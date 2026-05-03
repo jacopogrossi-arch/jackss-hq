@@ -61,3 +61,128 @@ All new games or UI additions should use these colours to stay visually consiste
 - Pure DOM (no canvas). Board is a CSS Grid; cells use `data-i` attributes for indexing.
 - Win detection iterates `WINS` (8 static triplets) each move.
 - Session scores live in a plain object `{ x, o, d }`; no persistence.
+
+---
+
+## AI Content Automation Project
+
+### Obiettivo
+
+Sistema quasi completamente automatizzato che genera e pubblica contenuti video sulla nicchia **moda maschile + brand building**, canale anonimo (no faccia, voiceover sintetico).
+
+### Pipeline principale
+
+```
+Schedule Trigger (ogni 48h)
+    ↓
+Trend Scouting (Google Trends + Reddit API)
+    ↓
+Claude API → 3 script (TikTok 60s / Reels / YouTube 8min)
+    ↓
+ElevenLabs API → voiceover
+    ↓
+HeyGen API → video assemblato
+    ↓
+Google Drive → salvataggio media
+    ↓
+Buffer API → pubblicazione social
+    ↓
+Notifica Telegram → preview per revisione
+```
+
+### Stack
+
+| Tool | Ruolo | Costo |
+|------|-------|-------|
+| n8n (self-hosted) | Orchestrazione workflow | ~€10/mese VPS |
+| Claude API | Generazione script | Pay per use |
+| ElevenLabs | Voiceover sintetico | ~€22/mese |
+| HeyGen | Video con avatar AI | ~€29/mese |
+| Buffer | Scheduling social | ~€15/mese |
+| Google Sheets / Airtable | Content queue | Gratis |
+
+### Monetizzazione
+
+- Community Skool "Come costruire un brand di moda con €1.000" — €29-49/mese
+- Target: 100 iscritti = €2.900-4.900/mese
+
+### Regole di lavoro su questo progetto
+
+- L'utente è un **principiante assoluto** su n8n, API e automazioni — non dare mai nulla per scontato
+- Spiega **sempre** ogni passaggio, anche quello che sembra ovvio: dove cliccare, cosa copiare, dove incollare
+- Usa un linguaggio **semplice e diretto**, senza gergo tecnico non spiegato
+- Se usi un termine tecnico, **spiegalo subito** tra parentesi o con un esempio
+- Spiega ogni nodo/blocco di codice **in italiano semplice**
+- Preferisci **soluzioni visuali in n8n** (senza codice) quando possibile
+- Scrivi sempre un **test minimale** prima di integrare un'API nuova
+- Ogni workflow n8n deve terminare con un **nodo notifica Telegram**
+- Il codice nei nodi custom va **commentato in italiano**
+- Priorità: **semplice e funzionante** > elegante e complesso
+
+### Struttura file progetto
+
+I file del progetto sono in `n8n-automation/`:
+- `overview.md` — obiettivo, stack, pipeline, monetizzazione
+- `progress.md` — stato avanzamento dettagliato, note tecniche, prossimi passi
+- `workflows/workflow-01.md` — workflow attuale step by step
+- `prompts/system-prompt.md` — system prompt Claude per generare gli script
+
+### Stato (vedi `n8n-automation/progress.md` per il dettaglio aggiornato)
+
+Workflow funzionante con Schedule Trigger ogni 48h, argomento casuale da Google Sheet, generazione script con Claude, e voiceover ElevenLabs. Prossimo step: salvare l'audio su Google Drive.
+
+---
+
+## AI Image & Video Generation Project
+
+> **ATTENZIONE — Questo progetto è completamente separato dal progetto n8n sopra.**
+> NON usa n8n, NON ha pipeline automatizzata, NON pubblica sui social in automatico.
+> Riguarda la generazione manuale di immagini e video AI come skill creativa e potenziale servizio.
+
+### Obiettivo
+
+Imparare a generare immagini e video AI di qualità professionale usando strumenti come Gemini, Kling, Midjourney, Krea. Obiettivo finale: offrire questo come servizio a clienti nel settore moda/lusso.
+
+### Stack strumenti
+
+| Tool | Tipo | Uso |
+|------|------|-----|
+| Gemini / NanoBanana | Generatore immagini (free) | Concetti veloci, moodboard, test prompt |
+| Midjourney | Generatore immagini (pro) | Immagini ad alta qualità |
+| Krea | Generatore immagini (pro) | Ritratti realistici, stile fashion |
+| HiggsField | Generatore immagini (pro) | Ultra-realistico, campagne editoriali |
+| Kling | Generatore video | Text-to-Video e Image-to-Video |
+| HeyGen | Avatar AI | Presentatori video |
+| ElevenLabs | Voiceover AI | Narrazione sintetica |
+
+### Brand di riferimento (progetto di studio)
+
+Visual identity **luxury Italian fashion / old money**:
+- Soggetto: giovane uomo italiano elegante, ~25 anni, stile classico
+- Scenario: Ferrari convertibile anni '80, campagna Toscana, strade con pini
+- Mood: dolce vita, Riviera Italiana anni '80, lusso senza ostentazione
+- Palette: amber `#F5E6C8`, gold `#C9A46A`, deep red `#8B0000`, near-black `#1E1E1E`
+- Riferimenti: campagne Marlboro anni '70, Helmut Newton, *Blade Runner 2049*
+
+### Struttura file progetto
+
+I file del progetto sono in `ai-content-claude/`:
+- `style-guide.md` — identità visiva, palette, sistema prompt
+- `platform-cheatsheet.md` — quale tool usare per cosa
+- `prompts/hw1-image-prompts.md` — prompt immagini Homework 1
+- `prompts/hw2-video-prompts.md` — prompt video Homework 2 (Kling)
+- `progress.md` — log avanzamento e prossimi step
+
+### Stato avanzamento (maggio 2026)
+
+- [x] Homework 1: 3 varianti prompt immagine + JSON prompt (Gemini)
+- [x] Homework 2: TTV e I2V con Kling (brand Ferrari/Toscana)
+- [ ] Homework 3 e successivi (in corso)
+
+### Regole di lavoro su questo progetto
+
+- Parla di **prompt visivi**, non di workflow o nodi n8n
+- Il lavoro è **manuale e creativo**, non automatizzato
+- Usa terminologia da **fotografia e regia**: lens, lighting, composition, shot type
+- Quando suggerisci miglioramenti ai prompt, usa la struttura: SHOT + LENS + LIGHT + TEXTURE + COMPOSITION + STYLE
+- NON mescolare mai questo progetto con il progetto n8n/automazioni
