@@ -128,3 +128,15 @@ File progetto in `ai-content-claude/`:
 - `prompts/hw1-image-prompts.md` — prompt immagini Homework 1
 - `prompts/hw2-video-prompts.md` — prompt video Homework 2 (Kling)
 - `progress.md` — log avanzamento e prossimi step
+
+---
+
+## Segnali dal Daily Log Agent
+
+Il file `claude-signals.md` nella root del repo viene aggiornato automaticamente ogni notte dall'agente `Jackss — Daily Log Processor`, che legge i Daily Log di Notion e rileva nuovi progetti, contatti, decisioni e obiettivi.
+
+**All'inizio di ogni sessione:** leggi `claude-signals.md` se esiste. Per ogni blocco marcato `Da processare`:
+1. Estrai le informazioni rilevanti (nuovi progetti, contatti, decisioni, obiettivi)
+2. Salva nei file di memoria appropriati in `C:\Users\Jacopo Grossi\.claude\projects\D--ClaudeCodeTest\memory\`
+3. Marca il blocco come `Processato` (sostituisci `Da processare` con `Processato`)
+4. Salva con Edit
