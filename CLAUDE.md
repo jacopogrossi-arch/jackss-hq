@@ -44,7 +44,7 @@ Questo progetto è anche un prodotto da vendere: la community Skool "Come costru
 
 ### Come collaborare su questo progetto
 
-Jacopo sta imparando n8n e le API mentre costruisce. Non conosce ancora il funzionamento interno dei workflow, ma capisce il "perché" quando lo si spiega bene. Le spiegazioni devono arrivare fino al livello pratico — dove cliccare, cosa copiare, dove incollare. I termini tecnici vanno spiegati al primo utilizzo.
+Jacopo ha già costruito e testato una pipeline video completa in n8n (completata maggio 2026). Conosce il flusso pratico dei workflow ma si avvicina ancora come utente, non come sviluppatore. Le spiegazioni devono arrivare fino al livello pratico — dove cliccare, cosa copiare, dove incollare. I termini tecnici vanno spiegati al primo utilizzo.
 
 In n8n, le soluzioni visuali (drag-and-drop tra nodi) sono da preferire al codice custom. Quando il codice è necessario, va commentato in italiano. Ogni nuova API si testa prima con un nodo HTTP Request minimale, prima di integrarla nella pipeline. Ogni workflow deve terminare con un nodo Telegram — è la conferma visibile che la macchina ha funzionato.
 
@@ -53,19 +53,25 @@ In n8n, le soluzioni visuali (drag-and-drop tra nodi) sono da preferire al codic
 ```
 Schedule Trigger (ogni 48h)
     ↓
-Trend Scouting (Google Trends + Reddit API)
+Google Sheets → leggi argomenti dalla coda
     ↓
-Claude API → 3 script (TikTok 60s / Reels / YouTube 8min)
+Code (JS) → sceglie argomento casuale, costruisce prompt
     ↓
-ElevenLabs API → voiceover
+Claude API (LLM Chain) → genera script TikTok 60s
     ↓
-HeyGen API → video assemblato
+Code (JS) → unisce script + argomento + data
     ↓
-Google Drive → salvataggio media
+Google Sheets → salva script nella coda
     ↓
-Buffer API → pubblicazione social
+ElevenLabs API → voiceover .mp3
     ↓
-Notifica Telegram → preview per revisione
+Google Drive → salva audio, rende file pubblico
+    ↓
+HeyGen API → genera video con avatar Adriana
+    ↓
+Wait 12 min → HeyGen status check
+    ↓
+Telegram → notifica con link video
 ```
 
 ### Stack
@@ -84,6 +90,8 @@ Notifica Telegram → preview per revisione
 Community Skool "Come costruire un brand di moda con €1.000" — €29-49/mese. Target: 100 iscritti = €2.900-4.900/mese.
 
 ### Stato corrente
+
+**Al 10/05/2026: pipeline end-to-end completa e funzionante.** Prossimi step: migrazione su VPS Hetzner, integrazione Buffer per pubblicazione automatica.
 
 Vedi `n8n-automation/progress.md` per lo stato aggiornato. File progetto in `n8n-automation/`:
 - `overview.md` — obiettivo, stack, pipeline, monetizzazione
@@ -118,9 +126,15 @@ I tool hanno caratteristiche diverse: Gemini/NanoBanana per iterazioni veloci e 
 
 ### Stato avanzamento
 
-- [x] Homework 1: 3 varianti prompt immagine + JSON prompt (Gemini)
-- [x] Homework 2: TTV e I2V con Kling (brand Ferrari/Toscana)
-- [ ] Homework 3 e successivi (in corso)
+- [x] HW 1: Image prompting con Gemini (3 varianti + JSON prompt)
+- [x] HW 1.3: Gusto visivo — moodboard Pinterest + 10 keyword estetiche
+- [x] HW 1.4: Aesthetic types — 3 board + estetica cinematica scelta
+- [x] HW 1.5: Character creation — personaggio con PromptEngine
+- [x] HW 1.6: Campaign generation — MidJourney con OmniReference
+- [x] HW 2: Video generation con Kling (TTV + I2V, brand Ferrari/Toscana)
+- [x] HW 2.4: Camera movement — 4 versioni, migliore selezionata
+- [x] HW 2.5: LipSync — talking avatar con Kling
+- [ ] HW 3 e successivi (in corso)
 
 File progetto in `ai-content-claude/`:
 - `style-guide.md` — identità visiva, palette, sistema prompt
@@ -128,6 +142,16 @@ File progetto in `ai-content-claude/`:
 - `prompts/hw1-image-prompts.md` — prompt immagini Homework 1
 - `prompts/hw2-video-prompts.md` — prompt video Homework 2 (Kling)
 - `progress.md` — log avanzamento e prossimi step
+
+---
+
+## Cartamodelli (cartamodelli/)
+
+Tool web per generare cartamodelli di jeans tramite Claude API. Prende misure corporee e silhouette come input → 4 chiamate API sequenziali → Claude genera SVG con i 4 pezzi separati (Davanti, Dietro, Cintura, Tasca).
+
+MVP funzionante: `cartamodelli/tool.html` — apri nel browser, inserisci API key Claude, genera.
+System prompt: `cartamodelli/system-prompt.md`
+Prompt jeans: `cartamodelli/prompts/jeans.md`
 
 ---
 

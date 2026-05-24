@@ -8,3 +8,8 @@ Thumbs.db
 
 # Claude Code local settings
 .claude/settings.local.json
+
+# Python package manager binaries (uv)
+uv.exe
+uvw.exe
+uvx.exe

@@ -25,9 +25,10 @@ _Ultimo aggiornamento: 10/05/2026_
 
 ## Prossimi step
 
+- [ ] **Migrare n8n su Hetzner VPS** — server sempre acceso, indipendente dal PC locale. Piano completo in `.claude/plans/si-mettiamo-l-opzione-c-jazzy-ocean.md` (Hetzner CX22 €3.79/mese, Docker, 9 fasi)
+- [ ] Integrare Buffer → pubblicazione social automatica
 - [ ] Migliorare qualità video: aggiungere B-roll cinematografico con Kling API
 - [ ] Aggiungere editing automatico con Shotstack (motion graphics, transizioni, testi)
-- [ ] Integrare Buffer → pubblicazione social automatica
 - [ ] Valutare avatar personalizzato su HeyGen
 
 ## Note tecniche importanti
