@@ -237,6 +237,12 @@
     }
     .btn-sec:hover { border-color: var(--gold-dim); color: var(--cream); }
 
+    .btn-preset {
+      border-color: var(--gold-dim);
+      color: var(--gold);
+    }
+    .btn-preset:hover { border-color: var(--gold); background: #28221A; }
+
     .btn-row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
 
     /* GENERATE */
@@ -390,7 +396,10 @@
   <div class="card">
     <div class="card-head">
       <div class="card-title">Misure corporee</div>
-      <button class="btn-sec" onclick="loadDefaults()">Default Taglia 48 IT</button>
+      <div class="btn-row">
+        <button class="btn-sec" onclick="loadDefaults()">Taglia 48 IT</button>
+        <button class="btn-sec btn-preset" onclick="loadJacopo()">&#9733; Jacopo</button>
+      </div>
     </div>
 
     <div class="subhead">Circonferenze</div>
@@ -836,6 +845,22 @@ function pickSil(card) {
 function loadDefaults() {
   const d = { waist:82, hips:98, thigh:58, knee:40, ankle:32,
               length:102, frontRise:27, backRise:35, hipH:20 };
+  Object.entries(d).forEach(([id, v]) => { document.getElementById(id).value = v; });
+}
+
+function loadJacopo() {
+  // Misure reali Jacopo — da foglio misure personale (maggio 2026)
+  const d = {
+    waist:     78,   // giro vita
+    hips:      99,   // giro fianchi
+    thigh:     55,   // giro coscia
+    knee:      37,   // giro ginocchio
+    ankle:     27,   // giro caviglia
+    length:   113,   // lunghezza pantalone
+    frontRise: 23,   // cavallo frontale
+    backRise:  28,   // cavallo posteriore
+    hipH:      21,   // altezza vita-fianchi
+  };
   Object.entries(d).forEach(([id, v]) => { document.getElementById(id).value = v; });
 }
 
