@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Macchina da Cartamodelli — Inverso</title>
+  <style>
+    :root {
+      --bg:       #1E1E1E;
+      --surface:  #252525;
+      --surface2: #2C2C2C;
+      --gold:     #C9A46A;
+      --gold-dim: #7A6040;
+      --cream:    #F5E6C8;
+      --muted:    #6A5A44;
+      --border:   #383530;
+      --error:    #E05555;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: 'Courier New', Consolas, monospace;
+      min-height: 100vh;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    .wrap { max-width: 820px; margin: 0 auto; }
+
+    /* ── HEADER ── */
+    header {
+      border-bottom: 1px solid var(--gold-dim);
+      padding-bottom: 1.2rem;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: flex-end;
+      gap: 1.2rem;
+    }
+    header h1 {
+      font-size: 1.25rem;
+      letter-spacing: 0.22em;
+      color: var(--gold);
+      text-transform: uppercase;
+    }
+    header small {
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      padding-bottom: 2px;
+    }
+
+    /* ── CARD ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.4rem 1.6rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.2rem;
+    }
+
+    .card-title {
+      font-size: 0.65rem;
+      letter-spacing: 0.28em;
+      color: var(--gold);
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .card-title::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ── FORM ── */
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0.9rem; }
+
+    .field { display: flex; flex-direction: column; gap: 0.35rem; }
+
+    label {
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    input[type="number"],
+    input[type="text"],
+    input[type="password"],
+    select,
+    textarea {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      color: var(--cream);
+      font-family: inherit;
+      font-size: 0.88rem;
+      padding: 0.48rem 0.65rem;
+      width: 100%;
+      transition: border-color .15s;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--gold-dim);
+    }
+    input[type="number"] { font-size: 1rem; }
+    textarea { resize: vertical; min-height: 56px; }
+    select option:disabled { color: var(--muted); }
+
+    .subhead {
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      color: var(--gold-dim);
+      text-transform: uppercase;
+      margin: 1.1rem 0 0.65rem;
+      padding-top: 0.9rem;
+      border-top: 1px solid var(--border);
+    }
+    .subhead:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+
+    hr { border: none; border-top: 1px solid var(--border); margin: 1.2rem 0; }
+
+    /* ── SILHOUETTE CARDS ── */
+    .sil-grid {
+      display: flex;
+      gap: 0.7rem;
+    }
+
+    .sil-card {
+      flex: 1;
+      cursor: pointer;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 0.8rem 0.4rem 0.7rem;
+      text-align: center;
+      transition: border-color .15s, background .15s;
+      user-select: none;
+    }
+    .sil-card:hover { border-color: var(--gold-dim); }
+    .sil-card.on {
+      border-color: var(--gold);
+      background: #28221A;
+    }
+
+    /* Pant-leg icon via CSS */
+    .leg-icon {
+      display: flex;
+      gap: 3px;
+      justify-content: center;
+      align-items: flex-start;
+      height: 38px;
+      margin-bottom: 7px;
+    }
+    .leg-icon span {
+      display: block;
+      background: var(--muted);
+      border-radius: 1px;
+      height: 100%;
+      transition: background .15s, width .15s;
+    }
+    .sil-card.on .leg-icon span { background: var(--gold); }
+
+    .sil-name {
+      font-size: 0.58rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-transform: uppercase;
+      line-height: 1.3;
+    }
+    .sil-card.on .sil-name { color: var(--gold); }
+
+    /* ── SLIDERS ── */
+    .slider-rows { display: flex; flex-direction: column; gap: 0.9rem; }
+
+    .slider-row {
+      display: grid;
+      grid-template-columns: 90px 1fr 90px;
+      align-items: center;
+      gap: 0.7rem;
+    }
+    .sl-l { font-size: 0.68rem; color: var(--muted); text-align: right; }
+    .sl-r { font-size: 0.68rem; color: var(--muted); text-align: left; }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      height: 3px;
+      background: var(--border);
+      border-radius: 2px;
+      outline: none;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 13px; height: 13px;
+      background: var(--gold);
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    /* ── BUTTONS ── */
+    .btn-pri {
+      background: var(--gold);
+      border: none;
+      border-radius: 3px;
+      color: #1A1209;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 0.22em;
+      padding: 0.85rem 2.5rem;
+      text-transform: uppercase;
+      transition: background .15s;
+    }
+    .btn-pri:hover { background: #D8B47A; }
+    .btn-pri:disabled { background: var(--gold-dim); cursor: not-allowed; opacity: .7; }
+
+    .btn-sec {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      color: var(--muted);
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      padding: 0.42rem 0.85rem;
+      text-transform: uppercase;
+      transition: all .15s;
+      white-space: nowrap;
+    }
+    .btn-sec:hover { border-color: var(--gold-dim); color: var(--cream); }
+
+    .btn-row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+
+    /* ── GENERATE ── */
+    .gen-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .spinner-wrap {
+      display: none;
+      align-items: center;
+      gap: 0.7rem;
+      color: var(--muted);
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+    }
+    .spinner-wrap.on { display: flex; }
+
+    .spinner {
+      width: 15px; height: 15px;
+      border: 2px solid var(--border);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      flex-shrink: 0;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .err-box {
+      background: #2A1515;
+      border: 1px solid var(--error);
+      border-radius: 3px;
+      color: var(--error);
+      font-size: 0.78rem;
+      padding: 0.7rem 1rem;
+      display: none;
+      width: 100%;
+      text-align: center;
+    }
+    .err-box.on { display: block; }
+
+    /* ── OUTPUT ── */
+    .out-section { display: none; }
+    .out-section.on { display: block; }
+
+    .tab-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.8rem; }
+
+    .tab-btn {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      color: var(--muted);
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      padding: 0.35rem 0.8rem;
+      text-transform: uppercase;
+      transition: all .15s;
+    }
+    .tab-btn:hover { border-color: var(--gold-dim); color: var(--cream); }
+    .tab-btn.on { border-color: var(--gold); color: var(--gold); }
+
+    .svg-preview {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: auto;
+      max-height: 560px;
+      padding: 1rem;
+    }
+    .svg-preview svg { max-width: 100%; height: auto; display: block; }
+
+    /* ── PRINT ── */
+    @media print {
+      body > * { display: none !important; }
+      .out-section { display: block !important; }
+      .card-head, .tab-row, .btn-row { display: none !important; }
+      .svg-preview { border: none; max-height: none; overflow: visible; padding: 0; }
+    }
+
+    /* ── MISC ── */
+    .hint {
+      color: var(--muted);
+      font-size: 0.68rem;
+      margin-top: 0.4rem;
+      letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Macchina da Cartamodelli</h1>
+    <small>Inverso · AI Pattern Generator</small>
+  </header>
+
+  <!-- ── CONFIGURAZIONE ── -->
+  <div class="card">
+    <div class="card-head">
+      <div class="card-title">Configurazione</div>
+      <button class="btn-sec" onclick="clearKey()">Reset API key</button>
+    </div>
+    <div class="grid2">
+      <div class="field">
+        <label>Claude API Key</label>
+        <input type="password" id="apiKey" placeholder="sk-ant-api03-...">
+        <p class="hint">Salvata localmente nel browser, non inviata altrove.</p>
+      </div>
+      <div class="field">
+        <label>Tipo di capo</label>
+        <select id="garment">
+          <option value="jeans">Jeans</option>
+          <option value="trousers" disabled>Pantaloni formali (V2)</option>
+          <option value="shirt" disabled>Camicia (V2)</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MISURE CORPOREE ── -->
+  <div class="card">
+    <div class="card-head">
+      <div class="card-title">Misure corporee</div>
+      <button class="btn-sec" onclick="loadDefaults()">Default Taglia 48 IT</button>
+    </div>
+
+    <div class="subhead">Circonferenze</div>
+    <div class="grid2">
+      <div class="field">
+        <label>Giro vita (cm)</label>
+        <input type="number" id="waist" min="60" max="130" step="0.5" placeholder="82">
+      </div>
+      <div class="field">
+        <label>Giro fianchi (cm)</label>
+        <input type="number" id="hips" min="75" max="145" step="0.5" placeholder="98">
+      </div>
+      <div class="field">
+        <label>Giro coscia (cm)</label>
+        <input type="number" id="thigh" min="40" max="85" step="0.5" placeholder="58">
+      </div>
+      <div class="field">
+        <label>Giro ginocchio (cm)</label>
+        <input type="number" id="knee" min="30" max="65" step="0.5" placeholder="40">
+      </div>
+      <div class="field">
+        <label>Giro caviglia (cm)</label>
+        <input type="number" id="ankle" min="25" max="50" step="0.5" placeholder="32">
+      </div>
+    </div>
+
+    <div class="subhead">Lunghezze</div>
+    <div class="grid2">
+      <div class="field">
+        <label>Lunghezza pantalone (cm)</label>
+        <input type="number" id="length" min="80" max="120" step="0.5" placeholder="102">
+      </div>
+      <div class="field">
+        <label>Cavallo frontale (cm)</label>
+        <input type="number" id="frontRise" min="22" max="42" step="0.5" placeholder="27">
+      </div>
+      <div class="field">
+        <label>Cavallo posteriore (cm)</label>
+        <input type="number" id="backRise" min="28" max="52" step="0.5" placeholder="35">
+      </div>
+      <div class="field">
+        <label>Altezza vita‑fianchi (cm)</label>
+        <input type="number" id="hipH" min="15" max="30" step="0.5" placeholder="20">
+      </div>
+    </div>
+  </div>
+
+  <!-- ── BRIEF CREATIVO ── -->
+  <div class="card">
+    <div class="card-title" style="margin-bottom:1.2rem;">Brief creativo del fit</div>
+
+    <!-- Silhouette -->
+    <label style="display:block;margin-bottom:.8rem;">Silhouette</label>
+    <div class="sil-grid" id="silGrid">
+
+      <div class="sil-card" data-v="ultra-slim" onclick="pickSil(this)">
+        <div class="leg-icon">
+          <span style="width:5px"></span>
+          <span style="width:5px"></span>
+        </div>
+        <div class="sil-name">Ultra<br>Slim</div>
+      </div>
+
+      <div class="sil-card on" data-v="slim" onclick="pickSil(this)">
+        <div class="leg-icon">
+          <span style="width:8px"></span>
+          <span style="width:8px"></span>
+        </div>
+        <div class="sil-name">Slim</div>
+      </div>
+
+      <div class="sil-card" data-v="regular" onclick="pickSil(this)">
+        <div class="leg-icon">
+          <span style="width:12px"></span>
+          <span style="width:12px"></span>
+        </div>
+        <div class="sil-name">Regular</div>
+      </div>
+
+      <div class="sil-card" data-v="relaxed" onclick="pickSil(this)">
+        <div class="leg-icon">
+          <span style="width:17px"></span>
+          <span style="width:17px"></span>
+        </div>
+        <div class="sil-name">Relaxed</div>
+      </div>
+
+      <div class="sil-card" data-v="baggy" onclick="pickSil(this)">
+        <div class="leg-icon">
+          <span style="width:23px"></span>
+          <span style="width:23px"></span>
+        </div>
+        <div class="sil-name">Baggy</div>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <!-- Sliders -->
+    <label style="display:block;margin-bottom:.9rem;">Dettagli fit</label>
+    <div class="slider-rows">
+      <div class="slider-row">
+        <span class="sl-l">Vita bassa</span>
+        <input type="range" id="slWaist" min="0" max="10" value="5">
+        <span class="sl-r">Vita alta</span>
+      </div>
+      <div class="slider-row">
+        <span class="sl-l">Gamba dritta</span>
+        <input type="range" id="slLeg" min="0" max="10" value="3">
+        <span class="sl-r">Gamba conica</span>
+      </div>
+      <div class="slider-row">
+        <span class="sl-l">Cavallo corto</span>
+        <input type="range" id="slCrotch" min="0" max="10" value="5">
+        <span class="sl-r">Cavallo lungo</span>
+      </div>
+    </div>
+
+    <hr>
+
+    <!-- Testo libero -->
+    <div class="grid2">
+      <div class="field">
+        <label>Riferimento ispirazione</label>
+        <input type="text" id="reference" placeholder="Es: Levi's 501 anni '90, Carhartt Double Knee...">
+      </div>
+      <div class="field">
+        <label>Note stilistiche (opzionale)</label>
+        <textarea id="notes" placeholder="Es: vita leggermente più bassa davanti, gamba dritta con lieve conicità finale..."></textarea>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ── GENERA ── -->
+  <div class="card gen-wrap">
+    <button class="btn-pri" id="genBtn" onclick="generate()">
+      Genera Cartamodello
+    </button>
+    <div class="spinner-wrap" id="spinner">
+      <div class="spinner"></div>
+      <span>Claude sta costruendo il cartamodello…</span>
+    </div>
+    <div class="err-box" id="errBox"></div>
+  </div>
+
+  <!-- ── OUTPUT ── -->
+  <div class="card out-section" id="outSection">
+    <div class="card-head">
+      <div class="card-title">Cartamodello generato</div>
+      <div class="btn-row">
+        <button class="btn-sec" onclick="downloadCurrent()">↓ Scarica SVG</button>
+        <button class="btn-sec" onclick="downloadAll()">↓ Scarica tutti</button>
+        <button class="btn-sec" onclick="window.print()">⎙ Stampa</button>
+      </div>
+    </div>
+    <div class="tab-row" id="tabs"></div>
+    <div class="svg-preview" id="preview"></div>
+  </div>
+
+</div><!-- /wrap -->
+
+<script>
+/* ───────────────────────────────────────────────
+   SYSTEM PROMPT (da system-prompt.md)
+─────────────────────────────────────────────── */
+const SYS = `Sei un esperto di modellistica tecnica maschile (Metodo Müller) e direttore artistico di moda.
+
+RUOLO: Ricevi MISURE CORPOREE + BRIEF CREATIVO del fit. Le misure definiscono il blocco base; il brief creativo definisce abbondanze (ease) e proporzioni stilistiche.
+
+OUTPUT: Esclusivamente SVG valido. Zero testo, zero markdown fuori dall'SVG. Quattro blocchi SVG separati da <!-- FOGLIO N: nome --> su riga propria. Ogni SVG inizia con <svg e finisce con </svg>. Sii conciso.
+
+SPECIFICHE SVG:
+- width/height in mm. ViewBox = 10× le misure mm (1 unità = 0.1mm, scala 1:1 stampabile).
+- Foglio A1 (594×841mm) → viewBox="0 0 5940 8410" — DAVANTI e DIETRO
+- Foglio A3 (420×297mm) → viewBox="0 0 4200 2970" — CINTURA e TASCA
+- Margini di cucitura: 15mm (150 unità) inclusi nelle outline. Origine (0,0) = alto sx. Y verso il basso.
+- Ogni pezzo centrato nel foglio con ≥200 unità di margine ai bordi.
+
+EASE PER SILHOUETTE (mm, aggiungere alle misure corporee):
+ULTRA-SLIM: anca+10, coscia+10 | SLIM: anca+20, coscia+20 | REGULAR: anca+30, coscia+40 | RELAXED: anca+50, coscia+60 | BAGGY: anca+80, coscia+100
+
+SLIDER:
+- VITA [0–10]: offset_vita = (v−5)×5mm
+- GAMBA [0–10]: conicita_ginocchio = v×2mm, conicita_caviglia = v×3mm
+- CAVALLO [0–10]: offset_cavallo = (v−5)×4.5mm
+
+FORMULE JEANS (misure in mm):
+W4=vita/4, H4=fianchi/4, T2=coscia/2, Ea=ease_anca, Ec=ease_coscia
+
+PEZZO 1 DAVANTI:
+  vitaDav = W4+10+Ea/2
+  ancaDav = H4+10+Ea/2
+  cosciaDav = T2+Ec/2
+  ginocchioDav = ginocchio/2 − conicita_ginocchio + Ec/4
+  cavigliaDav = caviglia/2 − conicita_caviglia + Ec/4
+  profCavDav = frontRise − hipH + 10 + offset_cavallo
+  h_vita_anca = hipH + offset_vita
+  Costruisci il pezzo con: vita in alto, curva cavallo (bezier, profondità 30mm), cucitura laterale destra, gamba che si assottiglia verso il basso secondo i valori ginocchio e caviglia.
+
+PEZZO 2 DIETRO:
+  vitaDie = W4+25+Ea/2, inclinata 25mm esternamente
+  ancaDie = H4+15+Ea/2
+  cosciaDie = T2+30+Ec/2
+  ginocchioDie = ginocchio/2 − conicita_ginocchio + Ec/4 + 5
+  cavigliaDie = caviglia/2 − conicita_caviglia + Ec/4 + 5
+  profCavDie = backRise + offset_cavallo (curva più ampia del davanti)
+
+PEZZO 3 CINTURA: rettangolo. lungh=(vita+Ea/2)×2+40, h=80mm. 1 pezzo, grain line orizzontale.
+
+PEZZO 4 TASCA POST.: rettangolo 140×150mm, angoli inf. r=20mm. × 2 pezzi.
+
+ELEMENTI OBBLIGATORI per pezzo:
+1. Outline — <path> stroke="#000" stroke-width="3" fill="#F9F7F2"
+2. Grain line — <line> verticale centrata (orizz. per cintura), frecce con <marker>, stroke="#000" stroke-width="2"
+3. Notches — rettangolini 50×150 unità ⊥ al bordo: cuciture laterali all'anca, ginocchio, fondo gamba
+4. Label — <text> nome, "× N pezzi", "MARGINI 15mm INCLUSI", font-family="monospace"
+5. Barra scala — rettangolo 1000×80 unità, testo "← 10 cm →", posizionata in basso nel foglio
+
+STRUTTURA OUTPUT:
+<!-- FOGLIO 1: DAVANTI -->
+<svg xmlns="http://www.w3.org/2000/svg" width="594mm" height="841mm" viewBox="0 0 5940 8410">
+[contenuto]
+</svg>
+<!-- FOGLIO 2: DIETRO -->
+<svg xmlns="http://www.w3.org/2000/svg" width="594mm" height="841mm" viewBox="0 0 5940 8410">
+[contenuto]
+</svg>
+<!-- FOGLIO 3: CINTURA -->
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 4200 2970">
+[contenuto]
+</svg>
+<!-- FOGLIO 4: TASCA POSTERIORE -->
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 4200 2970">
+[contenuto]
+</svg>
+
+Calcola le coordinate in unità viewBox (0.1mm). Il risultato deve essere stampabile 1:1.`;
+
+
+/* ─── STATE ─────────────────────────────────── */
+let silhouette = 'slim';
+let pieces = [];   // [{label, svg}, ...]
+let current = 0;
+
+/* ─── INIT ───────────────────────────────────── */
+window.onload = () => {
+  const k = localStorage.getItem('inv_key');
+  if (k) document.getElementById('apiKey').value = k;
+};
+
+/* ─── SILHOUETTE ─────────────────────────────── */
+function pickSil(card) {
+  document.querySelectorAll('.sil-card').forEach(c => c.classList.remove('on'));
+  card.classList.add('on');
+  silhouette = card.dataset.v;
+}
+
+/* ─── DEFAULTS ───────────────────────────────── */
+function loadDefaults() {
+  const d = { waist:82, hips:98, thigh:58, knee:40, ankle:32,
+              length:102, frontRise:27, backRise:35, hipH:20 };
+  Object.entries(d).forEach(([id, v]) => { document.getElementById(id).value = v; });
+}
+
+/* ─── API KEY ─────────────────────────────────── */
+function clearKey() {
+  localStorage.removeItem('inv_key');
+  document.getElementById('apiKey').value = '';
+}
+
+/* ─── GENERATE ───────────────────────────────── */
+async function generate() {
+  const key = document.getElementById('apiKey').value.trim();
+  if (!key) { err('Inserisci la Claude API Key per continuare.'); return; }
+
+  // collect
+  const ids = ['waist','hips','thigh','knee','ankle','length','frontRise','backRise','hipH'];
+  const m = {};
+  for (const id of ids) {
+    const v = parseFloat(document.getElementById(id).value);
+    if (!v || v <= 0) { err(`Campo obbligatorio mancante: ${id}. Inserisci tutte le misure.`); return; }
+    m[id] = v;
+  }
+
+  localStorage.setItem('inv_key', key);
+
+  const sw = +document.getElementById('slWaist').value;
+  const sl = +document.getElementById('slLeg').value;
+  const sc = +document.getElementById('slCrotch').value;
+  const ref = document.getElementById('reference').value.trim();
+  const notes = document.getElementById('notes').value.trim();
+
+  const waistLabel  = sw < 4 ? 'bassa' : sw > 6 ? 'alta' : 'media';
+  const legLabel    = sl < 3 ? 'dritta' : sl > 6 ? 'molto conica' : sl > 3 ? 'leggermente conica' : 'dritta';
+  const crotchLabel = sc < 4 ? 'corto' : sc > 6 ? 'lungo' : 'standard';
+
+  const userMsg = `GENERA CARTAMODELLO JEANS UOMO
+
+--- MISURE CORPOREE (in cm) ---
+Giro vita: ${m.waist}
+Giro fianchi: ${m.hips} (misurato a ${m.hipH} cm dalla vita)
+Giro coscia: ${m.thigh}
+Giro ginocchio: ${m.knee}
+Giro caviglia: ${m.ankle}
+Lunghezza totale pantalone: ${m.length}
+Cavallo frontale: ${m.frontRise}
+Cavallo posteriore: ${m.backRise}
+Altezza vita–fianchi: ${m.hipH}
+
+--- BRIEF CREATIVO ---
+Silhouette: ${silhouette.toUpperCase()}
+Vita: ${waistLabel} (slider ${sw}/10)
+Gamba: ${legLabel} (slider ${sl}/10)
+Cavallo: ${crotchLabel} (slider ${sc}/10)
+${ref ? `Riferimento: ${ref}` : ''}
+${notes ? `Note: ${notes}` : ''}
+
+Genera i 4 fogli SVG come da istruzioni. Calcola tutte le coordinate in unità viewBox.`;
+
+  setLoading(true);
+  err('');
+  document.getElementById('outSection').classList.remove('on');
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'x-api-key': key,
+        'anthropic-version': '2023-06-01',
+        'content-type': 'application/json',
+        'anthropic-dangerous-direct-browser-access': 'true',
+      },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-6',
+        max_tokens: 8000,
+        system: SYS,
+        messages: [{ role: 'user', content: userMsg }],
+      }),
+    });
+
+    if (!res.ok) {
+      const e = await res.json().catch(() => ({}));
+      throw new Error(e.error?.message || `HTTP ${res.status}`);
+    }
+
+    const data = await res.json();
+    const raw = data.content?.[0]?.text || '';
+    parsePieces(raw);
+
+  } catch (e) {
+    err('Errore API: ' + e.message);
+  } finally {
+    setLoading(false);
+  }
+}
+
+/* ─── PARSE SVG PIECES ───────────────────────── */
+function parsePieces(raw) {
+  const result = [];
+  const labels = ['DAVANTI','DIETRO','CINTURA','TASCA POST.'];
+
+  // Trova separatori <!-- FOGLIO N: ... -->
+  const splits = raw.split(/<!--\s*FOGLIO\s*\d+[^>]*-->/i);
+  const markers = [...raw.matchAll(/<!--\s*(FOGLIO\s*\d+[^>]*?)-->/gi)];
+
+  if (markers.length > 0) {
+    for (let i = 1; i < splits.length; i++) {
+      const svgM = splits[i].match(/<svg[\s\S]*?<\/svg>/i);
+      if (svgM) {
+        const rawLabel = markers[i-1]?.[1]?.replace(/FOGLIO\s*\d+\s*:?\s*/i,'').trim();
+        result.push({ label: rawLabel || labels[i-1] || `Foglio ${i}`, svg: svgM[0] });
+      }
+    }
+  }
+
+  // Fallback: estrai tutti gli SVG nell'ordine
+  if (result.length === 0) {
+    const all = [...raw.matchAll(/<svg[\s\S]*?<\/svg>/gi)];
+    all.forEach((m, i) => result.push({ label: labels[i] || `Pezzo ${i+1}`, svg: m[0] }));
+  }
+
+  if (result.length === 0) {
+    err('Nessun SVG trovato nella risposta. Prova a rigenerare o controlla la API key.');
+    return;
+  }
+
+  pieces = result;
+  current = 0;
+  render();
+}
+
+/* ─── RENDER ─────────────────────────────────── */
+function render() {
+  // Tabs
+  document.getElementById('tabs').innerHTML =
+    pieces.map((p,i) =>
+      `<button class="tab-btn ${i===current?'on':''}" onclick="switchTab(${i})">${p.label}</button>`
+    ).join('');
+
+  // Preview
+  document.getElementById('preview').innerHTML = pieces[current]?.svg || '';
+
+  // Show
+  const out = document.getElementById('outSection');
+  out.classList.add('on');
+  out.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function switchTab(i) { current = i; render(); }
+
+/* ─── DOWNLOAD ───────────────────────────────── */
+function downloadCurrent() {
+  if (!pieces.length) return;
+  dl(pieces[current]);
+}
+
+function downloadAll() {
+  pieces.forEach(p => dl(p));
+}
+
+function dl(piece) {
+  const blob = new Blob([piece.svg], { type: 'image/svg+xml' });
+  const url  = URL.createObjectURL(blob);
+  const a    = document.createElement('a');
+  a.href     = url;
+  a.download = `inverso-jeans-${piece.label.toLowerCase().replace(/[\s.]+/g,'-')}.svg`;
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+/* ─── UI HELPERS ─────────────────────────────── */
+function setLoading(on) {
+  document.getElementById('genBtn').disabled = on;
+  document.getElementById('spinner').classList.toggle('on', on);
+}
+
+function err(msg) {
+  const b = document.getElementById('errBox');
+  b.textContent = msg;
+  b.classList.toggle('on', !!msg);
+}
+</script>
+</body>
+</html>
