@@ -6,8 +6,8 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Claude Code local settings
-.claude/settings.local.json
+# Claude Code local data (settings, worktrees, cache)
+.claude/
 
 # Python package manager binaries (uv)
 uv.exe
