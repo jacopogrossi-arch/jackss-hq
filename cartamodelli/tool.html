@@ -782,6 +782,11 @@ function buildPiecePrompts(m, sil, leg, sw, sl, sc, ref, notes) {
     ? Math.round(ginDie + flare_ankle)
     : Math.round(cavigA/2 - taper_ankle + Ec/4 + 5);
   const profCavDie= Math.round(cba + offset_cavallo);
+  // Forchetta: estensione orizzontale dell'arco cavallo oltre il punto anca interno
+  // Il davanti ha una forchetta piccola; il dietro più ampia + caduta (nadir)
+  const forkDav   = Math.round(fianch / 20);       // mm
+  const forkDie   = Math.round(fianch / 10 + 15);  // mm (sempre > forkDav)
+  const nadirDie  = 15;                              // mm - caduta nadir sotto y_cavallo
 
   // Cintura (mm)
   const lungCint  = Math.round((vita + Ea/2) * 2 + 40);
@@ -839,7 +844,8 @@ COORDINATE (unita viewBox, Y verso il basso):
   Cucitura interna / cavallo (lato sinistro del pezzo):
     x_int_vita   = cx - ${u(vitaDav)}/2 = ${Math.round(2970 - u(vitaDav)/2)}
     x_int_anca   = cx - ${u(ancaDav)}/2 = ${Math.round(2970 - u(ancaDav)/2)}
-    x_int_coscia = cx - ${u(cosciaDav)}/2 = ${Math.round(2970 - u(cosciaDav)/2)}
+    x_fork       = x_int_anca - ${u(forkDav)} = ${Math.round(2970 - u(ancaDav)/2 - u(forkDav))}
+                   (forchetta: ${forkDav}mm oltre il punto anca interno, alla y_cavallo)
     x_int_gin    = cx - ${u(ginDav)}/2 = ${Math.round(2970 - u(ginDav)/2)}
     x_int_cav    = cx - ${u(cavDav)}/2 = ${Math.round(2970 - u(cavDav)/2)}
 
@@ -847,17 +853,16 @@ PATH outline (senso orario):
   M ${Math.round(2970 - u(vitaDav)/2)},500
   L ${Math.round(2970 + u(vitaDav)/2)},500
   L ${Math.round(2970 + u(ancaDav)/2)},${500 + u(hVitaAnca)}
-  L ${Math.round(2970 + u(cosciaDav)/2)},${500 + u(hVitaAnca) + u(profCavDav)}
+  L ${Math.round(2970 + u(ancaDav)/2)},${500 + u(hVitaAnca) + u(profCavDav)}
   L ${Math.round(2970 + u(ginDav)/2)},<y_ginocc>
   L ${Math.round(2970 + u(cavDav)/2)},${500 + u(lungh)}
   L ${Math.round(2970 - u(cavDav)/2)},${500 + u(lungh)}
   L ${Math.round(2970 - u(ginDav)/2)},<y_ginocc>
-  L ${Math.round(2970 - u(cosciaDav)/2)},${500 + u(hVitaAnca) + u(profCavDav)}
-  C [bezier curva cavallo, profondita 300u verso sinistra]
-  L ${Math.round(2970 - u(ancaDav)/2)},${500 + u(hVitaAnca)}
+  L ${Math.round(2970 - u(ancaDav)/2 - u(forkDav))},${500 + u(hVitaAnca) + u(profCavDav)}
+  C ${Math.round(2970 - u(ancaDav)/2 - u(forkDav) - 50)},${500 + u(hVitaAnca) + u(profCavDav) - 300} ${Math.round(2970 - u(ancaDav)/2 - 150)},${500 + u(hVitaAnca) + 500} ${Math.round(2970 - u(ancaDav)/2)},${500 + u(hVitaAnca)}
   L ${Math.round(2970 - u(vitaDav)/2)},500 Z
 
-Aggiungi: linee costruzione tratteggiate (vita, anca, ginocchio), grain line verticale centrata con frecce, notches, label "DAVANTI x 2 pezzi", quote dimensionali, barra scala in basso.`;
+Aggiungi: linee costruzione tratteggiate (vita, anca, cavallo, ginocchio), grain line verticale centrata con frecce, notches, label "DAVANTI x 2 pezzi", quote dimensionali, barra scala in basso.`;
 
   // ─ PEZZO 2: DIETRO ─
   const msgDie = `${measLine}
@@ -876,46 +881,48 @@ MISURE GIA CALCOLATE:
   cavDie     = ${cavDie}mm -> ${u(cavDie)}u
   profCavDie = ${profCavDie}mm -> ${u(profCavDie)}u (piu profondo del davanti)
   hVitaAnca  = ${hVitaAnca}mm -> ${u(hVitaAnca)}u
-  inclinaz   = 250u (vita dietro inclinata: lato esterno 25mm piu alto del lato interno)
+  inclinaz   = 250u (vita dietro: lato esterno 25mm piu alto del centro-schiena)
+  forkDie    = ${forkDie}mm -> ${u(forkDie)}u (estensione forchetta, sempre > forkDav=${forkDav}mm)
+  nadirDie   = ${nadirDie}mm -> ${u(nadirDie)}u (caduta nadir sotto y_cavallo)
   lunghezza  = ${lungh}mm -> ${u(lungh)}u
 
-COORDINATE:
+COORDINATE (⚠️ y_cavallo IDENTICO al pannello DAVANTI = ${500 + u(hVitaAnca) + u(profCavDav)}):
   cx = 2970
-  y_vita_est = 500                    (lato esterno, piu alto)
-  y_vita_int = 500 + 250 = 750        (lato interno, piu basso per l'inclinazione)
-  y_anca     = 500 + ${u(hVitaAnca)} = ${500 + u(hVitaAnca)}
-  y_cavallo  = 500 + ${u(hVitaAnca)} + ${u(profCavDie)} = ${500 + u(hVitaAnca) + u(profCavDie)}
-  y_ginocc   = y_cavallo + (${u(lungh)} - ${u(hVitaAnca)} - ${u(profCavDie)}) / 2
-  y_caviglia = 500 + ${u(lungh)}
+  y_vita_est = 500
+  y_vita_int = 750
+  y_anca     = ${500 + u(hVitaAnca)}
+  y_cavallo  = ${500 + u(hVitaAnca) + u(profCavDav)}   <- UGUALE al davanti
+  y_nadir    = ${500 + u(hVitaAnca) + u(profCavDav) + u(nadirDie)}   <- ${nadirDie}mm sotto y_cavallo
+  y_ginocc   = y_cavallo + (${u(lungh)} - ${u(hVitaAnca)} - ${u(profCavDav)}) / 2
+  y_caviglia = ${500 + u(lungh)}
 
-  Lato esterno (dx): x = cx + larghezza/2
+  Lato esterno (dx):
     x_est_vita = ${Math.round(2970 + u(vitaDie)/2)}
-    x_est_anca = ${Math.round(2970 + u(ancaDie)/2)}
-    x_est_cosc = ${Math.round(2970 + u(coscDie)/2)}
+    x_est_anca = ${Math.round(2970 + u(ancaDie)/2)}  <- stesso X per anca e cavallo esterno
     x_est_gin  = ${Math.round(2970 + u(ginDie)/2)}
     x_est_cav  = ${Math.round(2970 + u(cavDie)/2)}
 
-  Lato interno (sx): x = cx - larghezza/2
+  Lato interno (sx = forchetta):
     x_int_vita = ${Math.round(2970 - u(vitaDie)/2)}
     x_int_anca = ${Math.round(2970 - u(ancaDie)/2)}
-    x_int_cosc = ${Math.round(2970 - u(coscDie)/2)}
+    x_nadir    = ${Math.round(2970 - u(ancaDie)/2 - u(forkDie))}  <- ${forkDie}mm oltre l'anca interna
     x_int_gin  = ${Math.round(2970 - u(ginDie)/2)}
     x_int_cav  = ${Math.round(2970 - u(cavDie)/2)}
 
 PATH outline:
-  M ${Math.round(2970 - u(vitaDie)/2)},750     (vita int, piu bassa)
-  L ${Math.round(2970 + u(vitaDie)/2)},500     (vita est, piu alta - inclinazione)
+  M ${Math.round(2970 - u(vitaDie)/2)},750
+  L ${Math.round(2970 + u(vitaDie)/2)},500
   L ${Math.round(2970 + u(ancaDie)/2)},${500 + u(hVitaAnca)}
-  L ${Math.round(2970 + u(coscDie)/2)},${500 + u(hVitaAnca) + u(profCavDie)}
+  L ${Math.round(2970 + u(ancaDie)/2)},${500 + u(hVitaAnca) + u(profCavDav)}
   L ${Math.round(2970 + u(ginDie)/2)},<y_ginocc>
   L ${Math.round(2970 + u(cavDie)/2)},${500 + u(lungh)}
   L ${Math.round(2970 - u(cavDie)/2)},${500 + u(lungh)}
   L ${Math.round(2970 - u(ginDie)/2)},<y_ginocc>
-  L ${Math.round(2970 - u(coscDie)/2)},${500 + u(hVitaAnca) + u(profCavDie)}
-  C [bezier curva cavallo posteriore, piu ampia del davanti, profondita ~500u]
-  L ${Math.round(2970 - u(ancaDie)/2)},${500 + u(hVitaAnca)}
+  L ${Math.round(2970 - u(ancaDie)/2 - u(forkDie))},${500 + u(hVitaAnca) + u(profCavDav) + u(nadirDie)}
+  C ${Math.round(2970 - u(ancaDie)/2 - u(forkDie) - 100)},${500 + u(hVitaAnca) + u(profCavDav) + u(nadirDie)} ${Math.round(2970 - u(ancaDie)/2 - 250)},${500 + u(hVitaAnca) + 700} ${Math.round(2970 - u(ancaDie)/2)},${500 + u(hVitaAnca)}
   L ${Math.round(2970 - u(vitaDie)/2)},750 Z
 
+⚠️ VERIFICA: la cucitura laterale esterna (VE->AE->DE->GE->OE) di questo pannello ha la stessa y_vita=500 e y_caviglia=${500 + u(lungh)} del davanti: le due cuciture laterali coincidono perfettamente.
 Aggiungi: linee costruzione tratteggiate, grain line verticale, notches, label "DIETRO x 2 pezzi", quote dimensionali, barra scala.`;
 
   // ─ PEZZO 3: CINTURA ─
@@ -1076,6 +1083,9 @@ function buildPiecePromptsTrousers(m, sil, leg, sw, sl, sc, ref, notes, pleat) {
     ? Math.round(ginDie + flare_ankle)
     : Math.round(cavigA/2 - taper_ankle + Ec/4 + 5);
   const profCavDie= Math.round(cba + offset_cavallo);
+  const forkDav   = Math.round(fianch / 20);
+  const forkDie   = Math.round(fianch / 10 + 15);
+  const nadirDie  = 15;
 
   // Cintura
   const lungCint  = Math.round((vita + Ea/2) * 2 + 40);
@@ -1135,7 +1145,8 @@ COORDINATE (unita viewBox, Y verso il basso):
   Cucitura interna / cavallo (lato sinistro):
     x_int_vita   = cx - ${u(vitaDav)}/2 = ${Math.round(2970 - u(vitaDav)/2)}
     x_int_anca   = cx - ${u(ancaDav)}/2 = ${Math.round(2970 - u(ancaDav)/2)}
-    x_int_coscia = cx - ${u(cosciaDav)}/2 = ${Math.round(2970 - u(cosciaDav)/2)}
+    x_fork       = x_int_anca - ${u(forkDav)} = ${Math.round(2970 - u(ancaDav)/2 - u(forkDav))}
+                   (forchetta: ${forkDav}mm oltre il punto anca interno, alla y_cavallo)
     x_int_gin    = cx - ${u(ginDav)}/2 = ${Math.round(2970 - u(ginDav)/2)}
     x_int_cav    = cx - ${u(cavDav)}/2 = ${Math.round(2970 - u(cavDav)/2)}
 
@@ -1143,18 +1154,17 @@ PATH outline (senso orario):
   M ${Math.round(2970 - u(vitaDav)/2)},500
   L ${Math.round(2970 + u(vitaDav)/2)},500
   L ${Math.round(2970 + u(ancaDav)/2)},${500 + u(hVitaAnca)}
-  L ${Math.round(2970 + u(cosciaDav)/2)},${500 + u(hVitaAnca) + u(profCavDav)}
+  L ${Math.round(2970 + u(ancaDav)/2)},${500 + u(hVitaAnca) + u(profCavDav)}
   L ${Math.round(2970 + u(ginDav)/2)},<y_ginocc>
   L ${Math.round(2970 + u(cavDav)/2)},${500 + u(lungh)}
   L ${Math.round(2970 - u(cavDav)/2)},${500 + u(lungh)}
   L ${Math.round(2970 - u(ginDav)/2)},<y_ginocc>
-  L ${Math.round(2970 - u(cosciaDav)/2)},${500 + u(hVitaAnca) + u(profCavDav)}
-  C [bezier curva cavallo, profondita 250u verso sinistra — piu piatta dei jeans]
-  L ${Math.round(2970 - u(ancaDav)/2)},${500 + u(hVitaAnca)}
+  L ${Math.round(2970 - u(ancaDav)/2 - u(forkDav))},${500 + u(hVitaAnca) + u(profCavDav)}
+  C ${Math.round(2970 - u(ancaDav)/2 - u(forkDav) - 50)},${500 + u(hVitaAnca) + u(profCavDav) - 300} ${Math.round(2970 - u(ancaDav)/2 - 150)},${500 + u(hVitaAnca) + 500} ${Math.round(2970 - u(ancaDav)/2)},${500 + u(hVitaAnca)}
   L ${Math.round(2970 - u(vitaDav)/2)},500 Z
 
 ${pleat_mm > 0 ? `PIEGA FRONTALE: traccia ${pleat_mm === 25 ? 'una' : 'due'} linea/linee tratteggiata/e verticale/i partendo dalla vita verso il basso per 200u (20cm), indicante/i la posizione della piega. Label "PIEGA".` : ''}
-Aggiungi: linee costruzione tratteggiate (vita, anca, ginocchio), grain line verticale centrata con frecce, notches, label "DAVANTI x 2 pezzi (pantalone)", quote dimensionali, barra scala in basso.`;
+Aggiungi: linee costruzione tratteggiate (vita, anca, cavallo, ginocchio), grain line verticale centrata con frecce, notches, label "DAVANTI x 2 pezzi (pantalone)", quote dimensionali, barra scala in basso.`;
 
   // ─ PEZZO 2: DIETRO (pantalone) ─
   const msgDie = `${measLine}
@@ -1173,29 +1183,31 @@ MISURE GIA CALCOLATE:
   cavDie     = ${cavDie}mm -> ${u(cavDie)}u
   profCavDie = ${profCavDie}mm -> ${u(profCavDie)}u
   hVitaAnca  = ${hVitaAnca}mm -> ${u(hVitaAnca)}u
-  inclinaz   = 250u (vita dietro inclinata: lato esterno 25mm piu alto del lato interno)
+  inclinaz   = 250u (vita dietro: lato esterno 25mm piu alto del centro-schiena)
+  forkDie    = ${forkDie}mm -> ${u(forkDie)}u (estensione forchetta, > forkDav=${forkDav}mm)
+  nadirDie   = ${nadirDie}mm -> ${u(nadirDie)}u (caduta nadir sotto y_cavallo)
   lunghezza  = ${lungh}mm -> ${u(lungh)}u
 
-COORDINATE:
+COORDINATE (⚠️ y_cavallo IDENTICO al pannello DAVANTI = ${500 + u(hVitaAnca) + u(profCavDav)}):
   cx = 2970
   y_vita_est = 500
   y_vita_int = 750
   y_anca     = ${500 + u(hVitaAnca)}
-  y_cavallo  = ${500 + u(hVitaAnca) + u(profCavDie)}
-  y_ginocc   = y_cavallo + (${u(lungh)} - ${u(hVitaAnca)} - ${u(profCavDie)}) / 2
+  y_cavallo  = ${500 + u(hVitaAnca) + u(profCavDav)}   <- UGUALE al davanti
+  y_nadir    = ${500 + u(hVitaAnca) + u(profCavDav) + u(nadirDie)}   <- ${nadirDie}mm sotto y_cavallo
+  y_ginocc   = y_cavallo + (${u(lungh)} - ${u(hVitaAnca)} - ${u(profCavDav)}) / 2
   y_caviglia = ${500 + u(lungh)}
 
-  Lato esterno:
+  Lato esterno (dx):
     x_est_vita = ${Math.round(2970 + u(vitaDie)/2)}
-    x_est_anca = ${Math.round(2970 + u(ancaDie)/2)}
-    x_est_cosc = ${Math.round(2970 + u(coscDie)/2)}
+    x_est_anca = ${Math.round(2970 + u(ancaDie)/2)}  <- stesso X per anca e cavallo esterno
     x_est_gin  = ${Math.round(2970 + u(ginDie)/2)}
     x_est_cav  = ${Math.round(2970 + u(cavDie)/2)}
 
-  Lato interno:
+  Lato interno (sx = forchetta):
     x_int_vita = ${Math.round(2970 - u(vitaDie)/2)}
     x_int_anca = ${Math.round(2970 - u(ancaDie)/2)}
-    x_int_cosc = ${Math.round(2970 - u(coscDie)/2)}
+    x_nadir    = ${Math.round(2970 - u(ancaDie)/2 - u(forkDie))}  <- ${forkDie}mm oltre l'anca interna
     x_int_gin  = ${Math.round(2970 - u(ginDie)/2)}
     x_int_cav  = ${Math.round(2970 - u(cavDie)/2)}
 
@@ -1203,16 +1215,16 @@ PATH outline:
   M ${Math.round(2970 - u(vitaDie)/2)},750
   L ${Math.round(2970 + u(vitaDie)/2)},500
   L ${Math.round(2970 + u(ancaDie)/2)},${500 + u(hVitaAnca)}
-  L ${Math.round(2970 + u(coscDie)/2)},${500 + u(hVitaAnca) + u(profCavDie)}
+  L ${Math.round(2970 + u(ancaDie)/2)},${500 + u(hVitaAnca) + u(profCavDav)}
   L ${Math.round(2970 + u(ginDie)/2)},<y_ginocc>
   L ${Math.round(2970 + u(cavDie)/2)},${500 + u(lungh)}
   L ${Math.round(2970 - u(cavDie)/2)},${500 + u(lungh)}
   L ${Math.round(2970 - u(ginDie)/2)},<y_ginocc>
-  L ${Math.round(2970 - u(coscDie)/2)},${500 + u(hVitaAnca) + u(profCavDie)}
-  C [bezier curva cavallo posteriore, piu ampia del davanti, profondita ~450u]
-  L ${Math.round(2970 - u(ancaDie)/2)},${500 + u(hVitaAnca)}
+  L ${Math.round(2970 - u(ancaDie)/2 - u(forkDie))},${500 + u(hVitaAnca) + u(profCavDav) + u(nadirDie)}
+  C ${Math.round(2970 - u(ancaDie)/2 - u(forkDie) - 100)},${500 + u(hVitaAnca) + u(profCavDav) + u(nadirDie)} ${Math.round(2970 - u(ancaDie)/2 - 250)},${500 + u(hVitaAnca) + 700} ${Math.round(2970 - u(ancaDie)/2)},${500 + u(hVitaAnca)}
   L ${Math.round(2970 - u(vitaDie)/2)},750 Z
 
+⚠️ VERIFICA: la cucitura laterale esterna ha y_vita=500 e y_caviglia=${500 + u(lungh)} identici al davanti.
 Aggiungi: linee costruzione tratteggiate, grain line verticale, notches, label "DIETRO x 2 pezzi (pantalone)", quote dimensionali, barra scala.`;
 
   // ─ PEZZO 3: CINTURA (pantalone) ─
