@@ -414,10 +414,10 @@
       </div>
       <div class="field">
         <label>Tipo di capo</label>
-        <select id="garment">
+        <select id="garment" onchange="onGarmentChange()">
           <option value="jeans">Jeans</option>
-          <option value="trousers" disabled>Pantaloni formali (V2)</option>
-          <option value="shirt" disabled>Camicia (V2)</option>
+          <option value="trousers">Pantaloni</option>
+          <option value="shirt" disabled>Camicia (prossimamente)</option>
         </select>
       </div>
     </div>
@@ -586,6 +586,46 @@
         <textarea id="notes" placeholder="Es: vita leggermente piu bassa davanti, gamba dritta con lieve conicita finale..."></textarea>
       </div>
     </div>
+  </div>
+
+  <!-- OPZIONI PANTALONE (visibile solo quando si seleziona Pantaloni) -->
+  <div class="card" id="trouserOpts" style="display:none">
+    <div class="card-title" style="margin-bottom:1.2rem;">Opzioni pantalone</div>
+
+    <label style="display:block;margin-bottom:.8rem;">Piega frontale</label>
+    <div class="sil-grid" id="pleatGrid" style="max-width:420px;">
+      <div class="sil-card on" data-v="no-pleat" onclick="pickPleat(this)">
+        <div class="leg-icon" style="justify-content:center;align-items:center;">
+          <svg width="24" height="38" viewBox="0 0 24 38">
+            <rect x="4" y="0" width="16" height="38" fill="var(--muted)" rx="1"/>
+          </svg>
+        </div>
+        <div class="sil-name">Nessuna<br>piega</div>
+      </div>
+      <div class="sil-card" data-v="single-pleat" onclick="pickPleat(this)">
+        <div class="leg-icon" style="justify-content:center;align-items:center;">
+          <svg width="24" height="38" viewBox="0 0 24 38">
+            <rect x="2" y="0" width="20" height="38" fill="var(--muted)" rx="1"/>
+            <line x1="12" y1="0" x2="12" y2="16" stroke="var(--bg)" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="sil-name">1 piega<br>+2.5 cm</div>
+      </div>
+      <div class="sil-card" data-v="double-pleat" onclick="pickPleat(this)">
+        <div class="leg-icon" style="justify-content:center;align-items:center;">
+          <svg width="24" height="38" viewBox="0 0 24 38">
+            <rect x="1" y="0" width="22" height="38" fill="var(--muted)" rx="1"/>
+            <line x1="9"  y1="0" x2="9"  y2="16" stroke="var(--bg)" stroke-width="2"/>
+            <line x1="15" y1="0" x2="15" y2="16" stroke="var(--bg)" stroke-width="2"/>
+          </svg>
+        </div>
+        <div class="sil-name">2 pieghe<br>+5 cm</div>
+      </div>
+    </div>
+
+    <p class="hint" style="margin-top:.8rem;">
+      La piega frontale aggiunge volume alla coscia e un aspetto sartoriale. 1 piega = classico business, 2 pieghe = sartoriale anni '40.
+    </p>
   </div>
 
   <!-- GENERA -->
@@ -946,10 +986,307 @@ Barra scala in basso.`;
 }
 
 /* =============================================================
+   PROMPT PANTALONI — formule per pantalone sartoriale uomo
+============================================================= */
+function buildPiecePromptsTrousers(m, sil, leg, sw, sl, sc, ref, notes, pleat) {
+  const easeMap = {
+    'ultra-slim': {Ea:10,  Ec:10 },
+    'slim':       {Ea:20,  Ec:20 },
+    'regular':    {Ea:30,  Ec:40 },
+    'relaxed':    {Ea:50,  Ec:60 },
+    'baggy':      {Ea:80,  Ec:100},
+  };
+  const {Ea, Ec} = easeMap[sil] || easeMap['regular'];
+
+  const offset_vita    = (sw - 5) * 5;
+  const offset_cavallo = (sc - 5) * 4.5;
+
+  // Piega frontale (in mm aggiunta al pannello davanti)
+  const pleatMap = { 'no-pleat': 0, 'single-pleat': 25, 'double-pleat': 50 };
+  const pleat_mm = pleatMap[pleat] || 0;
+  const pleatLabel = {
+    'no-pleat':     'Nessuna piega (pantalone piatto)',
+    'single-pleat': '1 piega frontale da 2.5cm (posizionata a 5cm dal centro)',
+    'double-pleat': '2 pieghe frontali da 2.5cm ciascuna (a 4cm e 9cm dal centro)',
+  }[pleat] || 'Nessuna piega';
+
+  // Forma gamba
+  let taper_gin   = 0;
+  let flare_ankle = 0;
+  let taper_ankle = 0;
+
+  switch (leg) {
+    case 'tapered':
+      taper_gin   = sl * 2;
+      taper_ankle = sl * 3;
+      break;
+    case 'straight':
+      break;
+    case 'bootcut':
+      taper_gin   = sl * 1;
+      flare_ankle = sl * 3 + 20;
+      break;
+    case 'wide-leg':
+      flare_ankle = sl * 5 + 40;
+      break;
+    default:
+      taper_gin = sl * 2;
+      taper_ankle = sl * 3;
+  }
+
+  const legShapeLabel = {
+    'tapered':  'TAPERED (restringimento verso la caviglia)',
+    'straight': 'STRAIGHT (gamba dritta, nessun restringimento)',
+    'bootcut':  'BOOTCUT (lieve strozzatura al ginocchio, svasatura alla caviglia)',
+    'wide-leg': 'WIDE LEG (gamba larga, svasatura accentuata)',
+  }[leg] || leg;
+
+  // misure in mm
+  const vita   = m.waist     * 10;
+  const fianch = m.hips      * 10;
+  const coscia = m.thigh     * 10;
+  const ginoc  = m.knee      * 10;
+  const cavigA = m.ankle     * 10;
+  const lungh  = m.length    * 10;
+  const cfr    = m.frontRise * 10;
+  const cba    = m.backRise  * 10;
+  const hipH   = m.hipH      * 10;
+
+  const W4 = vita / 4;
+  const H4 = fianch / 4;
+  const T2 = coscia / 2;
+
+  // Davanti — pantaloni sartoriali: meno allargamento vita (+5 vs +10 jeans), piega aggiunta
+  const vitaDav   = Math.round(W4 + 5 + Ea/2 + pleat_mm);
+  const ancaDav   = Math.round(H4 + 5 + Ea/2);
+  const cosciaDav = Math.round(T2 + Ec/2);
+  const ginDav    = Math.round(ginoc/2 - taper_gin + Ec/4);
+  const cavDav    = flare_ankle > 0
+    ? Math.round(ginDav + flare_ankle)
+    : Math.round(cavigA/2 - taper_ankle + Ec/4);
+  const profCavDav= Math.round(cfr - hipH + 5 + offset_cavallo);
+  const hVitaAnca = Math.round(hipH + offset_vita);
+
+  // Dietro — pantaloni: sedere +20 invece di +15 (più volume posteriore sartoriale)
+  const vitaDie   = Math.round(W4 + 20 + Ea/2);
+  const ancaDie   = Math.round(H4 + 20 + Ea/2);
+  const coscDie   = Math.round(T2 + 25 + Ec/2);
+  const ginDie    = Math.round(ginoc/2 - taper_gin + Ec/4 + 5);
+  const cavDie    = flare_ankle > 0
+    ? Math.round(ginDie + flare_ankle)
+    : Math.round(cavigA/2 - taper_ankle + Ec/4 + 5);
+  const profCavDie= Math.round(cba + offset_cavallo);
+
+  // Cintura
+  const lungCint  = Math.round((vita + Ea/2) * 2 + 40);
+
+  const u = v => v * 10;
+
+  const briefLine = [
+    `Tipo capo: PANTALONE SARTORIALE UOMO`,
+    `Silhouette: ${sil.toUpperCase()} (Ea=${Ea}mm, Ec=${Ec}mm)`,
+    `Forma gamba: ${legShapeLabel}`,
+    `Piega frontale: ${pleatLabel}`,
+    `Intensita forma (slider ${sl}/10): taper_gin=${taper_gin}mm, flare_ankle=${flare_ankle}mm, taper_ankle=${taper_ankle}mm`,
+    `Vita: ${sw<4?'bassa':sw>6?'alta':'media'} (offset ${offset_vita>=0?'+':''}${offset_vita}mm)`,
+    `Cavallo: ${sc<4?'corto':sc>6?'lungo':'standard'} (offset ${offset_cavallo>=0?'+':''}${offset_cavallo}mm)`,
+    ref   ? `Riferimento: ${ref}`   : null,
+    notes ? `Note: ${notes}` : null,
+  ].filter(Boolean).join('\n');
+
+  const measLine = `MISURE CORPOREE (mm): vita=${vita} fianchi=${fianch} coscia=${coscia} ginocchio=${ginoc} caviglia=${cavigA} lunghezza=${lungh} cavFront=${cfr} cavPost=${cba} hipH=${hipH}`;
+
+  // ─ PEZZO 1: DAVANTI (pantalone) ─
+  const msgDav = `${measLine}
+
+BRIEF:
+${briefLine}
+
+GENERA: PANNELLO DAVANTI pantalone sartoriale uomo.
+Usa foglio width=594mm. Calcola height adattata: height_mm = ${lungh} + 200 (margini) -> arrotonda al multiplo di 10.
+viewBox = "0 0 5940 <height*10>"
+
+MISURE GIA CALCOLATE (convertile in unita viewBox moltiplicando per 10):
+  vitaDav    = ${vitaDav}mm -> ${u(vitaDav)}u  (larghezza totale vita, include piega se presente: +${pleat_mm}mm)
+  ancaDav    = ${ancaDav}mm -> ${u(ancaDav)}u
+  cosciaDav  = ${cosciaDav}mm -> ${u(cosciaDav)}u
+  ginDav     = ${ginDav}mm -> ${u(ginDav)}u
+  cavDav     = ${cavDav}mm -> ${u(cavDav)}u
+  profCavDav = ${profCavDav}mm -> ${u(profCavDav)}u
+  hVitaAnca  = ${hVitaAnca}mm -> ${u(hVitaAnca)}u
+  lunghezza  = ${lungh}mm -> ${u(lungh)}u
+  pleat_mm   = ${pleat_mm}mm (aggiunto alla vita; 0 = nessuna piega)
+
+COORDINATE (unita viewBox, Y verso il basso):
+  cx = 2970
+  y_vita     = 500
+  y_anca     = 500 + ${u(hVitaAnca)}  = ${500 + u(hVitaAnca)}
+  y_cavallo  = 500 + ${u(hVitaAnca)} + ${u(profCavDav)} = ${500 + u(hVitaAnca) + u(profCavDav)}
+  y_ginocc   = y_cavallo + (${u(lungh)} - ${u(hVitaAnca)} - ${u(profCavDav)}) / 2
+  y_caviglia = 500 + ${u(lungh)}
+
+  Cucitura laterale (lato destro):
+    x_lat_vita   = cx + ${u(vitaDav)}/2 = ${Math.round(2970 + u(vitaDav)/2)}
+    x_lat_anca   = cx + ${u(ancaDav)}/2 = ${Math.round(2970 + u(ancaDav)/2)}
+    x_lat_coscia = cx + ${u(cosciaDav)}/2 = ${Math.round(2970 + u(cosciaDav)/2)}
+    x_lat_gin    = cx + ${u(ginDav)}/2 = ${Math.round(2970 + u(ginDav)/2)}
+    x_lat_cav    = cx + ${u(cavDav)}/2 = ${Math.round(2970 + u(cavDav)/2)}
+
+  Cucitura interna / cavallo (lato sinistro):
+    x_int_vita   = cx - ${u(vitaDav)}/2 = ${Math.round(2970 - u(vitaDav)/2)}
+    x_int_anca   = cx - ${u(ancaDav)}/2 = ${Math.round(2970 - u(ancaDav)/2)}
+    x_int_coscia = cx - ${u(cosciaDav)}/2 = ${Math.round(2970 - u(cosciaDav)/2)}
+    x_int_gin    = cx - ${u(ginDav)}/2 = ${Math.round(2970 - u(ginDav)/2)}
+    x_int_cav    = cx - ${u(cavDav)}/2 = ${Math.round(2970 - u(cavDav)/2)}
+
+PATH outline (senso orario):
+  M ${Math.round(2970 - u(vitaDav)/2)},500
+  L ${Math.round(2970 + u(vitaDav)/2)},500
+  L ${Math.round(2970 + u(ancaDav)/2)},${500 + u(hVitaAnca)}
+  L ${Math.round(2970 + u(cosciaDav)/2)},${500 + u(hVitaAnca) + u(profCavDav)}
+  L ${Math.round(2970 + u(ginDav)/2)},<y_ginocc>
+  L ${Math.round(2970 + u(cavDav)/2)},${500 + u(lungh)}
+  L ${Math.round(2970 - u(cavDav)/2)},${500 + u(lungh)}
+  L ${Math.round(2970 - u(ginDav)/2)},<y_ginocc>
+  L ${Math.round(2970 - u(cosciaDav)/2)},${500 + u(hVitaAnca) + u(profCavDav)}
+  C [bezier curva cavallo, profondita 250u verso sinistra — piu piatta dei jeans]
+  L ${Math.round(2970 - u(ancaDav)/2)},${500 + u(hVitaAnca)}
+  L ${Math.round(2970 - u(vitaDav)/2)},500 Z
+
+${pleat_mm > 0 ? `PIEGA FRONTALE: traccia ${pleat_mm === 25 ? 'una' : 'due'} linea/linee tratteggiata/e verticale/i partendo dalla vita verso il basso per 200u (20cm), indicante/i la posizione della piega. Label "PIEGA".` : ''}
+Aggiungi: linee costruzione tratteggiate (vita, anca, ginocchio), grain line verticale centrata con frecce, notches, label "DAVANTI x 2 pezzi (pantalone)", quote dimensionali, barra scala in basso.`;
+
+  // ─ PEZZO 2: DIETRO (pantalone) ─
+  const msgDie = `${measLine}
+
+BRIEF:
+${briefLine}
+
+GENERA: PANNELLO DIETRO pantalone sartoriale uomo.
+Usa foglio width=594mm, height adattata come per il davanti.
+
+MISURE GIA CALCOLATE:
+  vitaDie    = ${vitaDie}mm -> ${u(vitaDie)}u
+  ancaDie    = ${ancaDie}mm -> ${u(ancaDie)}u
+  coscDie    = ${coscDie}mm -> ${u(coscDie)}u
+  ginDie     = ${ginDie}mm -> ${u(ginDie)}u
+  cavDie     = ${cavDie}mm -> ${u(cavDie)}u
+  profCavDie = ${profCavDie}mm -> ${u(profCavDie)}u
+  hVitaAnca  = ${hVitaAnca}mm -> ${u(hVitaAnca)}u
+  inclinaz   = 250u (vita dietro inclinata: lato esterno 25mm piu alto del lato interno)
+  lunghezza  = ${lungh}mm -> ${u(lungh)}u
+
+COORDINATE:
+  cx = 2970
+  y_vita_est = 500
+  y_vita_int = 750
+  y_anca     = ${500 + u(hVitaAnca)}
+  y_cavallo  = ${500 + u(hVitaAnca) + u(profCavDie)}
+  y_ginocc   = y_cavallo + (${u(lungh)} - ${u(hVitaAnca)} - ${u(profCavDie)}) / 2
+  y_caviglia = ${500 + u(lungh)}
+
+  Lato esterno:
+    x_est_vita = ${Math.round(2970 + u(vitaDie)/2)}
+    x_est_anca = ${Math.round(2970 + u(ancaDie)/2)}
+    x_est_cosc = ${Math.round(2970 + u(coscDie)/2)}
+    x_est_gin  = ${Math.round(2970 + u(ginDie)/2)}
+    x_est_cav  = ${Math.round(2970 + u(cavDie)/2)}
+
+  Lato interno:
+    x_int_vita = ${Math.round(2970 - u(vitaDie)/2)}
+    x_int_anca = ${Math.round(2970 - u(ancaDie)/2)}
+    x_int_cosc = ${Math.round(2970 - u(coscDie)/2)}
+    x_int_gin  = ${Math.round(2970 - u(ginDie)/2)}
+    x_int_cav  = ${Math.round(2970 - u(cavDie)/2)}
+
+PATH outline:
+  M ${Math.round(2970 - u(vitaDie)/2)},750
+  L ${Math.round(2970 + u(vitaDie)/2)},500
+  L ${Math.round(2970 + u(ancaDie)/2)},${500 + u(hVitaAnca)}
+  L ${Math.round(2970 + u(coscDie)/2)},${500 + u(hVitaAnca) + u(profCavDie)}
+  L ${Math.round(2970 + u(ginDie)/2)},<y_ginocc>
+  L ${Math.round(2970 + u(cavDie)/2)},${500 + u(lungh)}
+  L ${Math.round(2970 - u(cavDie)/2)},${500 + u(lungh)}
+  L ${Math.round(2970 - u(ginDie)/2)},<y_ginocc>
+  L ${Math.round(2970 - u(coscDie)/2)},${500 + u(hVitaAnca) + u(profCavDie)}
+  C [bezier curva cavallo posteriore, piu ampia del davanti, profondita ~450u]
+  L ${Math.round(2970 - u(ancaDie)/2)},${500 + u(hVitaAnca)}
+  L ${Math.round(2970 - u(vitaDie)/2)},750 Z
+
+Aggiungi: linee costruzione tratteggiate, grain line verticale, notches, label "DIETRO x 2 pezzi (pantalone)", quote dimensionali, barra scala.`;
+
+  // ─ PEZZO 3: CINTURA (pantalone) ─
+  const msgCint = `${measLine}
+
+BRIEF:
+${briefLine}
+
+GENERA: CINTURA pantalone sartoriale uomo.
+Foglio A3: width="420mm" height="297mm" viewBox="0 0 4200 2970"
+
+MISURE GIA CALCOLATE:
+  lunghezza_cintura = ${lungCint}mm -> ${u(lungCint)}u
+  altezza_cintura   = 70mm -> 700u  (cintura sartoriale: 3.5cm finita, piu stretta rispetto ai jeans)
+
+COORDINATE:
+  x_start = (4200 - ${u(lungCint)}) / 2 = ${Math.round((4200 - u(lungCint)) / 2)}
+  y_start = (2970 - 700) / 2 = 1135
+  x_end   = x_start + ${u(lungCint)} = ${Math.round((4200 - u(lungCint)) / 2 + u(lungCint))}
+  y_end   = 1135 + 700 = 1835
+
+PATH outline: rettangolo M x_start,1135 L x_end,1135 L x_end,1835 L x_start,1835 Z
+Grain line ORIZZONTALE centrata.
+Notches: 1 al centro superiore, 1 a sx e 1 a dx (cuciture laterali), 2 notches per il davanti e il dietro (CF e CB).
+Label "CINTURA x 1", "DRITTO FILO", "MARGINI 15mm INCLUSI", "PANTALONE".
+Barra scala sotto il rettangolo.`;
+
+  // ─ PEZZO 4: TASCA LATERALE A FILETTO ─
+  const msgTasca = `${measLine}
+
+BRIEF:
+${briefLine}
+
+GENERA: TASCA LATERALE A FILETTO (side welt pocket) pantalone sartoriale uomo.
+Foglio A3: width="420mm" height="297mm" viewBox="0 0 4200 2970"
+
+PEZZI DA DISEGNARE (sullo stesso foglio A3, affiancati):
+
+PEZZO A — Bocca tasca (welt):
+  larghezza = 140mm -> 1400u
+  altezza   = 35mm -> 350u
+  Posizione: centrata nella metà sinistra del foglio
+  x_start = 350, y_start = 1310, x_end = 1750, y_end = 1660
+  PATH: rettangolo semplice M 350,1310 L 1750,1310 L 1750,1660 L 350,1660 Z
+  Label: "BOCCA TASCA x 2", "MARGINI 15mm INCLUSI"
+  Grain line orizzontale
+
+PEZZO B — Fondo tasca (pocket bag):
+  larghezza = 140mm -> 1400u
+  altezza   = 160mm -> 1600u
+  Posizione: centrata nella metà destra del foglio
+  x_start = 2450, y_start = 685, x_end = 3850, y_end = 2285
+  Angoli inferiori arrotondati r=15mm (150u)
+  PATH con angoli arrotondati:
+    M 2450,685 L 3850,685 L 3850,${2285-150} Q 3850,2285 ${3850-150},2285 L ${2450+150},2285 Q 2450,2285 2450,${2285-150} Z
+  Label: "FONDO TASCA x 2", "MARGINI 15mm INCLUSI"
+  Grain line verticale centrata
+
+Barra scala condivisa in basso al centro del foglio.`;
+
+  return [
+    { label: 'Davanti',      msg: msgDav   },
+    { label: 'Dietro',       msg: msgDie   },
+    { label: 'Cintura',      msg: msgCint  },
+    { label: 'Tasca Lat.',   msg: msgTasca },
+  ];
+}
+
+/* =============================================================
    STATE
 ============================================================= */
 let silhouette = 'relaxed';
 let legShape   = 'bootcut';
+let pleatType  = 'no-pleat';
 let pieces = [];
 let current = 0;
 
@@ -968,6 +1305,17 @@ function pickLeg(card) {
   document.querySelectorAll('.leg-card').forEach(c => c.classList.remove('on'));
   card.classList.add('on');
   legShape = card.dataset.v;
+}
+
+function pickPleat(card) {
+  document.querySelectorAll('#pleatGrid .sil-card').forEach(c => c.classList.remove('on'));
+  card.classList.add('on');
+  pleatType = card.dataset.v;
+}
+
+function onGarmentChange() {
+  const isTrousers = document.getElementById('garment').value === 'trousers';
+  document.getElementById('trouserOpts').style.display = isTrousers ? 'block' : 'none';
 }
 
 function loadDefaults() {
@@ -1020,7 +1368,10 @@ async function generate() {
   const ref  = document.getElementById('reference').value.trim();
   const note = document.getElementById('notes').value.trim();
 
-  const prompts = buildPiecePrompts(m, silhouette, legShape, sw, sl, sc, ref, note);
+  const garment = document.getElementById('garment').value;
+  const prompts = garment === 'trousers'
+    ? buildPiecePromptsTrousers(m, silhouette, legShape, sw, sl, sc, ref, note, pleatType)
+    : buildPiecePrompts(m, silhouette, legShape, sw, sl, sc, ref, note);
   const total   = prompts.length;
 
   pieces  = [];
@@ -1039,8 +1390,8 @@ async function generate() {
       'Generando ' + pc.label + ' (' + (i+1) + '/' + total + ')...';
     document.getElementById('progressFill').style.width = Math.round(i / total * 100) + '%';
     document.getElementById('progressLabel').textContent =
-      ['Davanti', 'Dietro', 'Cintura', 'Tasca Post.'].map((l, j) =>
-        j < i ? '[OK] ' + l : j === i ? '[..] ' + l : '[ ]  ' + l
+      prompts.map((p, j) =>
+        j < i ? '[OK] ' + p.label : j === i ? '[..] ' + p.label : '[ ]  ' + p.label
       ).join('   ');
 
     try {
@@ -1132,7 +1483,9 @@ function dl(piece) {
   const url  = URL.createObjectURL(blob);
   const a    = document.createElement('a');
   a.href     = url;
-  a.download = 'inverso-jeans-' + piece.label.toLowerCase().replace(/[\s.]+/g, '-') + '.svg';
+  const garmentId = document.getElementById('garment').value;
+  const garmentSlug = garmentId === 'trousers' ? 'pantaloni' : 'jeans';
+  a.download = 'inverso-' + garmentSlug + '-' + piece.label.toLowerCase().replace(/[\s.]+/g, '-') + '.svg';
   a.click();
   URL.revokeObjectURL(url);
 }
