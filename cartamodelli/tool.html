@@ -1664,13 +1664,16 @@ function computeValidation(m, garment, sil, sw, sl, sc) {
   const L_dav_mm = Math.round(L_dav / 10);
   const L_die_mm = Math.round(L_die / 10);
 
+  // Profondità totale dalla vita alla linea cavallo (quello che vale verificare)
+  const totalCavDepth = hVitaAnca + profCavDav;
+
   return {
     Y_vita, Y_anca, Y_cavallo, Y_ginocc, Y_orlo,
-    profCavDav,
+    profCavDav, totalCavDepth, hVitaAnca,
     forkDav, forkDie, nadirDie,
     L_dav_mm, L_die_mm,
     diffPct: +diffPct.toFixed(1),
-    ok_prof:  profCavDav >= 200 && profCavDav <= 350,
+    ok_prof:  totalCavDepth >= 180 && totalCavDepth <= 380,
     ok_seam:  diffPct < 5,
     ok_fork:  forkDie > forkDav,
   };
@@ -1763,8 +1766,13 @@ function showValidation(v) {
         <td></td>
       </tr>
       <tr>
-        <td>Profondità cavallo</td>
-        <td>${v.ok_prof ? fmtOk(v.profCavDav, 'mm') : fmtErr(v.profCavDav, 'mm')}</td>
+        <td>Prof. extra (sotto anca)</td>
+        <td>${fmt(v.profCavDav, 'mm')}</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Prof. totale (dalla vita)</td>
+        <td>${v.ok_prof ? fmtOk(v.totalCavDepth, 'mm') : fmtErr(v.totalCavDepth, 'mm')}</td>
         <td>${icon(v.ok_prof)}</td>
       </tr>
     </table>
@@ -1776,7 +1784,7 @@ function showValidation(v) {
   ${allOk
     ? '✅ Tutti i controlli passati — griglia Y allineata, cuciture bilanciate. Stampa e taglia.'
     : '⚠️ ' + [
-        !v.ok_prof ? `Profondità cavallo fuori range (${v.profCavDav}mm, atteso 200–350mm) — controlla cavallo frontale e hipH.` : '',
+        !v.ok_prof ? `Profondità totale cavallo fuori range (${v.totalCavDepth}mm, atteso 180–380mm) — vita-anca: ${v.hVitaAnca}mm + extra: ${v.profCavDav}mm. Controlla "cavallo frontale" e "altezza vita-fianchi".` : '',
         !v.ok_seam ? `Cucitura laterale: differenza ${v.diffPct}% tra davanti e dietro (limite 5%) — controlla le misure.` : '',
         !v.ok_fork ? 'Fork dietro ≤ fork davanti — errore interno, ricarica la pagina.' : '',
       ].filter(Boolean).join(' | ')
