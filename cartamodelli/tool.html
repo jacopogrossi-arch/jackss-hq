@@ -709,6 +709,7 @@
       <div class="btn-row">
         <button class="btn-sec" onclick="downloadCurrent()">&#8595; Scarica SVG</button>
         <button class="btn-sec" onclick="downloadAll()">&#8595; Scarica tutti</button>
+        <button class="btn-pri" onclick="downloadPDF()" style="font-size:0.75rem;padding:0.45rem 1rem;">&#128196; Scarica PDF</button>
         <button class="btn-sec" onclick="window.print()">&#9113; Stampa</button>
       </div>
     </div>
@@ -1581,6 +1582,73 @@ function showErr(msg) {
   const b = document.getElementById('errBox');
   b.textContent = msg;
   b.classList.toggle('on', !!msg);
+}
+
+/* =============================================================
+   DOWNLOAD PDF — apre una finestra di stampa con tutti i pezzi
+   L'utente salva come PDF dalla finestra di stampa del browser.
+   @page { size: auto } forza le dimensioni native dell'SVG.
+============================================================= */
+function downloadPDF() {
+  if (!pieces.length) { showErr('Genera prima il cartamodello.'); return; }
+
+  const garmentSlug = document.getElementById('garment').value === 'trousers' ? 'pantaloni' : 'jeans';
+
+  const pagesHTML = pieces.map(p => `<div class="pg">${p.svg}</div>`).join('\n');
+
+  const win = window.open('', '_blank');
+  if (!win) {
+    showErr('Popup bloccato dal browser. Consenti i popup per questa pagina e riprova.');
+    return;
+  }
+
+  win.document.write(`<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Inverso — Cartamodello ${garmentSlug}</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #fff; }
+    .pg { display: block; page-break-after: always; }
+    .pg:last-child { page-break-after: avoid; }
+    svg { display: block; }
+    @media print {
+      @page { size: auto; margin: 0mm; }
+      body  { margin: 0; }
+      .pg   { page-break-after: always; }
+      .pg:last-child { page-break-after: avoid; }
+    }
+    /* Schermata di attesa prima che si apra la stampa */
+    #overlay {
+      position: fixed; inset: 0;
+      background: #111; color: #fff;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      font-family: monospace; font-size: 1.1rem;
+      gap: 1rem; z-index: 9999;
+    }
+    #overlay small { color: #888; font-size: 0.8rem; }
+    @media print { #overlay { display: none !important; } }
+  </style>
+</head>
+<body>
+  <div id="overlay">
+    <span>&#128196; Apertura finestra di stampa...</span>
+    <small>Nella finestra che si apre: Stampante → "Salva come PDF" → Scala 100%</small>
+  </div>
+  ${pagesHTML}
+  <script>
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        document.getElementById('overlay').style.display = 'none';
+        window.print();
+      }, 600);
+    });
+  <\/script>
+</body>
+</html>`);
+  win.document.close();
 }
 
 /* =============================================================
