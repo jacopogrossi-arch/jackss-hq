@@ -1491,11 +1491,154 @@ PEZZO B — Fondo tasca (pocket bag):
 
 Barra scala condivisa in basso al centro del foglio.`;
 
+  // ─ PEZZO 5: FLY + SHIELD (pantalone) ─
+  // Stessa costruzione dei jeans (Armstrong Fig.5 Trouser Draft)
+  // Lo shield del pantalone si estende fino alla larghezza della cintura (più ampio del jeans)
+  const flyH_tr    = profCavDav;
+  const flyW_tr    = 50;
+  const shieldW_tr = Math.round(vita / 4 + 80);   // pantalone: 80mm oltre vita/4 (leggermente più ampio del jeans)
+  const shieldH_tr = flyH_tr + 25;                 // pantalone: +25mm invece di +20mm (cavallo più profondo)
+
+  const msgFlyTr = `${measLine}
+
+BRIEF:
+${briefLine}
+
+GENERA: FLY (patta cerniera) e SHIELD (scudo patta) pantalone uomo — stesso foglio.
+Foglio A4 landscape: width="297mm" height="210mm" viewBox="0 0 2970 2100"
+(Fonte: Armstrong Men's Wear — Trouser Draft, Fig.5)
+
+MISURE GIA CALCOLATE:
+  flyW_tr    = ${flyW_tr}mm -> ${u(flyW_tr)}u   (larghezza patta, taglia su piega CF)
+  flyH_tr    = ${flyH_tr}mm -> ${u(flyH_tr)}u  (altezza patta = profondità cavallo davanti)
+  shieldW_tr = ${shieldW_tr}mm -> ${u(shieldW_tr)}u (larghezza scudo pantalone)
+  shieldH_tr = ${shieldH_tr}mm -> ${u(shieldH_tr)}u (altezza scudo pantalone)
+
+LAYOUT (2 pezzi affiancati, centrati verticalmente):
+  Sinistra: FLY | Destra: SHIELD (lascia almeno 300u di spazio tra i due)
+
+PEZZO A — FLY:
+  Rettangolo ${u(flyW_tr)}u × ${u(flyH_tr)}u.
+  Angolo inferiore-destro arrotondato r=150u (15mm).
+  Bordo sinistro = linea di piega CF (tratteggiata, non outline).
+  Grain line: verticale centrata.
+  Notch: 1 al centro-top (linea vita), 1 a metà altezza lato destro (linea cerniera).
+  Label: "FLY x 2", "⟵ PIEGA CF", "MARGINI 15mm INCLUSI"
+
+PEZZO B — SHIELD:
+  Rettangolo ${u(shieldW_tr)}u × ${u(shieldH_tr)}u.
+  Angolo superiore-sinistro arrotondato r=200u (20mm).
+  Grain line: verticale centrata.
+  Label: "SHIELD x 2", "MARGINI 15mm INCLUSI"
+  Nota aggiuntiva: "1 self-fabric (con interfaccia) + 1 fodera"
+
+Barra scala in basso al centro.`;
+
+  // ─ PEZZO 6: WELT POCKET POSTERIORE (tasca posteriore a filetto) ─
+  // Fonte: Armstrong "Pant Welt Pocket — Practice Welt" (Fig.1a, 1b, 1c)
+  // Misure Armstrong convertite in mm (1" = 25.4mm):
+  //   Pocket bag (lining):  7" × 10" = 178mm × 254mm
+  //   Self-piping:          7" × 2-1/4" = 178mm × 57mm
+  //   Self-facing:          7" × 2-5/8" = 178mm × 67mm
+  //   Welt line on pant:    5-5.5" = 127-140mm lungo, 3" (75mm) dal fondo vita, 2" (50mm) dal fianco
+  const weltBagW  = 178;   // pocket bag larghezza: 178mm (7")
+  const weltBagH  = 254;   // pocket bag altezza: 254mm (10")
+  const weltPipW  = 178;   // piping larghezza: 178mm (7")
+  const weltPipH  = 57;    // piping altezza: 57mm (2-1/4")
+  const weltFaceW = 178;   // facing larghezza: 178mm (7")
+  const weltFaceH = 67;    // facing altezza: 67mm (2-5/8")
+
+  const msgWelt = `${measLine}
+
+BRIEF:
+${briefLine}
+
+GENERA: TASCA POSTERIORE A FILETTO (welt pocket) pantalone uomo — 3 pezzi sullo stesso foglio.
+Foglio A3 landscape: width="420mm" height="297mm" viewBox="0 0 4200 2970"
+(Fonte: Armstrong "Pant Welt Pocket — Practice Welt", Fig.1a-1c)
+
+MISURE GIA CALCOLATE (da Armstrong, convertite in mm):
+  weltBagW  = ${weltBagW}mm -> ${u(weltBagW)}u  (fondo tasca larghezza: 7")
+  weltBagH  = ${weltBagH}mm -> ${u(weltBagH)}u  (fondo tasca altezza: 10")
+  weltPipW  = ${weltPipW}mm -> ${u(weltPipW)}u  (piping larghezza: 7")
+  weltPipH  = ${weltPipH}mm -> ${u(weltPipH)}u  (piping altezza: 2-1/4")
+  weltFaceW = ${weltFaceW}mm -> ${u(weltFaceW)}u (facing larghezza: 7")
+  weltFaceH = ${weltFaceH}mm -> ${u(weltFaceH)}u (facing altezza: 2-5/8")
+
+  Posizione bocca tasca sul pantalone (nota costruttiva): 127-140mm di lunghezza, 75mm sotto la vita, 50mm dal fianco.
+
+LAYOUT: 3 pezzi disposti verticalmente nella metà sinistra del foglio, e annotazioni a destra.
+
+PEZZO A — FONDO TASCA / FODERA (pocket bag / lining):
+  Rettangolo ${u(weltBagW)}u × ${u(weltBagH)}u.
+  Angoli inferiori arrotondati r=150u (15mm).
+  Grain line: verticale centrata.
+  Label: "FONDO TASCA x 2", "7\" × 10\"", "MARGINI 10mm INCLUSI"
+
+PEZZO B — PIPING (autopiping con interfaccia):
+  Rettangolo ${u(weltPipW)}u × ${u(weltPipH)}u.
+  Grain line: orizzontale centrata.
+  Linea tratteggiata orizzontale al centro (linea di piega).
+  Label: "PIPING x 1", "INTERFACCIA INCLUSA", "PIEGA AL CENTRO"
+
+PEZZO C — FACING (rinforzo apertura filetto):
+  Rettangolo ${u(weltFaceW)}u × ${u(weltFaceH)}u.
+  Grain line: orizzontale centrata.
+  Label: "FACING x 1", "MARGINI 10mm INCLUSI"
+
+Nota costruttiva (testo nel foglio):
+  "Bocca tasca sul pantalone: linea ${127}mm, ${75}mm sotto vita, ${50}mm dal fianco.
+  Apertura filetto (welt line) = 3/8 pollice su ciascun lato."
+
+Barra scala in basso al centro.`;
+
+  // ─ PEZZO 7: PASSANTI CINTURA (pantalone) ─
+  // Pantaloni formali/sartoriali: 5 passanti (non 7 come i jeans), più stretti
+  const passW_tr     = 35;    // larghezza tagliata (mm) — piegata 4× → ~9mm finita
+  const passH_tr     = 70;    // altezza (mm) — leggermente più corti dei jeans
+  const passGap_tr   = 70;    // spazio tra pezzi (u) — più respiro su A3
+  const passTot_tr   = 5 * u(passW_tr) + 4 * passGap_tr;
+  const passX_tr     = Math.round((4200 - passTot_tr) / 2);
+  const passY_tr     = Math.round((2970 - u(passH_tr)) / 2);
+
+  const msgPassTr = `${measLine}
+
+BRIEF:
+${briefLine}
+
+GENERA: PASSANTI CINTURA pantalone uomo (belt loops) — 5 pezzi su griglia.
+Foglio A3 landscape: width="420mm" height="297mm" viewBox="0 0 4200 2970"
+(Pantaloni sartoriali: 5 passanti, più stretti dei jeans)
+
+MISURE GIA CALCOLATE:
+  passW = ${passW_tr}mm -> ${u(passW_tr)}u  (larghezza tagliata; piegata 4× → ~9mm finita)
+  passH = ${passH_tr}mm -> ${u(passH_tr)}u  (altezza)
+  gap   = ${passGap_tr}u (spazio tra pezzi)
+
+GRIGLIA 5 PEZZI in fila singola:
+  larghezza_totale = ${passTot_tr}u
+  x_start griglia  = ${passX_tr}
+  y_start          = ${passY_tr}
+
+Disegna 5 rettangoli identici ${u(passW_tr)}u × ${u(passH_tr)}u con gap ${passGap_tr}u.
+  Pezzo i (0-based): x = ${passX_tr} + i × ${u(passW_tr) + passGap_tr}
+
+Su ogni pezzo:
+  - Grain line: verticale centrata
+  - 2 linee tratteggiate verticali a x_pezzo + ${Math.round(u(passW_tr)/4)} e x_pezzo + ${Math.round(u(passW_tr)*3/4)} (segni di piega)
+  - Notch: 1 in alto al centro, 1 in basso al centro
+
+Label generale sotto la griglia: "PASSANTI CINTURA x 5", "FINITI: ~9mm × 70mm", "PIEGA IN 4 LUNGO L'ASSE VERTICALE"
+Barra scala in basso al centro.`;
+
   return [
-    { label: 'Davanti',      msg: msgDav   },
-    { label: 'Dietro',       msg: msgDie   },
-    { label: 'Cintura',      msg: msgCint  },
-    { label: 'Tasca Lat.',   msg: msgTasca },
+    { label: 'Davanti',      msg: msgDav      },
+    { label: 'Dietro',       msg: msgDie      },
+    { label: 'Cintura',      msg: msgCint     },
+    { label: 'Tasca Lat.',   msg: msgTasca    },
+    { label: 'Fly+Shield',   msg: msgFlyTr    },
+    { label: 'Welt Post.',   msg: msgWelt     },
+    { label: 'Passanti',     msg: msgPassTr   },
   ];
 }
 
