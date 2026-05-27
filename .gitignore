@@ -7,7 +7,13 @@ Thumbs.db
 .idea/
 
 # Claude Code local data (settings, worktrees, cache)
-.claude/
+# Ignora tutto tranne la cartella memory (committata per persistere tra sessioni)
+.claude/settings.json
+.claude/settings.local.json
+.claude/worktrees/
+.claude/cache/
+.claude/todos/
+.claude/statsig/
 
 # Python package manager binaries (uv)
 uv.exe
