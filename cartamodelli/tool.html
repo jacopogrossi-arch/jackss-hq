@@ -1052,11 +1052,149 @@ Notch: 1 al centro-top (punto attacco alla cucitura posteriore).
 Label "TASCA POSTERIORE x 2", "MARGINI 15mm INCLUSI".
 Barra scala in basso.`;
 
+  // ─ PEZZO 5: FLY + SHIELD ─
+  // Fonte: Armstrong "Jean Foundation" — Fly=2" larghezza, altezza=profondità cavallo davanti
+  // Shield: estensione 3" (75mm) oltre vita/4 dal CF
+  const flyH    = profCavDav;                   // altezza patta = profondità cav. davanti (mm)
+  const flyW    = 50;                           // larghezza patta: 50mm (Armstrong 2")
+  const shieldW = Math.round(vita / 4 + 75);   // scudo: vita/4 + 75mm (3" oltre CF)
+  const shieldH = flyH + 20;                   // scudo 20mm più alto della patta
+
+  const msgFly = `${measLine}
+
+BRIEF:
+${briefLine}
+
+GENERA: FLY (patta cerniera) e SHIELD (scudo patta) jeans uomo — stesso foglio.
+Foglio A4 landscape: width="297mm" height="210mm" viewBox="0 0 2970 2100"
+
+MISURE GIA CALCOLATE:
+  flyW    = ${flyW}mm -> ${u(flyW)}u   (larghezza patta — taglia su piega al CF)
+  flyH    = ${flyH}mm -> ${u(flyH)}u  (altezza patta = profondità cavallo davanti)
+  shieldW = ${shieldW}mm -> ${u(shieldW)}u (larghezza scudo)
+  shieldH = ${shieldH}mm -> ${u(shieldH)}u (altezza scudo)
+
+LAYOUT (disponi i 2 pezzi affiancati, centrati verticalmente nel foglio):
+  Metà sinistra (x 200..${200 + u(flyW) + 400}): FLY
+  Metà destra   (x ${2970 - 200 - u(shieldW)}..${2970 - 200}): SHIELD
+
+PEZZO A — FLY (patta):
+  Rettangolo ${u(flyW)}u × ${u(flyH)}u.
+  Angolo inferiore-destro arrotondato r=150u (15mm) — il bordo curvo è il lato libero.
+  Bordo sinistro = linea di piega CF: tracciata come linea tratteggiata (non outline).
+  Grain line: verticale centrata sul pezzo.
+  Notch: 1 al centro-top (allineamento con vita), 1 a metà altezza lato destro (linea cerniera).
+  Label: "FLY x 2", "⟵ PIEGA CF", "MARGINI 15mm INCLUSI"
+
+PEZZO B — SHIELD (scudo):
+  Rettangolo ${u(shieldW)}u × ${u(shieldH)}u.
+  Angolo superiore-sinistro arrotondato r=200u (20mm).
+  Grain line: verticale centrata.
+  Label: "SHIELD x 2", "MARGINI 15mm INCLUSI"
+  Nota: 1 copia in tessuto self-fabric + 1 in fodera.
+
+Barra scala in basso al centro.`;
+
+  // ─ PEZZO 6: TASCA FRONTALE (pocket bag + facing + item pocket) ─
+  // Fonte: Armstrong "Jean Foundation" Fig.6 — pocket bag 5"×7", item pocket 2.75"×2"
+  const pBagW  = 127;   // pocket bag larghezza: 127mm (Armstrong 5")
+  const pBagH  = 178;   // pocket bag altezza: 178mm (Armstrong 7")
+  const pFaceW = 70;    // facing (bavero ingresso tasca): 70mm (Armstrong ~2.75")
+  const pFaceH = 60;    // facing altezza: 60mm
+  const pItemW = 70;    // item pocket (taschino moneta): 70mm (Armstrong ~2.75")
+  const pItemH = 50;    // item pocket altezza: 50mm (Armstrong 2")
+
+  const msgTascaFront = `${measLine}
+
+BRIEF:
+${briefLine}
+
+GENERA: TASCA FRONTALE jeans uomo — 3 pezzi sullo stesso foglio.
+Foglio A4 landscape: width="297mm" height="210mm" viewBox="0 0 2970 2100"
+(Fonte costruzione: Armstrong Men's Jean Foundation, Fig.6)
+
+MISURE GIA CALCOLATE:
+  pBagW  = ${pBagW}mm -> ${u(pBagW)}u   (fondo tasca larghezza)
+  pBagH  = ${pBagH}mm -> ${u(pBagH)}u   (fondo tasca altezza)
+  pFaceW = ${pFaceW}mm -> ${u(pFaceW)}u  (bavero larghezza)
+  pFaceH = ${pFaceH}mm -> ${u(pFaceH)}u  (bavero altezza)
+  pItemW = ${pItemW}mm -> ${u(pItemW)}u  (taschino moneta larghezza)
+  pItemH = ${pItemH}mm -> ${u(pItemH)}u  (taschino moneta altezza)
+
+LAYOUT (3 pezzi affiancati, ognuno centrato verticalmente):
+  Sinistra (x ~150):       FONDO TASCA
+  Centro (x ~1600):        BAVERO
+  Destra (x ~2300):        TASCHINO MONETA
+
+PEZZO A — FONDO TASCA (pocket bag):
+  Rettangolo ${u(pBagW)}u × ${u(pBagH)}u.
+  Angoli inferiori arrotondati r=150u (15mm).
+  Grain line: verticale centrata.
+  Notch: 1 in alto al centro (attacco alla vita), 1 in alto a destra (lato cucitura laterale).
+  Label: "FONDO TASCA x 2", "MARGINI 15mm INCLUSI"
+
+PEZZO B — BAVERO (facing ingresso tasca):
+  Rettangolo ${u(pFaceW)}u × ${u(pFaceH)}u.
+  Bordo inferiore: curva morbida (arco r=200u) per seguire l'apertura della tasca.
+  Grain line: verticale centrata.
+  Label: "BAVERO x 2", "MARGINI 15mm INCLUSI"
+
+PEZZO C — TASCHINO MONETA (item pocket / coin pocket):
+  Rettangolo ${u(pItemW)}u × ${u(pItemH)}u.
+  Angoli superiori arrotondati r=100u (10mm).
+  Grain line: verticale centrata.
+  Label: "TASCHINO MONETA x 1", "MARGINI 10mm INCLUSI"
+
+Barra scala in basso al centro.`;
+
+  // ─ PEZZO 7: PASSANTI CINTURA (belt loops) ─
+  // Standard jeans: 7 passanti, finiti 10mm × 65mm
+  // Tagliati: 40mm larghezza (piegatura quadrupla → 10mm), 80mm altezza
+  const passW = 40;   // larghezza tagliata (mm) — piegata 4 volte → 10mm finita
+  const passH = 80;   // altezza (mm) — stessa per tutti e 7
+  // Layout su A3 landscape: 7 pezzi in riga singola
+  const passGap      = 60;                                          // spazio tra pezzi (u)
+  const passTotWidth = 7 * u(passW) + 6 * passGap;                 // larghezza totale griglia
+  const passXStart   = Math.round((4200 - passTotWidth) / 2);      // margine sx
+  const passYStart   = Math.round((2970 - u(passH)) / 2);          // centramento verticale
+
+  const msgPassanti = `${measLine}
+
+BRIEF:
+${briefLine}
+
+GENERA: PASSANTI CINTURA jeans uomo (belt loops) — 7 pezzi su griglia.
+Foglio A3 landscape: width="420mm" height="297mm" viewBox="0 0 4200 2970"
+
+MISURE GIA CALCOLATE:
+  passW = ${passW}mm -> ${u(passW)}u  (larghezza tagliata; piegata 4× → 10mm finita)
+  passH = ${passH}mm -> ${u(passH)}u  (altezza)
+  gap   = ${passGap}u (spazio tra pezzi = 6mm)
+
+GRIGLIA 7 PEZZI in fila singola:
+  larghezza_totale = ${passTotWidth}u
+  x_start griglia  = ${passXStart}  (centrata nel foglio A3)
+  y_start          = ${passYStart}  (centrata verticalmente)
+
+Disegna 7 rettangoli identici ${u(passW)}u × ${u(passH)}u affiancati con gap ${passGap}u.
+  Pezzo i (0-based): x = ${passXStart} + i × ${u(passW) + passGap}
+
+Su ogni pezzo:
+  - Grain line: verticale centrata
+  - 2 linee tratteggiate verticali a x_pezzo + ${Math.round(u(passW)/4)} e x_pezzo + ${Math.round(u(passW)*3/4)} (segni di piega)
+  - Notch: 1 in alto al centro e 1 in basso al centro (punti di cucitura alla cintura)
+
+Label generale sotto la griglia: "PASSANTI CINTURA x 7", "FINITI: 10mm × 80mm", "PIEGA IN 4 LUNGO L'ASSE VERTICALE"
+Barra scala in basso al centro.`;
+
   return [
-    { label: 'Davanti',     msg: msgDav   },
-    { label: 'Dietro',      msg: msgDie   },
-    { label: 'Cintura',     msg: msgCint  },
-    { label: 'Tasca Post.', msg: msgTasca },
+    { label: 'Davanti',      msg: msgDav         },
+    { label: 'Dietro',       msg: msgDie         },
+    { label: 'Cintura',      msg: msgCint        },
+    { label: 'Tasca Post.',  msg: msgTasca       },
+    { label: 'Fly+Shield',   msg: msgFly         },
+    { label: 'Tasca Ant.',   msg: msgTascaFront  },
+    { label: 'Passanti',     msg: msgPassanti    },
   ];
 }
 

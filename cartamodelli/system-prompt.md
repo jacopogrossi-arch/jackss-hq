@@ -235,6 +235,48 @@ PEZZO 4 — TASCA POSTERIORE
 
 
 ════════════════════════════════════════════════════════
+PEZZO 5 — FLY + SHIELD (Patta + Scudo cerniera)
+════════════════════════════════════════════════════════
+  Fonte: Armstrong "Men's Jean Foundation", Fig.4
+
+  fly_larghezza = 50 mm (Armstrong 2") — taglia su piega CF
+  fly_altezza   = profCavDav (= profondità cavallo davanti, stessa variabile del Pezzo 1)
+  shield_larghezza = giro_vita/4 + 75 mm (Armstrong: 3" oltre la CF dalla vita)
+  shield_altezza   = fly_altezza + 20 mm
+
+  Foglio: A4 landscape (297×210mm). 2 pezzi affiancati.
+  Fly: angolo inferiore-destro arrotondato r=15mm. Bordo sx = linea di piega CF.
+  Shield: angolo superiore-sinistro arrotondato r=20mm.
+  Entrambi: 2 copie (1 self-fabric + 1 fodera).
+
+
+════════════════════════════════════════════════════════
+PEZZO 6 — TASCA FRONTALE (Pocket bag + Facing + Item pocket)
+════════════════════════════════════════════════════════
+  Fonte: Armstrong "Jean Foundation", Fig.6
+
+  fondo_tasca   = 127 × 178 mm (Armstrong 5"×7") — angoli inf. arrotondati r=15mm
+  bavero        = 70 × 60 mm — bordo inferiore curvo
+  taschino_moneta = 70 × 50 mm (Armstrong 2.75"×2") — angoli sup. arrotondati r=10mm
+
+  Foglio: A4 landscape (297×210mm). 3 pezzi affiancati.
+  Fondo tasca: 2 pezzi. Bavero: 2 pezzi. Taschino moneta: 1 pezzo.
+
+
+════════════════════════════════════════════════════════
+PEZZO 7 — PASSANTI CINTURA (Belt loops)
+════════════════════════════════════════════════════════
+
+  passante_larghezza = 40 mm (piegato 4× → 10mm finito)
+  passante_altezza   = 80 mm
+  Quantità: 7 pezzi uguali in griglia singola fila.
+
+  Foglio: A3 landscape (420×297mm).
+  Ogni pezzo ha 2 linee di piega tratteggiate (a 1/4 e 3/4 della larghezza).
+  Notch in alto e in basso su ogni pezzo (punti di cucitura).
+
+
+════════════════════════════════════════════════════════
 ELEMENTI OBBLIGATORI per ogni pezzo
 ════════════════════════════════════════════════════════
 
