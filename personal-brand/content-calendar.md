@@ -11,6 +11,17 @@ Quando pubblichi, aggiungi il link e le metriche iniziali (views dopo 7 giorni).
 
 ---
 
+## In lavorazione
+
+| # | Titolo | Formato | Stato | Link | Views 7gg |
+|---|--------|---------|-------|------|-----------|
+| 0 | What if AI could build a fashion brand from scratch? (Manifesto) | Instagram Reel ~45s | in lavorazione | — | — |
+
+**Video #0 — prossimi step:** Soul ID HiggsField (upload 23 foto Gemini) → scene Kling → lip sync Sync.so → montaggio CapCut
+Notion: `36f30837-a9e6-81bb-9934-ff7a43f7af0e`
+
+---
+
 ## Backlog idee (12 video di partenza)
 
 | # | Titolo | Formato | Stato | Link | Views 7gg |

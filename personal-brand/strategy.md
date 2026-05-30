@@ -140,16 +140,25 @@ Il segnale che conta di più non sono i follower — **è il primo cliente pagan
 
 ---
 
-## Stack tecnico minimo
+## Stack tecnico (aggiornato maggio 2026)
+
+> **Decisione chiave:** il canale usa un avatar AI — nessuna faccia reale. L'avatar è il brand visivo.
 
 | Tool | Uso | Costo |
 |------|-----|-------|
-| YouTube | Video lungo (base) | Gratis |
-| Instagram / TikTok | Clip corte | Gratis |
-| CapCut o DaVinci | Montaggio | Gratis |
-| Beehiiv o ConvertKit | Lista email | Gratis fino a 1k iscritti |
-| Skool | Community futura | €99/mese quando serve |
+| HiggsField | Generazione avatar + scene fashion B-roll | $15/mese |
+| Kling AI | Scene video con Character Reference | piano a crediti |
+| Sync.so | Lip sync sull'audio | piano a crediti |
+| Gemini | Foto per Soul ID + image editing | Gratis |
+| Midjourney | Immagini di supporto | $10/mese |
+| CapCut | Montaggio | Gratis |
+| Instagram | Focus principale (Reels short-form) | Gratis |
+| YouTube | Long-form occasionale | Gratis |
 | Notion | Calendario editoriale | Gratis |
+
+**Workflow video:** HiggsField (hook) → Kling (scene avatar) → Sync.so (lip sync) → CapCut (montaggio)
+
+**Workflow Soul ID:** Gemini (23+ foto character-consistent) → HiggsField Soul ID training → Kling Character Reference
 
 ---
 
