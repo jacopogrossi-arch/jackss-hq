@@ -4,30 +4,46 @@ This file gives Claude Code the context to work well in this repository.
 
 ---
 
-## Chi lavora qui
+## Chi è Jacopo
 
-Jacopo è un giovane italiano che studia fashion design ed economia, applica l'AI in autonomia — automazioni e generazione video. Non è uno sviluppatore: le spiegazioni devono essere pratiche (dove cliccare, cosa copiare, dove incollare). Il principio guida: **semplice e funzionante batte elegante e complesso**.
+Giovane italiano (Roma) con un progetto imprenditoriale in sviluppo nel settore AI + moda.
+Non è uno sviluppatore: le spiegazioni devono essere pratiche (dove cliccare, cosa copiare, dove incollare).
+
+**Principio guida: semplice e funzionante batte elegante e complesso.**
+
+Per il contesto sulla vita personale (studi, sport, persone importanti), leggere la memoria `user_personal_life.md`.
+
+**Obiettivo immediato:** primo cliente pagante per servizi AI (SVG, campagne, consulenza) — non i follower.
+
+---
+
+## Progetto principale
+
+**Personal Brand AI + Moda** — canale YouTube/Instagram con avatar AI Jago.
+Posizionamento: "costruisco pubblicamente un brand di moda usando AI."
+
+File: `personal-brand/`
+
+---
+
+## Progetti archivio
+
+- **AI Content Automation** (pipeline n8n, dormiente) → `n8n-automation/`
+- **AI Image & Video** (corso completato, tecniche ora nel personal brand) → `ai-content-claude/`
+- **Cartamodelli** (tool SVG jeans via Claude API, attivo) → `cartamodelli/`
 
 ---
 
 ## Notion — Jackss HQ
 
-Jacopo gestisce tutto in un workspace Notion chiamato **Jackss HQ** (studio personale, AI/video, salute). Quando si fa riferimento a documentazione personale o stato di un progetto non in repo, usare il MCP Notion.
+Workspace personale con hub su AI/video, salute/sport e studio.
+Per documentazione personale o stato progetti non in repo, usare il MCP Notion.
 
 ---
 
 ## Git workflow
 
-- Remote: https://github.com/jacopogrossi-arch/jackss-hq — default branch `master`
-- Commit and push after every meaningful unit of work. Stage by filename, not `git add -A`.
-- Commit messages: imperative mood, what changed and why.
-
----
-
-## Progetti nel repo
-
-Se Jacopo menziona uno di questi progetti, leggi i file indicati per il contesto:
-
-- **AI Content Automation** (n8n, video moda) → `n8n-automation/overview.md`, `n8n-automation/progress.md`
-- **AI Image & Video Generation** (Midjourney, Kling, brand luxury) → `ai-content-claude/style-guide.md`, `ai-content-claude/progress.md`
-- **Cartamodelli** (tool web jeans SVG via Claude API) → `cartamodelli/system-prompt.md`
+- Remote: github.com/jacopogrossi-arch/jackss-hq — branch `master`
+- Commit e push dopo ogni unità di lavoro significativa.
+- Stage per filename, non `git add -A`.
+- Commit messages: imperativo, cosa è cambiato e perché.

@@ -1,9 +1,0 @@
-- [DJI Osmo Pocket 4 — Ricerca aprile 2026](reference_dji_osmo_pocket4.md) — Uscita 16 apr 2026, specs, prezzi e fonti web sulla nuova action cam DJI
-- [Novità Claude — Aprile 2026](reference_claude_news_april2026.md) — Modelli (Sonnet 4.6, Mythos Preview), Claude Code redesign, Cowork GA, API updates
-- [User Profile — Jacopo](user_profile.md) — Imprenditore italiano (Roma), brand Inverso (moda maschile), principiante su n8n e API
-- [AI Content Automation — Fashion Niche](project_ai_content_automation.md) — Pipeline n8n per generare/pubblicare video di moda con Claude+ElevenLabs+HeyGen, community Skool. File progetto in `n8n-automation/`
-- [Working style — AI automation project](feedback_working_style.md) — Spiega in italiano semplice, preferisci soluzioni senza codice in n8n, testa le API con script minimali
-- [AI Image & Video Generation Project](project_ai_image_video.md) — Corso manuale AI image/video (Gemini+Kling+Midjourney), SEPARATO da n8n, brand luxury Italian fashion
-- [Personal Brand AI + Moda — Piano](project_personal_brand_ai_moda.md) — Decisione maggio 2026: personal brand YouTube/IG su AI+moda, servizi prima (SVG, campagne, consulenza), corso dopo
-- [Notion — Asset personal brand](feedback_notion_assets.md) — Asset e info importanti vanno nella sottopagina "Asset" (non inline nella pagina strategia)
-- [Gemini vs Midjourney per avatar](feedback_gemini_vs_midjourney_avatar.md) — Gemini mantiene la consistenza del personaggio AI, Midjourney --cref non funziona per avatar HiggsField
