@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="600" height="420" style="background:#F4EFE6">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,500&amp;display=swap');
+      .label { font-family: 'EB Garamond', Georgia, serif; font-size: 13px; fill: #111110; }
+      .hex   { font-family: 'EB Garamond', Georgia, serif; font-size: 11px; fill: #6B6560; }
+      .name  { font-family: 'EB Garamond', Georgia, serif; font-style: italic; font-size: 11px; fill: #6B6560; }
+      .title { font-family: 'EB Garamond', Georgia, serif; font-style: italic; font-size: 22px; fill: #111110; letter-spacing: 1px; }
+    </style>
+  </defs>
+
+  <!-- Titolo -->
+  <text x="48" y="56" class="title">Jago — Palette</text>
+
+  <!-- Swatches — riga 1 -->
+
+  <!-- Nero -->
+  <rect x="48" y="80" width="96" height="160" rx="2" fill="#111110"/>
+  <text x="48" y="262" class="label">Nero</text>
+  <text x="48" y="277" class="hex">#111110</text>
+  <text x="48" y="291" class="name">primario</text>
+
+  <!-- Indaco -->
+  <rect x="160" y="80" width="96" height="160" rx="2" fill="#1C2845"/>
+  <text x="160" y="262" class="label">Indaco</text>
+  <text x="160" y="277" class="hex">#1C2845</text>
+  <text x="160" y="291" class="name">denim, accent</text>
+
+  <!-- Oliva -->
+  <rect x="272" y="80" width="96" height="160" rx="2" fill="#2E3320"/>
+  <text x="272" y="262" class="label">Oliva</text>
+  <text x="272" y="277" class="hex">#2E3320</text>
+  <text x="272" y="291" class="name">outerwear</text>
+
+  <!-- Talpa -->
+  <rect x="384" y="80" width="96" height="160" rx="2" fill="#3D3A36"/>
+  <text x="384" y="262" class="label">Talpa</text>
+  <text x="384" y="277" class="hex">#3D3A36</text>
+  <text x="384" y="291" class="name">secondario</text>
+
+  <!-- Avorio -->
+  <rect x="496" y="80" width="56" height="160" rx="2" fill="#EDE8DC" stroke="#D4CEC4" stroke-width="0.5"/>
+  <text x="496" y="262" class="label">Avorio</text>
+  <text x="496" y="277" class="hex">#EDE8DC</text>
+  <text x="496" y="291" class="name">lino, camicie</text>
+
+  <!-- Linea separatore -->
+  <line x1="48" y1="310" x2="552" y2="310" stroke="#D4CEC4" stroke-width="0.5"/>
+
+  <!-- Note uso -->
+  <text x="48" y="335" class="hex">Nero + Indaco + Oliva — capi. Talpa — etichette, packaging. Avorio — fodere, camicie, carta.</text>
+  <text x="48" y="355" class="hex">Logo ricamato: Avorio su Nero / Talpa su Avorio / Indaco su Indaco (tono su tono).</text>
+
+  <!-- Wordmark in basso -->
+  <text x="48" y="395" font-family="'EB Garamond', Georgia, serif" font-style="italic" font-weight="500" font-size="28" fill="#111110" letter-spacing="0">Jago</text>
+
+</svg>

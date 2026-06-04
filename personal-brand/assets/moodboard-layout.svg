@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 960" width="540" height="960">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,500&amp;display=swap');
+      .num  { font-family: 'EB Garamond', Georgia, serif; font-size: 11px; fill: #3D3A36; }
+      .desc { font-family: 'EB Garamond', Georgia, serif; font-style: italic; font-size: 9px; fill: #3D3A36; }
+      .mark { font-family: 'EB Garamond', Georgia, serif; font-style: italic; font-weight: 500; font-size: 22px; fill: #EDE8DC; letter-spacing: 0; }
+    </style>
+  </defs>
+
+  <!-- Sfondo nero -->
+  <rect width="540" height="960" fill="#111110"/>
+
+  <!-- ─── ROW 1 ─── -->
+
+  <!-- Img 1 — grande sinistra -->
+  <rect x="4" y="4" width="348" height="275" rx="1" fill="#1E1E1C"/>
+  <text x="14" y="24" class="num">01</text>
+  <text x="14" y="36" class="desc">Tessuto lana scura</text>
+
+  <!-- Img 2 — piccola destra -->
+  <rect x="355" y="4" width="181" height="275" rx="1" fill="#1E1E1C"/>
+  <text x="365" y="24" class="num">02</text>
+  <text x="365" y="36" class="desc">Denim selvage</text>
+
+  <!-- ─── ROW 2 ─── -->
+
+  <!-- Img 3 — piccola sinistra -->
+  <rect x="4" y="282" width="181" height="210" rx="1" fill="#1E1E1C"/>
+  <text x="14" y="302" class="num">03</text>
+  <text x="14" y="314" class="desc">Ricamo logo</text>
+
+  <!-- Img 4 — grande destra -->
+  <rect x="188" y="282" width="348" height="210" rx="1" fill="#1E1E1C"/>
+  <text x="198" y="302" class="num">04</text>
+  <text x="198" y="314" class="desc">Mani e tessuto</text>
+
+  <!-- ─── ROW 3 — full width ─── -->
+
+  <!-- Img 5 — panoramica -->
+  <rect x="4" y="495" width="532" height="150" rx="1" fill="#1E1E1C"/>
+  <text x="14" y="515" class="num">05</text>
+  <text x="14" y="527" class="desc">Tavolo da lavoro — atelier</text>
+
+  <!-- ─── ROW 4 — tre uguali ─── -->
+
+  <!-- Img 6 -->
+  <rect x="4" y="648" width="175" height="195" rx="1" fill="#1E1E1C"/>
+  <text x="14" y="668" class="num">06</text>
+  <text x="14" y="680" class="desc">Canvas cerato</text>
+
+  <!-- Img 7 -->
+  <rect x="182" y="648" width="175" height="195" rx="1" fill="#1E1E1C"/>
+  <text x="192" y="668" class="num">07</text>
+  <text x="192" y="680" class="desc">Luce Toscana</text>
+
+  <!-- Img 8 -->
+  <rect x="360" y="648" width="176" height="195" rx="1" fill="#1E1E1C"/>
+  <text x="370" y="668" class="num">08</text>
+  <text x="370" y="680" class="desc">Etichetta interna</text>
+
+  <!-- ─── WORDMARK ─── -->
+  <text x="532" y="910" class="mark" text-anchor="end">Jago</text>
+
+</svg>
