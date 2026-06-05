@@ -67,9 +67,7 @@ Durata: ~34s | Lingua: inglese | Formato: 9:16 vertical
 | Palette SVG | `personal-brand/assets/palette-jago.svg` | ✓ pronto |
 | Mood board Canva | https://www.canva.com/d/L79z5MiOTo8UC0C | ✓ pronto |
 | Mood board prompts | `personal-brand/assets/moodboard-prompts.md` | ✓ pronto |
-| Screen rec wordmark (Scena 2a) | `logo-jago.svg` nel browser | da registrare |
-| Animazione palette + logo polaroid (Scena 2b) | Kling/Seedance I2V — tavolo vuoto → 2 polaroid | ✓ pronto |
-| Kling I2V zoom screen → moodboard (Scena 2c) | Start: screenshot Canva / End: moodboard HiggsField | da generare |
+| Scena 2 — shot cinematografici AI | Sostituisce tutti gli screen rec originali | ✓ pronto |
 | Screen rec Inkscape (Scena 4a) | Inkscape path conversion | da registrare |
 | Screen rec mood board brief (Scena 4b) | Canva mood board | da registrare |
 | Ricamo macro (Scena 3a) | HiggsField Seedance 2.0 — prompt #3 | ✓ pronto |
