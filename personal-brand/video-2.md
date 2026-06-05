@@ -68,8 +68,8 @@ Durata: ~34s | Lingua: inglese | Formato: 9:16 vertical
 | Mood board Canva | https://www.canva.com/d/L79z5MiOTo8UC0C | ✓ pronto |
 | Mood board prompts | `personal-brand/assets/moodboard-prompts.md` | ✓ pronto |
 | Screen rec wordmark (Scena 2a) | `logo-jago.svg` nel browser | da registrare |
-| Screen rec palette (Scena 2b) | `palette-jago.svg` nel browser | da registrare |
-| Screen rec mood board (Scena 2c) | Canva mood board | da registrare |
+| Animazione palette + logo polaroid (Scena 2b) | Kling/Seedance I2V — tavolo vuoto → 2 polaroid | ✓ pronto |
+| Kling I2V zoom screen → moodboard (Scena 2c) | Start: screenshot Canva / End: moodboard HiggsField | da generare |
 | Screen rec Inkscape (Scena 4a) | Inkscape path conversion | da registrare |
 | Screen rec mood board brief (Scena 4b) | Canva mood board | da registrare |
 | Ricamo macro (Scena 3a) | HiggsField Seedance 2.0 — prompt #3 | ✓ pronto |
