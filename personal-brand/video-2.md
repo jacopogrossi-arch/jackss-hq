@@ -1,6 +1,6 @@
 # Video #2 — "The Jago Brand — Built in One Afternoon"
 
-**Status: in lavorazione**
+**Status: editing finale** — timeline composta in CapCut, mancano sound design e rifinitura
 
 Durata: ~34s | Lingua: inglese | Formato: 9:16 vertical
 
