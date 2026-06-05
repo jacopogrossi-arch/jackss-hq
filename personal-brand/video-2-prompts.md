@@ -105,12 +105,49 @@ ACTION: Subject delivers the line at an even, controlled pace. Camera is complet
 
 ---
 
+## SCENA 2C — Kling 3.0 I2V — Zoom in schermo → moodboard (3–4s)
+**Start frame:** screenshot del computer con Canva moodboard aperto
+**End frame:** `hf_20260604_174955_4a7b50bb-ebd8-4a55-9145-35e178eca2b8.png` (moodboard reale)
+
+```
+A slow cinematic push-in that begins on a laptop screen displaying a fashion mood board, 
+and ends fully inside the mood board scene itself — the screen frame recedes and 
+disappears as the camera moves forward. The transition is seamless and smooth: 
+no cut, no jump, just the image growing until the screen edges are gone and the 
+mood board fills the entire frame.
+
+Camera: slow, steady, linear push-in. No shake, no handheld, no rotation. 
+The motion starts gently and holds the same pace throughout. Dark ambient light. 
+Duration: 3–4 seconds.
+```
+
+---
+
+## SCENA 2C — End frame (HiggsField Nano Banana Pro)
+**Scopo:** end frame per la successiva animazione Seedance — stessa scena del moodboard con mano che solleva una polaroid
+**Da usare come:** start frame Seedance I2V dopo lo zoom Kling
+
+```
+Dark wooden atelier work table covered with scattered polaroid photographs — fashion 
+mood board layout. A hand enters from the right side of the frame, fingers gently 
+lifting one polaroid photo from the surface. The other polaroids remain on the table. 
+Warm amber light from the upper left, deep shadows on the right. The hand is elegant, 
+unhurried — the gesture is deliberate, not rushed.
+
+Photorealistic editorial photography. Same scene, same lighting, same table as the 
+mood board reference. Color grade: near-black shadows, warm golden amber highlights. 
+35mm film grain. Dark academia atelier atmosphere. Vertical 9:16.
+```
+
+---
+
 ## Ordine di esecuzione
 
-1. **Scena 2** — screen rec (da fare tu): `logo-jago.svg` + `palette-jago.svg` nel browser dark mode, poi mood board Canva. ~3s ognuno.
-2. **Scena 4** — screen rec (da fare tu): Inkscape path conversion (~3s) + mood board Canva (~2s).
-3. **Scena 3a** — HiggsField: immagine ricamo → Seedance animate
-4. **Scena 3b** — HiggsField: immagine etichetta → Seedance animate
-5. **Scena 1** — Kling 3.0 + reference image + lip sync
-6. **Scena 5** — Kling 3.0 + reference image + lip sync
-7. **Montaggio CapCut** — ordine: 1→2→3→4→5
+1. **Scena 2a** — screen rec: `logo-jago.svg` nel browser dark mode (~3s)
+2. **Scena 2b** — screen rec: `palette-jago.svg` nel browser dark mode (~3s)
+3. **Scena 2c** — screenshot schermo Canva → Kling I2V zoom in → moodboard
+4. **End frame Scena 2c** — HiggsField Nano Banana Pro (mano sulla polaroid)
+5. **Scena 4** — screen rec: Inkscape path conversion (~3s) + mood board Canva (~2s)
+6. **Scena 3a** — HiggsField: immagine ricamo → Seedance animate
+7. **Scena 3b** — HiggsField: immagine etichetta → Seedance animate
+8. **Montaggio CapCut** — ordine: 1→2→3→4→5
