@@ -126,10 +126,10 @@ no rotation, no handheld. Dark ambient light. Duration: 2–3 seconds.
 
 ```
 Dark wooden atelier work table covered with scattered polaroid photographs — fashion 
-mood board layout. A hand enters from the right side of the frame, fingers gently 
-lifting one polaroid photo from the surface. The other polaroids remain on the table. 
-Warm amber light from the upper left, deep shadows on the right. The hand is elegant, 
-unhurried — the gesture is deliberate, not rushed.
+mood board layout. A hand sweeps forcefully across the table from left to right, 
+sending all the polaroid photos flying off the surface in one single motion. 
+The polaroids are mid-air, scattered and falling. Warm amber light from the upper 
+left, deep shadows on the right.
 
 Photorealistic editorial photography. Same scene, same lighting, same table as the 
 mood board reference. Color grade: near-black shadows, warm golden amber highlights. 
