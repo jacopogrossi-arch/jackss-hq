@@ -138,6 +138,26 @@ mood board reference. Color grade: near-black shadows, warm golden amber highlig
 
 ---
 
+## SCENA 2B — Animazione palette + logo (Kling o Seedance I2V)
+**Start frame:** tavolo vuoto (`hf_20260605_152034_d7f3d4d4-78a3-4589-bd14-2dfb9465c061.png`)
+**End frame:** tavolo con le due polaroid (palette + wordmark Jago)
+
+```
+A hand enters the frame from the top and places two polaroid photographs onto the 
+dark wooden table — one at a time, quick and confident. The first polaroid lands 
+on the left, the second on the right. The hand withdraws cleanly out of frame.
+
+The gestures are fast but controlled — not slow, not hesitant. Each placement is 
+a single deliberate motion. Camera completely static throughout, no movement, 
+no shake. Warm amber light from the upper left, deep shadows on the right. 
+Dark academia atelier atmosphere.
+
+Start frame: empty dark wooden table. End frame: both polaroids resting on the 
+table exactly as shown in the reference.
+```
+
+---
+
 ## Ordine di esecuzione
 
 1. **Scena 2a** — screen rec: `logo-jago.svg` nel browser dark mode (~3s)
