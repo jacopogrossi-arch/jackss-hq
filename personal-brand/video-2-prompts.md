@@ -110,15 +110,13 @@ ACTION: Subject delivers the line at an even, controlled pace. Camera is complet
 **End frame:** `hf_20260604_174955_4a7b50bb-ebd8-4a55-9145-35e178eca2b8.png` (moodboard reale)
 
 ```
-A slow cinematic push-in that begins on a laptop screen displaying a fashion mood board, 
-and ends fully inside the mood board scene itself — the screen frame recedes and 
-disappears as the camera moves forward. The transition is seamless and smooth: 
-no cut, no jump, just the image growing until the screen edges are gone and the 
-mood board fills the entire frame.
+A fast, aggressive push-in that begins on a laptop screen displaying a fashion mood board 
+and crashes through into the image — the screen frame is swallowed by the camera as it 
+accelerates forward. No cut, no jump. The screen edges disappear fast and the mood board 
+fills the entire frame by the end.
 
-Camera: slow, steady, linear push-in. No shake, no handheld, no rotation. 
-The motion starts gently and holds the same pace throughout. Dark ambient light. 
-Duration: 3–4 seconds.
+Camera: rapid, accelerating push-in. Dynamic, high-energy motion. No rotation, no shake. 
+Dark ambient light. Duration: 2–3 seconds.
 ```
 
 ---
