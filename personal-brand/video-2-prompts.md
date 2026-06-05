@@ -72,11 +72,11 @@ STYLE ANCHOR: Photorealistic. Dark-luxury editorial. Warm amber side light from 
 
 DELIVERY: Lip sync active. Speaks the line: "Name. Logo. Palette. Mood board. The Jago brand — built in one afternoon." Pace is slow and deliberate. Each word landed with weight. Long natural pause between "Mood board." and "The Jago brand." No rush.
 
-LOGIC RULE: Expression is STOIC and LOCKED throughout — jaw set, mouth flat, no smile at any point, no pleasant expression, no softening at any moment. Only the lips move for speech. Slow smooth push-in across the full 6 seconds — from medium close-up to tighter medium close-up. Stable camera motion, no shake.
+LOGIC RULE: Expression is STOIC and LOCKED throughout — jaw set, mouth flat, no smile at any point, no pleasant expression, no softening at any moment. Only the lips move for speech. Camera locked and static throughout. No camera movement.
 
-NEGATIVE PROMPT: no smile, no pleasant expression, no eyebrow raise, no warmth, no handheld shake, no blurry face, no background movement, no cool color grade.
+NEGATIVE PROMPT: no smile, no pleasant expression, no eyebrow raise, no warmth, no camera movement, no push-in, no blurry face, no background movement, no cool color grade.
 
-ACTION: Subject delivers the line at a deliberate, unhurried pace. Push-in starts on frame 1 and continues smoothly to the end. Expression stoic and still — jaw set, mouth flat, eyes direct, zero warmth. The face does not move from this register. Only the mouth articulates each word with precision.
+ACTION: Subject delivers the line at a deliberate, unhurried pace. Camera is completely static. Expression stoic and still — jaw set, mouth flat, eyes direct, zero warmth. The face does not move from this register. Only the mouth articulates each word with precision.
 ```
 
 ---
