@@ -72,8 +72,8 @@ Durata: ~34s | Lingua: inglese | Formato: 9:16 vertical
 | Screen rec mood board (Scena 2c) | Canva mood board | da registrare |
 | Screen rec Inkscape (Scena 4a) | Inkscape path conversion | da registrare |
 | Screen rec mood board brief (Scena 4b) | Canva mood board | da registrare |
-| Ricamo macro (Scena 3a) | HiggsField Seedance 2.0 — prompt #3 | da generare |
-| Etichetta mockup (Scena 3b) | HiggsField Seedance 2.0 — prompt #8 | da generare |
+| Ricamo macro (Scena 3a) | HiggsField Seedance 2.0 — prompt #3 | ✓ pronto |
+| Etichetta mockup (Scena 3b) | HiggsField Seedance 2.0 — prompt #8 | ✓ pronto |
 | Talking head Shot 1 | Kling 3.0 Avatar | da generare |
 | Talking head Shot 5 | Kling 3.0 Avatar | da generare |
 
