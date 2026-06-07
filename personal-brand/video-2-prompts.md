@@ -92,7 +92,7 @@ SUBJECT: Young man, early 20s. Dark wavy hair, medium length, natural. Thin neck
 
 ENVIRONMENT: Dark luxury fashion atelier. Dark wooden work table in background scattered with fashion sketches, leather notebook, fabric swatches. Black tailor's mannequin standing background right. Clothes rack with dark garments hanging. Large grid window left casting warm amber light into the dim room. Dramatic chiaroscuro, deep shadows on the right side.
 
-STYLE ANCHOR: Photorealistic. Dark-luxury editorial. Warm amber side light from left, deep shadows right. Color grade: near-black blacks, warm golden highlights, no cool tones. 35mm film grain. Expression is stoic throughout — jaw set, mouth flat, zero upward curve, no raised cheeks. Eyes direct and unwavering.
+Ok, però la scena 4, che sarebbe il pezzo che diceSTYLE ANCHOR: Photorealistic. Dark-luxury editorial. Warm amber side light from left, deep shadows right. Color grade: near-black blacks, warm golden highlights, no cool tones. 35mm film grain. Expression is stoic throughout — jaw set, mouth flat, zero upward curve, no raised cheeks. Eyes direct and unwavering.
 
 DELIVERY: Lip sync active. Speaks the line: "If you want the same for your brand — you know where to find me." Pace is flat and measured. "You know where to find me" lands like a statement of fact — no upward inflection, no softening. The line closes the shot.
 
