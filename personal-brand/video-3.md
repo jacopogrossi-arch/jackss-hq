@@ -34,15 +34,21 @@ Durata: ~33s | Lingua: inglese | Formato: 9:16 vertical
 
 ## Brief scene-by-scene
 
-| Scena | Durata | Tool | Descrizione visiva | Audio |
+| Scena | Durata | Tipo | Descrizione visiva | Voiceover |
 |---|---|---|---|---|
-| **1 — Hook** (Talking Head) | 6s | Kling 3.0 Avatar | Jago MCU frontale, atelier dark-luxury. Consegna piatta, stoica. Pausa prima di "I built one in an afternoon." | *"A fashion lookbook costs €5,000. I built one in an afternoon."* |
-| **2 — Lookbook montage** | 10s | HiggsField + Seedance 2.0 | 5 tagli rapidi (~2s cad.) — immagini campaign-quality dark-luxury. Jago che indossa i capi, editorial shots. Nessun testo sullo schermo. | *"No photographer. No studio. No model."* |
-| **3 — Process flash** | 5s | Screen rec | Schermata tool con prompt visibile → output immagine. Veloce, non spiegato. Tool visibile ma non nominato. | *(silenzio)* |
-| **4 — Reveal** | 5s | Screen rec / Canva | Griglia delle immagini finali a schermo intero — proof del deliverable completo. | *"This is what AI does to fashion production."* |
-| **5 — CTA** (Talking Head) | 7s | Kling 3.0 Avatar | Jago frontale, MCU, stesso atelier. Stoico. Tiene il contatto visivo 1-2s dopo l'ultima parola. | *"Comment 'LOOKBOOK' if you want yours."* |
+| **1 — Intro** | 3s | Motion graphic | Sfondo tinta unita nero. Immagini lookbook appaiono in sequenza sopra — grid o dissolvenza rapida. | *(silenzio)* |
+| **2 — Hook** | 6s | B-roll / Seedance | Modello che cammina o si muove — shot da lookbook animato. Ritmo lento. | *"Stone Island spends €20,000 on a lookbook like this. I spent zero."* |
+| **3 — Claim** | 4s | B-roll / motion graphic | Continua con immagini lookbook o testo su tinta unita. | *"Same quality. One afternoon."* |
+| **4 — Here's how** | 2s | Motion graphic | Testo "Here's how." su sfondo tinta unita. Cut netto. | *"Here's how."* |
+| **5 — Brief pt.1** | 5s | Screen rec + motion graphic | Schermata ChatGPT con brief visibile. Keywords animate in sovrimpressione. | *"I start with a creative brief. Concept. Mood. Lighting. Camera angles. Poses."* |
+| **6 — Brief pt.2** | 4s | Motion graphic | Parole chiave sul brief animano su sfondo tinta unita. | *"Written with AI. Every decision locked before I open a single tool."* |
+| **7 — Generate** | 4s | Foto rapide + SFX | 5 foto lookbook in sequenza veloce, taglio netto su ognuna. Sound effect a ogni cut. | *"Then I generate. One character. Five looks. Campaign-quality."* |
+| **8 — Coherent** | 4s | B-roll + motion graphic | B-roll del personaggio alternato a testo su tinta unita. | *"Every visual stays coherent because the brief was coherent."* |
+| **9 — No photographer** | 3s | B-roll + motion graphic | B-roll alternato a motion graphic. | *"No photographer. No studio. No model."* |
+| **10 — Talking head** | 7s | Kling 3.0 Avatar | Jago MCU frontale, atelier dark-luxury. Delivery piatta, stoica. Contatto visivo fisso. | *"This isn't AI-generated content. This is what fashion production looks like when you use AI as a creative director."* |
+| **11 — CTA** | 6s | B-roll action | Jago in azione — scrive, guarda lo schermo, lavora. Non guarda in camera. | *"Comment 'LOOKBOOK'. I'll send you the full system."* |
 
-**Durata totale: ~33s**
+**Durata totale: ~48s**
 
 ---
 
