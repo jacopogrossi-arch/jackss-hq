@@ -54,56 +54,66 @@ Durata: ~33s | Lingua: inglese | Formato: 9:16 vertical
 
 ## Note produzione
 
-**Scene 1 e 5 — Talking Head**
-- Reference immagine: `hf_20260531_185739_f3fc7fb6-e5e8-483d-bb12-11b7e09a33da.png` (stesso Video #1 e #2)
-- Framework Dan Kieft: FORMAT / SUBJECT / ENVIRONMENT / STYLE ANCHOR / DELIVERY / LOGIC RULE / NEGATIVE PROMPT / ACTION
-- Ridondanza obbligatoria su espressione stoica in LOGIC RULE e NEGATIVE PROMPT
-- Lip sync attivo in Kling 3.0
-- Scena 1: pausa lunga e deliberata tra "€5,000." e "I built one in an afternoon." — è lì che sta la tensione
+**Scene 1, 4, 6, 8, 9 — Motion graphic**
+- Sfondo: nero tinta unita
+- Font: sans-serif fine, peso light/regular, bianco o ambra — coerente con identità Jago
+- Animazione: fade in o slide minimalista, nessun effetto esagerato
+- Da produrre in CapCut
 
-**Scena 2 — Lookbook montage**
-- 5 shot da ~2s ciascuno, tagli netti
-- Immagini selezionate per il montage (una per look):
+**Scena 2 — B-roll / Seedance (Hook)**
+- Usa una delle immagini lookbook già generate — modello che cammina o si muove
+- Seedance 2.0 I2V, ritmo lento
+- I Seedance prompts esistenti (sezione sotto) sono ancora validi — scegliere lo shot più forte
+
+**Scena 5 — Screen rec ChatGPT**
+- Registra schermata ChatGPT con il brief del lookbook visibile
+- Non nominare il tool esplicitamente — lascia che lo schermo parli
+- Durata 5s — mostra il brief, non il processo di scrittura
+
+**Scena 7 — Foto rapide + SFX**
+- Le 5 immagini lookbook selezionate (una per look):
   - Shot 1 Look 1: `af0a92cd` — bust, vicolo romano, amber chiaroscuro
   - Shot 2 Look 2: `eb69b9bc` — bust, scalone palazzo, luce laterale cool
   - Shot 3 Look 3: `d26553b8` — full body, campagna tramonto, golden raking
   - Shot 4 Look 4: `28cd9162` — full body, libreria scura, amber lamp
   - Shot 5 Look 5: `54170ff3` — full body, atelier, pantaloni extremely wide
+- ~0.8s per foto, taglio netto, sound effect (whoosh/click) a ogni cut
 
-**Scena 3 — Process flash**
-- Screen rec di HiggsField con prompt visibile (solo 2-3 secondi)
-- Taglio immediato sull'output — il contrasto "testo grezzo → immagine fashion" è il punto
-- Silenzio totale — lascia respirare prima della CTA
+**Scena 10 — Talking Head (Kling)**
+- Reference immagine: `hf_20260531_185739_f3fc7fb6-e5e8-483d-bb12-11b7e09a33da.png`
+- Framework Dan Kieft — ridondanza obbligatoria su espressione stoica in LOGIC RULE e NEGATIVE PROMPT
+- Lip sync attivo in Kling 3.0
+- Delivery completamente piatta — nessuna inflessione su "AI-generated content" o "creative director"
 
-**Scena 4 — Reveal**
-- Griglia Canva o schermo con tutte le immagini finali affiancate
-- Deve sembrare un deliverable professionale, non uno screenshot
-- Voiceover piatto sopra la griglia
+**Scena 11 — CTA action (B-roll)**
+- Jago in azione: scrive al computer, guarda lo schermo, lavora al desk
+- Non guarda in camera
+- Seedance I2V da immagine statica di Jago al lavoro
 
 ---
 
 ## Asset richiesti
 
-| Asset | File / Link | Status |
+| Asset | Scena | Status |
 |---|---|---|
-| Lookbook images (~20 foto) | `C:\Users\Jacopo Grossi\Downloads\lookbok\` | ✅ Generato |
-| Seedance prompts (Scena 2) | Vedi sezione sotto | ✅ Pronti |
-| Clip animati Seedance x5 | Seedance 2.0 I2V | ⬜ Da generare |
-| Screen rec process (Scena 3) | HiggsField screen rec | ⬜ Da registrare |
-| Lookbook grid Canva (Scena 4) | Canva | ⬜ Da creare |
-| Talking head Scena 1 | Kling 3.0 Avatar | ⬜ Da generare |
-| Talking head Scena 5 | Kling 3.0 Avatar | ⬜ Da generare |
+| Lookbook images (~20 foto) | 1, 7 | ✅ Generato |
+| Seedance prompts | 2 | ✅ Pronti |
+| Motion graphic (sfondo + testo animato) | 1, 4, 6, 8, 9 | ⬜ Da creare (CapCut) |
+| Clip Seedance — b-roll modello | 2 | ⬜ Da generare |
+| Screen rec ChatGPT brief | 5 | ⬜ Da registrare |
+| Clip Seedance — Jago action | 11 | ⬜ Da generare |
+| Talking head Kling | 10 | ⬜ Da generare |
 
 ---
 
 ## Ordine di produzione
 
 1. ✅ **Genera immagini lookbook** — HiggsField Soul ID, ~20 immagini, 5 look
-2. ⬜ **Anima immagini** — Seedance 2.0 I2V, push-in lento su 5 shot (~2-3s ciascuno)
-3. ⬜ **Scena 3** — screen rec HiggsField con prompt → output
-4. ⬜ **Scena 4** — griglia Canva con le immagini finali
-5. ⬜ **Scene 1 e 5** — Kling 3.0 Avatar talking head con lip sync
-6. ⬜ **Montaggio CapCut** — ordine: 1→2→3→4→5
+2. ⬜ **Screen rec ChatGPT** — Scena 5: brief del lookbook visibile a schermo
+3. ⬜ **Clip Seedance** — Scena 2 (b-roll modello) + Scena 11 (Jago action)
+4. ⬜ **Motion graphic** — Scene 1, 4, 6, 8, 9 in CapCut
+5. ⬜ **Talking head** — Scena 10: Kling 3.0 Avatar con lip sync
+6. ⬜ **Montaggio CapCut** — ordine: 1→2→3→4→5→6→7→8→9→10→11
 
 ---
 
