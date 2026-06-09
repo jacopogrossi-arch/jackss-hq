@@ -10,17 +10,23 @@ import {
 
 const VOICEOVER = "hf_20260601_113702_a8138b7d-feda-4727-9312-2328908dac1c.mp3";
 
-const CLIPS = [
-  "hf_20260601_115925_fa91c77b-f272-49af-b84a-3086164cc12f.mp4",
-  "hf_20260601_121703_a32dce72-e60e-4d29-a208-21f4fbee1612.mp4",
-  "hf_20260602_144225_6e38e4ff-585e-49b8-86b4-4c503ae8264f.mp4",
-  "hf_20260602_144555_28cf1b8b-ac9f-4414-b82a-3164ebd9b913.mp4",
-  "hf_20260602_144638_2cbaf6c1-260c-4896-95f2-e83a45b9a2d4.mp4",
-  "hf_20260602_150133_b0769e11-73c8-408d-a5dd-13a7dcafca3b.mp4",
+// ─── SOSTITUISCI QUI I CLIP ──────────────────────────────────────────────────
+// Per ogni slot: metti il nome del file in public/ (MP4).
+// Aggiungi o rimuovi righe — la durata si calcola in automatico.
+// ─────────────────────────────────────────────────────────────────────────────
+const CLIPS: { file: string; label: string }[] = [
+  { file: "hf_20260601_115925_fa91c77b-f272-49af-b84a-3086164cc12f.mp4", label: "macchina da cucire" },
+  { file: "hf_20260601_121703_a32dce72-e60e-4d29-a208-21f4fbee1612.mp4", label: "laptop / AI tools" },
+  { file: "hf_20260602_144225_6e38e4ff-585e-49b8-86b4-4c503ae8264f.mp4", label: "esame tessuto" },
+  { file: "hf_20260602_144555_28cf1b8b-ac9f-4414-b82a-3164ebd9b913.mp4", label: "mood board / schizzi" },
+  { file: "hf_20260602_144638_2cbaf6c1-260c-4896-95f2-e83a45b9a2d4.mp4", label: "ripresa di spalle / AI tools" },
+  { file: "hf_20260602_150133_b0769e11-73c8-408d-a5dd-13a7dcafca3b.mp4", label: "talking head con lipsync" },
 ];
+// ─────────────────────────────────────────────────────────────────────────────
 
-// 6 clips × 125 frames = 750 frames = 25s at 30fps
-const CLIP_DURATION = 125;
+// Durata per clip in frames — calcolata automaticamente su 25 secondi @30fps
+const TOTAL_FRAMES = 750;
+const CLIP_DURATION = Math.floor(TOTAL_FRAMES / CLIPS.length);
 
 const OVERLAYS: { line: string; from: number; duration: number }[] = [
   { line: "WHAT IF AI COULD BUILD\nA FASHION BRAND?", from: 30,  duration: 75 },
@@ -98,10 +104,10 @@ export function ManifestoReel() {
       <Audio src={staticFile(VOICEOVER)} />
 
       {/* Video clips in sequence */}
-      {CLIPS.map((clip, i) => (
-        <Sequence key={clip} from={i * CLIP_DURATION} durationInFrames={CLIP_DURATION}>
+      {CLIPS.map(({ file }, i) => (
+        <Sequence key={file} from={i * CLIP_DURATION} durationInFrames={CLIP_DURATION}>
           <Video
-            src={staticFile(clip)}
+            src={staticFile(file)}
             style={{
               width: "100%",
               height: "100%",
