@@ -10,13 +10,25 @@ Durata: ~33s | Lingua: inglese | Formato: 9:16 vertical
 
 ## Script voiceover
 
-> *"A fashion lookbook costs €5,000. I built one in an afternoon."*
+> *"Stone Island spends €20,000 on a lookbook like this. I spent zero."*
+>
+> *"Same quality. One afternoon."*
+>
+> *"Here's how."*
+>
+> *"I start with a creative brief. Concept. Mood. Lighting. Camera angles. Poses. Written with AI. Every decision locked before I open a single tool."*
+>
+> *"Then I generate. One character. Five looks. Campaign-quality."*
+>
+> *"Every visual stays coherent because the brief was coherent."*
 >
 > *"No photographer. No studio. No model."*
 >
-> *"This is what AI does to fashion production."*
+> *"This isn't AI-generated content."*
 >
-> *"Comment 'LOOKBOOK' if you want yours."*
+> *"This is what fashion production looks like when you use AI as a creative director."*
+>
+> *"Comment 'LOOKBOOK'. I'll send you the full system."*
 
 ---
 
