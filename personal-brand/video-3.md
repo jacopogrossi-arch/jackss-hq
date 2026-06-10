@@ -159,7 +159,7 @@ Replicare la densità di processo del riferimento. Registrare schermo reale, non
 
 | Asset | Scena | Status |
 |---|---|---|
-| Lookbook images — Marina, 5 shot stesso mondo costiero | 1, 10 | ⬜ Da generare (brief pronto) |
+| Lookbook images — Marina, 5 shot stesso mondo costiero | 1, 10 | ✅ Generati 10/06/2026 — Nano Banana + character ref |
 | Cornice polaroid sugli stills (bordo bianco + rotazione) | 1, 10, 15 | ⬜ Da fare (CapCut) |
 | Card nere (fondo nero) + testo animato + @handle | 3,5,6,8,11,14,18,20 | ⬜ Da creare (CapCut) |
 | Screen rec #1 — brief Marina | 7 | ⬜ Da registrare |
@@ -180,7 +180,7 @@ Replicare la densità di processo del riferimento. Registrare schermo reale, non
 1. ✅ **Concept lookbook ridefinito** — replica campagna Stone Island Marina SS26 con Jago modello (brief completo in questo file)
 2. ✅ **Conferma parametri generazione** — navy #1B2A4A + ecru bottom + pieno giorno marino 11-14h (da `video-3-lookbook-briefing.md` + analisi reference reali)
 3. ✅ **Reference trovate + moodboard Marina** — 13 file campagna reale (Downloads), moodboard definitiva `assets/video-3-moodboard.md` (Canva variant 4 winner, 10/06/2026)
-4. ⬜ **Genera immagini lookbook** — Higgsfield + Nano Banana Pro, 5 shot Marina, ~3-4 varianti per shot
+4. ✅ **Genera immagini lookbook** — Higgsfield + Nano Banana Pro, 5 shot Marina (character ref sheet + grana 35mm). File: Downloads `664032d3` (S1), `520c92ee` (S2), `2385ee96` (S3), `dd37fe79` (S4), `54215ba5` (S5)
 6. ⬜ **Screen rec (×3)** — brief Marina (sc.7), generazione immagini (sc.9), timeline montaggio (sc.16)
 7. ⬜ **Clip Seedance** — b-roll modello (sc.2,4,12,13) + Jago action (sc.19)
 8. ⬜ **Talking head** — Scena 17: Kling 3.0 Avatar con lip sync
