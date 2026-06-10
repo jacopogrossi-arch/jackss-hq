@@ -1,6 +1,6 @@
 # Video #3 — "A Fashion Lookbook — Built with AI"
 
-**Status: in post-produzione** — tutti gli asset generativi completati (lookbook 5 shot, 4 b-roll clip + talking head sc.17). Mancano: screen rec ×3, card nere, polaroid, montaggio CapCut
+**Status: in post-produzione** — asset generativi ✅ + screen rec ×3 ✅. Mancano: card nere, polaroid, immagine SI reale (sc.15), montaggio CapCut
 
 Durata: ~48s | Lingua: inglese | Formato: 9:16 vertical
 
@@ -162,9 +162,9 @@ Replicare la densità di processo del riferimento. Registrare schermo reale, non
 | Lookbook images — Marina, 5 shot stesso mondo costiero | 1, 10 | ✅ Generati 10/06/2026 — Nano Banana + character ref |
 | Cornice polaroid sugli stills (bordo bianco + rotazione) | 1, 10, 15 | ⬜ Da fare (CapCut) |
 | Card nere (fondo nero) + testo animato + @handle | 3,5,6,8,11,14,18,20 | ⬜ Da creare (CapCut) |
-| Screen rec #1 — brief Marina | 7 | ⬜ Da registrare |
-| Screen rec #2 — generazione immagini (griglia Nano Banana Pro) | 9 | ⬜ Da registrare |
-| Screen rec #3 — timeline montaggio CapCut | 16 | ⬜ Da registrare |
+| Screen rec #1 — brief Marina | 7 | ✅ Registrato 10/06/2026 |
+| Screen rec #2 — generazione immagini (griglia Nano Banana Pro) | 9 | ✅ Registrato 10/06/2026 |
+| Screen rec #3 — timeline montaggio CapCut | 16 | ✅ Registrato 10/06/2026 |
 | Immagine vera campagna Stone Island Marina SS26 (beat trasparenza) | 15 | ⬜ Da reperire |
 | Seedance prompts | 2 | ✅ Scritti 10/06/2026 — `video-3-seedance-prompts.md` (4 shot, Cinema Worldbuilder Pro) |
 | Moodboard Marina | 1 | ✅ `video-3-moodboard.md` — Canva variant 4, 10/06/2026 |
@@ -182,10 +182,10 @@ Replicare la densità di processo del riferimento. Registrare schermo reale, non
 3. ✅ **Reference trovate + moodboard Marina** — 13 file campagna reale (Downloads), moodboard definitiva `video-3-moodboard.md` (Canva variant 4 winner, 10/06/2026)
 4. ✅ **Genera immagini lookbook** — Higgsfield + Nano Banana Pro, 5 shot Marina (character ref sheet + grana 35mm). File: Downloads `664032d3` (S1), `520c92ee` (S2), `2385ee96` (S3), `dd37fe79` (S4), `54215ba5` (S5)
 5. ✅ **Seedance prompts scritti** — 4 clip, Cinema Worldbuilder Pro. Prompt in `video-3-seedance-prompts.md`
-6. ⬜ **Screen rec (×3)** — brief Marina (sc.7), generazione immagini (sc.9), timeline montaggio (sc.16)
+6. ✅ **Screen rec (×3)** — brief Marina (sc.7), generazione immagini (sc.9), timeline montaggio (sc.16)
 7. ✅ **Clip Seedance b-roll modello** — 4 clip (sc.2,4,12,13), 480p fast → upscale 1080p Topaz. Talking head sc.17: start frame + clip 480p → upscale 2K ByteDance
 8. ⏸ **Clip Seedance Jago action** (sc.19) — deferred
-9. ⬜ **Screen rec (×3)** — brief Marina (sc.7), generazione immagini (sc.9), timeline montaggio (sc.16)
+9. ✅ **Screen rec (×3)** — fatto
 10. ⬜ **Card nere + polaroid + IG end card** — in CapCut
 11. ⬜ **Montaggio CapCut** — montaggio interlacciato still/b-roll ↔ card, screen-rec sulle battute brief/generate/edit
 
