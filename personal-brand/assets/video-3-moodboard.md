@@ -3,6 +3,10 @@
 Costruita sulle reference reali della campagna Stone Island Marina SS26 analizzate il 2026-06-10.
 Sostituisce la versione Ghost Piece industriale (off-concept). File immagini originali: `c:\Users\Jacopo Grossi\Downloads\Nuova cartella (2)\`
 
+**Moodboard Canva (variante 4 — winner):**
+- Modifica: https://www.canva.com/d/YDnPmDxCzBPKqlZ
+- Visualizza: https://www.canva.com/d/NTgQblti0HpLbH9
+
 ---
 
 ## 1. Ambientazione — Il mondo
