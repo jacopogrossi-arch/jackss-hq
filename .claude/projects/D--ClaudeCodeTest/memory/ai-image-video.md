@@ -10,7 +10,7 @@ metadata:
 Hub per corsi e progetti di generazione immagini/video AI.
 Pagina Notion: https://www.notion.so/34f30837a9e680abb434cd560867fb56
 
-> Vedi anche: `ai-content-claude/style-guide.md` e `ai-content-claude/progress.md` per dettagli completi.
+> Vedi anche: `archivio/ai-content-claude/style-guide.md` e `archivio/ai-content-claude/progress.md` per dettagli completi.
 
 ## Corsi attivi
 

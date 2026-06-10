@@ -12,7 +12,7 @@ Canale anonimo, voiceover sintetico (ElevenLabs), nessuna faccia in video.
 
 Pagina Notion: https://www.notion.so/35030837a9e681169218f20d895d9ebb
 
-> Vedi anche: `n8n-automation/overview.md` e `n8n-automation/progress.md` per dettagli tecnici completi.
+> Vedi anche: `archivio/n8n-automation/overview.md` e `archivio/n8n-automation/progress.md` per dettagli tecnici completi.
 
 ## Stato (10/05/2026) — PIPELINE COMPLETA
 

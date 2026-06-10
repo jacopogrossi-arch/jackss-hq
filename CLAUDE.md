@@ -23,14 +23,23 @@ Per il contesto sulla vita personale (studi, sport, persone importanti), leggere
 Posizionamento: "costruisco pubblicamente un brand di moda usando AI."
 
 File: `personal-brand/`
+- Strategia e operatività nella root: `strategy.md`, `content-calendar.md`, `analytics.md`, `outreach.md`, `lead-magnet-lookbook.md`
+- Un video = una cartella: `video-1/`, `video-2/`, `video-3/` (script, prompt, moodboard, immagini)
+- `assets/` contiene solo gli asset condivisi del brand (logo, palette, moodboard Jago)
 
 ---
 
-## Progetti archivio
+## Progetti attivi
 
-- **AI Content Automation** (pipeline n8n, dormiente) → `n8n-automation/`
-- **AI Image & Video** (corso completato, tecniche ora nel personal brand) → `ai-content-claude/`
 - **Cartamodelli** (tool SVG jeans via Claude API, attivo) → `cartamodelli/`
+
+## Archivio
+
+Tutto ciò che è dormiente o fuori tema sta in `archivio/`:
+
+- **AI Content Automation** (pipeline n8n, dormiente) → `archivio/n8n-automation/`
+- **AI Image & Video** (corso completato, tecniche ora nel personal brand) → `archivio/ai-content-claude/`
+- **Dispensa diritto pubblico** (appunti universitari) → `archivio/dispensa-diritto-pubblico/`
 
 ---
 

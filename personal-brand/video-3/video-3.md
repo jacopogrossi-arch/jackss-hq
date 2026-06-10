@@ -131,7 +131,7 @@ Replicare la densità di processo del riferimento. Registrare schermo reale, non
 - **#1 Brief** (scena 7): documento "creative blueprint" Marina visibile su ChatGPT/Claude — mostra il brief finito, non la scrittura
 - **#2 Generazione** (scena 9): griglia risultati Higgsfield/Nano Banana Pro (4-up), i 5 look che compaiono
 - **#3 Montaggio** (scena 16): timeline CapCut con le clip Marina in sequenza
-- (Opzionale, se rafforza: screen rec del moodboard — da rigenerare per Marina, vedi `assets/video-3-moodboard.md`)
+- (Opzionale, se rafforza: screen rec del moodboard — da rigenerare per Marina, vedi `video-3-moodboard.md`)
 
 **Scena 2 — B-roll / Seedance (Hook)**
 - Usa una delle immagini lookbook Marina — Jago che si muove sul ponte / sulla riva
@@ -166,9 +166,9 @@ Replicare la densità di processo del riferimento. Registrare schermo reale, non
 | Screen rec #2 — generazione immagini (griglia Nano Banana Pro) | 9 | ⬜ Da registrare |
 | Screen rec #3 — timeline montaggio CapCut | 16 | ⬜ Da registrare |
 | Immagine vera campagna Stone Island Marina SS26 (beat trasparenza) | 15 | ⬜ Da reperire |
-| Seedance prompts | 2 | ✅ Scritti 10/06/2026 — `assets/video-3-seedance-prompts.md` (4 shot, Cinema Worldbuilder Pro) |
-| Moodboard Marina | 1 | ✅ `assets/video-3-moodboard.md` — Canva variant 4, 10/06/2026 |
-| Clip Seedance — b-roll modello | 2, 4, 12, 13 | 🔄 In generazione 10/06/2026 — job ID in `assets/video-3-seedance-prompts.md` |
+| Seedance prompts | 2 | ✅ Scritti 10/06/2026 — `video-3-seedance-prompts.md` (4 shot, Cinema Worldbuilder Pro) |
+| Moodboard Marina | 1 | ✅ `video-3-moodboard.md` — Canva variant 4, 10/06/2026 |
+| Clip Seedance — b-roll modello | 2, 4, 12, 13 | 🔄 In generazione 10/06/2026 — job ID in `video-3-seedance-prompts.md` |
 | Clip Seedance — Jago action | 19 | ⬜ Da generare |
 | Talking head Kling | 17 | ⬜ Da generare |
 | IG end card animata | 21 | ⬜ Da creare (CapCut) |
@@ -179,9 +179,9 @@ Replicare la densità di processo del riferimento. Registrare schermo reale, non
 
 1. ✅ **Concept lookbook ridefinito** — replica campagna Stone Island Marina SS26 con Jago modello (brief completo in questo file)
 2. ✅ **Conferma parametri generazione** — navy #1B2A4A + ecru bottom + pieno giorno marino 11-14h (da `video-3-lookbook-briefing.md` + analisi reference reali)
-3. ✅ **Reference trovate + moodboard Marina** — 13 file campagna reale (Downloads), moodboard definitiva `assets/video-3-moodboard.md` (Canva variant 4 winner, 10/06/2026)
+3. ✅ **Reference trovate + moodboard Marina** — 13 file campagna reale (Downloads), moodboard definitiva `video-3-moodboard.md` (Canva variant 4 winner, 10/06/2026)
 4. ✅ **Genera immagini lookbook** — Higgsfield + Nano Banana Pro, 5 shot Marina (character ref sheet + grana 35mm). File: Downloads `664032d3` (S1), `520c92ee` (S2), `2385ee96` (S3), `dd37fe79` (S4), `54215ba5` (S5)
-5. ✅ **Seedance prompts scritti** — 4 clip, Cinema Worldbuilder Pro. Prompt in `assets/video-3-seedance-prompts.md`
+5. ✅ **Seedance prompts scritti** — 4 clip, Cinema Worldbuilder Pro. Prompt in `video-3-seedance-prompts.md`
 6. ⬜ **Screen rec (×3)** — brief Marina (sc.7), generazione immagini (sc.9), timeline montaggio (sc.16)
 7. 🔄 **Clip Seedance** — b-roll modello (sc.2,4,12,13): in generazione. Jago action (sc.19): ancora da fare
 8. ⬜ **Talking head** — Scena 17: Kling 3.0 Avatar con lip sync

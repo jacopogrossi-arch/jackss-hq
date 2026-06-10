@@ -8,7 +8,7 @@ Tracker dei contenuti: idee → in lavorazione → pubblicato
 
 | # | Titolo | Formato | Stato | Note |
 |---|--------|---------|-------|------|
-| 3 | A Fashion Lookbook — Built with AI | Reel ~48s \| Inglese | in produzione | Concept + moodboard ✅. Prossimo step: generare le 5 immagini Marina (Higgsfield, Nano Banana Pro + Soul ID). Brief: `video-3.md`. CTA "LOOKBOOK" → lead magnet: `lead-magnet-lookbook.md`. Alla pubblicazione parte l'outreach (`outreach.md`) |
+| 3 | A Fashion Lookbook — Built with AI | Reel ~48s \| Inglese | in produzione | Concept + moodboard ✅. Prossimo step: generare le 5 immagini Marina (Higgsfield, Nano Banana Pro + Soul ID). Brief: `video-3/video-3.md`. CTA "LOOKBOOK" → lead magnet: `lead-magnet-lookbook.md`. Alla pubblicazione parte l'outreach (`outreach.md`) |
 
 ---
 
