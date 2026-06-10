@@ -8,7 +8,7 @@ Tracker dei contenuti: idee → in lavorazione → pubblicato
 
 | # | Titolo | Formato | Stato | Note |
 |---|--------|---------|-------|------|
-| 2 | The Jago Brand — Built in One Afternoon | Reel ~34s \| Inglese | in lavorazione | Timeline CapCut pronta. Manca: screen rec Inkscape, sound design, editing finale. Brief: `video-2.md` |
+| 3 | A Fashion Lookbook — Built with AI | Reel ~48s \| Inglese | in produzione | Concept + moodboard ✅. Prossimo step: generare le 5 immagini Marina (Higgsfield, Nano Banana Pro + Soul ID). Brief: `video-3.md`. CTA "LOOKBOOK" → lead magnet: `lead-magnet-lookbook.md`. Alla pubblicazione parte l'outreach (`outreach.md`) |
 
 ---
 
@@ -16,7 +16,8 @@ Tracker dei contenuti: idee → in lavorazione → pubblicato
 
 | # | Titolo | Piattaforma | Data | Link | Note |
 |---|--------|-------------|------|------|------|
-| 1 | What if AI could build a fashion brand from scratch? (Manifesto) | YouTube + Instagram | 02/06/2026 | — | Stack: HiggsField Soul V2 → Kling 3.0 + Veo → HiggsField voice → CapCut |
+| 1 | What if AI could build a fashion brand from scratch? (Manifesto) | YouTube + Instagram | 02/06/2026 | — | Stack: HiggsField Soul V2 → Kling 3.0 + Veo → HiggsField voice → CapCut. IG 75 view / YT 34 view (al 10/06) |
+| 2 | The Jago Brand — Built in One Afternoon | YouTube + Instagram | 07/06/2026 | — | Reel ~34s. Proof of concept del Brand Identity Pack. IG 123 view / YT 8 view (al 10/06) |
 
 ---
 
@@ -24,8 +25,7 @@ Tracker dei contenuti: idee → in lavorazione → pubblicato
 
 | # | Titolo | Formato | Stato |
 |---|--------|---------|-------|
-| 3 | Come ho generato un SVG per ricamo usando solo Claude | YouTube 8min + clip | idea |
-| 4 | Costruire la visual identity di un brand di moda con AI | YouTube 10min + clip | idea |
+| 4 | Come ho generato un SVG per cartamodelli usando solo Claude | YouTube 8min + clip | idea |
 | 5 | Kling per fashion video: quello che nessuno ti dice | YouTube 8min + clip | idea |
 | 6 | Da concept a campagna: flusso completo AI per un lookbook | YouTube 10min + clip | idea |
 | 7 | Come uso Claude per la modellistica e i pattern | YouTube 8min | idea |
@@ -41,6 +41,6 @@ Tracker dei contenuti: idee → in lavorazione → pubblicato
 
 | Mese | Video pubblicati | IG followers | YouTube subs | Email list | Clienti paganti | Entrate |
 |------|-----------------|--------------|--------------|------------|-----------------|---------|
-| Giugno 2026 | — | — | — | — | — | € — |
+| Giugno 2026 (al 10/06) | 2 | 2 | 0 | 0 | 0 | €0 |
 | Luglio 2026 | — | — | — | — | — | € — |
 | Agosto 2026 | — | — | — | — | — | € — |

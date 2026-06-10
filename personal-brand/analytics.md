@@ -71,4 +71,8 @@ Annota qui se cambi qualcosa nella strategia e perché.
 
 | Data | Cosa è cambiato | Perché |
 |------|----------------|--------|
-| — | — | — |
+| 10/06/2026 | Prezzo AI Lookbook fissato: **€400 pilota / €700 regime** (era range €400-800) | Un range non si scrive in un DM; il pilota basso compra testimonianze e case study |
+| 10/06/2026 | Avatar: **100% Jago, definitivo** — rimossa la progressione camera dalla strategia | Decisione consapevole; la strategia scritta contraddiceva l'esecuzione |
+| 10/06/2026 | **Inverso archiviato definitivamente** | Eliminare ambiguità tra tre identità (Jacopo/Jago/Inverso); l'identità moda è Jago |
+| 10/06/2026 | Outreach: parte **dopo la pubblicazione del Video #3**; lista 20 brand preparata in parallelo (`outreach.md`) | Il Video #3 (lookbook) è il proof del servizio principale |
+| 10/06/2026 | Lead magnet definito: PDF 2 pagine "The Lookbook System", invio manuale in DM + invito Beehiiv | La CTA "comment LOOKBOOK" prometteva un sistema che non esisteva |
