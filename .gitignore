@@ -15,6 +15,9 @@ Thumbs.db
 .claude/todos/
 .claude/statsig/
 
+# Dipendenze Node (mai tracciare)
+node_modules/
+
 # Python package manager binaries (uv)
 uv.exe
 uvw.exe
