@@ -21,7 +21,7 @@ Questo video ricalca 1:1 un reel di riferimento (brand finto "Jeko", polo verde/
 
 ### 5 tecniche da replicare
 
-1. **Card di testo a fondo colore PIENO del brand** (nel riferimento: verde Ralph Lauren), testo bianco sottile, molto spazio negativo, mini @handle nell'angolo basso. **NON nero.** → Per noi: fondo **verde militare/olive Stone Island** (da confermare — alternativa: nero+ambra identità Jago).
+1. **Card di testo a fondo colore PIENO del brand** (nel riferimento: verde Ralph Lauren), testo bianco sottile, molto spazio negativo, mini @handle nell'angolo basso. → **Scelta nostra:** manteniamo la tecnica (fondo pieno + testo bianco) ma con **fondo NERO** (identità Jago, riutilizzabile in video futuri) invece del colore brand.
 2. **Cornice polaroid** sugli stills lookbook: bordo bianco + leggera rotazione casuale.
 3. **Molto screen-recording del processo reale** — è il cuore del "here's how". Il riferimento ne mostra 4–5 diversi: design prodotto (Canva), brief (ChatGPT/Claude), generazione immagini (griglie), montaggio (timeline CapCut). **Da soli portano metà del valore del video.**
 4. **Beat di trasparenza:** mostrare la **vera campagna Stone Island** che stiamo ricreando (immagine ad reale, cornice polaroid) accanto al nostro shot.
@@ -78,31 +78,31 @@ Questo video ricalca 1:1 un reel di riferimento (brand finto "Jeko", polo verde/
 
 ## Brief scene-by-scene (trattamento del riferimento)
 
-Montaggio interlacciato come nel riferimento: **still/b-roll ↔ card a fondo colore** in rapida alternanza, con screen-rec del processo reale incastonati sulle battute "brief / generate / edit". Taglio veloce sulle card (~0.5–0.8s), hold più lunghi su hero b-roll e talking head.
+Montaggio interlacciato come nel riferimento: **still/b-roll ↔ card nere (fondo nero, testo bianco)** in rapida alternanza, con screen-rec del processo reale incastonati sulle battute "brief / generate / edit". Taglio veloce sulle card (~0.5–0.8s), hold più lunghi su hero b-roll e talking head.
 
 | # | Durata | Tipo | Descrizione visiva | Voiceover / Testo card |
 |---|---|---|---|---|
 | **1 — Intro** | 0–2.5s | Stills polaroid | 3–4 stills lookbook Ghost Piece in sequenza su nero, cornice polaroid (bordo bianco + leggera rotazione). | *(silenzio / beat musicale)* |
 | **2 — Hook** | 2.5–4s | B-roll Seedance | Jago cammina/si muove nel cortile industriale, Ghost Piece. Ritmo lento. | *"Stone Island spends €20,000 on a lookbook like this."* |
-| **3 — Hook payoff** | 4–4.5s | Card colore | Fondo colore brand pieno, testo bianco sottile. | *"I spent zero."* |
+| **3 — Hook payoff** | 4–4.5s | Card nera | Fondo nero pieno, testo bianco sottile. | *"I spent zero."* |
 | **4 — Claim** | 4.5–6.5s | B-roll / still | Jago posa (tre quarti, scala antincendio). | *"Same quality."* |
-| **5 — One afternoon** | 6.5–7.5s | Card colore | Testo su fondo pieno. | *"One afternoon."* |
-| **6 — Here's how** | 7.5–9s | Card colore | "Here's how." cut netto. | *"Here's how."* |
+| **5 — One afternoon** | 6.5–7.5s | Card nera | Testo su fondo pieno. | *"One afternoon."* |
+| **6 — Here's how** | 7.5–9s | Card nera | "Here's how." cut netto. | *"Here's how."* |
 | **7 — Brief (screen rec #1)** | 9–11s | Screen rec | Registrazione del brief / "creative blueprint" a schermo (ChatGPT/Claude, documento intero). | *"I start with a creative brief. Concept. Mood. Lighting. Camera angles. Poses."* |
-| **8 — Keyword cards** | 11–13s | Card colore | Keyword animate su fondo pieno: Concept · Mood · Lighting · Angles · Poses. | *"Written with AI. Every decision locked before I open a single tool."* |
+| **8 — Keyword cards** | 11–13s | Card nera | Keyword animate su fondo pieno: Concept · Mood · Lighting · Angles · Poses. | *"Written with AI. Every decision locked before I open a single tool."* |
 | **9 — Generate (screen rec #2)** | 13–15s | Screen rec | Registrazione generazione immagini: griglia risultati HiggsField Soul ID (4-up). | *"Then I generate."* |
 | **10 — Five looks** | 15–17s | Stills rapidi + SFX | 5 shot Ghost Piece in sequenza veloce, taglio netto + whoosh/click a ogni cut. | *"One character. Five looks. Campaign-quality."* |
-| **11 — Coherent** | 17–18.5s | Card colore | "Coherent." | *"Every visual stays coherent..."* |
+| **11 — Coherent** | 17–18.5s | Card nera | "Coherent." | *"Every visual stays coherent..."* |
 | **12 — Compass detail** | 18.5–20s | B-roll / still | Jago fermo, dettaglio compass badge sul braccio. | *"...because the brief was coherent."* |
 | **13 — No photographer** | 20–22s | Still / b-roll | Alternanza figura / ambiance shot. | *"No photographer."* |
-| **14 — No studio/model** | 22–23.5s | Card colore | "No studio." → "No model." | *"No studio. No model."* |
+| **14 — No studio/model** | 22–23.5s | Card nera | "No studio." → "No model." | *"No studio. No model."* |
 | **15 — Trasparenza** | 23.5–25.5s | Reference beat | **Vera campagna Stone Island** (immagine ad reale, cornice polaroid) accanto al nostro shot Ghost Piece. | *(silenzio / sotto-VO)* |
 | **16 — Montaggio (screen rec #3)** | 25.5–27s | Screen rec | Timeline CapCut con le clip Ghost Piece sulla timeline. | *(b-roll del processo)* |
 | **17 — Talking head** | 27–34s | Kling 3.0 Avatar | Jago MCU frontale, ambiente industriale. Delivery piatta, stoica. Contatto visivo fisso. | *"This isn't AI-generated content. This is what fashion production looks like when you use AI as a creative director."* |
-| **18 — "Non è fare immagini"** | 34–36s | Card colore | Eco del riferimento ("Questo non è fare immagini"): "This isn't making images." | *(rinforzo testo)* |
+| **18 — "Non è fare immagini"** | 34–36s | Card nera | Eco del riferimento ("Questo non è fare immagini"): "This isn't making images." | *(rinforzo testo)* |
 | **19 — CTA action** | 36–40s | B-roll action | Jago in azione al desk — scrive, guarda lo schermo. Non guarda in camera. | *"Comment 'LOOKBOOK'. I'll send you the full system."* |
-| **20 — CTA cards** | 40–44s | Card colore | "Comment LOOKBOOK" → "the full system" → "step by step". | testo CTA |
-| **21 — IG end card** | 44–48s | Motion graphic | Logo Instagram animato su fondo brand scuro + handle Jago. | CTA finale |
+| **20 — CTA cards** | 40–44s | Card nera | "Comment LOOKBOOK" → "the full system" → "step by step". | testo CTA |
+| **21 — IG end card** | 44–48s | Motion graphic | Logo Instagram animato su fondo nero + handle Jago. | CTA finale |
 
 **Durata totale: ~48s**
 
@@ -110,8 +110,8 @@ Montaggio interlacciato come nel riferimento: **still/b-roll ↔ card a fondo co
 
 ## Note produzione
 
-**Card di testo (scene 3, 5, 6, 8, 11, 14, 18, 20) — il look chiave del riferimento**
-- Sfondo: **colore pieno del brand** — proposta **verde militare/olive Stone Island** (da confermare; alternativa nero+ambra identità Jago). NON nero default.
+**Card di testo (scene 3, 5, 6, 8, 11, 14, 18, 20) — identità Jago**
+- Sfondo: **nero tinta unita** — manteniamo la dominante stilistica di Jago (riutilizzabile in video successivi). NB: diverge volutamente dal riferimento (che usa il verde brand); qui la coerenza con l'identità Jago ha priorità.
 - Testo: bianco, sans-serif fine (light/regular), centrato, molto spazio negativo
 - Mini **@handle Instagram di Jago** nell'angolo basso, sempre presente (come watermark)
 - Animazione: fade/slide minimalista; alcune parole in evidenza con peso diverso (vedi keyword "Concept/Mood/Lighting...")
@@ -148,7 +148,7 @@ Replicare la densità di processo del riferimento. Registrare schermo reale, non
 - Seedance I2V da immagine statica di Jago al lavoro
 
 **Scena 21 — IG end card**
-- Logo Instagram animato su fondo brand scuro + handle di Jago
+- Logo Instagram animato su fondo nero + handle di Jago
 - Chiusura come nel riferimento (@heyjeko → handle Jago)
 
 ---
@@ -159,7 +159,7 @@ Replicare la densità di processo del riferimento. Registrare schermo reale, non
 |---|---|---|
 | Lookbook images — Ghost Piece, 5 shot stesso setting industriale | 1, 10 | ⬜ Da generare (brief pronto) |
 | Cornice polaroid sugli stills (bordo bianco + rotazione) | 1, 10, 15 | ⬜ Da fare (CapCut) |
-| Card colore brand + testo animato + @handle | 3,5,6,8,11,14,18,20 | ⬜ Da creare (CapCut) — colore da confermare |
+| Card nere (fondo nero) + testo animato + @handle | 3,5,6,8,11,14,18,20 | ⬜ Da creare (CapCut) |
 | Screen rec #1 — brief Ghost Piece | 7 | ⬜ Da registrare |
 | Screen rec #2 — generazione immagini (griglia HiggsField) | 9 | ⬜ Da registrare |
 | Screen rec #3 — timeline montaggio CapCut | 16 | ⬜ Da registrare |
@@ -180,13 +180,15 @@ Replicare la densità di processo del riferimento. Registrare schermo reale, non
 4. ⬜ **Screen rec (×3)** — brief Ghost Piece (sc.7), generazione immagini (sc.9), timeline montaggio (sc.16)
 5. ⬜ **Clip Seedance** — b-roll modello (sc.2,4,12,13) + Jago action (sc.19)
 6. ⬜ **Talking head** — Scena 17: Kling 3.0 Avatar con lip sync
-7. ⬜ **Card colore + polaroid + IG end card** — in CapCut
+7. ⬜ **Card nere + polaroid + IG end card** — in CapCut
 8. ⬜ **Reperisci immagine vera campagna Stone Island** — beat trasparenza (sc.15)
 9. ⬜ **Montaggio CapCut** — montaggio interlacciato still/b-roll ↔ card, screen-rec sulle battute brief/generate/edit
 
 ---
 
 ## Brief Lookbook — Stone Island Ghost Piece Campaign
+
+> **Prima di generare:** leggere `video-3-lookbook-briefing.md` — analisi di come il riferimento ha tenuto la consistenza tra shot (6 pilastri) e parametri da bloccare.
 
 **Modello:** Jago (Soul ID HiggsField)  
 **Hero piece:** Ghost Piece Stone Island — nylon ripstop antracite, cappuccio, compass badge sul braccio sinistro, zip a metà o chiusa  
