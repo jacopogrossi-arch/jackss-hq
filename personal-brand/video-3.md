@@ -1,10 +1,12 @@
 # Video #3 — "A Fashion Lookbook — Built with AI"
 
-**Status: in pausa** — concept lookbook da ridefinire prima di procedere
+**Status: in produzione** — nuovo concept definito, immagini ⬜ da generare
 
-Durata: ~33s | Lingua: inglese | Formato: 9:16 vertical
+Durata: ~48s | Lingua: inglese | Formato: 9:16 vertical
 
-**Concept:** dimostra il servizio AI Lookbook con un hook sul contrasto costo/valore. Non presuppone che lo spettatore conosca Jago — funziona per chiunque nel fashion. Obiettivo primario: audience e follower. Secondario: generare richieste del servizio.
+**Concept (aggiornato):** una campagna lookbook in pieno stile Stone Island, con Jago come modello. Vestiti Stone Island, estetica Stone Island, qualità da campagna ufficiale. Il punto del video è mostrare al pubblico la potenza dell'AI: *questa sembra una vera campagna Stone Island — ed è tutta generata.* L'hook sul costo/valore rimane, ma il colpo visivo ora è immediato e inequivocabile.
+
+**Perché Stone Island:** brand riconoscibilissimo nel fashion, ha un'estetica forte e distintiva (garment dye, compass badge, palette neutro-militare, shooting industriali e outdoor). Quando il pubblico vede le immagini riconosce il brand all'istante — e capisce subito cosa significa "AI come creative director."
 
 ---
 
@@ -71,12 +73,7 @@ Durata: ~33s | Lingua: inglese | Formato: 9:16 vertical
 - Durata 5s — mostra il brief, non il processo di scrittura
 
 **Scena 7 — Foto rapide + SFX**
-- Le 5 immagini lookbook selezionate (una per look):
-  - Shot 1 Look 1: `af0a92cd` — bust, vicolo romano, amber chiaroscuro
-  - Shot 2 Look 2: `eb69b9bc` — bust, scalone palazzo, luce laterale cool
-  - Shot 3 Look 3: `d26553b8` — full body, campagna tramonto, golden raking
-  - Shot 4 Look 4: `28cd9162` — full body, libreria scura, amber lamp
-  - Shot 5 Look 5: `54170ff3` — full body, atelier, pantaloni extremely wide
+- 5 immagini lookbook Stone Island (⬜ da generare — vedi sezione Brief Lookbook)
 - ~0.8s per foto, taglio netto, sound effect (whoosh/click) a ogni cut
 
 **Scena 10 — Talking Head (Kling)**
@@ -96,8 +93,8 @@ Durata: ~33s | Lingua: inglese | Formato: 9:16 vertical
 
 | Asset | Scena | Status |
 |---|---|---|
-| Lookbook images (~20 foto) | 1, 7 | ⬜ Da rigenerare (concept da ridefinire) |
-| Seedance prompts | 2 | ⬜ Da aggiornare (dipende dal nuovo concept) |
+| Lookbook images — 5 look Stone Island con Jago | 1, 7 | ⬜ Da generare (brief pronto) |
+| Seedance prompts | 2 | ⬜ Da aggiornare con look Stone Island scelto |
 | Motion graphic (sfondo + testo animato) | 1, 4, 6, 8, 9 | ⬜ Da creare (CapCut) |
 | Clip Seedance — b-roll modello | 2 | ⬜ Da generare |
 | Screen rec ChatGPT brief | 5 | ⬜ Da registrare |
@@ -108,13 +105,60 @@ Durata: ~33s | Lingua: inglese | Formato: 9:16 vertical
 
 ## Ordine di produzione
 
-1. ⬜ **Ridefinisci concept lookbook** — decidere nuovo brief visivo prima di generare
-2. ⬜ **Genera immagini lookbook** — HiggsField Soul ID, ~20 immagini, 5 look
+1. ✅ **Concept lookbook ridefinito** — Stone Island campaign con Jago come modello (brief completo in questo file)
+2. ⬜ **Genera immagini lookbook** — HiggsField Soul ID, 5 look Stone Island, ~3-4 varianti per look
 3. ⬜ **Screen rec ChatGPT** — Scena 5: brief del lookbook visibile a schermo
 4. ⬜ **Clip Seedance** — Scena 2 (b-roll modello) + Scena 11 (Jago action)
 5. ⬜ **Motion graphic** — Scene 1, 4, 6, 8, 9 in CapCut
 6. ⬜ **Talking head** — Scena 10: Kling 3.0 Avatar con lip sync
 7. ⬜ **Montaggio CapCut** — ordine: 1→2→3→4→5→6→7→8→9→10→11
+
+---
+
+## Brief Lookbook — Stone Island Campaign
+
+**Modello:** Jago (Soul ID HiggsField)
+**Estetica di riferimento:** campagne Stone Island — palette neutro/militare (verde militare, sabbia, antracite, nero, arancio bruciato), shooting in ambienti industriali, urbani o outdoor grezzo. Nessun lusso decorativo. Qualità costruttiva, funzionalità, texture tessuto in primo piano.
+**Mood:** stoico, diretto, nessuna posa editoriale morbida. Il personaggio abita il capo — non lo esibisce.
+**Compass badge:** dove possibile, visibile sul capo (iconico, riconoscibile).
+
+### Look 1 — Ghost Piece
+- **Capo:** giacca Ghost Piece Stone Island in nylon ripstop antracite, cappuccio abbassato, zip chiusa a metà
+- **Bottom:** cargo trousers dritti, colore sabbia/khaki
+- **Ambientazione:** sottopasso urbano di notte, luce fluorescente dall'alto, cemento grezzo
+- **Frame:** bust shot, luce dura dall'alto che disegna il nylon
+
+### Look 2 — Garment Dye Overshirt
+- **Capo:** overshirt garment-dyed Stone Island color verde militare slavato, bottoni aperti su t-shirt bianca
+- **Bottom:** pantaloni chino wide-leg, beige
+- **Ambientazione:** cortile industriale abbandonato, ora d'oro bassa, ombre lunghe sul cemento
+- **Frame:** three-quarter full body, luce laterale calda
+
+### Look 3 — Knit Compass
+- **Capo:** maglione a collo alto in maglia grossa, colore camel/cammello, compass badge sulla manica
+- **Bottom:** jeans dritti indaco, no distressing
+- **Ambientazione:** porto/darsena con acqua grigia sullo sfondo, vento leggero, cielo coperto
+- **Frame:** bust shot con sfondo acqua sfocato, luce diffusa fredda
+
+### Look 4 — Soft Shell-R
+- **Capo:** giacca Soft Shell-R Stone Island nero, fit slim, compass badge sul braccio sinistro
+- **Bottom:** pantaloni tecnici neri, slim
+- **Ambientazione:** scala antincendio esterna di un edificio industriale, notte, luci della città sotto
+- **Frame:** full body dall'alto verso il basso, figura piccola nell'ambiente
+
+### Look 5 — Membrana 3L Storm
+- **Capo:** giacca impermeabile Storm arancio bruciato/ruggine Stone Island, cappuccio su
+- **Bottom:** cargo tecnico verde scuro
+- **Ambientazione:** banchina portuale in pioggia leggera, asfalto bagnato riflettente, nebbia bassa
+- **Frame:** full body, figura centrata, arancio che contrasta con l'ambiente grigio
+
+---
+
+### Note tecniche generazione (HiggsField Soul ID)
+- Generare con Soul ID di Jago per coerenza del volto in tutte le shot
+- Ogni look = minimo 3-4 varianti, selezionare la più forte
+- Compass badge Stone Island deve essere visibile dove il capo lo prevede
+- Qualità target: indistinguibile da una campagna reale — nessun artefatto AI visibile
 
 ---
 
