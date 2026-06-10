@@ -1,5 +1,7 @@
 # Moodboard — Video #3 Lookbook Stone Island Ghost Piece
 
+> ⚠️ **OFF-CONCEPT (2026-06-10).** Il concept di Video #3 è passato da *Ghost Piece industriale* a **replica della campagna Stone Island Marina SS26** (mondo costiero/nautico). Queste moodboard Ghost industriale **vanno rigenerate** sul nuovo brief Marina. Vedi `video-3.md` e `video-3-lookbook-briefing.md`. Conservate qui come storico.
+
 Moodboard generate con Canva per il lookbook (Jago modello, Ghost Piece, setting industriale unico).
 Generate il 2026-06-10. Sono salvate come design modificabili nell'account Canva di Jacopo.
 
