@@ -10,7 +10,10 @@
 
 **Sì:** *"Costruisco pubblicamente un brand di moda usando AI"*
 
-Ogni contenuto documenta il processo reale — fashion design + strumenti AI applicati a cose concrete. Sei la prova del concetto, non il professore. Nessun avatar, nessun canale anonimo: la tua specificità (25 anni, Roma, fashion design + economia + AI) è l'asset che nessuno può clonare.
+Ogni contenuto documenta il processo reale — fashion design + strumenti AI applicati a cose concrete. Sei la prova del concetto, non il professore.
+
+**Decisione definitiva (10/06/2026): il canale è 100% avatar Jago — nessuna faccia reale, mai.**
+Jago è il volto e il brand visivo. Jacopo è il creatore dietro le quinte e **l'interfaccia commerciale**: i DM partono dal profilo Jago ma firmati Jacopo ("Sono Jacopo, il creatore del progetto Jago"); call, preventivi e delivery sono gestiti da Jacopo in prima persona. La difendibilità del progetto sta in gusto, qualità e velocità di esecuzione — non nell'avatar in sé.
 
 ---
 
@@ -29,7 +32,7 @@ I servizi vengono prima del corso perché:
 
 **Obiettivo:** pubblicare il primo contenuto. Non deve essere perfetto.
 
-- Scegli qualcosa che hai GIÀ costruito (workflow n8n, SVG per ricamo, palette Inverso, campagna Midjourney)
+- Scegli qualcosa che hai GIÀ costruito (workflow n8n, SVG per ricamo, campagna Midjourney)
 - Formato: schermo + voce tua. Niente faccia obbligatoria. Niente setup professionale.
 - Durata: 5-8 minuti
 - Piattaforma: YouTube come base, poi taglia in clip per Instagram/TikTok
@@ -48,7 +51,7 @@ I servizi vengono prima del corso perché:
 
 ### Temi per i primi 12 video
 1. Come ho generato un SVG per ricamo usando solo Claude
-2. Costruire la visual identity di un brand di moda con Midjourney (Inverso)
+2. Costruire la visual identity di un brand di moda con AI (Jago)
 3. La pipeline che automatizza i video di moda: come funziona il mio n8n
 4. Kling per fashion video: quello che nessuno ti dice
 5. Da concept a campagna: flusso completo AI per un lookbook
@@ -60,18 +63,16 @@ I servizi vengono prima del corso perché:
 11. Come creo campagne luxury con Gemini e HiggsField
 12. Il mio sistema completo: 6 mesi di AI applicata alla moda — recap
 
-### Progressione camera
-- Mesi 1-2: voce + schermo, niente faccia richiesta
-- Mese 3: 30 secondi di presenza (intro o outro)
-- Mese 6: metà video con faccia naturale
-- Meccanismo: esposizione progressiva, non coraggio improvviso
+### Volto del canale
+- 100% avatar Jago (Soul ID HiggsField) — decisione definitiva, vedi Posizionamento
+- Nessuna progressione verso la faccia reale: il piano camera originale è stato rimosso il 10/06/2026
 
 ### Come trovare le prime 1.000 persone
 - Commenta in modo utile su community moda + AI (Reddit, Discord AI art, gruppi Facebook)
 - 1-2 collaborazioni con creator nella nicchia ogni trimestre
 - Cross-post clip su TikTok (#fashiondesign #AIart #midjourney #fashiontech)
-- Newsletter (Beehiiv/Substack): 1 email ogni 2 settimane, dietro le quinte + link video
-- Lista email dal primo giorno — è l'unico asset che possiedi davvero
+- Newsletter su Beehiiv (account già creato — da riattivare prima del lancio Video #3): 1 email ogni 2 settimane, dietro le quinte + link video
+- Lista email dal primo giorno — è l'unico asset che possiedi davvero. Flusso: commento keyword → DM con lead magnet → invito a iscriversi a Beehiiv
 
 ---
 
@@ -79,8 +80,8 @@ I servizi vengono prima del corso perché:
 
 **Obiettivo:** 500+ follower, 1 cliente pagante.
 
-- Mostra risultati concreti (Inverso, output reali per clienti)
-- Serie "Costruire Inverso in pubblico" — documenta il brand reale
+- Mostra risultati concreti (lookbook Jago, output reali per clienti)
+- Serie "Costruire il brand Jago in pubblico" — documenta identità, lookbook e processo
 - Collaborazioni con designer/studenti di moda o creator AI
 
 ---
@@ -89,22 +90,26 @@ I servizi vengono prima del corso perché:
 
 **Obiettivo:** prima entrata reale. Bastano 3 clienti.
 
-### Servizi offerti
+### Servizi offerti (aggiornati 10/06/2026)
 
-**SVG AI per produzione moda**
-- Output: file SVG per ricamo, taglio laser, plotter
-- Target: atelier, laboratori sartoria, brand piccoli
-- Prezzo pilota: €80-150 | Regime: €200-400/progetto
+**AI Lookbook — servizio principale**
+- Output: 10-15 immagini fashion campaign-quality in 48-72h
+- Target: brand che lanciano una collezione, designer emergenti, atelier
+- **Prezzo pilota: €400 fisso** (primi 3 clienti, in cambio di testimonianza + diritto case study) | **Regime: €700**
+- Proof of concept: Video #3 (lookbook Marina)
 
-**Campagna visiva AI**
-- Output: 5-10 immagini Midjourney + 1 clip Kling
-- Target: brand emergenti, designer indipendenti
-- Prezzo pilota: €150-300 | Regime: €400-800/pacchetto
+**Brand Identity Pack**
+- Output: nome + logo SVG production-ready + palette + mood board in 48h
+- Target: brand in fase di lancio, designer indipendenti
+- Prezzo: €150-300
+- Proof of concept: Video #2 (già pubblicato)
 
-**Consulenza AI per fashion business**
-- Output: audit workflow + roadmap integrazione AI
-- Target: brand medi che vogliono integrare l'AI
-- Prezzo pilota: €100-200 | Regime: €300-500/sessione 2h
+**Servizi tecnici futuri (B2B — dopo i primi clienti)**
+- Tech Pack completo (€300-800/capo), Cost Sheet automatizzato, Sampling Tracker, schede prodotto e-commerce
+- Dettaglio in Notion: sottopagina "Servizi Tecnici Futuri"
+
+> Outreach operativo (criteri, lista brand, template DM, tracker): vedi `outreach.md`.
+> **Sequenza decisa il 10/06/2026:** i DM partono **dopo la pubblicazione del Video #3**; la lista brand si prepara in parallelo alla produzione.
 
 ### Come trovare i primi 3 clienti
 1. Lista di 20 brand/atelier/designer italiani potenziali
@@ -123,6 +128,20 @@ A questo punto hai: case study, feedback, lista email, contenuto documentato.
 1. **Workshop live** (mese 12) — 3h su Zoom, €79-99, 15-20 persone
 2. **Corso registrato** (mese 14-16) — €197-297, prima alla lista email
 3. **Community a pagamento** (mese 16-18) — €29-49/mese su Skool
+
+---
+
+## Endgame — questione aperta (10/06/2026)
+
+Il punto di arrivo a 2-3 anni **non è ancora deciso**, ed è una scelta consapevole. Le tre strade possibili condividono i primi 6 mesi:
+
+1. **Brand di moda reale** — il canale come mezzo per lanciare un brand con capi veri
+2. **Agenzia / servizi AI** — lookbook, identity e tech pack per brand moda; il canale è il marketing
+3. **Creator / educatore** — corso + community come prodotto principale
+
+**Da rivedere al mese 9**, quando ci saranno dati reali (clienti, audience, entrate) per decidere dove investire.
+
+Nota: il brand **Inverso** (jeans selvage) è **archiviato definitivamente** dal 10/06/2026. L'identità moda del progetto è Jago.
 
 ---
 
