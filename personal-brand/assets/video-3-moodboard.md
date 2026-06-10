@@ -26,8 +26,11 @@ Generate il 2026-06-10. Sono salvate come design modificabili nell'account Canva
 - **Mood:** stoico, grezzo, direzionale — nessun lusso decorativo
 - **Target qualità:** indistinguibile da una vera campagna Stone Island
 
-## Nota
+## File immagine nel repo
 
-I file immagine non sono nel repo: gli export Canva sono scaricabili solo dall'app
-(Condividi → Scarica). Per averli come asset nel repo, scaricare i PNG dai link
-qui sopra e aggiungerli a questa cartella.
+| File | Descrizione |
+|---|---|
+| `video-3-moodboard-ghost-piece-title.jpeg` | Title board — Jago full body, Ghost Piece, cortile industriale, lettering "STONE ISLAND GHOST PIECE" |
+| `video-3-moodboard-ghost-piece-grid.jpeg` | Griglia shot — bust frontale, dettaglio compass badge, full body cortile, ambiance scala antincendio |
+
+Questi sono i due moodboard di riferimento finali per la generazione delle immagini lookbook.
