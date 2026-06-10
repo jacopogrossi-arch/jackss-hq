@@ -68,9 +68,9 @@ Camera Capture: wide-latitude cinema capture, vintage 55mm 2x anamorphic charact
 
 ---
 
-## Shot 4 — Close-up badge (3s)
+## Shot 4 — Close-up badge (4s)
 **Scena video:** 12 — Dettaglio capo (18.5–20s in CapCut)  
-**Mode:** M1 Narrative · **Lens:** 100mm · **Runtime:** 3s
+**Mode:** M1 Narrative · **Lens:** 100mm · **Runtime:** 4s (minimo Seedance 2.0)
 
 **Riferimenti da allegare in Seedance (in ordine):**
 1. `hf_20260610_165325_dd37fe79` — close-up estremo su petto/spalla sinistra della sailing jacket, badge bussola a fuoco, cima sfocata in background, mare sfocato sul fondo
@@ -134,7 +134,16 @@ Camera Capture: wide-latitude cinema capture, vintage 40mm 2x anamorphic charact
 ## Note di produzione
 
 - **Seedance model:** Seedance 2.0 I2V (image-to-video)
-- **Qualità:** minima disponibile per risparmiare crediti
+- **Qualità:** minima disponibile per risparmiare crediti (480p fast)
 - **Riferimenti:** allegare in Higgsfield nell'ordine esatto dei bullet (image1 prima, image2 seconda)
 - **In CapCut:** tagliare a: S2→1.5s, S3→2s, S4→1.5s, S5→2s (timing beat sheet)
 - **Clip ancora da generare:** talking head Kling (sc.17) + Jago al desk Seedance (sc.19)
+
+## Job ID generazione (10/06/2026)
+
+| Shot | Job ID | Durata | Ratio | Status |
+|---|---|---|---|---|
+| Shot 2 (rocce accovacciato) | `b4818b8e-9d3c-414f-98fe-b0703b45f9c1` | 6s | 9:16 | pending |
+| Shot 3 (battagliola) | `dfb13a0d-2c42-475f-aa24-7c04919add21` | 4s | 9:16 | pending |
+| Shot 4 (badge close-up) | `1f120e15-a1d5-42f3-aea6-26dd03770197` | 4s | 3:4 | pending |
+| Shot 5 (wide landscape) | `92f932bd-067d-42b4-a9de-f89d56a239ff` | 5s | 16:9 | pending |
