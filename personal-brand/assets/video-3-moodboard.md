@@ -7,21 +7,16 @@ Sostituisce la versione Ghost Piece industriale (off-concept). File immagini ori
 
 ## 1. Ambientazione — Il mondo
 
-**Un solo mondo costiero ligure. Non si esce mai da qui.**
+**Una sola location: riva rocciosa ligure. Non si esce mai da qui.**
 
-La campagna reale si svolge interamente tra due location che si alternano senza soluzione di continuità:
+Scelta definitiva: riva rocciosa, non barca. Più flessibile per 5 shot diversi, più facile da mantenere consistente su AI. La barca può apparire **sullo sfondo lontano** (sfocata) in uno o due shot — riconoscibile senza diventare una seconda location.
 
-**A — Sul ponte della barca a vela**
-- Ponte in legno di teak, cime spesse, bitte metalliche, sartiame che taglia il cielo
-- La barca è in moto — acqua che scorre, vento visibile sui capi
-- Sfondo: mare aperto blu profondo, eventualmente costa rocciosa o borgo ligure in lontananza (come in `00005` — barca con villaggio arroccato sulle colline)
-- Il soggetto è a proprio agio, non posa: piedi scalzi sul teak (come in `00001`), mano su una sartia, corpo che compensa il rollio
-
-**B — Sulla riva rocciosa**
-- Rocce chiare/grigie levigate dall'acqua, qualche ciuffo di vegetazione mediterranea
-- Mare che batte — non calmo piatto, c'è moto, schiuma, riverbero
-- Il soggetto è accovacciato, seduto, in piedi su roccia — mai su sabbia
-- Sfondo: mare aperto, cielo, eventualmente promontorio lontano
+**La location:**
+- Rocce chiare/grigie levigate dall'acqua, texture irregolare, qualche fessura naturale
+- Mare che batte — non piatto, c'è moto, schiuma bianca, riverbero forte
+- Il soggetto è sulla roccia: in piedi, accovacciato, seduto sul bordo — mai su sabbia
+- Sfondo: mare aperto, cielo ligure, eventualmente promontorio lontano o sagoma di barca a vela sfocata
+- Qualche prop nautico portato sul posto: cima spessa arrotolata, salvagente
 
 **Cosa NON è questa campagna:**
 - Nessun porto turistico affollato
