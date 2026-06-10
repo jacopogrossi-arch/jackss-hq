@@ -253,6 +253,57 @@ Replicare la densità di processo del riferimento. Registrare schermo reale, non
 >
 > I nuovi prompt Seedance vanno scritti **dopo** aver generato le immagini lookbook Marina, una per shot, usando lo stesso framework (Scene & Mood / Frame Map / Subject Lock / Movement / Last Frame / World Plate / Capture Realism / Camera Capture) ma sul **mondo costiero Marina**: barca a vela, riva rocciosa, mare ligure, luce marina, sailing jacket bloccata.
 
+## Checklist CapCut — Montaggio finale
+
+### Setup
+- [ ] Progetto: 1080×1920 (9:16) · 25fps
+- [ ] Importa tutti gli asset: 5 stills, 4 clip b-roll 1080p, talking head 2K, 3 screen rec, immagine vera SI, musica
+
+### Timeline (in ordine)
+- [ ] sc.1 (0–2.5s): 3–4 stills polaroid in sequenza · ~0.7s cad
+- [ ] sc.2 (2.5–4s): Clip Seedance Shot 2 (rocce) · taglia a 1.5s
+- [ ] sc.3 (4–4.5s): Card nera · *"I spent zero."*
+- [ ] sc.4 (4.5–6.5s): Still Shot 3 (battagliola) con polaroid
+- [ ] sc.5 (6.5–7.5s): Card nera · *"One afternoon."*
+- [ ] sc.6 (7.5–9s): Card nera · *"Here's how."*
+- [ ] sc.7 (9–11s): Screen rec #1 (brief) · crop 9:16
+- [ ] sc.8 (11–13s): Card nera · keywords: *Concept · Mood · Lighting · Angles · Poses*
+- [ ] sc.9 (13–15s): Screen rec #2 (griglia Higgsfield) · crop 9:16
+- [ ] sc.10 (15–17s): 5 stills rapidi · ~0.4s cad · SFX whoosh/click · cornice polaroid
+- [ ] sc.11 (17–18.5s): Card nera · *"Every visual stays coherent."*
+- [ ] sc.12 (18.5–20s): Clip Seedance Shot 4 (badge close-up) · taglia a 1.5s
+- [ ] sc.13 (20–22s): Clip Seedance Shot 5 (wide) · taglia a 2s
+- [ ] sc.14 (22–23.5s): Card nera · *"No photographer. No studio. No model."*
+- [ ] sc.15 (23.5–25.5s): Vera campagna Stone Island Marina (cornice polaroid) affiancata al nostro shot
+- [ ] sc.16 (25.5–27s): Screen rec #3 (timeline CapCut) · crop 9:16 · 1.5s
+- [ ] sc.17 (27–34s): Talking head 2K · 7s · nessun effetto
+- [ ] sc.18 (34–36s): Card nera · *"This isn't making images."*
+- [ ] sc.19 (36–40s): ⏸ Deferred — still placeholder o taglia
+- [ ] sc.20 (40–44s): Card nera CTA · *"Comment LOOKBOOK"* → *"the full system"* → *"step by step"*
+- [ ] sc.21 (44–48s): IG end card animata · logo IG + handle Jago su nero · 4s
+
+### Card nere — regole fisse
+- Sfondo: nero tinta unita
+- Testo: bianco, sans-serif light, centrato, molto spazio negativo
+- @handle Jago in basso a destra (watermark — su TUTTE le card)
+- Animazione: fade in semplice · 0.5–0.8s per card brevi
+
+### Cornici polaroid — regole fisse
+- Bordo bianco spesso · rotazione casuale ±2–4° (varia tra stills)
+- Usare su: sc.1, sc.10, sc.15
+
+### Audio
+- [ ] Musica traccia · -20dB sotto la voce
+- [ ] SFX whoosh/click su sc.10
+- [ ] Volume talking head (sc.17): pieno · musica abbassatissima durante la scena
+
+### Export
+- [ ] Review completa dall'inizio alla fine prima di esportare
+- [ ] Export: 1080×1920 · H.264 · 60fps · qualità massima
+- [ ] Nome file: `video3-marina-v1.mp4`
+
+---
+
 ## Caption Instagram
 
 Stone Island spends €20,000 on a lookbook like this. I spent zero.
