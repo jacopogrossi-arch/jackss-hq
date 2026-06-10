@@ -1,6 +1,6 @@
 # Video #3 — "A Fashion Lookbook — Built with AI"
 
-**Status: in produzione** — immagini lookbook ✅ generate, Seedance prompts ✅ pronti
+**Status: in pausa** — concept lookbook da ridefinire prima di procedere
 
 Durata: ~33s | Lingua: inglese | Formato: 9:16 vertical
 
@@ -96,8 +96,8 @@ Durata: ~33s | Lingua: inglese | Formato: 9:16 vertical
 
 | Asset | Scena | Status |
 |---|---|---|
-| Lookbook images (~20 foto) | 1, 7 | ✅ Generato |
-| Seedance prompts | 2 | ✅ Pronti |
+| Lookbook images (~20 foto) | 1, 7 | ⬜ Da rigenerare (concept da ridefinire) |
+| Seedance prompts | 2 | ⬜ Da aggiornare (dipende dal nuovo concept) |
 | Motion graphic (sfondo + testo animato) | 1, 4, 6, 8, 9 | ⬜ Da creare (CapCut) |
 | Clip Seedance — b-roll modello | 2 | ⬜ Da generare |
 | Screen rec ChatGPT brief | 5 | ⬜ Da registrare |
@@ -108,12 +108,13 @@ Durata: ~33s | Lingua: inglese | Formato: 9:16 vertical
 
 ## Ordine di produzione
 
-1. ✅ **Genera immagini lookbook** — HiggsField Soul ID, ~20 immagini, 5 look
-2. ⬜ **Screen rec ChatGPT** — Scena 5: brief del lookbook visibile a schermo
-3. ⬜ **Clip Seedance** — Scena 2 (b-roll modello) + Scena 11 (Jago action)
-4. ⬜ **Motion graphic** — Scene 1, 4, 6, 8, 9 in CapCut
-5. ⬜ **Talking head** — Scena 10: Kling 3.0 Avatar con lip sync
-6. ⬜ **Montaggio CapCut** — ordine: 1→2→3→4→5→6→7→8→9→10→11
+1. ⬜ **Ridefinisci concept lookbook** — decidere nuovo brief visivo prima di generare
+2. ⬜ **Genera immagini lookbook** — HiggsField Soul ID, ~20 immagini, 5 look
+3. ⬜ **Screen rec ChatGPT** — Scena 5: brief del lookbook visibile a schermo
+4. ⬜ **Clip Seedance** — Scena 2 (b-roll modello) + Scena 11 (Jago action)
+5. ⬜ **Motion graphic** — Scene 1, 4, 6, 8, 9 in CapCut
+6. ⬜ **Talking head** — Scena 10: Kling 3.0 Avatar con lip sync
+7. ⬜ **Montaggio CapCut** — ordine: 1→2→3→4→5→6→7→8→9→10→11
 
 ---
 
