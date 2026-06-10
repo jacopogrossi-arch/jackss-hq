@@ -1,8 +1,14 @@
 # Lead Magnet — "The Lookbook System" (PDF 2 pagine)
 
 > Creato 10/06/2026. Questo è il **contenuto testuale** del PDF promesso dalla CTA del Video #3 ("Comment LOOKBOOK").
-> **Da impaginare in Canva:** fondo nero, testo bianco sans-serif fine, wordmark Jago (Cormorant Garamond Italic), molto spazio negativo — stessa identità delle card nere dei video.
 > **Consegna:** invio manuale in DM a chi commenta + invito a iscriversi a Beehiiv.
+
+## Status impaginazione — 10/06/2026 ✅ bozza Canva pronta
+
+- **Design Canva (3 pagine):** "The Lookbook System — Jago Lead Magnet" — ID `DAHMM7wqMio` — [modifica](https://www.canva.com/d/A4lORbop_X3rE0U)
+- Pagina 1 = copertina nera con still life atelier generato via Higgsfield (Nano Banana Pro, asset Canva v1 `MAHMMw8_ciQ`, v2 `MAHMM-ShQuQ`)
+- Pagine 2-3 = contenuto completo (sei pilastri, Step 2/3, errori, CTA), testi fedeli a questo file
+- **Ritocchi manuali rimasti:** sostituire `[Instagram handle]` e `[newsletter link]` in pagina 3; eventuale sfondo nero sulle pagine interne (ora chiare); export PDF da Canva
 
 ---
 
