@@ -157,3 +157,15 @@ Questa foto va mostrata nel video come "vera campagna Stone Island Marina SS26" 
 3. `leaning on stainless steel guardrail three-quarter profile facing right, gazing at horizon, mast and rigging in background`
 4. `extreme close-up chest detail, compass badge and wooden pulls in focus, nautical rope blurred in background`
 5. `wide landscape, small figure on rocky coast, back or profile to camera, vast sea and sky dominant, distant promontory`
+
+---
+
+## 9. Environment plate — prompt Higgsfield (Banana Pro, nessun personaggio)
+
+Usato come reference world per tutti gli shot successivi. Generare PRIMA dei lookbook shots.
+
+```
+Editorial fashion campaign environment plate, Stone Island Marina SS26, Ligurian rocky coastline, no people, no characters, wide cinematic frame 4:5 vertical, massive grey limestone rocks worn smooth by salt water and wave action, natural fissures and texture in foreground rock face, deep navy Mediterranean sea with active wave motion and white foam spray, strong specular glare off water surface breaking into a thousand scattered light points, bright overhead maritime daylight 11:00–14:00 sun angle hard from above creating sharp shadows in rock crevices, slight saline haze suspended in air giving depth to distant water, distant promontory curving into background left, faint outline of a sailing vessel mast on far horizon barely visible, sky pale luminous blue with faint coastal haze, color world locked to navy #1B2A4A sea shadows + limestone grey #C8BFA8 rock + Mediterranean blue #3A8EC2 water + ecru white foam, color-negative 35mm film grain fine theatrical across entire frame, vintage 2x anamorphic optical character with oval bokeh and soft frame-edge falloff, atmospheric air depth between foreground rock and distant horizon, wide dynamic range holding detail in both shadow rock texture and bright specular water, no studio artifacts, no digital sharpness, real photographed location, cinematic grain, campaign-quality
+```
+
+**Higgsfield settings:** Banana Pro · M5 Atmospheric · 4:5 · no Soul ID · no character reference
