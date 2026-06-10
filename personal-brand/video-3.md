@@ -4,9 +4,12 @@
 
 Durata: ~48s | Lingua: inglese | Formato: 9:16 vertical
 
-**Concept (aggiornato):** una campagna lookbook in pieno stile Stone Island, con Jago come modello. Vestiti Stone Island, estetica Stone Island, qualità da campagna ufficiale. Il punto del video è mostrare al pubblico la potenza dell'AI: *questa sembra una vera campagna Stone Island — ed è tutta generata.* L'hook sul costo/valore rimane, ma il colpo visivo ora è immediato e inequivocabile.
+**Concept (aggiornato):** una campagna lookbook mono-prodotto in stile Stone Island. Jago è il modello. Il pezzo protagonista è la **Ghost Piece** — la giacca più iconica del brand. Una sola ambientazione industriale urbana, più shot nella stessa scena: varianti di framing, luce, posa. Come una vera campagna SI, non un collage di location diverse.
 
-**Perché Stone Island:** brand riconoscibilissimo nel fashion, ha un'estetica forte e distintiva (garment dye, compass badge, palette neutro-militare, shooting industriali e outdoor). Quando il pubblico vede le immagini riconosce il brand all'istante — e capisce subito cosa significa "AI come creative director."
+Il punto per il pubblico è immediato: riconoscono Stone Island all'istante, poi capiscono che è tutto generato con AI. Il contrasto è devastante.
+
+**Hero piece:** Ghost Piece Stone Island — giacca in nylon ripstop, cappuccio, compass badge  
+**Setting unico:** ambiente industriale urbano (capannone, cemento, scala antincendio, muri grezzi)
 
 ---
 
@@ -93,8 +96,8 @@ Durata: ~48s | Lingua: inglese | Formato: 9:16 vertical
 
 | Asset | Scena | Status |
 |---|---|---|
-| Lookbook images — 5 look Stone Island con Jago | 1, 7 | ⬜ Da generare (brief pronto) |
-| Seedance prompts | 2 | ⬜ Da aggiornare con look Stone Island scelto |
+| Lookbook images — Ghost Piece, 5 shot stesso setting industriale | 1, 7 | ⬜ Da generare (brief pronto) |
+| Seedance prompts | 2 | ⬜ Da aggiornare con shot Ghost Piece scelto |
 | Motion graphic (sfondo + testo animato) | 1, 4, 6, 8, 9 | ⬜ Da creare (CapCut) |
 | Clip Seedance — b-roll modello | 2 | ⬜ Da generare |
 | Screen rec ChatGPT brief | 5 | ⬜ Da registrare |
@@ -115,50 +118,55 @@ Durata: ~48s | Lingua: inglese | Formato: 9:16 vertical
 
 ---
 
-## Brief Lookbook — Stone Island Campaign
+## Brief Lookbook — Stone Island Ghost Piece Campaign
 
-**Modello:** Jago (Soul ID HiggsField)
-**Estetica di riferimento:** campagne Stone Island — palette neutro/militare (verde militare, sabbia, antracite, nero, arancio bruciato), shooting in ambienti industriali, urbani o outdoor grezzo. Nessun lusso decorativo. Qualità costruttiva, funzionalità, texture tessuto in primo piano.
-**Mood:** stoico, diretto, nessuna posa editoriale morbida. Il personaggio abita il capo — non lo esibisce.
-**Compass badge:** dove possibile, visibile sul capo (iconico, riconoscibile).
+**Modello:** Jago (Soul ID HiggsField)  
+**Hero piece:** Ghost Piece Stone Island — nylon ripstop antracite, cappuccio, compass badge sul braccio sinistro, zip a metà o chiusa  
+**Bottom:** cargo trousers dritti sabbia/khaki o pantaloni tecnici neri — coerente in tutte le shot  
+**Setting unico:** ambiente industriale urbano — cemento grezzo, muri scrostati, scala antincendio esterna, cortile capannone. Nessun elemento decorativo o di lusso.  
+**Palette:** antracite, grigio cemento, ruggine, sabbia. Luce industriale (fluorescente, diffusa, o taglio duro dall'alto/laterale).  
+**Mood:** stoico, diretto. Jago abita il capo — non posa per la camera.
 
-### Look 1 — Ghost Piece
-- **Capo:** giacca Ghost Piece Stone Island in nylon ripstop antracite, cappuccio abbassato, zip chiusa a metà
-- **Bottom:** cargo trousers dritti, colore sabbia/khaki
-- **Ambientazione:** sottopasso urbano di notte, luce fluorescente dall'alto, cemento grezzo
-- **Frame:** bust shot, luce dura dall'alto che disegna il nylon
+---
 
-### Look 2 — Garment Dye Overshirt
-- **Capo:** overshirt garment-dyed Stone Island color verde militare slavato, bottoni aperti su t-shirt bianca
-- **Bottom:** pantaloni chino wide-leg, beige
-- **Ambientazione:** cortile industriale abbandonato, ora d'oro bassa, ombre lunghe sul cemento
-- **Frame:** three-quarter full body, luce laterale calda
+### Shot 1 — Frontale bust, luce dall'alto
+- Jago in piedi, giacca Ghost Piece zip a metà, cappuccio abbassato
+- Luce fluorescente dura dall'alto che disegna il nylon, cemento grezzo alle spalle
+- Frame: bust shot centrato, 60% altezza frame
+- Espressione: neutra, sguardo leggermente oltre camera
 
-### Look 3 — Knit Compass
-- **Capo:** maglione a collo alto in maglia grossa, colore camel/cammello, compass badge sulla manica
-- **Bottom:** jeans dritti indaco, no distressing
-- **Ambientazione:** porto/darsena con acqua grigia sullo sfondo, vento leggero, cielo coperto
-- **Frame:** bust shot con sfondo acqua sfocato, luce diffusa fredda
+### Shot 2 — Full body, cortile industriale
+- Jago fermo nel mezzo di un cortile di capannone, asfalto screpolato
+- Luce diffusa sovrastante, cielo grigio coperto o ora d'oro rasante sui muri
+- Ghost Piece zip chiusa, cappuccio abbassato, mani in tasca
+- Frame: full body, figura che occupa 70% altezza frame, cemento e muri come sfondo
 
-### Look 4 — Soft Shell-R
-- **Capo:** giacca Soft Shell-R Stone Island nero, fit slim, compass badge sul braccio sinistro
-- **Bottom:** pantaloni tecnici neri, slim
-- **Ambientazione:** scala antincendio esterna di un edificio industriale, notte, luci della città sotto
-- **Frame:** full body dall'alto verso il basso, figura piccola nell'ambiente
+### Shot 3 — Tre quarti, scala antincendio
+- Jago appoggiato alla ringhiera di una scala antincendio esterna in ferro arrugginito
+- Luce laterale dall'esterno (diffusa o ora d'oro bassa), ombre delle sbarre
+- Ghost Piece cappuccio su, zip chiusa, compass badge leggibile
+- Frame: tre quarti, dal basso verso l'alto — figura domina sulla scala
 
-### Look 5 — Membrana 3L Storm
-- **Capo:** giacca impermeabile Storm arancio bruciato/ruggine Stone Island, cappuccio su
-- **Bottom:** cargo tecnico verde scuro
-- **Ambientazione:** banchina portuale in pioggia leggera, asfalto bagnato riflettente, nebbia bassa
-- **Frame:** full body, figura centrata, arancio che contrasta con l'ambiente grigio
+### Shot 4 — Close-up dettaglio compass badge
+- Close-up sul braccio sinistro: compass badge Stone Island nitido, nylon ripstop texture
+- Sfondo: cemento o ferro sfocati
+- Nessun volto nel frame — shot dettaglio puro
+- Luce: taglio laterale che esalta la texture del nylon
+
+### Shot 5 — Ambiente / ambiance shot
+- Jago di schiena o di profilo lontano nell'ambiente industriale
+- Figura piccola rispetto allo spazio — capannone, muri alti, finestre industriali rotte
+- Ghost Piece riconoscibile anche a distanza per la silhouette e il cappuccio
+- Frame: paesaggio industriale che ingloba la figura, mood editoriale
 
 ---
 
 ### Note tecniche generazione (HiggsField Soul ID)
-- Generare con Soul ID di Jago per coerenza del volto in tutte le shot
-- Ogni look = minimo 3-4 varianti, selezionare la più forte
-- Compass badge Stone Island deve essere visibile dove il capo lo prevede
-- Qualità target: indistinguibile da una campagna reale — nessun artefatto AI visibile
+- Soul ID di Jago per coerenza del volto in tutte le shot con viso visibile
+- Ogni shot = 3-4 varianti, selezionare la più forte
+- Compass badge visibile e leggibile nelle shot frontali/tre quarti
+- Target qualità: indistinguibile da una campagna Stone Island reale
+- Coerenza luce e palette tra tutti gli shot — stesso setting, stessa ora del giorno
 
 ---
 
