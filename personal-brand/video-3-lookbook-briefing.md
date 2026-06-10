@@ -58,16 +58,13 @@ Come il riferimento ha copiato Polo Ralph Lauren "The Heritage Swing" (mondo gol
 
 ---
 
-## 4. Parametri da BLOCCARE (confermare con Jacopo)
+## 4. Parametri BLOCCATI ✅
 
-- **Tool/modello:** Higgsfield + **Nano Banana Pro** (come il riferimento), partendo da Soul ID di Jago. *(confermato)*
-- **Capo hero:** sailing jacket Marina SS26 (cappuccio ripiegabile, chiusure gomma, tiretti legno) — colore da scegliere tra navy / ecru / giallo. *(da confermare)*
-- **Luce/condizione:** UNA tra:
-  - **A — Pieno giorno marino**: cielo luminoso, riverbero forte sull'acqua, alto contrasto (più Marina "performance")
-  - **B — Foschia salina / cielo coperto**: luce diffusa morbida, palette desaturata (più editoriale/atmosferico)
-  - **C — Luce di riva calda**: sole basso sulla costa, rocce calde (più cinematografico)
-  *(da confermare — il riferimento resta coerente perché ne usa una sola)*
-- **Bottom:** pantaloni coerenti in tutti gli shot — proposta tecnici navy o ecru. *(da confermare)*
+- **Tool/modello:** Higgsfield + **Nano Banana Pro**, partendo da Soul ID di Jago. ✅
+- **Capo hero:** sailing jacket Marina SS26 (cappuccio ripiegabile, chiusure gomma, tiretti legno), **colore NAVY** profondo garment-dyed. ✅
+- **Luce/condizione:** **pieno giorno marino** — cielo luminoso, riverbero forte sull'acqua, alto contrasto. Stessa in tutti gli shot. ✅
+- **Bottom:** **pantaloni ecru/naturale** (contrasto col navy, fa risaltare capo e badge bussola). ✅
+- **Da reperire:** 3–5 frame reali campagna Marina SS26 + reference pulita sailing jacket navy.
 
 ---
 
@@ -77,7 +74,7 @@ Replicando il metodo del riferimento (prompt semplice + reference forti):
 
 1. **Input al modello:** Soul ID di Jago + reference della sailing jacket Marina + 1–2 frame reali della campagna Marina SS26.
 2. **Prompt base (stesso per tutti gli shot, cambia solo la posa):**
-   > *"Artistic fashion campaign for Stone Island Marina, hero piece the sailing jacket with folding hood, aboard a sailing boat on the Ligurian coast, [POSA/FRAMING dello shot], real maritime conditions, [LUCE scelta], navy/ecru/yellow nautical palette, sea and grey rock environment, editorial campaign quality, indistinguishable from a real Stone Island Marina campaign."*
+   > *"Artistic fashion campaign for Stone Island Marina, hero piece the navy sailing jacket with folding hood, ecru trousers, aboard a sailing boat on the Ligurian coast, [POSA/FRAMING dello shot], real maritime conditions, bright maritime daylight with strong glare off the water and high contrast, navy and ecru nautical palette, blue sea and grey rock environment, editorial campaign quality, indistinguishable from a real Stone Island Marina campaign."*
 3. **Cambia solo il blocco [POSA/FRAMING]** shot per shot (vedi §3 e il Brief Lookbook in `video-3.md`).
 4. **3–4 varianti per shot**, si seleziona la più forte. Si scartano quelle dove capo/volto/luce/mare derivano.
 

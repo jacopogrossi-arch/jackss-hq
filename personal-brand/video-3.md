@@ -194,10 +194,11 @@ Replicare la densità di processo del riferimento. Registrare schermo reale, non
 > **Prima di generare:** leggere `video-3-lookbook-briefing.md` — la campagna reale che replichiamo, i 6 pilastri di consistenza e i parametri da bloccare.
 
 **Modello:** Jago (Soul ID Higgsfield)  
-**Hero piece:** Stone Island **Marina sailing jacket** SS26 — cappuccio ripiegabile, chiusure in gomma, tiretti in legno, badge bussola Marina. Stesso colore in tutte le shot (navy / ecru / giallo — da confermare)  
-**Bottom:** pantaloni coerenti in tutte le shot (proposta: tecnici navy o ecru)  
+**Hero piece:** Stone Island **Marina sailing jacket** SS26 — **navy** profondo, cappuccio ripiegabile, chiusure in gomma, tiretti in legno, badge bussola Marina. Stesso navy in tutte le shot  
+**Bottom:** pantaloni **ecru/naturale** — coerenti in tutte le shot (contrasto col navy)  
 **Setting unico:** costa ligure — barca a vela + riva rocciosa + mare. Un solo mondo costiero, condizioni marine reali (vento, salsedine, riverbero)  
-**Palette:** navy, ecru/naturale, giallo, bianco; ambiente mare blu + roccia grigia + cielo  
+**Luce:** **pieno giorno marino** — cielo luminoso, riverbero forte sull'acqua, alto contrasto. Stessa in tutte le shot  
+**Palette:** navy + ecru/naturale; ambiente mare blu + roccia grigia + cielo  
 **Mood:** funzionale, resiliente, in movimento. Editoriale. Jago abita il capo in condizioni reali — non posa di plastica.
 
 ---
