@@ -1,6 +1,6 @@
 # Video #3 — "A Fashion Lookbook — Built with AI"
 
-**Status: in post-produzione** — asset generativi ✅ + screen rec ×3 ✅. Mancano: card nere, polaroid, immagine SI reale (sc.15), montaggio CapCut
+**Status: ✅ COMPLETATO 11/06/2026** — montato ed esportato (`video3-marina-v1.mp4`). Copertina IG generata (`video3-cover-instagram.png`). Prima di pubblicare: riattivare Beehiiv + finire PDF lead magnet (priorità 2 e 3)
 
 Durata: ~48s | Lingua: inglese | Formato: 9:16 vertical
 
