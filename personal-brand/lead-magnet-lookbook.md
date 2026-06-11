@@ -3,12 +3,14 @@
 > Creato 10/06/2026. Questo è il **contenuto testuale** del PDF promesso dalla CTA del Video #3 ("Comment LOOKBOOK").
 > **Consegna:** invio manuale in DM a chi commenta + invito a iscriversi a Beehiiv.
 
-## Status impaginazione — 10/06/2026 ✅ bozza Canva pronta
+## Status impaginazione — 11/06/2026 🟡 quasi pronto
 
 - **Design Canva (3 pagine):** "The Lookbook System — Jago Lead Magnet" — ID `DAHMM7wqMio` — [modifica](https://www.canva.com/d/A4lORbop_X3rE0U)
 - Pagina 1 = copertina nera con still life atelier generato via Higgsfield (Nano Banana Pro, asset Canva v1 `MAHMMw8_ciQ`, v2 `MAHMM-ShQuQ`)
 - Pagine 2-3 = contenuto completo (sei pilastri, Step 2/3, errori, CTA), testi fedeli a questo file
-- **Ritocchi manuali rimasti:** sostituire `[Instagram handle]` e `[newsletter link]` in pagina 3; eventuale sfondo nero sulle pagine interne (ora chiare); export PDF da Canva
+- ✅ 11/06: placeholder sostituiti via MCP — `@byjago · byjago.beehiiv.com/subscribe` in pagina 3
+- ✅ 11/06: testi pagine interne ricolorati per tema scuro (titoli bianchi, body avorio `#E8E6E1`, accenti ambra `#C9A86A`, header/footer grigi) + eliminato il gradiente chiaro di pagina 2
+- **Resta da fare (manuale, l'API non può cambiare il colore pagina):** in Canva impostare sfondo NERO su pagina 2 e pagina 3, poi export PDF (posso esportarlo io via MCP appena fatto)
 
 ---
 
@@ -69,12 +71,12 @@ I build lookbooks like this for emerging brands — 10-15 campaign-quality image
 DM me "**BRAND**" and I'll show you what it would look like for your label.
 
 *Jago — built with AI, directed by a human.*
-[handle Instagram] · [link Beehiiv]
+@byjago · byjago.beehiiv.com/subscribe
 
 ---
 
 ## Note operative (non vanno nel PDF)
 
 - La CTA finale del PDF fa il doppio lavoro: il lettore aspirante creator si iscrive a Beehiiv, il lettore *brand* risponde "BRAND" → entra nel funnel servizio (€400 pilota).
-- Sostituire [handle Instagram] e [link Beehiiv] in fase di impaginazione.
+- ✅ Placeholder sostituiti (11/06/2026): handle `@byjago`, newsletter `https://byjago.beehiiv.com/subscribe`.
 - Versione 1: non perfezionare. Si migliora dopo i primi 20 invii in base alle domande che arrivano.
