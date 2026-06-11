@@ -134,11 +134,14 @@ I nomi sopra vengono dalla stampa di settore — il cliente €400 realistico sp
 
 ### Welcome email Beehiiv (testo da incollare nel setup)
 
+**Link pubblico PDF (Google Drive, verificato 12/06/2026):**
+`https://drive.google.com/file/d/1u4pK4FjsKCpvA5CE-zKQ2G77gM7V3xHJ/view`
+
 > **Subject:** Your Lookbook System is here 📐
 >
 > Here's your copy of The Lookbook System 👇
 >
-> **[Download the PDF]** *(→ link pubblico al PDF, es. Google Drive)*
+> **[Download the PDF]** *(→ bottone con il link Drive qui sopra)*
 >
 > It's the exact process I use to build campaign-quality fashion lookbooks with AI — in one afternoon.
 >
