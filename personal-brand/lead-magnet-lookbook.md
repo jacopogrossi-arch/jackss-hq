@@ -3,14 +3,13 @@
 > Creato 10/06/2026. Questo è il **contenuto testuale** del PDF promesso dalla CTA del Video #3 ("Comment LOOKBOOK").
 > **Consegna:** invio manuale in DM a chi commenta + invito a iscriversi a Beehiiv.
 
-## Status impaginazione — 11/06/2026 🟡 quasi pronto
+## Status impaginazione — 11/06/2026 ✅ COMPLETATO
 
 - **Design Canva (3 pagine):** "The Lookbook System — Jago Lead Magnet" — ID `DAHMM7wqMio` — [modifica](https://www.canva.com/d/A4lORbop_X3rE0U)
 - Pagina 1 = copertina nera con still life atelier generato via Higgsfield (Nano Banana Pro, asset Canva v1 `MAHMMw8_ciQ`, v2 `MAHMM-ShQuQ`)
-- Pagine 2-3 = contenuto completo (sei pilastri, Step 2/3, errori, CTA), testi fedeli a questo file
-- ✅ 11/06: placeholder sostituiti via MCP — `@byjago · byjago.beehiiv.com/subscribe` in pagina 3
-- ✅ 11/06: testi pagine interne ricolorati per tema scuro (titoli bianchi, body avorio `#E8E6E1`, accenti ambra `#C9A86A`, header/footer grigi) + eliminato il gradiente chiaro di pagina 2
-- **Resta da fare (manuale, l'API non può cambiare il colore pagina):** in Canva impostare sfondo NERO su pagina 2 e pagina 3, poi export PDF (posso esportarlo io via MCP appena fatto)
+- Pagine 2-3 = contenuto completo (sei pilastri, Step 2/3, errori, CTA), tema scuro: sfondo nero, titoli bianchi, body avorio `#E8E6E1`, accenti ambra `#C9A86A`
+- Placeholder sostituiti: `@byjago · byjago.beehiiv.com/subscribe` in pagina 3
+- **PDF finale esportato:** `The-Lookbook-System-Jago.pdf` in Downloads (1,7 MB) — pronto per i DM
 
 ---
 
