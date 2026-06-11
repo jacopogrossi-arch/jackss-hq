@@ -132,7 +132,9 @@ I nomi sopra vengono dalla stampa di settore — il cliente €400 realistico sp
 > Hey! Here's the PDF 👇 [attach The-Lookbook-System-Jago.pdf]
 > I checked out [brand name] — [specific observation]. It's exactly the kind of label I build lookbooks for, like the one in the video. Happy to show you what it would look like for your next drop.
 
-### Welcome email Beehiiv (testo da incollare nel setup)
+### Welcome email Beehiiv — ✅ ATTIVA (setup completato e testato 12/06/2026)
+
+Configurata in Settings → Emails → Preset Emails, toggle abilitato. Test con indirizzo +alias: email ricevuta, bottone presente.
 
 **Link pubblico PDF (Google Drive, verificato 12/06/2026):**
 `https://drive.google.com/file/d/1u4pK4FjsKCpvA5CE-zKQ2G77gM7V3xHJ/view`
