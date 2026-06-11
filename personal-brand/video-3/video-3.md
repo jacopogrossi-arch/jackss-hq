@@ -159,8 +159,8 @@ Replicare la densità di processo del riferimento. Registrare schermo reale, non
 
 | Asset | Scena | Status |
 |---|---|---|
-| Lookbook images — Marina, 5 shot stesso mondo costiero | 1, 10 | ✅ Generati 10/06/2026 — Nano Banana + character ref |
-| Lookbook images — Marina, 5 shot aggiuntivi (totale 10) | 1, 10 | ✅ Generati 11/06/2026 — Nano Banana, Downloads `video3-shot6...shot10`: cima (6), mani dettaglio v2 (7), seduto ponte (8), camminata rocce v2 (9), ritratto MCU (10) |
+| Lookbook images — Marina, 5 shot stesso mondo costiero | 1, 10 | ✅ Generati 10/06/2026 — Nano Banana + character ref. Downloads: `video3-shot1-deck-fullbody`, `shot2-crouching-rocks`, `shot3-guardrail`, `shot4-badge-detail`, `shot5-wide-landscape` |
+| Lookbook images — Marina, 5 shot aggiuntivi (totale 10) | 1, 10 | ✅ Generati 11/06/2026 — Nano Banana. Downloads: `video3-shot6-rope-action`, `shot7-hands-detail-v2`, `shot8-sitting-deck-v2` (badge corretto), `shot9-walking-rocks-v2`, `shot10-portrait-mcu` |
 | Cornice polaroid sugli stills (bordo bianco + rotazione) | 1, 10, 15 | ⬜ Da fare (CapCut) |
 | Card nere (fondo nero) + testo animato + @handle | 3,5,6,8,11,14,18,20 | ⬜ Da creare (CapCut) |
 | Screen rec #1 — brief Marina | 7 | ✅ Registrato 10/06/2026 |
