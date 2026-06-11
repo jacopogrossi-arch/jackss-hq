@@ -165,7 +165,7 @@ Replicare la densità di processo del riferimento. Registrare schermo reale, non
 | Screen rec #1 — brief Marina | 7 | ✅ Registrato 10/06/2026 |
 | Screen rec #2 — generazione immagini (griglia Nano Banana Pro) | 9 | ✅ Registrato 10/06/2026 |
 | Screen rec #3 — timeline montaggio CapCut | 16 | ✅ Registrato 10/06/2026 |
-| Immagine vera campagna Stone Island Marina SS26 (beat trasparenza) | 15 | ⬜ Da reperire |
+| Immagine vera campagna Stone Island Marina SS26 (beat trasparenza) | 15 | ✅ `C:\Users\Jacopo Grossi\Downloads\Nuova cartella (2)\Stone-Island-SS26-00007-240x360.jpeg` |
 | Seedance prompts | 2 | ✅ Scritti 10/06/2026 — `video-3-seedance-prompts.md` (4 shot, Cinema Worldbuilder Pro) |
 | Moodboard Marina | 1 | ✅ `video-3-moodboard.md` — Canva variant 4, 10/06/2026 |
 | Clip Seedance — b-roll modello | 2, 4, 12, 13 | ✅ Generati 10/06/2026 — upscale 1080p Topaz. Job ID in `video-3-seedance-prompts.md` |
