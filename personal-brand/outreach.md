@@ -100,9 +100,49 @@ I nomi sopra vengono dalla stampa di settore — il cliente €400 realistico sp
 
 ---
 
-## Flusso lead magnet (CTA Video #3)
+## Flusso lead magnet (CTA Video #3) — aggiornato 11/06/2026: email-gated
+
+**Regola: gate per le persone, niente gate per i brand.**
 
 1. Commento "LOOKBOOK" sul Reel
-2. DM manuale con il PDF "The Lookbook System" (contenuto: `lead-magnet-lookbook.md`)
-3. Nel DM: invito a iscriversi a Beehiiv per il dietro le quinte
-4. Chi sembra un *brand* (non un aspirante creator) → conversazione servizio, non lead magnet
+2. Guardo il profilo di chi ha commentato:
+   - **Persona/creator** → DM con il link Beehiiv (template A). Il PDF arriva via **welcome email** automatica dopo l'iscrizione → ogni PDF consegnato = un'email in lista
+   - **Brand/founder** → PDF direttamente nel DM, senza gate (template B) → l'obiettivo è la conversazione, non l'email
+3. Welcome email Beehiiv con il link al PDF (setup: vedi sotto)
+
+### Template A — risposta gated (persone/creator)
+
+**Italiano:**
+> Te lo mando subito! 👇 Iscriviti qui e il PDF ti arriva via email in automatico:
+> byjago.beehiiv.com/subscribe
+> Dentro c'è il sistema completo che uso per i lookbook — fammi sapere cosa ne pensi!
+
+**English:**
+> Sending it right over! 👇 Subscribe here and the PDF lands in your inbox automatically:
+> byjago.beehiiv.com/subscribe
+> It's the full system I use for my lookbooks — let me know what you think!
+
+### Template B — risposta diretta (brand/founder, NO gate)
+
+**Italiano:**
+> Ciao! Ecco il PDF 👇 [allegare The-Lookbook-System-Jago.pdf]
+> Ho visto [nome brand] — [osservazione specifica, una frase vera]. È esattamente il tipo di label per cui costruisco lookbook come quello del video. Se vi va, vi mostro come verrebbe per la vostra prossima collezione.
+
+**English:**
+> Hey! Here's the PDF 👇 [attach The-Lookbook-System-Jago.pdf]
+> I checked out [brand name] — [specific observation]. It's exactly the kind of label I build lookbooks for, like the one in the video. Happy to show you what it would look like for your next drop.
+
+### Welcome email Beehiiv (testo da incollare nel setup)
+
+> **Subject:** Your Lookbook System is here 📐
+>
+> Here's your copy of The Lookbook System 👇
+>
+> **[Download the PDF]** *(→ link pubblico al PDF, es. Google Drive)*
+>
+> It's the exact process I use to build campaign-quality fashion lookbooks with AI — in one afternoon.
+>
+> Reply to this email if you have questions. I read everything.
+>
+> — Jago (well, Jacopo — the human behind him)
+> @jagoworks
