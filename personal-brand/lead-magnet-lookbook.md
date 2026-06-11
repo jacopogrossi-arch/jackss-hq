@@ -8,7 +8,7 @@
 - **Design Canva (3 pagine):** "The Lookbook System — Jago Lead Magnet" — ID `DAHMM7wqMio` — [modifica](https://www.canva.com/d/A4lORbop_X3rE0U)
 - Pagina 1 = copertina nera con still life atelier generato via Higgsfield (Nano Banana Pro, asset Canva v1 `MAHMMw8_ciQ`, v2 `MAHMM-ShQuQ`)
 - Pagine 2-3 = contenuto completo (sei pilastri, Step 2/3, errori, CTA), tema scuro: sfondo nero, titoli bianchi, body avorio `#E8E6E1`, accenti ambra `#C9A86A`
-- Placeholder sostituiti: `@byjago · byjago.beehiiv.com/subscribe` in pagina 3
+- Placeholder sostituiti: `@jagoworks · byjago.beehiiv.com/subscribe` in pagina 3
 - **PDF finale esportato:** `The-Lookbook-System-Jago.pdf` in Downloads (1,7 MB) — pronto per i DM
 
 ---
@@ -70,12 +70,12 @@ I build lookbooks like this for emerging brands — 10-15 campaign-quality image
 DM me "**BRAND**" and I'll show you what it would look like for your label.
 
 *Jago — built with AI, directed by a human.*
-@byjago · byjago.beehiiv.com/subscribe
+@jagoworks · byjago.beehiiv.com/subscribe
 
 ---
 
 ## Note operative (non vanno nel PDF)
 
 - La CTA finale del PDF fa il doppio lavoro: il lettore aspirante creator si iscrive a Beehiiv, il lettore *brand* risponde "BRAND" → entra nel funnel servizio (€400 pilota).
-- ✅ Placeholder sostituiti (11/06/2026): handle `@byjago`, newsletter `https://byjago.beehiiv.com/subscribe`.
+- ✅ Placeholder sostituiti (11/06/2026): handle `@jagoworks`, newsletter `https://byjago.beehiiv.com/subscribe`.
 - Versione 1: non perfezionare. Si migliora dopo i primi 20 invii in base alle domande che arrivano.
