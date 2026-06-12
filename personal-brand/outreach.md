@@ -95,7 +95,12 @@ I nomi sopra vengono dalla stampa di settore — il cliente €400 realistico sp
 | 15 | ES'GIVIEN | 🇮🇹 | Eccellenza artigianale + estetica moderna accessibile, anima autentica | Accessibile = budget compatibile €400. IG e dimensione *(da verificare)* |
 | 16 | Yali — Playhouse | 🇮🇹 | Narrativa forte (casa immaginaria/memoria), womenswear concettuale | Brand-storytelling → lookbook valorizza il racconto. *(da verificare)* |
 | 17 | P. Andrade | 🇧🇷 | Menswear, radici brasiliane + sostenibilità, fondato da Pedro Andrade & Paula Kim | Estero (quota 30%). Drop/collezione e dimensione *(da verificare)* |
-| 18-30 | *(da riempire con ricerca IG / routine daily)* | | | |
+| 18 | Doppiaa | 🇮🇹 Milano | Menswear made in Italy, fondato da due amici (Alain + Alberto), tailoring morbido + palette colore → lookbook con campagna colore‑driven | @doppiaaofficial 18K. SS26 attiva su SSENSE/Trunk Clothiers. 5/6 criteri. Aggiunto 12/06/2026 |
+| 19 | Domenico Orefice | 🇮🇹 Firenze | Hybrid sportswear/tailoring, ex Polimoda, fondato 2022, neo‑entrato nel calendario CNMI → piccolo studio senza budget campagna | @domenicooreficetm ~9.8K. Finalista Camera Moda Trust Grant 2024. Gap visivo chiaro. 5/6 criteri. Aggiunto 12/06/2026 |
+| 20 | PECORANERA | 🇮🇹 Milano | Collettivo di 9 giovani creator, knitwear luxury sostenibile da filati recuperati industria italiana → narrativa forte + bisogno look campagna | @pecoranerastudio 18K. Fondato da giovani "pecore nere". 5/6 criteri. Aggiunto 12/06/2026 |
+| 21 | Vitelli | 🇮🇹 Milano | Maglieria italiana tradizionale riletta in chiave contemporanea, recupero filati scarto lanifici → look genderless compatibile con AI lookbook | @vitelli_official 23.3K. Distribuito da Slam Jam. 4/6 criteri. Aggiunto 12/06/2026 |
+| 22 | Vernisse | 🇮🇹 Milano | Capsule da tessuti archivio vintage, produzione artigianale su appuntamento, slow fashion → nessuna campagna professionale, gap visivo evidente | @vernisse_official 20K. Fondata 2019 da Eugenia + Francesca. Principalmente womenswear. 4/6 criteri. Aggiunto 12/06/2026 |
+| 23-30 | *(da riempire con ricerca IG / routine daily)* | | | |
 
 ---
 
