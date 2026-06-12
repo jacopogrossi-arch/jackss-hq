@@ -90,7 +90,12 @@ I nomi sopra vengono dalla stampa di settore — il cliente €400 realistico sp
 
 | # | Brand | Paese | Perché in target | Note |
 |---|---|---|---|---|
-| 13-30 | *(da riempire con ricerca IG)* | | | |
+| 13 | MTL Studio | 🇮🇹 | Menswear made in Italy, indie (workwear + cultura small-town/Berlino) — estetica narrativa compatibile | IG @mtlstudio_official, sito mtlstudio.it. Dimensione/gap visivo *(da verificare)* |
+| 14 | Alchètipo (Andrea Alchieri) | 🇮🇹 Milano | Genderless/seasonless, sartoria italiana + decostruttivismo, fondato 2024, ex Fendi, alumno Marangoni | Progetto giovane in dialogo con arte/cinema → forte bisogno visual. IG *(da verificare)* |
+| 15 | ES'GIVIEN | 🇮🇹 | Eccellenza artigianale + estetica moderna accessibile, anima autentica | Accessibile = budget compatibile €400. IG e dimensione *(da verificare)* |
+| 16 | Yali — Playhouse | 🇮🇹 | Narrativa forte (casa immaginaria/memoria), womenswear concettuale | Brand-storytelling → lookbook valorizza il racconto. *(da verificare)* |
+| 17 | P. Andrade | 🇧🇷 | Menswear, radici brasiliane + sostenibilità, fondato da Pedro Andrade & Paula Kim | Estero (quota 30%). Drop/collezione e dimensione *(da verificare)* |
+| 18-30 | *(da riempire con ricerca IG / routine daily)* | | | |
 
 ---
 
