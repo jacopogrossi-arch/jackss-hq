@@ -1,6 +1,6 @@
 # Video #3 — "A Fashion Lookbook — Built with AI"
 
-**Status: 🚀 PUBBLICATO 12/06/2026 — Instagram + YouTube (Shorts)** — montato ed esportato (`video3-marina-v1.mp4`), copertina IG (`video3-cover-instagram.png`). Funnel Beehiiv attivo e PDF lead magnet pronti prima della pubblicazione. Ora: outreach DM (`outreach.md`)
+**Status: 🚀 PUBBLICATO 12/06/2026 — Instagram + YouTube (Shorts)** — Reel: https://www.instagram.com/reel/DZe3zpFsiHm/ — montato ed esportato (`video3-marina-v1.mp4`), copertina IG (`video3-cover-instagram.png`). Funnel Beehiiv attivo e PDF lead magnet pronti prima della pubblicazione. Ora: outreach DM (`outreach.md`)
 
 Durata: ~48s | Lingua: inglese | Formato: 9:16 vertical
 
