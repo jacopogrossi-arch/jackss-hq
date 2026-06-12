@@ -11,8 +11,8 @@ description: |
   candidati outreach", "scrivi un DM per [brand]", "prepara i DM",
   "aggiorna il tracker outreach", "chi devo ricontattare",
   "follow-up". Fonte di verità: personal-brand/outreach.md.
-argument-hint: "trova [N] | scrivi DM [brand] [--en] | tracker | follow-up"
-allowed-tools: Read, Edit, WebSearch, WebFetch
+argument-hint: "daily | trova [N] | scrivi DM [brand] [--en] | tracker | follow-up"
+allowed-tools: Read, Edit, WebSearch, WebFetch, mcp__09560f98-c810-4ffc-9f21-49359caca955__notion-create-pages, mcp__09560f98-c810-4ffc-9f21-49359caca955__notion-fetch, Bash
 ---
 
 # Outreach — Assistente primi clienti
@@ -29,10 +29,66 @@ template DM aggiornati, i 6 criteri di selezione, la lista candidati e il tracke
 questo skill divergono, vince il file.
 
 Tieni a mente i vincoli del progetto (`CLAUDE.md`):
-- I DM partono **solo dopo la pubblicazione del Video #3**. Fino ad allora si
-  prepara solo la lista — non sollecitare invii.
+- Video #3 **è pubblicato** → i DM sono operativi. La proof da linkare è il Video #3.
 - Target geografico: **70% brand italiani (DM in italiano) / 30% esteri (EN)**.
 - Cliente pilota realistico = **Tier A** (micro-brand, visual deboli), non Tier B.
+
+## Doppia destinazione: repo + Notion
+
+Ogni brand vive in due posti che vanno tenuti allineati:
+- **Repo:** tabella "Lista candidati" in `personal-brand/outreach.md` (fonte di verità testuale).
+- **Notion:** database **"Brand candidati — Outreach Jago"**
+  `data_source_id = d5a4d66b-f04c-40f2-a13b-76d1b2469f5a`
+  (sotto la pagina *Personal Brand AI + Moda — Strategia*).
+
+Quando aggiungi brand, scrivili **in entrambi**. Colonne Notion (nomi esatti):
+`Brand` (title), `Paese`, `Tier` (A/B), `Perché in target`, `Criteri (su 6)` (numero),
+`Stato DM` (Da contattare / Contattato / Risposto / Cliente / Chiuso — no risposta),
+`Lingua` (IT/EN), `IG` (url), `Aggiunto` (data, usa `date:Aggiunto:start`), `Note`.
+Nuovi brand entrano sempre con `Stato DM = Da contattare`.
+
+**Dedup:** prima di aggiungere, controlla i brand già presenti in `outreach.md`
+*e* nel database Notion (fai `notion-fetch` sul data_source_id) per non duplicare.
+
+---
+
+## Comando: `daily` — la routine quotidiana (5 brand/giorno)
+
+Un solo comando che fa l'intero giro del giorno. Pensato per girare anche
+automaticamente (trigger schedulato) o lanciato a mano da Jacopo.
+
+1. **Dedup:** leggi i brand già in `outreach.md` e nel database Notino
+   (`notion-fetch` sul data_source_id) → costruisci la lista "già presenti" per non duplicare.
+2. **Trova 5** nuovi micro-brand **Tier A** seguendo `trova` (vedi sotto):
+   qualificali sui 6 criteri, tieni solo chi ne ha ≥4, niente duplicati.
+   Rispetta il mix 70/30 IT/EN sul totale nel tempo (di norma 3-4 IT + 1-2 EN).
+3. **Scrivi nel repo:** aggiungi le 5 righe alla tabella "Lista candidati" (Tier A)
+   di `outreach.md` con Edit.
+4. **Scrivi in Notion:** crea le 5 pagine nel database con `notion-create-pages`
+   (parent = data_source_id sopra), `Stato DM = Da contattare`,
+   `Aggiunto = data odierna`.
+5. **Commit & push** del repo (vedi "Git" sotto).
+6. **Riepilogo:** stampa i 5 brand trovati con 1 riga di motivazione ciascuno e
+   il link alla pagina Notion. Segnala ogni campo *(da verificare)*.
+
+⚠️ Se in un giorno non trovi 5 Tier A credibili, **aggiungine meno e dillo** —
+meglio 2 brand veri che 5 riempitivi. Onestà sui dati prima della quantità.
+
+**Esecuzione automatica:** quando giri in modalità schedulata e i candidati sono
+chiari, completa il giro senza chiedere conferma (è l'obiettivo della routine).
+In sessione interattiva, se Jacopo è presente, puoi mostrargli i 5 prima di
+scrivere. In dubbio, procedi e lascia a lui la review in Notion (Stato DM).
+
+### Git (per `daily`)
+
+```bash
+git add personal-brand/outreach.md
+git commit -m "Outreach daily: +N brand candidati (Tier A)"
+git push -u origin claude/personal-brand-outreach-agent-lb98l8
+```
+
+Solo `git add` per filename (mai `-A`). Se il push fallisce per rete, riprova
+con backoff 2s/4s/8s/16s.
 
 ---
 
