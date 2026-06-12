@@ -318,3 +318,30 @@ This is what AI does to fashion production.
 Comment "LOOKBOOK" and I'll send you the full system.
 
 #stoneisland #fashiondesign #AIdesign #lookbook #fashiontech #brandidentity #fashionbranding #artificialintelligence #fashionphotography #AIart #fashioncontent
+
+---
+
+## Titolo + descrizione YouTube (Shorts)
+
+**Titolo:**
+
+Stone Island spends €20,000 on a lookbook. I spent zero. #Shorts
+
+**Descrizione:**
+
+Stone Island spends €20,000 on a lookbook like this. I spent zero.
+
+No photographer. No studio. No model.
+One character. One clear brief. The right prompts.
+
+This is what AI does to fashion production.
+
+Want the full system I used? Get the free Lookbook System PDF here:
+https://byjago.beehiiv.com/subscribe
+
+Or comment "LOOKBOOK" and I'll send it to you.
+
+— Jago. Building a fashion brand with AI, in public.
+Instagram: https://www.instagram.com/jagoworks
+
+#stoneisland #fashiondesign #AIdesign #lookbook #fashiontech #AIart #Shorts
