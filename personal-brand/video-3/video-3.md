@@ -306,6 +306,19 @@ Replicare la densità di processo del riferimento. Registrare schermo reale, non
 
 ---
 
+## Piano Boost Reel (deciso 12/06/2026)
+
+Obiettivo: **visite al profilo** (funnel Reel → profilo → bio → Beehiiv), non follower. Budget **€30 / 6 giorni**.
+
+- Account @jagoworks in modalità professionale (Creator)
+- Reel → "Metti in evidenza" → obiettivo "Più visite al profilo"
+- Pubblico personalizzato: Italia · fashion design, moda uomo, streetwear, brand emergenti, design, AI · 20-45 anni
+- Checkpoint 48h: costo per visita profilo sotto ~€0,30-0,50 = ok; sopra = restringere interessi. Metrica vera: iscrizioni Beehiiv
+- ⚠️ Rischi rifiuto: musica da libreria IG normale (→ riesportare con traccia royalty-free) e marchio Stone Island (→ **Piano B: boostare il Video #2**, tutto originale)
+- Decisione di fondo: **mai comprare follower/view** — engagement rate impossibile smaschera l'account coi brand, l'algoritmo punisce, rischio ban. Il boost Meta è l'unico acquisto di visibilità sensato
+
+---
+
 ## Caption Instagram
 
 Stone Island spends €20,000 on a lookbook like this. I spent zero.
