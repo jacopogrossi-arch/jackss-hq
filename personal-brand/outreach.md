@@ -1,7 +1,9 @@
 # Outreach — Primi Clienti
 
-> Creato 10/06/2026. **Regola: i DM partono solo DOPO la pubblicazione del Video #3.**
-> La lista si prepara adesso, così al lancio è tutto pronto.
+> Creato 10/06/2026. **Video #3 pubblicato → i DM sono operativi.** La proof da linkare è il Video #3.
+>
+> 🤖 **Routine automatica:** lo skill `/outreach daily` aggiunge 5 brand Tier A al giorno qui e nel database Notion.
+> 📊 **Database Notion:** *Brand candidati — Outreach Jago* (sotto la pagina Strategia) — pipeline con Stato DM per ogni brand.
 
 ---
 
