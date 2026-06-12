@@ -1,6 +1,6 @@
 # Video #3 — "A Fashion Lookbook — Built with AI"
 
-**Status: ✅ COMPLETATO 11/06/2026** — montato ed esportato (`video3-marina-v1.mp4`). Copertina IG generata (`video3-cover-instagram.png`). Prima di pubblicare: riattivare Beehiiv + finire PDF lead magnet (priorità 2 e 3)
+**Status: 🚀 PUBBLICATO 12/06/2026** — montato ed esportato (`video3-marina-v1.mp4`), copertina IG (`video3-cover-instagram.png`). Funnel Beehiiv attivo e PDF lead magnet pronti prima della pubblicazione. Ora: outreach DM (`outreach.md`)
 
 Durata: ~48s | Lingua: inglese | Formato: 9:16 vertical
 
@@ -161,8 +161,8 @@ Replicare la densità di processo del riferimento. Registrare schermo reale, non
 |---|---|---|
 | Lookbook images — Marina, 5 shot stesso mondo costiero | 1, 10 | ✅ Generati 10/06/2026 — Nano Banana + character ref. Downloads: `video3-shot1-deck-fullbody`, `shot2-crouching-rocks`, `shot3-guardrail`, `shot4-badge-detail`, `shot5-wide-landscape` |
 | Lookbook images — Marina, 5 shot aggiuntivi (totale 10) | 1, 10 | ✅ Generati 11/06/2026 — Nano Banana. Downloads: `video3-shot6-rope-action`, `shot7-hands-detail-v2`, `shot8-sitting-deck-v2` (badge corretto), `shot9-walking-rocks-v2`, `shot10-portrait-mcu` |
-| Cornice polaroid sugli stills (bordo bianco + rotazione) | 1, 10, 15 | ⬜ Da fare (CapCut) |
-| Card nere (fondo nero) + testo animato + @handle | 3,5,6,8,11,14,18,20 | ⬜ Da creare (CapCut) |
+| Cornice polaroid sugli stills (bordo bianco + rotazione) | 1, 10, 15 | ✅ Fatte in CapCut (montaggio 11/06/2026) |
+| Card nere (fondo nero) + testo animato + @handle | 3,5,6,8,11,14,18,20 | ✅ Fatte in CapCut (montaggio 11/06/2026) |
 | Screen rec #1 — brief Marina | 7 | ✅ Registrato 10/06/2026 |
 | Screen rec #2 — generazione immagini (griglia Nano Banana Pro) | 9 | ✅ Registrato 10/06/2026 |
 | Screen rec #3 — timeline montaggio CapCut | 16 | ✅ Registrato 10/06/2026 |
@@ -172,7 +172,7 @@ Replicare la densità di processo del riferimento. Registrare schermo reale, non
 | Clip Seedance — b-roll modello | 2, 4, 12, 13 | ✅ Generati 10/06/2026 — upscale 1080p Topaz. Job ID in `video-3-seedance-prompts.md` |
 | Clip Seedance — Jago action | 19 | ⏸ Deferred — da generare in seguito |
 | Talking head Seedance | 17 | ✅ Generata 10/06/2026 — start frame `7c918020`, clip `f0795699`, upscale 2K ByteDance `127f3a4e` |
-| IG end card animata | 21 | ⬜ Da creare (CapCut) |
+| IG end card animata | 21 | ✅ Fatta in CapCut (montaggio 11/06/2026) |
 
 ---
 
@@ -187,8 +187,9 @@ Replicare la densità di processo del riferimento. Registrare schermo reale, non
 7. ✅ **Clip Seedance b-roll modello** — 4 clip (sc.2,4,12,13), 480p fast → upscale 1080p Topaz. Talking head sc.17: start frame + clip 480p → upscale 2K ByteDance
 8. ⏸ **Clip Seedance Jago action** (sc.19) — deferred
 9. ✅ **Screen rec (×3)** — fatto
-10. ⬜ **Card nere + polaroid + IG end card** — in CapCut
-11. ⬜ **Montaggio CapCut** — montaggio interlacciato still/b-roll ↔ card, screen-rec sulle battute brief/generate/edit
+10. ✅ **Card nere + polaroid + IG end card** — fatte in CapCut (11/06/2026)
+11. ✅ **Montaggio CapCut** — completato 11/06/2026, export `video3-marina-v1.mp4`
+12. ✅ **Pubblicazione** — 12/06/2026 su Instagram
 
 ---
 

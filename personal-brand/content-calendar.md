@@ -8,7 +8,7 @@ Tracker dei contenuti: idee → in lavorazione → pubblicato
 
 | # | Titolo | Formato | Stato | Note |
 |---|--------|---------|-------|------|
-| 3 | A Fashion Lookbook — Built with AI | Reel ~48s \| Inglese | in produzione | Concept + moodboard ✅. Prossimo step: generare le 5 immagini Marina (Higgsfield, Nano Banana Pro + Soul ID). Brief: `video-3/video-3.md`. CTA "LOOKBOOK" → lead magnet: `lead-magnet-lookbook.md`. Alla pubblicazione parte l'outreach (`outreach.md`) |
+| — | *(nessun video in lavorazione — prossimo dal backlog)* | | | |
 
 ---
 
@@ -18,6 +18,7 @@ Tracker dei contenuti: idee → in lavorazione → pubblicato
 |---|--------|-------------|------|------|------|
 | 1 | What if AI could build a fashion brand from scratch? (Manifesto) | YouTube + Instagram | 02/06/2026 | — | Stack: HiggsField Soul V2 → Kling 3.0 + Veo → HiggsField voice → CapCut. IG 75 view / YT 34 view (al 10/06) |
 | 2 | The Jago Brand — Built in One Afternoon | YouTube + Instagram | 07/06/2026 | — | Reel ~34s. Proof of concept del Brand Identity Pack. IG 123 view / YT 8 view (al 10/06) |
+| 3 | A Fashion Lookbook — Built with AI | Instagram | 12/06/2026 | — | Reel ~48s, inglese. Replica campagna Stone Island Marina SS26 con Jago. CTA "LOOKBOOK" → lead magnet via Beehiiv (funnel attivo). Outreach DM partito (`outreach.md` + routine daily) |
 
 ---
 
