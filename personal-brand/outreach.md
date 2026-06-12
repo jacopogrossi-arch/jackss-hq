@@ -108,7 +108,11 @@ I nomi sopra vengono dalla stampa di settore — il cliente €400 realistico sp
 
 | Data | Brand | Lingua | Video proof | Risposta | Esito | Follow-up |
 |---|---|---|---|---|---|---|
-| — | — | — | — | — | — | — |
+| 12/06/2026 | Doppiaa (@doppiaaofficial) | IT | Video #3 | — | in attesa | entro 17-19/06 se silenzio |
+| 12/06/2026 | Domenico Orefice (@domenicooreficetm) | IT | Video #3 | — | in attesa | entro 17-19/06 se silenzio |
+| 12/06/2026 | PECORANERA (@pecoranerastudio) | IT | Video #3 | — | in attesa | entro 17-19/06 se silenzio |
+| 12/06/2026 | Vitelli (@vitelli_official) | IT | Video #3 | — | in attesa | entro 17-19/06 se silenzio |
+| 12/06/2026 | Vernisse (@vernisse_official) | IT | Video #3 | — | in attesa | entro 17-19/06 se silenzio |
 
 ---
 
