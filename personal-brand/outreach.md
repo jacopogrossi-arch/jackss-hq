@@ -30,17 +30,17 @@
 
 ### Italiano (70% dei casi)
 
-> Ciao! Ho visto [nome brand] — [osservazione specifica su estetica, palette, identità: una frase vera, non generica].
+> Ciao! [Osservazione specifica su estetica, palette, identità — una frase vera che parla di loro. **Mai aprire con "ho visto [nome brand]"**: sanno chi sono, si parte dritti dall'osservazione.]
 > Sono Jacopo, il creatore del progetto Jago: costruisco lookbook e identità visive per label emergenti usando AI. Ho appena finito questo: [link video].
 > State lavorando a qualcosa del genere per la prossima collezione?
 
 ### English (30%)
 
-> Hi! I came across [brand name] — [specific observation about their aesthetic, palette, identity].
+> Hi! [Specific observation about their aesthetic, palette, identity — never open with "I came across [brand name]": start straight with the observation.]
 > I'm Jacopo, creator of the Jago project: I build campaign-quality lookbooks and visual identities for emerging labels using AI. Just finished this: [video link].
 > Are you working on anything like this for your next drop?
 
-**Regole:** prima parli di loro. Prezzo solo se rispondono. Mai più di un follow-up (dopo 5-7 giorni).
+**Regole:** prima parli di loro. Prezzo solo se rispondono. Mai più di un follow-up (dopo 5-7 giorni). Niente "ho visto [brand]" in apertura — dritti all'osservazione specifica.
 
 ---
 
