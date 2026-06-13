@@ -100,7 +100,11 @@ I nomi sopra vengono dalla stampa di settore — il cliente €400 realistico sp
 | 20 | PECORANERA | 🇮🇹 Milano | Collettivo di 9 giovani creator, knitwear luxury sostenibile da filati recuperati industria italiana → narrativa forte + bisogno look campagna | @pecoranerastudio 18K. Fondato da giovani "pecore nere". 5/6 criteri. Aggiunto 12/06/2026 |
 | 21 | Vitelli | 🇮🇹 Milano | Maglieria italiana tradizionale riletta in chiave contemporanea, recupero filati scarto lanifici → look genderless compatibile con AI lookbook | @vitelli_official 23.3K. Distribuito da Slam Jam. 4/6 criteri. Aggiunto 12/06/2026 |
 | 22 | Vernisse | 🇮🇹 Milano | Capsule da tessuti archivio vintage, produzione artigianale su appuntamento, slow fashion → nessuna campagna professionale, gap visivo evidente | @vernisse_official 20K. Fondata 2019 da Eugenia + Francesca. Principalmente womenswear. 4/6 criteri. Aggiunto 12/06/2026 |
-| 23-30 | *(da riempire con ricerca IG / routine daily)* | | | |
+| 23 | Tolo | 🇮🇹 Calabria | Menswear decostruttivo/knitwear, Pitti Uomo 106, made in Italy — estetica narrativa e struttura sartoriale compatibili con Jago | @toloclothier, ~follower IG da verificare. Sostenibilità + sartoria. 4/6 criteri. Aggiunto 13/06/2026 |
+| 24 | Federico Cina | 🇮🇹 Romagna | Menswear minimalista, radici rurali italiane, piccolo team — visuals semi-amatoriali, nessuna campagna professionale recente | @federicocinaofficial ~35K. LVMH Prize semi-finalist 2021. 4/6 criteri. Aggiunto 13/06/2026 |
+| 25 | Buzigahill | 🌍 Uganda | Upcycled menswear fondato 2022, drop "Return to Sender" attivo — gap visivo chiaro, budget campagna limitato | @buzigahill.official ~11K. Estero (quota 30%). EN. Verificare compatibilità estetica con Jago. 4/6 criteri. Aggiunto 13/06/2026 |
+| 26 | I Sarti Italian Menswear | 🇮🇹 | Luxury menswear made in Italy, feed senza campagna professionale — gap visivo evidente | @isarti.italian.menswear ~12K. 4/6 criteri. Aggiunto 13/06/2026 |
+| 27-30 | *(da riempire con ricerca IG / routine daily)* | | | |
 
 ---
 
