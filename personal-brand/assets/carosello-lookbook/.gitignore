@@ -1,0 +1,8 @@
+# File pesanti / temporanei: non versionare (rigenerabili)
+*.pdf
+contact-sheet.png
+slides/contact-sheet.png
+cover-*.png
+desk-*.png
+detail-*.png
+jago-cta.png
