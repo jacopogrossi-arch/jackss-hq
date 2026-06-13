@@ -308,6 +308,8 @@ Replicare la densità di processo del riferimento. Registrare schermo reale, non
 
 ## Piano Boost Reel (deciso 12/06/2026)
 
+> ⚠️ **STATO 13/06/2026 — boost NON partito.** L'ad account Meta è stato **bannato**: il boost è in attesa dello sblocco (ricorso a Meta). Appena ripristinato → lanciare con i parametri sotto. Nel frattempo la reach è solo organica: tenere il profilo attivo. Piano settimana 15-21/06: outreach in primo piano + avvio Video #4 + riflessione sul servizio.
+
 Obiettivo: **visite al profilo** (funnel Reel → profilo → bio → Beehiiv), non follower. Budget **€30 / 6 giorni**.
 
 - Account @jagoworks in modalità professionale (Creator)
