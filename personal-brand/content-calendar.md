@@ -8,7 +8,7 @@ Tracker dei contenuti: idee → in lavorazione → pubblicato
 
 | # | Titolo | Formato | Stato | Note |
 |---|--------|---------|-------|------|
-| — | *(nessun video in lavorazione — prossimo dal backlog)* | | | |
+| 4 | Your brand's first lookbook — built with AI | Reel/Short ~48s | script ✍️ | Lookbook per brand emergente (fittizio VESPRO). Demo del servizio AI Lookbook €400. CTA "BRAND". Riusa montaggio #3. File: `video-4/video-4.md` |
 
 ---
 
