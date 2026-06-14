@@ -44,6 +44,36 @@
 
 ---
 
+## Play partner — artigiani/fornitori come canale (ricamifici, atelier, laboratori)
+
+> Aggiunto 14/06/2026. Diverso dal cold-DM standard: l'artigiano **non è il cliente da €400**, è la **porta** verso i suoi clienti.
+
+Un ricamificio (o stamperia, maglificio, atelier) lavora **per** brand e stilisti. Quindi:
+
+1. **È un nodo con una rete.** Il valore vero sono i suoi clienti → la referral da lui vale più di una sua singola commessa.
+2. **Genera il case study originale che manca** (vedi nota Piano B Stone Island sopra): una campagna che mette in scena i *suoi* ricami = lookbook originale + partner reale dietro.
+3. **È una relazione calda tra pari**, non una vendita a freddo — specie se il founder è giovane e raggiungibile (~1k follower).
+
+### Trappole da evitare
+- **AI + artigianato è delicato.** Inquadralo come *"valorizzo il tuo lavoro a mano con visual che oggi non ti puoi permettere"*, mai come "ti sostituisco con la macchina". Lui resta l'artigiano, tu sei chi lo fa vedere bene.
+- **Una sola mini-collab gratis**, ed è uno scambio esplicito (visual ↔ testimonianza + presentazione a 1-2 clienti). Non diventare il suo grafico gratis a vita.
+- **La richiesta di clienti arriva DOPO la consegna**, mai nel primo DM.
+
+### Sequenza (3 passi)
+1. **DM1** — osservazione vera e specifica su un suo lavoro + proposta di mini-collaborazione. Nessun soldo, nessun "hai clienti?".
+2. **Consegna** — mini-look (2-3 immagini) che mette in scena *un suo pezzo* su un capo/scena generata. Gratis, come test.
+3. **Dopo che gli piace** — testimonianza + *"hai qualche cliente a cui servirebbe una campagna così?"* → primo cliente per referral.
+
+### Template
+
+**DM1 (apertura):**
+> Ciao! [Osservazione vera e specifica su un suo pezzo — es. "quel ricamo a filo metallico sull'ultima giacca è una bestia, il tipo di dettaglio che di solito si vede solo sull'alta moda"]. Sono Jacopo, dietro il progetto Jago: costruisco campagne e lookbook per brand di moda usando AI. Mi piacerebbe fare una cosa insieme — prendere un tuo lavoro e metterlo in scena in un mini-look come se fosse la campagna di un brand. Lo faccio gratis, per il gusto di vedere come viene. Ti va se ci provo?
+
+**Dopo la consegna (referral):**
+> Sono super contento di come è venuto. Se ti piace, l'unica cosa che ti chiedo è due righe di feedback che posso mostrare. E una curiosità: tra i brand con cui lavori, c'è qualcuno che sta per lanciare una collezione e a cui servirebbe una campagna così? Sarei felice di una presentazione.
+
+---
+
 ## Criteri di selezione
 
 Un brand è in target se rispetta almeno 4 di questi 6:
