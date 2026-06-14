@@ -29,9 +29,10 @@ A small summer tailoring label built around one sculptural trouser. No logos, no
 - Worn with a **minimal fitted black top** (tank or fine knit) so the trouser is the protagonist.
 
 ### 2. World — ONE setting
-**Sun-drenched minimal Mediterranean architecture.**
-- Pale lime-washed stone / plaster walls, stone steps, an archway or terrace, a glimpse of deep blue sea or sky.
-- Hard crisp shadows cast by direct sun. No interiors, no studio. One continuous sunlit world.
+**Luxury Italian coastal architecture, Capri register (deciso 14/06/2026).**
+- **Smooth whitewashed plaster** walls, rounded minimal forms, white vaulted archways, white balustrades, pale stone floors, a spill of magenta bougainvillea, deep blue Tyrrhenian sea on the horizon.
+- Clean, bright, airy, expensive — **nothing rough or rustic** (NO raw brick/grezzo stone: scartato da Jacopo). One continuous sunlit Capri world.
+- Hard crisp shadows cast by direct sun. No interiors, no studio.
 
 ### 3. Light — ONE condition
 **Warm golden late-afternoon Mediterranean light (the *vespro* hour).**

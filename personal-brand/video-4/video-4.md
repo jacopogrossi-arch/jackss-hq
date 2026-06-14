@@ -117,7 +117,7 @@ Montaggio interlacciato come nel #3: still/b-roll ↔ card nere (fondo nero, tes
 
 | Asset | Scena | Status |
 |-------|-------|--------|
-| Lookbook images VESPRO — 5 shot stesso mondo notturno | 1, 10, 12 | ⏳ Da generare (Higgsfield + Nano Banana Pro) |
+| Lookbook images VESPRO — 5 shot mondo Capri | 1, 10, 12 | ✅ Generati 14/06/2026 — Nano Banana Pro + doppia ref (character sheet Jago `50c1a7d6` + silhouette Draper `ce9be775`), NO Soul ID. File in `video-4/`: `shot1-capri-v2/v3` (full body), `shot2-capri-v1` (arco), `shot3-capri-v1` (dettaglio), `shot4-capri-v2` (seduto), `shot5-capri-v1` (wide). Altre varianti recuperabili su Higgsfield |
 | Clip Seedance b-roll — Jago strada notturna | 2, 6, 11, 13 | ⏳ Da generare (I2V dalle immagini lookbook) |
 | Screen rec #1 — brief VESPRO | 7 | ⏳ Da registrare |
 | Screen rec #2 — generazione immagini (griglia) | 9 | ⏳ Da registrare |
