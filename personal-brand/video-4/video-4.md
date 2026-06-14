@@ -14,9 +14,9 @@ Nel #3 abbiamo **copiato** una vera campagna (Stone Island Marina) per stupire. 
 - **Porta lo spettatore-brand dritto alla vendita.** Lo spettatore si proietta: "questo potrebbe essere il MIO brand". CTA finale = `BRAND` → funnel servizio.
 - **Zero rischio marchi.** Niente loghi reali → niente ban dell'ad account (problema avuto col #3/Stone Island). Boostabile senza paura.
 - **Dimostra che crei il MONDO, non che copi.** Messaggio più forte: "non mi serve una campagna da imitare, te ne invento una".
-- **Massimo contrasto col #3.** Marina = nautico, luminoso, navy, pieno giorno. VESPRO = sartoriale, notturno, nero+ambra. Mostra il range — e usa l'estetica nativa di Jago (dark-luxury), quindi consistenza facile.
+- **Contrasto pulito col #3.** Marina = nautico, navy, capo tecnico. VESPRO = sartoriale mediterraneo, draped tailoring, pantalone scultoreo come protagonista. Stesso registro luminoso (pieno sole costiero) ma mondo e capo completamente diversi → mostra il range senza cambiare estetica di base.
 
-**Brand fittizio: VESPRO** — *quiet tailoring, after dark.*
+**Brand fittizio: VESPRO** — *draped tailoring, in Mediterranean light.*
 > Nome sostituibile: se stai corteggiando un brand reale nell'outreach, possiamo costruire il lookbook **per quel brand specifico** e usare il video come esca diretta. In tal caso: sostituire VESPRO ovunque + procurare 1-2 reference del loro capo.
 
 ---
@@ -58,18 +58,18 @@ Montaggio interlacciato come nel #3: still/b-roll ↔ card nere (fondo nero, tes
 | # | Durata | Tipo | Descrizione visiva | Voiceover / Testo card |
 |---|--------|------|--------------------|------------------------|
 | **1 — Intro** | 0–2.5s | Stills polaroid | 3–4 stills lookbook VESPRO in sequenza su nero, cornice polaroid. | *(silenzio / beat)* |
-| **2 — Hook** | 2.5–4.5s | B-roll Seedance | Jago cammina lento, strada notturna, pavé bagnato, riflessi ambrati. | *"You just launched your brand. The collection is ready. The campaign isn't."* |
+| **2 — Hook** | 2.5–4.5s | B-roll Seedance | Jago cammina lento sotto un arco di pietra bianca, mare blu dietro, luce dorata del tardo pomeriggio. | *"You just launched your brand. The collection is ready. The campaign isn't."* |
 | **3 — Il costo** | 4.5–6.5s | Card nera | Numero grande: **€5,000**. | *"A real photoshoot? Five thousand euros."* |
 | **4 — Cosa serve** | 6.5–8s | Card nera | Keyword: *Studio · Photographer · Model · Location*. | *"Studio, photographer, model, location."* |
 | **5 — Payoff** | 8–10s | Card nera | *"You don't need it."* | *"You don't have that yet. You don't need it."* |
-| **6 — La promessa** | 10–12s | B-roll / still | Jago tre quarti sotto una vetrina illuminata. | *"Give me one garment and one idea. I'll build the world around it."* |
+| **6 — La promessa** | 10–12s | B-roll / still | Jago full body contro un muro bianco al sole, ombra netta proiettata. | *"Give me one garment and one idea. I'll build the world around it."* |
 | **7 — Brief (screen rec #1)** | 12–14.5s | Screen rec | Brief "creative blueprint" VESPRO a schermo (documento intero). | *"One brief. Concept, mood, light, poses..."* |
 | **8 — Keyword cards** | 14.5–16.5s | Card nera | Keyword animate: *Concept · Mood · Light · Poses*. | *"...locked before I open a single tool."* |
 | **9 — Generate (screen rec #2)** | 16.5–18.5s | Screen rec | Griglia risultati generazione (4-up), i look che compaiono. | *(b-roll del processo)* |
 | **10 — Five looks** | 18.5–21s | Stills rapidi + SFX | 5 shot VESPRO in sequenza veloce (~0.5s), whoosh/click a ogni cut. | *"One character. Five looks. Same light, same world, same hand."* |
-| **11 — Detail** | 21–22.5s | B-roll / still | Close-up tessuto / bottoni in corno, nessun volto. | *(silenzio / sotto-VO)* |
+| **11 — Detail** | 21–22.5s | B-roll / still | Close-up vita del pantalone: pince profonde, tessuto lino, mano alla cintura, nessun volto. | *(silenzio / sotto-VO)* |
 | **12 — Reveal brand** | 22.5–25s | Still hero | Lo shot migliore VESPRO, fermo, con il nome **VESPRO** in sovrimpressione minimale. | *"This is VESPRO. It doesn't exist — I built its first lookbook in one afternoon."* |
-| **13 — Atelier** | 25–27s | B-roll / still | Jago seduto in atelier dark academia, lampada ambrata. | *(beat)* |
+| **13 — Seduto** | 25–27s | B-roll / still | Jago seduto su un muretto in pietra al sole, mare e bougainvillea dietro. | *(beat)* |
 | **14 — Il punto** | 27–28.5s | Card nera | *"Before you've spent a cent."* | *"This is what your brand looks like before you've spent a cent on production."* |
 | **15 — Deliver (screen rec #3)** | 28.5–30s | Screen rec | Timeline montaggio / griglia finale dei 5 look impaginati. | *(b-roll del processo)* |
 | **16 — Talking head** | 30–37s | Kling/Seedance Avatar | Jago MCU frontale in atelier. Delivery piatta, stoica. Contatto visivo fisso. | *"Give me one garment and one idea, and in seventy-two hours your brand has a campaign."* |
@@ -83,33 +83,31 @@ Montaggio interlacciato come nel #3: still/b-roll ↔ card nere (fondo nero, tes
 
 ---
 
-## Brief Lookbook — VESPRO (quiet tailoring, after dark)
+## Brief Lookbook — VESPRO (draped tailoring, in Mediterranean light)
 
-> Stessa logica dei 6 pilastri di consistenza del #3 (`video-3-lookbook-briefing.md`): modello + capo + mondo + luce + grade BLOCCATI, cambiano solo posa e framing.
+> **Fonte di verità unica:** `video-4-brief-vespro.md` (il "creative blueprint" Capri, deciso 14/06/2026). Tutti i pilastri di consistenza, la shot list dei 5 look, il prompt base di generazione e il consistency check stanno lì. Qui solo il riassunto operativo.
 
-**Modello:** Jago (Soul ID Higgsfield) — in ogni shot con volto visibile.
-**Hero piece:** **cappotto sartoriale destrutturato in lana nera** (unstructured tailored overcoat), spalla morbida, revers ampio, **dolcevita nero** sotto, bottoni in corno scuro / ottone brunito. Nessun logo appariscente — quiet luxury. Identico in tutte le shot.
-**Bottom:** pantaloni sartoriali neri a gamba dritta — coerenti in tutte le shot.
-**Setting unico:** mondo **notturno urbano-sartoriale** — strada europea con pavé bagnato + vetrine/lampioni ambrati, e interno **atelier dark academia** (legno, libri, lampada calda) come variante interna dello stesso mondo.
-**Luce:** **notturna, chiaroscuro**, key ambrata calda contro ombre profonde. Stessa condizione in tutte le shot (non mischiare giorno/notte).
-**Palette:** nero + ambra/ottone + grigio pietra. Ambiente: pavé scuro bagnato + luci calde.
-**Mood:** *restrained, nocturnal, lived-in — he owns the night, he doesn't perform for it.* Editoriale, non posa di plastica.
+**Modello:** Jago — generato con **Nano Banana Pro + character sheet** (`assets/jago-character-sheet.jpeg`), **NO Soul ID**.
+**Hero piece:** **pantalone scultoreo draped wide-leg** a vita alta, pince profonde, gamba a barile voluminosa, lino-seta nero opaco (NON denim). Con top nero fitted minimale. Identico in tutte le shot.
+**Setting unico:** **architettura costiera mediterranea, registro Capri** — intonaco bianco, archi e balaustre bianche, pietra chiara, bougainvillea magenta, mare blu Tirreno. Niente grezzo/rustico, niente interni.
+**Luce:** **dorata calda del tardo pomeriggio mediterraneo (l'ora del *vespro*)** — sole diretto basso, ombre nette, alto contrasto. Stessa condizione in tutte le shot.
+**Palette:** nero/ink + pietra chiara calda + luce dorata + accento blu profondo.
+**Mood:** *draped, sculptural, sun-warmed — he drifts through the heat, he doesn't pose.*
 
-### I 5 shot
+### I 5 shot (mondo Capri)
 
-| # | Shot | Frame | Note |
-|---|------|-------|------|
-| 1 | **Full body strada notturna** — Jago in piedi sul pavé bagnato, cappotto aperto, riflessi ambrati a terra | Full body, figura ~70% altezza | Sguardo fuori campo, calmo |
-| 2 | **Tre quarti sotto vetrina** — appoggiato/in piedi accanto a una vetrina illuminata, luce calda laterale | Tre quarti, busto + ambiente urbano | Chiaroscuro forte |
-| 3 | **Close-up dettaglio capo** — tessuto lana, revers, bottoni in corno, mano in tasca | Dettaglio, **nessun volto** | Taglio di luce laterale che esalta la texture |
-| 4 | **Atelier interno** — Jago seduto in atelier dark academia, lampada ambrata, libri/legno | Mezza figura, interno | Variante interna dello stesso mondo notturno |
-| 5 | **Wide ambiance** — figura piccola in strada notturna deserta, inglobata da buio + luci | Wide, figura piccola nel paesaggio urbano | Mood editoriale, silhouette del cappotto riconoscibile |
+| # | Shot | Frame | File generato |
+|---|------|-------|---------------|
+| 1 | **Full body muro al sole** — in piedi contro muro intonacato, ombra netta | Full body, figura ~70% | `shot1-capri-v3` |
+| 2 | **In cammino sotto l'arco** — passo, gamba ampia che prende aria | Tre quarti / full, mid-step | `shot2-capri-v1` |
+| 3 | **Dettaglio, senza volto** — pince vita, tessuto lino, mano alla cintura | Close-up | `shot3-capri-v1` |
+| 4 | **Seduto su muretto** — drappeggio che scolpisce la gamba | Mezza/full figura, basso | `shot4-capri-v2` |
+| 5 | **Wide ambiance** — figura piccola su terrazza al sole, mare dietro | Wide | `shot5-capri-v1` |
 
 ### Note tecniche generazione (Higgsfield + Nano Banana Pro)
-- Soul ID di Jago per coerenza volto in tutte le shot con viso visibile.
-- Prompt base uguale per tutti, cambia solo il blocco [POSA/FRAMING] (stesso metodo §5 del briefing #3).
+- **NO Soul ID.** Doppia ref: character sheet Jago (`50c1a7d6`) + silhouette Draper trouser (`ce9be775`, `ref-draper-trouser.png`) — del trouser si tiene **solo la forma**, ribadire "linen-silk, not denim" nel prompt.
+- Prompt base uguale per tutti, cambia solo il blocco [POSE/FRAMING] (vedi `video-4-brief-vespro.md`).
 - 3–4 varianti per shot, si tiene la più forte. Si scarta tutto ciò che rompe luce/mondo/capo.
-- Sfondo Jago dark academia per lo shot 4 (atelier): vedi memoria `reference_sfondo_jago.md`.
 
 ---
 
@@ -118,7 +116,7 @@ Montaggio interlacciato come nel #3: still/b-roll ↔ card nere (fondo nero, tes
 | Asset | Scena | Status |
 |-------|-------|--------|
 | Lookbook images VESPRO — 5 shot mondo Capri | 1, 10, 12 | ✅ Generati 14/06/2026 — Nano Banana Pro + doppia ref (character sheet Jago `50c1a7d6` + silhouette Draper `ce9be775`), NO Soul ID. File in `video-4/`: `shot1-capri-v2/v3` (full body), `shot2-capri-v1` (arco), `shot3-capri-v1` (dettaglio), `shot4-capri-v2` (seduto), `shot5-capri-v1` (wide). Altre varianti recuperabili su Higgsfield |
-| Clip Seedance b-roll — Jago strada notturna | 2, 6, 11, 13 | ⏳ Da generare (I2V dalle immagini lookbook) |
+| Clip Seedance b-roll — Jago mondo Capri (diurno, I2V) | 2, 6, 11, 13 | 🟡 In corso — prompt pronti in `video-4-seedance-prompts.md`. ✅ Clip scena 2 (camminata sotto l'arco) generata 15/06/2026. ⏳ scene 6, 11, 13 |
 | Screen rec #1 — brief VESPRO | 7 | ⏳ Da registrare |
 | Screen rec #2 — generazione immagini (griglia) | 9 | ⏳ Da registrare |
 | Screen rec #3 — impaginazione / timeline | 15 | ⏳ Da registrare |
@@ -132,10 +130,10 @@ Montaggio interlacciato come nel #3: still/b-roll ↔ card nere (fondo nero, tes
 ## Ordine di produzione
 
 1. ✅ **Concept + angolo deciso** — lookbook per brand emergente (questo file)
-2. ⏳ **Conferma brand** — VESPRO fittizio, oppure brand reale dell'outreach
-3. ⏳ **Brief creativo VESPRO** — il "creative blueprint" da scrivere (serve anche come screen rec #1)
-4. ⏳ **Genera 5 immagini lookbook** — Higgsfield + Nano Banana Pro
-5. ⏳ **Seedance prompts** — b-roll notturno, una clip per shot in movimento
+2. ✅ **Conferma brand** — VESPRO fittizio, mondo Capri mediterraneo
+3. ✅ **Brief creativo VESPRO** — `video-4-brief-vespro.md` (serve anche come screen rec #1)
+4. ✅ **Genera 5 immagini lookbook** — Nano Banana Pro + doppia ref (14/06/2026)
+5. 🟡 **Seedance prompts** — b-roll Capri diurno, I2V dalle immagini → `video-4-seedance-prompts.md`. Clip scena 2 generata (15/06)
 6. ⏳ **Screen rec ×3** + talking head
 7. ⏳ **Card nere + polaroid + IG end card** (CapCut)
 8. ⏳ **Montaggio CapCut** → export `video4-vespro-v1.mp4`
