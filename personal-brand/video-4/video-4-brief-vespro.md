@@ -10,85 +10,86 @@
 
 ## THE BRAND
 
-**VESPRO** — *quiet tailoring, after dark.*
+**VESPRO** — *draped tailoring, in Mediterranean light.*
 
-A small tailoring label for people who dress at the end of the day, not the start. No logos, no noise. One coat, worn like it's lived in. The campaign has to feel nocturnal, restrained, expensive — without ever looking like it tried.
+A small summer tailoring label built around one sculptural trouser. No logos, no noise. The campaign has to feel sun-warmed, restrained and expensive — the fabric breathes, the light does the talking.
 
-**One-line mood:** *He owns the night. He doesn't perform for it.*
+**One-line mood:** *He moves through the heat. The fabric breathes. He doesn't pose — he drifts.*
 
 ---
 
 ## THE SIX PILLARS (locked before any tool opens)
 
 ### 1. Hero piece — ONE garment
-**Unstructured tailored overcoat, black wool.**
-- Soft shoulder, no padding — drapes, doesn't stand.
-- Wide notch lapel.
-- Horn / dark-burnished buttons (no shine).
-- Worn over a **black fine-gauge turtleneck**.
-- No visible logo, no contrast stitching. Quiet luxury.
+**Sculptural draped wide-leg trouser.**
+- **High waist**, deep front **pleats**.
+- **Voluminous barrel / curved leg** — wide and rounded through the thigh, tapering slightly at the ankle. **Ankle length.**
+- Material: **black ink linen with a silk / organza blend** → a soft, low sheen. **NOT denim, not jeans** (the silhouette reference is denim — we keep only the shape).
+- Silhouette reference: Beaularés "The Draper Trouser" (`ref-draper-trouser.png`) — **shape only**.
+- Worn with a **minimal fitted black top** (tank or fine knit) so the trouser is the protagonist.
 
 ### 2. World — ONE setting
-**Nocturnal European street + atelier interior, same world.**
-- Exterior: old-town street, **wet cobblestones**, warm shop windows and streetlamps, no crowds.
-- Interior: a **dark-academia atelier** — wood, books, a single warm lamp — as the indoor variant of the same night.
-- Never daylight. Never a studio sweep. One continuous nocturnal world.
+**Sun-drenched minimal Mediterranean architecture.**
+- Pale lime-washed stone / plaster walls, stone steps, an archway or terrace, a glimpse of deep blue sea or sky.
+- Hard crisp shadows cast by direct sun. No interiors, no studio. One continuous sunlit world.
 
 ### 3. Light — ONE condition
-**Nocturnal chiaroscuro, warm amber key against deep shadow.**
-- Single warm key (lamp / shop window), strong falloff into black.
-- High contrast, visible grain, no flat fill light.
+**Warm golden late-afternoon Mediterranean light (the *vespro* hour).**
+- Direct, low, warm sun — hard directional light, crisp dark shadows.
+- The raking light catches the silk-linen sheen and makes it glow. High contrast.
 - Same condition in every shot — the light is the glue.
 
-### 4. Palette — 3 colors
-**Black + amber/brass + stone grey.**
-- Garment: black wool / black knit.
-- Environment: dark wet cobble + warm amber light + grey stone.
+### 4. Palette — 3-4 colors
+**Black / ink + warm pale stone + golden light + deep blue accent.**
+- Garment: black ink linen-silk.
+- Environment: warm pale stone / lime-white plaster, deep blue sky or sea.
 - Nothing else enters the frame.
 
 ### 5. Model — one consistent character
-**Jago** (Higgsfield Soul ID) in every shot with a visible face. Same hair, same identity, same hand across all five looks.
+**Jago.** Generated with **Nano Banana Pro + the character sheet** (`personal-brand/assets/jago-character-sheet.jpeg`) — **NOT the Soul ID**. Same hair, same identity, same hand across all five looks. Full black top in every shot (Jago's rule).
 
 ### 6. Mood — one sentence
-*"Restrained, nocturnal, lived-in — he inhabits the coat, he doesn't pose in it."*
+*"Draped, sculptural, sun-warmed — he drifts through the heat, he doesn't pose."*
 
 ---
 
 ## SHOT LIST (5 looks, one world)
 
-Real campaigns vary distance and angle inside ONE world — they never change worlds. Only **pose and framing** change below. Everything else is locked above.
+Real campaigns vary distance and angle inside ONE world — they never change worlds. Only **pose and framing** change below. Everything else is locked above. At least 2-3 shots must read the **volume of the trouser** clearly.
 
 | # | Look | Frame | Pose / what the world does |
 |---|------|-------|----------------------------|
-| 1 | **Full body, wet street** | Full body, figure ~70% of frame | Standing on wet cobbles, coat open, amber reflections on the ground. Gaze off-frame, calm. |
-| 2 | **Three-quarter, shop window** | Three-quarter, torso + street | Beside a lit shop window, warm side light carving the face. Strong chiaroscuro. |
-| 3 | **Detail, no face** | Close-up | Wool texture, lapel, horn buttons, hand in pocket. Side light raking the fabric. *(Every real campaign has one faceless detail shot.)* |
-| 4 | **Atelier interior** | Half figure, indoors | Seated in the dark-academia atelier, single amber lamp, wood and books behind. The indoor face of the same night. |
-| 5 | **Wide ambiance** | Wide, small figure | Small in an empty nocturnal street, swallowed by dark and light. Coat silhouette still readable from distance. |
+| 1 | **Full body, sunlit wall** | Full body, figure ~70% of frame | Standing against a lime-washed stone wall, hard shadow behind. The full trouser volume reads head to ankle. Gaze off-frame, calm. |
+| 2 | **Three-quarter, in motion** | Three-quarter / full, mid-step | Walking through an archway, the wide leg catches air and golden light — the fabric breathes. |
+| 3 | **Detail, no face** | Close-up | The silk-linen sheen, deep waist pleats, a hand at the waistband. Raking golden light on the fabric weave. *(Every real campaign has one faceless detail shot.)* |
+| 4 | **Seated, stone steps** | Half / full figure, low | Seated or crouched on warm stone steps, the drape pools and sculpts around the leg. |
+| 5 | **Wide ambiance** | Wide, small figure | Small figure on a sunlit terrace, sea/sky behind, swallowed by stone and light. The voluminous trouser silhouette still readable at distance. |
 
 ---
 
 ## BASE GENERATION PROMPT (same for every shot, swap only [POSE/FRAMING])
 
-> *"Artistic fashion campaign for VESPRO, a quiet tailoring label. Hero piece: an unstructured black wool tailored overcoat, soft shoulder, wide notch lapel, dark horn buttons, worn over a black turtleneck, black tailored trousers, no visible logo. [POSE/FRAMING]. Setting: a nocturnal European old-town street with wet cobblestones, warm shop windows and streetlamps. Nocturnal chiaroscuro, single warm amber key light against deep shadow, high contrast, 35mm film grain. Palette: black, amber, stone grey. Editorial campaign quality, restrained and lived-in, indistinguishable from a real luxury tailoring campaign."*
+> *"Artistic summer fashion campaign for VESPRO, a quiet luxury label. Hero piece: a sculptural high-waisted draped wide-leg trouser with deep front pleats, a voluminous rounded barrel leg that tapers slightly at the ankle, ankle length, made of black ink linen with a silk-organza blend giving a soft low sheen — NOT denim, not jeans. Worn with a minimal fitted black top. [POSE/FRAMING]. Setting: sun-drenched minimal Mediterranean architecture, pale lime-washed stone and plaster walls, hard crisp shadows, deep blue sky. Warm golden late-afternoon Mediterranean light raking across the fabric, making the silk sheen glow, high contrast. Palette: black garment, warm pale stone, golden light, deep blue accent. Editorial campaign quality, draped and sculptural, restrained quiet luxury, 35mm film grain."*
 
 Swap `[POSE/FRAMING]` per shot:
-1. `full body standing on wet cobblestones, coat open, amber reflections on the ground, gaze off-frame`
-2. `three-quarter shot beside a lit shop window, warm side light on the face, leaning slightly`
-3. `extreme close-up of the wool lapel and horn buttons, a hand in the coat pocket, no face in frame`
-4. `seated in a dark-academia atelier interior, single warm lamp, wood and books behind, half figure`
-5. `wide shot, small figure in an empty nocturnal street, swallowed by darkness and warm light, coat silhouette readable`
+1. `full body standing against a lime-washed stone wall, hard shadow behind, the full trouser volume from waist to ankle, gaze off-frame`
+2. `three-quarter shot mid-step walking through a stone archway, the wide leg catching air and golden light`
+3. `extreme close-up of the trouser waist pleats and silk-linen fabric sheen, a hand at the waistband, no face in frame`
+4. `seated on warm sunlit stone steps, the drape pooling and sculpting around the leg, half figure`
+5. `wide shot, small figure on a sunlit Mediterranean terrace, deep blue sea behind, the voluminous trouser silhouette readable at distance`
 
-For shot 4 use Jago's dark-academia atelier background (vedi memoria `reference_sfondo_jago`).
+**Reference media (Nano Banana Pro, NO Soul ID):**
+- `personal-brand/assets/jago-character-sheet.jpeg` → face / identity.
+- `ref-draper-trouser.png` → trouser **silhouette only** (ignore the denim — restate "linen-silk, not denim" in the prompt).
 
 ---
 
 ## CONSISTENCY CHECK (before approving each shot)
 - [ ] Same Jago face?
-- [ ] Same black overcoat (soft shoulder, notch lapel, horn buttons, black turtleneck)?
-- [ ] Same nocturnal world (wet street / atelier — not a new location)?
-- [ ] Same warm amber chiaroscuro light?
-- [ ] Same black + amber + stone grey grade?
-- [ ] Trousers consistent with the other shots?
+- [ ] Same trouser (high-waist, deep pleats, voluminous barrel leg, ankle length, black linen-silk sheen — NOT denim)?
+- [ ] Same minimal black top?
+- [ ] Same sunlit Mediterranean world (stone / plaster — not a new location)?
+- [ ] Same warm golden raking light and crisp shadows?
+- [ ] Same black + warm stone + golden + blue grade?
 
 Se anche solo una casella salta → si rigenera. La coerenza batte la singola immagine.
