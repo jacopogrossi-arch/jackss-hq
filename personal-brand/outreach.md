@@ -104,7 +104,10 @@ I nomi sopra vengono dalla stampa di settore — il cliente €400 realistico sp
 | 24 | Federico Cina | 🇮🇹 Romagna | Menswear minimalista, radici rurali italiane, piccolo team — visuals semi-amatoriali, nessuna campagna professionale recente | @federicocinaofficial ~35K. LVMH Prize semi-finalist 2021. 4/6 criteri. Aggiunto 13/06/2026 |
 | 25 | Buzigahill | 🌍 Uganda | Upcycled menswear fondato 2022, drop "Return to Sender" attivo — gap visivo chiaro, budget campagna limitato | @buzigahill.official ~11K. Estero (quota 30%). EN. Verificare compatibilità estetica con Jago. 4/6 criteri. Aggiunto 13/06/2026 |
 | 26 | I Sarti Italian Menswear | 🇮🇹 | Luxury menswear made in Italy, feed senza campagna professionale — gap visivo evidente | @isarti.italian.menswear ~12K. 4/6 criteri. Aggiunto 13/06/2026 |
-| 27-30 | *(da riempire con ricerca IG / routine daily)* | | | |
+| 27 | Maragno Studio | 🇮🇹 Veneto | Genderless quiet luxury, upcycled cashmere/wool/silk da scarti industria lusso — palette neutrale compatibile con estetica Jago, gap visivo pieno | @maragnostudio ~3.2K. Fashion Hub CNMI "Designers for the Planet". Founder Giulio Maragno. 5/6 criteri. Aggiunto 14/06/2026 |
+| 28 | Mordecai | 🇮🇹 Milano | Menswear funzionale e versatile — "oltre le categorie" (sport/lavoro/formale), produzione italiana, estetica senza tempo | @mordecai_studio ~12K. Fondato 2022 da Ludovico Bruno. AW26 a MFW Jan 2026. Gap campagna editoriale ancora presente nonostante PR. 5/6 criteri. Aggiunto 14/06/2026 |
+| 29 | Victor Hart | 🇮🇹 Bologna | Esordio assoluto in passerella MFW FW26 (Jan 2026) — prima collezione = zero infrastruttura campagna, gap visivo totale | @victor__hart ~11K. Designer ghanese con base a Bologna (DM IT o EN). Denim jacquard bold — estetica meno minimalista di Jago, da valutare. 4/6 criteri. Aggiunto 14/06/2026 |
+| 30 | Meriisi | 🇮🇹 Milano | Menswear 1-person brand (founder Antonio D'Andrea), tailoring classico + leather, fondato 2022, Fashion Hub CNMI — nessuna campagna professionale nota | @meriisi_ ~follower da verificare. Estetica dark/eclettica (anni 80-90) — verificare se lookbook AI può adattarsi al loro linguaggio. 4/6 criteri. Aggiunto 14/06/2026 |
 
 ---
 
