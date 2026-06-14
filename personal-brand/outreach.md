@@ -72,6 +72,22 @@ Un ricamificio (o stamperia, maglificio, atelier) lavora **per** brand e stilist
 **Dopo la consegna (referral):**
 > Sono super contento di come è venuto. Se ti piace, l'unica cosa che ti chiedo è due righe di feedback che posso mostrare. E una curiosità: tra i brand con cui lavori, c'è qualcuno che sta per lanciare una collezione e a cui servirebbe una campagna così? Sarei felice di una presentazione.
 
+### Risposte pronte alla replica (quando l'artigiano risponde)
+
+→ **Se dice sì / "dai proviamo":**
+> Top! Mandami pure 2-3 foto del ricamo che preferisci, anche scattate male col telefono, a me serve solo il dettaglio. Al resto penso io e in un paio di giorni ti mostro come viene. 🔥
+
+→ **Se chiede "cosa intendi / come funziona?":**
+> Prendo un tuo ricamo e lo "vesto": costruisco 2-3 immagini in cui quel pezzo vive su un capo, indossato, con luce e ambientazione da campagna — il tipo di foto che di solito costa centinaia di euro a un brand. Te le mando e decidi tu se ti piacciono. Zero impegno.
+
+→ **Se è scettico sull'AI / "non so se fa per me":**
+> Ti capisco, il ricamo è lavoro a mano e quello resta il cuore. Io non lo tocco — lo metto solo in una cornice che lo fa risaltare. Se non ti convince il risultato, l'hai visto gratis e nessun problema. 🙌
+
+### Caso live — OUTLAW | Made in Italy (@outlaw.ricami)
+- **Profilo:** ricamificio made in Italy, 1093 follower, 5 post. Founder: **Mattia** (giovane). Settore tessile/artigianale.
+- **14/06/2026 — DM1 inviato** (richiesta di collaborazione accettata da inviare = "Invito inviato", chat business). Aggancio usato: "un ragazzo giovane come me in un settore artigianale come il tessile" + proposta mini-look gratis su un suo ricamo.
+- **Prossimo passo:** scegliere ORA 2-3 suoi ricami da mettere in scena; rispondere veloce con le repliche qui sopra appena Mattia risponde. Follow-up unico dopo 5-7 giorni se silenzio.
+
 ---
 
 ## Criteri di selezione
@@ -150,6 +166,7 @@ I nomi sopra vengono dalla stampa di settore — il cliente €400 realistico sp
 | 12/06/2026 | PECORANERA (@pecoranerastudio) | IT | Video #3 | — | in attesa | entro 17-19/06 se silenzio |
 | 12/06/2026 | Vitelli (@vitelli_official) | IT | Video #3 | — | in attesa | entro 17-19/06 se silenzio |
 | 12/06/2026 | Vernisse (@vernisse_official) | IT | Video #3 | — | in attesa | entro 17-19/06 se silenzio |
+| 14/06/2026 | OUTLAW \| Made in Italy (@outlaw.ricami) — *play partner* | IT | mini-collab gratis | — | DM1 inviato | entro 19-21/06 se silenzio |
 
 ---
 
