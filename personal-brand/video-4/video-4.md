@@ -27,27 +27,36 @@ Stessa impalcatura collaudata in CapCut (still polaroid ↔ card nere in alterna
 
 ---
 
-## Script voiceover
+## Script voiceover — v2 (attention-optimized 15/06/2026)
 
-> *"You just launched your brand. The collection is ready. The campaign isn't."*
+> **Riscritto per i primi 15s** dopo lo score 45/100 del Virality Predictor (Attention Control basso, Focus Drift alto — vedi memoria `reference_virality_predictor`). Principi: hook al secondo zero (NIENTE intro silenziosa), frasi corte e staccate, gap di curiosità immediato.
+> ⚠️ **Da ri-registrare il VO** (la battuta della talking head sc.15 resta identica: lip-sync già fatto).
+
+> *"This fashion brand isn't real. I built its entire campaign in one afternoon."*  ← HOOK, sul primo fotogramma
 >
-> *"A real photoshoot? Five thousand euros. Studio, photographer, model, location."*
+> *"A real one costs five thousand euros."*
 >
-> *"You don't have that yet. You don't need it."*
+> *"Studio. Photographer. Model. Location."*
 >
-> *"Give me one garment and one idea. I'll build the world around it."*
+> *"You need none of it."*
+>
+> *"Hand me one garment and one idea. I'll invent the rest."*
 >
 > *"One brief. Concept, mood, light, poses — locked before I open a single tool."*
 >
 > *"One character. Five looks. Same light, same world, same hand."*
 >
-> *"This is VESPRO. It doesn't exist — I built its first lookbook in one afternoon."*
+> *"This is VESPRO. It doesn't exist. I built its first lookbook today."*
 >
-> *"This is what your brand looks like before you've spent a cent on production."*
+> *"This is your brand — before you've spent a cent."*
 >
-> *"Delivered in seventy-two hours."*
+> *"Give me one garment and one idea, and in seventy-two hours your brand has a campaign."*  ← talking head (lip-sync già fatto)
 >
-> *"Comment 'BRAND'. I'll build your first lookbook."*
+> *"Seventy-two hours. That's all."*
+>
+> *"This isn't making images. It's directing a brand."*
+>
+> *"Comment BRAND. I'll build your first lookbook — on me."*
 
 ---
 
@@ -55,29 +64,30 @@ Stessa impalcatura collaudata in CapCut (still polaroid ↔ card nere in alterna
 
 Montaggio interlacciato come nel #3: still/b-roll ↔ card nere (fondo nero, testo bianco) in rapida alternanza, con screen-rec del processo incastonati sulle battute "brief / generate / deliver". Taglio veloce sulle card (~0.5–0.8s), hold più lunghi su hero b-roll e talking head.
 
+> **Beat sheet v2 (15/06/2026) — ottimizzato attenzione.** Eliminata l'intro silenziosa: il **b-roll arco + hook parte al secondo zero**. I primi 15s ora arrivano fino a "Five looks" (= molta più sostanza nella finestra che il Virality Predictor misura). Hold più stretti. Timing indicativi, da rifinire in CapCut.
+
 | # | Durata | Tipo | Descrizione visiva | Voiceover / Testo card |
 |---|--------|------|--------------------|------------------------|
-| **1 — Intro** | 0–2.5s | Stills polaroid | 3–4 stills lookbook VESPRO in sequenza su nero, cornice polaroid. | *(silenzio / beat)* |
-| **2 — Hook** | 2.5–4.5s | B-roll Seedance | Jago cammina lento sotto un arco di pietra bianca, mare blu dietro, luce dorata del tardo pomeriggio. | *"You just launched your brand. The collection is ready. The campaign isn't."* |
-| **3 — Il costo** | 4.5–6.5s | Card nera | Numero grande: **€5,000**. | *"A real photoshoot? Five thousand euros."* |
-| **4 — Cosa serve** | 6.5–8s | Card nera | Keyword: *Studio · Photographer · Model · Location*. | *"Studio, photographer, model, location."* |
-| **5 — Payoff** | 8–10s | Card nera | *"You don't need it."* | *"You don't have that yet. You don't need it."* |
-| **6 — La promessa** | 10–12s | B-roll / still | Jago full body contro un muro bianco al sole, ombra netta proiettata. | *"Give me one garment and one idea. I'll build the world around it."* |
-| **7 — Brief (screen rec #1)** | 12–14.5s | Screen rec | Brief "creative blueprint" VESPRO a schermo (documento intero). | *"One brief. Concept, mood, light, poses..."* |
-| **8 — Keyword cards** | 14.5–16.5s | Card nera | Keyword animate: *Concept · Mood · Light · Poses*. | *"...locked before I open a single tool."* |
-| **9 — Generate (screen rec #2)** | 16.5–18.5s | Screen rec | Griglia risultati generazione (4-up), i look che compaiono. | *(b-roll del processo)* |
-| **10 — Five looks** | 18.5–21s | Stills rapidi + SFX | 5 shot VESPRO in sequenza veloce (~0.5s), whoosh/click a ogni cut. | *"One character. Five looks. Same light, same world, same hand."* |
-| **11 — Detail** | 21–22.5s | B-roll / still | Close-up vita del pantalone: pince profonde, tessuto lino, mano alla cintura, nessun volto. | *(silenzio / sotto-VO)* |
-| **12 — Reveal brand** | 22.5–25s | Still hero | Lo shot migliore VESPRO, fermo, con il nome **VESPRO** in sovrimpressione minimale. | *"This is VESPRO. It doesn't exist — I built its first lookbook in one afternoon."* |
-| **13 — Seduto** | 25–27s | B-roll / still | Jago seduto su un muretto in pietra al sole, mare e bougainvillea dietro. | *(beat)* |
-| **14 — Il punto** | 27–28.5s | Card nera | *"Before you've spent a cent."* | *"This is what your brand looks like before you've spent a cent on production."* |
-| **15 — Deliver (screen rec #3)** | 28.5–30s | Screen rec | Timeline montaggio / griglia finale dei 5 look impaginati. | *(b-roll del processo)* |
-| **16 — Talking head** | 30–37s | Kling/Seedance Avatar | Jago MCU frontale **nel mondo Capri** (stesso muro bianco della sc.6, luce dorata vespro). Delivery piatta, stoica. Contatto visivo fisso. Prompt: `video-4-talking-head.md`. | *"Give me one garment and one idea, and in seventy-two hours your brand has a campaign."* |
-| **17 — 72 hours** | 37–39s | Card nera | Numero grande: **72h**. | *"Delivered in seventy-two hours."* |
-| **18 — "Non è fare immagini"** | 39–40.5s | Card nera | *"This isn't making images. It's directing a brand."* | *(rinforzo testo)* |
-| **19 — CTA action** | 40.5–43s | B-roll | Jago al desk, scrive / guarda lo schermo. Non guarda in camera. | *"Comment 'BRAND'."* |
-| **20 — CTA cards** | 43–46s | Card nera | *"Comment BRAND"* → *"your first lookbook"* → *"on me"*. | testo CTA |
-| **21 — IG end card** | 46–48s | Motion graphic | Logo Instagram animato su nero + handle Jago. | CTA finale |
+| **1 — Hook** | 0–2.5s | B-roll Seedance | Jago cammina lento sotto un arco di pietra bianca, mare blu dietro, luce dorata. **Apre il video** — VO sul primo fotogramma. | *"This fashion brand isn't real. I built its entire campaign in one afternoon."* |
+| **2 — Il costo** | 2.5–4.5s | Card nera | Numero grande: **€5,000**. | *"A real one costs five thousand euros."* |
+| **3 — Cosa serve** | 4.5–6s | Card nera | Keyword: *Studio · Photographer · Model · Location*. | *"Studio. Photographer. Model. Location."* |
+| **4 — Payoff** | 6–7.5s | Card nera | *"You need none of it."* | *"You need none of it."* |
+| **5 — La promessa** | 7.5–9.5s | B-roll / still | Jago full body contro un muro bianco al sole, ombra netta proiettata. | *"Hand me one garment and one idea. I'll invent the rest."* |
+| **6 — Brief (screen rec #1)** | 9.5–12s | Screen rec | Brief "creative blueprint" VESPRO a schermo (scroll PDF). | *"One brief. Concept, mood, light, poses..."* |
+| **7 — Keyword cards** | 12–13.5s | Card nera | Keyword animate: *Concept · Mood · Light · Poses*. | *"...locked before I open a single tool."* |
+| **8 — Generate (screen rec #2)** | 13.5–15.5s | Screen rec | Griglia risultati generazione (4-up), i look che compaiono. | *(b-roll del processo)* |
+| **9 — Five looks** | 15.5–18s | Stills rapidi + SFX | 5 shot VESPRO in sequenza veloce (~0.5s), whoosh/click a ogni cut, cornice polaroid. | *"One character. Five looks. Same light, same world, same hand."* |
+| **10 — Detail** | 18–19.5s | B-roll / still | Close-up vita del pantalone: pince profonde, tessuto lino, mano alla cintura, nessun volto. | *(sotto-VO)* |
+| **11 — Reveal brand** | 19.5–22s | Still hero | Lo shot migliore VESPRO, fermo, con il nome **VESPRO** in sovrimpressione minimale, cornice polaroid. | *"This is VESPRO. It doesn't exist. I built its first lookbook today."* |
+| **12 — Seduto** | 22–24s | B-roll / still | Jago seduto su un muretto in pietra al sole, mare e bougainvillea dietro. | *(beat)* |
+| **13 — Il punto** | 24–25.5s | Card nera | *"Before you've spent a cent."* | *"This is your brand — before you've spent a cent."* |
+| **14 — Deliver (screen rec #3)** | 25.5–27.5s | Screen rec | Scroll lookbook VESPRO impaginato (Canva). | *(b-roll del processo)* |
+| **15 — Talking head** | 27.5–34.5s | Avatar Capri | Jago MCU frontale **nel mondo Capri** (stesso muro della sc.5, luce dorata vespro). Delivery piatta, stoica. Contatto visivo fisso. Prompt: `video-4-talking-head.md`. | *"Give me one garment and one idea, and in seventy-two hours your brand has a campaign."* |
+| **16 — 72 hours** | 34.5–36.5s | Card nera | Numero grande: **72h**. | *"Seventy-two hours. That's all."* |
+| **17 — "Non è fare immagini"** | 36.5–38s | Card nera | *"This isn't making images. It's directing a brand."* | *(rinforzo testo)* |
+| **18 — CTA action** | 38–41s | B-roll | Jago seduto al tavolino caffè Capri, espresso + libro, **sguardo in camera**. | *"Comment BRAND."* |
+| **19 — CTA cards** | 41–45s | Card nera | *"Comment BRAND"* → *"your first lookbook"* → *"on me"*. | testo CTA |
+| **20 — IG end card** | 45–48s | Motion graphic | Logo Instagram animato su nero + handle Jago. | CTA finale |
 
 **Durata totale: ~48s**
 
