@@ -116,8 +116,8 @@ Montaggio interlacciato come nel #3: still/b-roll ↔ card nere (fondo nero, tes
 | Asset | Scena | Status |
 |-------|-------|--------|
 | Lookbook images VESPRO — 5 shot mondo Capri | 1, 10, 12 | ✅ Generati 14/06/2026 — Nano Banana Pro + doppia ref (character sheet Jago `50c1a7d6` + silhouette Draper `ce9be775`), NO Soul ID. File in `video-4/`: `shot1-capri-v2/v3` (full body), `shot2-capri-v1` (arco), `shot3-capri-v1` (dettaglio), `shot4-capri-v2` (seduto), `shot5-capri-v1` (wide). Altre varianti recuperabili su Higgsfield |
-| Clip Seedance b-roll — Jago mondo Capri (diurno, I2V) | 2, 6, 11, 13 | 🟡 In corso — prompt pronti in `video-4-seedance-prompts.md`. ✅ Clip scena 2 (camminata sotto l'arco) generata 15/06/2026. ⏳ scene 6, 11, 13 |
-| Screen rec #1 — brief VESPRO | 7 | ⏳ Da registrare |
+| Clip Seedance b-roll — Jago mondo Capri (diurno, I2V) | 2, 6, 11, 13 | ✅ Tutte e 4 generate 15/06/2026 — prompt in `video-4-seedance-prompts.md` |
+| Screen rec #1 — brief VESPRO | 7 | 🟡 Documento pronto — `video-4-brief-vespro.md` convertito in PDF Canva (dark-luxury) il 15/06/2026. Resta da registrare lo scroll |
 | Screen rec #2 — generazione immagini (griglia) | 9 | ⏳ Da registrare |
 | Screen rec #3 — impaginazione / timeline | 15 | ⏳ Da registrare |
 | Talking head — mondo Capri | 16 | ✅ Generata 15/06/2026 — prompt via skill (banana-pro-director + cinema-worldbuilder-pro) in `video-4-talking-head.md`. Sfondo Capri per consistenza scena |
