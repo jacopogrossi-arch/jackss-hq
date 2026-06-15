@@ -7,9 +7,9 @@
 | Clip | Scena (beat sheet) | Primo frame | Stato |
 |------|--------------------|-------------|-------|
 | 1 | 2 — Hook (camminata sotto l'arco) | `shot2-capri-v1.png` | ✅ Generata 15/06/2026 |
-| 2 | 6 — La promessa (al muro) | `shot1-capri-v3.png` | ⏳ Da generare |
-| 3 | 11 — Detail (tessuto/mano) | `shot3-capri-v1.png` | ⏳ Da generare |
-| 4 | 13 — Seduto (muretto) | `shot4-capri-v2.png` | ⏳ Da generare |
+| 2 | 6 — La promessa (al muro) | `shot1-capri-v3.png` | ✅ Generata 15/06/2026 |
+| 3 | 11 — Detail (tessuto/mano) | `shot3-capri-v1.png` | ✅ Generata 15/06/2026 |
+| 4 | 13 — Seduto (muretto) | `shot4-capri-v2.png` | ✅ Generata 15/06/2026 |
 
 ---
 
