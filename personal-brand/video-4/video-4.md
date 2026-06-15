@@ -120,7 +120,7 @@ Montaggio interlacciato come nel #3: still/b-roll ↔ card nere (fondo nero, tes
 | Screen rec #1 — brief VESPRO | 7 | ⏳ Da registrare |
 | Screen rec #2 — generazione immagini (griglia) | 9 | ⏳ Da registrare |
 | Screen rec #3 — impaginazione / timeline | 15 | ⏳ Da registrare |
-| Talking head — mondo Capri | 16 | ⏳ Da generare — prompt pronti in `video-4-talking-head.md` (plate Nano Banana Pro + animazione Kling + lip-sync). Sfondo Capri per consistenza scena |
+| Talking head — mondo Capri | 16 | ✅ Generata 15/06/2026 — prompt via skill (banana-pro-director + cinema-worldbuilder-pro) in `video-4-talking-head.md`. Sfondo Capri per consistenza scena |
 | Card nere + testo animato + @handle | 3,4,5,8,14,17,18,20 | ⏳ CapCut |
 | Cornici polaroid sugli stills | 1, 10, 12 | ⏳ CapCut |
 | IG end card animata | 21 | ⏳ CapCut (riusabile dal #3) |
