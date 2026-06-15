@@ -72,7 +72,7 @@ Montaggio interlacciato come nel #3: still/b-roll ↔ card nere (fondo nero, tes
 | **13 — Seduto** | 25–27s | B-roll / still | Jago seduto su un muretto in pietra al sole, mare e bougainvillea dietro. | *(beat)* |
 | **14 — Il punto** | 27–28.5s | Card nera | *"Before you've spent a cent."* | *"This is what your brand looks like before you've spent a cent on production."* |
 | **15 — Deliver (screen rec #3)** | 28.5–30s | Screen rec | Timeline montaggio / griglia finale dei 5 look impaginati. | *(b-roll del processo)* |
-| **16 — Talking head** | 30–37s | Kling/Seedance Avatar | Jago MCU frontale in atelier. Delivery piatta, stoica. Contatto visivo fisso. | *"Give me one garment and one idea, and in seventy-two hours your brand has a campaign."* |
+| **16 — Talking head** | 30–37s | Kling/Seedance Avatar | Jago MCU frontale **nel mondo Capri** (stesso muro bianco della sc.6, luce dorata vespro). Delivery piatta, stoica. Contatto visivo fisso. Prompt: `video-4-talking-head.md`. | *"Give me one garment and one idea, and in seventy-two hours your brand has a campaign."* |
 | **17 — 72 hours** | 37–39s | Card nera | Numero grande: **72h**. | *"Delivered in seventy-two hours."* |
 | **18 — "Non è fare immagini"** | 39–40.5s | Card nera | *"This isn't making images. It's directing a brand."* | *(rinforzo testo)* |
 | **19 — CTA action** | 40.5–43s | B-roll | Jago al desk, scrive / guarda lo schermo. Non guarda in camera. | *"Comment 'BRAND'."* |
@@ -120,7 +120,7 @@ Montaggio interlacciato come nel #3: still/b-roll ↔ card nere (fondo nero, tes
 | Screen rec #1 — brief VESPRO | 7 | ⏳ Da registrare |
 | Screen rec #2 — generazione immagini (griglia) | 9 | ⏳ Da registrare |
 | Screen rec #3 — impaginazione / timeline | 15 | ⏳ Da registrare |
-| Talking head | 16 | ⏳ Da generare (Kling/Seedance + lip sync) |
+| Talking head — mondo Capri | 16 | ⏳ Da generare — prompt pronti in `video-4-talking-head.md` (plate Nano Banana Pro + animazione Kling + lip-sync). Sfondo Capri per consistenza scena |
 | Card nere + testo animato + @handle | 3,4,5,8,14,17,18,20 | ⏳ CapCut |
 | Cornici polaroid sugli stills | 1, 10, 12 | ⏳ CapCut |
 | IG end card animata | 21 | ⏳ CapCut (riusabile dal #3) |
