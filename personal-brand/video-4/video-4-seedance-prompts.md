@@ -10,6 +10,9 @@
 | 2 | 6 — La promessa (al muro) | `shot1-capri-v3.png` | ✅ Generata 15/06/2026 |
 | 3 | 11 — Detail (tessuto/mano) | `shot3-capri-v1.png` | ✅ Generata 15/06/2026 |
 | 4 | 13 — Seduto (muretto) | `shot4-capri-v2.png` | ✅ Generata 15/06/2026 |
+| 5 | 19 — CTA action (al tavolino caffè) | `shot19-desk-capri-v1.png` + character sheet | 🟡 Prompt pronti (sotto) — plate + video da generare |
+
+> **Nota clip 5 (scena 19):** plate dedicato (Jago seduto a un caffè Capri con espresso + libro, sguardo basso) generato via `banana-pro-director` Mode 3A; prompt video via `cinema-worldbuilder-pro` M1. Usa **2 reference** in Seedance: `@image1` = plate scena 19 (primo frame), `@image2` = character sheet Jago. Prompt completi in fondo a questo file.
 
 ---
 
@@ -125,4 +128,46 @@ Sound Bed: Diegetic only — soft sea breeze, distant waves and faint gulls, lig
 Capture Realism: The figure sits inside real depth — light haze suspended in the air between camera, subject, and the distant sea, the far water rendered softer, desaturated, and lower-contrast than the foreground so he sits within the air rather than pasted on a flat plane. Skin reads true cinematic matte — zero shine on forehead, nose bridge, cheekbones, temples, chin, and collarbones, real peach fuzz at the jaw and hairline, real soft fine even pore texture, light absorbed like true subsurface scattering, warmth preserved and natural, slightly desaturated but never pale or washed-out, never plastic, never doll-skin, never harsh — no blemishes, no enlarged pores, fine flattering texture. Low-contrast curve — shadows lifted gently holding texture, highlights rolled off softly never clipping to white, nothing crushed to black. All specular highlights surgically removed from skin, hair, and fabric, every pixel matte and diffuse. Slightly desaturated grade with warmth preserved.
 
 Camera Capture: wide-latitude cinema capture, vintage 55mm 2x anamorphic character at a wide aperture — oval bokeh, soft frame-edge falloff — light diffusion bloom softening highlights, handheld with natural operator breath, color-negative daylight film rendition with fine 35mm grain, warm golden-hour grade, shallow depth of field, 24fps 180° shutter, 5 seconds.
+```
+
+---
+
+## Clip 5 — Scena 19 (CTA action, al tavolino caffè) — plate dedicato
+
+> Genera prima il **plate** (banana-pro-director Mode 3A), salvalo come `shot19-desk-capri-v1.png`, poi il **video** (sotto). In Seedance: `@image1` = plate scena 19, `@image2` = character sheet Jago.
+
+**Plate image (Banana Pro / Nano Banana Pro)** — ref: `personal-brand/assets/jago-character-sheet.jpeg`
+```
+A cinematic anamorphic still photograph captured on a real set — a medium three-quarter composition of the man from the attached character reference seated at a small round pale-marble café table on a sunlit Mediterranean terrace at the golden vespro hour, the camera at his seated eye level and slightly to one side, the table edge with an espresso cup and a book entering the foreground, his gaze cast down toward the book, the composition holding a quiet, composed, lived-in stillness.
+
+The character carrying identically from the attached character reference — his dark wavy semi-long hair, face, and identity locked from the reference, a thin pendant necklace at his throat. He wears a minimal fitted full-black top, matte black with no accents. He sits angled three-quarter toward screen-left, relaxed, one forearm resting on the table near the book, the other hand loosely beside the espresso cup, shoulders settled, his eyes low on the open book, never to camera, calm and self-possessed.
+
+The terrace around him is whitewashed Mediterranean architecture, Capri register — warm lime-washed plaster, a hard cast shadow raking across the pale stone, magenta bougainvillea and a sliver of deep blue Tyrrhenian sea sitting far out of focus behind a shallow depth of field as the only color accents, light atmospheric haze giving the air real body so the sea reads softer and lower-contrast than the foreground.
+
+On the table the espresso sits in a small cup on its saucer with a thin curl of steam rising, a bound book open beside it, the warm low sun raking across the marble surface, the cup, and the book from screen-right, catching the matte fabric and the pale stone in a warm glow with crisp dark shadows.
+
+Captured with a wide-latitude cinema look and a vintage 55mm-equivalent 2x anamorphic character at a wide aperture, a light diffusion bloom softening the highlights, color-negative daylight film rendition, in an M1 cinematic narrative register. Real anamorphic optical character with oval bokeh on the blurred bougainvillea and sea, organic operator breath, soft frame-edge falloff. Real human skin — peach fuzz catching light along the jawline and hairline, fine even pore texture, subsurface scattering at the ear edges and nostrils with warm undertone bleed, true natural skin tone preserved, matte with zero specular shine on forehead, nose bridge, cheekbones, temples and chin, never plastic, never waxy, no blemishes, no harsh clinical texture, fine flattering skin that looks good and real. Hair rendered strand by strand with realistic flyaways lifting faintly in the sea breeze. Fabric with real weave and drape, real ceramic and marble surface detail. Theatrical fine 35mm film grain across the entire frame — skin, plaster, marble, haze. Warm golden-hour grade, shadows lifted gently never crushed, highlights rolled off softly never clipping. Real photographic frame captured on a real cinema camera, real anamorphic lens, real marble table, real ceramic cup, real human subject, real sea haze — no CGI, no rendered look, no digital cleanliness, no plastic surfaces, no AI smoothness, no skin smoothing, no glow, no glossy highlights.
+```
+
+**Seedance prompt — 5s** — ref: 1. `@image1` plate scena 19 · 2. `@image2` character sheet Jago
+```
+Scene & Mood: A man sits at a small café table on a sunlit Capri terrace, reading, calm and unhurried in the warm afternoon. A private, lived-in beat — he doesn't perform, he lingers in the heat.
+
+Frame Map: @image1 in the left-center, x=45%, midground, seated, occupying roughly 70% of frame height, angled three-quarter toward screen-left. The round marble table with an espresso cup and an open book holds the foreground lower-right; magenta bougainvillea and deep blue sea sit far out of focus in the upper-right third as negative space.
+
+Subject Lock — @image1: Identity, dark wavy hair, thin pendant necklace, fitted full-black top, and silhouette identical to @image2 throughout. Seated three-quarter toward screen-left, one forearm resting on the table near the book, the other hand loosely beside the espresso cup. Gaze held low on the open book, calm and composed, never lifting to camera, expression quiet and self-possessed.
+
+Cross-Frame Rules: Single subject — he holds his seated position in the left-center, the table with cup and book stays fixed in the foreground, he never drifts toward the frame edges, the blurred bougainvillea and sea stay locked in the upper-right third.
+
+Movement: Across the full 5 seconds the motion is micro only — at 1 second his hand turns a single page of the book slowly, fingers settling flat by 3 seconds, then stilling; his gaze stays low on the page the whole time, never to camera. A slow quiet breath settles the chest, dark hair lifts almost imperceptibly in the sea breeze. A thin curl of steam rises and drifts from the espresso cup, the bougainvillea sways gently at the upper-right, the blurred sea glitters faintly behind, faint heat shimmer off the pale stone. Nothing else moves.
+
+Last Frame: He holds seated in the left-center, x=45%, hand flat on the open book, gaze still low on the page, breath settled, the espresso steam thinning, bougainvillea and blue sea quiet in the upper-right third. No on-screen text, no captions, no signage typography, no rendered text in the frame.
+
+World Plate: Anchored to @image1 — minimal whitewashed Mediterranean terrace, warm lime-washed plaster, a round pale-marble café table set with an espresso cup on a saucer and an open bound book, magenta bougainvillea and deep blue Tyrrhenian sea on the horizon. Late-afternoon golden vespro sun raking from screen-right, hard crisp shadows, clear sky, high contrast.
+
+Sound Bed: Diegetic only — soft sea breeze, distant waves and faint gulls, a light ceramic chime of cup against saucer, the soft rustle of a turning page, no music, no dialogue.
+
+Capture Realism: The figure sits inside real depth — light haze suspended in the air between camera, subject, and the distant sea, the far water rendered softer, desaturated, and lower-contrast than the foreground so he sits within the air rather than pasted on a flat plane. Skin reads true cinematic matte — zero shine on forehead, nose bridge, cheekbones, temples, chin, and collarbones, real peach fuzz catching light at the jaw and hairline, real soft fine even pore texture, light absorbed like true subsurface scattering, warmth preserved and natural, slightly desaturated but never pale or washed-out, never plastic, never doll-skin, never harsh — no blemishes, no enlarged pores, fine flattering texture that keeps the face looking good. Low-contrast curve — shadows lifted gently holding texture, highlights rolled off softly never clipping to white, nothing crushed to black. All specular highlights surgically removed from skin, hair, fabric, marble, and ceramic, every pixel reading matte and diffuse. Slightly desaturated grade with warmth preserved.
+
+Camera Capture: wide-latitude cinema capture, vintage 55mm 2x anamorphic character at a wide aperture — oval bokeh, soft frame-edge falloff — light diffusion bloom softening highlights, stable camera with the faintest natural operator breath, no shake, color-negative daylight film rendition with fine 35mm grain, warm golden-hour grade, shallow depth of field, 24fps 180° shutter, 5 seconds.
 ```

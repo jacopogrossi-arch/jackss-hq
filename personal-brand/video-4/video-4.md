@@ -121,6 +121,7 @@ Montaggio interlacciato come nel #3: still/b-roll ↔ card nere (fondo nero, tes
 | Screen rec #2 — generazione immagini (griglia) | 9 | ✅ Registrato 15/06/2026 in Higgsfield (griglia look VESPRO) |
 | Screen rec #3 — impaginazione / timeline | 15 | ✅ Registrato 15/06/2026 — scroll sul lookbook VESPRO impaginato su Canva (5 look Capri) |
 | Talking head — mondo Capri | 16 | ✅ Generata 15/06/2026 — prompt via skill (banana-pro-director + cinema-worldbuilder-pro) in `video-4-talking-head.md`. Sfondo Capri per consistenza scena |
+| B-roll scena 19 — Jago al tavolino caffè Capri (CTA) | 19 | 🟡 Prompt pronti 15/06 (plate banana-pro-director + video cinema-worldbuilder M1) in `video-4-seedance-prompts.md` (clip 5). Risolve il buco asset sc.19. Da generare |
 | Card nere + testo animato + @handle | 3,4,5,8,14,17,18,20 | ⏳ CapCut |
 | Cornici polaroid sugli stills | 1, 10, 12 | ⏳ CapCut |
 | IG end card animata | 21 | ⏳ CapCut (riusabile dal #3) |
