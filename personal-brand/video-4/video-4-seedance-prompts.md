@@ -10,7 +10,7 @@
 | 2 | 6 — La promessa (al muro) | `shot1-capri-v3.png` | ✅ Generata 15/06/2026 |
 | 3 | 11 — Detail (tessuto/mano) | `shot3-capri-v1.png` | ✅ Generata 15/06/2026 |
 | 4 | 13 — Seduto (muretto) | `shot4-capri-v2.png` | ✅ Generata 15/06/2026 |
-| 5 | 19 — CTA action (al tavolino caffè) | `shot19-desk-capri-v1.png` + character sheet | 🟡 Prompt pronti (sotto) — plate + video da generare |
+| 5 | 19 — CTA action (al tavolino caffè) | `shot19-desk-capri-v1.png` + character sheet | ✅ Generata 15/06/2026 (sguardo in camera) |
 
 > **Nota clip 5 (scena 19):** plate dedicato (Jago seduto a un caffè Capri con espresso + libro, sguardo basso) generato via `banana-pro-director` Mode 3A; prompt video via `cinema-worldbuilder-pro` M1. Usa **2 reference** in Seedance: `@image1` = plate scena 19 (primo frame), `@image2` = character sheet Jago. Prompt completi in fondo a questo file.
 
