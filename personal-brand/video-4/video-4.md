@@ -117,7 +117,7 @@ Montaggio interlacciato come nel #3: still/b-roll ↔ card nere (fondo nero, tes
 |-------|-------|--------|
 | Lookbook images VESPRO — 5 shot mondo Capri | 1, 10, 12 | ✅ Generati 14/06/2026 — Nano Banana Pro + doppia ref (character sheet Jago `50c1a7d6` + silhouette Draper `ce9be775`), NO Soul ID. File in `video-4/`: `shot1-capri-v2/v3` (full body), `shot2-capri-v1` (arco), `shot3-capri-v1` (dettaglio), `shot4-capri-v2` (seduto), `shot5-capri-v1` (wide). Altre varianti recuperabili su Higgsfield |
 | Clip Seedance b-roll — Jago mondo Capri (diurno, I2V) | 2, 6, 11, 13 | ✅ Tutte e 4 generate 15/06/2026 — prompt in `video-4-seedance-prompts.md` |
-| Screen rec #1 — brief VESPRO | 7 | 🟡 PDF Canva del brief pronto (dark-luxury). Scroll da confermare/registrare |
+| Screen rec #1 — brief VESPRO | 7 | ✅ Registrato 15/06/2026 — scroll sul PDF Canva del brief (dark-luxury) |
 | Screen rec #2 — generazione immagini (griglia) | 9 | ✅ Registrato 15/06/2026 in Higgsfield (griglia look VESPRO) |
 | Screen rec #3 — impaginazione / timeline | 15 | ✅ Registrato 15/06/2026 — scroll sul lookbook VESPRO impaginato su Canva (5 look Capri) |
 | Talking head — mondo Capri | 16 | ✅ Generata 15/06/2026 — prompt via skill (banana-pro-director + cinema-worldbuilder-pro) in `video-4-talking-head.md`. Sfondo Capri per consistenza scena |
@@ -133,10 +133,10 @@ Montaggio interlacciato come nel #3: still/b-roll ↔ card nere (fondo nero, tes
 2. ✅ **Conferma brand** — VESPRO fittizio, mondo Capri mediterraneo
 3. ✅ **Brief creativo VESPRO** — `video-4-brief-vespro.md` (serve anche come screen rec #1)
 4. ✅ **Genera 5 immagini lookbook** — Nano Banana Pro + doppia ref (14/06/2026)
-5. 🟡 **Seedance prompts** — b-roll Capri diurno, I2V dalle immagini → `video-4-seedance-prompts.md`. Clip scena 2 generata (15/06)
-6. ⏳ **Screen rec ×3** + talking head
-7. ⏳ **Card nere + polaroid + IG end card** (CapCut)
-8. ⏳ **Montaggio CapCut** → export `video4-vespro-v1.mp4`
+5. ✅ **B-roll Seedance** — 4 clip Capri I2V → `video-4-seedance-prompts.md` (tutte generate 15/06)
+6. ✅ **Screen rec ×3** (15/06) + **talking head** mondo Capri (15/06, `video-4-talking-head.md`)
+7. ⏳ **Montaggio CapCut** — checklist scena-per-scena in `video-4-montaggio-capcut.md`. ⚠️ Prima: generare il **VO inglese** + risolvere **asset mancante sc.19** (Jago al desk). Card nere + polaroid + IG end card si fanno qui.
+8. ⏳ **Export** → `video4-vespro-v1.mp4` (1080×1920 · 60fps)
 9. ⏳ **Pubblicazione** IG + YouTube Shorts + caption/descrizione
 
 ---
