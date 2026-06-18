@@ -23,8 +23,8 @@ Riassunto generato da Claude Code — Esame 26 giugno 2026
 - [III. Fonti dell'ordinamento italiano: Stato — Parte 2](#iii-le-fonti-dellordinamento-italiano-stato--parte-2-pp-411-427) — pp. 411-427
 - [IV-V. Fonti Europee e Fonti delle Autonomie](#iv-v-fonti-europee-e-fonti-delle-autonomie) — pp. 428-459
 - [VI. Atti e provvedimenti amministrativi](#vi-gli-atti-e-i-provvedimenti-amministrativi) — pp. 460-477
-- [VII. Diritti e libertà — Parte 1](#vii-diritti-e-libert--parte-1-pp-478-515) — pp. 478-515
-- [VII. Diritti e libertà — Parte 2](#vii-diritti-e-libert--parte-2-pp-516-553) — pp. 516-553
+- [VII. Diritti e libertà — Parte 1](#vii-diritti-e-libertà--parte-1-pp-478-515) — pp. 478-515
+- [VII. Diritti e libertà — Parte 2](#vii-diritti-e-libertà--parte-2-pp-516-553) — pp. 516-553
 - [VIII-IX. Giustizia](#viii-ix-lamministrazione-della-giustizia-e-la-giustizia-costituzionale) — pp. 554-597
 
 ---
@@ -1872,7 +1872,7 @@ Il **Parlamento in seduta comune** è un organo collegiale composto da tutti i p
 
 - Elezione del **Presidente della Repubblica** (con i delegati regionali; art. 83)
 - Elezione di **5 giudici costituzionali** (maggioranza qualificata)
-- Elezione di un terzo dei componenti del **CSM** (otto membri elettivi)
+- Elezione dei **membri laici del CSM** (dieci, pari a 1/3 dei componenti elettivi, scelti tra professori universitari e avvocati con almeno 15 anni di esercizio — dato aggiornato alla riforma Cartabia, l. 71/2022)
 - Votazione dell'elenco dei **45 cittadini** aventi i requisiti per essere senatori, tra i quali si sorteggiano i **16 "giudici aggregati"** che integrano la Corte costituzionale nei giudizi di accusa contro il Presidente della Repubblica; elezione inoltre dei commissari che sostengono l'accusa
 - **Messa in stato d'accusa** del Presidente della Repubblica (a maggioranza assoluta dei membri)
 
@@ -2344,7 +2344,7 @@ Storicamente i rapporti Stato-Regioni erano affidati al **Commissario del Govern
 
 #### 3.3 Il Principio di Leale Collaborazione
 
-La Corte costituzionale ha elaborato il principio di **leale collaborazione**, che impone il contemperamento degli interessi nei casi in cui le competenze di Stato e Regioni concorrano o si intreccino. Lo Stato non può agire unilateralmente nelle "materie trasversali" — quelle competenze statali che "tagliano" più materie di competenza regionale — senza prevedere forme di coinvolgimento delle Regioni. Il principio è anche inserito in Costituzione (art. 118, comma 3) e qualifica il nostro come ordinamento improntato al **regionalismo collaborativo (o cooperativo)**: i livelli di governo devono cooperare, non competere.
+La Corte costituzionale ha elaborato il principio di **leale collaborazione**, che impone il contemperamento degli interessi nei casi in cui le competenze di Stato e Regioni concorrano o si intreccino. Lo Stato non può agire unilateralmente nelle "materie trasversali" — quelle competenze statali che "tagliano" più materie di competenza regionale — senza prevedere forme di coinvolgimento delle Regioni. Si tratta di un principio di **matrice giurisprudenziale**: la Costituzione non lo enuncia espressamente con questo nome (la Corte lo ricava dall'art. 5 e dal sistema di riparto delle competenze). Una sua **espressione testuale** si rinviene comunque nell'**art. 118, comma 3**, che prevede *forme di coordinamento fra Stato e Regioni* in determinate materie (ordine pubblico e sicurezza, immigrazione, tutela dei beni culturali). Il principio qualifica il nostro come ordinamento improntato al **regionalismo collaborativo (o cooperativo)**: i livelli di governo devono cooperare, non competere.
 
 La Corte costituzionale ha precisato che il **metodo delle intese e del coordinamento** si impone in due ipotesi:
 1. quando la Costituzione lo prevede direttamente o indirettamente (sent. 178/2007);
@@ -2754,7 +2754,7 @@ Ha funzioni di **controllo** e **giurisdizionali** (contabilità pubblica). Stru
 
 **Potere estero delle Regioni** (art. 117, comma 9) — facoltà limitata di stipulare accordi con altri Stati (previa autorizzazione del MAE) e intese con enti territoriali stranieri, nelle sole materie di competenza regionale.
 
-**Leale collaborazione** — principio giurisprudenziale (e costituzionale, art. 118, comma 3) che impone a Stato e Regioni di coordinarsi e collaborare nelle materie dove le loro competenze si intersecano, evitando comportamenti unilaterali; fondamento del regionalismo cooperativo.
+**Leale collaborazione** — principio elaborato dalla Corte costituzionale (non enunciato espressamente in Costituzione con questo nome; lo si ricava dall'art. 5 e dal sistema, mentre una sua espressione testuale è l'art. 118, comma 3, sulle forme di coordinamento Stato-Regioni) che impone a Stato e Regioni di coordinarsi e collaborare nelle materie dove le loro competenze si intersecano, evitando comportamenti unilaterali; fondamento del regionalismo cooperativo.
 
 **Conferenza Stato-Regioni** — sede permanente di confronto tra Governo e Regioni; esprime pareri e intese su atti governativi che incidono sulle competenze regionali.
 
