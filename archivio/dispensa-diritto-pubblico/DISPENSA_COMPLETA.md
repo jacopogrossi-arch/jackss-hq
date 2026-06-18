@@ -1,6 +1,7 @@
 # Dispensa — Diritto Pubblico
 **Bin & Pitruzzella, "Diritto pubblico", Giappichelli, 2022**
 Riassunto generato da Claude Code — Esame 26 giugno 2026
+*Edizione arricchita con appunti personali di studio (98 pp.), integrati nelle sezioni pertinenti.*
 
 ---
 
@@ -32,9 +33,59 @@ Riassunto generato da Claude Code — Esame 26 giugno 2026
 
 ---
 
+
 # I. Lo Stato: politica e diritto
 
 > Bin & Pitruzzella, *Diritto pubblico*, 2022 — Capitolo I (pp. 3-24)
+
+---
+
+## 0. Norme e ordinamenti giuridici (premessa)
+
+### 0.1. Le norme giuridiche
+
+Il diritto è l'**insieme di norme che regolano la vita di un corpo sociale**. Le norme sono regole che permettono di raggiungere un fine comune e alla cui violazione si ricollegano determinate conseguenze.
+
+Le norme giuridiche appartengono al mondo delle **regole etiche** (indicano ciò che *deve essere*) e si distinguono da:
+- **Norme tecniche** — non impongono nulla, ma dicono come occorre operare per raggiungere un dato risultato.
+- **Norme di costume** — indicano solo come comportarsi per godere di una certa considerazione sociale.
+
+**Caratteri (indefettibili) della norma giuridica:**
+- **Esteriorità** — riguarda i comportamenti esteriori.
+- **Coercibilità** — possibilità di applicare una sanzione in caso di violazione.
+- **Imperatività** — capacità di comandare.
+- **Plurilateralità** — si rivolge a più individui.
+- **Generalità** — si riferisce a tutti coloro che possono tenere i comportamenti indicati.
+- **Astrattezza** — i comportamenti non sono individuati in concreto ma definiti in astratto (es. art. 624 c.p. che punisce il furto).
+
+> **NB** — Generalità e astrattezza sono particolarmente importanti: contribuiscono alla razionalità e alla giustizia sostanziale delle norme.
+
+**Classificazioni delle norme giuridiche:**
+- **Norme di produzione giuridica** (regolano direttamente i comportamenti) vs. **norme sulla produzione giuridica** (indicano *a chi* spetti emanare le prime e *con quali modalità*, es. le norme costituzionali che attribuiscono la funzione legislativa a Stato e Regioni).
+- **Norme cogenti** (obbligano incondizionatamente) vs. **norme dispositive** (derogabili dalla volontà privata; soprattutto di diritto civile).
+- **Norme di diritto interno** (società organizzate in Stati) vs. **norme di diritto internazionale** (comunità internazionali).
+- **Norme di diritto scritto** (contenute in atti di organi dotati di potere normativo, es. Costituzione) vs. **norme consuetudinarie** (originate da comportamenti ripetuti nel tempo — *continuitas actuum* — accompagnati dalla convinzione della loro obbligatorietà giuridica — *opinio iuris*).
+- **Norme di diritto pubblico** (natura pubblica degli interessi tutelati, es. costruzione di un'autostrada) vs. **norme di diritto privato** (natura privata degli interessi, es. ricostruzione di un edificio privato).
+- **Norme di diritto naturale** (complesso di norme non scritte, ritenute universali e necessarie, preesistenti al diritto positivo e parte del patrimonio etico-razionale-religioso) vs. **norme di diritto positivo** (*ius in civitate positum*: il diritto vigente in un dato ambito politico-territoriale e in un dato tempo, creato e imposto dallo Stato sovrano, es. art. 2 Cost.).
+
+### 0.2. Gli ordinamenti giuridici
+
+L'**ordinamento giuridico** è il sistema o complesso di norme giuridiche che organizza una data società, regolandone i comportamenti, determinandone i fini sociali, distribuendo le mansioni e disciplinando le sanzioni. L'elemento della **pluralità** (degli ordinamenti) è caratteristico: nello stesso spazio convivono più ordinamenti, da cui il problema dei loro rapporti.
+
+**Classificazioni degli ordinamenti:**
+- **Originari** (la validità è insita nell'ordinamento stesso; si fondano su sovranità e indipendenza, es. lo Stato) vs. **derivati** (autonomi ma non indipendenti, traggono validità da un altro ordinamento, es. Regioni, Province, Comuni e le altre formazioni sociali interne allo Stato). L'**originarietà** coincide con la **sovranità**, cioè l'indipendenza da ogni altro ordinamento: se un ordinamento si riconosce dipendente da un altro, non è originario ma derivato.
+- **Accentrati** (istituiscono un'autorità centrale per attuare i fini sociali, es. lo Stato italiano) vs. **decentrati o paritari** (l'autorità centrale manca e provvedono gli stessi consociati, es. la comunità internazionale).
+- **Semplici** (un solo sistema di norme) vs. **complessi** (comprendono ordinamenti minori).
+- **Perfetti** (provvedono con mezzi propri ai propri fini) vs. **imperfetti** (devono ricorrere ad altri ordinamenti).
+- **Politici** — si assumono competenti a curare *qualsiasi* interesse degli appartenenti al gruppo (es. lo Stato).
+
+Ulteriore criterio è la **qualità degli interessi** tutelati (formazioni sociali religiose, culturali, sportive, assistenziali, a scopo di lucro).
+
+**Rapporti tra ordinamenti:**
+- **Subordinazione** — un ordinamento è subordinato a un altro (es. Regioni, Province e Comuni rispetto allo Stato).
+- **Coordinazione** — un ordinamento riconosce che un altro è indipendente da esso (es. rapporto tra Stati). In questi casi può sorgere il problema di rendere operanti, in una comunità, le norme di un altro ordinamento: vi provvede il **diritto internazionale privato**, l'insieme di norme che regolano i rapporti caratterizzati da un *elemento di estraneità*. Il soggetto chiamato a regolare il caso può dichiarare applicabili le leggi di un altro Stato (**rinvio**), che può essere:
+  - **Mobile** — rinvio alla normazione di un altro ordinamento, anche futura (non a una norma determinata).
+  - **Fisso** — rinvio a una norma precisamente determinata.
 
 ---
 
@@ -83,7 +134,17 @@ Lo Stato moderno si differenzia dalle forme precedenti per due caratteristiche:
 - Concentrazione del potere di comando legittimo in un territorio in capo a un'**unica autorità**.
 - Presenza di un'**organizzazione amministrativa** retta da una burocrazia professionale.
 
+In termini di teoria degli ordinamenti, lo Stato è l'**ordinamento originario** di un popolo, **politico** (può assumere la cura di qualsiasi interesse dei cittadini) e tendenzialmente **accentrato**.
+
 Il nome "Stato" nel significato moderno si diffonde con Machiavelli (*Il Principe*, 1513), che apre l'opera distinguendo tutti i domini in "Repubbliche o Principati".
+
+#### 2.1.1. Gli elementi costitutivi dello Stato
+
+Lo Stato si compone di tre elementi costitutivi:
+
+- **Popolo** — collettività stabilmente stanziata su una parte della superficie terrestre, i cui componenti (i **cittadini**) sono titolari di un complesso di diritti e doveri che ne definisce lo *status* (la cittadinanza). Va distinto dalla **Nazione**: comunità caratterizzata da comunanza di origine, lingua, religione, costumi e tradizioni, tale da conferirle un'individualità storicamente e politicamente rilevante (il popolo è una nozione giuridica, la nazione una nozione storico-culturale).
+- **Territorio** — la parte di superficie terrestre dove è stanziato il popolo e nei cui limiti si esercitano i poteri sovrani del Governo (v. § 2.6).
+- **Governo (sovranità)** — l'autorità centrale di direzione dello Stato, la cui sovranità è in parte "erosa" verso il basso a favore degli ordinamenti inferiori (Regioni, Province, Comuni).
 
 ### 2.2. La nascita dello Stato moderno
 
@@ -143,7 +204,7 @@ Il territorio è composto da:
 - **Piattaforma continentale** — zoccolo continentale del fondo marino; lo Stato ne può riservare le risorse naturali a sé.
 - **Spazio atmosferico** sovrastante.
 - Navi e aeromobili battenti la propria bandiera in spazi internazionali.
-- **Sedi diplomatiche** all'estero.
+- **Sedi diplomatiche** all'estero (**extraterritorialità**).
 
 Il rapporto tra sovranità e territorio si è indebolito con la **globalizzazione**: capitali, informazioni e conoscenze si spostano liberamente oltre i confini sfuggendo al controllo degli Stati. Lo Stato si trova davanti a un'alternativa: chiudersi al mercato globale (rischio di impoverimento) oppure aprirsi, accettando che le scelte politiche siano condizionate dalla logica del mercato internazionale. Nell'UE questo è particolarmente evidente con il mercato unico e la libera circolazione di merci, capitali, servizi e persone ("spazio senza frontiere interne").
 
@@ -151,13 +212,13 @@ Il rapporto tra sovranità e territorio si è indebolito con la **globalizzazion
 
 La **cittadinanza** è uno **status** cui la Costituzione riconnette diritti e doveri. È presupposto dei diritti politici (elettorato attivo e passivo) e fondamento di doveri costituzionali (difesa della Patria, contribuzione fiscale, fedeltà alla Repubblica). La Costituzione italiana vieta la perdita della cittadinanza per motivi politici (art. 22 Cost.).
 
-Modi di acquisto della cittadinanza italiana (legge 91/1992):
+I tre principi di acquisto della cittadinanza sono lo *ius sanguinis* (discendenza), lo *ius soli* (nascita sul territorio) e il **principio di volontà** (acquisto su richiesta dello straniero, alle condizioni di legge). In dettaglio, i modi di acquisto della cittadinanza italiana (legge 91/1992):
 
 - **Per nascita:**
   - **Ius sanguinis** — figlio di padre o madre italiani, ovunque nato.
   - **Ius soli** — nato in Italia da genitori ignoti, apolidi o che non trasmettano la loro cittadinanza.
 - **Su dichiarazione** — lo straniero nato in Italia che vi ha risieduto ininterrottamente fino alla maggiore età, se entro un anno dichiara di voler acquisire la cittadinanza.
-- **Su istanza** — coniuge straniero di cittadino italiano, discendente di avo italiano, adottato da cittadino italiano, chi ha prestato servizio statale per almeno 5 anni, cittadino UE dopo 4 anni di residenza, apolide dopo 5 anni, straniero dopo 10 anni di regolare residenza.
+- **Su istanza** (principio di volontà) — coniuge straniero di cittadino italiano, discendente di avo italiano, adottato da cittadino italiano, chi ha prestato servizio statale per almeno 5 anni, cittadino UE dopo 4 anni di residenza, apolide dopo 5 anni, straniero dopo 10 anni di regolare residenza.
 
 La cittadinanza può essere **persa** (per rinuncia o automaticamente) e **riacquistata** secondo le condizioni di legge.
 
@@ -187,6 +248,8 @@ La dottrina giuridica tedesca dell'800 attribuì allo Stato la nozione di **pers
 - Evitare l'identificazione dell'autorità con la volontà delle singole persone fisiche.
 - Garantire **obiettività** alle manifestazioni di volontà statale.
 - In Italia (post-unificazione), risolvere il conflitto tra principio monarchico e principio popolare attribuendo la sovranità a un ente astratto.
+
+La personalità giuridica dello Stato assume **caratteri diversi a seconda dell'ordinamento** in cui rileva: ad esempio, nel diritto internazionale lo Stato è preso in considerazione come complessiva organizzazione di un popolo in una collettività territoriale sovrana.
 
 Nella pratica, però, lo Stato agisce tramite i suoi enti (Comuni, Regioni) o i suoi organi specifici, non come un soggetto unitario. La definizione più precisa è quella di **"organizzazione disaggregata"** (Giannini): "un congiunto organizzato di amministrazioni diverse".
 
@@ -219,13 +282,26 @@ Tendenza attuale: lo Stato e gli enti pubblici utilizzano sempre più frequentem
 
 L'unità strutturale elementare dell'organizzazione si chiama **ufficio**: servizio prestato da persone, considerato in astratto (prescinde dalle persone fisiche che vi sono preposte). Un ufficio può essere momentaneamente privo di titolare ("vacanza") senza cessare di esistere.
 
-L'**organo** è un ufficio particolarmente qualificato da una norma come idoneo ad esprimere la volontà della persona giuridica e ad imputarle atti ed effetti (def. Giannini). Non tutti gli uffici di un ente sono organi: solo i titolari di alcuni uffici sono abilitati ad agire giuridicamente all'esterno, imputando gli effetti all'ente.
+L'**organo** è un ufficio particolarmente qualificato da una norma come idoneo ad esprimere la volontà della persona giuridica e ad imputarle atti ed effetti (def. Giannini). Più in generale si dicono organi dello Stato le sue strutture parziali, di cui fanno parte gli **agenti** e i cui atti sono imputati allo Stato. Non tutti gli uffici di un ente sono organi: solo i titolari di alcuni uffici sono abilitati ad agire giuridicamente all'esterno, imputando gli effetti all'ente.
 
 Il titolare di un organo si trova in un rapporto di **immedesimazione organica** con la persona giuridica; ha inoltre con essa un **rapporto di servizio**, da cui scaturiscono diritti e doveri reciproci.
 
-Classificazioni degli organi:
-- **Organi rappresentativi** (titolari eletti o collegati a organi elettivi, es. Parlamento) vs. **organi burocratici** (personale professionale senza rapporto con il corpo elettorale).
-- **Organi attivi** (decidono per l'apparato — funzione deliberativa) vs. **organi consultivi** (esprimono pareri) vs. **organi di controllo** (verificano legittimità o merito degli atti altrui).
+**Classificazioni degli organi:**
+
+*Per composizione:*
+- **Organi individuali** — formati da una sola persona fisica (es. Presidente della Repubblica).
+- **Organi collegiali** — composti da più agenti che, salvo il presidente, hanno poteri eguali e operano mediante un unico atto (la **deliberazione**), imputato al collegio se approvato con la maggioranza richiesta. Le **maggioranze** possono essere:
+  - **Semplice** — maggioranza dei presenti (metà + 1).
+  - **Assoluta** — metà + 1 dei componenti.
+  - **Relativa** — voto maggiore di quello raggiunto da ciascuna delle altre proposte, singolarmente considerate.
+  - **Qualificata** — maggiore della maggioranza assoluta (es. 2/3 dei componenti).
+- **Organi complessi** — formati a loro volta da altri organi (es. il Governo, composto da organi individuali — Ministri e Presidente del Consiglio — e da un organo collegiale — il Consiglio dei Ministri).
+
+*Per ambito territoriale:* **organi centrali** (competenti su fattispecie localizzate in qualsiasi parte del territorio) vs. **organi periferici** (competenti solo su una parte del territorio).
+
+*Per provenienza/legittimazione:* **Organi rappresentativi** (titolari eletti o collegati a organi elettivi, es. Parlamento — esprimono la **volontà popolare** tramite **elettività** e **temporaneità** dei titolari, che fondano la rappresentanza politica) vs. **organi burocratici** (personale professionale senza rapporto con il corpo elettorale).
+
+*Per funzione:* **organi attivi** (decidono per l'apparato — funzione deliberativa) vs. **organi consultivi** (esprimono pareri) vs. **organi di controllo** (verificano legittimità o merito degli atti altrui). Secondo il tipo di attività svolta si distinguono inoltre organi **legislativi, esecutivi e giudiziari**.
 
 I **pareri** degli organi consultivi si distinguono in:
 - **Parere facoltativo** — l'organo deliberativo può richiederlo ma non è obbligato.
@@ -234,9 +310,17 @@ I **pareri** degli organi consultivi si distinguono in:
 
 In assenza di una norma espressa, i pareri non sono vincolanti: l'organo che decide può discostarsene, con l'unico obbligo di motivare maggiormente.
 
-#### 2.9.6. Organi costituzionali
+#### 2.9.6. I dipendenti pubblici
 
-Gli **organi costituzionali** sono gli organi più importanti per il sistema statale. Si distinguono per quattro caratteristiche:
+Vanno distinti due nozioni:
+- **Pubblici dipendenti** — gli agenti dello Stato e degli altri enti pubblici.
+- **Funzionari** — quei pubblici dipendenti che sono abilitati a esercitare **potestà pubbliche**.
+
+Il legame tra il dipendente e l'ente di cui fa parte è il **rapporto di servizio**, che può sorgere per nomina, per elezione, per contratto, ecc.
+
+#### 2.9.7. Organi costituzionali
+
+Gli **organi costituzionali** sono gli organi più importanti per il sistema statale (Presidente della Repubblica, le Camere, il Governo, la Corte costituzionale): esercitano le loro funzioni "in grado sovrano", cioè non subordinati ad alcun altro organo o soggetto. Si distinguono per quattro caratteristiche:
 
 1. Sono **necessari** — la loro mancanza determinerebbe l'arresto dell'intera attività statale.
 2. Sono **indefettibili** — non possono essere soppressi o sostituiti senza mutare la forma dello Stato (es. sopprimere il Parlamento cambierebbe radicalmente l'ordinamento).
@@ -248,6 +332,22 @@ Gli organi costituzionali si differenziano dagli altri non soltanto per le funzi
 ---
 
 ## Concetti chiave
+
+**Norma giuridica** — regola regolatrice delle formazioni sociali, dotata dei caratteri di esteriorità, coercibilità, imperatività, plurilateralità, generalità e astrattezza.
+
+**Generalità e astrattezza** — caratteri della norma per cui essa si rivolge a tutti i possibili destinatari (generalità) e a comportamenti definiti in astratto, non individuati in concreto (astrattezza); fondano la razionalità e la giustizia sostanziale del diritto.
+
+**Norme di produzione / sulla produzione giuridica** — le prime regolano direttamente i comportamenti; le seconde stabiliscono chi e come può emanare le prime.
+
+**Diritto positivo** (*ius in civitate positum*) — diritto vigente in un dato ambito politico-territoriale e tempo, creato e imposto dallo Stato sovrano; contrapposto al diritto naturale (norme non scritte, universali, preesistenti).
+
+**Norma consuetudinaria** — norma originata da comportamenti ripetuti nel tempo (*continuitas actuum*) accompagnati dalla convinzione della loro obbligatorietà (*opinio iuris*).
+
+**Ordinamento giuridico** — sistema di norme che organizza una società, ne fissa i fini e disciplina le sanzioni.
+
+**Ordinamento originario / derivato** — l'originario ha validità insita in sé e si fonda su sovranità e indipendenza (es. Stato); il derivato è autonomo ma non indipendente e trae validità da un altro ordinamento (es. Regioni, Comuni).
+
+**Diritto internazionale privato** — insieme di norme che regolano i rapporti caratterizzati da un elemento di estraneità, eventualmente operando un **rinvio** (mobile o fisso) all'ordinamento di un altro Stato.
 
 **Potere sociale** — capacità di influenzare il comportamento di altri individui.
 
@@ -265,6 +365,10 @@ Gli organi costituzionali si differenziano dagli altri non soltanto per le funzi
 
 **Stato** — forma storica di organizzazione del potere politico con monopolio della forza legittima su un determinato territorio e presenza di un apparato burocratico professionale.
 
+**Elementi costitutivi dello Stato** — popolo, territorio e governo (sovranità).
+
+**Popolo / Nazione** — il popolo è la collettività dei cittadini (nozione giuridica); la nazione è la comunità unita da origine, lingua, religione, costumi e tradizioni (nozione storico-culturale).
+
 **Sovranità** — monopolio del potere di comando supremo in un territorio (aspetto interno) e indipendenza da altri Stati (aspetto esterno).
 
 **Sovranità della nazione** — teoria per cui la sovranità appartiene alla Nazione, entità collettiva che sostituisce il Re; affermatasi con la rivoluzione francese.
@@ -278,6 +382,8 @@ Gli organi costituzionali si differenziano dagli altri non soltanto per le funzi
 **Ius sanguinis** — acquisto della cittadinanza per discendenza da genitore cittadino.
 
 **Ius soli** — acquisto della cittadinanza per nascita nel territorio dello Stato.
+
+**Principio di volontà** — acquisto della cittadinanza su richiesta dello straniero, alle condizioni di legge (es. dopo 10 anni di residenza regolare).
 
 **Cittadinanza dell'Unione europea** — status che completa (non sostituisce) la cittadinanza nazionale; attribuisce diritti di circolazione, soggiorno, tutela consolare ed elettorato nelle elezioni comunali e al Parlamento europeo.
 
@@ -297,6 +403,12 @@ Gli organi costituzionali si differenziano dagli altri non soltanto per le funzi
 
 **Organo** — ufficio qualificato dalla norma come idoneo ad esprimere la volontà della persona giuridica e a imputarle gli effetti giuridici degli atti compiuti.
 
+**Organi individuali / collegiali / complessi** — secondo la composizione: una sola persona fisica; più agenti che deliberano a maggioranza; organi formati da altri organi (es. Governo).
+
+**Maggioranza semplice / assoluta / relativa / qualificata** — soglie deliberative degli organi collegiali: metà+1 dei presenti; metà+1 dei componenti; voto superiore a ciascuna altra proposta; soglia superiore alla maggioranza assoluta (es. 2/3).
+
+**Funzionario** — pubblico dipendente abilitato a esercitare potestà pubbliche; legato all'ente dal rapporto di servizio.
+
 **Organi costituzionali** — organi necessari e indefettibili dello Stato, la cui struttura è dettata dalla Costituzione e che godono di parità giuridica reciproca; identificano lo Stato in un determinato momento storico.
 
 **Organismo di diritto pubblico** — nozione elaborata dal diritto UE per indicare soggetti formalmente privati che, ricevendo finanziamenti pubblici, devono rispettare le regole sugli appalti al pari degli enti pubblici.
@@ -314,9 +426,15 @@ Gli organi costituzionali si differenziano dagli altri non soltanto per le funzi
 
 **Forma di stato** — il rapporto tra le autorità dotate di potestà di imperio e la società civile; l'insieme dei principi e valori a cui lo Stato ispira la sua azione. Risponde alla domanda: *qual è la finalità prevalente dello Stato e che tipo di rapporto esiste tra apparato statale e società?*
 
+> **Costantino Mortati** definisce la forma di Stato come «il rapporto tra il detentore del potere e il soggetto di quel potere, e quindi i diversi aspetti del rapporto tra **autorità e libertà**».
+
+Più precisamente, le **forme di Stato** sono categorie generali secondo le quali si classificano gli Stati in base a caratteristiche omogenee ritenute rilevanti (inteso qui lo Stato come ordinamento originario di un popolo, su un territorio, sotto un governo sovrano). La forma di Stato rappresenta il rapporto tra Stato e cittadini, tra governanti e governati, e varia anche in base alla **distribuzione del potere nel territorio** (Stato accentrato o decentrato).
+
 **Forma di governo** — i modi in cui il potere è distribuito tra gli organi principali dello Stato e i rapporti che intercorrono tra essi. Risponde alla domanda: *chi governa all'interno dell'apparato statale?*
 
 Le due nozioni sono distinte ma legate da un **rapporto di strumentalità**: la forma di governo è lo strumento tecnico per realizzare la finalità politica della forma di stato. Esempio: la finalità garantistica dello Stato liberale si è tradotta nella separazione dei poteri e nella riserva di legge.
+
+> **Cenno storico (Aristotele)** — già il pensiero classico classificò le forme di governo distinguendo, per il numero dei governanti, **Monarchia** (governo di uno), **Aristocrazia** (governo dei migliori, di pochi) e **Politeia** (governo dei molti). Ciascuna può degenerare nella forma corrotta corrispondente (rispettivamente tirannide, oligarchia e democrazia degenerata in disordine). Per Aristotele la forma migliore è una *sintesi* equilibrata tra oligarchia e democrazia.
 
 ### 1.2. Classificazioni e modelli
 
@@ -328,13 +446,25 @@ Le forme di stato e di governo elaborate dalla dottrina sono **idealtipi** — m
 - **Stato totalitario**
 - **Stato socialista**
 
+Una classificazione trasversale, fondata sul **modo di esercizio del potere**, distingue inoltre due grandi categorie di regimi:
+- **Regime monocratico** — il potere politico è concentrato in un solo organo o soggetto (individuale o collettivo) che lo esercita in via esclusiva e incontrollata. Vi rientrano la monarchia assoluta, la dittatura rivoluzionaria e i regimi totalitari.
+- **Regime policratico** — il potere è ripartito tra più organi o soggetti, che lo esercitano limitandosi e controllandosi vicendevolmente.
+
+> **Dicotomia monarchia / repubblica** — a lungo considerata un criterio cruciale di classificazione delle forme di Stato e di governo. Con la trasformazione delle monarchie europee in **monarchie parlamentari**, la distinzione si è però fatta sfumata: oggi è poco idonea a distinguere le forme contemporanee di Stato e di governo (ciò che conta è la distribuzione effettiva del potere, non il titolo del Capo dello Stato).
+
 ---
 
 ## 2. L'Evoluzione delle Forme di Stato
 
+> **Quadro d'insieme** — l'evoluzione storica della forma di Stato in Europa segue, per grandi linee, la sequenza: **Stato feudale → Stato assoluto → Stato liberale → Stato di democrazia pluralista (e Welfare State)**, con le parentesi novecentesche dello **Stato totalitario** e dello **Stato socialista** sorte come reazione alla crisi dello Stato liberale.
+
+### 2.0. Lo Stato feudale
+
+Lo **Stato feudale** caratterizza l'Europa indicativamente dall'VIII al XII secolo. In realtà non esisteva ancora un vero Stato: vigevano **accordi privati** tra il signore/feudatario e i vassalli, il cui scopo era principalmente la protezione del territorio dagli attacchi. Il potere era disperso e fondato su rapporti personali (v. anche § I.2.2 sulla nascita dello Stato moderno come reazione a questa dispersione).
+
 ### 2.1. Lo Stato assoluto
 
-Lo **Stato assoluto** è la prima forma dello Stato moderno, nato in Europa tra il Quattrocento e il Cinquecento. Caratteri fondamentali:
+Lo **Stato assoluto** è la prima forma dello Stato moderno, nato in Europa tra il Quattrocento e il Cinquecento. Segna lo **spostamento del potere dai feudatari al Re** e, sul piano economico, il passaggio dalla terra al denaro. Caratteri fondamentali:
 
 - Il **potere sovrano** è interamente concentrato nella **Corona** (organo impersonale e continuo, distinto dal Re come persona fisica).
 - Il Re è **legibus solutus** — non incontra limiti legali; la sua volontà ha forza di legge (*quod principi placuit legis habet vigorem*).
@@ -353,11 +483,12 @@ Lo **Stato liberale** nasce tra fine Settecento e prima metà dell'Ottocento dal
 - Ragioni finanziarie: costi crescenti e pressione fiscale insopportabile.
 - Indebolimento della legittimazione politica: incapacità di conciliare la sovranità regia con una sfera di libertà individuale.
 
-**Momenti storici fondamentali:**
+**Momenti storici fondamentali** (l'affermazione dello Stato liberale varia da Paese a Paese):
 
-- **Rivoluzione francese (1789)** — la Dichiarazione dei diritti dell'uomo e del cittadino (1789) e la Costituzione del 1791 consacrano: conservazione dei diritti naturali (in primis proprietà), eguaglianza davanti alla legge, limitazione del potere tramite divisione dei poteri.
-- **Inghilterra** — evoluzione graduale. La **Gloriosa Rivoluzione (1689)** afferma che il potere del Re è sottoposto al diritto; la *Declaration of Rights* e il *Bill of Rights* vietano arresti arbitrari, imposizione di tributi senza consenso parlamentare, mantenimento di armate stabili in pace.
-- **America** — Dichiarazione di indipendenza (1776); Costituzione federale (1787), con separazione orizzontale dei poteri ("pesi e contrappesi") e separazione verticale (federalismo), illustrate ne *Il Federalista* (Hamilton, Jay, Madison).
+- **Rivoluzione francese (1789)** — la classe media (borghesia) lotta contro i privilegi di nobiltà e clero. La Dichiarazione dei diritti dell'uomo e del cittadino (1789) e la Costituzione del 1791 consacrano: conservazione dei diritti naturali (in primis proprietà), eguaglianza davanti alla legge, limitazione del potere tramite divisione dei poteri. Caratteristica l'oscillazione ideologica tra liberalismo e radicalismo democratico.
+- **Inghilterra** — evoluzione graduale, frutto delle due vittorie del Parlamento contro gli Stuart: la **Guerra civile (1649)** e la **Gloriosa Rivoluzione (1688-1689)**, che afferma la sottoposizione del Re al diritto. La *Declaration of Rights* e il *Bill of Rights* vietano arresti arbitrari, imposizione di tributi senza consenso parlamentare, mantenimento di armate stabili in tempo di pace.
+- **America** — lo Stato liberale è conseguenza della Guerra d'indipendenza contro la Gran Bretagna: Dichiarazione di indipendenza (1776); Costituzione federale (1787), con separazione orizzontale dei poteri ("pesi e contrappesi") e separazione verticale (federalismo), illustrate ne *Il Federalista* (Hamilton, Jay, Madison).
+- **Italia e Germania** — lo Stato liberale si afferma più tardi e attraverso una «**rivoluzione dall'alto**», legata all'espansione, rispettivamente, del Regno di Sardegna e della Prussia.
 
 ### 2.3. Stato liberale ed economia di mercato
 
@@ -382,13 +513,13 @@ Il modello "Stato liberale" è definito da cinque tratti essenziali:
 
 1. **Finalità garantistica** — lo Stato è strumento per tutelare libertà e diritti individuali, in primis la proprietà.
 2. **Stato minimo** — si astiene dall'economia; titolare solo delle funzioni indispensabili (giustizia, ordine pubblico, difesa, moneta). Bassa tassazione e pareggio di bilancio.
-3. **Principio di libertà individuale** — libertà personale, di proprietà, contrattuale, di pensiero, religiosa, di domicilio. Nessun corpo intermedio tra Stato e individuo; tutti sono **eguali davanti alla legge**.
+3. **Principio di libertà individuale** — libertà personale, di proprietà, contrattuale, di pensiero, religiosa, di domicilio. Nessun corpo intermedio tra Stato e individuo; tutti sono **eguali davanti alla legge**. Ne deriva una forte **separazione tra Stato e società** e una marcata impronta **individualista**.
 4. **Separazione dei poteri** — il potere è suddiviso tra soggetti istituzionali distinti che si controllano reciprocamente.
-5. **Principio di legalità** — ogni limitazione della libertà deve avvenire per mezzo della **legge**, che deve essere generale e astratta (garanzia contro l'arbitrio) e deve provenire dai rappresentanti della Nazione.
+5. **Principio di legalità** — ogni limitazione della libertà deve avvenire per mezzo della **legge**, che deve essere generale e astratta (garanzia contro l'arbitrio) e deve provenire dai rappresentanti della Nazione. Lo Stato liberale è quindi anche **Stato di diritto** (*rule of law*).
 
 > **Stato liberale vs. Stato di diritto** — "Stato liberale" fa riferimento all'ideologia liberista e all'idea di Stato minimo; "Stato di diritto" è concetto più giuridico (separazione dei poteri, legalità, tutela dei diritti, eguaglianza, indipendenza dei giudici) e può adattarsi anche a Stati non liberali, come i moderni Stati sociali.
 
-**Principio rappresentativo** — i parlamentari rappresentano l'intera Nazione (non corpi particolari) e operano senza mandato imperativo. Il corpo elettorale è però assai ristretto (suffraggio censitario): lo **Stato liberale è uno Stato monoclasse**, con base sociale circoscritta alla borghesia. In Italia nel 1860 l'elettorato era appena il 2% della popolazione.
+**Principio rappresentativo** — i parlamentari rappresentano l'intera Nazione (non corpi particolari) e operano senza mandato imperativo. Il corpo elettorale è però assai ristretto (**suffragio censitario**, determinato dal censo): ampi settori della popolazione restano privi del diritto di voto. Lo **Stato liberale è uno Stato monoclasse**, con base sociale circoscritta alla borghesia. In Italia nel 1860 l'elettorato era appena il 2% della popolazione.
 
 ### 2.5. La nascita dello Stato di democrazia pluralista
 
@@ -398,7 +529,7 @@ Tre trasformazioni decisive:
 
 - Affermazione dei **partiti di massa**, che organizzano la partecipazione politica di milioni di elettori.
 - Configurazione degli organi elettivi come luogo di confronto e scontro di interessi eterogenei.
-- Riconoscimento di **diritti sociali** accanto ai diritti di libertà, come strumenti di integrazione dei gruppi svantaggiati.
+- Riconoscimento di **diritti sociali** accanto ai diritti di libertà, come strumenti di integrazione dei gruppi svantaggiati. Si afferma così il riconoscimento, accanto ai **diritti liberali di prima generazione**, dei **diritti sociali ed economici di seconda generazione**.
 
 ---
 
@@ -425,21 +556,24 @@ Anche in Italia, la frammentazione politica post-1919, l'instabilità dei govern
 
 ### 3.3. Le alternative allo Stato di democrazia pluralista nel XX secolo
 
+Gli Stati **totalitari e autoritari** nascono come reazione alla crisi dello Stato liberale e come tentativo di risolvere il conflitto sociale tra classe media e classe operaia. Sono accomunati dall'uso della **forza** e dell'**azione intimidatoria** e da forti limitazioni dei diritti individuali fondamentali.
+
 **Stato totalitario** — caratteri fondamentali:
 
 - **Partito unico** integrato con l'organizzazione statale.
 - Concentrazione del potere (legislativo + esecutivo) in un unico organo.
 - Lo Stato occupa **tutti gli aspetti della vita** sociale e individuale, sopprimendo le libertà liberali.
-- **Fascismo italiano (1922-1943)**: Capo del Governo con poteri assoluti, soppressione del pluralismo politico, tutela degli "interessi nazionali".
+- **Fascismo italiano (1922-1943)**: il Capo del Governo concentra potere esecutivo e legislativo (fine della separazione dei poteri), soppressione del pluralismo politico, tutela degli "interessi nazionali". *Questione classificatoria*: parte della dottrina lo qualifica come Stato totalitario, parte come **Stato autoritario**, perché accanto al Duce sopravvivevano due istituzioni autonome — la **Chiesa** e la **Monarchia** — assenti invece nel modello nazista.
 - **Nazionalsocialismo tedesco (1933-1945)**: il movimento nazista è sovraordinato allo Stato; il Führer concentra in sé ogni potere costituente, legislativo, esecutivo e giurisdizionale (**Führerprinzip**).
 
-**Stato socialista** — basato sulla dottrina marxista-leninista:
+**Stato socialista** — basato sulla dottrina marxista-leninista (Marx e Lenin); alternativo allo Stato democratico pluralista:
 
-- **Dittatura del proletariato** come fase transitoria verso una società senza classi.
-- Abolizione della proprietà privata; Stato titolare dei mezzi di produzione.
+- **Dittatura del proletariato** come fase (in origine) transitoria verso una società senza classi e senza conflitti sociali, con l'obiettivo di eliminare la borghesia.
+- Abolizione della proprietà privata; Stato titolare (monopolio) dei mezzi di produzione.
 - Economia collettivistica (abolizione del mercato).
-- Modello: URSS, con le Costituzioni del 1936 (staliniana) e del 1977.
-- Crisi e crollo tra fine anni '80 e inizio anni '90, simboleggiati dalla caduta del Muro di Berlino.
+- Significative limitazioni dei diritti fondamentali (libertà di associazione, religione, espressione, circolazione, espatrio).
+- **Origine e diffusione**: si afferma con la Rivoluzione d'Ottobre del 1917 in Russia, poi in URSS e infine, dopo la Seconda guerra mondiale, nel blocco sovietico dell'Europa orientale. Costituzioni dell'URSS del 1936 (staliniana) e del 1977.
+- **Crisi e crollo** tra fine anni '80 e inizio anni '90, simboleggiati dalla **caduta del Muro di Berlino (1989)**. Molti Stati dell'Est si sono poi orientati al mercato e 10 di essi hanno aderito all'UE; il modello sopravvive in alcuni Paesi asiatici (Cina, Corea del Nord, Laos).
 
 ### 3.4. Consolidamento della democrazia pluralista e Stato sociale
 
@@ -452,6 +586,8 @@ Le nuove Costituzioni garantiscono:
 - I **diritti sociali** (salute, istruzione, lavoro, previdenza), che comportano prestazioni positive dei poteri pubblici.
 
 Da qui nasce il concetto di **Stato sociale** (o *Welfare State*): lo Stato interviene nella distribuzione dei benefici e dei sacrifici sociali per correggere gli esiti del mercato e ridurre le diseguaglianze, sviluppando la **solidarietà** tra individui e gruppi.
+
+> **L'esempio britannico** — il Welfare State nasce nel secondo dopoguerra; il caso più emblematico è il Regno Unito, dove nel **1945** il Partito laburista vinse le elezioni con un programma fondato sulle proposte dell'economista **William Beveridge**. Per Beveridge compito dello Stato è proteggere i cittadini «*from cradle to grave*» (dalla culla alla tomba) e combattere miseria, ignoranza, malattia e ozio. In questo quadro il **Servizio Sanitario Nazionale** diventa pubblico e universale.
 
 **Politiche del Welfare State (1950-1980):**
 
@@ -637,11 +773,15 @@ Nelle democrazie pluralistiche la distinzione non è tra maggioranze occasionali
 
 ## Concetti chiave
 
-**Forma di stato** — rapporto tra autorità e società civile; insieme dei principi che ispirano l'azione dello Stato. Risponde a "qual è la finalità prevalente dello Stato?".
+**Forma di stato** — rapporto tra autorità e società civile; insieme dei principi che ispirano l'azione dello Stato. Risponde a "qual è la finalità prevalente dello Stato?". Per Mortati, il rapporto tra detentore del potere e soggetto del potere (autorità vs. libertà).
 
 **Forma di governo** — distribuzione del potere tra gli organi principali dello Stato. Risponde a "chi governa?".
 
+**Regime monocratico / policratico** — classificazione per modo di esercizio del potere: concentrato in un solo soggetto in via incontrollata (monocratico: monarchia assoluta, dittatura, regimi totalitari) oppure ripartito tra più soggetti che si controllano (policratico).
+
 **Idealtipo** — modello teorico elaborato dalla dottrina comparando diverse esperienze costituzionali, che evidenzia i tratti ricorrenti senza esaurire la ricchezza di ogni singola realtà storica.
+
+**Stato feudale** — forma pre-statuale (VIII-XII sec.) fondata su accordi privati tra signore e vassalli per la protezione del territorio; potere disperso e personale.
 
 **Stato assoluto** — forma di Stato in cui il potere sovrano è integralmente concentrato nella Corona; il Re è *legibus solutus*, senza limiti legali.
 
@@ -653,9 +793,15 @@ Nelle democrazie pluralistiche la distinzione non è tra maggioranze occasionali
 
 **Stato di democrazia pluralista** — forma di Stato a base sociale allargata (pluriclasse), basato su suffragio universale, pluripartitismo, pluralismo di valori e formazioni sociali/politiche, diritti sociali.
 
+**Diritti di prima / seconda generazione** — i diritti liberali (libertà negative) riconosciuti dallo Stato liberale; i diritti sociali ed economici (prestazioni positive) riconosciuti dallo Stato di democrazia pluralista.
+
 **Stato totalitario** — forma di Stato in cui il partito unico si identifica con lo Stato, il pluralismo è soppresso e ogni aspetto della vita individuale e collettiva è controllato dal potere politico.
 
-**Stato sociale (Welfare State)** — forma di Stato in cui il potere pubblico interviene nella distribuzione dei benefici e dei sacrifici sociali per correggere gli esiti del mercato, garantire i diritti sociali e promuovere la solidarietà.
+**Stato autoritario** — forma intermedia in cui, pur con forte concentrazione del potere, sopravvivono centri di potere autonomi (es., per il fascismo, Chiesa e Monarchia); distinto dal totalitarismo pieno (modello nazista).
+
+**Stato socialista** — forma di Stato di matrice marxista-leninista fondata sulla dittatura del proletariato, l'abolizione della proprietà privata, il monopolio statale dei mezzi di produzione e l'economia collettivista; affermatosi dalla Rivoluzione d'Ottobre (1917), in crisi dopo il 1989.
+
+**Stato sociale (Welfare State)** — forma di Stato in cui il potere pubblico interviene nella distribuzione dei benefici e dei sacrifici sociali per correggere gli esiti del mercato, garantire i diritti sociali e promuovere la solidarietà (modello britannico post-1945 ispirato a Beveridge: protezione "dalla culla alla tomba").
 
 **Partiti di massa** — organizzazioni politiche con struttura permanente e radicamento nella società, capaci di mobilitare milioni di elettori; caratteristici delle democrazie pluraliste post-suffragio universale.
 
@@ -739,6 +885,8 @@ La nascita dello Stato moderno comporta la **secolarizzazione** e il riconoscime
 - Il "nuovo" Concordato è entrato in vigore con la **legge 121/1985**, eliminando norme incompatibili con la Costituzione (es. cattolicesimo "religione di Stato", insegnamento obbligatorio della religione).
 - L'**art. 8 Cost.** garantisce il pluralismo: tutte le confessioni religiose sono egualmente libere. Le confessioni non cattoliche possono organizzarsi con propri statuti; i loro rapporti con lo Stato sono regolati per legge sulla base di **intese** (art. 8.3).
 
+> **Collegamento** — la libertà di coscienza, di cui la laicità è garanzia, è oggi considerata un dovere dello Stato (lo Stato è obbligato a garantirla); insieme alla cura di istruzione, salute e protezione delle categorie più deboli, essa rientra tra le finalità che qualificano lo Stato come ordinamento *politico*, competente a curare qualsiasi interesse dei cittadini.
+
 ### 7.2. Principio di laicità, libertà di coscienza e pluralismo religioso
 
 In Italia il principio di **laicità** è stato elaborato principalmente dalla giurisprudenza costituzionale.
@@ -785,11 +933,11 @@ La **società multiculturale** è fondata sul principio che dev'essere assicurat
 
 ### Decentramento verticale del potere
 
-La separazione dei poteri può realizzarsi non solo in **orizzontale** (tra i poteri dello Stato) ma anche in **verticale**, distribuendo il potere tra lo Stato centrale e altri enti territoriali.
+La separazione dei poteri può realizzarsi non solo in **orizzontale** (tra i poteri dello Stato) ma anche in **verticale**, distribuendo il potere tra lo Stato centrale e altri enti territoriali. È, in altri termini, la **forma di Stato vista nel rapporto con il territorio**: la distinzione tra Stati unitari, regionali e federali si fonda sull'organizzazione territoriale e sulla ripartizione del potere (in particolare legislativo) tra governo centrale e strutture istituzionali substatali.
 
 **Distinzione fondamentale:**
-- **Stato unitario**: il potere appartiene al solo Stato centrale o a soggetti periferici da esso dipendenti (**decentramento amministrativo o burocratico**).
-- **Stato composto**: il potere è distribuito tra Stato centrale ed enti territoriali distinti, titolari di potere di indirizzo politico e di funzioni legislative e amministrative in determinate materie (**decentramento politico**).
+- **Stato unitario**: il potere legislativo è esercitato esclusivamente dal **governo centrale**; gli eventuali soggetti periferici dipendono da esso (**decentramento amministrativo o burocratico**, non politico).
+- **Stato composto** (decentralizzato): il potere — in primis quello **legislativo** — è esercitato sia dal governo centrale sia dagli **ordinamenti infrastatali**, titolari di potere di indirizzo politico e di funzioni legislative e amministrative in determinate materie (**decentramento politico**).
 
 ### Lo Stato federale
 
@@ -800,7 +948,7 @@ La separazione dei poteri può realizzarsi non solo in **orizzontale** (tra i po
 - **Partecipazione degli Stati membri** alla revisione costituzionale.
 - **Corte costituzionale** che risolve i conflitti tra Stato federale e Stati membri.
 
-**Origine storica:** spesso da Confederazioni di Stati indipendenti (USA 1777-1787, Svizzera 1815-1848, Germania 1815-1867). La **Confederazione di Stati** è un'aggregazione basata su un trattato internazionale, non su una Costituzione: non dà vita a uno Stato nuovo.
+**Origine storica:** spesso da Confederazioni di Stati indipendenti (USA 1777-1787, Svizzera 1815-1848, Germania 1815-1867). La **Confederazione di Stati** è un'aggregazione basata su un trattato internazionale, non su una Costituzione: non dà vita a uno Stato nuovo. Tra gli Stati confederati vige **indipendenza** e un rapporto di pura **coordinazione**; gli Stati membri di uno Stato federale, invece, pur molto autonomi, **non sono indipendenti**.
 
 ### Lo Stato regionale
 
@@ -809,6 +957,15 @@ La separazione dei poteri può realizzarsi non solo in **orizzontale** (tra i po
 - Le Regioni hanno competenze legislative e amministrative, ma **partecipazione limitata** alle funzioni statali.
 - **Nessuna seconda Camera** rappresentativa delle Regioni.
 - Una Corte costituzionale risolve i conflitti, assicurando la preminenza dell'interesse nazionale nelle materie regionali.
+
+**Schema comparativo (Stato federale vs. Stato regionale)** — i quattro elementi di confronto:
+
+| Elemento | Stato federale | Stato regionale |
+|---|---|---|
+| **Potere legislativo** | spettante (anche) alle entità substatali | imperniato sullo Stato centrale, con quote attribuite alle Regioni |
+| **Potere giudiziario** | proprio degli Stati membri | autonomo, ma facente capo allo Stato |
+| **Camera Alta** | rappresenta gli Stati membri (es. Senato USA) | seconda Camera che rappresenta le Regioni (es. Bundesrat) |
+| **Modifica costituzionale** | partecipano gli Stati membri (Länder) | partecipano (in misura più limitata) le Regioni |
 
 **Avvertenza:** la distinzione tra Stato federale e Stato regionale è nella pratica difficile da tracciare; la distinzione fondamentale resta quella tra **Stato unitario e Stato composto**.
 
@@ -822,11 +979,17 @@ La separazione dei poteri può realizzarsi non solo in **orizzontale** (tra i po
 
 ### 9.1. Definizioni e struttura
 
-L'**Unione europea** nasce con il Trattato di Maastricht con una struttura "a tre pilastri":
+Il processo di **integrazione europea** ha origine con la creazione della **Comunità europea del carbone e dell'acciaio (CECA)** tra Italia, Francia, Germania e i tre Paesi del **Benelux**, poi proseguito con le Comunità successive. La caratteristica che distingue queste Comunità (e l'Unione che ne è derivata) dalle classiche organizzazioni internazionali è una sola, ma decisiva: le norme dei Trattati e degli atti adottati dagli organi dell'Unione **obbligano direttamente i cittadini** degli Stati membri (efficacia diretta).
+
+L'**Unione europea** nasce formalmente con il **Trattato di Maastricht** (7 febbraio 1992), con una struttura "a tre pilastri":
 - Pilastro centrale: **Comunità europea** (CE).
 - Pilastri laterali: **PESC** (politica estera e di sicurezza comune) e **CGAI** (cooperazione in giustizia e affari interni).
 
-Con il **Trattato di Lisbona** i tre pilastri sono stati assorbiti nell'UE. La PESC mantiene però un regime speciale (decisioni all'unanimità, nessun atto legislativo, limitato controllo della Corte di giustizia).
+Con il **Trattato di Lisbona** (in vigore dal 1° dicembre 2009) i tre pilastri sono stati assorbiti nell'UE. La PESC mantiene però un regime speciale (decisioni all'unanimità, nessun atto legislativo, limitato controllo della Corte di giustizia). Dopo Lisbona l'Unione è disciplinata da **due Trattati**:
+- **TUE** (Trattato sull'Unione europea) — detta i principi fondamentali relativi alle finalità e all'assetto organizzativo dell'Unione.
+- **TFUE** (Trattato sul funzionamento dell'Unione europea) — regolamenta in modo analitico le singole funzioni dell'Unione e le relative modalità di svolgimento.
+
+L'UE comprende oggi **27 Stati** (dopo la Brexit, v. § 9.6).
 
 Il principio di **cooperazione rafforzata** (introdotto con il Trattato di Amsterdam) consente a gruppi di Stati membri di instaurare collaborazioni specifiche tra loro ("Europa a geometria variabile o a due velocità").
 
@@ -834,17 +997,21 @@ Il principio di **cooperazione rafforzata** (introdotto con il Trattato di Amste
 
 **Organi principali:**
 
-- **Consiglio europeo**: organo di impulso politico, composto dai Capi di Stato o di Governo e dal Presidente della Commissione. Il suo Presidente è eletto a maggioranza qualificata per due anni e mezzo, rinnovabili.
+- **Consiglio europeo**: organo di impulso politico, composto dai Capi di Stato o di Governo e dal Presidente della Commissione. Il suo Presidente è eletto a maggioranza qualificata per due anni e mezzo, rinnovabili (poteri limitati alla preparazione e direzione dei lavori del Consiglio europeo).
 
-- **Consiglio** (dei ministri): esercita con il PE la funzione legislativa e di bilancio; coordina le politiche degli Stati. Un ministro per Stato. Delibera a maggioranza qualificata (almeno 55% degli Stati, minimo 15, che rappresentino almeno il 65% della popolazione). Coadiuvato dal **COREPER** (Comitato dei Rappresentanti Permanenti).
+- **Consiglio** (dei ministri): esercita con il PE la funzione legislativa e di bilancio; coordina le politiche degli Stati e dispone di poteri di controllo delle relazioni internazionali. Un ministro per Stato. Delibera a maggioranza qualificata (almeno 55% degli Stati, minimo 15, che rappresentino almeno il 65% della popolazione). Coadiuvato dal **COREPER** (Comitato dei Rappresentanti Permanenti).
 
-- **Commissione europea**: centro del processo decisionale e organo propulsivo. Dispone di: poteri di iniziativa normativa; poteri di decisione amministrativa; poteri di controllo sugli Stati. Un commissario per Stato. Il Parlamento europeo elegge il Presidente su proposta del Consiglio e può censurare la Commissione con mozione di censura.
+- **Commissione europea**: centro del processo decisionale e organo propulsivo. Dispone di: poteri di iniziativa normativa; poteri di decisione amministrativa (esecuzione); poteri di controllo sugli Stati; funzioni di rilievo internazionale. Un commissario per Stato. Il Parlamento europeo elegge il Presidente su proposta del Consiglio e può censurare la Commissione con mozione di censura.
 
-- **Parlamento europeo**: 705 deputati eletti a suffragio universale e diretto ogni cinque anni. Partecipa pienamente alla formazione degli atti normativi attraverso la **procedura legislativa ordinaria** (codecisione, art. 294 TFUE). Poteri di controllo sulla Commissione (commissioni d'inchiesta, interrogazioni, mozione di censura).
+- **Parlamento europeo**: 705 deputati eletti a suffragio universale e diretto ogni cinque anni. Partecipa pienamente alla formazione degli atti normativi attraverso la **procedura legislativa ordinaria** (codecisione, art. 294 TFUE) e dispone di poteri relativi al bilancio. Poteri di controllo sulla Commissione (commissioni d'inchiesta, interrogazioni, mozione di censura).
 
-- **Corte di Giustizia**: assicura il rispetto del diritto nell'interpretazione del Trattato. Giudica sulle violazioni del diritto comunitario, sulla legittimità degli atti normativi comunitari e interpreta il diritto in via pregiudiziale.
+- **Organizzazione giurisdizionale** — costituita dalla **Corte di Giustizia** e dal **Tribunale**, cui spetta garantire l'osservanza del diritto dell'Unione:
+  - Il **Tribunale** è competente su determinate categorie di ricorsi (es. ricorso per annullamento); le sue decisioni sono impugnabili davanti alla Corte di Giustizia per i soli **motivi di diritto**.
+  - La **Corte di Giustizia** è giudice di "appello" rispetto alle sentenze del Tribunale e ha attribuzioni esclusive che assicurano l'unità della giurisdizione dell'Unione: giudica sulle violazioni del diritto dell'Unione, sulla legittimità degli atti normativi e interpreta il diritto **in via pregiudiziale**.
 
 - **Corte dei Conti**: controllo contabile.
+
+- **Banca centrale europea** (v. § 9.4).
 
 - **Comitato economico e sociale** e **Comitato delle Regioni**: organi consultivi.
 
@@ -970,13 +1137,19 @@ La crisi economica del Covid-19 ha spinto l'UE ad adottare misure straordinarie:
 
 **Stato composto** — Stato in cui il potere è distribuito tra Stato centrale ed enti territoriali distinti, titolari di potere di indirizzo politico e di funzioni legislative e amministrative.
 
-**Stato federale** — Stato composto in cui gli enti territoriali (Stati membri) hanno proprie Costituzioni, competenze garantite dalla Costituzione federale e sono rappresentati in una seconda Camera del Parlamento.
+**Stato federale** — Stato composto in cui gli enti territoriali (Stati membri) hanno proprie Costituzioni, competenze garantite dalla Costituzione federale e sono rappresentati in una seconda Camera del Parlamento; gli Stati membri sono autonomi ma non indipendenti.
 
 **Stato regionale** — Stato composto in cui le Regioni hanno autonomia politica garantita dalla Costituzione, ma senza proprie Costituzioni e con partecipazione limitata alle funzioni statali.
+
+**Confederazione di Stati** — Aggregazione di Stati fondata su un trattato internazionale (non su una Costituzione): gli Stati restano indipendenti e in rapporto di coordinazione; non nasce uno Stato nuovo. Da non confondere con lo Stato federale.
 
 **Federalismo duale** — Modello in cui Stato centrale e Stati membri operano nelle rispettive sfere senza interferenze reciproche (tipico del liberalismo classico).
 
 **Federalismo cooperativo** — Modello in cui Stato centrale e Stati membri intervengono congiuntamente nelle stesse materie (tipico delle democrazie pluraliste contemporanee).
+
+**Efficacia diretta del diritto UE** — Tratto che distingue l'UE dalle organizzazioni internazionali classiche: le norme dei Trattati e degli atti dell'Unione obbligano direttamente i cittadini degli Stati membri.
+
+**TUE / TFUE** — I due Trattati su cui si fonda l'UE dopo Lisbona: il TUE detta principi e assetto organizzativo; il TFUE disciplina analiticamente le funzioni dell'Unione.
 
 **Principio di sussidiarietà** — L'UE interviene nelle competenze concorrenti solo se l'obiettivo non può essere sufficientemente realizzato dagli Stati; la collocazione ottimale della competenza è quella dove può essere esercitata più efficacemente (funziona "come un ascensore").
 
@@ -1001,6 +1174,14 @@ La crisi economica del Covid-19 ha spinto l'UE ad adottare misure straordinarie:
 
 ## 1. Le forme di governo dello Stato liberale
 
+> **Distinzione preliminare: forma di Stato e forma di governo.** La **forma di Stato** indica le norme e i principi che governano il rapporto tra Stato e cittadini, tra governanti e governati (Mortati: «il rapporto tra detentore del potere e soggetto di quel potere, e quindi i diversi aspetti del rapporto tra autorità e libertà»); varia in base alla distribuzione del potere sul territorio (Stato accentrato o decentrato). La **forma di governo** riguarda invece il "modo di essere" dell'elemento in cui si esprime la volontà sovrana: la **struttura degli organi** di direzione politica, i loro **poteri** e i **rapporti** che intercorrono tra di essi. In altre parole: come è distribuito il potere fra i governanti.
+
+Sul piano più generale, le forme di governo si lasciano ricondurre a due grandi categorie:
+- **Regime monocratico**: il potere politico è concentrato in un solo organo o soggetto (individuale o collettivo) che lo esercita in via esclusiva e incontrollata (es. monarchia assoluta, dittatura rivoluzionaria, regimi totalitari)
+- **Regime policratico**: il potere è ripartito fra più organi o soggetti, che si limitano e si controllano vicendevolmente (caratteristico dello Stato liberale e democratico)
+
+> **La dicotomia monarchia/repubblica.** È stata a lungo considerata il criterio cruciale di classificazione. Con la trasformazione delle monarchie europee in **monarchie parlamentari**, però, la distinzione si è fatta sfumata: la presenza di un Re o di un Presidente dice ormai poco sull'effettivo funzionamento del sistema. La dicotomia è quindi inidonea a distinguere le forme di governo contemporanee.
+
 ### 1.1. La monarchia costituzionale
 
 Le forme di governo conosciute dallo Stato liberale sono tre: la **monarchia costituzionale**, il **governo parlamentare** (sua evoluzione storica) e, negli USA, il **governo presidenziale**.
@@ -1015,6 +1196,8 @@ I suoi caratteri fondamentali:
 - Il sistema si fonda sull'equilibrio tra due principi di legittimazione: quello **monarchico-ereditario** (nobiltà) e quello **elettivo** (borghesia)
 
 Con il rafforzamento della classe borghese, la monarchia costituzionale evolve gradualmente verso il **governo parlamentare**: si inserisce un terzo organo (il Governo) che si autonomizza dal Re e cerca il consenso del Parlamento. Nasce così il **rapporto di fiducia** che lega il Governo al Parlamento.
+
+> **Le origini britanniche del parlamentarismo.** La forma di governo parlamentare nasce in Gran Bretagna **nella prassi**, non in un testo scritto: è il frutto di un'evoluzione fondata su **convenzioni costituzionali** (e non su atti o costituzioni codificate), per cui da una monarchia costituzionale si è passati a una monarchia parlamentare. L'elemento decisivo di questo passaggio è proprio l'affermarsi del **rapporto di fiducia** tra Governo e Parlamento.
 
 ### 1.2. Parlamentarismo dualista e parlamentarismo monista
 
@@ -1065,6 +1248,12 @@ La **forma di governo parlamentare** si caratterizza per:
 - Il Parlamento può costringere il Governo alle dimissioni con un **voto di sfiducia**
 - Se il Parlamento è bicamerale, si distingue tra sistemi in cui la sfiducia può essere votata da entrambe le Camere (Italia) e quelli in cui il rapporto intercorre con una sola Camera politica (Germania)
 
+Tratti caratteristici del rapporto Governo-Parlamento in questa forma:
+- Il Governo **non ha una durata fissa**: la sua permanenza dipende dal mantenimento della fiducia
+- Se gode di una maggioranza forte, il Governo può governare per l'intera **legislatura**
+- È possibile il **cambio di Governo senza scioglimento** del Parlamento (e quindi senza nuove elezioni), purché il nuovo Governo ottenga la fiducia delle Camere
+- Di regola il Capo del Governo **non è eletto direttamente** dal corpo elettorale, ma nominato dal Capo dello Stato
+
 Il rischio tipico è l'**instabilità governativa**: l'avvento dei regimi totalitari in Europa tra le due guerre fu causato proprio dalla debolezza e frammentazione dei governi parlamentari.
 
 Da qui nasce la tendenza alla **razionalizzazione del parlamentarismo**: tradurre in norme costituzionali scritte le regole del funzionamento parlamentare, per garantire la stabilità del Governo. Si sviluppa nel dopoguerra (Francia 1946, Italia 1948, Germania 1949).
@@ -1098,6 +1287,8 @@ La distinzione fondamentale è tra due logiche di funzionamento:
 - Il **parlamentarismo compromissorio** favorisce la ricerca dell'accordo tra maggioranza e minoranza, consente la coesistenza pacifica tra forze ideologicamente distanti
 - Esempi: Belgio, Paesi Bassi, Danimarca, e — per certi versi — l'Italia
 
+> **Il ruolo del sistema elettorale.** La logica maggioritaria o compromissoria è fortemente influenzata dal sistema elettorale. Il sistema **maggioritario** (con eventuale premio di maggioranza) tende a far emergere una maggioranza già nelle urne e mette in evidenza il nome del Capo del Governo. Il sistema **proporzionale** "fotografa" la volontà popolare ma genera frammentazione, rende difficile un programma comune e favorisce il multipartitismo: in questo contesto il Capo dello Stato dispone di maggiori poteri nell'individuare il Capo del Governo, perché la nomina dipende dalla maggioranza che si forma solo dopo le elezioni.
+
 La **grande coalizione** (che ingloba tutti i principali partiti) si è formata in Germania (1966-1969, 2005-2009, 2013-2017, 2018), Austria, Belgio, Danimarca, Paesi Bassi.
 
 ---
@@ -1109,6 +1300,8 @@ La **forma di governo presidenziale** si caratterizza per tre elementi costituti
 - Il **Capo dello Stato** ("Presidente") è eletto dall'intero corpo elettorale nazionale
 - Non può essere **sfiduciato** dal Parlamento durante il suo mandato (durata prestabilita)
 - **Presiede e dirige** il Governo da lui nominato
+
+In questa forma il Presidente è insieme **Capo dello Stato e Capo del Governo (Capo dell'Esecutivo)**: non esiste un rapporto di fiducia con il Parlamento, ma una rigida **separazione dei poteri**. Il Congresso non può votare una mozione di sfiducia e il Presidente resta in carica per un periodo determinato.
 
 L'unico esempio di pieno successo storico è quello degli **Stati Uniti d'America**:
 
@@ -1136,6 +1329,8 @@ La **forma di governo semipresidenziale** combina elementi del parlamentarismo e
 
 Ne risulta una **struttura diarchica (bicefala)** del potere: due teste, il Presidente della Repubblica e il Primo ministro.
 
+> Nel caso francese l'elezione del Presidente avviene **a suffragio universale diretto con il sistema del doppio turno**, mentre il Capo del Governo, nominato dal Presidente, deve avere la fiducia dell'**Assemblea nazionale** (la Camera bassa). Poiché l'elezione del Presidente e quella dell'Assemblea **non avvengono contemporaneamente**, può accadere che le due maggioranze non coincidano: è il presupposto della *cohabitation*.
+
 **Varianti principali:**
 - **Semipresidenzialismo a presidente forte** — esempio tipico: **V Repubblica francese**
 - **Semipresidenzialismo a prevalenza del Governo** — Austria, Irlanda, Islanda
@@ -1143,7 +1338,7 @@ Ne risulta una **struttura diarchica (bicefala)** del potere: due teste, il Pres
 **Il caso francese (V Repubblica):**
 Il Presidente dispone di importanti poteri esercitabili senza controfirma governativa:
 - Nomina il Primo ministro e, su proposta di questi, nomina e revoca i ministri
-- Può sciogliere l'Assemblea nazionale
+- Può sciogliere l'Assemblea nazionale (previa consultazione del Primo ministro e dei Presidenti delle Assemblee)
 - Può sottoporre a referendum progetti di legge
 - Può deferire leggi al Consiglio costituzionale
 - Presiede il Consiglio dei ministri
@@ -1151,7 +1346,7 @@ Il Presidente dispone di importanti poteri esercitabili senza controfirma govern
 
 Il ruolo di direzione del Presidente si basa però soprattutto sull'**autorità politica** derivante dall'elezione popolare e sul **controllo della maggioranza parlamentare**. Normalmente, Presidente e maggioranza parlamentare coincidono politicamente.
 
-La **cohabitation** si verifica quando Presidente e maggioranza parlamentare appartengono a schieramenti opposti: in questo caso il potere si sposta sul Primo ministro.
+La **cohabitation** si verifica quando Presidente e maggioranza parlamentare appartengono a schieramenti opposti: in questo caso il Presidente è costretto a nominare Primo ministro una persona che goda del sostegno della maggioranza dell'Assemblea e il potere si sposta verso il Primo ministro.
 
 Nei sistemi con elezione diretta del Presidente ma funzionamento sostanzialmente parlamentare (Austria, Irlanda, Islanda), il Presidente svolge un mero **ruolo di garanzia**, per effetto del sistema politico bipolare e di convenzioni costituzionali che riservano la Presidenza a figure di secondo piano.
 
@@ -1161,15 +1356,16 @@ Nei sistemi con elezione diretta del Presidente ma funzionamento sostanzialmente
 
 **A) Forma di governo neoparlamentare:**
 - Rapporto di fiducia tra Governo e Parlamento
-- Elezione popolare **diretta** del Primo ministro
+- Elezione popolare **diretta** (o indicazione espressa) del Primo ministro al momento delle elezioni politiche
 - Elezione contestuale di Primo ministro e Parlamento
-- **Governo di legislatura**: crisi governativa determina scioglimento del Parlamento e nuove elezioni
-- Unico esempio storico: **Israele** (1992-2001, poi abrogata)
+- **Governo di legislatura**: la crisi governativa determina lo scioglimento del Parlamento e nuove elezioni, secondo il principio **simul stabunt, simul cadent** ("insieme staranno, insieme cadranno": se cade il Governo, cade anche il Parlamento e si torna al voto contestuale)
+- Non è incompatibile con la presenza di un Capo dello Stato
+- Unico esempio storico a livello nazionale: **Israele** (1992-2001, poi abrogata); in Italia è la forma di governo adottata per **Regioni e Comuni** (premierato/sindaco eletto direttamente)
 
 **B) Forma di governo direttoriale:**
 - Adottata esclusivamente dalla **Confederazione svizzera**
-- Accanto al Parlamento (Assemblea federale), esiste un **direttorio** (il Consiglio federale): 7 membri, eletti ma non revocabili dal Parlamento
-- Il Consiglio federale svolge contemporaneamente funzioni di Governo e di Capo dello Stato
+- Accanto al Parlamento (Assemblea federale), esiste un **direttorio** (il Consiglio federale): 7 membri, eletti dal Parlamento ma da esso **non revocabili**; durata fissa di 4 anni; non esiste rapporto di fiducia
+- Il Consiglio federale svolge contemporaneamente funzioni di Governo e di Capo dello Stato; il Presidente del Consiglio è scelto tra i sette membri e resta in carica un anno
 - Si giustifica per la necessità di rappresentare le diverse componenti etniche, linguistiche e religiose della Svizzera
 
 ---
@@ -1262,6 +1458,14 @@ Per le elezioni europee, le controversie sulle operazioni elettorali spettano al
 
 ## Concetti chiave
 
+**Forma di Stato** — categoria che descrive il rapporto tra Stato e cittadini (autorità/libertà) e la distribuzione del potere sul territorio (Stato accentrato o decentrato).
+
+**Forma di governo** — modo di essere dell'elemento sovrano dello Stato: struttura degli organi di direzione politica, loro poteri e rapporti reciproci; in breve, come è distribuito il potere fra i governanti.
+
+**Regime monocratico** — forma in cui il potere è concentrato in un solo organo o soggetto che lo esercita in via esclusiva e incontrollata (monarchia assoluta, dittatura, regimi totalitari).
+
+**Regime policratico** — forma in cui il potere è ripartito tra più organi che si limitano e si controllano reciprocamente.
+
 **Monarchia costituzionale** — forma di governo in cui Re e Parlamento si dividono i poteri (esecutivo al Re, legislativo al Parlamento) senza un raccordo stabile; tipica del primo Stato liberale.
 
 **Rapporto di fiducia** — legame politico-istituzionale per cui il Governo dipende dall'approvazione del Parlamento e può essere costretto alle dimissioni dal voto di sfiducia.
@@ -1287,6 +1491,10 @@ Per le elezioni europee, le controversie sulle operazioni elettorali spettano al
 **Semipresidenzialismo** — forma di governo con struttura diarchica: il Presidente è eletto direttamente e indipendente dal Parlamento, ma governa tramite un Premier che deve avere la fiducia parlamentare.
 
 **Cohabitation** — nel sistema semipresidenziale francese, situazione in cui il Presidente e la maggioranza parlamentare appartengono a schieramenti opposti, con conseguente spostamento del potere verso il Primo ministro.
+
+**Forma di governo neoparlamentare (premierato)** — forma in cui il Capo del Governo è eletto/indicato direttamente e contestualmente al Parlamento; vige il principio *simul stabunt simul cadent* (la caduta del Governo provoca lo scioglimento del Parlamento). In Italia è la forma adottata per Regioni e Comuni.
+
+**Simul stabunt simul cadent** — principio della forma neoparlamentare: Governo e Parlamento "stanno e cadono insieme"; la fine del Governo comporta nuove elezioni contestuali.
 
 **Sistema direttoriale** — forma di governo svizzera: il Consiglio federale (7 membri) è eletto ma non revocabile dal Parlamento e svolge insieme le funzioni di Governo e Capo dello Stato.
 
@@ -1317,11 +1525,16 @@ Per le elezioni europee, le controversie sulle operazioni elettorali spettano al
 
 ---
 
+
 # IV. L'organizzazione costituzionale in Italia — Parte 1 (pp. 184-230)
 
 ---
 
 ## 1. La forma di governo italiana: evoluzione e caratteri generali
+
+> **Antefatto storico: dallo Statuto Albertino alla Costituzione del 1948.** Lo **Statuto Albertino**, concesso da Carlo Alberto nel **1848** (e operante poi nel Regno d'Italia dal 1861), fu una **Costituzione flessibile**, modificabile cioè con legge ordinaria. Esso prevedeva inizialmente una **monarchia costituzionale**, evolutasi nella prassi in **monarchia parlamentare** con l'affermarsi della fiducia del Parlamento verso il Governo. Proprio la flessibilità dello Statuto consentì lo svuotamento delle garanzie liberali durante il regime fascista. La **Costituzione del 1948** è invece **rigida**: modificabile solo con il procedimento aggravato dell'art. 138, pensato perché ogni revisione sia meditata e il più possibile condivisa; ed è presidiata dalla **Corte costituzionale**, che può dichiarare incostituzionali le leggi ordinarie contrarie alla Costituzione (controllo di costituzionalità assente nello Statuto e modellato sull'esperienza della Corte Suprema statunitense).
+>
+> **Dal fascismo all'Assemblea Costituente.** Il regime concentrò il potere nelle mani del capo del Governo, smantellando la separazione dei poteri (legge elettorale 2444/1923; istituzione del **Gran Consiglio del Fascismo** come organo costituzionale, 1928; soppressione delle libertà di stampa e sindacali; leggi razziali del 1938 — oggi superate dall'art. 3 Cost.). Dopo la **caduta di Mussolini** (25 luglio 1943) e il **Patto di Salerno** (1944), terminata la guerra, l'**Assemblea Costituente** redasse la Costituzione (giugno 1946 - dicembre 1947). Memore della tirannia della maggioranza, scelse deliberatamente di **limitare il potere esecutivo**. *N.B.*: l'Assemblea Costituente esercita un potere **costituente** (*una volta tantum*); il Parlamento ordinario dispone solo del potere di **revisione** costituzionale.
 
 ### 1.1. Il parlamentarismo a debole razionalizzazione
 
@@ -1336,11 +1549,13 @@ La Costituzione prevede alcune garanzie procedurali per la stabilità del Govern
 - La **mozione di sfiducia** deve essere motivata e votata per **appello nominale** (voto palese, non segreto), impedendo il fenomeno dei *franchi tiratori*
 - La mozione deve essere firmata da almeno **un decimo** dei componenti della Camera
 - Non può essere messa in discussione prima di **tre giorni** dalla presentazione (periodo di "decantazione")
-- Il voto contrario su una proposta del Governo **non equivale** automaticamente a perdita della fiducia
+- Il voto contrario su una proposta del Governo **non equivale** automaticamente a perdita della fiducia (art. 94, comma 4): spetta al Governo valutare se quel voto integri una implicita negazione della fiducia
 
-La **fiducia iniziale** deve essere ottenuta entro dieci giorni dalla formazione del Governo, con mozione motivata e votata per appello nominale da entrambe le Camere.
+La **fiducia iniziale** deve essere ottenuta entro dieci giorni dalla formazione del Governo, con mozione motivata e votata per appello nominale da entrambe le Camere. La Costituzione **non richiede quorum speciali** (art. 64, comma 3): basta la maggioranza semplice, sicché vi sono stati governi privi del sostegno della maggioranza assoluta dei componenti.
 
-La **questione di fiducia** è lo strumento con cui il Governo dichiara che, se una sua proposta non viene approvata, considererà venuta meno la fiducia. Serve a compattare la maggioranza su scelte decisive del programma di governo.
+La **questione di fiducia** è lo strumento con cui il Governo dichiara che, se una sua proposta non viene approvata, considererà venuta meno la fiducia. Serve a compattare la maggioranza su scelte decisive del programma di governo e, in concreto, a **contrastare l'ostruzionismo**: posta la questione, gli emendamenti si intendono respinti e si vota sul solo testo del Governo.
+
+> **Sfiducia individuale.** Il regolamento della Camera (art. 115, comma 3) ammette la **mozione di sfiducia individuale**, rivolta a un singolo Ministro e non all'intero gabinetto: la sua approvazione non comporta l'obbligo costituzionale di dimissioni dell'intero Governo.
 
 La **maggioranza politica** che sostiene il Governo è distinta dalla maggioranza aritmetica (art. 64.3): è una maggioranza stabile, aggregata attorno a un preciso indirizzo politico, che si impegna a realizzarlo.
 
@@ -1387,8 +1602,10 @@ In Italia, prima del 1994, si formavano sempre coalizioni post-elettorali. Dopo 
 ### 1.5. Le crisi di governo
 
 Le crisi si distinguono in:
-- **Crisi parlamentari**: determinate dall'approvazione di una mozione di sfiducia o dal voto negativo sulla questione di fiducia
+- **Crisi parlamentari**: determinate dalla mancata concessione della fiducia iniziale, dall'approvazione di una mozione di sfiducia o dal voto negativo sulla questione di fiducia
 - **Crisi extraparlamentari**: dimissioni volontarie del Governo per rottura degli accordi nella coalizione (regola nell'esperienza italiana)
+
+Altre cause di cessazione del Governo sono l'elezione delle nuove Camere a fine legislatura e la **morte o l'impedimento permanente del Presidente del Consiglio**.
 
 Nell'intera storia repubblicana non si è mai avuta una crisi dovuta all'approvazione di una mozione di sfiducia. Le crisi extraparlamentari sono state la norma. Per renderle più trasparenti, alcuni Presidenti della Repubblica hanno promosso la **parlamentarizzazione delle crisi** (esposizione pubblica dei motivi in Parlamento), ma negli anni più recenti questa prassi è stata abbandonata.
 
@@ -1398,16 +1615,20 @@ Nell'intera storia repubblicana non si è mai avuta una crisi dovuta all'approva
 
 ### 2.1. Definizione e struttura
 
-Il **Governo** è un **organo costituzionale complesso**, composto da:
+Il **Governo** (o "Governo della Repubblica") è l'**organo costituzionale complesso** titolare dell'**indirizzo politico e amministrativo** dell'intera collettività, legato da un **rapporto fiduciario** con le Camere. È composto da:
 - Il **Presidente del Consiglio dei ministri** (PCM)
 - I **ministri**
 - Il **Consiglio dei ministri** (organo collegiale)
+
+In Italia il **ruolo centrale spetta al Consiglio dei ministri** (organo collegiale): è la sede ove si forma l'indirizzo politico-amministrativo dell'intero Governo e si deliberano i più importanti atti dell'esecutivo. Vi partecipano, oltre al PCM, tutti i ministri **in pari posizione e con lo stesso peso** nelle deliberazioni.
 
 Il Governo esercita una quota rilevante dell'indirizzo politico, delle funzioni esecutive e importanti poteri normativi. Il suo ruolo effettivo dipende dagli equilibri della forma di governo complessiva, dal grado di decentramento politico e dall'integrazione europea.
 
 **Organi governativi necessari** (art. 92.1 Cost.): Presidente del Consiglio e ministri.
 
 **Organi governativi non necessari** (possono esserci o meno): Vice-presidente, ministri senza portafoglio, sottosegretari di Stato, comitati interministeriali, Consiglio di gabinetto.
+
+> **Numero e organizzazione dei ministeri (riserva di legge).** Non è la Costituzione, ma la **legge**, a stabilire numero, attribuzioni e organizzazione dei singoli Ministeri; tale **riserva di legge** (art. 95, comma 3) riguarda anche la stessa Presidenza del Consiglio.
 
 ### 2.2. Le regole costituzionali sul Governo (artt. 92-95)
 
@@ -1422,9 +1643,9 @@ La legge attuativa dell'art. 95 — la **legge 400/1988** — è stata approvata
 
 L'art. 95 consacra tre principi coesistenti, in tensione tra loro:
 
-1. **Principio monocratico**: il PCM dirige la politica generale e mantiene l'unità dell'indirizzo; ha poteri di coordinamento sui ministri
+1. **Principio monocratico**: il PCM dirige la politica generale e mantiene l'unità dell'indirizzo (art. 95, comma 1 e 2); ha poteri di coordinamento sui ministri
 2. **Principio collegiale**: il Consiglio dei ministri delibera le scelte di politica generale; la responsabilità è collettiva
-3. **Principio della responsabilità ministeriale individuale**: ciascun ministro risponde degli atti del proprio ministero
+3. **Principio della responsabilità ministeriale individuale**: ciascun ministro risponde degli atti del proprio ministero (art. 95, comma 2), responsabilità che **non si estende** agli altri componenti del Governo
 
 L'equilibrio concreto tra questi principi varia a seconda degli equilibri politici, della compattezza della coalizione e del prestigio del Premier. Nelle fasi di coalizioni post-elettorali è prevalso il principio collegiale (con rischio di "neofeudalesimo ministeriale"); con le coalizioni pre-elettorali si è rafforzato il ruolo monocratico del PCM.
 
@@ -1436,13 +1657,15 @@ L'equilibrio concreto tra questi principi varia a seconda degli equilibri politi
 
 **Il procedimento di formazione:**
 
+Il procedimento è disciplinato da **scarne disposizioni costituzionali**, integrate in gran parte da **regole di prassi**. Nasce dall'apertura della crisi del Governo precedente; le dimissioni sono di regola **accettate con riserva**, poiché l'accettazione definitiva avviene solo al momento della nomina del nuovo PCM.
+
 1. Il Presidente della Repubblica svolge **consultazioni** con i presidenti dei gruppi parlamentari, i segretari dei partiti, i Presidenti delle Camere, gli ex Presidenti della Repubblica
 2. Conferisce l'**incarico** (oralmente, per evitare problemi di controfirma) alla persona ritenuta idonea a formare un Governo con la fiducia parlamentare
-3. L'incaricato accetta "**con riserva**" e svolge le trattative per definire lista dei ministri e programma
+3. L'incaricato accetta "**con riserva**" e svolge a sua volta consultazioni con le forze che potrebbero sostenerlo, per definire lista dei ministri e programma; se non raccoglie i consensi necessari, **rinuncia all'incarico** e il procedimento riparte
 4. Sciolta la riserva, il PCM propone al Capo dello Stato la lista dei ministri
-5. Il Presidente della Repubblica **nomina** il PCM e i ministri (può rifiutare la nomina di un ministro per ragioni istituzionali, come avvenne nel 2018 con il "**caso Savona**")
-6. **Giuramento** del Governo nelle mani del Presidente della Repubblica
-7. Entro dieci giorni, presentazione alle Camere per il **voto di fiducia**
+5. Il Presidente della Repubblica **nomina** il PCM (con decreto controfirmato dallo stesso neo-PCM, art. 1 l. 400/88) e, su proposta di questi, i ministri (può rifiutare la nomina di un ministro per ragioni istituzionali, come avvenne nel 2018 con il "**caso Savona**")
+6. **Giuramento** del Governo nelle mani del Presidente della Repubblica: da questo istante il nuovo Governo è immesso nelle funzioni, sostituendo quello dimissionario (che fino ad allora curava il **disbrigo degli affari correnti**)
+7. Entro dieci giorni, presentazione alle Camere per il **voto di fiducia** sulle dichiarazioni programmatiche
 
 In situazioni di crisi del sistema politico, il Presidente della Repubblica può conferire un **mandato esplorativo** (affidato a una figura super partes per sondare le possibilità) o un **preincarico** (alla persona che si intende poi incaricare). Nei momenti di grave emergenza, il Capo dello Stato ha nominato **Governi tecnici** (Ciampi 1993, Monti 2011, Draghi 2021).
 
@@ -1453,9 +1676,14 @@ Il rischio principale nei governi di coalizione è che i ministri agiscano come 
 - Il PCM può **sospendere l'adozione di atti** da parte dei ministri e sottoporre le questioni al Consiglio dei ministri
 - Il PCM emana **direttive politiche e amministrative** in attuazione delle deliberazioni del Consiglio dei ministri
 - Il PCM **concorda** con i ministri le dichiarazioni pubbliche che impegnano la politica del Governo
+- Il PCM **deferisce al Consiglio** la decisione delle questioni su cui siano emerse posizioni contrastanti tra le amministrazioni
 - Il PCM convoca il Consiglio dei ministri e forma l'**ordine del giorno**
 
 Il **potere di revoca del ministro** da parte del PCM non è esplicitamente previsto in Costituzione e in pratica non è mai stato esercitato, per le implicazioni politiche nei governi di coalizione (rischierebbe di provocare la crisi di governo).
+
+> **Responsabilità penale dei membri del Governo (reati ministeriali).** Sui reati commessi nell'esercizio delle funzioni dal PCM e dai ministri giudica la **magistratura ordinaria**, mediante un apposito collegio: il **"tribunale dei ministri"**. È però necessaria la **previa autorizzazione** dell'assemblea parlamentare cui l'accusato appartiene (o apparteneva). L'autorizzazione può essere negata solo con voto a **maggioranza assoluta**, qualora si reputi che l'inquisito abbia agito per la tutela di un interesse dello Stato costituzionalmente rilevante o per il perseguimento di un preminente interesse pubblico nell'esercizio della funzione di governo.
+
+> **Incompatibilità e conflitto di interessi.** Le cariche di governo sono incompatibili con ogni altro ufficio pubblico, con cariche o funzioni in società a scopo di lucro e con l'esercizio di attività professionali connesse. I componenti dell'esecutivo hanno l'obbligo di **astenersi** in caso di conflitto di interessi e di comunicare le proprie situazioni patrimoniali all'apposita Autorità, cui spetta accertare le incompatibilità e promuovere le sanzioni.
 
 ### 2.6. La legge 400/1988
 
@@ -1478,13 +1706,15 @@ Il personale è di provenienza mista: ruolo della Presidenza, prestito da altre 
 
 ### 2.8. Gli organi governativi non necessari
 
-- **Vice-presidente del Consiglio**: sostituisce il PCM in caso di assenza o impedimento; spesso usato per bilanciare i partiti della coalizione
-- **Consiglio di gabinetto**: riunisce i ministri rappresentativi delle componenti politiche della coalizione
-- **Comitati interministeriali**: possono essere istituiti per legge (con competenze deliberative verso l'esterno, es. il **CIPE**) o con d.P.C.M. (provvisori, con compiti di coordinamento)
-- **Ministri senza portafoglio**: non preposti a un ministero; esercitano funzioni delegate dal PCM
-- **Sottosegretari di Stato**: collaboratori del ministro; esercitano le funzioni delegate; non fanno parte del Consiglio dei ministri
-- **Viceministri**: sottosegretari con deleghe ampliate su aree dipartimentali; possono partecipare (senza voto) al Consiglio dei ministri
-- **Commissari straordinari**: nominati per realizzare specifici obiettivi o coordinare amministrazioni statali
+- **Vice-presidente del Consiglio**: sostituisce il PCM in caso di assenza o impedimento; le funzioni sono attribuite a uno o più ministri dal Consiglio dei ministri su proposta del PCM; spesso usato per bilanciare i partiti della coalizione
+- **Consiglio di gabinetto** (l. 400/1988, art. 6): istituito dal PCM, composto dai soli ministri da lui designati (sentito il Consiglio dei ministri); ha il **compito esclusivo e limitato di coadiuvare** il PCM, senza sostituirsi al Consiglio dei ministri
+- **Comitati interministeriali**: presieduti dal PCM o da un ministro delegato; istituiti per legge con importanti funzioni di indirizzo o di regolazione, per coordinare più ministri competenti in un dato settore. Tra i principali: **CIPE** (programmazione economica), **CICR** (credito e risparmio), **CIAE** (affari europei), **CISR** (sicurezza della Repubblica), **CIC** (cybersicurezza)
+- **Comitati dei ministri**: istituiti con decreto del PCM per esaminare in via preliminare questioni di comune competenza o esprimere pareri su problemi da sottoporre al Consiglio
+- **Ministri senza portafoglio**: non preposti a un ministero; esercitano funzioni delegate dal PCM, avvalendosi delle strutture della Presidenza del Consiglio
+- **Ministro ad interim**: l'incarico di un ministero può essere assunto temporaneamente dal titolare di un diverso dicastero
+- **Sottosegretari di Stato**: collaboratori del ministro o del PCM; esercitano le funzioni delegate con decreto; possono intervenire nei lavori parlamentari come rappresentanti del Governo; non fanno parte del Consiglio dei ministri
+- **Viceministri**: non più di dieci sottosegretari con deleghe ampliate su aree dipartimentali; possono partecipare (senza voto) al Consiglio dei ministri, ma non acquistano il rango di ministro né le relative responsabilità
+- **Commissari straordinari (e Alti Commissari)**: organi amministrativi temporanei, nominati per realizzare specifici obiettivi o coordinare amministrazioni statali
 
 ### 2.9. Gli strumenti per l'attuazione dell'indirizzo politico
 
@@ -1494,8 +1724,11 @@ Il Governo attua il suo indirizzo politico attraverso:
 - **Condizionamento della funzione legislativa** del Parlamento (programmazione dei lavori, questione di fiducia, emendamenti)
 - **Poteri normativi diretti**: decreti legislativi (delegati dal Parlamento) e decreti legge (in casi di necessità e urgenza), e regolamenti
 - **Poteri sostitutivi** nei confronti di Regioni ed enti locali inadempienti
+- **Annullamento straordinario** degli atti amministrativi illegittimi
 
 La crescita del "**Governo legislatore**" è un dato significativo: a partire dalla XII legislatura, il Governo ha progressivamente ampliato la sua capacità normativa, superando in numero i decreti legislativi rispetto alle leggi ordinarie non vincolate.
+
+> **Le attribuzioni del Governo in sintesi.** La Costituzione e le leggi attribuiscono al Governo: 1) **atti di indirizzo politico** (predisposizione del programma, atti di programmazione economico-finanziaria, direttive di sicurezza interna ed esterna, rapporti con le confessioni religiose, delibera dello stato di emergenza nazionale); 2) **atti normativi** (decreti-legge, decreti legislativi, decreti di attuazione degli statuti speciali, regolamenti); 3) **atti amministrativi** (nomine in giurisdizioni speciali e amministrazioni, potere sostitutivo verso Regioni ed enti locali, annullamento straordinario di atti illegittimi).
 
 ### 2.10. Settori della politica governativa
 
@@ -1514,6 +1747,7 @@ Gli **organi ausiliari** svolgono funzioni di ausilio (consulenza, controllo, in
 **A) CNEL — Consiglio nazionale dell'economia e del lavoro (art. 99)**
 - 64 componenti: esperti e rappresentanti delle categorie produttive
 - Compito: integrare la rappresentanza politica con la rappresentanza degli interessi economico-sociali
+- Dispone anche dell'**iniziativa legislativa** (art. 71 Cost.)
 - Giudizio storico: scarsa incidenza sul processo decisionale politico; i gruppi sociali preferiscono negoziare direttamente con i titolari del potere
 
 **B) Consiglio di Stato (art. 100)**
@@ -1539,20 +1773,29 @@ Caratteristiche distintive del bicameralismo italiano:
 - Entrambe le Camere possono accordare o revocare la fiducia al Governo (art. 94)
 - Le leggi devono essere approvate nel medesimo testo da entrambe le Camere
 - Il Senato è eletto "a base regionale" (art. 57), ma questo vincolo ha avuto effetti limitati
+- **Principio fondamentale**: le due Camere operano **separatamente e contemporaneamente**
 
-Il bicameralismo paritario italiano è **un'eccezione** nel panorama comparato: nella maggior parte degli ordinamenti non federali, il bicameralismo è "imperfetto" (la seconda Camera ha poteri ridotti, non può sfiduciare il Governo, ha ruolo secondario nelle leggi finanziarie). Il bicameralismo perfetto italiano è stato spesso criticato perché rallenta l'approvazione delle leggi (il testo deve fare la "**navette**" tra le due Camere) e rende più difficile la stabilità del rapporto di fiducia.
+Il bicameralismo paritario italiano è **un'eccezione** nel panorama comparato: nella maggior parte degli ordinamenti non federali, il bicameralismo è "imperfetto" (la seconda Camera ha poteri ridotti, non può sfiduciare il Governo, ha ruolo secondario nelle leggi finanziarie). Il bicameralismo perfetto italiano è stato spesso criticato perché rallenta l'approvazione delle leggi (il testo deve fare la "**navette**" tra le due Camere) e rende più difficile la stabilità del rapporto di fiducia. La sua funzione tipica è quella di una **più ponderata elaborazione delle leggi**, derivante dal duplice esame.
 
 ---
 
 ## Concetti chiave
 
+**Statuto Albertino** — prima Costituzione italiana (Carlo Alberto, 1848), **flessibile** (modificabile con legge ordinaria); previde dapprima una monarchia costituzionale, poi parlamentare. La sua flessibilità agevolò lo svuotamento delle garanzie liberali nel ventennio fascista.
+
+**Costituzione rigida** — costituzione modificabile solo con procedimento aggravato (art. 138) e presidiata dalla Corte costituzionale; tale è la Costituzione del 1948, in contrapposizione allo Statuto Albertino.
+
+**Potere costituente / potere di revisione** — il potere costituente (esercitato *una volta tantum* dall'Assemblea Costituente) crea la Costituzione; il Parlamento ordinario dispone solo del potere di revisione, entro i limiti dell'art. 138.
+
 **Forma di governo parlamentare a debole razionalizzazione** — forma di governo in cui sono previsti solo limitati interventi del diritto costituzionale per garantire la stabilità del Governo e la capacità di direzione politica; il modello italiano si distingue da parlamentarismi più "razionalizzati" come quello tedesco
 
 **Mozione di sfiducia** — atto con cui il Parlamento interrompe il rapporto di fiducia con il Governo, obbligandolo alle dimissioni; deve essere motivata, votata per appello nominale e firmata da almeno un decimo dei componenti della Camera
 
+**Mozione di sfiducia individuale** — mozione rivolta a un singolo ministro (regolamento Camera, art. 115.3); la sua approvazione non comporta l'obbligo di dimissioni dell'intero Governo
+
 **Mozione di fiducia** — atto con cui il Parlamento esprime il sostegno al Governo e al suo programma; deve essere motivata e votata per appello nominale entro dieci giorni dalla formazione del Governo
 
-**Questione di fiducia** — strumento con cui il Governo dichiara che la mancata approvazione di una sua proposta equivale alla perdita della fiducia; serve a compattare la maggioranza su scelte decisive
+**Questione di fiducia** — strumento con cui il Governo dichiara che la mancata approvazione di una sua proposta equivale alla perdita della fiducia; serve a compattare la maggioranza e a contrastare l'ostruzionismo (gli emendamenti si intendono respinti)
 
 **Maggioranza politica** — maggioranza stabile che si aggrega attorno a un preciso indirizzo politico e si impegna a realizzarlo, distinta dalla maggioranza aritmetica di volta in volta necessaria per l'approvazione dei singoli atti
 
@@ -1562,7 +1805,7 @@ Il bicameralismo paritario italiano è **un'eccezione** nel panorama comparato: 
 
 **Parlamentarismo maggioritario** — modello in cui il Governo è forte, si basa su una maggioranza predeterminata dalle elezioni e la dinamica politica è bipolare (es. modello britannico)
 
-**Crisi parlamentare** — crisi di governo determinata dall'approvazione di una mozione di sfiducia o dal voto negativo sulla questione di fiducia
+**Crisi parlamentare** — crisi di governo determinata dalla mancata fiducia iniziale, dall'approvazione di una mozione di sfiducia o dal voto negativo sulla questione di fiducia
 
 **Crisi extraparlamentare** — crisi di governo causata dalle dimissioni volontarie del Governo per rottura degli accordi nella coalizione; è stata la regola nell'esperienza italiana
 
@@ -1572,17 +1815,25 @@ Il bicameralismo paritario italiano è **un'eccezione** nel panorama comparato: 
 
 **Organo costituzionale complesso** — organo composto da più elementi distinti (nel caso del Governo: PCM, ministri, Consiglio dei ministri) che insieme formano un'entità unitaria
 
+**Tribunale dei ministri** — collegio della magistratura ordinaria competente sui reati ministeriali; per procedere serve l'autorizzazione dell'assemblea di appartenenza, negabile solo a maggioranza assoluta
+
+**Disbrigo degli affari correnti (ordinaria amministrazione)** — attività cui è limitato il Governo dimissionario fino al giuramento del nuovo Governo
+
 **Legge 400/1988** — legge sull'ordinamento della Presidenza del Consiglio dei ministri che ha razionalizzato i poteri del PCM e del Consiglio dei ministri, attuando l'art. 95 Cost. dopo quarant'anni di vuoto normativo
 
 **Principio monocratico** — principio per cui il PCM dirige la politica generale del Governo e ne mantiene l'unità; uno dei tre principi di organizzazione previsti dall'art. 95
 
 **Principio collegiale** — principio per cui il Consiglio dei ministri delibera collettivamente sulle scelte di indirizzo; i ministri rispondono collegialmente per gli atti del Consiglio
 
+**Consiglio di gabinetto** — organo facoltativo (l. 400/1988) composto dai ministri designati dal PCM, con il solo compito di coadiuvarlo, senza sostituirsi al Consiglio dei ministri
+
+**Comitati interministeriali** — collegi di ministri (CIPE, CICR, CIAE, CISR, CIC) con funzioni di indirizzo e coordinamento in determinati settori
+
 **Segreto di Stato** — vincolo di riservatezza apposto dal PCM su atti, documenti o cose la cui divulgazione potrebbe compromettere la sicurezza e l'integrità della Repubblica; durata massima quindici anni, prorogabili a trenta
 
 **Bicameralismo paritario (o perfetto)** — sistema in cui le due Camere hanno le stesse funzioni e gli stessi poteri; caratteristico del Parlamento italiano e raro nel panorama comparato
 
-**CNEL** — Consiglio nazionale dell'economia e del lavoro; organo ausiliario (art. 99 Cost.) che integra la rappresentanza politica con quella degli interessi economico-sociali; storicamente poco influente
+**CNEL** — Consiglio nazionale dell'economia e del lavoro; organo ausiliario (art. 99 Cost.) che integra la rappresentanza politica con quella degli interessi economico-sociali; titolare di iniziativa legislativa; storicamente poco influente
 
 **Corte dei conti** — organo ausiliario (art. 100 Cost.) con funzioni di controllo preventivo di legittimità sugli atti delle amministrazioni statali, controllo successivo sulla gestione del bilancio e funzioni giurisdizionali in materia di responsabilità contabile
 
@@ -1590,6 +1841,7 @@ Il bicameralismo paritario italiano è **un'eccezione** nel panorama comparato: 
 
 
 ---
+
 
 # IV. L'organizzazione costituzionale in Italia — Parte 2 (pp. 231-283)
 
@@ -1601,33 +1853,36 @@ Il bicameralismo paritario italiano è **un'eccezione** nel panorama comparato: 
 
 #### Il bicameralismo paritario
 
-Il Parlamento italiano è composto da **Camera dei deputati** e **Senato della Repubblica**, entrambe titolari degli stessi poteri: la funzione legislativa è esercitata collettivamente dalle due Camere (art. 70 Cost.). Si parla di **bicameralismo paritario** perché nessuna Camera prevale sull'altra.
+Il Parlamento italiano è composto da **Camera dei deputati** e **Senato della Repubblica**, entrambe titolari degli stessi poteri: la funzione legislativa è esercitata collettivamente dalle due Camere (art. 70 Cost.). Si parla di **bicameralismo paritario** perché nessuna Camera prevale sull'altra. Entrambe sono elette direttamente dai cittadini e quindi rappresentative del popolo, cui appartiene la sovranità; al Parlamento spettano perciò i più importanti poteri, incluso quello di **revisione costituzionale**.
 
 Le principali differenze strutturali sono:
 - Composizione numerica: dopo la riforma del 2020 (legge cost. 1/2020), 400 deputati e 200 senatori
-- Il Presidente della Repubblica può nominare fino a 5 **senatori a vita** (art. 59 Cost.)
+- Il Presidente della Repubblica può nominare fino a 5 **senatori a vita** (art. 59 Cost.); sono inoltre senatori a vita di diritto gli **ex Presidenti della Repubblica**
 - Età minima per essere eletti: 25 anni per la Camera, 40 anni per il Senato (ma l'età per votare è stata uniformata con la legge cost. 1/2021)
-- Durata: entrambe le Camere durano **5 anni** (la durata in carica si chiama **legislatura**)
+- Il Senato è eletto **a base regionale**: ogni Regione o Provincia autonoma non può avere meno di 3 senatori (eccetto il Molise, che ne ha 2, e la Valle d'Aosta, che ne ha 1)
+- Durata: entrambe le Camere durano **5 anni** (la durata in carica si chiama **legislatura**). In origine il Senato durava 6 anni: l'allineamento a 5 si deve alla legge cost. 2/1963
 
-**Problema del bicameralismo paritario**: rallenta il processo decisionale perché ogni legge deve essere approvata nel medesimo testo da entrambe le Camere. Se una Camera modifica il testo approvato dall'altra, si riparte ("navette"). Inoltre, esiste il rischio che le due Camere abbiano maggioranze politiche diverse, rendendo difficile la formazione del Governo.
+**Problema del bicameralismo paritario**: rallenta il processo decisionale perché ogni legge deve essere approvata nel medesimo testo da entrambe le Camere. Se una Camera modifica il testo approvato dall'altra, si riparte ("navette"). Inoltre, esiste il rischio che le due Camere abbiano maggioranze politiche diverse, rendendo difficile la formazione del Governo. Per converso, il duplice esame mira a una **migliore e più ponderata elaborazione delle leggi**; vale il principio per cui le due Camere operano **separatamente e contemporaneamente**.
 
 > La riforma costituzionale del Governo Renzi (2016), che voleva superare il bicameralismo paritario, è stata bocciata dal referendum del 4 dicembre 2016.
 
 #### Il Parlamento in seduta comune
 
-Il **Parlamento in seduta comune** è un organo collegiale composto da tutti i parlamentari (deputati + senatori). È considerato un **collegio imperfetto**: non controlla il proprio ordine del giorno e si riunisce solo per funzioni tassativamente elencate dalla Costituzione:
+Il **Parlamento in seduta comune** è un organo collegiale composto da tutti i parlamentari (deputati + senatori). È considerato un **collegio imperfetto**: non controlla il proprio ordine del giorno e si riunisce solo per funzioni tassativamente elencate dalla Costituzione, essenzialmente di tipo **elettivo** e **accusatorio**:
 
-- Elezione del **Presidente della Repubblica** (con i delegati regionali)
-- Elezione di **5 giudici costituzionali**
-- Elezione di un terzo dei componenti del **CSM**
-- Votazione dell'elenco dei cittadini aggregati alla Corte costituzionale per giudizi su accuse costituzionali
-- **Messa in stato d'accusa** del Presidente della Repubblica
+- Elezione del **Presidente della Repubblica** (con i delegati regionali; art. 83)
+- Elezione di **5 giudici costituzionali** (maggioranza qualificata)
+- Elezione di un terzo dei componenti del **CSM** (otto membri elettivi)
+- Votazione dell'elenco dei **45 cittadini** aventi i requisiti per essere senatori, tra i quali si sorteggiano i **16 "giudici aggregati"** che integrano la Corte costituzionale nei giudizi di accusa contro il Presidente della Repubblica; elezione inoltre dei commissari che sostengono l'accusa
+- **Messa in stato d'accusa** del Presidente della Repubblica (a maggioranza assoluta dei membri)
 
 È presieduto dal **Presidente della Camera** e si applicano le disposizioni del regolamento della Camera.
 
 #### I regolamenti parlamentari
 
-Ciascuna Camera adotta il proprio **regolamento a maggioranza assoluta** dei membri. La maggioranza assoluta (e non semplice) garantisce stabilità alle regole del gioco parlamentare e favorisce la condivisione tra maggioranza e minoranza.
+Ciascuna Camera adotta il proprio **regolamento a maggioranza assoluta** dei membri (art. 64 Cost.). La maggioranza assoluta (e non semplice) garantisce stabilità alle regole del gioco parlamentare e favorisce la condivisione tra maggioranza e minoranza. Ai regolamenti spetta disciplinare modalità di approvazione dei disegni di legge, procedimenti abbreviati, sede deliberante, ordine di discussioni e votazioni, inchieste, interrogazioni, interpellanze, mozioni e risoluzioni, organizzazione degli uffici e polizia interna.
+
+> **Insindacabilità dei regolamenti (Corte cost. 154/1985).** La Corte ha affermato che i regolamenti parlamentari sono **insindacabili**, perché alle Camere deve essere riconosciuta "una indipendenza guarentigiata nei confronti di qualsiasi altro potere".
 
 L'evoluzione dei regolamenti ha seguito i cambiamenti della forma di governo italiana:
 - 1971: regolamenti ispirati al **parlamentarismo compromissorio** (accordo unanime tra capigruppo)
@@ -1638,26 +1893,29 @@ L'evoluzione dei regolamenti ha seguito i cambiamenti della forma di governo ita
 
 #### Presidenti e Uffici di Presidenza
 
-I **Presidenti di assemblea** (della Camera e del Senato) rappresentano ciascun ramo del Parlamento e dirigono i lavori facendo osservare il regolamento. Differenze principali:
+I **Presidenti di assemblea** (della Camera e del Senato) rappresentano ciascun ramo del Parlamento e dirigono i lavori facendo osservare il regolamento. Funzioni costituzionalmente indicate e differenze principali:
+- Il potere di **convocare direttamente l'Assemblea** (art. 62, comma 2)
+- Il potere di essere **consultati dal Presidente della Repubblica** prima dello scioglimento di una o entrambe le Camere (art. 88)
 - Il Presidente della Camera **presiede il Parlamento in seduta comune**
 - Il Presidente del Senato **supplisce il Capo dello Stato** in caso di impedimento (art. 86 Cost.)
-- Entrambi devono essere **sentiti dal Presidente della Repubblica** prima dello scioglimento anticipato delle Camere
 
-I Presidenti sono eletti con quorum qualificati (due terzi nelle prime votazioni alla Camera, maggioranza assoluta al Senato) per favorire convergenza bipartisan. Dopo di loro, le Camere eleggono l'**Ufficio di Presidenza** (vicepresidenti, questori, segretari), che deve rappresentare tutti i gruppi parlamentari.
+I Presidenti sono eletti con quorum qualificati (due terzi nelle prime votazioni alla Camera, maggioranza assoluta al Senato) per favorire convergenza bipartisan. Dopo di loro, le Camere eleggono l'**Ufficio di Presidenza** (al Senato: Consiglio di Presidenza), composto da vicepresidenti, questori e segretari, che deve rappresentare tutti i gruppi parlamentari.
+
+> **Programma dei lavori.** Alla Camera il programma deve essere approvato dai presidenti di gruppo che rappresentino almeno i **tre quarti** dei membri; in mancanza, il Presidente predispone una proposta da sottoporre all'Assemblea. Al Senato il Presidente può sottoporre uno schema settimanale (definitivo se non vi sono proposte di modifica) e predispone un programma bimensile, approvato dalla conferenza dei gruppi.
 
 #### I gruppi parlamentari
 
-I **gruppi parlamentari** sono le unioni dei membri di una Camera appartenenti allo stesso partito o movimento. Entro pochi giorni dalla prima riunione (2 giorni alla Camera, 3 al Senato), ogni parlamentare deve dichiarare a quale gruppo appartiene. Chi non aderisce a nessun gruppo autonomo confluisce nel **gruppo misto**.
+I **gruppi parlamentari** sono le unioni dei membri di una Camera appartenenti allo stesso partito o movimento. Entro pochi giorni dalla prima riunione (2 giorni alla Camera, 3 al Senato), ogni parlamentare deve dichiarare a quale gruppo appartiene. Chi non aderisce a nessun gruppo autonomo confluisce nel **gruppo misto**. Per costituire un gruppo serve un numero minimo di parlamentari (alla Camera 20, ridotti a 14 dalla XX legislatura; al Senato 6). I componenti sono tenuti alla **disciplina di gruppo** (attuazione delle deliberazioni del gruppo).
 
 Poteri dei gruppi:
 - I presidenti dei gruppi formano la **Conferenza dei presidenti dei gruppi**, che approva il programma e il calendario dei lavori d'aula
 - Alla Camera, i presidenti possono attivare poteri procedurali (presentazione emendamenti, mozioni) che altrimenti richiederebbero la firma di un certo numero di parlamentari
-- I gruppi designano i rappresentanti nelle commissioni parlamentari
+- I gruppi designano i rappresentanti nelle commissioni parlamentari e possono "far propri" determinati disegni di legge, accelerandone l'approvazione
 
 #### Commissioni parlamentari e Giunte
 
 Le **commissioni parlamentari** possono essere:
-- **Permanenti**: organi stabili e necessari, titolari di importanti poteri nel procedimento legislativo; si riuniscono anche per ascoltare comunicazioni del Governo e per funzioni di indirizzo, controllo e informazione
+- **Permanenti**: organi stabili e necessari, titolari di importanti poteri nel procedimento legislativo; si formano all'inizio di ogni legislatura e si rinnovano a metà; le loro competenze corrispondono grosso modo a quelle dei Ministeri; esercitano la funzione **referente** (esame di tutti i disegni di legge per riferire all'Assemblea)
 - **Temporanee**: istituite per compiti specifici (es. commissioni d'inchiesta ex art. 82 Cost.)
 - **Monocamerali o bicamerali**
 
@@ -1665,11 +1923,11 @@ Commissioni permanenti di particolare rilievo:
 - **Commissione affari costituzionali** e **Commissione del bilancio**: fungono da **commissioni filtro** (il loro parere vincola la commissione di merito in sede deliberante)
 - **Commissione politiche UE**
 
-Le **commissioni bicamerali** (con componenti in eguale numero dalle due Camere) includono il Comitato per i servizi di sicurezza e la Commissione per i servizi radiotelevisivi.
+Le **commissioni bicamerali** (con componenti in eguale numero dalle due Camere) includono il Comitato per i servizi di sicurezza e la Commissione per i servizi radiotelevisivi; la Costituzione prevede inoltre la **Commissione bicamerale per le questioni regionali** (art. 126 Cost.).
 
 Le **Giunte** sono organi collegiali per funzioni diverse da quelle legislative:
 - **Giunta per il regolamento**: elabora proposte di modifica del regolamento
-- **Giunta delle elezioni**: verifica l'assenza di cause di ineleggibilità e incompatibilità
+- **Giunta delle elezioni** (al Senato: Giunta delle elezioni e delle immunità parlamentari): svolge l'attività istruttoria per la verifica dei poteri ex art. 66 Cost.
 - **Giunta delle autorizzazioni a procedere**: garantisce le prerogative parlamentari
 
 ### 3.3 Funzionamento del Parlamento
@@ -1677,26 +1935,34 @@ Le **Giunte** sono organi collegiali per funzioni diverse da quelle legislative:
 #### Durata e regole decisionali
 
 La durata in carica è di **5 anni**. La Costituzione prevede due istituti per la continuità:
-- **Prorogatio** (art. 61 Cost.): le Camere scadute continuano a esercitare le funzioni fino al rinnovo; le limitazioni durante la prorogatio riguardano principalmente il divieto di eleggere il Presidente della Repubblica
+- **Prorogatio** (art. 61 Cost.): le Camere scadute continuano a esercitare le funzioni fino al rinnovo (con poteri ridotti: solo atti urgenti come la conversione dei decreti-legge e l'approvazione del bilancio, non atti politici rinviabili). Le nuove Camere devono riunirsi entro 20 giorni dalle elezioni
 - **Proroga** (art. 60 Cost.): solo in caso di guerra, con legge
 
-Per la validità della seduta si richiede il **numero legale** (quorum strutturale = metà più uno dei componenti). Per la validità delle deliberazioni serve la **maggioranza dei presenti** (quorum funzionale), salvo maggioranze diverse prescritte dalla Costituzione.
+> **Riunioni di diritto e straordinarie.** Le Camere si riuniscono di diritto nei primi giorni non festivi di **febbraio e ottobre**; possono essere convocate in via straordinaria dal Presidente di assemblea, dal Presidente della Repubblica o da un terzo dei componenti. Devono riunirsi entro 5 giorni in caso di decreto-legge o per la formazione di un nuovo Governo (cui è obbligatorio presentarsi per la fiducia).
+
+Per la validità della seduta si richiede il **numero legale** (quorum strutturale = metà più uno dei componenti). Per la validità delle deliberazioni serve la **maggioranza dei presenti** (quorum funzionale), salvo maggioranze diverse prescritte dalla Costituzione. Nel computo, gli **astenuti non si contano tra i presenti** (sono presenti solo chi vota a favore o contro).
+
+> **Casi di maggioranza/quorum aggravati o di voto palese obbligatorio.** La maggioranza qualificata è richiesta per: leggi costituzionali (art. 138), leggi di amnistia e indulto (art. 79), legge sulla disciplina del bilancio (art. 81), regolamenti parlamentari (art. 64). Il **voto palese** è imposto dalla Costituzione in un solo caso: per accordare o negare la **fiducia** al Governo (art. 94).
 
 Il **voto palese** è la regola generale; il **voto segreto** è eccezione (riservato a votazioni su persone o su leggi che riguardino diritti di libertà costituzionali).
 
 #### Le prerogative parlamentari
 
-Le **prerogative parlamentari** non sono privilegi individuali, ma **garanzie dell'indipendenza del Parlamento** (sono irrinunciabili e indisponibili dal singolo parlamentare). L'art. 68 Cost. prevede:
+Le **prerogative parlamentari** non sono privilegi individuali, ma **garanzie dell'indipendenza del Parlamento** (sono irrinunciabili e indisponibili dal singolo parlamentare). Esse si distinguono in garanzie che tutelano **direttamente** l'indipendenza delle Camere (potestà regolamentare, verifica dei poteri, autonomia finanziaria e organizzativa, immunità della sede, tutela penale) e garanzie che la tutelano **indirettamente** (immunità parlamentari, divieto di mandato imperativo, indennità).
 
-1. **Insindacabilità** (comma 1): il parlamentare non può essere chiamato a rispondere, in alcuna sede (penale, civile, disciplinare), per le **opinioni espresse e i voti dati nell'esercizio delle funzioni parlamentari**. Ha efficacia permanente (vale anche dopo la scadenza del mandato). La Corte costituzionale verifica il nesso funzionale tra l'opinione e le funzioni parlamentari.
+L'art. 68 Cost. prevede:
 
-2. **Immunità penale** (comma 2–3): senza la previa autorizzazione della Camera di appartenenza, il parlamentare non può essere sottoposto a misure restrittive della libertà personale o domiciliare, né a limitazioni della libertà di corrispondenza e comunicazione (salvo flagranza di reato o condanna irrevocabile). Questa garanzia vale solo durante la legislatura.
+1. **Insindacabilità** (comma 1): il parlamentare non può essere chiamato a rispondere, in alcuna sede (penale, civile, disciplinare), per le **opinioni espresse e i voti dati nell'esercizio delle funzioni parlamentari**. Ha efficacia permanente (vale anche dopo la scadenza del mandato). La Corte costituzionale verifica il **nesso funzionale** tra l'opinione e le funzioni parlamentari; l'elasticità di questo limite ha originato conflitti di attribuzione tra Camere e potere giudiziario.
+
+2. **Immunità penale (inviolabilità)** (comma 2–3): senza la previa autorizzazione della Camera di appartenenza, il parlamentare non può essere sottoposto a misure restrittive della libertà personale o domiciliare, né a perquisizioni, né a intercettazioni o sequestro di corrispondenza (salvo flagranza di reato con arresto obbligatorio o condanna irrevocabile). Questa garanzia vale solo durante la legislatura. Le richieste di autorizzazione sono esaminate da una Giunta e approvate dall'Assemblea.
+
+> **Altre garanzie collegate.** **Immunità della sede**: la forza pubblica non può entrare nell'aula senza ordine del Presidente, previa sospensione della seduta. **Tutela penale**: la legge punisce chi compromette il libero esercizio delle funzioni della Camera. **Divieto di mandato imperativo** (art. 67): «ogni membro del Parlamento rappresenta la Nazione senza vincolo di mandato»; gli elettori non possono revocarlo e gli impegni verso il partito non hanno rilievo giuridico. **Indennità** (art. 69): i parlamentari ricevono un'indennità stabilita dalla legge.
 
 #### Gli interna corporis
 
 Ogni Camera è dotata di:
 - **Autonomia normativa** (regolamento interno)
-- **Autonomia contabile** (gestione del proprio bilancio)
+- **Autonomia contabile** (gestione del proprio bilancio preventivo e consuntivo)
 - **Autodichia** (giurisdizione esclusiva sui rapporti di lavoro con i propri dipendenti)
 
 Il principio degli **interna corporis acta** sottrae a qualsiasi controllo esterno gli atti e i procedimenti interni alle assemblee. La Corte costituzionale ha esteso il proprio controllo all'osservanza delle norme costituzionali sul procedimento legislativo, ma non all'osservanza delle norme regolamentari.
@@ -1705,7 +1971,20 @@ Il principio degli **interna corporis acta** sottrae a qualsiasi controllo ester
 
 #### Funzione legislativa
 
-L'art. 70 Cost. afferma che "la funzione legislativa è esercitata collettivamente dalle due Camere". Il Governo può usare la **questione di fiducia** su qualsiasi deliberazione parlamentare: se la Camera vota contro, il Governo si dimette; se vota a favore, l'atto è approvato e tutti gli emendamenti si intendono respinti. La questione di fiducia diventa così uno strumento per accelerare il procedimento.
+L'art. 70 Cost. afferma che "la funzione legislativa è esercitata collettivamente dalle due Camere". Il procedimento si articola in tre fasi:
+
+- **Iniziativa** (art. 71): potere di presentare un progetto di legge. Spetta al **Governo** (disegno di legge approvato dal Consiglio dei ministri e autorizzato dal Presidente della Repubblica — è la forma politicamente più importante), a **ciascun parlamentare**, al **popolo** (iniziativa popolare con almeno **50.000 elettori**) e agli organi cui sia conferita da leggi costituzionali (Consigli regionali, CNEL)
+- **Istruttoria**: si svolge in Commissione, che esamina il progetto e redige una relazione all'Assemblea (può proporre emendamenti o un nuovo testo); distinta è la competenza **consultiva** (parere a un'altra commissione)
+- **Deliberante** (in Assemblea): discussione generale (con possibili questioni pregiudiziale o sospensiva), discussione articolo per articolo (emendamenti) e discussione finale (approvazione o reiezione)
+
+**Altri procedimenti legislativi** (oltre all'ordinario):
+- **Abbreviato**: per i disegni dichiarati urgenti; termini ridotti e relazione orale della Commissione
+- **Decentrato (sede deliberante)**: discussione e approvazione avvengono in Commissione (che deve rispettare la proporzione dei gruppi); è **vietato** per leggi costituzionali, elettorali, di delegazione, ecc.; fino all'approvazione definitiva il Governo, un decimo dei componenti dell'Assemblea o un quinto della Commissione possono chiedere la **rimessione in aula**
+- **Sede redigente**: alla Commissione spetta la redazione del testo, riservandone all'Assemblea la sola approvazione finale
+
+**Leggi a procedimento aggravato:** le leggi di **amnistia e indulto** (art. 79) devono essere deliberate a maggioranza dei **due terzi** dei membri, sia nella votazione finale sia in quella di ciascun articolo.
+
+Il Governo può usare la **questione di fiducia** su qualsiasi deliberazione parlamentare: se la Camera vota contro, il Governo si dimette; se vota a favore, l'atto è approvato e tutti gli emendamenti si intendono respinti. La questione di fiducia diventa così uno strumento per accelerare il procedimento.
 
 #### Funzione di controllo
 
@@ -1715,15 +1994,19 @@ Il controllo parlamentare sull'operato del Governo si esercita tramite:
 
 - **Interpellanza**: domanda scritta con cui il parlamentare chiede di conoscere l'**intenzione politica** del Governo rispetto a un fatto o situazione (che si dà per scontata). Esistono anche **interpellanze urgenti** (procedimento abbreviato)
 
+- **Indagini conoscitive**: di iniziativa delle Commissioni, per acquisire informazioni e documenti utili all'attività delle Camere
+
+Rientrano nella funzione di controllo anche l'approvazione del **rendiconto generale dello Stato** e l'esame di taluni atti della Corte dei conti.
+
 #### Atti di indirizzo
 
-- **Mozione**: presentata da un presidente di gruppo o da 10 deputati (8 senatori); determina una discussione su questioni che incidono sull'attività del Governo; il Governo può porre la questione di fiducia
+- **Mozione**: presentata da un presidente di gruppo o da 10 deputati (8 senatori); determina una discussione su questioni che incidono sull'attività del Governo; il Governo può porre la questione di fiducia. Tra le mozioni hanno rilievo capitale la **mozione di fiducia** e quella di **sfiducia** (art. 94), che costituiscono o rompono l'accordo politico Parlamento-Governo
 - **Risoluzione**: proponibile anche in commissione; manifesta un orientamento o definisce un indirizzo
 - **Ordine del giorno**: atto accessorio che accompagna la discussione di un altro atto (di solito una legge); non produce effetti formali al di fuori del rapporto Governo-Camera
 
 #### Le inchieste parlamentari
 
-Ciascuna Camera può istituire **commissioni d'inchiesta** su materie di pubblico interesse, con poteri e limiti dell'autorità giudiziaria (art. 82 Cost.). Caratteristiche principali:
+Ciascuna Camera può istituire **commissioni d'inchiesta** su materie di pubblico interesse, con poteri e limiti dell'autorità giudiziaria (art. 82 Cost.). Le inchieste possono essere **legislative** (raccolta di informazioni utili a legiferare) o **politiche** (indagine sull'opera del Governo e dei poteri pubblici). Caratteristiche principali:
 
 - Procedono con i **poteri dell'autorità giudiziaria** (indagini, esame con mezzi del codice di procedura penale), ma si concludono con una **relazione** (non una sentenza)
 - Hanno un **doppio binario**: possono usare gli strumenti formali del codice di procedura o la libera audizione parlamentare
@@ -1772,6 +2055,8 @@ Il ciclo si articola in:
 
 Distinzione importante: **bilancio di competenza** (diritti di percepire/obblighi di spesa) vs **bilancio di cassa** (incassi e pagamenti effettivi).
 
+> **Il procedimento parlamentare di bilancio.** All'esame partecipano, oltre alla Commissione bilancio (esame generale), **tutte le Commissioni permanenti**. Apposite norme regolamentari impediscono l'alterazione sostanziale della manovra predisposta dal Governo e mirano all'approvazione **entro il 31 dicembre**, così da evitare l'**esercizio provvisorio** del bilancio (art. 81): a ciò serve la **sessione di bilancio**, periodo di 45 giorni in cui le Camere si occupano in via esclusiva della legge di bilancio.
+
 ### Copertura finanziaria delle leggi
 
 L'art. 81.4 Cost. impone che ogni legge che comporti nuove o maggiori spese individui i mezzi per farvi fronte. Le modalità di copertura sono:
@@ -1785,7 +2070,12 @@ L'art. 81.4 Cost. impone che ogni legge che comporti nuove o maggiori spese indi
 
 ### 4.1 Capo dello Stato e forma di governo
 
-Il Presidente della Repubblica è il **Capo dello Stato e rappresenta l'unità nazionale** (art. 87 Cost.). Nei sistemi parlamentari il suo ruolo oscilla tra due estremi:
+Il Presidente della Repubblica è il **Capo dello Stato e rappresenta l'unità nazionale** (art. 87 Cost.). Il ruolo del Capo dello Stato varia secondo la forma di governo:
+- Nei sistemi **presidenziali** (USA) è eletto direttamente dal popolo ed è anche Capo dell'Esecutivo
+- Nei sistemi **semipresidenziali** (Francia) è eletto direttamente, ma distinto dal Capo dell'Esecutivo
+- Nei sistemi **parlamentari** è escluso dal circuito politico Parlamento-Governo ed è **custode della Costituzione**, equilibratore dei poteri, "potere neutrale" e reggitore dello Stato nei momenti di crisi; è eletto da un collegio rappresentativo (in Italia, il Parlamento)
+
+Nei sistemi parlamentari il suo ruolo oscilla tra due estremi:
 - **Organo di garanzia costituzionale**: resta estraneo all'indirizzo politico; i suoi poteri servono a garantire il corretto funzionamento del sistema
 - **Organo governante**: interviene attivamente nelle scelte politiche fondamentali nei momenti di crisi
 
@@ -1812,26 +2102,30 @@ Modalità di elezione:
 
 Il quorum elevato serve a evitare che il Presidente sia espressione della sola maggioranza politica.
 
-Il mandato dura **7 anni** e decorre dalla data del **giuramento** davanti al Parlamento in seduta comune. Al termine del mandato (o in caso di dimissioni, morte, impedimento permanente), l'ex Presidente diviene di diritto **senatore a vita**, salvo rinuncia.
+Il mandato dura **7 anni** e decorre dalla data del **giuramento** di fedeltà alla Repubblica davanti al Parlamento in seduta comune. Il Presidente è **rieleggibile** (è il caso di Mattarella). Al termine del mandato (o in caso di dimissioni, morte, impedimento permanente), l'ex Presidente diviene di diritto **senatore a vita**, salvo rinuncia.
+
+> **Tempistica dell'elezione e proroga dei poteri (art. 85).** Trenta giorni prima della scadenza del settennato, il Presidente della Camera convoca il Parlamento in seduta comune (con i delegati regionali) per eleggere il nuovo Presidente entro 30 giorni. Se però il settennato scade quando le Camere sono sciolte o manca meno di **tre mesi** alla loro cessazione, l'elezione è effettuata dalle nuove Camere entro 15 giorni dalla loro riunione, e nel frattempo sono **prorogati i poteri del Presidente in carica**.
 
 ### 4.3 La controfirma ministeriale (art. 89 Cost.)
 
-La **controfirma** è la firma apposta da un ministro sull'atto del Presidente della Repubblica: è requisito di **validità** dell'atto e trasferisce la responsabilità al Governo, rendendo irresponsabile il Presidente.
+La **controfirma** è la firma apposta da un ministro sull'atto del Presidente della Repubblica: è requisito di **validità** dell'atto e trasferisce la responsabilità al Governo, rendendo irresponsabile il Presidente. La controfirma spetta ai **ministri proponenti**, oppure — per gli atti aventi valore legislativo — al **Presidente del Consiglio**, che se ne assume la responsabilità.
 
 In base al soggetto che decide sostanzialmente il contenuto, gli atti presidenziali si distinguono in:
 
-1. **Atti formalmente presidenziali e sostanzialmente governativi**: il Governo ne decide il contenuto, il Presidente li emana (es. decreti-legge, decreti legislativi, regolamenti del Governo). La controfirma attesta la determinazione governativa.
+1. **Atti formalmente presidenziali e sostanzialmente governativi**: il Governo ne decide il contenuto, il Presidente li emana (es. decreti-legge, decreti legislativi, regolamenti del Governo). Sono atti **su proposta** del ministro; il Presidente vi esercita un controllo limitato a una **richiesta di riesame**. La controfirma attesta la determinazione governativa.
 
-2. **Atti formalmente e sostanzialmente presidenziali**: il Presidente ne decide il contenuto (es. nomina dei senatori a vita, di un terzo dei giudici costituzionali, rinvio delle leggi, messaggi presidenziali). La controfirma serve a evitare che il Presidente imponga un proprio indirizzo politico contrario a quello della maggioranza.
+2. **Atti formalmente e sostanzialmente presidenziali**: il Presidente ne decide il contenuto (es. nomina dei senatori a vita, di un terzo dei giudici costituzionali, rinvio delle leggi, messaggi presidenziali). Sono atti **esenti da proposta** ministeriale; il Governo vi esercita un eguale controllo. La controfirma serve a evitare che il Presidente imponga un proprio indirizzo politico contrario a quello della maggioranza.
 
-3. **Atti complessi eguali** (o "duumvirali"): il contenuto è deciso di accordo tra Presidente e Governo (es. nomina del Presidente del Consiglio, scioglimento anticipato delle Camere). Sono controfirmati dallo stesso Presidente del Consiglio.
+3. **Atti complessi eguali** (o "duumvirali"): il contenuto è deciso di accordo tra Presidente e Governo, le cui volontà concorrono in posizione di parità (es. nomina del Presidente del Consiglio, scioglimento anticipato delle Camere). Sono controfirmati dallo stesso Presidente del Consiglio.
+
+> **Le due concezioni della controfirma.** Secondo una prima tesi, la controfirma **attesta** solo che l'atto è stato compiuto con la collaborazione (di regola determinante) dei ministri proponenti. Secondo la tesi oggi **maggioritaria**, l'esistenza di atti presidenziali privi di proposta ministeriale (promulgazione, indizione di elezioni e referendum, nomina dei senatori a vita e dei giudici costituzionali, rinvio delle leggi, scioglimento delle Camere) impone di distinguere atti sostanzialmente governativi, sostanzialmente presidenziali e complessi eguali. In ogni caso, la **controfirma non occorre** per gli atti personali (dimissioni, dichiarazione di impedimento permanente), per gli atti compiuti come presidente di organi collegiali e per gli atti orali.
 
 ### 4.4 L'irresponsabilità del Presidente
 
 Il Presidente della Repubblica non risponde politicamente (non esiste un meccanismo di rimozione anticipata dalla carica). La responsabilità giuridica si distingue in:
 
-- **Atti compiuti nell'esercizio delle funzioni**: risponde penalmente solo per **alto tradimento** e **attentato alla Costituzione** (art. 90 Cost.), giudicati dalla Corte costituzionale integrata da cittadini estratti a sorte. Al di fuori di questi casi estremi, è giuridicamente irresponsabile.
-- **Atti compiuti come qualsiasi altro cittadino**: è penalmente responsabile (ma l'azione penale è improcedibile durante il mandato) e civilmente responsabile al pari di tutti.
+- **Atti compiuti nell'esercizio delle funzioni**: risponde penalmente solo per **alto tradimento** e **attentato alla Costituzione** (art. 90 Cost.), giudicati dalla Corte costituzionale integrata da cittadini estratti a sorte. Secondo la dottrina più autorevole si applicano le norme del codice penale militare di pace sull'alto tradimento e dell'art. 283 c.p. sull'attentato alla Costituzione: si tratta di gravissime violazioni dei doveri d'ufficio e del giuramento di fedeltà. Al di fuori di questi casi estremi, è giuridicamente irresponsabile; le sue comunicazioni riservate godono di "riservatezza assoluta" (Corte cost.)
+- **Atti compiuti come qualsiasi altro cittadino**: è penalmente responsabile (ma l'azione penale è improcedibile durante il mandato) e civilmente responsabile al pari di tutti
 
 ### 4.5 La nomina del Presidente del Consiglio e la soluzione delle crisi
 
@@ -1840,6 +2134,8 @@ Il Capo dello Stato dispone di due poteri per gestire le crisi di Governo:
 2. **Scioglimento anticipato del Parlamento** (art. 88 Cost.)
 
 Nel **parlamentarismo maggioritario** questi atti sono sostanzialmente una ratifica delle scelte del corpo elettorale. Nei sistemi con coalizioni post-elettorali il ruolo presidenziale si espande: il Presidente usa le **consultazioni**, il **conferimento dell'incarico** e il **mandato esplorativo** per favorire la formazione di una maggioranza.
+
+> **Accettazione delle dimissioni del Governo.** È competenza del Presidente della Repubblica accettare le dimissioni del Governo. Egli può anche **respingerle**, invitando il Governo a presentarsi alle Camere per verificare se goda ancora della fiducia; ma se il Presidente del Consiglio dimissionario insiste, il Capo dello Stato deve accettarle. In via di prassi l'accettazione è "con riserva" e diventa definitiva solo al momento della nomina del nuovo Governo.
 
 Il limite fondamentale è che il Governo nominato deve presentarsi entro 10 giorni alle Camere per ottenere la fiducia (art. 94 Cost.): il Presidente non può nominare "suoi" Governi contro la volontà del Parlamento.
 
@@ -1850,9 +2146,9 @@ Caratteristiche costituzionali (art. 88 Cost.):
 - Deve prima **sentire i Presidenti delle Camere** (parere obbligatorio ma non vincolante)
 - Non può sciogliere durante il **semestre bianco** (ultimi 6 mesi del mandato presidenziale), salvo che coincida con gli ultimi 6 mesi della legislatura
 
-La decisione sostanziale di sciogliere varia secondo il sistema politico:
-- Nel **parlamentarismo maggioritario**: è il Governo che sostanzialmente propone lo scioglimento
-- Nel **pluripartitismo con coalizioni post-elettorali** (sistema italiano tradizionale): è un "atto complesso" tra Presidente e Governo; lo scioglimento è l'**extrema ratio** quando il Parlamento non riesce a esprimere nessuna maggioranza (**scioglimento funzionale**)
+La decisione sostanziale di sciogliere varia secondo il sistema politico, e con essa l'**effettivo potere del Capo dello Stato**:
+- Nel **parlamentarismo maggioritario**: è il Governo che sostanzialmente propone lo scioglimento; il potere presidenziale è **ridotto**
+- Nel **pluripartitismo con coalizioni post-elettorali** (sistema italiano tradizionale): è un "atto complesso" tra Presidente e Governo; lo scioglimento è l'**extrema ratio** quando il Parlamento non riesce a esprimere nessuna maggioranza (**scioglimento funzionale**, in cui il potere presidenziale è ridotto). Il potere è invece **decisivo** quando la rappresentatività del Parlamento entra in crisi perché non sembra più corrispondere alla volontà degli elettori
 
 Dopo lo scioglimento, il Governo dimissionario resta in carica per l'**ordinaria amministrazione** (gestione degli affari correnti senza decisioni politiche innovative).
 
@@ -1861,21 +2157,27 @@ Dopo lo scioglimento, il Governo dimissionario resta in carica per l'**ordinaria
 Principali atti presidenziali sostanziali:
 - **Nomina dei 5 senatori a vita** e **di un terzo dei giudici costituzionali**
 - **Rinvio delle leggi** alle Camere con messaggio motivato (veto sospensivo: se le Camere riapprovano nel medesimo testo, il Presidente è obbligato a promulgare)
-- **Messaggi presidenziali** (vincolati = rinvio leggi; liberi = comunicazioni al Parlamento)
+- **Messaggi presidenziali** (vincolati = rinvio leggi; liberi = comunicazioni al Parlamento). È prassi che il Capo dello Stato comunichi con le Camere per iscritto (messaggi controfirmati), ma può anche farlo **oralmente**, in particolare con il **messaggio di insediamento** subito dopo l'elezione
 - **Esternazioni atipiche** (discorsi, interviste, lettere ufficiali): sfuggono alla controfirma, instaurano un rapporto diretto con l'opinione pubblica
 - **Convocazione straordinaria delle Camere** (art. 62 Cost.)
 - **Concessione della grazia** e commutazione delle pene (Corte cost. 200/2006: è atto sostanzialmente presidenziale)
+- **Indizione delle elezioni delle Camere e dei referendum** (art. 87)
+
+> **Comando delle forze armate e dichiarazione dello stato di guerra.** Il Presidente accredita e riceve i rappresentanti diplomatici e **ratifica i trattati** (con autorizzazione delle Camere, art. 80, per quelli politici; nella prassi spesso elusa con i "trattati in forma semplificata" approvati dal Governo). **Dichiara lo stato di guerra** dopo la deliberazione delle Camere (art. 78). Il **comando delle forze armate** ha significato peculiare: la direzione delle operazioni spetta al Governo, mentre al Presidente spetta decidere quando e in che limiti sia legittimo l'impiego delle forze armate e vigilare sullo spirito democratico dell'ordinamento militare; presiede inoltre il **Consiglio supremo di difesa**.
 
 ### 4.8 Atti formalmente presidenziali e sostanzialmente governativi
 
 - Emanazione di **decreti-legge**, **decreti legislativi** e **regolamenti del Governo** (con possibilità di controllo costituzionale presidenziale e di rinvio prima dell'emanazione)
-- **Promulgazione delle leggi** (entro un mese dall'approvazione parlamentare; il Presidente può esercitare il rinvio)
+- **Promulgazione delle leggi** (entro un mese dall'approvazione parlamentare; il Presidente può esercitare il rinvio prima della promulgazione, chiedendo una nuova deliberazione: se le Camere riapprovano, deve promulgare). La legge è poi pubblicata in Gazzetta Ufficiale entro 30 giorni ed entra in vigore il 15º giorno successivo, salvo diverso termine
+- **Autorizzazione alla presentazione dei disegni di legge governativi** alle Camere (art. 87, comma 4)
 - **Ratifica dei trattati internazionali**, accreditamento diplomatici, dichiarazione dello stato di guerra
-- **Adozione** con forma di decreto presidenziale (d.P.R.) dei principali atti del Governo
+- **Nomina dei funzionari**, conferimento delle **onorificenze**, e adozione degli atti del Governo con forma di decreto presidenziale (d.P.R.); gli altri atti emanati su proposta dei ministri sono raggruppati in 31 categorie dalla legge 13/1991
 
 ### 4.9 Supplenza del Presidente della Repubblica
 
-In caso di **impedimento temporaneo**: le funzioni presidenziali sono esercitate dal **Presidente del Senato**, senza obbligo di giuramento (supplenza automatica).
+In caso di **impedimento temporaneo**: le funzioni presidenziali sono esercitate dal **Presidente del Senato** (art. 86), senza obbligo di giuramento (supplenza automatica). L'impedimento può essere permanente (es. dimissioni) o temporaneo (es. viaggi all'estero), e incontrovertibile o controvertibile.
+
+> **Supplenza parziale.** In caso di viaggio all'estero, il Presidente può essere impedito nell'esercizio dei poteri di **diritto interno** (assunti dal Presidente del Senato), ma continua a esercitare quelli inerenti alla sua funzione di **rappresentanza internazionale** dello Stato.
 
 In caso di **impedimento permanente, morte o dimissioni**: scatta la supplenza del Presidente del Senato, ma il Presidente della Camera avvia il procedimento per l'elezione del nuovo Presidente della Repubblica.
 
@@ -1891,11 +2193,21 @@ Il supplente si attiene all'ordinaria amministrazione.
 
 **Prorogatio** — istituto per cui le Camere scadute continuano a esercitare le funzioni (ordinaria amministrazione) fino alla riunione delle nuove Camere.
 
+**Proroga** — proroga della durata delle Camere disposta per legge nel solo caso di guerra (art. 60, comma 2).
+
+**Verifica dei poteri** — funzione con cui ciascuna Camera giudica i titoli di ammissione dei propri membri e le cause di ineleggibilità/incompatibilità (art. 66), con istruttoria affidata alla Giunta delle elezioni.
+
+**Divieto di mandato imperativo** — ogni membro del Parlamento rappresenta la Nazione senza vincolo di mandato (art. 67): non è revocabile dagli elettori e gli impegni verso il partito non hanno rilievo giuridico.
+
 **Prerogative parlamentari** — garanzie dell'indipendenza del Parlamento: insindacabilità per opinioni e voti (permanente) e immunità penale (limitata alla legislatura).
 
-**Insindacabilità** — il parlamentare non può essere chiamato a rispondere in nessuna sede per le opinioni espresse e i voti dati nell'esercizio delle funzioni parlamentari (art. 68.1 Cost.).
+**Insindacabilità** — il parlamentare non può essere chiamato a rispondere in nessuna sede per le opinioni espresse e i voti dati nell'esercizio delle funzioni parlamentari (art. 68.1 Cost.); è coperta nei limiti del "nesso funzionale" verificato dalla Corte costituzionale.
 
-**Interna corporis acta** — principio per cui gli atti interni alle Camere non possono essere sottoposti a controllo esterno; la Corte costituzionale controlla solo l'osservanza delle norme costituzionali sul procedimento legislativo.
+**Interna corporis acta** — principio per cui gli atti interni alle Camere non possono essere sottoposti a controllo esterno; la Corte costituzionale controlla solo l'osservanza delle norme costituzionali sul procedimento legislativo (i regolamenti restano insindacabili: Corte cost. 154/1985).
+
+**Sede deliberante (procedimento decentrato)** — procedimento in cui discussione e approvazione di un disegno di legge avvengono in Commissione; vietato per leggi costituzionali, elettorali e di delegazione; soggetto a possibile rimessione in aula.
+
+**Iniziativa legislativa popolare** — potere del popolo di presentare un progetto di legge mediante proposta sottoscritta da almeno 50.000 elettori (art. 71).
 
 **Questione di fiducia** — strumento con cui il Governo mette in gioco la propria permanenza in carica su una deliberazione parlamentare; se votata favorevolmente, approva l'atto e respinge tutti gli emendamenti.
 
@@ -1905,7 +2217,11 @@ Il supplente si attiene all'ordinaria amministrazione.
 
 **Commissione d'inchiesta** — organo parlamentare temporaneo con i poteri dell'autorità giudiziaria (art. 82 Cost.); si conclude con una relazione, non con una sentenza; i dati acquisiti non possono essere usati come prova penale.
 
+**Parlamento in seduta comune** — organo collegiale (collegio imperfetto) che riunisce tutti i parlamentari per le sole funzioni elettive e accusatorie tassativamente previste; presieduto dal Presidente della Camera.
+
 **Equilibrio di bilancio** — principio introdotto dalla riforma dell'art. 81 Cost. (legge cost. 1/2012): lo Stato deve assicurare l'equilibrio tra entrate e spese tenendo conto del ciclo economico; il ricorso all'indebitamento è consentito solo in casi eccezionali e previo voto parlamentare a maggioranza assoluta.
+
+**Sessione di bilancio** — periodo di 45 giorni in cui le Camere si occupano in via esclusiva della legge di bilancio, per garantirne l'approvazione entro il 31 dicembre ed evitare l'esercizio provvisorio.
 
 **DEF** (Documento di economia e finanza) — documento di programmazione pluriennale presentato dal Governo alle Camere entro il 10 aprile, contenente il Programma di stabilità, le previsioni di spesa e il Programma nazionale di riforma.
 
@@ -1919,12 +2235,15 @@ Il supplente si attiene all'ordinaria amministrazione.
 
 **Ordinaria amministrazione** — attività di routine del Governo (o delle Camere in prorogatio) priva di rilevanza politica innovativa, esercitata in attesa della risoluzione della crisi o del rinnovo degli organi.
 
-**Supplenza presidenziale** — in caso di impedimento del Presidente della Repubblica, le funzioni sono esercitate dal Presidente del Senato (art. 86 Cost.).
+**Supplenza presidenziale** — in caso di impedimento del Presidente della Repubblica, le funzioni sono esercitate dal Presidente del Senato (art. 86 Cost.); può essere anche parziale (viaggi all'estero: restano al Presidente i poteri di rappresentanza internazionale).
 
 **Irresponsabilità presidenziale** — il Presidente della Repubblica non risponde politicamente del suo operato; risponde penalmente solo per alto tradimento e attentato alla Costituzione (art. 90 Cost.).
 
+**Consiglio supremo di difesa** — organo presieduto dal Presidente della Repubblica che esamina le deliberazioni del Governo in materia di difesa e sicurezza.
+
 
 ---
+
 
 # V-VI. Regioni, Governo Locale e Amministrazione Pubblica
 
@@ -1942,6 +2261,10 @@ La Costituzione del 1948 ha impostato l'Italia come **Stato regionale e autonomi
 
 Le **Regioni ordinarie** (15) sono disciplinate direttamente dalla Costituzione; le **Regioni speciali** (5: Sicilia, Sardegna, Friuli Venezia Giulia, Trentino Alto Adige, Valle d'Aosta) godono di un'autonomia più ampia, definita dai rispettivi statuti approvati con legge costituzionale. Analoga autonomia spetta alle **Province autonome di Trento e Bolzano**.
 
+Le venti Regioni sono **elencate dall'art. 131 Cost.**; l'art. 116, comma 2, riconosce la Regione Trentino-Alto Adige/Südtirol come composta dalle Province autonome di Trento e Bolzano. Gli statuti speciali, adottati con legge costituzionale, **possono derogare alle norme generali** della Costituzione; tuttavia le disposizioni statutarie incompatibili con la riforma del 2001 sono sostituite dalla nuova normativa.
+
+Il sistema delle autonomie territoriali si fonda sul **principio di decentramento** (art. 5 Cost.), che opera nel rispetto dell'**unità e indivisibilità della Repubblica**. La **sussidiarietà** ha una duplice direzione: **verticale** (le funzioni vanno all'ente più vicino al cittadino, salvo necessità di livelli superiori) e **orizzontale** (favorisce l'iniziativa privata e il coinvolgimento diretto dei cittadini nelle attività di interesse generale).
+
 Le regioni ordinarie sono state istituite concretamente solo nel **1970**, con trasferimento parziale delle funzioni avvenuto nel 1972 e poi con il d.lgs. 616/1977.
 
 #### La Riforma Bassanini (1997)
@@ -1952,11 +2275,26 @@ La legge 59/1997 ha capovolto la logica precedente: non più le sole funzioni ne
 
 La riforma costituzionale del 2001 ha ridisegnato i rapporti tra i livelli di governo, realizzando un forte **decentramento politico**. Il modello non è federale (dove lo Stato centrale e gli Stati membri sono "padroni" dell'ordinamento degli enti minori), bensì quello di una **Repubblica delle autonomie** articolata su più livelli: Comuni, Città metropolitane, Province, Regioni, Stato — tutti dotati di autonomia costituzionalmente garantita.
 
+La riforma ha inoltre attribuito **rilievo costituzionale a Roma Capitale**, il cui ordinamento è disciplinato da una legge dello Stato, con la creazione della "Città metropolitana di Roma" in sostituzione della Provincia di Roma.
+
+Accanto agli enti **necessari** (Comuni, Città metropolitane, Province — art. 114, comma 1), la Costituzione consente la creazione di altri **enti rappresentativi delle comunità locali** (richiamati dagli artt. 123 e 116, comma 3), come Municipi, Comunità montane, Comunità isolane e Unioni di Comuni. La **legge 56/2014 ("legge Delrio")** ha riformato profondamente l'assetto delle Province, favorendo l'accorpamento dei Comuni più piccoli, l'esercizio associato delle funzioni comunali e la creazione di Unioni fra Comuni.
+
+##### Il regionalismo differenziato (art. 116, comma 3)
+
+L'**art. 116, comma 3, Cost.** consente l'introduzione del **regionalismo differenziato** per le Regioni a statuto ordinario: previo accordo con lo Stato, esse possono ottenere forme particolari di autonomia in specifiche materie. È stata avviata una procedura preliminare per la sua attuazione, legata alla definizione dei **livelli essenziali delle prestazioni (LEP)** e dei relativi **costi standard**.
+
 ---
 
 ### 2. La Ripartizione delle Competenze
 
 Il nuovo art. 114 Cost. pone **sullo stesso piano** lo Stato e gli altri enti territoriali (**equiordinazione**). La legge statale e la legge regionale sono pariordinate: lo Stato non ha più potestà legislativa generale, ma può legiferare **solo nelle materie espressamente attribuitegli** dalla Costituzione.
+
+Le attribuzioni di Regioni ed enti locali si articolano in due grandi categorie:
+
+- **Autonomia normativa**: comprende la **potestà statutaria** (adottare lo statuto, "carta fondamentale" dell'ente che ne fissa l'organizzazione e il funzionamento, nel rispetto dei limiti di Costituzione e legge — art. 114, comma 2), la **potestà legislativa** (propria delle sole Regioni) e la **potestà regolamentare**.
+- **Autonomia amministrativa**: titolarità ed esercizio delle funzioni amministrative.
+
+A queste si aggiunge, per le sole Regioni, il **"potere estero"** (v. infra).
 
 **Potestà legislativa** (art. 117):
 - **Esclusiva dello Stato**: materie come politica estera, difesa, moneta, ordine pubblico, tutela dell'ambiente, norme processuali, ecc.
@@ -1965,7 +2303,20 @@ Il nuovo art. 114 Cost. pone **sullo stesso piano** lo Stato e gli altri enti te
 
 **Funzioni amministrative** (art. 118): il principio guida è la **sussidiarietà** — le funzioni sono attribuite ai **Comuni** come livello base, e possono essere conferite a livelli superiori (Province, Città metropolitane, Regioni, Stato) solo per assicurarne l'esercizio unitario, sulla base anche dei principi di **differenziazione** (enti dello stesso livello possono avere competenze diverse) e **adeguatezza** (le funzioni vanno agli enti con requisiti sufficienti di efficienza).
 
-**Potestà regolamentare**: riservata allo Stato solo nelle materie di sua esclusiva competenza legislativa; nelle altre, spetta alle Regioni.
+Comuni, Province e Città metropolitane sono titolari di **funzioni proprie** (quelle già spettanti prima della riforma del 2001 e quelle derivanti dalla competenza generale dei Comuni) e di **funzioni fondamentali** definite dalla legge statale. Il conferimento di funzioni a enti diversi dai Comuni avviene con legge **statale o regionale** a seconda della competenza ex art. 117: solo la legge statale può attribuire funzioni agli organi dello Stato e disciplinare le funzioni fondamentali degli enti locali.
+
+La **"chiamata in sussidiarietà"** (elaborata dalla Corte costituzionale) consente l'attribuzione di funzioni amministrative allo **Stato anche in materie non di sua competenza esclusiva**, purché ricorrano: ragioni di esercizio unitario, una legge proporzionata e ragionevole, e meccanismi di **consultazione o accordo** con gli enti coinvolti, nel rispetto della leale collaborazione.
+
+**Potestà regolamentare**: riservata allo Stato solo nelle materie di sua esclusiva competenza legislativa; nelle altre, spetta alle Regioni. Gli **enti locali** (Comuni, Province, Città metropolitane) hanno potestà regolamentare limitata alla disciplina delle funzioni amministrative loro attribuite.
+
+#### Il potere estero delle Regioni (art. 117, comma 9)
+
+Alle Regioni è riconosciuto un **limitato potere estero**: possono stipulare **accordi con altri Stati** e **intese con enti territoriali stranieri**, ma solo nelle materie di loro competenza legislativa e secondo le modalità della legge statale. La **legge 131/2003** precisa che:
+
+- Gli accordi internazionali possono essere firmati solo con **autorizzazione del Ministero degli Esteri** (che verifica legittimità e opportunità politica e concede i "pieni poteri di firma"); senza autorizzazione l'accordo è **nullo**.
+- Per le intese con enti stranieri le Regioni devono **informare** Presidenza del Consiglio e MAE, che possono fare osservazioni non vincolanti.
+- Le Regioni non possono esprimere giudizi sulla politica estera statale, né assumere impegni vincolanti per lo Stato.
+- In caso di conflitto decide il **Consiglio dei ministri**, con la partecipazione del Presidente della Giunta interessata; se la Regione viola gli impegni assunti, lo Stato esercita il **potere sostitutivo** (art. 6, commi 5-6, legge 131/2003).
 
 ---
 
@@ -1981,17 +2332,36 @@ Prevista dall'art. 11, legge cost. 3/2001, avrebbe dovuto consentire la partecip
 
 Il principale strumento operativo di raccordo è il **sistema delle Conferenze** (d.lgs. 281/1997):
 
-- **Conferenza Stato-Regioni**: presieduta dal Presidente del Consiglio, riunisce ministri e Presidenti delle Regioni
+- **Conferenza Stato-Regioni**: presieduta dal Presidente del Consiglio, riunisce ministri e Presidenti delle Regioni (esclude Parlamento e Consigli regionali)
 - **Conferenza Stato-Città e autonomie locali**: per i rapporti con gli enti locali
 - **Conferenza unificata**: le due riunite insieme per le materie di interesse comune
 
-Le Conferenze esprimono **pareri** (normalmente non vincolanti giuridicamente, ma dotati di grande forza politica) e, in certi casi, **intese** che richiedono il consenso delle Regioni.
+Le Conferenze hanno funzioni di **informazione, consultazione e raccordo**; esprimono **pareri** (normalmente non vincolanti giuridicamente, ma dotati di grande forza politica) e, in certi casi, **intese e accordi** che richiedono il consenso delle Regioni.
+
+Un altro organismo rilevante è la **Conferenza dei Presidenti delle Regioni e delle Province autonome**, che riunisce i soli vertici regionali per il raccordo politico-amministrativo e l'interlocuzione con lo Stato.
+
+Storicamente i rapporti Stato-Regioni erano affidati al **Commissario del Governo**, organo decentrato statale soppresso nel 2001. Oggi, nelle Regioni ordinarie, è il **Prefetto** a rappresentare lo Stato nei rapporti con le autonomie locali, ma **senza poteri sostanziali di coordinamento** tra amministrazione statale e regionale.
 
 #### 3.3 Il Principio di Leale Collaborazione
 
-La Corte costituzionale ha elaborato il principio di **leale collaborazione**, che impone il contemperamento degli interessi nei casi in cui le competenze di Stato e Regioni concorrano o si intreccino. Lo Stato non può agire unilateralmente nelle "materie trasversali" — quelle competenze statali che "tagliano" più materie di competenza regionale — senza prevedere forme di coinvolgimento delle Regioni.
+La Corte costituzionale ha elaborato il principio di **leale collaborazione**, che impone il contemperamento degli interessi nei casi in cui le competenze di Stato e Regioni concorrano o si intreccino. Lo Stato non può agire unilateralmente nelle "materie trasversali" — quelle competenze statali che "tagliano" più materie di competenza regionale — senza prevedere forme di coinvolgimento delle Regioni. Il principio è anche inserito in Costituzione (art. 118, comma 3) e qualifica il nostro come ordinamento improntato al **regionalismo collaborativo (o cooperativo)**: i livelli di governo devono cooperare, non competere.
+
+La Corte costituzionale ha precisato che il **metodo delle intese e del coordinamento** si impone in due ipotesi:
+1. quando la Costituzione lo prevede direttamente o indirettamente (sent. 178/2007);
+2. quando una legge delega affida la disciplina a decreti legislativi che incidono sul riparto Stato-Regioni: in tal caso occorre un'**intesa preventiva**, non un semplice parere (sent. 251/2016).
 
 Il **potere sostitutivo del Governo** (art. 120.2 Cost.) consente all'esecutivo di surrogarsi agli enti inadempienti (tramite atto diretto o commissario ad acta) in caso di violazione di norme internazionali o europee, pericolo grave per la sicurezza pubblica, o per tutelare i livelli essenziali delle prestazioni. L'ente sostituito deve essere preventivamente diffidato.
+
+I presupposti del potere sostitutivo emergenziale (art. 120, comma 2) sono in dettaglio: mancato rispetto di **normative internazionali o comunitarie**; **pericolo grave per l'incolumità e la sicurezza pubblica**; **minaccia all'unità giuridica o economica**; **tutela dei livelli essenziali dei diritti civili e sociali**. L'esercizio del potere, regolato da legge statale, deve rispettare sussidiarietà e leale collaborazione, e può investire anche gli **atti normativi** di Regioni ed enti locali (es. decreti-legge adottati durante la pandemia di COVID-19). Esistono inoltre **poteri sostitutivi regionali** verso gli enti locali, per garantire il rispetto delle normative regionali e statali (Corte cost. n. 43/2004).
+
+##### Controlli e scioglimento degli organi
+
+Con la legge cost. 3/2001 sono stati **abrogati i controlli preventivi di legittimità** sugli atti amministrativi di Regioni ed enti locali; permane il **controllo di costituzionalità** sulle leggi regionali e il **controllo successivo della Corte dei conti** sulla gestione di bilancio, patrimonio e azione amministrativa (rafforzato dalla legislazione anticorruzione). La Corte ha inoltre eliminato il potere del Governo di **annullamento straordinario** degli atti amministrativi regionali (Corte cost. 229/1989), potere che resta però applicabile agli **atti degli enti locali** (art. 138 d.lgs. 267/2000; parere Cons. Stato n. 735/2020).
+
+Gli strumenti che comportano **scioglimento o rimozione** degli organi elettivi:
+- **Consiglio regionale e Presidente della Giunta** (art. 126 Cost.): scioglimento/rimozione con **decreto motivato del Presidente della Repubblica**, sentita la Commissione bicamerale, per atti contrari alla Costituzione o gravi violazioni di legge.
+- **Consigli provinciali e comunali**: scioglimento con decreto del PdR su proposta del **Ministro dell'Interno**, per atti contrari alla Costituzione, gravi violazioni di legge, motivi di ordine pubblico o mancata approvazione del bilancio; analoga procedura per la rimozione degli amministratori locali.
+- **Infiltrazioni mafiose**: scioglimento dei Consigli o sospensione prefettizia degli organi.
 
 ---
 
@@ -2006,6 +2376,37 @@ Il sistema degli enti locali si basa su:
 
 Con la riforma del 2001, l'autonomia degli enti locali ha ottenuto **piena garanzia costituzionale** (art. 114): Comuni, Province e Città metropolitane sono posti sullo stesso piano dello Stato e delle Regioni. L'art. 118 attribuisce ai Comuni le funzioni amministrative come regola generale. In ogni Regione lo statuto deve prevedere il **Consiglio delle autonomie locali**, organo consultivo in cui siedono i rappresentanti degli enti locali.
 
+#### Gli organi del Comune
+
+La disciplina degli enti locali è consolidata nel **Testo Unico degli enti locali (d.lgs. 267/2000)**, poi riformato dalla legge 56/2014. Gli organi comunali sono:
+
+1. **Consiglio comunale**: organo di indirizzo e controllo politico-amministrativo; adotta gli atti previsti dalla legge (art. 42), disciplina con regolamenti la propria organizzazione (art. 38) e approva lo statuto con procedura aggravata.
+2. **Giunta comunale**: collabora con il Sindaco e gestisce gli atti amministrativi non riservati a Consiglio o Sindaco (inclusi i regolamenti su uffici e servizi).
+3. **Sindaco**: rappresenta il Comune, convoca e presiede la Giunta, sovrintende ai servizi (art. 50); svolge anche funzioni di **ufficiale di Governo**, sovrintendendo ai servizi statali decentrati e adottando **ordinanze contingibili e urgenti** per gravi pericoli per la sicurezza e l'incolumità pubblica (art. 54 d.lgs. 267/2000).
+
+Il principio **simul stabunt, simul cadent** opera a livello comunale (art. 141 TUEL): la decadenza del Sindaco (dimissioni, impedimento, rimozione, decadenza, morte) o le dimissioni contestuali della maggioranza dei consiglieri determinano lo scioglimento del Consiglio.
+
+#### Gli organi della Provincia dopo la legge 56/2014
+
+Soppressa la Giunta provinciale, gli organi sono:
+- **Presidente della Provincia**: può delegare funzioni ai consiglieri.
+- **Consiglio provinciale**: eletto a suffragio ristretto da Sindaci e consiglieri comunali; organo di indirizzo e controllo, approva regolamenti, piani e programmi proposti dal Presidente.
+- **Assemblea dei Sindaci**: composta da tutti i Sindaci dei Comuni della Provincia; ha funzioni propositive, consultive e di controllo e approva lo statuto provinciale.
+
+#### Gli organi della Città metropolitana
+
+Le Città metropolitane (istituite dalla legge 56/2014 nelle Regioni ordinarie dal 1° gennaio 2015, in sostituzione di dieci Province preesistenti) hanno organi analoghi a quelli provinciali:
+- **Sindaco metropolitano**: è il Sindaco del Comune capoluogo.
+- **Consiglio metropolitano**: eletto dai sindaci e consiglieri dei Comuni, in proporzione alla popolazione.
+- **Conferenza metropolitana**: composta da tutti i Sindaci dei Comuni.
+- **Consiglieri delegati**: nominati dal Sindaco metropolitano.
+
+#### La formazione e modifica degli enti territoriali
+
+- **Nuove Regioni / fusioni** (art. 132, comma 1): procedimento complesso che richiede approvazione di almeno **un terzo dei Consigli comunali** interessati, **referendum** favorevole della maggioranza della popolazione, parere non vincolante dei Consigli regionali e infine **legge costituzionale** (procedimento aggravato art. 138).
+- **Distacco di Comuni/Province** verso altra Regione (art. 132, comma 2): si conclude con **legge ordinaria** (es. passaggio del Comune di Sappada dal Veneto al Friuli-Venezia Giulia, legge 182/2017).
+- **Nuove Province** (art. 133, comma 1): legge statale ordinaria ma "aggravata", su iniziativa dei Comuni interessati e con parere obbligatorio (non vincolante) della Regione. I tentativi di abolizione delle Province sono falliti (d.l. 128/2011 e 188/2012 non convertiti; Corte cost. n. 220/2013, che ha vietato la riforma per decreto d'urgenza; bocciatura referendaria della riforma costituzionale 2016). Le **Città metropolitane** sono state istituite con legge ordinaria senza seguire le procedure dell'art. 133, soluzione ritenuta legittima dalla Corte costituzionale.
+
 ---
 
 ### 5. Finanza Regionale e Locale
@@ -2017,9 +2418,11 @@ Il concetto di **federalismo fiscale** indica un sistema in cui gli enti territo
 - **Fondo perequativo** a favore dei territori con minore capacità fiscale, per garantire l'esercizio integrale delle funzioni
 - **Risorse aggiuntive e interventi speciali** dello Stato per promuovere sviluppo, coesione sociale e rimuovere squilibri economici
 
-Lo Stato conserva potestà legislativa esclusiva in materia di "armonizzazione dei bilanci pubblici" e "perequazione delle risorse finanziarie", e concorrente in materia di "coordinamento della finanza pubblica e del sistema tributario". Il divieto di indebitamento per spese correnti è assoluto: Regioni ed enti locali possono ricorrere all'indebitamento solo per finanziare **spese di investimento**.
+A garanzia dell'autonomia, l'art. 119 attribuisce inoltre agli enti territoriali un **patrimonio proprio** assegnato per legge.
 
-La legge delega 42/2009 sull'attuazione del federalismo fiscale ha introdotto il principio dei **costi standard** (quanto costa effettivamente ogni singola prestazione) in sostituzione della "spesa storica", per premiare l'efficienza. La crisi del 2008 e le complessità politiche hanno però ritardato la piena attuazione.
+Lo Stato conserva potestà legislativa esclusiva in materia di "armonizzazione dei bilanci pubblici" e "perequazione delle risorse finanziarie", e concorrente in materia di "coordinamento della finanza pubblica e del sistema tributario". Il divieto di indebitamento per spese correnti è assoluto: Regioni ed enti locali possono ricorrere all'indebitamento solo per finanziare **spese di investimento**, senza garanzia statale sui prestiti.
+
+La legge delega 42/2009 sull'attuazione del federalismo fiscale poggia su due principi: la **territorialità delle imposte** (il gettito finanzia tendenzialmente i servizi a beneficio dei residenti del territorio in cui è raccolto) e il finanziamento basato su **costi e fabbisogni standard** (quanto costa effettivamente ogni singola prestazione) in sostituzione della "spesa storica", per premiare l'efficienza. La crisi del 2008 e le complessità politiche hanno però ritardato la piena attuazione: con costi standard ancora definiti solo parzialmente, restano prevalenti i trasferimenti statali su base storica e la Corte costituzionale ha configurato un regime di autonomia finanziaria **"transitoria"** per gli enti territoriali.
 
 ---
 
@@ -2036,7 +2439,17 @@ La legge cost. 1/1999 ha introdotto l'**elezione popolare diretta del Presidente
 - **Consiglio regionale**: titolare della funzione legislativa, eletto dai cittadini
 - **Presidente della Regione**: eletto a suffragio universale diretto; dirige la politica della Giunta, nomina e revoca i componenti della Giunta
 
-Il rapporto tra i due organi segue il modello **neoparlamentare** con il principio del **"simul stabunt, simul cadent"**: il venir meno di uno dei due organi (per mozione di sfiducia, dimissioni, morte, ecc.) determina lo scioglimento anticipato di entrambi e il ricorso a nuove elezioni. La mozione di sfiducia richiede firma di almeno un quinto dei consiglieri e approvazione a maggioranza assoluta per appello nominale.
+Gli **organi essenziali** della Regione, con denominazioni vincolanti e non modificabili (art. 121, comma 1), sono **Consiglio regionale, Giunta regionale e Presidente della Giunta**. Il **Presidente della Giunta** svolge un duplice ruolo:
+1. **Vertice della Regione**: la rappresenta nei rapporti con lo Stato e gli altri enti; **promulga** le leggi regionali ed **emana** i regolamenti.
+2. **Capo dell'esecutivo**: nomina e revoca i membri della Giunta, ne dirige la politica e ne assume la responsabilità; coordina le funzioni amministrative delegate dallo Stato secondo le istruzioni del Governo (art. 121, u.c.).
+
+Tra le attribuzioni del **Consiglio regionale**, oltre alla potestà legislativa, la Costituzione include: la **funzione statutaria** (art. 123); l'**iniziativa di leggi statali** (artt. 71 e 121); l'**iniziativa per referendum** abrogativi e costituzionali (artt. 75 e 138); la **nomina dei delegati regionali** per l'elezione del Presidente della Repubblica (art. 83). La funzione regolamentare non è più riservata al Consiglio ed è rimessa agli statuti (Corte cost. n. 313/2003). I consiglieri godono di **insindacabilità** per opinioni e voti espressi nell'esercizio delle funzioni (art. 122, comma 4).
+
+La **legge regionale** disciplina il sistema elettorale, i casi di ineleggibilità e incompatibilità e la durata in carica degli organi (art. 122, comma 1), nel rispetto dei principi fondamentali fissati dalla **legge statale 165/2004**, che fissa anche la durata dei Consigli in **cinque anni**. È sancita l'incompatibilità tra consigliere/membro di Giunta regionale e appartenenza al Parlamento nazionale o europeo o ad altri Consigli/Giunte regionali (art. 122, comma 2). I limiti statali al numero dei consiglieri, confermati per le Regioni ordinarie, sono stati dichiarati incostituzionali per le Regioni speciali (Corte cost. n. 198/2012).
+
+Il rapporto tra i due organi segue il modello **neoparlamentare** (governo parlamentare razionalizzato con elementi presidenziali) con il principio del **"simul stabunt, simul cadent"**: il venir meno di uno dei due organi (per mozione di sfiducia, dimissioni, morte, ecc.) determina lo scioglimento anticipato di entrambi e il ricorso a nuove elezioni (entro tre mesi, art. 126 Cost.). La mozione di sfiducia richiede firma di almeno un quinto dei consiglieri e approvazione a maggioranza assoluta per appello nominale.
+
+Per le **Regioni a statuto speciale**, dopo la legge cost. n. 2/2001, vige una disciplina transitoria analoga a quella ordinaria, ma esse possono determinare autonomamente la forma di governo e le modalità di elezione con **legge regionale a procedura aggravata** (maggioranza assoluta e referendum popolare), nel rispetto della Costituzione e, in alcuni casi, dei principi di "rappresentatività e stabilità".
 
 #### 6.3 Il margine delle scelte statutarie
 
@@ -2068,6 +2481,16 @@ Nello Stato liberale l'amministrazione seguiva il **modello ministeriale** di de
 
 Nello Stato di democrazia pluralista questa uniformità è stata abbandonata: l'amministrazione si è **pluralizzata**, articolandosi in strutture autonome che esprimono indirizzi politici differenti. Accanto ai ministeri coesistono ora enti pubblici, agenzie, autorità amministrative indipendenti.
 
+Quando si parla di amministrazione pubblica si fa riferimento al **personale**, ai **mezzi e beni pubblici**, agli **apparati** e alle **attività** rivolti all'adempimento dei compiti delle pubbliche autorità. Al vertice dell'indirizzo politico-amministrativo nazionale è posto il **Governo della Repubblica** (art. 95), politicamente responsabile davanti al Parlamento. In via generalissima i compiti delle PA si distinguono in **compiti di conservazione e protezione** del gruppo sociale e **compiti di benessere**; per svolgerli, le amministrazioni devono disporre di **personale e mezzi**, **organizzarsi in apparati** e **porre in essere le corrispondenti attività**.
+
+#### Il decentramento amministrativo (art. 5 Cost.)
+
+Sul piano territoriale, l'art. 5 Cost. impone il **decentramento**, che si realizza in due forme:
+- **Decentramento burocratico (amministrativo)**: conferimento di compiti agli **uffici periferici dello Stato-apparato**.
+- **Decentramento istituzionale**: attribuzione di compiti a **enti distinti dallo Stato**.
+
+In questo quadro la Costituzione attribuisce in via generale le funzioni amministrative ai **Comuni** (con conferimento condizionato a Province, Città metropolitane, Regioni e Stato) e garantisce agli enti locali la titolarità di funzioni amministrative **"fondamentali"**, **"proprie"** e di quelle **conferite** con legge statale o regionale.
+
 ---
 
 ### 2. Il Governo e la Pubblica Amministrazione
@@ -2079,7 +2502,11 @@ Il principio fondamentale oggi è la **separazione tra politica e amministrazion
 - **Agli organi di governo** (Consiglio dei ministri e ministro): spettano la funzione di indirizzo politico-amministrativo, la determinazione di obiettivi e programmi, e la verifica dei risultati
 - **Ai dirigenti amministrativi**: spettano l'adozione degli atti e dei provvedimenti che impegnano l'amministrazione verso l'esterno, la gestione finanziaria, tecnica e amministrativa, il potere di spesa, l'organizzazione del personale
 
+La Corte costituzionale ha qualificato il principio di separazione tra scelte politiche e scelte di gestione come **"norma fondamentale di una legge di grande riforma economico-sociale"**.
+
 Il ministro emana **direttive generali** con obiettivi e standard, assegna le risorse e può revocare l'incarico ai dirigenti che non raggiungono gli obiettivi (**responsabilità dirigenziale**).
+
+A tutela dell'autonomia gestionale dei dirigenti **ministeriali**, i loro atti non possono essere annullati, revocati, riformati o avocati a sé dal ministro; tuttavia, in caso di **grave inosservanza delle direttive** che pregiudichi l'interesse pubblico, il ministro può nominare un **commissario ad acta** (dandone comunicazione al Presidente del Consiglio). I dirigenti possono essere revocati per inosservanza delle direttive e comunque **cessano 90 giorni dopo il voto di fiducia** al nuovo Governo.
 
 Lo **spoils system** (cambio dei vertici dell'amministrazione ad ogni cambio di governo) è stato parzialmente legittimato dalla Corte costituzionale solo per gli incarichi di diretta collaborazione con l'organo politico (non per i dirigenti di livello non apicale).
 
@@ -2089,15 +2516,15 @@ Lo **spoils system** (cambio dei vertici dell'amministrazione ad ogni cambio di 
 
 L'art. 97 Cost. e altre norme fondamentali sanciscono i principi cui devono conformarsi tutte le pubbliche amministrazioni:
 
-**a) Legalità**: l'amministrazione può fare solo ciò che è previsto dalla legge e nel modo da essa indicato (vincolo positivo, a differenza del privato che si muove liberamente nei limiti della legge). La legge pone inoltre una **riserva di legge relativa** sull'organizzazione degli uffici.
+**a) Legalità**: l'amministrazione può fare solo ciò che è previsto dalla legge e nel modo da essa indicato (vincolo positivo, a differenza del privato che si muove liberamente nei limiti della legge). L'attività **autoritativa** (svolta in posizione di supremazia sui cittadini) è sottoposta al **sindacato del giudice** a tutela di diritti e interessi legittimi (art. 113). La legge pone inoltre una **riserva di legge** sull'organizzazione degli uffici (art. 97, comma 2), riserva che è al tempo stesso **relativa** (basta che la legge fissi le linee generali, integrabili da fonti secondarie) e **rafforzata** (deve assicurare buon andamento e imparzialità).
 
-**b) Imparzialità** (art. 97): divieto di discriminazioni arbitrarie; l'amministrazione deve valutare imparzialmente tutti gli interessi coinvolti nelle sue decisioni.
+**b) Imparzialità** (art. 97): divieto di discriminazioni arbitrarie; l'amministrazione deve valutare imparzialmente tutti gli interessi coinvolti nelle sue decisioni. Collegata al principio di **eguaglianza** (art. 3), l'imparzialità impone di perseguire esclusivamente le finalità pubbliche **obiettivate dalla legge**: gli uffici non possono essere organizzati in modo che l'attività procuri ingiustizie.
 
 **c) Buon andamento** (art. 97): l'attività amministrativa deve rispettare i canoni di **efficienza** (miglior rapporto mezzi/risultati) ed **efficacia** (raggiungimento degli obiettivi prefissati). Il d.lgs. 29/1993 ha privatizzato e contrattualizzato il rapporto di lavoro con le PA.
 
 **d) Concorso pubblico** (art. 97.4): l'accesso al lavoro nelle PA avviene mediante concorso, basato sul merito. La legge Madia ha previsto concorsi in forma centralizzata o aggregata e ha istituito tre **ruoli unici** della dirigenza (nazionale, regionale, locale), con accesso tramite doppio canale (corso-concorso per esterni, concorso per interni).
 
-**e) Dovere di fedeltà** (art. 54): i dipendenti pubblici devono adempiere le funzioni con disciplina e onore, senza subire influenze da partiti o gruppi.
+**e) Dovere di fedeltà** (art. 54): i dipendenti pubblici devono adempiere le funzioni con disciplina e onore, senza subire influenze da partiti o gruppi. I pubblici impiegati sono "al **servizio esclusivo della nazione**" (art. 98); se membri del Parlamento non possono ottenere promozioni diverse da quelle per anzianità (art. 98, comma 2), ed è ammessa la limitazione del diritto di iscrizione ai partiti per talune categorie.
 
 **f) Separazione tra politica e amministrazione**: il funzionario ha poteri propri e responsabilità proprie (art. 97.3), ma l'amministrazione rimane funzionalmente collegata agli organi di governo.
 
@@ -2105,7 +2532,57 @@ L'art. 97 Cost. e altre norme fondamentali sanciscono i principi cui devono conf
 
 **h) Amministrazione tendenzialmente locale** (art. 118): le funzioni amministrative sono attribuite ai Comuni come regola generale.
 
+**i) Principi di derivazione UE**: il diritto dell'Unione aggiunge il **principio di proporzionalità** (le misure amministrative non devono imporre sacrifici sproporzionati ai privati) e il **principio del contraddittorio** (obbligo di ascoltare gli interessati prima di adottare la scelta amministrativa).
+
 Il **controllo di gestione** (verifica del raggiungimento degli obiettivi, effettuato da servizi di controllo interno) ha sostituito i vecchi controlli preventivi di legittimità sugli atti, soppressi dalla riforma del 2001. La **Corte dei conti** mantiene il controllo preventivo di legittimità su atti del Governo e il controllo successivo sulla gestione dei bilanci.
+
+I **controlli interni** verificano se l'azione amministrativa raggiunge gli obiettivi di legge secondo criteri di **efficienza, efficacia ed economicità**: sono affidati ad apposite strutture, come i **servizi di controllo interno** o gli **Organismi Indipendenti di Valutazione (OIV)**, e a sistemi di **misurazione e valutazione della performance**, oggi presidiati dal **Dipartimento della Funzione pubblica** presso la Presidenza del Consiglio (prima dall'ANAC). A essi si affianca il **controllo esterno (successivo) sulla gestione** svolto, in funzione ausiliaria, dalla **Corte dei conti**.
+
+---
+
+### 3-bis. Il Personale delle Pubbliche Amministrazioni
+
+Il personale è di norma selezionato per **concorso**, secondo il **principio meritocratico** (art. 97, comma 3), senza distinzione di sesso e in condizioni di eguaglianza (artt. 3 e 51). I dipendenti pubblici sono legati all'ente da un **rapporto di servizio** stabile e continuativo, da tenere distinto dal **rapporto organico** (che imputa all'ente gli atti del funzionario). Alle prestazioni dei funzionari professionali si aggiungono:
+- le **prestazioni coattive** di servizi personali, ammesse solo se previste dalla legge (art. 23), come il giudice popolare;
+- le **funzioni a titolo onorario** ("honoris causa"), svolte gratuitamente e per periodo limitato, salvo indennità a rimborso spese.
+
+La disciplina del rapporto di lavoro pubblico è stata riformata in tre direzioni:
+1. **Contrattualizzazione**: ampio spazio alla **contrattazione collettiva nazionale**, condotta per la parte pubblica dall'**ARAN** (Agenzia sotto vigilanza della Presidenza del Consiglio); i sindacati rappresentano i dipendenti se raggiungono una soglia di rappresentatività. I contratti nazionali sono immediatamente efficaci e fissano i limiti della **contrattazione integrativa** decentrata.
+2. **Privatizzazione**: il rapporto è ora retto dal **codice civile** e dalle leggi sul lavoro subordinato privato, regolato dai contratti collettivi (rapporto di lavoro subordinato di diritto privato, di norma a tempo indeterminato).
+3. **Delegificazione**: ampia autoregolamentazione dell'organizzazione del lavoro da parte delle stesse amministrazioni.
+
+Il rapporto di impiego nasce con l'**assunzione**. All'interno del personale spicca la **dirigenza**, interposta tra gli organi di direzione politica e gli altri impiegati: ai dirigenti spettano l'adozione di atti e provvedimenti, la gestione finanziaria, tecnica e amministrativa e i poteri di spesa e organizzazione. Presso il Dipartimento della Funzione pubblica opera il **"Nucleo per le azioni concrete di miglioramento dell'efficienza amministrativa"**, che verifica con sopralluoghi l'applicazione delle norme su organizzazione, trasparenza e digitalizzazione.
+
+---
+
+### 3-ter. I Mezzi e i Beni Pubblici
+
+#### I mezzi finanziari e il sistema tributario
+
+I mezzi finanziari sono raccolti soprattutto attraverso il **sistema tributario** e il **ricorso al credito**. I **tributi** si distinguono in tre categorie:
+1. **Imposte** — dovute per il solo fatto di trovarsi nelle condizioni di **capacità contributiva** previste dalla legge; si dividono in:
+   - **imposte dirette** (collegate a qualità economiche del soggetto, es. reddito/patrimonio — IRPEF), strumento principale della **progressività** e della **redistribuzione**;
+   - **imposte indirette** (collegate a un fatto oggettivo, es. attività economica — IVA), utili a condizionare i processi economici.
+2. **Tasse** — pagate da chi fruisce di beni o servizi pubblici, di norma per importi inferiori al costo del servizio.
+3. **Contributi speciali** — pagati da chi gode di particolari vantaggi derivanti da un'attività amministrativa.
+
+#### Il bilancio dello Stato e la manovra di finanza pubblica
+
+La Costituzione consente il **ricorso all'indebitamento solo per spese di investimento**, escludendo ogni garanzia statale (art. 119); i vincoli europei (**Patto di stabilità e crescita**; **Fiscal Compact**, 2012) impongono il controllo di deficit e debito. Il sistema originario dell'art. 81 si fondava su tre principi: obbligo di approvare annualmente bilancio e consuntivo; obbligo di indicare i mezzi di copertura di ogni nuova spesa; **divieto di stabilire nuovi tributi e spese con la legge di bilancio**. La **legge cost. 1/2012** ha introdotto il principio dell'**equilibrio di bilancio** e abrogato quel divieto; la **legge 243/2012** (attuativa dell'art. 81, comma 6) fissa il contenuto della legge di bilancio e le regole per la sostenibilità del debito.
+
+La **manovra di bilancio** comprende:
+- il **Documento di Economia e Finanza (DEF)**, presentato entro il 10 aprile e approvato entro il 30 aprile;
+- la **legge di approvazione del bilancio annuale di previsione**, presentata entro il 20 ottobre e approvata entro il 31 dicembre;
+- i **provvedimenti collegati**, presentati entro il 31 gennaio (con procedure parlamentari privilegiate);
+- la **legge di assestamento** e il **rendiconto generale dello Stato**, presentati entro il 30 giugno.
+
+La complessità è accresciuta dal **semestre europeo** e dai rapporti con gli enti territoriali. La **spesa pubblica** segue quattro fasi: **impegno** (decisione della spesa), **liquidazione** (accertamenti e documentazione), **ordinazione** (ordine di spesa) e **pagamento** (erogazione). Gli atti sono soggetti al controllo degli uffici centrali del bilancio dipendenti dalla **Ragioneria generale dello Stato**.
+
+#### I beni pubblici
+
+La legge distingue:
+- **Beni demaniali** — **inalienabili**, non espropriabili, non gravabili da diritti reali a favore di terzi. Si distinguono in **demanio necessario** (marittimo, idrico, militare) e **demanio eventuale/accidentale** (strade, autostrade, immobili di rilievo storico-artistico). I beni demaniali per destinazione possono passare al patrimonio se ne viene meno la destinazione.
+- **Beni patrimoniali** — possono essere **indisponibili** (non sottraibili alla destinazione, salvo nei modi di legge: foreste, miniere, cose di interesse storico-artistico, edifici pubblici) o **disponibili** (soggetti in via residuale alle regole del codice civile).
 
 ---
 
@@ -2127,11 +2604,42 @@ La legge 241/1990 (modificata dalla legge 15/2005) ha codificato i principi del 
 - **Responsabile del procedimento**: ogni procedimento ha un funzionario responsabile che lo segue dall'inizio alla fine
 - **Partecipazione degli interessati**: l'amministrazione deve comunicare l'avvio del procedimento; i privati interessati e i portatori di interessi diffusi hanno diritto di presentare memorie e documenti
 
+#### Il provvedimento amministrativo: elementi, effetti, vizi
+
+Il **provvedimento** è l'atto **tipico** di manifestazione di volontà della PA, adottabile solo nei casi, modi e forme previsti dalla legge. I suoi **elementi** sono: i **presupposti** (circostanze di fatto o diritto che legittimano a provvedere), i **motivi** (interessi/fini pubblici perseguiti), la **volontà** (scelta dell'effetto), l'**oggetto** (comportamenti cui si rivolge) e la **forma/esternazione** (modo in cui è reso conoscibile).
+
+Gli **effetti** sono caratterizzati da:
+- **Imperatività (autoritatività)**: capacità di incidere **unilateralmente** sulla sfera giuridica del destinatario;
+- **Esecutività**: i provvedimenti producono immediatamente i propri effetti;
+- **Esecutorietà** (solo nei casi di legge): l'amministrazione può dare esecuzione **coattiva** all'atto, anche contro la volontà del destinatario e senza intervento del giudice.
+
+I **vizi** si distinguono in:
+- **Illegittimità (invalidità)** → atto **annullabile** (resta efficace finché non annullato); tre tipologie: **incompetenza**, **violazione di legge** (categoria residuale) ed **eccesso di potere** (vizio della discrezionalità, accertato tramite **figure sintomatiche**: contraddittorietà tra motivi e dispositivo, contraddizione tra provvedimenti, illogicità o manifesta ingiustizia — figure di elaborazione giurisprudenziale, che rendono il vizio flessibile);
+- **Nullità** → quando manca un **elemento essenziale** dell'atto.
+
+#### La discrezionalità amministrativa
+
+La PA dispone, in misura variabile, di **discrezionalità amministrativa**: la facoltà di scegliere se, quando e con quale contenuto agire. Quanto più la legge è specifica, tanto minore è la discrezionalità (assente negli **atti vincolati**, massima negli **atti di alta amministrazione**). Nell'esercizio della discrezionalità l'amministrazione persegue l'**interesse pubblico primario** ma deve **ponderare** anche gli interessi secondari (pubblici, collettivi, diffusi o privati) rilevanti: tale **bilanciamento** è sindacabile dal giudice sotto il profilo dell'eccesso di potere. Diversa è la **discrezionalità tecnica**, che ricorre quando l'amministrazione agisce in base a valutazioni tecnico-scientifiche; va distinta dai **meri accertamenti tecnici**, dal cui esito l'amministrazione non può discostarsi.
+
+#### La tutela: ricorsi amministrativi e giurisdizionali
+
+Contro gli atti amministrativi sono esperibili **ricorsi amministrativi** (con cui si chiede alla stessa amministrazione di riesaminare/annullare l'atto, ottenendo un nuovo provvedimento):
+- **ricorsi ordinari**: il **ricorso gerarchico** (all'organo sovraordinato, ammesso in via generale contro ogni atto non definitivo) e il **ricorso in opposizione** (carattere speciale, solo nei casi di legge); riguardano legittimità e merito, sono **facoltativi** e non precludono la via giurisdizionale;
+- **ricorso straordinario al Presidente della Repubblica**: solo per controversie devolute al giudice amministrativo e solo su profili di **legittimità** di provvedimenti **definitivi**.
+
+La tutela giurisdizionale segue il **riparto di giurisdizione** fondato sulla distinzione tra **interessi legittimi** (giudice amministrativo) e **diritti soggettivi** (giudice ordinario):
+- il **giudice ordinario** può solo **disapplicare** l'atto illegittimo nel caso concreto e ordinare il risarcimento;
+- il **giudice amministrativo** può **annullare** l'atto, disporre il risarcimento e (tramite **giudizio di ottemperanza**, con eventuale nomina di un **commissario ad acta**) costringere la PA a conformarsi; in casi tassativi può sindacare anche il **merito** (es. contenzioso elettorale regionale e locale, l. 1147/1966).
+
+La **giurisdizione esclusiva** supera il riparto, attribuendo a un solo giudice sia diritti che interessi in ambiti specifici; la Corte costituzionale ne ha ribadito il **carattere eccezionale** (art. 103, comma 1).
+
 #### Strumenti di semplificazione
 
 **Conferenza di servizi**: riunione in cui vengono valutati contestualmente tutti gli interessi pubblici coinvolti, in sostituzione dell'esame separato dai diversi uffici. Esistono due modelli:
 - *Conferenza semplificata* (modalità ordinaria, "asincrona", via telematica, termine max 45 giorni)
 - *Conferenza simultanea* (con riunione, solo nei casi strettamente necessari)
+
+Da segnalare anche l'impiego delle **tecnologie informatiche** nel procedimento, che consente di parlare di **procedimento e provvedimento informatico**.
 
 **SCIA (Segnalazione certificata di inizio attività)**: sostituisce l'autorizzazione dell'amministrazione quando il rilascio dipende solo dall'accertamento di requisiti tecnici (attestati da tecnici abilitati); l'attività inizia subito, ma l'amministrazione può contestarla entro 60 giorni.
 
@@ -2144,6 +2652,11 @@ Il **d.lgs. 97/2016** (Freedom of Information Act italiano) ha introdotto:
 - **Accesso civico**: chiunque può richiedere documenti, dati e informazioni detenuti dalle PA, anche senza dimostrare un interesse specifico (salvo limiti per sicurezza nazionale, indagini penali, dati personali, ecc.)
 - Nomina obbligatoria di un **responsabile per la trasparenza** in ogni amministrazione
 - Ruolo dell'**ANAC** (Autorità Nazionale Anticorruzione) nella vigilanza e prevenzione della corruzione
+
+Vanno tenute distinte tre forme di accesso:
+- l'**accesso documentale** (artt. 22 ss. l. 241/1990): spetta a chi dimostra un **interesse diretto, attuale e concreto** collegato al documento;
+- l'**accesso civico "semplice"**: chiunque può chiedere la **pubblicazione** dei documenti che la legge obbliga a mettere online;
+- l'**accesso civico "generalizzato"**: chiunque può chiedere conoscenza di ulteriori dati/atti per i quali non è prevista la pubblicazione obbligatoria.
 
 ---
 
@@ -2188,43 +2701,102 @@ La scelta di non ricorrere al mercato (in house o azienda speciale) richiede una
 
 ---
 
+### 8. Gli Apparati Amministrativi
+
+L'apparato amministrativo dello Stato è costituito dalla **Presidenza del Consiglio** (al cui interno operano dipartimenti come quello per le politiche UE e il **DAGL** - Dipartimento per il coordinamento degli affari giuridici e legislativi) e dai **Ministeri**. L'organizzazione ministeriale, resa omogenea da un'apposita riforma, prevede gli **uffici di diretta collaborazione** con il Ministro, **strutture di primo e secondo livello** e, per alcuni compiti operativi, **Agenzie** dotate di particolare autonomia. L'organizzazione può essere **decentrata sul territorio**: gli atti degli uffici centrali valgono per tutto il Paese, quelli periferici solo nell'ambito di competenza.
+
+Altre funzioni sono svolte da soggetti distinti dallo Stato:
+- **Enti di autonomia funzionale** (università, camere di commercio);
+- **Enti pubblici** dotati di personalità giuridica autonoma (categoria eterogenea), tra cui spiccavano gli **enti pubblici economici** (produzione di beni/servizi con strumenti privatistici); molti sono stati **privatizzati o trasformati in s.p.a.** (ENEL, Poste);
+- **Autorità amministrative indipendenti** (es. IVASS): i loro componenti, nominati per competenza professionale da Governo o Camere, **non sono revocabili** e agiscono in piena indipendenza; dispongono di poteri regolamentari, amministrativi, di controllo e sanzionatori in funzione paragiurisdizionale.
+
+Le **attività** delle amministrazioni comprendono sia atti di **diritto privato** (in posizione di parità con i privati) sia **atti autoritativi** e **atti tipici** (previsti dalle norme per fini determinati).
+
+---
+
+### 9. Gli Organi Ausiliari
+
+Gli **organi ausiliari** sono tre: il **CNEL**, il **Consiglio di Stato** e la **Corte dei conti**. Esercitano compiti di **iniziativa, controllo e consultivi**, rivolti al più corretto ed efficiente svolgimento delle funzioni di altre istituzioni pubbliche.
+
+#### 9.1 Il CNEL (art. 99)
+
+Il **Consiglio Nazionale dell'Economia e del Lavoro** è composto da esperti e rappresentanti delle categorie produttive (lavoratori dipendenti, autonomi, imprenditori), oltre ai rappresentanti delle associazioni di promozione sociale e volontariato: **78 membri** (più presidente e segretario generale), **nominati dal Presidente della Repubblica** per cinque anni. Gode di autonomia contabile, funzionale e organizzativa. È **organo di consulenza** di Parlamento e Governo, con **iniziativa legislativa**; svolge consulenza obbligatoria su mercato del lavoro e contrattazione collettiva, su richiesta di Governo, Regioni e Province o di propria iniziativa. In caso di posizioni discordanti non si vota, ma si registrano le diverse posizioni. Per la scarsa incidenza delle sue pronunce è divenuto soprattutto luogo di studio e gestore dell'**archivio nazionale dei contratti collettivi**.
+
+#### 9.2 Il Consiglio di Stato (artt. 100 e 103)
+
+Organo di **consulenza giuridico-amministrativa** del Governo e di **tutela della giustizia nell'amministrazione** (art. 100, comma 1). La Costituzione ne garantisce l'indipendenza (art. 100, comma 3), benché la nomina governativa del Presidente e di un quarto dei consiglieri sollevi dubbi; a garanzia dei magistrati è stato istituito il **Consiglio di presidenza della giurisdizione amministrativa** (legge 186/1982). È composto da **sette sezioni** (due consultive, una delle quali sugli atti normativi, e cinque giurisdizionali); l'**Adunanza generale** dà pareri su questioni rilevanti, l'**Adunanza plenaria** risolve i contrasti giurisprudenziali. Le **funzioni giurisdizionali** riguardano la tutela degli interessi legittimi (e, in alcune materie, dei diritti soggettivi — art. 103, comma 1): è organo **d'appello** della giustizia amministrativa. Le **funzioni consultive** sono **obbligatorie** o **facoltative**, e può redigere schemi di atti normativi (in particolare i **testi unici**).
+
+#### 9.3 La Corte dei conti (artt. 100 e 103)
+
+Ha funzioni di **controllo** e **giurisdizionali** (contabilità pubblica). Strutturata in **sezioni centrali e regionali**; nella nomina dei magistrati il Governo nomina metà dei consiglieri e il Presidente, pur essendo riconosciuti autonomia finanziaria e un **Consiglio di presidenza** (analogo al CSM). Le funzioni di controllo:
+- **Controllo preventivo di legittimità** sugli atti del Governo, ora limitato a specifiche categorie (in particolare gli atti adottati dopo la deliberazione del Consiglio dei Ministri; legge 19/1994, d.l. 543/1996): se l'atto è legittimo, la Corte appone il **visto** e lo registra; se rifiuta il visto, il Governo può chiedere la registrazione **con riserva** (salvo i vizi di **copertura finanziaria**, per i quali il rifiuto è definitivo e annulla il provvedimento — art. 25 T.U. 1214/1935);
+- **Controllo successivo sul bilancio dello Stato**, che culmina nel **giudizio di parificazione** del rendiconto generale (relazione a Governo e Camere);
+- **Controllo sugli enti sovvenzionati**: sui conti consuntivi se lo Stato eroga contributi; con un magistrato negli organi dell'ente se lo Stato partecipa al capitale (regime che permane anche per gli enti trasformati in s.p.a. con partecipazione statale prevalente, Corte cost. 466/1993);
+- Ulteriori controlli di legge: controllo successivo di legittimità e regolarità sulle gestioni di amministrazioni statali, regionali e locali; **controllo sui controlli interni**; **controllo concomitante** sulle risorse del **PNRR**. I risultati sono riferiti alle amministrazioni e alle Camere.
+
+---
+
 ## Concetti chiave
 
 **Regioni speciali** — cinque Regioni (Sicilia, Sardegna, Friuli Venezia Giulia, Trentino Alto Adige, Valle d'Aosta) con autonomia più ampia definita da statuti approvati con legge costituzionale.
 
 **Equiordinazione** — principio per cui Stato, Regioni, Province, Città metropolitane e Comuni sono posti sullo stesso piano costituzionale (art. 114 Cost. riformato nel 2001), senza gerarchia tra di essi.
 
-**Sussidiarietà** — principio per cui le funzioni amministrative sono attribuite al livello di governo più vicino ai cittadini (i Comuni), e solo se questi non riescono ad assolverle in modo adeguato, le funzioni salgono ai livelli superiori.
+**Sussidiarietà** — principio per cui le funzioni amministrative sono attribuite al livello di governo più vicino ai cittadini (i Comuni), e solo se questi non riescono ad assolverle in modo adeguato, le funzioni salgono ai livelli superiori. Ha direzione **verticale** (tra livelli di governo) e **orizzontale** (favore per l'iniziativa privata e il coinvolgimento dei cittadini).
 
 **Differenziazione** — enti dello stesso livello territoriale possono avere competenze diverse in base alle proprie caratteristiche.
 
 **Adeguatezza** — le funzioni devono essere assegnate agli enti che abbiano strutture organizzative idonee ad esercitarle efficacemente.
 
-**Leale collaborazione** — principio giurisprudenziale che impone a Stato e Regioni di coordinarsi e collaborare nelle materie dove le loro competenze si intersecano, evitando comportamenti unilaterali.
+**Chiamata in sussidiarietà** — attribuzione allo Stato di funzioni amministrative in materie non di sua competenza esclusiva, ammessa solo per ragioni unitarie, con legge proporzionata e previa intesa/accordo con gli enti, nel rispetto della leale collaborazione.
+
+**Regionalismo differenziato** (art. 116, comma 3) — possibilità per le Regioni ordinarie di ottenere, previo accordo con lo Stato, forme particolari di autonomia in specifiche materie, legate alla definizione dei LEP e dei costi standard.
+
+**Potere estero delle Regioni** (art. 117, comma 9) — facoltà limitata di stipulare accordi con altri Stati (previa autorizzazione del MAE) e intese con enti territoriali stranieri, nelle sole materie di competenza regionale.
+
+**Leale collaborazione** — principio giurisprudenziale (e costituzionale, art. 118, comma 3) che impone a Stato e Regioni di coordinarsi e collaborare nelle materie dove le loro competenze si intersecano, evitando comportamenti unilaterali; fondamento del regionalismo cooperativo.
 
 **Conferenza Stato-Regioni** — sede permanente di confronto tra Governo e Regioni; esprime pareri e intese su atti governativi che incidono sulle competenze regionali.
 
-**Potere sostitutivo** — potere del Governo di surrogarsi agli enti locali inadempienti (tramite atto diretto o commissario ad acta) previa diffida; analogo potere spetta alle Regioni nei confronti degli enti locali.
+**Potere sostitutivo** — potere del Governo di surrogarsi agli enti locali inadempienti (tramite atto diretto o commissario ad acta) previa diffida; analogo potere spetta alle Regioni nei confronti degli enti locali. Presupposti ex art. 120.2: violazione di norme UE/internazionali, pericolo per la sicurezza, minaccia all'unità giuridico-economica, tutela dei LEP.
 
-**Federalismo fiscale** — sistema in cui gli enti territoriali hanno autonomia finanziaria di entrata (tributi propri, compartecipazioni) e di spesa, con meccanismi perequativi a favore dei territori con minore capacità fiscale.
+**Federalismo fiscale** — sistema in cui gli enti territoriali hanno autonomia finanziaria di entrata (tributi propri, compartecipazioni) e di spesa, con meccanismi perequativi a favore dei territori con minore capacità fiscale; fondato su territorialità delle imposte e costi/fabbisogni standard (legge 42/2009).
 
 **Fondo perequativo** — fondo statale che assegna risorse aggiuntive agli enti territoriali economicamente più deboli per garantire la copertura integrale delle loro funzioni.
 
 **Costi standard** — metodo per calcolare il finanziamento alle Regioni in base al costo effettivo e "virtuoso" delle singole prestazioni, in sostituzione della "spesa storica" che premiava l'inefficienza.
 
+**LEP** (Livelli essenziali delle prestazioni) — soglie di prestazioni concernenti i diritti civili e sociali che devono essere garantite uniformemente su tutto il territorio nazionale; parametro per il finanziamento degli enti su base di costi e fabbisogni standard.
+
 **Simul stabunt, simul cadent** — principio per cui la caduta del Presidente della Regione (o del Sindaco) determina automaticamente lo scioglimento del Consiglio e nuove elezioni per entrambi gli organi.
 
-**Separazione tra politica e amministrazione** — principio per cui agli organi politici spetta l'indirizzo, ai dirigenti spetta la gestione; i dirigenti hanno poteri propri e una propria responsabilità (dirigenziale).
+**Separazione tra politica e amministrazione** — principio per cui agli organi politici spetta l'indirizzo, ai dirigenti spetta la gestione; i dirigenti hanno poteri propri e una propria responsabilità (dirigenziale). La Corte costituzionale lo qualifica come "norma fondamentale di una legge di grande riforma economico-sociale".
 
 **Responsabilità dirigenziale** — conseguenza del mancato raggiungimento degli obiettivi fissati dagli organi politici: l'incarico dirigenziale può essere revocato.
 
 **Spoils system** — prassi per cui al cambio di governo vengono sostituiti i vertici dell'amministrazione; legittimo dalla Corte costituzionale solo per le posizioni di diretta collaborazione con l'organo politico.
 
+**Rapporto di servizio / rapporto organico** — il primo è il rapporto di lavoro stabile tra dipendente ed ente; il secondo imputa direttamente all'ente gli atti compiuti dal funzionario in qualità di organo.
+
+**Privatizzazione del pubblico impiego** — assimilazione del rapporto di lavoro pubblico a quello privato (codice civile, contratti collettivi negoziati dall'ARAN), con delegificazione dell'organizzazione.
+
 **Principio di legalità** (amministrativo) — l'amministrazione può agire solo nei modi e nei limiti previsti dalla legge (vincolo positivo), a differenza del privato che è libero entro i limiti della legge (vincolo negativo).
 
-**Imparzialità** (art. 97 Cost.) — divieto per l'amministrazione di effettuare discriminazioni arbitrarie; obbligo di valutare tutti gli interessi coinvolti nella decisione.
+**Riserva di legge** (art. 97) — sull'organizzazione dei pubblici uffici; è **relativa** (la legge fissa le linee generali) e **rafforzata** (deve assicurare buon andamento e imparzialità).
+
+**Imparzialità** (art. 97 Cost.) — divieto per l'amministrazione di effettuare discriminazioni arbitrarie; obbligo di valutare tutti gli interessi coinvolti nella decisione e di perseguire solo le finalità obiettivate dalla legge (collegamento con l'art. 3).
 
 **Buon andamento** (art. 97 Cost.) — obbligo dell'amministrazione di operare con efficienza (miglior rapporto mezzi/risultati) e efficacia (raggiungimento degli obiettivi).
+
+**Discrezionalità amministrativa** — facoltà di scegliere se, quando e con quale contenuto agire, ponderando l'interesse pubblico primario con gli interessi secondari rilevanti; assente negli atti vincolati. Distinta dalla **discrezionalità tecnica** (scelta su base tecnico-scientifica) e dal mero accertamento tecnico.
+
+**Eccesso di potere** — vizio di legittimità del provvedimento relativo all'esercizio della discrezionalità, accertato tramite figure sintomatiche (contraddittorietà, illogicità, manifesta ingiustizia); insieme a incompetenza e violazione di legge è uno dei tre vizi di legittimità (atto annullabile), distinti dalla nullità (mancanza di un elemento essenziale).
+
+**Imperatività, esecutività, esecutorietà** — caratteri del provvedimento: incidenza unilaterale sulla sfera del destinatario; immediata produzione di effetti; (nei soli casi di legge) esecuzione coattiva diretta senza intervento del giudice.
+
+**Riparto di giurisdizione** — criterio di riparto tra giudice ordinario (diritti soggettivi, può disapplicare l'atto) e giudice amministrativo (interessi legittimi, può annullarlo e, in ottemperanza, sostituirsi con commissario ad acta); superato in via eccezionale dalla giurisdizione esclusiva (art. 103).
+
+**Ricorsi amministrativi** — strumenti di tutela davanti alla stessa PA: ricorso gerarchico e in opposizione (ordinari), ricorso straordinario al Presidente della Repubblica (solo legittimità, atti definitivi).
 
 **Procedimento amministrativo** — sequenza di atti preordinati all'adozione del provvedimento finale (fasi: iniziativa, istruttoria, costitutiva, integrativa dell'efficacia).
 
@@ -2234,7 +2806,9 @@ La scelta di non ricorrere al mercato (in house o azienda speciale) richiede una
 
 **Conferenza di servizi** — riunione tra tutte le amministrazioni coinvolte in un procedimento per una valutazione contestuale degli interessi, evitando l'andirivieni dei documenti; può essere semplificata (asincrona, telematica) o simultanea (con riunione).
 
-**Accesso civico** — diritto di chiunque di richiedere alle PA documenti e informazioni, anche senza dimostrare un interesse personale specifico (introdotto dal d.lgs. 97/2016, FOIA italiano).
+**Accesso documentale** (artt. 22 ss. l. 241/1990) — diritto di prendere visione dei documenti spettante a chi vanta un interesse diretto, attuale e concreto collegato al documento.
+
+**Accesso civico** — diritto di chiunque di richiedere alle PA documenti e informazioni, anche senza dimostrare un interesse personale specifico (introdotto dal d.lgs. 97/2016, FOIA italiano); si distingue in "semplice" (pubblicazione di atti già obbligatori) e "generalizzato" (ulteriori atti non soggetti a pubblicazione obbligatoria).
 
 **ANAC** (Autorità Nazionale Anticorruzione) — autorità amministrativa indipendente che vigila sulla prevenzione della corruzione e sulla trasparenza nelle PA, e regola il settore degli appalti pubblici.
 
@@ -2244,8 +2818,19 @@ La scelta di non ricorrere al mercato (in house o azienda speciale) richiede una
 
 **Affidamento in house** — affidamento diretto di un servizio pubblico a una società interamente pubblica che soddisfi il requisito del controllo analogo (influenza determinante dell'ente sulla società) e dello svolgimento prevalente dell'attività a favore dell'ente (almeno 80% del fatturato).
 
+**Beni demaniali / patrimoniali** — i primi inalienabili e non gravabili (demanio necessario: marittimo, idrico, militare; eventuale: strade, beni storico-artistici); i secondi indisponibili (vincolati alla destinazione) o disponibili (regole del codice civile).
+
+**Tributi** — imposte (dovute per capacità contributiva; dirette/indirette), tasse (per fruizione di servizi pubblici) e contributi speciali (per vantaggi da attività amministrativa).
+
+**Equilibrio di bilancio** (legge cost. 1/2012) — principio costituzionale che ha sostituito il divieto di nuovi tributi/spese con la legge di bilancio; attuato dalla legge 243/2012, garantisce la sostenibilità del debito; indebitamento ammesso solo per investimenti.
+
+**Organi ausiliari** (artt. 99-100) — CNEL (consulenza economico-sociale), Consiglio di Stato (consulenza giuridico-amministrativa e giurisdizione amministrativa d'appello), Corte dei conti (controllo sulle finanze pubbliche e giurisdizione contabile).
+
+**Autorità amministrative indipendenti** — apparati separati dall'influenza governativa, con componenti non revocabili, dotati di poteri regolamentari, amministrativi, di controllo e sanzionatori in funzione paragiurisdizionale (es. IVASS, AGCM, ANAC).
+
 
 ---
+
 
 # I. Fonti del diritto: nozioni generali
 
@@ -2255,11 +2840,19 @@ La scelta di non ricorrere al mercato (in house o azienda speciale) richiede una
 
 Nel linguaggio giuridico, **fonte del diritto** è l'atto o il fatto abilitato dall'ordinamento a produrre norme giuridiche, cioè a innovare l'ordinamento stesso. La definizione è in parte circolare: è l'ordinamento a indicare i modi in cui si forma e si rinnova.
 
+Va distinto, all'interno delle norme dell'ordinamento, tra:
+- **Norme sulla produzione**: stabiliscono chi e come può produrre diritto (requisiti di validità ed efficacia delle fonti).
+- **Norme di produzione**: sono le norme di comportamento effettivamente prodotte dalle fonti.
+
+Oltre alle fonti legalmente riconosciute, in situazioni straordinarie o rivoluzionarie possono emergere atti o comportamenti **esterni al sistema legale** che producono ugualmente norme vincolanti (è il caso del potere costituente).
+
 ### 1.2 Norme di riconoscimento
 
 Gli ordinamenti moderni si istituiscono attraverso un **processo costituente**. È la Costituzione a indicare le fonti immediatamente inferiori ad essa, dette **fonti primarie** (leggi e atti equiparati). Saranno poi queste a regolare le fonti ancora inferiori (**fonti secondarie**).
 
 Le norme che indicano quali fonti sono abilitate a innovare l'ordinamento si chiamano **norme di riconoscimento** o **fonti sulla produzione delle norme**. In Italia, gli artt. 70-81 Cost. svolgono questo compito per le fonti primarie.
+
+Un problema rilevante dell'ordinamento italiano è la **mancanza di una norma sulla produzione che elenchi in modo completo** tutte le fonti. Per questo l'individuazione delle fonti di produzione passa attraverso un duplice accertamento: l'esistenza di una **norma di riconoscimento** che attribuisce la competenza a produrre norme, e la sussistenza di un **contenuto effettivamente normativo** dell'atto.
 
 ---
 
@@ -2271,6 +2864,8 @@ Le **fonti di cognizione** non producono diritto: sono gli strumenti attraverso 
 
 - **Fonti ufficiali**: la **Gazzetta Ufficiale della Repubblica italiana** (G.U.) è la principale; pubblicano anche i Bollettini Ufficiali Regionali (B.U.R.) e la Gazzetta Ufficiale dell'Unione europea (GUUE).
 - **Fonti non ufficiali**: repertori privati, banche dati, riviste specializzate — utili alla conoscenza ma privi di valore legale.
+
+Talvolta la fonte di cognizione è **necessaria per l'entrata in vigore** dell'atto (la pubblicazione è condizione di efficacia); in altri casi serve solo a garantire la **conoscibilità** del diritto vigente.
 
 ### 2.2 Pubblicazione ufficiale ed entrata in vigore
 
@@ -2290,6 +2885,8 @@ Le fonti di produzione si distinguono in due categorie fondamentali:
 - **Fonti-atto** (atti normativi): espressioni di volontà normativa di un soggetto cui l'ordinamento attribuisce il potere di porre norme giuridiche. Implicano un agire volontario di un organo abilitato.
 - **Fonti-fatto** (fatti normativi): categoria residuale — tutte le fonti riconosciute dall'ordinamento non perché prodotte dalla volontà di un soggetto determinato, ma per il semplice "fatto" di esistere e di essere richiamate dall'ordinamento.
 
+La distinzione si sovrappone in larga parte a quella tra **diritto scritto e diritto non scritto**: le fonti-atto sono tipicamente fonti scritte (redazione formale), mentre le fonti-fatto sono tipicamente non scritte (come le consuetudini), pur potendo essere successivamente formalizzate.
+
 ### 3.2 Tipicità delle fonti-atto
 
 Ogni atto normativo deve manifestarsi nelle forme specifiche previste dall'ordinamento per essere riconoscibile. La **forma tipica** è data da:
@@ -2304,6 +2901,8 @@ La **consuetudine** è la fonte-fatto per eccellenza storica. Si forma attravers
 
 - Elemento **oggettivo** (**diuturnitas**): comportamento sociale ripetuto nel tempo.
 - Elemento **soggettivo** (**opinio juris seu necessitatis**): convinzione che tale comportamento sia giuridicamente obbligatorio.
+
+Nell'ordinamento italiano la consuetudine occupa l'ultimo gradino della gerarchia delle fonti: secondo l'**art. 8 delle Preleggi**, gli usi hanno efficacia nelle materie regolate dalle leggi e dai regolamenti **soltanto quando sono espressamente richiamati** da esse.
 
 Oggi la consuetudine è quasi scomparsa dagli ordinamenti codificati come quello italiano. Restano pochi richiami nel codice civile, in materia contrattuale. Le raccolte tenute dalle Camere di commercio sono semplici fonti di cognizione degli usi, non fonti di produzione.
 
@@ -2347,13 +2946,39 @@ Esempi: le disposizioni di diritto internazionale privato e il rinvio alle consu
 
 L'atto normativo è un documento scritto articolato in **disposizioni** (enunciati imperativi). Dall'interpretazione delle disposizioni si ricavano le **norme** (i significati normativi applicabili al caso concreto). La distinzione disposizione/norma è fondamentale: una stessa disposizione può esprimere norme diverse a seconda del contesto.
 
+Spesso la norma non si ricava da una sola disposizione, ma dal **combinato disposto** di due o più disposizioni (lettura congiunta di più articoli per ricavarne un'ulteriore norma).
+
 ### Il compito dell'interprete
 
 Il linguaggio è ambiguo per natura. Il legislatore — organo politico, spesso collegiale — produce disposizioni che possono essere incongruenti, contraddittorie, lacunose. È compito dell'**interprete** (in primo luogo il giudice, poi l'amministrazione) ricavare dalle disposizioni norme univoche e coerenti, attraverso le tecniche interpretative elaborate in oltre duemila anni di scienza giuridica.
 
+L'interpretazione è svolta da **tecnici nominati** e non da legislatori eletti: ciò comporta il rischio che, data la natura soggettiva dell'interpretazione, l'interprete finisca per assumere di fatto un ruolo "legislativo" pur senza investitura elettorale.
+
 Il modello logico dell'applicazione è il **sillogismo giudiziale**: premessa maggiore (la norma) + premessa minore (il fatto) = conclusione (applicazione della norma al caso). Ma sia la norma sia il fatto sono frutto di interpretazione, non dati preesistenti.
 
 La **interpretazione autentica** è quella con cui il legislatore emana una nuova disposizione per precisare il significato di una precedente: non è vera interpretazione ma legislazione aggiuntiva.
+
+### I criteri dell'interpretazione (art. 12 Preleggi)
+
+L'**art. 12, comma 1, delle Preleggi** fissa la regola di base: «Nell'applicare la legge non si può ad essa attribuire altro senso che quello fatto palese dal **significato proprio delle parole** secondo la **connessione** di esse, e dalla **intenzione del legislatore**». Quest'ultima rinvia alla **ratio legis**, cioè lo scopo per cui la legge è stata prodotta.
+
+Nell'ordinamento attuale l'interpretazione deve inoltre essere **conforme a Costituzione**: la presenza della Costituzione orienta la lettura di tutte le norme. (Esempio: il codice penale Rocco, di impianto statualista, mirava a proteggere il cittadino in funzione dello Stato; oggi la norma penale va letta come tutela diretta del cittadino, posto al centro.)
+
+### Tipi di interpretazione
+
+- **Letterale**: fa riferimento al significato proprio delle parole.
+- **Sistematica**: ricava la norma a seconda del contesto, valorizzando la collocazione della disposizione nell'ordinamento.
+- **Teleologica**: guarda alla finalità (scopo) della disposizione per ricavarne la norma.
+- **Storico-evolutiva**: adatta la norma all'evoluzione del contesto storico (es. le norme sulla libertà di manifestazione del pensiero, che ammettono «ogni mezzo» di diffusione, si applicano anche ai nuovi media nati con l'evoluzione tecnologica).
+
+### Le lacune e la completezza dell'ordinamento
+
+Quando una controversia non può essere decisa con una precisa disposizione (lacuna), l'**art. 12, comma 2, delle Preleggi** indica la via per integrarla:
+
+- **Analogia legis**: si applicano le disposizioni che regolano casi simili o materie analoghe.
+- **Analogia iuris**: se il caso resta dubbio, si decide secondo i **principi generali dell'ordinamento giuridico dello Stato** (norme di portata più ampia, ricavate anche da interpretazioni precedenti).
+
+L'**art. 14 delle Preleggi** pone però un **divieto di analogia** per le leggi eccezionali e per le leggi penali (in coerenza con la riserva di legge e il principio di legalità in materia penale): la norma penale non può essere estesa per analogia a danno dell'imputato.
 
 ---
 
@@ -2361,7 +2986,11 @@ La **interpretazione autentica** è quella con cui il legislatore emana una nuov
 
 Le **antinomie** sono i contrasti tra norme: si verificano quando due disposizioni esprimono significati incompatibili (permettono e vietano lo stesso comportamento, ecc.).
 
-Quando l'interpretazione sistematica non basta a rendere le norme compatibili, l'interprete ricorre a quattro criteri:
+Quando l'interpretazione sistematica non basta a rendere le norme compatibili, l'interprete ricorre a quattro criteri. Una possibile classificazione li distingue in:
+- **Criteri storico-positivi** (scritti, posti dall'ordinamento): il criterio **gerarchico** e il criterio della **competenza**.
+- **Criteri logico-teoretici** (ricavabili per ragionamento logico): il criterio **cronologico** e il criterio di **specialità**.
+
+I quattro criteri sono:
 
 1. **Criterio cronologico** — risolve le antinomie tra norme di pari grado emanate in tempi diversi.
 2. **Criterio gerarchico** — risolve le antinomie tra norme di grado diverso.
@@ -2376,7 +3005,7 @@ Quando l'interpretazione sistematica non basta a rendere le norme compatibili, l
 
 **Lex posterior derogat priori**: in caso di contrasto tra due norme, prevale quella più recente. Questo riflette il carattere dinamico degli ordinamenti moderni.
 
-La prevalenza della norma nuova si esprime attraverso l'**abrogazione**: l'effetto che la norma più recente produce nei confronti di quella precedente, consistente nella **cessazione dell'efficacia** di quest'ultima.
+La prevalenza della norma nuova si esprime attraverso l'**abrogazione**: l'effetto che la norma più recente produce nei confronti di quella precedente, consistente nella **cessazione dell'efficacia** di quest'ultima. L'abrogazione opera **automaticamente** con l'entrata in vigore della nuova legge; la norma precedente resta peraltro efficace fino a quel momento.
 
 ### 7.2 Irretroattività
 
@@ -2384,7 +3013,7 @@ Vige il **principio di irretroattività**: le norme dispongono solo per il futur
 
 ### 7.3 Effetti temporali dell'abrogazione
 
-L'abrogazione opera **ex nunc** (da ora in poi): la vecchia norma cessa di essere la regola dei rapporti futuri, ma continua a regolare i rapporti sorti prima dell'entrata in vigore del nuovo atto.
+L'abrogazione opera **ex nunc** (da ora in poi): la vecchia norma cessa di essere la regola dei rapporti futuri, ma continua a regolare i rapporti sorti prima dell'entrata in vigore del nuovo atto (gli effetti normativi già prodotti restano fermi).
 
 ### 7.4 Tipi di abrogazione
 
@@ -2406,6 +3035,18 @@ L'art. 15 delle Preleggi prevede tre tipi:
 ### 8.1 Il principio
 
 **Lex superior derogat legi inferiori**: in caso di contrasto tra norme, prevale quella di grado gerarchicamente superiore. Tutti gli ordinamenti moderni sono strutturati su una gerarchia di fonti (Costituzione → fonti primarie → fonti secondarie → consuetudini).
+
+La **scala gerarchica** delle fonti nell'ordinamento italiano può schematizzarsi così:
+
+1. **Costituzione**.
+2. **Fonti di rango costituzionale**: leggi di revisione costituzionale e altre leggi costituzionali (art. 138).
+3. **Fonti primarie**: gli atti aventi forza di legge, subordinati solo alle fonti costituzionali — leggi ordinarie, decreti-legge, decreti legislativi, referendum abrogativo, regolamenti parlamentari e leggi regionali (nelle materie di competenza).
+4. **Fonti secondarie** (in particolare i regolamenti, disciplinati dalla legge 400/1988): subordinate sia alle fonti costituzionali sia a quelle primarie — regolamenti governativi, ministeriali, provinciali e comunali.
+5. **Usi e consuetudini**: efficaci, ex art. 8 Preleggi, solo se espressamente richiamati dalle leggi e dai regolamenti.
+
+Le fonti primarie sono dotate della tipica **forza di legge**, che ha due aspetti:
+- **Forza (di legge) attiva**: capacità di innovare l'ordinamento, abrogando le fonti precedenti di pari grado (per il criterio cronologico).
+- **Forza (di legge) passiva**: capacità di resistere alle modifiche provenienti da altre fonti, in particolare da quelle di rango inferiore.
 
 La prevalenza della norma superiore si esprime attraverso l'**annullamento**: una dichiarazione di illegittimità pronunciata da un giudice, a seguito della quale l'atto perde **validità**. L'annullamento riguarda situazioni **patologiche** dell'ordinamento (al contrario dell'abrogazione, che riguarda il ricambio fisiologico).
 
@@ -2431,7 +3072,7 @@ Il criterio è meno codificato degli altri (vi è solo un accenno nell'art. 15 c
 
 ## 10. Il criterio della competenza
 
-Il criterio della competenza non fornisce una regola risolutiva delle antinomie come i precedenti: serve invece a **spiegare la struttura del sistema delle fonti** nell'ambito dello stesso grado gerarchico.
+Il criterio della competenza non fornisce una regola risolutiva delle antinomie come i precedenti: serve invece a **spiegare la struttura del sistema delle fonti** nell'ambito dello stesso grado gerarchico. Distingue le fonti in senso **orizzontale**, cioè in base alla sfera di competenza riservata a ciascuna e all'autorità da cui provengono: tra due norme dello stesso livello prevale quella **competente**, mentre quella incompetente è annullata (es. nei rapporti tra leggi statali e leggi regionali).
 
 Il problema nasce dall'introduzione della Costituzione rigida: accanto alla legge formale, esistono altri atti di pari forza a cui la Costituzione assegna competenze specifiche. Esempi:
 - I **regolamenti parlamentari**, competenti a disciplinare il procedimento di formazione delle leggi.
@@ -2445,11 +3086,11 @@ In caso di conflitto, il criterio della competenza può ricondursi al criterio g
 
 ### 11.1 Definizioni
 
-Il **principio di legalità** impone che l'esercizio di qualsiasi potere pubblico si fondi su una previa norma attributiva della competenza. La sua ratio è assicurare un uso regolato, non arbitrario e controllabile del potere. La nostra Costituzione lo dà per presupposto (artt. 23, 25.2, 101.2, 113).
+Il **principio di legalità** impone che l'esercizio di qualsiasi potere pubblico si fondi su una previa norma attributiva della competenza: nessun atto delle autorità è legittimo se non subordinato alla legge. È il fondamento della subordinazione delle fonti secondarie (atti di autorità) alle fonti primarie. La sua ratio è assicurare un uso regolato, non arbitrario e controllabile del potere. La nostra Costituzione lo dà per presupposto (artt. 23, 25.2, 101.2, 113).
 
 Si distinguono:
-- **Legalità formale**: basta che esista una norma attributiva della competenza.
-- **Legalità sostanziale**: la legge deve anche limitare e indirizzare la discrezionalità dell'autorità agente con norme specifiche.
+- **Legalità formale**: basta che esista una norma attributiva della competenza, cioè che l'atto trovi nella legge il proprio fondamento.
+- **Legalità sostanziale**: la legge deve anche limitare e indirizzare la discrezionalità dell'autorità agente con norme specifiche, indicando presupposti, modi, forma e condizioni per l'esercizio del potere.
 
 La **riserva di legge** è lo strumento con cui la Costituzione impone che determinate materie siano disciplinate dalla legge, escludendo o limitando l'intervento di fonti sub-legislative (i regolamenti). È significativa solo in un sistema a Costituzione rigida.
 
@@ -2462,13 +3103,18 @@ La **riserva di legge** è lo strumento con cui la Costituzione impone che deter
 
 **Riserva di legge formale ordinaria:** impone che intervenga il solo atto prodotto dal procedimento parlamentare (legge in senso formale), con esclusione degli atti con forza di legge del Governo. Utilizzata quando il Parlamento deve controllare l'operato del Governo (artt. 76-80, 81 Cost.).
 
-**Riserva assoluta:** esclude qualsiasi intervento di fonti sub-legislative; la materia è integralmente riservata alla legge. Ricorre soprattutto in materia di libertà fondamentali (es. art. 13.2 Cost. sulla libertà personale). Spesso affiancata dalla **riserva di giurisdizione** (l'atto limitativo deve essere autorizzato dal giudice caso per caso).
+**Riserva assoluta:** esclude qualsiasi intervento di fonti sub-legislative; la materia è integralmente riservata alla legge. È ammesso al più un regolamento di **stretta esecuzione**. Ricorre soprattutto in materia di libertà fondamentali (es. art. 13.2 Cost. sulla libertà personale). Spesso affiancata dalla **riserva di giurisdizione** (l'atto limitativo deve essere autorizzato dal giudice caso per caso).
 
-**Riserva relativa:** consente il concorso del regolamento amministrativo, ma richiede che la legge disciplini almeno i principi. Esempio: art. 97.1 Cost. sull'organizzazione dei pubblici uffici. Vincola sia il legislatore (che deve porre la disciplina generale) sia l'esecutivo (vincolato al principio di legalità sostanziale).
+**Riserva relativa:** consente il concorso del regolamento amministrativo, ma richiede che la legge disciplini almeno i principi. Esempi: art. 97.1 Cost. sull'organizzazione dei pubblici uffici; la materia tributaria. Vincola sia il legislatore (che deve porre la disciplina generale) sia l'esecutivo (vincolato al principio di legalità sostanziale).
 
-**Riserve rinforzate:** la Costituzione non si limita a riservare la materia alla legge, ma pone ulteriori vincoli:
+**Riserve rinforzate:** la Costituzione non si limita a riservare la materia alla legge, ma pone ulteriori vincoli — indicando non solo il settore ma anche i criteri, le finalità e le condizioni dell'intervento (es. materia della salute):
 - **Per contenuto**: la legge può intervenire solo con contenuti specifici (es. artt. 14.3, 16.1, 43).
 - **Per procedimento**: la legge deve seguire un procedimento aggravato rispetto a quello ordinario (es. artt. 7, 8, 79, 116.3). La ratio è tutelare le minoranze (religiose o locali) imponendo il loro consenso.
+
+**Chi può soddisfare la riserva di legge.** Salvo che si tratti di riserva di legge formale (parlamentare), la riserva è rispettata — oltre che dalla legge ordinaria — anche da:
+- gli **atti con forza di legge** (decreti-legge e decreti legislativi), tranne quando la riserva è di legge parlamentare e mira proprio a far controllare il Governo;
+- le **leggi regionali**, se competenti per materia;
+- le **norme dell'Unione europea**.
 
 ---
 
@@ -2489,13 +3135,15 @@ La **riserva di legge** è lo strumento con cui la Costituzione impone che deter
 
 **Norme di riconoscimento** — norme che indicano quali fonti sono abilitate a produrre diritto in un dato ordinamento; in Italia: artt. 70-81 Cost. per le fonti primarie.
 
+**Norme sulla produzione / norme di produzione** — le prime stabiliscono chi e come può produrre diritto; le seconde sono le norme di comportamento effettivamente prodotte dalle fonti.
+
 **Fonte di cognizione** — strumento per conoscere le fonti di produzione (es. Gazzetta Ufficiale); non produce diritto.
 
 **Vacatio legis** — periodo di sospensione degli effetti dell'atto normativo dopo la pubblicazione (di regola 15 giorni) per consentirne la conoscenza.
 
-**Fonte-atto** — fonte prodotta dalla volontà di un organo abilitato dall'ordinamento; deve rispettare forma e procedimento tipici.
+**Fonte-atto** — fonte prodotta dalla volontà di un organo abilitato dall'ordinamento; deve rispettare forma e procedimento tipici. Tipicamente diritto scritto.
 
-**Fonte-fatto** — fonte riconosciuta dall'ordinamento indipendentemente dalla volontà di un soggetto determinato (consuetudini, norme UE, norme di diritto internazionale privato).
+**Fonte-fatto** — fonte riconosciuta dall'ordinamento indipendentemente dalla volontà di un soggetto determinato (consuetudini, norme UE, norme di diritto internazionale privato). Tipicamente diritto non scritto.
 
 **Diuturnitas** — elemento oggettivo della consuetudine: comportamento sociale costante e prolungato nel tempo.
 
@@ -2508,6 +3156,18 @@ La **riserva di legge** è lo strumento con cui la Costituzione impone che deter
 **Disposizione** — enunciato scritto contenuto nell'atto normativo; il testo della legge come è scritto.
 
 **Norma** — il significato ricavato dall'interpretazione di una o più disposizioni; la regola applicabile al caso concreto.
+
+**Combinato disposto** — norma ricavata dalla lettura congiunta di due o più disposizioni.
+
+**Ratio legis** — lo scopo per cui una legge è stata prodotta; corrisponde all'"intenzione del legislatore" richiamata dall'art. 12 Preleggi.
+
+**Interpretazione conforme a Costituzione** — criterio per cui, tra i possibili significati di una disposizione, si preferisce quello compatibile con la Costituzione.
+
+**Tipi di interpretazione** — letterale (significato delle parole), sistematica (contesto/collocazione), teleologica (finalità), storico-evolutiva (adeguamento al contesto storico).
+
+**Analogia legis / analogia iuris** — tecniche per colmare le lacune (art. 12 Preleggi): la prima applica norme su casi simili o materie analoghe; la seconda ricorre ai principi generali dell'ordinamento. Vietate per le leggi penali ed eccezionali (art. 14 Preleggi).
+
+**Forza di legge (attiva/passiva)** — forza attiva: capacità della fonte primaria di innovare l'ordinamento abrogando le precedenti; forza passiva: capacità di resistere alle modifiche di altre fonti.
 
 **Antinomia** — contrasto tra norme che qualificano lo stesso comportamento in modo incompatibile.
 
@@ -2530,6 +3190,7 @@ La **riserva di legge** è lo strumento con cui la Costituzione impone che deter
 
 ---
 
+
 # II. La Costituzione
 
 ## 1. I significati di "costituzione"
@@ -2550,6 +3211,13 @@ La costituzione come **fonte del diritto**: è la Costituzione di cui si occupan
 
 > Confondere questi tre significati è un errore metodologico grave, uno dei problemi centrali nell'interpretazione costituzionale.
 
+### Costituzione materiale e Costituzione vigente
+
+Dalla Costituzione scritta si distingue inoltre la **Costituzione materiale**, nozione resa celebre da **Costantino Mortati** (membro dell'Assemblea costituente):
+
+- **Costituzione materiale** — l'insieme dei valori, degli ideali e dei fini politici perseguiti dalle **forze politiche dominanti**, che diventano i pilastri caratterizzanti della struttura sociale dello Stato. Non coincide necessariamente con il testo scritto.
+- **Costituzione vigente** — il complesso delle norme effettivamente in vigore quale risulta dall'**applicazione e dall'interpretazione** del testo, in particolare ad opera della Corte costituzionale.
+
 ---
 
 ## 2. Potere costituente e poteri costituiti
@@ -2559,6 +3227,8 @@ Non tutti i sistemi politici possiedono un testo normativo chiamato Costituzione
 ### Il potere costituente
 
 Il **potere costituente** è il potere che dà vita alla Costituzione. Si definisce tradizionalmente come un "**potere libero**": non è vincolato da norme preesistenti, perché è esso stesso l'atto fondativo dell'ordinamento. Prima del potere costituente, non c'è diritto ma solo politica e forza.
+
+Il potere costituente si esercita **una volta tantum** (una sola volta, all'atto fondativo): da esso va tenuto distinto il **potere di revisione costituzionale**, che spetta al Parlamento e opera **dentro** i limiti già fissati dalla Costituzione.
 
 In realtà, il potere costituente non è mai del tutto privo di condizionamenti:
 - **Condizionamenti giuridici**: possono derivare da atti precedenti (es. in Italia, l'esito del referendum monarchia/repubblica del 1946 vincolò l'Assemblea costituente a scrivere una Costituzione repubblicana — e questo limite fu "trascritto" nell'art. 139, che vieta di modificare la forma repubblicana).
@@ -2572,6 +3242,15 @@ Con l'entrata in vigore della Costituzione si esaurisce il potere costituente e 
 
 Il passaggio dal fascismo alla Repubblica avvenne attraverso fasi complesse (luglio 1943 → patto di Salerno → referendum del 2 giugno 1946 → Assemblea costituente → Costituzione in vigore dal 1° gennaio 1948). L'Assemblea costituente fu eletta il 2 giugno 1946 — le prime elezioni a suffragio universale (incluso quello femminile) in Italia — e approvò il testo definitivo il 22 dicembre 1947 con quasi il 90% dei voti.
 
+Le principali tappe storiche del passaggio dal regime fascista alla Repubblica:
+- **1922** — Marcia su Roma.
+- **Legge elettorale n. 2444/1923** e istituzione del **Gran Consiglio del Fascismo**; Testo Unico di Pubblica Sicurezza con stretto controllo sui cittadini; divieto del diritto di riunione dei lavoratori e creazione delle corporazioni gestite dallo Stato.
+- **1928** — il Gran Consiglio del Fascismo diviene organo costituzionale; soppressione di diritti e libertà (stampa, sindacato, ecc.).
+- **1938** — leggi razziali (cui oggi risponde, in senso opposto, l'art. 3 Cost., che vieta ogni discriminazione).
+- **25 luglio 1943** — il Re revoca e destituisce Mussolini e nomina Badoglio, con un governo di militari e tecnici.
+- **1944** — Patto di Salerno (con Togliatti): i partiti antifascisti appoggiano il governo; il Re nomina luogotenente il figlio Umberto e si rinvia al dopoguerra la scelta tra monarchia e repubblica e l'elezione dell'Assemblea costituente.
+- **giugno 1946 – dicembre 1947** — l'Assemblea costituente redige la Costituzione, limitando il potere esecutivo per evitare la "tirannia della maggioranza".
+
 ---
 
 ## 3. Costituzioni flessibili e costituzioni rigide
@@ -2583,11 +3262,13 @@ Il passaggio dal fascismo alla Repubblica avvenne attraverso fasi complesse (lug
 
 Le costituzioni flessibili sono tipiche dell'**Ottocento** (brevi, concesse dal sovrano — "ottriate"). Le costituzioni rigide sono tipiche del **Novecento** (lunghe, frutto di compromesso tra più forze politiche).
 
+> Il modello del **controllo di legittimità costituzionale** affidato a un giudice nacque negli **Stati Uniti** (la Corte Suprema fu la prima a esercitare un sindacato di costituzionalità sulle leggi). Lo Statuto Albertino, costituzione flessibile, non prevedeva nulla di simile.
+
 ### La costituzione flessibile: lo Statuto Albertino
 
 Le costituzioni dell'Ottocento segnavano la fine del potere assoluto: il sovrano accettava di non governare da solo e di sottopporsi alla legge, intesa come prodotto dell'accordo tra il Re e il Parlamento. L'unica norma veramente fondamentale era quella che regolava il **procedimento legislativo**. Le garanzie delle libertà erano affidate alla legge, che poteva plasmarle a piacimento.
 
-Lo **Statuto Albertino** (1848) ne è il prototipo: nessuna norma ne prevedeva la revisione, ma era pacifico che si potesse modificare con il consenso del Re e delle Camere. Questa flessibilità permise la deriva fascista in forme apparentemente "legali".
+Lo **Statuto Albertino** ne è il prototipo: fu la prima costituzione italiana, **concessa da Carlo Alberto** ("octroyée") nel **1848** ed estesa, con l'Unità d'Italia, all'intero Regno nel **1861**. Nessuna norma ne prevedeva la revisione, ma era pacifico che potesse essere modificato con il consenso del Re e delle Camere (proprio perché flessibile, bastava una legge ordinaria). Inizialmente configurava una **monarchia costituzionale**, evoluta poi in **monarchia parlamentare** con l'affermarsi del rapporto di fiducia tra Governo e Parlamento. Questa flessibilità permise la deriva fascista in forme apparentemente "legali".
 
 > Le costituzioni flessibili guardavano al passato (sanzione di una rottura irrevocabile), non al futuro: in esse l'aspetto di "manifesto politico" prevaleva sulla funzione normativa.
 
@@ -2606,6 +3287,17 @@ Le costituzioni rigide nascono da un **compromesso** tra forze politiche, religi
 ### Quanto è rigida la Costituzione italiana?
 
 Tra le costituzioni moderne, la Costituzione italiana è paradossalmente quella **più facile da modificare**. Il procedimento previsto dall'art. 138 è macchinoso ma non insuperabile: richiede due deliberazioni successive di ciascuna Camera con un intervallo di tre mesi e una maggioranza assoluta; se la maggioranza raggiunta è inferiore ai 2/3, è possibile indire un **referendum confermativo**. Le difficoltà nel modificarla dipendono da ragioni politiche, non giuridiche. (Da notare: la revisione costituzionale del 2016, approvata a maggioranza assoluta, fu bocciata dal referendum del 4 dicembre 2016 con larga maggioranza di "no".)
+
+#### Il procedimento dell'art. 138 in dettaglio
+
+Le leggi di revisione costituzionale e le altre leggi costituzionali sono adottate da **ciascuna Camera con due deliberazioni successive**, a intervallo non minore di **tre mesi**. Nella **seconda votazione** si possono dare due esiti:
+
+1. **Maggioranza dei 2/3** dei componenti di ciascuna Camera → la legge è approvata in via definitiva e si procede direttamente alla promulgazione (nessun referendum possibile).
+2. **Maggioranza assoluta** (ma inferiore ai 2/3) → la legge è pubblicata in Gazzetta Ufficiale e, entro **tre mesi**, soggetti qualificati (un quinto dei membri di una Camera, 500.000 elettori o cinque Consigli regionali) possono chiedere un **referendum confermativo (oppositivo)**. Se prevalgono i "sì" la legge è promulgata; altrimenti è definitivamente bloccata. Per il referendum costituzionale **non è previsto alcun quorum di partecipazione**: è valido qualunque sia l'affluenza.
+
+#### I limiti alla revisione
+
+La revisione costituzionale incontra dei **limiti**. Oltre al **limite espresso** dell'**art. 139 Cost.** (la forma repubblicana non può essere oggetto di revisione), la Corte costituzionale ha individuato dei **limiti impliciti**: i **principi supremi** e i **diritti inviolabili** della Costituzione, intangibili anche con legge costituzionale (es. il principio democratico, l'unità della giurisdizione dello Stato, la leale collaborazione tra Stato e Regioni, il diritto di agire e difendersi in giudizio, la determinatezza della legge penale).
 
 ---
 
@@ -2634,7 +3326,7 @@ Un difetto reale della Costituzione fu il rinvio a leggi ordinarie dell'attuazio
 
 ### 4.2. Contenuti
 
-La Costituzione si articola nelle seguenti parti:
+La Costituzione è un **unico documento solenne**, scritto e rigido, composto da **139 articoli**. Si articola nelle seguenti parti:
 
 #### Principi fondamentali (artt. 1-12)
 Dodici articoli che contengono norme di principio, spesso in tensione tra loro, tratte dai diversi manifesti politici dei costituenti. Tra i più importanti:
@@ -2663,6 +3355,9 @@ Disciplina l'organizzazione costituzionale dello Stato:
 - **Titolo V**: le Regioni e le autonomie locali.
 - **Titolo VI**: le garanzie costituzionali (Corte costituzionale, revisione della Costituzione).
 
+#### Disposizioni transitorie e finali
+Al testo si aggiungono, in chiusura, **diciotto disposizioni transitorie e finali** (numerate con cifre romane, da I a XVIII), destinate a regolare il passaggio dal vecchio al nuovo ordinamento.
+
 #### Una nota terminologica fondamentale
 Il manuale distingue con precisione:
 - **Disposizioni**: gli enunciati scritti nel testo della Costituzione.
@@ -2681,15 +3376,25 @@ Il manuale distingue con precisione:
 
 **Costituzione come testo normativo** — fonte del diritto posta al vertice della gerarchia delle fonti, da cui derivano diritti, doveri e regole giuridicamente vincolanti.
 
-**Potere costituente** — potere "libero" (non vincolato da norme preesistenti) che fonda l'ordinamento attraverso l'emanazione della Costituzione; si esaurisce con essa.
+**Costituzione materiale (Mortati)** — l'insieme dei valori, ideali e fini politici perseguiti dalle forze politiche dominanti; non coincide necessariamente con il testo scritto.
+
+**Costituzione vigente** — il complesso delle norme effettivamente in vigore quale risulta dall'applicazione e dall'interpretazione del testo, in particolare ad opera della Corte costituzionale.
+
+**Potere costituente** — potere "libero" (non vincolato da norme preesistenti) che fonda l'ordinamento attraverso l'emanazione della Costituzione; si esercita una volta tantum e si esaurisce con essa.
 
 **Poteri costituiti** — tutti i poteri che operano all'interno dei limiti fissati dalla Costituzione (Parlamento, Governo, Presidente della Repubblica, magistratura, ecc.).
+
+**Potere di revisione** — potere, spettante al Parlamento, di modificare la Costituzione operando entro i limiti da essa fissati; va distinto dal potere costituente.
 
 **Costituzione flessibile** — costituzione modificabile con la normale attività legislativa, senza procedimento aggravato; tipica dell'Ottocento (es. Statuto Albertino).
 
 **Costituzione rigida** — costituzione modificabile solo attraverso un procedimento aggravato rispetto a quello ordinario; garantita da un giudice costituzionale; tipica del Novecento.
 
-**Revisione costituzionale** — procedimento formale per modificare il testo della Costituzione; in Italia disciplinato dall'art. 138 (doppia deliberazione, maggioranze qualificate, eventuale referendum confermativo).
+**Statuto Albertino** — prima costituzione italiana, concessa da Carlo Alberto nel 1848 ed estesa a tutto il Regno nel 1861; flessibile (modificabile con legge ordinaria), passò dalla monarchia costituzionale a quella parlamentare e non prevedeva controllo di costituzionalità.
+
+**Revisione costituzionale** — procedimento formale per modificare il testo della Costituzione; in Italia disciplinato dall'art. 138 (doppia deliberazione a distanza di tre mesi, maggioranza assoluta o dei 2/3, eventuale referendum confermativo senza quorum).
+
+**Limiti alla revisione** — limite espresso dell'art. 139 (forma repubblicana) e limiti impliciti dei principi supremi e dei diritti inviolabili (intangibili anche con legge costituzionale).
 
 **Assemblea costituente** — organo eletto il 2 giugno 1946 con il compito di redigere la Costituzione repubblicana italiana, approvata il 22 dicembre 1947 ed entrata in vigore il 1° gennaio 1948.
 
@@ -2706,6 +3411,7 @@ Il manuale distingue con precisione:
 
 ---
 
+
 # III. Le fonti dell'ordinamento italiano: Stato — Parte 1 (pp. 378-410)
 
 ---
@@ -2716,6 +3422,16 @@ Il manuale distingue con precisione:
 
 La **Costituzione della Repubblica italiana del 1948** è il **vertice della gerarchia delle fonti**: tutte le altre norme devono essere conformi ad essa per essere valide. È una **Costituzione rigida**, il che significa che non può essere modificata con il procedimento legislativo ordinario ma richiede un iter aggravato.
 
+**Struttura del testo costituzionale** — La Costituzione si compone di **139 articoli**, preceduti da **dodici articoli di "Principi fondamentali"** e seguiti da **diciotto disposizioni transitorie e finali**. Gli articoli sono ripartiti in due parti:
+- **Parte prima — "Diritti e doveri dei cittadini"** (artt. 13-54);
+- **Parte seconda — "Ordinamento della Repubblica"** (artt. 55-139).
+
+È una Costituzione **scritta e rigida**, racchiusa in un unico documento solenne.
+
+**Costituzione materiale e Costituzione vigente** — Dalla Costituzione scritta si distinguono due nozioni dottrinali:
+- **Costituzione materiale**: nozione elaborata da **Costantino Mortati** (membro dell'Assemblea costituente); è l'insieme dei valori, degli ideali e dei fini politici perseguiti dalle forze politiche dominanti, che divengono i pilastri caratterizzanti della struttura del corpo sociale dello Stato.
+- **Costituzione vigente**: il complesso delle norme contenute nel documento scritto come risultano dall'applicazione e dall'**interpretazione** delle stesse, in primo luogo quella resa dalla Corte costituzionale.
+
 ### 1.2 Il procedimento di revisione costituzionale (art. 138 Cost.)
 
 Per approvare una **legge costituzionale** (sia una modifica della Costituzione, sia una legge che essa stessa prevede) si segue un procedimento più complesso di quello ordinario. Le fasi sono:
@@ -2725,6 +3441,8 @@ Per approvare una **legge costituzionale** (sia una modifica della Costituzione,
 3. **Seconda deliberazione** in ciascuna Camera (senza possibilità di emendamenti):
    - **Prima ipotesi**: se entrambe le Camere approvano con **maggioranza dei 2/3**, la legge è definitiva e il Presidente della Repubblica la promulga.
    - **Seconda ipotesi**: se si raggiunge solo la **maggioranza assoluta** (metà più uno dei membri), il testo viene pubblicato in Gazzetta Ufficiale e si apre una finestra di **tre mesi** entro cui può essere richiesto un **referendum costituzionale confermativo**.
+
+> **Memo art. 138**: due deliberazioni per ciascuna Camera, intervallo non minore di tre mesi, e nella seconda votazione almeno la **maggioranza assoluta** dei componenti di ciascuna Camera.
 
 **Chi può chiedere il referendum costituzionale:**
 - 500.000 elettori
@@ -2744,6 +3462,8 @@ Non tutto il testo costituzionale è modificabile.
 - Il carattere **uno e indivisibile** della Repubblica (art. 5), che esclude qualsiasi secessione legale
 - Tutte le libertà e garanzie individuali indispensabili a definire "democratico" un ordinamento
 
+A titolo esemplificativo, tra i **principi supremi e diritti inviolabili** sottratti alla revisione vengono richiamati: il **principio democratico**, l'**unità della giurisdizione** dello Stato, la **leale collaborazione** tra Stato e Regioni, il **diritto di agire e difendersi in giudizio** e la **determinatezza della legge penale**.
+
 ---
 
 ## 2. Legge formale ordinaria e atti con forza di legge
@@ -2752,6 +3472,10 @@ Non tutto il testo costituzionale è modificabile.
 
 **Legge formale** — atto normativo prodotto dalla deliberazione delle Camere e promulgato dal Presidente della Repubblica. La "forma" è data dal procedimento, non dal contenuto. Con questo procedimento si producono sia leggi ordinarie sia leggi costituzionali.
 
+La **legge ordinaria dello Stato** è la fonte primaria per eccellenza, cui è riconosciuta la tipica **forza di legge**: è approvata da entrambe le Camere nel medesimo testo (artt. 70-72), promulgata dal Presidente della Repubblica **entro un mese** dall'approvazione e pubblicata in Gazzetta Ufficiale subito dopo la promulgazione. Salvo diverso termine stabilito dalla legge stessa, essa **entra in vigore 15 giorni dopo la pubblicazione** (cd. *vacatio legis*, art. 73 Cost.).
+
+**Le fonti subcostituzionali (o primarie)** sono quelle dotate dell'idoneità a innovare le norme vigenti, subordinatamente alle sole norme di rango costituzionale.
+
 **Atti con forza di legge** — atti normativi che *non* hanno la forma della legge (non deliberati dalle Camere), ma sono equiparati ad essa nella gerarchia delle fonti:
 - Hanno la stessa **forza attiva**: possono abrogare le leggi ordinarie
 - Hanno la stessa **forza passiva**: possono essere abrogati solo da leggi di pari grado
@@ -2759,6 +3483,10 @@ Non tutto il testo costituzionale è modificabile.
 **Fonti primarie** = leggi formali ordinarie + atti con forza di legge
 
 **Fonti secondarie** = regolamenti amministrativi (grado inferiore)
+
+> **Leggi in senso formale e in senso materiale** — Una distinzione utile a classificare le fonti primarie:
+> - **Leggi in senso soltanto formale**: hanno la forma della legge ma non modificano l'assetto legislativo vigente (es. legge di approvazione del rendiconto consuntivo dello Stato, art. 81, e legge di autorizzazione alla ratifica dei trattati, art. 80).
+> - **Leggi in senso soltanto materiale**: hanno la **forza** di legge ma non la **forma** della legge; sono cioè gli atti aventi forza di legge (decreti legislativi e decreti-legge) che, pur adottati con forma diversa, sono capaci di innovare le norme legislative vigenti.
 
 ### 2.2 Tipicità e tassatività delle fonti primarie
 
@@ -2852,11 +3580,17 @@ Le **leggi rinforzate** sono leggi ordinarie il cui procedimento di formazione �
 - Alcune riforme recenti richiedono la **maggioranza assoluta** delle Camere (es. legge per forme particolari di autonomia regionale ex art. 116; legge di bilancio rinforzata ex art. 81 Cost.).
 - Le leggi rinforzate sono anche **fonti atipiche**: hanno forza attiva e passiva particolari rispetto alle leggi ordinarie.
 
+Si dicono "rinforzate" proprio perché la loro **validità** è subordinata al rispetto di **presupposti, condizioni e limiti** (procedurali o di contenuto) specificamente imposti dalla Costituzione, che si riflettono di regola anche nella loro forma esteriore. Esempi tipici sono le leggi previste dagli **artt. 132 e 133 Cost.** (modifiche territoriali di Regioni, Province e Comuni).
+
 **Regola fondamentale**: il rinforzo del procedimento può essere previsto solo da norme costituzionali, non da leggi ordinarie (che potrebbero essere abrogate o derogate da qualsiasi altra legge di pari grado).
 
 ### 4.2 Fonti atipiche
 
 Le **fonti atipiche** sono atti che hanno la forma della legge ma una posizione anomala nel sistema delle fonti per quanto riguarda forza attiva o passiva.
+
+> **Nota terminologica** — Negli appunti la categoria delle leggi che si allontanano dal modello generale viene chiamata **leggi atipiche**, distinte in:
+> - **leggi atipiche in senso stretto** (o **a forza passiva rinforzata**): caratterizzate da una peculiare forza attiva o passiva diversa da quella comune; in esse è modificato il **rapporto** con le altre fonti primarie (es. le leggi non abrogabili con referendum, art. 75);
+> - **leggi rinforzate**: condizionate dalla necessaria presenza di presupposti procedurali o di contenuti imposti dalla Costituzione (es. artt. 132-133).
 
 **Tipologie principali:**
 
@@ -2889,6 +3623,8 @@ La delega deve contenere **tre contenuti necessari**, la cui mancanza rende ille
 2. **Tempo limitato** — la delega non può essere permanente; deve indicare il termine entro cui il decreto deve essere emanato. Se il termine supera i due anni, il Governo deve sottoporre lo schema di decreto al parere delle Commissioni parlamentari competenti.
 
 3. **Principi e criteri direttivi** — la legge di delega deve indicare i principi e gli obiettivi che guidano l'esercizio del potere delegato. La Corte costituzionale ritiene che la carenza di principi riduca l'ampiezza del potere normativo conferito al Governo, più che rendere illegittima la legge di delega stessa.
+
+> **Memo (i tre limiti dell'art. 76)**: **oggetti definiti**, **tempo limitato**, **principi e criteri direttivi**. La legge di delega va approvata dalle Camere con il procedimento ordinario; il procedimento di formazione del decreto legislativo è disciplinato dalla **legge 400/1988**.
 
 **Ulteriori vincoli:**
 - La delega può essere conferita **solo al Governo nella sua collegialità** (Consiglio dei ministri), non ai singoli ministri.
@@ -2927,6 +3663,8 @@ Il **decreto-legge** è un atto con forza di legge adottato dal Governo in "casi
 
 - **Entra in vigore immediatamente** dopo la pubblicazione in Gazzetta Ufficiale.
 - Ha effetti **provvisori**: decade retroattivamente se il Parlamento non lo converte in legge entro **60 giorni** dalla pubblicazione.
+
+Il Governo adotta "provvedimenti provvisori con forza di legge" che devono essere presentati il **medesimo giorno** alle Camere per la conversione (art. 77, c. 2). I decreti-legge acquistano efficacia di atti aventi forza di legge **sin dal momento della pubblicazione**, ma la perdono "**sin dall'inizio**" se non convertiti entro 60 giorni (art. 77, c. 3): la mancata conversione comporta dunque la **decadenza retroattiva** dell'atto, che viene meno non solo per il futuro ma anche per il passato (salvo la possibilità per il Parlamento di disciplinare i rapporti giuridici già sorti, quando il ripristino sia impossibile o inopportuno).
 
 **Materie vietate** (art. 15 legge 400/1988 e Costituzione): il decreto-legge non può essere emanato nelle materie coperte da **riserva di assemblea** (leggi costituzionali, elettorali, di delegazione, bilancio, ratifica trattati) né può conferire deleghe legislative.
 
@@ -2971,13 +3709,15 @@ La legge di conversione non può contenere emendamenti **estranei all'oggetto** 
 Oltre al decreto legislativo e al decreto-legge, l'ordinamento prevede altri due tipi di atti con forza di legge:
 
 - **Decreti del Governo in caso di guerra** (art. 78 Cost.): le Camere deliberano lo stato di guerra e conferiscono al Governo i poteri necessari — forma estrema di delegazione legislativa per situazioni belliche.
-- **Decreti legislativi di attuazione degli Statuti delle Regioni speciali**: previsti dalle leggi costituzionali che hanno approvato i singoli Statuti regionali (Valle d'Aosta, Trentino-Alto Adige, Friuli-Venezia Giulia, Sardegna, Sicilia).
+- **Decreti legislativi di attuazione degli Statuti delle Regioni speciali**: previsti dalle leggi costituzionali che hanno approvato i singoli Statuti regionali (Valle d'Aosta, Trentino-Alto Adige, Friuli-Venezia Giulia, Sardegna, Sicilia). Sono adottati dal Governo previo parere di una **Commissione paritetica** (componenti nominati per metà dal Governo e per metà dal Consiglio regionale interessato) ed emanati dal Capo dello Stato. Sono fonti di rango **primario** e a **competenza riservata**, con cui il Governo può dettare in via permanente (senza limiti temporali) le norme di attuazione, purché "nell'ambito dello spirito dello statuto e delle sue finalità".
 
 ---
 
 ## Concetti chiave
 
 **Costituzione rigida** — Costituzione modificabile solo con un procedimento aggravato rispetto a quello legislativo ordinario; garantisce la stabilità dei principi fondamentali.
+
+**Costituzione materiale** — Nozione elaborata da Costantino Mortati: l'insieme dei valori e dei fini politici delle forze dominanti, distinta dalla Costituzione "vigente" (le norme scritte come applicate e interpretate).
 
 **Revisione costituzionale** — Procedimento di modifica della Costituzione disciplinato dall'art. 138, che prevede quattro deliberazioni parlamentari e l'eventuale referendum confermativo.
 
@@ -2986,6 +3726,10 @@ Oltre al decreto legislativo e al decreto-legge, l'ordinamento prevede altri due
 **Principi supremi** — Nuclei della Costituzione (forma repubblicana, sovranità popolare, diritti inviolabili, unità e indivisibilità) che resistono anche alla revisione costituzionale.
 
 **Legge formale** — Atto normativo prodotto dalla deliberazione di Camera e Senato e promulgato dal Presidente della Repubblica; la "forma" è data dal procedimento.
+
+**Legge in senso solo formale / solo materiale** — La prima ha la forma ma non innova l'ordinamento (es. bilancio, autorizzazione a ratifica); la seconda ha la forza di legge ma non la forma (decreti legislativi e decreti-legge).
+
+**Vacatio legis** — Intervallo di 15 giorni tra pubblicazione in Gazzetta Ufficiale ed entrata in vigore della legge, salvo diverso termine stabilito dalla legge stessa (art. 73 Cost.).
 
 **Atti con forza di legge** — Atti normativi non deliberati dalle Camere ma equiparati alla legge ordinaria nella gerarchia delle fonti (stesso rango attivo e passivo); sono tipici e tassativi.
 
@@ -2997,7 +3741,9 @@ Oltre al decreto legislativo e al decreto-legge, l'ordinamento prevede altri due
 
 **Navette** — Il ripetuto passaggio del progetto di legge da una Camera all'altra fino all'approvazione del medesimo testo.
 
-**Legge rinforzata** — Legge il cui procedimento di formazione è più complesso di quello ordinario per previsione costituzionale; ha anche forza attiva e passiva peculiari rispetto alle leggi comuni.
+**Legge rinforzata** — Legge il cui procedimento di formazione è più complesso di quello ordinario per previsione costituzionale; ha anche forza attiva e passiva peculiari rispetto alle leggi comuni (es. artt. 132-133 Cost.).
+
+**Legge atipica in senso stretto (a forza passiva rinforzata)** — Legge caratterizzata da una forza attiva o passiva diversa da quella comune, che modifica il rapporto con le altre fonti primarie (es. leggi non abrogabili con referendum, art. 75).
 
 **Legge meramente formale** — Atto che ha necessariamente la forma della legge ma non introduce norme nuove a effetto generale (es. legge di bilancio, legge di autorizzazione alla ratifica dei trattati).
 
@@ -3063,6 +3809,8 @@ Gli Statuti delle Regioni a **autonomia speciale** (leggi costituzionali) preved
 - Proposto da una **commissione paritetica** (metà Governo + metà assemblea regionale).
 - Ha forza di legge e **competenza specifica e riservata**, senza necessità di delega parlamentare.
 
+Funzione: assicurare il **costante adeguamento** degli statuti speciali all'evoluzione dell'ordinamento statale. Il Governo può intervenire **in via permanente** (senza limiti temporali), purché entro lo "spirito dello statuto e delle sue finalità"; sono fonti di rango primario, subordinate agli statuti stessi.
+
 ---
 
 ## 3. Regolamenti parlamentari (e di altri organi costituzionali)
@@ -3073,6 +3821,8 @@ Il **regolamento parlamentare** è l'atto cui l'art. 64 Cost. riserva la discipl
 
 La loro approvazione richiede la **maggioranza assoluta** e sono pubblicati in Gazzetta Ufficiale. L'autonomia delle Camere, in quanto organi costituzionali, implica che la riserva di regolamento costituisce un limite all'applicazione delle leggi ordinarie e delle altre fonti generali.
 
+> **Attenzione a non confondere**: i **regolamenti parlamentari** (art. 64 Cost.) sono **fonti primarie**; i **regolamenti governativi** sono invece **fonti secondarie** (v. §5).
+
 ### 3.2. Forza di legge e sindacabilità
 
 I regolamenti parlamentari non hanno "forza di legge" nel senso tecnico del termine (forza attiva di abrogare leggi ordinarie e forza passiva di resistere all'abrogazione): il loro rapporto con le altre fonti primarie è di **reciproca esclusione per competenza**, non di gerarchia. Metaforicamente, i muri del Parlamento tracciano il confine tra due sfere normative separate.
@@ -3080,6 +3830,12 @@ I regolamenti parlamentari non hanno "forza di legge" nel senso tecnico del term
 La Corte costituzionale ha a lungo escluso di poter sindacare i regolamenti parlamentari (sent. 154/1985), riconoscendo l'indipendenza delle Camere anche dalla propria giurisdizione. Solo in sede di **conflitto di attribuzioni** la Corte ha accettato di occuparsene (sentt. 120/2014 e 262/2017).
 
 ### 3.3. Regolamenti degli altri organi costituzionali
+
+I regolamenti "interni" degli altri organi costituzionali (cd. **fonti a competenza riservata**) non sono previsti direttamente dalla Costituzione, ma da **leggi ordinarie**; sono talora subordinati alle sole disposizioni costituzionali che ne garantiscono l'ambito di intervento. Rientrano in questo gruppo:
+- i **regolamenti previsti da legge**;
+- i **regolamenti della Presidenza della Repubblica**;
+- i **regolamenti della Corte costituzionale**;
+- il **regolamento interno del Consiglio dei ministri**.
 
 - **Governo**: non gode della stessa autonomia, poiché l'art. 95.3 Cost. pone una riserva di legge per l'organizzazione dei ministeri. Il regolamento interno del Consiglio dei ministri (d.P.C.M. del 1993) è fonte secondaria, fondata sulla legge 400/1988.
 - **Presidente della Repubblica**: adotta regolamenti per i servizi della Presidenza, ma si tratta di strumenti di gestione amministrativa interna, non fonti dell'ordinamento generale. La Corte cost. (sent. 262/2017) ne ha riconosciuto il fondamento costituzionale nell'esigenza di garantire l'indipendenza della Presidenza.
@@ -3094,6 +3850,8 @@ La Corte costituzionale ha a lungo escluso di poter sindacare i regolamenti parl
 Il **referendum** è la richiesta rivolta al corpo elettorale di esprimersi direttamente su una questione. È uno strumento di **democrazia diretta** (art. 1.2 Cost.) e, in quanto tale, una deroga al principio rappresentativo.
 
 La Costituzione prevede quattro tipi di referendum. Nell'ambito delle fonti statali, solo il **referendum abrogativo** svolge una funzione effettivamente normativa: secondo la Corte costituzionale (sent. 29/1987) è un **atto-fonte dell'ordinamento dello stesso rango della legge ordinaria**.
+
+È una **fonte a competenza limitata**, perché l'abrogazione non può operare nelle materie indicate dall'art. 75 Cost. né può violare gli altri limiti impliciti dedotti dalla Corte costituzionale in sede di giudizio di ammissibilità. È inoltre una **fonte unidirezionalmente vincolata**: idonea soltanto ad abrogare leggi e atti legislativi, mai ad approvare nuove leggi.
 
 ### 4.2. Caratteri essenziali
 
@@ -3161,18 +3919,26 @@ Tre conseguenze importanti derivano dalla natura secondaria dei regolamenti:
 
 ### 5.4. Tipologia dei regolamenti governativi (art. 17.1 legge 400/1988)
 
-- **Regolamenti di esecuzione**: adottati senza autorizzazione specifica, assicurano l'operatività della legge con norme applicative o procedurali. Possono essere emanati anche in materie con riserva assoluta di legge, purché si limitino agli strumenti amministrativi senza integrare la fattispecie legislativa.
-- **Regolamenti di attuazione**: emanati per attuare e integrare leggi o decreti legislativi contenenti norme di principio (tipico schema della riserva di legge relativa: la legge fissa i principi, il regolamento disciplina i dettagli). Richiedono un'esplicita previsione nella legge da attuare.
+- **Regolamenti di esecuzione**: adottati senza autorizzazione specifica, assicurano l'operatività della legge con norme applicative o procedurali. Possono essere emanati anche in materie con riserva assoluta di legge, purché si limitino agli strumenti amministrativi senza integrare la fattispecie legislativa. Eseguono leggi, decreti legislativi e anche regolamenti dell'Unione europea.
+- **Regolamenti di attuazione**: emanati per attuare e integrare leggi o decreti legislativi contenenti norme di principio (tipico schema della riserva di legge relativa: la legge fissa i principi, il regolamento disciplina i dettagli). Richiedono un'esplicita previsione nella legge da attuare. Sono **escluse** però le normative di principio relative a materie di competenza regionale.
 - **Regolamenti indipendenti**: operano in materie non ancora disciplinate dalla legge e non coperte da riserva di legge. Il loro spazio è estremamente ridotto, data l'ipertrofia legislativa italiana e i limiti dell'art. 117.6 Cost.
-- **Regolamenti di organizzazione**: residuo storico dell'epoca prerepubblicana, oggi assimilabili ai regolamenti di esecuzione o attuazione, con una tendenza crescente verso l'autonomia dell'esecutivo nella strutturazione della pubblica amministrazione (la legge 59/1997 ha aggiunto il comma 4-bis all'art. 17 legge 400/1988, favorendo la "delegificazione" in questo settore).
+- **Regolamenti di organizzazione**: disciplinano l'organizzazione e il funzionamento delle amministrazioni pubbliche "secondo le disposizioni dettate dalla legge", con una discrezionalità innovativa accentuata. Residuo storico dell'epoca prerepubblicana, oggi assimilabili ai regolamenti di esecuzione o attuazione, con una tendenza crescente verso l'autonomia dell'esecutivo nella strutturazione della pubblica amministrazione (la legge 59/1997 ha aggiunto il comma 4-bis all'art. 17 legge 400/1988, favorendo la "delegificazione" in questo settore).
 
 ### 5.5. La delegificazione
 
-L'art. 17.2 della legge 400/1988 disciplina i **regolamenti delegati o autorizzati**, strumento della cosiddetta **delegificazione**: il passaggio della disciplina di una materia dal livello legislativo al livello regolamentare.
+L'art. 17.2 della legge 400/1988 disciplina i **regolamenti delegati o autorizzati**, strumento della cosiddetta **delegificazione**: il passaggio della disciplina di una materia dal livello legislativo al livello regolamentare. In sintesi, la delegificazione è l'**abbassamento del livello della normazione**, da quello legislativo a quello regolamentare (o comunque sublegislativo).
 
 Il meccanismo è preciso: poiché il regolamento non può da solo abrogare una legge (violerebbe la gerarchia delle fonti), è la **legge ordinaria stessa** a disporre l'abrogazione della normativa precedente, facendone però decorrere l'effetto dalla data di entrata in vigore del regolamento sostitutivo. La legge deve determinare le "norme generali regolatrici della materia" e il regolamento si limita a svilupparne i principi.
 
 > **Delegificazione ≠ deregolamentazione ≠ semplificazione**: tre concetti distinti. La delegificazione abbassa il livello normativo (da legge a regolamento). La deregolamentazione (deregulation) riduce il numero delle regole per liberare il mercato. La semplificazione alleggerisce i procedimenti burocratici. Spesso confuse nel dibattito politico, le tre misure possono coesistere o contraddirsi.
+
+### 5.6. Le ordinanze di necessità e urgenza
+
+Accanto ai regolamenti, l'ordinamento prevede atti che, sulla base di norme di legge, operano **non in circostanze ordinarie** ma solo al verificarsi concreto di situazioni di necessità ed emergenza. A differenza dei regolamenti (a contenuto tipico), queste **ordinanze** hanno **contenuto atipico**, modellato sulle contingenze. Esempi:
+- le **ordinanze di necessità** (potere dispositivo dell'amministrazione in circostanze eccezionali di urgenza e necessità);
+- le **ordinanze prefettizie**;
+- le **ordinanze di protezione civile**;
+- i **d.P.C.M.** utilizzati nella gestione della pandemia da Covid-19 (v. §6).
 
 ---
 
@@ -3192,9 +3958,11 @@ La gestione della pandemia Covid-19 (2020) ha costituito un banco di prova eccez
 
 **Commissione paritetica** — Organo misto (Governo + assemblea regionale) che propone i decreti legislativi di attuazione degli Statuti speciali delle Regioni a autonomia differenziata.
 
+**Fonti a competenza riservata** — Regolamenti interni degli organi costituzionali (Corte costituzionale, Presidenza della Repubblica, Consiglio dei ministri), previsti da legge ordinaria e con ambito di intervento garantito da norme costituzionali.
+
 **Regolamento parlamentare** — Fonte primaria, approvata a maggioranza assoluta da ciascuna Camera, con competenza riservata sull'organizzazione e il funzionamento delle Camere stesse; non ha forza di legge in senso tecnico, ma esclude le leggi ordinarie dalla propria sfera per competenza.
 
-**Referendum abrogativo** — Atto-fonte del medesimo rango della legge ordinaria (Corte cost., sent. 29/1987); consente al corpo elettorale di abrogare leggi statali. Richiede il quorum della maggioranza assoluta degli aventi diritto al voto.
+**Referendum abrogativo** — Atto-fonte del medesimo rango della legge ordinaria (Corte cost., sent. 29/1987); consente al corpo elettorale di abrogare leggi statali. Fonte a competenza limitata e unidirezionalmente vincolata (solo abroga, non crea norme). Richiede il quorum della maggioranza assoluta degli aventi diritto al voto.
 
 **Referendum manipolativo** — Referendum abrogativo che, eliminando selettivamente parole o frasi dal testo normativo, produce norme nuove (esempio: referendum elettorale del Senato del 1993).
 
@@ -3207,6 +3975,10 @@ La gestione della pandemia Covid-19 (2020) ha costituito un banco di prova eccez
 **Regolamento di attuazione** — Tipo di regolamento governativo che integra leggi contenenti norme di principio (schema della riserva di legge relativa); richiede una previsione esplicita nella legge da attuare.
 
 **Regolamento indipendente** — Tipo di regolamento governativo emanato in materie non coperte da legge né da riserva di legge; ha uno spazio operativo molto ridotto nel sistema italiano.
+
+**Regolamento di organizzazione** — Regolamento governativo che disciplina organizzazione e funzionamento delle pubbliche amministrazioni "secondo le disposizioni della legge"; oggi assimilabile a quelli di esecuzione/attuazione.
+
+**Ordinanza di necessità e urgenza** — Atto a contenuto atipico adottato in situazioni eccezionali sulla base di norme di legge (ordinanze prefettizie, di protezione civile, d.P.C.M. emergenziali).
 
 **Delegificazione** — Meccanismo per cui una legge ordinaria dispone la propria abrogazione (e quella delle norme precedenti) con effetto differito all'entrata in vigore di un regolamento sostitutivo; abbassa il livello normativo della disciplina senza ridurne necessariamente la quantità.
 
@@ -3234,6 +4006,8 @@ Il sistema delle fonti europee si articola in due grandi categorie:
 - **Diritto convenzionale**: i **Trattati** (TUE e TFUE) con cui l'UE è stata istituita e modificata. Sono la fonte gerarchicamente suprema, assimilabili a una "Costituzione" dell'ordinamento europeo. La **Corte di giustizia dell'UE** ne garantisce il rispetto, compreso il controllo di legittimità del diritto derivato.
 - **Diritto derivato**: gli atti normativi prodotti dagli organi dell'UE in base ai poteri loro conferiti dai Trattati.
 
+> **Terminologia equivalente**: il diritto convenzionale è anche detto **diritto primario** dell'UE e comprende, oltre ai Trattati istitutivi, la **Carta dei diritti fondamentali dell'UE**; il diritto derivato è detto **diritto secondario**. Secondo la Corte di giustizia il diritto primario è gerarchicamente sovraordinato a quello secondario.
+
 #### 1.2. Tipologia delle fonti del diritto derivato
 
 Le fonti del diritto derivato si distinguono in **atti vincolanti** e **atti non vincolanti**.
@@ -3244,9 +4018,9 @@ Le fonti del diritto derivato si distinguono in **atti vincolanti** e **atti non
 
 **Atti vincolanti (fonti in senso stretto):**
 
-- **Regolamento UE**: ha portata generale (norme generali e astratte, non rivolte a soggetti determinati), è obbligatorio in tutti i suoi elementi e — caratteristica più rilevante — è **direttamente applicabile** in ogni Stato membro (art. 288.2 TFUE). Ciò significa che non occorre né è ammesso alcun atto statale di esecuzione: il regolamento si impone per forza propria a tutti, compresi giudici e pubblica amministrazione.
+- **Regolamento UE**: ha portata generale (norme generali e astratte, non rivolte a soggetti determinati), è obbligatorio in tutti i suoi elementi e — caratteristica più rilevante — è **direttamente applicabile** in ogni Stato membro (art. 288.2 TFUE). Ciò significa che non occorre né è ammesso alcun atto statale di esecuzione: il regolamento si impone per forza propria a tutti, compresi cittadini, imprese, giudici e pubblica amministrazione.
 
-- **Direttiva UE**: ha come destinatari gli **Stati membri** (non i singoli). Vincola lo Stato "quanto al risultato da raggiungere" (art. 288.3 TFUE), lasciandogli discrezionalità sulla scelta delle forme e dei mezzi (legge, regolamento, atti amministrativi). Nella prassi esistono **direttive dettagliate**, che riducono lo spazio discrezionale degli Stati per garantire un'attuazione uniforme.
+- **Direttiva UE**: ha come destinatari gli **Stati membri** (non i singoli). Vincola lo Stato "quanto al risultato da raggiungere" (art. 288.3 TFUE), lasciandogli discrezionalità sulla scelta delle forme e dei mezzi (legge, regolamento, atti amministrativi). Non è di regola direttamente applicabile. Nella prassi esistono **direttive dettagliate** e **direttive self-executing**, che riducono lo spazio discrezionale degli Stati per garantire un'attuazione uniforme.
 
 - **Decisione UE**: obbligatoria in tutti i suoi elementi e direttamente applicabile come il regolamento, ma ha **portata particolare**: si rivolge a soggetti specifici (uno Stato membro o una determinata persona giuridica). Non rientra nel concetto di fonte del diritto in senso stretto, poiché equivale funzionalmente a un provvedimento amministrativo.
 
@@ -3301,6 +4075,11 @@ La Corte ha adottato nel tempo criteri diversi per risolvere i conflitti tra leg
 
 - **Norme costituzionali vs. norme europee** — **teoria dei controlimiti**: le norme europee possono derogare a norme costituzionali "di dettaglio", ma non ai **principi fondamentali** della Costituzione. Se una norma europea viola un principio fondamentale, la strada è impugnare l'ordine di esecuzione del Trattato nella parte in cui consente l'ingresso di quella specifica norma nell'ordinamento italiano. Il **caso Taricco** (ord. 24/2017 + sent. 115/2018) ha mostrato come la minaccia di attivare i controlimiti possa innescare un dialogo tra Corte costituzionale e Corte di giustizia.
 
+> **Schema rapido dei conflitti (artt. 11 e 117.1 Cost.)**:
+> - **regolamento UE vs. legge italiana** → si applica la norma europea e si **disapplica/non applica** quella italiana;
+> - **direttiva (non self-executing) UE vs. legge italiana** → si solleva **questione di costituzionalità** sulla legge interna contrastante;
+> - il "**primato del diritto UE**" affermato dalla Corte di giustizia incontra però i **controlimiti**: i principi supremi e i diritti inviolabili della Costituzione italiana prevalgono sempre. Il diritto UE, inoltre, si modifica solo con trattati internazionali.
+
 #### 2.4. Giudici, amministrazione e rinvio pregiudiziale
 
 Giudici e amministrazioni sono "servitori di due padroni", vincolati all'applicazione sia del diritto italiano sia di quello europeo. I giudici dispongono però di uno strumento specifico: il **rinvio pregiudiziale alla Corte di giustizia** (art. 267 TFUE), utilizzabile per:
@@ -3317,12 +4096,32 @@ L'Italia ha storicamente avuto uno dei peggiori record nell'attuazione delle dir
 
 - La **legge 234/2012** (che ha sostituito la "legge La Pergola" del 1989) disciplina la partecipazione del Parlamento al processo decisionale europeo e l'adempimento degli obblighi comunitari.
 - Il **Parlamento approva ogni anno**:
-  - la **legge di delegazione europea**: delega al Governo per il recepimento di direttive e altri atti UE (disegno di legge da presentare entro il 28 febbraio);
-  - la **legge europea**: adegua le norme italiane a quelle europee per interrompere le **procedure d'infrazione** avviate dalla Commissione.
+  - la **legge di delegazione europea**: contiene le disposizioni per dare attuazione agli atti UE **non direttamente efficaci** (es. le direttive). L'attuazione può avvenire **direttamente** ad opera della legge stessa, oppure conferendo **deleghe legislative** al Governo (che emanerà i corrispondenti decreti legislativi), oppure autorizzandolo a intervenire con **regolamenti governativi**. Il relativo disegno di legge va presentato entro il 28 febbraio;
+  - la **legge europea**: dà **esecuzione diretta** (senza mediazione di atti dell'esecutivo) agli obblighi europei, modificando o abrogando le norme statali in contrasto, soprattutto per interrompere le **procedure d'infrazione** avviate dalla Commissione o a seguito di sentenze di inadempimento della Corte di giustizia.
 
 **Procedura d'infrazione**: la Commissione, rilevata un'inadempienza, invia una lettera di messa in mora, poi emana un parere motivato; se lo Stato non adempie, propone ricorso per inadempimento alla Corte di giustizia, che può condannare lo Stato e infliggere sanzioni pecuniarie.
 
 **Ruolo delle Regioni**: l'art. 117.5 Cost. consente alle Regioni di dare attuazione diretta agli atti UE nelle materie di loro competenza. Se una Regione è inerte, lo Stato può sostituirsi ad essa (artt. 117.5 e 120.2 Cost.), ma le norme statali adottate in sostituzione sono **cedevoli**: perdono efficacia quando la Regione adotta la propria disciplina. Lo Stato ha diritto di rivalsa nei confronti della Regione inadempiente (art. 43, legge 234/2012).
+
+---
+
+### 4. Il diritto internazionale e l'ordinamento interno
+
+L'ordinamento italiano entra in rapporto con altri ordinamenti e talora ne accoglie le norme, prodotte da un particolare genere di fonti. Il **diritto internazionale** si compone di due grandi categorie.
+
+#### 4.1. Diritto internazionale generale (consuetudinario)
+
+È il diritto **accettato e riconosciuto dalla comunità internazionale degli Stati nel loro complesso**. Scaturisce dal **diritto consuetudinario** (non scritto): le consuetudini generali si formano nei rapporti tra Stati al determinarsi dei due **elementi costitutivi della consuetudine**:
+- l'**usus** (la prassi ripetuta e costante);
+- l'**opinio iuris ac necessitatis** (la convinzione di osservare un comportamento giuridicamente doveroso).
+
+Esempi: i principi del **diritto marittimo**, del **diritto diplomatico** e del **diritto bellico**. In assenza di apposite norme, le Corti internazionali possono ricorrere anche ai **principi fondamentali riconosciuti dalle nazioni civili** (es. il divieto di schiavitù).
+
+**Adattamento automatico** — Ai sensi dell'**art. 10, c. 1 Cost.** (e art. 117.1), "l'ordinamento giuridico italiano si conforma alle norme del diritto internazionale generalmente riconosciute": l'adeguamento è **automatico**, senza necessità di un apposito atto interno. Secondo la Corte costituzionale (**sent. 48/1979**), queste norme possono anche **derogare alla Costituzione**, purché non ai suoi **principi fondamentali**.
+
+#### 4.2. Diritto pattizio (trattati)
+
+Il diritto internazionale è costituito anche dalle norme di **diritto scritto** risultanti dalle convenzioni internazionali (bilaterali o multilaterali), ossia dai **trattati** (art. 80 e art. 117.1 Cost.). Per i trattati l'adattamento **non è automatico**: occorre un apposito **ordine di esecuzione del trattato** (Corte cost. 32/1960, 104/1962, 323/1989). Per i trattati indicati nell'art. 80 Cost. l'ordine di esecuzione è contenuto all'interno della **legge di autorizzazione alla ratifica**.
 
 ---
 
@@ -3332,16 +4131,17 @@ L'Italia ha storicamente avuto uno dei peggiori record nell'attuazione delle dir
 
 #### 1.1. Statuti speciali e statuti ordinari
 
-Le Regioni italiane si dividono in Regioni **a statuto speciale** (5 Regioni + 2 Province autonome) e Regioni **a statuto ordinario** (15 Regioni).
+Le Regioni italiane si dividono in Regioni **a statuto speciale** (5 Regioni + 2 Province autonome) e Regioni **a statuto ordinario** (15 Regioni). Le Regioni a **autonomia speciale o differenziata** sono **Trentino-Alto Adige, Friuli-Venezia Giulia, Valle d'Aosta, Sardegna e Sicilia**: dispongono di forme e condizioni particolari di autonomia secondo i rispettivi statuti speciali adottati con legge costituzionale.
 
 **Statuti delle Regioni speciali:**
-- Adottati con **legge costituzionale** (art. 116 Cost.).
+- Adottati (e modificati) con **legge costituzionale** dalle Camere (art. 116 Cost.).
 - Definiscono i poteri della Regione in deroga alla disciplina comune del Titolo V.
 - Dopo la legge cost. 2/2001, le disposizioni sulla **forma di governo** possono essere modificate con una **legge regionale "rinforzata"** (approvata a maggioranza assoluta, sottoponibile a referendum approvativo), con conseguente "decostituzionalizzazione" parziale dello Statuto.
 
 **Statuti delle Regioni ordinarie:**
 - Sono **leggi regionali rinforzate** (non leggi costituzionali).
-- Dopo la riforma del 1999 (legge cost. 1/1999), il nuovo art. 123 Cost. attribuisce agli Statuti ordinari la disciplina integrale della **forma di governo** regionale, dei principi fondamentali di organizzazione e funzionamento, del diritto di iniziativa legislativa e del referendum regionale.
+- Dopo la riforma del 1999 (legge cost. 1/1999), il nuovo art. 123 Cost. attribuisce agli Statuti ordinari la disciplina integrale della **forma di governo** regionale, dei principi fondamentali di organizzazione e funzionamento, del diritto di iniziativa legislativa e del referendum regionale. Devono inoltre essere "in **armonia con la Costituzione**".
+- Sono direttamente approvati e modificati dai **Consigli regionali a maggioranza assoluta** dei componenti, con un procedimento che ricorda alla lontana quello delle leggi costituzionali. Oltre al contenuto costituzionalmente necessario, lo Statuto può avere un **contenuto eventuale**, lasciato alla libera determinazione politica degli organi regionali.
 - Procedimento: approvazione dal Consiglio regionale con **maggioranza assoluta** in due deliberazioni successive a distanza di almeno due mesi; poi eventuale **referendum approvativo** (richiesto da 1/50 degli elettori o 1/5 dei consiglieri); infine promulgazione del Presidente della Regione e pubblicazione sul BUR.
 
 Lo Statuto ordinario si pone come limite sia per le leggi statali (che non possono invaderne la materia riservata) sia per le leggi regionali (sulle quali ha forza gerarchica superiore in ragione del suo "rafforzamento" procedurale).
@@ -3356,10 +4156,11 @@ La **legge regionale** è una fonte primaria, equiparata alla legge statale per 
 
 #### 2.2. Procedimento
 
-Il procedimento ricalca quello statale:
-- **Iniziativa**: Giunta regionale, consiglieri regionali, e altri soggetti previsti dagli Statuti (corpo elettorale, enti locali).
-- **Approvazione**: in Consiglio regionale (generalmente a maggioranza relativa, con possibili maggioranze rinforzate per materie specifiche).
-- **Promulgazione**: da parte del Presidente della Regione e pubblicazione sul BUR.
+Il procedimento ricalca quello statale ed è disciplinato dalla Costituzione, dagli statuti regionali e dai **regolamenti consiliari** (dettati dal Consiglio regionale per disciplinare le proprie attività). Si distinguono fase dell'iniziativa, fase istruttoria e fase deliberante:
+- **Iniziativa**: singoli consiglieri regionali, Giunta regionale, e soggetti/enti estranei all'organizzazione regionale (iniziativa popolare di un certo numero di elettori, proposta di enti territoriali, ecc.).
+- **Fase istruttoria**: svolta nelle **Commissioni consiliari**, che agiscono per lo più come le Commissioni parlamentari **in sede referente**; talora con funzioni **redigenti**, ma **mai deliberanti** in sostituzione dell'intero Consiglio.
+- **Approvazione**: in Consiglio regionale (generalmente a maggioranza relativa, con possibili maggioranze rinforzate per materie specifiche); previa discussione generale, il Consiglio vota articolo per articolo e poi nel complesso.
+- **Promulgazione**: da parte del Presidente della Regione **entro dieci giorni** e pubblicazione sul BUR.
 - **Controllo**: solo successivo (il Governo può impugnare la legge dopo la pubblicazione dinanzi alla Corte costituzionale; il controllo preventivo è stato eliminato dalla riforma del 2001).
 
 #### 2.3. Estensione della potestà legislativa regionale
@@ -3368,9 +4169,9 @@ La riforma del **Titolo V** (legge cost. 3/2001) ha "rovesciato il guanto" delle
 
 **Art. 117 Cost. — schema tripartito:**
 
-- **Art. 117.2** — **Potestà legislativa esclusiva dello Stato**: diritto d'asilo, immigrazione, moneta, difesa, ordine pubblico, ordinamento civile e penale, previdenza sociale, tutela dell'ambiente e dei beni culturali, ecc.
-- **Art. 117.3** — **Potestà legislativa concorrente**: lo Stato fissa i "principi fondamentali della materia" (con le c.d. **leggi cornice**); le Regioni disciplinano il resto nel rispetto di tali principi. Materie: tutela della salute, istruzione, governo del territorio, commercio estero, ordinamento sportivo, protezione civile, ecc.
-- **Clausola residuale** — **Potestà legislativa residuale delle Regioni**: tutte le materie non incluse nei due elenchi spettano alle Regioni.
+- **Art. 117.2** — **Potestà legislativa esclusiva dello Stato**: diritto d'asilo, immigrazione, moneta, difesa, ordine pubblico, ordinamento civile e penale, previdenza sociale, tutela dell'ambiente e dei beni culturali, ecc. (lo Stato detta leggi e regolamenti).
+- **Art. 117.3** — **Potestà legislativa concorrente**: lo Stato fissa i "principi fondamentali della materia" (con le c.d. **leggi cornice**); le Regioni disciplinano il resto nel rispetto di tali principi (e a esse spetta la potestà regolamentare). Materie: tutela della salute, istruzione, governo del territorio, commercio estero, ordinamento sportivo, protezione civile, ecc.
+- **Clausola residuale** — **Potestà legislativa residuale delle Regioni**: tutte le materie non incluse nei due elenchi spettano alle Regioni (con relativa potestà regolamentare).
 
 **Fattori che complicano il riparto:**
 
@@ -3388,8 +4189,9 @@ La riforma del **Titolo V** (legge cost. 3/2001) ha "rovesciato il guanto" delle
 
 - Prima della riforma del 1999, il potere regolamentare spettava al **Consiglio regionale** (organo legislativo), rendendo il regolamento pressoché inutile.
 - Dopo la riforma (legge cost. 1/1999), gli **Statuti** disciplinano la titolarità e i modi della potestà regolamentare, generalmente attribuendola alla **Giunta** (organo esecutivo).
+- La dottrina prevalente ritiene che i regolamenti regionali possano avere carattere **esecutivo o attuativo** delle leggi regionali adottate negli ambiti di rispettiva competenza.
 - La riforma del Titolo V introduce il **principio di parallelismo**: il potere regolamentare del Governo statale è limitato alle materie di esclusiva competenza statale; nelle altre materie il potere regolamentare spetta alle **Regioni**.
-- Nella gerarchia delle fonti regionali: leggi regionali subordinate allo Statuto, regolamenti subordinati alle leggi.
+- Nella gerarchia delle fonti regionali: leggi regionali subordinate allo Statuto, regolamenti subordinati alle leggi (vincolati ai medesimi limiti che gravano sulle leggi regionali).
 
 ---
 
@@ -3397,9 +4199,9 @@ La riforma del **Titolo V** (legge cost. 3/2001) ha "rovesciato il guanto" delle
 
 #### 4.1. Posizione nel sistema delle fonti
 
-La riforma del Titolo V ha "pariordinato" Comuni, Province, Città metropolitane, Regioni e Stato come componenti che "costituiscono" la Repubblica (art. 114.1 Cost.). Gli Statuti locali hanno rilevanza costituzionale (art. 114.2); i Comuni e le Province hanno **potestà regolamentare** riconosciuta dall'art. 117.6.
+La riforma del Titolo V ha "pariordinato" Comuni, Province, Città metropolitane, Regioni e Stato come componenti che "costituiscono" la Repubblica (art. 114.1 Cost.). Gli Statuti locali hanno rilevanza costituzionale (art. 114.2); i Comuni e le Province hanno **potestà regolamentare** riconosciuta dall'art. 117.6. Entrambe le funzioni normative (statutaria e regolamentare) sono ora **costituzionalmente protette** e dunque non più disponibili né da parte della legge statale né da parte di quella regionale.
 
-Tuttavia, l'autonomia normativa locale si svolge con **atti subordinati alla legge** (statale e regionale). La Costituzione riserva al legislatore statale la disciplina degli organi di governo e delle funzioni fondamentali degli enti locali.
+Tuttavia, l'autonomia normativa locale si svolge con **atti subordinati alla legge** (statale e regionale). La Costituzione riserva al legislatore statale la disciplina degli organi di governo e delle funzioni fondamentali degli enti locali (cfr. anche art. 4, c. 2, legge 131/2003: gli statuti locali sono tenuti all'"armonia con la Costituzione e con i principi generali in materia di organizzazione pubblica" e al rispetto della legge statale su legislazione elettorale, organi di governo e funzioni fondamentali).
 
 #### 4.2. Statuti degli enti locali
 
@@ -3419,17 +4221,19 @@ Il **regolamento** è lo strumento normativo tipico degli enti locali: disciplin
 
 L'art. 117.6 Cost. garantisce agli enti locali una potestà regolamentare costituzionalmente protetta per quanto riguarda l'organizzazione e lo svolgimento delle funzioni loro attribuite. Il legislatore regionale, pur potendo decidere se decentrare o meno le funzioni amministrative, non può limitare la potestà regolamentare propria dei Comuni o delle Province per le funzioni ad essi conferite (Corte cost., sent. 246/2006).
 
+> **Rapporto tra le fonti locali**: i regolamenti degli enti locali **non possono derogare né abrogare gli statuti** del corrispondente ente (art. 7 T.U. enti locali) e sono subordinati alla legislazione statale e regionale. La dottrina prevalente riconduce questo rapporto più al criterio della **competenza** (secondo le sfere indicate dalla legge statale e regionale) che a quello gerarchico.
+
 ---
 
 ## Concetti chiave
 
-**Diritto convenzionale** — il corpus dei Trattati istitutivi e modificativi dell'UE; fonte gerarchicamente sovraordinata al diritto derivato.
+**Diritto convenzionale (primario)** — il corpus dei Trattati istitutivi e modificativi dell'UE, comprensivo della Carta dei diritti fondamentali; fonte gerarchicamente sovraordinata al diritto derivato.
 
-**Diritto derivato** — gli atti normativi prodotti dagli organi UE in base ai poteri attribuiti dai Trattati (regolamenti, direttive, decisioni).
+**Diritto derivato (secondario)** — gli atti normativi prodotti dagli organi UE in base ai poteri attribuiti dai Trattati (regolamenti, direttive, decisioni, oltre a raccomandazioni e pareri non vincolanti).
 
 **Regolamento UE** — atto vincolante, a portata generale, obbligatorio in tutti gli elementi e direttamente applicabile in ogni Stato membro senza necessità di atti nazionali di esecuzione.
 
-**Direttiva UE** — atto vincolante rivolto agli Stati membri, obbligatori quanto al risultato ma lasciando discrezionalità su forma e mezzi di attuazione; richiede un atto di recepimento nazionale.
+**Direttiva UE** — atto vincolante rivolto agli Stati membri, obbligatori quanto al risultato ma lasciando discrezionalità su forma e mezzi di attuazione; richiede un atto di recepimento nazionale (salvo le direttive self-executing).
 
 **Diretta applicabilità** — qualità tipologica di certi atti (in primis i regolamenti UE) per cui producono effetti giuridici nell'ordinamento nazionale senza intermediazione di atti statali.
 
@@ -3441,11 +4245,17 @@ L'art. 117.6 Cost. garantisce agli enti locali una potestà regolamentare costit
 
 **Teoria dei controlimiti** — i principi fondamentali della Costituzione italiana costituiscono un limite invalicabile anche per le norme europee; se una norma europea li viola, può essere "bloccata" impugnando l'ordine di esecuzione del Trattato.
 
-**Legge di delegazione europea** — approvata annualmente dal Parlamento, contiene la delega al Governo per il recepimento delle direttive UE.
+**Legge di delegazione europea** — approvata annualmente dal Parlamento, contiene la delega al Governo (o l'autorizzazione a regolamenti governativi, o l'attuazione diretta) per il recepimento delle direttive e degli atti UE non direttamente efficaci.
 
-**Legge europea** — approvata annualmente, adegua l'ordinamento italiano a quello europeo soprattutto per chiudere le procedure d'infrazione.
+**Legge europea** — approvata annualmente, adegua l'ordinamento italiano a quello europeo con esecuzione diretta, soprattutto per chiudere le procedure d'infrazione.
 
 **Procedura d'infrazione** — avviata dalla Commissione UE contro uno Stato membro che non rispetti gli obblighi europei; può culminare in una condanna della Corte di giustizia e in sanzioni pecuniarie.
+
+**Diritto internazionale generale** — norme consuetudinarie (non scritte) riconosciute dalla comunità degli Stati, formate da usus e opinio iuris; recepite con adattamento automatico ex art. 10 Cost. (possono derogare alla Costituzione ma non ai principi fondamentali — sent. 48/1979).
+
+**Diritto pattizio (trattati)** — norme scritte da convenzioni internazionali; recepite non automaticamente ma tramite un apposito ordine di esecuzione (per i trattati ex art. 80, contenuto nella legge di autorizzazione alla ratifica).
+
+**Ordine di esecuzione** — atto interno con cui si introducono nell'ordinamento le norme di un trattato; per i trattati dell'art. 80 Cost. è incluso nella legge di autorizzazione alla ratifica.
 
 **Potestà legislativa esclusiva statale** — materie in cui solo lo Stato può legiferare (art. 117.2 Cost.): difesa, moneta, ordinamento civile e penale, tutela dell'ambiente, ecc.
 
@@ -3456,6 +4266,8 @@ L'art. 117.6 Cost. garantisce agli enti locali una potestà regolamentare costit
 **Materie trasversali** — competenze statali (tutela della concorrenza, ambiente, livelli essenziali delle prestazioni, ecc.) che non delimitano un campo circoscritto ma "tagliano" settori di competenza regionale perché perseguono obiettivi o valori di rilievo nazionale.
 
 **Principio di sussidiarietà** — le funzioni amministrative vanno esercitate al livello più vicino ai cittadini; in presenza di esigenze di coordinamento nazionale, possono essere attratte verso l'alto (art. 118 Cost.).
+
+**Principio di parallelismo** — la potestà regolamentare segue il riparto della potestà legislativa: regolamenti statali solo nelle materie esclusive dello Stato, regolamenti regionali nelle altre materie.
 
 **Legge regionale rinforzata** — legge approvata con procedimento aggravato (maggioranza qualificata, eventuale referendum) e/o con contenuto riservato dallo Statuto o dalla Costituzione.
 
@@ -3480,6 +4292,10 @@ Le **fonti del diritto** pongono regole **generali** (rivolte alla collettività
 
 La pubblica amministrazione agisce attraverso **atti amministrativi**, definiti come "comportamenti consapevoli e volontari che danno luogo a effetti giuridici". Questi atti trovano fondamento nel **principio di legalità**: i poteri dell'amministrazione devono essere attribuiti dalla legge e si giustificano con la prevalenza dell'interesse pubblico su quello privato.
 
+Gli apparati amministrativi possono agire in **piano di parità** con i privati, compiendo **attività di diritto privato** assoggettate alle normali regole di diritto comune; ma pongono in essere anche:
+- **atti autoritativi**: riservati agli uffici pubblici;
+- **atti tipici**: appositamente previsti dalle norme come gli strumenti giuridici da utilizzare per raggiungere determinati fini.
+
 La categoria degli atti amministrativi comprende diverse tipologie:
 
 - **Atti normativi** (regolamenti amministrativi di Stato, Regioni ed enti locali)
@@ -3490,14 +4306,31 @@ La categoria degli atti amministrativi comprende diverse tipologie:
 
 ### 1.2. Il provvedimento amministrativo
 
-Il **provvedimento amministrativo** è l'atto che produce **effetti esterni**, influendo sulle situazioni giuridiche dei destinatari, creando nuovi diritti o doveri. È di regola l'atto finale di un **procedimento amministrativo**, che si articola in fasi (iniziativa, istruttoria, acquisizione di pareri, decisione) prima di culminare nel provvedimento.
+Il **provvedimento amministrativo** è l'atto che produce **effetti esterni**, influendo sulle situazioni giuridiche dei destinatari, creando nuovi diritti o doveri. È di regola l'atto finale di un **procedimento amministrativo**, che si articola in fasi (iniziativa, istruttoria, acquisizione di pareri, decisione) prima di culminare nel provvedimento. È l'atto tipico di **manifestazione di volontà** della P.A., con cui essa soddisfa l'**interesse pubblico primario** risultante dalla legge.
 
 **Caratteristiche essenziali del provvedimento:**
 
-- **Unilateralità e autoritarietà**: l'amministrazione agisce senza il consenso del destinatario, facendo prevalere l'interesse pubblico. Gli atti sfavorevoli manifestano il carattere dell'**imperatività**, cioè la capacità di imporre la volontà dell'amministrazione su quella del privato.
+- **Unilateralità e autoritarietà**: l'amministrazione agisce senza il consenso del destinatario, facendo prevalere l'interesse pubblico. Gli atti sfavorevoli manifestano il carattere dell'**imperatività**, cioè la capacità di incidere unilateralmente nella sfera giuridica del destinatario, facendo nascere, modificare o estinguere situazioni giuridiche soggettive.
 - **Tipicità**: l'amministrazione può esercitare poteri autoritativi solo se la legge glieli conferisce (principio di **nominatività**). La legge deve precisare il tipo di provvedimento, l'interesse pubblico che lo giustifica, i presupposti, il procedimento e gli effetti. Questo garantisce al cittadino la prevedibilità dell'azione amministrativa.
-- **Esecutività**: il provvedimento è direttamente esecutivo senza necessità di un preventivo intervento del giudice.
-- **Esecutorietà**: in certi casi la legge consente all'amministrazione di portare direttamente in esecuzione coattiva il provvedimento (es. la multa non pagata). L'onere di agire si inverte: non è l'amministrazione a dover ricorrere al giudice, ma il privato che vuole opporsi.
+- **Esecutività**: il provvedimento è direttamente esecutivo senza necessità di un preventivo intervento del giudice (produce immediatamente i suoi effetti imperativi).
+- **Esecutorietà**: in certi casi la legge consente all'amministrazione di portare direttamente in esecuzione coattiva il provvedimento (es. la multa non pagata), anche contro la volontà del destinatario e senza l'intervento del giudice. L'onere di agire si inverte: non è l'amministrazione a dover ricorrere al giudice, ma il privato che vuole opporsi.
+
+**Gli elementi del provvedimento** — Nel provvedimento sono individuabili cinque elementi:
+- i **presupposti**: le circostanze di fatto o di diritto al cui verificarsi l'amministrazione è legittimata a provvedere;
+- i **motivi**: gli interessi o i fini pubblici alla cui soddisfazione l'atto è rivolto;
+- la **volontà**: la scelta dell'amministrazione di produrre un dato effetto;
+- l'**oggetto**: le attività e i comportamenti cui si rivolge il provvedimento;
+- la **forma (o esternazione)**: il modo con cui i predetti elementi sono resi conoscibili all'esterno.
+
+**Le fasi del procedimento amministrativo** — Il procedimento è la sequenza coordinata di attività che precede il provvedimento. Si articola in **quattro fasi**:
+1. **Iniziativa**: avvia il procedimento e ne determina l'oggetto; l'impulso può provenire dalla stessa amministrazione decidente, da un altro soggetto pubblico o da un privato interessato.
+2. **Istruttoria**: l'amministrazione raccoglie e valuta gli elementi necessari alla decisione e acquisisce gli interessi rilevanti.
+3. **Fase costitutiva o deliberativa**: l'organo competente adotta la decisione finale (il provvedimento prefigurato, uno diverso, o il diniego).
+4. **Integrazione dell'efficacia** (eventuale): quando prevista dalla legge, l'atto già perfetto produce i suoi effetti solo dopo controlli preventivi, notificazione o pubblicazione.
+
+> **Strumenti di semplificazione e innovazione**:
+> - la **conferenza dei servizi**: riunisce i rappresentanti di tutte le autorità interessate per esaminare contestualmente i molteplici interessi pubblici coinvolti, snellendo le decisioni che richiedono il coinvolgimento di più organi e amministrazioni;
+> - il **procedimento e provvedimento informatico**: la legge consente l'impiego delle tecnologie informatiche nelle singole fasi del procedimento e nella determinazione del provvedimento conclusivo.
 
 ---
 
@@ -3539,7 +4372,9 @@ La **discrezionalità amministrativa** è lo spazio di scelta che la legge attri
 - Il contenuto o la misura del provvedimento (**quid** o **quantum**)
 - Gli strumenti da utilizzare (**quomodo**)
 
-Spesso la discrezionalità implica il **bilanciamento di interessi** concorrenti: pubblici contro pubblici, o pubblici contro privati (es. costruzione di una strada: costi, impatto acustico, attività economiche, paesaggio, sicurezza).
+Quanto più specifiche sono le disposizioni che vincolano l'azione amministrativa, tanto minore è la discrezionalità: essa è **quasi del tutto assente negli atti vincolati**, mentre è massima negli **atti di alta amministrazione**.
+
+Spesso la discrezionalità implica il **bilanciamento di interessi** concorrenti: pubblici contro pubblici, o pubblici contro privati (es. costruzione di una strada: costi, impatto acustico, attività economiche, paesaggio, sicurezza). Nell'esercizio della discrezionalità l'amministrazione persegue l'**interesse pubblico primario**, senza però omettere di ponderare gli **interessi secondari** giuridicamente rilevanti (pubblici, collettivi, diffusi o privati). Questa ponderazione può essere sindacata dal giudice sotto il profilo dell'**eccesso di potere**.
 
 Il principio guida di questo bilanciamento è il **principio di proporzionalità**:
 1. Congruità del provvedimento al fine perseguito
@@ -3549,7 +4384,7 @@ Il principio guida di questo bilanciamento è il **principio di proporzionalità
 
 Ogni provvedimento discrezionale deve essere accompagnato dalla **motivazione** (art. 3, legge 241/1990), che indica i presupposti di fatto e le ragioni giuridiche della decisione. La motivazione è l'oggetto principale del controllo del giudice sulla legittimità dell'atto.
 
-> **Nota**: si distingue tra **discrezionalità tecnica** (valutazioni a contenuto essenzialmente tecnico-scientifico, es. commissione di concorso) e **discrezionalità politica** (scelte tra interessi e valori alternativi, es. localizzazione di una discarica).
+> **Nota**: si distingue tra **discrezionalità tecnica** (valutazioni a contenuto essenzialmente tecnico-scientifico, es. commissione di concorso) e **discrezionalità politica** (scelte tra interessi e valori alternativi, es. localizzazione di una discarica). All'interno della discrezionalità tecnica vanno poi distinti i casi in cui l'amministrazione si limita a **meri accertamenti tecnici** (dal cui esito non può discostarsi) da quelli in cui conserva una **certa discrezionalità di scelta** tra più opzioni disponibili in sede tecnico-scientifica.
 
 ---
 
@@ -3561,7 +4396,7 @@ Il provvedimento è **efficace** quando, completato il procedimento e superata l
 
 Il provvedimento è **valido** quando è conforme a tutte le norme vigenti (regole e principi).
 
-I **vizi** del provvedimento ne compromettono la validità. Si distinguono due grandi categorie: **nullità** e **illegittimità**.
+I **vizi** del provvedimento ne compromettono la validità. Si distinguono due grandi categorie: **nullità** e **illegittimità**. In caso di illegittimità il provvedimento è **annullabile**: l'atto resta efficace, ma può essere privato di effetti dall'autorità competente; in caso di nullità il provvedimento è invece privo degli elementi essenziali.
 
 ### 4.2. Nullità (o inesistenza)
 
@@ -3578,13 +4413,13 @@ Conseguenze della nullità: è **insanabile**, non ci sono termini di decadenza 
 L'**illegittimità** copre l'area di contrasto tra l'atto e le norme vigenti, collocandosi tra la nullità (gravissima) e la mera irregolarità (lieve, senza conseguenze sulla validità). I vizi di legittimità sono tre:
 
 **a) Incompetenza (relativa)**
-L'atto è emanato da un organo sbagliato all'interno di un'amministrazione che ha comunque la potestà sulla materia. Esempio: provvedimento emesso dal Sindaco al posto del dirigente competente.
+L'atto è emanato da un organo sbagliato all'interno di un'amministrazione che ha comunque la potestà sulla materia. Riguarda la difformità rispetto alle norme che disciplinano il soggetto competente all'adozione dell'atto. Esempio: provvedimento emesso dal Sindaco al posto del dirigente competente.
 
 **b) Violazione di legge**
-Contrasto puntuale del provvedimento con qualsiasi norma giuridica vigente (incluse le norme europee). Comprende le violazioni delle norme sul procedimento e sulla forma, con alcune attenuazioni: la legge 15/2005 esclude l'annullabilità quando il contenuto del provvedimento non avrebbe potuto essere diverso, anche se ci sono vizi formali o procedurali.
+Contrasto puntuale del provvedimento con qualsiasi norma giuridica vigente (incluse le norme europee). È una categoria **residuale**: vi rientrano tutti gli altri casi di difformità rispetto alle norme che disciplinano l'adozione dell'atto, comprese le violazioni delle norme sul procedimento e sulla forma, con alcune attenuazioni: la legge 15/2005 esclude l'annullabilità quando il contenuto del provvedimento non avrebbe potuto essere diverso, anche se ci sono vizi formali o procedurali.
 
 **c) Eccesso di potere**
-Vizio specifico della **discrezionalità amministrativa** (non può colpire atti vincolati). Si manifesta quando il provvedimento, pur non contraddicendo direttamente le norme vigenti, rivela difetti nel processo di formazione della volontà amministrativa.
+Vizio specifico della **discrezionalità amministrativa** (non può colpire atti vincolati). Si manifesta quando il provvedimento, pur non contraddicendo direttamente le norme vigenti, rivela **vizi logici e di consequenzialità** tra i presupposti dell'atto e le sue conclusioni: l'atto appare indirizzato a un fine diverso da quello voluto dalla legge, o inidoneo a raggiungerlo. Essendo le figure sintomatiche elaborate dalla **giurisprudenza amministrativa**, l'eccesso di potere è un vizio **flessibile**, che consente un controllo anche molto penetrante sull'attività amministrativa.
 
 ### 4.4. Figure sintomatiche dell'eccesso di potere
 
@@ -3617,7 +4452,7 @@ L'amministrazione può rimediare ai vizi dei propri atti prima dell'intervento d
 
 Il cittadino dispone di due vie per contestare un provvedimento illegittimo:
 
-- **Ricorso amministrativo**: istanza rivolta all'amministrazione per chiedere l'annullamento, la revoca o la riforma di un provvedimento (può invocare anche motivi di merito)
+- **Ricorso amministrativo**: istanza rivolta all'amministrazione per chiedere l'annullamento, la revoca o la riforma di un provvedimento (può invocare anche motivi di merito). I soggetti danneggiati non si rivolgono al giudice ma chiedono alla stessa amministrazione di riesaminare, modificare o annullare l'atto: il ricorso mira dunque a ottenere un **nuovo provvedimento amministrativo**.
 - **Ricorso giurisdizionale**: impugnazione davanti al giudice, organo terzo, per soli motivi di legittimità
 
 ### 5.2. Ricorsi amministrativi
@@ -3631,6 +4466,12 @@ Quattro tipologie:
 | **Ricorso in opposizione** | Eccezionale (solo se previsto per legge) | Lo stesso organo che ha emanato l'atto | Come previsto dalla legge |
 | **Ricorso straordinario al Capo dello Stato** | Generale, alternativo al giurisdizionale | Presidente della Repubblica (parere Consiglio di Stato) | 120 giorni; solo motivi di legittimità |
 
+> **Caratteri dei ricorsi amministrativi**:
+> - il **ricorso gerarchico** (all'organo sovraordinato) ha carattere **generale**: è ammesso contro ogni atto non definitivo;
+> - il **ricorso in opposizione** ha carattere **speciale**: solo nei casi previsti dalla legge;
+> - i ricorsi gerarchico e in opposizione possono riguardare sia la **legittimità** sia il **merito**, sono **facoltativi** e **non precludono** la successiva via giurisdizionale;
+> - il **ricorso straordinario al Capo dello Stato** è ammesso solo per controversie devolute al giudice amministrativo e solo per profili di **legittimità** di provvedimenti **definitivi**.
+
 **Il silenzio dell'amministrazione**: l'inerzia dell'amministrazione ha un significato giuridico. Di regola vale come **silenzio-rigetto** (sui ricorsi). Per le domande di provvedimento, la riforma del 2005 ha fatto del **silenzio-assenso** la regola: se l'amministrazione non risponde entro il termine, la richiesta si considera accolta. Per molti procedimenti autorizzatori vige invece la **SCIA** (Segnalazione Certificata di Inizio Attività): non occorre aspettare il provvedimento, ma è l'amministrazione a dover intervenire se vuole impedire l'attività.
 
 ### 5.3. Ricorso giurisdizionale
@@ -3641,6 +4482,12 @@ L'art. 113 Cost. garantisce **tutela giurisdizionale totale** contro tutti gli a
 - **Giudice amministrativo** (TAR in primo grado, Consiglio di Stato in appello): quando il privato vanta un **interesse legittimo** e il conflitto riguarda l'esercizio di un potere autoritativo
 
 Differenza fondamentale: solo il giudice amministrativo può **annullare** l'atto con effetti *erga omnes*; il giudice ordinario può solo **disapplicare** l'atto con effetti *inter partes*.
+
+**Poteri specifici dei due giudici**:
+- il **giudice ordinario** può solo **disapplicare** l'atto illegittimo rispetto al caso concreto, garantendo la reintegrazione nella situazione originaria e ordinando il **risarcimento dei danni**;
+- il **giudice amministrativo** può **annullare** l'atto, disporre il **risarcimento del danno** (anche in forma specifica) ma non può sostituirsi all'amministrazione nell'attività necessaria a dare attuazione alla sentenza. Se la P.A. non ottempera, il cittadino può attivare il **giudizio di ottemperanza** per obbligarla a conformarsi: in tal caso il giudice può nominare un **commissario ad acta** che si sostituisce all'amministrazione. In casi limitati la legge consente al giudice amministrativo di sindacare anche il **merito** del provvedimento, potendo modificarlo direttamente (es. contenzioso sulla regolarità delle elezioni regionali e locali, L. 1147/1966).
+
+> **Giurisdizione esclusiva** — Il riparto tra giudice ordinario e amministrativo può essere superato quando la legge attribuisce la **giurisdizione esclusiva** a uno dei due, consentendogli di giudicare in ambiti specifici sia diritti soggettivi sia interessi legittimi. La Corte costituzionale ha criticato l'ampliamento di questa tendenza per il contrasto con il carattere **eccezionale** della giurisdizione esclusiva (art. 103, c. 1, Cost.).
 
 ### 5.4. Diritto soggettivo e interesse legittimo
 
@@ -3654,13 +4501,23 @@ Differenza fondamentale: solo il giudice amministrativo può **annullare** l'att
 
 **Atto amministrativo** — comportamento consapevole e volontario della PA che dà luogo a effetti giuridici; categoria ampia che include atti normativi, di programmazione, direttive, circolari e provvedimenti.
 
-**Provvedimento amministrativo** — atto amministrativo che produce effetti esterni nella sfera giuridica dei destinatari; atto finale del procedimento amministrativo.
+**Atto autoritativo / atto tipico** — l'atto riservato agli uffici pubblici / l'atto previsto dalle norme come strumento giuridico per raggiungere un fine determinato.
+
+**Provvedimento amministrativo** — atto amministrativo che produce effetti esterni nella sfera giuridica dei destinatari; atto finale del procedimento amministrativo e manifestazione di volontà della PA.
+
+**Elementi del provvedimento** — presupposti, motivi, volontà, oggetto e forma (esternazione).
+
+**Procedimento amministrativo** — sequenza coordinata di attività che precede il provvedimento; quattro fasi: iniziativa, istruttoria, fase costitutiva/deliberativa ed eventuale integrazione dell'efficacia.
+
+**Conferenza dei servizi** — strumento di semplificazione che riunisce le autorità interessate per esaminare contestualmente i molteplici interessi pubblici di un procedimento.
 
 **Principio di legalità** — la PA può esercitare poteri autoritativi solo se la legge glieli conferisce e nelle forme da essa previste.
 
 **Principio di nominatività** — la legge deve precisare il tipo di provvedimento che l'amministrazione può adottare (conseguenza del principio di tipicità).
 
 **Unilateralità e autoritarietà** — carattere del provvedimento per cui la PA agisce senza il consenso del destinatario, facendo prevalere l'interesse pubblico.
+
+**Imperatività** — capacità del provvedimento di incidere unilateralmente nella sfera giuridica del destinatario, facendo nascere, modificare o estinguere situazioni soggettive.
 
 **Esecutività** — il provvedimento è direttamente esecutivo senza preventivo intervento del giudice.
 
@@ -3670,7 +4527,11 @@ Differenza fondamentale: solo il giudice amministrativo può **annullare** l'att
 
 **Concessione** — provvedimento favorevole che attribuisce al privato nuovi diritti sull'uso di risorse collettive o servizi pubblici; è a termine e genera una convenzione.
 
-**Discrezionalità amministrativa** — spazio di scelta che la legge lascia alla PA per realizzare l'interesse pubblico (an, quando, quid, quomodo).
+**Discrezionalità amministrativa** — spazio di scelta che la legge lascia alla PA per realizzare l'interesse pubblico (an, quando, quid, quomodo); assente negli atti vincolati, massima negli atti di alta amministrazione.
+
+**Interesse pubblico primario / interessi secondari** — l'interesse principale che la legge affida alla PA, da ponderare con gli altri interessi (pubblici, collettivi, diffusi o privati) giuridicamente rilevanti.
+
+**Discrezionalità tecnica** — potere di scelta esercitato sulla base di valutazioni tecnico-scientifiche; va distinta dai meri accertamenti tecnici, dal cui esito la PA non può discostarsi.
 
 **Principio di proporzionalità** — criterio che guida l'uso della discrezionalità: il provvedimento deve essere congruo al fine, con il minimo sacrificio degli interessi concorrenti.
 
@@ -3678,11 +4539,11 @@ Differenza fondamentale: solo il giudice amministrativo può **annullare** l'att
 
 **Nullità** — vizio gravissimo che impedisce la formazione dell'atto; causata da mancanza di elementi essenziali, incompetenza assoluta o violazione del giudicato; insanabile.
 
-**Illegittimità** — vizio che deriva dal contrasto tra l'atto e le norme vigenti; le tre specie sono incompetenza relativa, violazione di legge ed eccesso di potere.
+**Illegittimità** — vizio che deriva dal contrasto tra l'atto e le norme vigenti; rende l'atto annullabile; le tre specie sono incompetenza relativa, violazione di legge ed eccesso di potere.
 
 **Incompetenza relativa** — l'atto è emanato dall'organo sbagliato all'interno di un'amministrazione che ha comunque la potestà sulla materia.
 
-**Violazione di legge** — contrasto puntuale del provvedimento con qualsiasi norma giuridica vigente.
+**Violazione di legge** — contrasto puntuale del provvedimento con qualsiasi norma giuridica vigente; categoria residuale rispetto agli altri due vizi.
 
 **Eccesso di potere** — vizio specifico della discrezionalità; si manifesta attraverso figure sintomatiche elaborate dalla giurisprudenza (sviamento, travisamento dei fatti, illogicità, disparità di trattamento, vizi di motivazione, ecc.).
 
@@ -3695,6 +4556,10 @@ Differenza fondamentale: solo il giudice amministrativo può **annullare** l'att
 **Interesse legittimo** — situazione soggettiva di vantaggio del privato di fronte al potere della PA, consistente nella garanzia della legittimità dell'azione amministrativa; tutelato dal giudice amministrativo.
 
 **Diritto soggettivo** — posizione di vantaggio garantita dall'ordinamento indipendentemente dall'intervento della PA; tutelato dal giudice ordinario.
+
+**Giudizio di ottemperanza** — giudizio con cui il cittadino obbliga la PA a conformarsi a una sentenza del giudice amministrativo; il giudice può nominare un commissario ad acta.
+
+**Giurisdizione esclusiva** — ipotesi in cui la legge attribuisce a un solo giudice la cognizione sia di diritti soggettivi sia di interessi legittimi in ambiti specifici; ha carattere eccezionale (art. 103 Cost.).
 
 **Silenzio-assenso** — meccanismo per cui l'inerzia della PA equivale ad accoglimento della domanda del privato, decorso il termine.
 
@@ -3723,6 +4588,14 @@ Tuttavia, ogni libertà e ogni diritto contengono sempre entrambi gli aspetti: i
 
 **Mito da sfatare:** non esistono diritti puramente "negativi" che non abbiano costi pubblici. Anche le libertà classiche (libertà personale, domicilio, proprietà) richiedono ingenti apparati pubblici di protezione (polizia, giustizia, protezione civile). La distinzione tra libertà "gratuite" e diritti "costosi" è priva di fondamento.
 
+#### I tre principi posti a fondamento della Costituzione
+
+A monte dell'intero sistema dei diritti stanno tre principi fondamentali:
+
+- **Principio liberale (o personalista)** — affermato dall'**art. 2 Cost.**: "La Repubblica riconosce e garantisce i diritti inviolabili dell'uomo, sia come singolo, sia nelle formazioni sociali in cui si svolge la sua personalità". I diritti inviolabili "storici" qui evocati sono la libertà personale (art. 13), l'inviolabilità del domicilio (art. 14) e la libertà e segretezza della corrispondenza (art. 15); tutti i diritti, però, tendono a essere inviolabili in quanto necessari al pieno sviluppo della personalità.
+- **Principio democratico** — principio auto-governativo di cittadini liberi ed eguali (**art. 1 Cost.**): "L'Italia è una Repubblica democratica fondata sul lavoro. La sovranità appartiene al popolo, che la esercita nelle forme e nei limiti stabiliti dalla Costituzione". La sovranità (potere supremo di decidere) è esercitata dal popolo attraverso il **corpo elettorale** e incontra **limiti formali** (procedimenti e forme imposti dalla Costituzione) e **limiti sostanziali** (non può disporre in contrasto con la Costituzione).
+- **Principio sociale** — attuazione del principio liberale nella struttura della società: esige che i cittadini godano *di fatto*, in condizioni di eguaglianza, dei benefici della vita associata e che i poteri pubblici operino con azione moderatrice ed equilibratrice delle disuguaglianze. È espresso nella forma più chiara dall'**art. 3.2 Cost.**
+
 ### Classificazioni tradizionali
 
 **Diritti assoluti vs. relativi:**
@@ -3742,13 +4615,22 @@ Tuttavia, ogni libertà e ogni diritto contengono sempre entrambi gli aspetti: i
 
 La tutela è più intensa quanto più il diritto è vicino alla persona fisica; si attenua man mano che ci si allontana verso la sfera economica.
 
+**Classificazione per funzione (le tre grandi categorie dei diritti fondamentali):**
+- **Diritti di libertà** — da cui nasce la pretesa che lo Stato si *astenga* dall'intervenire in certi campi della vita o delle attività dei cittadini.
+- **Diritti sociali** — da cui deriva la pretesa che lo Stato effettui *prestazioni positive* a beneficio dei cittadini (es. istruzione, salute).
+- **Diritti politici** — che conferiscono poteri (es. diritto di voto) con cui i cittadini concorrono a determinare la "volontà dello Stato".
+
+A questa tripartizione corrisponde la struttura della Parte I della Costituzione: Titolo I "Rapporti civili" (diritti di libertà), Titolo II "Rapporti etico-sociali" (famiglia, salute, istruzione), Titolo III "Rapporti economici", Titolo IV "Rapporti politici".
+
 ### 1.2. Strumenti di tutela
 
-Le costituzioni rigide hanno potenziato gli strumenti di garanzia dei diritti. I principali meccanismi sono:
+Le costituzioni rigide hanno potenziato gli strumenti di garanzia dei diritti. Per **garanzie dei diritti fondamentali** si intendono le norme e i mezzi diretti ad assicurarne l'osservanza. I principali meccanismi sono:
+
+- **Rigidità della Costituzione** — la Costituzione può essere modificata solo con un "procedimento aggravato" (procedimento di revisione rafforzato). La garanzia è ulteriormente rafforzata dall'esistenza di un organo giurisdizionale (la Corte costituzionale) capace di annullare o impedire l'applicazione di leggi incostituzionali.
 
 - **Riserva di legge** — solo la legge può disciplinare i casi e i modi di limitazione delle libertà. L'intensità varia: *riserva assoluta* per le libertà individuali (artt. 13-15), *riserva relativa* per le libertà economiche. La novità rispetto alle costituzioni flessibili (come lo Statuto Albertino) sta nella **rigidità costituzionale**: senza sindacato di legittimità, la riserva di legge rischia di diventare uno strumento di svuotamento delle garanzie.
 
-- **Riserva di giurisdizione** — ogni provvedimento restrittivo della libertà individuale richiede autorizzazione preventiva (o convalida successiva in caso d'urgenza) da parte del giudice (artt. 13.2, 13.3, 14.2, 15.2).
+- **Riserva di giurisdizione** — ogni provvedimento restrittivo della libertà individuale richiede autorizzazione preventiva (o convalida successiva in caso d'urgenza) da parte del giudice (artt. 13.2, 13.3, 14.2, 15.2). Mentre la riserva di legge attribuisce solo alla legge formale il potere di stabilire i limiti, la riserva di giurisdizione aggiunge che solo il potere giudiziario può decidere se, nel caso concreto, la norma limitatrice debba essere applicata (esempi tipici: artt. 13, 15 e 21).
 
 - **Tutela giurisdizionale** — art. 24 Cost.: "Tutti possono agire in giudizio per la tutela dei propri diritti e interessi legittimi". Questa garanzia è vuota senza un processo organizzato secondo regole garantiste (principio del contraddittorio, parità delle armi).
 
@@ -3756,15 +4638,26 @@ Le costituzioni rigide hanno potenziato gli strumenti di garanzia dei diritti. I
 
 - **Sindacato di legittimità costituzionale** — la Corte costituzionale controlla che la legislazione ordinaria non comprima le garanzie fino ad annullarle. L'effettivo contenuto dei diritti dipende in larga misura dalle interpretazioni della Corte: "i diritti fondamentali sono quello che la Corte dice che essi siano".
 
+#### La garanzia internazionale dei diritti
+
+Alle garanzie interne si affianca l'**internazionalizzazione dei diritti fondamentali**:
+- **Dichiarazione universale dei diritti dell'uomo** (ONU, 10 dicembre 1948), poi esplicitata dai due **Patti internazionali del 1966** sui diritti economico-sociali-culturali e sui diritti civili e politici.
+- **CEDU** (Convenzione europea per la salvaguardia dei diritti dell'uomo e delle libertà fondamentali), opera del **Consiglio d'Europa** (organizzazione creata nel 1949 per promuovere democrazia e diritti dell'uomo), con istituzione della **Corte europea dei diritti dell'uomo** (Strasburgo), competente a interpretarne le disposizioni.
+- **Unione europea** — incide su un complesso di materie assai vasto; rilevano sia la CEDU sia la **Carta dei diritti** proclamata a Nizza nel 2000, cui è stato poi riconosciuto lo stesso valore giuridico dei Trattati. Il Consiglio d'Europa opera invece essenzialmente nel solo campo dei diritti fondamentali.
+
 ---
 
 ## 2. Il principio di eguaglianza
 
 L'art. 3 Cost. enuncia il principio di eguaglianza in forma duplice.
 
+Le radici storiche risalgono all'**art. 1 della Dichiarazione francese dei diritti dell'uomo e del cittadino del 1789**: "Gli uomini nascono liberi ed eguali nei diritti. Le distinzioni sociali possono essere fondate soltanto sull'utilità comune". Il principio comporta il divieto di qualsiasi discriminazione fra i soggetti dell'ordinamento, in particolare se fondata su una presunta superiorità naturale o sociale di alcuni sugli altri.
+
 ### Eguaglianza formale (art. 3.1)
 
 Prescrive di trattare in modo eguale situazioni eguali e in modo diverso situazioni diverse. Si rivolge essenzialmente al **legislatore**, vietandogli privilegi e discriminazioni ingiustificate.
+
+Dalla **pari dignità sociale** di tutti i cittadini discende che la legge ha eguale efficacia per tutti e nessuno può esserne dispensato per una presunta superiorità sociale (cfr. anche artt. 6 e 51 Cost.). La legge stessa non può creare privilegi o discriminazioni personali o di classe: è implicito il **principio di razionalità della legge**, che esige che essa regoli le fattispecie non arbitrariamente, ma in base a principi razionali immanenti nell'ordinamento.
 
 Il giudizio di eguaglianza non è mai meccanico, ma richiede valutare la *significatività* delle differenze: da qui nasce il **controllo di ragionevolezza delle leggi**, schema dominante nella giurisprudenza della Corte costituzionale.
 
@@ -3772,7 +4665,7 @@ Il giudizio di eguaglianza non è mai meccanico, ma richiede valutare la *signif
 
 ### Eguaglianza sostanziale (art. 3.2)
 
-Programma di intervento che impone di "rimuovere gli ostacoli di ordine economico e sociale" che impediscono l'eguale godimento dei diritti. Richiede leggi rivolte a singole categorie svantaggiate, derogando così all'eguaglianza formale.
+Programma di intervento che impone di "rimuovere gli ostacoli di ordine economico e sociale" che impediscono l'eguale godimento dei diritti. Richiede leggi rivolte a singole categorie svantaggiate (leggi speciali a favore delle categorie più deboli), derogando così all'eguaglianza formale.
 
 **I due principi sono interdipendenti**, non inconciliabili: l'eguaglianza sostanziale impedisce l'eccesso di rigore formale; l'eguaglianza formale impedisce che le azioni positive diventino fonte di *reverse discrimination*. Il punto di equilibrio è sempre il giudizio di ragionevolezza.
 
@@ -3788,12 +4681,16 @@ La Costituzione riconosce alcuni diritti a *tutti* (artt. 2, 19, 21, 24, 32, 34)
 
 2. **Art. 2 Cost.** — i "diritti inviolabili dell'uomo" appartengono all'"uomo" come essere libero, senza discriminazioni verso gli stranieri
 
+**Nozione di straniero:** sono stranieri i cittadini di Stati non appartenenti all'Unione europea e gli apolidi. Quanto ai **diritti politici**, gli stranieri ne sono in linea di principio esclusi.
+
 **Conclusione:** i diritti "inviolabili" si estendono agli stranieri anche dove la Costituzione sembrerebbe riservarli ai soli cittadini, ma:
 - L'estensione riguarda solo i diritti qualificabili come "inviolabili"
 - È un principio, non una regola tassativa: la condizione di straniero può giustificare ragionevoli differenziazioni
 - L'UE sviluppa una politica comune su asilo, immigrazione e controllo delle frontiere esterne
 
-Il **diritto d'asilo** (art. 10 Cost.) è riconosciuto allo straniero cui sia impedito l'esercizio delle libertà democratiche nel suo Paese; è disciplinato anche dal Sistema di Dublino (regolamento UE 604/2013).
+L'**art. 10 Cost.** contiene altre due disposizioni rilevanti per lo straniero:
+- **Diritto d'asilo** — riconosciuto allo straniero cui sia "impedito nel suo paese l'effettivo esercizio delle libertà democratiche garantite dalla Costituzione italiana", secondo le condizioni stabilite dalla legge. L'eccessiva ampiezza della formula è stata ridotta esigendo il presupposto della **qualità di rifugiato** (fondato timore di essere perseguitato). È disciplinato anche dal Sistema di Dublino (regolamento UE 604/2013).
+- **Estradizione** — consegna ad altro Stato di una persona imputata o condannata secondo le leggi di quest'ultimo. Agli stranieri si estende il **divieto di estradizione per reati politici** garantito ai cittadini (art. 26.2 Cost.), salvo che si tratti di delitti di genocidio.
 
 ### 3.2. L'evoluzione delle nozioni costituzionali
 
@@ -3827,6 +4724,10 @@ L'art. 2 Cost. — "la Repubblica riconosce e garantisce i diritti inviolabili d
 
 La Corte ha prevalentemente adottato la teoria del **catalogo chiuso**, riconducendo i diritti inviolabili agli articoli specifici della Costituzione, ma ha ammesso nel bilanciamento nuovi interessi tratti in via interpretativa dalle disposizioni esistenti.
 
+#### Il "diritto generale di libertà"
+
+Si discute se esista un **diritto generale a fare tutto ciò che la legge non vieta**. Pur contestato da parte della dottrina, esso può ritenersi esistente: ogni azione delle autorità che ostacoli un comportamento legittimo (cioè non vietato) può essere impugnata e annullata dai giudici, il che implica il riconoscimento di tale diritto.
+
 ---
 
 ## 4. I diritti nella sfera individuale
@@ -3845,16 +4746,22 @@ L'art. 13.2 cita detenzione, ispezione e perquisizione personale, ma include una
 
 Il criterio quantitativo è integrato da uno **qualitativo**: rientrano nella tutela anche i provvedimenti di violenza *morale* che offendano la dignità della persona e ne comportino la *degradazione giuridica* (es. ammonizione, soggiorno cautelare, obbligo di comparire in questura per i tifosi).
 
+La libertà personale può quindi essere limitata sia da **costrizioni fisiche e materiali** (arresto, detenzione, perquisizione, isolamento per malattie infettive) sia da **misure non materiali** (obblighi di residenza, divieti di partecipare a riunioni pubbliche, divieti di soggiorno in determinate aree), in quanto tutte assoggettano l'individuo al controllo del potere pubblico.
+
 Le **misure di prevenzione** (ante o praeter delictum) si distinguono dalle misure cautelari (durante le indagini) e dalle misure di sicurezza (dopo la condanna). Quelle personali incidono o meno sulla libertà personale a seconda che abbiano le caratteristiche qualitative e quantitative appena descritte.
 
 #### 4.2.2. Strumenti di tutela
 
 Gli strumenti sono i più forti previsti dalla Costituzione:
-- **Riserva assoluta di legge** (art. 13.2)
-- **Riserva di giurisdizione**: ogni provvedimento restrittivo richiede autorizzazione preventiva del giudice
-- **Ricorso in Cassazione** sempre ammesso (art. 111) contro provvedimenti che incidono sulla libertà personale
+- **Riserva assoluta di legge** (art. 13.2): solo norme di rango parlamentare possono stabilire i limiti alla libertà personale
+- **Riserva di giurisdizione** (rafforzata): solo i giudici possono disporre restrizioni, con atto motivato
+- **Ricorso in Cassazione** sempre ammesso (art. 111) contro provvedimenti che incidono sulla libertà personale; è inoltre possibile chiedere il **riesame** delle misure coercitive presso il **tribunale della libertà** (tribunale del riesame)
 
-**Eccezione:** l'art. 13.3 ammette, in casi eccezionali di necessità e urgenza tassativamente indicati dalla legge, provvedimenti provvisori della polizia, comunicati all'autorità giudiziaria entro 48 ore e convalidati nelle 48 ore successive; altrimenti "si intendono revocati e restano privi di ogni effetto". Rientrano nell'eccezione l'arresto in flagranza (artt. 379 ss. c.p.p.) e il fermo dell'indiziato per pericolo di fuga (art. 384 c.p.p.).
+**Eccezione:** l'art. 13.3 ammette, in casi eccezionali di necessità e urgenza tassativamente indicati dalla legge, provvedimenti provvisori della polizia (o, in alcune ipotesi, di privati), comunicati all'autorità giudiziaria entro 48 ore e convalidati nelle 48 ore successive; altrimenti "si intendono revocati e restano privi di ogni effetto". Rientrano nell'eccezione l'arresto in flagranza (artt. 379 ss. c.p.p.) e il fermo dell'indiziato per pericolo di fuga (art. 384 c.p.p.).
+
+La libertà personale è tutelata in particolare contro due abusi:
+- **Tortura e coercizione** — è vietato estorcere confessioni mediante tortura fisica (art. 613 bis c.p.) o morale (es. minacce ai familiari). A garanzia opera anche il **Garante nazionale dei diritti delle persone private della libertà personale**.
+- **Abuso della carcerazione preventiva** — la custodia cautelare non può trattenere indefinitamente l'imputato (durata massima complessiva: sei anni) e serve solo a garantire la presenza al processo, evitare l'inquinamento delle prove o la commissione di nuovi reati.
 
 #### 4.2.3. Restrizioni e pene
 
@@ -3882,7 +4789,7 @@ La garanzia si estende anche alle **persone giuridiche** (società, associazioni
 
 #### 4.3.2. Strumenti di tutela
 
-- **Riserva assoluta di legge** e **riserva di giurisdizione** per ispezione, perquisizione e sequestro
+- **Riserva assoluta di legge** e **riserva di giurisdizione** per ispezione, perquisizione e sequestro: tali atti sono consentiti solo secondo le leggi poste a tutela della libertà personale
 - Anche per il domicilio è prevista la facoltà della polizia di procedere d'urgenza (flagranza di reato, evasione), con trasmissione e convalida giudiziaria nei termini dell'art. 13.3
 
 Il codice penale (dopo il 1974) include tra i delitti contro il domicilio le **interferenze illecite nella vita privata** tramite strumenti di ripresa visiva o sonora (art. 615 bis). Dal 1993 anche i reati informatici (accesso abusivo a sistema informatico, art. 615 ter; diffusione di virus, art. 615 quinquies) sono collocati in questa sezione.
@@ -3899,16 +4806,19 @@ In tali casi, l'autorità amministrativa (ispettori del lavoro, sanitari, guardi
 
 #### 4.4.1. Definizioni
 
-L'art. 15 Cost. tutela la "libertà" e la "segretezza" di "ogni forma di comunicazione". L'elemento caratterizzante rispetto alla libertà di manifestazione del pensiero (art. 21) è la **segretezza**: la comunicazione protetta è quella intenzionalmente riservata (lettera chiusa a un amico vs. lettera aperta a un giornale).
+L'art. 15 Cost. tutela la "libertà" e la "segretezza" di "ogni forma di comunicazione". L'elemento caratterizzante rispetto alla libertà di manifestazione del pensiero (art. 21) è la **segretezza**: la comunicazione protetta è quella intenzionalmente riservata (lettera chiusa a un amico vs. lettera aperta a un giornale). La tutela opera sia verso le autorità pubbliche sia verso i privati.
 
 La tutela si estende a **tutte le forme di comunicazione**: scritta, orale, epistolare, telegrafica, telefonica, informatica, telematica — purché lo strumento sia idoneo a garantire la segretezza. Il codice penale (art. 616.4, modificato nel 1993) definisce "corrispondenza" qualsiasi "forma di comunicazione a distanza".
 
 #### 4.4.2. Strumenti di tutela
 
-- **Riserva di legge assoluta** e **riserva di giurisdizione**
+- **Riserva di legge assoluta** e **riserva di giurisdizione**: le limitazioni possono avvenire solo con atto motivato dell'autorità giudiziaria
+- A differenza dell'art. 13, l'art. 15 **non conferisce poteri speciali d'urgenza** alle forze di polizia; gli ufficiali di p.g. possono però sospendere l'inoltro della corrispondenza nei casi previsti dal codice di procedura penale
 - **Sequestro della posta**: disposto dall'autorità giudiziaria; solo il giudice può prendere cognizione del contenuto
 - **Intercettazioni telefoniche**: richiedono autorizzazione del giudice su richiesta del p.m., solo per delitti di particolare gravità (art. 266 c.p.p.), gravi indizi di reato e indispensabilità dell'intercettazione; durata massima 15 giorni, prorogabili
 - Se effettuate illecitamente, il risultato non è utilizzabile nel processo e la documentazione va distrutta (art. 271 c.p.p.)
+
+La libertà e segretezza delle comunicazioni è garantita a tutti, con alcune limitazioni per **minori, infermi di mente, falliti e detenuti**.
 
 **Il diritto alla riservatezza (privacy)** — non espressamente in Costituzione italiana, ma garantito dall'art. 8 CEDU e dalla Carta dei diritti UE — si fonda sui due perni della libertà di domicilio e di comunicazione. La legge 675/1996 (poi il GDPR europeo) ha istituito il **Garante della privacy** e pone sotto disciplina restrittiva i **dati sensibili** (razza, religione, opinioni politiche, salute, vita sessuale).
 
@@ -3916,16 +4826,17 @@ La tutela si estende a **tutte le forme di comunicazione**: scritta, orale, epis
 
 #### 4.5.1. Definizioni
 
-La **libertà di circolazione e soggiorno** è contigua alla libertà personale, di cui condivide la ratio, ma si distingue per l'assenza del carattere *coercitivo e degradante* che qualifica le restrizioni personali. Comprende:
+La **libertà di circolazione e soggiorno** è contigua alla libertà personale, di cui condivide la ratio, ma si distingue per l'assenza del carattere *coercitivo e degradante* che qualifica le restrizioni personali: tutela infatti contro i limiti alla possibilità di spostarsi o risiedere, senza un controllo *diretto* dell'autorità sulla persona. Comprende:
 - Libertà di circolare e scegliere la propria dimora nel territorio nazionale
-- **Libertà di espatrio** (art. 16.2): libertà di uscire dal territorio e rientrarvi; il passaporto è un diritto soggettivo, non discrezionale
-- **Libertà di emigrazione** (art. 35.4)
-- Libertà di scelta del luogo per l'esercizio di attività economiche (potenziata dal "diritto di stabilimento" nell'UE)
+- **Libertà di espatrio** (art. 16.2): libertà di uscire dal territorio e rientrarvi; il passaporto è un diritto soggettivo, non discrezionale. Per i cittadini il **diritto di rientro è assoluto**, mentre l'espatrio può essere condizionato da obblighi familiari, giudiziari, militari e dal possesso del passaporto
+- **Libertà di emigrazione** (art. 35.4), salvi i limiti posti dalla legge per l'interesse generale
+- Libertà di scelta del luogo per l'esercizio di attività economiche (potenziata dal "diritto di stabilimento" nell'UE); la libera scelta della residenza o del luogo di lavoro è protetta anche dall'**art. 120 Cost.**, che vieta alle Regioni di limitare il diritto al lavoro ovunque sul territorio nazionale
+
+Il diritto è garantito ai cittadini; per gli stranieri il legislatore può introdurre restrizioni.
 
 #### 4.5.2. Strumenti di tutela
 
-- **Riserva di legge rinforzata per contenuto** (art. 16.1), ma *non* riserva di giurisdizione
-- Le limitazioni devono essere stabilite "in via generale" e solo per **motivi di sanità o di sicurezza**
+- **Riserva di legge rinforzata** (per contenuto) e **relativa** (art. 16.1): rinforzata perché le limitazioni sono ammesse solo "in via generale" e per motivi di sanità o sicurezza; relativa perché anche fonti subordinate (regolamenti) possono concorrere a disciplinare la materia. **Non** vi è riserva di giurisdizione
 - È tassativamente vietato limitare la circolazione per **ragioni politiche** (sent. 19/1959), anche per l'espatrio
 
 Provvedimenti tipici ammessi dall'art. 16:
@@ -3959,6 +4870,8 @@ L'art. 2 Cost. garantisce i diritti inviolabili all'individuo "sia come singolo 
 
 Non è riunione il semplice assembramento casuale (coda, capannello di curiosi).
 
+Il diritto è garantito ai cittadini, con possibilità di limiti per gli stranieri.
+
 #### 5.2.2. Condizioni di legittimità e scioglimento
 
 La riunione deve svolgersi "**pacificamente e senza armi**" (art. 17.1). La pacificità viene meno quando trascende in violenze contro persone o cose: in tal caso la forza pubblica può scioglierla (procedura: tre intimazioni precedute da squilli di tromba, poi scioglimento coattivo — artt. 22-24 T.u.l.p.s.).
@@ -3975,7 +4888,7 @@ Le riunioni si distinguono in base al luogo:
 | **Luogo aperto al pubblico** | Cinema, teatro, aula magna | Non richiesto |
 | **Luogo pubblico** | Strade, piazze | **Sì** (almeno 3 giorni prima al questore) |
 
-Il **preavviso** (art. 17.2 Cost.; art. 18 T.u.l.p.s.) non è un'autorizzazione: la riunione è legittima anche senza di esso, ma i promotori rispondono penalmente per la sua omissione.
+Il **preavviso** (art. 17.2 Cost.; art. 18 T.u.l.p.s.) non è un'autorizzazione: la riunione è legittima anche senza di esso, ma i promotori rispondono penalmente per la sua omissione. La Corte costituzionale ha confermato che la riunione non preavvisata non è automaticamente illegittima, ferma restando la responsabilità dei promotori.
 
 Il questore può **vietare preventivamente** la riunione "soltanto per comprovati motivi di sicurezza o incolumità pubblica" (art. 17.3): il divieto deve essere motivato, è impugnabile davanti al giudice e non può basarsi su ragioni politiche.
 
@@ -3989,6 +4902,10 @@ L'art. 18 Cost. garantisce la libertà di associazione nelle sue forme generali.
 
 **Situazioni giuridiche soggettive** — insieme delle posizioni attive (libertà e diritti) e passive (doveri e obblighi) disciplinate dalla Costituzione.
 
+**Principio personalista (liberale)** — principio per cui i diritti inviolabili dell'uomo (art. 2 Cost.) sono riconosciuti e garantiti, sia come singolo sia nelle formazioni sociali, in funzione del pieno sviluppo della personalità.
+
+**Principio democratico** — principio per cui la sovranità appartiene al popolo (art. 1 Cost.), esercitata nelle forme e nei limiti (formali e sostanziali) stabiliti dalla Costituzione.
+
 **Libertà negative** — diritti che chiedono all'autorità l'astensione da qualsiasi costrizione; tipici del costituzionalismo liberale.
 
 **Diritti positivi** — diritti che richiedono prestazioni attive da parte dello Stato o di terzi; tipici dei diritti sociali.
@@ -3996,6 +4913,8 @@ L'art. 18 Cost. garantisce la libertà di associazione nelle sue forme generali.
 **Diritti assoluti** — diritti opponibili a tutti (erga omnes), il cui contenuto consiste nel divieto di interferenza altrui (es. libertà personale, proprietà).
 
 **Diritti relativi** — diritti azionabili solo verso soggetti determinati, ai quali si richiede una prestazione (es. diritti sociali verso lo Stato).
+
+**Rigidità costituzionale** — garanzia per cui la Costituzione è modificabile solo con procedimento aggravato e le leggi contrarie possono essere annullate dalla Corte costituzionale.
 
 **Riserva assoluta di legge** — la disciplina di una materia può provenire solo dalla legge formale, senza possibilità di deleghe secondarie (es. artt. 13.2, 14.2, 15.2).
 
@@ -4011,11 +4930,17 @@ L'art. 18 Cost. garantisce la libertà di associazione nelle sue forme generali.
 
 **Anacronismo legislativo** — fenomeno per cui una norma legislativa, un tempo compatibile con la Costituzione, diventa incompatibile per mutamento dei costumi, evoluzione tecnologica o riforma della legislazione.
 
+**Diritto generale di libertà** — pretesa a fare tutto ciò che la legge non vieta: ogni atto dell'autorità che ostacoli un comportamento legittimo è impugnabile e annullabile dal giudice.
+
+**Diritto d'asilo** — diritto dello straniero cui sia impedito nel proprio Paese l'esercizio delle libertà democratiche (art. 10.3 Cost.); presuppone la qualità di rifugiato (fondato timore di persecuzione).
+
 **Habeas corpus** — garanzia della libertà fisica della persona dagli arresti arbitrari; nucleo fondamentale dell'art. 13 Cost.
 
 **Trattamento sanitario obbligatorio (TSO)** — attività diagnostica o terapeutica imposta dalla legge per esigenze di salute pubblica; regolato dall'art. 32.2 (riserva relativa di legge, senza riserva di giurisdizione).
 
 **Misure di prevenzione** — provvedimenti adottati non dopo la commissione di un reato, ma sulla base di indizi o sospetti che reati possano essere commessi in futuro (ante o praeter delictum).
+
+**Carcerazione preventiva (custodia cautelare)** — misura restrittiva ante iudicium, ammessa solo per garantire la presenza al processo, evitare l'inquinamento delle prove o nuovi reati; durata massima complessiva sei anni.
 
 **Domicilio (nozione costituzionale)** — qualsiasi spazio isolato dall'ambiente esterno di cui il privato disponga legittimamente; più vicino alla nozione penalistica (art. 614 c.p.) che civilistica.
 
@@ -4031,6 +4956,9 @@ L'art. 18 Cost. garantisce la libertà di associazione nelle sue forme generali.
 
 
 ---
+
+</content>
+</invoke>
 
 # VII. Diritti e libertà — Parte 2 (pp. 516-553)
 
@@ -4050,17 +4978,17 @@ Il preavviso non è un'**autorizzazione**: la riunione è legittima anche senza 
 
 ### 5.3. La libertà di associazione
 
-L'"**associazione**" si distingue dalla riunione per la tendenziale stabilità e per un nucleo organizzativo. L'art. 18 Cost. copre tutte le forme associative, indipendentemente dalla qualificazione civilistica.
+L'"**associazione**" si distingue dalla riunione per la tendenziale stabilità e per un nucleo organizzativo: è il diritto di unirsi stabilmente con altri per perseguire un fine comune, attraverso un vincolo giuridico e uno statuto che regolano i comportamenti dei soci. L'art. 18 Cost. copre tutte le forme associative, indipendentemente dalla qualificazione civilistica.
 
 **Le tre garanzie dell'art. 18.1:**
 
-- **Libertà negativa di associarsi:** nessuno può essere obbligato ad aderire a un'associazione. La Corte costituzionale ha dichiarato illegittima l'appartenenza obbligatoria coatta degli ebrei alla Comunità israelitica (sent. 239/1984), ma ha ritenuto compatibili con la Costituzione le associazioni obbligatorie per ragioni di interesse pubblico rilevante (ordini professionali, federazioni sportive, consorzi obbligatori).
-- **Libertà di istituzione senza autorizzazione:** nessun intervento pubblico discrezionale può condizionare la nascita di un'associazione.
-- **Riserva di legge rinforzata:** le associazioni possono fare tutto ciò che è lecito al singolo. Si possono vietare solo le associazioni che hanno come scopo la commissione di reati già previsti per il singolo.
+- **Libertà negativa di associarsi:** nessuno può essere obbligato ad aderire a un'associazione; la garanzia comprende anche il diritto di **recedere**. La Corte costituzionale ha dichiarato illegittima l'appartenenza obbligatoria coatta degli ebrei alla Comunità israelitica (sent. 239/1984), ma ha ritenuto compatibili con la Costituzione le associazioni obbligatorie per ragioni di interesse pubblico rilevante (ordini professionali, federazioni sportive, consorzi obbligatori).
+- **Libertà di istituzione senza autorizzazione:** nessun intervento pubblico discrezionale può condizionare la nascita di un'associazione. La Corte ha dichiarato illegittime le disposizioni che imponevano lo scioglimento di associazioni "contrarie agli ordinamenti giuridici dello Stato" o ne subordinavano la costituzione ad autorizzazione.
+- **Riserva di legge rinforzata:** le associazioni possono fare tutto ciò che è lecito al singolo. Si possono vietare solo le associazioni che hanno come scopo la commissione di reati già previsti per il singolo (es. fini sovversivi violenti, punibili come reato anche se commessi dal singolo).
 
 **Le associazioni vietate dall'art. 18.2:**
 
-- **Associazioni segrete:** definite dalla legge 17/1982 ("legge P2") come quelle che occultano la propria esistenza o i propri soci e svolgono attività di interferenza illecita sulle istituzioni pubbliche. Lo scioglimento richiede sentenza irrevocabile seguita da d.P.C.M.
+- **Associazioni segrete:** definite dalla legge 17/1982 ("legge P2") come quelle che occultano la propria esistenza o i propri soci e svolgono attività di interferenza illecita sulle istituzioni pubbliche (organi costituzionali, pubblici servizi essenziali per l'interesse nazionale). Lo scioglimento richiede sentenza irrevocabile seguita da d.P.C.M.
 - **Associazioni paramilitari:** quelle che perseguono fini politici mediante organizzazione di carattere militare (struttura gerarchica, gradi, divise, idoneità all'impiego collettivo in azioni violente). La legge vieta anche l'adozione di uniformi da parte di organizzazioni collegate a partiti politici.
 
 A queste si aggiunge il divieto costituzionale (XII disposizione transitoria) di riorganizzare in qualsiasi forma il **partito fascista disciolto**.
@@ -4075,8 +5003,18 @@ La **libertà di coscienza** — libertà di coltivare convinzioni interiori e a
 
 - **Divieto di discriminazione** (art. 3 Cost.): le convinzioni religiose rientrano nei "**dati sensibili**" soggetti a protezione rafforzata.
 - **Eguaglianza tra confessioni religiose** (art. 8.1 Cost.): "tutte le confessioni religiose sono egualmente libere davanti alla legge." La Corte costituzionale ha progressivamente esteso questo principio dal significato di "eguale libertà" a quello di "eguale trattamento," ampliando le tutele alle minoranze religiose attraverso le **intese** ex art. 8.3 Cost.
-- **Libertà di culto** (art. 19 Cost.): tutela il profilo individuale della libertà religiosa — proselitismo, rituali, riti. L'unico limite è il **buon costume** (inteso come morale sessuale). La libertà negativa comprende il diritto di non professare alcuna fede (profilo degli atei) e di non subire simboli religiosi imposti.
-- **Obiezione di coscienza:** rifiuto motivato da convinzioni interiori di compiere atti prescritti dall'ordinamento. La legge la riconosce in alcuni casi specifici: servizio militare (sostituito con il servizio civile), personale sanitario rispetto all'aborto (legge 194/1978) e alla procreazione assistita (legge 40/2004), sperimentazione animale (legge 413/1993).
+- **Libertà di culto** (art. 19 Cost.): tutela il profilo individuale della libertà religiosa — professare la propria fede, fare proselitismo, esercitare il culto in forma individuale o associata, in privato e in pubblico. I limiti sono il **buon costume** (inteso come morale sessuale) e l'ordine pubblico. La libertà negativa comprende il diritto di non professare alcuna fede (profilo degli atei) e di non subire simboli religiosi imposti.
+- **Obiezione di coscienza:** rifiuto motivato da convinzioni interiori di compiere atti prescritti dall'ordinamento. Non può essere ammessa in modo generale (metterebbe in pericolo l'ordinamento), ma la legge la riconosce in casi specifici: servizio militare (sostituito con il servizio civile, fino all'abolizione della leva nel 2005), personale sanitario rispetto all'aborto (legge 194/1978) e alla procreazione assistita (legge 40/2004), sperimentazione animale (legge 413/1993).
+
+**Profili della libertà di coscienza:** il tema si riflette su più ambiti — il dovere dei genitori di educare i figli (art. 30 Cost.), che non consente però di imporre convinzioni religiose a minori capaci di scelta autonoma; l'insegnamento della religione nelle scuole, oggi **facoltativo**; le formule di **giuramento** (art. 54 Cost.), private dei riferimenti alle divinità.
+
+**Dallo Statuto Albertino alla parità delle confessioni:** l'art. 1 dello Statuto Albertino faceva della religione cattolica l'unica religione di Stato, qualificando gli altri culti come semplicemente "tollerati". Tali disposizioni, in gran parte abrogate dalla giurisprudenza costituzionale, sono state sostituite dal principio di parità tra le confessioni.
+
+**I rapporti Stato–Chiesa cattolica (art. 7 Cost.):** Stato e Chiesa cattolica sono "ciascuno nel proprio ordine, indipendenti e sovrani"; i loro rapporti sono regolati dai **Patti Lateranensi** (Trattato e Concordato del 1929), modificabili con l'accordo delle due parti **senza** procedimento di revisione costituzionale. Le norme di esecuzione dei Patti possono derogare alla Costituzione, purché non violino i **principi costituzionali supremi** (Corte cost.). L'**accordo di modifica del Concordato** (18 febbraio 1984, reso esecutivo con legge 121/1985) ha eliminato i privilegi di epoca totalitaria, garantendo alla Chiesa libertà in un contesto democratico: tra le novità, la libertà della scuola privata (art. 33 Cost.), la riforma del matrimonio concordatario e l'insegnamento facoltativo della religione cattolica.
+
+**I rapporti con le confessioni acattoliche (art. 8 Cost.):** ad esse sono garantite eguale libertà davanti alla legge, autonomia organizzativa secondo i propri statuti (purché compatibili con l'ordinamento) e regolazione dei rapporti con lo Stato mediante legge approvata sulla base di **intese** con i loro rappresentanti (ad oggi stipulate con 13 confessioni). In mancanza di intesa, e per i culti che non si configurino come confessioni organizzate, si applica ancora la legge 1159/1929 sui "culti ammessi", salve le parti dichiarate incostituzionali. L'**art. 20 Cost.** vieta discriminazioni legislative o fiscali fondate sul carattere religioso o ecclesiastico di un'associazione.
+
+**Il principio di laicità:** riconosciuto dalla Corte costituzionale come **principio supremo** dell'ordinamento (sent. 203/1989). Laicità non significa indifferenza verso il fenomeno religioso, ma garanzia della libertà di coscienza e rispetto delle tradizioni religiose diffuse (cfr. il dibattito sull'esposizione del crocifisso: Cons. Stato 2021; Cass. sent. 24414/2021; pronunce della Corte EDU).
 
 ---
 
@@ -4084,9 +5022,15 @@ La **libertà di coscienza** — libertà di coltivare convinzioni interiori e a
 
 La **libertà di manifestazione del pensiero** (art. 21 Cost.) — detta anche **libertà di espressione** — è la "pietra angolare" del sistema democratico: consiste nel diritto di esprimere le proprie idee e divulgarle a un numero indeterminato di destinatari. Non è funzionalizzata alla sola democrazia: copre qualunque contenuto, senza selezioni per scopi o circostanze.
 
+Oggetto della tutela è la comunicazione di **opinioni criticamente valutabili** (con la parola, lo scritto e ogni altro mezzo di diffusione), non le manifestazioni inarticolate di stati d'animo. Il legislatore può vietare la manifestazione di pensieri *soggettivamente falsi* (norme contro inganno, frode, raggiro; tutela della proprietà intellettuale) e imporre l'obbligo di **accertare i fatti** su cui un'opinione si fonda, mentre resta libera la loro *valutazione*. Non è invece imponibile un obbligo assoluto di verità sul modo di presentare i fatti, perché in un sistema libero non esiste un'autorità abilitata a giudicarlo.
+
+La libertà di manifestazione del pensiero (art. 21) va distinta dalla **libertà di informazione**, che riguarda la comunicazione di *notizie* e non di opinioni: per entrambe occorre accertare i fatti, ma il diritto di informare incontra limiti specifici (sicurezza dello Stato, relazioni internazionali, persecuzione dei reati, dignità altrui).
+
 #### 5.5.1. Il limite del "buon costume"
 
 L'unico limite esplicito che l'art. 21 pone è il **buon costume**, inteso essenzialmente come **pudore sessuale** (morale sessuale). È una nozione elastica che evolve con i costumi sociali. Non si applica alle opere d'arte e di scienza (art. 33 Cost.).
+
+Accanto al buon costume operano **limiti impliciti** desunti da altri valori costituzionali: onore e reputazione, riservatezza, segreto, ordine pubblico.
 
 #### 5.5.2. I reati di opinione
 
@@ -4094,6 +5038,12 @@ Alcune fattispecie penali puniscono espressioni del pensiero (istigazione, apolo
 
 - **Pensiero vs. azione:** è punibile l'espressione che sia *idonea a determinare direttamente* un'azione pericolosa per la sicurezza pubblica.
 - **Pensiero vs. offese:** sono legittimi i reati contro l'onore (ingiuria, diffamazione) e quelli a tutela del sentimento religioso e del prestigio delle istituzioni, purché si distingua la critica (anche dura) dall'insulto privo di valore espressivo.
+
+**Tutela dell'onore e ordine pubblico — fattispecie tipiche.** La tutela dell'onore si fonda sulla pari dignità sociale (art. 3 Cost.) e legittima i reati di ingiuria, diffamazione, calunnia e vilipendio verso istituzioni e simboli dello Stato, oltre ai limiti del diritto di cronaca. L'**ordine pubblico** — inteso come stato attuale di pace e stabilità — consente di vietare solo le manifestazioni che lo pongano in immediato e serio pericolo (non quelle solo potenzialmente dannose); sono perciò legittimi i divieti di apologia di delitto e istigazione a delinquere (artt. 414 e 302 c.p.), istigazione di militari alla disobbedienza (art. 266 c.p.), propaganda sovversiva (art. 272 c.p.), diffusione di notizie false atte a turbare l'ordine pubblico (art. 656 c.p.) e manifestazioni sediziose (art. 654 c.p.).
+
+**Riservatezza come limite:** la tutela si estende ai dati personali, in particolare ai **dati sensibili** (origine etnica, opinioni politiche, religione, salute, orientamento sessuale), disciplinati dal Codice della privacy e dal **GDPR** (reg. UE 2016/679) e affidati al **Garante per la protezione dei dati personali**, autorità indipendente.
+
+**Segreto professionale, d'ufficio e di Stato:** non possono essere divulgate informazioni di esclusiva pertinenza altrui, coperte da segreto professionale o d'ufficio (artt. 326, 621, 622 c.p.), né quelle che pregiudicano il buon andamento della giustizia (segretezza delle indagini, controllo sulle intercettazioni) o la **sicurezza dello Stato** (legge 124/2007). La tutela del **segreto di Stato** spetta al Presidente del Consiglio, con il supporto di un comitato interparlamentare, attraverso il potere di *apposizione* (impedire la diffusione) e di *opposizione* (vietare l'accesso); il segreto non opera per fatti di terrorismo, mafia, stragi o reati eversivi dell'ordine costituzionale.
 
 **Diffamazione a mezzo stampa:** la Corte EDU ha ritenuto che la sanzione detentiva ex art. 595.3 cod. pen. sia adeguata solo in casi eccezionali; la Corte costituzionale (sent. 150/2021) ha dichiarato parzialmente illegittima la norma, riservando la pena detentiva ai soli casi di eccezionale gravità.
 
@@ -4112,9 +5062,11 @@ La Costituzione (art. 21.2) vieta **autorizzazioni e censure preventive** sulla 
 
 La stampa è libera ma **non può essere anonima**: i periodici devono indicare il **direttore responsabile**, iscritto all'Ordine dei giornalisti, che risponde penalmente per omesso controllo.
 
+**Trasparenza dei finanziamenti:** l'art. 21 consente alla legge di imporre la divulgazione dei finanziamenti alla stampa periodica, per evitare che potenti forze finanziarie ne condizionino l'orientamento editoriale (attuazione con la legge 416/1981, monitorata dall'AGCOM).
+
 #### 5.5.5. Radiotelevisione e internet
 
-Il sistema radiotelevisivo è passato dal monopolio pubblico iniziale al sistema misto attuale, sotto la spinta della giurisprudenza costituzionale. La Corte ha progressivamente smantellato il monopolio RAI a livello locale, ma ha mantenuto il principio del monopolio pubblico per le trasmissioni nazionali fino all'approvazione di una legislazione antitrust. La "legge Mammì" (223/1990) ha poi legittimato il sistema misto pubblico-privato.
+Il sistema radiotelevisivo è passato dal monopolio pubblico iniziale (1936) al sistema misto attuale, sotto la spinta della giurisprudenza costituzionale. La Corte ha progressivamente smantellato il monopolio RAI a livello locale, ma ha mantenuto il principio del monopolio pubblico per le trasmissioni nazionali fino all'approvazione di una legislazione antitrust. La "legge Mammì" (223/1990) ha poi legittimato il sistema misto pubblico-privato; la disciplina vigente è il d.lgs. 177/2005 (Testo unico) e successive modifiche. Il **servizio pubblico** è concesso per 12 anni alla **RAI**, finanziata dal canone ma soggetta all'indirizzo del Parlamento tramite la **Commissione parlamentare di vigilanza**; agli operatori privati la legge impone limiti a programmi e ricavi per evitare posizioni dominanti, sotto la vigilanza dell'AGCOM.
 
 **Internet e la sfida alla democrazia:**
 - La **quarta rivoluzione industriale** ha radicalmente decentralizzato la produzione dell'informazione: chiunque può diventare produttore.
@@ -4243,15 +5195,67 @@ Sono riservati ai **cittadini** (status activae civitatis), ma l'integrazione eu
 
 I diritti politici **possono essere persi**: per incapacità di agire (infermità mentale) o come pena accessoria a condanne gravi (interdizione dai pubblici uffici: perpetua per condanne non inferiori a 5 anni, temporanea per condanne non inferiori a 3 anni).
 
+### 8.1. Il corpo elettorale e il corpo referendario
+
+Il **corpo elettorale** è l'insieme degli individui dotati di cittadinanza e di elettorato attivo. Non va confuso né con il *popolo* né con la *popolazione*, perché vi rientrano anche i **cittadini residenti all'estero** (cui la legge cost. 1/2000, modificando l'art. 48, ha consentito il voto per corrispondenza), accorpati nella **circoscrizione Estero** (8 deputati, 4 senatori).
+
+Al corpo elettorale la Costituzione attribuisce la funzione di eleggere i titolari delle due Camere (cui spetta la rappresentanza della nazione) e i membri italiani del Parlamento europeo; quando elegge gli organi rappresentativi delle Regioni agisce invece *frazionatamente*. Nelle elezioni comunali il voto spetta anche ai cittadini di altri Stati UE residenti in Italia.
+
+Accanto alla democrazia rappresentativa operano strumenti di **democrazia diretta**. Mediante i **referendum**, ai cittadini con diritto di voto (corpo referendario) è dato il potere di decidere direttamente su determinate questioni:
+- **Referendum costituzionale** (art. 138)
+- **Referendum abrogativo** (art. 75)
+- **Referendum regionali** (su atti delle Regioni)
+- **Referendum territoriali** (modifica delle circoscrizioni degli enti territoriali)
+
+Si affiancano l'**iniziativa legislativa popolare** (50.000 elettori) e il **diritto di petizione**, di rilievo minore.
+
+### 8.2. Campagne elettorali e referendarie
+
+La disciplina delle campagne non è dettata direttamente dalla Costituzione, salvi il principio di **libertà di voto** (art. 48) e l'accesso alle cariche elettive "in condizioni di eguaglianza" (art. 51, integrato dalla legge cost. 1/2003 sulle **pari opportunità** tra donne e uomini). La legislazione (es. legge 515/1993) prevede sanzioni contro i comportamenti lesivi della libera formazione della volontà dei votanti e regole di **par condicio**, distinte tra stampa e radiotelevisione e attuate da apposite autorità (AGCOM per stampa e tv private; Commissione parlamentare di vigilanza per la RAI). Sono regolati propaganda, "messaggi politici autogestiti", **sondaggi** (la cui divulgazione è vietata nei 15 giorni precedenti il voto) e spese dei candidati.
+
+### 8.3. I sistemi elettorali
+
+I sistemi elettorali si ispirano a due principi base:
+- **Sistema proporzionale** — la rappresentanza in Parlamento è proporzionale alla forza numerica delle liste nel corpo elettorale; più conforme alla "giustizia astratta", ma favorisce la frammentazione e rende difficile formare maggioranze stabili.
+- **Sistema maggioritario** — la rappresentanza è attribuita a chi vince nei singoli collegi (in genere uninominali); accentua la rappresentanza delle forze maggioritarie, agevolando governi stabili.
+
+**Correttivi:** per i proporzionali, **clausole di sbarramento** (soglia minima di voti per accedere al riparto dei seggi) e **premio di maggioranza** (seggi aggiuntivi alla lista più votata); per i maggioritari, **quota proporzionale** dei seggi e **diritto di tribuna** (seggi riservati alle minoranze).
+
+**Evoluzione delle leggi elettorali per il Parlamento italiano:**
+- Dall'Assemblea costituente al 1993: sistema **proporzionale**.
+- **Mattarellum** (leggi 276 e 277/1993, dopo il referendum del 18 aprile 1993): 75% dei seggi col maggioritario uninominale a turno unico, 25% col proporzionale.
+- **Porcellum** (legge 270/2005): ritorno al proporzionale con premio di maggioranza senza soglia minima, senza voto di preferenza — dichiarato incostituzionale (sent. 1/2014).
+- **Rosatellum** (2017): circa ⅝ proporzionale e ⅜ maggioritario, con clausole di sbarramento.
+
+**Altri sistemi elettorali:**
+- **Parlamento europeo:** proporzionale a liste, soglia di sbarramento del 4%, cinque grandi circoscrizioni; 76 seggi spettanti all'Italia (su 705 dopo l'uscita del Regno Unito).
+- **Consigli regionali (art. 122 Cost.):** disciplinati con legge regionale (per le Regioni ordinarie dopo la legge cost. 1/1999), nel rispetto dei principi fondamentali della legge statale 165/2004 (favorire maggioranze stabili e rappresentanza delle minoranze; divieto di mandato imperativo); il Presidente della Giunta è di regola eletto a suffragio universale e diretto.
+- **Comuni:** sopra i 15.000 abitanti, elezione diretta del Sindaco (eventuale ballottaggio) e Consiglio col proporzionale corretto da premio di maggioranza; sotto i 15.000, sistema in prevalenza maggioritario. Per Province e Città metropolitane vige l'elezione di **secondo grado** da parte di sindaci e consiglieri comunali, con voto "ponderato" in base alla popolazione.
+
+### 8.4. Il referendum costituzionale (art. 138)
+
+È la forma giuridicamente più rilevante di democrazia diretta: l'intero corpo votante è chiamato a confermare o respingere una legge di revisione (o altra legge costituzionale) già approvata dalle Camere. Il controllo spetta al solo **Ufficio centrale per il referendum** presso la Corte di cassazione (verifica di conformità alle norme costituzionali e alla legge 352/1970); **non** vi è il giudizio di ammissibilità della Corte costituzionale. È indetto dal Presidente della Repubblica e **non richiede alcun quorum di partecipazione**. La prima richiesta riguardò la riforma del Titolo V nel 2001.
+
+### 8.5. Il referendum abrogativo (art. 75)
+
+Consente di abrogare, in tutto o in parte, una legge o un atto avente forza di legge (sono escluse le altre fonti, es. i regolamenti governativi). La richiesta proviene da **500.000 elettori** o da **cinque Consigli regionali** e va depositata entro il 30 settembre presso l'Ufficio centrale per il referendum (Corte di cassazione). Vi sono due controlli successivi:
+1. **Ufficio centrale per il referendum** — verifica la conformità della richiesta e che l'atto sia ancora vigente. In base alla sent. 68/1978, se il Parlamento abroga la legge "in frode alla Costituzione" (solo per evitare il referendum, sostituendola con norma di tenore analogo), la consultazione si trasferisce sulla nuova legge.
+2. **Giudizio di ammissibilità della Corte costituzionale** (legge cost. 1/1953) — verifica i limiti dell'art. 75.2.
+
+La consultazione è valida solo se partecipa la **maggioranza degli aventi diritto** (quorum, art. 75.4); raggiunto il quorum, l'abrogazione opera se prevale il "sì" tra i voti validi (decreto del Presidente della Repubblica). La proposta abrogativa respinta non può essere riproposta nei **cinque anni** successivi.
+
 ---
 
 ## 9. I doveri costituzionali
 
-La Costituzione elenca vari doveri dei cittadini, spesso difficilmente traducibili in regole di comportamento coercibili:
+La Costituzione elenca vari doveri dei cittadini, spesso difficilmente traducibili in regole di comportamento coercibili. Il loro fondamento generale è l'**art. 2 Cost.**, che richiede l'adempimento dei "doveri inderogabili di solidarietà politica, economica e sociale":
 
 - **Doveri inderogabili di solidarietà** (art. 2 Cost.)
-- **Dovere di contribuire al progresso** (art. 4.2 Cost.)
-- **Dovere di fedeltà alla Repubblica** (art. 54.1 Cost.): ha significato normativo soprattutto per i titolari di cariche pubbliche; per i cittadini comuni si traduce nell'obbligo di rispettare Costituzione e leggi.
+- **Dovere di concorrere al progresso** materiale o spirituale della società mediante un'attività o funzione (art. 4.2 Cost.)
+- **Dovere di difesa della patria** (art. 52 Cost.)
+- **Dovere tributario** (art. 53 Cost.)
+- **Dovere di fedeltà alla Repubblica** e di osservanza della Costituzione e delle leggi (art. 54.1 Cost.): ha significato normativo soprattutto per i titolari di cariche pubbliche; per i cittadini comuni si traduce nell'obbligo di rispettare Costituzione e leggi.
+- A questi si affiancano i **diritti-doveri** dei genitori di mantenere, istruire ed educare i figli e il voto (dovere civico).
 
 I doveri costituzionali effettivamente sanzionabili si riducono essenzialmente a due:
 
@@ -4263,21 +5267,41 @@ Le **prestazioni imposte** (art. 23 Cost.) — sia patrimoniali (tariffe, tribut
 
 ---
 
+## 10. Il ripudio della guerra e l'apertura internazionale (art. 11)
+
+L'art. 11 Cost. enuncia due principi che ispirano la politica estera: il **ripudio della guerra di aggressione** e il **favore per un'organizzazione internazionale** che assicuri pace e giustizia.
+
+"L'Italia ripudia la guerra come strumento di offesa alla libertà degli altri popoli e come mezzo di risoluzione delle controversie internazionali." Non è vietata la **guerra di difesa** (anche di altri popoli); il divieto della guerra come mezzo di soluzione delle controversie impone di cercare vie pacifiche, fermo restando che l'uso della forza non è precluso se la controparte non si comporta secondo gli stessi principi. La disciplina sulle **missioni militari all'estero** deve comunque rispettare i principi dell'art. 11.
+
+Le **limitazioni di sovranità** vanno intese come limitazioni *liberamente consentite* all'esercizio della sovranità, derivanti dall'assunzione di obblighi internazionali (come nel caso dell'**Unione europea**), in condizioni di parità con gli altri Stati (eguale soggezione al diritto internazionale, eguale inviolabilità dell'integrità e indipendenza politica).
+
+---
+
 ## Concetti chiave
 
 **Preavviso di riunione** — onere posto a carico dei promotori di riunioni in luogo pubblico: non è condizione di legittimità (≠ autorizzazione), ma la sua omissione comporta responsabilità penale.
 
-**Associazione** — formazione sociale a base volontaria con nucleo organizzativo e tendenziale stabilità; tutelata dall'art. 18 Cost. con tre garanzie: libertà di adesione, libertà di istituzione senza autorizzazione, riserva di legge rinforzata.
+**Associazione** — formazione sociale a base volontaria con nucleo organizzativo e tendenziale stabilità; tutelata dall'art. 18 Cost. con tre garanzie: libertà di adesione (e di recesso), libertà di istituzione senza autorizzazione, riserva di legge rinforzata.
 
 **Associazioni segrete** — quelle che occultano la propria esistenza o i soci e interferiscono illecitamente sulle istituzioni pubbliche; vietate dall'art. 18.2 Cost. e dalla legge 17/1982 (legge P2).
 
-**Obiezione di coscienza** — rifiuto motivato da convinzioni interiori di compiere atti prescritti dall'ordinamento; ammessa dalla legge in casi specifici (servizio militare, aborto, procreazione assistita, sperimentazione animale).
+**Obiezione di coscienza** — rifiuto motivato da convinzioni interiori di compiere atti prescritti dall'ordinamento; non ammessa in via generale, ma riconosciuta dalla legge in casi specifici (servizio militare, aborto, procreazione assistita, sperimentazione animale).
 
-**Libertà di manifestazione del pensiero** — diritto di esprimere idee e divulgarle a destinatari indeterminati (art. 21 Cost.); "pietra angolare" della democrazia; unico limite costituzionale è il buon costume (pudore sessuale).
+**Principio di laicità** — principio supremo dell'ordinamento (Corte cost. 203/1989): non indifferenza verso il fenomeno religioso, ma garanzia della libertà di coscienza e rispetto delle tradizioni religiose diffuse.
+
+**Intese (art. 8.3 Cost.)** — accordi tra il Governo e i rappresentanti delle confessioni acattoliche sulla cui base la legge regola i rapporti con lo Stato (stipulate finora con 13 confessioni).
+
+**Patti Lateranensi (art. 7 Cost.)** — Trattato e Concordato del 1929 (modificati nel 1984/1985) che regolano i rapporti tra Stato e Chiesa cattolica; modificabili d'accordo tra le parti senza revisione costituzionale.
+
+**Libertà di manifestazione del pensiero** — diritto di esprimere idee e divulgarle a destinatari indeterminati (art. 21 Cost.); "pietra angolare" della democrazia; unico limite costituzionale esplicito è il buon costume (pudore sessuale).
+
+**Libertà di informazione** — diritto di comunicare e ricevere notizie (≠ opinioni); incontra limiti specifici (sicurezza dello Stato, relazioni internazionali, persecuzione dei reati, dignità altrui).
 
 **Buon costume** — nozione elastica intesa come morale sessuale; evolve con i costumi sociali; non si applica ad arte e scienza.
 
 **Reati di opinione** — fattispecie penali che puniscono espressioni del pensiero; compatibili con l'art. 21 solo se puniscono espressioni idonee a generare azioni pericolose o vere offese all'onore.
+
+**Segreto di Stato** — tutela affidata al Presidente del Consiglio (con comitato interparlamentare) tramite apposizione e opposizione; non opera per terrorismo, mafia, stragi e reati eversivi (legge 124/2007).
 
 **Filter bubble** — fenomeno per cui gli algoritmi dei social media personalizzano i contenuti in base alle preferenze dell'utente, chiudendolo in una "bolla" che rafforza i pregiudizi e frammenta il dibattito pubblico.
 
@@ -4307,10 +5331,23 @@ Le **prestazioni imposte** (art. 23 Cost.) — sia patrimoniali (tariffe, tribut
 
 **Diritti politici** — diritti riservati ai cittadini (status activae civitatis) per partecipare alla vita pubblica: elettorato attivo e passivo, referendum, petizione, accesso agli uffici pubblici (artt. 48-51 Cost.).
 
+**Corpo elettorale** — insieme dei cittadini titolari dell'elettorato attivo (comprende i residenti all'estero della circoscrizione Estero); distinto da popolo e popolazione.
+
+**Sistema proporzionale / maggioritario** — il primo distribuisce i seggi in proporzione ai voti (favorisce la rappresentatività ma frammenta); il secondo li attribuisce a chi vince nei collegi (favorisce la stabilità). Correttivi: clausole di sbarramento, premio di maggioranza, quota proporzionale, diritto di tribuna.
+
+**Referendum abrogativo** (art. 75 Cost.) — strumento di democrazia diretta per abrogare leggi o atti aventi forza di legge; richiesto da 500.000 elettori o 5 Consigli regionali; valido solo con il quorum della maggioranza degli aventi diritto.
+
+**Referendum costituzionale** (art. 138 Cost.) — consultazione di conferma di una legge costituzionale già approvata dalle Camere; non richiede quorum di partecipazione e non è soggetto al giudizio di ammissibilità della Corte costituzionale.
+
 **Dovere tributario** (art. 53 Cost.) — obbligo di contribuire alle spese pubbliche in proporzione alla capacità contributiva, con sistema progressivo che esprime l'eguaglianza sostanziale.
+
+**Ripudio della guerra** (art. 11 Cost.) — divieto della guerra di aggressione e come mezzo di risoluzione delle controversie; ammessa la guerra di difesa; fondamento delle limitazioni di sovranità a favore dell'UE e delle organizzazioni internazionali.
 
 
 ---
+
+</content>
+</invoke>
 
 # VIII-IX. L'Amministrazione della Giustizia e la Giustizia Costituzionale
 
@@ -4319,6 +5356,8 @@ Le **prestazioni imposte** (art. 23 Cost.) — sia patrimoniali (tariffe, tribut
 ## VIII. L'Amministrazione della Giustizia
 
 ### 1. La struttura del sistema giudiziario italiano
+
+Il **titolo IV della seconda parte della Costituzione (artt. 101-113)** disciplina l'esercizio della funzione giurisdizionale, che consiste nell'**applicare il diritto per risolvere controversie** tra cittadini o tra cittadini e pubbliche amministrazioni. La giustizia è amministrata **in nome del popolo** da giudici imparziali **soggetti soltanto alla legge** (art. 101 Cost.), intesa come l'insieme delle norme vigenti.
 
 Il sistema giudiziario italiano è caratterizzato dalla coesistenza di **più giurisdizioni**, ognuna competente su materie o posizioni giuridiche diverse:
 
@@ -4330,6 +5369,20 @@ Il sistema giudiziario italiano è caratterizzato dalla coesistenza di **più gi
 
 **Criterio di riparto**: di regola, i **diritti soggettivi** spettano al giudice ordinario; gli **interessi legittimi** al giudice amministrativo. Una tendenza più recente privilegia invece il criterio della **materia**.
 
+#### La composizione dell'ordine giudiziario
+
+I magistrati sono di regola **funzionari pubblici** selezionati per concorso in base al merito. La Costituzione prevede però alcune forme di partecipazione di soggetti **"non togati"**:
+
+- **Art. 102.3 Cost.** — consente la **partecipazione diretta del popolo** all'amministrazione della giustizia (es. i giudici popolari della corte d'assise)
+- **Art. 106.3 Cost.** — per **"meriti insigni"** possono essere nominati consiglieri di Cassazione professori universitari di materie giuridiche e avvocati con almeno 15 anni di esercizio (l. 303/1998)
+- I **giudici di pace** sono magistrati **onorari**, non di carriera
+
+La magistratura si articola in tre componenti:
+
+1. **Giudici** — titolari degli **organi giudicanti** (funzioni giurisdizionali): giudici di pace, tribunali, corti d'appello, Corte di cassazione
+2. **Pubblici ministeri** — titolari degli **organi requirenti** (funzioni di accusa): procure della Repubblica, procure distrettuali, procure antimafia e antiterrorismo
+3. **Giurisdizioni speciali** previste in Costituzione (es. Corte dei conti)
+
 #### Organizzazione della giustizia ordinaria
 
 Gli organi giudicanti **civili** si dividono in:
@@ -4340,13 +5393,28 @@ Gli organi giudicanti **penali** comprendono:
 - Primo grado: giudice di pace, tribunale, corte d'assise
 - Secondo grado: corte d'appello, corte d'assise d'appello, tribunale della libertà
 
-Gli **organi requirenti** sono i **Pubblici ministeri (PM)**, titolari dell'azione penale. L'art. 112 Cost. impone al PM l'**obbligo dell'azione penale**: non può scegliere discrezionalmente se esercitarla — deve farlo ogni volta che riceve una notitia criminis fondata. Ciò garantisce imparzialità nell'attivazione della giurisdizione penale.
+Gli **organi requirenti** sono i **Pubblici ministeri (PM)**, titolari dell'azione penale. L'art. 112 Cost. impone al PM l'**obbligo dell'azione penale**: non può scegliere discrezionalmente se esercitarla — deve farlo ogni volta che riceve una notitia criminis fondata. Ciò garantisce imparzialità nell'attivazione della giurisdizione penale. Il PM è **indipendente dall'esecutivo** e gode di garanzie costituzionali proprie, pur in una posizione distinta da quella del giudice.
 
 La questione della **separazione delle carriere** tra giudicanti e requirenti ha attraversato una storia tormentata. La riforma Cartabia (l. 71/2022) ha infine limitato il passaggio tra le due funzioni a **una sola volta** nel corso della carriera.
 
+#### Il principio di unità della giurisdizione
+
+L'**art. 102.1 Cost.** stabilisce che la funzione giurisdizionale è esercitata da un **unico corpo di giudici ordinari**. Ne deriva il **divieto di istituire giudici straordinari o speciali** (art. 102.2 Cost.), cioè giudici creati ad hoc per casi o materie specifiche al di fuori della giurisdizione ordinaria.
+
+Sono però ammesse:
+- **Sezioni specializzate** presso gli organi giudiziari ordinari, con la partecipazione di esperti estranei alla magistratura (es. **tribunale per i minorenni**, **sezioni di sorveglianza**, **tribunale delle imprese** per diritto societario, antitrust, contratti pubblici)
+- Le **giurisdizioni speciali espressamente previste** dalla Costituzione: Consiglio di Stato e TAR (art. 103.1), Corte dei conti (art. 103.2), tribunali militari (art. 103.3)
+- I **giudici speciali preesistenti** alla Costituzione (es. le Commissioni tributarie), purché riformati per garantirne indipendenza e terzietà; la **sent. 68/1968** della Corte costituzionale ha imposto la riforma o soppressione di quelli privi di tali requisiti
+
 #### La Corte di cassazione
 
-La **Corte di cassazione** è il giudice di **legittimità** (controlla solo la corretta applicazione della legge, non ricostruisce i fatti). Esercita anche la funzione di **nomofilachia** — indirizzo interpretativo uniforme per tutta la giurisdizione — e risolve i conflitti di competenza tra giudici.
+La **Corte di cassazione** è il giudice di **legittimità** (controlla la violazione o falsa applicazione delle norme di diritto, non ricostruisce i fatti) ed è l'**organo di chiusura** del sistema giudiziario. È suddivisa in **sezioni civili, penali e del lavoro** e si riunisce a **sezioni unite** nei casi più rilevanti o quando vi sono orientamenti contrastanti tra le sezioni.
+
+Esercita la funzione di **nomofilachia** — indirizzo interpretativo uniforme per tutta la giurisdizione — e risolve i conflitti di competenza, di giurisdizione e di attribuzione tra organi giurisdizionali.
+
+L'interpretazione della Cassazione **non costituisce precedente vincolante**, salvo eccezioni del codice di rito:
+- **Art. 384 c.p.c.** — accogliendo il ricorso e annullando con rinvio, la Cassazione enuncia un **principio di diritto** a cui il giudice del rinvio deve attenersi
+- **Art. 374 c.p.c.** — in caso di contrasto tra sezioni semplici, il Primo Presidente può assegnare la causa alle **sezioni unite**
 
 ---
 
@@ -4366,7 +5434,15 @@ L'art. 24 Cost. garantisce il diritto di agire in giudizio come **diritto inviol
 - **Contraddittorio** tra le parti in condizioni di parità
 - **Giudice terzo e imparziale**
 - Nel processo penale: informazione tempestiva dell'accusa, tempo adeguato per la difesa, diritto a interrogare i testimoni dell'accusa, **contraddittorio nella formazione della prova**
-- **Ragionevole durata del processo** (principio mutuato dall'art. 6 CEDU)
+- **Ragionevole durata del processo** (principio mutuato dall'art. 6 CEDU), assistita dalla previsione di un'**equa riparazione** per i danni da durata irragionevole
+
+#### 2.3. Obbligo di motivazione e ricorso in Cassazione
+
+- **Art. 111.6 Cost.** — tutti i provvedimenti giurisdizionali devono essere **motivati**, in fatto e in diritto, per consentire il controllo del percorso logico-giuridico della decisione e l'eventuale ricorso
+- **Art. 111.7 Cost.** — è sempre ammesso il **ricorso in Cassazione per violazione di legge** contro le sentenze e i provvedimenti sulla **libertà personale**, qualunque sia l'organo che li ha pronunciati
+- **Art. 111, u.c. Cost.** — contro le decisioni del Consiglio di Stato e della Corte dei conti il ricorso in Cassazione è ammesso **per i soli motivi inerenti alla giurisdizione**
+
+La Costituzione non sancisce espressamente il principio del **doppio grado di giurisdizione**.
 
 ---
 
@@ -4383,8 +5459,9 @@ Eccezioni: professori ordinari e avvocati con 15 anni di esperienza possono esse
 L'art. 104.1 Cost. afferma che **la magistratura è un ordine autonomo e indipendente da ogni altro potere**.
 
 - **Autonomia**: ogni magistrato decide senza condizionamenti interni all'ordine giudiziario
-- **Indipendenza**: protezione dai condizionamenti esterni (altri poteri dello Stato)
-- **Inamovibilità** (art. 107.1 Cost.): i magistrati non possono essere trasferiti senza consenso, salvo provvedimento motivato del CSM per incompatibilità o per ragioni di prestigio dell'ordine
+- **Indipendenza**: protezione dai condizionamenti esterni (altri poteri dello Stato). Per la giurisdizione ordinaria è affermata direttamente dalla Costituzione (art. 104.1); per le **giurisdizioni speciali** e per il PM ad esse legato è la **legge** a doverla garantire (art. 108.2 Cost.)
+- **Inamovibilità** (art. 107.1 Cost.): i magistrati non possono essere trasferiti, dispensati o sospesi senza consenso, salvo provvedimento motivato del CSM per incompatibilità o per ragioni di prestigio dell'ordine
+- **Assenza di gerarchia** (art. 107.3 Cost.): i magistrati si distinguono soltanto per le **funzioni** svolte, senza rapporti gerarchici tra loro
 
 ---
 
@@ -4402,13 +5479,18 @@ Il **CSM** è l'organo di autogoverno della magistratura ordinaria. La sua esist
 
 In totale: 33 membri (dopo la riforma Cartabia che ha ripristinato la composizione pre-2002).
 
-La presenza dei **membri laici** serve a evitare che la magistratura diventi una "casta" chiusa. La **presidenza del Capo dello Stato** ha carattere prevalentemente formale e simbolico; la gestione concreta spetta al vicepresidente eletto internamente.
+La presenza dei **membri laici** serve a evitare che la magistratura diventi una "casta" chiusa. La **presidenza del Capo dello Stato** ha carattere prevalentemente formale e simbolico; la gestione concreta spetta al **vicepresidente**, eletto **tra i membri laici**, che sostituisce il Presidente della Repubblica in caso di assenza e svolge funzioni delegate. Il CSM può essere **sciolto dal Presidente della Repubblica** in caso di impossibilità di funzionamento.
 
-#### Competenze
+Lo scopo originario della presidenza presidenziale era di **bilanciare** la maggioranza dei membri togati con la minoranza di estrazione politica; nella prassi si sono talvolta registrate tensioni istituzionali e una certa **politicizzazione** dell'organo.
 
-Il CSM delibera su: **assegnazioni, trasferimenti, promozioni, provvedimenti disciplinari**. L'**azione disciplinare** è promossa dal Ministro della giustizia o dal Procuratore Generale presso la Cassazione; la decisione spetta alla sezione disciplinare del CSM.
+#### Competenze (art. 105 Cost.)
 
-I magistrati rispondono anche di **responsabilità penale** e **civile**: la legge 18/2015 ha ampliato i casi di responsabilità civile (dolo o colpa grave), con risarcimento azionabile verso lo Stato, che si rivale sul magistrato per un importo non superiore alla metà dell'annualità dello stipendio.
+Il CSM delibera su **assunzioni, assegnazioni, trasferimenti, promozioni e provvedimenti disciplinari** dei magistrati ordinari.
+
+- L'**azione disciplinare** è promossa dal Ministro della giustizia o dal Procuratore Generale presso la Cassazione (art. 107.2 Cost.); la decisione spetta alla **sezione disciplinare** del CSM, composta dal vicepresidente e da altri cinque membri. Le sanzioni vanno dalla **censura** fino alla **rimozione**.
+- Le deliberazioni del CSM sono formalizzate con **decreto del Presidente della Repubblica** (o, in alcuni casi, del Ministro della giustizia). Trattandosi di atti **amministrativi**, sono impugnabili davanti al **TAR del Lazio** per motivi di legittimità; fa eccezione il **provvedimento disciplinare**, impugnabile con ricorso in **Cassazione a sezioni unite**.
+
+I magistrati rispondono anche di **responsabilità penale** e **civile**: la legge 18/2015 ha ampliato i casi di responsabilità civile (dolo o colpa grave, denegata giustizia, violazione manifesta della legge italiana o europea) e ha **rimosso il filtro di ammissibilità** delle azioni di risarcimento. L'azione è esperita verso lo **Stato**, che si rivale sul magistrato per un importo non superiore alla metà dell'annualità dello stipendio (salvo il dolo). Restano esclusi gli errori di interpretazione e valutazione, salvo dolo o colpa grave.
 
 ---
 
@@ -4423,6 +5505,28 @@ Con la Costituzione del 1948 i poteri del Ministro si sono drasticamente ridotti
 
 ---
 
+### 6. La giurisdizione amministrativa
+
+La giurisdizione amministrativa è esercitata in primo grado dai **Tribunali amministrativi regionali (TAR)**, istituiti con la **l. 1034/1971**, e in secondo grado dal **Consiglio di Stato**. L'**art. 113 Cost.** garantisce sempre la tutela giurisdizionale dei diritti e degli interessi legittimi contro gli atti della PA, davanti al giudice ordinario o amministrativo.
+
+- Di regola al giudice amministrativo spetta la tutela degli **interessi legittimi**; in **materie tassative** indicate dalla legge esercita una **giurisdizione esclusiva** che abbraccia anche i **diritti soggettivi** (es. pubblici servizi, urbanistica, edilizia, provvedimenti delle autorità amministrative indipendenti — art. 103 Cost.)
+- Su ricorso di chi lamenta la lesione di un interesse legittimo, il giudice amministrativo può **annullare l'atto illegittimo** e condannare al **risarcimento** (anche in forma specifica), ma **non può sostituirsi** all'amministrazione
+- In caso di inadempimento dell'amministrazione, il giudice attiva il **giudizio di ottemperanza**, nominando un **commissario ad acta** che compie gli atti necessari
+
+**Giudice ordinario e atto amministrativo**: quando un atto illegittimo lede un **diritto soggettivo**, il giudice ordinario può solo **disapplicare** l'atto nel caso concreto (non annullarlo né modificarlo) e ordinare il **risarcimento** del danno ingiusto (art. 2043 c.c.).
+
+---
+
+### 7. Le giurisdizioni speciali: contabile, tributaria e militare
+
+**Corte dei conti** (art. 103.2 Cost.) — accanto alle funzioni di controllo, esercita funzioni **giurisdizionali** in materia di **contabilità pubblica** e in materie definite dalla legge (es. trattamenti pensionistici dei dipendenti pubblici e pensioni di guerra). La giurisdizione si articola su **due gradi**: **sezioni regionali** (primo grado) e **sezioni centrali** (secondo grado); le **sezioni riunite** decidono i conflitti tra sezioni e le questioni di particolare rilevanza. Accerta la **responsabilità contabile** (responsabilità amministrativa di tipo patrimoniale per i danni all'erario causati con **dolo o colpa grave**); i giudizi sono promossi dai procuratori regionali e generale (l. 20/1994 e d.l. 174/2012).
+
+**Tribunali militari** (art. 103.3 Cost.) — operano in tempo di pace e di guerra. La **l. 180/1981** ha introdotto un giudice di secondo grado (**Corte militare d'appello**), il ricorso in Cassazione contro le sentenze militari, un PM militare presso la Cassazione e il **Consiglio della magistratura militare** (organo analogo al CSM); ai magistrati militari si applicano le garanzie di status e indipendenza dei magistrati ordinari.
+
+**Giustizia tributaria** — giudice speciale preesistente, riformato per garantirne indipendenza e terzietà. La **l. 130/2022** ha ridenominato gli organi **Corti di giustizia tributaria di primo e secondo grado**; le decisioni di secondo grado sono impugnabili in Cassazione. Esiste il **Consiglio di presidenza della giustizia tributaria**, organo di autogoverno analogo al CSM.
+
+---
+
 ## IX. Giustizia Costituzionale
 
 ### 1. Che cos'è la giustizia costituzionale
@@ -4431,11 +5535,16 @@ Con la Costituzione del 1948 i poteri del Ministro si sono drasticamente ridotti
 
 Per **giustizia costituzionale** si intende il sistema di controllo giurisdizionale del rispetto della Costituzione. È la principale garanzia della **rigidità costituzionale**: senza di essa la Costituzione perderebbe la sua prevalenza gerarchica sulle leggi ordinarie.
 
-Il celebre caso **Marbury v. Madison** (Corte Suprema USA, 1803) ha sancito per la prima volta il principio: se la Costituzione è legge superiore, il giudice deve applicarla anche a scapito della legge ordinaria contraria.
+Vale il principio dell'**unità della giurisdizione costituzionale**: tali funzioni non possono essere attribuite ad altri organi, neppure con norme di rango costituzionale. In applicazione di questo principio è stata, ad esempio, **soppressa l'Alta Corte di Giustizia siciliana**, le cui competenze sono state dichiarate incostituzionali.
 
-#### 1.2. Il modello italiano
+#### 1.2. I due modelli e il modello italiano
 
-Il sistema italiano è prevalentemente:
+Esistono **due modelli** di controllo di costituzionalità:
+
+- **Modello diffuso** — ogni giudice può sindacare la legittimità costituzionale delle leggi nel corso del giudizio; tipico degli **Stati Uniti**, con il valore di **precedente vincolante** delle decisioni della Corte Suprema. Il caso fondativo è **Marbury v. Madison** (1803): se la Costituzione è legge superiore, il giudice deve applicarla anche a scapito della legge ordinaria contraria.
+- **Modello accentrato** — il controllo spetta a un **unico organo specializzato**; nato in contesti federali europei (**Austria 1867, Svizzera 1874**) per risolvere i conflitti tra autorità centrali e federate, poi esteso al controllo generale delle leggi.
+
+Il sistema italiano ha adottato il **modello accentrato** ed è prevalentemente:
 
 - **Successivo**: il giudizio investe leggi già in vigore
 - **Accentrato**: c'è un unico organo, la **Corte costituzionale**
@@ -4448,11 +5557,13 @@ Eccezioni e attenuazioni:
 
 #### 1.3. Attribuzioni della Corte (art. 134 Cost.)
 
-1. Controllo di **legittimità costituzionale** delle leggi e degli atti con forza di legge
+1. Controllo di **legittimità costituzionale** delle leggi e degli atti con forza di legge (dello Stato, delle Regioni e delle Province autonome di Trento e Bolzano)
 2. Giudizio sui **conflitti di attribuzione tra poteri dello Stato**
 3. Giudizio sui **conflitti di attribuzione tra Stato e Regioni**
 4. Giudizio sulle **accuse contro il Presidente della Repubblica** (alto tradimento e attentato alla Costituzione)
 5. Giudizio di **ammissibilità del referendum abrogativo** (aggiunto dalla legge cost. 1/1953)
+
+L'art. 134 è stato **modificato nel 1989** per escludere il giudizio sui **reati ministeriali**.
 
 ---
 
@@ -4462,29 +5573,34 @@ Eccezioni e attenuazioni:
 
 La Corte è composta da **15 giudici**, nominati per un terzo ciascuno da:
 
-- **Parlamento in seduta comune** — con maggioranza dei 2/3 (poi 3/5 dal terzo scrutinio); di fatto si è instaurata una convenzione di spartizione tra partiti
+- **Parlamento in seduta comune** — con maggioranza qualificata dei **2/3 nei primi due scrutini**, **3/5 dal terzo scrutinio** (l. cost. 2/1967); di fatto si è instaurata una convenzione di spartizione tra partiti
 - **Presidente della Repubblica** — per convenzione senza proposta governativa, per preservare l'autonomia dalla maggioranza politica
-- **Supreme magistrature** — 3 dalla Cassazione, 1 dal Consiglio di Stato, 1 dalla Corte dei conti
+- **Supreme magistrature** — 3 dalla **Cassazione**, 1 dal **Consiglio di Stato**, 1 dalla **Corte dei conti** (a maggioranza assoluta, con eventuale ballottaggio)
 
-**Requisiti**: i giudici devono provenire dalle magistrature superiori, dall'accademia giuridica (professori ordinari) o dall'avvocatura con almeno **20 anni di esercizio**.
+**Requisiti** (art. 135.2 Cost.): i giudici devono provenire dalle **magistrature superiori** (anche a riposo), dall'**accademia giuridica** (professori ordinari di materie giuridiche) o dall'**avvocatura** con almeno **20 anni** di esercizio.
 
 #### 2.2. Status e garanzie
 
 - **Durata**: 9 anni, **non rinnovabili** (per evitare dipendenza dal potere nominante)
-- **Immunità**: i giudici non sono sindacabili per opinioni e voti espressi in funzione; godono dell'immunità parlamentare personale
-- **Inamovibilità**: la rimozione richiede delibera della Corte a maggioranza dei 2/3
-- **Incompatibilità**: assoluta con incarichi politici, professionali, associativi
-- **Autonomia finanziaria e normativa**: la Corte gestisce il proprio bilancio e ha un proprio regolamento
+- **Insindacabilità**: i giudici non sono perseguibili per opinioni espresse e voti dati nell'esercizio delle funzioni
+- **Immunità personale**: limitazioni alla libertà personale o domiciliare solo previa **autorizzazione della Corte**
+- **Inamovibilità**: la sospensione o rimozione è decisa dalla Corte stessa, in casi eccezionali
+- **Decadenza**: per mancato esercizio delle funzioni per **sei mesi**
+- **Incompatibilità**: assoluta con incarichi politici, parlamentari, regionali, con la professione di avvocato e con l'attività in partiti politici
+- **Autonomia finanziaria e normativa**: la Corte gestisce il proprio bilancio, decide sul proprio personale (**autodichia**) e ha un proprio regolamento
+- **Verifica dei poteri**: la Corte controlla essa stessa il possesso dei requisiti per l'accesso alla carica
 
 #### 2.3. Funzionamento
 
-Il **Presidente** è eletto dalla Corte stessa a scrutinio segreto; il mandato è triennale e rinnovabile.
+Il **Presidente** è eletto dalla Corte stessa a scrutinio segreto, a maggioranza assoluta (con eventuale ballottaggio); il mandato è **triennale e rinnovabile**. Stabilisce il calendario dei lavori, presiede le discussioni e il suo voto, pari a quello degli altri giudici, è **decisivo in caso di parità**.
 
 I giudici non scadono tutti insieme ma **gradualmente** (rinnovo parziale e continuo), e non si applica la prorogatio: alla scadenza del mandato la funzione cessa immediatamente.
 
+Le **fonti** che disciplinano la Corte sono gli artt. 134-137 Cost., la l. cost. 1/1948, la l. cost. 1/1953 e la l. 87/1953; quest'ultima autorizza la Corte ad adottare proprie **"norme integrative"** (regolamenti interni). Le norme integrative, aggiornate nel **2020**, hanno introdotto la possibilità di **opinioni scritte di "amici curiae"** (portatori di interessi collettivi o diffusi) e l'**audizione di esperti** nei giudizi in via incidentale.
+
 Le decisioni possono essere:
-- **Sentenze** — definiscono il giudizio
-- **Ordinanze** — provvedimenti interlocutori (non esauriscono il processo)
+- **Sentenze** — definiscono il giudizio (motivate)
+- **Ordinanze** — provvedimenti interlocutori che non esauriscono il processo (motivazione solo "succinta"); usate anche per la **manifesta infondatezza** (art. 29, l. 87/1953)
 
 Le decisioni della Corte **non sono mai impugnabili** (art. 137.3 Cost.).
 
@@ -4501,28 +5617,43 @@ Sono sindacabili le **leggi e gli atti con forza di legge** dello Stato e delle 
 
 Sono **esclusi**: consuetudini, regolamenti dell'esecutivo (sindacati dal giudice amministrativo), norme UE, "atti aventi forza di legge" regionali.
 
-#### 3.2. Il parametro di giudizio
+#### 3.2. I vizi e il parametro di giudizio
 
-Il parametro primario è la **Costituzione e le leggi costituzionali**. Esiste però il **parametro interposto**: norme sub-costituzionali la cui violazione implica una violazione indiretta della Costituzione (es. violazione dei principi direttivi della legge delega → violazione dell'art. 76 Cost.; violazione delle norme internazionali → violazione dell'art. 10 Cost.).
+I **vizi** di legittimità costituzionale si distinguono in:
+- **Vizi formali** — riguardano il **procedimento** di formazione dell'atto legislativo
+- **Vizi sostanziali** — riguardano il **contenuto normativo** della legge
+- **Eccesso di potere legislativo** — la legge devia dal fine pubblico; pur non potendo sindacare le scelte politiche e l'uso del potere discrezionale del Parlamento, la Corte verifica la **ragionevolezza**, la logica interna e la **coerenza tra mezzi e fini**
+
+Il parametro primario è la **Costituzione e le leggi costituzionali**. Esiste però il **parametro interposto**: norme sub-costituzionali la cui violazione implica una violazione indiretta della Costituzione (es. violazione dei principi direttivi della legge delega → violazione dell'art. 76 Cost.; legge regionale che viola i principi della legge statale → violazione dell'art. 117.3 Cost.; violazione delle norme internazionali → violazione dell'art. 10 Cost.). Il meccanismo **non opera** invece nel rapporto tra Costituzione, leggi e **regolamenti parlamentari**.
 
 #### 3.3. Giudizio incidentale (via d'eccezione)
 
-È il meccanismo principale di accesso. La questione di legittimità nasce come **incidente processuale** in un giudizio già in corso (il **giudizio a quo**). Il giudice può sollevarla d'ufficio o su istanza di parte.
+È il meccanismo principale di accesso. La questione di legittimità nasce come **incidente processuale** in un giudizio già in corso (il **giudizio a quo**). Il giudice può sollevarla d'ufficio o su istanza di parte (o del PM, che però **non può rimettere direttamente** la questione alla Corte); anche la stessa Corte può sollevare questioni sulle norme che applica.
 
 Requisiti perché il giudice possa rimettere la questione alla Corte:
 
 1. **Rilevanza**: la disposizione sospetta deve essere necessariamente applicabile nel giudizio in corso
 2. **Non manifesta infondatezza**: il giudice deve avere un ragionevole dubbio sulla costituzionalità (non deve pronunciarsi sulla fondatezza, solo non escluderla)
 
-Il giudice emette un'**ordinanza di rimessione** che sospende il processo principale. Le parti possono costituirsi davanti alla Corte, ma è un giudizio **a parti eventuali** (il loro intervento è facoltativo).
+Il giudice emette un'**ordinanza di rimessione** che **sospende** il processo principale. L'ordinanza definisce il **thema decidendum**:
+- I **motivi** — i requisiti di ammissibilità (rilevanza e non manifesta infondatezza)
+- I **termini** — l'**oggetto** (la disposizione sospettata) e il **parametro** (le disposizioni costituzionali ritenute violate)
+
+Le parti possono costituirsi davanti alla Corte, ma è un giudizio **a parti eventuali** (il loro intervento è facoltativo).
+
+**Principio di corrispondenza tra chiesto e pronunciato**: la Corte giudica solo sull'oggetto e sul parametro definiti dal giudice a quo, pur conservando autonomia interpretativa. In deroga a tale principio può però dichiarare l'**illegittimità costituzionale consequenziale**: estende la pronuncia ad altre norme che riproducono il contenuto di quella illegittima, vi sono funzionalmente collegate o restano prive di giustificazione dopo la decisione.
 
 #### 3.4. Giudizio in via principale (via d'azione)
 
-Può essere promosso dallo **Stato contro leggi regionali** o dalla **Regione contro leggi statali o di altre Regioni**. Il ricorso deve essere presentato entro **60 giorni** dalla pubblicazione della legge impugnata.
+Può essere promosso dallo **Stato contro leggi regionali** o dalla **Regione contro leggi statali o di altre Regioni**, senza l'intermediazione di un giudice. Il ricorso deve essere presentato entro **60 giorni** dalla pubblicazione della legge impugnata (disciplina modificata dalla l. cost. 3/2001; per lo Stato art. 127.1 Cost.).
 
-Caratteristiche: è un giudizio **astratto** (non dipende da un caso concreto) e **disponibile** (i soggetti legittimati non sono obbligati a promuoverlo).
+Caratteristiche: è un giudizio **astratto** (non dipende da un caso concreto) e **disponibile** (i soggetti legittimati non sono obbligati a promuoverlo e possono **rinunciare** al ricorso, con estinzione del processo se la rinuncia è accettata).
 
-**Asimmetria**: lo Stato può impugnare leggi regionali per qualsiasi violazione costituzionale; la Regione può impugnare leggi statali solo se violano le proprie competenze.
+**Soggetti legittimati**: per lo Stato il **Presidente del Consiglio**, previa deliberazione del Consiglio dei Ministri; per la Regione il **Presidente della Giunta**, previa deliberazione della Giunta. La Corte può **sospendere l'esecuzione** dell'atto impugnato in presenza di un rischio di **irreparabile pregiudizio** per l'interesse pubblico o i diritti dei cittadini.
+
+**Asimmetria**: lo Stato può impugnare leggi regionali per qualsiasi violazione costituzionale (senza dover dimostrare un interesse concreto, agendo a tutela dell'ordine giuridico complessivo); la Regione può impugnare leggi statali solo se ledono le proprie competenze (o diritti/interessi regionali costituzionalmente protetti), dovendo dimostrare un **interesse concreto e attuale**.
+
+Caso particolare: l'impugnazione **preventiva** delle leggi di approvazione degli **Statuti** regionali, entro **30 giorni** dalla pubblicazione.
 
 ---
 
@@ -4530,7 +5661,7 @@ Caratteristiche: è un giudizio **astratto** (non dipende da un caso concreto) e
 
 #### 4.1. Decisioni di inammissibilità
 
-La Corte dichiara l'inammissibilità quando mancano i presupposti formali o processuali: assenza dei requisiti soggettivi o oggettivi, carenza di rilevanza, difetto di motivazione nell'ordinanza di remissione, questioni che implicano valutazioni politiche insindacabili (art. 28, l. 87/1953).
+La Corte dichiara l'inammissibilità quando mancano i presupposti formali o processuali (si arresta **in limine litis**): assenza dei requisiti soggettivi o oggettivi, carenza di rilevanza, difetto di motivazione nell'ordinanza di remissione, questioni che implicano valutazioni politiche insindacabili (art. 28, l. 87/1953).
 
 #### 4.2. Sentenze di rigetto
 
@@ -4538,62 +5669,97 @@ La Corte dichiara la questione **"non fondata"**. Non afferma che la legge è le
 
 #### 4.3. Sentenze di accoglimento
 
-La Corte dichiara **l'illegittimità costituzionale** della disposizione. Effetti:
-- **Erga omnes**: la norma cessa di esistere nell'ordinamento
-- **Ex tunc** (retroattivi): colpisce anche i rapporti sorti in passato, ma **non i rapporti esauriti** (quelli su cui è passato in giudicato una sentenza, o per cui è decorsa la prescrizione)
-- In materia penale: cessa l'esecuzione delle condanne irrevocabili fondate sulla norma dichiarata illegittima (art. 30.4, l. 87/1953)
+La Corte dichiara **l'illegittimità costituzionale** della disposizione. Sono **pronunce di accertamento con effetti costitutivi**. Effetti:
+- **Erga omnes**: la norma cessa di esistere nell'ordinamento e non è più applicabile **dal giorno successivo** alla pubblicazione della decisione (di regola in **Gazzetta Ufficiale**)
+- **Ex tunc** (retroattivi): colpisce anche i rapporti sorti in passato, ma **non i rapporti esauriti** (quelli coperti da giudicato o per cui è decorsa la prescrizione/decadenza)
+- In materia penale: cessano l'esecuzione e tutti gli effetti penali delle **condanne irrevocabili** fondate sulla norma dichiarata illegittima, in applicazione del **favor rei** (art. 30.4, l. 87/1953)
+- In alcuni casi, per contenere gli effetti finanziari, la Corte può **modulare nel tempo** l'efficacia della pronuncia, limitandone la retroattività
 
 #### 4.4. Sentenze interpretative di rigetto
 
 La Corte non dichiara illegittima la disposizione, ma chiarisce che la questione è infondata perché il giudice l'ha interpretata male. Formula: "non fondata, **nei sensi di cui in motivazione**". La Corte indica l'interpretazione conforme a Costituzione. Tuttavia i giudici ordinari possono non seguirla; da qui il ricorso alla dottrina del **"diritto vivente"**: se l'interpretazione consolidata della giurisprudenza è incostituzionale, la Corte dichiara l'illegittimità di quella specifica norma vivente.
 
+Sottotipi elaborati dalla dottrina:
+- **Sentenze correttive** — la Corte rafforza la propria interpretazione con quella prevalente in giurisprudenza
+- **Sentenze adeguatrici** — la Corte elabora una nuova interpretazione conforme a Costituzione
+- **Sentenze monitorie (o "decalogo")** — invitano il legislatore a modificare la legge
+- **Sentenze di legittimità provvisoria** — la decisione è condizionata a un futuro intervento legislativo
+
+Quando l'interpretazione resta divergente o il legislatore non interviene, la sentenza interpretativa di rigetto può evolvere in **accoglimento** (talora con la **"tecnica della doppia pronuncia"** o, più recentemente, con un'**ordinanza di avvertimento** che fissa al legislatore un termine, decorso il quale segue l'accoglimento).
+
 #### 4.5. Sentenze manipolative di accoglimento
 
-Dichiarano l'illegittimità "**nella parte in cui**" la disposizione dice o non dice qualcosa. Tipi principali:
+Dichiarano l'illegittimità "**nella parte in cui**" la disposizione dice o non dice qualcosa, lasciando intatto il testo ma annullando una delle interpretazioni possibili; sono dette anche **normative** per il ruolo quasi paralegislativo della Corte. Tipi principali:
 
 - **Sentenze di accoglimento parziale**: illegittimità di una parte soltanto del testo
-- **Sentenze additive**: la disposizione è illegittima "nella parte in cui non prevede" qualcosa che costituzionalmente deve esserci. La Corte opera per "**rime obbligate**": aggiunge una norma ricavata dalla disciplina di situazioni analoghe, non la inventa
+- **Sentenze additive**: la disposizione è illegittima "nella parte in cui non prevede" qualcosa che costituzionalmente deve esserci. La Corte opera per "**rime obbligate**": aggiunge una norma ricavata dalla disciplina di situazioni analoghe e dai principi costituzionali, non la inventa
+- **Sentenze additive di principio**: inseriscono solo una **norma di principio**, la cui attuazione concreta è rimessa al legislatore (o, in sua assenza, al giudice); servono a evitare impatti finanziari immediati
 - **Sentenze sostitutive**: la disposizione è illegittima "nella parte in cui prevede X anziché Y". La Corte sostituisce la locuzione incostituzionale con quella corretta
 
 ---
 
 ### 5. I Conflitti di Attribuzione tra Poteri dello Stato
 
-#### 5.1. Definizione
+#### 5.1. Definizione e natura
 
-Strumento attraverso cui un "potere" difende le proprie attribuzioni costituzionali dal comportamento di un altro potere. "Potere" non coincide con i tre poteri tradizionali (legislativo, esecutivo, giudiziario): può essere qualsiasi soggetto cui la Costituzione attribuisce funzioni (Presidente della Repubblica, CSM, Corte dei conti, singolo ministro, commissioni parlamentari, promotori del referendum).
+Strumento attraverso cui un "potere" difende le proprie attribuzioni costituzionali dal comportamento di un altro potere. Il giudizio è **contenzioso**, avviato su iniziativa delle parti (che possono anche **rinunciarvi**), ed è disciplinato dalla **l. 87/1953** e dalle norme integrative (non esiste riserva di legge costituzionale).
+
+Va tenuto distinto da: i **regolamenti e conflitti di giurisdizione** (di competenza della **Cassazione**), i conflitti di competenza penale (regolati dal c.p.p.) e i conflitti **interni** a un singolo potere (es. tra Ministri, risolti dal Consiglio dei Ministri).
+
+"Potere" non coincide con i tre poteri tradizionali (legislativo, esecutivo, giudiziario): può essere qualsiasi **"potere-organo"** cui la Costituzione attribuisce **funzioni supreme** esercitate in modo **indipendente**, idoneo a esprimere **definitivamente la volontà del potere** (Presidente della Repubblica, Corte costituzionale, CSM, Corte dei conti, singole Camere, ecc.).
+
+**Legittimazione riconosciuta dalla giurisprudenza**:
+- **Ordine giudiziario** come **"potere diffuso"**: ogni organo giurisdizionale indipendente può essere parte del conflitto; al PM solo per l'**iniziativa dell'azione penale**, non per la funzione giurisdizionale
+- **Corte dei conti**, nelle funzioni sia giurisdizionali sia di controllo
+- **Soggetti esterni** allo Stato-persona con funzioni costituzionalmente rilevanti (es. **comitato promotore del referendum**)
+- **Singoli parlamentari**, per gravi violazioni delle loro prerogative (**sent. 17/2019**)
+
+**Esclusioni**: Regioni ed enti territoriali, autorità amministrative indipendenti.
 
 #### 5.2. Tipi di conflitto
 
 - **Vindicatio potestatis**: entrambi i soggetti rivendicano la stessa attribuzione (raro)
 - **Conflitto da menomazione/interferenza**: un soggetto, pur esercitando attribuzioni proprie, impedisce o ostacola l'esercizio delle attribuzioni altrui (caso frequente)
 
-Il conflitto può sorgere anche da comportamenti **omissivi** (la Camera che non delibera sull'autorizzazione all'arresto di un parlamentare, il Presidente della Repubblica che non promulga una legge).
+Il conflitto deve essere **reale** e non ipotetico, e può sorgere anche da comportamenti **omissivi** (la Camera che non delibera sull'autorizzazione all'arresto di un parlamentare, il Presidente della Repubblica che non promulga una legge). In via di principio **non può avere a oggetto atti legislativi** (soggetti al giudizio di legittimità), salvo eccezione quando l'atto-legge violi diritti fondamentali o alteri irreversibilmente l'ordine costituzionale.
 
 #### 5.3. Il giudizio
 
-Il ricorso è presentato direttamente alla Corte. Questa verifica prima in camera di consiglio l'ammissibilità (presupposti soggettivi e oggettivi), poi decide nel merito. La sentenza "dichiara a chi spetta la competenza" e può accompagnarsi all'annullamento degli atti emanati dall'organo risultato incompetente.
+Il ricorso è presentato direttamente alla Corte, **senza termini di decadenza**. La Corte verifica prima in camera di consiglio l'**ammissibilità** (presupposti soggettivi e oggettivi); se ammissibile, il ricorso è notificato ai soggetti passivi, che possono costituirsi, e si passa al merito. La sentenza "**dichiara a chi spetta la competenza**" (artt. 37-38, l. 87/1953) e può accompagnarsi all'**annullamento** (con effetti erga omnes) degli atti emanati dall'organo risultato incompetente.
 
 ---
 
 ### 6. I Conflitti di Attribuzione tra Stato e Regioni
 
-Sono **conflitti intersoggettivi** (tra enti), distinti dai conflitti tra poteri (interorganici). Riguardano atti non legislativi (amministrativi, regolamentari, giurisdizionali), poiché per le leggi c'è il giudizio in via principale.
+Sono **conflitti intersoggettivi** (tra enti dotati di personalità giuridica), distinti dai conflitti tra poteri (interorganici). Riguardano atti non legislativi (amministrativi, regolamentari, e — secondo la giurisprudenza più recente — anche **giurisdizionali**, purché di organi statali e censurabili solo per **difetto di giurisdizione**, non per errori in iudicando), poiché per le leggi c'è il giudizio in via principale.
 
-Il ricorso richiede un **interesse concreto e attuale** alla lesione della competenza. Il Presidente della Regione e il Presidente del Consiglio sono i soggetti legittimati in giudizio. La sentenza dichiara a chi spetta la competenza e può annullare l'atto.
+Possono presentarsi come **vindicatio potestatis** o come **conflitto da menomazione** e possono nascere anche da atti di **rilevanza interna** (es. circolari), purché vi sia un'azione **invasiva** e un **interesse concreto e attuale**. Il **parametro** include, oltre alle norme costituzionali, anche la **normativa subcostituzionale** che conferisce e regola le funzioni regionali.
+
+I soggetti legittimati sono il **Presidente del Consiglio** (per lo Stato, previa deliberazione del Consiglio dei Ministri) e il **Presidente della Giunta regionale** (previa deliberazione della Giunta).
+
+Differenze procedurali rispetto al conflitto tra poteri:
+- Il ricorso è soggetto al **termine perentorio di 60 giorni** dalla notificazione, pubblicazione o conoscenza dell'atto
+- **Non** è previsto il giudizio preliminare di ammissibilità
+- La Corte può **sospendere** l'atto invasivo per "gravi ragioni" con ordinanza motivata
+- È possibile la **cessazione della materia del contendere** in caso di accordo tra le parti
+
+La sentenza dichiara a chi spetta la competenza e può **annullare** l'atto: l'annullamento ha effetto **erga omnes**, mentre l'accertamento delle attribuzioni vale **inter partes** e per quel caso concreto.
 
 ---
 
 ### 7. Il Giudizio di Ammissibilità del Referendum Abrogativo
 
-La Corte controlla l'ammissibilità delle richieste referendarie (l'art. 75 Cost. non lo prevedeva: lo ha introdotto la legge cost. 1/1953). Il giudizio si conclude entro il 10 febbraio.
+La Corte controlla **d'ufficio** l'ammissibilità delle richieste referendarie (l'art. 75 Cost. non lo prevedeva: lo ha introdotto la legge cost. 1/1953). La pronuncia avviene con **sentenza** (di ammissibilità o inammissibilità), pubblicata in Gazzetta Ufficiale; in caso di ammissibilità si procede all'indizione del referendum.
+
+La Corte ha **interpretato estensivamente** i limiti dell'art. 75.2 Cost., individuando sia limiti espliciti sia **limiti impliciti**.
 
 **Motivi di inammissibilità** (art. 75.2 Cost. e giurisprudenza):
-- Leggi tributarie, di bilancio, di amnistia/indulto, di autorizzazione a ratifica trattati
-- Leggi costituzionali e leggi "rinforzate"
-- Leggi a contenuto costituzionalmente vincolato (es. legge elettorale in toto)
-- Quesiti senza "matrice razionalmente unitaria" (non omogenei)
-- Quesiti la cui normativa di risulta sarebbe inapplicabile
+- **Limiti espliciti**: leggi tributarie, di bilancio, di amnistia/indulto, di autorizzazione a ratifica di trattati internazionali — e, per estensione, le leggi a esse **strettamente collegate** o che ne alterino gli **equilibri finanziari**
+- Leggi **costituzionali** e leggi "**rinforzate**"/atipiche (es. quelle che eseguono i Patti lateranensi)
+- Leggi a **contenuto costituzionalmente vincolato** (il cui contenuto è l'unico modo di attuare la Costituzione) — da non confondere con le leggi **costituzionalmente obbligatorie**, necessarie ma a contenuto libero per il legislatore
+- Quesiti **eterogenei** privi di "**matrice razionalmente unitaria**" (violano la genuina manifestazione della volontà popolare, artt. 1 e 48 Cost.): il requisito essenziale è l'**omogeneità**
+- Quesiti la cui **normativa di risulta** sarebbe inapplicabile; per le **leggi elettorali** il referendum parziale è ammesso solo se la normativa residua è **immediatamente operante e autoapplicativa**
+- Quesiti **eccessivamente manipolativi**, che "creano ex novo" una disciplina diversa, trasformando il referendum da abrogativo a propositivo
 
 ---
 
@@ -4601,12 +5767,12 @@ La Corte controlla l'ammissibilità delle richieste referendarie (l'art. 75 Cost
 
 #### 8.1. Responsabilità penale del Presidente della Repubblica
 
-Il Presidente non risponde degli atti compiuti nell'esercizio delle funzioni, **salvo** per **alto tradimento** e **attentato alla Costituzione** (art. 90 Cost.). In questi casi:
+Il Presidente non risponde degli atti compiuti nell'esercizio delle funzioni, **salvo** per **alto tradimento** e **attentato alla Costituzione** (art. 90 Cost.). Si tratta di un processo **fortemente politico**, per la natura dei reati e per la composizione integrata della Corte (la maggioranza dei giudicanti è di nomina parlamentare: 16 aggregati contro 15 ordinari). In questi casi:
 
-1. Il **Parlamento in seduta comune** (a maggioranza assoluta) delibera la messa in stato d'accusa (dopo indagine di un Comitato delle Giunte per le immunità)
-2. La **Corte costituzionale in composizione integrata** (15 giudici ordinari + 16 giudici aggregati estratti a sorte da un elenco compilato dal Parlamento ogni 9 anni) giudica nel merito
+1. Il **Parlamento in seduta comune** (a maggioranza assoluta) delibera la messa in stato d'accusa (dopo indagine di un Comitato delle Giunte per le immunità) e **nomina i commissari** d'accusa
+2. La **Corte costituzionale in composizione integrata** (15 giudici ordinari + 16 giudici aggregati estratti a sorte da un elenco di 45 cittadini con i requisiti per essere senatori, compilato dal Parlamento ogni 9 anni) giudica nel merito
 
-Le sanzioni applicabili: penali, costituzionali, amministrative, civili. La sentenza è inappellabile. Questa competenza **non è mai stata attivata** nella storia repubblicana.
+Si applicano le norme del codice penale e di procedura penale, **senza opposizione del segreto di Stato**; dopo la fase istruttoria la Corte può **sospendere** il Presidente. Le sanzioni applicabili sono penali, costituzionali (es. **rimozione** dalla carica), amministrative e civili; la Corte ne ha **discrezionalità**. La sentenza è inappellabile, salvo **revisione** per nuovi fatti o prove. Possono essere giudicati anche soggetti privati per **"concorso"** nei reati presidenziali (art. 12.3, l. 1/1953, mod. l. 219/1989). Questa competenza **non è mai stata attivata** nella storia repubblicana.
 
 #### 8.2. Reati ministeriali
 
@@ -4618,6 +5784,8 @@ Con la legge cost. 1/1989 i reati ministeriali (reati comuni commessi nell'eserc
 
 **Giustizia costituzionale** — sistema di controllo giurisdizionale del rispetto della Costituzione; principale garanzia della sua rigidità.
 
+**Unità della giurisdizione (art. 102 Cost.)** — la funzione giurisdizionale spetta a un unico corpo di giudici ordinari; divieto di giudici straordinari o speciali, salve le sezioni specializzate e le giurisdizioni costituzionalmente previste o preesistenti riformate.
+
 **Giudice naturale precostituito per legge** — principio (art. 25 Cost.) per cui l'organo giudicante deve essere determinato da criteri astratti fissati prima del fatto da giudicare.
 
 **Giusto processo** — formula dell'art. 111 Cost. (riformato nel 1999): contraddittorio, parità delle parti, giudice terzo e imparziale, ragionevole durata.
@@ -4626,15 +5794,33 @@ Con la legge cost. 1/1989 i reati ministeriali (reati comuni commessi nell'eserc
 
 **Nomofilachia** — funzione della Corte di cassazione di garantire l'interpretazione uniforme del diritto su tutto il territorio nazionale.
 
+**Giurisdizione esclusiva** — ipotesi in cui la legge attribuisce al giudice amministrativo (in materie tassative) la cognizione anche dei diritti soggettivi.
+
+**Giudizio di ottemperanza** — strumento con cui il giudice amministrativo fa eseguire la propria sentenza inadempiuta dalla PA, anche tramite un commissario ad acta.
+
+**Disapplicazione** — potere del giudice ordinario di non applicare al caso concreto l'atto amministrativo illegittimo lesivo di un diritto soggettivo, senza poterlo annullare.
+
+**Responsabilità contabile** — responsabilità amministrativo-patrimoniale per i danni all'erario causati con dolo o colpa grave, accertata dalla Corte dei conti.
+
 **CSM** — Consiglio Superiore della Magistratura; organo di autogoverno della magistratura ordinaria, garante dell'indipendenza dei magistrati dal potere esecutivo.
 
 **Inamovibilità** — garanzia per cui i magistrati non possono essere trasferiti o rimossi senza il loro consenso, salvo provvedimento motivato del CSM.
+
+**Modello accentrato vs diffuso** — il controllo di costituzionalità è affidato a un unico organo specializzato (Italia, Austria) oppure a ogni giudice (USA, con precedente vincolante).
+
+**Norme integrative** — regolamenti interni che la Corte costituzionale adotta per disciplinare i propri giudizi (es. amici curiae, audizione di esperti).
 
 **Giudizio incidentale** — modalità di accesso alla Corte costituzionale in cui la questione di legittimità sorge come incidente in un processo in corso; richiede rilevanza e non manifesta infondatezza.
 
 **Rilevanza** — requisito del giudizio incidentale: la disposizione sospetta deve essere necessaria per decidere il caso concreto.
 
-**Parametro interposto** — norma sub-costituzionale la cui violazione implica indirettamente la violazione della Costituzione (es. legge di delega, trattato internazionale).
+**Thema decidendum** — oggetto e parametro della questione, come definiti dal giudice a quo nell'ordinanza di rimessione; delimita ciò su cui la Corte può pronunciarsi (corrispondenza tra chiesto e pronunciato).
+
+**Illegittimità costituzionale consequenziale** — estensione della pronuncia ad altre norme che riproducono il contenuto, sono collegate o restano ingiustificate dopo la decisione (deroga alla corrispondenza chiesto-pronunciato).
+
+**Vizi di legittimità** — formali (procedimento), sostanziali (contenuto), eccesso di potere legislativo (deviazione dal fine, sindacabile come irragionevolezza).
+
+**Parametro interposto** — norma sub-costituzionale la cui violazione implica indirettamente la violazione della Costituzione (es. legge di delega, trattato internazionale, principi della legge statale per le leggi regionali).
 
 **Sentenza di accoglimento** — dichiara l'illegittimità costituzionale della norma; effetti erga omnes e retroattivi sui rapporti pendenti (non su quelli esauriti).
 
@@ -4642,14 +5828,22 @@ Con la legge cost. 1/1989 i reati ministeriali (reati comuni commessi nell'eserc
 
 **Sentenza additiva** — tipo di sentenza manipolativa che dichiara l'illegittimità "nella parte in cui non prevede" qualcosa; la Corte agisce per "rime obbligate", non inventa norme.
 
+**Sentenza additiva di principio** — variante che aggiunge solo una norma di principio, lasciando l'attuazione al legislatore (o al giudice) per evitare impatti finanziari immediati.
+
 **Sentenza sostitutiva** — dichiara l'illegittimità "nella parte in cui prevede X anziché Y"; sostituisce la locuzione incostituzionale.
+
+**Sentenze monitorie / di legittimità provvisoria** — pronunce interpretative di rigetto che sollecitano o condizionano un futuro intervento del legislatore.
 
 **Diritto vivente** — interpretazione consolidata di una norma nella giurisprudenza ordinaria; la Corte accetta di giudicare la norma nel significato in cui essa "vive" nella realtà applicativa.
 
 **Conflitto di attribuzione tra poteri** — strumento per risolvere davanti alla Corte le controversie su chi abbia competenza a esercitare una funzione costituzionale; può sorgere da atti, comportamenti o omissioni.
 
-**Conflitto intersoggettivo** — conflitto tra enti (Stato e Regioni) su atti non legislativi.
+**Potere diffuso** — qualificazione dell'ordine giudiziario ai fini dei conflitti: ogni organo giurisdizionale indipendente può esserne parte.
 
-**Alto tradimento e attentato alla Costituzione** — unici reati per cui il Presidente della Repubblica può essere messo in stato d'accusa e giudicato dalla Corte costituzionale.
+**Conflitto intersoggettivo** — conflitto tra enti (Stato e Regioni) su atti non legislativi; ricorso entro 60 giorni, senza vaglio preliminare di ammissibilità.
+
+**Alto tradimento e attentato alla Costituzione** — unici reati per cui il Presidente della Repubblica può essere messo in stato d'accusa e giudicato dalla Corte costituzionale in composizione integrata.
 
 **Reati ministeriali** — reati comuni commessi da ministri nell'esercizio delle funzioni di governo; soggetti a autorizzazione parlamentare e giudicati dalla magistratura ordinaria (dal 1989).
+
+**Limiti impliciti del referendum** — categorie di leggi sottratte al referendum oltre quelle dell'art. 75.2 (contenuto costituzionalmente vincolato, leggi collegate alle escluse, quesiti non omogenei o manipolativi).
