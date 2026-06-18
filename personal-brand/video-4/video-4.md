@@ -152,16 +152,19 @@ Montaggio interlacciato come nel #3: still/b-roll ↔ card nere (fondo nero, tes
 
 ---
 
-## Caption Instagram (bozza)
+## Caption Instagram (finale — 18/06/2026)
 
 You just launched your brand. The collection is ready. The campaign isn't.
 
 A real photoshoot costs €5,000. Studio, photographer, model, location.
-You don't need any of it.
+You need none of it.
 
 Give me one garment and one idea — in 72 hours your brand has a campaign.
+
 This is VESPRO. It doesn't exist. I built its first lookbook in one afternoon.
 
-Comment "BRAND" and I'll build your first lookbook.
+Comment **BRAND** — I'll build yours. On me.
+
+---
 
 #fashiondesign #AIdesign #lookbook #fashiontech #brandidentity #emergingdesigner #fashionbranding #artificialintelligence #AIart #quietluxury #tailoring
