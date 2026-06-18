@@ -1,6 +1,6 @@
 # Video #4 — "Your brand's first lookbook — built with AI"
 
-**Status: ✍️ IN SCRITTURA (14/06/2026)** — angolo deciso: *lookbook per un brand emergente* (vicino alla vendita del servizio).
+**Status: ✅ PUBBLICATO 18/06/2026** — Virality Predictor: 48/100 (▲ da 45/100 del #3)
 
 Durata: ~48s | Lingua: inglese | Formato: 9:16 vertical
 
@@ -60,36 +60,9 @@ Stessa impalcatura collaudata in CapCut (still polaroid ↔ card nere in alterna
 
 ---
 
-## Beat sheet scene-by-scene (~48s)
+## Beat sheet (✅ completato)
 
-Montaggio interlacciato come nel #3: still/b-roll ↔ card nere (fondo nero, testo bianco) in rapida alternanza, con screen-rec del processo incastonati sulle battute "brief / generate / deliver". Taglio veloce sulle card (~0.5–0.8s), hold più lunghi su hero b-roll e talking head.
-
-> **Beat sheet v2 (15/06/2026) — ottimizzato attenzione.** Eliminata l'intro silenziosa: il **b-roll arco + hook parte al secondo zero**. I primi 15s ora arrivano fino a "Five looks" (= molta più sostanza nella finestra che il Virality Predictor misura). Hold più stretti. Timing indicativi, da rifinire in CapCut.
-
-| # | Durata | Tipo | Descrizione visiva | Voiceover / Testo card |
-|---|--------|------|--------------------|------------------------|
-| **1 — Hook** | 0–2.5s | B-roll Seedance | Jago cammina lento sotto un arco di pietra bianca, mare blu dietro, luce dorata. **Apre il video** — VO sul primo fotogramma. | *"This fashion brand isn't real. I built its entire campaign in one afternoon."* |
-| **2 — Il costo** | 2.5–4.5s | Card nera | Numero grande: **€5,000**. | *"A real one costs five thousand euros."* |
-| **3 — Cosa serve** | 4.5–6s | Card nera | Keyword: *Studio · Photographer · Model · Location*. | *"Studio. Photographer. Model. Location."* |
-| **4 — Payoff** | 6–7.5s | Card nera | *"You need none of it."* | *"You need none of it."* |
-| **5 — La promessa** | 7.5–9.5s | B-roll / still | Jago full body contro un muro bianco al sole, ombra netta proiettata. | *"Hand me one garment and one idea. I'll invent the rest."* |
-| **6 — Brief (screen rec #1)** | 9.5–12s | Screen rec | Brief "creative blueprint" VESPRO a schermo (scroll PDF). | *"One brief. Concept, mood, light, poses..."* |
-| **7 — Keyword cards** | 12–13.5s | Card nera | Keyword animate: *Concept · Mood · Light · Poses*. | *"...locked before I open a single tool."* |
-| **8 — Generate (screen rec #2)** | 13.5–15.5s | Screen rec | Griglia risultati generazione (4-up), i look che compaiono. | *(b-roll del processo)* |
-| **9 — Five looks** | 15.5–18s | Stills rapidi + SFX | 5 shot VESPRO in sequenza veloce (~0.5s), whoosh/click a ogni cut, cornice polaroid. | *"One character. Five looks. Same light, same world, same hand."* |
-| **10 — Detail** | 18–19.5s | B-roll / still | Close-up vita del pantalone: pince profonde, tessuto lino, mano alla cintura, nessun volto. | *(sotto-VO)* |
-| **11 — Reveal brand** | 19.5–22s | Still hero | Lo shot migliore VESPRO, fermo, con il nome **VESPRO** in sovrimpressione minimale, cornice polaroid. | *"This is VESPRO. It doesn't exist. I built its first lookbook today."* |
-| **12 — Seduto** | 22–24s | B-roll / still | Jago seduto su un muretto in pietra al sole, mare e bougainvillea dietro. | *(beat)* |
-| **13 — Il punto** | 24–25.5s | Card nera | *"Before you've spent a cent."* | *"This is your brand — before you've spent a cent."* |
-| **14 — Deliver (screen rec #3)** | 25.5–27.5s | Screen rec | Scroll lookbook VESPRO impaginato (Canva). | *(b-roll del processo)* |
-| **15 — Talking head** | 27.5–34.5s | Avatar Capri | Jago MCU frontale **nel mondo Capri** (stesso muro della sc.5, luce dorata vespro). Delivery piatta, stoica. Contatto visivo fisso. Prompt: `video-4-talking-head.md`. | *"Give me one garment and one idea, and in seventy-two hours your brand has a campaign."* |
-| **16 — 72 hours** | 34.5–36.5s | Card nera | Numero grande: **72h**. | *"Seventy-two hours. That's all."* |
-| **17 — "Non è fare immagini"** | 36.5–38s | Card nera | *"This isn't making images. It's directing a brand."* | *(rinforzo testo)* |
-| **18 — CTA action** | 38–41s | B-roll | Jago seduto al tavolino caffè Capri, espresso + libro, **sguardo in camera**. | *"Comment BRAND."* |
-| **19 — CTA cards** | 41–45s | Card nera | *"Comment BRAND"* → *"your first lookbook"* → *"on me"*. | testo CTA |
-| **20 — IG end card** | 45–48s | Motion graphic | Logo Instagram animato su nero + handle Jago. | CTA finale |
-
-**Durata totale: ~48s**
+20 scene · ~48s · beat sheet v2 ottimizzato attenzione. Struttura: hook b-roll (0s) → card nere costo/payoff → screen rec brief → 5 stills polaroid → detail → reveal VESPRO → screen rec lookbook → talking head Capri → CTA → IG end card. Dettaglio checklist: `video-4-montaggio-capcut.md` (archiviato).
 
 ---
 
@@ -114,41 +87,25 @@ Montaggio interlacciato come nel #3: still/b-roll ↔ card nere (fondo nero, tes
 | 4 | **Seduto su muretto** — drappeggio che scolpisce la gamba | Mezza/full figura, basso | `shot4-capri-v2` |
 | 5 | **Wide ambiance** — figura piccola su terrazza al sole, mare dietro | Wide | `shot5-capri-v1` |
 
-### Note tecniche generazione (Higgsfield + Nano Banana Pro)
-- **NO Soul ID.** Doppia ref: character sheet Jago (`50c1a7d6`) + silhouette Draper trouser (`ce9be775`, `ref-draper-trouser.png`) — del trouser si tiene **solo la forma**, ribadire "linen-silk, not denim" nel prompt.
-- Prompt base uguale per tutti, cambia solo il blocco [POSE/FRAMING] (vedi `video-4-brief-vespro.md`).
-- 3–4 varianti per shot, si tiene la più forte. Si scarta tutto ciò che rompe luce/mondo/capo.
+Prompt base e note tecniche generazione: `video-4-brief-vespro.md`.
 
 ---
 
-## Asset richiesti
+## Asset (✅ tutti completati)
 
-| Asset | Scena | Status |
-|-------|-------|--------|
-| Lookbook images VESPRO — 5 shot mondo Capri | 1, 10, 12 | ✅ Generati 14/06/2026 — Nano Banana Pro + doppia ref (character sheet Jago `50c1a7d6` + silhouette Draper `ce9be775`), NO Soul ID. File in `video-4/`: `shot1-capri-v2/v3` (full body), `shot2-capri-v1` (arco), `shot3-capri-v1` (dettaglio), `shot4-capri-v2` (seduto), `shot5-capri-v1` (wide). Altre varianti recuperabili su Higgsfield |
-| Clip Seedance b-roll — Jago mondo Capri (diurno, I2V) | 2, 6, 11, 13 | ✅ Tutte e 4 generate 15/06/2026 — prompt in `video-4-seedance-prompts.md` |
-| Screen rec #1 — brief VESPRO | 7 | ✅ Registrato 15/06/2026 — scroll sul PDF Canva del brief (dark-luxury) |
-| Screen rec #2 — generazione immagini (griglia) | 9 | ✅ Registrato 15/06/2026 in Higgsfield (griglia look VESPRO) |
-| Screen rec #3 — impaginazione / timeline | 15 | ✅ Registrato 15/06/2026 — scroll sul lookbook VESPRO impaginato su Canva (5 look Capri) |
-| Talking head — mondo Capri | 16 | ✅ Generata 15/06/2026 — prompt via skill (banana-pro-director + cinema-worldbuilder-pro) in `video-4-talking-head.md`. Sfondo Capri per consistenza scena |
-| B-roll scena 19 — Jago al tavolino caffè Capri (CTA) | 19 | ✅ Generata 15/06/2026 — sguardo in camera. Prompt (plate + video) in `video-4-seedance-prompts.md` clip 5. Buco asset sc.19 chiuso |
-| Card nere + testo animato + @handle | 3,4,5,8,14,17,18,20 | ⏳ CapCut |
-| Cornici polaroid sugli stills | 1, 10, 12 | ⏳ CapCut |
-| IG end card animata | 21 | ⏳ CapCut (riusabile dal #3) |
+| Asset | File / Note |
+|-------|-------------|
+| 5 immagini lookbook VESPRO | `shot1-capri-v3`, `shot2-capri-v1`, `shot3-capri-v1`, `shot4-capri-v2`, `shot5-capri-v1` · Nano Banana Pro + doppia ref (char sheet `50c1a7d6` + Draper `ce9be775`) NO Soul ID |
+| B-roll Seedance (5 clip I2V) | Vedi `video-4-seedance-prompts.md` |
+| Screen rec ×3 | Brief VESPRO (PDF Canva) · Griglia Higgsfield · Lookbook Canva impaginato |
+| Talking head Capri | Prompt in `video-4-talking-head.md` · Kling Avatar Speak v2 |
+| Card nere + polaroid + IG end card | ✅ Montati in CapCut |
 
 ---
 
-## Ordine di produzione
+## Produzione (✅ completata 18/06/2026)
 
-1. ✅ **Concept + angolo deciso** — lookbook per brand emergente (questo file)
-2. ✅ **Conferma brand** — VESPRO fittizio, mondo Capri mediterraneo
-3. ✅ **Brief creativo VESPRO** — `video-4-brief-vespro.md` (serve anche come screen rec #1)
-4. ✅ **Genera 5 immagini lookbook** — Nano Banana Pro + doppia ref (14/06/2026)
-5. ✅ **B-roll Seedance** — 4 clip Capri I2V → `video-4-seedance-prompts.md` (tutte generate 15/06)
-6. ✅ **Screen rec ×3** (15/06) + **talking head** mondo Capri (15/06, `video-4-talking-head.md`)
-7. ⏳ **Montaggio CapCut** — checklist scena-per-scena in `video-4-montaggio-capcut.md`. ⚠️ Prima: generare il **VO inglese** + risolvere **asset mancante sc.19** (Jago al desk). Card nere + polaroid + IG end card si fanno qui.
-8. ⏳ **Export** → `video4-vespro-v1.mp4` (1080×1920 · 60fps)
-9. ⏳ **Pubblicazione** IG + YouTube Shorts + caption/descrizione
+Tutte le fasi completate: concept → brief VESPRO → 5 immagini lookbook → b-roll Seedance (5 clip) → screen rec ×3 → talking head Capri → montaggio CapCut → export `video4-vespro-v1.mp4` → pubblicazione IG + YouTube.
 
 ---
 
