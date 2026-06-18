@@ -18,16 +18,16 @@ Aggiorna una volta al mese. Il segnale che conta di più non sono i follower —
 
 ## Tracker mensile
 
-### Mese 1 — Giugno 2026 (rilevazione 10/06/2026)
+### Mese 1 — Giugno 2026 (aggiornato 18/06/2026)
 - YouTube subscribers: 0
 - Instagram followers: 2
 - TikTok followers: —
-- Email list: 0 (Beehiiv creato ma fermo — da riattivare)
-- Video pubblicati: 2 (Video #1 il 02/06, Video #2 il 07/06) ✅ target Mese 1 raggiunto
-- Outreach clienti inviati: 0
+- Email list: 0 (Beehiiv attivo dal 12/06 con welcome email + PDF lead magnet)
+- Video pubblicati: 4 (Video #1 02/06, #2 07/06, #3 12/06, #4 18/06) ✅ target Mese 1 superato
+- Outreach clienti inviati: 5 (DM Tier A, partiti il 12/06)
 - Clienti paganti: 0
 - Entrate totali: €0
-- Note: dettaglio view — IG: Video #1 = 75 view / 0 like, Video #2 = 123 view / 0 like. YouTube: Video #1 = 34 view, Video #2 = 8 view. Baseline di partenza: numeri piccoli e attesi a questo stadio. IG conferma di essere la piattaforma principale (più reach degli Shorts YT). Video #3 in produzione.
+- Note: Video #3 = Virality Predictor Higgsfield 45/100. Video #4 (VESPRO, Capri) = 48/100 — miglioramento hook e ritmo primi 15s. IG resta piattaforma principale.
 
 ---
 
