@@ -195,106 +195,134 @@
 
 ## I. Fonti del diritto: nozioni generali — pp. 330-357
 
-### Concetti chiave
-- **Fonti del diritto**: atti o fatti abilitati dall'ordinamento a produrre norme giuridiche
+**1. Fonti del diritto**
 - **Fonti-atto**: atti volontari di organi competenti (leggi, regolamenti)
-- **Fonti-fatto**: comportamenti cui l'ordinamento riconosce valore normativo (consuetudini)
-- **Gerarchia delle fonti**: ordine di prevalenza; la fonte inferiore non può violare la superiore
-- **Criterio gerarchico**: prevale la norma di fonte superiore (lex superior)
-- **Criterio cronologico**: prevale la norma più recente (lex posterior)
-- **Criterio di specialità**: prevale la norma speciale sulla generale (lex specialis)
-- **Criterio di competenza**: ciascuna fonte regola le materie di sua spettanza
-- **Riserva di legge**: la Costituzione riserva una materia alla legge; può essere assoluta (solo legge formale) o relativa (anche fonti secondarie nei limiti di principi posti dalla legge)
-- **Riserva di legge rinforzata**: la Costituzione prescrive anche il contenuto o la procedura della legge
-- **Norma in bianco**: rinvio di un atto a un altro per la disciplina di dettaglio
-- **Delegificazione**: il Parlamento autorizza il Governo a disciplinare con regolamento materie già coperte da legge, abrogando contestualmente le leggi precedenti
+- **Fonti-fatto**: comportamenti cui l'ordinamento attribuisce valore normativo (consuetudini)
 
-### Classificazioni / Struttura
-- Gerarchia italiana: Costituzione → leggi costituzionali → fonti primarie (legge, atti equiparati) → fonti secondarie (regolamenti) → usi
-- Fonti primarie statali: legge formale, decreti legislativi, decreti-legge, referendum abrogativo
-- Fonti secondarie (regolamenti governativi/ministeriali): esecutivi, attuativi-integrativi, indipendenti, di delegificazione, organizzativi
-- Usi (consuetudini): praeter legem (integrano la legge), secundum legem (applicano la legge), contra legem (vietati)
+**2. Criteri per risolvere le antinomie**
+- **Gerarchico** (*lex superior*): prevale la fonte superiore; la norma inferiore è incostituzionale o illegittima
+- **Cronologico** (*lex posterior*): prevale la norma più recente; la precedente è abrogata
+- **Specialità** (*lex specialis*): prevale la norma speciale sulla generale
+- **Competenza**: ciascuna fonte regola le materie di sua spettanza
 
-### Dettagli importanti
-- Regolamento governativo (d.P.R.): parere obbligatorio del Consiglio di Stato; registrazione Corte dei conti; deliberazione del Consiglio dei Ministri
-- Regolamento ministeriale: firma del singolo ministro; se più ministeri → d.P.C.M. o d.P.R.
-- Regolamenti parlamentari (art. 64): adottati da ciascuna Camera a maggioranza assoluta; fonti primarie in quanto non sindacabili dalla Corte costituzionale in via incidentale (discusso)
-- Conflitto tra norme coeve di pari grado: criterio di specialità o, in mancanza, cronologico
-- Antinomia: criterio gerarchico → incostituzionalità della norma inferiore; criterio cronologico → abrogazione
+**3. Gerarchia delle fonti in Italia**
 
-### Articoli / norme
-- Art. 64 Cost.: regolamenti parlamentari (maggioranza assoluta)
-- Art. 70 Cost.: funzione legislativa collettiva delle due Camere
-- Art. 76 Cost.: delega legislativa (principi, criteri direttivi, termine, oggetto definito)
-- Art. 77 Cost.: decreto-legge (necessità e urgenza; conversione 60 giorni)
-- Art. 17, l. 400/1988: tipologie dei regolamenti governativi
+Cost. → leggi costituzionali → fonti primarie (legge, d.lgs., d.l., referendum abr.) → fonti secondarie (regolamenti) → usi
+
+**4. Riserve di legge**
+- **Assoluta**: solo legge formale può disciplinare la materia (es. art. 13: libertà personale)
+- **Relativa**: ammette fonti secondarie nei limiti dei principi posti dalla legge
+- **Rinforzata**: la Cost. prescrive anche il contenuto o la procedura della legge
+
+**5. Fonti secondarie: regolamenti governativi** (art. 17, l. 400/1988)
+
+| Tipo | Funzione |
+|---|---|
+| Esecutivi | Attuano una legge |
+| Attuativi-integrativi | Principi dalla legge, dettaglio dal regolamento |
+| Indipendenti | Materie non coperte da legge (solo organizzazione interna PA) |
+| Di delegificazione | Sostituiscono la legge su autorizzazione parlamentare |
+| Organizzativi | Organizzazione interna PA |
+
+- **d.P.R.** (governativo): deliberazione CdM + parere Consiglio di Stato + registrazione Corte dei conti
+- **Regolamento ministeriale**: firma del singolo ministro; se pluriministeri → d.P.C.M. o d.P.R.
+- **Regolamenti parlamentari** (art. 64): magg. assoluta; non sindacabili dalla Corte cost. in via incidentale (discusso)
+
+**6. Usi (consuetudini)**
+- *Praeter legem*: integrano la legge (ammessi)
+- *Secundum legem*: applicano la legge (ammessi)
+- *Contra legem*: in contrasto con la legge (vietati)
+
+- **Delegificazione**: il Parlamento autorizza il Governo a disciplinare con regolamento materie già coperte da legge; le leggi precedenti si abrogano all'entrata in vigore del regolamento
+
+**Articoli chiave**
+- Art. 64 Cost. → regolamenti parlamentari (magg. assoluta)
+- Art. 70 Cost. → funzione legislativa delle due Camere
+- Art. 76 Cost. → delega legislativa (principi, criteri, termine, oggetto)
+- Art. 77 Cost. → decreto-legge (necessità e urgenza; 60 giorni)
+- Art. 17, l. 400/1988 → tipologie regolamenti governativi
 
 ---
 
 ## II. La Costituzione — pp. 358-377
 
-### Concetti chiave
-- **Costituzione**: norma fondamentale dell'ordinamento; fonte delle fonti; rigida se modificabile solo con procedimento aggravato
-- **Costituzione rigida**: prevalenza gerarchica su tutte le leggi ordinarie; garantita dal controllo di costituzionalità
-- **Costituzione flessibile** (es. Statuto Albertino 1848): modificabile con legge ordinaria; nessun controllo giurisdizionale
-- **Potere costituente**: potere originario che crea la Costituzione (non soggetto a limiti giuridici preesistenti)
-- **Potere di revisione costituzionale** (art. 138): potere derivato; soggetto ai limiti della Costituzione
-- **Limiti espliciti** alla revisione: art. 139 Cost. — la forma repubblicana non può essere oggetto di revisione costituzionale
-- **Limiti impliciti** (elaborati dalla Corte): i principi fondamentali (artt. 1-12) e i diritti inviolabili non sono modificabili neppure con legge costituzionale
-- **Costituzione italiana**: approvata dall'Assemblea Costituente; entrata in vigore il 1° gennaio 1948; 139 articoli + 18 disposizioni transitorie
-- **Struttura**: Principi fondamentali (artt. 1-12) + Parte I (Diritti e doveri dei cittadini, artt. 13-54) + Parte II (Ordinamento della Repubblica, artt. 55-139)
+**1. Tipi di Costituzione**
+- **Rigida**: modificabile solo con procedimento aggravato; gerarchicamente superiore a tutte le leggi; garantita dal controllo di costituzionalità
+- **Flessibile** (es. Statuto Albertino 1848): modificabile con legge ordinaria; nessun controllo giurisdizionale
 
-### Classificazioni / Struttura
-- Procedimento di revisione (art. 138): 1) doppia deliberazione in ciascuna Camera con intervallo di almeno 3 mesi; 2) nella seconda deliberazione maggioranza assoluta; 3) se approvata con meno di 2/3 → referendum costituzionale possibile (richiesto da 1/5 dei parlamentari, 500.000 elettori, 5 Consigli regionali entro 3 mesi); 4) referendum non richiede quorum; 5) legge promulgata dal Presidente della Repubblica
-- Leggi costituzionali: stessa procedura dell'art. 138; disciplinano materie che la Costituzione riserva a questo tipo di fonte
+**2. Potere costituente vs. potere di revisione**
+- **Potere costituente**: originario; crea la Costituzione; non soggetto a limiti giuridici preesistenti
+- **Potere di revisione** (art. 138): derivato; soggetto ai limiti della Costituzione stessa
 
-### Dettagli importanti
-- Referendum costituzionale: NON richiede quorum; NON è soggetto al giudizio di ammissibilità della Corte costituzionale; controllo solo dell'Ufficio centrale per il referendum (Cassazione)
-- Prima revisione costituzionale con referendum: 2001 (riforma Titolo V)
-- Assemblea Costituente: eletta il 2 giugno 1946 (stesso giorno del referendum istituzionale monarchia/repubblica); lavori 1946-1947
-- I "principi supremi" della Costituzione (Corte cost.): non cedono neppure di fronte al diritto UE (teoria dei controlimiti)
+**3. Procedimento di revisione costituzionale** (art. 138)
+1. Doppia deliberazione in ciascuna Camera con intervallo di almeno **3 mesi**
+2. Nella seconda deliberazione: **maggioranza assoluta** (se ≥ 2/3 → nessun referendum possibile)
+3. Se approvata con meno di 2/3 → referendum possibile entro 3 mesi (richiesto da **1/5 parlamentari**, **500.000 elettori** o **5 Consigli regionali**)
+4. Referendum: **nessun quorum**; nessun giudizio di ammissibilità della Corte cost. (solo Cassazione)
+5. Promulgazione del Presidente della Repubblica
 
-### Articoli / norme
-- Art. 138 Cost.: procedimento di revisione costituzionale
-- Art. 139 Cost.: limite esplicito — forma repubblicana immodificabile
-- Art. 1 Cost.: principio democratico e sovranità popolare
-- Art. 2 Cost.: diritti inviolabili dell'uomo (catalogo aperto secondo parte della dottrina)
+**4. Limiti alla revisione**
+- **Limite esplicito** (art. 139): la forma repubblicana non può essere oggetto di revisione
+- **Limiti impliciti** (elaborati dalla Corte): principi fondamentali (artt. 1-12) e diritti inviolabili non modificabili neppure con legge costituzionale → **teoria dei controlimiti** (non cedono neppure al diritto UE)
+
+**5. La Costituzione italiana**
+- Entrata in vigore: **1° gennaio 1948**; **139 articoli** + 18 disposizioni transitorie e finali
+- Struttura: Principi fondamentali (artt. 1-12) → Parte I: Diritti e doveri (artt. 13-54) → Parte II: Ordinamento della Repubblica (artt. 55-139)
+- Assemblea Costituente: eletta il **2 giugno 1946** (stesso giorno del referendum istituzionale monarchia/repubblica); lavori 1946-1947
+- Prima revisione con referendum: 2001 (riforma Titolo V)
+
+**Articoli chiave**
+- Art. 1 Cost. → principio democratico e sovranità popolare
+- Art. 2 Cost. → diritti inviolabili (catalogo aperto)
+- Art. 138 Cost. → procedimento di revisione costituzionale
+- Art. 139 Cost. → forma repubblicana immodificabile
 
 ---
 
 ## III. Fonti dell'ordinamento italiano: Stato — pp. 378-427
 
-### Concetti chiave
-- **Legge formale**: approvata dal Parlamento secondo il procedimento dell'art. 70 ss. Cost.; fonte primaria per eccellenza
-- **Decreto legislativo** (d.lgs.): atto con forza di legge del Governo, su delega parlamentare ex art. 76; deve rispettare principi e criteri direttivi, termine, oggetto definito
-- **Decreto-legge** (d.l.): atto con forza di legge del Governo per "casi straordinari di necessità e urgenza" (art. 77); perde efficacia se non convertito in legge entro 60 giorni; reiterazione vietata (Corte cost. sent. 360/1996)
-- **Referendum abrogativo** (art. 75): fonte primaria "negativa"; abroga in tutto o in parte una legge o un atto con forza di legge; 500.000 elettori o 5 Consigli regionali; quorum = maggioranza aventi diritto; limiti ex art. 75.2 (leggi tributarie, bilancio, amnistia, ratifica trattati) + limiti impliciti elaborati dalla Corte
-- **Delegificazione** (art. 17.2, l. 400/1988): legge autorizza regolamento governativo a disciplinare materia precedentemente legislativa, abrogando le leggi vigenti al momento dell'entrata in vigore del regolamento
-- **Regolamenti governativi** (d.P.R.): fonti secondarie; deliberati dal Consiglio dei Ministri; parere Consiglio di Stato; registrati dalla Corte dei conti
-- **Regolamenti ministeriali/interministeriali**: disciplinano materie di competenza del singolo ministero; non possono derogare a quelli governativi
-- **Regolamenti indipendenti**: nelle materie non disciplinate da legge (residuale); ammessi solo per l'organizzazione interna della PA
+**1. Procedimento legislativo ordinario**
 
-### Classificazioni / Struttura
-- Gerarchia fonti primarie statali: Costituzione > leggi costituzionali > leggi formali = atti con forza di legge (d.lgs., d.l.) > regolamenti > usi
-- Tipologie regolamenti governativi (art. 17, l. 400/1988): esecutivi (attuano legge) → attuativi-integrativi (principi da legge + dettaglio da regolamento) → indipendenti (materie non coperte da legge) → di delegificazione (sostituiscono legge) → organizzativi (organizzazione interna PA)
-- Limiti espliciti referendum abrogativo: tasse, bilancio, amnistia/indulto, ratifica trattati
-- Limiti impliciti (Corte cost.): leggi cost. e rinforzate; contenuto cost. vincolato; quesiti eterogenei; normativa di risulta inapplicabile; quesiti manipolativi
+Iniziativa (Governo, parlamentari, CNEL, Regioni, **50.000 elettori**, Comuni) → commissione (referente / redigente / deliberante) → approvazione identica in entrambe le Camere → promulgazione (**30 gg**) → pubblicazione G.U. → entrata in vigore (**15 gg** vacatio legis, salvo diversa previsione)
 
-### Dettagli importanti
-- Decreto-legge: il Governo presenta il d.d.l. di conversione alle Camere il giorno stesso della pubblicazione; emendamenti ammessi ma con limiti
-- Se d.l. non convertito: decadenza ex tunc (retroattiva); il Parlamento può però "sanare" gli effetti con legge
-- Legge di conversione: ha forza di legge; può modificare il d.l.; stessa forza del d.lgs.
-- Procedimento di approvazione legge: iniziativa (Governo, singoli parlamentari, CNEL, Regioni, 50.000 elettori, Comuni) → commissione (referente, redigente, deliberante) → approvazione identica nelle due Camere → promulgazione (30 gg) → pubblicazione G.U. → entrata in vigore (15 gg vacatio legis, salvo diversa previsione)
-- Corte cost. sent. 1/2014 ("Porcellum"): dichiarate incostituzionali le norme sul premio di maggioranza senza soglia minima e i listini bloccati integrali
+**2. Decreto legislativo (d.lgs.)** — art. 76 Cost.
+- Atto con forza di legge del Governo su **delega parlamentare**
+- Requisiti della legge delega: **principi e criteri direttivi** + **termine** + **oggetto definito**
+- Stessa forza della legge formale; sindacabile dalla Corte cost.
 
-### Articoli / norme
-- Art. 70 Cost.: funzione legislativa delle due Camere
-- Art. 72 Cost.: procedimento normale; casi di commissione deliberante
-- Art. 73 Cost.: promulgazione (30 giorni) e pubblicazione; entrata in vigore (15 giorni)
-- Art. 75 Cost.: referendum abrogativo (richiesta, quorum, limiti)
-- Art. 76 Cost.: delega al Governo (principi, criteri, termine, oggetto)
-- Art. 77 Cost.: decreti-legge (necessità e urgenza; 60 giorni)
-- Art. 17, l. 400/1988: tipologie di regolamenti governativi
+**3. Decreto-legge (d.l.)** — art. 77 Cost.
+- Atto con forza di legge per "casi straordinari di **necessità e urgenza**"
+- Convertito in legge entro **60 giorni**; il Governo presenta il d.d.l. di conversione **lo stesso giorno** della pubblicazione
+- Emendamenti: ammessi ma con nesso di pertinenza
+- Se non convertito: **decadenza ex tunc** (retroattiva); il Parlamento può sanare gli effetti con legge
+- **Reiterazione vietata** (Corte cost. sent. **360/1996**)
+
+**4. Referendum abrogativo** — art. 75 Cost.
+- Fonte primaria "negativa"; abroga in tutto o in parte leggi o atti con forza di legge
+- Richiesto da: **500.000 elettori** o **5 Consigli regionali**; deposito entro 30 settembre
+- **Quorum**: maggioranza degli aventi diritto; se respinto → non riproponibile per **5 anni**
+
+| Limiti espliciti (art. 75.2) | Limiti impliciti (Corte cost.) |
+|---|---|
+| Leggi tributarie e di bilancio | Leggi cost. e rinforzate |
+| Amnistia e indulto | Contenuto cost. vincolato |
+| Autorizzazione a ratificare trattati | Quesiti eterogenei (no "matrice razionalmente unitaria") |
+| | Normativa di risulta inapplicabile |
+| | Quesiti manipolativi |
+
+**5. Regolamenti governativi** — art. 17, l. 400/1988
+- Fonti secondarie; deliberati dal CdM; parere Consiglio di Stato; registrati dalla Corte dei conti
+- Tipi: esecutivi → attuativi-integrativi → indipendenti → di delegificazione → organizzativi
+- **Regolamenti ministeriali**: firma del singolo ministro; non possono derogare a quelli governativi
+
+**Articoli chiave**
+- Art. 70 Cost. → funzione legislativa
+- Art. 72 Cost. → procedimento; commissioni (referente, redigente, deliberante)
+- Art. 73 Cost. → promulgazione (30 gg); entrata in vigore (15 gg)
+- Art. 75 Cost. → referendum abrogativo
+- Art. 76 Cost. → delega legislativa (principi, criteri, termine, oggetto)
+- Art. 77 Cost. → decreti-legge (necessità e urgenza; 60 giorni)
+- Art. 17, l. 400/1988 → tipologie regolamenti governativi
 
 ---
 
@@ -414,224 +442,288 @@ Potestà legislativa — **art. 117 Cost.**:
 
 ## VI. Atti e provvedimenti amministrativi — pp. 460-477
 
-### Concetti chiave
-- **Atto amministrativo**: comportamento consapevole e volontario della PA che produce effetti giuridici
-- **Provvedimento amministrativo**: atto che produce effetti esterni nella sfera giuridica dei destinatari; atto finale del procedimento; manifesta la volontà della PA
-- **Principio di legalità**: la PA può esercitare poteri autoritativi solo se la legge glieli attribuisce
-- **Principio di tipicità/nominatività**: la legge deve precisare il tipo di provvedimento, l'interesse pubblico, i presupposti, il procedimento, gli effetti
-- **Unilateralità e autoritarietà**: la PA agisce senza il consenso del destinatario
-- **Imperatività**: il provvedimento incide unilateralmente sulla sfera giuridica del destinatario
-- **Esecutività**: il provvedimento è direttamente esecutivo senza previo intervento del giudice
-- **Esecutorietà**: la PA può portare in esecuzione coattiva certi provvedimenti senza ricorrere al giudice
-- **Discrezionalità amministrativa**: spazio di scelta (an, quando, quid/quantum, quomodo) che la legge lascia alla PA per realizzare l'interesse pubblico
+**1. Provvedimento amministrativo**
+- Atto finale del procedimento; produce effetti **esterni** nella sfera giuridica dei destinatari
+- Elementi: **presupposti** → **motivi** → **volontà** → **oggetto** → **forma** (esternazione)
+- **Tipicità / nominatività**: la legge deve prevedere il tipo, l'interesse pubblico, i presupposti, gli effetti
+- **Esecutività**: direttamente esecutivo senza previo intervento del giudice
+- **Esecutorietà**: in certi casi la PA porta in esecuzione coattiva senza ricorrere al giudice; l'onere si inverte (è il privato a dover ricorrere)
+
+**2. Procedimento amministrativo** (l. 241/1990)
+1. **Iniziativa**: avvia il procedimento (d'ufficio, su istanza privata o di un altro ente)
+2. **Istruttoria**: raccolta e valutazione degli elementi decisori
+3. **Fase costitutiva/deliberativa**: adozione del provvedimento
+4. **Integrazione dell'efficacia** (eventuale): controlli preventivi, notificazione, pubblicazione
+
+- **Conferenza dei servizi**: riunisce le autorità interessate per esaminare contestualmente tutti gli interessi pubblici coinvolti
+- **Motivazione** (art. 3, l. 241/1990): obbligatoria in ogni provvedimento discrezionale; indica presupposti di fatto e ragioni giuridiche
+
+**3. Tipologie di provvedimenti**
+
+| Tipo | Esempi |
+|---|---|
+| **Favorevoli / ampliativi** | Autorizzazione (rimuove ostacolo; no scadenza: patente, porto d'armi, licenza), Concessione (attribuisce nuovi diritti; a termine: balneari, taxi) |
+| **Sfavorevoli / ablatori** | Ordini, espropriazione, requisizione, sanzioni pecuniarie, demolizione |
+| **Generali** | Tariffe, piani urbanistici (effetti conformativi sulla proprietà) |
+
+**4. Discrezionalità amministrativa**
+- Spazio di scelta (an / quando / quid-quantum / quomodo) lasciato dalla legge alla PA
 - **Discrezionalità tecnica**: valutazioni tecnico-scientifiche; distinta dai meri accertamenti tecnici (non derogabili)
-- **Eccesso di potere**: vizio specifico della discrezionalità; vizi logici tra presupposti e decisione
-- **Autotutela**: potere della PA di intervenire sui propri atti (sanatoria, annullamento d'ufficio, revoca)
-- **Annullamento d'ufficio** (art. 21-nonies, l. 241/1990): discrezionale; richiede specifico interesse pubblico; diventa obbligatorio se l'atto contrasta con il diritto UE (CGUE Kühne & Heitz)
-- **Revoca** (art. 21-quinquies, l. 241): toglie efficacia ad atto non viziato per mutamento interesse pubblico; genera sempre obbligo di **indennizzo**
-- **Silenzio-assenso**: inerzia della PA = accoglimento della domanda, decorso il termine
-- **SCIA** (Segnalazione Certificata di Inizio Attività): il privato comunica l'inizio attività; spetta alla PA intervenire se vuole impedirla
-- **Interesse legittimo**: situazione di vantaggio del privato di fronte al potere della PA; tutelato dal giudice amministrativo; include diritto al risarcimento (Cass. s.u. 500/1999)
-- **Diritto soggettivo**: posizione di vantaggio garantita dall'ordinamento indipendentemente dalla PA; tutelato dal giudice ordinario
+- **Eccesso di potere**: vizio della discrezionalità; figure sintomatiche: sviamento, travisamento dei fatti, contraddittorietà, disparità di trattamento, vizi di motivazione, ingiustizia manifesta
+- **Principio di proporzionalità**: misura più idonea al fine; sacrificio minore degli interessi coinvolti
 
-### Classificazioni / Struttura
-- Elementi del provvedimento: presupposti → motivi → volontà → oggetto → forma (esternazione)
-- Fasi del procedimento (l. 241/1990): 1) iniziativa → 2) istruttoria → 3) fase costitutiva/deliberativa → 4) integrazione dell'efficacia (eventuale)
-- Tipologie di provvedimenti: favorevoli/ampliativi (autorizzazione, concessione, ammissioni, esoneri, incentivi) → sfavorevoli/ablatori (ordini, espropriazione, requisizione, sanzioni) → generali (tariffe, piani urbanistici)
-- Vizi del provvedimento: nullità (insanabile) → illegittimità/annullabilità (incompetenza relativa, violazione di legge, eccesso di potere)
-- Ricorsi amministrativi: gerarchico proprio (30 gg; silenzio-rigetto 90 gg) → gerarchico improprio → in opposizione → straordinario al Capo dello Stato (120 gg; solo legittimità)
-- Giurisdizione: giudice ordinario (diritti soggettivi; può disapplicare e risarcire) → giudice amministrativo (interessi legittimi; può annullare e risarcire)
+**5. Vizi e autotutela**
 
-### Dettagli importanti
-- Autorizzazione: rimuove ostacolo; nessuna scadenza; es. patente, porto d'armi, licenza commerciale
-- Concessione: attribuisce nuovi diritti; è a termine; es. concessioni balneari, frequenze TV, taxi
-- Figure sintomatiche eccesso di potere: sviamento, travisamento dei fatti, contraddittorietà, disparità di trattamento, vizi di motivazione, violazione prassi, ingiustizia manifesta
-- Motivazione (art. 3, l. 241/1990): obbligatoria in ogni provvedimento discrezionale; indica presupposti di fatto e ragioni giuridiche
-- Giudizio di ottemperanza: strumento con cui il cittadino obbliga la PA a conformarsi alla sentenza del giudice amministrativo; il giudice può nominare commissario ad acta
-- Nullità ex art. 21-octies l. 241/1990: mancanza elementi essenziali, difetto assoluto di attribuzione (incompetenza assoluta), violazione del giudicato; insanabile, senza termini di decadenza
-- Illegittimità: incompetenza relativa + violazione di legge (residuale) + eccesso di potere (solo atti discrezionali)
-- Conferenza dei servizi: riunisce tutte le autorità interessate per esaminare contestualmente gli interessi pubblici coinvolti
+| Vizio | Tipo | Regime |
+|---|---|---|
+| Mancanza elementi essenziali, incompetenza assoluta, violazione giudicato | **Nullità** (art. 21-octies) | Insanabile; nessun termine di decadenza |
+| Incompetenza relativa, violazione di legge, eccesso di potere | **Illegittimità / annullabilità** | Annullabile su ricorso |
 
-### Articoli / norme
-- Art. 97 Cost.: PA organizzata per legge; imparzialità, buon andamento; accesso per concorso
-- Art. 113 Cost.: tutela giurisdizionale totale contro atti della PA
-- Art. 103 Cost.: giurisdizione esclusiva del giudice amministrativo in materie specifiche
-- Legge 241/1990: disciplina del procedimento amministrativo; artt. 21-bis ss. su vizi, nullità, annullamento d'ufficio, revoca
+- **Annullamento d'ufficio** (art. 21-nonies): discrezionale; richiede interesse pubblico specifico; obbligatorio se l'atto contrasta con diritto UE (CGUE Kühne & Heitz)
+- **Revoca** (art. 21-quinquies): toglie efficacia ad atto non viziato per mutamento dell'interesse pubblico → genera sempre **indennizzo**
+- **Silenzio-assenso**: inerzia della PA dopo il termine = accoglimento della domanda
+- **SCIA**: il privato comunica l'inizio attività; la PA interviene solo se vuole impedirla
+
+**6. Giurisdizione**
+- **Diritti soggettivi** → **giudice ordinario** (può disapplicare l'atto e risarcire)
+- **Interessi legittimi** → **giudice amministrativo** (TAR + Consiglio di Stato; può annullare e risarcire)
+- **Interesse legittimo**: include il diritto al risarcimento (Cass. s.u. **500/1999**)
+- **Giurisdizione esclusiva** (art. 103): giudice amministrativo anche per diritti soggettivi in materie tassative
+- **Giudizio di ottemperanza**: obbliga la PA a conformarsi alla sentenza; il giudice può nominare commissario ad acta
+- Ricorsi amministrativi: gerarchico proprio (**30 gg**; silenzio-rigetto **90 gg**) → straordinario al Capo dello Stato (**120 gg**; solo legittimità)
+
+**Articoli chiave**
+- Art. 97 Cost. → PA organizzata per legge; imparzialità, buon andamento; accesso per concorso
+- Art. 103 Cost. → giurisdizione esclusiva del giudice amministrativo
+- Art. 113 Cost. → tutela giurisdizionale totale contro atti PA
+- L. 241/1990 → procedimento amm.; motivazione (art. 3); nullità (art. 21-octies); annullamento d'ufficio (art. 21-nonies); revoca (art. 21-quinquies)
 
 ---
 
 ## VII. Diritti e libertà — Parte 1 — pp. 478-515
 
-### Concetti chiave
-- **Principio liberale/personalista** (art. 2 Cost.): la Repubblica riconosce e garantisce i diritti inviolabili dell'uomo come singolo e nelle formazioni sociali
-- **Principio democratico** (art. 1 Cost.): sovranità al popolo; esercitata nelle forme e nei limiti stabiliti dalla Costituzione; limiti formali (procedimenti) e sostanziali (no violazione Costituzione)
-- **Principio sociale** (art. 3.2 Cost.): rimozione degli ostacoli economici e sociali che impediscono l'eguale godimento dei diritti
-- **Eguaglianza formale** (art. 3.1): trattare in modo eguale situazioni eguali; divieto di discriminazioni per sesso, razza, lingua, religione, opinioni politiche, condizioni personali e sociali; fonte del controllo di ragionevolezza
-- **Eguaglianza sostanziale** (art. 3.2): rimozione ostacoli economici e sociali; ammette leggi "premiali" per categorie svantaggiate; interdipendente con l'eguaglianza formale
+**1. Principi fondamentali**
+- **Personalista** (art. 2): la Repubblica riconosce e garantisce i diritti inviolabili dell'uomo come singolo e nelle formazioni sociali; catalogo aperto
+- **Democratico** (art. 1): sovranità al popolo; esercitata nelle forme e nei limiti della Costituzione
+- **Sociale** (art. 3.2): rimozione degli ostacoli economici e sociali che impediscono l'eguale godimento dei diritti
+
+**2. Eguaglianza** — art. 3 Cost.
+- **Formale** (art. 3.1): trattare in modo eguale situazioni eguali; divieto di discriminazioni per sesso, razza, lingua, religione, opinioni politiche, condizioni personali e sociali → fonte del **controllo di ragionevolezza**
+- **Sostanziale** (art. 3.2): rimozione degli ostacoli economici e sociali; ammette leggi "premiali" per categorie svantaggiate
+
+**3. Strumenti di tutela**
+Rigidità cost. → riserva di legge → riserva di giurisdizione → tutela giurisdizionale (art. 24) → responsabilità funzionario (art. 28) → sindacato Corte cost.
 - **Riserva assoluta di legge**: solo legge formale può limitare le libertà (artt. 13, 14, 15)
-- **Riserva di giurisdizione**: ogni restrizione della libertà individuale richiede autorizzazione preventiva (o convalida successiva in urgenza) del giudice
-- **Libertà personale** (art. 13): habeas corpus; riserva assoluta di legge + riserva di giurisdizione; in urgenza: comunicazione all'AG entro 48 ore + convalida nelle successive 48 ore
-- **Custodia cautelare**: durata massima complessiva 6 anni
-- **Libertà di domicilio** (art. 14): proiezione spaziale della persona; stesse garanzie dell'art. 13; leggi speciali ammesse per motivi di sanità/incolumità pubblica e fini economico-fiscali (senza riserva di giurisdizione in questi casi)
-- **Libertà di corrispondenza** (art. 15): segretezza di tutte le forme di comunicazione; riserva assoluta di legge + riserva di giurisdizione; nessun potere d'urgenza alla polizia; intercettazioni telefoniche: autorizzazione del giudice su richiesta PM, solo per delitti gravi, durata max 15 giorni prorogabili (art. 266 c.p.p.)
-- **Libertà di circolazione** (art. 16): libera circolazione nel territorio; libertà di espatrio (passaporto = diritto soggettivo); riserva di legge rinforzata (per contenuto) e relativa; NO riserva di giurisdizione; NO limitazioni per ragioni politiche (sent. 19/1959)
-- **Diritto generale di libertà**: diritto di fare tutto ciò che la legge non vieta; ogni atto dell'autorità che ostacoli un comportamento legittimo è impugnabile
+- **Riserva di giurisdizione**: ogni restrizione richiede autorizzazione preventiva o convalida successiva del giudice
+- **Garanzie internazionali**: Dichiarazione ONU 1948 + Patti ONU 1966 + CEDU (Corte EDU Strasburgo) + Carta UE (valore pari ai Trattati)
 
-### Classificazioni / Struttura
-- Diritti per contenuto: sfera individuale (artt. 13-16) → sfera pubblica (artt. 17-21) → sociali (artt. 29-34) → economici (artt. 35-47) → politici (artt. 48-51)
-- Strumenti di tutela: rigidità costituzionale → riserva di legge → riserva di giurisdizione → tutela giurisdizionale (art. 24) → responsabilità del funzionario (art. 28) → sindacato Corte costituzionale
-- Garanzie internazionali: Dichiarazione universale ONU (1948) + Patti ONU 1966 + CEDU (Consiglio d'Europa 1949, Corte EDU Strasburgo) + Carta diritti UE (Nizza 2000, valore pari ai Trattati)
+**4. Libertà personale** — art. 13 Cost.
+- *Habeas corpus*; riserva **assoluta** + riserva di giurisdizione
+- In urgenza: comunicazione all'AG entro **48 ore** + convalida nelle **48 ore** successive
+- Custodia cautelare: durata massima complessiva **6 anni**
+- TSO (art. 32.2): regolato dall'art. 32, non dall'art. 13; riserva **relativa** di legge, senza riserva di giurisdizione
 
-### Dettagli importanti
-- Art. 3.1: nucleo forte — divieto discriminazioni per sesso, razza, lingua, religione, opinioni politiche, condizioni personali e sociali
-- Intercettazioni telefoniche (art. 266 c.p.p.): solo per delitti tassativi gravi; durata max 15 giorni prorogabili; se illecite → inutilizzabili + distruzione documentazione (art. 271 c.p.p.)
-- Libertà di domicilio — nozione costituzionale ≈ nozione penalistica (art. 614 c.p.: "abitazione e ogni altro luogo di privata dimora"); più ampia di quella civilistica; si estende alle persone giuridiche
-- Diritto d'asilo (art. 10.3 Cost.): straniero cui sia impedito nel proprio Paese l'esercizio delle libertà democratiche; presuppone la qualità di rifugiato; Sistema di Dublino (reg. UE 604/2013)
-- Libertà personale — trattamento sanitario obbligatorio (TSO, art. 32.2): regolato dall'art. 32 (non art. 13); riserva relativa di legge, senza riserva di giurisdizione; motivato da esigenze di salute pubblica (non individuale)
-- Pena di morte: abolita; definitivamente dalla legge cost. 1/2007
-- Libertà di riunione — preavviso (art. 17): almeno 3 giorni prima al questore; NON è un'autorizzazione; omissione → responsabilità penale dei promotori; riunione rimane legittima
-- Riunioni in luogo pubblico: questore può vietarle solo per "comprovati motivi di sicurezza o incolumità pubblica" (art. 17.3)
+**5. Libertà di domicilio** — art. 14 Cost.
+- Proiezione spaziale della persona; stesse garanzie dell'art. 13
+- Nozione cost. ≈ penalistica (art. 614 c.p.: "abitazione e ogni altro luogo di privata dimora"); si estende alle persone giuridiche
+- Leggi speciali ammesse per **sanità/incolumità** e **fini economico-fiscali** (senza riserva di giurisdizione in questi casi)
 
-### Articoli / norme
-- Art. 2 Cost.: diritti inviolabili dell'uomo (catalogo aperto vs. chiuso)
-- Art. 3 Cost.: eguaglianza formale (3.1) e sostanziale (3.2)
-- Art. 13 Cost.: libertà personale; riserva assoluta + giurisdizione; comunicazione ad AG 48 ore + convalida 48 ore
-- Art. 14 Cost.: libertà di domicilio; stesse garanzie art. 13; leggi speciali per sanità, sicurezza, fini economico-fiscali
-- Art. 15 Cost.: libertà e segretezza della corrispondenza; riserva assoluta + giurisdizione
-- Art. 16 Cost.: libertà di circolazione e soggiorno; riserva di legge rinforzata per contenuto (solo "in via generale" per sanità o sicurezza); no ragioni politiche
-- Art. 17 Cost.: libertà di riunione; preavviso per luoghi pubblici (3 giorni); divieto solo per motivi di sicurezza o incolumità pubblica
-- Art. 24 Cost.: diritto di agire in giudizio (inviolabile in ogni stato e grado)
-- Art. 28 Cost.: responsabilità diretta dei funzionari
+**6. Libertà di corrispondenza** — art. 15 Cost.
+- Segretezza di tutte le forme di comunicazione; riserva **assoluta** + riserva di giurisdizione; nessun potere d'urgenza alla polizia
+- Intercettazioni (art. 266 c.p.p.): solo per delitti gravi tassativi; durata max **15 giorni** prorogabili; se illecite → inutilizzabili + distruzione (art. 271 c.p.p.)
+
+**7. Libertà di circolazione** — art. 16 Cost.
+- Libera circolazione nel territorio + libertà di espatrio (passaporto = diritto soggettivo)
+- Riserva di legge **rinforzata per contenuto** (solo "in via generale" per sanità o sicurezza) e **relativa**; NO riserva di giurisdizione; NO limitazioni per ragioni politiche (sent. 19/1959)
+
+**8. Libertà di riunione** — art. 17 Cost.
+- Preavviso per luoghi pubblici: almeno **3 giorni** al questore (NON è autorizzazione; omissione → resp. penale promotori, riunione resta legittima)
+- Questore può vietare solo per "comprovati motivi di sicurezza o incolumità pubblica"
+
+**Articoli chiave**
+- Art. 2 Cost. → diritti inviolabili (catalogo aperto)
+- Art. 3.1 Cost. → eguaglianza formale; divieto discriminazioni
+- Art. 3.2 Cost. → eguaglianza sostanziale; rimozione ostacoli
+- Art. 13 Cost. → libertà personale; riserva assoluta + giurisdizione; 48+48 ore in urgenza
+- Art. 14 Cost. → libertà di domicilio; leggi speciali per sanità e fini economici
+- Art. 15 Cost. → segretezza corrispondenza; riserva assoluta + giurisdizione
+- Art. 16 Cost. → libertà di circolazione; riserva rinforzata per contenuto; no ragioni politiche
+- Art. 17 Cost. → libertà di riunione; preavviso 3 gg; divieto solo per sicurezza/incolumità
+- Art. 24 Cost. → diritto di agire in giudizio (inviolabile)
+- Art. 28 Cost. → responsabilità diretta dei funzionari
 
 ---
 
 ## VII. Diritti e libertà — Parte 2 — pp. 516-553
 
-### Concetti chiave
-- **Libertà di associazione** (art. 18): formazione sociale stabile con nucleo organizzativo; 3 garanzie: libertà di adesione/recesso, libertà di istituzione senza autorizzazione, riserva di legge rinforzata
-- **Associazioni vietate** (art. 18.2): segrete (legge 17/1982 "legge P2": occultano esistenza o soci; interferenza illecita su istituzioni; scioglimento con sentenza irrevocabile + d.P.C.M.) + paramilitari (fini politici con organizzazione militare: gerarchia, gradi, divise)
-- **Divieto ricostituzione PNF** (XII disp. transitoria): vietata in qualsiasi forma la riorganizzazione del partito fascista
-- **Libertà di coscienza**: non ha un riconoscimento esplicito in Costituzione; tutelata tramite art. 3, art. 19, art. 8
-- **Libertà di culto** (art. 19): professare la fede, fare proselitismo, esercitare culto individuale/associato; limiti: buon costume e ordine pubblico
-- **Principio di laicità**: principio supremo dell'ordinamento (Corte cost. 203/1989); non indifferenza verso il fenomeno religioso, ma garanzia della libertà di coscienza
-- **Patti Lateranensi** (art. 7 Cost.): Trattato e Concordato 1929 (modificati con accordo 18 febbraio 1984, reso esecutivo da legge 121/1985); modificabili d'accordo tra le parti senza procedimento di revisione costituzionale; le norme di esecuzione possono derogare alla Costituzione salvo i principi supremi
-- **Intese** (art. 8.3 Cost.): accordi tra Governo e confessioni acattoliche; base per la legge che regola i rapporti; 13 intese stipulate finora
-- **Libertà di manifestazione del pensiero** (art. 21): "pietra angolare" della democrazia; esprimere idee e divulgarle a destinatari indeterminati; unico limite costituzionale esplicito = buon costume (= morale sessuale)
-- **Limiti impliciti** all'art. 21: onore, reputazione, riservatezza, segreto, ordine pubblico
-- **Segreto di Stato** (legge 124/2007): tutela affidata al Presidente del Consiglio; apposizione e opposizione; non opera per terrorismo, mafia, stragi, reati eversivi
-- **Diritti sociali**: diritti a ricevere prestazioni dagli apparati pubblici; "minimo essenziale" non comprimibile per ragioni di finanza pubblica
-- **Sentenze additive**: Corte dichiara illegittima la norma "nella parte in cui" esclude dai benefici una categoria; estende la portata della norma
-- **SSN** (Servizio Sanitario Nazionale): istituito nel 1978; globalità delle prestazioni, universalità dei destinatari, uguaglianza dei trattamenti; erogato tramite ASL; dopo Titolo V, "tutela della salute" = materia concorrente
-- **Referendum abrogativo** (art. 75): 500.000 elettori o 5 Consigli regionali; deposito entro 30 settembre; quorum = maggioranza aventi diritto; se respinto → non riproponibile per 5 anni
-- **Referendum costituzionale** (art. 138): nessun quorum; nessun giudizio di ammissibilità della Corte costituzionale; solo controllo dell'Ufficio centrale per il referendum (Cassazione)
-- **Corpo elettorale**: cittadini con elettorato attivo; include residenti all'estero (circoscrizione Estero: 8 dep. + 4 sen.); nelle elezioni comunali anche cittadini UE residenti in Italia
-- **Autorità amministrative indipendenti**: indipendenti dal Governo; legittimanzione tecnica non democratica; AGCM (antitrust), AGCOM (comunicazioni), CONSOB (mercato finanziario)
+**1. Libertà di associazione** — art. 18 Cost.
+- Formazione sociale stabile con nucleo organizzativo; 3 garanzie: libertà di adesione/recesso + istituzione senza autorizzazione + riserva di legge rinforzata
+- **Associazioni vietate**:
+  - *Segrete* (l. 17/1982 "legge P2"): occultano esistenza o soci; interferiscono con istituzioni; scioglimento con sentenza irrevocabile + d.P.C.M.
+  - *Paramilitari*: fini politici con organizzazione militare (gerarchia, gradi, divise)
+- **XII disp. transitoria**: vietata in qualsiasi forma la riorganizzazione del PNF
 
-### Classificazioni / Struttura
-- Obiezione di coscienza: ammessa dalla legge in casi specifici → servizio militare (sospeso 2005) → aborto (l. 194/1978) → procreazione assistita (l. 40/2004) → sperimentazione animale (l. 413/1993)
-- Sistemi elettorali: proporzionale (rappresentatività; rischio frammentazione) → maggioritario (stabilità; rischio esclusione minoranze). Correttivi: clausola di sbarramento, premio di maggioranza, quota proporzionale, diritto di tribuna
-- Leggi elettorali per il Parlamento italiano: proporzionale (fino 1993) → Mattarellum (ll. 276-277/1993: 75% maggioritario uninominale + 25% proporzionale) → Porcellum (l. 270/2005: proporzionale con premio; incostituzionale, sent. 1/2014) → Rosatellum (2017: ~⅝ proporzionale + ~⅜ maggioritario)
-- Diritti politici: elettorato attivo e passivo, referendum, petizione, accesso agli uffici pubblici (artt. 48-51); riservati ai cittadini; persi per incapacità o come pena accessoria (interdizione perpetua per condanne ≥ 5 anni; temporanea per condanne ≥ 3 anni)
+**2. Libertà religiosa** — artt. 7, 8, 19 Cost.
+- **Libertà di culto** (art. 19): professare la fede, fare proselitismo, esercitare culto individuale/associato; limite: buon costume e ordine pubblico
+- **Laicità**: principio supremo dell'ordinamento (sent. **203/1989**); non indifferenza ma garanzia della libertà di coscienza
+- **Patti Lateranensi** (art. 7): Trattato e Concordato 1929 (modificati con accordo 18 febbraio 1984, l. 121/1985); modificabili d'accordo tra le parti senza revisione cost.; norme di esecuzione possono derogare alla Cost. salvo i principi supremi
+- **Intese** (art. 8.3): accordi tra Governo e confessioni acattoliche; base per la legge che regola i rapporti; 13 intese stipulate
 
-### Dettagli importanti
-- Parlamento europeo: proporzionale a liste; soglia 4%; 76 seggi per l'Italia (su 705 totali)
-- Consigli regionali: disciplinati con legge regionale dopo l.cost. 1/1999; Presidente Giunta eletto a suffragio universale
-- Comuni > 15.000 ab.: elezione diretta Sindaco (eventuale ballottaggio) + Consiglio con proporzionale corretto da premio
-- Comuni < 15.000 ab.: sistema prevalentemente maggioritario
-- Province e Città metropolitane (legge Delrio): elezioni di secondo grado (sindaci e consiglieri); voto ponderato per popolazione
-- Previdenza sociale (art. 38): metodo retributivo (importo proporzionato a retribuzione e anzianità contributiva) → metodo contributivo (l. 353/1995: proporzionato ai contributi effettivamente versati)
-- Libertà sindacale (art. 39): primo comma applicato; commi su registrazione e contratti erga omnes mai attuati; i sindacati sono associazioni di diritto privato
-- Sciopero (art. 40): sospensione collettiva temporanea; no conseguenze penali/civili/disciplinari; nessuna disciplina generale; servizi pubblici essenziali regolati dalla l. 146/1990
-- Art. 34.3 Cost.: "i capaci e i meritevoli, anche se privi di mezzi, hanno diritto di raggiungere i gradi più alti degli studi"
-- Art. 33.3 Cost.: le scuole private possono essere istituite "senza oneri per lo Stato"
-- Scuole paritarie (l. 62/2000): rispettano principi costituzionali, aperte a tutti, organi collegiali democratici, docenti abilitati con contratti collettivi
-- Art. 41.3 Cost. (riformato da l.cost. 1/2022): aggiunta "e ambientali" ai fini sociali dell'iniziativa economica
+**3. Libertà di manifestazione del pensiero** — art. 21 Cost.
+- "Pietra angolare" della democrazia; unico limite esplicito = **buon costume** (= morale sessuale)
+- Limiti impliciti: onore, reputazione, riservatezza, segreto, ordine pubblico
+- **Segreto di Stato** (l. 124/2007): tutela affidata al Presidente del Consiglio; non opera per terrorismo, mafia, stragi, reati eversivi
+- Sequestro: solo per violazioni penali o anonimato; riserva assoluta + giurisdizione; in urgenza: comunicazione **24 ore** + convalida **24 ore**
 
-### Articoli / norme
-- Art. 7 Cost.: Stato e Chiesa cattolica; Patti Lateranensi; modifiche senza revisione cost.
-- Art. 8 Cost.: tutte le confessioni egualmente libere; intese (art. 8.3)
-- Art. 18 Cost.: libertà di associazione; associazioni segrete e paramilitari vietate
-- Art. 19 Cost.: libertà di culto; limite: buon costume e ordine pubblico
-- Art. 21 Cost.: libertà di manifestazione del pensiero; divieto di censura preventiva; sequestro solo per violazioni penali o anonimato; riserva di legge assoluta + riserva di giurisdizione; in urgenza: comunicazione 24 ore + convalida 24 ore
-- Art. 32 Cost.: diritto alla salute fondamentale; TSO per legge; no trattamenti contrari alla dignità
-- Art. 34 Cost.: scuola aperta a tutti; diritto allo studio; borse di studio
-- Art. 38 Cost.: previdenza sociale; inabili e indigenti; lavoratori; assicurazione obbligatoria
-- Art. 39-40 Cost.: libertà sindacale e diritto di sciopero
-- Art. 41 Cost.: libertà di iniziativa economica; limiti: utilità sociale, sicurezza, libertà, dignità umana; (2022: +ambiente)
-- Art. 42 Cost.: proprietà privata; funzione sociale; espropriazione con indennizzo
-- Art. 48 Cost.: voto universale, libero, segreto, eguale; obbligatorio come dovere civico
-- Art. 53 Cost.: dovere tributario; capacità contributiva; sistema progressivo
-- Art. 75 Cost.: referendum abrogativo (500.000 elettori o 5 Consigli; quorum = maggioranza aventi diritto; proposta respinta → no per 5 anni)
-- Art. 138 Cost.: referendum costituzionale (no quorum; no giudizio ammissibilità Corte cost.)
+**4. Diritti sociali**
+- Prestazioni positive degli apparati pubblici; "minimo essenziale" non comprimibile per ragioni di finanza pubblica
+- **Sentenze additive**: Corte dichiara illegittima la norma "nella parte in cui" esclude una categoria dai benefici → estende la portata della norma
+- **SSN** (1978): globalità, universalità, uguaglianza dei trattamenti; erogato tramite ASL; dopo Titolo V "tutela della salute" = materia **concorrente**
+- **Libertà sindacale** (art. 39): primo comma applicato; registrazione e contratti erga omnes mai attuati; sindacati = associazioni di diritto privato
+- **Sciopero** (art. 40): sospensione collettiva temporanea; nessuna conseguenza penale/civile/disciplinare; servizi pubblici essenziali: l. 146/1990
+- **Libertà di iniziativa economica** (art. 41): limiti: utilità sociale, sicurezza, libertà, dignità; dal 2022 (l.cost. 1/2022): + **ambiente**
+- **Proprietà privata** (art. 42): funzione sociale; espropriazione con **indennizzo**
+
+**5. Sistemi elettorali e diritti politici**
+- **Art. 48**: voto universale, libero, segreto, eguale; elezioni comunali: anche cittadini UE residenti
+- Circoscrizione Estero: **8 dep. + 4 sen.**
+
+| Legge elettorale | Anni | Sistema |
+|---|---|---|
+| Proporzionale | Fino al 1993 | Proporzionale puro |
+| Mattarellum (ll. 276-277/1993) | 1994-2001 | 75% maggioritario uninominale + 25% proporzionale |
+| Porcellum (l. 270/2005) | 2006-2013 | Proporzionale + premio; **incostituzionale** (sent. 1/2014) |
+| Rosatellum (2017) | Dal 2018 | ~⅜ maggioritario uninominale + ~⅝ proporzionale |
+
+**6. Referendum** (riepilogo)
+
+| | Abrogativo (art. 75) | Costituzionale (art. 138) |
+|---|---|---|
+| Chi richiede | 500.000 elettori o 5 Consigli regionali | 1/5 parlamentari, 500.000 elettori o 5 Consigli |
+| Quorum | Maggioranza aventi diritto | **Nessuno** |
+| Ammissibilità | **Corte costituzionale** | Solo Cassazione (Ufficio centrale) |
+| Se respinto | Non riproponibile per **5 anni** | — |
+
+**Articoli chiave**
+- Art. 7 Cost. → Patti Lateranensi; modifiche senza revisione cost.
+- Art. 8 Cost. → confessioni egualmente libere; intese
+- Art. 18 Cost. → libertà di associazione; associazioni segrete e paramilitari vietate
+- Art. 19 Cost. → libertà di culto; limite buon costume
+- Art. 21 Cost. → libertà di pensiero; sequestro in urgenza 24+24 ore
+- Art. 32 Cost. → diritto alla salute; TSO per legge
+- Art. 34 Cost. → scuola aperta a tutti; diritto allo studio
+- Art. 38 Cost. → previdenza sociale
+- Art. 39-40 Cost. → libertà sindacale e sciopero
+- Art. 41 Cost. → iniziativa economica; (2022: +ambiente)
+- Art. 42 Cost. → proprietà privata; espropriazione con indennizzo
+- Art. 48 Cost. → voto universale, libero, segreto, eguale
+- Art. 53 Cost. → capacità contributiva; sistema progressivo
+- Art. 75 Cost. → referendum abrogativo (quorum: magg. aventi diritto)
+- Art. 138 Cost. → referendum costituzionale (no quorum; no ammissibilità Corte cost.)
 
 ---
 
 ## VIII-IX. Giustizia — pp. 554-597
 
-### Concetti chiave
-- **Giurisdizione**: funzione di applicare il diritto per risolvere controversie; esercitata "in nome del popolo" da giudici soggetti solo alla legge (art. 101 Cost.)
-- **Unità della giurisdizione** (art. 102.1 Cost.): funzione giurisdizionale a un unico corpo di giudici ordinari; divieto di giudici straordinari o speciali post-factum
-- **Sezioni specializzate** (ammesse): tribunale per i minorenni, sezioni di sorveglianza, tribunale delle imprese
-- **Giurisdizioni speciali** ammesse dalla Cost.: Consiglio di Stato e TAR (art. 103.1), Corte dei conti (art. 103.2), tribunali militari (art. 103.3)
-- **Giudice naturale precostituito per legge** (art. 25 Cost.): criteri astratti e predeterminati per individuare l'organo competente
-- **Giusto processo** (art. 111 Cost., riformato da l.cost. 2/1999): contraddittorio, parità delle parti, giudice terzo e imparziale, ragionevole durata; nel penale: informazione tempestiva, tempo adeguato per la difesa, contraddittorio nella formazione della prova
-- **Obbligo dell'azione penale** (art. 112 Cost.): il PM deve esercitare l'azione penale per ogni notitia criminis fondata; nessuna discrezionalità
-- **Nomofilachia**: funzione della Corte di cassazione di garantire interpretazione uniforme del diritto
-- **Corte di cassazione**: giudice di legittimità; organo di chiusura del sistema; sezioni civili, penali, lavoro + sezioni unite per casi rilevanti e contrasti; i principi di diritto enunciati non costituiscono precedente vincolante (salvo art. 384 c.p.c.)
-- **Autonomia e indipendenza della magistratura** (art. 104.1 Cost.): "ordine autonomo e indipendente da ogni altro potere"
-- **Inamovibilità** (art. 107.1 Cost.): magistrati non trasferibili o rimovibili senza consenso, salvo provvedimento motivato del CSM
-- **Assenza di gerarchia** (art. 107.3 Cost.): magistrati si distinguono solo per funzioni
-- **CSM** (Consiglio Superiore della Magistratura): organo di autogoverno; 33 membri (riforma Cartabia): 3 di diritto (PR, Primo Presidente Cassazione, Procuratore Generale Cassazione) + 20 togati (eletti magistrati) + 10 laici (eletti dal Parlamento tra professori ordinari e avvocati con 15 anni)
-- **Vicepresidente CSM**: eletto tra i membri laici; sostituisce il Presidente della Repubblica
-- **Corte dei conti**: controllo preventivo di legittimità sugli atti del Governo + controllo successivo sulla gestione del bilancio + giurisdizione contabile (responsabilità per danni all'erario con dolo o colpa grave)
-- **Responsabilità civile dei magistrati** (l. 18/2015): azione verso lo Stato; rivalsa sul magistrato fino alla metà dell'annualità dello stipendio; esclusi errori interpretativi (salvo dolo o colpa grave)
-- **Giustizia costituzionale**: sistema di controllo giurisdizionale del rispetto della Costituzione; garanzia della rigidità
-- **Modello diffuso**: ogni giudice sindaca le leggi (USA; caso Marbury v. Madison 1803; precedente vincolante)
-- **Modello accentrato**: un unico organo specializzato (Italia, Austria 1867, Svizzera 1874)
-- **Corte costituzionale italiana**: modello accentrato, successivo, ad accesso indiretto; 15 giudici; mandato 9 anni non rinnovabile; decisioni inappellabili (art. 137.3 Cost.)
-- **Giudizio incidentale**: questione di legittimità come incidente nel giudizio a quo; requisiti: rilevanza + non manifesta infondatezza; ordinanza di rimessione + sospensione giudizio a quo; parti eventuali
-- **Giudizio in via principale**: Stato contro leggi regionali o Regioni contro leggi statali; entro 60 giorni dalla pubblicazione; giudizio astratto e disponibile
-- **Illegittimità consequenziale**: estensione della pronuncia ad altre norme collegate; deroga al principio di corrispondenza chiesto-pronunciato
-- **Diritto vivente**: interpretazione consolidata nella giurisprudenza ordinaria; la Corte giudica la norma nel significato in cui essa "vive"
-- **Conflitti di attribuzione tra poteri**: risolve davanti alla Corte le controversie su chi abbia competenza a esercitare una funzione costituzionale; "potere" = qualsiasi organo a cui la Cost. attribuisce funzioni supreme esercitate in modo indipendente
-- **Alto tradimento e attentato alla Costituzione** (art. 90 Cost.): unici reati del Presidente della Repubblica; accusa dal Parlamento in seduta comune (maggioranza assoluta); giudica la Corte costituzionale in composizione integrata (15 ordinari + 16 aggregati estratti a sorte da elenco di 45 cittadini compilato dal Parlamento ogni 9 anni)
-- **Reati ministeriali** (l.cost. 1/1989): reati comuni di ministri nell'esercizio delle funzioni; autorizzazione parlamentare; giudica magistratura ordinaria tramite tribunale dei ministri
+**1. Struttura della giurisdizione**
 
-### Classificazioni / Struttura
-- Giurisdizioni: ordinaria (civile e penale) → amministrativa (TAR primo grado + Consiglio di Stato secondo grado) → contabile (Corte dei conti) → tributaria (Corti di giustizia tributaria l. 130/2022) → militare (art. 103.3)
-- Riparto ordinario/amministrativo: diritti soggettivi → giudice ordinario; interessi legittimi → giudice amministrativo; giurisdizione esclusiva → giudice amministrativo anche per diritti soggettivi in materie tassative
-- Composizione CSM: 3 di diritto + 20 togati (2/3) + 10 laici (1/3) = 33 totali; azione disciplinare promossa da Ministro della giustizia o Procuratore Generale Cassazione; sanzioni: censura → rimozione
-- Attribuzioni Corte costituzionale (art. 134): 1) controllo legittimità leggi e atti forza di legge Stato e Regioni; 2) conflitti tra poteri dello Stato; 3) conflitti Stato-Regioni; 4) accuse contro il PR; 5) ammissibilità referendum abrogativo (aggiunto da l.cost. 1/1953)
-- Tipologie di decisioni: inammissibilità → rigetto ("non fondata", inter partes) → accoglimento (erga omnes, ex tunc, non sui rapporti esauriti) → interpretativa di rigetto → manipolative (additiva, additiva di principio, sostitutiva, parziale)
+| Giurisdizione | Organi | Materia |
+|---|---|---|
+| **Ordinaria** | Tribunali → Corti d'Appello → Corte di cassazione | Civile e penale |
+| **Amministrativa** | TAR (1° grado) → Consiglio di Stato (2° grado) | Interessi legittimi + giurisdizione esclusiva |
+| **Contabile** | Corte dei conti | Responsabilità erariale + controllo bilancio |
+| **Tributaria** | Corti di giustizia tributaria (l. 130/2022) | Controversie tributarie |
+| **Militare** | Tribunali militari | Reati militari |
 
-### Dettagli importanti
-- Corte costituzionale — composizione (art. 135): 15 giudici; 1/3 eletti dal Parlamento in seduta comune (2/3 nei primi 2 scrutini, 3/5 dal terzo); 1/3 nominati dal Presidente della Repubblica; 1/3 eletti dalle supreme magistrature (3 Cassazione, 1 Consiglio di Stato, 1 Corte dei conti)
-- Requisiti giudici Corte cost.: magistrature superiori (anche a riposo), professori ordinari di materie giuridiche, avvocati con almeno 20 anni di esercizio
-- Presidente Corte cost.: eletto dalla Corte stessa; mandato triennale, rinnovabile; voto decisivo in caso di parità
-- Rinnovo graduale: i giudici scadono gradualmente; non si applica la prorogatio
-- Incompatibilità giudici Corte cost.: assoluta con incarichi politici/parlamentari/regionali, professione di avvocato, attività in partiti politici
-- Sentenza di accoglimento: effetti erga omnes; efficacia dal giorno successivo alla pubblicazione in G.U.; ex tunc ma non sui rapporti esauriti (coperti da giudicato o decaduti); in materia penale: cessano esecuzione e effetti penali delle condanne irrevocabili (favor rei, art. 30.4 l. 87/1953)
-- Sentenza additiva per "rime obbligate": la Corte aggiunge solo ciò che è ricavabile dalla disciplina di situazioni analoghe e dai principi costituzionali; non inventa norme
-- Giudizio in via principale: Stato → Presidente del Consiglio previa deliberazione Consiglio dei Ministri; Regione → Presidente della Giunta previa deliberazione Giunta; 60 giorni dalla pubblicazione
-- Conflitti tra poteri: senza termini di decadenza; ammissibilità in camera di consiglio → merito
-- Conflitti Stato-Regioni: termine perentorio 60 giorni dalla notificazione/pubblicazione; la Corte può sospendere l'atto invasivo; cessazione della materia del contendere se accordo
-- Giustizia tributaria (l. 130/2022): Corti di giustizia tributaria di primo e secondo grado; Consiglio di presidenza della giustizia tributaria (organo di autogoverno)
-- Magistratura militare: l. 180/1981 → Corte militare d'appello; PM militare; Consiglio della magistratura militare; garanzie di status come magistratura ordinaria
-- Separazione delle carriere (riforma Cartabia, l. 71/2022): passaggio tra funzioni giudicanti e requirente limitato a una sola volta nel corso della carriera
-- Limiti impliciti referendum abrogativo (elaborati dalla Corte cost.): leggi cost. e rinforzate; contenuto cost. vincolato; leggi strettamente collegate alle categorie escluse; quesiti eterogenei (no "matrice razionalmente unitaria"); normativa di risulta inapplicabile; quesiti eccessivamente manipolativi; per leggi elettorali: normativa residua deve essere "immediatamente operante e autoapplicativa"
+- **Art. 102.1**: unità della giurisdizione; divieto di giudici straordinari o speciali; sezioni specializzate ammesse (minori, imprese, sorveglianza)
+- **Giudice naturale precostituito per legge** (art. 25): criteri astratti e predeterminati
+- **Giusto processo** (art. 111, riformato da l.cost. 2/1999): contraddittorio, parità delle parti, giudice terzo e imparziale, ragionevole durata; nel penale: informazione tempestiva, tempo per la difesa, contraddittorio nella formazione della prova
 
-### Articoli / norme
-- Art. 101 Cost.: giustizia amministrata in nome del popolo; giudici soggetti solo alla legge
-- Art. 102 Cost.: unità della giurisdizione; divieto di giudici straordinari o speciali
-- Art. 103 Cost.: Consiglio di Stato (interessi legittimi + giurisdizione esclusiva), Corte dei conti (contabilità pubblica), tribunali militari
-- Art. 104 Cost.: magistratura ordine autonomo e indipendente; composizione CSM; vicepresidente tra i laici
-- Art. 105 Cost.: competenze CSM (assunzioni, assegnazioni, trasferimenti, promozioni, disciplina)
-- Art. 107 Cost.: inamovibilità; azione disciplinare (Ministro o PG Cassazione); magistrati distinti solo per funzioni
-- Art. 111 Cost.: giurisdizione per legge; contraddittorio; giudice terzo; ragionevole durata; obbligo di motivazione; ricorso in Cassazione sempre ammesso per libertà personale
-- Art. 112 Cost.: obbligo dell'azione penale
-- Art. 113 Cost.: tutela giurisdizionale totale contro atti PA
-- Art. 134 Cost.: attribuzioni della Corte costituzionale
-- Art. 135 Cost.: composizione (15 giudici; 1/3 Parlamento, 1/3 Presidente Repubblica, 1/3 supreme magistrature; 9 anni non rinnovabile)
-- Art. 137 Cost.: legge disciplina le procedure; le decisioni della Corte non sono impugnabili
-- L. 87/1953: disciplina dei giudizi davanti alla Corte costituzionale
-- L.cost. 1/1989: reati ministeriali → magistratura ordinaria con autorizzazione parlamentare
+**2. Magistratura ordinaria**
+- **Art. 104.1**: "ordine autonomo e indipendente da ogni altro potere"
+- **Inamovibilità** (art. 107.1): non trasferibili o rimovibili senza consenso, salvo provvedimento motivato del CSM
+- **Assenza di gerarchia** (art. 107.3): magistrati si distinguono solo per funzioni
+- **Obbligo dell'azione penale** (art. 112): il PM esercita l'azione per ogni notitia criminis fondata; nessuna discrezionalità
+- **Separazione delle carriere** (l. 71/2022, riforma Cartabia): passaggio funzioni giudicanti/requirente limitato a **una sola volta**
+- **Responsabilità civile** (l. 18/2015): azione verso lo Stato; rivalsa sul magistrato fino alla metà dell'annualità; esclusi errori interpretativi (salvo dolo o colpa grave)
+
+**3. CSM — Consiglio Superiore della Magistratura** (art. 104)
+
+| Componente | N. | Come |
+|---|---|---|
+| Di diritto | 3 | PR (presiede), Primo Presidente Cassazione, PG Cassazione |
+| Togati | 20 | Eletti dai magistrati |
+| Laici | 10 | Eletti dal Parlamento (professori ordinari o avvocati ≥15 anni) |
+| **Totale** | **33** | Riforma Cartabia |
+
+- **Vicepresidente**: eletto tra i laici; sostituisce il PR
+- **Competenze** (art. 105): assunzioni, assegnazioni, trasferimenti, promozioni, disciplina
+- Azione disciplinare: Ministro della giustizia o PG Cassazione; sanzioni: censura → rimozione
+
+**4. Corte dei conti**
+- Controllo preventivo di legittimità sugli atti del Governo
+- Controllo successivo sulla gestione del bilancio
+- Giurisdizione contabile: responsabilità per danni all'erario con **dolo o colpa grave**
+
+**5. Corte costituzionale — composizione** (art. 135)
+- **15 giudici**; mandato **9 anni** non rinnovabile; decisioni **inappellabili** (art. 137.3)
+- 1/3 eletti dal **Parlamento** in seduta comune (2/3 nei primi 2 scrutini, poi 3/5)
+- 1/3 nominati dal **Presidente della Repubblica**
+- 1/3 eletti dalle **supreme magistrature** (3 Cassazione + 1 Consiglio di Stato + 1 Corte dei conti)
+- Requisiti: magistrature superiori (anche a riposo), professori ordinari di materie giuridiche, avvocati ≥20 anni
+- Presidente: eletto dalla Corte; mandato triennale rinnovabile; voto decisivo in caso di parità
+- Incompatibilità assoluta con incarichi politici, avvocatura, partiti
+
+**6. Attribuzioni della Corte costituzionale** (art. 134)
+1. Controllo legittimità leggi e atti con forza di legge (Stato e Regioni)
+2. Conflitti di attribuzione tra poteri dello Stato
+3. Conflitti Stato-Regioni e tra Regioni
+4. Accuse contro il Presidente della Repubblica
+5. Ammissibilità del referendum abrogativo (aggiunta da l.cost. 1/1953)
+
+**7. Giudizio incidentale**
+- Questione di legittimità come incidente nel giudizio a quo
+- Requisiti: **rilevanza** (la norma si applica al caso) + **non manifesta infondatezza**
+- Ordinanza di rimessione → sospensione del giudizio a quo → giudizio Corte cost.
+- **Diritto vivente**: la Corte giudica la norma nel significato in cui "vive" nella giurisprudenza consolidata
+
+**8. Giudizio in via principale**
+- Stato vs. leggi regionali o Regioni vs. leggi statali; entro **60 giorni** dalla pubblicazione
+- Stato: Presidente del Consiglio previa deliberazione CdM
+- Regione: Presidente della Giunta previa deliberazione della Giunta
+- Giudizio astratto e disponibile (può cessare per accordo)
+
+**9. Tipologie di decisioni**
+
+| Tipo | Effetti |
+|---|---|
+| **Inammissibilità / rigetto** ("non fondata") | *Inter partes* |
+| **Accoglimento** | *Erga omnes*; ex tunc (non su rapporti esauriti); in penale: cessano esecuzione e effetti condanne irrevocabili (**favor rei**, art. 30.4 l. 87/1953) |
+| **Interpretativa di rigetto** | Salva la norma nell'interpretazione conforme a Cost. |
+| **Additiva** | Aggiunge ciò che manca; per "rime obbligate": solo ciò ricavabile da discipline analoghe e principi cost. |
+| **Additiva di principio** | Enuncia il principio; rimanda al legislatore per il dettaglio |
+| **Sostitutiva** | Sostituisce una parte della norma |
+
+- **Illegittimità consequenziale**: estensione della pronuncia ad altre norme collegate
+
+**10. Altri giudizi**
+- **Conflitti tra poteri**: senza termini di decadenza; ammissibilità in camera di consiglio poi merito; "potere" = organo a cui la Cost. attribuisce funzioni supreme esercitate in modo indipendente
+- **Conflitti Stato-Regioni**: termine perentorio **60 giorni** dalla notificazione/pubblicazione; la Corte può sospendere l'atto invasivo
+- **Alto tradimento e attentato alla Costituzione** (art. 90): accusa dal Parlamento in seduta comune (magg. assoluta); giudica la Corte in composizione integrata (15 ordinari + **16 aggregati** estratti da elenco di 45 cittadini compilato dal Parlamento ogni 9 anni)
+- **Reati ministeriali** (l.cost. 1/1989): reati comuni di ministri nell'esercizio delle funzioni; autorizzazione parlamentare; giudica la magistratura ordinaria tramite tribunale dei ministri
+
+**Articoli chiave**
+- Art. 101 Cost. → giustizia in nome del popolo; giudici soggetti solo alla legge
+- Art. 102 Cost. → unità della giurisdizione; divieto giudici straordinari
+- Art. 103 Cost. → Cons. di Stato (interessi legittimi + giurisdizione esclusiva), Corte dei conti, tribunali militari
+- Art. 104 Cost. → magistratura ordine autonomo; composizione CSM; VP tra i laici
+- Art. 105 Cost. → competenze CSM
+- Art. 107 Cost. → inamovibilità; magistrati distinti solo per funzioni
+- Art. 111 Cost. → giusto processo; contraddittorio; ragionevole durata; motivazione
+- Art. 112 Cost. → obbligo dell'azione penale
+- Art. 113 Cost. → tutela giurisdizionale totale contro atti PA
+- Art. 134 Cost. → attribuzioni Corte costituzionale
+- Art. 135 Cost. → composizione (15 giudici; 9 anni non rinnovabile; 1/3 Parlamento, 1/3 PR, 1/3 magistrature)
+- Art. 137 Cost. → decisioni Corte cost. non impugnabili
+- L. 87/1953 → giudizi davanti alla Corte cost.; art. 30.4 favor rei in penale
+- L.cost. 1/1989 → reati ministeriali → magistratura ordinaria con autorizzazione parlamentare
