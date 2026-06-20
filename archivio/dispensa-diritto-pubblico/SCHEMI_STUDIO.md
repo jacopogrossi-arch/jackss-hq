@@ -300,92 +300,115 @@
 
 ## IV-V. Fonti Europee e Fonti delle Autonomie — pp. 428-459
 
-### Concetti chiave
+**1. Atti UE**
 
-**Fonti UE**
-- **Diritto primario UE** (convenzionale): Trattati istitutivi (TUE + TFUE) + Carta dei diritti fondamentali UE → fonte gerarchicamente suprema nell'ordinamento europeo; il diritto derivato le è subordinato
-- **Diritto derivato UE** (secondario): atti emanati dagli organi UE in base ai poteri attribuiti dai Trattati
-- **Regolamento UE** (art. 288.2 TFUE): portata generale; obbligatorio in tutti gli elementi; **direttamente applicabile** in ogni Stato membro → nessun atto nazionale di esecuzione (né richiesto né ammesso)
-- **Direttiva UE** (art. 288.3 TFUE): rivolta agli Stati; vincola "quanto al risultato"; lascia discrezionalità su forme e mezzi → richiede un atto di recepimento nazionale (salvo direttive self-executing)
-- **Decisione UE**: obbligatoria in tutti gli elementi; **portata particolare** (destinatari specifici) → funzione di provvedimento amministrativo, non è fonte del diritto in senso stretto
-- **Raccomandazioni e pareri**: non vincolanti; funzione di orientamento e guida interpretativa
-- **Diretta applicabilità**: qualità tipologica dell'**atto** (definita dai Trattati); produce effetti nell'ordinamento nazionale senza intermediazione di atti statali → propria dei regolamenti UE
-- **Effetto diretto** (*efficacia diretta*): qualità della **norma** (elaborata dalla Corte di giustizia); norma chiara, precisa e incondizionata → il singolo la invoca direttamente contro lo Stato inadempiente; norma **self-executing**
-- **Teoria dualistica** (sent. 170/1984 "Granital"): ordinamento europeo e italiano sono autonomi e separati; il giudice **non applica** la legge italiana incompatibile con norma UE self-executing → la legge resta valida ma inapplicabile al caso concreto (≠ disapplicazione, ≠ dichiarazione di illegittimità)
-- **Teoria dei controlimiti**: le norme UE possono derogare a norme costituzionali "di dettaglio" ma **non ai principi fondamentali** della Costituzione italiana
-- **Rinvio pregiudiziale** (art. 267 TFUE): il giudice nazionale sospende il giudizio e chiede alla Corte di giustizia UE l'interpretazione di norme europee o il giudizio di validità di atti derivati
-- **Legge di delegazione europea**: approvata ogni anno; delega al Governo per recepire atti UE non direttamente efficaci; d.d.l. entro il **28 febbraio**
-- **Legge europea**: approvata ogni anno; esecuzione diretta degli obblighi europei; chiude le procedure d'infrazione
-- **Adattamento automatico** al diritto internazionale generale (art. 10.1 Cost.): le consuetudini internazionali entrano nell'ordinamento senza atti interni; possono derogare alla Costituzione ma non ai principi fondamentali (sent. 48/1979)
-- **Diritto pattizio** (trattati internazionali): adattamento **non automatico**; richiede un **ordine di esecuzione**; per i trattati ex art. 80 Cost. → l'ordine è contenuto nella legge di autorizzazione alla ratifica
+- **Diritto primario**: Trattati TUE + TFUE + Carta diritti fondamentali UE → fonte suprema; sovraordinata al diritto derivato
+- **Regolamento UE** (art. 288.2 TFUE): portata generale; obbligatorio in tutti gli elementi; **direttamente applicabile** → nessun atto nazionale di esecuzione
+- **Direttiva UE** (art. 288.3 TFUE): vincola lo Stato "quanto al risultato"; forme e mezzi liberi → richiede recepimento (salvo self-executing)
+- **Decisione UE**: obbligatoria; portata **particolare** (destinatari specifici) → funzione di provvedimento amministrativo, non è fonte in senso stretto
+- **Raccomandazioni / pareri**: non vincolanti → orientamento interpretativo
 
-**Fonti delle autonomie**
-- **Statuto regionale speciale**: adottato con **legge costituzionale** (5 Regioni + 2 Province autonome: Trentino-AA, FVG, VdA, Sardegna, Sicilia); dopo legge cost. 2/2001 la forma di governo può essere modificata con legge regionale rinforzata
-- **Statuto regionale ordinario**: **legge regionale rinforzata** (non legge cost.); disciplina forma di governo, principi fondamentali di organizzazione e funzionamento, iniziativa legislativa, referendum regionali (art. 123 Cost.)
-- **Legge regionale**: fonte primaria; controllo di legittimità riservato alla Corte costituzionale
-- **Potestà legislativa residuale delle Regioni**: tutte le materie non incluse negli elenchi dell'art. 117.2 e 117.3 Cost.
-- **Materie trasversali**: competenze esclusive statali che "tagliano" settori regionali (tutela della concorrenza, ambiente, livelli essenziali delle prestazioni) → Corte usa criterio della **materia prevalente** + **leale collaborazione**
-- **Principio di parallelismo**: il potere regolamentare segue il riparto legislativo → Governo solo per materie esclusive statali; Regioni nelle altre materie
-- **Clausola di cedevolezza**: norme statali di dettaglio nelle materie regionali (emanate per attuare obblighi UE) perdono efficacia quando la Regione adotta propria disciplina
-- **Clausola di maggior favore** (art. 10, legge cost. 3/2001): le nuove norme del Titolo V si applicano anche alle Regioni speciali per le parti in cui garantiscano autonomia più ampia
+---
 
-### Classificazioni / Struttura
+**2. Diretta applicabilità vs. effetto diretto**
 
-**Atti UE**
-- Vincolanti → regolamento (portata generale, d.a.) → direttiva (risultato vincolante, mezzi liberi) → decisione (portata particolare)
-- Non vincolanti → raccomandazione → parere
+- **Diretta applicabilità**: qualità dell'**atto** (definita dai Trattati) → produce effetti senza intermediazione statale; propria dei regolamenti UE
+- **Effetto diretto**: qualità della **norma** (elaborata dalla CGUE) → norma chiara + precisa + incondizionata = **self-executing**; il singolo la invoca contro lo Stato inadempiente
 
-**Il "cammino comunitario" della Corte costituzionale**
-1. Criterio cronologico (sent. 14/1964) → insoddisfacente: una legge italiana poteva "abrogare" un regolamento UE
-2. Criterio gerarchico → inefficace (caso Granital: 12 anni tra norma UE e sentenza di incostituzionalità)
-3. Criterio di competenza / teoria dualistica (sent. **170/1984** "Granital") → **svolta**: non applicazione della legge italiana incompatibile con norma UE self-executing
+| Atto | Norma | Risultato |
+|---|---|---|
+| Dir. applicabile | Self-executing | Effetti immediati (es. regolamento UE) |
+| Non dir. applicabile | Self-executing | Divieto in direttiva interpretato dalla CGUE |
+| Non dir. applicabile | Non self-executing | Direttiva non ancora attuata |
 
-**Conflitti legge italiana vs. norma UE (quadro attuale)**
-- Norma UE **self-executing** vs. legge ordinaria → **non applicazione** della legge italiana (anche se successiva); vale per giudici **e** PA
-- Norma UE **non self-executing** vs. legge ordinaria → **questione di legittimità costituzionale** (violazione indiretta art. 11 + diretta art. 117.1 Cost.)
-- Norma UE vs. **fonti sub-legislative** → criterio gerarchico: il regolamento amministrativo contrastante è illegittimo
-- Norma UE vs. **principi fondamentali della Cost.** → **teoria dei controlimiti**: impugnazione dell'ordine di esecuzione del Trattato; **caso Taricco** (ord. 24/2017 + sent. 115/2018)
+---
 
-**Procedura d'infrazione**: Commissione → lettera di messa in mora → parere motivato → ricorso CGUE → condanna + sanzioni pecuniarie
+**3. Rapporti norma UE / legge italiana**
 
-**Potestà legislativa regionale — art. 117 Cost.**
-- Art. 117.2 → **esclusiva statale**: difesa, moneta, immigrazione, ord. civile e penale, ambiente, beni culturali, previdenza, ecc.
-- Art. 117.3 → **concorrente**: Stato fissa principi fondamentali (leggi cornice); Regioni dettano il dettaglio; materie: sanità, istruzione, governo del territorio, commercio estero, sport, protezione civile, ecc.
-- Clausola residuale → **competenza residuale regionale** (tutto il resto)
+Il **"cammino comunitario"** della Corte costituzionale:
+1. **Criterio cronologico** (sent. 14/1964) → insoddisfacente: legge italiana poteva "abrogare" un regolamento UE
+2. **Criterio gerarchico** → inefficace (caso Granital: 12 anni tra norma UE e sentenza)
+3. **Sent. 170/1984 "Granital"** — teoria dualistica *(svolta)*: ordinamenti autonomi e separati; il giudice **non applica** la legge italiana incompatibile con norma UE self-executing (≠ disapplicazione, ≠ illegittimità)
 
-**Statuto regionale ordinario — procedimento**
-- Consiglio regionale a **maggioranza assoluta** × **2** (intervallo ≥ **2 mesi**) → eventuale **referendum approvativo** (richiesto da **1/50** elettori o **1/5** consiglieri) → promulgazione del Presidente della Regione
+| Conflitto | Soluzione |
+|---|---|
+| Legge ordinaria vs. norma UE **self-executing** | **Non applicazione** della legge italiana — vale per giudici e PA |
+| Legge ordinaria vs. norma UE **non self-executing** | **Q.l.c.** per violazione indiretta art. 11 + diretta art. 117.1 |
+| Fonti sub-legislative vs. norma UE | **Criterio gerarchico**: regolamento amministrativo è illegittimo |
+| Principi fondamentali Cost. vs. norma UE | **Teoria dei controlimiti** → impugnazione ordine di esecuzione del Trattato |
 
-**Statuto comunale — approvazione** (T.U. enti locali, d.lgs. 267/2000)
-- **2/3** dei consiglieri in prima votazione, oppure **doppia votazione a maggioranza assoluta**
+- **Caso Taricco** (ord. 24/2017 + sent. 115/2018): Corte cost. minaccia i controlimiti → CGUE corregge la propria interpretazione; primo dialogo concreto tra le due Corti
+- **Rinvio pregiudiziale** (art. 267 TFUE): il giudice sospende il giudizio e chiede alla CGUE interpretazione di norme UE o validità di atti derivati
 
-### Dettagli importanti
-- **Sent. Granital (170/1984)**: il giudice "non applica" (non "disapplica") → distinzione fondamentale: non è un giudizio sulla validità dell'atto, ma una scelta della norma competente secondo il riparto del Trattato
-- **Caso Taricco** (ord. 24/2017 + sent. 115/2018): Corte cost. minaccia i controlimiti sull'obbligo di disapplicare la prescrizione penale → CGUE corregge la propria interpretazione; primo esempio concreto di dialogo tra le due Corti
-- **Legge 234/2012** (sostituisce "legge La Pergola" 1989): partecipazione del Parlamento al processo decisionale UE + meccanismo annuale di recepimento
-- **Regioni e direttive UE** (art. 117.5 Cost.): attuazione diretta nelle materie di propria competenza; se inerti, lo Stato interviene con norme cedevoli; diritto di rivalsa statale (art. 43, legge 234/2012)
-- **Sussidiarietà** (art. 118 Cost.) + **sent. 303/2003**: l'attrazione verso l'alto di funzioni amministrative è ammessa solo con rispetto del principio di **leale collaborazione** (intese Stato-Regioni)
-- **Legge regionale ordinaria**: promulgata dal Presidente della Regione entro **10 giorni**; controllo **solo successivo** (il Governo impugna alla Corte cost. dopo la pubblicazione; eliminato il controllo preventivo con la riforma del 2001); Commissioni consiliari mai in sede **deliberante**
-- **Regolamenti regionali**: dopo legge cost. 1/1999 la potestà regolamentare passa dal Consiglio (organo legislativo) alla **Giunta** (organo esecutivo)
-- **Art. 114 Cost.**: Comuni, Province, Città metropolitane, Regioni e Stato "costituiscono" la Repubblica → pariordinazione; autonomia normativa costituzionalmente protetta → non disponibile dal legislatore statale o regionale
-- **Province e Città metropolitane**: statuti disciplinati dalla legge **Delrio** (56/2014)
-- **Regolamenti locali** (art. 117.6 Cost.): non possono derogare né abrogare gli statuti del medesimo ente (art. 7 T.U. enti locali); rapporto con legge statale/regionale: più criterio di **competenza** che gerarchico
+---
 
-### Articoli / norme
-- Art. 10.1 Cost.: adattamento automatico al diritto internazionale generale (consuetudini)
-- Art. 11 Cost.: limitazioni di sovranità per organizzazioni che assicurino pace e giustizia → base costituzionale adesione UE
-- Art. 80 Cost.: trattati soggetti ad autorizzazione parlamentare alla ratifica (politici, arbitrali, giudiziari, onerosi, modificativi di leggi)
-- Art. 114 Cost.: pariordinazione Comuni, Province, CM, Regioni, Stato
-- Art. 116 Cost.: Regioni a statuto speciale → legge costituzionale
-- Art. 117.1 Cost.: vincolo per legislatore statale e regionale (obblighi internazionali + UE)
-- Art. 117.2-3 Cost.: potestà esclusiva statale + concorrente + residuale regionale
-- Art. 117.5 Cost.: Regioni attuano direttive UE nelle proprie materie
-- Art. 117.6 Cost.: potestà regolamentare degli enti locali (costituzionalmente protetta)
-- Art. 118 Cost.: sussidiarietà, differenziazione, adeguatezza; sussidiarietà orizzontale (c. 4)
-- Art. 123 Cost.: statuto regionale ordinario (forma di governo, principi di organizzazione)
-- Art. 267 TFUE: rinvio pregiudiziale alla Corte di giustizia UE
-- Art. 288 TFUE: definizione di regolamento, direttiva, decisione, raccomandazione, parere
-- Art. 10, legge cost. 3/2001: clausola di maggior favore per Regioni speciali
+**4. Attuazione norme UE + diritto internazionale**
+
+- **Legge 234/2012** (sostituisce "legge La Pergola" 1989): partecipazione Parlamento al processo decisionale UE
+- **Legge di delegazione europea**: ogni anno; delega al Governo per recepire direttive non direttamente efficaci; d.d.l. entro **28 febbraio**
+- **Legge europea**: ogni anno; esecuzione diretta obblighi europei; chiude procedure d'infrazione
+- **Procedura d'infrazione**: Commissione → lettera di messa in mora → parere motivato → ricorso CGUE → condanna + sanzioni
+- **Regioni e direttive** (art. 117.5): attuano nelle proprie materie; se inerti lo Stato interviene con norme **cedevoli**; diritto di rivalsa statale (art. 43, l. 234/2012)
+- **Diritto internazionale generale** (consuetudinario): usus + opinio iuris → **adattamento automatico** (art. 10.1 Cost.); può derogare alla Cost. ma non ai principi fondamentali (sent. 48/1979)
+- **Trattati internazionali**: adattamento **non automatico** → richiede **ordine di esecuzione**; per i trattati ex art. 80 → incluso nella legge di autorizzazione alla ratifica
+
+---
+
+**5. Statuti regionali**
+
+| | Regioni speciali (5 + 2 PA) | Regioni ordinarie (15) |
+|---|---|---|
+| Atto | **Legge costituzionale** (art. 116) | **Legge regionale rinforzata** (art. 123) |
+| Regioni | TN-AA, FVG, VdA, Sardegna, Sicilia | Le restanti 15 |
+| Procedimento | Ex art. 138 Cost. | Magg. assoluta × 2 (≥ 2 mesi) + eventuale referendum (1/50 elettori o 1/5 consiglieri) |
+
+- **Clausola di maggior favore** (art. 10, l.cost. 3/2001): nuove norme Titolo V si applicano anche alle Regioni speciali se garantiscono autonomia più ampia
+
+---
+
+**6. Leggi regionali e potestà legislativa**
+
+- Fonte primaria; controllo di legittimità → **Corte costituzionale**
+- Procedimento: iniziativa → Commissioni in sede **referente** (mai deliberante) → voto in Consiglio → promulgazione entro **10 giorni** → controllo **solo successivo** (Governo impugna dopo la pubblicazione)
+
+Potestà legislativa — **art. 117 Cost.**:
+
+| Tipo | Chi legifera | Materie principali |
+|---|---|---|
+| **Esclusiva statale** (117.2) | Solo Stato | Difesa, moneta, immigrazione, ord. civile e penale, ambiente, previdenza |
+| **Concorrente** (117.3) | Stato (principi) + Regioni (dettaglio) | Sanità, istruzione, governo del territorio, sport, protezione civile |
+| **Residuale** | Solo Regioni | Tutto il resto |
+
+- **Materie trasversali** (concorrenza, ambiente, LEP): "tagliano" competenze regionali → Corte usa **materia prevalente** + **leale collaborazione**
+- **Sussidiarietà** (art. 118) + **sent. 303/2003**: attrazione verso l'alto ammessa solo con rispetto della **leale collaborazione**
+
+---
+
+**7. Regolamenti regionali e fonti locali**
+
+- Prima del 1999: potestà regolamentare al Consiglio (=organo legislativo) → inutile
+- Dopo **l.cost. 1/1999**: Statuti la attribuiscono alla **Giunta**
+- **Principio di parallelismo**: Governo → solo materie esclusive statali; Regioni → nelle altre materie
+- **Art. 114 Cost.**: Comuni, Province, CM, Regioni e Stato "costituiscono" la Repubblica → **pariordinazione**; autonomia normativa costituzionalmente protetta
+- **Statuto comunale** (T.U. enti locali, d.lgs. 267/2000): **2/3** consiglieri in 1ª votazione oppure **doppia votazione a magg. assoluta**
+- **Province e CM**: statuti disciplinati da legge **Delrio** (56/2014)
+- **Regolamenti locali** (art. 117.6): non possono derogare né abrogare gli statuti dello stesso ente (art. 7 T.U.); rapporto con legge: criterio di **competenza** più che gerarchico
+
+---
+
+**Articoli chiave**
+- Art. 10.1 Cost. → adattamento automatico diritto int. generale
+- Art. 11 Cost. → base cost. adesione UE (limitazioni di sovranità)
+- Art. 80 Cost. → trattati che richiedono autorizzazione parlamentare
+- Art. 114 Cost. → pariordinazione enti della Repubblica
+- Art. 116 Cost. → Regioni speciali → legge cost.
+- Art. 117 Cost. → riparto potestà legislativa (esclusiva / concorrente / residuale)
+- Art. 117.5 Cost. → Regioni attuano direttive UE nelle proprie materie
+- Art. 117.6 Cost. → potestà regolamentare enti locali
+- Art. 118 Cost. → sussidiarietà, differenziazione, adeguatezza
+- Art. 123 Cost. → statuto regionale ordinario
+- Art. 267 TFUE → rinvio pregiudiziale alla CGUE
+- Art. 288 TFUE → regolamento, direttiva, decisione, raccomandazione, parere
 
 ---
 
