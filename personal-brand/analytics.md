@@ -74,6 +74,14 @@ Aggiorna una volta al mese. Il segnale che conta di più non sono i follower —
 
 ---
 
+## Azioni prioritarie
+
+| Priorità | Azione | Contesto |
+|----------|--------|---------|
+| 🔴 Alta | **Video #5: riprogettare l'hook dei primi 3 secondi** | Video #4: avg view 4s, 2% supera i 10s → il video muore prima della CTA. Il primo frame deve fermare lo scroll visivamente, niente intro narrativa. Riferimento: Virality Predictor segnala hold <1,5s e occhi in camera come leve principali. |
+
+---
+
 ## Decisioni e aggiustamenti
 
 Annota qui se cambi qualcosa nella strategia e perché.
