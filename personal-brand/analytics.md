@@ -18,7 +18,7 @@ Aggiorna una volta al mese. Il segnale che conta di più non sono i follower —
 
 ## Tracker mensile
 
-### Mese 1 — Giugno 2026 (aggiornato 18/06/2026)
+### Mese 1 — Giugno 2026 (aggiornato 26/06/2026)
 - YouTube subscribers: 0
 - Instagram followers: 2
 - TikTok followers: —
@@ -27,7 +27,16 @@ Aggiorna una volta al mese. Il segnale che conta di più non sono i follower —
 - Outreach clienti inviati: 5 (DM Tier A, partiti il 12/06)
 - Clienti paganti: 0
 - Entrate totali: €0
-- Note: Video #3 = Virality Predictor Higgsfield 45/100. Video #4 (VESPRO, Capri) = 48/100 — miglioramento hook e ritmo primi 15s. IG resta piattaforma principale.
+- Note: IG resta piattaforma principale. Virality Predictor: #3 = 45/100, #4 = 48/100 (▲ hook e ritmo).
+
+**Performance per video (IG Reel — rilevazione 26/06/2026):**
+
+| Video | Pubblicato | Views | Like | Commenti keyword | Note |
+|-------|-----------|-------|------|------------------|------|
+| #1 — Manifesto | 02/06 | ~75 | — | — | — |
+| #2 — The Jago Brand | 07/06 | ~123 | — | — | — |
+| #3 — Stone Island Lookbook | 12/06 | — | — | — | CTA: "LOOKBOOK" |
+| #4 — VESPRO Lookbook | 18/06 | 195 | 6 | 0 | CTA: "BRAND" |
 
 ---
 
