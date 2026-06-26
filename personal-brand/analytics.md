@@ -36,7 +36,7 @@ Aggiorna una volta al mese. Il segnale che conta di più non sono i follower —
 | #1 — Manifesto | 02/06 | ~75 | — | — | — |
 | #2 — The Jago Brand | 07/06 | ~123 | — | — | — |
 | #3 — Stone Island Lookbook | 12/06 | — | — | — | CTA: "LOOKBOOK" |
-| #4 — VESPRO Lookbook | 18/06 | 195 | 6 | 0 | CTA: "BRAND" |
+| #4 — VESPRO Lookbook | 18/06 | 195 | 6 | 0 | CTA: "BRAND" — avg view 4s, solo 2% supera i 10s |
 
 ---
 
@@ -85,3 +85,4 @@ Annota qui se cambi qualcosa nella strategia e perché.
 | 10/06/2026 | **Inverso archiviato definitivamente** | Eliminare ambiguità tra tre identità (Jacopo/Jago/Inverso); l'identità moda è Jago |
 | 10/06/2026 | Outreach: parte **dopo la pubblicazione del Video #3**; lista 20 brand preparata in parallelo (`outreach.md`) | Il Video #3 (lookbook) è il proof del servizio principale |
 | 10/06/2026 | Lead magnet definito: PDF 2 pagine "The Lookbook System", invio manuale in DM + invito Beehiiv | La CTA "comment LOOKBOOK" prometteva un sistema che non esisteva |
+| 26/06/2026 | **Problema identificato: hook nei primi 4 secondi** — Video #4: avg view 4s, 2% supera i 10s. La CTA non viene mai raggiunta. Il problema non è l'offerta, è che il video muore prima. Video #5 deve aprire con qualcosa di visivamente immediato, niente intro narrativa lenta. |
