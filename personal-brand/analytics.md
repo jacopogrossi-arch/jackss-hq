@@ -18,12 +18,13 @@ Aggiorna una volta al mese. Il segnale che conta di più non sono i follower —
 
 ## Tracker mensile
 
-### Mese 1 — Giugno 2026 (aggiornato 26/06/2026)
+### Mese 1 — Giugno 2026 (aggiornato 27/06/2026)
 - YouTube subscribers: 0
-- Instagram followers: 2
+- Instagram followers: 9
 - TikTok followers: —
 - Email list: 0 (Beehiiv attivo dal 12/06 con welcome email + PDF lead magnet)
 - Video pubblicati: 4 (Video #1 02/06, #2 07/06, #3 12/06, #4 18/06) ✅ target Mese 1 superato
+- Caroselli pubblicati: 1 (Carosello Pricing 27/06)
 - Outreach clienti inviati: 5 (DM Tier A, partiti il 12/06)
 - Clienti paganti: 0
 - Entrate totali: €0
