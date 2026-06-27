@@ -19,7 +19,7 @@ The ground is a continuous field of raw black basalt lava rock — ancient, frac
 
 The deep blue sea horizon anchors the background as a clean color counterpoint to the off-white linen and black basalt — the palette locked to off-white, sand-ocra, black basalt, deep Mediterranean blue.
 
-Captured with a wide-latitude cinema look and a vintage 55mm-equivalent 2x anamorphic character at a wide aperture — oval bokeh on the distant volcanic rock texture and sea horizon, gentle horizontal squeeze, soft frame-edge falloff, light diffusion bloom on the brightest white linen highlights, color-negative daylight film rendition, in an M1 cinematic narrative register. Fine theatrical 35mm grain across the entire frame. The light is hard, white, zenithal — short crisp shadows falling directly underfoot with almost no soft fill. Real photographic frame captured on a real cinema camera — no CGI, no rendered look, no digital cleanliness, no plastic surfaces, no AI smoothness, no beauty bloom.
+Captured with a wide-latitude cinema look and a vintage 55mm-equivalent 2x anamorphic character at a wide aperture — oval bokeh on the distant volcanic rock texture and sea horizon, gentle horizontal squeeze, soft frame-edge falloff, light diffusion bloom on the brightest white linen highlights, color-negative daylight film rendition, in an M1 cinematic narrative register. Fine theatrical 35mm grain across the entire frame. The light is hard, white, zenithal — short crisp shadows falling directly underfoot with almost no soft fill. Real photographic frame captured on a real cinema camera, real anamorphic lens, real raw linen fabric, real human subject on real volcanic rock — no CGI, no rendered look, no digital cleanliness, no plastic surfaces, no AI smoothness, no beauty bloom.
 ```
 
 ---
@@ -35,7 +35,7 @@ The wall behind him is perfectly flat whitewashed lime plaster — no texture be
 
 The geometric shadow on the white wall is the visual anchor of this shot — dark against white, the body silhouette simplified into graphic form by the intensity of the overhead light.
 
-Captured with a wide-latitude cinema look and a vintage 55mm-equivalent 2x anamorphic character at a wide aperture — oval bokeh on the wall texture at frame edges, gentle horizontal squeeze, soft frame-edge falloff, light diffusion bloom lifting the white plaster highlights, color-negative daylight film rendition, in an M1 cinematic narrative register. Fine theatrical 35mm grain. Hard overhead white light with minimal fill — the shadow side of his face and the shadow on the wall both reading deep and clean. Real photographic frame — no CGI, no rendered look, no plastic surfaces, no AI smoothness.
+Captured with a wide-latitude cinema look and a vintage 55mm-equivalent 2x anamorphic character at a wide aperture — oval bokeh on the wall texture at frame edges, gentle horizontal squeeze, soft frame-edge falloff, light diffusion bloom lifting the white plaster highlights, color-negative daylight film rendition, in an M1 cinematic narrative register. Fine theatrical 35mm grain. Hard overhead white light with minimal fill — the shadow side of his face and the shadow on the wall both reading deep and clean. Real photographic frame captured on a real cinema camera, real anamorphic lens, real lime-plaster wall, real human subject — no CGI, no rendered look, no plastic surfaces, no AI smoothness, no digital cleanliness.
 ```
 
 ---
@@ -51,7 +51,7 @@ The background behind the figure is soft dark shadow — out of focus, reading a
 
 The fabric texture in hard white light is the entire subject of this shot — the weave catching the zenithal sun, the raw linen surface reading warm and textural against the pale sand-ocra of the trouser.
 
-Captured with a wide-latitude cinema look and a vintage 55mm-equivalent 2x anamorphic character at a wide aperture — very shallow depth of field with the fabric sharp and the background falling into soft dark bokeh, oval bokeh, light diffusion bloom lifting the brightest linen highlights, color-negative daylight film rendition, in an M2 studio/editorial register. Fine theatrical 35mm grain across fabric and hand. The overhead light is hard and white — the linen weave readable in the direct light, the shadows between threads crisp and deep. Real photographic frame — no CGI, no rendered look, no plastic fabric, no AI smoothness.
+Captured with a wide-latitude cinema look and a vintage 55mm-equivalent 2x anamorphic character at a wide aperture — very shallow depth of field with the fabric sharp and the background falling into soft dark bokeh, oval bokeh, light diffusion bloom lifting the brightest linen highlights, color-negative daylight film rendition, in an M2 studio/editorial register. Fine theatrical 35mm grain across fabric and hand. The overhead light is hard and white — the linen weave readable in the direct light, the shadows between threads crisp and deep. Real photographic frame captured on a real cinema camera, real anamorphic lens, real raw linen and sand-ocra fabric, real human hand — no CGI, no rendered look, no plastic fabric, no AI smoothness, no digital cleanliness.
 ```
 
 ---
@@ -67,7 +67,7 @@ The cliff edge is raw black basalt lava rock — fractured, ancient, volcanic, d
 
 The figure is the single human anchor in an immense landscape — small against the sea and rock, the silhouette reading clearly against the blue background despite the distance.
 
-Captured with a wide-latitude cinema look and a vintage 55mm-equivalent 2x anamorphic character stopped down for environmental depth — strong atmospheric perspective with visible haze between the cliff foreground and the sea horizon, distant water rendering softer and slightly desaturated, the horizon in a gentle haze, oval bokeh on the closest foreground rock fragments. Color-negative daylight film rendition, in an M5 atmospheric register. Fine theatrical 35mm grain across the entire frame. Hard overhead white light — the figure in full zenithal sun, the sea reflecting the same white sky. Real photographic frame — no CGI, no rendered look, no digital cleanliness, no AI smoothness.
+Captured with a wide-latitude cinema look and a vintage 55mm-equivalent 2x anamorphic character stopped down for environmental depth — strong atmospheric perspective with visible haze between the cliff foreground and the sea horizon, distant water rendering softer and slightly desaturated, the horizon in a gentle haze, oval bokeh on the closest foreground rock fragments. Color-negative daylight film rendition, in an M5 atmospheric register. Fine theatrical 35mm grain across the entire frame. Hard overhead white light — the figure in full zenithal sun, the sea reflecting the same white sky. Real photographic frame captured on a real cinema camera, real anamorphic lens, real volcanic rock and open sea — no CGI, no rendered look, no digital cleanliness, no AI smoothness, no beauty bloom.
 ```
 
 ---
@@ -83,7 +83,7 @@ The interior is a traditional Sicilian dammuso — low curved whitewashed ceilin
 
 The lateral light band across his shirt is the visual anchor — brilliant white on the right side of the linen, deep shadow on the left, the hard edge of the light band cutting cleanly across the fabric and defining the interior with a single gesture of light.
 
-Captured with a wide-latitude cinema look and a vintage 55mm-equivalent 2x anamorphic character at a wide aperture — shallow depth of field with the figure sharp and the whitewashed walls falling into soft background detail, oval bokeh, light diffusion bloom lifting the brilliant white linen highlight, color-negative daylight film rendition pushed slightly for the interior register, in an M1 cinematic narrative register. Fine theatrical 35mm grain. Lifted blacks in the shadow areas holding detail in the dark wall, highlights rolled off softly on the white linen — wide dynamic range across the single-source interior. Real photographic frame — no CGI, no rendered look, no plastic surfaces, no AI smoothness.
+Captured with a wide-latitude cinema look and a vintage 55mm-equivalent 2x anamorphic character at a wide aperture — shallow depth of field with the figure sharp and the whitewashed walls falling into soft background detail, oval bokeh, light diffusion bloom lifting the brilliant white linen highlight, color-negative daylight film rendition pushed slightly for the interior register, in an M1 cinematic narrative register. Fine theatrical 35mm grain. Lifted blacks in the shadow areas holding detail in the dark wall, highlights rolled off softly on the white linen — wide dynamic range across the single-source interior. Real photographic frame captured on a real cinema camera, real anamorphic lens, real whitewashed dammuso walls, real linen fabric, real human subject — no CGI, no rendered look, no plastic surfaces, no AI smoothness, no digital cleanliness.
 ```
 
 ---
