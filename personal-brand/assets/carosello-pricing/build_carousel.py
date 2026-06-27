@@ -181,7 +181,7 @@ def slide1():
     y += 56
     f_title = font(DISP, 62)
     eu_it = font(EURO_IT, 58)
-    y = draw_block(d, MARGIN, y, "A lookbook like Stone Island's costs " + EURO + "20,000.",
+    y = draw_block(d, MARGIN, y, "A lookbook like a major fashion brand's costs " + EURO + "20,000.",
                    f_title, IVORY, W - 2 * MARGIN, euro_fnt=eu_it, leading=1.06)
     y += 6
     draw_line(d, (MARGIN, y), "Mine costs " + EURO + "400.", f_title, AMBER, euro_fnt=eu_it)
