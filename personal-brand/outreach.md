@@ -242,7 +242,7 @@ I nomi sopra vengono dalla stampa di settore — il cliente €400 realistico sp
 | 28/06/2026 | Vescovo (@vescovo.vescovo) | IT | Video #4 | — | in attesa | entro 3-5/07 se silenzio |
 | 28/06/2026 | DERRICK (@lukederrick) | EN | Video #4 | — | in attesa | entro 3-5/07 se silenzio |
 | 28/06/2026 | Sciamāt — linea Vibe (@sciamat_vibe) | IT | Video #4 | — | in attesa | entro 3-5/07 se silenzio |
-| 28/06/2026 | Vanence (@vanence.it) — *play partner / profilo personale* | IT | — | ✅ risposto ("grazie g ❤️") | proposta collab inviata | entro 3-5/07 se silenzio |
+| 28/06/2026 | Vanence (@vanence.it) — *play partner / profilo personale* | IT | — | ✅ risposto | ❌ chiuso — vuole mantenere immagine naturale, no AI | — |
 
 ---
 
