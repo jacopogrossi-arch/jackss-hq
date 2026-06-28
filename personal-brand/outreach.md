@@ -226,12 +226,22 @@ I nomi sopra vengono dalla stampa di settore — il cliente €400 realistico sp
 
 | Data | Brand | Lingua | Video proof | Risposta | Esito | Follow-up |
 |---|---|---|---|---|---|---|
-| 12/06/2026 | Doppiaa (@doppiaaofficial) | IT | Video #3 | — | in attesa | entro 17-19/06 se silenzio |
-| 12/06/2026 | Domenico Orefice (@domenicooreficetm) | IT | Video #3 | — | in attesa | entro 17-19/06 se silenzio |
-| 12/06/2026 | PECORANERA (@pecoranerastudio) | IT | Video #3 | — | in attesa | entro 17-19/06 se silenzio |
-| 12/06/2026 | Vitelli (@vitelli_official) | IT | Video #3 | — | in attesa | entro 17-19/06 se silenzio |
-| 12/06/2026 | Vernisse (@vernisse_official) | IT | Video #3 | — | in attesa | entro 17-19/06 se silenzio |
+| 12/06/2026 | Doppiaa (@doppiaaofficial) | IT | Video #3 | — | follow-up inviato 28/06 | — (esaurito) |
+| 12/06/2026 | Domenico Orefice (@domenicooreficetm) | IT | Video #3 | — | follow-up inviato 28/06 | — (esaurito) |
+| 12/06/2026 | PECORANERA (@pecoranerastudio) | IT | Video #3 | — | follow-up inviato 28/06 | — (esaurito) |
+| 12/06/2026 | Vitelli (@vitelli_official) | IT | Video #3 | — | follow-up inviato 28/06 | — (esaurito) |
+| 12/06/2026 | Vernisse (@vernisse_official) | IT | Video #3 | — | follow-up inviato 28/06 | — (esaurito) |
 | 14/06/2026 | OUTLAW \| Made in Italy (@outlaw.ricami) — *play partner* | IT | mini-collab gratis | — | DM1 inviato | entro 19-21/06 se silenzio |
+| 28/06/2026 | Garcias (@garcias_official) | EN | Video #4 | — | in attesa | entro 3-5/07 se silenzio |
+| 28/06/2026 | Raimondi (@raimondi___) | EN | Video #4 | — | in attesa | entro 3-5/07 se silenzio |
+| 28/06/2026 | William Palmer (@williampalmer_uk) | EN | Video #4 | — | in attesa | entro 3-5/07 se silenzio |
+| 28/06/2026 | Magazzino Ricambi (@magazzino_ricambi) — *play partner* | IT | mini-collab gratis | — | DM1 inviato | entro 3-5/07 se silenzio |
+| 28/06/2026 | TRC (@trc2038) | IT | Video #4 | — | in attesa | entro 3-5/07 se silenzio |
+| 28/06/2026 | Blue of a Kind (@blueofakind) | IT | Video #4 | — | in attesa | entro 3-5/07 se silenzio |
+| 28/06/2026 | Maragno Studio (@maragnostudio) | IT | Video #4 | — | in attesa | entro 3-5/07 se silenzio |
+| 28/06/2026 | Vescovo (@vescovo.vescovo) | IT | Video #4 | — | in attesa | entro 3-5/07 se silenzio |
+| 28/06/2026 | DERRICK (@lukederrick) | EN | Video #4 | — | in attesa | entro 3-5/07 se silenzio |
+| 28/06/2026 | Sciamāt — linea Vibe (@sciamat_vibe) | IT | Video #4 | — | in attesa | entro 3-5/07 se silenzio |
 
 ---
 
