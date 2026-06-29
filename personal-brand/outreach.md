@@ -30,13 +30,13 @@
 
 ### Italiano (70% dei casi)
 
-> Ciao! [Osservazione specifica su estetica, palette, identità — una frase vera che parla di loro. **Mai aprire con "ho visto [nome brand]"**: sanno chi sono, si parte dritti dall'osservazione.]
+> Ciao! [Reazione personale e spontanea su estetica, palette, identità — "mi piace", "mi ha colpito", "adoro come". **Mai aprire con "ho visto [nome brand]"** e mai costruzioni analitiche/descrittive ("quella silhouette che...", "è il tipo di estetica che..."): deve sembrare una reazione genuina, non una recensione.]
 > Sono Jacopo, il creatore del progetto Jago: costruisco lookbook e identità visive per label emergenti usando AI. Ho appena finito questo: [link video].
 > State lavorando a qualcosa del genere per la prossima collezione?
 
 ### English (30%)
 
-> Hi! [Specific observation about their aesthetic, palette, identity — never open with "I came across [brand name]": start straight with the observation.]
+> Hi! [Personal, spontaneous reaction to their aesthetic, palette, identity — "I love how", "what caught my eye", "really into how you". Never open with "I came across [brand name]" and avoid analytical/descriptive constructions ("that silhouette that...", "it's exactly the kind of aesthetic..."): it should feel like a genuine reaction, not a review.]
 > I'm Jacopo, creator of the Jago project: I build campaign-quality lookbooks and visual identities for emerging labels using AI. Just finished this: [video link].
 > Are you working on anything like this for your next drop?
 
