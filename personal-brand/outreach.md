@@ -243,6 +243,15 @@ I nomi sopra vengono dalla stampa di settore — il cliente €400 realistico sp
 | 28/06/2026 | DERRICK (@lukederrick) | EN | Video #4 | — | in attesa | entro 3-5/07 se silenzio |
 | 28/06/2026 | Sciamāt — linea Vibe (@sciamat_vibe) | IT | Video #4 | — | in attesa | entro 3-5/07 se silenzio |
 | 28/06/2026 | Vanence (@vanence.it) — *play partner / profilo personale* | IT | — | ✅ risposto | ❌ chiuso — vuole mantenere immagine naturale, no AI | — |
+| 29/06/2026 | Maison Fallen (@maisonfallen) | IT | Video #4 | — | in attesa | entro 4-6/07 se silenzio |
+| 29/06/2026 | Subwae (@subwaestudios) | EN | Video #4 | — | in attesa | entro 4-6/07 se silenzio |
+| 29/06/2026 | Ajabeng (@ajabeng.gh) | EN | Video #4 | — | in attesa | entro 4-6/07 se silenzio |
+| 29/06/2026 | Vien Atelier (@vien_atelier) | IT | Video #4 | — | in attesa | entro 4-6/07 se silenzio |
+| 29/06/2026 | GAMS NOTE (@gamsnote) | IT | Video #4 | — | in attesa | entro 4-6/07 se silenzio |
+| 29/06/2026 | Bottega Bernard (@bottegabernard) | IT | Video #4 | — | in attesa | entro 4-6/07 se silenzio |
+| 29/06/2026 | Ascend Beyond (@ascendbeyond) | IT | Video #4 | — | in attesa | entro 4-6/07 se silenzio |
+| 29/06/2026 | ZONA20 Milano (@zona20milano) | IT | Video #4 | — | in attesa | entro 4-6/07 se silenzio |
+| 29/06/2026 | MeidItaly (@meiditaly) | IT | Video #4 | — | in attesa | entro 4-6/07 se silenzio |
 
 ---
 
