@@ -16,7 +16,7 @@
 | 2 | **Flash risultato** | 2-3s | Banana Pro | Taglio rapido tra 3 immagini SCIROCCO (~0,7s l'una), stacco netto. **Timer overlay "47:00" lampeggia** 1s come teaser di curiosità. | Silenzio — solo musica |
 | 3 | **Talking head (ponte)** | 3-4s | Kling Avatar | Jago talking head, close-up, atelier scuro, luce laterale calda. Diventa il ponte verso il processo, non l'apertura. | *"This entire campaign? 47 minutes. No photographer, no Sicily."* |
 | 4 | **Processo: Claude** | 5s | Screen rec | Schermo Claude con il brief SCIROCCO visibile. **Timer overlay: 00:00** | *"First: the concept. Brand, aesthetic, garment."* |
-| 5 | **Processo: HiggsField** | 5s | Screen rec | Schermo HiggsField in generazione, loading bar visibile. **Timer overlay: 15:00** | *"Then the images. Same quality as a real shoot."* |
+| 5 | **Processo: Magnific** | 5s | Screen rec | Schermo Magnific in generazione, loading bar visibile. **Timer overlay: 15:00** | *"Then the images. Same quality as a real shoot."* |
 | 6 | **Risultato finale** | 7-9s | Banana Pro | Tutte e 5 le immagini SCIROCCO in slideshow lento e cinematico. **Timer freeze su 47:00** | *"47 minutes. A complete brand."* |
 | 7 | **CTA** | 3-4s | Kling Avatar | Talking head Jago, stoico, stesso setup clip 3 | *"Want the same for your brand — comment LOOKBOOK."* |
 
@@ -45,7 +45,7 @@ Il timer ha **due funzioni**: teaser di curiosità (Clip 2) + device del process
 |------|--------|-----------|------|
 | 2 — Flash risultato | `47:00` (teaser, lampeggia ~1s) | Centro o angolo basso destro | Anticipa il numero-curiosità prima del processo |
 | 4 — Screen rec Claude | `00:00` | Angolo basso destro | Font monospace, bianco, opacity 80% — il cronometro "riparte" |
-| 5 — Screen rec HiggsField | `15:00` | Stesso angolo | Stesso stile |
+| 5 — Screen rec Magnific | `15:00` | Stesso angolo | Stesso stile |
 | 6 — Risultato finale | `47:00` | Stesso angolo | Freeze 2s alla fine prima della CTA |
 
 **Come aggiungerlo:** Testo → font tipo Courier o Source Code Pro → colore bianco → opacity ~80% → posizionare angolo basso destro sopra le safe margins.
@@ -68,9 +68,9 @@ Il timer ha **due funzioni**: teaser di curiosità (Clip 2) + device del process
 - Prompt talking head in `video-5-prompts.md`.
 
 ### Clip 4 e 5 — Screen recording
-- Registrare separatamente: prima Claude (brief SCIROCCO aperto), poi HiggsField (generazione attiva).
+- Registrare separatamente: prima Claude (brief SCIROCCO aperto), poi Magnific (generazione attiva).
 - 5 secondi per clip sono sufficienti.
-- La loading bar di HiggsField deve essere visibile — è l'elemento visivo chiave.
+- La loading bar di Magnific deve essere visibile — è l'elemento visivo chiave.
 - Jump cut al cambio di schermata se necessario.
 
 ### Clip 6 — Risultato finale (Banana Pro)
