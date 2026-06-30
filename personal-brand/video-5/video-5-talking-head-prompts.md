@@ -1,6 +1,6 @@
 # Talking Head Prompts — SCIROCCO (Video #5)
 
-**Tool: HiggsField Seedance | Mode: M1 Narrative | Runtime: 3s ciascuna**
+**Tool: Magnific — Seedance | Mode: M1 Narrative | Runtime: 3s ciascuna**
 
 ## References da allegare (stesso ordine per entrambe le clip)
 
@@ -18,7 +18,7 @@ Scene & Mood: A figure seated inside a spare whitewashed dammuso room addresses 
 
 Frame Map: @image1 anchored at center x=50%, foreground, chest-up framing occupying approximately 65% of frame height. A small rough-hewn raw stone table surface sits in the lower 15% of the frame. The whitewashed arched dammuso wall and lateral window of @image2 fill the background in soft bokeh.
 
-Subject Lock — @image1: Face, hair, and silhouette identical to reference throughout. Wearing a fluid off-white raw linen shirt open over a minimal fitted black tank — linen catching the lateral window light on the right side, left side falling into cool shadow. Seated upright at the stone table, torso facing camera directly, weight settled. Both hands resting on the table surface at the start, then lifting in contained natural gestures — fingers loose, movement economical and unhurried, no performative emphasis. Gaze locked directly into the camera throughout. Expression stoic, lips moving in natural speech, jaw relaxed. Face, hair, wardrobe, and silhouette identical throughout.
+Subject Lock — @image1: Face, hair, and silhouette identical to reference throughout. Wearing an off-white raw linen shirt completely open — all buttons undone, the linen panels draping open from the shoulders to either side. Beneath it, a fitted black tank top worn as the inner garment. What is visible from the front: the black tank at chest and center torso, the open linen shirt as loose side panels at shoulders and arms. No jacket, no coat, no third garment. The linen catches the lateral window light on the right side, left side falling into cool shadow. Seated upright at the stone table, torso facing camera directly, weight settled. Both hands resting on the table surface at the start, then lifting in contained natural gestures — fingers loose, movement economical and unhurried, no performative emphasis. Gaze locked directly into the camera throughout. Expression stoic, lips moving in natural speech, jaw relaxed. Face, hair, wardrobe, and silhouette identical throughout.
 
 Cross-Frame Rules: Single subject. @image1 stays centered at x=50% throughout — no drift, no depth change, position held across the full 3 seconds.
 
@@ -46,7 +46,7 @@ Scene & Mood: The same figure at the same stone table inside the dammuso closes 
 
 Frame Map: @image1 anchored at center x=50%, foreground, chest-up framing occupying approximately 65% of frame height. Stone table surface in the lower 15% of the frame. @image2 dammuso wall and window in soft cool bokeh background.
 
-Subject Lock — @image1: Face, hair, and silhouette identical to reference throughout. Same fluid off-white raw linen shirt open over minimal fitted black tank. Seated upright at the table, torso facing camera directly, weight settled. Both hands resting flat on the table surface at the start. At approximately 1.5s one hand lifts in a single slow controlled forward extension — open palm, fingers slightly loose, held for approximately 0.8s — unhurried and pointed, not theatrical — then settles back down onto the table surface by 2.5s. Gaze locked directly into the camera throughout, unbroken. Expression stoic, lips moving in natural speech. Face, hair, wardrobe, and silhouette identical throughout.
+Subject Lock — @image1: Face, hair, and silhouette identical to reference throughout. Same off-white raw linen shirt completely open — all buttons undone, linen panels draping open from shoulders. Fitted black tank top as the inner garment beneath. Visible from front: black tank at chest and center torso, open linen as loose side panels. No jacket, no coat, no third garment. Seated upright at the table, torso facing camera directly, weight settled. Both hands resting flat on the table surface at the start. At approximately 1.5s one hand lifts in a single slow controlled forward extension — open palm, fingers slightly loose, held for approximately 0.8s — unhurried and pointed, not theatrical — then settles back down onto the table surface by 2.5s. Gaze locked directly into the camera throughout, unbroken. Expression stoic, lips moving in natural speech. Face, hair, wardrobe, and silhouette identical throughout.
 
 Cross-Frame Rules: Single subject. @image1 centered at x=50% throughout — no drift, no depth change, position held across the full 3 seconds.
 
