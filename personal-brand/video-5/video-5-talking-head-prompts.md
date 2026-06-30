@@ -62,3 +62,60 @@ Capture Realism: @image1 sits inside real interior depth — thin atmosphere bet
 
 Camera Capture: wide-latitude cinema capture, vintage 75mm 2x anamorphic character at a wide aperture — oval bokeh on the background dammuso wall and window, soft frame-edge falloff — light diffusion bloom softening the lateral window highlight on the linen, handheld with minimal natural operator breath, nearly locked, color-negative film rendition with fine 35mm grain, teal-amber grade with cool shadow bias in the interior register, shallow depth of field, 24fps 180° shutter, 3 seconds.
 ```
+
+---
+
+## Versione Kling — Framework Dan Kieft
+
+**Tool: Kling 3.0 | Runtime: 3s ciascuna**
+
+> Reference da allegare: stessa coppia — @image1 character sheet, @image2 dammuso interior.
+> Croppa la watermark da @image1 prima di caricare su Kling (blocco "Restricted content").
+
+---
+
+### Clip 3 — "Ponte"
+
+Script voiceover: *"This entire campaign? 47 minutes. No photographer, no Sicily."*
+
+```
+FORMAT: 3s cinematic talking head, chest-up MCU, 9:16, 24fps, 35mm grain, teal-amber grade, cool shadow bias interior.
+
+SUBJECT: Young man, dark wavy hair, olive skin, silver pendant necklace. Off-white raw linen shirt worn completely open — all buttons undone, linen panels draping from shoulders. Fitted black tank top as inner garment — black tank visible at chest and center torso, linen as open side panels. No jacket, no third garment. Seated upright at rough-hewn stone table, torso facing camera, weight settled.
+
+ENVIRONMENT: Whitewashed dammuso interior — low curved plaster ceiling, thick lime walls, pale stone tile floor. Single lateral window camera-right, hard band of white light across figure's right side, deep cool blue-grey shadow filling the rest of the room.
+
+STYLE ANCHOR: Dark-luxury Mediterranean, hard lateral chiaroscuro. Vintage 75mm 2x anamorphic, oval bokeh on background wall. Cinematic matte skin — zero shine, subsurface scattering. Expression is stoic throughout — jaw set, mouth flat, zero upward curve, no raised cheeks, eyes direct and unwavering.
+
+DELIVERY: Lips moving in natural speech. At 0.5s one hand lifts in loose open-palm gesture, held 1s, lowers to rest at 1.5s. At 2s one hand returns in single contained forward gesture, settles by 2.8s. Natural chest breathing, subtle linen shift.
+
+LOGIC RULE: Expression STOIC and LOCKED throughout — jaw set, mouth flat, no smile, no softening at any point. Figure centered at x=50%, no drift, no depth change.
+
+NEGATIVE PROMPT: no smile, no pleasant expression, no jacket, no coat, no third garment, no on-screen text.
+
+ACTION: Seated at stone table, lips and jaw moving naturally. At 0.5s one hand lifts in loose open-palm gesture — held 1s, lowers to rest at 1.5s. At 2s one hand lifts in single contained forward gesture — settles by 2.8s. Expression stoic and still — jaw set, mouth flat, eyes direct, zero warmth, face locked in this register.
+```
+
+---
+
+### Clip 7 — "CTA"
+
+Script voiceover: *"Want the same for your brand — comment LOOKBOOK."*
+
+```
+FORMAT: 3s cinematic talking head, chest-up MCU, 9:16, 24fps, 35mm grain, teal-amber grade, cool shadow bias interior.
+
+SUBJECT: Young man, dark wavy hair, olive skin, silver pendant necklace. Off-white raw linen shirt worn completely open — all buttons undone, linen panels draping from shoulders. Fitted black tank top as inner garment — black tank visible at chest and center torso, linen as open side panels. No jacket, no third garment. Seated upright at rough-hewn stone table, torso facing camera, weight settled, both hands flat on table.
+
+ENVIRONMENT: Same dammuso interior — whitewashed arched room, lateral window camera-right, hard white light band across figure's right side, deep cool blue-grey shadow filling the room.
+
+STYLE ANCHOR: Dark-luxury Mediterranean, hard lateral chiaroscuro. Vintage 75mm 2x anamorphic, oval bokeh on background. Cinematic matte skin — zero shine, subsurface scattering. Expression is stoic throughout — jaw set, mouth flat, zero upward curve, no raised cheeks, eyes direct and unwavering.
+
+DELIVERY: Completely still for first 1.5s — only lips and jaw moving, hands flat on table. At 1.5s one hand lifts in single slow controlled forward extension — open palm, fingers slightly loose, held 0.8s, unhurried — settles back to table by 2.5s. Final 0.5s in full stillness.
+
+LOGIC RULE: Expression STOIC and LOCKED throughout — jaw set, mouth flat, no smile, no softening at any point. Figure centered at x=50%, no drift, no depth change.
+
+NEGATIVE PROMPT: no smile, no pleasant expression, no jacket, no coat, no third garment, no on-screen text.
+
+ACTION: Seated at stone table, lips and jaw moving naturally. Hands flat on table through 1.5s. At 1.5s one hand lifts in single slow forward extension — open palm, held 0.8s, settles back by 2.5s. Final 0.5s both hands flat, gaze locked on camera. Expression stoic and still — jaw set, mouth flat, eyes direct, zero warmth, face locked in this register.
+```
