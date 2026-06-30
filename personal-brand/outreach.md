@@ -285,11 +285,11 @@ I nomi sopra vengono dalla stampa di settore — il cliente €400 realistico sp
 
 **Italiano:**
 > Ciao! Ecco il PDF 👇 [allegare The-Lookbook-System-Jago.pdf]
-> Ho visto [nome brand] — [osservazione specifica, una frase vera]. È esattamente il tipo di label per cui costruisco lookbook come quello del video. Se vi va, vi mostro come verrebbe per la vostra prossima collezione.
+> [Reazione genuina e specifica — es. "Mi piace come...", "Mi ha colpito...". MAI "Ho visto [nome brand]"]. È esattamente il tipo di label per cui costruisco lookbook come quello del video. Se vi va, vi mostro come verrebbe per la vostra prossima collezione.
 
 **English:**
 > Hey! Here's the PDF 👇 [attach The-Lookbook-System-Jago.pdf]
-> I checked out [brand name] — [specific observation]. It's exactly the kind of label I build lookbooks for, like the one in the video. Happy to show you what it would look like for your next drop.
+> [Genuine, specific reaction — e.g. "I love how...", "What caught my eye...". NEVER "I checked out [brand name]"]. It's exactly the kind of label I build lookbooks for, like the one in the video. Happy to show you what it would look like for your next drop.
 
 ### Welcome email Beehiiv — ✅ ATTIVA (setup completato e testato 12/06/2026)
 
