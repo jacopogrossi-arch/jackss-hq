@@ -22,3 +22,6 @@ node_modules/
 uv.exe
 uvw.exe
 uvx.exe
+
+# Materiale didattico riservato (slide docenti) - solo locale
+archivio/dispensa-ragioneria/pdf-fonte/
