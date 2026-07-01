@@ -1,4 +1,4 @@
-# Video #7 — "L'influencer AI in ritardo di due anni"
+# Video #6 — "L'influencer AI in ritardo di due anni"
 
 **Status: 🟡 script bloccato — da generare**
 
@@ -36,11 +36,11 @@ La Firma chiude il cerchio sull'hook (i "due anni" tornano) — effetto a tenagl
 
 ## Produzione
 
-- **Tool:** Kling Avatar (Speak v2) — stesso identico processo delle talking head precedenti
-- **Sfondo:** atelier scuro, vedi `reference_sfondo_jago` in memoria — setup già pronto, nessun nuovo asset
+- **Tool:** Magnific Seedance (M1 Narrative) — confermato 01/07/2026 al posto di Kling Avatar: testato su Video #5, Seedance batte nettamente Kling per i talking head di Jago (vedi `feedback_kling_vs_seedance_talkie`)
+- **Sfondo:** atelier scuro, vedi `reference_sfondo_jago` in memoria — setup già pronto, nessun nuovo asset da generare da zero (eventuale reference atelier esistente da recuperare in libreria Magnific)
 - **Generazioni:** 3-4 clip separate (una per beat), con leggero cambio di inquadratura tra Build e Provocazione per dare ritmo
 - **Montaggio:** CapCut, tagli secchi tra i beat, caption a schermo sincronizzata sull'hook (il claim scritto nei primi secondi — ferma lo scroll prima che parta l'audio)
-- **Zero immagini nuove, zero Seedance** — produzione più veloce realizzata finora sul canale
+- **Zero immagini nuove** — solo generazione video con reference esistenti (character sheet + atelier)
 
 ---
 
@@ -48,10 +48,11 @@ La Firma chiude il cerchio sull'hook (i "due anni" tornano) — effetto a tenagl
 
 | Asset | Stato |
 |-------|-------|
-| Clip Hook (Kling Avatar) | ⬜ da generare |
-| Clip Build (Kling Avatar) | ⬜ da generare |
-| Clip Provocazione (Kling Avatar) | ⬜ da generare |
-| Clip Firma (Kling Avatar) | ⬜ da generare |
+| Prompt Seedance (4 clip) | ✅ generati con `cinema-worldbuilder-pro` — vedi `video-6-prompts.md` |
+| Clip Hook (Seedance) | ⬜ da generare in Magnific |
+| Clip Build (Seedance) | ⬜ da generare in Magnific |
+| Clip Provocazione (Seedance) | ⬜ da generare in Magnific |
+| Clip Firma (Seedance) | ⬜ da generare in Magnific |
 | Caption a schermo | ⬜ da impaginare in CapCut |
 | Montaggio CapCut | ⬜ |
 | Caption Instagram + hashtag | ⬜ da scrivere (max 5 hashtag, vedi `feedback_ig_caption_rules`) |

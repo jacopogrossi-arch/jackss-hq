@@ -6,7 +6,7 @@ Tracker dei contenuti: idee → in lavorazione → pubblicato
 
 ## In lavorazione
 
-_Nessun video in lavorazione al momento — prossimo: Video #6 da definire._
+**Video #6** — "L'influencer AI in ritardo di due anni" — talking head puro, no lookbook, no brand fittizio. Claim polarizzante su brand senza volto AI. Script bloccato, produzione da avviare (Seedance M1 Narrative, sfondo atelier). File: `video-6/video-6.md`
 
 ---
 
