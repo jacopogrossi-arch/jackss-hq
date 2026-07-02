@@ -5,6 +5,7 @@ Thumbs.db
 # Editor
 .vscode/
 .idea/
+.obsidian/
 
 # Claude Code local data (settings, worktrees, cache)
 # Ignora tutto tranne la cartella memory (committata per persistere tra sessioni)
