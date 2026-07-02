@@ -1,6 +1,8 @@
 # Reference "il Talent" — Face Lock GPT-2
 
-**Tool: Higgsfield GPT-2 | Aspect ratio: 3:4 (impostare nella UI) | Generato con skill `banana-pro-director` (03/07/2026)**
+**Tool: Magnific — Google Nano Banana Pro, 3:4, 2k | Generato con skill `banana-pro-director` (03/07/2026)**
+
+> Aggiornamento 03/07: Jacopo non usa più Higgsfield, si genera tutto su Magnific. Il modello "GPT 2" presente su Magnific NON va usato (è per testo/infografiche, non fotorealismo): l'equivalente giusto per questa reference è **Nano Banana Pro**.
 
 Personaggio del cold open Video #6 — spokesperson del falso spot (Shot A e B).
 
@@ -25,6 +27,6 @@ Extreme face fidelity. Real skin texture with soft fine even pores, fine peach f
 
 ## Dopo la generazione
 
-1. Salvare l'immagine come `personal-brand/video-6/talent-reference.jpeg` (o nella libreria Higgsfield)
+1. Salvare l'immagine come `personal-brand/video-6/talent-reference.jpeg` (o nella libreria Magnific)
 2. Usarla come reference identità nei prompt Seedance Shot A (falso spot) e Shot B (cazzotto, M3)
-3. Decisione presa 03/07/2026: **niente sosia di volti reali** — rischio blocco likeness su Higgsfield/Instagram, aggravato dal fatto che il personaggio prende un pugno in scena
+3. Decisione presa 03/07/2026: **niente sosia di volti reali** — rischio blocco likeness su Magnific/Instagram, aggravato dal fatto che il personaggio prende un pugno in scena

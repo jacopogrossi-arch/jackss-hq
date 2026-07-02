@@ -84,7 +84,7 @@ La Firma chiude il cerchio sull'hook (i "due anni" tornano) — effetto a tenagl
 
 | Asset | Stato |
 |-------|-------|
-| Reference "Talent" (banana-pro-director) | 🟡 prompt GPT-2 pronto 03/07 — vedi `talent-reference-prompt.md`, da generare in Higgsfield |
+| Reference "Talent" (banana-pro-director) | 🟡 prompt pronto 03/07 — vedi `talent-reference-prompt.md`, da generare in Magnific (Nano Banana Pro, 3:4, 2k) |
 | Prompt Seedance Shot A (falso spot) | ⬜ da generare — dopo lock Talent |
 | Prompt Seedance Shot B (cazzotto, M3) | ⬜ da generare — dopo lock Talent |
 | Prompt Seedance Shot C (reveal + match cut) | ⬜ da generare |
