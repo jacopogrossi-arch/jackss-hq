@@ -1,8 +1,9 @@
 # Reference "il Talent" — Face Lock GPT-2
 
-**Tool: Magnific — Google Nano Banana Pro, 3:4, 2k | Generato con skill `banana-pro-director` (03/07/2026)**
+**Tool: Magnific | Generato con skill `banana-pro-director` (03/07/2026)**
 
-> Aggiornamento 03/07: Jacopo non usa più Higgsfield, si genera tutto su Magnific. Il modello "GPT 2" presente su Magnific NON va usato (è per testo/infografiche, non fotorealismo): l'equivalente giusto per questa reference è **Nano Banana Pro**.
+> ✅ GENERATA il 03/07/2026 con **Magnific GPT-2** → `talent-reference.png` (scelta tra 2 uscite: scartata la variante orizzontale troppo argento).
+> Nota tool: il catalogo Magnific raccomanda GPT-2 per testo/infografiche, ma sul face lock ha reso volti fotorealistici eccellenti — valido anche per ritratti.
 
 Personaggio del cold open Video #6 — spokesperson del falso spot (Shot A e B).
 
