@@ -258,6 +258,22 @@ I nomi sopra vengono dalla stampa di settore — il cliente €400 realistico sp
 | 29/06/2026 | Ascend Beyond (@ascendbeyond) | IT | Video #4 | — | in attesa | entro 4-6/07 se silenzio |
 | 29/06/2026 | ZONA20 Milano (@zona20milano) | IT | Video #4 | — | in attesa | entro 4-6/07 se silenzio |
 | 29/06/2026 | MeidItaly (@meiditaly) | IT | Video #4 | — | in attesa | entro 4-6/07 se silenzio |
+| 02/07/2026 | Bramani Cashmere (@bramani_cashmere) | IT | Video #4 | — | in attesa | entro 7-9/07 se silenzio |
+| 02/07/2026 | SERIE V (@luciovanotti) | IT | Video #4 | — | in attesa | entro 7-9/07 se silenzio |
+| 02/07/2026 | SEEKÎNAMOUR (@seekinamour) | IT | Video #4 | — | in attesa | entro 7-9/07 se silenzio |
+| 02/07/2026 | Tela Genova (@telagenova) | IT | Video #4 | — | in attesa | entro 7-9/07 se silenzio |
+| 02/07/2026 | Diomene (@diomeneofficial) | IT | Video #4 | — | in attesa | entro 7-9/07 se silenzio |
+| 02/07/2026 | Niccolò Pasqualetti (@niccolopasqualetti) | IT | Video #4 | — | in attesa | entro 7-9/07 se silenzio |
+| 02/07/2026 | Viapiave33 (@viapiave33) | IT | Video #4 | — | in attesa | entro 7-9/07 se silenzio |
+| 02/07/2026 | NOESI Milano (@noesimilano) | IT | Video #4 | — | in attesa | entro 7-9/07 se silenzio |
+| 02/07/2026 | Born Outside (@bornoutsideitaly) | IT | Video #4 | — | in attesa | entro 7-9/07 se silenzio |
+| 02/07/2026 | LAC Milano (@l_a_c_milano) | IT | Video #4 | — | in attesa | entro 7-9/07 se silenzio |
+| 02/07/2026 | RIER (@rierofficial) | EN | Video #4 | — | in attesa | entro 7-9/07 se silenzio |
+| 02/07/2026 | OUAT (@ouat_tokyo) | EN | Video #4 | — | in attesa | entro 7-9/07 se silenzio |
+| 02/07/2026 | Museum Garments (@museumgarments) | EN | Video #4 | — | in attesa | entro 7-9/07 se silenzio |
+| 02/07/2026 | Sergio Davila (@sergiodaviladesign) | EN | Video #4 | — | in attesa | entro 7-9/07 se silenzio |
+
+> ⚠️ Nota 02/07: dal database Notion risultano contattati anche Mordecai (14/06), Federico Cina (13/06) e I Sarti (13/06) — DM inviati ma mai registrati in questo tracker.
 
 ---
 
