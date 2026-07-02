@@ -77,9 +77,15 @@ Aggiorna una volta al mese. Il segnale che conta di più non sono i follower —
 
 ## Azioni prioritarie
 
+> Aggiornate 02/07/2026 dal briefing review (`briefing-2026-07-02-review.md`). Le tre azioni della settimana attaccano lo stesso problema: nessun brand ha ancora visto cosa Jacopo sa fare **per lui**.
+
 | Priorità | Azione | Contesto |
 |----------|--------|---------|
-| 🔴 Alta | **Video #5: riprogettare l'hook dei primi 3 secondi** | Video #4: avg view 4s, 2% supera i 10s → il video muore prima della CTA. Il primo frame deve fermare lo scroll visivamente, niente intro narrativa. Riferimento: Virality Predictor segnala hold <1,5s e occhi in camera come leve principali. |
+| 🔴 1 | **Immagini custom per i 5 migliori follow-up in scadenza (3-9/07)** | ~40 DM con link a brand fittizio = zero risposte. Nuovo formato: 2-3 shot campaign con un capo DEL brand contattato (workflow lookbook, ~30-60 min a brand). Il follow-up con le immagini è una seconda chance vera, non un sollecito. |
+| 🔴 2 | **Mini-look OUTLAW — fare e mandare il risultato finito** | DM1 del 14/06 senza risposta, finestra follow-up passata. Niente più permesso: piano operativo 5 step in `outreach-outlaw-minilook/brief.md` (serve solo che Jacopo salvi 2-3 foto dei ricami). Primo case study reale. |
+| 🟠 3 | **Profilo IG come landing page (~1 ora)** | Chi riceve il DM guarda il profilo prima di rispondere. Checklist pronta in `profilo-ig-jagoworks.md`: bio, nome ricercabile, 3 Reel pinnati, 3 highlight. |
+| ⏸️ — | **Routine outreach daily IN PAUSA (dal 02/07)** | 105 candidati, ~40 testati, zero risposte: il collo di bottiglia è la conversione del messaggio, non il volume. Riparte quando il nuovo formato DM produce 3-5 risposte. |
+| ✅ Chiusa | ~~Video #5: riprogettare l'hook dei primi 3 secondi~~ | Fatto: #5 SCIROCCO pubblicato 01/07 con hook timer 47min dal primo frame. |
 
 ---
 
