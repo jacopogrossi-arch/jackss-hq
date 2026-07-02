@@ -2,7 +2,7 @@
 
 > Creato 10/06/2026. **Video #3 pubblicato → i DM sono operativi.** La proof da linkare è il Video #3.
 >
-> 🤖 **Routine automatica:** lo skill `/outreach daily` aggiunge 5 brand Tier A al giorno qui e nel database Notion.
+> 🤖 **Routine automatica:** ⏸️ **IN PAUSA dal 02/07/2026** (decisione da `briefing-2026-07-02-review.md`): 105 candidati in lista e ~40 DM inviati con zero risposte positive — il collo di bottiglia è la conversione del messaggio, non il volume. Si riattiva quando il nuovo formato DM (immagini custom sul capo del brand) ha prodotto 3-5 risposte. Per riattivare: claude.ai/code/routines → "Outreach" → enable.
 > 📊 **Database Notion:** *Brand candidati — Outreach Jago* (sotto la pagina Strategia) — pipeline con Stato DM per ogni brand.
 
 ---
@@ -86,7 +86,8 @@ Un ricamificio (o stamperia, maglificio, atelier) lavora **per** brand e stilist
 ### Caso live — OUTLAW | Made in Italy (@outlaw.ricami)
 - **Profilo:** ricamificio made in Italy, 1093 follower, 5 post. Founder: **Mattia** (giovane). Settore tessile/artigianale.
 - **14/06/2026 — DM1 inviato** (richiesta di collaborazione accettata da inviare = "Invito inviato", chat business). Aggancio usato: "un ragazzo giovane come me in un settore artigianale come il tessile" + proposta mini-look gratis su un suo ricamo.
-- **Prossimo passo:** scegliere ORA 2-3 suoi ricami da mettere in scena; rispondere veloce con le repliche qui sopra appena Mattia risponde. Follow-up unico dopo 5-7 giorni se silenzio.
+- **02/07/2026 — cambio approccio** (da `briefing-2026-07-02-review.md`): la finestra follow-up (19-21/06) è passata senza risposta. Niente più richiesta di permesso: **si fa il mini-look e si manda il risultato finito.** Piano operativo in `outreach-outlaw-minilook/brief.md`.
+- **Prossimo passo:** Jacopo salva 2-3 foto dei ricami dal feed pubblico → generazione mini-look (banana-pro-director) → DM con il risultato: *"Ti avevo scritto qualche settimana fa — alla fine non ho resistito e l'ho provato comunque. Ecco com'è venuto."*
 
 ---
 
@@ -241,7 +242,7 @@ I nomi sopra vengono dalla stampa di settore — il cliente €400 realistico sp
 | 12/06/2026 | PECORANERA (@pecoranerastudio) | IT | Video #3 | — | follow-up inviato 28/06 | — (esaurito) |
 | 12/06/2026 | Vitelli (@vitelli_official) | IT | Video #3 | — | follow-up inviato 28/06 | — (esaurito) |
 | 12/06/2026 | Vernisse (@vernisse_official) | IT | Video #3 | — | follow-up inviato 28/06 | — (esaurito) |
-| 14/06/2026 | OUTLAW \| Made in Italy (@outlaw.ricami) — *play partner* | IT | mini-collab gratis | — | DM1 inviato | entro 19-21/06 se silenzio |
+| 14/06/2026 | OUTLAW \| Made in Italy (@outlaw.ricami) — *play partner* | IT | mini-collab gratis | — | DM1 senza risposta → mini-look diretto in preparazione (02/07) | DM2 con risultato finito |
 | 28/06/2026 | Garcias (@garcias_official) | EN | Video #4 | — | in attesa | entro 3-5/07 se silenzio |
 | 28/06/2026 | Raimondi (@raimondi___) | EN | Video #4 | — | in attesa | entro 3-5/07 se silenzio |
 | 28/06/2026 | William Palmer (@williampalmer_uk) | EN | Video #4 | — | in attesa | entro 3-5/07 se silenzio |
