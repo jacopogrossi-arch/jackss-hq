@@ -1,6 +1,6 @@
 # Video #6 — "L'influencer AI in ritardo di due anni"
 
-**Status: 🟡 struttura visiva definita 01/07/2026 — cold open aggiunto, da generare**
+**Status: 🟡 tutti i prompt pronti 03/07/2026 (4 talking head + 4 cold open) — da generare le clip in Magnific**
 
 Durata: ~29-30s (aggiornata da ~24s per il cold open) | Lingua: italiano | Formato: 9:16 vertical
 
@@ -85,9 +85,9 @@ La Firma chiude il cerchio sull'hook (i "due anni" tornano) — effetto a tenagl
 | Asset | Stato |
 |-------|-------|
 | Reference "Talent" (banana-pro-director) | ✅ generata 03/07 con Magnific GPT-2 — `talent-reference.png` |
-| Prompt Seedance Shot A (falso spot) | ⬜ da generare — dopo lock Talent |
-| Prompt Seedance Shot B (cazzotto, M3) | ⬜ da generare — dopo lock Talent |
-| Prompt Seedance Shot C (reveal + match cut) | ⬜ da generare |
+| Prompt Seedance Shot A (falso spot) | ✅ generato 03/07 — vedi `video-6-cold-open-prompts.md` |
+| Prompt Seedance Shot B (cazzotto, M3) | ✅ generato 03/07 — vedi `video-6-cold-open-prompts.md` |
+| Prompt Seedance Shot C (reveal + match cut) | ✅ generato 03/07 come C1+C2 (due clip, match cut in CapCut) — vedi `video-6-cold-open-prompts.md` |
 | Prompt Seedance Hook/Build/Provocazione/Firma | ✅ generati con `cinema-worldbuilder-pro` — vedi `video-6-prompts.md` (timing da rinominare, contenuto invariato) |
 | Clip Shot A (Seedance) | ⬜ |
 | Clip Shot B (Seedance) | ⬜ |
