@@ -2,7 +2,7 @@
 
 **Status: 🟡 tutti i prompt pronti 03/07/2026 (4 talking head + 4 cold open) — da generare le clip in Magnific**
 
-Durata: ~29-30s (aggiornata da ~24s per il cold open) | Lingua: italiano | Formato: 9:16 vertical
+Durata: ~28s (rivista 03/07: hook recitato in movimento nel cold open) | Lingua: italiano | Formato: 9:16 vertical
 
 ---
 
@@ -29,7 +29,7 @@ Tre shot prima dell'inizio dello script originale. Meccanica: sembra un vero spo
 |---|---|---|
 | **A — Falso spot** | ≈0-2.5s | Un personaggio nuovo (il "Talent", non Jago) recita dritto in camera: *"L'artigianalità non si può replicare con un computer."* Deve sembrare a tutti gli effetti uno spot vero e finito — sfondo pulito/sfocato, luce alta chiave, nessun indizio di troupe o set. |
 | **B — Cazzotto** | ≈2.5-4s | Jago entra a schermo e lo colpisce. Taglio secco **prima** del contatto visibile — si vede il movimento, non l'impatto (sicurezza policy Instagram + resa più affidabile su Seedance). |
-| **C — Reveal + match cut** | ≈4-6.5s | La camera arretra mentre Jago esce dalla scena: si rivela tutta l'attrezzatura da studio (luci, riflettori, camera su treppiede, monitor, cavi) — era un set, non un ambiente reale. Nello stesso movimento di uscita, taglio sul suo ingresso nell'atelier vero (match cut sul movimento) — **è qui che parte la linea Hook.** |
+| **C — Reveal + walk-through** | ≈4-9s | *(rivisto 03/07)* Jago si aggancia all'obiettivo e avanza verso la camera parlando, mentre la camera arretra al suo passo: l'attrezzatura da studio (luci, riflettori, camera su treppiede, monitor, cavi) sfila ai bordi del frame — era un set. A metà passo, taglio sull'atelier: stessa camminata frontale, stessa scala (walk-through transition). **L'hook è recitato qui, in movimento**, e si chiude con Jago che si pianta dietro al worktable. |
 
 **Perché funziona:** il contrasto luce piatta/alta chiave del falso spot (mondo pubblicitario tradizionale, patinato, impersonale) contro il chiaroscuro caldo dell'atelier (mondo di Jago, personale, autoriale) fa il lavoro tematico prima ancora che parta la prima parola di Jago. Il pugno non è gratuito — è la rottura fisica tra i due mondi.
 
@@ -55,11 +55,11 @@ Tre shot prima dell'inizio dello script originale. Meccanica: sembra un vero spo
 |---|---|---|
 | Cold open A | ≈0-2.5s | *(Talent)* "L'artigianalità non si può replicare con un computer." |
 | Cold open B | ≈2.5-4s | — (nessun dialogo, solo azione) |
-| Cold open C | ≈4-6.5s | — (nessun dialogo, reveal + match cut) |
-| **Hook** | ≈6.5-11.5s | *"Il tuo brand non ha ancora un influencer AI. Sei già indietro di due anni."* |
-| **Build** | ≈11.5-19.5s | *"Tu stai ancora valutando un casting. Io ho già la campagna pronta."* |
-| **Provocazione** | ≈19.5-25.5s | *"So già chi non sarà d'accordo. Chi vive ancora di shooting tradizionali."* |
-| **Firma** | ≈25.5-30.5s | *"Tra due anni sarai ancora indietro. Stavolta saprai perché."* |
+| **Hook parte 1** (C1, reveal) | ≈4-6.5s | *(Jago, camminando in camera)* "Il tuo brand non ha ancora un influencer AI." |
+| **Hook parte 2** (C2, atelier) | ≈6.5-9s | *(Jago, camminando, chiude al worktable)* "Sei già indietro di due anni." |
+| **Build** | ≈9-17s | *"Tu stai ancora valutando un casting. Io ho già la campagna pronta."* |
+| **Provocazione** | ≈17-23s | *"So già chi non sarà d'accordo. Chi vive ancora di shooting tradizionali."* |
+| **Firma** | ≈23-28s | *"Tra due anni sarai ancora indietro. Stavolta saprai perché."* |
 
 La Firma chiude il cerchio sull'hook (i "due anni" tornano) — effetto a tenaglia invece di una semplice uscita. La battuta del Talent ("l'artigianalità non si può replicare") viene smentita in diretta dal resto del video: è Jago, generato al 100% con AI, a "vincere" la scena.
 
@@ -74,7 +74,8 @@ La Firma chiude il cerchio sull'hook (i "due anni" tornano) — effetto a tenagl
 - **Sfondo atelier:** vedi `reference_sfondo_jago` in memoria — invariato, nessun asset nuovo
 - **Ambientazioni cold open:** da generare ex novo (falso set spot + soundstage) — non riusano l'atelier
 - **Personaggio Talent:** reference lock da generare con `banana-pro-director` prima dei prompt Seedance di Shot A/B
-- **Match cut Shot C:** probabile gestione in due clip separate (uscita dal soundstage + ingresso in atelier) tagliate a stacco in CapCut, salvo che Seedance regga la transizione in un'unica generazione continua
+- **Transizione Shot C (rivista 03/07):** due clip (C1 soundstage + C2 atelier) con **walk-through transition** — Jago cammina frontale verso la camera in entrambe, dead center alla stessa scala, taglio a metà passo in CapCut; l'hook è parlato lungo tutta la camminata
+- **Clip 1 "Hook" statica eliminata (03/07):** l'hook vive in C1+C2; i talking head al tavolo restano 3 (Build, Provocazione, Firma)
 - **Montaggio:** CapCut, tagli secchi tra i beat, caption a schermo sincronizzata sull'hook
 - **Scope aumentato rispetto al piano originale:** non più "zero immagini nuove" — ora serve 1 reference personaggio + 2 ambientazioni nuove prima di generare i video
 
@@ -87,12 +88,12 @@ La Firma chiude il cerchio sull'hook (i "due anni" tornano) — effetto a tenagl
 | Reference "Talent" (banana-pro-director) | ✅ generata 03/07 con Magnific GPT-2 — `talent-reference.png` |
 | Prompt Seedance Shot A (falso spot) | ✅ generato 03/07 — vedi `video-6-cold-open-prompts.md` |
 | Prompt Seedance Shot B (cazzotto, M3) | ✅ generato 03/07 — vedi `video-6-cold-open-prompts.md` |
-| Prompt Seedance Shot C (reveal + match cut) | ✅ generato 03/07 come C1+C2 (due clip, match cut in CapCut) — vedi `video-6-cold-open-prompts.md` |
-| Prompt Seedance Hook/Build/Provocazione/Firma | ✅ generati con `cinema-worldbuilder-pro` — vedi `video-6-prompts.md` (timing da rinominare, contenuto invariato) |
+| Prompt Seedance Shot C (C1+C2, walk-through) | ✅ riscritti 03/07 — Jago parla in camera camminando, vedi `video-6-cold-open-prompts.md` |
+| Prompt Seedance Build/Provocazione/Firma | ✅ in `video-6-prompts.md` — Clip 1 "Hook" ELIMINATA 03/07 (hook spostato in C1+C2) |
 | Clip Shot A (Seedance) | ⬜ |
 | Clip Shot B (Seedance) | ⬜ |
 | Clip Shot C (Seedance) | ⬜ |
-| Clip Hook/Build/Provocazione/Firma (Seedance) | ⬜ da generare in Magnific |
+| Clip Build/Provocazione/Firma (Seedance) | ⬜ da generare in Magnific |
 | Caption a schermo | ⬜ da impaginare in CapCut |
 | Montaggio CapCut | ⬜ |
 | Caption Instagram + hashtag | ⬜ da scrivere (max 5 hashtag, vedi `feedback_ig_caption_rules`) |

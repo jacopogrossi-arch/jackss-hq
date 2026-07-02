@@ -2,7 +2,11 @@
 
 **Tool: Magnific — Seedance | Generati con skill `cinema-worldbuilder-pro` (03/07/2026)**
 
-4 clip da 5s ciascuna, da tagliare in CapCut ai beat finali (~2.5s + ~1.5s + ~2.5s). Lo Shot C è spezzato in C1 (reveal soundstage) + C2 (ingresso atelier): il match cut si fa a stacco in CapCut sul movimento left-to-right (Jago esce a destra in C1, entra da sinistra in C2).
+4 clip da 5s ciascuna, da tagliare in CapCut ai beat finali. **Revisione 03/07 (seconda passata):** dopo il cazzotto Jago parla dritto in camera camminando verso l'obiettivo mentre la camera arretra — l'hook è recitato in movimento, spalmato su C1+C2. Il taglio C1→C2 è una **walk-through transition**: a metà passo, Jago dead center alla stessa scala in entrambe le clip, cambia solo l'ambiente attorno (soundstage → atelier). La Clip 1 "Hook" statica dei talking head è eliminata: dal tavolo si parte con la Build.
+
+Battute in camera (labiale generato, voce col flusso solito):
+- **C1:** *"Il tuo brand non ha ancora un influencer AI."*
+- **C2:** *"Sei già indietro di due anni."* (chiude piantandosi dietro al worktable)
 
 Reference:
 - **Talent:** `talent-reference.png` (camicia bianca descritta nel prompt — la reference ha la canotta)
@@ -77,41 +81,41 @@ Camera Capture: wide-latitude cinema capture, vintage 40mm 2x anamorphic charact
 
 ---
 
-## Shot C1 — Reveal del soundstage (M1 Narrative, 5s → tenere ~1.5-2s)
+## Shot C1 — Reveal del soundstage, Jago parla in camera (M1 Narrative, 5s → tenere ~2.5s)
 
-La camera arretra: era un set. Jago esce a destra (direzione del match cut).
+Dopo il pugno Jago si aggancia all'obiettivo e avanza parlando: *"Il tuo brand non ha ancora un influencer AI."* La camera arretra al suo passo, il set si rivela ai bordi del frame.
 
 Reference da allegare:
 1. Character sheet Jago
 
 **Seedance prompt — 5s**
 ```
-Scene & Mood: The camera retreats and the advertisement dies — what read as a finished commercial reveals itself as a small lit set inside a dark cavernous soundstage, the intruder walking away from the broken illusion without a glance back.
+Scene & Mood: The punch has landed offscreen and the intruder owns the lens — walking slowly straight at the retreating camera, speaking cold and level into it, while the pristine commercial dissolves into a dark soundstage around him.
 
-Frame Map: Opens waist-up on @image1 at center, x=50%, foreground, the bright ivory backdrop behind him. Across the full 5 seconds the camera pulls straight back and the framing widens to a full wide: the ivory backdrop becomes a lit seamless paper panel standing inside a dark soundstage — light stands with softboxes camera-left, a silver reflector, a cinema camera on a tripod in the right midground facing the set, a monitor cart with a glowing screen, thick cables crossing the dark concrete floor. @image1 walks screen-right and exits the right frame edge at 4.5s.
+Frame Map: @image1 dead center at x=50%, foreground, waist-up framing holding near-constant scale as the camera retreats at his walking pace. Behind him the bright ivory backdrop panel recedes and shrinks; as he advances out of the lit set zone, dark soundstage elements sweep past the frame edges — a light stand with a softbox passing at left, a cinema camera on a tripod and a monitor cart passing at right, thick cables crossing the concrete below.
 
-Subject Lock — @image1: Face, hair, and silhouette identical to reference throughout. Fitted black crew-neck tee, silver pendant necklace. Expression stoic — jaw set, mouth flat, unhurried cold authority. Lowers his right fist in the first second, turns screen-right without haste, and walks out with steady unbroken stride, gaze fixed ahead, never looking back and never looking at camera. The frame contains only @image1 — no other figures enter or remain.
+Subject Lock — @image1: Face, hair, and silhouette identical to reference throughout. Fitted black crew-neck tee, silver pendant necklace. Expression stoic — jaw set, brow level, no smile, cold unhurried authority. Gaze locked dead into the lens for the entire clip, unbroken. Lips and jaw moving in measured natural speech as he walks slow, steady, straight at the camera.
 
-Cross-Frame Rules: Single subject. @image1's left-to-right exit is the only crossing in the shot. Every set element — backdrop panel, light stands, tripod camera, monitor cart, cables — holds a fixed position; the reveal happens through camera retreat alone.
+Cross-Frame Rules: Single subject. @image1 holds dead center at x=50% throughout — no lateral drift, scale near constant as the camera retreats at his pace. The frame contains only @image1; every set element holds its fixed position, revealed by the retreat alone.
 
-Movement: 0–1s @image1 lowers the fist and turns screen-right. 1–4.5s he walks steadily left-to-right and exits the right frame edge. The camera pulls straight back across the full 5 seconds, widening from waist-up to full wide, the soundstage equipment entering the frame progressively from the edges as the retreat reveals it. Micro-motion: pendant swaying with the stride, faint fabric shift at the shoulders. Environmental motion: thin haze drifting through the rig light, the monitor screen flickering faintly. The final half second holds on the emptied set.
+Movement: 0–1s @image1 lowers his right fist, chin lifting, gaze snapping into the lens, and takes his first stride toward camera. 1–5s he walks slowly and steadily straight at the retreating camera, speaking into the lens the whole way, the glowing backdrop shrinking behind him, rig silhouettes sweeping past both frame edges as he crosses out of the lit set into the dark stage. Micro-motion: pendant swaying with the stride, natural breath between phrases, faint fabric shift at the shoulders. Environmental motion: thin haze drifting through the rig light, the monitor screen flickering faintly at the right edge. The clip ends mid-stride, mid-speech.
 
-Last Frame: A full wide of the dark soundstage — the bright backdrop panel glowing at center like an island of false daylight, silhouetted light stands and softboxes camera-left, the tripod camera and monitor cart at the right, cables across the concrete, no figures anywhere in the frame. No on-screen text, no captions, no signage typography, no rendered text in the frame.
+Last Frame: @image1 dead center, waist-up, mid-stride toward camera, gaze locked in the lens, lips mid-word — behind him the small bright island of the commercial set glowing deep in the dark soundstage, light stands silhouetted at the edges. No on-screen text, no captions, no signage typography, no rendered text in the frame.
 
 World Plate: A large dark soundstage wrapped around a small bright commercial set — black walls falling away into darkness, the warm ivory seamless paper backdrop lit high-key at center, professional lighting rig with softboxes and a silver reflector on stands, a cinema camera on a tripod, a monitor cart with glowing screen, sandbags and coiled cables on smooth dark concrete, thin atmospheric haze catching the rig light.
 
-Sound Bed: Diegetic only — steady footsteps on concrete, the electrical hum of studio lamps, faint monitor buzz, cable rustle underfoot, the cavernous room tone of a large empty stage, no music, no dialogue.
+Sound Bed: Diegetic only — steady footsteps on concrete, the electrical hum of studio lamps, faint monitor buzz, the cavernous room tone of a large empty stage, no music, no dialogue except what is physically spoken in frame.
 
-Capture Realism: The shot lives on depth — light haze suspended between camera, the walking figure, the lit set, and the black soundstage walls, each deeper plane rendered softer, desaturated, and lower-contrast so the bright set reads as a small island inside real dark air. Skin reads true cinematic matte — zero shine on forehead, nose bridge, cheekbones, temples, and chin, real fine even pore texture, warmth preserved, never plastic, never harsh. The glowing backdrop's highlights roll off softly never clipping to white, the soundstage blacks stay lifted and open holding texture in the dark, all speculars removed from skin, fabric, and equipment surfaces, everything matte and diffuse.
+Capture Realism: The shot lives on depth — light haze suspended between camera, the advancing figure, and the shrinking lit set behind him, each deeper plane rendered softer, desaturated, and lower-contrast so the bright set reads as a receding island inside real dark air. Skin reads true cinematic matte — zero shine on forehead, nose bridge, cheekbones, temples, and chin, real peach fuzz at the jaw and hairline, real soft fine even pore texture, warmth preserved and natural, never plastic, never harsh — fine flattering texture, no blemishes, no rough pores. The backdrop glow rolls off softly never clipping to white, the soundstage blacks stay lifted and open holding texture in the dark, all speculars removed from skin, fabric, and equipment surfaces, everything matte and diffuse.
 
-Camera Capture: wide-latitude cinema capture, vintage 40mm 2x anamorphic character at a wide aperture — oval bokeh, soft frame-edge falloff — light diffusion bloom softening the backdrop glow, smooth steady backward pull with natural handheld operator breath, color-negative film rendition with fine 35mm grain, neutral dark grade holding the warm high-key island at center, 24fps 180° shutter, 5 seconds.
+Camera Capture: wide-latitude cinema capture, vintage 40mm 2x anamorphic character at a wide aperture — oval bokeh, soft frame-edge falloff — light diffusion bloom softening the backdrop glow, smooth backward dolly retreating at walking pace with natural handheld operator breath, color-negative film rendition with fine 35mm grain, neutral dark grade holding the warm high-key island deep in frame, 24fps 180° shutter, 5 seconds.
 ```
 
 ---
 
-## Shot C2 — Ingresso in atelier (M1 Narrative, 5s → tenere ~1-1.5s + aggancio alla linea Hook)
+## Shot C2 — Atelier, la camminata continua (M1 Narrative, 5s → tenere ~2.5s)
 
-Jago entra da sinistra (match cut sul movimento) e si piazza dietro al worktable — l'ultimo frame aggancia il blocking della Clip 1 "Hook".
+Stessa camminata frontale, ora nell'atelier: Jago continua *"Sei già indietro di due anni."* e chiude la frase piantandosi dietro al worktable. Taglio C1→C2 a metà passo (walk-through transition).
 
 Reference da allegare:
 1. Character sheet Jago
@@ -120,31 +124,32 @@ Reference da allegare:
 
 **Seedance prompt — 5s**
 ```
-Scene & Mood: The figure crosses out of one world into his own — striding into a dark wooden atelier cut by a hard band of warm window light, arriving behind the worktable and squaring to the camera, the room already his.
+Scene & Mood: A figure advances slowly through a dark wooden atelier straight at the retreating camera, speaking cold and level into the lens, closing the distance to his worktable and planting behind it as the line lands — the room already his.
 
-Frame Map: Opens on the atelier with the dark wood worktable's edge crossing the lower 15% of frame and the black dress form mannequin soft in the upper-right background. @image1 enters from the left frame edge at 0.5s in waist-up scale, moves left-to-right through the midground, and arrives centered at x=50% behind the worktable by 3.5s, the framing settling to chest-up occupying approximately 65% of frame height by the close.
+Frame Map: @image1 dead center at x=50%, foreground, waist-up framing, mid-stride toward the camera as it retreats at his walking pace through the atelier. The dark wood worktable sits between him and the camera, its edge entering the lower frame as he closes the distance; the black dress form mannequin holds soft-focus in the upper-right background, the amber window light band cutting diagonally across the room.
 
-Subject Lock — @image1: Face, hair, and silhouette identical to reference throughout. Fitted black crew-neck tee, no jacket, silver pendant necklace at the base of the throat. Walks unhurried and proprietary, gaze ahead during the entrance. At 3.5s he plants behind the worktable, shoulders squaring to camera, both hands coming to rest lightly on the table's edge, and his gaze lands directly into the lens by 4s and holds. Expression stoic — jaw set, mouth flat, no upward curve. Face, hair, wardrobe, and silhouette identical throughout.
+Subject Lock — @image1: Face, hair, and silhouette identical to reference throughout. Fitted black crew-neck tee, no jacket, silver pendant necklace at the base of the throat. Expression stoic — jaw set, mouth flat between phrases, no upward curve. Gaze locked dead into the lens for the entire clip, unbroken. Lips and jaw moving in measured natural speech through the walk and the plant.
 
-Cross-Frame Rules: Single subject. The left-to-right entrance is the only crossing; from 3.5s @image1 holds centered at x=50% with no drift and no depth change through the close.
+Cross-Frame Rules: Single subject. @image1 holds dead center at x=50% throughout — no lateral drift, scale near constant through the walk, tightening only as he plants and the camera settles.
 
-Movement: @image1 enters the left frame edge at 0.5s and walks steadily left-to-right through the amber window light band, dust motes stirring faintly in his wake. At 3.5s he plants behind the worktable, hands settling on the table edge, shoulders squaring. By 4s his gaze locks into the camera and the final second holds completely still — only natural chest breathing, the pendant settling from the walk, subtle hair movement. The warm amber window band holds steady across the room throughout.
+Movement: 0–3.5s @image1 walks slowly and steadily straight at the retreating camera, speaking into the lens, crossing through the warm amber window band, dust motes stirring faintly in the light. At 3.5s he reaches the worktable and plants behind it, shoulders squaring, both hands coming to rest lightly on the table's edge, still speaking. By 4.5s the line lands and his mouth settles flat; the final half second holds completely still — only natural chest breathing and the pendant settling from the walk. The camera retreat eases to a stop as he plants.
 
-Last Frame: @image1 centered behind the worktable, chest-up, both hands resting lightly on the table's edge, gaze locked into the camera, expression stoic and unmoved — the exact composition of a man about to speak. The dress form mannequin soft-focus in the upper-right background. No on-screen text, no captions, no signage typography, no rendered text in the frame.
+Last Frame: @image1 centered behind the worktable, chest-up occupying approximately 65% of frame height, both hands resting lightly on the table's edge, gaze locked into the camera, expression stoic and unmoved — the exact composition of a man about to keep speaking. The dress form mannequin soft-focus in the upper-right background, the worktable's edge crossing the lower frame. No on-screen text, no captions, no signage typography, no rendered text in the frame.
 
 World Plate: An empty luxury fashion atelier — dark wooden worktable scattered with fashion sketches, vintage photographs, a leather notebook, and fabric swatches. A black tailor's dress form mannequin stands in the background; a clothes rack with dark garments sits further back in shadow. A large window with a grid pattern casts warm golden amber light in a hard diagonal band across the room, the rest held in deep brown-black chiaroscuro shadow. Dark academia atelier, old Italian fashion house mood.
 
-Sound Bed: Diegetic only — measured footsteps on old wood, faint fabric rustle of the stride, low interior room tone, distant muffled city ambience beyond the window, no music, no dialogue.
+Sound Bed: Diegetic only — measured footsteps on old wood slowing to a stop, faint fabric rustle of the stride, low interior room tone, distant muffled city ambience beyond the window, no music, no dialogue except what is physically spoken in frame.
 
-Capture Realism: @image1 sits inside real interior depth — thin atmosphere suspended between camera, subject, and the mannequin behind him, the background rendered softer and lower-contrast than the foreground so the figure moves within the room rather than across a flat plane. Skin reads true cinematic matte — zero shine on forehead, nose bridge, cheekbones, temples, chin, and collarbones, real peach fuzz catching the window light at the jaw and hairline, real soft fine even pore texture, light absorbed like true subsurface scattering, warmth preserved and natural, never plastic, never harsh — fine flattering texture, no blemishes, no rough pores. Low-contrast curve — shadows lifted gently holding texture, highlights rolled off softly never clipping on the amber window band, nothing crushed to black. All speculars removed from skin, hair, and fabric, every pixel matte and diffuse.
+Capture Realism: @image1 sits inside real interior depth — thin atmosphere suspended between camera, subject, and the room behind him, the background rendered softer and lower-contrast than the foreground so the figure advances within the room rather than across a flat plane. Skin reads true cinematic matte — zero shine on forehead, nose bridge, cheekbones, temples, chin, and collarbones, real peach fuzz catching the window light at the jaw and hairline, real soft fine even pore texture, light absorbed like true subsurface scattering, warmth preserved and natural, never plastic, never harsh — fine flattering texture, no blemishes, no rough pores. Low-contrast curve — shadows lifted gently holding texture, highlights rolled off softly never clipping on the amber window band, nothing crushed to black. All speculars removed from skin, hair, and fabric, every pixel matte and diffuse.
 
-Camera Capture: wide-latitude cinema capture, vintage 55mm 2x anamorphic character at a wide aperture — oval bokeh on the background mannequin and window, soft frame-edge falloff — light diffusion bloom softening the amber window highlight, handheld with natural operator breath gently panning with the entrance then settling centered, color-negative film rendition with fine 35mm grain, warm amber grade with deep brown-black shadow bias, shallow depth of field, 24fps 180° shutter, 5 seconds.
+Camera Capture: wide-latitude cinema capture, vintage 55mm 2x anamorphic character at a wide aperture — oval bokeh on the background mannequin and window, soft frame-edge falloff — light diffusion bloom softening the amber window highlight, smooth backward dolly retreating at walking pace then easing to a stop with natural handheld operator breath as he plants, color-negative film rendition with fine 35mm grain, warm amber grade with deep brown-black shadow bias, shallow depth of field, 24fps 180° shutter, 5 seconds.
 ```
 
 ---
 
 ## Note di montaggio
 
-- **Match cut C1→C2:** Jago esce dal frame a destra in C1 ed entra da sinistra in C2 — stessa direzione di marcia, taglio a stacco sul movimento in CapCut.
+- **Walk-through transition C1→C2:** taglio a metà passo in CapCut — Jago dead center alla stessa scala waist-up in entrambe le clip, camera in arretramento in entrambe; cambia solo l'ambiente. Scegliere due frame con la falcata nella stessa fase.
 - **Shot B:** il taglio secco prima del contatto si fa in CapCut — la clip generata arriva al pugno a centimetri dal volto, senza impatto (policy Instagram + resa Seedance).
-- **Voce Talent (Shot A):** la battuta *"L'artigianalità non si può replicare con un computer"* va aggiunta col flusso voce abituale — la clip genera solo il labiale.
+- **Voci:** le clip generano solo il labiale. Talent (A): *"L'artigianalità non si può replicare con un computer."* Jago (C1): *"Il tuo brand non ha ancora un influencer AI."* Jago (C2): *"Sei già indietro di due anni."* — voci col flusso abituale.
+- **Clip 1 "Hook" statica eliminata** (03/07): l'hook è recitato in movimento su C1+C2. Dal worktable si prosegue con Build → Provocazione → Firma di `video-6-prompts.md`.

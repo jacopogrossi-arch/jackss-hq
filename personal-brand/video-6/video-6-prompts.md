@@ -14,7 +14,9 @@ Wardrobe fissa in tutte le clip: t-shirt girocollo nera aderente, nessuna giacca
 
 ---
 
-## Clip 1 — "Hook" (0-5s)
+## Clip 1 — "Hook" (0-5s) — ❌ ELIMINATA 03/07/2026
+
+> L'hook è ora recitato in movimento nel cold open (Shot C1+C2, vedi `video-6-cold-open-prompts.md`). Questa clip statica non va generata. Il prompt resta qui solo come riferimento di blocking: l'ultimo frame di C2 riproduce questa composizione, da cui parte la Clip 2 "Build".
 
 Script voiceover: *"Il tuo brand non ha ancora un influencer AI. Sei già indietro di due anni."*
 
