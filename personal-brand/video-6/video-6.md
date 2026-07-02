@@ -37,6 +37,7 @@ Tre shot prima dell'inizio dello script originale. Meccanica: sembra un vero spo
 
 - Ruolo: spokesperson generico di uno spot — rappresenta il mondo della pubblicità tradizionale, non un brand reale
 - Look proposto, **volutamente opposto a Jago**: capelli chiari e corti, carnagione chiara, camicia bianca o pastello semplice, aspetto curato e convenzionale da "spot pubblicitario" — contrasto totale con capelli scuri mossi/carnagione olivastra/full black di Jago
+- **Spec bloccato 03/07/2026** (vedi `talent-reference-prompt.md`): archetipo "testimonial da spot", biondo cenere brizzolato alle tempie (leggermente più maturo di Jago = mondo pubblicitario vecchio), occhi azzurri, rasato. Scartata l'idea del volto-sosia: rischio likeness su Higgsfield/Instagram
 - Illuminazione Shot A: alta chiave, piatta, pulita — l'opposto del chiaroscuro drammatico dell'atelier
 - **Nota tecnica:** personaggio nuovo e ricorrente per 2 inquadrature consecutive (A e B) — serve una reference lock via `banana-pro-director` prima di generare i prompt Seedance di questi shot, per garantire continuità del volto tra le due clip
 
@@ -83,7 +84,7 @@ La Firma chiude il cerchio sull'hook (i "due anni" tornano) — effetto a tenagl
 
 | Asset | Stato |
 |-------|-------|
-| Reference "Talent" (banana-pro-director) | ⬜ da generare |
+| Reference "Talent" (banana-pro-director) | 🟡 prompt GPT-2 pronto 03/07 — vedi `talent-reference-prompt.md`, da generare in Higgsfield |
 | Prompt Seedance Shot A (falso spot) | ⬜ da generare — dopo lock Talent |
 | Prompt Seedance Shot B (cazzotto, M3) | ⬜ da generare — dopo lock Talent |
 | Prompt Seedance Shot C (reveal + match cut) | ⬜ da generare |
