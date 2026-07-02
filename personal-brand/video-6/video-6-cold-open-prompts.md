@@ -147,6 +147,40 @@ Camera Capture: wide-latitude cinema capture, vintage 55mm 2x anamorphic charact
 
 ---
 
+## Alternativa — Shot C unificato, 10s (transizione continua in un'unica generazione)
+
+Al posto di C1+C2: un solo prompt da 10s dove l'ambiente si trasforma attorno a Jago mentre cammina senza mai fermarsi (soundstage → atelier, morph a ~4.5-6.5s). **Da provare per prima**: se il morph tiene, niente taglio in CapCut; se l'identità o gli ambienti derapano, fallback sulle due clip da 5s qui sopra. Piano B intermedio: frame chaining (ultimo frame di C1 come keyframe di partenza di C2 in `video_generate`).
+
+Reference da allegare:
+1. Character sheet Jago
+
+**Seedance prompt — 10s**
+```
+Scene & Mood: A figure walks slowly straight at the retreating camera, speaking cold and level into the lens, while the world transforms around his unbroken stride — a dark soundstage dissolving into a warm wooden atelier, one world melting into the other without the walk ever stopping.
+
+Frame Map: @image1 dead center at x=50%, foreground, waist-up framing holding near-constant scale as the camera retreats at his walking pace for the full 10 seconds. Behind him at the start: a bright ivory backdrop panel receding inside a dark soundstage, light stands and a tripod cinema camera sweeping past the frame edges. Behind him at the close: a dark wooden atelier with a black dress form mannequin soft-focus in the upper-right background and a warm amber window light band cutting across the room, the dark wood worktable entering the lower frame as he arrives behind it.
+
+Subject Lock — @image1: Face, hair, and silhouette identical to reference throughout. Fitted black crew-neck tee, no jacket, silver pendant necklace at the base of the throat. Expression stoic — jaw set, brow level, no smile, cold unhurried authority. Gaze locked dead into the lens for the entire clip, unbroken through the transformation. Lips and jaw moving in measured natural speech through the walk and the plant. Face, hair, wardrobe, and silhouette identical throughout — the figure is the one constant while the world changes.
+
+Cross-Frame Rules: Single subject. @image1 holds dead center at x=50% for the full 10 seconds — no lateral drift, no depth change, scale near constant, stride rhythm unbroken across the environment transformation. Only the environment transforms; the figure never dissolves, never flickers, never changes.
+
+Movement: 0–1s @image1 lowers his right fist, chin lifting, gaze snapping into the lens, first stride toward camera. 1–4.5s he walks slowly and steadily straight at the retreating camera, speaking into the lens, the glowing backdrop shrinking behind him, rig silhouettes sweeping past both frame edges. 4.5–6.5s the world transforms around his unbroken stride: the concrete floor grades into old dark wood underfoot, the light stands and monitor cart dissolve into the mannequin and a clothes rack in shadow, the cold rig glow warms into the golden amber window band washing across him mid-step. 6.5–8.5s he walks on through the atelier, still speaking, dust motes stirring in the window light. At 8.5s he reaches the worktable and plants behind it, shoulders squaring, both hands coming to rest lightly on the table's edge; by 9.5s the line lands, his mouth settles flat, and the final half second holds completely still. The camera retreat eases to a stop as he plants.
+
+Last Frame: @image1 centered behind the worktable, chest-up occupying approximately 65% of frame height, both hands resting lightly on the table's edge, gaze locked into the camera, expression stoic and unmoved. The dress form mannequin soft-focus in the upper-right background, the amber window band steady across the room. No on-screen text, no captions, no signage typography, no rendered text in the frame.
+
+World Plate: Two worlds joined by one walk. First: a large dark soundstage wrapped around a small bright commercial set — ivory seamless paper backdrop lit high-key, softboxes on stands, a cinema camera on a tripod, a monitor cart, cables on smooth dark concrete, thin haze in the rig light. Second: an empty luxury fashion atelier — dark wooden worktable scattered with fashion sketches, vintage photographs, a leather notebook, and fabric swatches, a black tailor's dress form mannequin, a clothes rack in shadow, a large grid-paned window casting warm golden amber light in a hard diagonal band, the rest in deep brown-black chiaroscuro. Dark academia atelier, old Italian fashion house mood.
+
+Sound Bed: Diegetic only — steady footsteps shifting from concrete to old wood mid-walk, faint fabric rustle of the stride, the electrical hum of studio lamps fading into low interior room tone and distant muffled city ambience, no music, no dialogue except what is physically spoken in frame.
+
+Capture Realism: @image1 sits inside real depth in both worlds — light haze suspended between camera, the advancing figure, and each receding background, every deeper plane rendered softer, desaturated, and lower-contrast so he advances within real air, never pasted on a flat plane. Skin reads true cinematic matte — zero shine on forehead, nose bridge, cheekbones, temples, chin, and collarbones, real peach fuzz catching the light at the jaw and hairline, real soft fine even pore texture, light absorbed like true subsurface scattering, warmth preserved and natural, never plastic, never harsh — fine flattering texture, no blemishes, no rough pores. Low-contrast curve — shadows lifted gently holding texture, highlights rolled off softly never clipping on the backdrop glow or the amber window band, nothing crushed to black. All speculars removed from skin, hair, and fabric, every pixel matte and diffuse.
+
+Camera Capture: wide-latitude cinema capture, vintage 40mm 2x anamorphic character at a wide aperture — oval bokeh, soft frame-edge falloff — light diffusion bloom, smooth backward dolly retreating at walking pace then easing to a stop with natural handheld operator breath as he plants, color-negative film rendition with fine 35mm grain, grade shifting from neutral dark with a warm high-key island into warm amber with deep brown-black shadow bias as the world transforms, 24fps 180° shutter, 10 seconds.
+```
+
+Battuta intera sulla clip unica: *"Il tuo brand non ha ancora un influencer AI. Sei già indietro di due anni."* (labiale generato, voce col flusso solito).
+
+---
+
 ## Note di montaggio
 
 - **Walk-through transition C1→C2:** taglio a metà passo in CapCut — Jago dead center alla stessa scala waist-up in entrambe le clip, camera in arretramento in entrambe; cambia solo l'ambiente. Scegliere due frame con la falcata nella stessa fase.
