@@ -1,6 +1,6 @@
 # Video #6 — "L'influencer AI in ritardo di due anni"
 
-**Status: 🟡 tutti i prompt pronti 03/07/2026 (4 talking head + 4 cold open) — da generare le clip in Magnific**
+**Status: 🟡 fase reference images in corso 03/07/2026 — workflow: prima TUTTE le foto reference (plate + start/end frame), poi le clip Seedance. Vedi `video-6-reference-images.md`**
 
 Durata: ~28s (rivista 03/07: hook recitato in movimento nel cold open) | Lingua: italiano | Formato: 9:16 vertical
 
@@ -90,6 +90,12 @@ La Firma chiude il cerchio sull'hook (i "due anni" tornano) — effetto a tenagl
 | Prompt Seedance Shot B (cazzotto, M3) | ✅ generato 03/07 — vedi `video-6-cold-open-prompts.md` |
 | Prompt Seedance Shot C (C1+C2, walk-through) | ✅ riscritti 03/07 — Jago parla in camera camminando, vedi `video-6-cold-open-prompts.md` |
 | Prompt Seedance Build/Provocazione/Firma | ✅ in `video-6-prompts.md` — Clip 1 "Hook" ELIMINATA 03/07 (hook spostato in C1+C2) |
+| Plate soundstage (R1) | ✅ 2 varianti generate 03/07 (Recraft V4.1) — da scegliere, link in `video-6-reference-images.md` |
+| Plate atelier (R2) | ✅ 2 varianti generate 03/07 (Recraft V4.1) — da scegliere, link in `video-6-reference-images.md` |
+| Start frame Shot A — Talent camicia bianca (R3) | ⬜ prompt pronto — in attesa face lock Talent confermata |
+| Start frame Shot B (R4) | ⬜ prompt pronto — dipende da R3 |
+| Start frame Shot C1 — Jago soundstage (R5) | ⬜ prompt pronto — dipende da scelta R1 |
+| End frame Shot C2 — Jago worktable (R6) | ⬜ prompt pronto — dipende da scelta R2 |
 | Clip Shot A (Seedance) | ⬜ |
 | Clip Shot B (Seedance) | ⬜ |
 | Clip Shot C (Seedance) | ⬜ |
