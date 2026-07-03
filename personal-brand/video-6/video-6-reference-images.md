@@ -19,23 +19,21 @@ Aggiornato 03/07/2026 — generazione via MCP Magnific (account by Jago).
 
 Identità già disponibili su Magnific:
 - **Jago:** character sheet caricato (upload `jago-character-sheet`)
-- **Talent:** 2 uscite GPT-2 del 02/07 — quale sia quella scelta (la verticale salvata in `talent-reference.png`) è **da confermare**: Jacopo la re-invia in chat e viene ricaricata come creation.
+- **Talent:** ✅ risolto 03/07 — `talent-reference.png` (la verticale lockata) ricaricata su Magnific come nuova creation via URL GitHub. ⚠️ Nota: l'immagine re-inviata in chat da Jacopo era la variante ORIZZONTALE scartata ("troppo argento") — verificato visivamente e NON usata; il face lock resta la verticale del repo.
 
 ---
 
-## R1 — Plate soundstage (✅ generate, da scegliere)
+## R1 — Plate soundstage (✅ SCELTA 03/07: variante 2)
 
-- Variante 1: https://www.magnific.com/app/creation/1su9Tizr4r
-- Variante 2: https://www.magnific.com/app/creation/l75ZdGqgv9
+- Variante 1 (scartata): https://www.magnific.com/app/creation/1su9Tizr4r
+- **Variante 2 (SCELTA)**: https://www.magnific.com/app/creation/l75ZdGqgv9
 
-Criteri di scelta: l'isola del set avorio deve leggersi piccola e luminosa DENTRO un palcoscenico buio e cavernoso; attrezzatura (stativi, softbox, camera su treppiede, monitor cart, cavi) riconoscibile ai lati; haze visibile nei fasci di luce; pavimento in cemento che guida verso il set.
+## R2 — Plate atelier (✅ SCELTA 03/07: variante 1)
 
-## R2 — Plate atelier (✅ generate, da scegliere)
+- **Variante 1 (SCELTA)**: https://www.magnific.com/app/creation/iA7pum83uK
+- Variante 2 (scartata): https://www.magnific.com/app/creation/l75Zd0fgv9
 
-- Variante 1: https://www.magnific.com/app/creation/iA7pum83uK
-- Variante 2: https://www.magnific.com/app/creation/l75Zd0fgv9
-
-Criteri di scelta: worktable in primo piano col bordo che taglia il basso del frame; mannequin sartoriale nero in alto a destra; banda diagonale amber dalla finestra a griglia; chiaroscuro marrone-nero profondo; mood "old Italian fashion house". Questa plate diventa l'ancora visiva di **4 clip** (C2, Build, Provocazione, Firma).
+Questa plate diventa l'ancora visiva di **4 clip** (C2, Build, Provocazione, Firma).
 
 ---
 
