@@ -34,6 +34,22 @@
 Keep the layered garment in the attached product still exactly as it is — same boxy oversized washed black tee, same cracked cream-white "JAGO" arched chest lettering with its metallic tonal variation, same printed long under-sleeves with their faded white grunge graphics, same deep crimson seamless backdrop, same flat product lighting, same framing. Change only one thing: remove the ribbed cuffs at the wrists. The long under-sleeves now end wide and open, falling straight and loose at the wrist with a plain raw hem, relaxed and roomy all the way down — no ribbing, no elastic, no tapering, the sleeve keeps its full width to the very end, the printed graphics running down to the open hem. Everything else stays identical to the reference.
 ```
 
+---
+
+## GATE 0 / Shot 2 — Drake, garment swap su foto reale
+
+**Tool:** Banana Pro (Nano Banana)
+**Reference da allegare (2):** ① il selfie allo specchio (`image.jpg`, Downloads) ② la garment reference v4 (`magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`)
+**Aspect ratio (nella UI):** stessa della foto originale
+**Nota:** lettering JAGO **specchiato** di default (è un mirror selfie — se leggibile, l'illusione si rompe). Per la variante leggibile: sostituire l'ultima frase del primo paragrafo con *"the chest lettering reads correctly, not mirrored."*
+**⚠️ Questo è il GATE 0:** se il tool blocca o degrada il volto, stop e piano B (vedi brief, blocco 14).
+
+```
+Take the first attached photo — a mirror selfie in a marble bathroom — and keep everything exactly as it is: the man, his face, his braided hair, his beard, his pose with the phone raised, his watch, rings and bracelet, the wide light-blue denim pants with the hanging chain, the cream shoes, the marble walls, the glass doors, the mirror reflection, the warm lighting, the framing. Replace only the red short-sleeve tee he is wearing with the layered garment shown in the second attached product still: a boxy oversized washed black tee with sewn-in long under-sleeves, worn with the same relaxed oversized drape as his original tee. The long printed under-sleeves now cover his arms down to wide open hems at the wrists — no cuffs, the faded white thorn and gothic graphics running down the outer sleeves exactly as in the product still. The large arched cream-white "JAGO" chest lettering with its cracked texture appears mirror-reversed, as chest text naturally reads in a mirror selfie.
+
+The garment integrates into the photo's real light — the warm bathroom lighting falling on the black cotton with natural soft highlights and shadow in the folds, the washed black fabric reading matte with visible weave, the print following every fold of the drape. The image keeps the exact look of a casual phone photo: same colors, same softness, same slight phone-camera noise, nothing else altered — a real photo, not a rendered image.
+```
+
 ### v3 — Layer LUMON (design approvato, base della v4)
 
 ```
