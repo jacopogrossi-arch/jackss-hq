@@ -16,6 +16,22 @@
 > **v3 (attuale, sotto):** parte dalla v1 come reference e aggiunge gli elementi LUMON — texture crepata più ricca sul lettering e maniche long-sleeve stampate che escono da sotto la tee boxy (layer cucito). Crest/banner "WORLDWIDE" rimosso su richiesta (05/07).
 >
 > **Reference da allegare (2):** ① la v1 (`magnific_a-streetwear-product-stil_Eq8D5PRuuO.png`) ② lo screenshot LUMON (`Cattura.PNG`)
+>
+> **v3 generata 05/07** (`magnific_streetwear-product-still-_mCpWbRUhJQ.png`) — ✅ approvata come design. **v4 (sotto):** unico ritocco, via i polsini a costine — maniche ampie e dritte fino in fondo.
+
+---
+
+### v4 — Ritocco maniche (versione corrente)
+
+**Tool:** Banana Pro (Nano Banana)
+**Reference da allegare (1 sola):** la v3 (`magnific_streetwear-product-still-_mCpWbRUhJQ.png`)
+**Aspect ratio (nella UI):** stessa della v3
+
+```
+Keep the layered garment in the attached product still exactly as it is — same boxy oversized washed black tee, same cracked cream-white "JAGO" arched chest lettering with its metallic tonal variation, same printed long under-sleeves with their faded white grunge graphics, same deep crimson seamless backdrop, same flat product lighting, same framing. Change only one thing: remove the ribbed cuffs at the wrists. The long under-sleeves now end wide and open, falling straight and loose at the wrist with a plain raw hem, relaxed and roomy all the way down — no ribbing, no elastic, no tapering, the sleeve keeps its full width to the very end, the printed graphics running down to the open hem. Everything else stays identical to the reference.
+```
+
+### v3 — Layer LUMON (design approvato, base della v4)
 
 ```
 A streetwear product still photograph of a single layered garment presented alone, front-facing, filling the frame — the same boxy oversized short-sleeve tee in washed black heavyweight cotton shown in the first attached product still, keeping its exact silhouette, boxy drop-shoulder cut, sun-faded wash, ribbed crew collar, and its large arched cream-white "JAGO" chest lettering with cracked distressed screen-print texture exactly as shown. Sewn in under the tee, long knit sleeves emerge from beneath the short sleeves and run down to ribbed cuffs at the wrists — a built-in double-layer look, the long sleeves part of the same garment, in matching washed black cotton.
