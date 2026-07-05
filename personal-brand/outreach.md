@@ -280,7 +280,7 @@ I nomi sopra vengono dalla stampa di settore — il cliente €400 realistico sp
 | 29/06/2026 | Ascend Beyond (@ascendbeyond) | IT | Video #4 | — | in attesa | entro 4-6/07 se silenzio |
 | 29/06/2026 | ZONA20 Milano (@zona20milano) | IT | Video #4 | — | in attesa | entro 4-6/07 se silenzio |
 | 29/06/2026 | MeidItaly (@meiditaly) | IT | Video #4 | — | in attesa | entro 4-6/07 se silenzio |
-| 02/07/2026 | Bramani Cashmere (@bramani_cashmere) | IT | Video #4 | — | in attesa | entro 7-9/07 se silenzio |
+| 02/07/2026 | Bramani Cashmere (@bramani_cashmere) | IT | Video #4 (v1, dal profilo personale) | ✅ risposto 05/07 | "Ringraziamo per il messaggio. Qualsiasi cosa scrivete su email." → **porta aperta: continuare via email** | email con immagini custom (dm-pack) al posto del follow-up DM |
 | 02/07/2026 | SERIE V (@luciovanotti) | IT | Video #4 | — | in attesa | entro 7-9/07 se silenzio |
 | 02/07/2026 | SEEKÎNAMOUR (@seekinamour) | IT | Video #4 | — | in attesa | entro 7-9/07 se silenzio |
 | 02/07/2026 | Tela Genova (@telagenova) | IT | Video #4 | — | in attesa | entro 7-9/07 se silenzio |
