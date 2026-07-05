@@ -58,6 +58,47 @@ Camera Capture: wide-latitude cinema capture, vintage 40mm 2x anamorphic charact
 
 ---
 
+## Clip 2 — Jago si volta e inizia a camminare, reveal del soundstage (M1 Narrative, 4s)
+
+Parte dallo stesso end frame della Clip 1 (il pugno atterrato). Jago si volta verso l'obiettivo e inizia a camminare mentre la camera arretra e il soundstage si rivela attorno a lui. Il Talent (già colpito) esce di scena nel primo mezzo secondo. Battuta in inglese per il lip sync generato direttamente da Seedance: *"Your brand doesn't have an AI influencer yet."*
+
+Reference generate:
+- **Start frame:** end frame della Clip 1 (pugno atterrato)
+- **End frame:** Jago a piena falcata nel soundstage rivelato, generato con Nano Banana Pro (Magnific) il 05/07/2026 — https://www.magnific.com/app/creation/5xfpUYEKxe (salvato come `jago-clip2-endframe.jpg`)
+  - Primo tentativo scartato: posa troppo statica/ferma, non a metà passo — corretto specificando esplicitamente piede avanti piantato e peso spostato in avanti
+
+Reference da allegare in Seedance (in quest'ordine):
+1. Character sheet Jago
+2. Start frame (end frame Clip 1)
+3. End frame (soundstage a piena falcata)
+
+**Seedance prompt — 4s**
+```
+Scene & Mood: A man turns from the blow he's just landed and locks his gaze on the lens, beginning to walk forward as the polished advertisement world peels back into the bare machinery of a soundstage around him.
+
+Frame Map: Opens anchored to @image2 — @image1 left-of-center, waist-up scale, arm still carrying the punch's follow-through. Closes anchored to @image3 — @image1 centered, full body, mid-stride, the frame pulled back to a wider waist-to-full composition as the soundstage opens around him.
+
+Subject Lock — @image1: Identical to reference throughout. Opens in the exact pose of @image2, arm still extended from the punch. At 0.5s his gaze locks onto the lens, stance squaring toward camera. At 1s he takes his first stride, weight rolling onto the front foot, back leg trailing into push-off exactly as in @image3, and speaks the line "Your brand doesn't have an AI influencer yet." starting on that stride, lips and jaw shaping the words in a level, unhurried cadence continuing through the walk to the close. Torso leans slightly forward, arms swing in natural counter-rhythm, hands loosely closed into half-fists. Expression stoic and unbroken throughout — jaw set, gaze locked into the lens without breaking.
+
+Cross-Frame Rules: @image1 holds screen-left at the opening beat then advances toward center as the frame widens — no lateral drift beyond this forward path, no change of screen direction, gaze never leaves the lens once locked at 0.5s.
+
+Movement: 0–0.5s the second figure struck a beat earlier completes his fall and drops out of the bottom frame edge, no longer visible. At 0.5s @image1's gaze snaps onto the lens. At 1s he takes his first deliberate stride and begins speaking; from 1–4s he walks at a measured, purposeful pace straight toward the retreating camera, each step landing solidly. Micro-motion: the silver pendant swinging with each stride, hair shifting naturally, fabric moving with the arm swing. Environmental motion: thin haze drifting through the rig light, the monitor screen glowing steady at the right edge. The small bright commercial backdrop behind him visibly shrinks as he advances and the camera pulls back, light stands and the tripod camera sweeping into view at the frame edges as the soundstage opens around him.
+
+Last Frame: Matching @image3 — @image1 centered, full body, mid-stride, front foot planted, gaze locked into the lens, the small bright commercial set now a shrinking glow deep behind him, the soundstage rig visible at the frame edges. No on-screen text, no captions, no rendered text.
+
+World Plate: Anchored to @image2 at the open, transitioning to @image3 at the close — the bright commercial set shrinking into a large dark soundstage, light stands with softbox and reflector, a cinema camera on a wheeled tripod with a glowing monitor, cables coiled on smooth concrete, thin haze catching the rig light.
+
+Sound Bed: Diegetic only — the line "Your brand doesn't have an AI influencer yet." spoken level and unhurried, footsteps landing on concrete, faint electrical hum of studio lamps, faint monitor buzz, no music.
+
+Capture Realism: @image1 sits inside real depth — thin atmosphere suspended between camera, the advancing figure, and the receding backdrop, the background rendered softer and lower-contrast than the foreground. Skin reads true cinematic matte — zero shine on forehead, nose bridge, cheekbones, temples, real peach fuzz, warmth preserved, never plastic. Shadows lifted gently, highlights rolled off never clipping, all specular highlights removed, every surface reading matte and diffuse.
+
+Camera Capture: wide-latitude cinema capture, vintage 55mm 2x anamorphic character at a wide aperture — oval bokeh, soft frame-edge falloff — light diffusion bloom, smooth backward dolly retreating at walking pace with natural handheld operator breath, color-negative film rendition with fine 35mm grain, neutral dark grade holding the warm high-key island deep in frame, 24fps 180° shutter, 4 seconds.
+```
+
+**Nota:** questa Clip 2 resta ancora nel soundstage (non nell'atelier) — il suo end frame diventerà lo start frame della Clip 3, che proseguirà la camminata. Da non confondere con i vecchi "Shot C1/C2" sotto, superati da questa nuova scomposizione più granulare in Clip 1/2/3.
+
+---
+
 ## Shot A — Falso spot (M2 Studio, 5s → tenere ~2.5s)
 
 Il Talent recita: *"L'artigianalità non si può replicare con un computer."* Deve sembrare uno spot vero e finito.
