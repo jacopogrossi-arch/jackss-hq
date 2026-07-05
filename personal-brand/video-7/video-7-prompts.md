@@ -18,6 +18,9 @@
 > **Reference da allegare (2):** ① la v1 (`magnific_a-streetwear-product-stil_Eq8D5PRuuO.png`) ② lo screenshot LUMON (`Cattura.PNG`)
 >
 > **v3 generata 05/07** (`magnific_streetwear-product-still-_mCpWbRUhJQ.png`) — ✅ approvata come design. **v4 (sotto):** unico ritocco, via i polsini a costine — maniche ampie e dritte fino in fondo.
+>
+> ### ✅ v4 DEFINITIVA — 05/07/2026
+> **`magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`** (Downloads) è la **garment reference ufficiale** del Video #7: da allegare in ogni shot celebrity (GATE 0 Drake, Rihanna, Travis Scott). Capo bloccato: boxy tee nera washed + maniche long-sleeve cucite sotto, ampie senza polsino, grafiche a spine/gotiche in bianco sbiadito fino all'orlo, wordmark JAGO crackizzato con variazione metallica.
 
 ---
 

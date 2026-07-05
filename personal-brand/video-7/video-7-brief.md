@@ -89,7 +89,7 @@ Lingua: **inglese**. Regole Virality Predictor: apertura diretta su Drake, nessu
 
 ## 11. Wardrobe & palette
 
-- **Capo hero (UNO):** black oversized streetwear long-sleeve tee, large **JAGO** chest graphic — faded collegiate/grunge lettering in cream white. Stile LUMON ma identità nostra. **Stesso identico capo su tutte e tre le celebrity.**
+- **Capo hero (UNO) — bloccato 05/07, reference: `magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`:** boxy oversized washed black tee con maniche long-sleeve cucite sotto (double-layer), ampie e senza polsino; wordmark **JAGO** ad arco sul petto in collegiate crackizzato bianco-crema con variazione tonale metallica; maniche con grafica all-over a spine/ornamenti gotici in bianco sbiadito fino all'orlo aperto. **Stesso identico capo su tutte e tre le celebrity.**
 - **Palette campagna (4):** nero (capo) + crimson (plate) + bianco-crema (lettering) + grigio cemento (backstage). Niente altro nel frame.
 - **Rottura estetica motivata (deciso 05/07):** niente dark-luxury classico Jago — stonerebbe addosso a rapper internazionali. Resta solo la grana 35mm.
 
@@ -101,7 +101,7 @@ Lingua: **inglese**. Regole Virality Predictor: apertura diretta su Drake, nessu
 
 ## 13. Pillars di consistenza (BLOCCATI — si ripetono identici in ogni prompt)
 
-1. **Capo hero:** black oversized streetwear long-sleeve, large faded cream-white JAGO collegiate/grunge chest graphic — identico in ogni shot
+1. **Capo hero:** boxy oversized washed black tee layered over sewn-in wide long sleeves (no cuffs, open hems), large cracked cream-white arched JAGO collegiate chest graphic with metallic tonal variation, faded white thorn/gothic all-over sleeve prints — identico in ogni shot, sempre con la garment reference allegata
 2. **Mondo:** "leaked campaign" — crimson seamless studio plates + gritty backstage candids (venue corridors, underground parking, stage backstage)
 3. **Luce:** direct hard on-camera flash con ombre nette (candid) / flat clean product light (plate)
 4. **Palette:** black + deep crimson + cream white + raw concrete grey — nient'altro
@@ -115,8 +115,8 @@ Lingua: **inglese**. Regole Virality Predictor: apertura diretta su Drake, nessu
 | Shot / Asset | Tool | Skill | Stato |
 |---|---|---|---|
 | GATE 0 — test candid Drake | Nano Banana Pro / GPT-2 | `/banana-pro-director` | ⬜ |
-| Grafica maglia JAGO (lettering) | Banana Pro (+ eventuale rifinitura Canva) | `/banana-pro-director` | ⬜ |
-| Shot 1 — hero product still | Banana Pro | `/banana-pro-director` | ⬜ |
+| Grafica maglia JAGO (lettering) | Banana Pro (+ eventuale rifinitura Canva) | `/banana-pro-director` | ✅ 05/07 (v4 in `video-7-prompts.md`) |
+| Shot 1 — hero product still | Banana Pro | `/banana-pro-director` | ✅ 05/07 — `magnific_keep-the-layered-garment-_Bm0AFaFoQR.png` (garment reference ufficiale) |
 | Shot 2 — Drake candid corridoio | Banana Pro | `/banana-pro-director` | ⬜ |
 | Shot 3 — Rihanna candid parcheggio | Banana Pro | `/banana-pro-director` | ⬜ |
 | Shot 4 — dettaglio grafica petto | Banana Pro | `/banana-pro-director` | ⬜ |
