@@ -99,6 +99,49 @@ Camera Capture: wide-latitude cinema capture, vintage 55mm 2x anamorphic charact
 
 ---
 
+## Clip 3 — Transizione soundstage→atelier, seconda parte dell'hook (M1 Narrative, 5s)
+
+Parte dall'end frame della Clip 2 (Jago a piena falcata nel soundstage). L'ambiente si trasforma in atelier mentre Jago continua a camminare senza interrompere il passo, dice la seconda parte dell'hook in inglese e chiude piantandosi dietro al worktable. Sostituisce i vecchi "Shot C1/C2" separati — qui la transizione avviene dentro un'unica generazione.
+
+Battuta in inglese: *"You're already two years behind."*
+
+Reference generate:
+- **Start frame:** end frame della Clip 2 (soundstage, piena falcata)
+- **End frame:** Jago piantato al worktable in atelier, mani sul bordo del tavolo — salvato come `jago-clip3-endframe.png`
+  - Nota continuità: qui Jago indossa una maglietta nera a maniche corte invece della manica lunga di Clip 1/2 — accettato così (05/07)
+
+Reference da allegare in Seedance (in quest'ordine):
+1. Character sheet Jago
+2. Start frame (end frame Clip 2, soundstage)
+3. End frame (worktable in atelier)
+
+**Seedance prompt — 5s**
+```
+Scene & Mood: A man continues his advance out of a dark soundstage, the world melting from cold industrial machinery into a warm wood-paneled atelier around his unbroken stride, closing the distance to a worktable and planting behind it as his line lands.
+
+Frame Map: Opens anchored to @image2 — @image1 centered, full body, mid-stride, soundstage visible behind him. Closes anchored to @image3 — @image1 waist-up, centered behind the worktable, hands resting on its edge, the atelier's dress form and window light behind him.
+
+Subject Lock — @image1: Identical to reference throughout. Opens mid-stride exactly as in @image2, walking at a measured, purposeful pace straight toward the retreating camera. Speaks the line "You're already two years behind." partway through the walk, lips and jaw shaping the words in a level, unhurried cadence. As he nears the worktable he slows, both hands coming to rest lightly on its edge exactly as in @image3, shoulders squaring, torso leaning slightly forward. Expression stoic throughout — jaw set, gaze locked into the lens without breaking, mouth settling flat as the line lands and he plants.
+
+Cross-Frame Rules: @image1 holds center throughout, no lateral drift — only forward advance toward camera and the final settling behind the table. Gaze never leaves the lens.
+
+Movement: 0–2s @image1 continues walking straight at the retreating camera through the tail end of the soundstage, speaking the line "You're already two years behind." starting around 1s. 2–3.5s the environment transforms around his unbroken stride: the concrete floor grades into old dark wood underfoot, the soundstage rig and monitor dissolve into the mannequin and clothes rack in shadow, the cold rig glow warms into the golden amber window band washing across him mid-step. 3.5–4.5s he continues walking through the atelier, dust motes stirring in the window light, reaching the worktable. At 4.5s he plants behind it, hands coming to rest on the edge, shoulders squaring; by 5s the line has landed, mouth settling flat, holding still. Micro-motion: pendant swaying with the stride then settling, fabric shift at the shoulders, natural breath. The camera retreat eases to a stop as he plants.
+
+Last Frame: Matching @image3 — @image1 centered behind the worktable, waist-up, both hands resting lightly on its edge, gaze locked into the lens, expression stoic and unmoved, the dress form soft-focus in the background, warm amber window light crossing the room. No on-screen text, no captions, no rendered text.
+
+World Plate: Anchored to @image2 at the open transitioning to @image3 at the close — a dark soundstage giving way to an empty luxury fashion atelier: dark wooden worktable scattered with sketches, photographs, a leather notebook, fabric swatches, a black dress form mannequin, a clothes rack of dark garments in shadow, a large window casting warm golden amber light in a diagonal band across the room, the rest in deep brown-black chiaroscuro.
+
+Sound Bed: Diegetic only — the line "You're already two years behind." spoken level and unhurried, footsteps shifting from concrete to old wood mid-stride, fabric rustle, low interior room tone, distant muffled ambience beyond the window, no music.
+
+Capture Realism: @image1 sits inside real depth in both worlds — light haze suspended between camera, the advancing figure, and each receding background, every plane rendered softer and lower-contrast the further back it sits. Skin reads true cinematic matte — zero shine on forehead, nose bridge, cheekbones, temples, real peach fuzz, warmth preserved, never plastic. Shadows lifted gently, highlights rolled off never clipping on the amber window band, all specular highlights removed, every surface matte and diffuse.
+
+Camera Capture: wide-latitude cinema capture, vintage 55mm 2x anamorphic character at a wide aperture — oval bokeh, soft frame-edge falloff — light diffusion bloom, smooth backward dolly retreating at walking pace then easing to a stop as he plants, color-negative film rendition with fine 35mm grain, grade shifting from neutral dark into warm amber with deep brown-black shadow bias as the world transforms, 24fps 180° shutter, 5 seconds.
+```
+
+**Nota:** dopo questa clip l'hook è completo — dal worktable si prosegue con Build → Provocazione → Firma di `video-6-prompts.md`.
+
+---
+
 ## Shot A — Falso spot (M2 Studio, 5s → tenere ~2.5s)
 
 Il Talent recita: *"L'artigianalità non si può replicare con un computer."* Deve sembrare uno spot vero e finito.
