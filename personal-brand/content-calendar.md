@@ -19,7 +19,7 @@ Tracker dei contenuti: idee → in lavorazione → pubblicato
 | 3 | A Fashion Lookbook — Built with AI | YouTube + Instagram | 12/06/2026 | [IG](https://www.instagram.com/reel/DZe3zpFsiHm/) | Reel/Short ~48s, inglese. Replica campagna Stone Island Marina SS26 con Jago. CTA "LOOKBOOK" → lead magnet via Beehiiv (funnel attivo, link in descrizione YT). Outreach DM partito (`outreach.md` + routine daily) |
 | 4 | Your brand's first lookbook — built with AI | Instagram + YouTube | 18/06/2026 | [IG](https://www.instagram.com/reel/DZwe0B2MXjL/) | Reel ~48s, inglese. Brand fittizio VESPRO (Capri, draped tailoring, lino-seta nero). Demo servizio AI Lookbook €400. CTA "BRAND". Virality Predictor: 48/100 (▲ da 45/100 del #3) |
 | 5 | I built a professional lookbook in 47 minutes | Instagram | 01/07/2026 | [IG](https://www.instagram.com/reel/DaOkjz5Mm_Q/) | Reel ~35-40s, inglese. Brand fittizio SCIROCCO (resort siciliano, lino bianco, basalto lavico). Hook: timer 47min dal primo frame, reach broad. CTA "LOOKBOOK". File: `video-5/video-5.md` |
-| 6 | 2 Years Behind (L'influencer AI in ritardo di due anni) | Instagram | 05/07/2026 | — | Reel ~28s, inglese. Primo virale-broad: cold open col pugno (falso spot → reveal set → atelier), claim polarizzante sugli influencer AI. Nessuna CTA esplicita (scelta di script). Copertina "2 YEARS BEHIND". File: `video-6/video-6.md` |
+| 6 | 2 Years Behind (L'influencer AI in ritardo di due anni) | Instagram | 05/07/2026 | [IG](https://www.instagram.com/reel/DaavUUIM-mV/) | Reel ~28s, inglese. Primo virale-broad: cold open col pugno (falso spot → reveal set → atelier), claim polarizzante sugli influencer AI. Nessuna CTA esplicita (scelta di script). Copertina "2 YEARS BEHIND". File: `video-6/video-6.md` |
 
 ---
 
