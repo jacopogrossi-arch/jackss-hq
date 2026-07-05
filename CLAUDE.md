@@ -24,6 +24,7 @@ Posizionamento: "costruisco pubblicamente un brand di moda usando AI."
 
 File: `personal-brand/`
 - Strategia e operatività nella root: `strategy.md`, `content-calendar.md`, `analytics.md`, `outreach.md`, `lead-magnet-lookbook.md`
+- **Nuovo video**: quando Jacopo dice "Iniziamo il processo di creazione di un nuovo video" usare la skill `/jago-creative-director` (propone direzioni creative, poi Campaign Blueprint in `video-N/video-N-brief.md`)
 - Un video = una cartella: `video-1/`, `video-2/`, `video-3/` (script, prompt, moodboard, immagini)
 - `assets/` contiene solo gli asset condivisi del brand (logo, palette, moodboard Jago)
 
