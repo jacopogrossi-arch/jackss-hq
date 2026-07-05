@@ -50,6 +50,21 @@ Take the first attached photo — a mirror selfie in a marble bathroom — and k
 The garment integrates into the photo's real light — the warm bathroom lighting falling on the black cotton with natural soft highlights and shadow in the folds, the washed black fabric reading matte with visible weave, the print following every fold of the drape. The image keeps the exact look of a casual phone photo: same colors, same softness, same slight phone-camera noise, nothing else altered — a real photo, not a rendered image.
 ```
 
+---
+
+## Shot 3 — Rihanna, garment swap su foto reale
+
+**Tool:** Banana Pro (Nano Banana)
+**Reference da allegare (2):** ① la foto sorgente (`rihanna-C-vogue.jpg`, Downloads — street notturna, jersey blu oversized) ② la garment reference v4 (`magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`)
+**Aspect ratio (nella UI):** stessa della foto originale
+**Nota:** lettering leggibile (non è un mirror selfie).
+
+```
+Take the first attached photo — a nighttime street photo of a woman walking on a city sidewalk, photographed with direct flash — and keep everything exactly as it is: the woman, her face, her long dark hair with bangs, her red lipstick, her gold chain necklace, her small red handbag, her baggy light-blue denim jeans, her heels, the night street behind her with its storefronts and distant lights, the flash lighting, the framing. Replace only the oversized royal-blue sports jersey she is wearing with the layered garment shown in the second attached product still: a boxy oversized washed black tee with sewn-in long under-sleeves, worn oversized and roomy with the hem falling to her hips over the jeans. The long printed under-sleeves cover her arms down to wide open hems at the wrists — no cuffs, the faded white thorn and gothic graphics running down the outer sleeves exactly as in the product still. The large arched cream-white "JAGO" chest lettering with its cracked texture sits centered on her chest, clearly readable.
+
+The garment integrates into the photo's real light — the hard direct flash hitting the black cotton with bright natural highlights on the folds and a soft shadow falling behind her, the washed black fabric reading matte with visible weave, the print catching the flash and following every fold of the drape. The image keeps the exact look of a real nighttime paparazzi photo: same colors, same flash falloff, same slight photo noise, nothing else altered — a real photo, not a rendered image.
+```
+
 ### v3 — Layer LUMON (design approvato, base della v4)
 
 ```
