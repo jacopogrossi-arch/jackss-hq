@@ -28,19 +28,35 @@
 
 ## Template DM
 
-### Italiano (70% dei casi)
+> ⚠️ **Dal 05/07/2026 è attivo il formato v2** (DM con 2-3 immagini custom sul capo del brand, niente "AI" nel primo messaggio). Il perché e il processo completo sono in `playbook-dm.md`. Il vecchio formato v1 (link al video) **non si usa più per i primi contatti**.
 
-> Ciao! [Reazione personale e spontanea su estetica, palette, identità — "mi piace", "mi ha colpito", "adoro come". **Mai aprire con "ho visto [nome brand]"** e mai costruzioni analitiche/descrittive ("quella silhouette che...", "è il tipo di estetica che..."): deve sembrare una reazione genuina, non una recensione.]
-> Sono Jacopo, il creatore del progetto Jago: costruisco lookbook e identità visive per label emergenti usando AI. Ho appena finito questo: [link video].
-> State lavorando a qualcosa del genere per la prossima collezione?
+### v2 — Primo contatto con immagini custom · Italiano (70% dei casi)
 
-### English (30%)
+*Prerequisito: 2-3 shot campaign-quality generati sul loro capo (processo "dm-pack" in `playbook-dm.md`). Le immagini si allegano come foto nel DM, prima o insieme al testo.*
 
-> Hi! [Personal, spontaneous reaction to their aesthetic, palette, identity — "I love how", "what caught my eye", "really into how you". Never open with "I came across [brand name]" and avoid analytical/descriptive constructions ("that silhouette that...", "it's exactly the kind of aesthetic..."): it should feel like a genuine reaction, not a review.]
-> I'm Jacopo, creator of the Jago project: I build campaign-quality lookbooks and visual identities for emerging labels using AI. Just finished this: [video link].
-> Are you working on anything like this for your next drop?
+> Ciao! [Reazione personale e spontanea su estetica, palette, identità — "mi piace", "mi ha colpito", "adoro come". **Mai aprire con "ho visto [nome brand]"** e mai costruzioni analitiche/descrittive: reazione genuina, non recensione.]
+> Mi sono permesso di fare una prova: ho immaginato [capo specifico] come apertura di una campagna editoriale — te la allego, curioso di sapere se vi ci ritrovate.
+> Sono Jacopo, il creatore del progetto Jago: faccio lookbook editoriali per label emergenti — consegna in 72h, a una frazione del costo di uno shooting.
+> Se vi incuriosisce, ve ne preparo un altro paio sul prossimo drop, senza impegno.
 
-**Regole:** prima parli di loro. Prezzo solo se rispondono. Mai più di un follow-up (dopo 5-7 giorni). Niente "ho visto [brand]" in apertura — dritti all'osservazione specifica.
+### v2 — First contact with custom images · English (30%)
+
+> Hi! [Personal, spontaneous reaction — "I love how", "what caught my eye". Never open with "I came across [brand name]", no analytical constructions.]
+> I couldn't resist trying something: I imagined [specific garment] as the opening shot of an editorial campaign — attaching it here, curious whether it feels like you.
+> I'm Jacopo, creator of the Jago project: I build editorial lookbooks for emerging labels — 72h delivery, at a fraction of what a shoot costs.
+> If it sparks anything, I'll put together a couple more for your next drop, no strings.
+
+### v2 — Follow-up con immagini (per i DM v1 rimasti senza risposta)
+
+*Non è un sollecito: è la seconda consegna di valore. Solo per i 5 migliori brand in attesa (criteri in `playbook-dm.md`, sez. 4).*
+
+> Ciao! Ti avevo scritto qualche giorno fa — nel frattempo non ho resistito: ho provato a immaginare [capo specifico] in un contesto editoriale. Ecco com'è venuto.
+> Se ti va, te ne faccio vedere un altro paio.
+
+> Hi! I reached out a few days ago — in the meantime I couldn't resist: I tried imagining [specific garment] in an editorial context. Here's how it turned out.
+> Happy to show you a couple more if you're curious.
+
+**Regole:** prima parli di loro. Niente "AI" nel primo messaggio — il risultato prima del metodo (se chiedono come, verità totale). Le immagini si presentano come prova fatta di iniziativa, mai come lavoro commissionato. Prezzo solo se rispondono. Mai più di un follow-up (dopo 5-7 giorni). Niente "ho visto [brand]" in apertura. Nel tracker annotare il formato ricevuto (v1/v2).
 
 ---
 

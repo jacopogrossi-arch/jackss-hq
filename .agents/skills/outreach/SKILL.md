@@ -1,17 +1,20 @@
 ---
-version: 0.1.0
+version: 0.2.0
 name: outreach
 description: |
   Assistente outreach per il personal brand Jago. Fa il lavoro
   pesante PRIMA dell'invio: trova micro-brand di moda in target,
-  li qualifica contro i 6 criteri, scrive DM personalizzati pronti
-  da incollare (IT/EN), e aggiorna il tracker. NON invia DM su
+  li qualifica contro i 6 criteri, prepara il dm-pack v2 (DM +
+  immagini custom sul capo del brand), scrive DM pronti da
+  incollare (IT/EN), e aggiorna il tracker. NON invia DM su
   Instagram — l'invio resta manuale di Jacopo (umano dove conta,
   automatico dove è noioso). Usa quando: "trova brand", "cerca
-  candidati outreach", "scrivi un DM per [brand]", "prepara i DM",
-  "aggiorna il tracker outreach", "chi devo ricontattare",
-  "follow-up". Fonte di verità: personal-brand/outreach.md.
-argument-hint: "daily | trova [N] | scrivi DM [brand] [--en] | tracker | follow-up"
+  candidati outreach", "prepara il dm-pack per [brand]", "scrivi
+  un DM per [brand]", "prepara i DM", "aggiorna il tracker
+  outreach", "chi devo ricontattare", "follow-up". Fonti di
+  verità: personal-brand/outreach.md (template, criteri, tracker)
+  e personal-brand/playbook-dm.md (metodo v2).
+argument-hint: "dm-pack [brand] [--follow-up] [--en] | scrivi DM [brand] [--en] | trova [N] | daily | tracker | follow-up"
 allowed-tools: Read, Edit, WebSearch, WebFetch, mcp__09560f98-c810-4ffc-9f21-49359caca955__notion-create-pages, mcp__09560f98-c810-4ffc-9f21-49359caca955__notion-fetch, Bash
 ---
 
@@ -21,17 +24,24 @@ Prepara l'outreach di Jago fino al punto "incolla e invia". L'invio dei DM su
 Instagram lo fa Jacopo a mano, sempre. Questo skill non automatizza l'invio:
 toglie a Jacopo solo le ore di ricerca, qualifica e scrittura.
 
-## Regola zero — leggi sempre la fonte di verità
+## Regola zero — leggi sempre le fonti di verità
 
-Prima di qualsiasi azione, leggi `personal-brand/outreach.md`. Contiene listino,
-template DM aggiornati, i 6 criteri di selezione, la lista candidati e il tracker.
-**Non inventare prezzi, template o criteri**: usa quelli del file. Se il file e
-questo skill divergono, vince il file.
+Prima di qualsiasi azione, leggi `personal-brand/outreach.md` (listino, template
+DM v2, i 6 criteri di selezione, la lista candidati e il tracker) e — per
+qualsiasi cosa riguardi la scrittura o la preparazione di DM —
+`personal-brand/playbook-dm.md` (diagnosi v1, principi v2, processo dm-pack,
+priorità, soglie di misurazione). **Non inventare prezzi, template o criteri**:
+usa quelli dei file. Se i file e questo skill divergono, vincono i file.
 
-Tieni a mente i vincoli del progetto (`CLAUDE.md`):
-- Video #3 **è pubblicato** → i DM sono operativi. La proof da linkare è il Video #3.
+Tieni a mente i vincoli del progetto:
+- **Formato attivo: DM v2 con immagini custom** (dal 05/07/2026). Il v1 (link
+  al video) non si usa più per i primi contatti. Se serve un video di
+  riferimento, è il **Video #5 SCIROCCO** — mai il #6.
+- Niente "AI" nel primo messaggio: si vende il risultato (lookbook editoriale,
+  72h, frazione del costo di uno shooting). Se chiedono come, verità totale.
 - Target geografico: **70% brand italiani (DM in italiano) / 30% esteri (EN)**.
 - Cliente pilota realistico = **Tier A** (micro-brand, visual deboli), non Tier B.
+- **Qualità sul volume:** 3-5 dm-pack a settimana battono 14 DM template al giorno.
 
 ## Doppia destinazione: repo + Notion
 
@@ -52,7 +62,49 @@ Nuovi brand entrano sempre con `Stato DM = Da contattare`.
 
 ---
 
+## Comando: `dm-pack [brand] [--follow-up] [--en]` — il formato principale (v2)
+
+Prepara tutto il necessario per un DM v2: analisi del brand, prompt per le
+immagini custom, testo del DM. È il giro da 30-60 minuti descritto in
+`playbook-dm.md` sezione 3 — questo comando fa la parte noiosa.
+
+1. **Contesto:** leggi la riga del brand in `outreach.md` (lista + tracker) e
+   fai una ricerca veloce sul feed IG (estetica, palette, drop recente o in
+   arrivo, gap visivo). Con `--follow-up`, verifica nel tracker che il brand
+   abbia ricevuto un DM v1 senza risposta e nessun follow-up (regola: max 1).
+2. **Scelta del capo:** proponi a Jacopo 1-2 capi candidati dal feed (i più
+   fotogenici e riconoscibili, idealmente dal drop in corso). Jacopo sceglie e
+   salva 1-2 foto pulite del capo — servono come reference.
+3. **Prompt immagini:** invoca la skill `banana-pro-director` per generare i
+   prompt (mai a mano — regola di progetto). Workflow lookbook: Nano Banana Pro
+   con doppia reference (character sheet Jago + silhouette del capo) per shot
+   on-model, oppure still-life editoriale se il capo rende meglio da solo.
+   **L'estetica è quella del brand, non quella di Jago.** Validare il primo
+   shot con Jacopo prima di propagare agli altri 2.
+4. **Testo DM:** usa il template v2 corretto da `outreach.md` (primo contatto o
+   follow-up; IT default, `--en` per l'inglese). Osservazione specifica **vera
+   e verificabile** + riferimento al capo delle immagini. Output: DM in blocco
+   copiabile + 1 riga sul perché dell'osservazione.
+5. **Promemoria a Jacopo:** allegare le immagini come **foto nel DM** (non
+   link). Dopo l'invio confermato: tracker in `outreach.md` (annotando
+   **formato v2**) + database Notion (Stato DM → Contattato, data, follow-up).
+
+**Priorità dei destinatari** (da `playbook-dm.md` sez. 4): 1) i 5 migliori
+follow-up in scadenza, 2) play partner con risultato finito, 3) nuovi brand 6/6.
+Non spendere un dm-pack su candidati mediocri.
+
+**Misurazione** (soglie in `playbook-dm.md` sez. 5): obiettivo 3-5 risposte per
+riattivare il volume; dopo 10 dm-pack a zero risposte, stop e sistemare prima
+il profilo IG.
+
+---
+
 ## Comando: `daily` — la routine quotidiana (5 brand/giorno)
+
+> ⏸️ **IN PAUSA dal 02/07/2026** (decisione briefing): il collo di bottiglia è
+> la conversione del messaggio, non il volume della lista. Si riattiva quando
+> il formato v2 ha prodotto 3-5 risposte (soglie in `playbook-dm.md` sez. 5).
+> Se Jacopo chiede di lanciarla, ricordaglielo prima di procedere.
 
 Un solo comando che fa l'intero giro del giorno. Pensato per girare anche
 automaticamente (trigger schedulato) o lanciato a mano da Jacopo.
