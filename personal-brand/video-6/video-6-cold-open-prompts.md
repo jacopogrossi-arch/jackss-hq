@@ -108,7 +108,8 @@ Battuta in inglese: *"You're already two years behind."*
 Reference generate:
 - **Start frame:** end frame della Clip 2 (soundstage, piena falcata)
 - **End frame:** Jago piantato al worktable in atelier, mani sul bordo del tavolo — salvato come `jago-clip3-endframe.png`
-  - Nota continuità: qui Jago indossa una maglietta nera a maniche corte invece della manica lunga di Clip 1/2 — accettato così (05/07)
+  - Prima versione scartata (05/07): maglietta a maniche corte, incoerente con Clip 1/2
+  - Rigenerata (05/07) con Nano Banana Pro bloccando esplicitamente la manica lunga — https://www.magnific.com/app/creation/VdAymcpMMU
 
 Reference da allegare in Seedance (in quest'ordine):
 1. Character sheet Jago
