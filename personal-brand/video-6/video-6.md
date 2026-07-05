@@ -93,8 +93,8 @@ La Firma chiude il cerchio sull'hook (i "due anni" tornano) — effetto a tenagl
 | End frame Clip 3 (Jago al worktable, atelier) | ✅ generato 05/07 con Nano Banana Pro (manica lunga, verticale nativo) |
 | Prompt Clip 3 Seedance (transizione soundstage→atelier, hook parte 2 EN) | ✅ generato 05/07 — da generare in Magnific |
 | Prompt Build/Provocazione (atelier, EN) | ✅ in `video-6-prompts.md` |
-| Environment plate Firma (soundstage backstage) | ✅ generata 05/07 — `soundstage-backstage-plate.png` |
-| Prompt Firma (rigirata nel soundstage backstage, EN) | ✅ riscritto 05/07 in `video-6-prompts.md` — sostituisce la versione atelier |
+| Esperimento Firma nel soundstage backstage | ❌ scartato 05/07 — 3 tentativi immagine con problemi di integrazione/prospettiva mai risolti, vedi nota in `video-6-prompts.md` |
+| Prompt Firma (torna nell'atelier, riusa end frame Clip 3, EN) | ✅ versione definitiva 05/07 in `video-6-prompts.md` |
 | Clip Shot A+B / Clip 1 (Seedance) | 🟡 generata, vedi nota sopra |
 | Clip 2, Clip 3, Build, Provocazione, Firma (Seedance) | ⬜ da generare in Magnific |
 | Caption a schermo | ⬜ da impaginare in CapCut |
