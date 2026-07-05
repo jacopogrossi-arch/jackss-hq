@@ -110,17 +110,19 @@ Lingua: **inglese**. Regole Virality Predictor: apertura diretta su Drake, nessu
 
 ## 14. Piano di produzione & handoff
 
-⚠️ **GATE 0 — test di fattibilità likeness (PRIMA di tutto):** generare UNA candid di Drake con la maglia via `/banana-pro-director`. Se Nano Banana Pro / GPT-2 bloccano o degradano il volto → stop e decisione piano B con Jacopo (sosia dichiarato / archetipi). Nessun altro asset si genera prima di questo test.
+✅ **GATE 0 SUPERATO (05/07/2026):** Banana Pro accetta e regge i volti celebrity. Test riuscito con garment swap sul mirror selfie di Drake — volto intatto, capo integrato nella luce reale, lettering specchiato coerente (`magnific_take-the-first-attached-p_gJKu2pOSXO.png`).
+
+**Tecnica di produzione aggiornata (decisa col GATE 0):** gli shot celebrity NON si generano da zero — si fa **garment swap su foto reali** (foto IG/candid della celebrity + garment reference v4 come seconda reference). Molto più credibile: luce, posa e contesto sono veri. Per ogni celebrity serve quindi una foto sorgente scelta da Jacopo. Lettering specchiato nei mirror selfie, leggibile nelle foto normali.
 
 | Shot / Asset | Tool | Skill | Stato |
 |---|---|---|---|
-| GATE 0 — test candid Drake | Nano Banana Pro / GPT-2 | `/banana-pro-director` | ⬜ |
+| GATE 0 — test candid Drake | Nano Banana Pro / GPT-2 | `/banana-pro-director` | ✅ 05/07 — superato |
 | Grafica maglia JAGO (lettering) | Banana Pro (+ eventuale rifinitura Canva) | `/banana-pro-director` | ✅ 05/07 (v4 in `video-7-prompts.md`) |
 | Shot 1 — hero product still | Banana Pro | `/banana-pro-director` | ✅ 05/07 — `magnific_keep-the-layered-garment-_Bm0AFaFoQR.png` (garment reference ufficiale) |
-| Shot 2 — Drake candid corridoio | Banana Pro | `/banana-pro-director` | ⬜ |
-| Shot 3 — Rihanna candid parcheggio | Banana Pro | `/banana-pro-director` | ⬜ |
+| Shot 2 — Drake (garment swap su mirror selfie) | Banana Pro | `/banana-pro-director` | ✅ 05/07 — `magnific_take-the-first-attached-p_gJKu2pOSXO.png` |
+| Shot 3 — Rihanna (garment swap su foto reale, sorgente da scegliere) | Banana Pro | `/banana-pro-director` | ⬜ |
 | Shot 4 — dettaglio grafica petto | Banana Pro | `/banana-pro-director` | ⬜ |
-| Shot 5 — Travis plate crimson | Banana Pro | `/banana-pro-director` | ⬜ |
+| Shot 5 — Travis Scott (garment swap su foto reale, sorgente da scegliere) | Banana Pro | `/banana-pro-director` | ⬜ |
 | Shot 6 — poster finale JAGO | Banana Pro | `/banana-pro-director` | ⬜ |
 | Micro-motion su 1-2 shot chiave (M5, living still) | Seedance (Magnific) | `/cinema-worldbuilder-pro` | ⬜ |
 | Voiceover Jago EN | Magnific TTS | — | ⬜ |
