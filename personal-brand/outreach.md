@@ -20,7 +20,8 @@
 
 ## Chi vende
 
-- DM dal **profilo Instagram Jago**, ma firmato: *"Sono Jacopo, il creatore del progetto Jago."*
+- DM dal **profilo Instagram personale di Jacopo** (cambiato 05/07/2026: DM partiti per errore dal profilo personale hanno ricevuto risposte, quelli da @jagoworks vengono ignorati — il profilo personale supera il filtro spam/bot). Presentazione: *"Sono Jacopo, il creatore del progetto Jago"* — Jago è il portfolio da andare a vedere, non il mittente.
+- Se rispondono "mandami tutto via mail": chiedere l'indirizzo e mandare immagini + 3 righe di proposta — è una porta aperta, non un rifiuto.
 - Call, preventivi e delivery: Jacopo in prima persona.
 - Target geografico: **mix 70% brand italiani (DM in italiano) / 30% esteri (DM in inglese)**.
 

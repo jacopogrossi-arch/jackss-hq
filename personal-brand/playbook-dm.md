@@ -25,6 +25,18 @@ Aggiungere 5 brand al giorno a una lista da 105 mentre il messaggio converte a z
 
 **La sintesi in una riga: nessuno dei 43 ha mai visto cosa sai fare *per lui*.**
 
+### Scoperta 05/07 — il mittente conta più del messaggio
+Alcuni DM partiti **per sbaglio dal profilo personale di Jacopo** invece che da
+@jagoworks hanno ricevuto risposte (anche solo un grazie, o "mandami tutto via
+mail") — mentre gli stessi messaggi da Jago venivano ignorati. Il segnale è
+chiaro: un profilo personale vero, con una faccia e una vita dietro, supera il
+filtro "spam/bot" che un account brand sconosciuto da 9 follower fa scattare
+a prescindere dal contenuto. **Regola nuova: i DM partono dal profilo personale
+di Jacopo.** Jago resta il portfolio — lo si nomina nel messaggio ("il progetto
+Jago") e chi è curioso se lo va a vedere, ma il primo contatto è da persona a
+persona. E "mandami tutto via mail" è di per sé una porta: quando arriva,
+rispondere chiedendo l'indirizzo e mandare le immagini + 3 righe di proposta.
+
 ---
 
 ## 2. I principi del v2
@@ -80,7 +92,9 @@ Il v2 è un esperimento con soglie decise **prima**:
 - Niente costruzioni analitiche da recensione ("quella silhouette che...") — reazione genuina.
 - Prima parli di loro. Prezzo solo se rispondono.
 - Max **un** follow-up (5-7 giorni), poi il brand si chiude.
-- DM dal profilo Jago, firmato "Sono Jacopo, il creatore del progetto Jago".
+- DM **dal profilo personale di Jacopo** (dato 05/07: da Jago vengono ignorati,
+  dal profilo personale rispondono). Ci si presenta come "Jacopo, il creatore
+  del progetto Jago" — Jago è il portfolio, non il mittente.
 - Mix 70% IT / 30% EN.
 - L'invio è **sempre manuale** — nessuna automazione su Instagram.
 - Nei DM il video di riferimento, se serve, è il **Video #5 SCIROCCO** — mai il #6 (virale-broad, non demo del servizio). Ma nel v2 il video è opzionale: le immagini sono la proof.

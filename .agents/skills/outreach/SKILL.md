@@ -39,6 +39,9 @@ Tieni a mente i vincoli del progetto:
   riferimento, è il **Video #5 SCIROCCO** — mai il #6.
 - Niente "AI" nel primo messaggio: si vende il risultato (lookbook editoriale,
   72h, frazione del costo di uno shooting). Se chiedono come, verità totale.
+- **Mittente: il profilo Instagram personale di Jacopo**, non @jagoworks
+  (dato 05/07: da Jago vengono ignorati, dal profilo personale rispondono).
+  Jago si nomina come portfolio nel testo.
 - Target geografico: **70% brand italiani (DM in italiano) / 30% esteri (EN)**.
 - Cliente pilota realistico = **Tier A** (micro-brand, visual deboli), non Tier B.
 - **Qualità sul volume:** 3-5 dm-pack a settimana battono 14 DM template al giorno.
