@@ -86,13 +86,17 @@ La Firma chiude il cerchio sull'hook (i "due anni" tornano) — effetto a tenagl
 | Asset | Stato |
 |-------|-------|
 | Reference "Talent" (banana-pro-director) | ✅ generata 03/07 con Magnific GPT-2 — `talent-reference.png` |
-| End frame Shot A+B (Talent che cade, Banana Pro) | ✅ generato 05/07 |
-| Prompt Seedance Shot A+B fusi (keyframe start+end) | ✅ generato 05/07 — sostituisce i prompt separati Shot A/Shot B, vedi `video-6-cold-open-prompts.md` |
-| Prompt Seedance Shot C (C1+C2, walk-through) | ✅ riscritti 03/07 — Jago parla in camera camminando, vedi `video-6-cold-open-prompts.md` |
-| Prompt Seedance Build/Provocazione/Firma | ✅ in `video-6-prompts.md` — Clip 1 "Hook" ELIMINATA 03/07 (hook spostato in C1+C2) |
-| Clip Shot A+B (Seedance) | 🟡 generata 05/07, migliorabile (ingresso Jago un po' da "guardia") — tenuta per ora, correzione pronta in `video-6-cold-open-prompts.md` per un futuro rigeneration |
-| Clip Shot C (Seedance) | ⬜ |
-| Clip Build/Provocazione/Firma (Seedance) | ⬜ da generare in Magnific |
+| End frame Clip 1 (Talent che cade, Banana Pro) | ✅ generato 05/07 |
+| Prompt + Clip 1 Seedance (Shot A+B fusi, keyframe start+end) | ✅ generata 05/07 — 🟡 migliorabile (ingresso Jago un po' da "guardia"), correzione pronta in `video-6-cold-open-prompts.md` per futuro rigeneration |
+| End frame Clip 2 (Jago a piena falcata, soundstage) | ✅ generato 05/07 con Nano Banana Pro |
+| Prompt + Clip 2 Seedance (turn + reveal soundstage, hook parte 1 EN) | ✅ generata 05/07 — buona, tenuta |
+| End frame Clip 3 (Jago al worktable, atelier) | ✅ generato 05/07 con Nano Banana Pro (manica lunga, verticale nativo) |
+| Prompt Clip 3 Seedance (transizione soundstage→atelier, hook parte 2 EN) | ✅ generato 05/07 — da generare in Magnific |
+| Prompt Build/Provocazione (atelier, EN) | ✅ in `video-6-prompts.md` |
+| Environment plate Firma (soundstage backstage) | ✅ generata 05/07 — `soundstage-backstage-plate.png` |
+| Prompt Firma (rigirata nel soundstage backstage, EN) | ✅ riscritto 05/07 in `video-6-prompts.md` — sostituisce la versione atelier |
+| Clip Shot A+B / Clip 1 (Seedance) | 🟡 generata, vedi nota sopra |
+| Clip 2, Clip 3, Build, Provocazione, Firma (Seedance) | ⬜ da generare in Magnific |
 | Caption a schermo | ⬜ da impaginare in CapCut |
 | Montaggio CapCut | ⬜ |
-| Caption Instagram + hashtag | ⬜ da scrivere (max 5 hashtag, vedi `feedback_ig_caption_rules`) |
+| Caption Instagram + hashtag | ⬜ da scrivere (max 5 hashtag, vedi `feedback_ig_caption_rules`) — nota: intero video ora in inglese, valutare hashtag di conseguenza |
