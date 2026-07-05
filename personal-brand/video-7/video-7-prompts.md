@@ -65,6 +65,21 @@ Take the first attached photo — a nighttime street photo of a woman walking on
 The garment integrates into the photo's real light — the hard direct flash hitting the black cotton with bright natural highlights on the folds and a soft shadow falling behind her, the washed black fabric reading matte with visible weave, the print catching the flash and following every fold of the drape. The image keeps the exact look of a real nighttime paparazzi photo: same colors, same flash falloff, same slight photo noise, nothing else altered — a real photo, not a rendered image.
 ```
 
+---
+
+## Shot 5 — Travis Scott, garment swap su foto reale
+
+**Tool:** Banana Pro (Nano Banana)
+**Reference da allegare (2):** ① la foto sorgente (`image 3.jpg`, Downloads — cucina industriale notturna, giacca racing) ② la garment reference v4 (`magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`)
+**Aspect ratio (nella UI):** stessa della foto originale
+**Nota:** scartata `image 2.jpg` (hoodie col cappuccio alzato: lo swap avrebbe dovuto inventare testa e capelli — rischio likeness troppo alto). Lettering leggibile, occlusione parziale del braccio accettata (aggiunge realismo).
+
+```
+Take the first attached photo — a flash-lit nighttime photo of a man sitting on a stainless steel counter in a commercial kitchen, sipping a smoothie through a straw, shot on grainy film — and keep everything exactly as it is: the man, his face, his braided hair, his earring, his downward gaze, his hand holding the cup at his chest, his other arm resting across his lap, his hand tattoo, his baggy black pants, his tan-and-white sneakers, the ice machine and steel sinks around him, the dark windows behind, the hard flash lighting, the framing. Replace only the black-and-white racing jacket he is wearing with the layered garment shown in the second attached product still: a boxy oversized washed black tee with sewn-in long under-sleeves, worn relaxed and roomy over his frame. The long printed under-sleeves cover his arms down to wide open hems at the wrists — no cuffs, the faded white thorn and gothic graphics running down the outer sleeves exactly as in the product still. The large arched cream-white "JAGO" chest lettering with its cracked texture sits centered on his chest, mostly readable, naturally interrupted where his raised arm and the cup cross in front of it, the print following the folds.
+
+The garment integrates into the photo's real light — the hard direct flash hitting the black cotton with bright highlights on the folds and deep soft shadows where his arms bend, the washed black fabric reading matte with visible weave. The image keeps the exact look of the original: same grainy film texture, same flash falloff, same colors, nothing else altered — a real photo, not a rendered image.
+```
+
 ### v3 — Layer LUMON (design approvato, base della v4)
 
 ```
