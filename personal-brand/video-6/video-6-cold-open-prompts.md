@@ -109,7 +109,8 @@ Reference generate:
 - **Start frame:** end frame della Clip 2 (soundstage, piena falcata)
 - **End frame:** Jago piantato al worktable in atelier, mani sul bordo del tavolo — salvato come `jago-clip3-endframe.png`
   - Prima versione scartata (05/07): maglietta a maniche corte, incoerente con Clip 1/2
-  - Rigenerata (05/07) con Nano Banana Pro bloccando esplicitamente la manica lunga — https://www.magnific.com/app/creation/VdAymcpMMU
+  - Seconda versione scartata (05/07): manica lunga corretta, ma composta in orizzontale e ruotata 90° per stiparla nel 9:16 (si vedeva storta) — https://www.magnific.com/app/creation/VdAymcpMMU
+  - **Versione finale** (05/07): inquadratura nativamente verticale specificata esplicitamente nel prompt, manica lunga confermata — https://www.magnific.com/app/creation/rlQ89acxtc
 
 Reference da allegare in Seedance (in quest'ordine):
 1. Character sheet Jago
