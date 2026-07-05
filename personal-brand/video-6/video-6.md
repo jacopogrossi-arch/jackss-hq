@@ -1,8 +1,8 @@
 # Video #6 — "L'influencer AI in ritardo di due anni"
 
-**Status: 🟡 tutti i prompt pronti 03/07/2026 (4 talking head + 4 cold open) — da generare le clip in Magnific**
+**Status: ✅ PUBBLICATO 05/07/2026**
 
-Durata: ~28s (rivista 03/07: hook recitato in movimento nel cold open) | Lingua: italiano | Formato: 9:16 vertical
+Durata: ~28s (rivista 03/07: hook recitato in movimento nel cold open) | Lingua: **inglese** (deciso 05/07 in produzione — battute generate col lip sync Seedance direttamente in EN) | Formato: 9:16 vertical
 
 ---
 
