@@ -86,12 +86,11 @@ La Firma chiude il cerchio sull'hook (i "due anni" tornano) — effetto a tenagl
 | Asset | Stato |
 |-------|-------|
 | Reference "Talent" (banana-pro-director) | ✅ generata 03/07 con Magnific GPT-2 — `talent-reference.png` |
-| Prompt Seedance Shot A (falso spot) | ✅ generato 03/07 — vedi `video-6-cold-open-prompts.md` |
-| Prompt Seedance Shot B (cazzotto, M3) | ✅ generato 03/07 — vedi `video-6-cold-open-prompts.md` |
+| End frame Shot A+B (Talent che cade, Banana Pro) | ✅ generato 05/07 |
+| Prompt Seedance Shot A+B fusi (keyframe start+end) | ✅ generato 05/07 — sostituisce i prompt separati Shot A/Shot B, vedi `video-6-cold-open-prompts.md` |
 | Prompt Seedance Shot C (C1+C2, walk-through) | ✅ riscritti 03/07 — Jago parla in camera camminando, vedi `video-6-cold-open-prompts.md` |
 | Prompt Seedance Build/Provocazione/Firma | ✅ in `video-6-prompts.md` — Clip 1 "Hook" ELIMINATA 03/07 (hook spostato in C1+C2) |
-| Clip Shot A (Seedance) | ⬜ |
-| Clip Shot B (Seedance) | ⬜ |
+| Clip Shot A+B (Seedance) | 🟡 generata 05/07, migliorabile (ingresso Jago un po' da "guardia") — tenuta per ora, correzione pronta in `video-6-cold-open-prompts.md` per un futuro rigeneration |
 | Clip Shot C (Seedance) | ⬜ |
 | Clip Build/Provocazione/Firma (Seedance) | ⬜ da generare in Magnific |
 | Caption a schermo | ⬜ da impaginare in CapCut |

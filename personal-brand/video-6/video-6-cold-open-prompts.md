@@ -14,6 +14,50 @@ Reference:
 
 ---
 
+## Revisione 05/07/2026 — Shot A+B fusi in un'unica generazione (keyframe start+end)
+
+Invece di generare Shot A e Shot B come due clip separate da tagliare in CapCut, si è passati a **una sola generazione Seedance da 5s** guidata da uno start frame e un end frame (immagini Banana Pro/GPT-2 già generate), che copre l'intero arco: Talent che recita da solo → Jago entra ed atterra il pugno.
+
+- **Start frame:** il Talent da solo, chest-up, camicia bianca, sfondo ivory sfocato (in procinto di parlare) — `magnific_vertical-cinematic-still-_Pil0rPv42C.png`
+- **End frame:** il pugno atterrato — braccio di Jago completamente esteso, Talent che cede all'indietro — vedi prompt end frame Banana Pro sopra, immagine generata `magnific_a-hyperdetailed-cinematic_43gFuvU9Aa.png`
+- **Battuta del Talent tradotta in inglese** per il lip sync generato direttamente da Seedance (non più doppiata in post): *"Craftsmanship can't be replicated by a computer."* — nota: il resto del video resta in italiano, da valutare in montaggio se sottotitolare/doppiare questa singola battuta
+- Riferimenti da allegare in ordine: 1) character sheet Jago, 2) reference Talent, 3) start frame, 4) end frame
+
+**Stato generazione (05/07/2026):**
+- Primo tentativo: labiale del Talent buono, ma ingresso di Jago "AI slop" — appare piccolo/sfocato sullo sfondo poi salta vicino, corpo storto
+- Secondo tentativo (corretto): ingresso a piena scala fin dal primo frame, camminata ancorata al pavimento, niente distorsioni — **migliorato e accettabile**, ma resta una postura da "guardia da videogioco" (stance bassa, pugni alzati, bouncing) nei frame ~2,5-3,25s, prima del pugno vero e proprio — questo cade **dentro** la parte di footage che verrà usata (non nella coda congelata post-impatto, che si taglia comunque in CapCut)
+- **Deciso 05/07:** tenere il secondo tentativo per ora (risparmio crediti), ma la correzione sotto è pronta per quando si deciderà di rigenerare
+
+**Prompt Seedance approvato (versione attualmente generata, "secondo tentativo"):**
+
+```
+Scene & Mood: A polished commercial spokesperson delivers a confident claim into the lens inside a pristine advertisement — until a second figure walks in from the side and lands a blow, shattering the register into raw handheld violence.
+
+Frame Map: @image2 centered, chest-up, foreground, matching @image3. Left third empty at start. At 2s @image1 enters already at full scale and the same depth as @image2 — not distant, not soft-focus — closing to the two-figure composition of @image4 by the final second.
+
+Subject Lock — @image1: Identical to reference throughout, correct proportions, no distortion. Absent for the first two seconds. At 2s steps in from the left edge already full height and scale, walking with a measured, deliberate, grounded stride — not running — both feet planted flat on the visible floor each step, torso upright, no lean, no crooked posture. Closes in two unhurried strides, plants at 3.5s, right arm reaching full extension by the final second, fist connected at @image2's jaw, expression cold and stoic.
+
+Subject Lock — @image2: Identical to reference throughout. Clearly resolved pore texture across cheeks, forehead, and nose bridge at this close range. Speaks "Craftsmanship can't be replicated by a computer." into the lens through 2.5 seconds, confident presenter cadence, gaze on camera. At 2.5s gaze snaps screen-left as @image1 enters. By the final second head snaps backward from impact, jaw off-axis, eyes shut, mouth open, body breaking backward, one foot lifting clear of the floor, arms flailing.
+
+Cross-Frame Rules: @image2 holds center through 2.5s. @image1 advances left-to-right at walking pace on the same ground plane as @image2 throughout — no scale jump, no floating. @image2 stays screen-right of @image1 once both share frame. No swap.
+
+Movement: 0–2.5s @image2 speaks into the lens, one palm rising then settling, frame locked. At 2s @image1 steps in already full-scale, camera breaking into handheld shake as he walks two grounded, unhurried strides — no running, no sudden appearance from distance. At 3.5s he plants, fist launching with motion blur; @image2's eyes snap left. By 4.5–5s the fist connects, @image2's head snaps back, body breaks backward, foot lifts. Micro-motion: fabric shift, pendant swinging with the stride. Backdrop holds still.
+
+Last Frame: Matching @image4 — arm at full extension, fist at @image2's jaw, motion blur on the forearm, head snapped back, body breaking backward, foot lifting clear of the floor, arms flailing, bright backdrop calm behind. No on-screen text, no captions, no rendered text.
+
+World Plate: Anchored to @image3 and @image4 — the same bright high-key commercial set throughout, warm ivory backdrop softly out of focus, flat even lighting, no equipment, no crew.
+
+Sound Bed: Diegetic only — the line spoken then cut off by impact, two grounded footsteps, a sharp exhale on the swing, fabric whip, a muffled thud, no music.
+
+Capture Realism: Both figures sit inside real depth — thin atmosphere between camera, subjects, and the blurred backdrop. Skin reads true matte with clearly resolved pore texture — zero shine on forehead, nose bridge, cheekbones, temples, real peach fuzz, warmth preserved, never plastic, never smoothed flat. Shadows lifted gently, highlights rolled off never clipping, all specular highlights removed. Both bodies hold correct proportion and perspective throughout — no distortion, no warping.
+
+Camera Capture: wide-latitude cinema capture, vintage 40mm 2x anamorphic character at a wide aperture — oval bokeh, soft edge falloff — light diffusion bloom, locked and still for two seconds then breaking into handheld shake as @image1 enters, color-negative film rendition with fine grain pushed in the final second, high-key palette fracturing with the camera break, 24fps 180° shutter, 5 seconds.
+```
+
+**Correzione pronta per il prossimo rigeneration (NON ancora provata — da usare quando si decide di reinvestire crediti):** eliminare la fase di "guardia da videogioco" nell'ingresso. Sostituire nel blocco `Subject Lock — @image1` e in `Movement` la descrizione della camminata con un'azione a passo singolo e deciso, niente stance bassa/pugni alzati in anticipo, niente bouncing — es. "closes the distance in one direct, purposeful stride, arm already beginning its swing on the final step rather than pausing in a guarded stance" — l'obiettivo è che il corpo vada dritto dal camminare al colpo, senza una fase di preparazione statica che legge come combattimento coreografato.
+
+---
+
 ## Shot A — Falso spot (M2 Studio, 5s → tenere ~2.5s)
 
 Il Talent recita: *"L'artigianalità non si può replicare con un computer."* Deve sembrare uno spot vero e finito.
