@@ -80,6 +80,38 @@ Take the first attached photo — a flash-lit nighttime photo of a man sitting o
 The garment integrates into the photo's real light — the hard direct flash hitting the black cotton with bright highlights on the folds and deep soft shadows where his arms bend, the washed black fabric reading matte with visible weave. The image keeps the exact look of the original: same grainy film texture, same flash falloff, same colors, nothing else altered — a real photo, not a rendered image.
 ```
 
+---
+
+## Shot 2-bis — Drake ALTERNATIVA (scritta JAGO in piena vista)
+
+> Alternativa al mirror selfie: qui le mani sono giunte in basso e il petto è libero — lettering JAGO completamente leggibile.
+
+**Tool:** Banana Pro (Nano Banana)
+**Reference da allegare (2):** ① `drake-B-fullbody.jpg` (Downloads) ② la garment reference v4
+**Aspect ratio (nella UI):** stessa della foto originale
+
+```
+Take the first attached photo — a daylight paparazzi photo of a man standing outdoors in a bright blue beanie, yellow shorts and blue cowboy boots, hands clasped low in front of his stomach, another man standing behind him — and keep everything exactly as it is: the man, his face, his beard, his beanie, his earrings, his gold watch and bracelets, his hand position, his yellow shorts, his blue boots, his arm tattoos, the second man behind him, the background, the daylight, the framing. Replace only the white oversized graphic tee he is wearing with the layered garment shown in the second attached product still: a boxy oversized washed black tee with sewn-in long under-sleeves, worn with the same oversized drape and the hem falling the same length over his shorts. The long printed under-sleeves now cover his arms down to wide open hems at the wrists — no cuffs, the faded white thorn and gothic graphics running down the outer sleeves exactly as in the product still, his watch and bracelets now sitting over the sleeve hems at the wrist. The large arched cream-white "JAGO" chest lettering with its cracked texture sits centered high on his chest, fully visible and clearly readable above his clasped hands.
+
+The garment integrates into the photo's real light — the bright daylight falling on the black cotton with soft natural highlights and shadow in the folds, the washed black fabric reading matte with visible weave, the print following every fold of the drape. The image keeps the exact look of a real paparazzi photo: same colors, same softness, same slight photo grain, nothing else altered — a real photo, not a rendered image.
+```
+
+---
+
+## Shot 5-bis — Travis Scott ALTERNATIVA (scritta JAGO in piena vista)
+
+> Alternativa alla cucina: camminata NYC con braccia lungo i fianchi — petto libero al 100%.
+
+**Tool:** Banana Pro (Nano Banana)
+**Reference da allegare (2):** ① `travis-B-nyc.jpg` (Downloads) ② la garment reference v4
+**Aspect ratio (nella UI):** stessa della foto originale
+
+```
+Take the first attached photo — a daylight paparazzi photo of a man walking alone on a New York sidewalk, wearing a black cap, baggy light-blue jeans and white sneakers, arms relaxed at his sides — and keep everything exactly as it is: the man, his face, his braids under the cap, his earring, his neck and arm tattoos, his watch, his walking pose with both arms hanging naturally, his baggy jeans, his sneakers, the storefronts and sidewalk behind him, the soft daylight, the framing. Replace only the washed navy graphic tee he is wearing with the layered garment shown in the second attached product still: a boxy oversized washed black tee with sewn-in long under-sleeves, worn with the same relaxed oversized drape over his jeans. The long printed under-sleeves now cover his arms down to wide open hems at the wrists — no cuffs, the faded white thorn and gothic graphics running down the outer sleeves exactly as in the product still, his watch now sitting over the sleeve hem. The large arched cream-white "JAGO" chest lettering with its cracked texture sits centered on his chest, fully visible and clearly readable, nothing crossing in front of it.
+
+The garment integrates into the photo's real light — the soft overcast daylight falling on the black cotton with natural highlights and shadow in the folds, the washed black fabric reading matte with visible weave, the print following every fold of the drape as he walks. The image keeps the exact look of a real paparazzi photo: same colors, same softness, same slight photo grain, nothing else altered — a real photo, not a rendered image.
+```
+
 ### v3 — Layer LUMON (design approvato, base della v4)
 
 ```
