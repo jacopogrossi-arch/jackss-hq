@@ -6,7 +6,9 @@ Tracker dei contenuti: idee → in lavorazione → pubblicato
 
 ## In lavorazione
 
-*(vuoto — Video #7 da definire)*
+| # | Titolo | Formato | Stato |
+|---|--------|---------|-------|
+| 7 | IDIACO — La campagna celebrity che nessun budget può comprare | Reel 9:16 ~29s, inglese | Blueprint bloccato 05/07 (`video-7/video-7-brief.md`) — prossimo step: GATE 0 test likeness Drake via `/banana-pro-director` |
 
 ---
 
