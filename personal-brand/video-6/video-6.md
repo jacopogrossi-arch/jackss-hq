@@ -96,7 +96,8 @@ La Firma chiude il cerchio sull'hook (i "due anni" tornano) — effetto a tenagl
 | Esperimento Firma nel soundstage backstage | ❌ scartato 05/07 — 3 tentativi immagine con problemi di integrazione/prospettiva mai risolti, vedi nota in `video-6-prompts.md` |
 | Prompt Firma (torna nell'atelier, riusa end frame Clip 3, EN) | ✅ versione definitiva 05/07 in `video-6-prompts.md` |
 | Clip Shot A+B / Clip 1 (Seedance) | 🟡 generata, vedi nota sopra |
-| Clip 2, Clip 3, Build, Provocazione, Firma (Seedance) | ⬜ da generare in Magnific |
+| Clip Firma (Seedance) | ✅ generata 05/07 — atelier, worktable |
+| Clip 2, Clip 3, Build, Provocazione (Seedance) | ⬜ da generare in Magnific |
 | Caption a schermo | ⬜ da impaginare in CapCut |
 | Montaggio CapCut | ⬜ |
 | Caption Instagram + hashtag | ⬜ da scrivere (max 5 hashtag, vedi `feedback_ig_caption_rules`) — nota: intero video ora in inglese, valutare hashtag di conseguenza |
