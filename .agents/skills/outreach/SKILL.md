@@ -136,7 +136,7 @@ scrivere. In dubbio, procedi e lascia a lui la review in Notion (Stato DM).
 ```bash
 git add personal-brand/outreach.md
 git commit -m "Outreach daily: +N brand candidati (Tier A)"
-git push -u origin claude/personal-brand-outreach-agent-lb98l8
+git push
 ```
 
 Solo `git add` per filename (mai `-A`). Se il push fallisce per rete, riprova
@@ -171,12 +171,17 @@ fretta e la ricerca web non vede sempre il profilo IG aggiornato. Marca come
 
 ## Comando: `scrivi DM [brand] [--en]`
 
-Genera un DM pronto da incollare. Default italiano; `--en` per l'inglese.
+Genera il solo testo di un DM pronto da incollare. Default italiano; `--en`
+per l'inglese. **Per un primo contatto, il default è il dm-pack** (testo +
+immagini): se Jacopo chiede solo "scrivi DM" per un brand mai contattato,
+proponi il dm-pack e usa questo comando solo se conferma di volere il solo testo
+(es. risposte al lead magnet, play partner, conversazioni già aperte).
 
 1. Raccogli contesto sul brand: la riga in lista se c'è, + una ricerca veloce
    (estetica, palette, ultimo drop, gap visivo). Serve per la **frase vera**.
 2. Usa il **template DM** corretto da `outreach.md`:
-   - Brand non ancora contattato → "Template DM" (IT o EN).
+   - Brand non ancora contattato → template v2 (IT o EN) — con immagini.
+   - Follow-up di un DM v1 senza risposta → template "Follow-up con immagini".
    - Risposta al lead magnet, persona/creator → Template A (gated).
    - Risposta al lead magnet, brand/founder → Template B (PDF diretto, no gate).
 3. Riempi `[osservazione specifica]` con **una frase concreta e verificabile**
