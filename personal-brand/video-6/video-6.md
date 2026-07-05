@@ -98,6 +98,23 @@ La Firma chiude il cerchio sull'hook (i "due anni" tornano) — effetto a tenagl
 | Clip Shot A+B / Clip 1 (Seedance) | 🟡 generata, vedi nota sopra |
 | Clip Firma (Seedance) | ✅ generata 05/07 — atelier, worktable |
 | Clip 2, Clip 3, Build, Provocazione (Seedance) | ⬜ da generare in Magnific |
-| Caption a schermo | ⬜ da impaginare in CapCut |
-| Montaggio CapCut | ⬜ |
-| Caption Instagram + hashtag | ⬜ da scrivere (max 5 hashtag, vedi `feedback_ig_caption_rules`) — nota: intero video ora in inglese, valutare hashtag di conseguenza |
+| Caption a schermo | ✅ montate in CapCut |
+| Montaggio CapCut | ✅ completato 05/07 |
+| Copertina IG | ✅ 05/07 — `copertina-varianti/copertina-finale.png` (template magazine del #5, foto Magnific Jago+soundstage, titolo "2 Years Behind") — design Canva: https://www.canva.com/d/pKIL_lCyCo8Qo44 |
+| Caption Instagram + hashtag | ✅ scritta 05/07 (inglese, 5 hashtag) — vedi sotto |
+
+---
+
+## Caption Instagram (finale — 05/07/2026)
+
+The ad you saw at the start? Fake. The spokesperson? Never existed. Neither do I — and that's the point.
+
+Your brand doesn't have an AI influencer yet. You're already two years behind.
+
+While you're still weighing a casting call, the campaign could already be done. No studio. No crew. No reshoots.
+
+I'm Jago. 100% AI-generated.
+
+In two years you'll still be behind. This time you'll know why.
+
+#aiinfluencer #fashiontech #artificialintelligence #aifashion #digitalfashion
