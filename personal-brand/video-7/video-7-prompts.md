@@ -116,6 +116,42 @@ Take the first attached photo — a daylight paparazzi photo of a man walking al
 The garment integrates into the photo's real light — the soft overcast daylight falling on the black cotton with natural highlights and shadow in the folds, the washed black fabric reading matte with visible weave, the print following every fold of the drape as he walks. The image keeps the exact look of a real paparazzi photo: same colors, same softness, same slight photo grain, nothing else altered — a real photo, not a rendered image.
 ```
 
+## Shot 4 — Dettaglio grafica petto (candid flash, no volto)
+
+> ✅ **Generata 07/07** via MCP Magnific (Nano Banana Pro, 9:16) — `Downloads\Video Jago\Video 7 - JAGO Campaign\shot-4-dettaglio-petto.png`. Torso in corridoio di cemento, lettering crackizzato in primo piano, maniche a spine visibili.
+
+**Tool:** Banana Pro (Nano Banana)
+**Reference da allegare (1):** la garment reference v4 (`magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`)
+**Aspect ratio (nella UI):** 9:16
+
+```
+A flash-lit nighttime candid photograph framed tight on the torso of a figure standing in a raw concrete backstage corridor — the frame cropped from the chin down to the hips, no face visible. The figure wears the layered garment carrying identically from the attached product still: the boxy oversized washed black tee with its large arched cream-white "JAGO" chest lettering, the cracked distressed screen-print texture clearly readable at this close range, every fissure in the ink visible, the print following the soft folds of the heavy cotton across the chest. The sewn-in long under-sleeves emerge from beneath the short sleeves at both sides of the frame, their faded white thorn and gothic graphics starting down the outer arms, the arms hanging relaxed at the sides.
+
+Hard direct on-camera flash hits the torso straight on — bright hot highlights on the raised folds of the washed black cotton, deep soft shadows in the creases, a sharp dark shadow thrown onto the concrete wall close behind the figure. The corridor behind reads out of focus — raw grey concrete, a cable run along the wall, the cold falloff of the flash dying quickly into darkness at the frame edges. The washed black fabric reads matte with visible weave, real weight, real drape, the wash unevenness reading as real dye.
+
+Captured with a wide-latitude cinema look on a clean normal prime at a wide aperture, the flash exposure carrying that raw paparazzi register — slight vignette from the flash falloff, fine theatrical 35mm film grain across the entire frame including fabric, concrete, and shadow. Real photographic frame captured on a real camera — real cracked screen-print ink, real cotton, real concrete — no CGI, no rendered look, no digital cleanliness, no plastic surfaces, no AI smoothness, no glossy highlights.
+```
+
+---
+
+## Shot 6 — Poster finale campagna (crimson)
+
+> ✅ **Generata 07/07** via MCP Magnific (Nano Banana Pro, 9:16) — `Downloads\Video Jago\Video 7 - JAGO Campaign\shot-6-poster-finale.png`. Wordmark JAGO crackizzato su crimson + riga "WORLDWIDE — S/S 2026".
+
+**Tool:** Banana Pro (Nano Banana)
+**Reference da allegare (1):** la garment reference v4 (`magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`)
+**Aspect ratio (nella UI):** 9:16
+
+```
+A campaign poster graphic plate photographed as a real printed still — a deep crimson seamless studio backdrop filling the entire frame, rich dark cherry red, perfectly even, no seam line, no gradient, the paper texture of the seamless faintly visible under the light. Dominating the center of the frame, the huge arched "JAGO" wordmark carrying identically from the attached product still — the same collegiate letterforms, cream-white with heavy cracked distressed texture, faint metallic silver-white tonal variation inside the letters, edges eroded — rendered large across the full width of the frame like a printed poster masthead. Below the wordmark, in small clean cream-white capital letters, a single centered line reads "WORLDWIDE — S/S 2026", quiet and understated against the crimson field.
+
+Clean flat product-photography lighting, soft and perfectly even across the whole plate, no chiaroscuro, no rim light, no hotspot — the crimson reading rich and saturated edge to edge, the cream lettering holding its cracked texture crisply. The plate reads as a physical printed poster photographed head-on: the ink sits on the surface with real print texture, the cracks in the letterforms reading as real distressed screen-print, never a flat digital graphic.
+
+Fine theatrical 35mm film grain across the entire frame including the crimson field and the lettering, gentle filmic highlight roll-off, lifted blacks. Real photographic frame captured on a real camera of a real printed poster — no CGI, no rendered look, no digital flatness, no vector-clean edges, no AI smoothness.
+```
+
+---
+
 ### v3 — Layer LUMON (design approvato, base della v4)
 
 ```
