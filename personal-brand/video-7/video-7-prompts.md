@@ -85,6 +85,8 @@ The garment integrates into the photo's real light — the hard direct flash hit
 ## Shot 2-bis — Drake ALTERNATIVA (scritta JAGO in piena vista)
 
 > Alternativa al mirror selfie: qui le mani sono giunte in basso e il petto è libero — lettering JAGO completamente leggibile.
+>
+> ✅ **Generata 07/07** via MCP Magnific (Nano Banana Pro, 2:3) — salvata in `Downloads\Video Jago\Video 7 - JAGO Campaign\shot-2bis-drake-fullbody.png`. Volto intatto, lettering pieno, maniche a spine senza polsini, orologio e bracciali sopra l'orlo.
 
 **Tool:** Banana Pro (Nano Banana)
 **Reference da allegare (2):** ① `drake-B-fullbody.jpg` (Downloads) ② la garment reference v4
@@ -101,6 +103,8 @@ The garment integrates into the photo's real light — the bright daylight falli
 ## Shot 5-bis — Travis Scott ALTERNATIVA (scritta JAGO in piena vista)
 
 > Alternativa alla cucina: camminata NYC con braccia lungo i fianchi — petto libero al 100%.
+>
+> ✅ **Generata 07/07** via MCP Magnific (Nano Banana Pro, 3:4) — salvata in `Downloads\Video Jago\Video 7 - JAGO Campaign\shot-5bis-travis-nyc.png`. Volto e treccine intatti, lettering pieno con texture crepata, grafiche maniche fedeli alla v4.
 
 **Tool:** Banana Pro (Nano Banana)
 **Reference da allegare (2):** ① `travis-B-nyc.jpg` (Downloads) ② la garment reference v4

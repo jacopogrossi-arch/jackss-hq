@@ -123,7 +123,7 @@ Lingua: **inglese**. Regole Virality Predictor: apertura diretta su Drake, nessu
 | Shot 3 — Rihanna (garment swap su `rihanna-C-vogue.jpg`, street notturna col flash) | Banana Pro | `/banana-pro-director` | ✅ 05/07 — generata e approvata |
 | Shot 4 — dettaglio grafica petto | Banana Pro | `/banana-pro-director` | ⬜ |
 | Shot 5 — Travis Scott (garment swap su `image 3.jpg`, cucina industriale col flash) | Banana Pro | `/banana-pro-director` | ✅ 05/07 — generata e approvata (scritta parzialmente coperta) |
-| Shot 2-bis / 5-bis — Drake e Travis con scritta JAGO in piena vista (sorgenti: `drake-B-fullbody.jpg`, `travis-B-nyc.jpg`) | Banana Pro | `/banana-pro-director` | 🟡 prompt pronti in `video-7-prompts.md`, da generare |
+| Shot 2-bis / 5-bis — Drake e Travis con scritta JAGO in piena vista (sorgenti: `drake-B-fullbody.jpg`, `travis-B-nyc.jpg`) | Banana Pro | `/banana-pro-director` | ✅ 07/07 — generate via MCP, in `Downloads\Video Jago\Video 7 - JAGO Campaign\` (da approvare) |
 | Shot 6 — poster finale JAGO | Banana Pro | `/banana-pro-director` | ⬜ |
 | Micro-motion su 1-2 shot chiave (M5, living still) | Seedance (Magnific) | `/cinema-worldbuilder-pro` | ⬜ |
 | Voiceover Jago EN | Magnific TTS | — | ⬜ |
