@@ -156,7 +156,7 @@ Fine theatrical 35mm film grain across the entire frame including the crimson fi
 
 > Prompt generati via `/cinema-worldbuilder-pro` (M5 Atmospheric, living still). Drake resta still puro (un mirror selfie che si muove romperebbe l'illusione).
 >
-> ⚠️ **Seedance 2.0 ha BLOCCATO entrambe le clip** ("content doesn't meet guidelines" — likeness celebrity sul frame di partenza). ✅ **Generate 07/07 con Kling 2.5** (fallback, prompt condensati <2500 char, 1:1, 1080p, 5s, start frame = shot originale, no audio — sound bed in CapCut): `clip-A-rihanna-living-still.mp4` e `clip-B-travis-living-still.mp4` in `Downloads\Video Jago\Video 7 - JAGO Campaign\`. I prompt sotto sono le versioni Seedance integrali (per riferimento); le versioni Kling sono le stesse condensate in prosa unica.
+> ❌ **CAPITOLO CHIUSO 07/07 — il video va di still puri + punch-in CapCut.** Cronologia: Seedance blocca la likeness celebrity sul frame di partenza (verificato con prompt neutro su Seedance Mini: è l'immagine, non il testo); Kling 2.5 e Kling 3.0 generano clip inusabili (movimento rigido). I prompt sotto restano come riferimento se in futuro si riprova con un tool migliore.
 
 ### Clip A — Rihanna street (start frame: shot 3)
 
