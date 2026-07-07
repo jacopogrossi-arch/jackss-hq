@@ -152,6 +152,62 @@ Fine theatrical 35mm film grain across the entire frame including the crimson fi
 
 ---
 
+## Micro-motion Seedance — Clip A (Rihanna) e Clip B (Travis)
+
+> Prompt generati via `/cinema-worldbuilder-pro` (M5 Atmospheric, living still). Drake resta still puro (un mirror selfie che si muove romperebbe l'illusione).
+>
+> ⚠️ **Seedance 2.0 ha BLOCCATO entrambe le clip** ("content doesn't meet guidelines" — likeness celebrity sul frame di partenza). ✅ **Generate 07/07 con Kling 2.5** (fallback, prompt condensati <2500 char, 1:1, 1080p, 5s, start frame = shot originale, no audio — sound bed in CapCut): `clip-A-rihanna-living-still.mp4` e `clip-B-travis-living-still.mp4` in `Downloads\Video Jago\Video 7 - JAGO Campaign\`. I prompt sotto sono le versioni Seedance integrali (per riferimento); le versioni Kling sono le stesse condensate in prosa unica.
+
+### Clip A — Rihanna street (start frame: shot 3)
+
+```
+Scene & Mood: A real nighttime paparazzi photograph coming alive for a single stolen moment — the woman keeps walking toward the photographer's flash, unbothered, the street breathing around her.
+
+Frame Map: @image1 anchored center frame, full body, foreground, occupying most of the frame height. The night street with its storefronts and distant lights holds the background; the man in black stays in the left edge midground.
+
+Subject Lock — @image1: Face, hair, black JAGO layered tee, jeans, red handbag, gold chain, and silhouette identical throughout. Mid-stride walking pose carried forward naturally, gaze level and steady past the camera, expression calm and unbothered, red lips still. Feet keep contact with the sidewalk on natural walking steps.
+
+Cross-Frame Rules: The frame contains only the figures already present in the start frame. The man in black at the left edge holds his position and depth, drifting slightly with his own walk. Nobody crosses the center line or approaches the camera.
+
+Movement: She continues her walk toward camera at a slow natural pace across the full five seconds — half a step, weight rolling naturally, hips and shoulders in a relaxed sway. Micro-motion carries the life: her dark hair drifts with the walk, the oversized tee folds shift subtly on her torso, the gold chain catches the flash with a tiny sway, the red handbag swings gently at her side. Behind her, distant traffic lights flicker faintly and a passing car's headlights slide slowly through the far background. The camera flash falls off naturally, ambient street light holding the exposure between pulses.
+
+Last Frame: She lands half a step closer to camera, still centered, gaze steady past the lens, hair settling, the JAGO chest lettering fully readable, night street soft behind her. No on-screen text, no captions, no signage typography, no rendered text in the frame.
+
+World Plate: Anchored to @image1 — a city sidewalk at night, storefronts and scattered warm lights in the deep background, hard on-camera flash as the dominant light source, cool ambient night behind it.
+
+Sound Bed: Diegetic only — heels on pavement, fabric movement, distant traffic hum, one faint camera shutter click, no music, no dialogue.
+
+Capture Realism: She sits inside real depth — light night haze suspended between camera, her figure, and the deep street background, the storefronts rendered softer, desaturated, and lower-contrast than the foreground. Skin reads true cinematic matte — zero shine on forehead, nose bridge, cheekbones, temples, and chin, real fine even texture, warmth preserved and natural, never plastic, never AI-rendered. Low-contrast curve — shadows lifted gently holding texture, the flash highlight rolled off softly never clipping to white, nothing crushed to black. All specular highlights removed from skin and fabric, the washed black cotton reading matte with visible weave. Slightly desaturated grade with warmth preserved.
+
+Camera Capture: wide-latitude cinema capture, vintage 40mm 2x anamorphic character at a wide aperture — oval bokeh, soft frame-edge falloff — light diffusion bloom softening the flash falloff, handheld with natural paparazzo operator breath, color-negative night film rendition with fine 35mm grain, 24fps 180° shutter, 5 seconds.
+```
+
+### Clip B — Travis cucina (start frame: shot 5)
+
+```
+Scene & Mood: A grainy flash-lit film photo holding its breath — the man on the steel counter takes one slow sip through the straw, everything else in the commercial kitchen stays still.
+
+Frame Map: @image1 seated center-right on the stainless steel counter, midground, three-quarter body, the ice machine filling the left third and the steel sinks the right third. Dark windows hold the upper background.
+
+Subject Lock — @image1: Face, braided hair, earring, black JAGO layered tee, baggy black pants, sneakers, and silhouette identical throughout. Seated on the counter, shoulders relaxed and rounded forward, one hand holding the smoothie cup at his chest with the straw at his lips, the other arm resting across his lap. Gaze stays downward on the cup, expression calm and inward. Body weight settled on the counter, feet hanging.
+
+Cross-Frame Rules: He is the only figure in the frame. No one enters or passes through. His position, depth, and seat on the counter hold across the full runtime.
+
+Movement: He draws one slow sip through the straw across the first two seconds — cheeks hollowing almost imperceptibly, throat moving once on the swallow — then lowers the cup a few centimeters and holds, gaze still down. Micro-motion carries the rest: a slow visible breath lifting his shoulders, the folds of the washed black tee shifting subtly, the thorn-printed sleeve creasing at the bent elbow, the earring trembling faintly. Environmental motion stays minimal — a faint shimmer of the fluorescent reflection on the steel sink, nothing else moves in the frame.
+
+Last Frame: He holds the cup lowered at mid-chest, gaze down, shoulders settled on an exhale, the JAGO chest lettering readable between his arm and the cup, the kitchen steel still and cold around him. No on-screen text, no captions, no signage typography, no rendered text in the frame.
+
+World Plate: Anchored to @image1 — a commercial kitchen at night, stainless steel counters, ice machine and deep sinks, dark windows behind, hard on-camera flash frozen as the dominant light, grainy film texture.
+
+Sound Bed: Diegetic only — the faint pull of liquid through a straw, a slow breath, the low hum of the ice machine and refrigeration, no music, no dialogue.
+
+Capture Realism: He sits inside real depth — thin kitchen air suspended between camera, his figure, and the dark windows behind, the background rendered softer and lower-contrast than the foreground. Skin reads true cinematic matte — zero shine on forehead, nose bridge, cheekbones, temples, and chin, real fine even texture, warmth preserved and natural, never plastic, never AI-rendered. Low-contrast curve — shadows lifted gently holding texture, the flash highlights on the steel rolled off softly never clipping to white, nothing crushed to black. Specular highlights removed from skin and fabric, the washed black cotton matte with visible weave; the steel surfaces keep only muted, diffuse reflection. Slightly desaturated grade with warmth preserved, grainy film texture held across the entire frame.
+
+Camera Capture: wide-latitude cinema capture, vintage 55mm 2x anamorphic character at a wide aperture — oval bokeh, soft frame-edge falloff — light diffusion bloom softening highlights, locked-off with the faintest operator micro-drift, color-negative night film rendition pushed with heavy grain, 24fps 180° shutter, 5 seconds.
+```
+
+---
+
 ### v3 — Layer LUMON (design approvato, base della v4)
 
 ```

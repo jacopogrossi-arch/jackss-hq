@@ -125,7 +125,7 @@ Lingua: **inglese**. Regole Virality Predictor: apertura diretta su Drake, nessu
 | Shot 5 — Travis Scott (garment swap su `image 3.jpg`, cucina industriale col flash) | Banana Pro | `/banana-pro-director` | ✅ 05/07 — generata e approvata (scritta parzialmente coperta) |
 | Shot 2-bis / 5-bis — Drake e Travis con scritta JAGO in piena vista (sorgenti: `drake-B-fullbody.jpg`, `travis-B-nyc.jpg`) | Banana Pro | `/banana-pro-director` | ✅ 07/07 — generate via MCP, in `Downloads\Video Jago\Video 7 - JAGO Campaign\` (da approvare) |
 | Shot 6 — poster finale JAGO | Banana Pro | `/banana-pro-director` | ✅ 07/07 — generata via MCP, riga "WORLDWIDE — S/S 2026" (da approvare) |
-| Micro-motion su 1-2 shot chiave (M5, living still) | Seedance (Magnific) | `/cinema-worldbuilder-pro` | ⬜ |
+| Micro-motion su 1-2 shot chiave (M5, living still) | ~~Seedance~~ → **Kling 2.5** (Seedance blocca likeness celebrity) | `/cinema-worldbuilder-pro` | ✅ 07/07 — clip A Rihanna + clip B Travis (5s, 1:1, da approvare) |
 | Voiceover Jago EN | Magnific TTS | — | ⬜ |
 | Montaggio (punch-in, SFX flash, beat) | CapCut | — | ⬜ |
 | Caption IG + disclaimer + 5 hashtag | — | — | ⬜ |
