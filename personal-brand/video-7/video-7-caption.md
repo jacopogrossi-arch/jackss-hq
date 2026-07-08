@@ -5,9 +5,9 @@
 
 ---
 
-Drake has never seen my brand. Rihanna hasn't either. Travis doesn't know it exists.
+Drake has never seen my brand. Travis doesn't even know it exists.
 
-But in this campaign, they're all wearing it.
+But in this campaign, they're both wearing it.
 
 A celebrity campaign like this costs half a million dollars. Mine cost one afternoon — every single photo is AI.
 
