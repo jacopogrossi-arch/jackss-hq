@@ -46,7 +46,8 @@ Il video è un **montaggio di still a ritmo** con voiceover: le immagini le gene
 |---|------|-------|----------|
 | 1 | Maglia JAGO hero, fronte | Close-up prodotto a schermo pieno | Plate studio |
 | 2 | Drake, corridoio backstage | Full body, flash diretto | Candid |
-| 3 | Rihanna, parcheggio sotterraneo | Three-quarter, flash | Candid |
+| 3 | A$AP Rocky, street notturna | Three-quarter, flash | Candid |
+| 3-bis | Central Cee, uscita venue / marciapiede | Full body, flash | Candid |
 | 4 | Dettaglio grafica sul petto (su celebrity) | Close-up, no volto | Candid |
 | 5 | Travis Scott, ritratto su fondo crimson | Medium, centrato | Plate studio |
 | 6 | Poster finale campagna (logo JAGO grande) | Graphic plate | Plate studio |
@@ -69,7 +70,7 @@ Lingua: **inglese**. Regole Virality Predictor: apertura diretta su Drake, nessu
 | Beat | Tempo | Visual | Voiceover (Jago, EN) |
 |---|---|---|---|
 | **Hook** | 0-2s | Candid Drake backstage | *"This is Drake, wearing my brand."* |
-| **Hook 2** | 2-5s | Candid Rihanna + dettaglio, ritmo veloce | *"He's never seen it. Neither have the others."* |
+| **Hook 2** | 2-5s | Candid Rocky + Central Cee, ritmo veloce | *"He's never seen it. Neither have the others."* |
 | **Reveal costo** | 5-10s | Plate studio + dettaglio grafica | *"A campaign like this costs half a million dollars."* |
 | **Reveal AI** | 10-15s | Punch-in sulle candid, sequenza rapida | *"Mine cost me one afternoon. Every single photo is AI."* |
 | **Build** | 15-22s | Plate Travis crimson + maglia hero | *"No contracts. No agents. No shoot. Just a brand born yesterday — looking like it runs the industry."* |
@@ -79,17 +80,20 @@ Lingua: **inglese**. Regole Virality Predictor: apertura diretta su Drake, nessu
 
 **Jago: solo voiceover, mai in frame** (deciso 05/07).
 
-**3 celebrity reali internazionali** (deciso 05/07 — approccio lumonboy con disclaimer, niente archetipi fittizi, niente celebrity italiane):
+**4 celebrity reali internazionali** (aggiornato 08/07 — **prova rapper swap**: fuori Rihanna, dentro A$AP Rocky e Central Cee; resta l'approccio lumonboy con disclaimer, niente archetipi fittizi, niente celebrity italiane):
 
 1. **Drake** — bloccato, è la keyword della CTA
-2. **Rihanna** — autorità fashion, lettura femminile del capo
-3. **Travis Scott** — il re delle collab streetwear
+2. **A$AP Rocky** — eredita da Rihanna il ruolo di autorità fashion del cast
+3. **Central Cee** — lettura UK/europea, aggancia il pubblico streetwear più giovane
+4. **Travis Scott** — il re delle collab streetwear
+
+> Lo shot 3 di Rihanna (già generato e approvato il 05/07) non si butta: resta in archivio come alternativa se la prova non convince.
 
 ⚠️ **Rischio noto e accettato:** likeness di persone reali. Mitigazioni: disclaimer obbligatorio in caption (vedi blocco 12) + **gate di fattibilità in produzione** (vedi blocco 14) — se i tool bloccano i volti reali si decide il piano B prima di propagare.
 
 ## 11. Wardrobe & palette
 
-- **Capo hero (UNO) — bloccato 05/07, reference: `magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`:** boxy oversized washed black tee con maniche long-sleeve cucite sotto (double-layer), ampie e senza polsino; wordmark **JAGO** ad arco sul petto in collegiate crackizzato bianco-crema con variazione tonale metallica; maniche con grafica all-over a spine/ornamenti gotici in bianco sbiadito fino all'orlo aperto. **Stesso identico capo su tutte e tre le celebrity.**
+- **Capo hero (UNO) — bloccato 05/07, reference: `magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`:** boxy oversized washed black tee con maniche long-sleeve cucite sotto (double-layer), ampie e senza polsino; wordmark **JAGO** ad arco sul petto in collegiate crackizzato bianco-crema con variazione tonale metallica; maniche con grafica all-over a spine/ornamenti gotici in bianco sbiadito fino all'orlo aperto. **Stesso identico capo su tutte le celebrity.**
 - **Palette campagna (4):** nero (capo) + crimson (plate) + bianco-crema (lettering) + grigio cemento (backstage). Niente altro nel frame.
 - **Rottura estetica motivata (deciso 05/07):** niente dark-luxury classico Jago — stonerebbe addosso a rapper internazionali. Resta solo la grana 35mm.
 
@@ -105,7 +109,7 @@ Lingua: **inglese**. Regole Virality Predictor: apertura diretta su Drake, nessu
 2. **Mondo:** "leaked campaign" — crimson seamless studio plates + gritty backstage candids (venue corridors, underground parking, stage backstage)
 3. **Luce:** direct hard on-camera flash con ombre nette (candid) / flat clean product light (plate)
 4. **Palette:** black + deep crimson + cream white + raw concrete grey — nient'altro
-5. **Casting:** Drake, Rihanna, Travis Scott — likeness consistente per ciascuno attraverso gli shot
+5. **Casting:** Drake, A$AP Rocky, Central Cee, Travis Scott (prova rapper swap 08/07 — ex Rihanna) — likeness consistente per ciascuno attraverso gli shot
 6. **Mood:** *"Leaked before launch — braggadocio silenzioso, 35mm film grain."*
 
 ## 14. Piano di produzione & handoff
@@ -120,7 +124,9 @@ Lingua: **inglese**. Regole Virality Predictor: apertura diretta su Drake, nessu
 | Grafica maglia JAGO (lettering) | Banana Pro (+ eventuale rifinitura Canva) | `/banana-pro-director` | ✅ 05/07 (v4 in `video-7-prompts.md`) |
 | Shot 1 — hero product still | Banana Pro | `/banana-pro-director` | ✅ 05/07 — `magnific_keep-the-layered-garment-_Bm0AFaFoQR.png` (garment reference ufficiale) |
 | Shot 2 — Drake (garment swap su mirror selfie) | Banana Pro | `/banana-pro-director` | ✅ 05/07 — `magnific_take-the-first-attached-p_gJKu2pOSXO.png` |
-| Shot 3 — Rihanna (garment swap su `rihanna-C-vogue.jpg`, street notturna col flash) | Banana Pro | `/banana-pro-director` | ✅ 05/07 — generata e approvata |
+| Shot 3 — Rihanna (garment swap su `rihanna-C-vogue.jpg`, street notturna col flash) | Banana Pro | `/banana-pro-director` | 🔁 08/07 — accantonata nella prova rapper swap; resta in archivio come alternativa (era ✅ 05/07) |
+| Shot 3A — A$AP Rocky (garment swap su foto reale, sorgente da scegliere) | Banana Pro | `/banana-pro-director` | ⬜ serve foto sorgente (criteri in `video-7-prompts.md`) |
+| Shot 3B — Central Cee (garment swap su foto reale, sorgente da scegliere) | Banana Pro | `/banana-pro-director` | ⬜ serve foto sorgente (criteri in `video-7-prompts.md`) |
 | Shot 4 — dettaglio grafica petto | Banana Pro | `/banana-pro-director` | ✅ 07/07 — generata via MCP (da approvare) |
 | Shot 5 — Travis Scott (garment swap su `image 3.jpg`, cucina industriale col flash) | Banana Pro | `/banana-pro-director` | ✅ 05/07 — generata e approvata (scritta parzialmente coperta) |
 | Shot 2-bis / 5-bis — Drake e Travis con scritta JAGO in piena vista (sorgenti: `drake-B-fullbody.jpg`, `travis-B-nyc.jpg`) | Banana Pro | `/banana-pro-director` | ✅ 07/07 — generate via MCP, in `Downloads\Video Jago\Video 7 - JAGO Campaign\` (da approvare) |

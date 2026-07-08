@@ -54,6 +54,8 @@ The garment integrates into the photo's real light — the warm bathroom lightin
 
 ## Shot 3 — Rihanna, garment swap su foto reale
 
+> 🔁 **08/07 — PROVA RAPPER SWAP:** Rihanna accantonata; al suo posto **A$AP Rocky (Shot 3A)** e **Central Cee (Shot 3B)**, sezioni sotto. Questo prompt e l'immagine già generata restano in archivio come alternativa.
+
 **Tool:** Banana Pro (Nano Banana)
 **Reference da allegare (2):** ① la foto sorgente (`rihanna-C-vogue.jpg`, Downloads — street notturna, jersey blu oversized) ② la garment reference v4 (`magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`)
 **Aspect ratio (nella UI):** stessa della foto originale
@@ -63,6 +65,53 @@ The garment integrates into the photo's real light — the warm bathroom lightin
 Take the first attached photo — a nighttime street photo of a woman walking on a city sidewalk, photographed with direct flash — and keep everything exactly as it is: the woman, her face, her long dark hair with bangs, her red lipstick, her gold chain necklace, her small red handbag, her baggy light-blue denim jeans, her heels, the night street behind her with its storefronts and distant lights, the flash lighting, the framing. Replace only the oversized royal-blue sports jersey she is wearing with the layered garment shown in the second attached product still: a boxy oversized washed black tee with sewn-in long under-sleeves, worn oversized and roomy with the hem falling to her hips over the jeans. The long printed under-sleeves cover her arms down to wide open hems at the wrists — no cuffs, the faded white thorn and gothic graphics running down the outer sleeves exactly as in the product still. The large arched cream-white "JAGO" chest lettering with its cracked texture sits centered on her chest, clearly readable.
 
 The garment integrates into the photo's real light — the hard direct flash hitting the black cotton with bright natural highlights on the folds and a soft shadow falling behind her, the washed black fabric reading matte with visible weave, the print catching the flash and following every fold of the drape. The image keeps the exact look of a real nighttime paparazzi photo: same colors, same flash falloff, same slight photo noise, nothing else altered — a real photo, not a rendered image.
+```
+
+---
+
+## Shot 3A — A$AP Rocky, garment swap su foto reale (prova rapper swap 08/07)
+
+> ⬜ **Serve la foto sorgente.** Come per Drake/Travis, la sceglie Jacopo e la salva in Downloads (proposta di nome: `rocky-A-night.jpg`).
+>
+> **Criteri per la foto (imparati sugli shot precedenti):**
+> - **Petto libero** — niente braccia incrociate, borse a tracolla o mani davanti al petto (il lettering JAGO deve poter respirare; occlusione parziale ok solo se voluta, vedi Travis cucina)
+> - **Niente cappuccio in testa** — lo swap dovrebbe inventare capelli/testa, rischio likeness troppo alto (è il motivo per cui fu scartata `image 2.jpg` di Travis)
+> - **Capo originale semplice** da sostituire: tee, jersey, felpa — non cappotti o layer complessi
+> - **Registro ideale: notturna col flash diretto** (è lo slot che era di Rihanna). Rocky viene paparazzato di continuo di notte — es. le uscite dai club a Parigi di gennaio 2026 (gallery su Just Jared / Getty)
+> - Inquadratura three-quarter o full body, soggetto solo o facilmente isolabile
+>
+> **Nel prompt sotto, i blocchi `[MAIUSCOLI TRA PARENTESI QUADRE]` vanno adattati alla foto scelta** (come fatto per Drake e Travis: si descrive ciò che c'è davvero nella foto). Se la foto scelta è **diurna**, sostituire il secondo paragrafo con quello "daylight" dello Shot 2-bis.
+
+**Tool:** Banana Pro (Nano Banana)
+**Reference da allegare (2):** ① la foto sorgente scelta (`rocky-A-night.jpg`, Downloads) ② la garment reference v4 (`magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`)
+**Aspect ratio (nella UI):** stessa della foto originale
+**Nota:** lettering leggibile (non è un mirror selfie).
+
+```
+Take the first attached photo — a nighttime street photo of a man [POSA: es. "walking on a city sidewalk" / "leaving a venue"], photographed with direct flash — and keep everything exactly as it is: the man, his face, his [CAPELLI: es. "braided hair"], [ACCESSORI VISIBILI: es. "his gold chains, his rings, his watch, his sunglasses"], his pose, his [PANTALONI: es. "baggy dark denim jeans"], his [SCARPE], the night street behind him with [SFONDO: es. "storefronts and distant lights" / "the venue entrance and parked cars"], the flash lighting, the framing. Replace only the [CAPO ORIGINALE: es. "white graphic tee" / "leather jacket over bare chest"] he is wearing with the layered garment shown in the second attached product still: a boxy oversized washed black tee with sewn-in long under-sleeves, worn relaxed and oversized over his frame with the hem falling over his pants. The long printed under-sleeves cover his arms down to wide open hems at the wrists — no cuffs, the faded white thorn and gothic graphics running down the outer sleeves exactly as in the product still, his watch and jewelry now sitting over the sleeve hems. The large arched cream-white "JAGO" chest lettering with its cracked texture sits centered on his chest, clearly readable, nothing crossing in front of it.
+
+The garment integrates into the photo's real light — the hard direct flash hitting the black cotton with bright natural highlights on the folds and a soft shadow falling behind him, the washed black fabric reading matte with visible weave, the print catching the flash and following every fold of the drape. The image keeps the exact look of a real nighttime paparazzi photo: same colors, same flash falloff, same slight photo noise, nothing else altered — a real photo, not a rendered image.
+```
+
+---
+
+## Shot 3B — Central Cee, garment swap su foto reale (prova rapper swap 08/07)
+
+> ⬜ **Serve la foto sorgente.** Stessi criteri dello Shot 3A (petto libero, niente cappuccio in testa, capo semplice da sostituire). Proposta di nome: `centralcee-A-night.jpg` (Downloads).
+>
+> **Attenzione specifica a Central Cee:** gira quasi sempre in tracksuit con zip o smanicato/vest — meglio una foto in tee o felpa aperta senza cappuccio alzato. Foto candid si trovano su Getty, PAUSE Mag e sull'IG @centralcee (spotted a Londra / New York).
+>
+> Anche qui: blocchi `[MAIUSCOLI]` da adattare alla foto scelta; se diurna, secondo paragrafo "daylight" dello Shot 2-bis.
+
+**Tool:** Banana Pro (Nano Banana)
+**Reference da allegare (2):** ① la foto sorgente scelta (`centralcee-A-night.jpg`, Downloads) ② la garment reference v4 (`magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`)
+**Aspect ratio (nella UI):** stessa della foto originale
+**Nota:** lettering leggibile (non è un mirror selfie).
+
+```
+Take the first attached photo — a nighttime street photo of a man [POSA: es. "standing outside a venue" / "walking toward the camera"], photographed with direct flash — and keep everything exactly as it is: the man, his face, his [CAPELLI: es. "short cropped hair"], [ACCESSORI VISIBILI: es. "his diamond chain and pendant, his earrings, his watch"], his pose, his [PANTALONI: es. "grey tracksuit bottoms" / "baggy jeans"], his [SCARPE], the street behind him with [SFONDO: es. "the venue doorway and railings" / "storefronts and parked cars"], the flash lighting, the framing. Replace only the [CAPO ORIGINALE: es. "zip-up tracksuit jacket" / "graphic tee"] he is wearing with the layered garment shown in the second attached product still: a boxy oversized washed black tee with sewn-in long under-sleeves, worn relaxed and oversized over his slim frame with the hem falling over his pants. The long printed under-sleeves cover his arms down to wide open hems at the wrists — no cuffs, the faded white thorn and gothic graphics running down the outer sleeves exactly as in the product still, his watch and chain now sitting naturally over the garment. The large arched cream-white "JAGO" chest lettering with its cracked texture sits centered on his chest, clearly readable, nothing crossing in front of it.
+
+The garment integrates into the photo's real light — the hard direct flash hitting the black cotton with bright natural highlights on the folds and a soft shadow falling behind him, the washed black fabric reading matte with visible weave, the print catching the flash and following every fold of the drape. The image keeps the exact look of a real nighttime paparazzi photo: same colors, same flash falloff, same slight photo noise, nothing else altered — a real photo, not a rendered image.
 ```
 
 ---
