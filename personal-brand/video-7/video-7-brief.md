@@ -126,7 +126,7 @@ Lingua: **inglese**. Regole Virality Predictor: apertura diretta su Drake, nessu
 | Shot 2-bis / 5-bis — Drake e Travis con scritta JAGO in piena vista (sorgenti: `drake-B-fullbody.jpg`, `travis-B-nyc.jpg`) | Banana Pro | `/banana-pro-director` | ✅ 07/07 — generate via MCP, in `Downloads\Video Jago\Video 7 - JAGO Campaign\` (da approvare) |
 | Shot 6 — poster finale JAGO | Banana Pro | `/banana-pro-director` | ✅ 07/07 — generata via MCP, riga "WORLDWIDE — S/S 2026" (da approvare) |
 | Micro-motion su 1-2 shot chiave (M5, living still) | Seedance / Kling | `/cinema-worldbuilder-pro` | ❌ SCARTATO 07/07 — Seedance blocca likeness celebrity (verificato con prompt neutro); Kling 2.5 e 3.0 producono clip inusabili. Il video va di still puri + punch-in CapCut |
-| Voiceover Jago EN | Magnific TTS (ElevenLabs v3, voce "Michael Johnson" id 300 — ora voce ufficiale Jago) | — | ✅ 07/07 — `voiceover-jago-video7.mp3` in `Downloads\Video Jago\Video 7 - JAGO Campaign\` |
+| Voiceover Jago EN | Magnific TTS (ElevenLabs v3, voce "Matt Carson" id 22 — ora voce ufficiale Jago, sostituisce Michael Johnson) | — | ✅ 08/07 — rigenerato, da riscaricare in `Downloads\Video Jago\Video 7 - JAGO Campaign\` |
 | Montaggio (punch-in, SFX flash, beat) | CapCut | — | ⬜ |
 | Caption IG + disclaimer + 5 hashtag | — | — | ⬜ |
 | Copertina IG | Canva (template magazine #5/#6) | — | ⬜ |
