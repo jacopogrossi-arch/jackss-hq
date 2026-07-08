@@ -3,15 +3,17 @@
 > Prompt generati via `/banana-pro-director`, Mode 3 (scene plate). Modello sempre anonimo, mai a volto scoperto — coerente con lo shot 4 (dettaglio petto). Stessa maglietta JAGO (garment reference ufficiale) in ogni scatto.
 >
 > **Reference da allegare in tutti e 3:** `shot-4-dettaglio-petto.png` (stile/registro) + garment reference ufficiale `magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`
+>
+> **Aggiornamento 08/07:** framing riscritto per formato 9:16 nativo — la testa non entra mai nel frame (il bordo superiore parte netto alla base del collo, senza headroom ambiguo), il corpo riempie tutta l'altezza verticale fino a metà coscia/ginocchio. Corregge il crop che tagliava male la testa nella v1.
 
 ---
 
 ## Contorno 1 — Parcheggio sotterraneo, dettaglio manica
 
 ```
-A cinematic still photograph capturing a faceless detail moment in an underground parking garage — a tight three-quarter composition cropped just below the chin, framing the shoulder, arm, and hand of a figure standing against a bare concrete support pillar, one hand resting loosely in the pocket, the printed long under-sleeve with its faded white thorn and gothic graphic catching hard direct light along the forearm, the washed black boxy tee visible at the shoulder and chest edge.
+A cinematic still photograph capturing a faceless detail moment in an underground parking garage — a tall vertical three-quarter composition filling the full height of the frame, the top edge of the frame cutting cleanly across the base of the neck with no head and no headroom in shot, the body filling the frame downward through the shoulder, arm, torso, and hip to just above the knee, standing against a bare concrete support pillar, one hand resting loosely in the pocket, the printed long under-sleeve with its faded white thorn and gothic graphic catching hard direct light along the forearm, the washed black boxy tee filling the upper two-thirds of the frame.
 
-The garment carries identically from the attached reference — the boxy oversized washed black tee layered over the sewn-in wide long sleeve with its faded white thorn print, no cuff, open raw hem at the wrist. No face visible in frame, cropped at the jawline.
+The garment carries identically from the attached reference — the boxy oversized washed black tee layered over the sewn-in wide long sleeve with its faded white thorn print, no cuff, open raw hem at the wrist. No head or face anywhere in frame — the top frame edge is the neck base, a hard clean crop, not an accidental cutoff.
 
 The concrete pillar and garage floor behind carry a cold, gritty, underground register — bare cast concrete with visible form-tie marks and water staining, a painted parking line just visible at the floor edge, a single distant fluorescent tube casting a thin cool wash far in the background, otherwise the space falling into deep shadow beyond the immediate pillar.
 
@@ -25,9 +27,9 @@ Captured with the specific optical signature of a direct-flash candid photograph
 ## Contorno 2 — Corridoio backstage, cavi e flight case
 
 ```
-A cinematic still photograph capturing a faceless backstage moment in a venue corridor — a medium composition cropped at the collarbone, the figure standing three-quarter turned away from camera, walking past a stack of black flight cases and coiled stage cables, the back and shoulder of the washed black boxy tee filling the frame with the printed long under-sleeve visible along the trailing arm, motion caught mid-stride.
+A cinematic still photograph capturing a faceless backstage moment in a venue corridor — a tall vertical composition filling the full height of the frame, the top edge of the frame cutting cleanly across the base of the neck with no head and no headroom in shot, the figure standing three-quarter turned away from camera, walking past a stack of black flight cases and coiled stage cables, the back and shoulder of the washed black boxy tee filling the upper frame with the printed long under-sleeve visible along the trailing arm, the body continuing down through the torso and legs to just above the ankle, motion caught mid-stride.
 
-The garment carries identically from the attached reference — the boxy oversized washed black tee layered over the sewn-in wide long sleeve with its faded white thorn print, no cuff, open raw hem at the wrist, worn exactly as shown. No face visible in frame, the figure angled away from camera and cropped above the shoulder line.
+The garment carries identically from the attached reference — the boxy oversized washed black tee layered over the sewn-in wide long sleeve with its faded white thorn print, no cuff, open raw hem at the wrist, worn exactly as shown. No head or face anywhere in frame — the top frame edge is the neck base, a hard clean crop, not an accidental cutoff.
 
 The corridor behind is a raw backstage passage — scuffed painted concrete walls, exposed conduit running along the ceiling, black flight cases stacked against the wall, thick coiled cables looping across the floor, a single bare work light overhead casting a hard pool of light that falls off quickly into the shadowed length of the corridor beyond.
 
@@ -41,9 +43,9 @@ Captured with the specific optical signature of a direct-flash candid photograph
 ## Contorno 3 — Uscita di sicurezza, mezzobusto
 
 ```
-A cinematic still photograph capturing a faceless candid moment at a venue fire exit — a medium composition cropped just below the chin, the figure standing square to camera beside a battered metal push-bar fire door propped half open, one hand raised to grip the door frame, the washed black boxy tee and cracked cream-white arched chest lettering filling the center of the frame, the printed long under-sleeves visible on both arms.
+A cinematic still photograph capturing a faceless candid moment at a venue fire exit — a tall vertical composition filling the full height of the frame, the top edge of the frame cutting cleanly across the base of the neck with no head and no headroom in shot, the figure standing square to camera beside a battered metal push-bar fire door propped half open, one hand raised to grip the door frame, the washed black boxy tee and cracked cream-white arched chest lettering filling the upper-center of the frame, the printed long under-sleeves visible on both arms, the body continuing down through the waist and legs to just above the knee.
 
-The garment carries identically from the attached reference — the boxy oversized washed black tee with its cracked cream-white arched chest lettering and metallic tonal variation, layered over the sewn-in wide long sleeves with their faded white thorn print, no cuff, open raw hem at the wrist, worn exactly as shown. No face visible in frame, cropped at the jawline.
+The garment carries identically from the attached reference — the boxy oversized washed black tee with its cracked cream-white arched chest lettering and metallic tonal variation, layered over the sewn-in wide long sleeves with their faded white thorn print, no cuff, open raw hem at the wrist, worn exactly as shown. No head or face anywhere in frame — the top frame edge is the neck base, a hard clean crop, not an accidental cutoff.
 
 The fire door and surrounding wall behind carry a raw utilitarian register — scratched grey metal push-bar door, chipped paint on the surrounding frame, a strip of yellow-and-black hazard tape peeling at the door edge, a sliver of cool blue night visible through the gap in the propped-open door, otherwise the wall falling into flat shadow.
 
