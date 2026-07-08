@@ -105,3 +105,51 @@ High contrast dominates the frame — deep crushed shadow across the crowd and b
 
 Captured with a wide-latitude cinema look and a vintage 55mm-equivalent 2x anamorphic character at a wide aperture, oval bokeh deepening into darkness with distance down the runway corridor, strong horizontal anamorphic streak flare bursting off the nearest flash units, color-negative film rendition pushed for contrast with fine theatrical 35mm grain across the entire frame including skin, fabric, and the dark crowd, in an M4 performance register. Real photographic frame captured on a real cinema camera at a real runway show, real fabric, real flash units, real crowd — no CGI, no rendered look, no digital cleanliness, no plastic surfaces, no AI smoothness, no skin smoothing, no flat evenly-lit stage look.
 ```
+
+---
+
+## "I'm Jago" — beat Firma + CTA (22-29s)
+
+> ⚠️ **Rompe la regola del brief "Jago: solo voiceover, mai in frame"** (decisa 05/07) — eccezione consapevole solo per questo shot finale, confermata da Jacopo 08/07. Jago compare in video, outfit standard nero (non la maglietta JAGO).
+
+### Still (Banana Pro) — Jago per le strade di New York, saluto in camera
+
+**Reference da allegare:** `jago-character-sheet.jpeg`
+
+```
+A cinematic still photograph capturing a direct-to-camera moment on a New York City street — a medium three-quarter composition of a man standing in the foreground, chest-up to waist-up in frame, his body angled slightly off-camera but his face and eyes turned straight into the lens, one hand raised to shoulder height mid-gesture in a smooth, elegant wave, wrist relaxed and fingers loosely spread as if caught mid-motion, the other hand hanging relaxed at his side.
+
+The character carrying identically from the attached character reference — his medium-length dark wavy hair, olive-tan skin, sharp jaw and cheekbones locked from the reference — dressed in his standard plain black long-sleeve top, no jacket, no styling additions, a calm, confident, closed-lip half-smile, direct steady eye contact with the camera.
+
+The street behind him is a classic New York sidewalk scaffolding scene — a sidewalk shed with metal support poles, a plywood ceiling, and horizontal crossbars running along the building line to one side, brick and pre-war building facades rising behind, a manhole cover further down the block gently steaming, parked cars and a few pedestrians softly out of focus deeper in the frame, fire escapes zigzagging up the building fronts. No one is using the scaffolding crossbars — the street holds only ordinary, sparse foot traffic well out of focus.
+
+Soft natural daylight falls at a mid-morning angle, diffused and even rather than harsh, consistent with a spring or early-summer late-morning around eleven o'clock — gentle directional shadow falling across the sidewalk, warm neutral color temperature, no golden-hour cast and no flat overcast either, a true clear mid-morning city light with soft haze softening the deeper background blocks.
+
+Captured with the specific optical signature of a retro compact film camera rather than clean modern cinema glass — slightly soft corners, mild natural vignette, a touch of warm color-negative drift in the mid-tones, noticeably pronounced grain structure across the entire frame, textured and organic in the skin, fabric, brick, and pavement, a slightly lower-contrast nostalgic film-stock rendition rather than a crisp digital look, natural round bokeh on the scaffolding and background figures, a light diffusion bloom softening the brightest highlights on brick and pavement. Real photographic frame captured on a real retro film camera on a real New York street, real brick, real steam, real fabric, real human subject — no CGI, no rendered look, no digital cleanliness, no plastic surfaces, no AI smoothness, no skin smoothing, no glossy highlights, no halation that reads as artificial.
+```
+
+### Video (Seedance grammar, renderizzato con Kling 3.0 Omni) — 4s, si gira e cammina verso camera
+
+**Reference da allegare:** still approvato sopra (`magnific_a-cinematic-still-photogr_iAOnBrk3uK.png`)
+
+```
+Scene & Mood: A man on a New York sidewalk turns away from his wave and starts walking directly toward the camera, calm and unhurried, the moment shifting from a greeting into an approach.
+
+Frame Map: @image1 starts in the right-center of the frame as in the plate, mid-ground, waist-up. Across the shot he moves forward and slightly left, closing distance toward the camera, ending in the left-center foreground, chest-up. Scaffolding and brick facades hold the right two-thirds as receding negative space throughout.
+
+Subject Lock — @image1: Face, hair, black long-sleeve top, and silhouette identical throughout. Begins mid-wave, turns his torso and head forward, drops the raised hand naturally to his side as he pivots, then walks forward at a relaxed even pace. Eyes find the camera again within the first second and hold steady contact as he approaches.
+
+Cross-Frame Rules: Single-subject shot — @image1 remains the only figure in focus throughout, background pedestrians stay small and out of focus, never entering the foreground path.
+
+Movement: @image1 completes the turn and drops his hand in the first 1 second, then walks forward at a natural relaxed pace from 1–4 seconds, closing roughly half the distance to camera, footsteps even on the pavement. Micro-motion: hair shifting slightly with the turn and stride, fabric of the long-sleeve top settling and swaying naturally with the arm swing, steady unbroken eye contact with the camera. Environmental motion: steam continuing to drift off the manhole cover camera-left, background pedestrians and a passing car moving slowly and softly out of focus, faint breeze movement in a hanging fire-escape line or awning edge. Camera holds a natural handheld wobble throughout — visible unstabilized drift and micro-shake, no smoothing, no gimbal steadiness, the frame breathing slightly as if held by a walking operator.
+
+Last Frame: @image1 now in the left-center foreground, chest-up, mid-stride, eyes locked on camera, calm expression holding. Scaffolding, brick facades, and the steaming manhole recede softly behind him in negative space. No on-screen text, no captions, no signage typography, no rendered text in the frame.
+
+World Plate: Anchored to @image1's plate — New York sidewalk scaffolding scene, metal support poles and plywood shed ceiling to one side, brick and pre-war building facades with fire escapes rising behind, a manhole gently steaming further down the block, sparse soft-focus pedestrians and parked cars in the depth. Soft natural diffused mid-morning daylight, spring/early-summer register around eleven o'clock, warm neutral color temperature, gentle directional shadow.
+
+Sound Bed: Diegetic only — footsteps on pavement, faint ambient city traffic hum, distant pedestrian murmur, light breeze, no music, no dialogue, no soundtrack.
+
+Capture Realism: @image1 sits inside real depth — light atmosphere suspended between camera, subject, and the receding street, background rendered softer and lower-contrast than the foreground. Skin reads true matte — zero shine on forehead, nose bridge, cheekbones, temples, and chin, real peach fuzz at jaw and hairline, fine even pore texture, warmth preserved and natural, never plastic or harsh, no blemishes, fine flattering texture. Shadows lifted gently, highlights rolled off softly, nothing crushed or clipped. Specular highlights removed from skin, hair, and fabric — matte and diffuse throughout. Slightly desaturated, warm-retained grade true to the retro film-camera register of the plate.
+
+Camera Capture: wide-latitude cinema capture, vintage 55mm 2x anamorphic character at a wide aperture, natural oval bokeh, light diffusion bloom, fully handheld with pronounced natural wobble and micro-shake, no stabilization, retro film-camera color-negative rendition with pronounced organic grain across the frame, slightly lower-contrast nostalgic stock look, 24fps 180° shutter, 4 seconds.
+```
