@@ -71,47 +71,38 @@ The garment integrates into the photo's real light — the hard direct flash hit
 
 ## Shot 3A — A$AP Rocky, garment swap su foto reale (prova rapper swap 08/07)
 
-> ⬜ **Serve la foto sorgente.** Come per Drake/Travis, la sceglie Jacopo e la salva in Downloads (proposta di nome: `rocky-A-night.jpg`).
+> ✅ **Foto scelta 08/07:** candid diurna a New York, Rocky accanto a Rihanna (in secondo piano, non indossa JAGO — stesso schema del "man in black" già usato nello shot Drake alternativa). Scartata l'altra opzione fornita (giacca di pelle rossa, sorriso da red carpet): il tee grigio semplice regge uno swap più pulito e il tono candido è più coerente col mood "braggadocio silenzioso" del brief.
 >
-> **Criteri per la foto (imparati sugli shot precedenti):**
-> - **Petto libero** — niente braccia incrociate, borse a tracolla o mani davanti al petto (il lettering JAGO deve poter respirare; occlusione parziale ok solo se voluta, vedi Travis cucina)
-> - **Niente cappuccio in testa** — lo swap dovrebbe inventare capelli/testa, rischio likeness troppo alto (è il motivo per cui fu scartata `image 2.jpg` di Travis)
-> - **Capo originale semplice** da sostituire: tee, jersey, felpa — non cappotti o layer complessi
-> - **Registro ideale: notturna col flash diretto** (è lo slot che era di Rihanna). Rocky viene paparazzato di continuo di notte — es. le uscite dai club a Parigi di gennaio 2026 (gallery su Just Jared / Getty)
-> - Inquadratura three-quarter o full body, soggetto solo o facilmente isolabile
->
-> **Nel prompt sotto, i blocchi `[MAIUSCOLI TRA PARENTESI QUADRE]` vanno adattati alla foto scelta** (come fatto per Drake e Travis: si descrive ciò che c'è davvero nella foto). Se la foto scelta è **diurna**, sostituire il secondo paragrafo con quello "daylight" dello Shot 2-bis.
+> **Da salvare in Downloads come** `rocky-A-nyc-street.jpg`.
 
 **Tool:** Banana Pro (Nano Banana)
-**Reference da allegare (2):** ① la foto sorgente scelta (`rocky-A-night.jpg`, Downloads) ② la garment reference v4 (`magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`)
+**Reference da allegare (2):** ① la foto sorgente (`rocky-A-nyc-street.jpg`, Downloads — daylight, strada NYC con Rihanna) ② la garment reference v4 (`magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`)
 **Aspect ratio (nella UI):** stessa della foto originale
 **Nota:** lettering leggibile (non è un mirror selfie).
 
 ```
-Take the first attached photo — a nighttime street photo of a man [POSA: es. "walking on a city sidewalk" / "leaving a venue"], photographed with direct flash — and keep everything exactly as it is: the man, his face, his [CAPELLI: es. "braided hair"], [ACCESSORI VISIBILI: es. "his gold chains, his rings, his watch, his sunglasses"], his pose, his [PANTALONI: es. "baggy dark denim jeans"], his [SCARPE], the night street behind him with [SFONDO: es. "storefronts and distant lights" / "the venue entrance and parked cars"], the flash lighting, the framing. Replace only the [CAPO ORIGINALE: es. "white graphic tee" / "leather jacket over bare chest"] he is wearing with the layered garment shown in the second attached product still: a boxy oversized washed black tee with sewn-in long under-sleeves, worn relaxed and oversized over his frame with the hem falling over his pants. The long printed under-sleeves cover his arms down to wide open hems at the wrists — no cuffs, the faded white thorn and gothic graphics running down the outer sleeves exactly as in the product still, his watch and jewelry now sitting over the sleeve hems. The large arched cream-white "JAGO" chest lettering with its cracked texture sits centered on his chest, clearly readable, nothing crossing in front of it.
+Take the first attached photo — a daylight paparazzi photo of a man and a woman walking together on a New York City sidewalk, a yellow taxi and city buildings in the background — and keep everything exactly as it is: the man, his face, his braided hair, his silver chain necklace, his fingerless racing-style glove on one hand, his relaxed pose with his arm gently resting near the woman beside him, his dark baggy trousers, his tan Timberland boots, the woman beside him in her striped halter maxi dress with her gold bangles and red handbag, the sidewalk, the taxi, the buildings, the soft overcast daylight, the framing. Replace only the plain oversized grey crew-neck tee he is wearing with the layered garment shown in the second attached product still: a boxy oversized washed black tee with sewn-in long under-sleeves, worn with the same relaxed oversized drape falling over his trousers. The long printed under-sleeves now cover his arms down to wide open hems at the wrists — no cuffs, the faded white thorn and gothic graphics running down the outer sleeves exactly as in the product still, his chain and glove now sitting over the garment. The large arched cream-white "JAGO" chest lettering with its cracked texture sits centered on his chest, clearly readable even at this three-quarter angle.
 
-The garment integrates into the photo's real light — the hard direct flash hitting the black cotton with bright natural highlights on the folds and a soft shadow falling behind him, the washed black fabric reading matte with visible weave, the print catching the flash and following every fold of the drape. The image keeps the exact look of a real nighttime paparazzi photo: same colors, same flash falloff, same slight photo noise, nothing else altered — a real photo, not a rendered image.
+The garment integrates into the photo's real light — the soft overcast daylight falling evenly on the black cotton with gentle natural highlights and shadow in the folds, the washed black fabric reading matte with visible weave, the print following every fold of the drape as he walks. The image keeps the exact look of a real daylight paparazzi photo: same colors, same softness, same slight photo grain, nothing else altered — a real photo, not a rendered image.
 ```
 
 ---
 
 ## Shot 3B — Central Cee, garment swap su foto reale (prova rapper swap 08/07)
 
-> ⬜ **Serve la foto sorgente.** Stessi criteri dello Shot 3A (petto libero, niente cappuccio in testa, capo semplice da sostituire). Proposta di nome: `centralcee-A-night.jpg` (Downloads).
+> ✅ **Foto scelta 08/07:** candid diurna a un evento di comunità su un campetto da basket indoor, circondato da bambini del posto, canotta bianca "Member Only", bandana annodata in testa, braccia incrociate sul petto. Unica foto disponibile — le braccia incrociate coprono in parte il lettering: stesso compromesso già accettato per Travis Scott in cucina (occlusione parziale = più realismo).
 >
-> **Attenzione specifica a Central Cee:** gira quasi sempre in tracksuit con zip o smanicato/vest — meglio una foto in tee o felpa aperta senza cappuccio alzato. Foto candid si trovano su Getty, PAUSE Mag e sull'IG @centralcee (spotted a Londra / New York).
->
-> Anche qui: blocchi `[MAIUSCOLI]` da adattare alla foto scelta; se diurna, secondo paragrafo "daylight" dello Shot 2-bis.
+> **Da salvare in Downloads come** `centralcee-A-basketball.jpg`.
 
 **Tool:** Banana Pro (Nano Banana)
-**Reference da allegare (2):** ① la foto sorgente scelta (`centralcee-A-night.jpg`, Downloads) ② la garment reference v4 (`magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`)
+**Reference da allegare (2):** ① la foto sorgente (`centralcee-A-basketball.jpg`, Downloads — daylight, campetto da basket indoor) ② la garment reference v4 (`magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`)
 **Aspect ratio (nella UI):** stessa della foto originale
-**Nota:** lettering leggibile (non è un mirror selfie).
+**Nota:** lettering leggibile ma parzialmente coperto dalle braccia incrociate (accettato).
 
 ```
-Take the first attached photo — a nighttime street photo of a man [POSA: es. "standing outside a venue" / "walking toward the camera"], photographed with direct flash — and keep everything exactly as it is: the man, his face, his [CAPELLI: es. "short cropped hair"], [ACCESSORI VISIBILI: es. "his diamond chain and pendant, his earrings, his watch"], his pose, his [PANTALONI: es. "grey tracksuit bottoms" / "baggy jeans"], his [SCARPE], the street behind him with [SFONDO: es. "the venue doorway and railings" / "storefronts and parked cars"], the flash lighting, the framing. Replace only the [CAPO ORIGINALE: es. "zip-up tracksuit jacket" / "graphic tee"] he is wearing with the layered garment shown in the second attached product still: a boxy oversized washed black tee with sewn-in long under-sleeves, worn relaxed and oversized over his slim frame with the hem falling over his pants. The long printed under-sleeves cover his arms down to wide open hems at the wrists — no cuffs, the faded white thorn and gothic graphics running down the outer sleeves exactly as in the product still, his watch and chain now sitting naturally over the garment. The large arched cream-white "JAGO" chest lettering with its cracked texture sits centered on his chest, clearly readable, nothing crossing in front of it.
+Take the first attached photo — a candid daylight photo of a man standing on an indoor basketball court surrounded by a crowd of local kids, a hoop and green gymnasium walls behind him, daylight coming through barred windows mixed with overhead gym lighting — and keep everything exactly as it is: the man, his face, his face and neck tattoos, his tattooed arms, the red-and-white bandana tied over his head with strands of hair showing beneath it, his arms crossed in front of him, his belt, his cargo shorts, his white sneakers, the crowd of kids around him, the basketball hoop and green walls, the banner in the background, the daylight, the framing. Replace only the white ribbed tank top he is wearing with the layered garment shown in the second attached product still: a boxy oversized washed black tee with sewn-in long under-sleeves, worn relaxed and roomy over his frame with the hem falling to the same length as his original tank top. The long printed under-sleeves now cover his arms down to wide open hems at the wrists — no cuffs, the faded white thorn and gothic graphics running down the outer sleeves exactly as in the product still, his hand and finger tattoos still visible below the hems. The large arched cream-white "JAGO" chest lettering with its cracked texture sits centered on his chest, mostly readable, naturally interrupted where his crossed arms cross in front of it.
 
-The garment integrates into the photo's real light — the hard direct flash hitting the black cotton with bright natural highlights on the folds and a soft shadow falling behind him, the washed black fabric reading matte with visible weave, the print catching the flash and following every fold of the drape. The image keeps the exact look of a real nighttime paparazzi photo: same colors, same flash falloff, same slight photo noise, nothing else altered — a real photo, not a rendered image.
+The garment integrates into the photo's real light — the mixed daylight and gym lighting falling softly on the black cotton with natural highlights and shadow in the folds, the washed black fabric reading matte with visible weave, the print following every fold of the drape. The image keeps the exact look of a real candid phone photo: same colors, same softness, same slight photo grain, nothing else altered — a real photo, not a rendered image.
 ```
 
 ---

@@ -125,8 +125,8 @@ Lingua: **inglese**. Regole Virality Predictor: apertura diretta su Drake, nessu
 | Shot 1 — hero product still | Banana Pro | `/banana-pro-director` | ✅ 05/07 — `magnific_keep-the-layered-garment-_Bm0AFaFoQR.png` (garment reference ufficiale) |
 | Shot 2 — Drake (garment swap su mirror selfie) | Banana Pro | `/banana-pro-director` | ✅ 05/07 — `magnific_take-the-first-attached-p_gJKu2pOSXO.png` |
 | Shot 3 — Rihanna (garment swap su `rihanna-C-vogue.jpg`, street notturna col flash) | Banana Pro | `/banana-pro-director` | 🔁 08/07 — accantonata nella prova rapper swap; resta in archivio come alternativa (era ✅ 05/07) |
-| Shot 3A — A$AP Rocky (garment swap su foto reale, sorgente da scegliere) | Banana Pro | `/banana-pro-director` | ⬜ serve foto sorgente (criteri in `video-7-prompts.md`) |
-| Shot 3B — Central Cee (garment swap su foto reale, sorgente da scegliere) | Banana Pro | `/banana-pro-director` | ⬜ serve foto sorgente (criteri in `video-7-prompts.md`) |
+| Shot 3A — A$AP Rocky (garment swap su street candid NYC con Rihanna, `rocky-A-nyc-street.jpg`) | Banana Pro | `/banana-pro-director` | ⬜ 08/07 — foto scelta, prompt pronto in `video-7-prompts.md`, da generare |
+| Shot 3B — Central Cee (garment swap su candid campetto da basket, `centralcee-A-basketball.jpg`) | Banana Pro | `/banana-pro-director` | ⬜ 08/07 — foto scelta, prompt pronto in `video-7-prompts.md`, da generare |
 | Shot 4 — dettaglio grafica petto | Banana Pro | `/banana-pro-director` | ✅ 07/07 — generata via MCP (da approvare) |
 | Shot 5 — Travis Scott (garment swap su `image 3.jpg`, cucina industriale col flash) | Banana Pro | `/banana-pro-director` | ✅ 05/07 — generata e approvata (scritta parzialmente coperta) |
 | Shot 2-bis / 5-bis — Drake e Travis con scritta JAGO in piena vista (sorgenti: `drake-B-fullbody.jpg`, `travis-B-nyc.jpg`) | Banana Pro | `/banana-pro-director` | ✅ 07/07 — generate via MCP, in `Downloads\Video Jago\Video 7 - JAGO Campaign\` (da approvare) |
