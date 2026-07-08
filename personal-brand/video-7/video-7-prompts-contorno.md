@@ -133,23 +133,23 @@ Captured with the specific optical signature of a retro compact film camera rath
 **Reference da allegare:** still approvato sopra (`magnific_a-cinematic-still-photogr_iAOnBrk3uK.png`)
 
 ```
-Scene & Mood: A man on a New York sidewalk turns away from his wave and starts walking directly toward the camera, calm and unhurried, the moment shifting from a greeting into an approach.
+Scene & Mood: A man on a NYC sidewalk turns from his wave and walks directly toward camera, calm and unhurried.
 
-Frame Map: @image1 starts in the right-center of the frame as in the plate, mid-ground, waist-up. Across the shot he moves forward and slightly left, closing distance toward the camera, ending in the left-center foreground, chest-up. Scaffolding and brick facades hold the right two-thirds as receding negative space throughout.
+Frame Map: @image1 starts right-center, mid-ground, waist-up. Moves forward and slightly left, ending left-center foreground, chest-up. Scaffolding and brick facades hold the right two-thirds as negative space.
 
-Subject Lock — @image1: Face, hair, black long-sleeve top, and silhouette identical throughout. Begins mid-wave, turns his torso and head forward, drops the raised hand naturally to his side as he pivots, then walks forward at a relaxed even pace. Eyes find the camera again within the first second and hold steady contact as he approaches.
+Subject Lock — @image1: Face, hair, black long-sleeve top, silhouette identical throughout. Turns torso and head forward, drops raised hand naturally, walks forward at a relaxed pace. Eyes find camera within 1s and hold steady contact.
 
-Cross-Frame Rules: Single-subject shot — @image1 remains the only figure in focus throughout, background pedestrians stay small and out of focus, never entering the foreground path.
+Cross-Frame Rules: Single-subject — @image1 stays in focus throughout, background pedestrians stay small and out of focus.
 
-Movement: @image1 completes the turn and drops his hand in the first 1 second, then walks forward at a natural relaxed pace from 1–4 seconds, closing roughly half the distance to camera, footsteps even on the pavement. Micro-motion: hair shifting slightly with the turn and stride, fabric of the long-sleeve top settling and swaying naturally with the arm swing, steady unbroken eye contact with the camera. Environmental motion: steam continuing to drift off the manhole cover camera-left, background pedestrians and a passing car moving slowly and softly out of focus, faint breeze movement in a hanging fire-escape line or awning edge. Camera holds a natural handheld wobble throughout — visible unstabilized drift and micro-shake, no smoothing, no gimbal steadiness, the frame breathing slightly as if held by a walking operator.
+Movement: Turn and hand-drop complete by 1s, then relaxed walk 1–4s, closing roughly half the distance to camera, even footsteps. Hair and fabric shift naturally with stride, steady eye contact held. Steam drifts off the manhole camera-left, background pedestrians and a car move softly out of focus. Camera holds natural handheld wobble throughout — visible unstabilized drift and micro-shake, no smoothing.
 
-Last Frame: @image1 now in the left-center foreground, chest-up, mid-stride, eyes locked on camera, calm expression holding. Scaffolding, brick facades, and the steaming manhole recede softly behind him in negative space. No on-screen text, no captions, no signage typography, no rendered text in the frame.
+Last Frame: @image1 left-center foreground, chest-up, mid-stride, eyes locked on camera. Scaffolding and manhole recede softly behind. No on-screen text, no captions, no signage typography, no rendered text.
 
-World Plate: Anchored to @image1's plate — New York sidewalk scaffolding scene, metal support poles and plywood shed ceiling to one side, brick and pre-war building facades with fire escapes rising behind, a manhole gently steaming further down the block, sparse soft-focus pedestrians and parked cars in the depth. Soft natural diffused mid-morning daylight, spring/early-summer register around eleven o'clock, warm neutral color temperature, gentle directional shadow.
+World Plate: NYC sidewalk scaffolding — metal poles, plywood shed ceiling, brick facades with fire escapes, a manhole steaming down the block, soft-focus pedestrians and cars in depth. Soft diffused mid-morning daylight, spring/early-summer, ~11am, warm neutral tone.
 
-Sound Bed: Diegetic only — footsteps on pavement, faint ambient city traffic hum, distant pedestrian murmur, light breeze, no music, no dialogue, no soundtrack.
+Sound Bed: Diegetic only — footsteps on pavement, ambient traffic hum, distant pedestrian murmur, light breeze, no music, no dialogue.
 
-Capture Realism: @image1 sits inside real depth — light atmosphere suspended between camera, subject, and the receding street, background rendered softer and lower-contrast than the foreground. Skin reads true matte — zero shine on forehead, nose bridge, cheekbones, temples, and chin, real peach fuzz at jaw and hairline, fine even pore texture, warmth preserved and natural, never plastic or harsh, no blemishes, fine flattering texture. Shadows lifted gently, highlights rolled off softly, nothing crushed or clipped. Specular highlights removed from skin, hair, and fabric — matte and diffuse throughout. Slightly desaturated, warm-retained grade true to the retro film-camera register of the plate.
+Capture Realism: Light atmosphere between subject and receding street, background softer/lower-contrast. Skin true matte — zero shine on forehead, nose, cheekbones, temples, chin, real peach fuzz, warmth preserved, never plastic. Shadows lifted gently, highlights rolled off, nothing crushed/clipped. Specular removed from skin/hair/fabric. Desaturated warm-retained grade matching the retro film plate.
 
-Camera Capture: wide-latitude cinema capture, vintage 55mm 2x anamorphic character at a wide aperture, natural oval bokeh, light diffusion bloom, fully handheld with pronounced natural wobble and micro-shake, no stabilization, retro film-camera color-negative rendition with pronounced organic grain across the frame, slightly lower-contrast nostalgic stock look, 24fps 180° shutter, 4 seconds.
+Camera Capture: wide-latitude cinema capture, vintage 55mm 2x anamorphic, wide aperture, natural oval bokeh, light diffusion bloom, fully handheld with pronounced wobble and micro-shake, no stabilization, retro film-camera color-negative rendition with pronounced organic grain, lower-contrast nostalgic stock look, 24fps 180° shutter, 4 seconds.
 ```
