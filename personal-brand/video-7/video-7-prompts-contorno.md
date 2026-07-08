@@ -4,16 +4,18 @@
 >
 > **Reference da allegare in tutti e 3:** `shot-4-dettaglio-petto.png` (stile/registro) + garment reference ufficiale `magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`
 >
-> **Aggiornamento 08/07:** framing riscritto per formato 9:16 nativo — la testa non entra mai nel frame (il bordo superiore parte netto alla base del collo, senza headroom ambiguo), il corpo riempie tutta l'altezza verticale fino a metà coscia/ginocchio. Corregge il crop che tagliava male la testa nella v1.
+> **Aggiornamento 08/07 (v2):** framing riscritto per formato 9:16 nativo — bordo superiore del frame poco sopra la base del collo, corpo che riempie tutta l'altezza verticale fino a metà coscia/ginocchio. Corregge il crop che tagliava male la testa nella v1.
+>
+> **Aggiornamento 08/07 (v3 — fix decapitazione):** la v2 istruiva "no head in frame", ma il modello l'ha presa alla lettera generando un soggetto letteralmente senza testa (collo mozzato) invece di limitarsi a tagliare la foto sopra la testa. Riscritto come normale linguaggio da crop fotografico — il soggetto ha la testa, è solo fuori dal bordo superiore dell'inquadratura, come una foto scattata da vicino.
 
 ---
 
 ## Contorno 1 — Parcheggio sotterraneo, dettaglio manica
 
 ```
-A cinematic still photograph capturing a faceless detail moment in an underground parking garage — a tall vertical three-quarter composition filling the full height of the frame, the top edge of the frame cutting cleanly across the base of the neck with no head and no headroom in shot, the body filling the frame downward through the shoulder, arm, torso, and hip to just above the knee, standing against a bare concrete support pillar, one hand resting loosely in the pocket, the printed long under-sleeve with its faded white thorn and gothic graphic catching hard direct light along the forearm, the washed black boxy tee filling the upper two-thirds of the frame.
+A cinematic still photograph capturing a close detail moment in an underground parking garage — a tall vertical three-quarter composition filling the full height of the frame, shot tight and close so the top edge of the frame sits just above the collar, cropping the photograph slightly above the neckline the way a close-in garment detail shot naturally crops, the body filling the frame downward through the shoulder, arm, torso, and hip to just above the knee, standing against a bare concrete support pillar, one hand resting loosely in the pocket, the printed long under-sleeve with its faded white thorn and gothic graphic catching hard direct light along the forearm, the washed black boxy tee filling the upper two-thirds of the frame.
 
-The garment carries identically from the attached reference — the boxy oversized washed black tee layered over the sewn-in wide long sleeve with its faded white thorn print, no cuff, open raw hem at the wrist. No head or face anywhere in frame — the top frame edge is the neck base, a hard clean crop, not an accidental cutoff.
+The garment carries identically from the attached reference — the boxy oversized washed black tee layered over the sewn-in wide long sleeve with its faded white thorn print, no cuff, open raw hem at the wrist. The photograph is framed tight on the garment, collar up to shoulder, exactly like a close editorial crop — an ordinary photographic framing choice, not a bodily feature.
 
 The concrete pillar and garage floor behind carry a cold, gritty, underground register — bare cast concrete with visible form-tie marks and water staining, a painted parking line just visible at the floor edge, a single distant fluorescent tube casting a thin cool wash far in the background, otherwise the space falling into deep shadow beyond the immediate pillar.
 
@@ -27,9 +29,9 @@ Captured with the specific optical signature of a direct-flash candid photograph
 ## Contorno 2 — Corridoio backstage, cavi e flight case
 
 ```
-A cinematic still photograph capturing a faceless backstage moment in a venue corridor — a tall vertical composition filling the full height of the frame, the top edge of the frame cutting cleanly across the base of the neck with no head and no headroom in shot, the figure standing three-quarter turned away from camera, walking past a stack of black flight cases and coiled stage cables, the back and shoulder of the washed black boxy tee filling the upper frame with the printed long under-sleeve visible along the trailing arm, the body continuing down through the torso and legs to just above the ankle, motion caught mid-stride.
+A cinematic still photograph capturing a backstage moment in a venue corridor — a tall vertical composition filling the full height of the frame, shot tight and close so the top edge of the frame sits just above the collar, cropping the photograph slightly above the neckline the way a close-in garment detail shot naturally crops, the figure standing three-quarter turned away from camera, walking past a stack of black flight cases and coiled stage cables, the back and shoulder of the washed black boxy tee filling the upper frame with the printed long under-sleeve visible along the trailing arm, the body continuing down through the torso and legs to just above the ankle, motion caught mid-stride.
 
-The garment carries identically from the attached reference — the boxy oversized washed black tee layered over the sewn-in wide long sleeve with its faded white thorn print, no cuff, open raw hem at the wrist, worn exactly as shown. No head or face anywhere in frame — the top frame edge is the neck base, a hard clean crop, not an accidental cutoff.
+The garment carries identically from the attached reference — the boxy oversized washed black tee layered over the sewn-in wide long sleeve with its faded white thorn print, no cuff, open raw hem at the wrist, worn exactly as shown. The photograph is framed tight on the garment, collar up to shoulder, exactly like a close editorial crop — an ordinary photographic framing choice, not a bodily feature.
 
 The corridor behind is a raw backstage passage — scuffed painted concrete walls, exposed conduit running along the ceiling, black flight cases stacked against the wall, thick coiled cables looping across the floor, a single bare work light overhead casting a hard pool of light that falls off quickly into the shadowed length of the corridor beyond.
 
@@ -43,9 +45,9 @@ Captured with the specific optical signature of a direct-flash candid photograph
 ## Contorno 3 — Uscita di sicurezza, mezzobusto
 
 ```
-A cinematic still photograph capturing a faceless candid moment at a venue fire exit — a tall vertical composition filling the full height of the frame, the top edge of the frame cutting cleanly across the base of the neck with no head and no headroom in shot, the figure standing square to camera beside a battered metal push-bar fire door propped half open, one hand raised to grip the door frame, the washed black boxy tee and cracked cream-white arched chest lettering filling the upper-center of the frame, the printed long under-sleeves visible on both arms, the body continuing down through the waist and legs to just above the knee.
+A cinematic still photograph capturing a candid moment at a venue fire exit — a tall vertical composition filling the full height of the frame, shot tight and close so the top edge of the frame sits just above the collar, cropping the photograph slightly above the neckline the way a close-in garment detail shot naturally crops, the figure standing square to camera beside a battered metal push-bar fire door propped half open, one hand raised to grip the door frame, the washed black boxy tee and cracked cream-white arched chest lettering filling the upper-center of the frame, the printed long under-sleeves visible on both arms, the body continuing down through the waist and legs to just above the knee.
 
-The garment carries identically from the attached reference — the boxy oversized washed black tee with its cracked cream-white arched chest lettering and metallic tonal variation, layered over the sewn-in wide long sleeves with their faded white thorn print, no cuff, open raw hem at the wrist, worn exactly as shown. No head or face anywhere in frame — the top frame edge is the neck base, a hard clean crop, not an accidental cutoff.
+The garment carries identically from the attached reference — the boxy oversized washed black tee with its cracked cream-white arched chest lettering and metallic tonal variation, layered over the sewn-in wide long sleeves with their faded white thorn print, no cuff, open raw hem at the wrist, worn exactly as shown. The photograph is framed tight on the garment, collar up to shoulder, exactly like a close editorial crop — an ordinary photographic framing choice, not a bodily feature.
 
 The fire door and surrounding wall behind carry a raw utilitarian register — scratched grey metal push-bar door, chipped paint on the surrounding frame, a strip of yellow-and-black hazard tape peeling at the door edge, a sliver of cool blue night visible through the gap in the propped-open door, otherwise the wall falling into flat shadow.
 
