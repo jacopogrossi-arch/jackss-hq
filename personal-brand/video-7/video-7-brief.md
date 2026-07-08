@@ -128,7 +128,7 @@ Lingua: **inglese**. Regole Virality Predictor: apertura diretta su Drake, nessu
 | Micro-motion su 1-2 shot chiave (M5, living still) | Seedance / Kling | `/cinema-worldbuilder-pro` | ❌ SCARTATO 07/07 — Seedance blocca likeness celebrity (verificato con prompt neutro); Kling 2.5 e 3.0 producono clip inusabili. Il video va di still puri + punch-in CapCut |
 | Voiceover Jago EN | Magnific TTS (ElevenLabs v3, voce "Matt Carson" id 22 — ora voce ufficiale Jago, sostituisce Michael Johnson) | — | ✅ 08/07 — rigenerato, da riscaricare in `Downloads\Video Jago\Video 7 - JAGO Campaign\` |
 | Montaggio (punch-in, SFX flash, beat) | CapCut | — | ⬜ |
-| Caption IG + disclaimer + 5 hashtag | — | — | ⬜ |
+| Caption IG + disclaimer + 5 hashtag | — | — | ✅ 08/07 — `video-7-caption.md` (EN, keyword "DRAKE", disclaimer incluso) |
 | Copertina IG | Canva (template magazine #5/#6) | — | ⬜ |
 
 **Handoff:** i prompt immagine si generano SOLO con `/banana-pro-director`; gli eventuali prompt video SOLO con `/cinema-worldbuilder-pro`. Questo brief non contiene prompt di proposito.
