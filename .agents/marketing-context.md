@@ -1,98 +1,69 @@
-# Marketing Context — Jago / Jacopo Grossi
+# Marketing Context — INVERSO / Jacopo Grossi
 
 > Questo file viene letto automaticamente da tutte le skill di marketing prima di iniziare qualsiasi task. Non ripetere queste informazioni nelle richieste — sono già qui.
+> Aggiornato il 13/07/2026 dopo il pivot strategico (briefing `personal-brand/briefing-2026-07-12-inverso-strategia.md`).
 
 ---
 
 ## 1. Brand Overview
 
-**Nome brand:** Jago (avatar AI) / Jacopo Grossi (persona reale dietro)
-**Formato:** Personal brand — YouTube + Instagram
-**Posizionamento:** "Costruisco pubblicamente un brand di moda usando AI"
-**Tipo di business:** Creator + servizi AI per il settore moda
-**Fase attuale:** Early stage — obiettivo immediato è il primo cliente pagante
+**Brand:** INVERSO — menswear italiano, target uomo 20–30
+**Volto:** Jacopo Grossi (persona reale: studente di economia + accademia di moda, Roma, cuce davvero)
+**Posizionamento:** build-in-public — "costruisco un brand di moda vero, da studente, usando anche l'AI"
+**Modello:** UN capo per volta, pre-order, drop ogni 3–4 mesi. Primo drop: 10–20 pezzi.
+**Fase attuale:** pre-Drop 1 — il primo capo (Modello A/B) è la priorità assoluta
+**Reference model:** micro-brand build-in-public (es. Marcus Milione). In Italia nessuno lo fa così.
 
----
+## 2. Struttura canali (funnel, non canali paralleli)
 
-## 2. Cosa fa Jago
+- **Profilo personale pubblico di Jacopo** (IG) = **il processo**. Build-in-public: mani, macchina, tessuto, decisioni, costi. Ogni post menziona @inverso. Vende la storia.
+- **Profilo Inverso** (IG) = **il risultato**. Solo capo, lookbook, drop, pre-order. Cadenza bassa, tutto livello campagna. Vende il capo.
+- **@jagoworks** = congelato, vetrina del servizio Lookbook AI. Fuori dal funnel fino a dopo il Drop 1.
+- **Piattaforma primaria: Instagram.** YouTube solo in seconda fase (long-form recap dal girato grezzo accumulato).
 
-Mostra in pubblico come si costruisce un brand di moda dal niente usando strumenti AI (HiggsField, Kling, Seedance, Claude). Ogni video/Reel è un pezzo del processo reale, non contenuto educativo generico. Il canale è la vetrina dei servizi, non il prodotto finale.
+## 3. Jago (avatar AI) — ruolo attuale
 
----
+Non è più il progetto: è uno strumento dentro Inverso.
+1. Modello virtuale dei lookbook dei capi reali (sostituisce lo shooting)
+2. Personaggio del racconto build-in-public ("il mio modello non esiste")
+3. Case study del futuro servizio Lookbook AI
 
-## 3. Servizi offerti
+## 4. Servizi (SOLO dopo il Drop 1 — non promuovere prima)
 
-### Offerta principale (primo cliente)
-**Lookbook AI completo** — produzione di un lookbook fotografico/visivo interamente generato con AI per un piccolo brand di moda. Include immagini coerenti, palette definita, stile editoriale curato.
+- **Lookbook AI** (€400 pilota / €700 regime) — cavallo di Troia, argomento costo vs shooting €3–8k
+- **Idea→Campione** (€800–1500/capo, ipotesi): moodboard → rendering AI + tech pack + cartamodello digitale. Scope da definire onestamente.
+- Funnel servizi: Lookbook AI porta dentro → Idea→Campione tiene dentro.
+- Posizionamento: "campagna con direzione creativa vera, prodotta con AI" — MAI "immagini AI per moda".
 
-**Prezzo:** da definire (in valutazione)
+## 5. Audience e cliente
 
-### Servizi aggiuntivi
-- Generazione SVG per cartamodelli (es. jeans) via Claude API
-- Campagne visual AI per brand moda (immagini, video, Reel)
-- Consulenza AI per aziende/creator del settore moda
-
----
-
-## 4. Target cliente
-
-**Cliente ideale (ICP):** Piccolo brand di moda italiano indipendente
-- Budget limitato per produzioni fotografiche tradizionali
-- Vuole contenuti visivi di qualità professionale
-- Aperto all'AI ma non sa come usarla
-- Cerca qualcuno che lo faccia per loro, non un corso
-
-**Cliente da NON cercare:** grandi aziende, agenzie, brand con fotografo interno già strutturato.
-
----
-
-## 5. Audience del canale (follower)
-
-- Designer indipendenti, creator moda, piccoli brand
-- Interessati all'intersezione AI + moda
-- Prevalentemente italiani
-- Seguono il processo costruttivo, non tutorial tecnici
-
----
+**Audience contenuti:** italiani interessati a moda, artigianato, build-in-public, AI creativa. Si affezionano al processo e alla persona.
+**Cliente Drop 1:** chi compra un capo menswear €150–200 in tiratura limitata da una storia credibile.
+**Cliente servizi (dopo):** brand emergente che ha già fatto 1–2 drop — non il principiante con €3k totali.
 
 ## 6. Tono di voce
 
-- **Diretto e concreto** — mostra, non promette
-- **Autentico** — "ti mostro cosa faccio io, tu decidi se ti serve"
-- **Non guru, non hype** — zero promesse esagerate, zero motivational content
-- **Pratico** — ogni contenuto ha un'utilità reale, non è solo estetica
-
----
+- Studente vero, non guru: mostra, non promette. Zero hype, zero motivational.
+- Il cringe è incongruenza (recitare da esperto), non bassa qualità: parlare MENTRE si fa, non ALLA camera.
+- La lentezza è contenuto, non debito ("ci ho messo 4 mesi" è il punto di forza).
+- Trasparenza su costi e numeri = pilastro di credibilità.
 
 ## 7. Estetica visiva
 
-- Dark-luxury / dark academia
-- Palette: nero, ambra, legno, toni caldi scuri
-- Grana 35mm, chiaroscuro marcato
-- Illuminazione teatrale, atmosfera
-- Niente colori vivaci, niente stile corporate o clean-minimal
+- Inverso/Jago: dark-luxury, dark academia — nero, ambra, legno, chiaroscuro, grana 35mm
+- Processo su profilo personale: grezzo autentico va bene (è il "prima" del before/after)
+- Palette capi: nero, indaco profondo, oliva scuro, avorio
 
----
+## 8. Vincoli operativi
 
-## 8. Competitor / Riferimenti
-
-- Nessun competitor diretto identificato in Italia (vantaggio)
-- Riferimento: creator internazionali che mostrano processi AI creativi
-- Differenziatore: focus esclusivo su moda + servizio reale (non solo content)
-
----
+- **Regola di collisione:** salta prima il contenuto, poi il capo, MAI lo studio. Minimo vitale: 1 azione fisica sul capo a settimana.
+- Contenuti time-boxed: gira → monta grezzo → pubblica. Se sfora, pubblica lo stesso.
+- Instagram: max 5 hashtag per post/Reel.
+- Protocollo camera a progressione: prime settimane solo processo (mani/macchina) + voiceover, poi faccia di sfuggita, poi 10s a camera.
+- Università + accademia hanno sempre precedenza; sfruttare la sovrapposizione accademia ↔ Inverso.
 
 ## 9. Obiettivi
 
-**Immediato:** primo cliente pagante (lookbook AI)
-**Medio termine:** costruire un portfolio di 3-5 brand serviti
-**Lungo termine:** corso/prodotto digitale (dopo aver validato i servizi)
-
----
-
-## 10. Canali attivi
-
-- Instagram (Reel + post)
-- YouTube (video processo)
-- Notion (documentazione interna)
-- Telegram (ecosistema personale Jackss Life)
+**Immediato:** chiudere il ciclo completo del Drop 1 (idea → capo → campagna → vendita). Non è il fatturato.
+**Medio:** caso studio in mano → riaprire outreach servizi con "brand vero costruito con AI, ecco i numeri".
+**Lungo:** Inverso brand sostenibile + servizi che lo finanziano.
