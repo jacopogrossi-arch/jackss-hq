@@ -54,6 +54,8 @@ The garment integrates into the photo's real light — the warm bathroom lightin
 
 ## Shot 3 — Rihanna, garment swap su foto reale
 
+> 🔁 **08/07 — PROVA RAPPER SWAP:** Rihanna accantonata; al suo posto **A$AP Rocky (Shot 3A)** e **Central Cee (Shot 3B)**, sezioni sotto. Questo prompt e l'immagine già generata restano in archivio come alternativa.
+
 **Tool:** Banana Pro (Nano Banana)
 **Reference da allegare (2):** ① la foto sorgente (`rihanna-C-vogue.jpg`, Downloads — street notturna, jersey blu oversized) ② la garment reference v4 (`magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`)
 **Aspect ratio (nella UI):** stessa della foto originale
@@ -63,6 +65,44 @@ The garment integrates into the photo's real light — the warm bathroom lightin
 Take the first attached photo — a nighttime street photo of a woman walking on a city sidewalk, photographed with direct flash — and keep everything exactly as it is: the woman, her face, her long dark hair with bangs, her red lipstick, her gold chain necklace, her small red handbag, her baggy light-blue denim jeans, her heels, the night street behind her with its storefronts and distant lights, the flash lighting, the framing. Replace only the oversized royal-blue sports jersey she is wearing with the layered garment shown in the second attached product still: a boxy oversized washed black tee with sewn-in long under-sleeves, worn oversized and roomy with the hem falling to her hips over the jeans. The long printed under-sleeves cover her arms down to wide open hems at the wrists — no cuffs, the faded white thorn and gothic graphics running down the outer sleeves exactly as in the product still. The large arched cream-white "JAGO" chest lettering with its cracked texture sits centered on her chest, clearly readable.
 
 The garment integrates into the photo's real light — the hard direct flash hitting the black cotton with bright natural highlights on the folds and a soft shadow falling behind her, the washed black fabric reading matte with visible weave, the print catching the flash and following every fold of the drape. The image keeps the exact look of a real nighttime paparazzi photo: same colors, same flash falloff, same slight photo noise, nothing else altered — a real photo, not a rendered image.
+```
+
+---
+
+## Shot 3A — A$AP Rocky, garment swap su foto reale (prova rapper swap 08/07)
+
+> ✅ **Foto scelta 08/07:** candid diurna a New York, Rocky accanto a Rihanna (in secondo piano, non indossa JAGO — stesso schema del "man in black" già usato nello shot Drake alternativa). Scartata l'altra opzione fornita (giacca di pelle rossa, sorriso da red carpet): il tee grigio semplice regge uno swap più pulito e il tono candido è più coerente col mood "braggadocio silenzioso" del brief.
+>
+> **Da salvare in Downloads come** `rocky-A-nyc-street.jpg`.
+
+**Tool:** Banana Pro (Nano Banana)
+**Reference da allegare (2):** ① la foto sorgente (`rocky-A-nyc-street.jpg`, Downloads — daylight, strada NYC con Rihanna) ② la garment reference v4 (`magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`)
+**Aspect ratio (nella UI):** stessa della foto originale
+**Nota:** lettering leggibile (non è un mirror selfie).
+
+```
+Take the first attached photo — a daylight paparazzi photo of a man and a woman walking together on a New York City sidewalk, a yellow taxi and city buildings in the background — and keep everything exactly as it is: the man, his face, his braided hair, his silver chain necklace, his fingerless racing-style glove on one hand, his relaxed pose with his arm gently resting near the woman beside him, his dark baggy trousers, his tan Timberland boots, the woman beside him in her striped halter maxi dress with her gold bangles and red handbag, the sidewalk, the taxi, the buildings, the soft overcast daylight, the framing. Replace only the plain oversized grey crew-neck tee he is wearing with the layered garment shown in the second attached product still: a boxy oversized washed black tee with sewn-in long under-sleeves, worn with the same relaxed oversized drape falling over his trousers. The long printed under-sleeves now cover his arms down to wide open hems at the wrists — no cuffs, the faded white thorn and gothic graphics running down the outer sleeves exactly as in the product still, his chain and glove now sitting over the garment. The large arched cream-white "JAGO" chest lettering with its cracked texture sits centered on his chest, clearly readable even at this three-quarter angle.
+
+The garment integrates into the photo's real light — the soft overcast daylight falling evenly on the black cotton with gentle natural highlights and shadow in the folds, the washed black fabric reading matte with visible weave, the print following every fold of the drape as he walks. The image keeps the exact look of a real daylight paparazzi photo: same colors, same softness, same slight photo grain, nothing else altered — a real photo, not a rendered image.
+```
+
+---
+
+## Shot 3B — Central Cee, garment swap su foto reale (prova rapper swap 08/07)
+
+> ✅ **Foto scelta 08/07:** candid diurna a un evento di comunità su un campetto da basket indoor, circondato da bambini del posto, canotta bianca "Member Only", bandana annodata in testa, braccia incrociate sul petto. Unica foto disponibile — le braccia incrociate coprono in parte il lettering: stesso compromesso già accettato per Travis Scott in cucina (occlusione parziale = più realismo).
+>
+> **Da salvare in Downloads come** `centralcee-A-basketball.jpg`.
+
+**Tool:** Banana Pro (Nano Banana)
+**Reference da allegare (2):** ① la foto sorgente (`centralcee-A-basketball.jpg`, Downloads — daylight, campetto da basket indoor) ② la garment reference v4 (`magnific_keep-the-layered-garment-_Bm0AFaFoQR.png`)
+**Aspect ratio (nella UI):** stessa della foto originale
+**Nota:** lettering leggibile ma parzialmente coperto dalle braccia incrociate (accettato).
+
+```
+Take the first attached photo — a candid daylight photo of a man standing on an indoor basketball court surrounded by a crowd of local kids, a hoop and green gymnasium walls behind him, daylight coming through barred windows mixed with overhead gym lighting — and keep everything exactly as it is: the man, his face, his face and neck tattoos, his tattooed arms, the red-and-white bandana tied over his head with strands of hair showing beneath it, his arms crossed in front of him, his belt, his cargo shorts, his white sneakers, the crowd of kids around him, the basketball hoop and green walls, the banner in the background, the daylight, the framing. Replace only the white ribbed tank top he is wearing with the layered garment shown in the second attached product still: a boxy oversized washed black tee with sewn-in long under-sleeves, worn relaxed and roomy over his frame with the hem falling to the same length as his original tank top. The long printed under-sleeves now cover his arms down to wide open hems at the wrists — no cuffs, the faded white thorn and gothic graphics running down the outer sleeves exactly as in the product still, his hand and finger tattoos still visible below the hems. The large arched cream-white "JAGO" chest lettering with its cracked texture sits centered on his chest, mostly readable, naturally interrupted where his crossed arms cross in front of it.
+
+The garment integrates into the photo's real light — the mixed daylight and gym lighting falling softly on the black cotton with natural highlights and shadow in the folds, the washed black fabric reading matte with visible weave, the print following every fold of the drape. The image keeps the exact look of a real candid phone photo: same colors, same softness, same slight photo grain, nothing else altered — a real photo, not a rendered image.
 ```
 
 ---
