@@ -5,6 +5,10 @@
 
 ---
 
+## 0. Natura del progetto (LEGGERE PRIMA DI TUTTO)
+
+**Inverso è prima di tutto un progetto personale di vita, non un business.** È la ricerca di Jacopo: sviluppo del gusto creativo, ricerca su tessuti e materiali, passione per la moda, crescita come designer e come persona. I soldi sono importanti ma non sono il fine — la sostenibilità economica serve a finanziare la ricerca e a renderla seria, non il contrario. Il racconto build-in-public riflette questo: un percorso di formazione e scoperta condiviso, non una macchina di vendita. **Qualsiasi strategia che sacrifichi la dimensione personale/creativa per massimizzare metriche o revenue è fuori strada.**
+
 ## 1. Brand Overview
 
 **Brand:** INVERSO — menswear italiano, target uomo 20–30

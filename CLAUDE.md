@@ -13,20 +13,24 @@ Non è uno sviluppatore: le spiegazioni devono essere pratiche (dove cliccare, c
 
 Per il contesto sulla vita personale (studi, sport, persone importanti), leggere la memoria `user_personal_life.md`.
 
-**Obiettivo immediato:** primo cliente pagante per servizi AI (SVG, campagne, consulenza) — non i follower.
+**Obiettivo:** portare Inverso al Drop 1 (primo capo, pre-order) — chiudere il ciclo idea→capo→campagna→vendita.
 
 ---
 
-## Progetto principale
+## Progetto principale — INVERSO (dal 13/07/2026)
 
-**Personal Brand AI + Moda** — canale YouTube/Instagram con avatar AI Jago.
-Posizionamento: "costruisco pubblicamente un brand di moda usando AI."
+**Inverso** — brand menswear italiano reale, costruito in build-in-public col volto di Jacopo.
+**Prima di tutto è un progetto personale di vita e ricerca**: sviluppo del gusto creativo, ricerca su tessuti e materiali, passione per la moda. I soldi finanziano la ricerca, non sono il fine.
 
-File: `personal-brand/`
-- Strategia e operatività nella root: `strategy.md`, `content-calendar.md`, `analytics.md`, `outreach.md`, `playbook-dm.md` (metodo DM v2 con immagini custom), `lead-magnet-lookbook.md`
-- **Nuovo video**: quando Jacopo dice "Iniziamo il processo di creazione di un nuovo video" usare la skill `/jago-creative-director` (propone direzioni creative, poi Campaign Blueprint in `video-N/video-N-brief.md`)
-- Un video = una cartella: `video-1/`, `video-2/`, `video-3/` (script, prompt, moodboard, immagini)
-- `assets/` contiene solo gli asset condivisi del brand (logo, palette, moodboard Jago)
+File: `inverso/`
+- `piano-inverso.md` — piano maestro del progetto
+- `briefing-2026-07-12-inverso-strategia.md` — briefing strategico fondativo
+- `analisi/` — analisi delle skill marketing (copywriting, psychology, social, positioning, idee)
+- `assets-jago/` — asset dell'avatar Jago (logo, palette, moodboard), ora strumento di Inverso
+
+**Struttura:** Jacopo = volto del processo (profilo IG personale) · @inverso = risultato/drop · Jago = modello virtuale dei lookbook · @jagoworks = congelato, vetrina servizio.
+**Marketing:** skill `/inverso-marketing` (strategia) + copywriting/psychology/social/product-marketing/marketing-ideas (globali, coreyhaines31). Contesto letto da tutte: `.agents/marketing-context.md`.
+**Servizi (Lookbook AI, Idea→Campione):** solo dopo il Drop 1.
 
 ---
 
@@ -43,6 +47,7 @@ Tutto ciò che è dormiente o fuori tema sta in `archivio/`:
 - **Dispensa diritto pubblico** (appunti universitari, esame superato) → `archivio/dispensa-diritto-pubblico/`
 - **Dispensa ragioneria** (esame 16/07/2026) → `archivio/dispensa-ragioneria/`
 - **Log Jackss** (briefing/check-in delle routine dismesse) → `archivio/logs-jackss/`
+- **Canale Jago** (7 video pubblicati, outreach, strategia — chiuso come progetto autonomo il 13/07/2026, Jago vive come strumento di Inverso) → `archivio/canale-jago/`. La skill `/jago-creative-director` resta per eventuali video lookbook di Inverso.
 
 ---
 
