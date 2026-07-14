@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Ragioneria — Teoria completa</title>
+<style>
+  :root {
+    --bg: #0f1115;
+    --card: #1a1d24;
+    --text: #e8e6e1;
+    --muted: #9a968e;
+    --accent: #d4a94e;
+    --green: #4caf7d;
+    --red: #d9534f;
+    --border: #2a2e38;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 24px 16px;
+  }
+  .container { width: 100%; max-width: 720px; }
+  header { text-align: center; margin-bottom: 24px; }
+  header h1 { font-size: 1.4rem; color: var(--accent); letter-spacing: 0.5px; }
+  header p { color: var(--muted); font-size: 0.9rem; margin-top: 6px; }
+  .progress-bar { height: 6px; background: var(--border); border-radius: 3px; margin: 18px 0; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--accent); width: 0%; transition: width 0.3s; }
+  .status { display: flex; justify-content: space-between; color: var(--muted); font-size: 0.85rem; margin-bottom: 12px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 24px;
+  }
+  .part-tag { display: inline-block; font-size: 0.72rem; color: var(--accent); border: 1px solid var(--accent); border-radius: 20px; padding: 2px 10px; margin-bottom: 12px; letter-spacing: 0.5px; }
+  .question { font-size: 1.1rem; line-height: 1.5; margin-bottom: 22px; }
+  .options { display: flex; flex-direction: column; gap: 10px; }
+  .option {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    cursor: pointer;
+    font-size: 0.98rem;
+    line-height: 1.45;
+    text-align: left;
+    color: var(--text);
+    font-family: inherit;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .option:hover:not(:disabled) { border-color: var(--accent); }
+  .option:disabled { cursor: default; opacity: 0.85; }
+  .option.correct { border-color: var(--green); background: rgba(76,175,125,0.12); }
+  .option.wrong { border-color: var(--red); background: rgba(217,83,79,0.12); }
+  .feedback {
+    margin-top: 18px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    display: none;
+  }
+  .feedback.ok { display: block; background: rgba(76,175,125,0.1); border: 1px solid var(--green); }
+  .feedback.ko { display: block; background: rgba(217,83,79,0.1); border: 1px solid var(--red); }
+  .feedback strong.verdict { display: block; margin-bottom: 6px; }
+  .btn {
+    margin-top: 20px;
+    background: var(--accent);
+    color: #14120c;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 26px;
+    font-size: 1rem;
+    font-family: inherit;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .btn:hover { filter: brightness(1.1); }
+  .btn.secondary { background: transparent; color: var(--muted); border: 1px solid var(--border); font-weight: normal; }
+  .btn.secondary:hover { color: var(--text); border-color: var(--muted); }
+  .result { text-align: center; }
+  .result h2 { color: var(--accent); font-size: 1.6rem; margin-bottom: 10px; }
+  .result .score { font-size: 2.6rem; margin: 14px 0; }
+  .result p { color: var(--muted); margin-bottom: 8px; }
+  .errors-list { text-align: left; margin-top: 20px; border-top: 1px solid var(--border); padding-top: 16px; }
+  .errors-list h3 { font-size: 1rem; color: var(--red); margin-bottom: 10px; }
+  .errors-list li { margin-bottom: 8px; font-size: 0.9rem; line-height: 1.4; margin-left: 18px; }
+  .home { text-align: center; }
+  .home .big-avg { font-size: 2.8rem; color: var(--accent); margin: 10px 0 4px; }
+  .home .avg-label { color: var(--muted); font-size: 0.85rem; margin-bottom: 20px; }
+  .stats-row { display: flex; gap: 12px; justify-content: center; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-box { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 12px 18px; min-width: 100px; }
+  .stat-box .num { font-size: 1.4rem; color: var(--text); }
+  .stat-box .lbl { font-size: 0.75rem; color: var(--muted); margin-top: 2px; }
+  .history { text-align: left; margin-top: 26px; border-top: 1px solid var(--border); padding-top: 18px; }
+  .history h3 { font-size: 1rem; color: var(--accent); margin-bottom: 12px; }
+  .history table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+  .history th { text-align: left; color: var(--muted); font-weight: normal; padding: 6px 8px; border-bottom: 1px solid var(--border); }
+  .history td { padding: 7px 8px; border-bottom: 1px solid var(--border); }
+  .history td.good { color: var(--green); }
+  .history td.bad { color: var(--red); }
+  .history .empty { color: var(--muted); font-size: 0.9rem; }
+  footer { text-align: center; color: var(--muted); font-size: 0.78rem; margin-top: 20px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>Quiz Ragioneria — Teoria completa</h1>
+    <p>Tutte le parti del ripasso lampo · 10 domande casuali per sessione</p>
+  </header>
+  <div class="progress-bar"><div class="progress-fill" id="progress"></div></div>
+  <div class="status">
+    <span id="counter"></span>
+    <span id="score"></span>
+  </div>
+  <div class="card" id="main-card"></div>
+  <footer>Fonte: RIPASSO_TEORIA_LAMPO.md — esame 16/07/2026 · In bocca al lupo! 🍀</footer>
+</div>
+
+<script>
+const QUIZ = [
+// ============ PARTE I — Fondamenti e postulati ============
+{ part: "Parte I", q: "Da quali documenti è composto il bilancio d'esercizio ex art. 2423 c.c.?",
+  opts: ["Stato Patrimoniale, Conto Economico, Rendiconto Finanziario e Nota Integrativa",
+    "Stato Patrimoniale, Conto Economico, Nota Integrativa e Relazione sulla Gestione",
+    "Stato Patrimoniale, Conto Economico e Relazione sulla Gestione",
+    "Stato Patrimoniale, Conto Economico, Rendiconto Finanziario e Relazione del Collegio Sindacale"],
+  exp: "SP, CE, Rendiconto Finanziario e Nota Integrativa. La Relazione sulla Gestione (art. 2428) accompagna il bilancio ma NON ne fa parte." },
+{ part: "Parte I", q: "Quali sono i limiti del bilancio abbreviato (art. 2435-bis)?",
+  opts: ["Totale attivo 4,4 mln € · ricavi 8,8 mln € · 50 dipendenti medi (non superarne 2 su 3 per due esercizi consecutivi)",
+    "Totale attivo 175.000 € · ricavi 350.000 € · 5 dipendenti medi (non superarne 2 su 3 per due esercizi consecutivi)",
+    "Totale attivo 8,8 mln € · ricavi 4,4 mln € · 250 dipendenti medi (non superarne nemmeno 1)",
+    "Totale attivo 4,4 mln € · ricavi 8,8 mln € · 50 dipendenti medi (basta non superarne 1 per un solo esercizio)"],
+  exp: "Abbreviato: attivo 4,4 mln, ricavi 8,8 mln, 50 dipendenti — non superare 2 dei 3 limiti per due esercizi consecutivi. I limiti 175.000/350.000/5 sono delle micro-imprese (art. 2435-ter)." },
+{ part: "Parte I", q: "Qual è la clausola generale del bilancio (art. 2423, co. 2)?",
+  opts: ["Il bilancio deve essere redatto con chiarezza e rappresentare in modo veritiero e corretto la situazione patrimoniale, finanziaria e il risultato economico",
+    "Il bilancio deve essere redatto secondo prudenza e nella prospettiva della continuazione dell'attività",
+    "Il bilancio deve rappresentare la verità oggettiva dei valori aziendali, senza margini di stima",
+    "Il bilancio deve essere redatto secondo i principi contabili internazionali IAS/IFRS"],
+  exp: "Chiarezza + rappresentazione veritiera e corretta (RVC): norma sovra-ordinata a tutti gli altri principi. Prudenza e continuità sono postulati dell'art. 2423-bis." },
+{ part: "Parte I", q: "Cosa significa \"veritiero\" nella rappresentazione veritiera e corretta?",
+  opts: ["Che i redattori operano correttamente le stime e ne rappresentano il risultato — non verità oggettiva",
+    "Che tutti i valori di bilancio devono corrispondere alla verità oggettiva, senza eccezioni",
+    "Che il bilancio deve rispettare forma e struttura degli schemi di legge",
+    "Che il bilancio deve essere certificato da un revisore esterno indipendente"],
+  exp: "Deriva dal \"true and fair view\" della IV Direttiva CEE: NON verità oggettiva (impossibile per i valori stimati), ma stime operate correttamente. Forma e struttura sono la \"chiarezza\"." },
+{ part: "Parte I", q: "Cosa prevede il postulato della completezza informativa (art. 2423, co. 3)?",
+  opts: ["Se le informazioni richieste dal codice civile non sono sufficienti a dare una RVC, si devono fornire le informazioni complementari necessarie",
+    "Tutte le voci di bilancio devono essere compilate, anche se a valore zero",
+    "La Nota Integrativa deve riportare tutti i movimenti contabili dell'esercizio",
+    "Il bilancio deve includere sempre anche il bilancio consolidato di gruppo"],
+  exp: "Se le informazioni di legge non bastano per la RVC, vanno fornite informazioni complementari." },
+{ part: "Parte I", q: "La deroga per casi eccezionali (art. 2423, co. 5) è una facoltà o un obbligo?",
+  opts: ["È un obbligo: la norma incompatibile con la RVC non deve essere applicata, e gli utili da deroga vanno in riserva non distribuibile",
+    "È una facoltà rimessa alla discrezionalità degli amministratori, senza vincoli sugli utili",
+    "È un obbligo, ma gli utili da deroga sono liberamente distribuibili ai soci",
+    "È una facoltà che richiede l'autorizzazione preventiva del tribunale"],
+  exp: "OBBLIGO: la norma incompatibile con la RVC non si applica. Deroghe motivate in NI con gli effetti; utili da deroga in riserva non distribuibile finché il maggior valore non è realizzato; si esprime anche il Collegio Sindacale." },
+{ part: "Parte I", q: "Quale tra questi NON è un \"caso eccezionale\" che legittima la deroga ex art. 2423, co. 5?",
+  opts: ["La scarsa significatività dei valori storici per effetto dell'inflazione",
+    "Il cambiamento di destinazione economica del bene (terreno agricolo che diventa edificabile)",
+    "L'eliminazione di vincoli o servitù sul bene",
+    "Il compromesso di vendita firmato prima del 31/12 a prezzo superiore al valore contabile"],
+  exp: "L'inflazione NON è caso eccezionale: servono le leggi speciali di rivalutazione (facoltative, logica diversa). I casi eccezionali riguardano i beni: cambio destinazione economica/giuridica, eliminazione vincoli." },
+{ part: "Parte I", q: "Qual è la scrittura della rivalutazione da deroga alla chiusura dell'esercizio?",
+  opts: ["Fabbricato (SP B.II.1) a Rivalutazioni (CE A.5)",
+    "Fabbricato (SP B.II.1) a Riserva di rivalutazione (SP A.III)",
+    "Rivalutazioni (CE A.5) a Fabbricato (SP B.II.1)",
+    "Fabbricato (SP B.II.1) a Utile d'esercizio (SP A.IX)"],
+  exp: "Alla chiusura: Fabbricato a Rivalutazioni (CE A.5). All'approvazione del bilancio: Utile d'esercizio a Riserva da deroghe (non distribuibile)." },
+{ part: "Parte I", q: "Quali sono i postulati elencati dall'art. 2423-bis, co. 1?",
+  opts: ["Continuità aziendale, prudenza, rappresentazione sostanziale, competenza, valutazione separata, costanza dei criteri",
+    "Chiarezza, verità, correttezza, completezza, rilevanza, comparabilità",
+    "Continuità aziendale, prudenza, competenza, rilevanza, comparabilità, neutralità",
+    "Prudenza, competenza, costo storico, costanza, atomisticità, trasparenza"],
+  exp: "Art. 2423-bis: continuità, prudenza, rappresentazione sostanziale, competenza, valutazione separata/atomistica, costanza. Rilevanza (art. 2423 c.4) e comparabilità (art. 2423-ter c.5) hanno fonti diverse." },
+{ part: "Parte I", q: "Su quale orizzonte temporale gli amministratori devono accertare la continuità aziendale (going concern)?",
+  opts: ["Almeno 12 mesi dalla data di riferimento del bilancio",
+    "Almeno 24 mesi dalla data di approvazione del bilancio",
+    "Fino alla chiusura dell'esercizio successivo, senza obbligo di verifica",
+    "Almeno 6 mesi dalla data di approvazione del bilancio"],
+  exp: "OIC 11: ACCERTARE (non presumere) la capacità di continuare per almeno 12 mesi dalla data di riferimento del bilancio. È il \"proto-postulato\"." },
+{ part: "Parte I", q: "Qual è il capitale minimo legale di una S.p.A. (art. 2327)?",
+  opts: ["50.000 €", "10.000 €", "120.000 €", "100.000 €"],
+  exp: "50.000 €. Se le perdite riducono il capitale sotto il minimo legale: o ricapitalizzazione o scioglimento (causa tipica di perdita della continuità)." },
+{ part: "Parte I", q: "Come tratta il postulato della prudenza gli utili sperati e le perdite presunte?",
+  opts: ["Divieto di contabilizzare gli utili sperati; obbligo di contabilizzare le perdite presunte se probabili e quantificabili",
+    "Divieto di contabilizzare sia utili sperati sia perdite presunte fino al realizzo",
+    "Obbligo di contabilizzare sia utili sperati sia perdite presunte, per simmetria",
+    "Facoltà di contabilizzare gli utili sperati; divieto di contabilizzare le perdite presunte"],
+  exp: "Asimmetria delle stime: solo utili REALIZZATI (divieto per gli sperati), obbligo per le perdite presunte anche se conosciute dopo la chiusura. Limite: niente riserve occulte." },
+{ part: "Parte I", q: "Qual è l'esempio classico di prevalenza della sostanza sulla forma?",
+  opts: ["Il pronti contro termine (PCT): nella forma vendita di titoli, nella sostanza finanziamento garantito da titoli",
+    "Il leasing operativo: nella forma noleggio, nella sostanza acquisto a rate",
+    "Il factoring pro-soluto: nella forma cessione di crediti, nella sostanza prestito bancario",
+    "L'affitto d'azienda: nella forma locazione, nella sostanza cessione definitiva"],
+  exp: "Il PCT: i titoli restano nello SP del venditore (art. 2424-bis, co. 5); proventi e oneri, inclusa la differenza pronti/termine, in C.16 e C.17 per competenza." },
+{ part: "Parte I", q: "Quando un COSTO è di competenza economica dell'esercizio?",
+  opts: ["Se si è realizzato il correlativo ricavo, si è utilizzato il servizio, oppure ricavo o servizio sono svaniti",
+    "Quando è avvenuto il pagamento in denaro",
+    "Quando è stata ricevuta la fattura del fornitore",
+    "Quando il bene è stato ordinato al fornitore"],
+  exp: "Costo di competenza se: (a) realizzato il correlativo ricavo, (b) utilizzato il servizio, (c) ricavo o servizio svaniti. Il pagamento è principio di cassa, non di competenza." },
+{ part: "Parte I", q: "Cosa vieta il postulato della valutazione atomistica?",
+  opts: ["I compensi di partite: gli elementi eterogenei nelle singole voci si valutano separatamente",
+    "Il cambiamento dei criteri di valutazione da un esercizio all'altro",
+    "La contabilizzazione di utili non realizzati",
+    "L'iscrizione di beni non di proprietà dell'azienda"],
+  exp: "Valutazione separata degli elementi eterogenei, vietati i compensi di partite (art. 2423-ter). Il divieto di cambiare criteri è la COSTANZA (cambi solo alle condizioni OIC 29)." },
+{ part: "Parte I", q: "Cosa prevede il principio di rilevanza (art. 2423, co. 4)?",
+  opts: ["Non occorre rispettare gli obblighi di rilevazione, valutazione, presentazione e informativa quando la loro osservanza ha effetti irrilevanti sulla RVC",
+    "Le voci di importo inferiore a 1.000 € possono essere omesse dal bilancio",
+    "Solo le operazioni rilevanti vanno registrate in contabilità generale",
+    "Le voci irrilevanti vanno raggruppate obbligatoriamente in un'unica voce residuale"],
+  exp: "Introdotto dal D.Lgs. 139/2015. Restano fermi gli obblighi di regolare tenuta contabile; criteri in NI. Rilevanza giudicata con fattori quantitativi E qualitativi — nessuna soglia fissa in euro." },
+{ part: "Parte I", q: "Cosa richiede il principio di comparabilità (art. 2423-ter, co. 5)?",
+  opts: ["Per ogni voce va indicato l'importo dell'esercizio precedente; se non comparabili, le voci precedenti vanno adattate con segnalazione in NI",
+    "Il bilancio va confrontato con quello dei principali concorrenti del settore",
+    "Le voci non comparabili vanno semplicemente omesse dal bilancio",
+    "Vanno indicati gli importi degli ultimi cinque esercizi per ogni voce"],
+  exp: "Ogni voce riporta l'importo dell'esercizio precedente; se non comparabili, quelle precedenti vanno adattate, segnalando e commentando in NI." },
+{ part: "Parte I", q: "Qual è la gerarchia delle fonti sul bilancio per le società non quotate italiane?",
+  opts: ["Codice civile (norme primarie) → principi contabili nazionali OIC che interpretano e integrano le norme di legge",
+    "Principi OIC → codice civile → IAS/IFRS in via residuale",
+    "IAS/IFRS obbligatori per tutte le società, integrati dal codice civile",
+    "Solo il codice civile: i principi OIC sono facoltativi e privi di valore interpretativo"],
+  exp: "Codice civile → OIC (interpretano e integrano). IAS/IFRS obbligatori per quotate e altri soggetti (D.Lgs. 38/2005), volontari per alcune categorie." },
+{ part: "Parte I", q: "Entro quanto tempo l'assemblea di una S.p.A. approva il bilancio, e quando va depositato al Registro delle imprese?",
+  opts: ["Approvazione entro 120 giorni dalla chiusura (180 per particolari esigenze); deposito entro 30 giorni dall'approvazione",
+    "Approvazione entro 90 giorni dalla chiusura; deposito entro 60 giorni dall'approvazione",
+    "Approvazione entro 180 giorni dalla chiusura in ogni caso; deposito entro 15 giorni",
+    "Approvazione entro 120 giorni dalla chiusura, senza eccezioni; deposito entro 90 giorni"],
+  exp: "Assemblea entro 120 giorni (180 per particolari esigenze, es. consolidato, se previsto dallo statuto); deposito al Registro imprese entro 30 giorni. Prima: progetto amministratori → Collegio Sindacale/revisore (30 gg prima) → deposito in sede 15 gg prima." },
+{ part: "Parte I", q: "Riserva legale (art. 2430): quanto si accantona e fino a che limite?",
+  opts: ["Almeno il 5% dell'utile netto annuale, finché la riserva non raggiunge il 20% del capitale sociale",
+    "Almeno il 20% dell'utile netto annuale, finché la riserva non raggiunge il 5% del capitale sociale",
+    "Almeno il 10% dell'utile netto annuale, senza limite massimo",
+    "Almeno il 5% del capitale sociale ogni anno, finché la riserva non eguaglia il capitale"],
+  exp: "Il 5% (la ventesima parte) dell'utile netto, fino al 20% (il quinto) del capitale sociale. Copertura perdite (utilizzo B), non distribuibile." },
+
+// ============ PARTE II — Schemi, Rendiconto, NI ============
+{ part: "Parte II", q: "Che forma hanno SP e CE civilistici?",
+  opts: ["SP a sezioni contrapposte (art. 2424); CE in forma scalare con costi classificati per natura (art. 2425)",
+    "SP in forma scalare; CE a sezioni contrapposte con costi per destinazione",
+    "Entrambi a sezioni contrapposte, con costi classificati per destinazione",
+    "Entrambi in forma scalare, con costi classificati per funzione"],
+  exp: "SP a sezioni contrapposte (Attivo/Passivo), CE scalare per natura. Anche il Rendiconto Finanziario (art. 2425-ter) è in forma scalare." },
+{ part: "Parte II", q: "Con quale criterio è classificato l'attivo dello Stato Patrimoniale civilistico?",
+  opts: ["La destinazione (criterio funzionale), non la liquidità",
+    "Il grado di liquidità crescente",
+    "Il grado di liquidità decrescente",
+    "L'ordine alfabetico delle voci previsto dal codice"],
+  exp: "Criterio della DESTINAZIONE (funzionale): immobilizzazioni = destinate a uso durevole, circolante = il resto. Il criterio finanziario (liquidità) si usa solo nella riclassificazione per l'analisi." },
+{ part: "Parte II", q: "Quali sono le macroclassi del passivo dello SP (art. 2424)?",
+  opts: ["A) Patrimonio netto · B) Fondi per rischi e oneri · C) TFR · D) Debiti · E) Ratei e risconti passivi",
+    "A) Debiti · B) Patrimonio netto · C) Fondi rischi · D) TFR · E) Ratei passivi",
+    "A) Patrimonio netto · B) TFR · C) Debiti · D) Fondi rischi e oneri",
+    "A) Patrimonio netto · B) Debiti a lungo · C) Debiti a breve · D) Ratei e risconti"],
+  exp: "Passivo: A) PN · B) Fondi rischi e oneri · C) TFR · D) Debiti · E) Ratei e risconti passivi. Attivo: A) Crediti v/soci · B) Immobilizzazioni · C) Circolante · D) Ratei e risconti attivi." },
+{ part: "Parte II", q: "Che fine ha fatto l'area straordinaria del Conto Economico?",
+  opts: ["Il D.Lgs. 139/2015 ha abolito la classe E): i componenti straordinari vanno per natura in A.5 o B.14, con indicazione in NI",
+    "È ancora presente come classe E) del CE, dopo l'area finanziaria",
+    "È stata sostituita dalla classe D) rettifiche di valore",
+    "È confluita interamente nella voce 20 (imposte sul reddito)"],
+  exp: "Abolita dal D.Lgs. 139/2015: i componenti straordinari vanno per natura in A.5 o B.14 con separata indicazione in NI. Per questo A−B non esprime il risultato operativo puro." },
+{ part: "Parte II", q: "Da quando è obbligatorio il rendiconto finanziario e chi ne detta forma e contenuto?",
+  opts: ["Dal D.Lgs. 139/2015 (bilanci 2016); il codice fissa l'obiettivo (art. 2425-ter), forma e contenuto sono nell'OIC 10",
+    "Dal D.Lgs. 127/1991; forma e contenuto sono nell'art. 2425-ter",
+    "Dal D.Lgs. 38/2005; forma e contenuto sono negli IAS/IFRS",
+    "È sempre stato obbligatorio dal codice civile del 1942"],
+  exp: "D.Lgs. 139/2015 (dai bilanci 2016). Art. 2425-ter fissa solo l'obiettivo; OIC 10 detta forma e contenuto. Esonerati: bilancio abbreviato e micro-imprese." },
+{ part: "Parte II", q: "Quali sono le tre aree di flussi del rendiconto finanziario (OIC 10)?",
+  opts: ["Attività operativa, attività di investimento, attività di finanziamento",
+    "Gestione caratteristica, gestione accessoria, gestione straordinaria",
+    "Area monetaria, area economica, area patrimoniale",
+    "Attività ordinaria, attività finanziaria, attività fiscale"],
+  exp: "Operativa (area residuale: beni e servizi + tutto ciò che non è investimento/finanziamento), investimento (acquisto/vendita immobilizzazioni), finanziamento (capitale di rischio e di debito). Con autonoma indicazione delle operazioni con i soci." },
+{ part: "Parte II", q: "Cosa comprendono le \"disponibilità liquide\" ai fini del rendiconto (OIC 10)?",
+  opts: ["Depositi bancari e postali, assegni, denaro e valori in cassa, anche in valuta estera",
+    "Solo il denaro in cassa in euro",
+    "Cassa, banca e crediti verso clienti esigibili entro 3 mesi",
+    "Cassa, banca e titoli di Stato a breve termine"],
+  exp: "Depositi bancari e postali, assegni, denaro e valori in cassa (anche in valuta estera). Niente crediti né titoli." },
+{ part: "Parte II", q: "Qual è la differenza tra metodo diretto e indiretto nel rendiconto finanziario?",
+  opts: ["Diretto: flusso operativo dalle entrate/uscite monetarie; indiretto: parte dall'utile e lo rettifica con elementi non monetari e variazioni di circolante",
+    "Diretto: parte dall'utile; indiretto: parte dalle entrate e uscite monetarie",
+    "Diretto: obbligatorio per l'OIC 10; indiretto: ammesso solo per gli IFRS",
+    "Diretto: calcola solo il flusso di investimento; indiretto: solo quello operativo"],
+  exp: "Diretto = incassi/pagamenti (preferibile, obbligatorio IFRS, richiede contabilità per cassa). Indiretto = utile rettificato (il più usato in Italia). L'OIC 10 li ammette entrambi." },
+{ part: "Parte II", q: "Qual è la formula del Flusso di Cassa Operativo col metodo indiretto?",
+  opts: ["FCO = Risultato d'esercizio + ammortamenti/accantonamenti/svalutazioni − Δ capitale circolante netto",
+    "FCO = Risultato d'esercizio − ammortamenti + Δ capitale circolante netto",
+    "FCO = Ricavi incassati − costi pagati − imposte",
+    "FCO = EBITDA + ammortamenti − investimenti"],
+  exp: "FCO = Risultato + ammortamenti/accantonamenti/svalutazioni − ΔCCN, dove −ΔCCN = −Δcrediti − Δrimanenze + Δdebiti commerciali. Gli ammortamenti sono costi non monetari; più crediti/rimanenze assorbono cassa, più debiti la liberano." },
+{ part: "Parte II", q: "Può l'utile essere positivo e il flusso di cassa operativo negativo?",
+  opts: ["Sì: l'utile segue la competenza, il FCO la manifestazione monetaria (es. ricavi non incassati)",
+    "No: utile positivo implica sempre cassa positiva",
+    "Solo in caso di errori contabili o frodi",
+    "Sì, ma solo se l'azienda è in liquidazione giudiziale"],
+  exp: "Sì: divergono perché l'utile segue la competenza, il FCO la cassa. Cruciale in start-up e crisi (solvibilità → insolvenza → liquidazione giudiziale). Il FCO è la base dei metodi DCF." },
+{ part: "Parte II", q: "Dove si classificano i dividendi PAGATI nel rendiconto finanziario (OIC 10)?",
+  opts: ["Attività di finanziamento (remunerazione del capitale di rischio)",
+    "Attività operativa, come i dividendi incassati",
+    "Attività di investimento",
+    "Non compaiono nel rendiconto: sono una partita di giro"],
+  exp: "Dividendi pagati → finanziamento; dividendi incassati → operativa. Interessi pagati/incassati → operativa (salvo casi specifici); imposte sul reddito → operativa; rami d'azienda → investimento." },
+{ part: "Parte II", q: "La Relazione sulla Gestione (art. 2428) è parte del bilancio?",
+  opts: ["No: è un documento degli amministratori che accompagna il bilancio (andamento gestione, rischi, R&S, azioni proprie, evoluzione prevedibile)",
+    "Sì: è parte integrante del bilancio come la Nota Integrativa",
+    "Sì, ma solo per le società quotate",
+    "No: è un documento facoltativo redatto dal Collegio Sindacale"],
+  exp: "NON è parte del bilancio, lo accompagna. La Nota Integrativa (art. 2427) invece è parte integrante. Deposito del fascicolo in formato XBRL." },
+
+// ============ PARTE III — Criteri di valutazione ============
+{ part: "Parte III", q: "Qual è il criterio-base di valutazione delle immobilizzazioni (art. 2426, n. 1-2)?",
+  opts: ["Costo storico (acquisto + oneri accessori, o produzione), ammortizzato sistematicamente in relazione alla residua possibilità di utilizzazione",
+    "Fair value alla data di chiusura, con variazioni a conto economico",
+    "Valore di mercato, aggiornato ogni esercizio tramite perizia",
+    "Costo storico rivalutato annualmente per l'inflazione"],
+  exp: "Costo storico ammortizzato sistematicamente (piano: valore da ammortizzare, vita utile, criterio — di regola quote costanti). L'ammortamento parte da quando il bene è disponibile e pronto per l'uso. I terreni non si ammortizzano." },
+{ part: "Parte III", q: "In quanti anni si ammortizzano i costi di impianto e ampliamento?",
+  opts: ["Entro 5 anni", "Entro 10 anni", "Entro 3 anni", "Secondo la vita utile, senza limiti"],
+  exp: "Impianto/ampliamento: entro 5 anni. Sviluppo: secondo vita utile, se non stimabile entro 5 anni. Entrambi iscrivibili con il consenso del Collegio Sindacale, con vincolo alla distribuzione di utili (art. 2426, n. 5)." },
+{ part: "Parte III", q: "Quando si può iscrivere l'avviamento in bilancio?",
+  opts: ["Solo se acquisito a titolo oneroso, nei limiti del costo sostenuto, con il consenso del Collegio Sindacale",
+    "Anche se generato internamente, purché stimato da un perito indipendente",
+    "Solo per le società quotate che applicano gli IFRS",
+    "Liberamente, purché motivato in Nota Integrativa"],
+  exp: "Solo a titolo oneroso (mai quello interno), col consenso del Collegio Sindacale (art. 2426, n. 6). È l'eccedenza del prezzo rispetto al valore corrente netto del patrimonio acquisito. Ammortamento secondo vita utile; se non stimabile, entro 10 anni." },
+{ part: "Parte III", q: "In quanti anni si ammortizza l'avviamento se la vita utile non è stimabile attendibilmente?",
+  opts: ["Entro 10 anni", "Entro 5 anni", "Entro 20 anni", "Non si ammortizza: si sottopone solo a impairment test"],
+  exp: "Entro 10 anni (art. 2426, n. 6). E dopo una svalutazione, l'avviamento non è MAI ripristinabile (vale anche per gli oneri pluriennali)." },
+{ part: "Parte III", q: "Come si ammortizzano le migliorie su beni di terzi non separabili dal bene?",
+  opts: ["Tra le altre immobilizzazioni immateriali, nel minore tra vita utile della miglioria e durata residua della locazione",
+    "Tra le immobilizzazioni materiali, secondo la vita utile del bene principale",
+    "Interamente a costo d'esercizio nell'anno di sostenimento",
+    "Nel maggiore tra vita utile della miglioria e durata della locazione"],
+  exp: "Se non separabili: altre immobilizzazioni immateriali, ammortizzate nel MINORE tra vita utile della miglioria e durata residua della locazione." },
+{ part: "Parte III", q: "Come si trattano le spese di manutenzione ordinarie e straordinarie?",
+  opts: ["Ordinarie a costo d'esercizio (B.7); straordinarie/incrementative capitalizzate sul cespite e ammortizzate con esso",
+    "Entrambe capitalizzate sul cespite",
+    "Entrambe a costo d'esercizio nell'anno",
+    "Ordinarie capitalizzate; straordinarie a costo d'esercizio"],
+  exp: "Ordinarie (mantengono in efficienza) → costo B.7. Straordinarie/incrementative (aumentano capacità, sicurezza o vita utile) → capitalizzate e ammortizzate col cespite." },
+{ part: "Parte III", q: "OIC 9: come si determina il valore recuperabile di un'immobilizzazione?",
+  opts: ["È il MAGGIORE tra fair value (prezzo netto di vendita) e valore d'uso (valore attuale dei flussi di cassa attesi)",
+    "È il MINORE tra fair value e valore d'uso",
+    "È sempre il fair value comunicato da un perito",
+    "È la media tra costo storico e valore di mercato"],
+  exp: "Valore recuperabile = MAGGIORE tra fair value e valore d'uso. Se valore contabile netto > recuperabile → svalutazione (CE B.10.c); gli ammortamenti successivi si ricalcolano sul nuovo valore." },
+{ part: "Parte III", q: "OIC 9: il ripristino di valore dopo una svalutazione è…",
+  opts: ["Obbligatorio se vengono meno i presupposti, fino al valore che il bene avrebbe avuto senza svalutazione — mai per avviamento e oneri pluriennali",
+    "Facoltativo, a discrezione degli amministratori",
+    "Obbligatorio per tutte le immobilizzazioni, incluso l'avviamento",
+    "Vietato: le svalutazioni sono sempre definitive"],
+  exp: "OBBLIGO di ripristino se vengono meno i presupposti, fino al valore ante-svalutazione (al netto degli ammortamenti che sarebbero maturati). Eccezione: avviamento e oneri pluriennali, mai ripristinabili." },
+{ part: "Parte III", q: "Come si valutano le partecipazioni immobilizzate in controllate e collegate?",
+  opts: ["Al costo (svalutato per perdite durevoli) oppure, in alternativa, col metodo del patrimonio netto (art. 2426, n. 4)",
+    "Sempre e solo al fair value con variazioni a CE",
+    "Sempre col metodo del patrimonio netto, obbligatorio",
+    "Al minore tra costo e valore di realizzazione di mercato"],
+  exp: "Costo (con svalutazione per perdite durevoli e ripristino) oppure equity method per controllate/collegate; le plusvalenze da equity method vanno in riserva non distribuibile. Nel circolante invece: minore tra costo e realizzo di mercato." },
+{ part: "Parte III", q: "Quando si presume il collegamento societario ex art. 2359?",
+  opts: ["Influenza notevole, presunta con almeno il 20% dei voti (10% se la società è quotata)",
+    "Influenza notevole, presunta con almeno il 50% dei voti",
+    "Maggioranza dei voti esercitabili in assemblea ordinaria",
+    "Almeno il 30% dei voti in qualunque società"],
+  exp: "Collegamento = influenza notevole, presunta con ≥20% dei voti (10% se quotata). Controllo = maggioranza dei voti o influenza dominante." },
+{ part: "Parte III", q: "Con quale criterio si valutano i crediti (art. 2426, n. 8)?",
+  opts: ["Costo ammortizzato, tenendo conto del fattore temporale e del valore di presumibile realizzo",
+    "Sempre al valore nominale",
+    "Al fair value con variazioni a conto economico",
+    "Al valore di presumibile realizzo, senza mai considerare il fattore temporale"],
+  exp: "Costo ammortizzato + fattore temporale + presumibile realizzo. Esenzioni (→ nominale − fondo svalutazione): abbreviato, micro, effetti irrilevanti (OIC 15: crediti a breve, costi transazione trascurabili, tasso ≈ mercato)." },
+{ part: "Parte III", q: "Qual è la scrittura di stima delle perdite presunte su crediti a fine esercizio?",
+  opts: ["Svalutazione crediti (CE B.10.d) a Fondo svalutazione crediti",
+    "Perdite su crediti (CE B.14) a Crediti v/clienti",
+    "Fondo svalutazione crediti a Svalutazione crediti (CE B.10.d)",
+    "Accantonamento (CE B.12) a Fondo rischi su crediti (SP B.3)"],
+  exp: "Svalutazione crediti (B.10.d) a Fondo svalutazione crediti; il fondo va a diretta riduzione dei crediti nell'attivo. Alla perdita effettiva: prima si utilizza il fondo, l'eccedenza va a CE." },
+{ part: "Parte III", q: "Con quale criterio si valutano le rimanenze (art. 2426, n. 9)?",
+  opts: ["Al MINORE tra costo (acquisto o produzione) e valore di realizzazione desumibile dal mercato",
+    "Al MAGGIORE tra costo e valore di mercato",
+    "Sempre al costo di acquisto, senza confronti col mercato",
+    "Al fair value di fine esercizio"],
+  exp: "Minore tra costo e valore di realizzazione di mercato. Se svalutate e vengono meno i presupposti, il ripristino fino al costo originario è OBBLIGATORIO." },
+{ part: "Parte III", q: "Con prezzi crescenti, quale metodo dà le rimanenze più ALTE?",
+  opts: ["FIFO (in magazzino restano i costi più recenti)",
+    "LIFO (in magazzino restano i costi più recenti)",
+    "CMP (costo medio ponderato)",
+    "Tutti i metodi danno lo stesso valore"],
+  exp: "FIFO → rimanenze più alte (costi recenti in magazzino), LIFO → più basse (costi vecchi), CMP intermedio. Tutti e tre ammessi dal codice (art. 2426, n. 10). LIFO a scatti: incrementi stratificati ai costi dell'anno, decrementi scaricano gli strati recenti." },
+
+// ============ PARTE IV — LIC, fondi, debiti, imposte, PN, derivati ============
+{ part: "Parte IV", q: "Lavori in corso su ordinazione: cosa prevede il criterio della percentuale di completamento?",
+  opts: ["Rimanenze al corrispettivo contrattuale maturato (anche > costo); il margine è ripartito pro-quota sugli esercizi",
+    "Rimanenze al costo; ricavi e margine interamente alla consegna",
+    "Rimanenze al fair value; margine interamente nell'esercizio di firma del contratto",
+    "Rimanenze al minore tra costo e mercato, come le rimanenze ordinarie"],
+  exp: "Percentuale di completamento (art. 2426, n. 11): corrispettivo maturato, margine pro-quota. Criterio tipico: cost-to-cost (% = costi cumulati/costi totali stimati). Non viola la prudenza se il corrispettivo matura con ragionevole certezza. La commessa completata invece: costo, margine alla consegna." },
+{ part: "Parte IV", q: "Come si tratta una commessa in perdita?",
+  opts: ["La perdita si rileva interamente e subito (fondo rischi), con qualunque metodo",
+    "La perdita si ripartisce pro-quota sugli esercizi di durata della commessa",
+    "La perdita si rileva solo alla consegna dell'opera",
+    "La perdita si compensa con i margini delle altre commesse"],
+  exp: "Perdita interamente e SUBITO (fondo rischi), sia con la commessa completata sia con la percentuale di completamento. È la prudenza." },
+{ part: "Parte IV", q: "Qual è la differenza tra fondi oneri e fondi rischi (OIC 31)?",
+  opts: ["Fondi oneri: esistenza CERTA con importo o data stimati; fondi rischi: esistenza PROBABILE (passività potenziali)",
+    "Fondi oneri: esistenza probabile; fondi rischi: esistenza certa",
+    "Fondi oneri: passività a breve; fondi rischi: passività a lungo termine",
+    "Nessuna: sono sinonimi nel codice civile"],
+  exp: "Oneri = esistenza CERTA, importo/data stimati (es. manutenzione ciclica). Rischi = esistenza PROBABILE (es. causa in corso). Base: art. 2424-bis, co. 3." },
+{ part: "Parte IV", q: "Passività potenziale con esito POSSIBILE: come si tratta?",
+  opts: ["Nessun fondo, solo informativa in Nota Integrativa",
+    "Accantonamento a fondo rischi",
+    "Nulla: né fondo né informativa",
+    "Iscrizione diretta tra i debiti"],
+  exp: "Probabile → fondo (Accantonamento CE B.12/B.13 a Fondo SP B.3). Possibile → solo NI. Remoto → nulla." },
+{ part: "Parte IV", q: "Come si utilizza un fondo rischi quando l'evento si verifica?",
+  opts: ["Utilizzo diretto e solo per lo scopo originario: Fondo a Debiti/Banca, senza passare dal CE se capiente",
+    "Sempre passando dal conto economico, voce B.14",
+    "Si storna a proventi straordinari e si registra il nuovo costo",
+    "Si gira a riserva di patrimonio netto"],
+  exp: "Utilizzo diretto (Fondo a Debiti/Banca) senza CE se capiente. Se non basta, la differenza va a CE (stessa voce dell'accantonamento). Se eccede, il rilascio va nella stessa area (tipicamente A.5)." },
+{ part: "Parte IV", q: "Cosa distingue i debiti dai fondi e dagli impegni (OIC 19)?",
+  opts: ["Debiti: esistenza certa e importo fisso o determinabile; fondi: importo o data indeterminati; impegni: obbligazioni future (conti d'ordine/NI)",
+    "Debiti: esistenza probabile; fondi: esistenza certa; impegni: esistenza remota",
+    "Debiti: sempre a breve termine; fondi: sempre a lungo termine",
+    "Nessuna differenza sostanziale: cambia solo la voce di bilancio"],
+  exp: "Debiti = natura determinata, esistenza certa, importo fisso o determinabile. Fondi = importo o data indeterminati. Impegni = accordi per obbligazioni future (conti d'ordine/NI)." },
+{ part: "Parte IV", q: "Quando si può valutare un debito al valore nominale invece che al costo ammortizzato?",
+  opts: ["Bilancio abbreviato, micro-imprese, o effetti irrilevanti (debiti entro 12 mesi, costi di transazione trascurabili, tasso ≈ mercato)",
+    "Mai: il costo ammortizzato è sempre obbligatorio",
+    "Solo per i debiti verso banche",
+    "Solo se il debito è in valuta estera"],
+  exp: "Criterio generale: costo ammortizzato col fattore temporale (art. 2426, n. 8). Esenzioni: abbreviato, micro, effetti irrilevanti (OIC 19)." },
+{ part: "Parte IV", q: "Nel costo ammortizzato, cos'è il TIR (tasso di interesse effettivo)?",
+  opts: ["Il tasso che eguaglia a zero il valore attuale dei flussi: erogazione netta dei costi di transazione contro le rate future",
+    "Il tasso nominale del contratto di mutuo",
+    "Il tasso legale fissato annualmente dal MEF",
+    "Il tasso medio di mercato pubblicato da Banca d'Italia"],
+  exp: "Il debito si rileva al netto dei costi di transazione (istruttoria, perizia, commissioni); il TIR eguaglia erogazione netta e rate. Ogni anno: interessi a CE = debito iniziale × TIR; la differenza con gli interessi nominali incrementa il debito residuo." },
+{ part: "Parte IV", q: "Qual è la differenza tra crisi e insolvenza?",
+  opts: ["Crisi: inadeguatezza dei flussi di cassa prospettici a coprire le obbligazioni dei successivi 12 mesi; insolvenza: incapacità attuale di adempiere regolarmente",
+    "Crisi: incapacità attuale di pagare; insolvenza: difficoltà prospettica futura",
+    "Sono sinonimi nel Codice della Crisi d'Impresa",
+    "Crisi: riguarda solo le S.p.A.; insolvenza: riguarda tutte le imprese"],
+  exp: "Crisi = prospettica (flussi 12 mesi inadeguati); insolvenza = attuale (inadempimenti). Esito estremo: liquidazione giudiziale (ex fallimento)." },
+{ part: "Parte IV", q: "Come si calcolano le imposte correnti partendo dal risultato civilistico?",
+  opts: ["Risultato lordo ± variazioni fiscali (riprese in aumento/diminuzione) = reddito imponibile × aliquota IRES 24%",
+    "Risultato lordo × 24%, senza alcuna variazione",
+    "Risultato netto × 24% + IRAP 3,9%",
+    "Reddito imponibile × 27,5% (aliquota IRES vigente)"],
+  exp: "Risultato lordo ± variazioni fiscali (art. 83 TUIR) = imponibile × 24% IRES. Scrittura: Imposte correnti (CE 20) a Debiti tributari (SP D.12)." },
+{ part: "Parte IV", q: "Le differenze PERMANENTI tra risultato civilistico e reddito fiscale…",
+  opts: ["Sono definitive: nessun effetto futuro e nessuna fiscalità differita (es. sanzioni indeducibili)",
+    "Si riverseranno con segno opposto negli esercizi successivi",
+    "Generano sempre imposte anticipate",
+    "Generano sempre imposte differite"],
+  exp: "Permanenti = definitive, niente fiscalità differita (sanzioni, costi auto indeducibili, quota esente dividendi 95%). Le TEMPORANEE invece si riversano e generano differite o anticipate." },
+{ part: "Parte IV", q: "Una differenza temporanea DEDUCIBILE (es. compensi amministratori non pagati) genera…",
+  opts: ["Imposte ANTICIPATE: Crediti per imposte anticipate (SP C.II.5-ter) a Imposte anticipate (CE 20)",
+    "Imposte DIFFERITE: Imposte differite (CE 20) a Fondo imposte differite (SP B.2)",
+    "Solo maggiori imposte correnti, senza fiscalità differita",
+    "Un credito verso l'Erario rimborsabile a richiesta"],
+  exp: "Deducibile (oggi pago di più, domani deduco) → ANTICIPATE (riducono la voce 20). Tassabile (oggi pago di meno, es. plusvalenza rateizzata) → DIFFERITE (Fondo B.2). Verifica: voce 20 = correnti + differite − anticipate ≈ 24% × (risultato ± permanenti)." },
+{ part: "Parte IV", q: "Come si trattano le perdite fiscali riportabili?",
+  opts: ["Riportabili senza limiti di tempo, utilizzabili fino all'80% del reddito imponibile; generano imposte anticipate solo con ragionevole certezza di redditi futuri",
+    "Riportabili per massimo 5 anni, utilizzabili al 100% del reddito imponibile",
+    "Generano sempre e comunque un credito verso l'Erario",
+    "Riportabili senza limiti e utilizzabili al 100% dell'imponibile"],
+  exp: "Senza limiti di tempo, fino all'80% dell'imponibile di ciascun esercizio. Imposte anticipate (C.II.5-ter) solo con ragionevole certezza di redditi capienti. Non sono un credito verso l'Erario." },
+{ part: "Parte IV", q: "Quanto va versato subito alla sottoscrizione di un aumento di capitale (artt. 2439, 2481-bis)?",
+  opts: ["Almeno il 25% del valore nominale + l'intero sovrapprezzo",
+    "Almeno il 50% del valore nominale + metà del sovrapprezzo",
+    "L'intero nominale, mentre il sovrapprezzo può essere versato dopo",
+    "Almeno il 25% del nominale; il sovrapprezzo entro 90 giorni"],
+  exp: "25% del nominale + INTERO sovrapprezzo. Il capitale si iscrive in A.I per l'intero sottoscritto; la parte non versata va in voce A dell'attivo \"Crediti verso soci\". Aumento inscindibile vs scindibile." },
+{ part: "Parte IV", q: "Quando è distribuibile la riserva da sovrapprezzo azioni (art. 2431)?",
+  opts: ["Solo quando la riserva legale ha raggiunto il quinto del capitale sociale",
+    "Sempre, essendo una riserva disponibile",
+    "Mai: è una riserva indisponibile per legge",
+    "Solo dopo 5 esercizi dalla sua costituzione"],
+  exp: "Distribuibile solo quando la legale ha raggiunto 1/5 del capitale. È una riserva DI CAPITALE (non di utili); utilizzi A/B/C con quel vincolo per la distribuzione." },
+{ part: "Parte IV", q: "Come si contabilizza l'acquisto di azioni proprie?",
+  opts: ["Al costo, tramite iscrizione della riserva negativa A.X, contestuale all'acquisto",
+    "Tra le attività finanziarie del circolante (C.III), al costo",
+    "Tra le immobilizzazioni finanziarie (B.III), al fair value",
+    "A riduzione diretta del capitale sociale per il valore nominale"],
+  exp: "Riserva negativa A.X al costo d'acquisto (niente più azioni proprie nell'attivo). Annullamento: storno A.X e riduzione capitale per il nominale. Alienazione: differenza a incremento/decremento di altra voce di PN, mai a CE." },
+{ part: "Parte IV", q: "Quale tra queste è una riserva DI CAPITALE (non di utili)?",
+  opts: ["Riserva da sovrapprezzo azioni",
+    "Riserva legale",
+    "Riserva straordinaria",
+    "Utili portati a nuovo"],
+  exp: "Di capitale (da apporti/operazioni sul capitale): sovrapprezzo, versamenti soci, riserva da deroghe/rivalutazione. Di utili: legale, statutaria, straordinaria, utili a nuovo. In NI serve il prospetto art. 2427, 7-bis con legenda A/B/C." },
+{ part: "Parte IV", q: "Prestito obbligazionario convertibile: cosa succede alla conversione se il nominale delle obbligazioni supera quello delle azioni emesse?",
+  opts: ["L'eccedenza va a riserva sovrapprezzo azioni",
+    "L'eccedenza va a conto economico come provento finanziario",
+    "L'eccedenza resta iscritta tra i debiti obbligazionari",
+    "L'eccedenza va a riserva legale"],
+  exp: "Si elimina il debito per la parte convertita, si aumenta il PN; l'eccedenza del nominale delle obbligazioni sul nominale delle azioni va a riserva sovrapprezzo (art. 2420-bis: aumento di capitale deliberato all'emissione)." },
+{ part: "Parte IV", q: "Quali sono le 3 caratteristiche di uno strumento finanziario derivato (OIC 32)?",
+  opts: ["Investimento iniziale nullo o minimo; regolamento a data futura; valore dipendente da un sottostante",
+    "Investimento iniziale elevato; regolamento immediato; valore fisso contrattuale",
+    "Emissione bancaria; quotazione in borsa; scadenza oltre 12 mesi",
+    "Capitale garantito; rendimento variabile; durata pluriennale"],
+  exp: "(1) Investimento nullo/minimo, (2) regolamento futuro, (3) valore legato a un sottostante (tassi, cambi, merci, indici). Valutazione al fair value (art. 2426, n. 11-bis), mark to market al 31/12. Finalità: copertura o speculativa." },
+{ part: "Parte IV", q: "Dove vanno le variazioni di fair value di un derivato di copertura dei flussi finanziari (cash flow hedge)?",
+  opts: ["A Patrimonio Netto, riserva A.VII (che può diventare negativa), al netto degli effetti fiscali differiti",
+    "A Conto Economico, voci D.18.d / D.19.d",
+    "A Conto Economico, voci C.16 / C.17",
+    "In Nota Integrativa, senza rilevazione contabile"],
+  exp: "Cash flow hedge → PN riserva A.VII. Copertura del fair value e derivati SPECULATIVI → CE D.18.d/D.19.d. SP: derivato attivo → C.III.5 (o B.III.4); passivo → B.3 fondi." },
+
+// ============ ANALISI DI BILANCIO ============
+{ part: "Analisi", q: "Con quale criterio si riclassifica lo SP per l'analisi di bilancio?",
+  opts: ["Criterio finanziario: attività per grado di liquidità, passività per grado di esigibilità",
+    "Criterio funzionale: attività per destinazione, come nello schema civilistico",
+    "Criterio per natura, come nel Conto Economico",
+    "Criterio fiscale: attività deducibili e non deducibili"],
+  exp: "Dal criterio funzionale civilistico al criterio FINANZIARIO: attività immobilizzate vs correnti (disponibilità/magazzino, liquidità differite/crediti, liquidità immediate/cassa); passività per esigibilità (PN, consolidate oltre 12 mesi, correnti entro 12 mesi)." },
+{ part: "Analisi", q: "Come si calcola il current ratio (indice di disponibilità)?",
+  opts: ["Attività correnti / Passività correnti (auspicabile tra 1 e 2); il margine corrispondente è il CCN",
+    "Liquidità immediate / Passività correnti",
+    "(Liquidità immediate + differite) / Passività correnti",
+    "Attività correnti / Totale passività"],
+  exp: "Current ratio = AC/PC (≥1÷2 auspicabile); margine = CCN (AC−PC). Quick ratio esclude il magazzino: (liquidità immediate + differite)/PC. Tesoreria primario = liquidità immediate/PC." },
+{ part: "Analisi", q: "Cosa misura l'indice di struttura secondario e quale valore indica equilibrio?",
+  opts: ["(PN + Passività consolidate) / Attività immobilizzate; equilibrio se ≥ 1 (AI coperte da fonti permanenti/consolidate)",
+    "PN / Attività immobilizzate; equilibrio se ≥ 2",
+    "Passività correnti / Attività immobilizzate; equilibrio se ≤ 0,5",
+    "(PN + Passività correnti) / Attività correnti; equilibrio se ≥ 1"],
+  exp: "Secondario = (PN + Pcons)/AI ≥ 1: le immobilizzazioni devono essere coperte da fonti permanenti/consolidate. Il primario è PN/AI." },
+{ part: "Analisi", q: "Come si calcola l'indice di indebitamento complessivo?",
+  opts: ["(Passività correnti + consolidate) / Patrimonio netto — capitale di terzi su capitale proprio",
+    "Patrimonio netto / Totale passività",
+    "Debiti finanziari / EBITDA",
+    "Totale attivo / Patrimonio netto"],
+  exp: "(Pc + Pcons)/PN: più è alto, più la struttura è indebitata (leverage). Declinabile anche a breve e a M/L termine." },
+{ part: "Analisi", q: "ROI: formula e significato?",
+  opts: ["Risultato operativo / Capitale investito — redditività della gestione caratteristica, a prescindere da come è finanziata",
+    "Utile netto / Patrimonio netto — redditività per i soci",
+    "Risultato operativo / Ricavi di vendita — marginalità sulle vendite",
+    "Utile netto / Capitale investito — redditività totale dell'impresa"],
+  exp: "ROI = RO/CI (gestione caratteristica). ROE = Utile netto/PN (per i soci). ROS = RO/Ricavi (marginalità). ROI = ROS × rotazione del capitale investito." },
+{ part: "Analisi", q: "Nel CE riclassificato a valore aggiunto, cosa si ottiene sottraendo il costo del personale dal valore aggiunto?",
+  opts: ["MOL/EBITDA", "Risultato operativo/EBIT", "Reddito netto", "Valore della produzione tipica"],
+  exp: "Produzione tipica − costi esterni = VALORE AGGIUNTO − personale = MOL/EBITDA − ammortamenti/svalutazioni/accantonamenti = EBIT ± gestioni accessoria/finanziaria/straordinaria = ante imposte − imposte = reddito netto." },
+
+// ============ M&A — Cessione d'azienda ============
+{ part: "M&A", q: "Qual è la differenza tra asset deal e share deal?",
+  opts: ["Asset deal: si trasferiscono i singoli elementi patrimoniali dell'azienda (con possibile avviamento); share deal: si trasferisce la titolarità delle quote/azioni e la target continua a esistere",
+    "Asset deal: si trasferiscono le azioni; share deal: si trasferiscono i beni aziendali",
+    "Sono sinonimi: entrambi indicano la cessione di partecipazioni",
+    "Asset deal: solo per società quotate; share deal: solo per non quotate"],
+  exp: "Asset deal = cessione azienda/ramo: l'acquirente può iscrivere l'avviamento (prezzo − valore corrente netto); il venditore rileva plusvalenza/minusvalenza in CE A.5 (con NI). Share deal = cessione partecipazione: l'acquirente iscrive una partecipazione (B.III.1) al costo." },
+{ part: "M&A", q: "Nel deal flow tipico di un'operazione M&A, cosa viene firmato PRIMA della due diligence?",
+  opts: ["Il MoU (accordo preliminare)", "L'atto di closing", "Il contratto definitivo di trasferimento", "Il bilancio consolidato"],
+  exp: "Deal flow: incarico all'advisor → scouting e short list → valutazione (es. multipli: 10 × utile netto) → negoziazione e struttura (asset vs share) → MoU → due diligence → closing." },
+{ part: "M&A", q: "Quali obblighi scattano dopo l'acquisto di una partecipazione di CONTROLLO (art. 2359)?",
+  opts: ["Bilancio consolidato (D.Lgs. 127/1991, salvo esoneri dimensionali), indicazione in NI, e obblighi ex art. 2497 in caso di direzione e coordinamento",
+    "Solo la comunicazione alla CONSOB entro 30 giorni",
+    "Nessun obbligo particolare per le società non quotate",
+    "L'obbligo di fondere le due società entro 12 mesi"],
+  exp: "Con il controllo: bilancio consolidato (salvo esoneri dimensionali), partecipazione indicata in NI, obblighi pubblicitari ex art. 2497 e ss. in caso di direzione e coordinamento." },
+{ part: "M&A", q: "Nella cessione d'azienda, dove rileva il VENDITORE la plusvalenza?",
+  opts: ["In Conto Economico, voce A.5, con indicazione in Nota Integrativa (area straordinaria abolita)",
+    "In Conto Economico, classe E) proventi straordinari",
+    "Direttamente a riserva di Patrimonio Netto",
+    "In voce C.16, tra i proventi finanziari"],
+  exp: "Plusvalenza/minusvalenza in A.5 (o B.14 se negativa) con indicazione in NI: l'area straordinaria è stata abolita dal D.Lgs. 139/2015." }
+];
+
+const QUESTIONS_PER_QUIZ = 10;
+const STORAGE_KEY = 'quizRagioneriaRisultati';
+
+let sessionQuestions = [];
+let current = 0;
+let score = 0;
+let wrongAnswers = [];
+
+const cardEl = document.getElementById('main-card');
+const counterEl = document.getElementById('counter');
+const scoreEl = document.getElementById('score');
+const progressEl = document.getElementById('progress');
+
+function loadResults() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || []; }
+  catch { return []; }
+}
+function saveResult(score, total, wrong) {
+  const results = loadResults();
+  results.push({ date: new Date().toISOString(), score, total, wrong });
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(results));
+}
+function fmtDate(iso) {
+  const d = new Date(iso);
+  return d.toLocaleDateString('it-IT', { day: '2-digit', month: '2-digit' }) + ' ' +
+         d.toLocaleTimeString('it-IT', { hour: '2-digit', minute: '2-digit' });
+}
+
+// ---------- SCHERMATA INIZIALE ----------
+function showHome() {
+  counterEl.textContent = '';
+  scoreEl.textContent = '';
+  progressEl.style.width = '0%';
+  const results = loadResults();
+  let html = '<div class="home">';
+  if (results.length > 0) {
+    const totScore = results.reduce((s, r) => s + r.score, 0);
+    const totQ = results.reduce((s, r) => s + r.total, 0);
+    const avgPct = Math.round((totScore / totQ) * 100);
+    const best = Math.max(...results.map(r => Math.round((r.score / r.total) * 100)));
+    const last = results[results.length - 1];
+    html += `<div class="big-avg">${avgPct}%</div>
+      <div class="avg-label">media su ${results.length} quiz completat${results.length === 1 ? 'o' : 'i'}</div>
+      <div class="stats-row">
+        <div class="stat-box"><div class="num">${results.length}</div><div class="lbl">quiz fatti</div></div>
+        <div class="stat-box"><div class="num">${best}%</div><div class="lbl">migliore</div></div>
+        <div class="stat-box"><div class="num">${Math.round((last.score / last.total) * 100)}%</div><div class="lbl">ultimo</div></div>
+      </div>`;
+  } else {
+    html += `<p style="color:var(--muted); margin-bottom:18px;">Nessun quiz completato finora.<br>Ogni sessione: <strong style="color:var(--text)">10 domande casuali</strong> pescate da tutte le ${QUIZ.length} del ripasso lampo.</p>`;
+  }
+  html += `<button class="btn" onclick="startQuiz()">Inizia un quiz →</button>`;
+  if (results.length > 0) {
+    html += `<div class="history"><h3>Risultati precedenti</h3><table>
+      <tr><th>#</th><th>Data</th><th>Punteggio</th><th>%</th></tr>`;
+    results.slice().reverse().forEach((r, i) => {
+      const pct = Math.round((r.score / r.total) * 100);
+      const cls = pct >= 60 ? 'good' : 'bad';
+      html += `<tr><td>${results.length - i}</td><td>${fmtDate(r.date)}</td><td>${r.score}/${r.total}</td><td class="${cls}">${pct}%</td></tr>`;
+    });
+    html += `</table>
+      <button class="btn secondary" onclick="clearHistory()" style="margin-top:14px; font-size:0.85rem; padding:8px 16px;">Cancella lo storico</button></div>`;
+  }
+  html += '</div>';
+  cardEl.innerHTML = html;
+}
+
+function clearHistory() {
+  if (confirm('Vuoi davvero cancellare tutti i risultati salvati?')) {
+    localStorage.removeItem(STORAGE_KEY);
+    showHome();
+  }
+}
+
+// ---------- QUIZ ----------
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function startQuiz() {
+  sessionQuestions = shuffle(QUIZ).slice(0, QUESTIONS_PER_QUIZ).map(item => {
+    const indices = shuffle(item.opts.map((_, i) => i));
+    return {
+      part: item.part, q: item.q, exp: item.exp,
+      shuffled: indices.map(i => item.opts[i]),
+      correctShuffled: indices.indexOf(0)
+    };
+  });
+  current = 0;
+  score = 0;
+  wrongAnswers = [];
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const item = sessionQuestions[current];
+  counterEl.textContent = `Domanda ${current + 1} di ${sessionQuestions.length}`;
+  scoreEl.textContent = `Punteggio: ${score}`;
+  progressEl.style.width = `${(current / sessionQuestions.length) * 100}%`;
+  let html = `<span class="part-tag">${item.part}</span>
+    <div class="question">${item.q}</div>
+    <div class="options" id="options"></div>
+    <div class="feedback" id="feedback"></div>
+    <button class="btn" id="next-btn" style="display:none"></button>`;
+  cardEl.innerHTML = html;
+  const optsEl = document.getElementById('options');
+  item.shuffled.forEach((opt, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'option';
+    btn.textContent = String.fromCharCode(65 + i) + ') ' + opt;
+    btn.onclick = () => answer(i, btn);
+    optsEl.appendChild(btn);
+  });
+}
+
+function answer(chosen, btn) {
+  const item = sessionQuestions[current];
+  const optsEl = document.getElementById('options');
+  const fbEl = document.getElementById('feedback');
+  const nextBtn = document.getElementById('next-btn');
+  const buttons = optsEl.querySelectorAll('.option');
+  buttons.forEach(b => b.disabled = true);
+  buttons[item.correctShuffled].classList.add('correct');
+  if (chosen === item.correctShuffled) {
+    score++;
+    fbEl.className = 'feedback ok';
+    fbEl.innerHTML = '<strong class="verdict">✅ Esatto!</strong>' + item.exp;
+  } else {
+    btn.classList.add('wrong');
+    wrongAnswers.push(`[${item.part}] ${item.q}`);
+    fbEl.className = 'feedback ko';
+    fbEl.innerHTML = '<strong class="verdict">❌ Sbagliato.</strong>' + item.exp;
+  }
+  scoreEl.textContent = `Punteggio: ${score}`;
+  nextBtn.style.display = 'inline-block';
+  nextBtn.textContent = current === sessionQuestions.length - 1 ? 'Vedi risultato →' : 'Prossima domanda →';
+  nextBtn.onclick = () => {
+    current++;
+    if (current < sessionQuestions.length) renderQuestion();
+    else showResult();
+  };
+}
+
+function showResult() {
+  progressEl.style.width = '100%';
+  counterEl.textContent = 'Completato';
+  saveResult(score, sessionQuestions.length, wrongAnswers);
+  const results = loadResults();
+  const totScore = results.reduce((s, r) => s + r.score, 0);
+  const totQ = results.reduce((s, r) => s + r.total, 0);
+  const avgPct = Math.round((totScore / totQ) * 100);
+  const pct = Math.round((score / sessionQuestions.length) * 100);
+  let verdict;
+  if (pct === 100) verdict = 'Perfetto! 🏆';
+  else if (pct >= 80) verdict = 'Ottimo! Ripassa solo le sbagliate.';
+  else if (pct >= 60) verdict = 'Buona base, rifai un giro sulle sbagliate.';
+  else verdict = 'Serve un altro ripasso sul file RIPASSO_TEORIA_LAMPO.';
+  let html = `<div class="result">
+    <h2>Risultato</h2>
+    <div class="score">${score} / ${sessionQuestions.length}</div>
+    <p>${pct}% — ${verdict}</p>
+    <p style="margin-top:10px;">Media complessiva: <strong style="color:var(--accent)">${avgPct}%</strong> su ${results.length} quiz</p>`;
+  if (wrongAnswers.length > 0) {
+    html += `<div class="errors-list"><h3>Domande da ripassare:</h3><ul>`;
+    wrongAnswers.forEach(w => { html += `<li>${w}</li>`; });
+    html += `</ul></div>`;
+  }
+  html += `<button class="btn" onclick="startQuiz()">Nuovo quiz (altre 10 domande) ↺</button>
+    <button class="btn secondary" onclick="showHome()">Vai allo storico</button></div>`;
+  cardEl.innerHTML = html;
+}
+
+showHome();
+</script>
+</body>
+</html>
