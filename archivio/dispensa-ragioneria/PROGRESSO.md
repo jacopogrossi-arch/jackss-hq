@@ -52,6 +52,7 @@ Lettura: partenza fredda a 60%, poi stabilmente sopra il 70% con chiusura a 90%.
 - ✅ Esercizio 1 — **7/10**
 - ✅ Esercizio 2 — **8/10**
 - ⚠️ Esercizio 3 — IPO Sigma — **6,5/10**. Giusti: scritture Sigma (importi 600 CS + 1.000 sovrapprezzo), niente scritture per la vendita VENTO, SP quadrato 9.600, compagine perfetta (58,33% — trappola Beta superata!). Errori: (1) plusvalenza col nominale 900 invece del carico 1.200 → 1.500 invece di 1.200, stesso errore di Beta; (2) conto chiamato "plusvalenza da emissione" invece di Riserva sovrapprezzo azioni; (3) quinto applicato al sovrapprezzo invece che alla legale (500 < 720 → sovrapprezzo NON distribuibile); (4) scindibile detto al contrario ("inefficace per la parte sottoscritta"). Da ridire a voce: plusvalenza, quinto, scindibile.
+- ⚠️ Esercizio 4 — Deroga Rho — fatta solo la teoria (punto 5, numeri saltati su richiesta). (a) concetto e obbligatorietà ok MA "in casi eccezionali" non citato e **utili detti a riserva straordinaria invece che a riserva NON distribuibile** (errore grave, è l'opposto); (b) NI giusta ✅; (c) revisore vs collegio: scheletro giusto ma troppo generico — mancano perizia/contabilizzazione/giudizio (revisore) e vigilanza+relazione all'assemblea (collegio). Gancio: "assemblea" = solo collegio.
 - [ ] Esercizi successivi
 
 ## Prossimi blocchi (da PIANO_ULTIME_48H)
