@@ -51,7 +51,7 @@ Lettura: partenza fredda a 60%, poi stabilmente sopra il 70% con chiusura a 90%.
 
 - ✅ Esercizio 1 — **7/10**
 - ✅ Esercizio 2 — **8/10**
-- [ ] Esercizio 3 — IPO (variante Sigma S.p.A., rigenerata dopo la chiusura della sessione)
+- ⚠️ Esercizio 3 — IPO Sigma — **6,5/10**. Giusti: scritture Sigma (importi 600 CS + 1.000 sovrapprezzo), niente scritture per la vendita VENTO, SP quadrato 9.600, compagine perfetta (58,33% — trappola Beta superata!). Errori: (1) plusvalenza col nominale 900 invece del carico 1.200 → 1.500 invece di 1.200, stesso errore di Beta; (2) conto chiamato "plusvalenza da emissione" invece di Riserva sovrapprezzo azioni; (3) quinto applicato al sovrapprezzo invece che alla legale (500 < 720 → sovrapprezzo NON distribuibile); (4) scindibile detto al contrario ("inefficace per la parte sottoscritta"). Da ridire a voce: plusvalenza, quinto, scindibile.
 - [ ] Esercizi successivi
 
 ## Prossimi blocchi (da PIANO_ULTIME_48H)
