@@ -40,8 +40,11 @@ Lettura: partenza fredda a 60%, poi stabilmente sopra il 70% con chiusura a 90%.
 - ✅ **IPO Beta** — plusvalenza, scritture Beta, SP e "niente scritture per la vendita HOLDCO" giusti. Due sbavature: scrittura HOLDCO col carico sbagliato (600 invece di 800 → plusvalenza 1.200 invece di 1.000, in contraddizione col proprio calcolo: la quadratura non salva!) e compagine 53% invece di 58,33%. Punti 4-5 saltati (scrittura a mano faticosa) — la trappola del quinto (2.400/5=480 > ris. legale 400) ripassata a voce.
 - ✅ **Deroga Gamma** — praticamente perfetta: rivalutazione 800, quota 250, CE/SP anno n, destinazione utile 800+450, perdita n+1, VNC 1.500. Unico errore: dividendi mai pagati per banca (riga di traccia non contabilizzata). Lezione: a fine esercizio rileggere la traccia spuntando ogni operazione. Teoria fatta a voce: 1-2 perfette, terza (revisore vs collegio) rifinita.
 
-## Prossimi blocchi (da PIANO_ULTIME_48H)
+## Esercizi OIC 9 e LIC (15/07 pomeriggio, varianti Omega/Tau)
 
-- [ ] Esercizi OIC 9 (Omega) + LIC (Tau) — PDF pronto, da fare
+- ✅ **OIC 9 Omega** — perfetto: tabella, recuperabile = max(4.600; 3.900) = 4.600, svalutazione 1.400 con scrittura giusta, risposte 3/3. Trappola del "vince il prezzo di vendita" schivata.
+- ✅ **LIC Tau** — anno 1 perfetto (corrispettivo 800 distinto dall'anticipo 700, utile 200, SP quadrato). Anno 2 spiegato insieme (storno rimanenze iniziali per non contare due volte; verifica: utile 1 + utile 2 = utile budget). Domande secche 3/3. Chiarito banca 100 = anticipo 700 − costi 600 (competenza ≠ cassa).
+
+## Prossimi blocchi (da PIANO_ULTIME_48H)
 - [ ] Tardo pomeriggio: seconda passata RIPASSO_TEORIA_LAMPO (segnare le ✗)
 - [ ] Sera: Simulazione 8 (prova generale completa)
