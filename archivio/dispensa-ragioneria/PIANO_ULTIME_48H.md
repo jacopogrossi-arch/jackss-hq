@@ -16,8 +16,8 @@
 - [x] `kit-ripasso/DEROGA_RIVALUTAZIONE_RIPASSO` — scheda-metodo + esercizio Alfa *(fatto 15/07 mattina, verifica orale superata — ricordare "casi eccezionali" e deroga obbligatoria)*
 
 **Primo pomeriggio — correzioni Sim. 7 (rifare DA ZERO, non rileggere)**
-- [ ] Scrittura del **venditore** nella cessione d'azienda (7.3) — ricorda: si chiudono SOLO gli elementi trasferiti, MAI i conti di netto; in Dare c'è Banca per il prezzo
-- [ ] Sezione A del rendiconto (7.4) — riga 1 = **utile dal CE così com'è (500)**, mai rettificato a mano; le righe sotto fanno tutto loro
+- [x] Scrittura del **venditore** nella cessione d'azienda (7.3) — rifatta 15/07: tutta giusta al primo colpo ✅
+- [x] Sezione A del rendiconto (7.4) — rifatta 15/07: primo tentativo CCN in C invece che in A; seconda prova (variante Delta, segni invertiti) perfetta ✅
 - [ ] Ripasso 2 minuti: current ratio = tutto il circolante (1,64) ≠ tesoreria primario = solo cassa; a prezzi crescenti LIFO = utile più basso, FIFO = utile e magazzino più alti
 
 **Tardo pomeriggio — teoria attiva (1h)**
