@@ -30,8 +30,13 @@ Lettura: partenza fredda a 60%, poi stabilmente sopra il 70% con chiusura a 90%.
 
 ---
 
+## Correzioni Sim. 7 rifatte da zero (15/07 pomeriggio)
+
+- ✅ **Scrittura venditore cessione (7.3)** — rifatta su carta: tutta giusta (plusvalenza pre-calcolata, nessun conto di netto, quadratura 42.000, CE A.5). Errore di ieri superato. Rifinitura: citare sempre "con indicazione in NI" e ricordare che E.20 non esiste più (D.Lgs. 139/2015).
+- ⚠️ **Rendiconto (7.4)** — rifatto: cassa finale 450 giusta, MA variazioni CCN messe in C invece che in A (A veniva 700 invece di 750). Regola memorizzata: ciclo operativo → A, banche/soci → C, cespiti → B. In corso seconda prova con variante Delta S.p.A. (minusvalenza, CCN a segni invertiti, mutuo acceso).
+
 ## Prossimi blocchi (da PIANO_ULTIME_48H)
 
-- [ ] Primo pomeriggio: rifare da zero scrittura venditore cessione (7.3) + sezione A rendiconto (7.4)
+- [ ] Traccia 2 Delta S.p.A. (rendiconto, versione nuova) — in corso
 - [ ] Tardo pomeriggio: seconda passata RIPASSO_TEORIA_LAMPO (segnare le ✗)
 - [ ] Sera: Simulazione 8 (prova generale completa)
