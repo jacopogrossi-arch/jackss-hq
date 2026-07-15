@@ -12,8 +12,8 @@
 ## 📅 Domani — 15/07
 
 **Mattina — IPO e deroga (i due argomenti mai visti)**
-- [ ] `kit-ripasso/IPO_RIPASSO` — scheda-metodo + esercizio Alfa
-- [ ] `kit-ripasso/DEROGA_RIVALUTAZIONE_RIPASSO` — scheda-metodo + esercizio Alfa
+- [x] `kit-ripasso/IPO_RIPASSO` — scheda-metodo + esercizio Alfa *(fatto 15/07 mattina, verifica orale superata)*
+- [x] `kit-ripasso/DEROGA_RIVALUTAZIONE_RIPASSO` — scheda-metodo + esercizio Alfa *(fatto 15/07 mattina, verifica orale superata — ricordare "casi eccezionali" e deroga obbligatoria)*
 
 **Primo pomeriggio — correzioni Sim. 7 (rifare DA ZERO, non rileggere)**
 - [ ] Scrittura del **venditore** nella cessione d'azienda (7.3) — ricorda: si chiudono SOLO gli elementi trasferiti, MAI i conti di netto; in Dare c'è Banca per il prezzo
