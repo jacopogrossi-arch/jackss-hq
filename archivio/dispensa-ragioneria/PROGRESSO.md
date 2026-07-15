@@ -45,6 +45,15 @@ Lettura: partenza fredda a 60%, poi stabilmente sopra il 70% con chiusura a 90%.
 - ✅ **OIC 9 Omega** — perfetto: tabella, recuperabile = max(4.600; 3.900) = 4.600, svalutazione 1.400 con scrittura giusta, risposte 3/3. Trappola del "vince il prezzo di vendita" schivata.
 - ✅ **LIC Tau** — anno 1 perfetto (corrispettivo 800 distinto dall'anticipo 700, utile 200, SP quadrato). Anno 2 spiegato insieme (storno rimanenze iniziali per non contare due volte; verifica: utile 1 + utile 2 = utile budget). Domande secche 3/3. Chiarito banca 100 = anticipo 700 − costi 600 (competenza ≠ cassa).
 
+## Simulazione 8 — prova generale (15/07 sera, a voce, IN CORSO)
+
+> Iniziata in una sessione a voce poi chiusa; ripresa in chat. Punteggi riportati da Jacopo.
+
+- ✅ Esercizio 1 — **7/10**
+- ✅ Esercizio 2 — **8/10**
+- [ ] Esercizio 3 — IPO (variante Sigma S.p.A., rigenerata dopo la chiusura della sessione)
+- [ ] Esercizi successivi
+
 ## Prossimi blocchi (da PIANO_ULTIME_48H)
 - [ ] Tardo pomeriggio: seconda passata RIPASSO_TEORIA_LAMPO (segnare le ✗)
-- [ ] Sera: Simulazione 8 (prova generale completa)
+- [x] Sera: Simulazione 8 (prova generale completa) — in corso, vedi sopra
