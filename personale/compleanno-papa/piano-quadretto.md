@@ -26,11 +26,13 @@ Regalo di compleanno: un'immagine simpatica da stampare e incorniciare — **pap
 ## Workflow (collaudato sul video 6 di Jago)
 
 1. ✅ Setup cartella + piano
-2. ⬜ Foto reference: 3–5 foto del papà inviate in chat → upload su Magnific come creations
-3. ⬜ Character sheet del papà (Nano Banana Pro, identity lock dalle foto) → `papa-character-sheet.md`
-4. ⬜ Prompt del quadretto → `prompts-quadretto.md`
-5. ⬜ Generazione 2–4 varianti + iterazioni
-6. ⬜ Upscale per stampa (30×40 ≈ 3600×4800 px @ 300 dpi) e consegna
+2. ✅ Foto reference: caricate da Jacopo direttamente su magnific.com (la rete della sessione bloccava upload e CDN); decisiva la singola foto nitida IMG_3289 + reference reale del rastrello tellinaro
+3. ✅ Character sheet: 2 tentativi scartati (griglia 7 viste e mezzo busto multi-foto: poca somiglianza) → strategia vincente: generazione diretta del quadretto dalla foto singola
+4. ✅ Prompt del quadretto in 4 stili → `prompts-quadretto.md`
+5. ✅ Generazione: 13 candidati in 4 stili → scelti 2 vincitori (vintage + olio), corrette le etichette del vintage ("attrezzi", "more")
+6. ✅ Upscale 4x precision di entrambi — pronti per stampa 30×40, link in `prompts-quadretto.md`
+
+**COMPLETATO il 16/07/2026** — si stampano entrambe le versioni: poster vintage + pittura a olio. Aggiunto in corsa il 9° elemento: **Candy**, il cane. 🎉
 
 ## Riferimenti nel repo
 

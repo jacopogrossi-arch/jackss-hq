@@ -3,9 +3,9 @@
 ## 🏆 SCELTE FINALI (16/07) — si stampano ENTRAMBE
 
 1. **Poster vintage**: https://www.magnific.com/app/creation/l7rkZTEgv9 — con correzione etichette ("screwlook"→"attrezzi", "bramble"→"more"):
-   - Correzione var. 1: https://www.magnific.com/app/creation/MXWnjtsDCm
-   - Correzione var. 2: https://www.magnific.com/app/creation/WMAZKXWcXe
-   - ⬜ upscale dopo scelta della correzione
+   - Correzione var. 1 (scartata): https://www.magnific.com/app/creation/MXWnjtsDCm
+   - Correzione var. 2 (✅ SCELTA): https://www.magnific.com/app/creation/WMAZKXWcXe
+   - ✅ Upscale 4x precision (pronto per stampa 30×40): https://www.magnific.com/app/creation/1sqFTnJr4r
 2. **Pittura a olio**: https://www.magnific.com/app/creation/1sqF9MWr4r
    - ✅ Upscale 4x precision (pronto per stampa 30×40): https://www.magnific.com/app/creation/jSKbTitLD0
 
