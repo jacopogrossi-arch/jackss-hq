@@ -2,7 +2,12 @@
 
 **Tool: Magnific Nano Banana Pro | Formato: come `inverso/assets-jago/jago-character-sheet.jpeg`**
 
-Stato: ⬜ da generare (in attesa upload foto reference su Magnific da parte di Jacopo)
+Stato: ✅ generate 2 varianti il 16/07/2026 — **da scegliere**
+
+- Variante 1: https://www.magnific.com/app/creation/xg5HIbWjfW
+- Variante 2: https://www.magnific.com/app/creation/XtM0iVTBfo
+
+> Nota sessione: la rete blocca il CDN Magnific → le varianti si scelgono dai link `magnific.com/app/creation/...` (come nel video 6). Foto reference caricate da Jacopo via app (5 upload del 16/07).
 
 ## Reference fotografiche (5 foto del 16/07/2026)
 
