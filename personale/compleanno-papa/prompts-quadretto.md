@@ -1,5 +1,14 @@
 # Prompt quadretto — ritratto illustrato con le passioni
 
+## 🏆 SCELTE FINALI (16/07) — si stampano ENTRAMBE
+
+1. **Poster vintage**: https://www.magnific.com/app/creation/l7rkZTEgv9 — con correzione etichette ("screwlook"→"attrezzi", "bramble"→"more"):
+   - Correzione var. 1: https://www.magnific.com/app/creation/MXWnjtsDCm
+   - Correzione var. 2: https://www.magnific.com/app/creation/WMAZKXWcXe
+   - ⬜ upscale dopo scelta della correzione
+2. **Pittura a olio**: https://www.magnific.com/app/creation/1sqF9MWr4r
+   - ✅ Upscale 4x precision (pronto per stampa 30×40): https://www.magnific.com/app/creation/jSKbTitLD0
+
 **Tool: Magnific Nano Banana Pro | Formato: verticale 3:4 | Reference: character sheet papà + foto Candy**
 
 Stato: 🔄 prime 2 varianti generate il 16/07/2026 — **da scegliere**
