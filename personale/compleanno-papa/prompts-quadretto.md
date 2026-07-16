@@ -40,6 +40,13 @@ The small handwritten labels are integrated into the background like affectionat
 
 ## Varianti di stile (generate 16/07, stesse 2 reference)
 
+**Batch 1 (1 per stile):**
 - **Poster vintage anni '50/'60 italiano**: https://www.magnific.com/app/creation/rlbHyYZxtc
 - **Pittura classica a olio**: https://www.magnific.com/app/creation/vu8Bk3Oa47
 - **Fotorealistico (studio)**: https://www.magnific.com/app/creation/PiwSnqM42C
+
+**Batch 2 (2 in più per stile, richiesta Jacopo):**
+- Illustrato: https://www.magnific.com/app/creation/LUk53yHswO · https://www.magnific.com/app/creation/BmDVbEKoQR
+- Vintage: https://www.magnific.com/app/creation/l7rkZTEgv9 · https://www.magnific.com/app/creation/rlbHNY6xtc
+- Olio: https://www.magnific.com/app/creation/bruCOWm5Y2 · https://www.magnific.com/app/creation/1sqF9MWr4r
+- Fotorealistico: https://www.magnific.com/app/creation/kLHQ4oO16B · https://www.magnific.com/app/creation/CHmIl02EEy
