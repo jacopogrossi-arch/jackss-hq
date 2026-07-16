@@ -2,7 +2,12 @@
 
 **Tool: Magnific Nano Banana Pro | Formato: verticale 3:4 | Reference: character sheet papà + foto Candy**
 
-Stato: ⬜ da generare (dopo la character sheet)
+Stato: 🔄 prime 2 varianti generate il 16/07/2026 — **da scegliere**
+
+- Variante 1: https://www.magnific.com/app/creation/xg5qsFsjfW
+- Variante 2: https://www.magnific.com/app/creation/MXWneGODCm
+
+**Reference identità:** SOLO la foto nitida IMG_3289 (camicia bianca, Reggia di Caserta) — decisione dopo 2 giri falliti di ritratto identità (griglia 7 viste e mezzo busto con 10 foto: poca somiglianza). Strategia: generazione diretta del quadretto dalla foto singola, wardrobe uguale alla foto (camicia bianca + jeans) per massima fedeltà. Candy descritta a parole nel prompt.
 
 ## I 9 elementi
 
