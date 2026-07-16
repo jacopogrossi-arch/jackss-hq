@@ -33,7 +33,10 @@ The small handwritten labels are integrated into the background like affectionat
 
 ## Note di iterazione
 
-- (da compilare dopo le prime varianti)
+- **Giro 1** (16/07): idea approvata da Jacopo ✅, ma rastrello da telline sbagliato → Jacopo ha caricato la reference reale (upload "rastrello-tellinaro")
+- **Giro 2** (16/07): rigenerato con 2 reference (foto papà + rastrello tellinaro vero, descritto come manico lungo con cestello a gabbia in rete metallica con denti):
+  - Variante 1: https://www.magnific.com/app/creation/l7rkPELgv9
+  - Variante 2: https://www.magnific.com/app/creation/wPsj6qX7EI
 
 ## Varianti di stile da provare dopo (scelta Jacopo: "proviamo nei diversi")
 
