@@ -2,10 +2,15 @@
 
 **Tool: Magnific Nano Banana Pro | Formato: come `inverso/assets-jago/jago-character-sheet.jpeg`**
 
-Stato: ✅ generate 2 varianti il 16/07/2026 — **da scegliere**
+Stato: 🔄 secondo giro il 16/07/2026 — **da scegliere**
 
+**Tentativo 1 — griglia a 7 viste (SCARTATO: poca somiglianza, l'identità si diluiva):**
 - Variante 1: https://www.magnific.com/app/creation/xg5HIbWjfW
 - Variante 2: https://www.magnific.com/app/creation/XtM0iVTBfo
+
+**Tentativo 2 — ritratto singolo mezzo busto (metodo talent video 6), 10 foto reference:**
+- Variante 1: https://www.magnific.com/app/creation/gJxkkLYSXO
+- Variante 2: https://www.magnific.com/app/creation/XtM00p2Bfo
 
 > Nota sessione: la rete blocca il CDN Magnific → le varianti si scelgono dai link `magnific.com/app/creation/...` (come nel video 6). Foto reference caricate da Jacopo via app (5 upload del 16/07).
 
