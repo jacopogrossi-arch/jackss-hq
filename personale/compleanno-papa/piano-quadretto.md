@@ -30,7 +30,7 @@ Regalo di compleanno: un'immagine simpatica da stampare e incorniciare — **pap
 3. ✅ Character sheet: 2 tentativi scartati (griglia 7 viste e mezzo busto multi-foto: poca somiglianza) → strategia vincente: generazione diretta del quadretto dalla foto singola
 4. ✅ Prompt del quadretto in 4 stili → `prompts-quadretto.md`
 5. ✅ Generazione: 13 candidati in 4 stili → scelti 2 vincitori (vintage + olio), corrette le etichette del vintage ("attrezzi", "more")
-6. ✅ Upscale 4x precision di entrambi — pronti per stampa 30×40, link in `prompts-quadretto.md`
+6. ✅ Upscale 4x precision di entrambi (3584×4800 px) — pronti per stampa in **15×20 cm** (formato aggiornato da Jacopo il 16/07; a quella misura i file rendono ~600 dpi), link in `prompts-quadretto.md`
 
 **COMPLETATO il 16/07/2026** — si stampano entrambe le versioni: poster vintage + pittura a olio. Aggiunto in corsa il 9° elemento: **Candy**, il cane. 🎉
 

@@ -1,6 +1,8 @@
 # Prompt quadretto — ritratto illustrato con le passioni
 
-## 🏆 SCELTE FINALI (16/07) — si stampano ENTRAMBE
+## 🏆 SCELTE FINALI (16/07) — si stampano ENTRAMBE in **15×20 cm**
+
+**Formato stampa aggiornato il 16/07: 15×20 cm** (era 30×40). I file upscalati sono 3584×4800 px = ~600 dpi su 15×20: risoluzione più che doppia del necessario, si usano gli stessi file senza modifiche. Rapporto 3:4 identico al formato, nessun ritaglio.
 
 1. **Poster vintage**: https://www.magnific.com/app/creation/l7rkZTEgv9 — con correzione etichette ("screwlook"→"attrezzi", "bramble"→"more"):
    - Correzione var. 1 (scartata): https://www.magnific.com/app/creation/MXWnjtsDCm
