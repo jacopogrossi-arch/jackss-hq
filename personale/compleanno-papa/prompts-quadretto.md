@@ -38,8 +38,8 @@ The small handwritten labels are integrated into the background like affectionat
   - Variante 1: https://www.magnific.com/app/creation/l7rkPELgv9
   - Variante 2: https://www.magnific.com/app/creation/wPsj6qX7EI
 
-## Varianti di stile da provare dopo (scelta Jacopo: "proviamo nei diversi")
+## Varianti di stile (generate 16/07, stesse 2 reference)
 
-- Fotorealistico (ritratto in studio circondato dagli oggetti reali)
-- Poster vintage anni '50/'60 italiano
-- Pittura classica a olio con ironia
+- **Poster vintage anni '50/'60 italiano**: https://www.magnific.com/app/creation/rlbHyYZxtc
+- **Pittura classica a olio**: https://www.magnific.com/app/creation/vu8Bk3Oa47
+- **Fotorealistico (studio)**: https://www.magnific.com/app/creation/PiwSnqM42C
