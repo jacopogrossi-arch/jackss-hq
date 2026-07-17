@@ -1,5 +1,7 @@
 # Dispensa Ragioneria — esame 16/07/2026
 
+> ✅ **Esame sostenuto il 16/07/2026.** Sensazione positiva; risultati attesi intorno al 24/07/2026.
+
 Come orientarsi:
 
 - **`kit-ripasso/`** — i 5 kit pre-esame (14/07): teoria lampo, rendiconto finanziario (OIC 10), cessione d'azienda, IPO/OPVS, deroga ex art. 2423 co. 5. Ogni kit = scheda-metodo + svolgimento dell'esercizio ufficiale del corso. Disponibili in `.md` e `.pdf`.

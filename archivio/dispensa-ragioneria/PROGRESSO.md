@@ -1,5 +1,7 @@
 # Progresso ripasso — esame Ragioneria 16/07/2026
 
+> ✅ **ESAME SOSTENUTO il 16/07/2026** — sensazione positiva. Risultati attesi intorno al 24/07/2026. Questo file resta come archivio del ripasso.
+
 > File di tracking delle ultime 48h. Aggiornato man mano che si completano i blocchi del `PIANO_ULTIME_48H.md`.
 
 ---

@@ -45,7 +45,7 @@ Tutto ciò che è dormiente o fuori tema sta in `archivio/`:
 - **AI Content Automation** (pipeline n8n, dormiente) → `archivio/n8n-automation/`
 - **AI Image & Video** (corso completato, tecniche ora nel personal brand) → `archivio/ai-content-claude/`
 - **Dispensa diritto pubblico** (appunti universitari, esame superato) → `archivio/dispensa-diritto-pubblico/`
-- **Dispensa ragioneria** (esame 16/07/2026) → `archivio/dispensa-ragioneria/`
+- **Dispensa ragioneria** (esame sostenuto il 16/07/2026, andato bene — esito atteso ~24/07) → `archivio/dispensa-ragioneria/`
 - **Log Jackss** (briefing/check-in delle routine dismesse) → `archivio/logs-jackss/`
 - **Canale Jago** (7 video pubblicati, outreach, strategia — chiuso come progetto autonomo il 13/07/2026, Jago vive come strumento di Inverso) → `archivio/canale-jago/`. La skill `/jago-creative-director` resta per eventuali video lookbook di Inverso.
 
