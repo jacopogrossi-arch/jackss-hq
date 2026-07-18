@@ -15,7 +15,7 @@
 **Volto:** Jacopo Grossi (persona reale: studente di economia + accademia di moda, Roma, cuce davvero)
 **Posizionamento:** build-in-public — "costruisco un brand di moda vero, da studente, usando anche l'AI"
 **Modello:** UN capo per volta, pre-order, drop ogni 3–4 mesi. Primo drop: 10–20 pezzi.
-**Fase attuale:** pre-Drop 1 — il primo capo (Modello A/B) è la priorità assoluta
+**Fase attuale:** pre-Drop 1 — il Modello A/B è stato azzerato (18/07/2026): si riparte dallo studio (silhouette + elementi fondamentali del pantalone), poi cartamodello dalla base esistente. Il primo capo resta la priorità assoluta; la fase di studio è anche materia prima per il pilastro Ricerca.
 **Reference model:** micro-brand build-in-public (es. Marcus Milione). In Italia nessuno lo fa così.
 
 ## 2. Struttura canali (funnel, non canali paralleli)

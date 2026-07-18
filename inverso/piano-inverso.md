@@ -23,7 +23,7 @@ I due profili sono **un funnel, non due canali**: il personale vende la storia, 
 
 ## 2. Il ciclo (piano operativo)
 
-1. **Ora → ~2 mesi:** finire il Modello A o B come primo capo. Pocket 3 accesa sul tavolo — cucire con una telecamera accesa, non "fare contenuti".
+1. **Ora:** il Modello A/B non esiste più (azzerato il 18/07/2026) — si riparte da capo, con metodo: prima **lo studio della materia** (disegnare una vera silhouette, definire gli elementi fondamentali del pantalone), poi il processo creativo, poi il cartamodello (base esistente da modificare, eventualmente con aiuto esterno). Criterio di fine studio: esiste una tavola di silhouette scelta + la lista scritta degli elementi fondamentali. Pocket 3 accesa sul tavolo — anche studiare e disegnare con la telecamera accesa vale.
 2. **In parallelo:** lookbook del capo con Jago (test dei 15-20 scatti coerenti) — valida il futuro servizio E produce la campagna del brand. Un lavoro, due output.
 3. **Drop 1:** pre-order 10–20 pezzi numerati su @inverso. Obiettivo scritto PRIMA del drop: **chiudere il ciclo idea→capo→campagna→vendita**, non il sold-out. Materiali €500–1500.
 4. **Solo dopo:** definire i servizi con i numeri veri in mano.
@@ -87,7 +87,9 @@ In ordine di attivazione:
 
 ## 9. Prossime azioni (dopo il 16/07 — esame Ragioneria)
 
-- [ ] **Stato reale del Modello A/B**: cartamodello finito? Tessuto comprato? (la domanda da cui riparte tutto)
+- [x] Stato reale del capo: il Modello A/B non esiste più — si riparte da zero (18/07/2026)
+- [ ] **Fase di studio del pantalone**: disegnare la silhouette vera + definire gli elementi fondamentali del capo. Finito quando: tavola di silhouette scelta + lista scritta degli elementi. (Lo studio serve al capo, non lo sostituisce.)
+- [ ] Cartamodello: adattare la base esistente alla nuova silhouette + individuare chi può dare una mano
 - [ ] Ore realistiche della settimana-tipo d'autunno → calibrare il ciclo
 - [x] Handle del brand: scelto **@inversorome** (18/07/2026 — inverso.studio non era libero)
 - [x] Profilo **@inversorome** aperto con bio definitiva (18/07/2026 — testo in `analisi/01-copywriting.md`)
