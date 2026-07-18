@@ -90,7 +90,8 @@ In ordine di attivazione:
 - [ ] **Stato reale del Modello A/B**: cartamodello finito? Tessuto comprato? (la domanda da cui riparte tutto)
 - [ ] Ore realistiche della settimana-tipo d'autunno → calibrare il ciclo
 - [x] Handle del brand: scelto **@inversorome** (18/07/2026 — inverso.studio non era libero)
-- [ ] Aprire il profilo @inversorome + finalizzare le bio dei due profili (bozze in `analisi/01-copywriting.md`)
+- [x] Profilo **@inversorome** aperto con bio definitiva (18/07/2026 — testo in `analisi/01-copywriting.md`)
+- [ ] Aggiornare la bio del profilo personale (bozza in `analisi/01-copywriting.md`)
 - [ ] Primo Diario di Ricerca tessuti (60s, Pocket 3)
 - [ ] Test tecnico: capo reale fedele su Jago in 15 scatti coerenti
 
