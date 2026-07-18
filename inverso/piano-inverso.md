@@ -14,7 +14,7 @@ Da questa natura discende tutto il resto: il ritmo lento è un pregio, gli error
 | Chi/Cosa | Ruolo |
 |---|---|
 | **Jacopo** | Volto del progetto. Profilo IG personale = il processo, il laboratorio, la storia |
-| **@inverso** | Il risultato: capo, lookbook, drop, pre-order. Poco e a livello campagna |
+| **@inversorome** | Il risultato: capo, lookbook, drop, pre-order. Poco e a livello campagna |
 | **Jago** (avatar AI) | Strumento: modello virtuale dei lookbook + personaggio del racconto ("il mio modello non esiste") |
 | **@jagoworks** | Congelato. Vetrina del futuro servizio Lookbook AI |
 | **Servizi** (Lookbook AI, Idea→Campione) | SOLO dopo il Drop 1, col caso studio in mano |
@@ -89,7 +89,8 @@ In ordine di attivazione:
 
 - [ ] **Stato reale del Modello A/B**: cartamodello finito? Tessuto comprato? (la domanda da cui riparte tutto)
 - [ ] Ore realistiche della settimana-tipo d'autunno → calibrare il ciclo
-- [ ] Handle @inverso: verificare disponibilità (rosa: inverso.studio · inverso.roma · wearinverso) + bio dei due profili
+- [x] Handle del brand: scelto **@inversorome** (18/07/2026 — inverso.studio non era libero)
+- [ ] Aprire il profilo @inversorome + finalizzare le bio dei due profili (bozze in `analisi/01-copywriting.md`)
 - [ ] Primo Diario di Ricerca tessuti (60s, Pocket 3)
 - [ ] Test tecnico: capo reale fedele su Jago in 15 scatti coerenti
 

@@ -40,13 +40,13 @@ Voce in prima persona, radicalmente studente. Perfetta per il profilo personale 
 ```
 Jacopo — Roma
 Studio economia e moda. Cucio davvero.
-Costruisco @inverso un capo alla volta: cartamodelli, denim, errori, costi.
+Costruisco @inversorome un capo alla volta: cartamodelli, denim, errori, costi.
 Drop 1 in lavorazione ↓
 [link: pre-order / lista d'attesa]
 ```
 Logica: identità reale in riga 1–2 (credibilità), promessa di contenuto in riga 3 con le parole concrete del processo ("errori, costi" = il differenziante), tensione verso il drop in riga 4. Niente emoji-diluvio, niente "founder", niente "creator".
 
-**@inverso (= il risultato):**
+**@inversorome (= il risultato):**
 ```
 INVERSO
 Menswear. Un capo per volta, in tiratura limitata.
