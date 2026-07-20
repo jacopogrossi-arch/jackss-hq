@@ -260,11 +260,76 @@ La storia del "come sta su" un pantalone è una parabola di autonomia. **Fase 1,
 
 Il confronto '30s/'80s (capitoli 5 e 9) dimostra che **il peso del tessuto è una decisione di silhouette**, la più invisibile e la più importante. Regole pratiche: **350–450 g** (flanella, lane invernali) = caduta a piombo, riga scolpita, pieghe che restano chiuse in piedi — il look '30s, ma il capo è stagionale; **260–320 g** (lane 4 stagioni, gabardine) = il compromesso moderno, caduta buona e uso esteso; **200–250 g** (fresco leggero, crêpe) = movimento, onde, mano estiva — il look '80s, ma la riga vive poco e le pieghe "sventolano". Per un primo capo che deve dimostrare la qualità della costruzione, il peso medio-alto è l'alleato: **il tessuto pesante perdona meno in cucitura ma racconta meglio la caduta** — e la caduta è fotogenica, il che per un brand build-in-public non è un dettaglio.
 
+## 14. I tessuti del pantalone — merceologia operativa (dal formale al casual)
+
+Il capitolo 13 ha stabilito il principio: **il peso è una decisione di silhouette**. Questo capitolo scende nel concreto: quali tessuti esistono per un pantalone a vita alta con pieghe, come si comportano, e che registro parlano. Premessa importante: il brief dice "indossabile più o meno in qualsiasi contesto" — quindi i tessuti **casual nobili non sono un ripiego, sono candidati alla pari** dei sartoriali. Un pantalone dal taglio '30s in cotone pesante è, oggi, più portabile di uno in flanella grigia — e più coerente con un brand che nasce da un banco di lavoro, non da un atelier di Savile Row.
+
+I criteri per giudicare un tessuto da pantalone sono sei: **peso** (caduta), **armatura** (come è tessuto: la saia/twill è diagonale e robusta, la tela è piatta e ariosa), **mano** (come è al tatto), **ritorno della piega** (quanto tiene la riga e quanto si stropiccia), **resistenza all'abrasione** (un pantalone lavora su sedie, bici, banchi), e **come invecchia** — l'ultimo è il più sottovalutato ed è quello più "Inverso": un tessuto che migliora invecchiando racconta la lentezza meglio di qualsiasi caption.
+
+### Famiglia A — I classici sartoriali (lana)
+
+**1. Flanella di lana (330–450 g).** IL tessuto del drape anni '30. Superficie garzata (leggermente "pelosa"), mano morbida e calda, caduta a piombo che nessun altro tessuto eguaglia: le pieghe restano chiuse in piedi, la riga è scolpita. Due versioni: **pettinata** (più liscia e resistente) e **cardata** (più soffice, più fragile). Difetti: stagionale (ottobre–marzo), si "lucida" sui punti d'attrito con gli anni, il ginocchio può formare le "borse". Registro: dal formale al casual-elegante (la flanella grigia con maglione è un classico assoluto). Se il primo capo vuole il massimo carattere '30s, è qui.
+
+**2. Fresco di lana / tropical (230–280 g).** Lana pettinata a trama aperta e torsione alta: croccante, ariosa, antipiega per natura. La caduta è più "secca" della flanella — meno onda, più linea. È il tessuto del calibro romano anni '50. Registro: formale-moderno; sta bene anche spezzato ma parla comunque "ufficio". Quattro stagioni vere se sui 260+ g.
+
+**3. Gabardine di lana (260–320 g).** Saia pettinata fitta e compatta, superficie liscia con diagonale visibile. Robusta, antivento, riga eterna. È il tessuto dei '40s hollywoodiani. Rischio: nelle versioni lucide "fa divisa". Registro: trasversale, dal formale al casual pulito.
+
+**4. Cavalry twill e covert (350–450 g).** Le sale "cavallerizze" inglesi: diagonali marcate, densità altissima, quasi indistruttibili. Nascono per stare a cavallo — è il ramo *country* della sartoria britannica. Mano asciutta, caduta pesante e composta, colori terrosi (lovat, fawn, oliva). Registro: sportivo-elegante d'altri tempi; oggi leggono "conoscitore". Invecchiano magnificamente.
+
+### Famiglia B — I casual nobili (cotone e affini) ← il territorio più interessante per il brief
+
+**5. Cotone drill / chino twill pesante (240–340 g).** La saia di cotone dei gurkha e dei chino militari. Mano asciutta, caduta onesta (meno fluida della lana: le pieghe si aprono un po' di più, la riga vive meno), si ammorbidisce e si schiarisce con i lavaggi — **invecchia raccontando**. Registro: casual per eccellenza, ma un drill pesante tagliato a vita alta con doppie pieghe diventa esattamente quel "elegante ma ovunque" del brief. È probabilmente il candidato più democratico per un Drop 1: materiale accessibile, manutenzione facile, nessuna soggezione.
+
+**6. Moleskin / fustagno (300–450 g).** Cotone a raso rasato: superficie compatta e vellutata (il nome viene dalla "pelle di talpa"), mano calda quasi scamosciata. È il tessuto del lavoro e della caccia inglese e del **fustagno italiano** — il tessuto operaio per antonomasia, che ha vestito le campagne e le officine del Novecento. Caduta pesante e piena, riga discreta, resistenza enorme; si consuma con grazia, schiarendosi sui punti di lavoro. Registro: casual nobile invernale. Per un brand romano che parla di mestiere, il fustagno ha anche un valore narrativo: è il tessuto della classe che lavorava con le mani.
+
+**7. Velluto a coste (250–400 g).** Coste larghe (più casual, anni '70, professori e campagna) o fini (più urbane). Caldo, morbido, texture fortissima in foto. Ma attenzione col volume: su gamba ampia il velluto "ingrossa" — meglio su rastremazioni misurate. Registro: casual intellettuale. Si consuma sui punti d'attrito perdendo il pelo.
+
+**8. Denim, selvedge (12–15 oz ≈ 400–500 g).** Il ponte naturale col lavoro già fatto su Cartamodelli: la saia di cotone indaco, cimosa a telaio stretto, la stoffa che **registra la vita di chi la porta** (fade, baffi, honeycomb) come nessun'altra. Un pantalone **sartoriale** in denim — vita alta, doppie pieghe, side adjuster, orlo con cimosa a vista nel risvolto — è un territorio contemporaneo preciso (lo esplorano i sartoriali-denim inglesi e giapponesi) e per Inverso avrebbe un senso doppio: unisce la competenza jeans già in casa con il taglio classico studiato qui. Registro: casual assoluto ma con dignità sartoriale se il taglio è serio. Nota tecnica: il denim rigido chiede un cartamodello dedicato (non si comporta come la lana: niente ritorno elastico, pieghe "di carattere").
+
+**9. Canvas / duck di cotone (300–500 g).** La tela pesante del workwear. Più rustica del drill, caduta rigida che si "rompe" ad angoli invece di curvare. Registro: workwear dichiarato — probabilmente oltre il confine del brief ("elegante"), ma utile da conoscere come limite, e ottimo per un capo futuro più grezzo.
+
+### Famiglia C — Gli estivi e i fluidi
+
+**10. Lino (240–320 g).** Fibra vegetale fresca e rigida: la caduta è secca, lo **stropiccio è l'estetica** — chi sceglie il lino sceglie di dichiararlo. I lini irlandesi sono più compatti, gli italiani più morbidi. A vita alta con pieghe è un classico mediterraneo (ed era il registro estivo del gurkha). Registro: dal resort al casual urbano; mai davvero formale in Italia.
+
+**11. Misti lana-lino(-seta) (240–300 g).** Il compromesso estivo nobile: la lana dà ritorno e caduta, il lino dà freschezza e grana, l'eventuale seta dà luce. Meno stropiccio del lino puro, più interesse materico del fresco. Registro: eleganza estiva.
+
+**12. Crêpe e lane fluide (200–240 g).** Il territorio '80s (cap. 9): torsioni crêpe, cadute liquide, onde in movimento. Bellissimo in video, difficile da domare in costruzione (cuciture che arricciano, orli che ballano) — non un tessuto da primo capo, ma da tenere nel radar per quando la mano sarà esperta.
+
+### Tabella comparativa dei tessuti
+
+| Tessuto | Peso | Riga/pieghe | Registro | Stagione | Come invecchia | Adatto al primo capo? |
+|---|---|---|---|---|---|---|
+| Flanella | 330–450 g | scolpite | formale→casual elegante | O–M | si lucida, borse al ginocchio | sì, se invernale e col massimo carattere '30s |
+| Fresco lana | 230–280 g | nette, antipiega | formale moderno | 4 stagioni | neutro | sì, ma parla "ufficio" |
+| Gabardine lana | 260–320 g | eterne | trasversale | 4 stagioni | può lucidarsi | sì |
+| Cavalry/covert | 350–450 g | pesanti, composte | sportivo-conoscitore | O–M | benissimo | sì, scelta da intenditori |
+| **Cotone drill** | 240–340 g | oneste, si aprono | **casual nobile** | 3 stagioni | **schiarisce, racconta** | **sì — il più democratico** |
+| **Moleskin/fustagno** | 300–450 g | discrete, piene | **casual nobile invernale** | O–M | **con grazia, sui punti di lavoro** | **sì — valore narrativo forte** |
+| Velluto a coste | 250–400 g | assorbite dalla costa | casual intellettuale | O–M | perde il pelo | possibile, su gamba misurata |
+| **Denim selvedge** | 400–500 g | "di carattere" | casual con dignità sartoriale | 3 stagioni | **il migliore: registra la vita** | **sì — ponte con la competenza jeans** |
+| Canvas/duck | 300–500 g | ad angoli | workwear | 3 stagioni | rustico | oltre il brief |
+| Lino | 240–320 g | stropiccio dichiarato | estivo | P–E | ammorbidisce | solo se drop estivo |
+| Misto lana-lino | 240–300 g | buone | eleganza estiva | P–E | bene | solo se drop estivo |
+| Crêpe/lane fluide | 200–240 g | onde, non riga | '80s fluido | 4 stagioni | delicato | no: difficile da costruire |
+
+*Prezzi: volutamente non in tabella — variano troppo tra merceria, stock e tessutai. Vanno rilevati dal vivo, ed è già contenuto: il giro dei tessutai romani con la Pocket 3 è l'idea "Roma, tessuti" del piano, e la trasparenza sul costo al metro del tessuto scelto è un post del pilastro costi.*
+
+### Le tre candidature per il Drop 1 (ipotesi da verificare toccando)
+
+1. **Cotone drill pesante** — il pantalone del brief in versione quotidiana: taglio '30s-'40s, materia democratica, zero soggezione, invecchia raccontando. Il più coerente con "indossabile ovunque".
+2. **Moleskin/fustagno** — stessa idea ma invernale e più materica, col valore narrativo del tessuto operaio italiano: il capo elegante tagliato nel tessuto del lavoro è quasi un manifesto Inverso.
+3. **Flanella 350+ g** — la scelta filologica '30s: massimo carattere e massima caduta, ma stagionale e più esigente (in cucitura e in cura). Forte se il Drop 1 esce in autunno-inverno.
+
+**(Il denim selvedge resta la carta speciale:** unirebbe la competenza jeans già in casa al taglio classico studiato qui — da valutare quando si decide se il primo capo deve dialogare o no col progetto Cartamodelli.)
+
+La decisione vera si prende **al tatto**: campioni in mano, drappeggiati sul braccio, guardando come cadono — un altro episodio naturale del Diario di Ricerca.
+
 ---
 
 # PARTE IV — SINTESI OPERATIVA
 
-## 14. Tavola comparativa estesa
+## 15. Tavola comparativa estesa
 
 | | Oxford '20s | Drape '30s | Hollywood '40s | Gurkha | Roma '50s | Armani '80s |
 |---|---|---|---|---|---|---|
@@ -278,16 +343,16 @@ Il confronto '30s/'80s (capitoli 5 e 9) dimostra che **il peso del tessuto è un
 | Cosa segnalava | provocazione generazionale | l'agio come status | sobrietà patriottica / sfida (zoot) | funzione → connoisseurship | l'Italia moderna | potere senza sforzo |
 | Motore sociale | ribellione interna all'élite | corte + cinema | guerra e legge | impero e trattato | boom + Cinecittà | industria della moda + cinema |
 
-## 15. La mappa delle decisioni (estesa, da compilare a studio finito)
+## 16. La mappa delle decisioni (estesa, da compilare a studio finito)
 
 1. **Ampiezza gamba** — La forchetta ragionevole del brief sta tra la misura '40s (controllata, massima versatilità) e quella '30s (piena, massimo carattere). Il metodo: disegnare 3–5 varianti della stessa base cambiando SOLO le tre larghezze (coscia/ginocchio/fondo) e scegliere sulla tavola, non a memoria.
 2. **Verso delle pieghe** — All'inglese (più drape, coerenti col sistema '30s e coi side adjuster) o all'italiana (più pulite, tradizione di casa romana). È LA decisione identitaria: inglese = il capo dichiara il suo debito col drape; italiana = lo traduce in dialetto romano. Non esiste risposta giusta, esiste la risposta coerente con la storia che vuoi raccontare.
 3. **Risvolto** — Sì (4–5 cm, zavorra la caduta, completa il sistema '30s) o no (orlo pulito, eco gurkha/'50s, più moderno). Nota tecnica: con gamba ampia e tessuto pesante il risvolto lavora; con tessuto leggero è solo decoro.
 4. **Vita** — Punto vita naturale ('30s) o accenno di fascia più alta (eco gurkha, senza fibbie). La seconda è più caratterizzante e più difficile da portare: da decidere sul corpo, non sulla carta.
 5. **Lunghezza/break** — No break o mezzo break: con la gamba ampia l'orlo deciso è quasi obbligato (il break pieno anni '80 chiede il tessuto fluido, che è un altro progetto).
-6. **Peso del tessuto** — La decisione più strutturale (vedi cap. 13): 350+ g per il carattere '30s con stagionalità limitata, 260–320 g per l'uso esteso. Da decidere INSIEME al punto 1: ampiezza e peso si sommano.
+6. **Tessuto** — La decisione più strutturale (vedi capp. 13 e 14): le tre candidature sono cotone drill pesante (quotidiano, democratico), moleskin/fustagno (invernale, narrativo) e flanella 350+ g (filologico '30s); il denim selvedge resta la carta speciale. Da decidere INSIEME al punto 1 (ampiezza e peso si sommano) e **al tatto**, sui campioni.
 
-## 16. Filmografia e iconografia di studio (in ordine di priorità)
+## 17. Filmografia e iconografia di studio (in ordine di priorità)
 
 1. *Top Hat* (1935) e *Swing Time* (1936) — la caduta del tessuto in movimento; guardare i numeri di ballo a velocità ridotta
 2. *Casablanca* (1942) — la versione quotidiana e trasversale del volume
@@ -296,7 +361,7 @@ Il confronto '30s/'80s (capitoli 5 e 9) dimostra che **il peso del tessuto è un
 5. *Il grande sonno* (1946), *Stormy Weather* (1943, per lo zoot), *8½* (1963)
 6. Illustrazioni di Laurence Fellows (Apparel Arts/Esquire anni '30); fotografie di Slim Aarons (Italia anni '50); campagne Armani di Aldo Fallai (anni '80)
 
-## 17. Fonti principali
+## 18. Fonti principali
 
 - **DAKS / side adjuster:** [DAKS — Our History](https://daks.com/pages/ourhistory) · [Wikipedia — DAKS](https://en.wikipedia.org/wiki/DAKS) · [Bond Suits — The Types of Trouser Adjusters](https://www.bondsuits.com/trouser-adjusters/)
 - **Oxford bags:** [Wikipedia — Oxford bags](https://en.wikipedia.org/wiki/Oxford_bags) · [Atlas Obscura — Oxford Bags](https://www.atlasobscura.com/articles/oxford-bags-pants) · [Encyclopedia.com — Oxford Bags](https://www.encyclopedia.com/fashion/encyclopedias-almanacs-transcripts-and-maps/oxford-bags)
