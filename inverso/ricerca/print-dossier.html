@@ -1,0 +1,380 @@
+<title>Inverso — Studio silhouette: sei pantaloni, 1920-1990</title>
+<style>
+  :root{
+    --paper:#EDE7DA; --ink:#221E18; --cloth:#E2DAC8; --amber:#A97E2F;
+    --indigo:#35415E; --muted:#7A7263; --line:#C9BFA9; --card:#E7E0D0;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --paper:#171410; --ink:#E6DFD0; --cloth:#221E17; --amber:#C9973F;
+      --indigo:#93A5C9; --muted:#8D8574; --line:#3A342A; --card:#1E1A14; }
+  }
+  :root[data-theme="dark"]{ --paper:#171410; --ink:#E6DFD0; --cloth:#221E17; --amber:#C9973F;
+    --indigo:#93A5C9; --muted:#8D8574; --line:#3A342A; --card:#1E1A14; }
+  :root[data-theme="light"]{ --paper:#EDE7DA; --ink:#221E18; --cloth:#E2DAC8; --amber:#A97E2F;
+    --indigo:#35415E; --muted:#7A7263; --line:#C9BFA9; --card:#E7E0D0; }
+
+  body{ background:var(--paper); color:var(--ink);
+    font-family:Georgia,'Times New Roman',serif; line-height:1.65; margin:0; }
+  .wrap{ max-width:1060px; margin:0 auto; padding:2.5rem 1.25rem 5rem; }
+  h1,h2,h3{ font-family:Palatino,'Palatino Linotype','Book Antiqua',Georgia,serif;
+    text-wrap:balance; line-height:1.15; }
+  h1{ font-size:clamp(1.9rem,4.5vw,3rem); margin:.2rem 0 .4rem; font-weight:600; }
+  h2{ font-size:clamp(1.35rem,2.6vw,1.8rem); margin:0 0 .3rem; font-weight:600; }
+  .eyebrow{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.72rem;
+    letter-spacing:.18em; text-transform:uppercase; color:var(--amber); }
+  .lede{ font-size:1.05rem; max-width:62ch; color:var(--ink); }
+  .muted{ color:var(--muted); }
+  .rule{ border:none; border-top:1px solid var(--line); margin:2.6rem 0; }
+
+  .strip{ display:flex; gap:.4rem; overflow-x:auto; padding:1.2rem 0 .6rem;
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+  .strip figure{ margin:0; flex:0 0 auto; width:138px; text-align:center; }
+  .strip figcaption{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:.66rem; letter-spacing:.04em; margin-top:.35rem; color:var(--muted); }
+  .strip figcaption b{ display:block; color:var(--ink); font-size:.72rem; letter-spacing:.08em; }
+  .axis{ flex:0 0 auto; width:84px; }
+
+  .chapter{ display:grid; grid-template-columns:300px 1fr; gap:2.2rem; margin:3rem 0; }
+  @media (max-width:760px){ .chapter{ grid-template-columns:1fr; } }
+  .plate{ background:var(--card); border:1px solid var(--line); padding:1rem .6rem .6rem;
+    align-self:start; position:sticky; top:1rem; }
+  @media (max-width:760px){ .plate{ position:static; max-width:320px; margin:0 auto; } }
+  .plate .num-legend{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:.7rem; line-height:1.5; margin:.6rem .4rem 0; padding:0; list-style:none; color:var(--muted); }
+  .plate .num-legend b{ color:var(--amber); font-weight:600; }
+  .chapter p{ max-width:64ch; margin:.55rem 0; }
+  .tag{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.7rem;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--indigo); display:block; margin-top:1.1rem; }
+  .social{ border-left:3px solid var(--amber); padding:.15rem 0 .15rem 1rem; margin:1rem 0; }
+  .social p{ margin:.3rem 0; }
+
+  table{ border-collapse:collapse; font-size:.85rem; min-width:840px; }
+  .tablebox{ overflow-x:auto; border:1px solid var(--line); }
+  th,td{ text-align:left; padding:.5rem .7rem; border-bottom:1px solid var(--line);
+    vertical-align:top; }
+  th{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.68rem;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--muted); font-weight:600; }
+  td:first-child{ font-weight:700; white-space:nowrap; }
+  td{ font-variant-numeric:tabular-nums; }
+
+  .overlay-box{ display:grid; grid-template-columns:320px 1fr; gap:2rem; align-items:center; }
+  @media (max-width:760px){ .overlay-box{ grid-template-columns:1fr; } }
+  .chips{ list-style:none; padding:0; margin:0; font-size:.9rem; }
+  .chips li{ display:flex; gap:.6rem; align-items:baseline; margin:.45rem 0; }
+  .chips .sw{ width:22px; height:0; border-top:3px solid; flex:0 0 auto; transform:translateY(-3px); }
+
+  svg text{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; fill:var(--muted); }
+  .decisions{ counter-reset:d; max-width:64ch; padding-left:0; list-style:none; }
+  .decisions li{ counter-increment:d; margin:.7rem 0; padding-left:2.2rem; position:relative; }
+  .decisions li::before{ content:counter(d,decimal-leading-zero);
+    position:absolute; left:0; top:.15rem; font-family:ui-monospace,Menlo,monospace;
+    font-size:.75rem; color:var(--amber); letter-spacing:.05em; }
+  a{ color:var(--indigo); }
+</style>
+
+<div class="wrap">
+  
+<section class="cover">
+  <span class="eyebrow">Inverso &middot; Ricerca &middot; Fase di studio &middot; 18/07/2026</span>
+  <h1 style="font-size:2.6rem">Sei pantaloni,<br>settant&rsquo;anni</h1>
+  <p class="lede">Dossier di studio per il primo capo. Storia, contesto sociale, uso e costruzione
+  di sei silhouette (1920&ndash;1990), con tavole tecniche in scala comune e ricostruzioni fotografiche.</p>
+  <p class="lede">Il brief: vita alta &middot; side adjuster &middot; pieghe o doppie pieghe centrali &middot;
+  gamba dritta / leggermente wide &middot; elegante, che cade bene, portabile in qualsiasi contesto.
+  Prima di scegliere e mescolare: vedere <em>tutte</em> le silhouette alla stessa scala,
+  e capire chi le portava e perch&eacute;.</p>
+  <p class="muted" style="font-size:.85rem">Dossier testuale completo con fonti:
+  <code>inverso/ricerca/02-dossier-stili-pantalone.md</code><br>
+  Ricostruzioni fotografiche: Magnific, serie estetica Jago (luce ambra, ombre profonde, grana pellicola).</p>
+</section>
+
+
+  <div class="strip" id="strip"></div>
+  <p class="muted" style="font-size:.85rem">Flat tecnici alla stessa scala. Linee orizzontali:
+  vita naturale · bacino · ginocchio · caviglia. In <span style="color:var(--indigo)">indaco</span> le pieghe,
+  in <span style="color:var(--amber)">ambra</span> i dettagli di chiusura.</p>
+
+  <div id="chapters"></div>
+
+  <hr class="rule">
+  <span class="eyebrow">Sovrapposizione</span>
+  <h2>Le sei sagome, una sopra l'altra</h2>
+  <div class="overlay-box">
+    <div id="overlay"></div>
+    <ul class="chips" id="chips"></ul>
+  </div>
+
+  <hr class="rule">
+  <span class="eyebrow">Sintesi</span>
+  <h2>Tavola comparativa</h2>
+  <div class="tablebox"><table>
+    <tr><th></th><th>Oxford '20s</th><th>Drape '30s</th><th>Hollywood '40s</th><th>Gurkha</th><th>Roma '50s</th><th>Armani '80s</th></tr>
+    <tr><td>Vita</td><td>media (standard epoca)</td><td>alta, punto vita</td><td>alta (Hollywood waistband)</td><td>altissima, a fascia</td><td>media-alta</td><td>alta</td></tr>
+    <tr><td>Chiusura</td><td>bretelle/cintura</td><td>side adjuster (DAKS 1934)</td><td>cintura o adjuster</td><td>doppia cinghia + fibbia</td><td>cintura</td><td>cintura</td></tr>
+    <tr><td>Pieghe</td><td>singole o assenti</td><td>doppie inglesi (→ tasche)</td><td>singola / doppia</td><td>doppie profonde</td><td>singola italiana (→ patta)</td><td>doppie</td></tr>
+    <tr><td>Gamba</td><td>tubo larghissimo</td><td>ampia, dritta</td><td>ampia controllata</td><td>ampia rastremata</td><td>asciutta</td><td>ampia fluida</td></tr>
+    <tr><td>Fondo</td><td>28–50 cm</td><td>23–26 cm + risvolto</td><td>22–24 cm</td><td>medio, no risvolto</td><td>20–22 cm</td><td>pieno, con break</td></tr>
+    <tr><td>Tessuto</td><td>flanella chiara</td><td>flanella 350–450 g</td><td>lane medie, gabardine</td><td>drill, lino</td><td>fresco lana</td><td>lane leggere, crêpe</td></tr>
+    <tr><td>Chi lo portava</td><td>studenti élite ribelli</td><td>aristocrazia + divi</td><td>tutti — trasversale</td><td>soldati coloniali → ufficiali</td><td>borghesia del boom</td><td>professionisti yuppie</td></tr>
+    <tr><td>Cosa segnalava</td><td>provocazione generazionale</td><td>l'agio come status</td><td>sobrietà patriottica</td><td>funzione → connoisseurship</td><td>l'Italia moderna</td><td>potere senza sforzo</td></tr>
+  </table></div>
+
+  <hr class="rule">
+  <span class="eyebrow">Dopo lo studio</span>
+  <h2>La mappa delle decisioni</h2>
+  <p class="muted" style="max-width:62ch">Da compilare <em>solo a studio finito</em> — una riga
+  decisa = un elemento fondamentale del pantalone Inverso.</p>
+  <ol class="decisions">
+    <li><b>Ampiezza gamba</b> — tra '40s (controllata) e '30s (piena): il «leggermente wide» del brief.</li>
+    <li><b>Verso delle pieghe</b> — inglesi (più drape, coerenti col mood '30s) o italiane (più pulite, più romane). La decisione identitaria.</li>
+    <li><b>Risvolto</b> — sì, 4–5 cm ('30s) o orlo pulito (gurkha / '50s).</li>
+    <li><b>Vita</b> — punto vita naturale ('30s) o accenno a fascia più alta (eco gurkha, senza fibbia).</li>
+    <li><b>Lunghezza</b> — no break / mezzo break: la gamba ampia vuole l'orlo deciso.</li>
+    <li><b>Peso del tessuto</b> — la vera scelta di silhouette: pesante = riga scolpita ('30s); leggero = onda fluida ('80s).</li>
+  </ol>
+  <p class="muted" style="font-size:.85rem">Dossier completo con storia, contesto sociale e fonti:
+  <code>inverso/ricerca/02-dossier-stili-pantalone.md</code></p>
+</div>
+
+<script>
+const W=240, H=560, CX=120, WAIST=120, HIP=190, KNEE=350, ANKLE=520, CROTCH=240;
+
+const styles=[
+ {id:'oxford', name:'Oxford Bags', years:'1924–25',
+  waistTop:128, wbH:13, waistHalf:41, hipHalf:55, hemW:54, innerGap:4, hemY:522,
+  cuffH:0, pleats:[10], detail:'plain', tube:true,
+  color:'#A65B33',
+  legend:['<b>1</b> gamba a tubo: stessa ampiezza da coscia a fondo','<b>2</b> fondo 28–50 cm: il confine del wide'],
+  markers:[{x:178,y:380,n:1},{x:186,y:512,n:2}],
+  storia:"Nascono a Oxford tra gli undergraduate. La leggenda dei plus-fours nascosti sotto è probabilmente falsa: nei primi anni non erano abbastanza ampi. Certo è che tra il '24 e il '25 il fondo esplode fino a oltre 50 cm, in flanella spesso chiara.",
+  social:"È la prima moda maschile come provocazione generazionale: li porta l'élite studentesca, ma contro il codice dei padri. Quando il presidente USA Coolidge dichiara che «non si farebbe vedere morto» con addosso gli Oxford bags, li lancia in America. La disapprovazione dell'autorità come motore di adozione.",
+  uso:"Quotidiano studentesco e passeggio — mai formale: erano l'anti-formale. Oggi sopravvivono nel northern soul e nel wide-leg streetwear.",
+  inverso:"Niente da copiare: sono il confine oltre cui il wide diventa costume. E una lezione: un capo diventa simbolo anche perché qualcuno lo vieta o lo deride."},
+
+ {id:'drape', name:'English Drape', years:'anni ’30',
+  waistTop:110, wbH:14, waistHalf:40, hipHalf:52, hemW:40, innerGap:7, hemY:520,
+  cuffH:24, pleats:[10,22], detail:'adjusters', tube:false,
+  color:'#B0862F',
+  legend:['<b>1</b> side adjuster — DAKS, 1934','<b>2</b> doppie pieghe inglesi (aperte verso le tasche)','<b>3</b> risvolto 4–5 cm','<b>4</b> vita al punto vita naturale'],
+  markers:[{x:172,y:118,n:1},{x:138,y:165,n:2},{x:168,y:505,n:3},{x:64,y:112,n:4}],
+  storia:"Frederick Scholte, Savile Row, inventa il drape cut per il Principe di Galles: volume che cade morbido dal punto vita, tessuti pesanti che si autoregolano. Nel 1934 Alexander Simpson (DAKS) inventa il pantalone self-supporting: side adjuster con elastico interno, niente bretelle né cintura. Brevetto 1935. Il side adjuster nasce come soluzione sportiva (il golf), non come vezzo.",
+  social:"Doppio motore: aristocrazia britannica (il Duca di Windsor lo legittima dall'alto) e Hollywood (Astaire e Grant lo moltiplicano dal basso). Il messaggio: l'eleganza non è rigidità ma agio — chi è sicuro del proprio posto può permettersi la morbidezza. Astaire che balla in quei pantaloni è la prova vivente.",
+  uso:"Dal mattino alla sera: città, sport, serata. L'epoca in cui l'uomo elegante lo è in ogni contesto — esattamente il requisito del brief. Da studiare: Top Hat (1935), Swing Time (1936), le tavole di Laurence Fellows su Apparel Arts.",
+  inverso:"IL riferimento centrale: vita alta + side adjuster + doppie pieghe + caduta nascono tutti qui. Flanelle 350–450 g: il peso FA la silhouette."},
+
+ {id:'holly', name:'Hollywood', years:'anni ’40',
+  waistTop:110, wbH:0, waistHalf:38, hipHalf:49, hemW:36, innerGap:7, hemY:520,
+  cuffH:22, pleats:[11], detail:'hollywood', tube:false,
+  color:'#52788A',
+  legend:['<b>1</b> Hollywood waistband: cintura continua col corpo, dietro sale ancora','<b>2</b> piega singola, volume asciugato dal razionamento'],
+  markers:[{x:64,y:114,n:1},{x:134,y:160,n:2}],
+  storia:"La guerra impone il razionamento: risvolti aboliti, ampiezze ridotte. Il volume anni '30 si asciuga per necessità e ne esce più moderno. Il tratto tecnico dell'epoca è la Hollywood waistband: cintura tagliata in continuità col pantalone, senza cinturino separato.",
+  social:"Il pantalone trasversale: lo porta Bogart al night e l'operaio la domenica — la guerra livella, l'ostentazione è sospetta, la sobrietà patriottica. Contrasto negli stessi anni: lo zoot suit delle comunità afro e messicano-americane, così carico di significato che nel 1943 scoppiano gli Zoot Suit Riots. Il pantalone come campo di battaglia sociale, letteralmente.",
+  uso:"Tutto: ufficio, strada, sera. Oggi è la porta d'ingresso del vintage portabile: la silhouette '40s è quella che si traveste meglio da contemporanea. Da studiare: Casablanca (1942), Il grande sonno (1946).",
+  inverso:"L'anello di congiunzione: come un volume importante resta quotidiano. Se il capo deve vivere in qualsiasi contesto, la misura è più '40s che '30s."},
+
+ {id:'gurkha', name:'Gurkha', years:'XIX sec.–anni ’40',
+  waistTop:96, wbH:24, waistHalf:39, hipHalf:50, hemW:32, innerGap:8, hemY:516,
+  cuffH:0, pleats:[10,23], detail:'gurkha', tube:false,
+  color:'#6E7038',
+  legend:['<b>1</b> doppia cinghia incrociata con fibbia — la firma','<b>2</b> vita altissima a fascia (cummerbund)','<b>3</b> doppie pieghe profondissime','<b>4</b> orlo pulito, origine militare'],
+  markers:[{x:150,y:108,n:1},{x:64,y:100,n:2},{x:138,y:165,n:3},{x:158,y:508,n:4}],
+  storia:"L'uniforme tropicale dei soldati nepalesi reclutati dall'esercito britannico dal 1815 (trattato di Sugauli — clausola attiva ancora oggi). Vita a fascia con doppia cinghia e fibbia incrociata sopra la patta: regolabile senza cintura né bretelle. Tutto nasce funzionale: clima, movimento, equipaggiamento.",
+  social:"Il contrasto sociale più forte del dossier, da dire onestamente: è un capo coloniale, nato sul corpo di soldati al servizio di un impero e passato al guardaroba civile tramite gli ufficiali di ritorno. La riscoperta sartoriale (Rubinacci, poi il circuito Pitti) lo ha reso segno di connoisseurship. Studiare il gurkha = decidere come si racconta la provenienza di un dettaglio senza estetizzarne la storia.",
+  uso:"Allora uniforme tropicale; oggi pantalone estivo sartoriale, quasi sempre spezzato, mai formale — la fibbia occupa la vita.",
+  inverso:"Non la fibbia (il brief dice side adjuster) ma la lezione: la chiusura in vita può essere l'identità del pantalone, e ogni dettaglio credibile ha un'origine funzionale da raccontare."},
+
+ {id:'roma', name:'Roma', years:'anni ’50–’60',
+  waistTop:132, wbH:12, waistHalf:38, hipHalf:47, hemW:27, innerGap:9, hemY:520,
+  cuffH:0, pleats:[11], detail:'loops', tube:false,
+  color:'#8A5578',
+  legend:['<b>1</b> piega singola all’italiana (aperta verso la patta)','<b>2</b> gamba asciutta, rastremata con misura','<b>3</b> vita più bassa dei ’30'],
+  markers:[{x:134,y:178,n:1},{x:160,y:400,n:2},{x:64,y:134,n:3}],
+  storia:"Il dopoguerra italiano asciuga il drape inglese: Brioni (Roma, 1945) porta in passerella la prima sfilata maschile della storia (Sala Bianca, Pitti 1952) e nasce il Roman style: linee pulite, volumi controllati, pieghe all'italiana aperte verso la patta. Cinecittà è il moltiplicatore: le star americane girano a Roma e tornano vestite dai sarti romani.",
+  social:"La faccia del boom economico: l'Italia che si presenta al mondo moderna e ottimista. La dolce vita (1960) la mostra nel momento in cui diventa anche inquietudine — Mastroianni elegantissimo e perso. Il completo asciutto come uniforme dell'italiano arrivato, o che vuole arrivare (Il sorpasso, 1962).",
+  uso:"Città, sera, ufficio: il formale-moderno per eccellenza. Oggi è la grammatica di base della sartoria italiana, la più vicina al gusto mainstream.",
+  inverso:"Il calibro: insegna dove fermare l'ampiezza perché resti eleganza e non citazione vintage. Ed è la tradizione di casa: il capo sarà cucito a Roma — il dialogo '30s inglese ↔ '50s romano è già una storia."},
+
+ {id:'armani', name:'Armani', years:'anni ’80',
+  waistTop:114, wbH:13, waistHalf:40, hipHalf:51, hemW:40, innerGap:7, hemY:534,
+  cuffH:0, pleats:[10,22], detail:'loops', tube:false, breakw:true,
+  color:'#5A6FA0',
+  legend:['<b>1</b> doppie pieghe su tessuto leggero: onda, non riga','<b>2</b> il fondo si appoggia sulla scarpa (break)'],
+  markers:[{x:136,y:165,n:1},{x:166,y:528,n:2}],
+  storia:"Dal 1975 Armani destruttura: via rigidità e imbottiture, il pantalone risale di vita, riprende le doppie pieghe, si allarga e scende morbido con un break sulla scarpa. È il drape anni '30 tradotto in tessuti leggeri. American Gigolo (1980) è il manifesto.",
+  social:"La divisa del potere che non deve dimostrare sforzo: yuppie, creativi, la Milano da bere. Nei '30 la morbidezza era agio aristocratico; qui è professionale — il potere si veste comodo perché lavora tanto. È anche il sorpasso di Milano su Roma come capitale della moda. E l'avvertimento: quando la silhouette diventa divisa di massa, stanca — da lì il pendolo verso lo slim dei 2000.",
+  uso:"Lavoro e sera, il primo power casual. Il revival 2015–2025 del pantalone ampio (The Row, Lemaire, quiet luxury) è figlio diretto di questa stagione.",
+  inverso:"La prova che il brief è un classico ciclico (~ogni 40 anni), non nostalgia. E la scoperta chiave: tra '30s e '80s il disegno è simile, cambia il PESO del tessuto. La scelta del tessuto sarà una decisione di silhouette."}
+];
+
+function lerp(a,b,t){return a+(b-a)*t;}
+
+function trouserSVG(s, opts={}){
+  const scale=opts.scale||1, notes=opts.markers&&s.markers;
+  const hemOX = CX + s.innerGap + s.hemW;          // right outer x at hem
+  const hemIX = CX + s.innerGap;                   // right inner x at hem
+  const wbBot = s.waistTop + (s.wbH||0);
+  const hipY=HIP, hemY=s.hemY;
+  const outerAt = y => lerp(CX+s.hipHalf, hemOX, Math.max(0,(y-hipY)/(hemY-hipY)));
+  const oKnee = outerAt(KNEE);
+  const innerAt = y => lerp(CX, hemIX, Math.max(0,(y-CROTCH)/(hemY-CROTCH)));
+  const iKnee = innerAt(KNEE);
+  const mid = (a)=>2*CX-a;
+  // outline path (front view, both legs)
+  const p = [
+    `M ${mid(CX+s.waistHalf)} ${s.waistTop}`,
+    `L ${CX+s.waistHalf} ${s.waistTop}`,
+    `L ${CX+s.hipHalf} ${hipY}`,
+    `L ${oKnee} ${KNEE}`, `L ${hemOX} ${hemY}`,
+    `L ${hemIX} ${hemY}`, `L ${iKnee} ${KNEE}`, `L ${CX} ${CROTCH}`,
+    `L ${mid(iKnee)} ${KNEE}`, `L ${mid(hemIX)} ${hemY}`,
+    `L ${mid(hemOX)} ${hemY}`, `L ${mid(oKnee)} ${KNEE}`,
+    `L ${mid(CX+s.hipHalf)} ${hipY}`, 'Z'
+  ].join(' ');
+  let el=[];
+  // reference lines
+  [[WAIST,'vita'],[HIP,'bacino'],[KNEE,'ginocchio'],[ANKLE,'caviglia']].forEach(([y])=>{
+    el.push(`<line x1="8" y1="${y}" x2="${W-8}" y2="${y}" stroke="var(--line)" stroke-dasharray="3 5" stroke-width="1"/>`);
+  });
+  el.push(`<path d="${p}" fill="var(--cloth)" stroke="var(--ink)" stroke-width="2.2" stroke-linejoin="round"/>`);
+  // waistband
+  if(s.wbH) el.push(`<line x1="${mid(CX+s.waistHalf)+2}" y1="${wbBot}" x2="${CX+s.waistHalf-2}" y2="${wbBot}" stroke="var(--ink)" stroke-width="1.4"/>`);
+  // fly
+  el.push(`<path d="M ${CX-3} ${wbBot+2} Q ${CX-6} ${CROTCH-30} ${CX-1} ${CROTCH-6}" fill="none" stroke="var(--ink)" stroke-width="1.2"/>`);
+  // cuffs
+  if(s.cuffH){ [ [hemIX,hemOX], [mid(hemOX),mid(hemIX)] ].forEach(([a,b])=>{
+    el.push(`<line x1="${a+1}" y1="${hemY-s.cuffH}" x2="${b-1}" y2="${hemY-s.cuffH}" stroke="var(--ink)" stroke-width="1.6"/>`);});}
+  // break (soft hem)
+  if(s.breakw){ el.push(`<path d="M ${mid(hemOX)} ${hemY} q 10 -7 20 0 q 10 6 20 -2" fill="none" stroke="var(--ink)" stroke-width="1.4"/>`);
+    el.push(`<path d="M ${hemIX} ${hemY} q 10 -7 20 0 q 10 6 20 -2" fill="none" stroke="var(--ink)" stroke-width="1.4"/>`);}
+  // creases
+  const lc=(hemIX+hemOX)/2;
+  [[lc],[mid(lc)]].forEach(([x])=>{
+    el.push(`<line x1="${x}" y1="272" x2="${x}" y2="${hemY-(s.cuffH?s.cuffH+4:6)}" stroke="var(--muted)" stroke-dasharray="2 6" stroke-width="1.3"/>`);});
+  // pleats
+  s.pleats.forEach(off=>{ [1,-1].forEach(sgn=>{
+    const x=CX+sgn*off;
+    el.push(`<path d="M ${x} ${wbBot+1} q ${sgn*4} 42 ${sgn*2} 78" fill="none" stroke="var(--indigo)" stroke-width="2"/>`);});});
+  // details
+  if(s.detail==='adjusters'){ [1,-1].forEach(sgn=>{
+    const x=CX+sgn*s.waistHalf;
+    el.push(`<rect x="${x-(sgn>0?0:14)}" y="${s.waistTop+3}" width="14" height="7" fill="none" stroke="var(--amber)" stroke-width="1.8"/>`);
+    el.push(`<circle cx="${x+sgn*7}" cy="${s.waistTop+6.5}" r="2.2" fill="var(--amber)"/>`);});}
+  if(s.detail==='gurkha'){
+    el.push(`<path d="M ${CX-s.waistHalf} ${s.waistTop+8} L ${CX+18} ${s.waistTop+13}" stroke="var(--amber)" stroke-width="5" fill="none"/>`);
+    el.push(`<rect x="${CX+18}" y="${s.waistTop+7}" width="11" height="12" fill="none" stroke="var(--amber)" stroke-width="2"/>`);
+    el.push(`<path d="M ${CX+s.waistHalf} ${s.waistTop+16} L ${CX-26} ${s.waistTop+11}" stroke="var(--amber)" stroke-width="5" fill="none" opacity=".55"/>`);}
+  if(s.detail==='loops'){ [-0.8,-0.45,0,0.45,0.8].forEach(t=>{
+    const x=CX+t*s.waistHalf;
+    el.push(`<rect x="${x-1.6}" y="${s.waistTop+1.5}" width="3.2" height="${(s.wbH||12)-3}" fill="var(--amber)"/>`);});}
+  if(s.detail==='hollywood'){
+    el.push(`<line x1="${CX-s.waistHalf}" y1="${s.waistTop-8}" x2="${CX+s.waistHalf}" y2="${s.waistTop-4}" stroke="var(--amber)" stroke-width="1.6" stroke-dasharray="4 3"/>`);}
+  // markers
+  if(notes) s.markers.forEach(m=>{
+    el.push(`<circle cx="${m.x}" cy="${m.y}" r="9" fill="var(--paper)" stroke="var(--amber)" stroke-width="1.6"/>`);
+    el.push(`<text x="${m.x}" y="${m.y+3.5}" text-anchor="middle" font-size="10" fill="var(--amber)" font-weight="bold">${m.n}</text>`);});
+  return `<svg viewBox="0 0 ${W} ${H}" width="${W*scale}" height="${H*scale}" style="max-width:100%;height:auto" role="img" aria-label="Flat tecnico: ${s.name}">${el.join('')}</svg>`;
+}
+
+// hero strip with axis
+const axis=(()=>{ let el=[];
+  [[WAIST,'vita nat.'],[HIP,'bacino'],[KNEE,'ginocchio'],[ANKLE,'caviglia']].forEach(([y,l])=>{
+    el.push(`<line x1="30" y1="${y}" x2="84" y2="${y}" stroke="var(--line)" stroke-width="1"/>`);
+    el.push(`<text x="80" y="${y-5}" text-anchor="end" font-size="11">${l}</text>`);});
+  return `<svg viewBox="0 0 84 ${H}" width="84" height="${H*0.58}" style="height:auto" aria-hidden="true">${el.join('')}</svg>`;})();
+document.getElementById('strip').innerHTML =
+  `<div class="axis">${axis}</div>` +
+  styles.map(s=>`<figure>${trouserSVG(s,{scale:0.58})}<figcaption><b>${s.name}</b>${s.years}</figcaption></figure>`).join('');
+
+// chapters
+document.getElementById('chapters').innerHTML = styles.map((s,i)=>`
+  <hr class="rule">
+  <section class="chapter">
+    <div class="plate">${trouserSVG(s,{scale:1.1,markers:true})}
+      <ul class="num-legend">${s.legend.map(l=>`<li>${l}</li>`).join('')}</ul>
+    </div>
+    <div>
+      <span class="eyebrow">Capitolo ${i+1} · ${s.years}</span>
+      <h2>${s.name}</h2>
+      <p>${s.storia}</p>
+      <span class="tag">Contesto sociale</span>
+      <div class="social"><p>${s.social}</p></div>
+      <span class="tag">Uso — allora e oggi</span>
+      <p>${s.uso}</p>
+      <span class="tag">Per Inverso</span>
+      <p>${s.inverso}</p>
+    </div>
+  </section>`).join('');
+
+// overlay
+const dark = matchMedia('(prefers-color-scheme: dark)').matches;
+(function(){
+  let el=[];
+  [[WAIST],[HIP],[KNEE],[ANKLE]].forEach(([y])=>{
+    el.push(`<line x1="10" y1="${y}" x2="${W-10}" y2="${y}" stroke="var(--line)" stroke-dasharray="3 5"/>`);});
+  styles.forEach(s=>{
+    const hemOX=CX+s.innerGap+s.hemW, hipY=HIP, hemY=s.hemY;
+    const oKnee=lerp(CX+s.hipHalf,hemOX,(KNEE-hipY)/(hemY-hipY));
+    const c = s.color;
+    const half=`M ${CX} ${s.waistTop} L ${CX+s.waistHalf} ${s.waistTop} L ${CX+s.hipHalf} ${hipY} L ${oKnee} ${KNEE} L ${hemOX} ${hemY} L ${CX+s.innerGap} ${hemY} L ${CX} ${CROTCH} Z`;
+    el.push(`<path d="${half}" fill="none" stroke="${c}" stroke-width="2" opacity=".8" class="ov-${s.id}"/>`);
+  });
+  document.getElementById('overlay').innerHTML =
+    `<svg viewBox="0 0 ${W} ${H}" width="300" style="max-width:100%;height:auto" role="img" aria-label="Sovrapposizione delle sei silhouette (mezza figura destra)">${el.join('')}</svg>`;
+  document.getElementById('chips').innerHTML = styles.map(s=>
+    `<li><span class="sw" style="border-color:${s.color}"></span><span><b>${s.name}</b> — ${
+      {oxford:'il tubo estremo',drape:'ampio e dritto, vita alta',holly:'ampio controllato',
+       gurkha:'vita massima, gamba che rastrema',roma:'il più asciutto, vita più bassa',
+       armani:'ampio fluido, più lungo (break)'}[s.id]}</span></li>`).join('');
+})();
+</script>
+
+<style>
+  @page { size: A4; margin: 12mm 13mm; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .wrap { max-width: none; padding: 0; }
+  .cover { padding-top: 34mm; break-after: page; }
+  .strip { flex-wrap: nowrap; overflow: visible; gap: 1.2%; }
+  .axis { width: 9%; }
+  .axis svg { width: 100%; height: auto; }
+  .strip figure { width: 14.5%; flex: 0 1 14.5%; }
+  .strip figure svg { width: 100%; height: auto; }
+  .chapter { break-before: page; grid-template-columns: 78mm 1fr; gap: 8mm; margin: 0; }
+  .plate { position: static; break-inside: avoid; padding: 4mm 3mm 3mm; }
+  .plate svg { width: 100%; height: auto; }
+  .photo { margin: 5mm 0 0; break-inside: avoid; }
+  .photo img { max-width: 66mm; max-height: 92mm; width: auto; display: block; border: 1px solid var(--line); }
+  .photo figcaption { font-family: ui-monospace, Menlo, monospace; font-size: .62rem;
+    color: var(--muted); margin-top: 2mm; }
+  .sect-break { break-before: page; }
+  .rule { margin: 1.2rem 0; }
+  .chapter p { font-size: .86rem; line-height: 1.55; margin: .4rem 0; }
+  h2 { font-size: 1.3rem; }
+  .tablebox table { min-width: 0; width: 100%; font-size: .68rem; }
+  .overlay-box { grid-template-columns: 84mm 1fr; }
+  .overlay-box svg { width: 100%; height: auto; }
+</style>
+<script>document.documentElement.dataset.theme = 'light';</script>
+
+<script>
+const photos = {
+  oxford: ['img/1-oxford-bags.jpg', 'Ricostruzione AI \u2014 Oxford bags, anni \u201920'],
+  drape:  ['img/2-english-drape.jpg', 'Ricostruzione AI \u2014 English drape, anni \u201930'],
+  holly:  ['img/3-hollywood.jpg', 'Ricostruzione AI \u2014 Hollywood, anni \u201940'],
+  gurkha: ['img/4-gurkha.jpg', 'Ricostruzione AI \u2014 Gurkha'],
+  roma:   ['img/5-roma.jpg', 'Ricostruzione AI \u2014 Roma, anni \u201950'],
+  armani: ['img/6-armani.jpg', 'Ricostruzione AI \u2014 Milano, anni \u201980'],
+};
+document.querySelectorAll('.chapter').forEach((ch, i) => {
+  const s = styles[i];
+  const [src, cap] = photos[s.id];
+  const fig = document.createElement('figure');
+  fig.className = 'photo';
+  fig.innerHTML = `<img src="${src}" alt="${cap}"><figcaption>${cap}</figcaption>`;
+  ch.lastElementChild.appendChild(fig);
+});
+document.querySelectorAll('.wrap > .rule').forEach(r => {
+  const next = r.nextElementSibling;
+  if (next && next.classList.contains('eyebrow')) r.classList.add('sect-break');
+});
+</script>
