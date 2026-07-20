@@ -88,7 +88,7 @@ In ordine di attivazione:
 ## 9. Prossime azioni (dopo il 16/07 — esame Ragioneria)
 
 - [x] Stato reale del capo: il Modello A/B non esiste più — si riparte da zero (18/07/2026)
-- [ ] **Fase di studio del pantalone** (avviata il 18/07): materiali in `ricerca/` — panoramica (`01-silhouette-riferimenti-storici.md`), dossier approfondito con contesto sociale e uso (`02-dossier-stili-pantalone.md`), tavole visive comparative (`tavole-silhouette.html`), **PDF stampabile con foto AI dei 6 stili** (`dossier-stili-pantalone.pdf`, immagini in `img/`). Finito quando: tavola di silhouette scelta + lista scritta degli elementi. (Lo studio serve al capo, non lo sostituisce.)
+- [ ] **Fase di studio del pantalone** (avviata il 18/07): materiali in `ricerca/` — **ricerca approfondita completa** (`03-ricerca-approfondita-pantalone.md` + PDF 23 pagine `ricerca-approfondita-pantalone.pdf`: anatomia tecnica, cronologia, 6 monografie con contesto sociale, storie trasversali dei dettagli, filmografia, fonti), tavole visive comparative (`tavole-silhouette.html`), foto AI dei 6 stili (`img/`). I file `01` e `02` restano come appunti preparatori. Finito quando: tavola di silhouette scelta + lista scritta degli elementi. (Lo studio serve al capo, non lo sostituisce.)
 - [ ] Cartamodello: adattare la base esistente alla nuova silhouette + individuare chi può dare una mano
 - [ ] Ore realistiche della settimana-tipo d'autunno → calibrare il ciclo
 - [x] Handle del brand: scelto **@inversorome** (18/07/2026 — inverso.studio non era libero)
