@@ -87,6 +87,8 @@ In ordine di attivazione:
 
 ## 9. Prossime azioni (dopo il 16/07 — esame Ragioneria)
 
+> **Aggiornamento 21/07:** fino a settembre Jacopo è fuori Roma (~7 giorni in città in totale) e non si pubblicano contenuti. La preparazione estiva è organizzata in `piano-estate-2026.md`; le azioni qui sotto restano valide e sono ricollocate lì tra lavoro remoto e giorni romani.
+
 - [ ] **Stato reale del Modello A/B**: cartamodello finito? Tessuto comprato? (la domanda da cui riparte tutto)
 - [ ] Ore realistiche della settimana-tipo d'autunno → calibrare il ciclo
 - [ ] Handle @inverso: verificare disponibilità (rosa: inverso.studio · inverso.roma · wearinverso) + bio dei due profili
