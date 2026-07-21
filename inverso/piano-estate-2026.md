@@ -22,10 +22,11 @@ In ordine di importanza:
 1. **Fondazione narrativa: il nome.** "INVERSO" non è mai stato spiegato — è il primo atto narrativo del brand (il contrario della fretta, il rovescio del fast fashion). Scriverne la spiegazione in una pagina: diventerà il primo post di @inverso e la spina dorsale delle bio. *Costo: 2 ore, una volta.*
 2. **Setup canali.** Verificare disponibilità handle (rosa: inverso.studio · inverso.roma · wearinverso), registrare quello scelto, preparare le bio dei due profili partendo dalle bozze in `analisi/01-copywriting.md`. Non pubblicare nulla: profilo pronto ma silente. *Costo: 1 ora.*
 3. **Banca contenuti settembre.** Dalla lista dei 10 Reel in `analisi/03-social.md`, scegliere i primi 4 e scrivere per ciascuno: hook (prime 1,5s), scaletta di ripresa, caption con prima riga fattuale. A settembre si gira e si pubblica senza pensare. *Costo: 30–45 min a Reel, uno a settimana.*
-4. **Test tecnico Jago (parte remota).** Provare la pipeline dei 15–20 scatti coerenti con un capo di riferimento qualsiasi (non serve il Modello A/B per validare la coerenza del personaggio). Se il test regge, a settembre resta solo la sostituzione col capo vero. *Costo: 2–3 ore totali, spalmate.*
-5. **Ricerca tessuti da remoto.** Il pilastro Ricerca si prepara leggendo: selvage, pesi, cimose, costruzioni. Output concreto: lista di 3–5 tessuti candidati per il Modello A/B + lista mercerie/tessutai romani da visitare nei giorni a Roma. Gli appunti diventeranno voiceover dei Diari di Ricerca. *Costo: quando va, è la parte piacevole.*
-6. **Apparecchiare il Drop 1 sulla carta.** Tre documenti brevi: criterio di successo scritto PRIMA del drop (chiudere il ciclo, non il sold-out) · scomposizione trasparente dei costi (per la pagina pre-order) · bozza pagina pre-order con data di consegna realistica. *Costo: 2 ore totali.*
-7. **Settimana-tipo d'autunno.** Ore reali disponibili tra università, accademia e Muay Thai → calendario con gli slot fissi di Inverso (1 sessione capo + 1 sessione montaggio da 60 min). *Costo: 30 min, verso fine agosto quando gli orari sono noti.*
+4. **Palestra camera (privata, mai pubblicata).** Il protocollo a progressione serve a bypassare la paura della camera: mani prima, faccia poi. L'estate anticipa la progressione in privato — 10–15 min a settimana: prime 2 settimane registrare solo voiceover (leggere ad alta voce le caption dei Reel progettati: doppio uso, esercizio + audio pronto); poi filmarsi le mani mentre si fa qualcosa parlando nel frattempo (appunti, schizzi, qualsiasi cosa); da metà agosto provare i 10 secondi a camera. Si registra, si riguarda una volta, si cancella. A settembre la progressione pubblica riparte da mani+voiceover come previsto, ma senza il blocco iniziale. *Costo: 10–15 min a settimana.*
+5. **Test tecnico Jago (parte remota).** Provare la pipeline dei 15–20 scatti coerenti con un capo di riferimento qualsiasi (non serve il Modello A/B per validare la coerenza del personaggio). Se il test regge, a settembre resta solo la sostituzione col capo vero. *Costo: 2–3 ore totali, spalmate.*
+6. **Ricerca tessuti da remoto.** Il pilastro Ricerca si prepara leggendo: selvage, pesi, cimose, costruzioni. Output concreto: lista di 3–5 tessuti candidati per il Modello A/B + lista mercerie/tessutai romani da visitare nei giorni a Roma. Gli appunti diventeranno voiceover dei Diari di Ricerca. *Costo: quando va, è la parte piacevole.*
+7. **Apparecchiare il Drop 1 sulla carta.** Tre documenti brevi: criterio di successo scritto PRIMA del drop (chiudere il ciclo, non il sold-out) · scomposizione trasparente dei costi (per la pagina pre-order) · bozza pagina pre-order con data di consegna realistica. *Costo: 2 ore totali.*
+8. **Settimana-tipo d'autunno.** Ore reali disponibili tra università, accademia e Muay Thai → calendario con gli slot fissi di Inverso (1 sessione capo + 1 sessione montaggio da 60 min). *Costo: 30 min, verso fine agosto quando gli orari sono noti.*
 
 ### Binario 2 — I ~7 giorni a Roma (lista chiusa, in quest'ordine)
 
@@ -47,6 +48,7 @@ Il 1° settembre "pronti e carichi" significa, concretamente:
 - [ ] 4 Reel progettati (hook + scaletta + caption) e 2–3 già coperti dal girato estivo
 - [ ] Test Jago validato su capo di riferimento
 - [ ] Criterio di successo Drop 1 + breakdown costi + bozza pre-order scritti
+- [ ] Palestra camera completata: voiceover a voce sciolta e i 10s a camera provati almeno un paio di volte
 - [ ] Calendario d'autunno con gli slot fissi
 - [ ] Stato Modello A/B noto e tessuto in mano (o ordinato)
 
@@ -64,6 +66,8 @@ Il 1° settembre "pronti e carichi" significa, concretamente:
 | 11–17/08 | Ricerca tessuti: lista candidati + lista mercerie + Reel 3 |
 | 18–24/08 | Documenti Drop 1 (criterio, costi, pre-order) + Reel 4 |
 | 25–31/08 | Test Jago (sessione 2) + settimana-tipo d'autunno + ripasso checklist |
+
+Ogni settimana, in più: **10–15 min di palestra camera** (voiceover nelle prime due settimane, poi mani+voce, dal 11/08 circa i primi 10s a camera).
 
 I giorni a Roma si incastrano dove capitano: quando le date sono note, si piazzano i 4 punti del binario 2 e basta. *Ipotesi dichiarata: non so ancora quando cadono i 7 giorni — appena Jacopo li fissa, il calendario si aggiorna.*
 
