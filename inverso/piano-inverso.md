@@ -91,7 +91,7 @@ In ordine di attivazione:
 
 - [ ] **Stato reale del Modello A/B**: cartamodello finito? Tessuto comprato? (la domanda da cui riparte tutto)
 - [ ] Ore realistiche della settimana-tipo d'autunno → calibrare il ciclo
-- [ ] Handle @inverso: verificare disponibilità (rosa: inverso.studio · inverso.roma · wearinverso) + bio dei due profili
+- [x] Handle scelto il 22/07: **@inversorome** — resta da registrarlo e preparare le bio dei due profili
 - [ ] Primo Diario di Ricerca tessuti (60s, Pocket 3)
 - [ ] Test tecnico: capo reale fedele su Jago in 15 scatti coerenti
 
