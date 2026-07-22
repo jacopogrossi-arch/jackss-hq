@@ -41,6 +41,6 @@ Logica: modello produttivo come posizionamento (riga 1), rimando esplicito alla 
 
 - [x] Handle personale inserito: **@thejacopogrossi** (22/07)
 - [ ] Incollare le bio sui due profili
-- [ ] Comprare il dominio (inversorome.com verificato disponibile il 22/07)
+- Dominio: verificato disponibile il 22/07 — **Jacopo ha scelto di aspettare** (decisione del 22/07). Se ne riparla a ridosso della pagina pre-order; l'essenziale (gli handle social) è già bloccato.
 
 *Nota: se Instagram taglia la bio di @inversorome, la riga sacrificabile è "Il contrario della fretta." — le prime due non si toccano.*
