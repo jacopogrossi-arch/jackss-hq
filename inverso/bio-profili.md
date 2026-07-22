@@ -3,7 +3,7 @@
 
 ---
 
-## Profilo personale di Jacopo (= il processo)
+## @thejacopogrossi — profilo personale (= il processo)
 
 **Campo nome** (cercabile): `Jacopo · moda a Roma`
 
@@ -27,7 +27,7 @@ Logica: identità reale nella prima riga (credibilità), promessa di contenuto c
 **Bio** (~135 caratteri):
 ```
 Menswear. Un capo per volta, in tiratura limitata.
-Disegnato e cucito a Roma da @[handle personale].
+Disegnato e cucito a Roma da @thejacopogrossi.
 Il contrario della fretta. Drop 1 in arrivo.
 ```
 
@@ -39,7 +39,7 @@ Logica: modello produttivo come posizionamento (riga 1), rimando esplicito alla 
 
 ## Da completare
 
-- [ ] Inserire l'handle del profilo personale di Jacopo al posto di `@[handle personale]`
+- [x] Handle personale inserito: **@thejacopogrossi** (22/07)
 - [ ] Incollare le bio sui due profili
 - [ ] Comprare il dominio (inversorome.com verificato disponibile il 22/07)
 
