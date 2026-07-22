@@ -91,7 +91,7 @@ In ordine di attivazione:
 
 - [ ] **Stato reale del Modello A/B**: cartamodello finito? Tessuto comprato? (la domanda da cui riparte tutto)
 - [ ] Ore realistiche della settimana-tipo d'autunno → calibrare il ciclo
-- [x] Handle scelto il 22/07: **@inversorome** — resta da registrarlo e preparare le bio dei due profili
+- [x] Handle **@inversorome** scelto e registrato su IG e TikTok (22/07) — bio pronte in `bio-profili.md`, dominio ancora da comprare
 - [ ] Primo Diario di Ricerca tessuti (60s, Pocket 3)
 - [ ] Test tecnico: capo reale fedele su Jago in 15 scatti coerenti
 
