@@ -3,6 +3,8 @@
 Lista di letture da affrontare, dalla selezione ragionata del 27/07/2026.
 Due filoni: crescita personale/relazioni e mestiere/brand (Inverso).
 
+**Notion:** la stessa lista vive come database [📚 Letture](https://app.notion.com/p/0a507c01a2ae4018886edaaa619a563f) nell'hub Jackss Personal Life, con stato (Da leggere / In lettura / Finito), categoria e note. Il tracking quotidiano si fa lì; questo file resta la copia di riferimento nel repo.
+
 **Come usarla:** spunta `[x]` quando un libro è finito, aggiungi note e data sotto al titolo. Le note personali su cosa ti ha lasciato ogni libro valgono più della spunta.
 
 ---
