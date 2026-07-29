@@ -14,7 +14,7 @@ Da questa natura discende tutto il resto: il ritmo lento è un pregio, gli error
 | Chi/Cosa | Ruolo |
 |---|---|
 | **Jacopo** | Volto del progetto. Profilo IG personale = il processo, il laboratorio, la storia |
-| **@inverso** | Il risultato: capo, lookbook, drop, pre-order. Poco e a livello campagna |
+| **@inversorome** (handle preso il 29/07/2026) | Il risultato: capo, lookbook, drop, pre-order. Poco e a livello campagna |
 | **Jago** (avatar AI) | Strumento: modello virtuale dei lookbook + personaggio del racconto ("il mio modello non esiste") |
 | **@jagoworks** | Congelato. Vetrina del futuro servizio Lookbook AI |
 | **Servizi** (Lookbook AI, Idea→Campione) | SOLO dopo il Drop 1, col caso studio in mano |
@@ -93,7 +93,7 @@ In ordine di attivazione:
 
 - [ ] **Stato reale del Modello A/B**: cartamodello finito? Tessuto comprato? (la domanda da cui riparte tutto — decide cosa si fa nei 12 giorni a Roma)
 - [ ] Lista della spesa materiali: cosa comprare appena arrivato, così i 12 giorni non si bruciano a cercare tessuti
-- [ ] Handle @inverso: verificare disponibilità (rosa: inverso.studio · inverso.roma · wearinverso) — 10 minuti da telefono
+- [x] Handle @inverso: **fatto (29/07)** — preso **@inversorome**
 
 ### 1–12 agosto — Roma (la finestra fisica: si tocca il capo)
 
@@ -106,7 +106,7 @@ In ordine di attivazione:
 
 - [ ] 1 Reel/settimana montato dal girato accumulato (sessione unica, 60 min time-boxed — la promessa non si interrompe)
 - [ ] Test tecnico Jago: capo reale fedele in 15 scatti coerenti (lavoro AI, si fa ovunque)
-- [ ] Bio dei due profili + eventuale apertura @inverso (bozze in `analisi/01-copywriting.md`)
+- [ ] Bio dei due profili + setup del profilo @inversorome (handle già preso; bozze bio in `analisi/01-copywriting.md`)
 - [ ] Ore realistiche della settimana-tipo d'autunno → calibrare il ciclo verso il Drop 1
 
 ### Settembre — rientro
