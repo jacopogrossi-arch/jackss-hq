@@ -91,7 +91,7 @@ In ordine di attivazione:
 
 **Già fatto:**
 - [x] Stato reale del capo: il Modello A/B non esiste più — si riparte da zero (18/07/2026)
-- [x] Handle del brand: scelto **@inversorome** (18/07/2026 — inverso.studio non era libero); registrato su IG e TikTok (22/07)
+- [x] Handle del brand: scelto **@inversorome** (18/07/2026 — inverso.studio non era libero); registrato su IG e TikTok (22/07). Dominio rimandato: se ne riparla verso la pagina pre-order
 - [x] Profilo **@inversorome** aperto con bio definitiva (18/07/2026 — testi in `bio-profili.md` e `analisi/01-copywriting.md`). Resta silente fino a settembre.
 
 ### Ora → 31 luglio — chiudere lo studio, preparare la finestra romana

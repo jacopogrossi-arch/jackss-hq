@@ -20,8 +20,8 @@
 
 ## 2. Struttura canali (funnel, non canali paralleli)
 
-- **Profilo personale pubblico di Jacopo** (IG) = **il processo**. Build-in-public: mani, macchina, tessuto, decisioni, costi. Ogni post menziona @inverso. Vende la storia.
-- **Profilo Inverso** (IG: **@inversorome**, scelto il 18/07/2026) = **il risultato**. Solo capo, lookbook, drop, pre-order. Cadenza bassa, tutto livello campagna. Vende il capo.
+- **Profilo personale pubblico di Jacopo** (IG: **@thejacopogrossi**) = **il processo**. Build-in-public: mani, macchina, tessuto, decisioni, costi. Ogni post menziona @inverso. Vende la storia.
+- **Profilo Inverso** (IG: **@inversorome**, scelto il 18/07/2026, registrato anche su TikTok) = **il risultato**. Solo capo, lookbook, drop, pre-order. Cadenza bassa, tutto livello campagna. Vende il capo.
 - **@jagoworks** = congelato, vetrina del servizio Lookbook AI. Fuori dal funnel fino a dopo il Drop 1.
 - **Piattaforma primaria: Instagram.** YouTube solo in seconda fase (long-form recap dal girato grezzo accumulato).
 
