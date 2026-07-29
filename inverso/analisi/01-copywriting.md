@@ -40,20 +40,20 @@ Voce in prima persona, radicalmente studente. Perfetta per il profilo personale 
 ```
 Jacopo — Roma
 Studio economia e moda. Cucio davvero.
-Costruisco @inverso un capo alla volta: cartamodelli, denim, errori, costi.
+Costruisco @inversorome un capo alla volta: cartamodelli, denim, errori, costi.
 Drop 1 in lavorazione ↓
 [link: pre-order / lista d'attesa]
 ```
 Logica: identità reale in riga 1–2 (credibilità), promessa di contenuto in riga 3 con le parole concrete del processo ("errori, costi" = il differenziante), tensione verso il drop in riga 4. Niente emoji-diluvio, niente "founder", niente "creator".
 
-**@inverso (= il risultato):**
+**@inversorome (= il risultato) — bio DEFINITIVA, live dal 18/07/2026:**
 ```
-INVERSO
-Menswear. Un capo per volta, in tiratura limitata.
-Disegnato e cucito a Roma da @jacopo[handle].
-Drop 1 — [stagione/anno]. Pre-order ↓
+Il contrario della fretta.
+Un capo per volta, cucito a Roma da @[handle personale].
+Drop 1 in lavorazione — il processo è tutto qui ↓
 ```
-Logica: nome del modello produttivo come posizionamento (riga 2), rimando esplicito alla persona (riga 3 — è la garanzia che non è un brand fantasma), un solo evento a cui puntare (riga 4). Cadenza bassa, tono campagna: la bio deve reggere anche con 6 post totali.
+Campo Nome del profilo (separato, indicizzato nella ricerca IG): `INVERSO — Roma`.
+Logica: la riga 1 spiega il nome (tagline Opzione A — l'occasione narrativa colta), la riga 2 è la garanzia anti-brand-fantasma (persona vera, luogo vero), la riga 3 punta al processo — unica CTA sensata in fase pre-drop. 127 caratteri, margine ~23 sotto il limite di 150. Riserva di taglio futuro: riga 3 → "Drop 1 in lavorazione ↓" (~101).
 
 ### 2c. Cinque formule di apertura per caption (studente che mostra, mai guru)
 

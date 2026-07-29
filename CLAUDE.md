@@ -62,5 +62,6 @@ Per documentazione personale o stato progetti non in repo, usare il MCP Notion.
 
 - Remote: github.com/jacopogrossi-arch/jackss-hq — branch `master`
 - Commit e push dopo ogni unità di lavoro significativa.
+- **Doppio salvataggio:** oltre al push su GitHub, aggiornare anche Notion (Jackss HQ, via MCP) con lo stato di avanzamento a fine di ogni unità di lavoro.
 - Stage per filename, non `git add -A`.
 - Commit messages: imperativo, cosa è cambiato e perché.

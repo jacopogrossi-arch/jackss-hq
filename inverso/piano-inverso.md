@@ -14,7 +14,7 @@ Da questa natura discende tutto il resto: il ritmo lento è un pregio, gli error
 | Chi/Cosa | Ruolo |
 |---|---|
 | **Jacopo** | Volto del progetto. Profilo IG personale = il processo, il laboratorio, la storia |
-| **@inversorome** (handle preso il 29/07/2026) | Il risultato: capo, lookbook, drop, pre-order. Poco e a livello campagna |
+| **@inversorome** (handle preso il 18/07/2026) | Il risultato: capo, lookbook, drop, pre-order. Poco e a livello campagna |
 | **Jago** (avatar AI) | Strumento: modello virtuale dei lookbook + personaggio del racconto ("il mio modello non esiste") |
 | **@jagoworks** | Congelato. Vetrina del futuro servizio Lookbook AI |
 | **Servizi** (Lookbook AI, Idea→Campione) | SOLO dopo il Drop 1, col caso studio in mano |
@@ -23,7 +23,7 @@ I due profili sono **un funnel, non due canali**: il personale vende la storia, 
 
 ## 2. Il ciclo (piano operativo)
 
-1. **Ora → ~2 mesi:** finire il Modello A o B come primo capo. Pocket 3 accesa sul tavolo — cucire con una telecamera accesa, non "fare contenuti".
+1. **Ora:** il Modello A/B non esiste più (azzerato il 18/07/2026) — si riparte da capo, con metodo: prima **lo studio della materia** (disegnare una vera silhouette, definire gli elementi fondamentali del pantalone), poi il processo creativo, poi il cartamodello (base esistente da modificare, eventualmente con aiuto esterno). Criterio di fine studio: esiste una tavola di silhouette scelta + la lista scritta degli elementi fondamentali. Pocket 3 accesa sul tavolo — anche studiare e disegnare con la telecamera accesa vale.
 2. **In parallelo:** lookbook del capo con Jago (test dei 15-20 scatti coerenti) — valida il futuro servizio E produce la campagna del brand. Un lavoro, due output.
 3. **Drop 1:** pre-order 10–20 pezzi numerati su @inverso. Obiettivo scritto PRIMA del drop: **chiudere il ciclo idea→capo→campagna→vendita**, non il sold-out. Materiali €500–1500.
 4. **Solo dopo:** definire i servizi con i numeri veri in mano.
@@ -87,31 +87,38 @@ In ordine di attivazione:
 
 ## 9. Tabella di marcia — da qui a settembre 2026
 
-**Vincolo chiave:** Jacopo è a Roma solo dall'**1 al 12 agosto**, poi riparte fino a settembre. Tutto ciò che richiede mani, banco di lavoro, tessuti e Pocket 3 va concentrato in quella finestra. Il resto (telefono/laptop) si fa in viaggio.
+**Vincolo chiave (fissato il 29/07):** Jacopo è a Roma dall'**1 al 12 agosto**, poi riparte fino a settembre. Tutto ciò che richiede mani, banco di lavoro, tessuti e Pocket 3 si concentra in quella finestra; il resto (laptop/telefono) si fa in viaggio. Dettaglio settimana per settimana in `piano-estate-2026.md`. Non si pubblica nulla prima di settembre: l'estate prepara, settembre parte.
 
-### Ora → 31 luglio — preparare la finestra romana
+**Già fatto:**
+- [x] Stato reale del capo: il Modello A/B non esiste più — si riparte da zero (18/07/2026)
+- [x] Handle del brand: scelto **@inversorome** (18/07/2026 — inverso.studio non era libero); registrato su IG e TikTok (22/07)
+- [x] Profilo **@inversorome** aperto con bio definitiva (18/07/2026 — testi in `bio-profili.md` e `analisi/01-copywriting.md`). Resta silente fino a settembre.
 
-- [ ] **Stato reale del Modello A/B**: cartamodello finito? Tessuto comprato? (la domanda da cui riparte tutto — decide cosa si fa nei 12 giorni a Roma)
-- [ ] Lista della spesa materiali: cosa comprare appena arrivato, così i 12 giorni non si bruciano a cercare tessuti
-- [x] Handle @inverso: **fatto (29/07)** — preso **@inversorome**
+### Ora → 31 luglio — chiudere lo studio, preparare la finestra romana
+
+- [ ] **Chiudere la fase di studio del pantalone** (avviata il 18/07, materiali in `ricerca/`): tavola di silhouette scelta + lista scritta degli elementi fondamentali — decide cosa si compra e si fa a Roma
+- [ ] Lista della spesa: mercerie/tessutai romani da visitare + tessuti candidati da toccare (dal capitolo merceologia: cotone drill · moleskin/fustagno · flanella; carta speciale denim selvedge)
 
 ### 1–12 agosto — Roma (la finestra fisica: si tocca il capo)
 
-- [ ] Comprare tessuti/materiali nelle mercerie romane — con Pocket 3 accesa: è già il contenuto "Roma, tessuti" (idea #2)
-- [ ] Portare avanti il Modello A/B il più possibile: ogni sessione al banco con la telecamera accesa
-- [ ] **Fare scorta di girato**: Diario di Ricerca tessuti (macro, 60s) + processo al banco — abbastanza materiale grezzo da coprire i Reel delle settimane in viaggio
-- [ ] Fotografare il capo/i materiali reali che servono per il test Jago, prima di partire
+- [ ] **Tessuto in mano**: visitare 1–2 tessutai/mercerie dalla lista, comprare il tessuto del primo pantalone o almeno i campioni dei candidati — Pocket 3 accesa: è già il contenuto "Roma, tessuti" (idea #2)
+- [ ] Cartamodello: riprendere la base esistente, capire cosa va adattato alla silhouette scelta + individuare chi può dare una mano
+- [ ] **Fare scorta di girato (senza pubblicare)**: macro sui tessuti (= 2–3 Diari di Ricerca già girati), mani su carta e cartamodello, le mercerie — materiale grezzo per i Reel di settembre
+- [ ] Foto di riferimento per il test Jago (10–15 foto pulite di un capo o mock, da più angoli) prima di ripartire
 
 ### 12 agosto → settembre — in viaggio (solo laptop/telefono)
 
-- [ ] 1 Reel/settimana montato dal girato accumulato (sessione unica, 60 min time-boxed — la promessa non si interrompe)
-- [ ] Test tecnico Jago: capo reale fedele in 15 scatti coerenti (lavoro AI, si fa ovunque)
-- [ ] Bio dei due profili + setup del profilo @inversorome (handle già preso; bozze bio in `analisi/01-copywriting.md`)
-- [ ] Ore realistiche della settimana-tipo d'autunno → calibrare il ciclo verso il Drop 1
+- [ ] Banca contenuti: progettare i primi 4 Reel (hook + scaletta + caption con prima riga fattuale) — pronti da girare/pubblicare a settembre
+- [ ] Test tecnico Jago: 15 scatti coerenti su un capo di riferimento (lavoro AI, si fa ovunque)
+- [ ] Palestra camera privata: 10–15 min a settimana (voiceover → mani+voce → 10s a camera), si registra e si cancella
+- [ ] Documenti Drop 1: criterio di successo scritto PRIMA + scomposizione costi + bozza pagina pre-order
+- [ ] Aggiornare la bio del profilo personale (bozza in `analisi/01-copywriting.md`)
+- [ ] Fine agosto: ore realistiche della settimana-tipo d'autunno → calendario con gli slot fissi di Inverso
 
-### Settembre — rientro
+### Settembre — si parte
 
-- [ ] Punto sul Modello A/B e ripresa del cucito (la metrica binaria riparte: ho toccato il capo? sì/no)
+- [ ] Pubblicare il Diario di Ricerca #1 (già girato a Roma) sul profilo personale → da lì partono 1 Reel/settimana e il protocollo camera a progressione
+- [ ] Ripresa del capo al banco: la metrica binaria riparte (ho toccato il capo? sì/no)
 - [ ] Fissare una data realistica per il Drop 1 in base a dove si è arrivati
 
 ---
