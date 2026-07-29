@@ -1,11 +1,13 @@
 # INVERSO — Piano Estate 2026 (21/07 → settembre)
-> Creato il 21/07/2026. Obiettivo: arrivare al 1° settembre pronti a partire con i contenuti e col ciclo del Drop 1 già apparecchiato.
+> Creato il 21/07/2026 · aggiornato il 29/07. Obiettivo: arrivare al 1° settembre pronti a partire con i contenuti e col ciclo del Drop 1 già apparecchiato.
+
+> **Aggiornamento 29/07 — date fissate:** Jacopo è a Roma dall'**1 al 12 agosto** (12 giorni, non ~7), poi riparte fino a settembre. Il binario 2 si concentra tutto lì. Nota: dove questo piano dice "Modello A/B", vale il reset del 18/07 — il capo è il **primo pantalone** (studio in `ricerca/`, poi cartamodello dalla base esistente).
 
 ---
 
 ## La situazione
 
-- Fino a settembre Jacopo è fuori Roma quasi sempre: **~7 giorni a Roma in totale** (date da fissare — vedi sotto).
+- Fino a settembre Jacopo è fuori Roma quasi sempre: **a Roma dall'1 al 12 agosto** (12 giorni, fissati il 29/07), poi di nuovo in viaggio.
 - **Nessun contenuto pubblicato prima di settembre.** L'estate serve a preparare, non a partire a metà.
 - Voglia di lavorare: sì. Quindi il piano usa l'estate per tutto ciò che si fa con laptop e telefono, e concentra nei giorni romani le uniche cose che richiedono le mani.
 
@@ -28,12 +30,12 @@ In ordine di importanza:
 7. **Apparecchiare il Drop 1 sulla carta.** Tre documenti brevi: criterio di successo scritto PRIMA del drop (chiudere il ciclo, non il sold-out) · scomposizione trasparente dei costi (per la pagina pre-order) · bozza pagina pre-order con data di consegna realistica. *Costo: 2 ore totali.*
 8. **Settimana-tipo d'autunno.** Ore reali disponibili tra università, accademia e Muay Thai → calendario con gli slot fissi di Inverso (1 sessione capo + 1 sessione montaggio da 60 min). *Costo: 30 min, verso fine agosto quando gli orari sono noti.*
 
-### Binario 2 — I ~7 giorni a Roma (lista chiusa, in quest'ordine)
+### Binario 2 — I 12 giorni a Roma, 1–12 agosto (lista chiusa, in quest'ordine)
 
 Questi giorni sono il collo di bottiglia fisico dell'estate. Priorità rigida:
 
-1. **Stato reale del Modello A/B** — cartamodello: a che punto? Tessuto: comprato? È la domanda da cui riparte tutto; senza risposta il resto del piano è aria.
-2. **Tessuto in mano** — visitare 1–2 tessutai/mercerie dalla lista del binario 1; comprare il tessuto del Modello A/B o almeno i campioni dei candidati.
+1. **Il capo (primo pantalone)** — silhouette scelta alla mano (chiudere lo studio in `ricerca/` prima di arrivare), riprendere la base di cartamodello esistente e capire cosa va adattato + chi può dare una mano.
+2. **Tessuto in mano** — visitare 1–2 tessutai/mercerie dalla lista del binario 1; comprare il tessuto del primo pantalone o almeno i campioni dei candidati (drill · moleskin · flanella; carta speciale denim selvedge).
 3. **Girato in banca (senza pubblicare)** — Pocket 3 accesa mentre si fanno i punti 1 e 2: macro sui tessuti (= 2–3 Diari di Ricerca già girati), mani sul cartamodello, la merceria. Regola invariata: si filma MENTRE si fa, non si "fanno contenuti".
 4. **Foto di riferimento per Jago** — se esiste un capo o un mock: 10–15 foto pulite da più angoli, per il test lookbook.
 
@@ -50,7 +52,7 @@ Il 1° settembre "pronti e carichi" significa, concretamente:
 - [ ] Criterio di successo Drop 1 + breakdown costi + bozza pre-order scritti
 - [ ] Palestra camera completata: voiceover a voce sciolta e i 10s a camera provati almeno un paio di volte
 - [ ] Calendario d'autunno con gli slot fissi
-- [ ] Stato Modello A/B noto e tessuto in mano (o ordinato)
+- [ ] Silhouette del primo pantalone scelta, cartamodello base ripreso in mano e tessuto in mano (o ordinato)
 
 **Prima azione di settembre:** pubblicare il Diario di Ricerca #1 (già girato a Roma) sul profilo personale. Da lì parte il ritmo di 1 Reel/settimana e il protocollo camera a progressione.
 
@@ -69,13 +71,13 @@ Il 1° settembre "pronti e carichi" significa, concretamente:
 
 Ogni settimana, in più: **10–15 min di palestra camera** (voiceover nelle prime due settimane, poi mani+voce, dal 11/08 circa i primi 10s a camera).
 
-I giorni a Roma si incastrano dove capitano: quando le date sono note, si piazzano i 4 punti del binario 2 e basta. *Ipotesi dichiarata: non so ancora quando cadono i 7 giorni — appena Jacopo li fissa, il calendario si aggiorna.*
+**Date fissate (29/07): i giorni a Roma sono l'1–12 agosto.** Nelle settimane 28/07–03/08 e 04–10/08 la priorità passa quindi al binario 2 (capo, tessuti, girato); il lavoro remoto di quelle due settimane (Reel 1-2, test Jago sessione 1) scala alle settimane in viaggio dal 12/08 in poi.
 
 ---
 
 ## La singola azione più importante
 
-**Fissare le date dei giorni a Roma e, nel primo di quei giorni, rispondere alla domanda: a che punto è davvero il Modello A/B?** Tutto il resto dell'estate si può fare da qualsiasi posto; questa no, e da questa dipende la data del Drop 1.
+**Arrivare all'1 agosto con la silhouette scelta, e nei primi giorni romani mettere le mani su cartamodello e tessuto.** Tutto il resto dell'estate si può fare da qualsiasi posto; questo no, e da questo dipende la data del Drop 1.
 
 ## Cosa NON fare
 
