@@ -1,5 +1,5 @@
 # INVERSO — Piano Maestro
-> Aggiornato il 13/07/2026 · Sintesi di: briefing strategico 12/07 + 5 analisi specialistiche (in `analisi/`)
+> Aggiornato il 29/07/2026 · Sintesi di: briefing strategico 12/07 + 5 analisi specialistiche (in `analisi/`)
 
 ---
 
@@ -85,13 +85,34 @@ In ordine di attivazione:
 - Università + accademia hanno sempre precedenza; l'accademia si sovrappone a Inverso per progetto, non per caso.
 - Muay Thai, Chiara, la vita: non si toccano. Inverso ha diritto solo agli slot che gli vengono assegnati.
 
-## 9. Prossime azioni (dopo il 16/07 — esame Ragioneria)
+## 9. Tabella di marcia — da qui a settembre 2026
 
-- [ ] **Stato reale del Modello A/B**: cartamodello finito? Tessuto comprato? (la domanda da cui riparte tutto)
-- [ ] Ore realistiche della settimana-tipo d'autunno → calibrare il ciclo
-- [ ] Handle @inverso: verificare disponibilità (rosa: inverso.studio · inverso.roma · wearinverso) + bio dei due profili
-- [ ] Primo Diario di Ricerca tessuti (60s, Pocket 3)
-- [ ] Test tecnico: capo reale fedele su Jago in 15 scatti coerenti
+**Vincolo chiave:** Jacopo è a Roma solo dall'**1 al 12 agosto**, poi riparte fino a settembre. Tutto ciò che richiede mani, banco di lavoro, tessuti e Pocket 3 va concentrato in quella finestra. Il resto (telefono/laptop) si fa in viaggio.
+
+### Ora → 31 luglio — preparare la finestra romana
+
+- [ ] **Stato reale del Modello A/B**: cartamodello finito? Tessuto comprato? (la domanda da cui riparte tutto — decide cosa si fa nei 12 giorni a Roma)
+- [ ] Lista della spesa materiali: cosa comprare appena arrivato, così i 12 giorni non si bruciano a cercare tessuti
+- [ ] Handle @inverso: verificare disponibilità (rosa: inverso.studio · inverso.roma · wearinverso) — 10 minuti da telefono
+
+### 1–12 agosto — Roma (la finestra fisica: si tocca il capo)
+
+- [ ] Comprare tessuti/materiali nelle mercerie romane — con Pocket 3 accesa: è già il contenuto "Roma, tessuti" (idea #2)
+- [ ] Portare avanti il Modello A/B il più possibile: ogni sessione al banco con la telecamera accesa
+- [ ] **Fare scorta di girato**: Diario di Ricerca tessuti (macro, 60s) + processo al banco — abbastanza materiale grezzo da coprire i Reel delle settimane in viaggio
+- [ ] Fotografare il capo/i materiali reali che servono per il test Jago, prima di partire
+
+### 12 agosto → settembre — in viaggio (solo laptop/telefono)
+
+- [ ] 1 Reel/settimana montato dal girato accumulato (sessione unica, 60 min time-boxed — la promessa non si interrompe)
+- [ ] Test tecnico Jago: capo reale fedele in 15 scatti coerenti (lavoro AI, si fa ovunque)
+- [ ] Bio dei due profili + eventuale apertura @inverso (bozze in `analisi/01-copywriting.md`)
+- [ ] Ore realistiche della settimana-tipo d'autunno → calibrare il ciclo verso il Drop 1
+
+### Settembre — rientro
+
+- [ ] Punto sul Modello A/B e ripresa del cucito (la metrica binaria riparte: ho toccato il capo? sì/no)
+- [ ] Fissare una data realistica per il Drop 1 in base a dove si è arrivati
 
 ---
 
