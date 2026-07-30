@@ -1,6 +1,6 @@
 # Dispensa Ragioneria — esame 16/07/2026
 
-> ✅ **Esame sostenuto il 16/07/2026.** Sensazione positiva; risultati attesi intorno al 24/07/2026.
+> ✅ **Esame superato con 24/30** (sostenuto il 16/07/2026).
 
 Come orientarsi:
 
