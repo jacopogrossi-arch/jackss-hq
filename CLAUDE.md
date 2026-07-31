@@ -38,6 +38,12 @@ File: `inverso/`
 
 - **Cartamodelli** (tool SVG jeans via Claude API, attivo) → `cartamodelli/`
 
+## Vita personale
+
+Materiale personale non legato a un progetto sta in `personale/`:
+
+- **Letture** (lista letture da affrontare con tracking, personali + Inverso) → `personale/letture.md`
+
 ## Archivio
 
 Tutto ciò che è dormiente o fuori tema sta in `archivio/`:
