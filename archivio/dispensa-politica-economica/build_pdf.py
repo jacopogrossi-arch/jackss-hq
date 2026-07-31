@@ -4,6 +4,7 @@ from pathlib import Path
 
 BASE = Path(__file__).parent
 SCHEMI = BASE / "schemi"
+OUT_NAME = "Dispensa Politica Economica"
 
 FILES_IN_ORDER = [
     "00c-mappa-priorita.md",
@@ -34,7 +35,7 @@ for i, fname in enumerate(FILES_IN_ORDER):
     parts.append(text)
 
 combined_md = "\n".join(parts)
-(BASE / "DISPENSA_COMPLETA.md").write_text(combined_md, encoding="utf-8")
+(BASE / f"{OUT_NAME}.md").write_text(combined_md, encoding="utf-8")
 
 # nel documento unico i link tra file .md diventano ancore alla stessa pagina;
 # nei file sorgente restano link a file separati (utili su GitHub/VSCode)
@@ -97,5 +98,5 @@ html_template = f"""<!DOCTYPE html>
 </html>
 """
 
-(BASE / "DISPENSA_COMPLETA.html").write_text(html_template, encoding="utf-8")
-print("OK: DISPENSA_COMPLETA.md e DISPENSA_COMPLETA.html generati")
+(BASE / f"{OUT_NAME}.html").write_text(html_template, encoding="utf-8")
+print(f"OK: {OUT_NAME}.md e {OUT_NAME}.html generati")

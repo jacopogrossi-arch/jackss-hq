@@ -28,4 +28,4 @@ uvx.exe
 **/pdf-fonte/
 
 # HTML intermedio di build (derivato da build_pdf.py, non serve tracciarlo)
-archivio/dispensa-politica-economica/DISPENSA_COMPLETA.html
+archivio/dispensa-politica-economica/Dispensa Politica Economica.html

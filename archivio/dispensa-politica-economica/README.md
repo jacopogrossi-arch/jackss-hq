@@ -4,7 +4,7 @@ Costruita a partire dal materiale della professoressa (37 file in `pdf-fonte/`, 
 
 ## Come studiare da qui
 
-**`DISPENSA_COMPLETA.pdf`** — il documento unico da cui studiare: 75 pagine, indice cliccabile in prima pagina che rimanda a ogni capitolo, tutti gli schemi + formulario + glossario + mappa di priorità + i 9 grafici, in ordine di priorità. Generato da `build_pdf.py` (Python + Chrome headless — rilanciare lo script dopo qualsiasi modifica agli schemi per rigenerare il PDF).
+**`Dispensa Politica Economica.pdf`** — il documento unico da cui studiare: 75 pagine, indice cliccabile in prima pagina che rimanda a ogni capitolo, tutti gli schemi + formulario + glossario + mappa di priorità + i 9 grafici, in ordine di priorità. Generato da `build_pdf.py` (Python + Chrome headless — rilanciare lo script dopo qualsiasi modifica agli schemi per rigenerare il PDF).
 
 ## Come orientarsi nei file sorgente
 
