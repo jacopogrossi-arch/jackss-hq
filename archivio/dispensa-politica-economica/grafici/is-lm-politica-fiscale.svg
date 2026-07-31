@@ -1,0 +1,66 @@
+<svg viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, serif">
+  <rect width="640" height="420" fill="white"/>
+
+  <!-- Assi -->
+  <line x1="80" y1="380" x2="600" y2="380" stroke="black" stroke-width="2"/>
+  <line x1="80" y1="380" x2="80" y2="40" stroke="black" stroke-width="2"/>
+  <polygon points="600,380 590,375 590,385" fill="black"/>
+  <polygon points="80,40 75,50 85,50" fill="black"/>
+  <text x="610" y="385" font-size="16">Y</text>
+  <text x="60" y="35" font-size="16">i</text>
+
+  <!-- LM (fissa) -->
+  <line x1="140" y1="360" x2="500" y2="90" stroke="#1a5276" stroke-width="2.5"/>
+  <text x="505" y="88" font-size="15" fill="#1a5276">LM</text>
+
+  <!-- IS0 -->
+  <line x1="150" y1="90" x2="510" y2="360" stroke="#922b21" stroke-width="2.5"/>
+  <text x="513" y="365" font-size="15" fill="#922b21">IS₀</text>
+
+  <!-- IS1 (dopo espansione fiscale) -->
+  <line x1="220" y1="90" x2="580" y2="360" stroke="#922b21" stroke-width="2.5" stroke-dasharray="0"/>
+  <text x="583" y="365" font-size="15" fill="#922b21">IS₁</text>
+
+  <!-- Punti di equilibrio -->
+  <circle cx="315" cy="221" r="4.5" fill="black"/>
+  <text x="300" y="212" font-size="14">E₀</text>
+
+  <circle cx="360" cy="195" r="4.5" fill="black"/>
+  <text x="368" y="188" font-size="14">E₁</text>
+
+  <circle cx="385" cy="221" r="4.5" fill="#6c3483"/>
+  <text x="392" y="235" font-size="13" fill="#6c3483">E_full</text>
+
+  <!-- Linee guida tratteggiate verticali -->
+  <line x1="315" y1="221" x2="315" y2="380" stroke="gray" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="360" y1="195" x2="360" y2="380" stroke="gray" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="385" y1="221" x2="385" y2="380" stroke="gray" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Linee guida orizzontali -->
+  <line x1="80" y1="221" x2="315" y2="221" stroke="gray" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="80" y1="195" x2="360" y2="195" stroke="gray" stroke-width="1" stroke-dasharray="4,3"/>
+
+  <!-- Etichette assi -->
+  <text x="308" y="398" font-size="13">Y₀</text>
+  <text x="353" y="398" font-size="13">Y₁</text>
+  <text x="378" y="398" font-size="13">Y_full</text>
+  <text x="55" y="225" font-size="13">i₀</text>
+  <text x="55" y="199" font-size="13">i₁</text>
+
+  <!-- Freccia spostamento IS -->
+  <line x1="330" y1="130" x2="395" y2="130" stroke="#922b21" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#922b21"/>
+    </marker>
+  </defs>
+  <text x="325" y="122" font-size="12" fill="#922b21">↑G (espansione fiscale)</text>
+
+  <!-- Segmento crowding-out -->
+  <line x1="360" y1="221" x2="385" y2="221" stroke="#e67e22" stroke-width="4"/>
+  <text x="345" y="245" font-size="12.5" fill="#e67e22">spiazzamento (crowding-out)</text>
+
+  <!-- Titolo e legenda -->
+  <text x="120" y="25" font-size="17" font-weight="bold">Espansione fiscale con LM non accomodante</text>
+  <text x="120" y="410" font-size="12" fill="#555">E₀→E₁: equilibrio effettivo (Y,i entrambi ↑, ma Y sale meno del moltiplicatore pieno) · E_full: se i fosse rimasto costante (moltiplicatore keynesiano puro)</text>
+</svg>

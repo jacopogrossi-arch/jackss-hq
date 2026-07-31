@@ -1,0 +1,53 @@
+<svg viewBox="0 0 660 440" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, serif">
+  <rect width="660" height="440" fill="white"/>
+  <text x="330" y="26" font-size="17" font-weight="bold" text-anchor="middle">Monopolio naturale e mercato contendibile (D: P=20-q, TC=10q+16)</text>
+
+  <line x1="80" y1="360" x2="580" y2="360" stroke="black" stroke-width="2"/>
+  <line x1="80" y1="360" x2="80" y2="80" stroke="black" stroke-width="2"/>
+  <text x="588" y="365" font-size="15">q</text>
+  <text x="55" y="75" font-size="15">P</text>
+
+  <!-- D -->
+  <line x1="80" y1="100" x2="560" y2="360" stroke="#1a5276" stroke-width="2.5"/>
+  <text x="562" y="358" font-size="13" fill="#1a5276">D</text>
+
+  <!-- MR -->
+  <line x1="80" y1="100" x2="320" y2="360" stroke="#117864" stroke-width="2" stroke-dasharray="2,2"/>
+  <text x="300" y="378" font-size="12" fill="#117864">MR</text>
+
+  <!-- MC costante = 10 -->
+  <line x1="80" y1="230" x2="560" y2="230" stroke="#922b21" stroke-width="2.5"/>
+  <text x="565" y="234" font-size="13" fill="#922b21">MC=10</text>
+
+  <!-- ATC decrescente -->
+  <polyline points="128,126 200,188 272,204 320,209 464,217 560,220" fill="none" stroke="#7d3c98" stroke-width="2.5"/>
+  <text x="130" y="118" font-size="13" fill="#7d3c98">ATC = 10 + 16/q</text>
+
+  <!-- Q_m monopolio: q=5,P=15 -->
+  <circle cx="200" cy="165" r="4.5" fill="black"/>
+  <circle cx="200" cy="230" r="3.5" fill="black"/>
+  <line x1="200" y1="165" x2="200" y2="360" stroke="gray" stroke-dasharray="3,3"/>
+  <text x="120" y="158" font-size="12">Monopolio: q=5, P=15 (MR=MC)</text>
+
+  <!-- profitto rettangolo tra P*=15 e ATC(5)=13.2 -->
+  <rect x="80" y="165" width="120" height="23" fill="#27ae60" fill-opacity="0.3" stroke="#27ae60"/>
+  <text x="30" y="178" font-size="11.5" fill="#27ae60">Π=9</text>
+
+  <!-- Q contendibile: q=8, P=ATC=12 -->
+  <circle cx="272" cy="204" r="4.5" fill="black"/>
+  <line x1="272" y1="204" x2="272" y2="360" stroke="gray" stroke-dasharray="3,3"/>
+  <text x="278" y="200" font-size="12">Mercato contendibile: q=8, P=ATC=12 (profitto=0)</text>
+
+  <!-- Q regolamentato P=MC: q=10,P=10 -->
+  <circle cx="320" cy="230" r="4.5" fill="black"/>
+  <circle cx="320" cy="209" r="3.5" fill="black"/>
+  <line x1="320" y1="209" x2="320" y2="360" stroke="gray" stroke-dasharray="3,3"/>
+  <text x="326" y="260" font-size="12">Regolamentato P=MC: q=10, P=10</text>
+
+  <!-- perdita rettangolo tra ATC(10)=11.6 e MC=10 -->
+  <rect x="80" y="209" width="240" height="21" fill="#e67e22" fill-opacity="0.35" stroke="#e67e22"/>
+  <text x="30" y="222" font-size="11.5" fill="#e67e22">perdita=16</text>
+
+  <text x="90" y="42" font-size="12" fill="#555" text-anchor="start"></text>
+  <text x="60" y="404" font-size="12" fill="#555">ATC sempre sopra MC (subadditività) → un solo produttore è efficiente. Contendibilità (minaccia di entrata) forza P=ATC (profitto zero); regolamentazione P=MC crea perdita pari all'area arancione.</text>
+</svg>

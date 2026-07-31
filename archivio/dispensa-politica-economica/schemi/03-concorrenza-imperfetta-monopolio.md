@@ -59,6 +59,8 @@ Metodo generale per una funzione di domanda lineare **P = a − bQ** e un costo 
 - **Metodo dell'integrale** (equivalente, utile quando MC non è costante): DWL = ∫ da Q_M a Q_C di [Domanda(Q) − MC(Q)] dQ
 - I due metodi danno lo stesso risultato; con domanda e MC lineari conviene il metodo del triangolo.
 
+![Equilibrio di monopolio e triangolo della perdita secca](../grafici/monopolio-perdita-secca.svg)
+
 ## 6. **Monopolio naturale**
 
 - **Definizione**: si ha monopolio naturale quando i **costi fissi sono molto elevati** (barriera all'entrata) e i **costi variabili sono relativamente bassi**, tipico delle *utilities* (acqua, gas, energia elettrica, rifiuti, trasporto pubblico locale) che devono costruire e mantenere un'infrastruttura di rete.
@@ -73,6 +75,8 @@ Metodo generale per una funzione di domanda lineare **P = a − bQ** e un costo 
 - L'equilibrio contendibile **non è efficiente nel senso di Pareto** (il prezzo resta comunque pari al costo medio, non al costo marginale)
 - Il **prezzo limite** è il prezzo più basso compatibile con profitti nulli (P = ATC) che scoraggia l'entrata di nuovi concorrenti pur non essendo pari al costo marginale
 - La **deregolamentazione** trova il suo fondamento teorico proprio nella teoria dei mercati contendibili
+
+![Monopolio naturale: ATC, MC, equilibrio di monopolio, mercato contendibile e regolamentazione P=MC](../grafici/monopolio-naturale-contendibile.svg)
 
 ## 8. **Regolamentazione P=MC e perdita del monopolista naturale**
 

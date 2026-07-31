@@ -87,6 +87,8 @@
   - u > uN → π < πᵉ
 - Con λ=1 (caso limite): πᵉt = π(t-1). Se u resta stabilmente sotto u\*, l'inflazione **accelera** periodo dopo periodo invece di stabilizzarsi (vedi esercizio tipo).
 
+![Curva di Phillips di breve periodo e spostamento con le aspettative](../grafici/curva-phillips.svg)
+
 **9. Perché in concorrenza perfetta non c'è disoccupazione volontaria**
 - In concorrenza perfetta il salario è determinato dall'incontro tra domanda e offerta di lavoro: al salario di equilibrio, domanda e offerta di lavoro coincidono e chi vuole lavorare a quel salario trova impiego.
 - Non essendoci rigidità di prezzi/salari né potere di mercato, non si generano eccessi di offerta di lavoro persistenti: eventuale disoccupazione osservata sarebbe solo frizionale/di breve aggiustamento, non "involontaria" nel senso di lavoratori disposti a lavorare al salario vigente ma esclusi dal mercato. La disoccupazione involontaria richiede invece imperfezioni di mercato (salari rigidi verso il basso, potere contrattuale, informazione imperfetta, principio del costo pieno con price-maker) — è per questo che nei modelli con conflitto distributivo (punto 3) e nella curva di Phillips esiste un uN "naturale" positivo anche in equilibrio.
@@ -96,6 +98,8 @@
 - **Inflazione da domanda**: la curva **AD si sposta a destra** (più domanda aggregata) → nuovo equilibrio con **p più alto e Y più alto** lungo la stessa AS.
 - **Inflazione da costi/offerta**: la curva **AS si sposta a sinistra/verso l'alto** (costi di produzione più alti o shock di offerta negativo) → nuovo equilibrio con **p più alto ma Y più basso**.
 - Collegamento con la Curva di Phillips: uno spostamento di AD a destra corrisponde a un movimento **lungo** la CdP (meno u, più π — trade-off "normale"). Uno shock di AS negativo genera invece **più inflazione E più disoccupazione insieme**: è la **stagflazione** (USA anni '70), un caso in cui il trade-off della CdP tradizionale si rompe perché l'origine dello shock non è la domanda ma l'offerta.
+
+![Modello AD-AS: inflazione da domanda vs da costi](../grafici/ad-as-inflazione.svg)
 
 **11. Perché la deflazione è dannosa**
 - La deflazione (prezzi in calo continuo) non è il semplice "specchio" positivo dell'inflazione:

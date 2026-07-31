@@ -1,0 +1,29 @@
+<svg viewBox="0 0 500 420" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, serif">
+  <rect width="500" height="420" fill="white"/>
+  <text x="250" y="26" font-size="17" font-weight="bold" text-anchor="middle">Curva di Lorenz e indice di Gini</text>
+
+  <line x1="100" y1="340" x2="380" y2="340" stroke="black" stroke-width="2"/>
+  <line x1="100" y1="340" x2="100" y2="60" stroke="black" stroke-width="2"/>
+  <text x="385" y="345" font-size="13">quota cumulata popolazione</text>
+  <text x="20" y="55" font-size="13">quota cumulata reddito</text>
+
+  <!-- bisettrice: perfetta uguaglianza -->
+  <line x1="100" y1="340" x2="380" y2="60" stroke="#555" stroke-width="1.8" stroke-dasharray="5,3"/>
+  <text x="330" y="80" font-size="12" fill="#555">bisettrice (uguaglianza perfetta)</text>
+
+  <!-- area B: sotto la curva di Lorenz (fino all'asse) -->
+  <path d="M 100,340 L 380,340 L 380,60 Q 320,330 100,340 Z" fill="#b7d7ea" fill-opacity="0.6"/>
+
+  <!-- area A: tra bisettrice e curva di Lorenz -->
+  <path d="M 100,340 L 380,60 Q 320,330 100,340 Z" fill="#f5b041" fill-opacity="0.55"/>
+
+  <!-- curva di Lorenz -->
+  <path d="M 100,340 Q 320,330 380,60" fill="none" stroke="#922b21" stroke-width="2.8"/>
+  <text x="250" y="290" font-size="12" fill="#922b21">curva di Lorenz</text>
+
+  <text x="215" y="230" font-size="15" font-weight="bold" fill="#a15a00">A</text>
+  <text x="290" y="320" font-size="15" font-weight="bold" fill="#1a5276">B</text>
+
+  <text x="60" y="380" font-size="13" font-weight="bold">G = A / (A+B) = 2A</text>
+  <text x="60" y="400" font-size="11.5" fill="#555">G=0: uguaglianza perfetta (Lorenz coincide con la bisettrice) · G=1: disuguaglianza massima</text>
+</svg>

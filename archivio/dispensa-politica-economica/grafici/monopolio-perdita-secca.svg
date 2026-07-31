@@ -1,0 +1,42 @@
+<svg viewBox="0 0 640 420" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, serif">
+  <rect width="640" height="420" fill="white"/>
+  <text x="320" y="26" font-size="17" font-weight="bold" text-anchor="middle">Equilibrio di monopolio e perdita secca (D: P=20-2q, MC=3q)</text>
+
+  <line x1="80" y1="360" x2="580" y2="360" stroke="black" stroke-width="2"/>
+  <line x1="80" y1="360" x2="80" y2="80" stroke="black" stroke-width="2"/>
+  <text x="588" y="365" font-size="15">q</text>
+  <text x="55" y="75" font-size="15">P</text>
+
+  <!-- D -->
+  <line x1="80" y1="120" x2="560" y2="312" stroke="#1a5276" stroke-width="2.5"/>
+  <text x="565" y="316" font-size="13" fill="#1a5276">D</text>
+
+  <!-- MR -->
+  <line x1="80" y1="120" x2="380" y2="360" stroke="#117864" stroke-width="2.5"/>
+  <text x="365" y="378" font-size="13" fill="#117864">MR</text>
+
+  <!-- MC -->
+  <line x1="80" y1="360" x2="480" y2="120" stroke="#922b21" stroke-width="2.5"/>
+  <text x="485" y="118" font-size="13" fill="#922b21">MC</text>
+
+  <!-- Triangolo perdita secca: A(251,189) su D, B(251,257) su MC, C(320,216) equilibrio concorrenziale -->
+  <polygon points="251,189 251,257 320,216" fill="#e67e22" fill-opacity="0.45" stroke="#e67e22" stroke-width="1.5"/>
+  <text x="330" y="250" font-size="13" fill="#e67e22" font-weight="bold">DWL</text>
+
+  <!-- Punto di monopolio Em -->
+  <circle cx="251" cy="189" r="4.5" fill="black"/>
+  <text x="200" y="183" font-size="13">Eₘ (P*=14,29 / q*=2,86)</text>
+  <line x1="251" y1="189" x2="251" y2="360" stroke="gray" stroke-dasharray="3,3"/>
+  <line x1="80" y1="189" x2="251" y2="189" stroke="gray" stroke-dasharray="3,3"/>
+
+  <!-- Punto concorrenziale Ec -->
+  <circle cx="320" cy="216" r="4.5" fill="black"/>
+  <text x="326" y="212" font-size="13">E_c (P=12 / q=4)</text>
+  <line x1="320" y1="216" x2="320" y2="360" stroke="gray" stroke-dasharray="3,3"/>
+  <line x1="80" y1="216" x2="320" y2="216" stroke="gray" stroke-dasharray="3,3"/>
+
+  <text x="243" y="378" font-size="12">q*</text>
+  <text x="313" y="378" font-size="12">q_c</text>
+
+  <text x="90" y="402" font-size="12" fill="#555">MR=MC → q*=20/7≈2,86; P*=D(q*)≈14,29. Concorrenza: D=MC → q_c=4, P_c=12. DWL = triangolo tra q* e q_c ≈ 3,27</text>
+</svg>

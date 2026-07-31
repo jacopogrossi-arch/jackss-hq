@@ -1,0 +1,56 @@
+<svg viewBox="0 0 660 400" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, serif">
+  <rect width="660" height="400" fill="white"/>
+  <text x="330" y="24" font-size="17" font-weight="bold" text-anchor="middle">Scatola di Edgeworth e frontiera di Pareto</text>
+
+  <!-- PANNELLO A: scatola di Edgeworth -->
+  <text x="150" y="46" font-size="14" font-weight="bold" text-anchor="middle">A. Scatola di Edgeworth</text>
+  <rect x="60" y="60" width="220" height="220" fill="none" stroke="black" stroke-width="2"/>
+  <text x="45" y="290" font-size="12">O_A</text>
+  <text x="272" y="55" font-size="12">O_B</text>
+
+  <!-- curve di indifferenza di A (convesse rispetto a O_A, in basso a sinistra) -->
+  <path d="M 75,240 Q 130,180 240,150" fill="none" stroke="#1a5276" stroke-width="1.8"/>
+  <path d="M 90,265 Q 160,210 265,175" fill="none" stroke="#1a5276" stroke-width="1.8"/>
+  <text x="235" y="145" font-size="11" fill="#1a5276">U_A</text>
+
+  <!-- curve di indifferenza di B (convesse rispetto a O_B, in alto a destra) -->
+  <path d="M 265,95 Q 210,150 100,180" fill="none" stroke="#922b21" stroke-width="1.8"/>
+  <path d="M 250,75 Q 180,130 80,155" fill="none" stroke="#922b21" stroke-width="1.8"/>
+  <text x="85" y="150" font-size="11" fill="#922b21">U_B</text>
+
+  <!-- curva dei contratti -->
+  <path d="M 60,280 Q 150,190 280,60" fill="none" stroke="#117864" stroke-width="2.5" stroke-dasharray="5,3"/>
+  <text x="150" y="155" font-size="11.5" fill="#117864">curva dei contratti</text>
+
+  <!-- punti di tangenza -->
+  <circle cx="130" cy="222" r="3.5" fill="black"/>
+  <circle cx="200" cy="130" r="3.5" fill="black"/>
+
+  <text x="60" y="335" font-size="11.5" fill="#555">Ogni punto sulla curva dei contratti = allocazione Pareto-efficiente (tangenza tra curve di indifferenza)</text>
+
+  <!-- separatore -->
+  <line x1="320" y1="45" x2="320" y2="360" stroke="#ccc"/>
+
+  <!-- PANNELLO B: frontiera di Pareto / frontiera delle utilità -->
+  <text x="490" y="46" font-size="14" font-weight="bold" text-anchor="middle">B. Frontiera delle possibilità di utilità</text>
+
+  <line x1="370" y1="320" x2="370" y2="70" stroke="black" stroke-width="2"/>
+  <line x1="370" y1="320" x2="610" y2="320" stroke="black" stroke-width="2"/>
+  <text x="615" y="325" font-size="13">U_A</text>
+  <text x="355" y="65" font-size="13">U_B</text>
+
+  <!-- frontiera concava -->
+  <path d="M 380,90 Q 500,140 600,300" fill="none" stroke="#1a5276" stroke-width="2.5"/>
+  <text x="595" y="270" font-size="11" fill="#1a5276">frontiera di Pareto (efficiente)</text>
+
+  <!-- punto interno inefficiente -->
+  <circle cx="480" cy="230" r="4.5" fill="#922b21"/>
+  <text x="440" y="250" font-size="11.5" fill="#922b21">punto interno (inefficiente)</text>
+
+  <!-- freccia verso la frontiera: miglioramento forte -->
+  <line x1="480" y1="230" x2="510" y2="185" stroke="#27ae60" stroke-width="1.8" marker-end="url(#arrowE)"/>
+  <defs><marker id="arrowE" markerWidth="7" markerHeight="7" refX="5" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" fill="#27ae60"/></marker></defs>
+  <text x="500" y="175" font-size="11" fill="#27ae60">miglioramento paretiano forte</text>
+
+  <text x="365" y="360" font-size="11.5" fill="#555">Solo i punti sulla frontiera sono Pareto-efficienti; da un punto interno si può migliorare senza peggiorare nessuno</text>
+</svg>

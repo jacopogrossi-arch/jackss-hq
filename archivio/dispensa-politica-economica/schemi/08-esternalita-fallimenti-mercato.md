@@ -51,6 +51,8 @@
 - Il triangolo compreso tra Q_OS, Q_CP e le curve MC_S/D rappresenta la **perdita di benessere** dovuta all'esternalità non internalizzata.
 - **Obiettivo della politica**: spostare l'equilibrio da A a C, cioè **ridurre la quantità** e **aumentare il prezzo**.
 
+![Esternalità negativa: equilibrio privato vs ottimo sociale, con tassa pigouviana](../grafici/esternalita-negativa.svg)
+
 **Caso esternalità positiva di produzione (divergenza sui benefici)**
 - MB_S (= D + beneficio esterno) sta **sopra** la domanda privata D=MB_P.
 - Equilibrio di mercato Q_CP < Q_OS (ottimo sociale): il mercato produce **meno** del socialmente ottimo.

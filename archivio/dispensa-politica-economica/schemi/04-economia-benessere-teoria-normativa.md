@@ -45,6 +45,8 @@
 
 - Graficamente: **scatola di Edgeworth** (curva dei contratti = punti di tangenza tra curve di indifferenza = allocazioni efficienti nello scambio) e **frontiera di Pareto** (frontiera delle possibili utilità): solo i punti **sulla frontiera** sono efficienti; un punto interno può muoversi verso la frontiera con un **miglioramento paretiano debole** (migliora solo alcuni) o **forte** (migliora tutti).
 
+![Scatola di Edgeworth e frontiera di Pareto](../grafici/edgeworth-pareto.svg)
+
 ---
 
 ## 4. **I tre criteri principali di Funzione di Benessere Sociale (FBS)**

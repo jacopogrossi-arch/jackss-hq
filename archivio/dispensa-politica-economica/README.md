@@ -5,6 +5,7 @@ Costruita a partire dal materiale della professoressa (37 file in `pdf-fonte/`, 
 ## Come orientarsi
 
 - **`schemi/`** — gli schemi di studio veri e propri, in ordine di priorità (numero crescente = priorità decrescente). Ogni schema ha in testa le domande d'esame reali collegate e chiude con un esercizio tipo svolto (dove pertinente).
+- **`grafici/`** — i grafici richiamati negli schemi (SVG disegnati a mano, non generati da AI, per garantire precisione su assi/curve/etichette): IS-LM con crowding-out, AD-AS domanda/costi, curva di Phillips, monopolio+perdita secca, monopolio naturale/contendibile, esternalità, Edgeworth/Pareto, Mundell-Fleming, Lorenz/Gini.
 - **`appunti-grezzi/`** — trascrizioni fedeli dei PDF sorgente, per argomento. Fonte per generare nuovi esercizi senza rileggere i PDF originali.
 - **`pdf-fonte/`** — i PDF originali del corso (esclusa da git, materiale della docente).
 

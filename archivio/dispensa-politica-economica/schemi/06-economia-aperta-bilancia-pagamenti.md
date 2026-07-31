@@ -157,6 +157,8 @@ $$\Rightarrow Y = \frac{1}{1-c+m}\left[I(i)+\bar G+\bar X\right]$$
 
 (Nota: le slide analizzate presentano gli elementi costitutivi del modello — IS, LM, BP, pendenze e meccanismi — ma non sviluppano graficamente ogni singolo caso politica/regime; la tabella sintetizza la logica standard del modello Mundell-Fleming coerente con quanto esposto su MK, competitività e riequilibrio.)
 
+![Modello Mundell-Fleming: IS, LM e BP al variare della mobilità dei capitali](../grafici/mundell-fleming-is-lm-bp.svg)
+
 ---
 
 ## Esercizio tipo svolto

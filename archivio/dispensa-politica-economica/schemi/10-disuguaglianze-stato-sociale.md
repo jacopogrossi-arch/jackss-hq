@@ -18,6 +18,8 @@
 - **Reddito disponibile = reddito di mercato + trasferimenti − tasse.**
 - **Curva di Lorenz**: quota cumulata di reddito (asse y) vs quota cumulata di popolazione (asse x); coincide con la bisettrice in caso di perfetta uguaglianza.
 - **Indice di Gini**: **G = A / (A+B) = 2A**, con A = area tra bisettrice e curva di Lorenz, A+B = area del triangolo sotto la bisettrice. Varia da 0 (uguaglianza) a 1 (disuguaglianza massima).
+
+![Curva di Lorenz e indice di Gini](../grafici/lorenz-gini.svg)
   - Il Gini dei redditi **di mercato** è generalmente più alto di quello dei redditi **disponibili**: l'intervento pubblico (tasse + trasferimenti) riduce la disuguaglianza.
 - **Povertà assoluta**: soglia da un paniere di beni/servizi essenziali (definita da Istat in Italia).
 - **Povertà relativa**: soglia UE = **60% della mediana** del reddito disponibile equivalente (in Italia, famiglia di 2 persone ≈ 1.218 €/mese nel 2024; incidenza ≈ 10,9% delle famiglie).

@@ -134,6 +134,8 @@
  - Se invece la politica monetaria è **accomodante** (la Banca Centrale espande M in parallelo, spostando anche la LM a destra): r non sale (o sale meno), l'investimento privato non viene spiazzato, e l'aumento di Y è più vicino al pieno moltiplicatore keynesiano.
 - Collegamento con la visione neoclassica: quando l'economia è già a piena occupazione (Y = Y_PO fisso, offerta rigida), l'aumento della domanda aggregata da politica fiscale non può tradursi in più Y reale e si scarica interamente sui tassi di interesse (o sui prezzi) → è il caso limite dello spiazzamento totale visto al punto 6.
 
+![Espansione fiscale con crowding-out nel modello IS-LM](../grafici/is-lm-politica-fiscale.svg)
+
 ---
 
 **8. Vincoli europei alla politica di bilancio**
