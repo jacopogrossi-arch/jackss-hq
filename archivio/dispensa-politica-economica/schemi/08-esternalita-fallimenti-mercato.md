@@ -111,6 +111,23 @@
 
 ---
 
+## 9. **Il cambiamento climatico come fallimento del mercato globale**
+
+- Il cambiamento climatico è un **caso particolare di esternalità**: manca un mercato in grado di attribuire un prezzo alle emissioni di gas serra e ai loro effetti sull'ambiente (stessa logica del punto 2: diritti di proprietà non definiti sull'atmosfera).
+- **Differenza rispetto agli altri problemi ambientali (es. inquinamento locale)**: ha una **dimensione globale**, coinvolge l'intero pianeta, non solo un mercato o un territorio locale.
+- **Elementi che lo rendono un problema economico-politico più complesso**:
+  - **assenza di mercati ben definiti** per le emissioni
+  - **incertezza** sugli effetti futuri del riscaldamento globale
+  - possibilità di **reazioni a catena** e **punti di non ritorno** ambientali (non linearità, irreversibilità)
+  - necessità di **cooperazione internazionale** (nessun singolo paese può risolverlo da solo)
+  - **complessità intergenerazionale**: le scelte di oggi determinano gli effetti subiti dalle generazioni future
+- **Rischio "a coda spessa" (Weitzman)**: esiste una probabilità non trascurabile di eventi estremi e catastrofici, anche se poco probabili → le politiche pubbliche non possono basarsi solo sullo scenario più probabile, ma devono considerare anche gli **scenari estremi**.
+- **Eterogeneità degli interessi**: gli impatti del cambiamento climatico variano molto **tra le nazioni** e **al loro interno**, in base alle condizioni economiche di paesi e individui → rende più difficile il coordinamento (si può leggere come un problema di **azione collettiva su scala globale**, affine alla tragedia dei beni comuni ma con giocatori = stati sovrani).
+- **Dimensione di giustizia**: non è solo una sfida ambientale ma anche una questione di **giustizia economica e intergenerazionale** — bilanciare gli interessi tra ricchi e poveri, produttori e consumatori, presente e futuro.
+- Si collega agli strumenti già visti al punto 5 (tassazione, regolamentazione, permessi negoziabili/cap-and-trade — es. EU ETS), applicati però su **scala internazionale** e con il problema aggiuntivo di dover essere concordati tra stati con interessi divergenti.
+
+---
+
 ## **Esercizio tipo svolto**
 
 **Dati**: Domanda inversa **P = 20 − 2q**; costo marginale privato **MC = 3q**; esternalità (costo esterno marginale, costante) **= 10**.
