@@ -1,0 +1,87 @@
+# INVERSO — Piano Estate 2026 (21/07 → settembre)
+> Creato il 21/07/2026 · aggiornato il 29/07. Obiettivo: arrivare al 1° settembre pronti a partire con i contenuti e col ciclo del Drop 1 già apparecchiato.
+
+> **Aggiornamento 29/07 — date fissate:** Jacopo è a Roma dall'**1 al 12 agosto** (12 giorni, non ~7), poi riparte fino a settembre. Il binario 2 si concentra tutto lì. Nota: dove questo piano dice "Modello A/B", vale il reset del 18/07 — il capo è il **primo pantalone** (studio in `ricerca/`, poi cartamodello dalla base esistente).
+
+---
+
+## La situazione
+
+- Fino a settembre Jacopo è fuori Roma quasi sempre: **a Roma dall'1 al 12 agosto** (12 giorni, fissati il 29/07), poi di nuovo in viaggio.
+- **Nessun contenuto pubblicato prima di settembre.** L'estate serve a preparare, non a partire a metà.
+- Voglia di lavorare: sì. Quindi il piano usa l'estate per tutto ciò che si fa con laptop e telefono, e concentra nei giorni romani le uniche cose che richiedono le mani.
+
+**Il rischio da tenere davanti agli occhi:** un'estate di sola teoria e marketing è esattamente l'errore fatale del piano maestro ("costruire teoria rimandando il capo"). Antidoto: i giorni a Roma sono sacri e vanno al capo prima che a qualsiasi ripresa; il lavoro remoto è solo ciò che a settembre fa risparmiare tempo vero.
+
+---
+
+## I tre binari
+
+### Binario 1 — Lavoro remoto (dove sei, 2–4 ore a settimana, time-boxed)
+
+In ordine di importanza:
+
+1. **Fondazione narrativa: il nome.** "INVERSO" non è mai stato spiegato — è il primo atto narrativo del brand (il contrario della fretta, il rovescio del fast fashion). Scriverne la spiegazione in una pagina: diventerà il primo post di @inverso e la spina dorsale delle bio. *Costo: 2 ore, una volta.*
+2. **Setup canali.** ✅ **@inversorome scelto e registrato su IG e TikTok (22/07).** Bio pronte in `bio-profili.md`, da incollare. Dominio: disponibile, ma Jacopo preferisce aspettare — se ne riparla verso la pagina pre-order. Non pubblicare nulla: profilo pronto ma silente.
+3. **Banca contenuti settembre.** Dalla lista dei 10 Reel in `analisi/03-social.md`, scegliere i primi 4 e scrivere per ciascuno: hook (prime 1,5s), scaletta di ripresa, caption con prima riga fattuale. A settembre si gira e si pubblica senza pensare. *Costo: 30–45 min a Reel, uno a settimana.*
+4. **Palestra camera (privata, mai pubblicata).** Il protocollo a progressione serve a bypassare la paura della camera: mani prima, faccia poi. L'estate anticipa la progressione in privato — 10–15 min a settimana: prime 2 settimane registrare solo voiceover (leggere ad alta voce le caption dei Reel progettati: doppio uso, esercizio + audio pronto); poi filmarsi le mani mentre si fa qualcosa parlando nel frattempo (appunti, schizzi, qualsiasi cosa); da metà agosto provare i 10 secondi a camera. Si registra, si riguarda una volta, si cancella. A settembre la progressione pubblica riparte da mani+voiceover come previsto, ma senza il blocco iniziale. *Costo: 10–15 min a settimana.*
+5. **Test tecnico Jago (parte remota).** Provare la pipeline dei 15–20 scatti coerenti con un capo di riferimento qualsiasi (non serve il Modello A/B per validare la coerenza del personaggio). Se il test regge, a settembre resta solo la sostituzione col capo vero. *Costo: 2–3 ore totali, spalmate.*
+6. **Ricerca tessuti da remoto.** Il pilastro Ricerca si prepara leggendo: selvage, pesi, cimose, costruzioni. Output concreto: lista di 3–5 tessuti candidati per il Modello A/B + lista mercerie/tessutai romani da visitare nei giorni a Roma. Gli appunti diventeranno voiceover dei Diari di Ricerca. *Costo: quando va, è la parte piacevole.*
+7. **Apparecchiare il Drop 1 sulla carta.** Tre documenti brevi: criterio di successo scritto PRIMA del drop (chiudere il ciclo, non il sold-out) · scomposizione trasparente dei costi (per la pagina pre-order) · bozza pagina pre-order con data di consegna realistica. *Costo: 2 ore totali.*
+8. **Settimana-tipo d'autunno.** Ore reali disponibili tra università, accademia e Muay Thai → calendario con gli slot fissi di Inverso (1 sessione capo + 1 sessione montaggio da 60 min). *Costo: 30 min, verso fine agosto quando gli orari sono noti.*
+
+### Binario 2 — I 12 giorni a Roma, 1–12 agosto (lista chiusa, in quest'ordine)
+
+Questi giorni sono il collo di bottiglia fisico dell'estate. Priorità rigida:
+
+1. **Il capo (primo pantalone)** — silhouette scelta alla mano (chiudere lo studio in `ricerca/` prima di arrivare), riprendere la base di cartamodello esistente e capire cosa va adattato + chi può dare una mano.
+2. **Tessuto in mano** — visitare 1–2 tessutai/mercerie dalla lista del binario 1; comprare il tessuto del primo pantalone o almeno i campioni dei candidati (drill · moleskin · flanella; carta speciale denim selvedge).
+3. **Girato in banca (senza pubblicare)** — Pocket 3 accesa mentre si fanno i punti 1 e 2: macro sui tessuti (= 2–3 Diari di Ricerca già girati), mani sul cartamodello, la merceria. Regola invariata: si filma MENTRE si fa, non si "fanno contenuti".
+4. **Foto di riferimento per Jago** — se esiste un capo o un mock: 10–15 foto pulite da più angoli, per il test lookbook.
+
+Se i giorni sono pochi o spezzati: si taglia dal basso (il punto 4 salta per primo, il punto 1 mai).
+
+### Binario 3 — Settembre, settimana 1
+
+Il 1° settembre "pronti e carichi" significa, concretamente:
+
+- [ ] Handle @inversorome registrato, bio dei due profili pronte
+- [ ] Spiegazione del nome scritta (primo post di @inverso in canna)
+- [ ] 4 Reel progettati (hook + scaletta + caption) e 2–3 già coperti dal girato estivo
+- [ ] Test Jago validato su capo di riferimento
+- [ ] Criterio di successo Drop 1 + breakdown costi + bozza pre-order scritti
+- [ ] Palestra camera completata: voiceover a voce sciolta e i 10s a camera provati almeno un paio di volte
+- [ ] Calendario d'autunno con gli slot fissi
+- [ ] Silhouette del primo pantalone scelta, cartamodello base ripreso in mano e tessuto in mano (o ordinato)
+
+**Prima azione di settembre:** pubblicare il Diario di Ricerca #1 (già girato a Roma) sul profilo personale. Da lì parte il ritmo di 1 Reel/settimana e il protocollo camera a progressione.
+
+---
+
+## Calendario indicativo (6 settimane)
+
+| Settimana | Focus remoto |
+|---|---|
+| 21–27/07 | Spiegazione del nome + verifica handle |
+| 28/07–03/08 | Bio dei due profili + Reel 1 progettato |
+| 04–10/08 | Test Jago (sessione 1) + Reel 2 |
+| 11–17/08 | Ricerca tessuti: lista candidati + lista mercerie + Reel 3 |
+| 18–24/08 | Documenti Drop 1 (criterio, costi, pre-order) + Reel 4 |
+| 25–31/08 | Test Jago (sessione 2) + settimana-tipo d'autunno + ripasso checklist |
+
+Ogni settimana, in più: **10–15 min di palestra camera** (voiceover nelle prime due settimane, poi mani+voce, dal 11/08 circa i primi 10s a camera).
+
+**Date fissate (29/07): i giorni a Roma sono l'1–12 agosto.** Nelle settimane 28/07–03/08 e 04–10/08 la priorità passa quindi al binario 2 (capo, tessuti, girato); il lavoro remoto di quelle due settimane (Reel 1-2, test Jago sessione 1) scala alle settimane in viaggio dal 12/08 in poi.
+
+---
+
+## La singola azione più importante
+
+**Arrivare all'1 agosto con la silhouette scelta, e nei primi giorni romani mettere le mani su cartamodello e tessuto.** Tutto il resto dell'estate si può fare da qualsiasi posto; questo no, e da questo dipende la data del Drop 1.
+
+## Cosa NON fare
+
+- Non aprire i profili "intanto" con contenuti di riempimento: si parte a settembre col girato vero, non con post-segnaposto ad agosto.
+- Non trasformare l'estate in un progetto di scrittura infinito: ogni voce del binario 1 ha un costo dichiarato ed è time-boxed — finita, si chiude.
+- Non toccare i servizi (Lookbook AI, Idea→Campione): restano congelati fino a dopo il Drop 1.
+- Non comprare attrezzatura o tessuti "di scorta" da remoto: il tessuto si sceglie con le mani, a Roma.

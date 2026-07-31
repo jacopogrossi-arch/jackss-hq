@@ -28,7 +28,7 @@ File: `inverso/`
 - `analisi/` — analisi delle skill marketing (copywriting, psychology, social, positioning, idee)
 - `assets-jago/` — asset dell'avatar Jago (logo, palette, moodboard), ora strumento di Inverso
 
-**Struttura:** Jacopo = volto del processo (profilo IG personale) · @inverso = risultato/drop · Jago = modello virtuale dei lookbook · @jagoworks = congelato, vetrina servizio.
+**Struttura:** Jacopo = volto del processo (profilo IG personale) · @inversorome (handle preso il 29/07/2026) = risultato/drop · Jago = modello virtuale dei lookbook · @jagoworks = congelato, vetrina servizio.
 **Marketing:** skill `/inverso-marketing` (strategia) + copywriting/psychology/social/product-marketing/marketing-ideas (globali, coreyhaines31). Contesto letto da tutte: `.agents/marketing-context.md`.
 **Servizi (Lookbook AI, Idea→Campione):** solo dopo il Drop 1.
 
@@ -62,5 +62,6 @@ Per documentazione personale o stato progetti non in repo, usare il MCP Notion.
 
 - Remote: github.com/jacopogrossi-arch/jackss-hq — branch `master`
 - Commit e push dopo ogni unità di lavoro significativa.
+- **Doppio salvataggio:** oltre al push su GitHub, aggiornare anche Notion (Jackss HQ, via MCP) con lo stato di avanzamento a fine di ogni unità di lavoro.
 - Stage per filename, non `git add -A`.
 - Commit messages: imperativo, cosa è cambiato e perché.
