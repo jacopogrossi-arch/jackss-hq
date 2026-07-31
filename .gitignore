@@ -24,5 +24,5 @@ uv.exe
 uvw.exe
 uvx.exe
 
-# Materiale didattico riservato (slide docenti) - solo locale
-archivio/dispensa-ragioneria/pdf-fonte/
+# Materiale didattico riservato (slide docenti) - solo locale, mai su repo pubblico
+**/pdf-fonte/
