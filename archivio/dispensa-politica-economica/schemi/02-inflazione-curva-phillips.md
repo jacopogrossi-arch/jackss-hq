@@ -5,6 +5,7 @@
 ---
 
 **1. Definizione e misura dell'inflazione**
+
 - L'**inflazione** è un processo di aumento continuo e generalizzato del livello dei prezzi dei beni e servizi al consumo.
 - **Tasso di inflazione**: **π = ṗ = (variazione dei prezzi nell'unità di tempo) / (livello dei prezzi)**.
 - Un tasso del 10% annuo composto per 10 anni porta un prezzo di 100€ a 259€ (non 200€: è un tasso di crescita composto, non lineare).
@@ -26,6 +27,7 @@
 | **Da aspettative** | I lavoratori/imprese incorporano l'inflazione attesa nelle richieste salariali/nei prezzi, alimentando l'inflazione effettiva (vedi curva di Phillips aumentata, punto 6) |
 
 **3. Il principio del costo pieno e l'inflazione come conflitto distributivo**
+
 - Ipotesi: mercati non concorrenziali → le imprese sono **price-maker**.
 - Le imprese fissano il prezzo come costo del lavoro per unità di prodotto (**CLUP** = w/θ) più un **mark-up** (1+g):
 
@@ -36,9 +38,11 @@
   **π = ṗ = ẇ − θ̇ + (1+g)˙**
 
   (ẇ = crescita salari nominali, θ̇ = crescita produttività, (1+g)˙ = variazione del mark-up)
+
 - L'inflazione nasce dal **conflitto distributivo** tra imprese (che vogliono il mark-up) e sindacati (che vogliono il salario reale w/p) sulla ripartizione del reddito.
 
 **4. Salario reale, PIL reale/nominale, quota salari**
+
 - **Salario reale** = w/p (potere d'acquisto del salario nominale w).
 - **PIL nominale** = pY (valore a prezzi correnti); **PIL reale** = Y (valore a prezzi costanti, "quantità"); **deflatore del PIL** = PIL nominale/PIL reale.
 - Due categorie di reddito: lavoratori e percettori di profitto → **pY = W + PR**, con **W = wN** (reddito da lavoro = salario nominale × occupati).
@@ -61,6 +65,7 @@
   - Esempi italiani: 1984 predeterminazione della "scala mobile" (per bloccare la spirale salari-inflazione); 1993 aumenti salariali basati su inflazione programmata + contrattazione di secondo livello.
 
 **6. La curva di Phillips (originaria)**
+
 - Relazione empirica tra tasso di disoccupazione u e tasso di variazione dei **salari monetari** ẇ (Phillips, dati UK 1861-1957):
 
   **ẇ = γ(u)**
@@ -68,6 +73,7 @@
 - Curva decrescente e convessa. **uN (o u\*)** = tasso di disoccupazione naturale: al di sotto le imprese offrono salari più alti per attirare lavoratori (ẇ>0), al di sopra i salari ristagnano o scendono.
 
 **7. La curva di Phillips "menù di scelta" (Samuelson-Solow)**
+
 - Sostituendo ẇ = γ(u) nell'equazione del costo pieno (π = ẇ − θ̇ + (1+g)˙) si ottiene:
 
   **π = γ(u) − θ̇ + (1+g)˙**
@@ -76,6 +82,7 @@
 - La scelta ottimale è nel punto di tangenza tra il vincolo (CdP) e la funzione obiettivo del policymaker (curve di indifferenza tra i due "mali" inflazione e disoccupazione) — collegato alla **regola aurea di Tinbergen**: se n. strumenti < n. obiettivi non tutti gli obiettivi sono raggiungibili contemporaneamente; si rinuncia a qualche obiettivo, si aggiungono strumenti, o si passa a "obiettivi flessibili" (funzione di perdita da minimizzare).
 
 **8. Curva di Phillips aumentata dalle aspettative (Friedman-Phelps, 1968)**
+
 - La relazione non è stabile nel **lungo periodo** perché trascura l'**inflazione attesa** πᵉ:
 
   **πt = γ(u) + πᵉt**
@@ -85,15 +92,18 @@
   - u < uN → π > πᵉ (l'economia "surriscalda")
   - u = uN → π = πᵉ (equilibrio, aspettative corrette)
   - u > uN → π < πᵉ
+
 - Con λ=1 (caso limite): πᵉt = π(t-1). Se u resta stabilmente sotto u\*, l'inflazione **accelera** periodo dopo periodo invece di stabilizzarsi (vedi esercizio tipo).
 
 ![Curva di Phillips di breve periodo e spostamento con le aspettative](../grafici/curva-phillips.svg)
 
 **9. Perché in concorrenza perfetta non c'è disoccupazione volontaria**
+
 - In concorrenza perfetta il salario è determinato dall'incontro tra domanda e offerta di lavoro: al salario di equilibrio, domanda e offerta di lavoro coincidono e chi vuole lavorare a quel salario trova impiego.
 - Non essendoci rigidità di prezzi/salari né potere di mercato, non si generano eccessi di offerta di lavoro persistenti: eventuale disoccupazione osservata sarebbe solo frizionale/di breve aggiustamento, non "involontaria" nel senso di lavoratori disposti a lavorare al salario vigente ma esclusi dal mercato. La disoccupazione involontaria richiede invece imperfezioni di mercato (salari rigidi verso il basso, potere contrattuale, informazione imperfetta, principio del costo pieno con price-maker) — è per questo che nei modelli con conflitto distributivo (punto 3) e nella curva di Phillips esiste un uN "naturale" positivo anche in equilibrio.
 
 **10. Modello AD-AS: inflazione da domanda vs da costi (rappresentazione grafica)**
+
 - Assi: prezzo p (verticale), reddito/output Y (orizzontale). AD inclinata negativamente, AS inclinata positivamente (o verticale nel lungo periodo).
 - **Inflazione da domanda**: la curva **AD si sposta a destra** (più domanda aggregata) → nuovo equilibrio con **p più alto e Y più alto** lungo la stessa AS.
 - **Inflazione da costi/offerta**: la curva **AS si sposta a sinistra/verso l'alto** (costi di produzione più alti o shock di offerta negativo) → nuovo equilibrio con **p più alto ma Y più basso**.
@@ -102,11 +112,13 @@
 ![Modello AD-AS: inflazione da domanda vs da costi](../grafici/ad-as-inflazione.svg)
 
 **11. Perché la deflazione è dannosa**
+
 - La deflazione (prezzi in calo continuo) non è il semplice "specchio" positivo dell'inflazione:
   - i consumatori rinviano gli acquisti aspettandosi prezzi ancora più bassi in futuro → crollo della domanda aggregata, che alimenta ulteriore deflazione (spirale deflattiva);
   - il valore reale dei debiti **aumenta** (effetto opposto rispetto all'inflazione) → aggrava la posizione dei debitori, può portare a insolvenze e instabilità finanziaria;
   - i salari nominali sono rigidi verso il basso, quindi un aggiustamento via deflazione genera più facilmente disoccupazione invece che riduzione ordinata dei salari reali;
   - la politica monetaria convenzionale perde efficacia (rischio di tassi di interesse reali troppo alti anche con tassi nominali a zero — "trappola della liquidità").
+
 - In sintesi: la deflazione redistribuisce ricchezza dai debitori ai creditori (opposto dell'inflazione non attesa) e deprime la domanda, con effetti recessivi che si autoalimentano.
 
 **12. Chi è danneggiato dall'inflazione**

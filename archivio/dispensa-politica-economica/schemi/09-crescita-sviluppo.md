@@ -29,6 +29,7 @@
 - **Output gap (OG)**: scostamento tra PIL effettivo e potenziale.
   - **OG = Y − Y_p** (in livello) oppure **OG = (Y − Y_p)/Y_p** (in %)
   - **Y > Y_p** → fase di espansione; **Y < Y_p** → recessione.
+
 - **Tasso di crescita γ**: variazione percentuale del PIL reale tra due periodi: **γ = (Y_t − Y_{t-1}) / Y_{t-1}**. Obiettivo di politica economica: **γ > 0** (crescita); stagnazione/recessione = problemi da correggere.
 
 ## 3. **Crescita economica vs sviluppo — la distinzione chiave**
@@ -50,13 +51,14 @@
 ## 5. **I limiti del PIL come misura del benessere**
 
 - Il PIL è solo una misura **approssimativa** del benessere economico, che a sua volta è solo una misura approssimativa della qualità della vita complessiva. In sintesi non registra:
-  1. il **deprezzamento del capitale prodotto** (non sottrae l'usura degli impianti)
-  2. l'**impoverimento del capitale naturale** (risorse esaurite non sono un costo)
-  3. non distingue tra prodotti "buoni" e "cattivi": misura allo stesso modo beni utili e dannosi (es. armi), o eventi e i loro rimedi (incidenti stradali e produzione di automobili)
-  4. include le **spese difensive** (spese fatte solo per sanare un danno, es. disinquinamento) come se fossero valore aggiunto
-  5. non valuta **danni ed effetti di lungo periodo**
-  6. non dice se i beni prodotti soddisfano **bisogni/diritti fondamentali** (cibo, medicine, vestiti) per chi non ne ha abbastanza
-  7. non contabilizza l'**economia sommersa** (lavoro domestico/informale, autoconsumo, attività illegale)
+    1. il **deprezzamento del capitale prodotto** (non sottrae l'usura degli impianti)
+    2. l'**impoverimento del capitale naturale** (risorse esaurite non sono un costo)
+    3. non distingue tra prodotti "buoni" e "cattivi": misura allo stesso modo beni utili e dannosi (es. armi), o eventi e i loro rimedi (incidenti stradali e produzione di automobili)
+    4. include le **spese difensive** (spese fatte solo per sanare un danno, es. disinquinamento) come se fossero valore aggiunto
+    5. non valuta **danni ed effetti di lungo periodo**
+    6. non dice se i beni prodotti soddisfano **bisogni/diritti fondamentali** (cibo, medicine, vestiti) per chi non ne ha abbastanza
+    7. non contabilizza l'**economia sommersa** (lavoro domestico/informale, autoconsumo, attività illegale)
+
 - In sintesi, i **limiti principali del PIL come indicatore di benessere**:
   - **il reddito non è un buon indice di sviluppo** (non informa sulla distribuzione)
   - **non considera beni pubblici ed esternalità** (mancano i relativi mercati)
@@ -80,9 +82,11 @@ Tre categorie di intervento pubblico, distinte per obiettivo:
 - **Politiche per la crescita economica** (agiscono sul **lato dell'offerta**):
   - politica **industriale** (R&D) → aumenta la **produttività**
   - politica per l'**istruzione** → accumula **capitale umano**
+
 - **Politiche di stabilizzazione** (agiscono sulla **domanda**, per ridurre l'output gap e le fluttuazioni cicliche):
   - politica **fiscale**
   - politica **monetaria**
+
 - **Politiche per lo sviluppo (sostenibile)** (obiettivo più ampio del solo PIL):
   - politica **ambientale**
   - politica **sanitaria**
@@ -98,6 +102,7 @@ Tre settori produttivi: Agricoltura (produzione 200, consumi intermedi 50), Indu
 - I tre metodi devono dare **lo stesso risultato** (identità contabile): quello che è prodotto = quello che è speso = quello che è distribuito come reddito.
 
 **PIL nominale vs reale — esempio**: un paese produce pane e automobili.
+
 - 2020 (anno base): pane 2€×1000=2.000€; auto 10.000€×10=100.000€ → **PIL 2020 = 102.000€**
 - 2025: pane 2,50€×1100=2.750€; auto 12.000€×12=144.000€ → **PIL nominale 2025 = 146.750€**
 - **PIL reale 2025 (a prezzi 2020)** = 2€×1100 + 10.000€×12 = **122.200€**

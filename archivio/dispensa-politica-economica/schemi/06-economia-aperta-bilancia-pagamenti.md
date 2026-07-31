@@ -1,6 +1,7 @@
 # Economia aperta, bilancia dei pagamenti e modello IS-LM-BP
 
 **Domande d'esame collegate:**
+
 - Modello IS-LM-BP completo (dato esempio: C=0,7Y consumo, I=600-400i investimenti, G=380 spesa pubblica, M=0,1Y importazioni, X=320 esportazioni, Ld=0,25Y+500-1000i domanda di moneta): calcolo del reddito di equilibrio, del saldo della bilancia commerciale, della domanda di moneta transattiva
 - Da una tabella con Export/Import/Movimenti di capitale: calcolo della variazione delle riserve ufficiali e del suo effetto sulla base monetaria
 
@@ -36,6 +37,7 @@
 - **Semplificando** (CK=0): **BP = CC + MK**, e questo saldo corrisponde algebricamente alla **variazione delle riserve ufficiali** (RU) cambiata di segno.
   - Disavanzo di BP → RU diminuiscono
   - Avanzo di BP → RU aumentano (→ creazione di base monetaria, BM)
+
 - Logica macro: se X>M (esportazioni > importazioni), allora Y>C+I, cioè S>I: l'equilibrio richiede che il risparmio in eccesso trovi sbocco all'estero (deflusso di capitali).
 
 **4. Il tasso di cambio**
@@ -93,6 +95,7 @@ condizione di **non arbitraggio**: il rendimento atteso di un'attività in valut
 - Un deprezzamento del cambio (↓e) ha due effetti opposti:
   - fa **aumentare le quantità** esportate e ridurre quelle importate → CC>0 (effetto quantità)
   - **riduce il prezzo in valuta estera** delle esportazioni ($p_x e$) → CC<0 (effetto prezzo)
+
 - L'effetto complessivo è positivo solo se prevale l'effetto quantità, cioè se c'è sufficiente elasticità delle quantità al cambio:
 $$|\varepsilon_x| + |\varepsilon_m| > 1 \quad \text{(condizione di Marshall-Lerner)}$$
 dove $\varepsilon_x$ = elasticità delle esportazioni al cambio, $\varepsilon_m$ = elasticità delle importazioni al cambio.
@@ -109,15 +112,18 @@ dove $\varepsilon_x$ = elasticità delle esportazioni al cambio, $\varepsilon_m$
 - Strumenti del protezionismo:
   - **Tariffario**: **dazi** (imposta sui beni importati, genera gettito fiscale)
   - **Non tariffario**: **contingenti** (limiti fisici/di valore alle importazioni), regolamentazioni, sussidi alle esportazioni, svalutazione competitiva del cambio
+
 - **Effetti di un dazio** (prezzo internazionale invariato, ipotesi paese "piccolo"): il prezzo interno sale da p a $p(1+d)$ →
   - effetto consumo: -↓ consumo interno
   - effetto produzione: +↑ produzione interna
   - effetto importazione: ↓ importazioni
   - effetto entrate fiscali: + gettito (importazioni residue × aliquota del dazio)
   - effetto redistribuzione: consumatori pagano un prezzo più alto (trasferimento verso i produttori interni e lo Stato)
+
 - Giustificazioni del protezionismo:
   - **Ragioni di scambio**: un dazio può spingere i produttori esteri a ridurre il prezzo al netto del dazio (*pricing to market*), migliorando la ragione di scambio $TT = \dfrac{p_x e}{p_m}$
   - **Industria nascente**: economie di scala dinamiche (*learning by doing*) — una protezione temporanea permette al paese nuovo entrante di ridurre i costi unitari fino a essere competitivo
+
 - **Attenzione**: rischio di **contromisure** — un paese protezionista può subire ritorsioni simmetriche dagli altri paesi.
 
 **10. Il modello Mundell-Fleming (IS-LM-BP)**
@@ -129,6 +135,7 @@ dove $\varepsilon_x$ = elasticità delle esportazioni al cambio, $\varepsilon_m$
   - Mercato dei beni → curva **IS**
   - Mercato della moneta → curva **LM**
   - Mercato estero (valutario/dei capitali) → curva **BP**
+
 - L'equilibrio generale del sistema è dato dall'**intersezione simultanea** di IS, LM e BP nel piano (Y, i).
 
 **Costruzione delle equazioni:**

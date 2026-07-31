@@ -1,6 +1,7 @@
 # Economia del benessere e teoria normativa della politica economica
 
 **Domande d'esame collegate:**
+
 - Data una tabella di utilità di 3 individui in 3 stati sociali diversi: individuare gli stati Pareto-efficienti; determinare la scelta collettiva secondo Funzione di Benessere Sociale (FBS) utilitarista, rawlsiana, e di Bergson-Samuelson (es. W=U1×U2); commentare i risultati.
 - Domanda teorica standalone: "Spiegate perché in presenza di mercati completi, un sistema di concorrenza perfetta raggiunge una situazione di ottimo paretiano" (Primo Teorema dell'economia del benessere).
 
@@ -14,6 +15,7 @@
   - **votazione a maggioranza** (rischia il **paradosso di Condorcet**: A batte B, B batte C, C batte A — nessun vincitore stabile; funziona solo se le preferenze sono **unimodali**, e allora vince l'alternativa dell'**elettore mediano**);
   - **Funzione di Benessere Sociale (FBS)**;
   - **criterio paretiano**.
+
 - Il **Teorema di impossibilità di Arrow** dice che non esiste una regola di aggregazione che soddisfi insieme transitività, monotonicità, indipendenza dalle alternative irrilevanti e non dittatorialità. Per aggirarlo, la FBS ammette **confronti interpersonali di utilità** (cosa che il criterio paretiano, basato su utilità ordinale, non fa).
 
 ---
@@ -26,11 +28,13 @@
   - Se lo stato B ha **tutte le utilità ≥** rispetto allo stato A e **almeno una strettamente >**, allora **B domina A** → A **non è Pareto-efficiente** (va scartato).
   - Se il confronto è **misto** (in un'utilità sale, in un'altra scende), i due stati **non sono confrontabili** con Pareto: restano **entrambi candidati efficienti**.
   - Uno stato è **Pareto-efficiente** se **nessun altro stato lo domina**.
+
 - **Limite cruciale**: il criterio paretiano fonda su utilità **ordinali e non confrontabili tra individui** → è **l'unico criterio "neutro"** (non richiede giudizi di valore sull'equità), ma proprio per questo:
   - **non tiene conto dell'equità** ("una situazione può essere di ottimo paretiano ed essere assolutamente disgustosa", Sen — es. A=(100,1000) vs B=(101,2000): B domina A ma è molto più diseguale, e Pareto non lo segnala);
   - **non dà un ordinamento completo**: più stati possono essere simultaneamente efficienti e reciprocamente non confrontabili (nessun criterio per scegliere tra loro);
   - **privilegia lo status quo** (serve un miglioramento paretiano stretto per giustificare un cambiamento);
   - è un criterio di efficienza **statico** (non dinamico/adattivo/innovativo).
+
 - Proprio per superare l'**incompletezza** dell'ordinamento paretiano, si introduce la **FBS**, che aggiunge un giudizio di valore su efficienza vs equità.
 
 ---
@@ -123,6 +127,7 @@ Quando questi presupposti vengono meno, il mercato **non riesce da solo a raggiu
 - I **criteri guida** dell'intervento pubblico sono due, spesso in tensione:
   - **Efficienza**: miglior utilizzo delle risorse scarse (massimo benessere collettivo aggregato).
   - **Equità**: distribuzione "giusta" del benessere.
+
 - Il ruolo dello Stato secondo **Musgrave (1959)**: (1) **allocare** efficientemente le risorse, (2) **redistribuire** la ricchezza, (3) **stabilizzare** il sistema economico.
 - La **teoria normativa** della politica economica studia come lo Stato **dovrebbe** intervenire (il decisore pubblico come *pianificatore sociale benevolo*) per perseguire i fini collettivi, scegliendo obiettivi e strumenti — a differenza della **teoria positiva**, che descrive con modelli come il sistema economico funziona di fatto (e della *political economy*, che descrive come i policy-maker si comportano realmente).
 - Il Secondo Teorema fornisce la **giustificazione teorica** per intervenire sul lato distributivo **senza sacrificare l'efficienza**: basta agire sulle dotazioni iniziali (via fiscalità/trasferimenti) e lasciare che il mercato allochi efficientemente a valle.

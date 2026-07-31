@@ -1,6 +1,7 @@
 # Concorrenza imperfetta, monopolio e politiche per la concorrenza
 
 **Domande d'esame collegate:**
+
 - Dato mercato con domanda P=20-2q, MC=3q: calcolo della perdita secca (deadweight loss) di monopolio
 - Domanda aperta applicata: caso antitrust reale (es. FTC vs Facebook/Instagram/WhatsApp) → discussione su politica della concorrenza
 - Dato mercato con domanda P=20-Q, costi TC=10q+16: verificare che sia un monopolio naturale, calcolare l'equilibrio di monopolio (prezzo, quantità, profitti), calcolare l'equilibrio in caso di mercato contendibile, calcolare la perdita del monopolista con regolamentazione P=MC
@@ -40,7 +41,8 @@ Metodo generale per una funzione di domanda lineare **P = a − bQ** e un costo 
 
 1. **Ricavo totale**: TR = P·Q = (a − bQ)·Q = aQ − bQ²
 2. **Ricavo marginale**: MR = dTR/dQ = a − 2bQ
-   - Regola pratica: il MR ha **la stessa intercetta** della domanda ma **pendenza doppia**
+    - Regola pratica: il MR ha **la stessa intercetta** della domanda ma **pendenza doppia**
+
 3. **Condizione di massimo profitto**: MR = MC → si risolve per **Q_M** (quantità di monopolio)
 4. **Prezzo di monopolio**: si sostituisce Q_M nella funzione di domanda → **P_M = a − bQ_M**
 5. **Profitto**: **π = TR(Q_M) − TC(Q_M) = P_M·Q_M − TC(Q_M)**
@@ -49,7 +51,7 @@ Metodo generale per una funzione di domanda lineare **P = a − bQ** e un costo 
 
 ## 5. **Perdita secca (deadweight loss) di monopolio**
 
-- Il monopolista pone R'=C' (MR=MC) e produce Q_M < Q_C (quantità concorrenziale, dove Domanda=MC)
+- Il monopolista pone MR=MC e produce Q_M < Q_C (quantità concorrenziale, dove Domanda=MC)
 - **In monopolio il surplus totale è inferiore rispetto al mercato concorrenziale**: esistono scambi mutualmente vantaggiosi non realizzati tra Q_M e Q_C
 - Il triangolo compreso tra Q_M, Q_C e la curva di domanda/offerta è la **perdita secca (DWL)**
 
@@ -97,6 +99,7 @@ Metodo generale per una funzione di domanda lineare **P = a − bQ** e un costo 
   - USA: Sherman Act (1890), Clayton Act (1914)
   - Europa: Trattato di Roma (1957) e Amsterdam (1997), TFUE artt. 101-109, Merger Regulation 139/2004
   - Italia: legge 287/90, ricalca la normativa europea
+
 - **Impresa pubblica** (nazionalizzazione): rinuncia all'obiettivo di massimo profitto per perseguire finalità pubbliche (efficienza in monopolio naturale, sviluppo di un settore); criticata per carenze manageriali (relazione **agente-principale**) e clientelismo
 - **Regolamentazione**: controllo diretto tramite regole (entrata, concorrenza effettiva, tariffe/prezzi)
 
@@ -125,7 +128,7 @@ Metodo generale per una funzione di domanda lineare **P = a − bQ** e un costo 
 
 ## 10. **Cenni di politica antitrust — casi applicati da conoscere**
 
-- **FTC vs Facebook (2020)**: la FTC ha citato in giudizio Meta/Facebook per monopolizzazione illegale, contestando in particolare le acquisizioni "predatorie" di Instagram e WhatsApp come strategia per eliminare concorrenti emergenti (*buy or bury*) e mantenere la posizione dominante nei social network personali. Rimedio proposto: la separazione (divestiture) di Instagram e WhatsApp da Facebook. Domanda aperta tipica: discutere se la vendita di Instagram e WhatsApp migliorerebbe il benessere sociale (argomenti pro: più concorrenza, meno barriere per nuovi entranti, prezzo pubblicitario più basso; argomenti contro: perdita di sinergie/economie di scala e di rete, possibili minori investimenti in sicurezza/qualità).
+- **FTC vs Facebook (2020)**: la FTC ha citato in giudizio Meta/Facebook per monopolizzazione illegale, contestando in particolare le acquisizioni "predatorie" di Instagram e WhatsApp come strategia per eliminare concorrenti emergenti (*buy or bury*) e mantenere la posizione dominante nei social network personali. Rimedio proposto: la separazione (divestiture) di Instagram e WhatsApp da Facebook — causa tuttora in corso/in contenzioso, non un caso concluso. Domanda aperta tipica: discutere se la vendita di Instagram e WhatsApp migliorerebbe il benessere sociale (argomenti pro: più concorrenza, meno barriere per nuovi entranti, prezzo pubblicitario più basso; argomenti contro: perdita di sinergie/economie di scala e di rete, possibili minori investimenti in sicurezza/qualità).
 - **AGCM vs Google (istruttoria 2023)**: caso italiano di presunto abuso di posizione dominante, chiuso con impegni (commitments) accettati da Alphabet. Da collegare ai concetti di **posizione dominante** e **interoperabilità**.
 - Schema logico da usare per rispondere a una domanda aperta di questo tipo: (1) individuare il mercato rilevante, (2) verificare l'esistenza di posizione dominante, (3) individuare la condotta abusiva/anticompetitiva contestata, (4) valutare il rimedio proposto (comportamentale o strutturale) rispetto all'effetto sul benessere sociale (SC+SP), citando esplicitamente il trade-off tra maggiore concorrenza e perdita di eventuali economie di scala/rete.
 
@@ -167,6 +170,7 @@ DWL = ∫ da q_M a q_C di (20 − 5q) dq = [20q − 2,5q²] da 20/7 a 4 = 40 −
 
 **Passo 1 — Verifica che sia un monopolio naturale**
 Costo medio totale: ATC = TC/q = 10 + 16/q
+
 - ATC è **decrescente** al crescere di q (per la presenza del costo fisso 16 spalmato su più unità) e **sempre superiore al MC = 10**
 - Un'unica impresa produce a costo medio inferiore rispetto a due imprese che si dividano la stessa quantità totale (i costi fissi si duplicherebbero) → il costo è **subadditivo**
 → Si conferma che si tratta di un **monopolio naturale**
@@ -183,6 +187,7 @@ Si impone P = ATC, cioè si cerca l'intersezione tra Domanda e ATC:
 20 − Q = 10 + 16/Q
 Moltiplicando per Q: 20Q − Q² = 10Q + 16 → Q² − 10Q + 16 = 0
 Risolvendo: Q = [10 ± √(100 − 64)] / 2 = (10 ± 6) / 2 → **Q = 2 oppure Q = 8**
+
 - A Q = 2: P = 18 (ATC = 10+16/2 = 18) → ma non è un equilibrio stabile: per quantità intermedie (es. Q=5) il prezzo di domanda (15) è superiore all'ATC (13,2), quindi un entrante potrebbe inserirsi con un prezzo più basso e restare comunque profittevole → questo punto viene "eroso" dalla contendibilità
 - A **Q = 8**: P = 12 (ATC = 10+16/8 = 12) → oltre Q=8 il prezzo di domanda scende sotto l'ATC (non profittevole), quindi nessun entrante trova conveniente espandersi oltre → questo è l'equilibrio **stabile (hit-and-run-proof)**
 

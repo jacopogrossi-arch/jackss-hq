@@ -22,6 +22,7 @@
 **Attenzione al denominatore**: attività e occupazione hanno come denominatore la **popolazione** (Pop15+), la disoccupazione ha come denominatore la **forza lavoro** (FL), non la popolazione totale — errore tipico da evitare.
 
 **Evidenza empirica (dati OECD/Eurostat citati a lezione)**:
+
 - In tutti i paesi UE il tasso di attività femminile è inferiore a quello maschile (Italia 2021: uomini 73,6%, donne 55,4%, totale 64,5% — tra i divari più ampi in Europa).
 - Le donne lavorano mediamente meno ore, in settori meno retribuiti e in posizioni di rango inferiore → divari retributivi di genere, dovuti sia a ruoli sociali radicati sia a incentivi economici.
 - La disoccupazione giovanile (15-24 anni) è sistematicamente più alta di quella adulta (25-74) in tutti i paesi OECD, con Italia tra i valori più elevati.
@@ -62,6 +63,7 @@ Seconda distinzione, per **causa** (classificazione Treccani):
 - **Visione 1 (mercato concorrenziale)**
   - Causa: cattivo funzionamento del mercato del lavoro, ostacoli all'incontro domanda-offerta, "difetto" di concorrenza.
   - Rimedio: **politiche attive** (servizi/misure per l'inserimento/reinserimento e l'occupabilità) + politiche per la concorrenza.
+
 - **Visione 2 (Keynes, domanda aggregata)**
   - Causa: debolezza della domanda aggregata di beni (ridotta capacità di spesa di consumatori e imprese).
   - Rimedio: **politiche passive** (sostegno alla capacità di spesa di chi perde il lavoro) + politiche di domanda (fiscali/monetarie).
@@ -82,6 +84,7 @@ Seconda distinzione, per **causa** (classificazione Treccani):
 ## **Esercizio tipo svolto**
 
 **Dati (tipo censimento):**
+
 - Popolazione in età lavorativa: Pop₁₅₊ = 120
 - Occupati: N = 100
 - Disoccupati: U = 10

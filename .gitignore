@@ -26,3 +26,6 @@ uvx.exe
 
 # Materiale didattico riservato (slide docenti) - solo locale, mai su repo pubblico
 **/pdf-fonte/
+
+# HTML intermedio di build (derivato da build_pdf.py, non serve tracciarlo)
+archivio/dispensa-politica-economica/DISPENSA_COMPLETA.html

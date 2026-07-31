@@ -18,9 +18,10 @@
 - **Reddito disponibile = reddito di mercato + trasferimenti − tasse.**
 - **Curva di Lorenz**: quota cumulata di reddito (asse y) vs quota cumulata di popolazione (asse x); coincide con la bisettrice in caso di perfetta uguaglianza.
 - **Indice di Gini**: **G = A / (A+B) = 2A**, con A = area tra bisettrice e curva di Lorenz, A+B = area del triangolo sotto la bisettrice. Varia da 0 (uguaglianza) a 1 (disuguaglianza massima).
+- Il Gini dei redditi **di mercato** è generalmente più alto di quello dei redditi **disponibili**: l'intervento pubblico (tasse + trasferimenti) riduce la disuguaglianza.
 
 ![Curva di Lorenz e indice di Gini](../grafici/lorenz-gini.svg)
-  - Il Gini dei redditi **di mercato** è generalmente più alto di quello dei redditi **disponibili**: l'intervento pubblico (tasse + trasferimenti) riduce la disuguaglianza.
+
 - **Povertà assoluta**: soglia da un paniere di beni/servizi essenziali (definita da Istat in Italia).
 - **Povertà relativa**: soglia UE = **60% della mediana** del reddito disponibile equivalente (in Italia, famiglia di 2 persone ≈ 1.218 €/mese nel 2024; incidenza ≈ 10,9% delle famiglie).
 - **Top incomes**: quota di reddito del top 10%/1% — trend a U (paesi anglosassoni) o a L (Europa continentale), in calo dal dopoguerra e in risalita dagli anni '80-'90.
@@ -67,6 +68,7 @@
   - **Reddito di partecipazione**: condizionato ad attività a favore della società.
   - **Reddito di cittadinanza**.
   - Criticità comuni: costo del finanziamento, verifica requisiti, stigma sociale.
+
 - **Politiche abitative**: edilizia pubblica/social housing, incentivi fiscali prima casa, sussidi affitto, regole su sfratti/morosità.
 - **Politiche per la famiglia**: sostegno al costo dei figli (asili nido, trasferimenti), congedi familiari, cura degli anziani, sostegno a maternità/paternità.
 
@@ -76,12 +78,14 @@
 - Base normativa: **art. 37 Cost.** (parità di retribuzione a parità di lavoro) e **art. 157 TFUE** (parità retributiva UE, anche per lavoro di pari valore).
 - **Gender Pay Gap (GWG)**: differenza tra retribuzione oraria lorda media maschile e femminile, in % della retribuzione maschile.
   - **GWG = (Wm − Wf) / Wm**
+
 - Nella UE il gap medio "grezzo" (unadjusted) è intorno al 12%, con forte eterogeneità tra paesi.
 - Questioni di misurazione: media vs mediana; retribuzione oraria (isola l'effetto ore lavorate) vs mensile (riflette anche differenze di orario/part-time).
 - **Divario "ponderato per fattori"** (ILO): si confrontano sottogruppi omogenei per istruzione, età/esperienza, tempo pieno/part-time, pubblico/privato, poi si aggrega.
 - **Scomposizione di Blinder-Oaxaca (1973)**, basata sull'equazione dei salari di Mincer: separa il gap in
   - **componente spiegata** (differenze osservabili: istruzione, esperienza, settore, ecc.)
   - **componente non spiegata** (differenza nei "rendimenti" delle stesse caratteristiche → possibile indicatore di **discriminazione**)
+
 - Fattori Eurostat che alimentano il gap: interruzioni di carriera (91% prese da donne), squilibrio nei ruoli dirigenziali (uomini 65% dei manager), part-time (75% donne), segregazione occupazionale (donne 73% in istruzione/sanità/assistenza, settori a paga più bassa).
 
 ## 7. **Politiche per le pari opportunità (Italia e UE)**
@@ -89,8 +93,9 @@
 - **Pari opportunità**: principio giuridico di eliminazione di ogni ostacolo discriminatorio (sesso, razza, religione, disabilità, età, orientamento sessuale) nell'accesso a risorse e opportunità.
 - Base costituzionale italiana: **art. 3** (uguaglianza formale e sostanziale), **art. 37** (parità retributiva lavoratrice/lavoratore), **art. 51** (parità di accesso a uffici pubblici e cariche elettive, revisione 2003), **art. 31** (tutela maternità e famiglia).
 - **Direttiva UE sulla trasparenza salariale** (adottata 24/4/2023), quattro assi:
-  1. **Accesso alle informazioni** (stipendio dichiarato negli annunci, divieto di chiedere storia retributiva ai candidati).
-  2. **Obbligo di segnalazione** (aziende >250 dipendenti riferiscono annualmente; se gap >5% ingiustificato, misure correttive obbligatorie).
-  3. **Accesso alla giustizia** (risarcimento, inversione dell'onere della prova a carico del datore).
-  4. **Discriminazione intersezionale** inclusa per la prima volta nell'ambito di applicazione.
+    1. **Accesso alle informazioni** (stipendio dichiarato negli annunci, divieto di chiedere storia retributiva ai candidati).
+    2. **Obbligo di segnalazione** (aziende >250 dipendenti riferiscono annualmente; se gap >5% ingiustificato, misure correttive obbligatorie).
+    3. **Accesso alla giustizia** (risarcimento, inversione dell'onere della prova a carico del datore).
+    4. **Discriminazione intersezionale** inclusa per la prima volta nell'ambito di applicazione.
+
 - Piano italiano (pariopportunita.gov.it): target ridurre gender pay gap privato dal ~17% al ~10%, per i laureati dal ~22% a <15%; misure principali: definizione normativa del GPG, sistemi di misurazione dell'equal pay aziendale, policy di genere per le imprese, incremento indennità congedi parentali, microcredito per donne a basso reddito/vittime di violenza/madri sole, riduzione del pension gap da maternità.

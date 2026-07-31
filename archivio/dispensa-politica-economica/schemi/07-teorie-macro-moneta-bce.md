@@ -48,6 +48,7 @@
   - **Lungo periodo**: la politica monetaria non ha effetti reali, solo sui prezzi (**neutralità della moneta**). Curva di Phillips **verticale** al tasso naturale di disoccupazione.
   - **Breve periodo**: per illusione monetaria, effetti temporanei; curva di Phillips corretta per le aspettative inclinata negativamente.
   - **"Regola semplice"**: l'offerta di moneta deve variare quanto il reddito reale, per garantire la stabilità dei prezzi.
+
 - La **politica fiscale è inefficace** (spiazzamento finanziario totale con prezzi flessibili e reddito di piena occupazione).
 
 ## 6. **La Nuova Macroeconomia Classica (nuovi classici)**
@@ -55,6 +56,7 @@
 - Due ipotesi fondamentali:
   - **Aspettative razionali**: gli agenti sfruttano tutta l'informazione disponibile, aspettative "corrette in media" (errori non prevedibili).
   - **Prezzi perfettamente flessibili**: mercati in equilibrio istantaneo.
+
 - La disoccupazione può essere **solo volontaria**: il prodotto sale sopra il livello naturale solo per un aumento *imprevisto* dei prezzi.
 - Politiche (fiscali/monetarie) **imprevedibili** → efficacia temporanea; politiche **prevedibili** → effetti solo sui prezzi (curva di Phillips **verticale anche nel breve periodo**).
 - **Neutralità/invarianza della politica economica**: incapace di influenzare reddito e disoccupazione anche nel breve periodo (se anticipata).
@@ -91,11 +93,12 @@
 - **Canale monetario** (implicito in IS-LM): con prezzi rigidi, variazioni della quantità nominale di moneta hanno effetti reali immediati sui tassi di interesse reali, e attraverso questi sulla domanda aggregata.
 - **Canale creditizio**: sottolinea asimmetrie informative e imperfezioni dei mercati finanziari; altri meccanismi legati a variazioni del credito bancario.
 - **Cinque circuiti/canali di trasmissione** (dettaglio):
-  1. **Tassi d'interesse**: ↑M → ↓i → ↓r → ↑I,C → ↑Y (ostacolo: trappola della liquidità)
-  2. **Tassi di cambio**: ↑M → ↓i → ↓e → ↑NX → ↑Y (economia aperta)
-  3. **Prezzo delle attività finanziarie**: ↑M → ↑P_attività → ↑ricchezza/garanzie → ↑I,C → ↑Y
-  4. **Prestito bancario**: ↑M → ↑Depositi → ↑prestiti bancari → ↑I,C → ↑Y
-  5. **Condizioni di credito**: variazioni di garanzie/cash flow/patrimonio influenzano la selezione avversa e l'azzardo morale, quindi la disponibilità di credito
+    1. **Tassi d'interesse**: ↑M → ↓i → ↓r → ↑I,C → ↑Y (ostacolo: trappola della liquidità)
+    2. **Tassi di cambio**: ↑M → ↓i → ↓e → ↑NX → ↑Y (economia aperta)
+    3. **Prezzo delle attività finanziarie**: ↑M → ↑P_attività → ↑ricchezza/garanzie → ↑I,C → ↑Y
+    4. **Prestito bancario**: ↑M → ↑Depositi → ↑prestiti bancari → ↑I,C → ↑Y
+    5. **Condizioni di credito**: variazioni di garanzie/cash flow/patrimonio influenzano la selezione avversa e l'azzardo morale, quindi la disponibilità di credito
+
 - **Tempi**: la politica monetaria agisce con ritardi lunghi e variabili — 6 mesi/1 anno per le variabili reali, 1-2 anni per l'inflazione. La politica restrittiva è generalmente più efficace di quella espansiva ("il cavallo e l'acqua").
 
 ## 11. **Strumenti della BCE**
@@ -104,6 +107,7 @@
   - **Operazioni di mercato aperto (OMA)**: acquisti/vendite di titoli, definitive o temporanee (pronti contro termine); MRO (1 settimana) e LTRO (3 mesi) sono le principali operazioni di rifinanziamento.
   - **Standing facilities**: a discrezione delle controparti — rifinanziamento marginale (tasso più alto, tetto del corridoio) e deposito marginale (tasso più basso, pavimento del corridoio); i tassi interbancari overnight fluttuano dentro questo corridoio.
   - **Riserva obbligatoria minima** (1% dei depositi): variando il coefficiente la BC cambia la liquidità disponibile alle banche; remunerata al tasso medio delle MRO nel periodo di mantenimento.
+
 - **Strumenti non convenzionali** (adottati dalla crisi 2008 in poi, ormai "convenzionali" anch'essi):
   - **Programmi di acquisto di attività (QE)**: APP, PEPP — obiettivo: rompere la trappola della liquidità, portare liquidità oltre le banche fino a mercati finanziari e intermediari non bancari, abbassare i tassi a lungo termine, sostenere prezzi degli asset.
   - **Operazioni di rifinanziamento speciali**: LTRO, TLTRO (scadenze più lunghe, condizioni mirate al credito).

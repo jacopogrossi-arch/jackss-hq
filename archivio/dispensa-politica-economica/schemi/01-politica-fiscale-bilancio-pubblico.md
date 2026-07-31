@@ -1,6 +1,7 @@
 # Politica fiscale, bilancio pubblico e debito pubblico
 
 **Domande d'esame collegate:**
+
 - Calcolo del tasso di interesse che garantisce un rapporto debito/PIL costante, dati crescita PIL, inflazione, bilancio primario in pareggio
 - "Cosa afferma il teorema di Haavelmo?"
 - Da una tabella di conto economico della PA: calcolo di saldo corrente, indebitamento netto, saldo primario (% PIL), con commento
@@ -44,6 +45,7 @@
 - Se **T < G** (deficit): finanziamento tramite
   - emissione di titoli di debito pubblico (ΔB), oppure
   - creazione di base monetaria (ΔH) — **vietata nell'Unione Monetaria Europea**.
+
 - Identità di finanziamento: **G + INT − T = ΔH + ΔB**
 - Finanziamento con **base monetaria**: meno costoso (niente interessi), ma rischia inflazione ("tassa da inflazione": l'inflazione inattesa riduce il valore reale del debito a vantaggio del governo).
 - Finanziamento con **debito**: costoso (interessi), ma non genera direttamente inflazione.
@@ -96,6 +98,7 @@
 **Intuizione economica:** l'aumento di G ha un effetto espansivo pieno (moltiplicatore 1/(1−c)) sulla domanda aggregata. L'aumento di T ha un effetto restrittivo minore, pari a c/(1−c), perché riduce il reddito disponibile ma i consumatori assorbono solo una quota c della minore disponibilità (il resto avrebbe comunque un peso minore rispetto all'iniezione diretta di spesa pubblica, che si traduce in domanda al 100%). La somma netta dei due effetti è esattamente pari a ΔG.
 
 **Attenzione — vale solo con imposta in somma fissa.** Con imposta **proporzionale** (T = tY), il teorema **non vale più**:
+
 - Y = 1/(1−c(1−t)) · (I₀ + G)
 - ΔY = 1/(1−c(1−t)) · ΔG
 - ΔT = t·ΔY = t/(1−c(1−t)) · ΔG
@@ -105,14 +108,16 @@
 
 **6. Politica fiscale e mercato dei prestiti: la visione neoclassica**
 
-- Modello dei prestiti (equilibrio EEG, piena occupazione data): **S(r) = I(−r) + (G − T)**
- - S(r) = offerta di prestiti (risparmio delle famiglie, crescente in r)
- - I(−r) + (G−T) = domanda di prestiti (imprese + Stato)
+- Modello dei prestiti (equilibrio **EEG**, equilibrio economico generale, a piena occupazione data): **S(r) = I(−r) + (G − T)**
+    - S(r) = offerta di prestiti (risparmio delle famiglie, crescente in r)
+    - I(−r) + (G−T) = domanda di prestiti (imprese + Stato)
+
 - **Politica fiscale espansiva (↑G o ↓T) → effetto spiazzamento (crowding-out):**
- 1. ↑(G−T) → aumenta la domanda di prestiti da parte dello Stato
- 2. → aumenta il tasso di interesse reale r
- 3. → aumentano i risparmi, **diminuiscono C e I privati**
- 4. Nel nuovo equilibrio Y = Y* (invariato, perché piena occupazione), ma la quota di prodotto assorbita dallo Stato è cresciuta a scapito di quella privata: **la spesa pubblica sostituisce, non aggiunge, spesa privata**.
+    1. ↑(G−T) → aumenta la domanda di prestiti da parte dello Stato
+    2. → aumenta il tasso di interesse reale r
+    3. → aumentano i risparmi, **diminuiscono C e I privati**
+    4. Nel nuovo equilibrio Y = Y* (invariato, perché piena occupazione), ma la quota di prodotto assorbita dallo Stato è cresciuta a scapito di quella privata: **la spesa pubblica sostituisce, non aggiunge, spesa privata**.
+
 - Implicazioni di policy (visione 1 / neoclassica): contenere spesa pubblica e tassazione, evitare oscillazioni delle aliquote, limitare il ruolo della manovra di bilancio nella stabilizzazione. Condizione ideale: G − T = 0.
 
 ---
@@ -120,18 +125,21 @@
 **7. Politica fiscale nel modello reddito-spesa keynesiano e IS-LM**
 
 **Modello reddito-spesa (senza settore monetario), imposta in somma fissa:**
+
 - Y = C + I + G; C = c(Y−T); I = I₀ → **Y = 1/(1−c) · (I₀ + G − cT)**
 - **Moltiplicatore della spesa pubblica = 1/(1−c)** (con 0<c<1): un aumento di G si traduce in un aumento più che proporzionale di Y, perché la spesa iniziale genera reddito, che genera consumo aggiuntivo, che genera altro reddito, ecc. (↑I→↑Y→↑C→↑Y→↑C…)
 - In economia **aperta** e con imposta proporzionale il moltiplicatore si riduce: Y = 1/(1−c(1−t)+m) · (I₀+G+X₀) — le "fughe" verso tasse e importazioni indeboliscono l'effetto moltiplicativo.
 
 **Il modello IS-LM (integra il mercato dei beni con quello monetario):**
-- La curva **IS** rappresenta le combinazioni (Y, r) che equilibrano il mercato dei beni: Y = C(Y−T) + I(r) + G. È inclinata negativamente (r↑ → I↓ → Y↓).
-- La curva **LM** rappresenta le combinazioni (Y, r) che equilibrano il mercato della moneta (domanda di moneta = offerta data M/p). È inclinata positivamente (Y↑ → più domanda di moneta per transazioni → r deve salire per riequilibrare, a offerta di moneta data).
+
+- La curva **IS** rappresenta le combinazioni (Y, i) che equilibrano il mercato dei beni: Y = C(Y−T) + I(i) + G. È inclinata negativamente (i↑ → I↓ → Y↓). *(qui i = r, tasso di interesse — stessa variabile chiamata r nel modello dei prestiti sopra; da schema 07 in poi si usa sempre i)*
+- La curva **LM** rappresenta le combinazioni (Y, i) che equilibrano il mercato della moneta (domanda di moneta = offerta data M/p). È inclinata positivamente (Y↑ → più domanda di moneta per transazioni → i deve salire per riequilibrare, a offerta di moneta data).
 - **Efficacia della politica fiscale espansiva (↑G):**
- - La IS si sposta a destra (per ogni r, il livello di Y di equilibrio nel mercato dei beni è più alto).
- - Con LM invariata (politica monetaria **non accomodante**, offerta di moneta costante): il nuovo equilibrio si sposta lungo la LM verso l'alto a destra → **sia Y che r aumentano**.
- - L'aumento di Y è **minore** di quanto previsto dal moltiplicatore keynesiano "puro" (che si avrebbe a r costante), perché l'aumento di r **spiazza parzialmente gli investimenti privati** (↓I): questo è lo **spiazzamento finanziario (crowding-out)** — graficamente, la distanza tra lo spostamento "orizzontale" della IS (l'effetto moltiplicatore pieno, a r invariato) e lo spostamento effettivo di Y lungo la nuova LM misura esattamente il crowding-out.
- - Se invece la politica monetaria è **accomodante** (la Banca Centrale espande M in parallelo, spostando anche la LM a destra): r non sale (o sale meno), l'investimento privato non viene spiazzato, e l'aumento di Y è più vicino al pieno moltiplicatore keynesiano.
+    - La IS si sposta a destra (per ogni r, il livello di Y di equilibrio nel mercato dei beni è più alto).
+    - Con LM invariata (politica monetaria **non accomodante**, offerta di moneta costante): il nuovo equilibrio si sposta lungo la LM verso l'alto a destra → **sia Y che r aumentano**.
+    - L'aumento di Y è **minore** di quanto previsto dal moltiplicatore keynesiano "puro" (che si avrebbe a r costante), perché l'aumento di r **spiazza parzialmente gli investimenti privati** (↓I): questo è lo **spiazzamento finanziario (crowding-out)** — graficamente, la distanza tra lo spostamento "orizzontale" della IS (l'effetto moltiplicatore pieno, a r invariato) e lo spostamento effettivo di Y lungo la nuova LM misura esattamente il crowding-out.
+    - Se invece la politica monetaria è **accomodante** (la Banca Centrale espande M in parallelo, spostando anche la LM a destra): r non sale (o sale meno), l'investimento privato non viene spiazzato, e l'aumento di Y è più vicino al pieno moltiplicatore keynesiano.
+
 - Collegamento con la visione neoclassica: quando l'economia è già a piena occupazione (Y = Y_PO fisso, offerta rigida), l'aumento della domanda aggregata da politica fiscale non può tradursi in più Y reale e si scarica interamente sui tassi di interesse (o sui prezzi) → è il caso limite dello spiazzamento totale visto al punto 6.
 
 ![Espansione fiscale con crowding-out nel modello IS-LM](../grafici/is-lm-politica-fiscale.svg)

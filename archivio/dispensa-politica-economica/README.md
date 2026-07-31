@@ -2,8 +2,15 @@
 
 Costruita a partire dal materiale della professoressa (37 file in `pdf-fonte/`, esclusa da git) e da un'analisi dei compiti/esercitazioni passati per capire cosa viene davvero chiesto all'esame.
 
-## Come orientarsi
+## Come studiare da qui
 
+**`DISPENSA_COMPLETA.pdf`** — il documento unico da cui studiare: 75 pagine, indice cliccabile in prima pagina che rimanda a ogni capitolo, tutti gli schemi + formulario + glossario + mappa di priorità + i 9 grafici, in ordine di priorità. Generato da `build_pdf.py` (Python + Chrome headless — rilanciare lo script dopo qualsiasi modifica agli schemi per rigenerare il PDF).
+
+## Come orientarsi nei file sorgente
+
+- **`schemi/00c-mappa-priorita.md`** — vista d'insieme argomento → priorità → tipo di esercizio, prima di aprire la dispensa.
+- **`schemi/00b-glossario-simboli.md`** — i simboli (i, r, Q, MC, FBS, EEG...) usati in schemi diversi, fissati in un unico posto per evitare confusione.
+- **`schemi/00a-formulario.md`** — tutte le formule chiave per il ripasso last-minute, con rimando allo schema che le spiega.
 - **`schemi/`** — gli schemi di studio veri e propri, in ordine di priorità (numero crescente = priorità decrescente). Ogni schema ha in testa le domande d'esame reali collegate e chiude con un esercizio tipo svolto (dove pertinente).
 - **`grafici/`** — i grafici richiamati negli schemi (SVG disegnati a mano, non generati da AI, per garantire precisione su assi/curve/etichette): IS-LM con crowding-out, AD-AS domanda/costi, curva di Phillips, monopolio+perdita secca, monopolio naturale/contendibile, esternalità, Edgeworth/Pareto, Mundell-Fleming, Lorenz/Gini.
 - **`appunti-grezzi/`** — trascrizioni fedeli dei PDF sorgente, per argomento. Fonte per generare nuovi esercizi senza rileggere i PDF originali.

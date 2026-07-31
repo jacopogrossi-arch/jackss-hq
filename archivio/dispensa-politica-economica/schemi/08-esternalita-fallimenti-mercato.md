@@ -1,6 +1,7 @@
 # Esternalità e fallimenti di mercato
 
 **Domande d'esame collegate:**
+
 - Confronto tra equilibrio di concorrenza perfetta e quantità socialmente ottima in presenza di un'esternalità negativa (con valore numerico dato, es. costo esterno marginale = 10), rappresentato anche graficamente
 
 ---
@@ -10,6 +11,7 @@
 - Il mercato "fallisce" quando non riesce, da solo, a raggiungere l'allocazione **Pareto-efficiente**. Due macro-cause:
   - **A. Mancanza di concorrenza** (potere di mercato, monopolio, oligopolio)
   - **B. Mercati non completi**: 1) **esternalità**, 2) **beni pubblici**, 3) **asimmetrie informative / costi di transazione**
+
 - A questi si aggiungono, anche **in presenza di efficienza statica (paretiana)**: bisogni meritori, innovazione (efficienza dinamica), equità.
 - Argomento di questo schema: **esternalità** (tema centrale) + **cenni sintetici** su beni pubblici e informazione asimmetrica.
 
@@ -21,11 +23,13 @@
 - Se i diritti di proprietà **sono definiti** e **esiste un mercato**, si può raggiungere una produzione efficiente dell'esternalità; se **non sono definiti**, il mercato produce un livello **inefficiente**.
 
 **Esternalità negativa**
+
 - Chi la provoca causa un **danno** (diseconomia esterna): il costo per la collettività (costo esterno) è maggiore del costo privato sostenuto da chi agisce, ovvero il beneficio per la collettività è minore del beneficio privato.
 - Senza correttivi → **sovra-produzione** (se produzione) o **sovra-consumo** (se consumo) rispetto all'ottimo sociale.
 - Esempi: inquinamento da fabbrica chimica (produzione); guida in stato di ebrezza, fumo passivo, musica ad alto volume (consumo).
 
 **Esternalità positiva**
+
 - Chi la provoca determina un **vantaggio** (economia esterna): il beneficio per la collettività è maggiore del beneficio privato, ovvero il costo per la collettività è minore del costo privato.
 - Senza correttivi → **sotto-produzione** o **sotto-consumo** rispetto all'ottimo sociale.
 - Esempi: rimboschimento, nuovo aeroporto (produzione); trasporto pubblico, vaccinazione (consumo).
@@ -44,6 +48,7 @@
 ## 4. **Quantità socialmente ottima vs equilibrio di mercato — lettura grafica**
 
 **Caso esternalità negativa di produzione (divergenza sui costi, il caso più frequente in sede d'esame)**
+
 - Sul piano (Q, P): curva di **domanda (D = BMP = BMS)**, costo marginale privato **MC_P** crescente (= offerta di mercato), costo marginale sociale **MC_S = MC_P + CME** più in alto (traslato verso l'alto/sinistra).
 - **Equilibrio di concorrenza (punto A)**: intersezione D = MC_P → quantità **Q_CP**, prezzo **P_CP**.
 - **Ottimo sociale (punto C)**: intersezione D = MC_S → quantità **Q_OS < Q_CP**, prezzo **P_OS > P_CP**.
@@ -54,13 +59,16 @@
 ![Esternalità negativa: equilibrio privato vs ottimo sociale, con tassa pigouviana](../grafici/esternalita-negativa.svg)
 
 **Caso esternalità positiva di produzione (divergenza sui benefici)**
+
 - MB_S (= D + beneficio esterno) sta **sopra** la domanda privata D=MB_P.
 - Equilibrio di mercato Q_CP < Q_OS (ottimo sociale): il mercato produce **meno** del socialmente ottimo.
 
 **Caso esternalità negativa nel consumo**
+
 - MB_S sta **sotto** MB_P (il consumo genera un costo esterno): equilibrio di mercato Q_CP > Q_OS, stessa logica di sovra-consumo.
 
 **Caso esternalità positiva nel consumo**
+
 - MB_S = MB_P + beneficio esterno marginale, sta **sopra** MB_P: equilibrio di mercato Q_CP < Q_OS, sotto-consumo.
 
 ## 5. **Soluzioni classiche alle esternalità**
@@ -123,6 +131,7 @@
   - possibilità di **reazioni a catena** e **punti di non ritorno** ambientali (non linearità, irreversibilità)
   - necessità di **cooperazione internazionale** (nessun singolo paese può risolverlo da solo)
   - **complessità intergenerazionale**: le scelte di oggi determinano gli effetti subiti dalle generazioni future
+
 - **Rischio "a coda spessa" (Weitzman)**: esiste una probabilità non trascurabile di eventi estremi e catastrofici, anche se poco probabili → le politiche pubbliche non possono basarsi solo sullo scenario più probabile, ma devono considerare anche gli **scenari estremi**.
 - **Eterogeneità degli interessi**: gli impatti del cambiamento climatico variano molto **tra le nazioni** e **al loro interno**, in base alle condizioni economiche di paesi e individui → rende più difficile il coordinamento (si può leggere come un problema di **azione collettiva su scala globale**, affine alla tragedia dei beni comuni ma con giocatori = stati sovrani).
 - **Dimensione di giustizia**: non è solo una sfida ambientale ma anche una questione di **giustizia economica e intergenerazionale** — bilanciare gli interessi tra ricchi e poveri, produttori e consumatori, presente e futuro.
@@ -135,12 +144,14 @@
 **Dati**: Domanda inversa **P = 20 − 2q**; costo marginale privato **MC = 3q**; esternalità (costo esterno marginale, costante) **= 10**.
 
 **1. Equilibrio di mercato in concorrenza perfetta**
+
 - In concorrenza perfetta il mercato eguaglia il prezzo (= beneficio marginale privato, dalla domanda) al **costo marginale privato**: P = MC
 - 20 − 2q = 3q
 - 20 = 5q → **q_CP = 4**
 - P_CP = 20 − 2(4) = **12**
 
 **2. Quantità socialmente ottima**
+
 - Il costo marginale **sociale** include il costo esterno: MC_S = MC_P + E = 3q + 10
 - L'ottimo sociale eguaglia domanda (beneficio marginale sociale, coincide con quella privata perché l'esternalità è di produzione) e costo marginale sociale: P = MC_S
 - 20 − 2q = 3q + 10
@@ -148,12 +159,14 @@
 - P_OS = 20 − 2(2) = **16**
 
 **3. Spiegazione della differenza**
+
 - q_CP (4) > q_OS (2): il mercato concorrenziale, non "vedendo" il costo esterno di 10 per unità, produce **più del doppio** della quantità socialmente desiderabile.
 - Questo perché in concorrenza il produttore eguaglia P al solo **MC_P**, ignorando il danno che l'esternalità negativa scarica sulla collettività; la mancata internalizzazione genera **sovra-produzione** (coerente con il punto 4 sopra: A a destra di C sul grafico, con MC_S > MC_P per ogni livello di q).
 - Il prezzo di mercato (12) è "troppo basso" rispetto al vero costo sociale (16): non riflette il costo esterno.
 - Tra q_OS e q_CP si genera una **perdita di benessere sociale** (l'area del triangolo tra MC_S, MC_P e le quantità 2 e 4): per queste unità aggiuntive il costo sociale marginale supera il beneficio marginale, quindi produrle riduce il benessere collettivo.
 
 **4. Tassa pigouviana**
+
 - La tassa pigouviana ottimale è pari esattamente al costo esterno marginale (che qui è costante): **t = E = 10**
 - Verifica: con la tassa, il produttore massimizza max_q [P·q − c(q) − t·q], quindi eguaglia P = MC_P + t = 3q + 10, cioè esattamente la condizione dell'ottimo sociale calcolata al punto 2.
 - Infatti: 20 − 2q = 3q + 10 → q = 2 = q_OS, con prezzo pagato dal consumatore P = 16 (di cui 10 vanno allo Stato come imposta e servono a "internalizzare" il costo esterno).
