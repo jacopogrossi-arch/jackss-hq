@@ -10,8 +10,8 @@ Questo documento è la base per il cartamodello, per la campionatura in atelier 
 
 Dritto ampio, posizionato a metà tra due riferimenti storici studiati nella ricerca:
 
-- **Hollywood Top anni '40** — vita alta, ampiezza strutturata
-- **Oxford Bags anni '30** — ampiezza estrema
+- **Hollywood anni '40** — vita alta, ampiezza strutturata (fondo 22–24 cm)
+- **Oxford Bags, 1924–25** — ampiezza estrema, tubo costante (fondo 28–50 cm)
 
 Inverso sta nel mezzo: ampio ma controllato, mai eccessivo. Dritto sulla coscia, con una piccola svasatura sul fondo che richiama un bootcut leggero, non marcato.
 
@@ -21,25 +21,36 @@ Inverso sta nel mezzo: ampio ma controllato, mai eccessivo. Dritto sulla coscia,
 
 | Elemento | Scelta |
 |---|---|
-| Tessuto | Cotone drill |
-| Vita | Naturale |
-| Chiusura vita | Side adjuster + chiusura a scomparsa asimmetrica sul cinturone |
-| Patta | Bottoni nascosti |
+| Tessuto | Cotone drill — ⚠️ peso da decidere al tatto sui campioni (range 240–340 g, la ricerca raccomanda il pesante) |
+| Vita / Rise | **Alta**: appena sopra la cresta iliaca = punto vita naturale. Non alla cassa toracica. Comoda. *(Il termine "rise medio" della prima stesura era un errore di trascrizione.)* |
+| Chiusura vita | Side adjuster (i due sono confermati) + chiusura semplice nascosta. **Asimmetria eliminata** — una sola firma in vita |
+| Patta | Bottoni nascosti — fronte pulito |
 | Pieghe | Doppie, all'italiana (apertura verso la patta), ampie ma controllate |
 | Silhouette | Dritto ampio, tra Hollywood '40 e Oxford Bags '30 |
-| Fondo | Risvolto pulito (no risvolto evidente), leggera svasatura |
+| Fondo | **Orlo pulito, senza risvolto** · svasatura ⚠️ ancora aperta |
 | Passanti | Nessuno (coerente coi side adjuster, niente cintura) |
-| Tasche davanti | Taschino portamonete + tasche laterali a filo (slash pocket) |
-| Tasche posteriori | A filo (welt), senza patta né bottone |
-| Rise | Media |
-| Bottoni | Metallo, ottone brunito |
-| Colore tessuto | ⚠️ Aperto: nero o verde oliva/militare — da chiudere |
+| Tasche davanti | Taschino portamonete **confermato** + tasche laterali ⚠️ da sciogliere ("a filo" e "slash pocket" sono due lavorazioni diverse) |
+| Tasche posteriori | A filo (welt), senza patta né bottone — ⚠️ da decidere se una o due |
+| Bottoni | Metallo, ottone brunito — ⚠️ da rivedere: se la patta è nascosta, l'ottone non si vede (meglio sulle fibbie dei side adjuster) |
+| Colore tessuto | **Verde oliva / militare** ✅ (deciso 01/08 — il nero renderebbe il capo indistinguibile dal COS di riferimento in foto) |
 
 ---
 
+## Decisioni chiuse il 01/08 dopo la review critica
+
+1. **Rise alto** (punto vita naturale, sopra la cresta iliaca) — non medio.
+2. **Colore oliva militare** — chiude il punto che era rimasto aperto.
+3. **Una sola firma in vita**: i due side adjuster. La chiusura a scomparsa asimmetrica è eliminata, resta una chiusura semplice nascosta e un fronte pulito.
+4. **Taschino portamonete** confermato.
+
 ## Punti ancora aperti
 
-- **Colore del tessuto** — nero o verde oliva/militare.
+- **Peso del tessuto** (240–340 g) — da decidere al tatto, sui campioni, dal tessutaio.
+- **Svasatura sul fondo** — tenerla, toglierla, o tenerla dichiarandola come scelta personale (nessuna delle 6 epoche studiate ha la gamba svasata).
+- **Tasche posteriori: una o due** — due tasche a doppio filetto su un primo capo in drill sono la lavorazione più punitiva.
+- **Tasche laterali** — costruzione esatta e posizione del taschino.
+- **Cinturino** — continuo (firma tecnica dell'Hollywood '40) o separato + altezza in cm.
+- **Tutte le misure in cm** — da ricavare misurando il capo di riferimento (esercizio A.3 in `04-appendice-reference-cos.md`).
 
 ---
 
