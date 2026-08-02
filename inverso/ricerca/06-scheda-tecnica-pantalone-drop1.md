@@ -77,8 +77,8 @@ Misurate col metro sul **COS di riferimento** in armadio (esercizio A.3). Tutte 
 | Lunghezza laterale | 108 | — | **105,5** ⚠️ | −2,5 |
 | Altezza cinturino | 4 | — | **4** | = |
 | Cavallo davanti (incl. cinturino) | 35,5 | — | — | — |
-| Cavallo davanti (netto) | 31,5 | — | **31,5** ⚠️ | = |
-| Cavallo dietro (netto) | 42 | — | **42** ⚠️ | = |
+| Cavallo davanti (netto) | 31,5 | — | **32** | +0,5 |
+| Cavallo dietro (netto) | 42 | — | **42,5** | +0,5 |
 
 ⚠️ = da confermare, vedi sotto.
 
@@ -97,6 +97,14 @@ Jacopo ha rivisto le proporzioni e **confermato coscia 30,5 e svasatura +1 cm** 
 Scartata l'alternativa proposta (ginocchio 26 = colonna dritta senza svasatura): il +1 cm resta perché è impercettibile e la svasatura è una specifica funzionale della scheda, non un vezzo.
 
 **Da verificare sulla tela di prova:** il salto coscia → ginocchio è di 10 cm di circonferenza (61 → 51), contro i 6 cm del COS. È la linea più ripida del capo ed è l'unica cosa che può far leggere la gamba come *strizzata al ginocchio e poi campanata* invece che dritta. Guardare **di profilo, in piedi**, non da seduti: se il ginocchio "pizzica", si allarga lì (fino a 26) senza toccare né coscia né fondo.
+
+### Rise chiuso il 02/08 — +0,5 cm sul COS
+
+Verificato addosso: il cinturino del COS, lasciato rilassato, **tocca la punta più alta della cresta iliaca**, e Jacopo se lo alza spontaneamente di circa mezzo centimetro. È esattamente la posizione che la scheda chiama "appena sopra la cresta iliaca": il COS era già un rise medio-alto e la specifica non richiede una riprogettazione.
+
+**Decisione:** cavallo davanti netto **32** (era 31,5), cavallo dietro netto **42,5** (era 42). Totale davanti con cinturino: 36 cm.
+
+Conseguenza sulla lunghezza: il pantalone si siede 0,5 cm più in alto, quindi **l'orlo sale di 0,5 cm da solo**. L'accorciamento a −2,5 va quindi riletto come −2 effettivi. Motivo in più per chiudere l'orlo sulla tela e non sulla carta.
 
 ### Perché queste correzioni producono la svasatura
 
@@ -118,8 +126,7 @@ Il −2,5 cm è **provvisorio**. Se il rise si alza, il pantalone sale sul corpo
 
 ## Punti ancora aperti
 
-- **Rise del Drop 1** — dove si siede il COS addosso a Jacopo: sopra o sotto la cresta iliaca? Un cavallo davanti netto di 31,5 cm è già medio-alto. Se il COS ci sta già, il rise resta invariato; se sta sotto, +2/3 cm.
-- **Vita nuda di Jacopo** (misura sul corpo, nel punto dove deve stare il pantalone) — serve per tarare i side adjuster: il cinturino si taglia 2–3 cm più largo del corpo e sono gli adjuster a riprendere. Delicato perché **senza passanti non c'è cintura a correggere**.
+- **Vita nuda di Jacopo** (misura sul corpo, nel punto dove deve stare il pantalone) — serve per tarare i side adjuster: il cinturino si taglia 2–3 cm più largo del corpo e sono gli adjuster a riprendere. Delicato perché **senza passanti non c'è cintura a correggere**. È l'unico numero del capo non ricavabile per deduzione: la vita di 38 piatto (76 di circonferenza) è per ora una stima ottenuta togliendo 2 cm al COS.
 - **Lunghezza definitiva** — da chiudere sulla tela di prova, con gli stivali.
 - **Peso del tessuto** (240–340 g) — da decidere al tatto, sui campioni, dal tessutaio.
 - **Tasca posteriore** — su quale lato, e a che altezza.
