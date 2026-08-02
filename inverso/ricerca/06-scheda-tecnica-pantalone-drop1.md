@@ -54,17 +54,69 @@ Non è una citazione stilistica anni '70 e non deve leggersi come tale. **È una
 
 Questa è la risposta alla domanda "da dove viene?", ed è più solida di una citazione d'archivio: è il **bootcut nel senso sartoriale originario** — dare spazio al fondo perché scavalchi la calzatura — non il flare come moda. Si collega al guardaroba reale di Jacopo (stivali texani): è una decisione presa su un problema vero, non su un riferimento.
 
-Da tradurre in numeri: differenza in cm tra ginocchio e fondo, da definire misurando. Ordine di grandezza indicativo: **1–2 cm, non di più**.
+**Tradotta in numeri il 02/08:** ginocchio 51 cm → fondo 52 cm di circonferenza = **+1 cm di svasatura**. Dentro l'ordine di grandezza previsto (1–2 cm), sul lato prudente. Vedi la sezione Misure.
+
+---
+
+## Misure — rilevate il 02/08/2026
+
+Misurate col metro sul **COS di riferimento** in armadio (esercizio A.3). Tutte le misure "piatto" sono a capo steso, da cucitura a cucitura: la circonferenza è il doppio.
+
+**Controllo incrociato superato:** lunghezza laterale 108 − inseam 74,5 = 33,5 cm di rise laterale, coerente col cavallo davanti di 35,5 (che segue una curva, quindi più lungo del laterale dritto).
+
+### Tabella COS → Drop 1
+
+| Punto | COS (piatto) | COS (circonf.) | **Drop 1 (piatto)** | Δ circonf. |
+|---|---|---|---|---|
+| Vita | 39 | 78 | **38** | −2 |
+| Fianchi (20 cm sotto vita) | 60 | 120 | **58,5** | −3 |
+| Coscia | 32 | 64 | **30,5** | −3 |
+| Ginocchio | 29 | 58 | **25,5** | −7 |
+| Fondo | 26 | 52 | **26** | = |
+| Inseam | 74,5 | — | **72** ⚠️ | −2,5 |
+| Lunghezza laterale | 108 | — | **105,5** ⚠️ | −2,5 |
+| Altezza cinturino | 4 | — | **4** | = |
+| Cavallo davanti (incl. cinturino) | 35,5 | — | — | — |
+| Cavallo davanti (netto) | 31,5 | — | **31,5** ⚠️ | = |
+| Cavallo dietro (netto) | 42 | — | **42** ⚠️ | = |
+
+⚠️ = da confermare, vedi sotto.
+
+### Feedback di Jacopo sul COS (02/08)
+
+- Cosce e ginocchio **troppo larghi** — vuole qualche cm in meno, non un taglio drastico.
+- **Il fondo va bene** così com'è.
+- Parte alta della gamba un po' più stretta.
+- Lunghezza **eccessiva** di qualche cm.
+- Vita da stringere leggermente.
+
+### Perché queste correzioni producono la svasatura
+
+Il COS **rastrema**: dal ginocchio (58) al fondo (52) si stringe di 6 cm. È il contrario di quello che chiede la scheda.
+
+Stringendo ginocchio e coscia e **lasciando il fondo invariato**, la gamba smette di rastremare e si apre: ginocchio 51 → fondo 52 = **+1 cm di svasatura in circonferenza**. Impercettibile a occhio, esattamente l'ordine di grandezza previsto. Il feedback istintivo di Jacopo coincide con la specifica — non è un compromesso.
+
+I fianchi scendono in proporzione alla coscia (−3), altrimenti la linea sopra il ginocchio si spezza.
+
+### Rischio tecnico: apertura delle pieghe
+
+La coscia **non** è stata stretta oltre −3 cm di proposito. Su un pantalone a **doppia piega**, togliere troppa ampiezza in coscia fa aprire le pieghe a bocca camminando e da seduti: la piega ha bisogno di stoffa sotto per restare chiusa. −3 cm è il limite prudente. Se sulla tela di prova risulta ancora largo si stringe lì; il contrario non si recupera.
+
+### Lunghezza: da chiudere sul corpo, non sulla carta
+
+Il −2,5 cm è **provvisorio**. Se il rise si alza, il pantalone sale sul corpo e l'orlo si alza della stessa quantità: si rischia di accorciare due volte. L'orlo si decide addosso, in piedi, **con gli stivali texani ai piedi**, sulla tela di prova.
 
 ---
 
 ## Punti ancora aperti
 
+- **Rise del Drop 1** — dove si siede il COS addosso a Jacopo: sopra o sotto la cresta iliaca? Un cavallo davanti netto di 31,5 cm è già medio-alto. Se il COS ci sta già, il rise resta invariato; se sta sotto, +2/3 cm.
+- **Vita nuda di Jacopo** (misura sul corpo, nel punto dove deve stare il pantalone) — serve per tarare i side adjuster: il cinturino si taglia 2–3 cm più largo del corpo e sono gli adjuster a riprendere. Delicato perché **senza passanti non c'è cintura a correggere**.
+- **Lunghezza definitiva** — da chiudere sulla tela di prova, con gli stivali.
 - **Peso del tessuto** (240–340 g) — da decidere al tatto, sui campioni, dal tessutaio.
 - **Tasca posteriore** — su quale lato, e a che altezza.
 - **Tasche laterali** — costruzione esatta e posizione del taschino.
-- **Cinturino** — continuo (firma tecnica dell'Hollywood '40) o separato + altezza in cm.
-- **Tutte le misure in cm** — da ricavare misurando il capo di riferimento (esercizio A.3 in `04-appendice-reference-cos.md`).
+- **Cinturino** — continuo (firma tecnica dell'Hollywood '40) o separato. *Altezza risolta: 4 cm, come il COS.*
 
 ---
 
