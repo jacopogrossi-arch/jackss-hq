@@ -4,7 +4,7 @@
 
 ## 🎯 PRIORITÀ ASSOLUTA — la prossima sessione parte da qui
 
-Prima di usare o correggere questo foglio, **costruire la Basic Pant Foundation Armstrong** vera (`ricerca/10-metodo-armstrong-pantalone.md`, sezione 3) con le misure reali del Drop 1 in cm. Questo foglio è dichiaratamente una **decostruzione** (vedi sotto), non una costruzione: la forchetta di 2,5 cm qui sotto non è stata verificata con nessun metodo reale. Il documento `10` spiega perché il confronto non è stato ancora fatto e cosa serve per chiuderlo.
+**Aggiornamento 02/08:** la Basic Pant Foundation Armstrong è stata costruita con i numeri reali del Drop 1 in `ricerca/11-basic-pant-foundation-costruita.md`. Griglia e vita sono risultate **identiche** a questo foglio (buon segno: la decostruzione era corretta). La curva del cavallo — l'unica cosa che qui sotto non era coperta — ora ha punti concreti da tracciare (sezione 4 del doc `11`). **Resta da fare:** disegnarla su carta e misurarla di costa, per vedere se la forchetta di 2,5 cm qui sotto regge o va corretta — il doc `11` spiega perché non si può dare quel verdetto solo con l'aritmetica.
 
 ## ⚠️ Che metodo è questo — e che metodo NON è
 
