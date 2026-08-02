@@ -1,7 +1,22 @@
 # Foglio di costruzione — cartamodello pantalone Drop 1
 
 > Scritto il 02/08/2026. Traduce la scheda tecnica (`06`) in numeri da tracciare su carta, **a mano**.
-> Metodo di riferimento: Müller. Questo foglio dà i **valori**; le curve (cavallo, giro vita) si tracciano come da metodo — un numero non sostituisce una curva.
+
+## ⚠️ Che metodo è questo — e che metodo NON è
+
+**Non è metodo Müller.** Müller parte dalle misure del **corpo** e costruisce con formule proporzionali (profondità cavallo da tabella, forchetta posteriore = 1/10 del giro fianchi, ecc.); il capo finito è il risultato.
+
+Qui è l'opposto: si parte dalle **misure del capo finito** decise nella scheda `06` e le si scompone all'indietro nei pezzi. È la ricostruzione di un cartamodello **da un capo esistente** — una decostruzione, non un sistema di costruzione. Era la strada obbligata, perché i numeri del Drop 1 sono nati misurando il COS, non il corpo di Jacopo.
+
+**Cosa è aritmetica** (deriva dai numeri, non opinabile): profondità cavallo 30 = 102 − 72 · tutte le somme di verifica · lunghezza laterale 106.
+
+**Cosa è scelta di pratica comune** (spostabile): linea ginocchio a cavallo + 34 · la ripartizione davanti/dietro a ogni livello · ripresa piega 4 cm e pinces 2 cm · la distribuzione 3,5 / 4 del rientro vita dietro · i margini.
+
+**Cosa NON è coperto qui:** le curve del cavallo davanti e dietro · l'angolo di inclinazione del centro dietro · la curvatura delle cuciture laterali · il drittofilo.
+
+**Come usarlo:** queste larghezze sono l'**obiettivo da centrare**. La **geometria** — curve, inclinazione del sedere, drittofilo — si prende da Müller o dalla base di cartamodello esistente. Il foglio dà i valori, non sostituisce il sistema.
+
+Il punto debole di questo approccio è la **forchetta**: un sistema la deriva dal corpo con una formula e garantisce il funzionamento del cavallo, qui invece è uscita per differenza tra due misure del capo (2,5 cm contro i 4 del COS) — è stata scoperta facendo i conti, non progettata. Il punto forte è che il COS calza davvero: partire da un capo provato sul corpo è più affidabile di una tabella di taglie.
 
 ---
 
