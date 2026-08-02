@@ -1,104 +1,79 @@
 # Basic Pant Foundation Armstrong — costruita con i numeri del Drop 1
 
-> Scritto il 02/08/2026. Applica il draft Men's Wear (`10-metodo-armstrong-pantalone.md`, sezione 3) — non il Trouser della teoria femminile — ai numeri reali in cm del Drop 1 (`09-foglio-costruzione-cartamodello.md`). Questo è il passo che mancava: prima c'era solo la decostruzione (09) e il metodo estratto in pollici (10), separati.
+> Scritto il 02/08/2026, **corretto il 02/08/2026 dopo aver guardato le pagine vere del libro** (pag. 613-614 stampate, "Basic Pant Foundation for Trouser", Figure 1-4 — immagini estratte in sessione da `cartamodelli/prompts/Patternmaking for Fashion Design ( PDFDrive ).pdf`, pagine PDF 620-621). La prima versione di questo foglio (sezioni 3 e 4) era sbagliata: dedotta dal testo senza guardare le figure. Jacopo l'ha beccato disegnando a mano e confrontando con le figure — vedi `feedback_pattern_drafting_verifica.md` in memoria.
 
 ## Come leggere questo foglio
 
-Il libro lavora in pollici partendo dalle **misure del corpo** e aggiunge margini per arrivare al capo finito. Qui si parte al contrario: i numeri del Drop 1 (`09`) **sono già** misure di capo finito, verificate su un COS che calza. Quindi dove Armstrong dice "hip arc + margine", il margine è già dentro il numero del Drop 1 — non va aggiunto una seconda volta. Le uniche frazioni di pollice che restano e vengono convertite in cm sono quelle **di dettaglio fine** (posizione dart, blend delle curve): sono la parte del metodo che 09 non poteva ricostruire da solo, perché non deriva dalle misure del capo ma dalla geometria del cavallo.
+I numeri Drop 1 (`09`) sono già misure di capo finito. Le formule Armstrong si applicano direttamente a quei numeri, senza aggiungere ease una seconda volta.
 
-Ogni riga sotto riporta: **nome del punto Armstrong → formula del libro → valore in cm col Drop 1**.
-
----
-
-## 1 — Griglia (conferma quello che 09 aveva già trovato)
-
-| Punto | Formula | Calcolo | Valore | Confronto con `09` |
-|---|---|---|---|---|
-| A–B | lunghezza vita-orlo | 30 (cavallo) + 72 (int. gamba) | **102** | = lunghezza netta di 09 ✓ |
-| A–C | crotch depth | già misura di capo | **30** | = profondità cavallo di 09 ✓ |
-| C–D | hip depth = ⅓ di C–A | 30 ÷ 3 | **10** | fianchi a 20 da vita ✓ |
-| C–E | knee depth = ½ di C–B, meno ~2 | 72÷2 − 2 = 36 − 2 | **34** | ginocchio a 64 da vita ✓ |
-
-**Buona notizia:** i quattro punti della griglia verticale tornano esatti. Il "cavallo + 34" che 09 aveva scelto come "pratica comune spostabile" **è** la formula Armstrong (metà interno gamba meno un margine fisso), non un'invenzione — non va più considerato spostabile senza motivo.
+**Regola imparata a caro prezzo in questa sessione: mai dedurre una posizione da una formula "X–Y = lunghezza" senza sapere la DIREZIONE dalla figura.** Il libro scrive solo la lunghezza del segmento, non la direzione — e in due punti diversi di questo stesso foglio la direzione giusta era quella opposta a quella "ovvia". Ogni valore qui sotto è stato verificato guardando l'immagine della pagina, non dedotto a tavolino.
 
 ---
 
-## 2 — Rettangolo di partenza (dove nasce la forma, prima della curva)
-
-Nel draft uomo il cavallo **non si estende** oltre il fianco: parte **largo quanto il fianco** e viene ritagliato dopo (è la differenza col metodo teorico spiegata in `10`).
-
-| Punto | Formula | Valore |
-|---|---|---|
-| D–F (fianco dietro) | hip arc dietro, pannello intero | **30** |
-| D–J (fianco davanti) | hip arc davanti, pannello intero | **28,5** |
-| C–G = A–H (dietro) | = D–F | **30** |
-| C–K = A–L (davanti) | = D–J | **28,5** |
-
-Cioè: alla linea del cavallo e alla linea vita, **prima di piegare o disegnare curve**, il pannello dietro è largo 30 su tutta l'altezza, e quello davanti 28,5. È un rettangolo. La curva del cavallo si ritaglia dentro questo rettangolo — non lo sfonda mai verso l'esterno.
-
-**X — punto di riferimento per le curve:** a metà del lato esterno verticale (G–H per il dietro, K–L per il davanti), cioè **15 cm** sopra G e sopra K. Non è la linea fianchi (quella è a 10 da C): è un punto in più, solo per far sfumare le curve più avanti — tienilo a mente ma non confonderlo con D.
-
----
-
-## 3 — Vita e pieghe (conferma anche qui)
-
-| Punto | Formula | Valore | Confronto |
-|---|---|---|---|
-| M–N (vita dietro, pre-pinces) | back waist arc + margine | **22,5** | = vita grezza dietro di 09 ✓ |
-| L–O (vita davanti, pre-pieghe) | front waist arc + margine | **27,5** | = vita grezza davanti di 09 ✓ |
-
-Anche qui i numeri tornano esatti: la decostruzione di 09 aveva ricostruito bene questa parte.
-
-**Cosa aggiunge Armstrong che 09 non aveva — la posizione e la lunghezza dei dart/pieghe:**
+## 1 — Griglia (confermata, invariata)
 
 | Punto | Formula | Calcolo | Valore |
 |---|---|---|---|
-| H–P (posizione dart dietro da H) | ½ di M–N + 1,3 cm | 22,5÷2 + 1,3 | **12,5 cm dal centro dietro** |
-| Lunghezza dart dietro | squadra in basso | — | **8,9 cm** dalla vita |
-| L–Q (prima piega davanti da L) | ⅓ di L–O | 27,5 ÷ 3 | **9,2 cm dal centro davanti** |
-| seconda piega | +3,2 cm dopo la prima | 9,2 + 3,2 | **12,4 cm dal centro davanti** |
-| Lunghezza pieghe (riferimento dart) | squadra in basso | — | **7,6 cm** dalla vita |
+| A–B | lunghezza vita-orlo | 30 (cavallo) + 72 (int. gamba) | **102** |
+| A–C | crotch depth | già misura di capo | **30** |
+| C–D | hip depth = ⅓ di C–A | 30 ÷ 3 | **10** (fianchi a 20 da vita) |
+| C–E | knee depth = ½ di C–B, meno ~2 | 72÷2 − 2 | **34** (ginocchio a 64 da vita) |
 
-⚠️ Il capo ha **pieghe**, non dart corti: la piega scende fino all'orlo (è la creaseline), non si ferma a 7,6 cm. Questi 7,6/8,9 cm sono la lunghezza del **dart interno** nel draft base — il punto dove finisce la ripresa di stoffa vera e propria, sotto la piega stirata che invece prosegue visivamente fino in fondo. Utile per capire dove la stoffa è davvero doppia in vita, non per tagliare la piega corta.
+## 2 — Rettangolo di partenza (confermato, invariato)
+
+| Punto | Valore |
+|---|---|
+| D–F = C–G = A–H (dietro, fianco/cavallo/vita) | **30 cm dal centro** |
+| D–J = C–K = A–L (davanti, fianco/cavallo/vita) | **28,5 cm dal centro** |
+| X dietro (metà di G–H) | 15 cm sopra G, sul lato |
+| X davanti (metà di K–L) | 15 cm sopra K, sul lato |
+
+Il cavallo parte largo quanto il fianco (rettangolo pieno), si ritaglia dopo — non si estende oltre.
 
 ---
 
-## 4 — La curva del cavallo (quello che mancava del tutto)
+## 3 — Vita e pieghe — **CORRETTO**
 
-Questa è la parte che 09 dichiarava esplicitamente non coperta. Il libro la costruisce così: prima trova due punti fissi sulla linea orizzontale del cavallo (R e S), poi da lì fa scendere la curva vera e propria sotto quella linea (V e W).
+⚠️ La prima versione diceva N a 26,5 e O a 27,5 dal centro (vicino a H/L). **Sbagliato.** Guardando la figura: O e N stanno **vicino al centro**, non vicino a L/H.
 
 | Punto | Formula | Calcolo | Valore |
 |---|---|---|---|
-| G–R (dietro, su C–G=30) | ½ di G–C | 30 ÷ 2 | **15 cm da G** (= 15 cm da C, è il centro esatto) |
-| K–S (davanti, su K–C=28,5) | ¼ di K–C | 28,5 ÷ 4 | **7,1 cm da K** |
-| G–T / K–U (raccordo verso X) | 0,85 cm in diagonale | — | **0,85 cm** |
-| R–V (profondità curva dietro) | ½ di R–C (15), meno 0,3 | 7,5 − 0,3 | **7,2 cm sotto la linea, in corrispondenza di R** |
-| S–W (profondità curva davanti) | ½ di S–C (21,4), meno 0,3 | 10,7 − 0,3 | **10,4 cm sotto la linea, in corrispondenza di S** |
+| H–M | 3/4" verso il centro, 3/4" più in alto | 30 − 1,9 | **M = 28,1 cm dal centro** (poco sopra la linea vita) |
+| M–N | back waist arc + margine = 22,5 (lunghezza, verso il centro da M) | 28,1 − 22,5 | **N = 5,6 cm dal centro** |
+| L–O | front waist arc + margine = 27,5 (lunghezza, verso il centro da L) | 28,5 − 27,5 | **O = 1,0 cm dal centro** |
 
-**Come si traccia in pratica, dietro:**
-1. Sulla linea orizzontale del cavallo (a 30 cm da vita), segna G all'estremità (fianco) e C al centro dietro.
-2. Segna R a metà strada tra i due (15 cm da entrambi).
-3. Da R, scendi **7,2 cm** verso il basso: quel punto è V.
-4. La curva parte da G, sfuma leggermente verso l'alto in T (0,85 cm) per raccordarsi a X (15 cm più su, sul lato), poi ridiscende e passa per V, per arrivare a C in basso.
+**Pieghe davanti** (Figura 2, `L–Q = ⅓ di L–O`, misurata da L verso il centro):
+- Piega 1: **19,3 cm dal centro** (28,5 − 9,2)
+- Piega 2: **16,1 cm dal centro** (19,3 − 3,2)
+- Lunghezza: 7,6 cm dalla vita, chiusa a punta
 
-**Stessa cosa davanti**, con K al posto di G, S al posto di R (a 7,1 cm da K, non a metà), W al posto di V (10,4 cm di profondità).
+**Pinces dietro** (Armstrong ha un solo dart: `H–P = ½ di M–N + 0,5"`, misurata da H verso il centro):
+- Dart unico Armstrong: **17,5 cm dal centro** (30 − 12,5)
+- Drop 1 vuole 2 pinces da 2 cm: distribuite intorno a 17,5 → **15,5-17,5** e **19,5-21,5 cm dal centro**
+- Lunghezza: 8,9 cm dalla vita, chiusa a punta
 
-⚠️ **Perché la profondità davanti (10,4) è più della metà di quella dietro (7,2), quando di solito è il contrario?** Perché S è vicino a K (7,1 da 28,5 totali), quindi S–C è un tratto lungo (21,4) e la sua metà è per forza grande. È un artefatto del fatto che qui uso ¼ di K–C invece che ½: il libro usa apposta frazioni diverse (½ dietro, ¼ davanti) perché il punto di partenza R/S non è nella stessa posizione relativa nei due pannelli — non è un segno che la curva davanti scenda più di quella dietro. **Prima di tracciare, verifica questo punto su un cartamodello uomo esistente o chiedi conferma in atelier**: è l'unico passaggio di questo foglio dove l'interpretazione del testo (senza le figure originali del libro) potrebbe aver invertito qualcosa. Se in atelier ti dicono che la curva davanti deve scendere meno di quella dietro (è la convenzione più comune), usa S–W come profondità **dietro** e R–V come profondità **davanti** — cioè scambiale.
-
-**Rifinitura inseam:** prima di disegnare le linee gamba verso l'orlo, rientra **1,3 cm** da S e da R verso il centro — è il piccolo scarto che separa la curva del cavallo dalla cucitura interna gamba vera e propria.
+**Il punto "Z" (centro dietro a 4 cm, inclinazione) inventato nella prima versione non esiste nel metodo — va ignorato.** N sostituisce quel ruolo.
 
 ---
 
-## 5 — Cosa NON dice ancora questo foglio sulla forchetta
+## 4 — La curva del cavallo — **DA RIFARE, ancora aperto**
 
-**Non do un numero unico di "forchetta" da confrontare con i 2,5 cm di `09` o i 4 cm del COS** — e non perché manchi voglia di chiudere il conto, ma perché in questo sistema (rettangolo pieno + ritaglio) la forchetta non è una misura che si legge direttamente da nessuna formula: è il **risultato** della curva G→T→X→R→V→C che hai appena tracciato. Il numero giusto per il confronto è la **lunghezza della curva stessa**, misurata di costa col metro dopo averla disegnata — esattamente il controllo #4 che `09` aveva già messo in fondo al foglio (curva davanti 32, dietro 42,5).
+⚠️ **Le due versioni precedenti di questa sezione erano sbagliate.** La prima diceva che la curva scende sotto la linea del cavallo fino a un punto V/W. La seconda diceva che la curva (quella che parte da X, passa per G, arriva a R) prosegue fino a C. **Nessuna delle due è giusta.**
 
-**Il vero passo successivo, quindi, è pratico, non aritmetico:**
-1. Traccia la griglia (sezione 1-2 qui sopra) su carta.
-2. Disegna le due curve del cavallo con i punti della sezione 4.
-3. Misura le due curve di costa col metro da sarta.
-4. Confrontale con l'obiettivo di `09`: davanti 32, dietro 42,5, totale 74,5.
+**Quello che è confermato guardando la Figura 3 e 4:**
+- La curva grigia spessa che si vede nel disegno va da **M**, scende per **X**, gira intorno a **G**, e prosegue (passando vicino a **T**) fino a **R** — un'unica curva continua. **Questo è il fianco (outseam)**, non il cavallo: continua oltre l'angolo dell'anca e scende nella gamba.
+- **V** (22,8 cm dal centro dietro) e **W** (18,1 cm dal centro davanti) **non stanno su questa curva**. Servono più avanti (Figura 4) per far scendere dritta la riga di piega verticale (creaseline) della gamba — sono un riferimento per dopo, non un punto che il fianco deve toccare.
+- Il centro dietro/davanti (da N/O, passando per D, fino a C) è una linea **separata**, quasi dritta.
 
-Se tornano vicine, hai una costruzione vera sotto ai numeri di 09 — non solo una decostruzione — e puoi tagliare la tela con più fiducia. Se si discostano parecchio, è il segnale che la forchetta di 09 va corretta usando questa curva come riferimento, non il contrario.
+**Quello che NON è ancora chiaro, da verificare prima di disegnare:** come si chiude esattamente il pannello tra il fianco (che arriva a R/S) e il centro (che arriva a C) all'altezza del cavallo — cioè cosa collega concretamente questi due lati. Nella Figura 4 il tratto marcato in grigio spesso (la vera linea di taglio) sembra continuare dal centro (C) verso il basso nella gamba, separatamente dal fianco — ma non ho ancora capito con certezza cosa succede esattamente nella fascia "Crotch" tra i due lati.
+
+**Prossimo passo, prima di riprendere a disegnare:** guardare di nuovo, con calma, la Figura 4 (pag. 614 stampata / 621 PDF), in particolare la fascia tra "Hip" e "Crotch", e capire come il tratto grigio spesso (taglio vero) collega fianco e centro — eventualmente confrontando con un cartamodello uomo che Jacopo ha già usato in passato, che potrebbe risolvere l'ambiguità più in fretta di un'altra rilettura del libro.
+
+---
+
+## 5 — Sulla forchetta
+
+Resta valido quanto detto prima: niente numero unico da confrontare a tavolino. Si disegna, si misura di costa, si confronta con l'obiettivo di `09` (davanti 32, dietro 42,5, totale 74,5).
 
 [[project-inverso-pantalone-drop1]]
+[[feedback_pattern_drafting_verifica]]
