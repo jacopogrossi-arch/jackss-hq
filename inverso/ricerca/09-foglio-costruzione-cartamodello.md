@@ -2,6 +2,10 @@
 
 > Scritto il 02/08/2026. Traduce la scheda tecnica (`06`) in numeri da tracciare su carta, **a mano**.
 
+## 🎯 PRIORITÀ ASSOLUTA — la prossima sessione parte da qui
+
+Prima di usare o correggere questo foglio, **costruire la Basic Pant Foundation Armstrong** vera (`ricerca/10-metodo-armstrong-pantalone.md`, sezione 3) con le misure reali del Drop 1 in cm. Questo foglio è dichiaratamente una **decostruzione** (vedi sotto), non una costruzione: la forchetta di 2,5 cm qui sotto non è stata verificata con nessun metodo reale. Il documento `10` spiega perché il confronto non è stato ancora fatto e cosa serve per chiuderlo.
+
 ## ⚠️ Che metodo è questo — e che metodo NON è
 
 **Non è metodo Müller.** Müller parte dalle misure del **corpo** e costruisce con formule proporzionali (profondità cavallo da tabella, forchetta posteriore = 1/10 del giro fianchi, ecc.); il capo finito è il risultato.

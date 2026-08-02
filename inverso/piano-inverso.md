@@ -102,7 +102,7 @@ In ordine di attivazione:
 ### 1–12 agosto — Roma (la finestra fisica: si tocca il capo)
 
 - [ ] **Tessuto in mano**: visitare 1–2 tessutai/mercerie dalla lista, comprare il tessuto del primo pantalone o almeno i campioni dei candidati — Pocket 3 accesa: è già il contenuto "Roma, tessuti" (idea #2)
-- [ ] Cartamodello: riprendere la base esistente, capire cosa va adattato alla silhouette scelta + individuare chi può dare una mano
+- [ ] 🎯 **PRIORITÀ ASSOLUTA — prossima sessione parte da qui:** costruire a mano la **Basic Pant Foundation Armstrong** (metodo `ricerca/10-metodo-armstrong-pantalone.md`, sezione 3) con le misure reali del Drop 1 in cm (`ricerca/06-scheda-tecnica-pantalone-drop1.md`). È il passo che manca prima di correggere `ricerca/09-foglio-costruzione-cartamodello.md` (che oggi è solo una decostruzione, non una costruzione vera) — in particolare verifica se la forchetta di 2,5 cm regge col metodo reale o va corretta. Solo dopo si individua chi può dare una mano in atelier.
 - [ ] **Fare scorta di girato (senza pubblicare)**: macro sui tessuti (= 2–3 Diari di Ricerca già girati), mani su carta e cartamodello, le mercerie — materiale grezzo per i Reel di settembre
 - [ ] Foto di riferimento per il test Jago (10–15 foto pulite di un capo o mock, da più angoli) prima di ripartire
 
