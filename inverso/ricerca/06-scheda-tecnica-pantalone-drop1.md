@@ -98,6 +98,26 @@ Scartata l'alternativa proposta (ginocchio 26 = colonna dritta senza svasatura):
 
 **Da verificare sulla tela di prova:** il salto coscia → ginocchio è di 10 cm di circonferenza (61 → 51), contro i 6 cm del COS. È la linea più ripida del capo ed è l'unica cosa che può far leggere la gamba come *strizzata al ginocchio e poi campanata* invece che dritta. Guardare **di profilo, in piedi**, non da seduti: se il ginocchio "pizzica", si allarga lì (fino a 26) senza toccare né coscia né fondo.
 
+### Vita chiusa il 02/08 — corpo 72, cinturino 76
+
+**Vita nuda di Jacopo: 72 cm** (misurata sul corpo, all'altezza del cinturino). La stima di 38 piatto / **76 di circonferenza** regge: **confermata senza modifiche.**
+
+Il cinturino si taglia più largo del corpo di proposito, e sono i side adjuster a riprendere:
+
+| Adjuster | Circonferenza effettiva | Vestibilità |
+|---|---|---|
+| Aperti | 76 | +4 sul corpo, largo |
+| A metà | ~74 | **+2 — la vestibilità di progetto** |
+| Chiusi | ~72 | aderente |
+
+**Perché volutamente larghi:** il drill di cotone non ha elasticità e un adjuster stringe sempre, non allarga mai. L'errore in largo si recupera, quello in stretto no.
+
+**Dato utile:** il COS misura 78 su un corpo da 72 — 6 cm di gioco — e sta su lo stesso. Conferma che **un pantalone a vita alta non sta su per stretta in vita, ma perché si appoggia sulla cresta iliaca**: il fianco fa da mensola. Con 76 e nessun passante non c'è rischio che scenda.
+
+⚠️ **Condizione vincolata alla minuteria:** il 76 funziona solo se i side adjuster danno **almeno 4 cm di ripresa totale** (2 cm per lato). Da verificare in merceria sulla corsa della fibbia:
+- ≥ 2 cm per lato → cinturino **76**
+- ~1,5 cm per lato → cinturino **74**
+
 ### Rise chiuso il 02/08 — +0,5 cm sul COS
 
 Verificato addosso: il cinturino del COS, lasciato rilassato, **tocca la punta più alta della cresta iliaca**, e Jacopo se lo alza spontaneamente di circa mezzo centimetro. È esattamente la posizione che la scheda chiama "appena sopra la cresta iliaca": il COS era già un rise medio-alto e la specifica non richiede una riprogettazione.
@@ -126,8 +146,10 @@ Il −2,5 cm è **provvisorio**. Se il rise si alza, il pantalone sale sul corpo
 
 ## Punti ancora aperti
 
-- **Vita nuda di Jacopo** (misura sul corpo, nel punto dove deve stare il pantalone) — serve per tarare i side adjuster: il cinturino si taglia 2–3 cm più largo del corpo e sono gli adjuster a riprendere. Delicato perché **senza passanti non c'è cintura a correggere**. È l'unico numero del capo non ricavabile per deduzione: la vita di 38 piatto (76 di circonferenza) è per ora una stima ottenuta togliendo 2 cm al COS.
-- **Lunghezza definitiva** — da chiudere sulla tela di prova, con gli stivali.
+> **Le misure su carta sono complete al 02/08/2026.** Tutto ciò che resta si decide con le mani: sui campioni, in merceria, o sulla tela di prova.
+
+- **Corsa dei side adjuster** — da verificare in merceria: se sotto i 2 cm per lato, il cinturino scende da 76 a 74.
+- **Lunghezza definitiva** — da chiudere sulla tela di prova, in piedi, con gli stivali.
 - **Peso del tessuto** (240–340 g) — da decidere al tatto, sui campioni, dal tessutaio.
 - **Tasca posteriore** — su quale lato, e a che altezza.
 - **Tasche laterali** — costruzione esatta e posizione del taschino.
