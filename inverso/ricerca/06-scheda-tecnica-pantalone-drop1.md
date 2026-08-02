@@ -90,6 +90,14 @@ Misurate col metro sul **COS di riferimento** in armadio (esercizio A.3). Tutte 
 - Lunghezza **eccessiva** di qualche cm.
 - Vita da stringere leggermente.
 
+### Conferma del 02/08 — misure di gamba chiuse
+
+Jacopo ha rivisto le proporzioni e **confermato coscia 30,5 e svasatura +1 cm** (ginocchio 25,5, fondo 26). Intenzione dichiarata: *"l'occhio estetico sente un pantalone dritto, la svasatura deve essere proprio impercettibile"*.
+
+Scartata l'alternativa proposta (ginocchio 26 = colonna dritta senza svasatura): il +1 cm resta perché è impercettibile e la svasatura è una specifica funzionale della scheda, non un vezzo.
+
+**Da verificare sulla tela di prova:** il salto coscia → ginocchio è di 10 cm di circonferenza (61 → 51), contro i 6 cm del COS. È la linea più ripida del capo ed è l'unica cosa che può far leggere la gamba come *strizzata al ginocchio e poi campanata* invece che dritta. Guardare **di profilo, in piedi**, non da seduti: se il ginocchio "pizzica", si allarga lì (fino a 26) senza toccare né coscia né fondo.
+
 ### Perché queste correzioni producono la svasatura
 
 Il COS **rastrema**: dal ginocchio (58) al fondo (52) si stringe di 6 cm. È il contrario di quello che chiede la scheda.
