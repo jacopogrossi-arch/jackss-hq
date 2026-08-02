@@ -122,7 +122,11 @@ Il −2,5 cm è **provvisorio**. Se il rise si alza, il pantalone sale sul corpo
 
 ## Prossimo passo
 
-Cartamodello: adattare la base esistente, trovare chi può aiutare in atelier.
+**Deciso il 02/08, in quest'ordine:**
+
+1. **Due misure sul corpo** (5 minuti, a casa) — dove si siede il COS rispetto alla cresta iliaca, e la vita nuda nel punto dove deve stare il pantalone. Chiudono rise e taratura dei side adjuster.
+2. **Tessutaio, lunedì 3/08** — campioni di drill oliva, peso deciso al tatto (240–340 g). Va fatto dentro la finestra romana dell'1–12 agosto.
+3. **Cartamodello** — adattare la base esistente, trovare chi può aiutare in atelier.
 
 ---
 
