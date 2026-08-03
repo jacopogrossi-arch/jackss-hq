@@ -120,5 +120,23 @@ Le due cose non possono essere vere insieme con questa geometria: **la manopola 
 
 Nota per la tela: con R a 47 la coscia dietro disegnata sarà ancora più piena di quanto stimato (fascia ~45 contro il target 32 di `09`). È il compromesso già deciso: il cavallo che misura giusto vince, la coscia si giudica addosso.
 
+---
+
+## 6 — Controlli finali (03/08) — CARTAMODELLO BASE FINITO ✅
+
+Disegno completato sul tavolo (curve cavallo, fianchi N→D e O→D, creaseline W=18 e V=23,8, gambe) e verificato con tutti i controlli di `09`:
+
+| Controllo | Misurato | Verdetto |
+|---|---|---|
+| Cavallo di costa | davanti 32 · dietro 42,5 · tot 74,5 | ✓ in target pieno |
+| Interno gamba di costa | davanti 73 · dietro 74 | ✓ dietro +1 = la molla prevista dal metodo |
+| Fianchi di costa | dietro più lungo di 1,5 → **pareggiato alzando O di 1,5 (O′)**, regola Armstrong "add to the short side" | ✓ ora coincidono |
+| Vita davanti (L→O′, intera) | 27,5 (= 19,5 finita + 2 pieghe da 4) | ✓ |
+| Vita dietro (M→N, intera) | 22,5 (= 18,5 finita + 2 pinces da 2) | ✓ |
+
+La vita davanti ora sale di 1,5 verso il fianco (O′): è la pareggiatura, non un errore — non "raddrizzarla" ricalcando.
+
+**Prossima fase:** ricalco dei pannelli su carta nuova (davanti e dietro separati), margini di cucitura da `09` sezione 5, tacche e drittofilo, poi tela di prova.
+
 [[project-inverso-pantalone-drop1]]
 [[feedback_pattern_drafting_verifica]]
