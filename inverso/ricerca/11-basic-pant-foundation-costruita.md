@@ -106,5 +106,15 @@ Le due cose non possono essere vere insieme con questa geometria: **la manopola 
 2. Misurarle di costa → accorciare la forchetta (spostando R e S verso il centro lungo la linea del cavallo) fino a centrare **32 davanti / 42,5 dietro**.
 3. A quel punto misurare la coscia risultante: verrà comunque più larga di 29/32. Annotare di quanto — quella differenza si decide **sulla tela**, non sul foglio (se il cavallo veste, una coscia più piena su un pantalone ampio è il rischio minore; strizzarla a tavolino rischia di rubare forchetta).
 
+### ✅ Chiuso sul tavolo il 03/08 — le curve sono disegnate e misurano giusto
+
+| Curva | Misura di costa | Obiettivo | Punta forchetta |
+|---|---|---|---|
+| Davanti (L→X→S) | **32** | 32 ✓ | S arretrata a **34,6 dal centro** (prima misura 33 con S a 35,6, corretta di 1 cm) |
+| Dietro (M→X→R) | **42,5** | 42,5 ✓ | da annotare dove è finita R |
+| **Totale** | **74,5** | 74,5 ✓ | — |
+
+Con S a 34,6 la creaseline davanti si ricalcola: `S–W = ½ S–C − 0,3` → **W a 17,6 dal centro** (non più 18,1). La V dietro dipende da dove è finita R.
+
 [[project-inverso-pantalone-drop1]]
 [[feedback_pattern_drafting_verifica]]
