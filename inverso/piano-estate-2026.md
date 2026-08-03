@@ -32,6 +32,10 @@ In ordine di importanza:
 
 ### Binario 2 — I 12 giorni a Roma, 1–12 agosto (lista chiusa, in quest'ordine)
 
+> **Aggiornamento 03/08 — stato e marcia verso il 12.** Il punto 1 è oltre il piano: il **cartamodello base del Drop 1 è finito e verificato** (vedi `ricerca/11`, sezione 6) — non "ripreso in mano", proprio costruito da zero col metodo Armstrong. Decisione presa: **cuce Jacopo, con le sue mani** — niente sarta. Quindi il traguardo del 12 è: **tela di prova cucita e provata addosso + cartamodello corretto + drill comprato e tagliato** (confezione drill avviata; patta a bottoni e tasca a filo si finiscono anche a settembre).
+>
+> Marcia: **3–4/08** ricalco+margini · tessutai (tela economica 2,5–3 m, drill, merceria) · verifica macchina da cucire → **4–5/08** taglio tela + imbastitura + palestra cuciture su ritagli → **6–7/08** cucitura tela semplificata (senza tasche/patta) + **prova addosso #1** (cavallo, coscia, ginocchio) → **8–9/08** correzioni sul cartamodello + taglio drill → **10–12/08** confezione drill: gambe e cavallo montati.
+
 Questi giorni sono il collo di bottiglia fisico dell'estate. Priorità rigida:
 
 1. **Il capo (primo pantalone)** — silhouette scelta alla mano (chiudere lo studio in `ricerca/` prima di arrivare), riprendere la base di cartamodello esistente e capire cosa va adattato + chi può dare una mano.
