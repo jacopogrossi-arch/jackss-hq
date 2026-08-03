@@ -108,13 +108,17 @@ Le due cose non possono essere vere insieme con questa geometria: **la manopola 
 
 ### ✅ Chiuso sul tavolo il 03/08 — le curve sono disegnate e misurano giusto
 
-| Curva | Misura di costa | Obiettivo | Punta forchetta |
+| Curva | Misura di costa | Obiettivo | Punta forchetta (posizione reale sul foglio) |
 |---|---|---|---|
-| Davanti (L→X→S) | **32** | 32 ✓ | S arretrata a **34,6 dal centro** (prima misura 33 con S a 35,6, corretta di 1 cm) |
-| Dietro (M→X→R) | **42,5** | 42,5 ✓ | da annotare dove è finita R |
+| Davanti (L→X→S) | **32** | 32 ✓ | **S a 35,5 dal centro** (prima misura 33, corretta arretrando di 1 cm) |
+| Dietro (M→X→R) | **42,5** | 42,5 ✓ | **R a 47 dal centro** (la formula Armstrong diceva 45: per arrivare a 42,5 di costa ne sono serviti 2 in più) |
 | **Totale** | **74,5** | 74,5 ✓ | — |
 
-Con S a 34,6 la creaseline davanti si ricalcola: `S–W = ½ S–C − 0,3` → **W a 17,6 dal centro** (non più 18,1). La V dietro dipende da dove è finita R.
+**Creaseline ricalcolate sui punti reali** (`S–W = ½ S–C − 0,3` · `R–V = ½ R–C − 0,3`):
+- **W (davanti) a 18,0 dal centro** (35,5 − 17,45)
+- **V (dietro) a 23,8 dal centro** (47 − 23,2)
+
+Nota per la tela: con R a 47 la coscia dietro disegnata sarà ancora più piena di quanto stimato (fascia ~45 contro il target 32 di `09`). È il compromesso già deciso: il cavallo che misura giusto vince, la coscia si giudica addosso.
 
 [[project-inverso-pantalone-drop1]]
 [[feedback_pattern_drafting_verifica]]
