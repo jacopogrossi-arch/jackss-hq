@@ -1,6 +1,8 @@
 # Basic Pant Foundation Armstrong — costruita con i numeri del Drop 1
 
 > Scritto il 02/08/2026, **corretto il 02/08/2026 dopo aver guardato le pagine vere del libro** (pag. 613-614 stampate, "Basic Pant Foundation for Trouser", Figure 1-4 — immagini estratte in sessione da `cartamodelli/prompts/Patternmaking for Fashion Design ( PDFDrive ).pdf`, pagine PDF 620-621). La prima versione di questo foglio (sezioni 3 e 4) era sbagliata: dedotta dal testo senza guardare le figure. Jacopo l'ha beccato disegnando a mano e confrontando con le figure — vedi `feedback_pattern_drafting_verifica.md` in memoria.
+>
+> **03/08/2026: sezione 4 chiusa.** Riguardate le Figure 3 e 4 ad alta risoluzione: la curva grigia è il centro + cavallo (non il fianco), R e S sono le punte della forchetta, da lì parte l'interno gamba. Il foglio ora è completo: si può disegnare tutto. Il punto aperto rimasto è il compromesso forchetta/coscia (sezione 5), che si risolve col metro di costa e poi sulla tela.
 
 ## Come leggere questo foglio
 
@@ -56,24 +58,53 @@ Il cavallo parte largo quanto il fianco (rettangolo pieno), si ritaglia dopo —
 
 ---
 
-## 4 — La curva del cavallo — **DA RIFARE, ancora aperto**
+## 4 — La curva del cavallo — **RISOLTO** (03/08, riguardando Figure 3 e 4 ad alta risoluzione)
 
-⚠️ **Le due versioni precedenti di questa sezione erano sbagliate.** La prima diceva che la curva scende sotto la linea del cavallo fino a un punto V/W. La seconda diceva che la curva (quella che parte da X, passa per G, arriva a R) prosegue fino a C. **Nessuna delle due è giusta.**
+⚠️ Anche la terza interpretazione ("la curva grigia è il fianco") era **sbagliata**. Ritagli delle pagine salvati in `img/armstrong-fig3-cavallo.png`, `img/armstrong-fig4-fascia-crotch.png`, `img/armstrong-formule-cavallo.png` — sono da tenere accanto al foglio mentre si disegna.
 
-**Quello che è confermato guardando la Figura 3 e 4:**
-- La curva grigia spessa che si vede nel disegno va da **M**, scende per **X**, gira intorno a **G**, e prosegue (passando vicino a **T**) fino a **R** — un'unica curva continua. **Questo è il fianco (outseam)**, non il cavallo: continua oltre l'angolo dell'anca e scende nella gamba.
-- **V** (22,8 cm dal centro dietro) e **W** (18,1 cm dal centro davanti) **non stanno su questa curva**. Servono più avanti (Figura 4) per far scendere dritta la riga di piega verticale (creaseline) della gamba — sono un riferimento per dopo, non un punto che il fianco deve toccare.
-- Il centro dietro/davanti (da N/O, passando per D, fino a C) è una linea **separata**, quasi dritta.
+**Come stanno davvero le cose (verificato sulle figure):**
 
-**Quello che NON è ancora chiaro, da verificare prima di disegnare:** come si chiude esattamente il pannello tra il fianco (che arriva a R/S) e il centro (che arriva a C) all'altezza del cavallo — cioè cosa collega concretamente questi due lati. Nella Figura 4 il tratto marcato in grigio spesso (la vera linea di taglio) sembra continuare dal centro (C) verso il basso nella gamba, separatamente dal fianco — ma non ho ancora capito con certezza cosa succede esattamente nella fascia "Crotch" tra i due lati.
+- La **curva grigia spessa non è il fianco: è il centro + la curva del cavallo.** Dietro: da M scende lungo il centro dietro inclinato, passa per X, gira l'angolo vicino a G e finisce a **R**, che è la **punta della forchetta dietro**. Davanti, speculare: da L per X, gira vicino a K, finisce a **S**, punta della forchetta davanti.
+- Il **fianco (outseam)** è l'altra linea, quella quasi dritta: curva fianchi da **N a D** (dietro) e da **O a D** (davanti), poi da D scende nella gamba fino all'orlo passando vicino a C, fondendosi ("blending with D"). Nella Figura 4 le due linee grigie che scendono da D nel canale tra le gambe sono proprio i due fianchi.
+- **Non c'è niente da "chiudere" tra R/S e C**: sono i due lati opposti del pannello. La linea orizzontale "Crotch" (C–W–V) è **solo costruzione, non si taglia**. Da S e da R parte l'**interno gamba (inseam)** che scende fino all'orlo; il pannello nella fascia fianchi–cavallo è delimitato dal cavallo da un lato e dal fianco dall'altro. Il tratto grigio che "continuava nella gamba" oltre R/S era l'inseam che comincia lì — per questo la linea sembrava proseguire.
 
-**Prossimo passo, prima di riprendere a disegnare:** guardare di nuovo, con calma, la Figura 4 (pag. 614 stampata / 621 PDF), in particolare la fascia tra "Hip" e "Crotch", e capire come il tratto grigio spesso (taglio vero) collega fianco e centro — eventualmente confrontando con un cartamodello uomo che Jacopo ha già usato in passato, che potrebbe risolvere l'ambiguità più in fretta di un'altra rilettura del libro.
+**I punti della forchetta (formule pag. 614, applicate ai numeri Drop 1):**
+
+| Punto | Formula | Calcolo | Valore |
+|---|---|---|---|
+| G–R (forchetta dietro) | ½ di G–C | 30 ÷ 2 | **R = 45 cm dal centro** |
+| K–S (forchetta davanti) | ¼ di K–C | 28,5 ÷ 4 | **S = 35,6 cm dal centro** |
+| G–T e K–U | 1/3" sulla diagonale dell'angolo | — | **0,85 cm** (vedi nota) |
+
+⚠️ **Nota su T e U:** il testo del libro dice 1/3" (0,85 cm), ma nella figura T e U sembrano molto più lontani dall'angolo (~3 cm in scala). La figura è schematica, quindi non fa testo — ma nemmeno la cifra va presa come dogma: la diagonale serve solo a guidare il curvilineo. La curva si disegna da X, sfiora la diagonale, arriva a R (o S); fa fede la **misura di costa** finale, non il punto esatto.
+
+**V e W confermati** (22,8 e 18,1 dal centro): derivano proprio da R=45 e S=35,6 (`R–V = ½ R–C − 0,3` · `S–W = ½ S–C − 0,3`). Da V e W scendono le creaseline, perpendicolari, fino all'orlo.
+
+**La gamba (Figura 4), coi numeri Drop 1, centrata sulle creaseline:**
+
+| Livello | Davanti (creaseline W) | Dietro (creaseline V) |
+|---|---|---|
+| Ginocchio | 24,5 → **12,25 per lato** | 26,5 → **13,25 per lato** |
+| Orlo | 25 → **12,5 per lato** | 27 → **13,5 per lato** |
+
+- **Inseam:** segna 1,3 cm (½") verso l'interno da S e da R, tira una retta fino al segno d'orlo; poi dal ginocchio in su la si curva fino a **toccare S e R** (la cucitura vera passa per le punte).
+- **Outseam:** dal segno d'orlo sale dritta fino al ginocchio, poi si fonde in D.
 
 ---
 
-## 5 — Sulla forchetta
+## 5 — Sulla forchetta — il conflitto ora ha i numeri
 
-Resta valido quanto detto prima: niente numero unico da confrontare a tavolino. Si disegna, si misura di costa, si confronta con l'obiettivo di `09` (davanti 32, dietro 42,5, totale 74,5).
+Resta vero che il verdetto finale è della misura di costa e poi della tela — ma ora il conflitto è visibile a tavolino, ed è la versione quantificata del "da tenere d'occhio" di `09`:
+
+- **Forchette Armstrong** (7,1 davanti + 15 dietro): le curve del cavallo vengono lunghe circa quanto serve (obiettivo 32 + 42,5 = 74,5), ma la **coscia** disegnata viene ~34 davanti / ~43 dietro — controllo `09` a 29 / 32, cioè **~15 cm in più a gamba**. È la coscia di un classico ampio anni '40, non del Drop 1.
+- **Forchette da `09`** (0,5 + 2): coscia giusta, ma la curva dietro non può fisicamente arrivare a 42,5 (con 30 di profondità e 2 di forchetta si ferma verso i 34-35).
+
+Le due cose non possono essere vere insieme con questa geometria: **la manopola è la forchetta, soprattutto dietro.**
+
+**Ordine di lavoro sul foglio:**
+1. Disegnare le curve con le forchette Armstrong (R=45, S=35,6).
+2. Misurarle di costa → accorciare la forchetta (spostando R e S verso il centro lungo la linea del cavallo) fino a centrare **32 davanti / 42,5 dietro**.
+3. A quel punto misurare la coscia risultante: verrà comunque più larga di 29/32. Annotare di quanto — quella differenza si decide **sulla tela**, non sul foglio (se il cavallo veste, una coscia più piena su un pantalone ampio è il rischio minore; strizzarla a tavolino rischia di rubare forchetta).
 
 [[project-inverso-pantalone-drop1]]
 [[feedback_pattern_drafting_verifica]]

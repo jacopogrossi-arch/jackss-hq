@@ -4,7 +4,9 @@
 
 ## 🎯 PRIORITÀ ASSOLUTA — la prossima sessione parte da qui
 
-**Aggiornamento 02/08:** la Basic Pant Foundation Armstrong è stata costruita con i numeri reali del Drop 1 in `ricerca/11-basic-pant-foundation-costruita.md`. Griglia e vita sono risultate **identiche** a questo foglio (buon segno: la decostruzione era corretta). La curva del cavallo — l'unica cosa che qui sotto non era coperta — ora ha punti concreti da tracciare (sezione 4 del doc `11`). **Resta da fare:** disegnarla su carta e misurarla di costa, per vedere se la forchetta di 2,5 cm qui sotto regge o va corretta — il doc `11` spiega perché non si può dare quel verdetto solo con l'aritmetica.
+**Aggiornamento 02/08:** la Basic Pant Foundation Armstrong è stata costruita con i numeri reali del Drop 1 in `ricerca/11-basic-pant-foundation-costruita.md`. Griglia e vita sono risultate **identiche** a questo foglio (buon segno: la decostruzione era corretta).
+
+**Aggiornamento 03/08:** anche la curva del cavallo è chiusa (sezione 4 del doc `11`, con i ritagli delle figure in `ricerca/img/armstrong-*.png`): la curva grigia di Armstrong è il centro + cavallo, R e S sono le punte della forchetta, da lì scende l'interno gamba. **Il disegno su carta ora si può fare per intero.** L'unico compromesso rimasto è forchetta vs coscia: le forchette Armstrong (7,1 + 15) danno il cavallo giusto ma una coscia da classico ampio (~15 cm oltre il target a gamba); la forchetta da 2,5 di questo foglio dà la coscia giusta ma un cavallo dietro corto. Sezione 5 del doc `11` dà l'ordine di lavoro: disegnare con Armstrong, accorciare la forchetta fino a centrare 32/42,5 di costa, annotare la coscia risultante e decidere sulla tela.
 
 ## ⚠️ Che metodo è questo — e che metodo NON è
 
