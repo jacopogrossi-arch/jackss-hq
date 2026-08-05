@@ -1,0 +1,152 @@
+# La tela di prova — dal cartamodello alla prova addosso
+
+> Scritto il 05/08/2026, dopo la finitura del cartamodello (`12-finitura-cartamodello-carta.md`).
+> È l'ultimo passaggio prima di tagliare il drill oliva. Serve a scoprire gli errori sulla tela da 3 euro invece che sul tessuto buono.
+
+---
+
+## ⚠️ Prima di tutto: la tela si compra questa settimana
+
+Il giro tessutai (`08`) ha una finestra che **non si ripete**: 1–12 agosto, poi Roma chiude. Oggi è il 5.
+
+**La tela si compra nello stesso viaggio del drill.** 2 m di cotone economico — tela grezza, mussola, un cotone pesante qualsiasi. Deve avere **peso e mano simili al drill** (240–340 g): una mussola leggerissima cade in modo diverso e ti dice bugie sul ginocchio. Se il negoziante ha uno scampolo di cotone pesante a poco, è perfetto — il colore non conta.
+
+Non aspettare che il cartamodello sia perfetto per comprarla. Il tessuto lo trovi solo in questa finestra, il cartamodello lo correggi quando vuoi.
+
+---
+
+## 1 — Il taglio
+
+### Cosa serve
+
+Tela, gesso da sarto (o una saponetta secca), spilli, filo di **colore contrastante**, forbici da tessuto.
+
+### Come posizionare i pezzi
+
+- Piega la tela in due **lungo il filo** (la cimosa, il bordo finito, contro se stessa). Tagliando su doppio strato ottieni i due pezzi specchiati in un colpo.
+- Appoggia ogni pannello con il **drittofilo parallelo alla cimosa**. Misura la distanza drittofilo-cimosa in due punti, sopra e sotto: se i due numeri non coincidono, il pezzo è storto. Questo controllo vale più di qualsiasi altra cura in fase di taglio.
+- Spilla dentro il perimetro, non sul bordo.
+
+### Cosa riportare sulla tela
+
+Questo è il passaggio che quasi tutti saltano e che rende la prova leggibile:
+
+| Cosa | Come | Perché |
+|---|---|---|
+| **Linea di cucitura** (il netto) | gesso, tutto il perimetro | provando vedi *dove* cadrebbe la cucitura, non il bordo del margine |
+| **Creaseline** | filo contrastante, imbastita a mano | è la cosa più importante da vedere addosso |
+| **Linee vita, fianchi, ginocchio** | gesso, tratti brevi ai lati | ti dicono a che altezza sta il problema |
+| **Pinces e pieghe** | gesso + una tacca | vanno cucite dove sono, non a occhio |
+
+La creaseline imbastita col filo colorato serve a una cosa sola, ma decisiva: se addosso **non cade a piombo**, la gamba è girata. È un difetto che a occhio nudo non vedi e che sul drill scopriresti troppo tardi.
+
+---
+
+## 2 — La cucitura
+
+**Punto lungo (4–5 mm), niente rifiniture.** La tela va scucita e ricucita più volte: è materiale di lavoro, non un capo.
+
+### Cosa cucire
+
+1. Pinces dietro e pieghe davanti
+2. Cuciture laterali (fianco)
+3. Interno gamba
+4. Cavallo (il cavallo per ultimo, sempre — è l'unico modo di farlo combaciare)
+
+### Cosa NON cucire
+
+Niente tasche, niente patta, niente cinturino, niente orlo. Sono dettagli e ora non servono a niente.
+
+Alla vita: un **elastico spillato** o una fettuccia, giusto per tenerla su all'altezza giusta. E lascia il cavallo davanti **aperto per 15 cm** con due spilli — così te lo infili senza patta.
+
+### La regola che vale più di tutte
+
+Cuci **esattamente sulla linea di gesso**, non a occhio sul margine. Se cuci sul margine hai provato un pantalone diverso da quello che hai disegnato, e tutto quello che scopri è inutile.
+
+---
+
+## 3 — La prova
+
+**Come presentarti alla prova:**
+- **In piedi, davanti a uno specchio intero.** Un pantalone si giudica in piedi.
+- **Con le scarpe che porterai** — gli stivali texani. L'altezza del tacco cambia dove cade l'orlo e come si legge la gamba.
+- Fatti **tre foto**: davanti, profilo, dietro. Le pieghe si vedono meglio in foto che allo specchio, e ti servono per confrontare dopo la correzione.
+
+### Le due cose da sentire (foglio `09` §7)
+
+**La forchetta.** Cammina. Siediti. Accovacciati. Se tira sul cavallo, i 2,5 cm di forchetta sono corti — si allunga **dietro**, mai davanti.
+
+**Il ginocchio.** Guardati **di profilo, in piedi** — non da seduto. Il salto coscia→ginocchio è di 10 cm contro i 6 del COS: è la linea più ripida del capo, ed è l'unica cosa che può far leggere la gamba come strizzata e poi campanata invece che dritta. Se pizzica, si allarga il ginocchio fino a 26 senza toccare né coscia né orlo.
+
+### Come si leggono le pieghe
+
+Regola sartoriale che vale sempre: **le pieghe puntano verso il problema.**
+
+| Cosa vedi | Cosa significa | Dove si corregge |
+|---|---|---|
+| Pieghe diagonali sotto il sedere | cavallo dietro corto | forchetta dietro |
+| Pieghe orizzontali sotto il sedere | cavallo dietro troppo lungo | si accorcia dietro |
+| Tira sul davanti in mezzo alle gambe | forchetta davanti corta | ultima risorsa, prima prova dietro |
+| La creaseline non cade a piombo | gamba girata | drittofilo o bilanciamento fianco/interno |
+| Tira sul fianco all'altezza dei fianchi | manca larghezza a 20 | fianco, non vita |
+
+### Cosa NON decidere sulla tela
+
+**L'orlo.** Si segna addosso, in piedi, con gli stivali ai piedi — ma alla fine, sul capo vero, non sulla tela.
+
+---
+
+## 4 — Le correzioni
+
+**Segnale sulla tela addosso, con un pennarello.** Non a memoria, non "poi mi ricordo". Se serve più spazio in un punto, scuci lì e infila una striscia di tela: è il modo più diretto di sapere *quanti* centimetri mancano invece di indovinarli.
+
+Poi, tolta la tela:
+
+1. Misura sulla tela quanto hai aggiunto o tolto, in centimetri
+2. Riportalo **sul master** (il foglio di costruzione), non solo sul ricalco
+3. Ricalca di nuovo i pezzi corretti
+4. Scrivi sul master **cosa hai cambiato e perché** — con la data
+
+Il punto 4 non è burocrazia. Il Drop 1 è il primo capo: questo foglio corretto diventa la base di tutto quello che verrà dopo, e tra sei mesi «perché il cavallo dietro è 44 e non 42,5» deve avere una risposta scritta.
+
+**Se le correzioni sono grosse, si fa una seconda tela.** Costa 3 euro e mezz'ora. Tagliare il drill su un cartamodello corretto ma mai riprovato è il modo classico di rovinare 2 metri di tessuto buono.
+
+---
+
+## Checklist
+
+```
+ACQUISTO (entro il 12 agosto)
+[ ] 2 m tela economica, peso simile al drill
+[ ] filo contrastante, gesso da sarto
+
+TAGLIO
+[ ] tela piegata lungo il filo
+[ ] drittofilo parallelo alla cimosa — misurato in due punti
+[ ] linea di cucitura a gesso su tutto il perimetro
+[ ] creaseline imbastita col filo colorato
+[ ] vita / fianchi / ginocchio segnati
+[ ] pinces e pieghe segnate
+
+CUCITURA (punto lungo)
+[ ] pinces e pieghe
+[ ] laterali
+[ ] interno gamba
+[ ] cavallo (per ultimo), aperto 15 cm davanti
+[ ] elastico alla vita
+
+PROVA
+[ ] in piedi, specchio intero, stivali texani
+[ ] tre foto: davanti / profilo / dietro
+[ ] forchetta: cammina, siediti, accovacciati
+[ ] ginocchio: di profilo, in piedi
+[ ] creaseline a piombo?
+
+CORREZIONI
+[ ] segnate sulla tela col pennarello, addosso
+[ ] misurate in cm
+[ ] riportate sul MASTER, con data e motivo
+[ ] seconda tela se le correzioni sono grosse
+```
+
+[[project-inverso-pantalone-drop1]]
