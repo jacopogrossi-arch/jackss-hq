@@ -25,6 +25,43 @@ Il test senza bilancia: prendine un lembo e lascialo cadere dalla mano. Se sta s
 
 ---
 
+## 0 bis — Se salti le verifiche a tavolino
+
+**Scelta di Jacopo, 05/08: si va diretti al taglio della tela senza fare i quattro controlli del doc `12` §2.**
+
+È una scelta difendibile: la tela di prova serve proprio a quello, e te lo dice addosso invece che col metro. Ma cambia una cosa nel taglio, e va fatta o la scelta si paga.
+
+### Margini larghi — solo sulla tela
+
+Salta le verifiche, ma taglia la tela con **margini abbondanti**:
+
+| Dove | Cartamodello definitivo | **Sulla tela di prova** |
+|---|---|---|
+| Laterali e interno gamba | 1,5 | **3 cm** |
+| Curva del cavallo | 1 | **2 cm** |
+| Vita | 1 | **3 cm** |
+| Orlo | 4 | lascia tutto, non orlare |
+
+Il motivo è semplice: se scoprendo il difetto addosso ti manca stoffa, non puoi correggere — devi ritagliare tutto. Con 3 cm di margine scuci, sposti la cucitura e riprovi lo stesso giorno. Un centimetro e mezzo in più per lato ti dà 6 cm di manovra su una circonferenza: è tantissimo, ed è gratis.
+
+**Non ritoccare il cartamodello.** I margini larghi si aggiungono a occhio in fase di taglio della tela, tenendo il pezzo di carta appoggiato e tagliando più larghi. Il cartamodello resta quello definitivo, con i margini veri.
+
+### Le verifiche le fai comunque — mentre cuci
+
+Non le hai saltate, le hai solo spostate. Quando appai due pezzi per cucirli, se un lato è più lungo dell'altro **quello è il risultato della verifica**, scritto sulla tela.
+
+Tieni matita e foglio accanto alla macchina e segna:
+
+```
+laterale   davanti vs dietro:  combaciano / dietro più lungo di ___ / più corto di ___
+interno    davanti vs dietro:  ___
+cavallo    combacia in punta?  ___
+```
+
+Servono dopo, quando riporti le correzioni sul master. Uno scarto che scopri e non annoti è uno scarto che rifarai.
+
+---
+
 ## 1 — Il taglio
 
 ### Cosa serve
@@ -133,12 +170,14 @@ PRIMA DI TAGLIARE
 TAGLIO
 [ ] tela piegata lungo il filo
 [ ] drittofilo parallelo alla cimosa — misurato in due punti
+[ ] MARGINI LARGHI: laterali e interno 3 cm · cavallo 2 · vita 3
 [ ] linea di cucitura a gesso su tutto il perimetro
 [ ] creaseline imbastita col filo colorato
 [ ] vita / fianchi / ginocchio segnati
 [ ] pinces e pieghe segnate
 
 CUCITURA (punto lungo)
+[ ] matita e foglio accanto alla macchina: annota gli scarti che trovi
 [ ] pinces e pieghe
 [ ] laterali
 [ ] interno gamba
