@@ -1,6 +1,6 @@
 # Finitura del cartamodello su carta — dal ricalco al taglio della tela
 
-> Scritto il 05/08/2026, dopo che Jacopo ha **ricalcato il contorno del pannello su un foglio pulito, insieme alle pinces e alla creaseline**.
+> Scritto il 05/08/2026, dopo che Jacopo ha **ricalcato il contorno di entrambi i pannelli (davanti e dietro) su foglio pulito, insieme alle pinces e alla creaseline**.
 > Questo foglio copre solo quello che succede *dopo* il ricalco: cosa segnare, cosa verificare, quando aggiungere i margini.
 > I numeri di riferimento stanno in `09-foglio-costruzione-cartamodello.md`. Qui non se ne inventano di nuovi.
 
@@ -80,6 +80,54 @@ Armstrong (§8 del doc `10`) lo dice in modo pratico: si sovrappongono i due pez
 
 - Se il dietro risulta più corto: *"add to the short side"* — si aggiunge al lato corto, non si taglia il lungo.
 - In zona cavallo la cucitura posteriore **può restare un po' più corta** sul cartamodello: si allunga fisicamente cucendo (si tira il dietro sul davanti). È voluto, non è un errore — è quello che fa spazio al sedere.
+
+### Lo strumento
+
+**Metro da sarta messo di costa** — in piedi sul bordo, non appoggiato piatto. È l'unico modo di seguire una curva senza accorciarla. Se una curva è troppo stretta per il metro (il cavallo), usa uno spago: lo appoggi sulla curva, lo segni con due dita, poi lo stendi sul metro.
+
+Misura sempre **sulla linea di cucitura** (il netto), non sul bordo della carta.
+
+### Le tolleranze
+
+| Differenza | Cosa significa |
+|---|---|
+| **≤ 2 mm** | torna. Si assorbe cucendo, non toccare niente |
+| **3–5 mm** | correggibile a matita sul ricalco, senza rifare |
+| **> 5 mm** | c'è un errore nel disegno. Si torna al master |
+
+### Se una verifica non torna
+
+**1. Cuciture laterali diverse.**
+Misura dal punto vita-fianco di ciascun pannello fino all'orlo. Attenzione: dietro il punto vita sul fianco sta **più alto** che al centro (l'inclinazione del §3 del foglio `09`) — il punto da cui parti è quello sul fianco, non quello sul centro dietro.
+Se non tornano: si aggiunge al corto, alzando di quel tanto il punto vita sul fianco del pannello corto e raccordando la curva. Non accorciare il lungo: la lunghezza laterale di 106 è già decisa.
+
+**2. Interno gamba.**
+Si misura dal **crotch point** (fine della forchetta) all'orlo. Il dietro deve venire **più lungo di 0,5–1 cm** — è pratica comune, non un numero della scheda: quel mezzo centimetro si "molla" cucendo sopra il ginocchio ed è ciò che fa piegare il ginocchio senza tirare.
+Se il dietro viene **più corto**, non aggiustarlo lì: quasi sempre l'errore è nel crotch point dietro o nella curva del cavallo — cioè proprio la parte lasciata aperta nel doc `11` §4. Si torna a quella curva.
+
+**3. Vita.**
+L'errore classico: la linea vita **è curva**, quindi misurata di costa viene più lunga della larghezza orizzontale del pannello. Non confondere le due cose.
+Il controllo giusto: spilla la carta chiudendo pieghe e pinces (la carta gobba, è normale — appoggiala e misura la linea, non forzarla piatta), poi misura di costa la vita del pezzo chiuso. Davanti **19,5**, dietro **18,5**.
+Se viene largo: hai perso ripresa nelle pieghe/pinces. Se viene stretto: le hai fatte troppo profonde. Si correggono le riprese, **non** la larghezza del pannello — quella è la scheda tecnica.
+
+**4. Cavallo.**
+La verifica che conta di più, perché è la parte del disegno meno solida. Di costa lungo la curva, dal punto vita sul centro fino al crotch point: davanti **32**, dietro **42,5**, totale **74,5**.
+- **Corto** → sul corpo tirerà. Si allunga **dietro**, mai davanti (foglio `09` §7).
+- **Lungo** → farà una sacca sotto il sedere. Si accorcia dietro.
+- Se lo scarto è > 1 cm, non correggere il ricalco: torna al master e rifai la curva.
+
+### Tabella da riempire a matita
+
+Segna i valori **rilevati**, non quelli attesi. Se poi correggi, devi sapere da dove sei partito.
+
+```
+data ____________
+
+1. laterale   davanti ______   dietro ______   Δ ______
+2. interno    davanti ______   dietro ______   Δ ______  (dietro +0,5/1)
+3. vita       davanti ______   dietro ______   (att. 19,5 / 18,5)
+4. cavallo    davanti ______   dietro ______   tot ______  (att. 32 / 42,5 / 74,5)
+```
 
 ---
 
