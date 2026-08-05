@@ -124,6 +124,41 @@ Costa tempo, e questo è l'unico argomento contro. Sul **drill del capo vero** i
 
 **Mentre cuci:** non passare a macchina *sopra* l'erbetta — cuci di fianco, o toglila mano a mano. Se ci cuci sopra poi non la sfili più.
 
+### Sequenza operativa: dal cartamodello spillato ai pezzi pronti
+
+*(Scritta il 05/08 sulla situazione reale: cartamodelli spillati sulla tela nera, margini già tracciati a gesso.)*
+
+**Regola che ordina tutto: quello che richiede il cartamodello in posizione va fatto adesso.** Tolti gli spilli non si recupera più.
+
+**0. Due controlli, 30 secondi, prima di toccare le forbici**
+
+- **Doppio strato?** Solleva un angolo e verifica che sotto ci sia il secondo strato di tela. Se è singolo, ogni pezzo esce una volta sola e ti mancano le gambe specchiate: fermati e ristendi.
+- **Drittofilo.** Misura dalla creaseline del cartamodello alla cimosa **in due punti, in alto e in basso**. Devono coincidere. È l'unico controllo che dopo non si recupera in nessun modo, e vale più di tutti gli altri messi insieme.
+- Controlla anche che le linee di gesso dei due pezzi **non si tocchino**: ciascuno deve avere i suoi margini interi.
+
+**1. Taglia sulla linea di gesso** — con la carta ancora spillata. Gli spilli tengono i due strati insieme e il tessuto non scivola. Non togliere niente.
+
+**2. Punti lenti, attraverso carta e tessuto**
+
+L'ago passa attraverso **cartamodello + due strati di tela**. È così che si segnano anche le linee interne, che stanno sotto la carta.
+
+Il ricalco si buca e si strappa: **va bene**, è un pezzo di lavoro e il master è al sicuro nel cassetto. Non provare a salvarlo, ci perdi solo precisione.
+
+Cosa segnare, in quest'ordine:
+- **Contorno netto** — pungendo appena *dentro* il bordo della carta, così l'erbetta cade sulla linea di cucitura e non sul margine
+- **Creaseline** per tutta la lunghezza
+- **Livelli** vita, fianchi, ginocchio, ai due lati
+- **Pinces e pieghe**: punte, estremi, e un paio di punti lungo i lati
+- **Crotch point** e tutte le **tacche**
+
+**3. Togli gli spilli e stacca la carta**, tirando su piano. I fili la trattengono e si strappa lungo i fori: è previsto.
+
+**4. Apri i due strati di 1–2 cm e taglia i fili tesi** con le forbicine a punta. Erbetta su tutti e due i pezzi, identica per costruzione.
+
+**5. Etichetta subito** ogni pezzo con un pezzetto di nastro di carta: `DAVANTI dx`, `DAVANTI sx`, `DIETRO dx`, `DIETRO sx`. Quattro pezzi di tela nera senza etichetta, a distanza di un giorno, sono indistinguibili.
+
+Da qui si va alla cucitura (§2): pinces e pieghe → laterali → interno gamba → **cavallo per ultimo**.
+
 ### La scorciatoia, se un giorno hai fretta
 
 Solo per una tela di prova, mai sul capo vero: gesso bianco sullo strato di sopra, punti lenti **solo sui punti singolari** (creaseline, livelli, punte pinces, crotch point, tacche), poi separi gli strati, **ribalti** il cartamodello sul secondo pezzo allineandolo su quei punti e ripassi col gesso.
