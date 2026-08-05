@@ -5,13 +5,23 @@
 
 ---
 
-## ⚠️ Prima di tutto: la tela si compra questa settimana
+## ⚠️ La tela c'è già — quindi l'ordine cambia
 
-Il giro tessutai (`08`) ha una finestra che **non si ripete**: 1–12 agosto, poi Roma chiude. Oggi è il 5.
+**Aggiornamento 05/08: Jacopo ha già la tela in casa.** Niente acquisto da fare, si può tagliare subito. Questo apre una possibilità che vale la pena sfruttare.
 
-**La tela si compra nello stesso viaggio del drill.** 2 m di cotone economico — tela grezza, mussola, un cotone pesante qualsiasi. Deve avere **peso e mano simili al drill** (240–340 g): una mussola leggerissima cade in modo diverso e ti dice bugie sul ginocchio. Se il negoziante ha uno scampolo di cotone pesante a poco, è perfetto — il colore non conta.
+### Cuci la tela *prima* del giro tessutai
 
-Non aspettare che il cartamodello sia perfetto per comprarla. Il tessuto lo trovi solo in questa finestra, il cartamodello lo correggi quando vuoi.
+Il giro tessutai (`08`) ha una finestra che non si ripete: **1–12 agosto**. Serve ancora — per il **drill oliva**, non per la tela.
+
+Se la tela di prova è cucita e provata *prima* di andare a comprare il drill, ci vai sapendo due cose che oggi non sai: che il cartamodello funziona davvero, e **quanti metri servono per il pantalone corretto** (se il modello si allarga, i 1,8–2 m stimati cambiano). Comprare il tessuto buono su un cartamodello mai provato è la parte più rischiosa di tutto il Drop 1.
+
+È fattibile: taglio e cucitura della tela sono mezza giornata. La finestra è 5–12 agosto.
+
+### Prima di tagliare, controlla che la tela sia adatta
+
+Una cosa sola, ma conta: **il peso**. Deve essere vicino al drill (240–340 g/m²) — una tela leggera da lenzuolo cade in modo diverso e ti mente proprio sul ginocchio, che è il punto più delicato del capo.
+
+Il test senza bilancia: prendine un lembo e lascialo cadere dalla mano. Se sta su e fa una piega netta, va bene. Se si affloscia come una camicia, è troppo leggera — ti dirà che la gamba è a posto anche quando non lo è. In quel caso usala lo stesso per verificare *le misure* (vita, cavallo, lunghezze, forchetta), ma **non fidarti di come legge la linea della gamba**: quella la giudichi solo sul drill.
 
 ---
 
@@ -116,9 +126,9 @@ Il punto 4 non è burocrazia. Il Drop 1 è il primo capo: questo foglio corretto
 ## Checklist
 
 ```
-ACQUISTO (entro il 12 agosto)
-[ ] 2 m tela economica, peso simile al drill
-[ ] filo contrastante, gesso da sarto
+PRIMA DI TAGLIARE
+[ ] tela pesata a mano: sta su o si affloscia?
+[ ] filo contrastante, gesso da sarto, spilli
 
 TAGLIO
 [ ] tela piegata lungo il filo
