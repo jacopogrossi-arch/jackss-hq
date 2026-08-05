@@ -87,6 +87,46 @@ Questo è il passaggio che quasi tutti saltano e che rende la prova leggibile:
 
 La creaseline imbastita col filo colorato serve a una cosa sola, ma decisiva: se addosso **non cade a piombo**, la gamba è girata. È un difetto che a occhio nudo non vedi e che sul drill scopriresti troppo tardi.
 
+### Tessuto scuro: come si segna, e come si passa al secondo strato
+
+*(Aggiunto il 05/08 — la tela di casa è nera e la carta carbone nera su nero non si vede.)*
+
+**Primo: la carta carbone lasciala perdere, su un tessuto scuro.** Serve **gesso bianco** o una saponetta secca — si vede benissimo sul nero e va via. La rotella dentata con carbone chiaro funziona, ma non è roba da procurarsi adesso.
+
+Resta il vero problema: il gesso segna **solo lo strato di sopra**. Il secondo strato, quello piegato sotto, resta bianco. La soluzione più rapida è in tre passaggi, e non richiede di imparare niente di nuovo.
+
+**1. Traccia normalmente sullo strato di sopra**, col gesso bianco. Tutto: linea di cucitura, creaseline, livelli, pinces, tacche.
+
+**2. Prima di separare gli strati, fissa i punti chiave** attraverso entrambi. Non tutta la linea — solo questi:
+
+- i **quattro estremi della creaseline** (alto e basso)
+- dove le linee **vita, fianchi, ginocchio** incrociano i due lati
+- **punta ed estremi** di ogni pinces e di ogni piega
+- il **crotch point**
+- ogni **tacca**
+
+Due modi, scegli tu:
+- **Spilli**, infilati dritti attraverso i due strati. Veloce, ma si sfilano se sposti il tessuto.
+- **Punti di segno** (*tailor's tacks*) — più lenti ma non si muovono più. Vedi sotto.
+
+**3. Separa gli strati, ribalta il cartamodello sul secondo pezzo** allineandolo sui punti che hai fissato, e ripassa col gesso. Il cartamodello è netto e il pezzo è tagliato coi margini, quindi non combacia sui bordi: sono i punti chiave a dirti dov'è la posizione giusta, non il contorno.
+
+⚠️ **Ribalta il cartamodello**, non appoggiarlo dallo stesso verso: il secondo pezzo è lo specchio del primo. È l'errore che produce due gambe sinistre.
+
+### I punti di segno, come si fanno
+
+Ago con filo **doppio, non annodato**, di colore contrastante (bianco o rosso).
+
+1. Prendi un punto attraverso **entrambi** gli strati, lasciando una coda di 3–4 cm
+2. Rifai un punto **nello stesso posto**, lasciando stavolta un'ansa alta 2–3 cm
+3. Taglia il filo lasciando un'altra coda
+4. Ripeti su ogni punto chiave
+5. Alla fine **allontana i due strati di 1–2 cm** e taglia i fili tesi in mezzo, con le forbici a punta
+
+Restano due ciuffetti di filo, uno per strato, nella stessa identica posizione. Non si spostano e non lasciano segno.
+
+**Filo doppio e senza nodo** sono le due cose che contano: il nodo non passa quando separi gli strati, il filo singolo scivola via.
+
 ---
 
 ## 2 — La cucitura
