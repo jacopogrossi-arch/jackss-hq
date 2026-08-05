@@ -80,10 +80,10 @@ Questo è il passaggio che quasi tutti saltano e che rende la prova leggibile:
 
 | Cosa | Come | Perché |
 |---|---|---|
-| **Linea di cucitura** (il netto) | gesso, tutto il perimetro | provando vedi *dove* cadrebbe la cucitura, non il bordo del margine |
+| **Linea di cucitura** (il netto) | punti lenti → erbetta (o gesso, vedi sotto) | provando vedi *dove* cadrebbe la cucitura, non il bordo del margine |
 | **Creaseline** | filo contrastante, imbastita a mano | è la cosa più importante da vedere addosso |
-| **Linee vita, fianchi, ginocchio** | gesso, tratti brevi ai lati | ti dicono a che altezza sta il problema |
-| **Pinces e pieghe** | gesso + una tacca | vanno cucite dove sono, non a occhio |
+| **Linee vita, fianchi, ginocchio** | tratti brevi ai lati | ti dicono a che altezza sta il problema |
+| **Pinces e pieghe** | punti lenti su punte ed estremi | vanno cucite dove sono, non a occhio |
 
 La creaseline imbastita col filo colorato serve a una cosa sola, ma decisiva: se addosso **non cade a piombo**, la gamba è girata. È un difetto che a occhio nudo non vedi e che sul drill scopriresti troppo tardi.
 
@@ -91,41 +91,46 @@ La creaseline imbastita col filo colorato serve a una cosa sola, ma decisiva: se
 
 *(Aggiunto il 05/08 — la tela di casa è nera e la carta carbone nera su nero non si vede.)*
 
-**Primo: la carta carbone lasciala perdere, su un tessuto scuro.** Serve **gesso bianco** o una saponetta secca — si vede benissimo sul nero e va via. La rotella dentata con carbone chiaro funziona, ma non è roba da procurarsi adesso.
+**La carta carbone, su un tessuto scuro, lasciala perdere.** E il gesso bianco risolve solo metà del problema, perché segna **solo lo strato di sopra**.
 
-Resta il vero problema: il gesso segna **solo lo strato di sopra**. Il secondo strato, quello piegato sotto, resta bianco. La soluzione più rapida è in tre passaggi, e non richiede di imparare niente di nuovo.
+Il metodo giusto è quello che Jacopo ha imparato a scuola di sartoria, ed è questo — non una scorciatoia:
 
-**1. Traccia normalmente sullo strato di sopra**, col gesso bianco. Tutto: linea di cucitura, creaseline, livelli, pinces, tacche.
+### Punti lenti su tutto il contorno → l'erbetta
 
-**2. Prima di separare gli strati, fissa i punti chiave** attraverso entrambi. Non tutta la linea — solo questi:
+Si segna **tutto il tracciato** con punti lenti attraverso i due strati. Quando si aprono gli strati e si tagliano i fili tesi, resta su ciascun pezzo un **tracciato fatto di ciuffetti di filo — l'"erbetta"**.
 
-- i **quattro estremi della creaseline** (alto e basso)
-- dove le linee **vita, fianchi, ginocchio** incrociano i due lati
-- **punta ed estremi** di ogni pinces e di ogni piega
-- il **crotch point**
-- ogni **tacca**
+**Come si fa:**
 
-Due modi, scegli tu:
-- **Spilli**, infilati dritti attraverso i due strati. Veloce, ma si sfilano se sposti il tessuto.
-- **Punti di segno** (*tailor's tacks*) — più lenti ma non si muovono più. Vedi sotto.
+1. Ago con filo **doppio, non annodato**, di colore contrastante
+2. Punto attraverso **entrambi** gli strati, lasciando 3–4 cm di coda
+3. Secondo punto **nello stesso posto**, lasciando un'ansa alta 2–3 cm
+4. Taglia lasciando un'altra coda
+5. Prosegui lungo **tutto il contorno** e su tutte le linee interne
+6. Alla fine **allontana i due strati di 1–2 cm** e taglia i fili tesi in mezzo, con le forbicine a punta
 
-**3. Separa gli strati, ribalta il cartamodello sul secondo pezzo** allineandolo sui punti che hai fissato, e ripassa col gesso. Il cartamodello è netto e il pezzo è tagliato coi margini, quindi non combacia sui bordi: sono i punti chiave a dirti dov'è la posizione giusta, non il contorno.
+**Spaziatura:** ogni 4–5 cm sui tratti dritti · ogni 2–3 cm sulle curve (cavallo e giro vita, dove la linea cambia in fretta) · **sempre un punto sugli angoli e sui punti singolari** — crotch point, punta delle pinces, estremi delle pieghe, incroci con vita/fianchi/ginocchio.
 
-⚠️ **Ribalta il cartamodello**, non appoggiarlo dallo stesso verso: il secondo pezzo è lo specchio del primo. È l'errore che produce due gambe sinistre.
+**Il filo giusto:** cotone morbido da imbastire, non ritorto. Il poliestere liscio scivola via dall'erbetta e te la ritrovi a terra.
 
-### I punti di segno, come si fanno
+**Filo doppio e senza nodo** sono le due cose che reggono tutto il metodo: il nodo non passa quando separi gli strati, il filo singolo si sfila.
 
-Ago con filo **doppio, non annodato**, di colore contrastante (bianco o rosso).
+**Perché è meglio del gesso, e non solo su tessuto nero:**
 
-1. Prendi un punto attraverso **entrambi** gli strati, lasciando una coda di 3–4 cm
-2. Rifai un punto **nello stesso posto**, lasciando stavolta un'ansa alta 2–3 cm
-3. Taglia il filo lasciando un'altra coda
-4. Ripeti su ogni punto chiave
-5. Alla fine **allontana i due strati di 1–2 cm** e taglia i fili tesi in mezzo, con le forbici a punta
+- Il tracciato nasce **identico sui due strati per costruzione** — non c'è nessun riposizionamento del cartamodello, quindi nessun errore di allineamento
+- Non sbiadisce maneggiando il pezzo, mentre il gesso sui bordi sparisce proprio dove serve
+- Funziona su tessuti che il gesso non prende (lana pettinata, seta) e su qualsiasi colore
 
-Restano due ciuffetti di filo, uno per strato, nella stessa identica posizione. Non si spostano e non lasciano segno.
+Costa tempo, e questo è l'unico argomento contro. Sul **drill del capo vero** il tempo si spende e basta.
 
-**Filo doppio e senza nodo** sono le due cose che contano: il nodo non passa quando separi gli strati, il filo singolo scivola via.
+**Mentre cuci:** non passare a macchina *sopra* l'erbetta — cuci di fianco, o toglila mano a mano. Se ci cuci sopra poi non la sfili più.
+
+### La scorciatoia, se un giorno hai fretta
+
+Solo per una tela di prova, mai sul capo vero: gesso bianco sullo strato di sopra, punti lenti **solo sui punti singolari** (creaseline, livelli, punte pinces, crotch point, tacche), poi separi gli strati, **ribalti** il cartamodello sul secondo pezzo allineandolo su quei punti e ripassi col gesso.
+
+È più veloce e introduce un errore di allineamento di qualche millimetro. Sul drill non vale la pena.
+
+⚠️ In quel caso il cartamodello va **ribaltato**, non appoggiato dallo stesso verso: il secondo pezzo è lo specchio del primo. È l'errore che produce due gambe sinistre.
 
 ---
 
