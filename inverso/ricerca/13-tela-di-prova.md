@@ -157,6 +157,25 @@ Cosa segnare, in quest'ordine:
 
 **5. Etichetta subito** ogni pezzo con un pezzetto di nastro di carta: `DAVANTI dx`, `DAVANTI sx`, `DIETRO dx`, `DIETRO sx`. Quattro pezzi di tela nera senza etichetta, a distanza di un giorno, sono indistinguibili.
 
+### Dritto, rovescio, destra e sinistra — come si leggono i pezzi
+
+**L'erbetta non dice qual è il dritto.** I ciuffetti attraversano il tessuto, quindi si vedono **da tutte e due le facce**: come indicatore di lato non serve.
+
+Semmai vale il contrario: il cartamodello era appoggiato sul **rovescio**. Il tessuto si piega dritto-contro-dritto, quindi i due rovesci restano all'esterno — la faccia che hai tracciato e su cui hai lavorato è il rovescio, non il dritto.
+
+**Su una tela di prova senza dritto evidente, però, la domanda non ha risposta e non serve.** Un cotone nero uniforme non ha un dritto vero: **decidi tu una faccia e sii coerente**, segnandola con un pezzetto di nastro. Sul drill sarà diverso — lì il dritto si riconosce (diagonale più netta e in rilievo, colore più pieno; sulla cimosa i forellini del telaio sporgono verso il rovescio).
+
+**Le facce che erano a contatto sono i dritti.** È l'unica cosa che devi ricordare: rimetti i due pezzi come erano da tagliati e le due facce che si toccano sono le facce esterne del capo. Cucendoli così, torneranno a contatto in macchina — che è esattamente come si cuce.
+
+**Destra e sinistra, sul pannello dietro:** appoggia il pezzo con la **vita in alto** e la faccia esterna verso di te.
+
+- forchetta a **destra** → gamba **destra**
+- forchetta a **sinistra** → gamba **sinistra**
+
+(Guardi la persona da dietro: la sua gamba destra ti appare a sinistra, e il centro dietro — con la forchetta — le sta alla tua destra.)
+
+**Perché non puoi sbagliare comunque.** Un pantalone base è simmetrico: non c'è tasca né patta che distingua una gamba dall'altra. Se scambi destra e sinistra non succede niente. L'unico errore vero sarebbe avere **due pezzi uguali invece che speculari** — impossibile, perché li hai tagliati in doppio. Etichetta per ordine, non per paura di sbagliare.
+
 Da qui si va alla cucitura (§2): pinces e pieghe → laterali → interno gamba → **cavallo per ultimo**.
 
 ### La scorciatoia, se un giorno hai fretta
