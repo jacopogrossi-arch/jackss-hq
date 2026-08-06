@@ -192,12 +192,47 @@ Solo per una tela di prova, mai sul capo vero: gesso bianco sullo strato di sopr
 
 **Punto lungo (4–5 mm), niente rifiniture.** La tela va scucita e ricucita più volte: è materiale di lavoro, non un capo.
 
-### Cosa cucire
+### La sequenza, passo per passo
 
-1. Pinces dietro e pieghe davanti
-2. Cuciture laterali (fianco)
-3. Interno gamba
-4. Cavallo (il cavallo per ultimo, sempre — è l'unico modo di farlo combaciare)
+**1. Pinces dietro** (2 per pannello, da 2 cm)
+
+Si cuce **dal largo verso la punta**. Arrivata in punta **non fermare a macchina**: esci dal tessuto lasciando 10 cm di filo e annoda i due capi a mano. Una fermatura sulla punta fa una bozza che sul sedere si vede.
+
+Stirale **verso il centro dietro**.
+
+**2. Pieghe davanti** (2 per pannello, ripresa 4 cm)
+
+Si piegano **verso la patta**, cioè verso il centro davanti — all'italiana, come da scheda `06`.
+
+Sulla tela **non cucirle per tutta la lunghezza**: piegale, spillale e fermale con una cucitura sulla linea vita. Devono poter essere spostate se la prova dice che vanno riposizionate.
+
+**3. Fianco** (outseam) — una gamba alla volta
+
+Davanti e dietro **dritto contro dritto**. Spilla prima sulle **tacche** (fianchi, ginocchio), poi riempi in mezzo. Cuci dalla vita all'orlo.
+
+**4. Interno gamba** (inseam) — stessa gamba
+
+Spilla partendo dal **crotch point** e dal ginocchio. Il dietro è più lungo di 0,5–1 cm: **distribuisci l'eccedenza sopra il ginocchio**, dove serve.
+
+Trucco: metti il pezzo **più lungo sotto**, contro le griffe della macchina. Le griffe tirano il pezzo di sotto più di quello di sopra e ti aiutano ad assorbire la differenza da sole.
+
+A questo punto hai **due tubi**. Ripeti 3 e 4 per l'altra gamba.
+
+**5. Il cavallo** — il passaggio che confonde tutti
+
+Non si cuce da piatti: si uniscono i due tubi.
+
+- Rovescia **una** gamba al dritto. L'altra lasciala al rovescio.
+- **Infila la gamba al dritto dentro quella al rovescio**, dai piedi. Ora si trovano dritto contro dritto, e le due curve del cavallo si sovrappongono.
+- Allinea le curve facendo combaciare **le cuciture dell'interno gamba** — quello è il punto di riferimento, non il bordo.
+- Cuci **una curva sola e continua**, dal centro davanti al centro dietro.
+- Lascia **15 cm aperti sul davanti**, in alto: è il posto della patta e ti serve per infilarla.
+
+Sfila la gamba interna: è un pantalone.
+
+**6. La vita**
+
+Un elastico o una fettuccia spillata, niente cinturino. Serve solo a tenerlo all'altezza giusta mentre provi.
 
 ### Cosa NON cucire
 
@@ -207,7 +242,9 @@ Alla vita: un **elastico spillato** o una fettuccia, giusto per tenerla su all'a
 
 ### La regola che vale più di tutte
 
-Cuci **esattamente sulla linea di gesso**, non a occhio sul margine. Se cuci sul margine hai provato un pantalone diverso da quello che hai disegnato, e tutto quello che scopri è inutile.
+Cuci **esattamente sull'erbetta**, non a occhio sul margine. L'erbetta è la linea di cucitura: se cuci sul margine hai provato un pantalone diverso da quello che hai disegnato, e tutto quello che scopri è inutile.
+
+Passa **di fianco** ai ciuffetti, non sopra, e toglili man mano che avanzi. Se ci cuci sopra non li sfili più.
 
 ---
 
