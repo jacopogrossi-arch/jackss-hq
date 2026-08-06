@@ -258,13 +258,30 @@ Misura la vita del pannello dietro **da erbetta a erbetta laterale**: deve dare 
 
 **3. Fianco** (outseam) — una gamba alla volta
 
-Davanti e dietro **dritto contro dritto**. Spilla prima sulle **tacche** (fianchi, ginocchio), poi riempi in mezzo. Cuci dalla vita all'orlo.
+Accoppia un davanti e un dietro **dritto contro dritto**, allineando il bordo del fianco. I due pannelli hanno larghezze diverse (28,5 contro 30 ai fianchi): è il bordo del **fianco** che deve combaciare, non tutto il pezzo.
+
+**Ordine di spillatura** — prima gli estremi, poi i riferimenti, poi il resto:
+
+1. Vita e orlo
+2. Tacca dei **fianchi** (20) e del **ginocchio** (64)
+3. Riempi ogni 8–10 cm
+
+⚠️ **Qui si legge la verifica 1.** Se le due lunghezze non coincidono, lo scopri adesso. Fino a 2 mm ignora. Sopra, distribuisci la differenza tra le tacche e **annota lo scarto**: serve per correggere il master.
+
+Cuci **sull'erbetta, dalla vita all'orlo** — e fai lo stesso verso sull'altra gamba, o le due cuciture "tirano" in modo diverso e il pantalone non è simmetrico. Stira la cucitura **aperta**.
 
 **4. Interno gamba** (inseam) — stessa gamba
 
-Spilla partendo dal **crotch point** e dal ginocchio. Il dietro è più lungo di 0,5–1 cm: **distribuisci l'eccedenza sopra il ginocchio**, dove serve.
+**Ordine di spillatura:**
 
-Trucco: metti il pezzo **più lungo sotto**, contro le griffe della macchina. Le griffe tirano il pezzo di sotto più di quello di sopra e ti aiutano ad assorbire la differenza da sole.
+1. **Crotch point** (la fine della forchetta) — è il riferimento, parte da lì
+2. Tacca del **ginocchio**
+3. Orlo
+4. Riempi in mezzo
+
+Il dietro è più lungo di 0,5–1 cm: **distribuisci l'eccedenza sopra il ginocchio**, dove il ginocchio deve poter piegare. Se invece è il dietro a risultare **più corto**, fermati e annotalo — l'errore è nella curva del cavallo, non qui.
+
+Trucco: metti il pezzo **più lungo sotto**, contro le griffe della macchina. Le griffe tirano il pezzo di sotto più di quello di sopra e assorbono la differenza da sole, senza che tu debba tirare niente.
 
 A questo punto hai **due tubi**. Ripeti 3 e 4 per l'altra gamba.
 
