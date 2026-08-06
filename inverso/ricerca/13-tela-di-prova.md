@@ -194,11 +194,41 @@ Solo per una tela di prova, mai sul capo vero: gesso bianco sullo strato di sopr
 
 ### La sequenza, passo per passo
 
-**1. Pinces dietro** (2 per pannello, da 2 cm)
+**1. Pinces dietro** (2 per pannello, da 2 cm, lunghe 8,9 cm dalla vita)
 
-Si cuce **dal largo verso la punta**. Arrivata in punta **non fermare a macchina**: esci dal tessuto lasciando 10 cm di filo e annoda i due capi a mano. Una fermatura sulla punta fa una bozza che sul sedere si vede.
+Si lavora **sul rovescio**: la piega della pinces sporge dentro il capo.
 
-Stirale **verso il centro dietro**.
+**Prima di spillare — hai tre punti, ti serve la linea.** L'erbetta ti dà i due punti sulla linea vita (distanti 2 cm) e il punto della punta. Uniscili con la riga e il gesso bianco: sono le due gambe della pinces, ed è lì che passerà l'ago.
+
+**Come si piega.** Piega il pannello **dritto contro dritto** portando i due segni di vita **uno sopra l'altro**. La piega nasce da sola e arriva esattamente in punta. Non forzarla: se il tessuto la fa venire storta, i due punti non sono sovrapposti bene.
+
+**Come si spilla,** in quest'ordine:
+
+1. Uno spillo **sulla linea vita**, attraverso i due segni sovrapposti
+2. Uno spillo **in punta**, attraverso il punto di sopra e quello di sotto
+3. Due o tre spilli **intermedi** lungo la linea
+
+Tutti **perpendicolari alla cucitura**, non paralleli: così li sfili al volo mentre cuci senza fermarti.
+
+**Il controllo che vale la pinces.** Infila uno spillo dritto nel punto della punta dello strato di sopra e guarda dove esce sotto: deve uscire **esattamente** sul punto della punta di sotto. Se è fuori di qualche millimetro la pinces esce storta, e su un pannello dietro si vede addosso. Ricorreggi adesso, non dopo.
+
+**Come si cuce:**
+
+- Punto **normale (2,5 mm)**, non il punto lungo del resto della tela: la punta con punto lungo viene grossolana e non capisci se la forma è giusta
+- Parti **dalla vita**, dal largo. Lì la fermatura puoi farla — quel tratto finirà sotto il cinturino
+- Segui la linea di gesso verso la punta
+- **Negli ultimi 1–2 cm appiattisci la direzione**: arriva in punta con la cucitura quasi parallela alla piega. È il trucco che evita la bozza
+- **Esci dal tessuto sulla piega, senza fermare.** Lascia 10–15 cm di filo, annoda i due capi a mano con due nodi, taglia a 1 cm
+
+Una fermatura a macchina sulla punta fa una bozza che sul sedere si legge da lontano.
+
+**Stiratura:**
+
+1. Prima stira la pinces **così com'è cucita, chiusa** — assesta i punti
+2. Poi apri il pannello e stira la piega **verso il centro dietro** (tutte e due le pinces nella stessa direzione)
+3. Sotto, un asciugamano arrotolato o un cuscino da stiro: la punta della pinces contiene volume, e su un piano lo schiacci
+
+Ripeti sull'altra pinces, e poi sull'altro pannello dietro.
 
 **2. Pieghe davanti** (2 per pannello, ripresa 4 cm)
 
