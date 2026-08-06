@@ -230,11 +230,31 @@ Una fermatura a macchina sulla punta fa una bozza che sul sedere si legge da lon
 
 Ripeti sull'altra pinces, e poi sull'altro pannello dietro.
 
-**2. Pieghe davanti** (2 per pannello, ripresa 4 cm)
+**1 bis. Controllo, con le pinces chiuse**
 
-Si piegano **verso la patta**, cioè verso il centro davanti — all'italiana, come da scheda `06`.
+Misura la vita del pannello dietro **da erbetta a erbetta laterale**: deve dare **18,5 cm**. È una delle quattro verifiche saltate, e adesso te la restituisce il lavoro fatto.
 
-Sulla tela **non cucirle per tutta la lunghezza**: piegale, spillale e fermale con una cucitura sulla linea vita. Devono poter essere spostate se la prova dice che vanno riposizionate.
+**2. Pieghe davanti** (2 per pannello, ripresa 4 cm ciascuna)
+
+⚠️ **Le pieghe si lavorano dal dritto, al contrario delle pinces.** Una piega è un elemento che si vede da fuori: la formi guardandola da fuori.
+
+**Come funziona la ripresa.** Ogni piega ha **due segni sulla linea vita, distanti 4 cm**. Portandoli a coincidere sparisce quella quantità di tessuto, e la piega che resta visibile è profonda la metà: **2 cm**. Per questo la vita davanti passa da 27,5 grezzi a 19,5 finiti — 8 cm mangiati dalle due pieghe.
+
+**La direzione.** Porta il segno **verso il fianco** sopra il segno **verso il centro**. Così la cresta guarda il fianco e l'apertura guarda la patta: è la piega all'italiana della scheda `06`.
+
+**Il controllo che conta:** la cresta della **prima piega** deve cadere **esattamente sulla creaseline** — l'erbetta verticale che scende lungo la gamba. Quella cresta *è* la riga stirata del pantalone: se la piega nasce mezzo centimetro fuori, la riga scende storta per tutta la gamba. La seconda piega sta a 4 cm dalla prima, verso il fianco.
+
+**Come si fissa:**
+
+1. Forma le due pieghe e spilla **perpendicolare** alla linea vita
+2. Imbastisci a mano lungo la vita — sulla tela regge meglio degli spilli mentre giri il pezzo
+3. Ferma a macchina a **0,7 cm dal bordo tagliato**: resta dentro il margine, sopra la linea di cucitura, e non si vede
+
+**Sulla tela non cucirle per tutta la lunghezza** e non stirare la riga fino in fondo: dai 15–20 cm di stiratura dalla vita in giù, quanto basta a tenerle in posizione. Devono restare spostabili se la prova dice di riposizionarle.
+
+*(Sul capo vero è diverso: Armstrong (`10` §4) stira la prima piega **fino all'orlo**, sfumando a zero, e la seconda **fino al ginocchio**.)*
+
+**Controllo finale:** con le due pieghe chiuse, la vita del davanti da erbetta a erbetta laterale deve dare **19,5 cm**. Con il dietro a 18,5: `2 × (19,5 + 18,5) = 76` ✓ — la terza verifica, chiusa.
 
 **3. Fianco** (outseam) — una gamba alla volta
 
