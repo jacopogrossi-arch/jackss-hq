@@ -326,6 +326,41 @@ Il punto 4 non è burocrazia. Il Drop 1 è il primo capo: questo foglio corretto
 
 ---
 
+## Video di riferimento
+
+> Trovati il 05/08/2026 cercando su YouTube. **Selezionati da titolo e descrizione, non guardati uno per uno** — sono un punto di partenza, non un avallo.
+
+### Adesso — le pinces
+
+- [Come cucire pinces perfette — Sara Poiese](https://www.youtube.com/watch?v=Z9KxrZfPG-E)
+- [Come cucire una pince — Corso di sartoria online](https://www.youtube.com/watch?v=HqAJ0eFBTmk)
+- [Come fare le pinces singole e doppie — tutorial base](https://www.youtube.com/watch?v=QSBhHkYkV8o)
+
+### Già fatto, ma utile per confronto
+
+- [Segniamo il tessuto: i punti lenti](https://www.youtube.com/watch?v=Q5ppazb1swE)
+- [Come segnare il tessuto — carta copiativa, gesso, punti lenti](https://www.youtube.com/watch?v=4dWicSbTgZo)
+- [Il drittofilo del tessuto e nel cartamodello](https://www.youtube.com/watch?v=ZoG7b9ndR2I)
+
+### La serie sul pantalone di alta sartoria — è quella che segue il tuo percorso
+
+Copre esattamente le fasi che hai davanti, nell'ordine:
+
+1. [Piazzamento del cartamodello sul tessuto](https://www.youtube.com/watch?v=7AytfzA7U-E)
+2. [Imbastiture per la prima prova — parte 1](https://www.youtube.com/watch?v=Jy2dmRlhNT8)
+3. [Imbastitura e prima stiratura della gamba](https://www.youtube.com/watch?v=xE7F55FM6sc)
+4. [Imbastitura del cavallo e orlo](https://www.youtube.com/watch?v=zQ0geMgroXY)
+5. [Seconda prova: i difetti e come si correggono](https://www.youtube.com/watch?v=a5Y-YiRG5t8)
+
+⚠️ **Attenzione a una differenza di metodo.** In alta sartoria la prima prova si **imbastisce a mano**, non si cuce a macchina. È un'alternativa vera a quello che stai facendo, e ha un vantaggio grosso sulla tela: si scuce in un secondo e le linee si possono correggere **con il pantalone addosso**. Costa tempo. Se la mano dell'imbastitura ce l'hai dalla scuola, per la tela vale la pena valutarla.
+
+### Dopo la prova — leggere i difetti
+
+- [Seconda prova pantalone di alta sartoria](https://www.youtube.com/watch?v=a5Y-YiRG5t8)
+- [Il pantalone fa difetto davanti? Come risolvere](https://www.youtube.com/watch?v=DGLjv1hH8jM)
+
+---
+
 ## Checklist
 
 ```
