@@ -256,14 +256,18 @@ Misura la vita del pannello dietro **da erbetta a erbetta laterale**: deve dare 
 
 **Controllo finale:** con le due pieghe chiuse, la vita del davanti da erbetta a erbetta laterale deve dare **19,5 cm**. Con il dietro a 18,5: `2 × (19,5 + 18,5) = 76` ✓ — la terza verifica, chiusa.
 
-**2 bis. I due controlli di simmetria** — con pinces e pieghe chiuse, prima di attaccare i fianchi
+**2 bis. Simmetria di pieghe e pinces** — *cosmetico, non bloccante*
 
-**Pieghe e pinces devono essere speculari, non uguali.** È l'errore classico: si lavorano i due pannelli uno dopo l'altro nello stesso verso, e uno dei due esce girato al contrario. Addosso si vede subito e si recupera solo scucendo.
+⚠️ **Questo controllo non serve a validare il cartamodello.** Se le pieghe escono girate nello stesso verso invece che a specchio, le misure sono identiche: cambia solo come si legge una gamba. Sulla tela si può ignorare. Sul capo vero no.
+
+**Pieghe e pinces vanno speculari, non uguali.** È l'errore classico: si lavorano i due pannelli uno dopo l'altro nello stesso verso e uno esce girato al contrario.
 
 - **Davanti:** affianca i due pannelli, dritti in su, vita in alto, centri davanti verso l'interno. Le pieghe devono aprirsi **verso il centro** su tutti e due — cioè a specchio, non nello stesso verso.
 - **Dietro:** stessa cosa. Le pinces stirate **verso il centro dietro** su entrambi.
 
 **Come si accoppiano i pezzi giusti.** Appoggia un davanti con il dritto in su e sopra un dietro con il dritto in giù. Se i bordi del fianco si sovrappongono per come sono, è la coppia giusta. Se per farli combaciare devi capovolgere il dietro, quello è il dietro **dell'altra gamba**: cambialo.
+
+*Non serve controllarlo prima: se sbagli coppia i pezzi non combaciano e te ne accorgi spillando.*
 
 **3. Fianco** (outseam) — una gamba alla volta
 
