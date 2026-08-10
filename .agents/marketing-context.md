@@ -17,6 +17,7 @@
 **Modello:** UN capo per volta, pre-order, drop ogni 3–4 mesi. Primo drop: 10–20 pezzi.
 **Fase attuale:** pre-Drop 1 — il Modello A/B è stato azzerato (18/07/2026): si riparte dallo studio (silhouette + elementi fondamentali del pantalone), poi cartamodello dalla base esistente. Il primo capo resta la priorità assoluta; la fase di studio è anche materia prima per il pilastro Ricerca.
 **Reference model:** micro-brand build-in-public (es. Marcus Milione). In Italia nessuno lo fa così.
+**Valori (10/08/2026):** bellezza nel miglioramento, qualità interiore (del capo e della persona), materiale che dura una vita, cultura che resta dentro senza sbandierare, agire per sé e per la propria famiglia, coerenza con se stessi e con la realtà. Il cliente ideale si riconosce in questi valori (miglioramento reale senza ostentazione) — testo fondativo e limiti d'uso in `inverso/concept-2026-08-10-valori-inverso.md`. Attenzione: "intelligenti/carismatiche/rivoluzionarie" è psicografia interna, mai copy pubblico.
 
 ## 2. Struttura canali (funnel, non canali paralleli)
 
