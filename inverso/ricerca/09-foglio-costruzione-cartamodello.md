@@ -6,7 +6,9 @@
 
 **Aggiornamento 05/08:** il contorno del pannello è stato **ricalcato su foglio pulito**, con pinces e creaseline. Da qui si prosegue su `ricerca/12-finitura-cartamodello-carta.md`: tacche, drittofilo, le quattro verifiche del §6 di questo foglio (da fare sul netto, prima dei margini), poi margini e tela di prova.
 
-**Aggiornamento 02/08:** la Basic Pant Foundation Armstrong è stata costruita con i numeri reali del Drop 1 in `ricerca/11-basic-pant-foundation-costruita.md`. Griglia e vita sono risultate **identiche** a questo foglio (buon segno: la decostruzione era corretta). La curva del cavallo — l'unica cosa che qui sotto non era coperta — ora ha punti concreti da tracciare (sezione 4 del doc `11`). **Resta da fare:** disegnarla su carta e misurarla di costa, per vedere se la forchetta di 2,5 cm qui sotto regge o va corretta — il doc `11` spiega perché non si può dare quel verdetto solo con l'aritmetica.
+**Aggiornamento 03/08:** anche la curva del cavallo è chiusa (sezione 4 del doc `11`, con i ritagli delle figure in `ricerca/img/armstrong-*.png`): la curva grigia di Armstrong è il centro + cavallo, R e S sono le punte della forchetta, da lì scende l'interno gamba. **Il disegno su carta è stato fatto per intero e verificato** (sezione 6 del doc `11`): cavallo di costa 32 + 42,5 = 74,5 in target, con **S a 35,5 e R a 47 dal centro** — cioè la forchetta reale è più lunga dei 2,5 cm ipotizzati qui sotto. Il compromesso accettato è la coscia più piena, da giudicare sulla tela.
+
+**Aggiornamento 02/08:** la Basic Pant Foundation Armstrong è stata costruita con i numeri reali del Drop 1 in `ricerca/11-basic-pant-foundation-costruita.md`. Griglia e vita sono risultate **identiche** a questo foglio (buon segno: la decostruzione era corretta). La curva del cavallo — l'unica cosa che qui sotto non era coperta — ha avuto punti concreti da tracciare (sezione 4 del doc `11`).
 
 ## ⚠️ Che metodo è questo — e che metodo NON è
 
