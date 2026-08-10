@@ -42,8 +42,10 @@ Non è più il progetto: è uno strumento dentro Inverso.
 
 ## 5. Audience e cliente
 
-**Audience contenuti:** italiani interessati a moda, artigianato, build-in-public, AI creativa. Si affezionano al processo e alla persona.
-**Cliente Drop 1:** chi compra un capo menswear €150–200 in tiratura limitata da una storia credibile.
+**Persona (10/08/2026, proxy — nessun cliente reale ancora, vedi `inverso/analisi/07-customer-persona-community.md`):** "il ragazzo di mezzo" — 20-30, classe media italiana che non si posiziona, vuole crescere e colturarsi con coerenza senza doverlo dimostrare né diventare esperto di nulla. **Non è un appassionato tecnico di moda/tessuti** — quello è pubblico secondario di credibilità, non il target primario. Entra per i valori e la storia, non per il metodo Müller.
+**Errore da non ripetere:** parlare a nerd del settore (once del denim, dettagli sartoriali) invece che a chi si riconosce nel percorso di miglioramento personale. Mai riferimenti estetici "old money"/quiet luxury — quel bacino è aspirazionale-ricco, l'opposto del posizionamento.
+**Community:** non esiste ancora un luogo aggregato per questo pubblico (né IT né estero) — Inverso deve nominarlo, non intercettarlo altrove. Termometro di linguaggio più vicino trovato: Will Media, Tlon, The Vision (consapevolezza/crescita, non hype).
+**Cliente Drop 1:** chi compra un capo menswear €150–200 in tiratura limitata perché si riconosce nella storia, non per l'expertise tecnica.
 **Cliente servizi (dopo):** brand emergente che ha già fatto 1–2 drop — non il principiante con €3k totali.
 
 ## 6. Tono di voce
