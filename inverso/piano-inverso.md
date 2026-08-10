@@ -35,6 +35,7 @@ I due profili sono **un funnel, non due canali**: il personale vende la storia, 
 - **Statement:** Inverso è il brand di ricerca di uno studente di moda che impara il mestiere in pubblico — ogni capo è il risultato documentato di mesi di studio su tessuti, costruzione e forma, cucito a Roma in tiratura numerata.
 - **Differenziatori in ordine di forza:** (1) cuce davvero + metodo Müller, (2) processo documentato dal giorno zero (il "prima" non si ricrea a posteriori), (3) build-in-public in Italia, (4) AI integrata nel processo (mai da sola), (5) Roma, (6) tiratura limitata come fatto, non come claim.
 - **Il nome:** "INVERSO" non è mai stato spiegato pubblicamente — è l'occasione narrativa più grande (il contrario della fretta, il rovescio del fast fashion). Da sviluppare come primo atto narrativo.
+- **I valori (10/08/2026):** bellezza nel miglioramento, qualità interiore, materiale che dura una vita, cultura che resta dentro senza sbandierare, coerenza con sé e con la realtà. Testo fondativo e valutazione in `concept-2026-08-10-valori-inverso.md` — con il ragazzo di mezzo (origine) e la spiegazione del nome completa la fondazione narrativa: dice per chi esiste il brand e in cosa crede.
 - **Prezzo (€150-200):** non si giustifica, si contestualizza — scomposizione trasparente dei costi, ancoraggi reali (modellista €300-800/capo, shooting €3-8k), mai sconti.
 - **Mai vendere l'AI invece del capo.** L'AI è commodity; il capo reale è il progetto.
 
