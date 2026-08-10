@@ -38,6 +38,7 @@ I due profili sono **un funnel, non due canali**: il personale vende la storia, 
 - **I valori (10/08/2026):** bellezza nel miglioramento, qualità interiore, materiale che dura una vita, cultura che resta dentro senza sbandierare, coerenza con sé e con la realtà. Testo fondativo e valutazione in `concept-2026-08-10-valori-inverso.md` — con il ragazzo di mezzo (origine) e la spiegazione del nome completa la fondazione narrativa: dice per chi esiste il brand e in cosa crede.
 - **Prezzo (€150-200):** non si giustifica, si contestualizza — scomposizione trasparente dei costi, ancoraggi reali (modellista €300-800/capo, shooting €3-8k), mai sconti.
 - **Mai vendere l'AI invece del capo.** L'AI è commodity; il capo reale è il progetto.
+- **Customer persona (10/08/2026, da analisi/07):** "il ragazzo di mezzo" — non un appassionato tecnico di moda/tessuti, ma chi si riconosce nel percorso di crescita personale senza ostentazione. Nessuna community aggregata esiste ancora per questo pubblico: Inverso deve nominarla, non intercettarla. Persona provvisoria/proxy, da sostituire con dati reali dopo le prime vendite.
 
 ## 4. Contenuti (da analisi/03)
 
