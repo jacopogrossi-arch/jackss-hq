@@ -254,7 +254,9 @@ Tre titoli della lista originale **non esistevano come scritti**. Sono errori di
 
 ## In lettura ora
 
-*(nessuna lettura in corso — il prossimo è* L'attore e il bersaglio*)*
+- **Building a StoryBrand** — Donald Miller *(iniziato ad agosto 2026, in vacanza)*
+  Comprato prima della revisione che lo ha declassato, e si legge lo stesso: un libro in mano vale più di dieci in lista. **Come spremerlo, visto che il giudizio resta:** il framework presuppone un cliente con un problema esplicito da risolvere, e nella moda si compra identità — quindi non usarlo come filosofia del brand, o finisci a scrivere copy da agenzia. Usalo dove funziona davvero: **la struttura della pagina pre-order e delle schede prodotto**, dove serve ordine e gerarchia e non serve visione. Leggilo tenendo a mente che *The Anatomy of Humbug* (Feldwick) spiega perché ogni framework di questo tipo è utile e pericoloso allo stesso tempo.
+  *Il prossimo è* L'attore e il bersaglio.
 
 ## Finiti
 
