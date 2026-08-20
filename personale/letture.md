@@ -80,9 +80,10 @@ Due filoni: crescita personale/relazioni e mestiere/brand (Inverso).
 
 ## In lettura ora
 
-- **Psycho-Cybernetics** — Maxwell Maltz *(iniziato a luglio 2026)*
-  Classico sulla self-image: come l'immagine che hai di te stesso guida comportamenti e risultati, e come riprogrammarla. Aggiunto fuori dalla selezione originale.
+*(nessuna lettura in corso — scegli il prossimo dalla lista sopra)*
 
 ## Finiti
 
-*(vuoto — libro finito, data e 2–3 righe su cosa ti ha lasciato)*
+- [x] **Psycho-Cybernetics** — Maxwell Maltz *(iniziato luglio 2026 — finito 20/08/2026)*
+  Classico sulla self-image: come l'immagine che hai di te stesso guida comportamenti e risultati, e come riprogrammarla. Aggiunto fuori dalla selezione originale.
+  *Note: da scrivere — 2–3 righe su cosa ti ha lasciato.*
