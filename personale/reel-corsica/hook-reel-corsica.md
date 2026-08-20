@@ -41,6 +41,55 @@ Se non è vero che non volevi partire, non usarlo. Sostituisci con qualsiasi cos
 
 ---
 
+## Le altre due versioni dello stesso hook
+
+Stessa struttura: riga onesta all'inizio, riga piatta alla fine, niente testo in mezzo.
+Cambia il motore emotivo.
+
+### Versione 2 — le poche foto
+
+```
+[0.5 – 3s]     Ho fatto pochissime foto.
+
+... (tutto il reel senza testo) ...
+
+[ultimi 2s]    Sono queste.
+```
+
+Abbassa l'aspettativa e poi le immagini la superano. Conviene se le clip sono poche e belle:
+spiega il montaggio invece di scusarsene — statico, rado, niente riempitivi.
+E dice una cosa che gli amici leggono tra le righe: *c'ero, non stavo filmando.*
+Il `Sono queste.` finale e' quasi un'alzata di spalle, ed e' per quello che funziona.
+
+### Versione 3 — il contraccolpo del ritorno
+
+```
+[0.5 – 3s]     Sono tornato ieri e mi sembra passato un mese.
+
+... (tutto il reel senza testo) ...
+
+[ultimi 2s]    Corsica. Sei giorni.
+```
+
+Parte da una distorsione del tempo che hanno provato tutti: riconoscimento immediato, zero sforzo.
+L'etichetta sta alla fine — non apri dicendo dove sei stato, ci arrivi.
+Chi guarda passa il reel dentro la tua sensazione e solo alla fine riceve le coordinate.
+
+### Come scegliere
+
+Non per gusto, per cosa e' vero:
+
+- il viaggio ti ha cambiato l'umore rispetto a come sei partito → **versione 1**
+- hai poco materiale, o hai scelto di stare presente invece di riprendere → **versione 2**
+- la cosa che senti di piu' adesso e' il contraccolpo del ritorno → **versione 3**
+
+Se due sono vere, prendi quella con la parola piu' concreta: le righe astratte invecchiano male.
+
+**Regola unica:** non addolcire l'apertura. L'ammissione deve costare qualcosina,
+sennò diventa una didascalia e il meccanismo si spegne.
+
+---
+
 ## Alternative (una per reel, non mischiarle)
 
 **Se vuoi il minimo assoluto** — la più coerente con clip statiche e gradate:
