@@ -1,163 +1,128 @@
-# Reel Corsica — Hook + struttura
+# Reel Corsica — hook e montaggio
 
-**Formato:** clip cinematografiche, statiche, color gradate. Nessun parlato, nessun prodotto.
-**Obiettivo:** massimizzare condivisioni in DM (è il segnale n.1 di ranking dei Reels oggi) e salvataggi.
-**Durata target:** 18–25 secondi. Non di più.
-
----
-
-## Il problema da risolvere
-
-Un reel di viaggio "bello e basta" non gira. Di clip turchesi ben gradate ce ne sono a milioni:
-la bellezza non ferma lo scroll, la **tensione** lo ferma.
-
-Le tue clip sono statiche e lente: quindi il ritmo non può venire dal montaggio.
-Deve venire dal **testo a schermo**, che apre una domanda e la chiude solo alla fine.
-
-La domanda che deve nascere nella testa di chi guarda è una sola: **"aspetta, dov'è?"**
-Quella domanda produce commenti, salvataggi e soprattutto invii in DM ("guarda, andiamoci").
+**Cos'è:** un pezzo di diario. Clip cinematografiche, statiche, color gradate.
+**Per chi:** amici e famiglia, gente che ti conosce.
+**Non è:** contenuto da travel influencer.
 
 ---
 
-## HOOK CONSIGLIATO — "L'errore geografico"
+## Il punto di partenza
 
-Tre battute di testo sui primi 5 secondi, sulle clip più forti che hai (falesie di Bonifacio o acqua turchese dall'alto).
+Chi ti guarda non deve essere convinto a fermarsi: si ferma perché sei tu.
+Quindi l'hook non serve a rubare attenzione — serve a **dare un tono**, a dire in tre parole
+che tipo di cosa sta per vedere.
+
+Da qui discende tutto il resto: l'hook giusto per te è **basso, asciutto, in prima persona**.
+Un hook forte ("Non è la Grecia!") su questo pubblico produce imbarazzo, non condivisioni.
+
+E c'è un rovescio utile: i reel fatti davvero per gli amici a volte arrivano più lontano di quelli
+costruiti per il pubblico, perché il registro sincero è raro. Ma è una conseguenza, non l'obiettivo.
+
+---
+
+## HOOK CONSIGLIATO
+
+Una riga all'inizio, una alla fine. Nient'altro per tutto il reel.
 
 ```
-[0.0 – 1.5s]   Non è la Grecia.
-[1.5 – 3.0s]   Non sono i Caraibi.
-[3.0 – 5.0s]   È a 50 minuti dall'Italia.
+[0.5 – 3s]     Non volevo partire.
+
+... (tutto il reel senza testo) ...
+
+[ultimi 2s]    Poi è andata così.
 ```
 
-**Perché funziona:**
-- Le prime due righe sono **negazioni**: il cervello si oppone e resta a guardare per verificare.
-- La terza riga è una **informazione vera, utile e sorprendente** → è il motivo per cui uno preme "invia".
-- Non promette ritmo veloce: prepara lo spettatore alla lentezza, quindi le clip statiche diventano un pregio, non un difetto.
+**Perché funziona:** apre una piccola tensione onesta e la chiude. Chi ti conosce legge la prima riga
+e guarda tutto il resto cercando la risposta — che sono le immagini stesse.
+Zero promesse, zero linguaggio da contenuto. E ti dà una cosa a cui rispondere in DM.
 
-**Dato reale da usare:** la Corsica è francese ma è più vicina all'Italia che alla Francia. Bonifacio dista
-circa 12 km dalla Sardegna, il traghetto Santa Teresa di Gallura → Bonifacio è ~50 minuti.
-Da Livorno a Bastia sono ~4 ore di nave. Sono fatti veri: verifica solo gli orari della stagione prima di scriverli a schermo.
+Se non è vero che non volevi partire, non usarlo. Sostituisci con qualsiasi cosa vera e poco lusinghiera:
+`Ci sono arrivato distrutto.` · `Non avevo programmato niente.` · `Doveva essere una settimana normale.`
 
 ---
 
-## Struttura completa del reel (22 secondi)
+## Alternative (una per reel, non mischiarle)
 
-| Tempo | Clip | Testo a schermo |
-|---|---|---|
-| 0.0–1.5s | La clip più forte in assoluto (falesia / acqua dall'alto) | `Non è la Grecia.` |
-| 1.5–3.0s | Stessa clip o secondo frame dello stesso luogo | `Non sono i Caraibi.` |
-| 3.0–5.5s | Cambio clip — paesaggio ampio | `È a 50 minuti dall'Italia.` |
-| 5.5–9s | Clip: montagna / interno dell'isola | `Corsica.` |
-| 9–13s | Clip: mare, dettaglio | `Una montagna gettata nel mare.` |
-| 13–17s | Clip: strada, luce, silenzio | `2.700 metri di vetta a 20 minuti dalla spiaggia.` |
-| 17–21s | La seconda clip più forte | *(nessun testo — lascia respirare)* |
-| 21–22s | Frame finale = identico al primo frame | `E ci arrivi in traghetto.` |
+**Se vuoi il minimo assoluto** — la più coerente con clip statiche e gradate:
+```
+Corsica. Sei giorni.
+```
+Nient'altro, mai più testo. La sottrazione qui è il messaggio: dice "non ti sto vendendo niente".
 
-**Il loop:** chiudere sull'inquadratura con cui hai aperto fa ripartire il reel senza stacco.
-Il rewatch conta come watch time e su un reel da 22 secondi raddoppia la metrica.
+**Se eravate in gruppo** — la più condivisa tra chi c'era:
+```
+Sei giorni, quattro persone,
+zero foto decenti.
+```
+Autoironica. Gli amici la mandano agli altri amici. È l'unica versione "virale" che non stona.
 
----
-
-## Regole tecniche per il testo a schermo
-
-- **Zona sicura:** tieni il testo nel terzo centrale/alto. Il terzo basso viene coperto da caption, nome utente e audio.
-- **Font:** sans-serif pulito, bianco, peso medio. Niente ombre marcate, niente font "da viaggio" con le grazie.
-  Su clip color gradate un contorno nero rovina il grading: se serve leggibilità usa un leggerissimo velo scuro sotto il testo, non l'outline.
-- **Massimo 5 parole per riga, una riga sola.** Le tue frasi sono corte apposta.
-- **Nessuna animazione di entrata.** Dissolvenza da 0.2s, punto. Su clip statiche un testo che rimbalza distrugge il tono cinematografico.
-- **Prima riga entro il primo mezzo secondo.** Se il testo compare al secondo 2, hai già perso metà pubblico.
+**Se vuoi zero testo:** nessuna scritta per tutto il reel, e una sola riga sull'ultimo frame.
+Funziona benissimo, ma solo se l'ultimo frame è forte.
 
 ---
 
-## Audio
+## Il montaggio conta più dell'hook
 
-Non usare un trend con la cassa in quattro: combatte contro le tue immagini statiche.
-Serve un brano che **cresce** (ambient / archi / elettronica lenta con un climax verso il secondo 15–17),
-così il picco musicale cade sulla clip senza testo. Cerca nella libreria audio di Instagram per non rischiare la rimozione dell'audio.
+Qui c'è il vero salto di qualità per il tuo obiettivo. Sei punti:
 
-Se trovi un audio in tendenza *lento* usalo: prendi il boost del trend senza rompere il tono.
+1. **Metti una persona nel primo frame.**
+   È la cosa che cambia di più. Amici e famiglia si fermano per le persone, non per le falesie.
+   Basta una schiena, una mano, qualcuno fuori fuoco che cammina. Una clip perfetta senza esseri umani è una cartolina, e le cartoline si scorrono.
+
+2. **Lascia dentro due clip imperfette.**
+   Una mossa, una storta, una non gradata. Se è tutto gradato benissimo diventa un catalogo.
+   Le imperfezioni sono la prova che è vita e non produzione.
+
+3. **L'ultimo frame deve essere umano, non paesaggistico.**
+   Qualcuno che ride, una faccia, un momento sciocco. È quello il frame a cui le persone rispondono in DM.
+   Chiudere sulla falesia al tramonto chiude anche la conversazione.
+
+4. **Usa la canzone vera.**
+   Quella che avete ascoltato davvero lì. Batte qualsiasi tappeto ambient "cinematografico",
+   perché per chi c'era è un innesco di memoria e per chi non c'era è comunque una scelta tua, non da libreria.
+
+5. **Niente loop.**
+   Il loop è una tecnica per gonfiare il tempo di visione. Un diario finisce. Fallo finire.
+
+6. **La durata la decide il materiale, non l'algoritmo.**
+   Con clip lente 25–35 secondi vanno benissimo. Non tagliare a 20 per una regola: taglia le clip deboli.
 
 ---
 
 ## Caption
 
+Un dettaglio specifico e piccolo. Niente riassunti, niente aggettivi da brochure, nessuna call to action.
+
 ```
-La Corsica è più vicina a Livorno che a Nizza.
-Ci si arriva in traghetto, si guida per due ore e sei in un posto
-che non sembra Europa.
-
-Salva questo per la prossima estate.
-Dimmi dove ti porto la prossima volta 👇
+Corsica, sei giorni.
+Il quarto giorno abbiamo sbagliato strada per due ore.
+È stato il pezzo migliore.
 ```
 
-- La prima riga ripete il gancio informativo: chi guarda senza audio e legge solo la caption capisce comunque.
-- "Salva questo" → salvataggi. "Dimmi dove" → commenti facili, senza sforzo, che è la chiave.
-- **Niente link, niente hashtag nel corpo.** Massimo 3–5 hashtag in fondo o nel primo commento:
-  `#corsica #corse #viaggioinitalia #cinematic` + uno geolocalizzato (`#bonifacio`).
-- **Metti il tag località.** Sui contenuti di viaggio la geolocalizzazione porta reach dalla scheda del luogo.
+- **Un solo dettaglio concreto** vale più di tre frasi belle. È quello che fa scrivere "ahahah vero" a chi c'era.
+- **Niente "salvate questo", niente "dove vi porto?".** Su questo pubblico suonano finti all'istante.
+- **Niente hashtag.** Solo il tag località, se vuoi.
+- Se il reel è davvero solo per amici e famiglia, valuta i **Close Friends**: cambia quello che ti senti di postare,
+  ed è la ragione per cui spesso quei contenuti vengono meglio.
 
 ---
 
-## Copertina
+## Come capire se ha funzionato
 
-Scegli come copertina **la seconda clip più forte**, non la prima.
-La prima la vedono già in feed; la copertina serve al tuo profilo a griglia.
-Sulla copertina lascia il testo `Non è la Grecia.` — funziona anche da sola.
+Non guardare le visualizzazioni. Guarda **quante persone ti hanno risposto in DM**
+e se qualcuno ha citato un momento preciso invece di dire "bellissimo".
 
----
-
-## 8 hook alternativi (da testare)
-
-Stessa struttura, gancio diverso. Testane uno per reel, non mischiarli.
-
-**Per le condivisioni in DM:**
-1. `Non è la Grecia. Non sono i Caraibi. È a 50 minuti dall'Italia.` ← consigliato
-2. `L'isola più bella del Mediterraneo non è la Sardegna.` (polarizzante: genera commenti a valanga)
-3. `Il posto più sottovalutato d'Europa è a 4 ore di nave da Livorno.`
-
-**Per i salvataggi:**
-4. `Vuoi il mare dei Caraibi senza prendere un aereo? Guarda.`
-5. `Se hai una settimana e non sai dove andare, salva questo.`
-
-**Per il tempo di visione (emotivi, adatti al tuo grading):**
-6. `Ho spento il telefono per sei giorni. Questo è quello che ho visto.`
-7. `Non ho fatto niente per una settimana. È stata la cosa migliore dell'anno.`
-8. `Nessuno di questi posti aveva campo.`
-
-Il 6, 7 e 8 sono i più coerenti col tuo tono cinematografico e col fatto che sei tu il volto del processo.
-Il 2 è il più esplosivo ma tira commenti aggressivi dai sardi: usalo solo se hai voglia di gestirli
-(e se lo fai, **rispondi a tutti nella prima ora** — è lì che si decide la distribuzione).
+Una risposta tipo *"ma quella era la sera che..."* vale più di diecimila views.
+Se non arriva nessuna risposta specifica, il reel era bello ma non raccontava niente:
+la prossima volta togli una clip di paesaggio e mettici una persona.
 
 ---
 
-## Cosa NON fare
+## Se ne vuoi fare altri
 
-- **Niente "POV: sei in Corsica"** — è morto da due anni.
-- **Niente testo che descrive quello che si vede.** Se si vede il mare, non scrivere "mare cristallino". Il testo deve aggiungere, non doppiare.
-- **Niente reel da 45 secondi.** Con clip statiche il calo di ritenzione dopo il secondo 25 è verticale. Meglio due reel da 20 che uno da 45.
-- **Niente carrellata di 15 posti.** Un reel = un'idea. Gli altri posti sono il reel della settimana dopo.
-- **Non pubblicare e sparire.** I primi 60 minuti contano: stai sui commenti.
-
----
-
-## Se il primo va bene
-
-Hai materiale per una mini-serie, e la serie cresce meglio del singolo:
-- Reel 1 — l'hook geografico (questo)
-- Reel 2 — "la parte che nessuno vede": l'interno dell'isola, la montagna
-- Reel 3 — "quanto è costato davvero" (i reel sui costi reali di viaggio girano tantissimo e portano salvataggi)
-- Reel 4 — il carosello con la mappa e i punti esatti → è quello che converte in follower
-
----
-
-## Metriche da guardare dopo 48 ore
-
-| Metrica | Soglia buona | Se è sotto |
-|---|---|---|
-| Ritenzione a 3s | > 60% | Cambia hook, non le clip |
-| Rewatch | > 15% | Sistema il loop finale |
-| Invii per copertura | > 1% | L'informazione non era abbastanza condivisibile |
-| Salvataggi | > 2% | Manca l'utilità pratica (luoghi, costi, come arrivare) |
-
-Se la ritenzione a 3 secondi è alta ma gli invii sono bassi: le immagini funzionano, il messaggio no.
-Se è bassa a 3 secondi: le immagini non c'entrano, è l'hook. Ripubblica lo stesso montaggio con la riga 1 diversa.
+Un reel = un momento, non un riassunto del viaggio.
+La serie funziona meglio dell'antologia, anche tra amici:
+- il viaggio in sé
+- la giornata storta
+- le persone
+- il posto a cui ripensi
