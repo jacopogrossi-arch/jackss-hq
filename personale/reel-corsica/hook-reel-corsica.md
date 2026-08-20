@@ -138,6 +138,48 @@ Qui c'è il vero salto di qualità per il tuo obiettivo. Sei punti:
 
 ---
 
+## SCELTA FATTA — versione 1
+
+```
+[0.5 – 3s]     Non volevo partire.
+[ultimi 2s]    Poi e' andata cosi'.
+```
+
+### Caption tarata su questo hook
+
+La caption non ripete l'hook, lo **dimostra**. L'hook fa l'ammissione in astratto,
+la caption porta la prova concreta: il dettaglio che fa vedere il cambio senza nominarlo.
+
+```
+Il primo giorno ho controllato il telefono ogni dieci minuti.
+Dal terzo non sapevo piu' dov'era.
+```
+
+Due righe, nessuna parola in comune con l'hook, l'arco raccontato con un comportamento
+invece che con un aggettivo. Chi ti conosce ci legge dentro il periodo che stavi passando
+senza che tu debba spiegarlo.
+
+**Se non e' vero, sostituisci il dettaglio, non la struttura.**
+Serve una cosa piccola e misurabile che facevi all'inizio e non facevi piu' alla fine.
+Formula: *"Il primo giorno [comportamento concreto]. Dal terzo [lo stesso comportamento, sparito]."*
+
+**Alternativa piu' asciutta** — la prova e' un'azione, non una sensazione:
+
+```
+Sei giorni.
+Sono partito controvoglia e ho rimandato il ritorno di un giorno.
+```
+
+Solo se e' successo davvero, sennò suona costruita.
+
+### Da non fare
+
+- Niente morale esplicita (`"a volte devi solo partire"`): trasforma un'ammissione personale
+  in una lezione per gli altri e spegne l'hook.
+- Niente domanda finale (`"vi e' mai capitato?"`): con gli amici sembra che chiedi commenti.
+
+---
+
 ## Caption
 
 Un dettaglio specifico e piccolo. Niente riassunti, niente aggettivi da brochure, nessuna call to action.
