@@ -121,7 +121,7 @@ Clip lunghe, 2-3 secondi.
 
 | Tempo | Clip |
 |---|---|
-| 9 – 11s | **la prima clip con movimento vero** — acqua o barca. E' lo stacco del reel |
+| 9 – 11s | **la clip piu' cineticamente forte che hai** — la prua che taglia l'onda, un tuffo, la scia. E' lo stacco del reel |
 | 11 – 12,5s | **B** acqua o barca |
 | 12,5 – 13,5s | **C** corta (1s) |
 | 13,5 – 15s | **B** acqua |
@@ -150,6 +150,16 @@ anche a chi non ci sta facendo caso. Le durate qui sopra la costruiscono da sole
 **La svolta la porta la canzone, non il silenzio.** Scegli un pezzo con l'intro rada
 che poi cresce, e allinea il punto in cui il brano **si apre** al secondo 9, sul cambio d'atto.
 Ogni ingresso o cambio di musica cade su uno stacco, mai a meta' clip.
+
+### Chi guarda in muto
+
+Molta gente guarda i reel senza audio. Per loro **l'ingresso della musica al 2,5s e la sua
+apertura al 9s non esistono**: tutta la svolta sonora e' invisibile.
+
+Il design regge lo stesso, perche' l'arco e' prima di tutto visivo (fermo → in movimento).
+Ma ne segue una regola precisa: **la clip al secondo 9 deve essere la piu' cinetica
+dell'archivio**, non genericamente "acqua". E' l'unico segnale del cambio d'atto per chi
+guarda in silenzio, quindi da sola deve far capire che il video e' cambiato.
 
 ### Rifiniture
 
