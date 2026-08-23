@@ -92,14 +92,26 @@ dal loro contenuto. Viene dalla loro **qualita'**.
 si finisce con le piu' mosse e piene. Cosi' le ~25 clip di paesaggio fermo hanno un lavoro
 vero: sono il "prima", e la loro immobilita' e' voluta.
 
-### ATTO 1 — la stasi (0–9s) · solo audio ambientale, niente musica
+### ATTO 1 — la stasi (0–9s)
 
 | Tempo | Clip | Testo |
 |---|---|---|
-| 0 – 3s | **C**, la piu' vuota e immobile — cielo, mare aperto, una strada. Zero persone | `Non volevo partire.` |
+| 0 – 3s | **tu di spalle**, fermo, piccolo nel frame, vuoto intorno | `Non volevo partire.` |
 | 3 – 5s | **C** vuota | |
 | 5 – 7s | **C** vuota | |
-| 7 – 9s | **D** dettaglio freddo: chiavi, valigia, un oggetto | *(la musica entra qui)* |
+| 7 – 9s | **D** dettaglio freddo: chiavi, valigia, un oggetto | |
+
+**Audio:** ambientale reale 0–2,5s, poi entra la musica. Non di piu':
+otto secondi di solo ambiente non danno atmosfera, danno la sensazione che il video
+non sia partito, e l'hook resta senza ritmo sotto.
+
+**L'apertura risolve due esigenze in una.** Una persona ferma e piccola dentro
+un'inquadratura vuota e' contemporaneamente un essere umano (che tiene chi guarda)
+e la stasi che serve all'arco. Quella clip *e'* "non volevo partire".
+
+**La faccia al secondo 0 no, e non per gusto: per aritmetica.** Ne hai 3-4 in tutto.
+Spesa all'inizio non ha niente su cui atterrare e lascia l'atto 3 senza il suo pagamento.
+Le facce sono la prova che qualcosa e' cambiato: vanno dove il cambiamento e' gia' avvenuto.
 
 **Qui la regola "mai due C di fila" e' sospesa.** Tre paesaggi consecutivi e immobili sono
 lo strumento: creano la stasi che l'atto 2 rompe. Unico punto del piano dove la noia e' voluta.
@@ -110,7 +122,7 @@ Clip lunghe, 2-3 secondi.
 | Tempo | Clip |
 |---|---|
 | 9 – 11s | **la prima clip con movimento vero** — acqua o barca. E' lo stacco del reel |
-| 11 – 12,5s | **di spalle**, qualcuno che *entra* nel frame |
+| 11 – 12,5s | **B** acqua o barca |
 | 12,5 – 13,5s | **C** corta (1s) |
 | 13,5 – 15s | **B** acqua |
 | 15 – 16s | **D** dettaglio |
@@ -135,9 +147,9 @@ al secondo 23, dove diventa la prova che qualcosa e' cambiato.
 **Ritmo: lento → veloce → lento-ma-pieno.** E' la curva che fa sentire il cambiamento
 anche a chi non ci sta facendo caso. Le durate qui sopra la costruiscono da sole.
 
-**La musica entra al secondo 8, su uno stacco, mai a meta' clip.** Quel punto d'ingresso
-e' il momento piu' importante del reel: e' li' che l'hook riceve risposta, otto secondi
-prima che arrivi il testo finale.
+**La svolta la porta la canzone, non il silenzio.** Scegli un pezzo con l'intro rada
+che poi cresce, e allinea il punto in cui il brano **si apre** al secondo 9, sul cambio d'atto.
+Ogni ingresso o cambio di musica cade su uno stacco, mai a meta' clip.
 
 ### Rifiniture
 
