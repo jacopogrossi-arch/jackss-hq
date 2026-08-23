@@ -81,7 +81,72 @@ le stesse clip, quindi falli solo se i primi tre vanno bene e ti avanza voglia.
 # LE SEI IDEE
 
 ## 1. "Non volevo partire" — l'arco del viaggio
-*Gia' definito in `hook-reel-corsica.md`. Il pezzo principale, esce per primo.*
+**Il pezzo principale, esce per primo.** Hook e caption in `hook-reel-corsica.md`.
+
+### Il principio
+
+Le clip sono tutte belle e ferme allo stesso modo: il cambiamento non puo' venire
+dal loro contenuto. Viene dalla loro **qualita'**.
+
+**Il reel diventa progressivamente piu' vivo.** Si parte dalle clip piu' immobili e vuote,
+si finisce con le piu' mosse e piene. Cosi' le ~25 clip di paesaggio fermo hanno un lavoro
+vero: sono il "prima", e la loro immobilita' e' voluta.
+
+### ATTO 1 — la stasi (0–9s) · solo audio ambientale, niente musica
+
+| Tempo | Clip | Testo |
+|---|---|---|
+| 0 – 3s | **C**, la piu' vuota e immobile — cielo, mare aperto, una strada. Zero persone | `Non volevo partire.` |
+| 3 – 5s | **C** vuota | |
+| 5 – 7s | **C** vuota | |
+| 7 – 9s | **D** dettaglio freddo: chiavi, valigia, un oggetto | *(la musica entra qui)* |
+
+**Qui la regola "mai due C di fila" e' sospesa.** Tre paesaggi consecutivi e immobili sono
+lo strumento: creano la stasi che l'atto 2 rompe. Unico punto del piano dove la noia e' voluta.
+Clip lunghe, 2-3 secondi.
+
+### ATTO 2 — si muove qualcosa (9–18s) · clip corte, 1–1,5s
+
+| Tempo | Clip |
+|---|---|
+| 9 – 11s | **la prima clip con movimento vero** — acqua o barca. E' lo stacco del reel |
+| 11 – 12,5s | **di spalle**, qualcuno che *entra* nel frame |
+| 12,5 – 13,5s | **C** corta (1s) |
+| 13,5 – 15s | **B** acqua |
+| 15 – 16s | **D** dettaglio |
+| 16 – 18s | **B** barca, movimento |
+
+### ATTO 3 — vivo (18–27s) · clip di nuovo lunghe, 2s
+
+| Tempo | Clip | Testo |
+|---|---|---|
+| 18 – 20s | la clip con la **faccia** migliore, tenuta lunga | |
+| 20 – 21,5s | movimento: un tuffo, acqua | |
+| 21,5 – 23s | seconda faccia, o il gruppo | |
+| 23 – 25s | **la clip piu' bella del viaggio**, larga | |
+| 25 – 27s | **mucchio E** — la clip mossa, storta, brutta | `Poi e' andata cosi'.` |
+
+### Le tre cose che fanno la differenza
+
+**Non aprire con la clip piu' bella.** E' l'istinto naturale ed e' l'errore piu' grosso:
+se parti dal meglio, tutto il resto e' discesa e l'arco non esiste. La clip migliore va
+al secondo 23, dove diventa la prova che qualcosa e' cambiato.
+
+**Ritmo: lento → veloce → lento-ma-pieno.** E' la curva che fa sentire il cambiamento
+anche a chi non ci sta facendo caso. Le durate qui sopra la costruiscono da sole.
+
+**La musica entra al secondo 8, su uno stacco, mai a meta' clip.** Quel punto d'ingresso
+e' il momento piu' importante del reel: e' li' che l'hook riceve risposta, otto secondi
+prima che arrivi il testo finale.
+
+### Rifiniture
+
+- **Grading come narrazione:** atto 1 piu' freddo (-10 saturazione, temperatura verso il blu),
+  atto 3 piu' caldo. Due secondi per clip in CapCut, raddoppia l'effetto dell'arco.
+  Senza esagerare: deve restare lo stesso viaggio.
+- **Testo:** piccolo, bianco, senza ombra pesante, in basso. Il font grande e grassetto
+  e' la firma dell'influencer, cioe' il registro che stiamo evitando.
+- **Solo due testi in tutto il reel.** Nessuna scritta tra il secondo 3 e il 25.
 
 ---
 
