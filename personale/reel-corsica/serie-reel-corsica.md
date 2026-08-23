@@ -3,8 +3,20 @@
 Materiale: ~40 clip cinematografiche, statiche, color gradate.
 Pubblico: amici e famiglia. Registro: diario, non travel content.
 
-**40 clip non sono 40 reel.** Sono 4-6 reel buoni piu' scarto.
-Il limite non e' il materiale, e' la pazienza di chi guarda.
+**40 clip non sono 40 reel.** Il limite non e' il materiale, e' la pazienza di chi guarda.
+
+## INVENTARIO REALE (verificato)
+
+- **~8 clip con persone**, di cui **4-5 di spalle** (Jacopo o un amico)
+- **Poche B**: acqua, e soprattutto **riprese dalla barca** — le uniche con movimento vero
+- **Il resto e' C**: paesaggio bello e immobile, ~25 clip
+
+**Conseguenza: tre reel, non sei.** Con 3-4 clip di volti veri, un reel di sole persone
+non sta in piedi. Tre reel fatti bene battono sei che riciclano lo stesso paesaggio.
+
+**Conseguenza 2: le clip in barca sono il materiale migliore, non il ripiego.**
+Con 25 clip immobili, la barca e' l'unica cosa che si muove da sola: orizzonte che scorre,
+acqua, persone dentro. E' la spina dorsale di un reel, non riempitivo.
 
 ---
 
@@ -57,9 +69,12 @@ purche' non siano nella stessa posizione.
 
 ## Calendario
 
-Uno ogni 4-5 giorni, per circa tre settimane.
-Il viaggio dura di piu' nel racconto e il pubblico non satura.
-Pubblicane **quattro**, tieni gli altri due in riserva.
+Uno ogni 4-5 giorni. Tre reel = circa due settimane di racconto.
+Il viaggio dura di piu' e il pubblico non satura.
+
+**I tre da fare:** 1 (l'arco) · 2 (la barca) · 3 (la giornata storta, se e' successa davvero).
+I reel 4, 5 e 6 restano qui sotto come riserva: con questo inventario riciclerebbero
+le stesse clip, quindi falli solo se i primi tre vanno bene e ti avanza voglia.
 
 ---
 
@@ -70,24 +85,26 @@ Pubblicane **quattro**, tieni gli altri due in riserva.
 
 ---
 
-## 2. Le persone
-**Il reel che i tuoi amici mandano agli altri amici.**
-
-Solo mucchio A. Se hai meno di 8 clip con persone, questo reel non si fa — o lo fai a 15 secondi.
+## 2. La barca
+**Sostituisce "Le persone" (tagliato: 4-5 clip su 8 sono di spalle).**
+**Costruito sull'unico materiale con movimento vero.**
 
 ```
-0 – 2s     una persona di spalle che cammina, inquadratura larga
-           TESTO: "Le foto del viaggio le ho fatte tutte agli altri."
-2 – 4s     dettaglio: mani, un bicchiere, dei piedi
-4 – 13s    6-7 clip di persone, alternando scala:
-           volto → gruppo largo → dettaglio → qualcuno in acqua → mezza figura
-13 – 16s   la clip di gruppo migliore, tenuta lunga (2,5s)
-16 – 18s   una clip TUA, presa dal mucchio E — mossa, storta, brutta
+0 – 2,5s   la prua che taglia l'acqua — SOLO audio reale del motore, niente musica
+           TESTO: "L'unico giorno in cui non ho pensato a niente."
+2,5s       entra la musica
+2,5 – 5s   qualcuno di spalle seduto a prua  (il di-spalle qui funziona: si muove tutto intorno)
+5 – 7s     dettaglio: mano nell'acqua, una corda, piedi bagnati
+7 – 12s    4 clip di acqua e costa dalla barca — corte, 1,2s l'una
+12 – 15s   l'unica clip con una faccia, tenuta lunga
+15 – 18s   un tuffo, o l'acqua ripresa dall'alto
+18 – 21s   la costa che si allontana, clip lunga
 ```
 
-**Chiusura:** nessun testo finale. La clip brutta di te e' la battuta.
-**Suono:** canzone vera, entra al secondo 2 dopo l'audio ambientale.
-**Caption:** i nomi. Solo i nomi delle persone, separati da virgole. Niente altro.
+**Perche' funziona:** e' l'unico reel in cui il movimento e' nelle immagini e non nel montaggio.
+Puoi tenere i tagli lenti senza che sembri fermo.
+**Suono:** ambientale reale per 2,5s, poi la canzone del viaggio.
+**Caption:** un dettaglio concreto della giornata. Niente riassunti.
 
 ---
 
@@ -164,6 +181,33 @@ Funziona **solo come ultimo della serie**: dopo cinque reel raccontati, uno muto
 Pubblicato per primo, sarebbe solo un bel niente.
 
 **Caption:** solo `Corsica.` e il tag localita'.
+
+---
+
+## Le clip di spalle: come usarle
+
+Non sono inutili, sono mal posizionate se finiscono in mezzo.
+
+- **Massimo due per reel**, distanti tra loro. Tre diventano un tic e si nota.
+- **In apertura o chiusura**, mai nel corpo centrale.
+- **Solo dove si muove qualcos'altro nel frame**: sulla barca, con le onde, col vento nei vestiti.
+  Una schiena ferma davanti a un panorama fermo e' la definizione di foto stock.
+  Una schiena che **entra** o **esce** dall'inquadratura e' viva.
+
+---
+
+## Salvare le clip C (ne hai ~25, vanno usate)
+
+**Accorciale.** Una clip statica di 2s e' uno stallo; la stessa a 0,8-1s e' un battito.
+Controintuitivo con materiale bello, ma le clip di paesaggio vanno **piu' corte** delle altre,
+non piu' lunghe. Questa deroga sostituisce la regola 5 per il mucchio C.
+
+**Punch-in impercettibile.** Scala da 100% a 104% sulla durata della clip
+(CapCut: zoom con due keyframe). Aggiunge movimento dove non ce n'e'.
+**Una clip su tre al massimo** — applicato a tutte si vede e sembra un preset.
+
+**Il format che le salva davvero e' il reel 3.** Quando e' il testo a raccontare,
+la clip bella e immobile fa da spalla alla battuta e non serve nessuna persona dentro.
 
 ---
 
