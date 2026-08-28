@@ -177,22 +177,50 @@ Dato il coefficiente circolante/depositi h = 0,2 e il coefficiente di riserva (o
 
 **Punto 1**
 
-Il moltiplicatore monetario è:
-$$ M = \frac{1+h}{h+j} \cdot H $$
+L'offerta di moneta si ottiene moltiplicando la base monetaria per il moltiplicatore:
 
-Con h = 0,2 e j = 0,1:
-$$ \frac{1+h}{h+j} = \frac{1,2}{0,3} = 4 $$
+```
+            1 + h
+      M = ─────────  ·  H
+             h + j
+```
 
-Quindi con H = 1.000:
-$$ M = 4 \times 1.000 = 4.000 $$
+**dove:**
+- `M` = offerta di moneta (circolante + depositi)
+- `H` = **base monetaria** creata dalla banca centrale (circolante + riserve)
+- `h` = rapporto **circolante / depositi**: quanta parte del denaro il pubblico tiene in contanti invece che in banca
+- `j` = **coefficiente di riserva** (obbligatoria + libera): quanta parte dei depositi le banche non prestano
+- la frazione `(1+h)/(h+j)` è il **moltiplicatore monetario**: è sempre maggiore di 1, perché il sistema bancario crea moneta oltre quella emessa dalla banca centrale
+
+Con `h` = 0,2 e `j` = 0,1:
+
+```
+      1 + 0,2     1,2
+      ───────  =  ───  =  4          moltiplicatore
+      0,2 + 0,1   0,3
+```
+
+Quindi con `H` = 1.000:
+
+```
+      M = 4 · 1.000 = 4.000
+```
 
 **Punto 2**
 
-Con h = 0,4 e j = 0,3:
-$$ \frac{1+h}{h+j} = \frac{1,4}{0,7} = 2 $$
+Con `h` = 0,4 e `j` = 0,3:
 
-Con H raddoppiata a 2.000:
-$$ M = 2 \times 2.000 = 4.000 $$
+```
+      1 + 0,4     1,4
+      ───────  =  ───  =  2          moltiplicatore dimezzato
+      0,4 + 0,3   0,7
+```
+
+Con `H` raddoppiata a 2.000:
+
+```
+      M = 2 · 2.000 = 4.000
+```
 
 **Interpretazione**: nonostante la base monetaria raddoppi, l'offerta di moneta resta invariata (M = 4.000 in entrambi i casi), perché l'aumento di h e j (più contante trattenuto dal pubblico, più riserve trattenute dalle banche) dimezza il moltiplicatore monetario, compensando esattamente il raddoppio di H. Questo illustra il problema di **controllabilità**: la BC controlla direttamente solo H, ma h e j sono endogeni (sensibili ai tassi di interesse correnti e attesi, e ai comportamenti di banche e pubblico), quindi il controllo di H non garantisce automaticamente il controllo di M.
 
@@ -201,15 +229,33 @@ $$ M = 2 \times 2.000 = 4.000 $$
 **Esercizio aggiuntivo — domanda di moneta (esempio minimo tipo Ld = a + bY − ci)**
 
 Supponiamo una funzione di domanda di moneta keynesiana del tipo:
-$$ L(Y,i) = fY + L_0 - gi $$
-con f = 0,25, L0 = 200, g = 500, Y = 2.000, i = 0,04 (4%).
 
-**Calcolo**:
-$$ L = 0,25 \times 2.000 + 200 - 500 \times 0,04 = 500 + 200 - 20 = 680 $$
+```
+      L(Y, i) = f · Y + L_0 − g · i
+```
+
+**dove:**
+- `L` = quantità di moneta domandata
+- `f` = sensibilità della domanda di moneta al **reddito** (componente transattiva)
+- `L_0` = componente autonoma della domanda speculativa
+- `g` = sensibilità della domanda di moneta al **tasso di interesse** (con il segno meno: se `i` sale, conviene comprare titoli e si tiene meno moneta)
+
+Con `f` = 0,25, `L_0` = 200, `g` = 500, `Y` = 2.000, `i` = 0,04 (4%):
+
+```
+      L = 0,25 · 2.000 + 200 − 500 · 0,04
+        = 500 + 200 − 20
+        = 680
+```
 
 Se la banca centrale fissa l'offerta di moneta M = 680, il mercato della moneta è in equilibrio a questa combinazione (Y=2.000, i=4%): è uno dei punti della curva LM.
 
-Se il tasso di interesse scende a i = 0,02 (2%), a parità di Y:
-$$ L = 500 + 200 - 500 \times 0,02 = 500 + 200 - 10 = 690 $$
+Se il tasso di interesse scende a `i` = 0,02 (2%), a parità di Y:
+
+```
+      L = 500 + 200 − 500 · 0,02
+        = 500 + 200 − 10
+        = 690
+```
 
 La domanda di moneta aumenta (690 > 680): coerente con la pendenza negativa della domanda di moneta rispetto al tasso di interesse (componente speculativa L2(i) = L0 − gi), e quindi con la pendenza positiva della curva LM nel piano (Y, i).

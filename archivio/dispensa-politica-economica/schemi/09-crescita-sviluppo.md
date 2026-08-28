@@ -106,16 +106,36 @@ Tre categorie di intervento pubblico, distinte per obiettivo:
 
 Tre settori produttivi: Agricoltura (produzione 200, consumi intermedi 50), Industria (produzione 300, consumi intermedi 100), Servizi (produzione 400, consumi intermedi 150).
 
-- **Metodo del valore aggiunto**: V.A. = 150 + 200 + 250 = **PIL = 600**
-- **Metodo della spesa**: C=350, I=150, G=120, X=70, M=90 → PIL = 350+150+120+(70−90) = **600**
-- **Metodo del reddito**: Salari=380, Profitti=180, Imposte nette=40 → PIL = 380+180+40 = **600**
+```
+      Metodo del VALORE AGGIUNTO   (produzione − consumi intermedi, per settore)
+      V.A. = 150 + 200 + 250                       PIL = 600
+
+      Metodo della SPESA           C + I + G + (X − M)
+      350 + 150 + 120 + (70 − 90)                  PIL = 600
+
+      Metodo del REDDITO           salari + profitti + imposte nette
+      380 + 180 + 40                               PIL = 600
+```
 - I tre metodi devono dare **lo stesso risultato** (identità contabile): quello che è prodotto = quello che è speso = quello che è distribuito come reddito.
 
 **PIL nominale vs reale — esempio**: un paese produce pane e automobili.
 
-- 2020 (anno base): pane 2€×1000=2.000€; auto 10.000€×10=100.000€ → **PIL 2020 = 102.000€**
-- 2025: pane 2,50€×1100=2.750€; auto 12.000€×12=144.000€ → **PIL nominale 2025 = 146.750€**
-- **PIL reale 2025 (a prezzi 2020)** = 2€×1100 + 10.000€×12 = **122.200€**
+```
+      2020 (anno base):
+      pane  2,00 € × 1.000 =   2.000 €
+      auto 10.000 € ×    10 = 100.000 €
+      PIL 2020 = 102.000 €
+
+      2025, a prezzi 2025 (PIL NOMINALE):
+      pane  2,50 € × 1.100 =   2.750 €
+      auto 12.000 € ×    12 = 144.000 €
+      PIL nominale 2025 = 146.750 €
+
+      2025, a prezzi 2020 (PIL REALE):
+      pane  2,00 € × 1.100 =   2.200 €
+      auto 10.000 € ×    12 = 120.000 €
+      PIL reale 2025 = 122.200 €
+```
 - Variazione: PIL nominale +44% (include inflazione) vs PIL reale +20% (solo crescita reale delle quantità) → la differenza tra le due variazioni è dovuta all'inflazione.
 
 ---

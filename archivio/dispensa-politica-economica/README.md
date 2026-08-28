@@ -63,6 +63,33 @@ Stabilita analizzando **8 compiti/esercitazioni d'esame passati** per gli schemi
 13. `10-disuguaglianze-stato-sociale.md` — disuguaglianze economiche e di genere, Stato Sociale, redistribuzione
 14. `14-sistema-monetario-internazionale.md` — cambi fissi vs flessibili, gold standard, Bretton Woods, dilemma di Triffin
 
+## Come si scrivono le formule
+
+Il PDF è generato da `build_pdf.py` con `python-markdown`, che **non traduce il LaTeX**: una formula scritta con `$...$` o `\frac{}{}` finisce nel PDF come codice grezzo e diventa illeggibile. In più, un trattino basso o un asterisco fuori posto può essere interpretato come comando di formattazione e **far sparire pezzi di testo**. Da qui la convenzione:
+
+**1. Formula in evidenza → blocco recintato con tre apici inversi.** Dentro un blocco markdown non tocca nulla: nessun carattere può essere mangiato.
+
+**2. Subito sotto, la legenda dei simboli**, introdotta da `**dove:**`, con un punto elenco per simbolo. Va messa dove il simbolo compare **la prima volta in quello schema** — ogni schema deve essere autosufficiente.
+
+**3. Frazioni composte su due righe**, con la linea di frazione `─` (U+2500). Il font monospace del PDF (DejaVu Sans Mono) copre `─ │ · × − ≈ √ Σ ε θ π Δ` e pedici/apici. Le frazioni semplici restano in linea, con `/`.
+
+**4. Simboli citati nel testo scorrevole → fra apici inversi singoli**: `` `L_d` ``, `` `MC_S` ``. Protegge allo stesso modo, e li fa risaltare.
+
+Esempio completo:
+
+    ```
+                 p · e
+          e_r = ───────
+                   p_w
+    ```
+
+    **dove:**
+    - `e_r` = tasso di cambio reale (competitività)
+    - `p` = prezzi interni · `p_w` = prezzi esteri
+    - `e` = tasso di cambio nominale
+
+**Il controllo automatico.** `build_pdf.py` verifica a ogni generazione che non ci siano `$`, comandi LaTeX o corsivi inventati da markdown, e stampa **file e numero di riga** di ogni problema. Se stampa `Controllo formule: nessun problema rilevato`, il PDF è pulito. Non blocca la generazione: avvisa.
+
 ## Provenienza delle fonti
 
 | Fonte | Copre |

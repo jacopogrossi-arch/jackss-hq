@@ -79,7 +79,7 @@
 |---|---|---|---|
 | **Tassazione (tassa pigouviana)** | **t = E = MC_S − MC_P**, così che MC_S = MC_P + t = MC_P privato "aumentato". In concorrenza perfetta P = MC_P, quindi aumentando il costo privato con la tassa si raggiunge la soluzione efficiente: max_x[px − c(x) − tx] → p = c'(x) + t | Internalizzazione dell'esternalità, meccanismo di prezzo, incentivo a innovare | Difficoltà di implementazione (stima del costo esterno), evasione |
 | **Regolamentazione** | Imporre l'installazione di depuratori, una quota massima sulla produzione, fissazione di un livello massimo di esternalità (cap) | Semplicità e immediatezza, controllo diretto (obbligo) | Non incentiva la riduzione dell'esternalità oltre lo standard fissato |
-| **Diritti negoziabili (permessi scambiabili)** | Proposta da **Coase (1960)**, applicata dagli anni '80. Si creano diritti di proprietà scambiabili sull'esternalità (mercato dei permessi). Quantità di diritti immessi = livello ottimo di diseconomia E*, dove MC_S(E*) = MC_P(E*) | Efficiente indipendentemente da chi riceve i diritti iniziali (se costi di transazione nulli); flessibilità per le imprese | Richiede un ente che fissi il cap e gestisca l'assegnazione; rischio di cap fissato male (vedi EU ETS) |
+| **Diritti negoziabili (permessi scambiabili)** | Proposta da **Coase (1960)**, applicata dagli anni '80. Si creano diritti di proprietà scambiabili sull'esternalità (mercato dei permessi). Quantità di diritti immessi = livello ottimo di diseconomia `E*`, dove `MC_S(E*) = MC_P(E*)` | Efficiente indipendentemente da chi riceve i diritti iniziali (se costi di transazione nulli); flessibilità per le imprese | Richiede un ente che fissi il cap e gestisca l'assegnazione; rischio di cap fissato male (vedi EU ETS) |
 
 - **Teorema di Coase**: *"Se i costi di transazione sono nulli, lo scambio conduce all'ottimo sociale (se questo è unico) indipendentemente dall'attribuzione dei diritti negoziabili."*
 - **Cap and trade**: si fissa un limite (cap) all'inquinamento, si emettono permessi corrispondenti (es. tramite asta), le imprese li scambiano fino a che il prezzo del permesso = costo marginale di abbattimento di ciascuna impresa (Pareto-efficiente). Esempio: due imprese a 500 t CO2 ciascuna, il governo assegna 800 t di permessi; l'impresa con costi di abbattimento più bassi riduce a 300 t e vende 100 t di permessi all'altra.
@@ -162,18 +162,27 @@
 
 **1. Equilibrio di mercato in concorrenza perfetta**
 
-- In concorrenza perfetta il mercato eguaglia il prezzo (= beneficio marginale privato, dalla domanda) al **costo marginale privato**: P = MC
-- 20 − 2q = 3q
-- 20 = 5q → **q_CP = 4**
-- P_CP = 20 − 2(4) = **12**
+In concorrenza perfetta il mercato eguaglia il prezzo (= beneficio marginale privato, letto sulla domanda) al **costo marginale privato**:
+
+```
+      P = MC_P
+      20 − 2q = 3q
+      20 = 5q      →   q_CP = 4
+      P_CP = 20 − 2 · 4 = 12
+```
 
 **2. Quantità socialmente ottima**
 
-- Il costo marginale **sociale** include il costo esterno: MC_S = MC_P + E = 3q + 10
-- L'ottimo sociale eguaglia domanda (beneficio marginale sociale, coincide con quella privata perché l'esternalità è di produzione) e costo marginale sociale: P = MC_S
-- 20 − 2q = 3q + 10
-- 10 = 5q → **q_OS = 2**
-- P_OS = 20 − 2(2) = **16**
+Il costo marginale **sociale** include anche il costo esterno: `MC_S = MC_P + E = 3q + 10`. L'ottimo sociale eguaglia la domanda al costo marginale **sociale**:
+
+```
+      P = MC_S
+      20 − 2q = 3q + 10
+      10 = 5q      →   q_OS = 2
+      P_OS = 20 − 2 · 2 = 16
+```
+
+**dove:** `MC_P` = costo marginale **privato** (quello che paga l'impresa) · `E` = costo esterno marginale (il danno scaricato sugli altri) · `MC_S` = costo marginale **sociale**, la somma dei due · `q_CP` = quantità di concorrenza perfetta · `q_OS` = quantità socialmente ottima
 
 **3. Spiegazione della differenza**
 
@@ -186,5 +195,5 @@
 
 - La tassa pigouviana ottimale è pari esattamente al costo esterno marginale (che qui è costante): **t = E = 10**
 - Verifica: con la tassa, il produttore massimizza max_q [P·q − c(q) − t·q], quindi eguaglia P = MC_P + t = 3q + 10, cioè esattamente la condizione dell'ottimo sociale calcolata al punto 2.
-- Infatti: 20 − 2q = 3q + 10 → q = 2 = q_OS, con prezzo pagato dal consumatore P = 16 (di cui 10 vanno allo Stato come imposta e servono a "internalizzare" il costo esterno).
+- Infatti: `20 − 2q = 3q + 10` → `q = 2 = q_OS`, con prezzo pagato dal consumatore P = 16 (di cui 10 vanno allo Stato come imposta e servono a "internalizzare" il costo esterno).
 - **Conclusione**: la tassa pigouviana di 10 riporta esattamente l'equilibrio di mercato dal punto A (q=4, P=12) al punto socialmente ottimo C (q=2, P=16), eliminando la sovra-produzione dell'esternalità negativa.

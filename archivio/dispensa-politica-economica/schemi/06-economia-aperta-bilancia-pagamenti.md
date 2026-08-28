@@ -42,15 +42,34 @@
 
 **4. Il tasso di cambio**
 
-- **Tasso di cambio nominale (e)**: prezzo di una valuta in termini di un'altra (quotazione certo per incerto: unità di valuta estera per 1 unità di valuta nazionale, es. $/Euro).
-- **Apprezzamento**: aumento di e (es. da 1,2 a 1,25 $/Euro) → serve più valuta estera per comprare 1 unità di valuta nazionale.
-- **Deprezzamento**: diminuzione di e (es. da 1,2 a 1,15 $/Euro).
+- **Tasso di cambio nominale (e)**: prezzo di una valuta in termini di un'altra (quotazione certo per incerto: unità di valuta estera per 1 unità di valuta nazionale, es. USD per 1 Euro).
+- **Apprezzamento**: aumento di e (es. da 1,2 a 1,25 USD per 1 Euro) → serve più valuta estera per comprare 1 unità di valuta nazionale.
+- **Deprezzamento**: diminuzione di e (es. da 1,2 a 1,15 USD per 1 Euro).
 - Cause: eccesso di domanda/offerta di valuta sul mercato dei cambi (le importazioni generano domanda di valuta estera, le esportazioni offerta di valuta estera).
-- **Tasso di cambio reale**: $$e_r = \frac{p \cdot e}{p_w}$$ dove p = prezzi interni, p_w = prezzi esteri, e = cambio nominale.
-  - Se $pe = p_w$ ($e_r=1$): parità dei poteri d'acquisto ("condizione di arbitraggio internazionale").
-  - **Apprezzamento reale** (↑e_r) → perdita di competitività.
-  - **Deprezzamento reale** (↓e_r) → guadagno di competitività.
-  - Versione dinamica: $\dot e_r = \dot p + \dot e - \dot p_w$ (la competitività varia con l'inflazione interna, quella estera e la variazione del cambio nominale).
+- **Tasso di cambio reale**: misura la competitività, cioè quanto costano i beni interni rispetto a quelli esteri.
+
+```
+             p · e
+      e_r = ───────
+              p_w
+```
+
+**dove:**
+- `e_r` = tasso di cambio **reale** (competitività)
+- `p` = livello dei prezzi **interni**
+- `p_w` = livello dei prezzi **esteri** (w sta per *world*)
+- `e` = tasso di cambio **nominale**
+
+  - Se `p · e = p_w` (quindi `e_r = 1`): vale la **parità dei poteri d'acquisto**, la "condizione di arbitraggio internazionale" — con la stessa somma si compra la stessa quantità di beni dentro e fuori.
+  - **Apprezzamento reale** (`e_r` sale) → i nostri beni costano relativamente di più → **perdita** di competitività.
+  - **Deprezzamento reale** (`e_r` scende) → **guadagno** di competitività.
+  - **Versione dinamica** (in tassi di variazione, cioè "di quanto cambia ogni grandezza"):
+
+```
+      ė_r = ṗ + ė − ṗ_w
+```
+
+**dove** il puntino sopra la lettera significa "tasso di variazione di": `ṗ` = inflazione interna, `ṗ_w` = inflazione estera, `ė` = variazione del cambio nominale. In parole: **la competitività peggiora se la nostra inflazione supera quella estera**, e migliora se il cambio si deprezza.
 
 **5. Regimi di cambio: fisso vs flessibile**
 
@@ -64,9 +83,18 @@
 
 **6. Meccanismi automatici di riequilibrio della BP**
 
-- **Via movimenti di capitale (MK)**: sotto (perfetta) mobilità dei capitali, MK=0 è garantito dalla **condizione di parità scoperta**:
-$$i = i_w - \dot e^e$$
-condizione di **non arbitraggio**: il rendimento atteso di un'attività in valuta nazionale deve eguagliare quello di un'attività estera analoga al netto del deprezzamento atteso della valuta nazionale. Se $i > i_w - \dot e^e$ → afflusso di capitali → i tende a scendere.
+- **Via movimenti di capitale (MK)**: sotto (perfetta) mobilità dei capitali, MK = 0 è garantito dalla **condizione di parità scoperta**:
+
+```
+      i = i_w − ė ᵉ
+```
+
+**dove:**
+- `i` = tasso di interesse **interno**
+- `i_w` = tasso di interesse **estero**
+- `ė ᵉ` = deprezzamento **atteso** della valuta nazionale (il puntino = tasso di variazione, la "e" in alto = atteso)
+
+  È una condizione di **non arbitraggio**: il rendimento atteso di un'attività in valuta nazionale deve eguagliare quello di un'attività estera analoga, al netto del deprezzamento atteso della valuta nazionale. Se `i` è **maggiore** di `i_w − ė ᵉ` → conviene investire da noi → afflusso di capitali → `i` tende a scendere finché l'uguaglianza è ristabilita.
 
 - **Via cambi flessibili**: se BP>0 → ↑e → ↑e_r → ↓CC → BP torna a 0; se BP<0 → ↓e → ↓e_r → ↑CC → BP torna a 0.
 
@@ -83,33 +111,62 @@ condizione di **non arbitraggio**: il rendimento atteso di un'attività in valut
 | **Riequilibrio dei MK** | Politica monetaria (variazione di i) o controllo diretto dei movimenti di capitale (es. "tassa di Tobin") |
 | **Riequilibrio del CC** | Politiche per la domanda aggregata (fiscali/monetarie, agiscono su Y) oppure politiche per la competitività (agiscono su p, p_w, e) |
 
-- **Politica monetaria sui MK**: se $i < i_w - \dot e^e$ la BC può fare politica monetaria restrittiva per alzare i ed evitare il deflusso di capitali; MA questo ha effetti restrittivi su Y e può aggravare il debito pubblico (tassi più alti). In alternativa: controllo diretto dei MK. Attenzione: le politiche influenzano anche le aspettative $\dot e^e$, che a loro volta muovono i MK.
+- **Politica monetaria sui MK**: se `i` è **minore** di `i_w − ė ᵉ` (quindi conviene portare i capitali all'estero), la BC può fare politica monetaria **restrittiva** per alzare `i` ed evitare il deflusso; MA questo ha effetti restrittivi su Y e può aggravare il debito pubblico (tassi più alti). In alternativa: controllo diretto dei MK. Attenzione: le politiche influenzano anche le **aspettative** `ė ᵉ`, che a loro volta muovono i MK.
 
-- **Politiche di domanda sul CC**: $CC=X-M=f(\overset{-}{e_r},\overset{-}{Y},\overset{+}{Y_w})$. Se CC>0: politica espansiva (↑Y → ↑M → ↓CC); se CC<0: politica restrittiva (↓Y → ↓M → ↑CC). **Se CC<0, l'obiettivo esterno (BP=0) è in conflitto con l'obiettivo interno di crescita di Y** (trade-off classico).
+- **Politiche di domanda sul CC**. Il saldo commerciale dipende da tre variabili, due con segno negativo e una con segno positivo:
+
+```
+      CC = X − M = f( e_r , Y , Y_w )
+                       −    −    +
+```
+
+**dove** il segno sotto ogni variabile indica come il saldo reagisce a un suo aumento:
+- `e_r` = cambio reale: se sale (apprezzamento reale) **perdiamo competitività** → CC peggiora **(−)**
+- `Y` = reddito **interno**: se sale, importiamo di più → CC peggiora **(−)**
+- `Y_w` = reddito **estero**: se sale, il resto del mondo compra di più da noi → CC migliora **(+)**
+
+  Se CC > 0: politica espansiva (Y↑ → M↑ → CC↓); se CC < 0: politica restrittiva (Y↓ → M↓ → CC↑). **Se CC < 0, l'obiettivo esterno (BP = 0) è in conflitto con l'obiettivo interno di crescita di Y** (trade-off classico).
 
 - **Politiche sulla competitività**: agiscono su p (politiche dei prezzi/redditi), su p_w (politiche protezionistiche, non ammesse in UE), su e (manovra del cambio: modifica della parità in cambi fissi, o pilotaggio del cambio in cambi flessibili). Se CC<0 → ↓e → ↑CC; se CC>0 → ↑e → ↓CC.
 
 **8. Efficacia della svalutazione: la condizione di Marshall-Lerner**
 
-- CC in valuta estera: $CC = (p_x e)q_x - p_m q_m$.
+- Il saldo commerciale, espresso **in valuta estera**:
+
+```
+      CC = (p_x · e) · q_x − p_m · q_m
+```
+
+**dove:**
+- `p_x` = prezzo delle **esportazioni** (in valuta nazionale) · `q_x` = quantità esportate
+- `p_m` = prezzo delle **importazioni** (già in valuta estera) · `q_m` = quantità importate
+- `e` = tasso di cambio nominale, che converte il valore delle esportazioni in valuta estera
 - Un deprezzamento del cambio (↓e) ha due effetti opposti:
   - fa **aumentare le quantità** esportate e ridurre quelle importate → CC>0 (effetto quantità)
-  - **riduce il prezzo in valuta estera** delle esportazioni ($p_x e$) → CC<0 (effetto prezzo)
+  - **riduce il prezzo in valuta estera** delle esportazioni (`p_x · e`) → CC<0 (effetto prezzo)
 
 - L'effetto complessivo è positivo solo se prevale l'effetto quantità, cioè se c'è sufficiente elasticità delle quantità al cambio:
-$$|\varepsilon_x| + |\varepsilon_m| > 1 \quad \text{(condizione di Marshall-Lerner)}$$
-dove $\varepsilon_x$ = elasticità delle esportazioni al cambio, $\varepsilon_m$ = elasticità delle importazioni al cambio.
+```
+      | ε_x | + | ε_m | > 1          ← condizione di Marshall-Lerner
+```
+
+**dove:**
+- `ε_x` = **elasticità delle esportazioni** al cambio (di quanto % variano le quantità esportate per una variazione dell'1% del cambio)
+- `ε_m` = **elasticità delle importazioni** al cambio
+- le barre verticali `| |` indicano il **valore assoluto**: si sommano i due numeri senza guardare al segno
+
+In parole: **la somma delle due sensibilità deve superare 1**, altrimenti l'effetto prezzo prevale su quello quantità e la svalutazione peggiora il saldo invece di migliorarlo.
 
 **Le quattro ipotesi su cui poggia la condizione** (da citare se la domanda chiede "quando la svalutazione funziona?"):
 
-1. **$p$ e $p^*$ dati e costanti**: non c'è trasferimento della variazione del cambio sui prezzi interni (niente *pass-through*);
+1. **`p` e `p_w` dati e costanti** (prezzi interni ed esteri): non c'è trasferimento della variazione del cambio sui prezzi (niente *pass-through*);
 2. **Nessun vincolo di offerta**: il paese è in grado di produrre di più per soddisfare la maggiore domanda estera. In **pieno impiego** l'offerta non può crescere e l'aumento della domanda estera si scarica sui **prezzi** (aggravato dal rincaro dei beni importati);
 3. **Le quantità reagiscono più velocemente dei prezzi** — se non è vero, il saldo inizialmente **peggiora** (curva a J, qui sotto);
 4. **Nessun effetto sulle aspettative di deprezzamento futuro**: se la svalutazione genera attese di ulteriori svalutazioni, si innesca un **deflusso di capitali** che peggiora la BP invece di migliorarla.
 
 **La curva a J** — l'ipotesi 3 spiegata: se le quantità importate calano e quelle esportate crescono **lentamente**,
 
-- **nel primo periodo** prevale l'effetto prezzo: la svalutazione riduce il valore in valuta estera delle esportazioni ($p_x e$) e il saldo **peggiora**;
+- **nel primo periodo** prevale l'effetto prezzo: la svalutazione riduce il valore in valuta estera delle esportazioni (`p_x · e`) e il saldo **peggiora**;
 - **dopo un certo tempo** le quantità si adeguano e, se vale Marshall-Lerner, il saldo **migliora**.
 
 Il saldo dei movimenti di beni disegna quindi nel tempo una **J**: prima scende, poi risale sopra il livello di partenza. È il motivo per cui gli effetti di una svalutazione **non si giudicano nel breve periodo**.
@@ -122,7 +179,15 @@ Il saldo dei movimenti di beni disegna quindi nel tempo una **J**: prima scende,
 | **Protezionismo** | difesa della produzione interna dalla concorrenza estera |
 | **Autarchia** | chiusura totale dell'economia nazionale verso l'estero |
 
-- **Grado di apertura** $= \dfrac{X+M}{Y}$
+- **Grado di apertura** dell'economia — quanto un paese commercia con l'estero rispetto a quanto produce:
+
+```
+                          X + M
+      grado di apertura = ───────
+                             Y
+```
+
+**dove:** `X` = esportazioni · `M` = importazioni · `Y` = PIL
 
 **Il principio dei costi comparati con i numeri** (schema dell'esempio tipico). Il paese B ha un vantaggio **assoluto** in entrambi i beni, ma conviene comunque specializzarsi e scambiare:
 
@@ -140,7 +205,7 @@ Il saldo dei movimenti di beni disegna quindi nel tempo una **J**: prima scende,
   - **Tariffario**: **dazi** (imposta sui beni importati, genera gettito fiscale)
   - **Non tariffario**: **contingenti** (limiti fisici/di valore alle importazioni), regolamentazioni, sussidi alle esportazioni, svalutazione competitiva del cambio
 
-- **Effetti di un dazio** (prezzo internazionale invariato, ipotesi paese "piccolo"): il prezzo interno sale da p a $p(1+d)$ →
+- **Effetti di un dazio** (prezzo internazionale invariato, ipotesi paese "piccolo"): il prezzo interno sale da `p` a `p · (1 + d)`, dove `d` è l'aliquota del dazio →
   - effetto consumo: -↓ consumo interno
   - effetto produzione: +↑ produzione interna
   - effetto importazione: ↓ importazioni
@@ -159,7 +224,7 @@ Il saldo dei movimenti di beni disegna quindi nel tempo una **J**: prima scende,
 - Il **dazio proibitivo** è quello che porta domanda e offerta interne a coincidere: le importazioni si azzerano (autarchia) e — punto controintuitivo da ricordare — **il gettito è nullo**, perché non c'è più nulla da tassare.
 
 - Giustificazioni del protezionismo:
-  - **Ragioni di scambio**: un dazio può spingere i produttori esteri a ridurre il prezzo al netto del dazio (*pricing to market*), migliorando la ragione di scambio $TT = \dfrac{p_x e}{p_m}$. Vale però **solo se il paese non è piccolo**: serve che la sua riduzione di domanda sposti il prezzo internazionale. In tal caso il dazio è **efficace sulla ragione di scambio ma meno efficace nel proteggere la produzione interna** (il prezzo estero scende e compensa in parte il dazio)
+  - **Ragioni di scambio**: un dazio può spingere i produttori esteri a ridurre il prezzo al netto del dazio (*pricing to market*), migliorando la **ragione di scambio** `TT = (p_x · e) / p_m`, cioè il rapporto fra il prezzo di ciò che esportiamo e il prezzo di ciò che importiamo (più è alto, meglio è: vendiamo caro e compriamo a buon mercato). Vale però **solo se il paese non è piccolo**: serve che la sua riduzione di domanda sposti il prezzo internazionale. In tal caso il dazio è **efficace sulla ragione di scambio ma meno efficace nel proteggere la produzione interna** (il prezzo estero scende e compensa in parte il dazio)
   - **Industria nascente**: economie di scala dinamiche (*learning by doing*) — una protezione temporanea permette al paese nuovo entrante di ridurre i costi unitari fino a essere competitivo. Benefici aggiuntivi di **spillover** su altri settori; problemi: individuare i settori che diventeranno vitali, e la difficoltà **politica** di rimuovere il dazio una volta introdotto
   - **Difesa dal lavoro straniero a buon mercato** (*dumping sociale*): concorrenza di economie con salari molto più bassi. **Obiezione da conoscere**: i salari tendono a seguire la produttività, quindi le differenze in termini di **costo del lavoro per unità di prodotto** (w/q) sono molto più piccole di quelle in termini di salari
 
@@ -180,20 +245,39 @@ Il saldo dei movimenti di beni disegna quindi nel tempo una **J**: prima scende,
 
 **Costruzione delle equazioni:**
 
-- **IS** (mercato dei beni), forma generale: $Y = C+I+G+X-M$, con $C=cY$, $I=I(i)$, $M=mY$, $X=\bar X$
-$$\Rightarrow Y = \frac{1}{1-c+m}\left[I(i)+\bar G+\bar X\right]$$
+- **IS** (mercato dei beni). Si parte da `Y = C + I + G + X − M`, con `C = c·Y`, `I = I(i)`, `M = m·Y`, `X` dato. Risolvendo per Y:
+
+```
+                 1
+      Y = ───────────────  ·  [ I(i) + G + X ]
+             1 − c + m
+```
+
+**dove:**
+- `c` = propensione marginale al **consumo** (quanta parte di un euro in più di reddito viene consumata)
+- `m` = propensione marginale a **importare** (quanta parte di un euro in più di reddito viene spesa in beni esteri)
+- `1 / (1 − c + m)` = **moltiplicatore in economia aperta**: più piccolo di quello in economia chiusa `1/(1−c)`, perché una parte della domanda "esce" all'estero sotto forma di importazioni
+- `I(i)` = investimenti, che dipendono **negativamente** dal tasso di interesse · `G` = spesa pubblica · `X` = esportazioni (date)
   (multiplo keynesiano ridotto dalla propensione a importare m)
 
-- **LM** (mercato della moneta): condizione $L_d(Y,i) = M_s$ (domanda di moneta = offerta di moneta); la LM è crescente nel piano (i,Y): a Y più alto serve i più alto per mantenere in equilibrio il mercato monetario dato Ms.
+- **LM** (mercato della moneta): condizione `L_d(Y, i) = M_s`, cioè **domanda di moneta = offerta di moneta**, dove `L_d` è la domanda di moneta (cresce con Y, cala con i) e `M_s` è l'offerta di moneta decisa dalla banca centrale. La LM è **crescente** nel piano (i, Y): a Y più alto serve un i più alto per tenere in equilibrio il mercato monetario, data `M_s`.
 
-- **BP** (mercato estero): $BP(Y,i,\bar e) = CC(Y,\bar e) + MK(i) = 0$, esplicitamente $BP = X(e) - m(e)Y + MK(i) = 0$
+- **BP** (equilibrio con l'estero): la bilancia dei pagamenti è in pareggio quando il saldo commerciale e i movimenti di capitale si compensano.
+
+```
+      BP = CC(Y, e) + MK(i) = 0
+
+      esplicitamente:   X(e) − m(e)·Y + MK(i) = 0
+```
+
+**dove:** `CC` = saldo di conto corrente (dipende da Y e dal cambio `e`) · `MK` = saldo dei movimenti di capitale (dipende dal tasso `i`)
   - **Curva BP inclinata positivamente**: a Y più alto (→ più importazioni, CC peggiora) serve i più alto (→ più afflusso di capitali) per mantenere BP=0.
   - **Pendenza della BP e mobilità dei capitali**:
     - se i movimenti di capitale sono **vietati** (mobilità nulla) → BP **verticale** (BP dipende solo da Y, tramite CC)
     - se la mobilità dei capitali è **crescente**, la BP diventa più **piatta**
-    - in caso di **perfetta mobilità dei capitali** → BP **orizzontale**, in corrispondenza del tasso di interesse internazionale $i_w$ (qualunque i diverso da $i_w$ genera flussi di capitale infiniti)
+    - in caso di **perfetta mobilità dei capitali** → BP **orizzontale**, in corrispondenza del tasso di interesse internazionale `i_w` (qualunque `i` diverso da `i_w` genera flussi di capitale infiniti)
   - Sopra la curva BP: zona di **avanzo**; sotto: zona di **disavanzo**.
-  - Una **svalutazione del cambio** (↓e) sposta la BP verso il basso (più esportazioni a parità di Y) e la rende meno inclinata (minore propensione a importare in termini reali): $Y = \dfrac{1}{m(e)}X(e)+MK(i)$
+  - Una **svalutazione del cambio** (↓e) sposta la BP verso il basso (più esportazioni a parità di Y) e la rende meno inclinata (minore propensione a importare in termini reali): `Y = [ X(e) + MK(i) ] / m(e)`
 
 **11. Effetti delle politiche in cambi fissi vs flessibili (schema generale Mundell-Fleming)**
 
@@ -210,44 +294,96 @@ $$\Rightarrow Y = \frac{1}{1-c+m}\left[I(i)+\bar G+\bar X\right]$$
 
 ## Esercizio tipo svolto
 
-**Dati**: C = 0,7Y — I = 600 − 400i — G = 380 — M = 0,1Y — X = 320 — $L_d = 0,25Y + 500 - 1000i$
+**Dati del problema:**
+
+```
+      C   = 0,7 · Y                  consumi
+      I   = 600 − 400 · i            investimenti
+      G   = 380                      spesa pubblica
+      X   = 320                      esportazioni
+      M   = 0,1 · Y                  importazioni
+      L_d = 0,25 · Y + 500 − 1000 · i    domanda di moneta
+```
+
+**dove:**
+- `Y` = reddito (PIL) · `i` = tasso di interesse, **in decimali** (5% si scrive 0,05)
+- `0,7` = propensione al consumo `c` · `0,1` = propensione a importare `m`
+- in `L_d`, la parte `0,25 · Y` è la domanda di moneta **transattiva** (dipende dal reddito), la parte `500 − 1000 · i` è quella **speculativa** (dipende dal tasso)
 
 ### 1. Equazione IS (equilibrio del mercato dei beni)
 
-$$Y = C+I+G+X-M$$
-$$Y = 0,7Y + (600-400i) + 380 + 320 - 0,1Y$$
-$$Y - 0,7Y + 0,1Y = 1300 - 400i$$
-$$0,4\,Y = 1300 - 400i$$
-$$\boxed{Y = 3250 - 1000i} \quad \text{(equazione della curva IS)}$$
+Si parte dall'equilibrio e si sostituiscono i dati:
+
+```
+      Y = C + I + G + X − M
+      Y = 0,7Y + (600 − 400i) + 380 + 320 − 0,1Y
+```
+
+Si portano a sinistra tutti i termini con Y:
+
+```
+      Y − 0,7Y + 0,1Y = 1300 − 400i
+      0,4 · Y         = 1300 − 400i
+```
+
+Si divide tutto per 0,4:
+
+```
+      Y = 3250 − 1000 · i          ←  equazione della curva IS
+```
+
+**Come si legge**: se il tasso di interesse sale di 1 punto (0,01), il reddito di equilibrio scende di 10 (1000 × 0,01), perché tassi più alti riducono gli investimenti.
 
 ### 2. Saldo della bilancia commerciale (CC = X − M) in funzione di i
 
-$$CC = X - M = 320 - 0,1Y$$
+```
+      CC = X − M = 320 − 0,1 · Y
+```
 
-sostituendo la IS:
+Sostituendo dentro l'equazione IS trovata al punto 1:
 
-$$CC = 320 - 0,1(3250-1000i) = 320 - 325 + 100i$$
-$$\boxed{CC = 100i - 5}$$
+```
+      CC = 320 − 0,1 · (3250 − 1000i)
+      CC = 320 − 325 + 100i
+      CC = 100 · i − 5             ←  saldo commerciale in funzione di i
+```
 
-→ il saldo commerciale migliora (CC aumenta) al crescere del tasso di interesse i, perché i più alto riduce gli investimenti, quindi riduce Y (via IS), quindi riduce le importazioni M=0,1Y.
+**Come si legge**: il saldo commerciale **migliora al crescere del tasso di interesse**. Catena causale: `i` sale → gli investimenti calano → Y cala (via IS) → le importazioni `M = 0,1·Y` calano → CC migliora. Il saldo è in pareggio (CC = 0) quando `i = 0,05`, cioè al 5%.
 
 ### 3. Domanda di moneta transattiva in funzione di i
 
-La componente transattiva di $L_d$ è **0,25Y** (la parte che dipende dal reddito; la parte $500-1000i$ è la componente speculativa/legata al tasso di interesse). Sostituendo la IS:
+La componente **transattiva** di `L_d` è `0,25 · Y` (solo la parte che dipende dal reddito). Sostituendo di nuovo la IS:
 
-$$L_{d,\text{transattiva}} = 0,25Y = 0,25(3250-1000i)$$
-$$\boxed{L_{d,\text{transattiva}} = 812,5 - 250i}$$
+```
+      L_transattiva = 0,25 · Y = 0,25 · (3250 − 1000i)
+      L_transattiva = 812,5 − 250 · i
+```
 
 ### 4. Chiusura numerica del sistema (nota metodologica)
 
-Per ottenere un **valore numerico unico** di Y* (e quindi di i*, CC* e della domanda di moneta transattiva) serve la curva **LM**, cioè la condizione $L_d = M_s$ con un valore dato dell'**offerta di moneta $M_s$** (o, in alternativa, un valore di i dato direttamente dal testo). Con i soli dati forniti (IS + $L_d$, ma senza $M_s$) il sistema IS-LM è **sottodeterminato**: si può esprimere Y, CC e la domanda di moneta transattiva solo **in funzione di i**, come sopra.
+Per ottenere un **valore numerico unico** di Y (e quindi di `i`, di CC e della domanda di moneta) serve anche la curva **LM**, cioè la condizione:
 
-**Esempio illustrativo** (solo per mostrare il procedimento completo — il valore di i qui è ipotizzato, va sostituito con il dato reale fornito nel testo d'esame, es. tramite $M_s$ o un tasso i esplicito): se i = 5% (0,05):
+```
+      L_d = M_s
+```
 
-- $Y = 3250 - 1000(0,05) = 3200$
-- $I = 600 - 400(0,05) = 580$
-- verifica: $Y = 0,7(3200)+580+380+320-0,1(3200) = 2240+580+380+320-320 = 3200$ ✓
-- $CC = 100(0,05) - 5 = 0$ (commercio in pareggio)
-- $L_{d,\text{transattiva}} = 0,25(3200) = 800$
+**dove** `M_s` è l'**offerta di moneta**, un dato che deve essere fornito dal testo d'esame (in alternativa il testo può dare direttamente il valore di `i`).
 
-Il metodo (equazione IS → sostituzione in CC e nella componente transattiva di $L_d$) è lo stesso qualunque sia il valore di i fornito dal testo dell'esame.
+Con i soli dati di questo esercizio (la IS e la funzione `L_d`, ma **senza** `M_s`) il sistema è **sottodeterminato**: si possono esprimere Y, CC e la domanda di moneta soltanto **in funzione di i**, come fatto sopra. Non è un errore di svolgimento: è che manca un dato.
+
+**Esempio illustrativo** — solo per mostrare il procedimento completo. Il valore di `i` qui è **ipotizzato**, e all'esame va sostituito con quello ricavato da `M_s` o fornito dal testo. Se `i` = 5% (cioè 0,05):
+
+```
+      Y = 3250 − 1000 · 0,05 = 3200
+      I = 600 − 400 · 0,05   = 580
+
+      verifica:
+      Y = 0,7·(3200) + 580 + 380 + 320 − 0,1·(3200)
+        = 2240 + 580 + 380 + 320 − 320
+        = 3200   ✓
+
+      CC = 100 · 0,05 − 5 = 0        (commercio in pareggio)
+      L_transattiva = 0,25 · 3200 = 800
+```
+
+Il metodo — **ricavare l'equazione IS, poi sostituirla dentro CC e dentro la componente transattiva della domanda di moneta** — resta identico qualunque sia il valore di `i` fornito dal testo d'esame.

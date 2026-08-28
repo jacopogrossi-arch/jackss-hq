@@ -1,5 +1,6 @@
 import markdown
 import re
+import sys
 from pathlib import Path
 
 BASE = Path(__file__).parent
@@ -32,6 +33,52 @@ FILES_IN_ORDER = [
     # autoverifica, in coda
     "00d-domande-preselezione.md",
 ]
+
+def controlla_formule(files):
+    """Segnala LaTeX rimasto e trattini bassi fuori da blocchi/apici, che markdown
+    interpreta come corsivo mangiandosi pezzi di formula. Avvisa, non blocca."""
+    comando_latex = re.compile(r"\\[a-zA-Z]+")
+    avvisi = []
+    for fname in files:
+        dentro_blocco = False
+        for n, riga in enumerate((SCHEMI / fname).read_text(encoding="utf-8").split("\n"), 1):
+            if riga.lstrip().startswith("```"):
+                dentro_blocco = not dentro_blocco
+                continue
+            if dentro_blocco:
+                continue
+            fuori_apici = re.sub(r"`[^`]*`", "", riga)
+            if "$" in fuori_apici:
+                avvisi.append(f"{fname}:{n}  simbolo $ fuori da un blocco (LaTeX non viene reso nel PDF)")
+            if comando_latex.search(fuori_apici):
+                avvisi.append(f"{fname}:{n}  comando LaTeX (\\frac, \\dot...) non reso nel PDF")
+    return avvisi
+
+
+def controlla_html(html):
+    """Il trattino basso puo' essere interpretato da markdown come corsivo, mangiando
+    il testo in mezzo alla formula. Qui si verifica il risultato reso: un <em> o uno
+    <strong> che contiene _ o $ e' sempre sintomo di formula corrotta."""
+    avvisi = []
+    # solo <em>: il grassetto con trattini bassi (**MC_S**) e' corretto, mentre un
+    # corsivo che contiene _ o $ e' sempre un corsivo che markdown ha inventato
+    for contenuto in re.findall(r"<em>([^<]*)</em>", html):
+        if "_" in contenuto or "$" in contenuto:
+            avvisi.append(f"corsivo inventato da markdown (testo mangiato): {contenuto[:70]!r}")
+    return avvisi
+
+
+def stampa_avvisi(avvisi):
+    if avvisi:
+        print("\n!! FORMULE DA CONTROLLARE — nel PDF verrebbero illeggibili:")
+        for a in avvisi:
+            print("   " + a)
+        print("   Soluzione: mettere la formula in un blocco recintato ``` oppure fra `apici inversi`.\n")
+    else:
+        print("Controllo formule: nessun problema rilevato.")
+
+
+avvisi_sorgente = controlla_formule(FILES_IN_ORDER)
 
 parts = []
 HEADER = """# Dispensa Politica Economica
@@ -118,7 +165,13 @@ html_template = f"""<!DOCTYPE html>
   th, td {{ border: 1px solid #999; padding: 5px 8px; text-align: left; vertical-align: top; }}
   th {{ background: #eef2f7; }}
   img {{ max-width: 92%; display: block; margin: 14px auto; page-break-inside: avoid; }}
-  code {{ background: #f2f2f2; padding: 1px 4px; font-family: 'Consolas', monospace; font-size: 10pt; }}
+  code {{ background: #f2f2f2; padding: 1px 4px; font-family: 'Consolas', 'DejaVu Sans Mono', monospace; font-size: 10pt; }}
+  /* riquadro delle formule: il contenuto di un blocco recintato non viene toccato da
+     markdown, quindi nessun simbolo puo' essere mangiato o interpretato come corsivo */
+  pre {{ background: #f7f9fb; border: 1px solid #dde; border-left: 4px solid #1a5276;
+        padding: 10px 14px; margin: 12px 0; page-break-inside: avoid; overflow-x: auto; }}
+  pre code {{ background: none; padding: 0; font-size: 10.5pt; line-height: 1.35;
+             white-space: pre; color: #16324f; }}
   blockquote {{ border-left: 3px solid #ccc; margin-left: 0; padding-left: 12px; color: #555; }}
   .pagebreak {{ page-break-before: always; }}
   a {{ color: #1a5276; text-decoration: none; }}
@@ -136,4 +189,6 @@ html_template = f"""<!DOCTYPE html>
 """
 
 (BASE / f"{OUT_NAME}.html").write_text(html_template, encoding="utf-8")
+
+stampa_avvisi(avvisi_sorgente + controlla_html(html_body))
 print(f"OK: {OUT_NAME}.md e {OUT_NAME}.html generati")

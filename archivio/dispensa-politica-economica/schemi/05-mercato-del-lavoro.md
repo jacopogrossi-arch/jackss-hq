@@ -89,18 +89,20 @@ Seconda distinzione, per **causa** (classificazione Treccani):
 - Occupati: N = 100
 - Disoccupati: U = 10
 
-**Passo 1 — Forza lavoro**
-FL = N + U = 100 + 10 = **110**
+```
+      Passo 1 — Forza lavoro
+      FL = N + U = 100 + 10 = 110
 
-**Passo 2 — Tasso di disoccupazione**
-u = U / FL = 10 / 110 = **0,0909 → ≈ 9,1%**
+      Passo 2 — Tasso di disoccupazione   (denominatore: FORZA LAVORO)
+      u = U / FL = 10 / 110 = 0,0909   →  ≈ 9,1%
 
-**Passo 3 — Tasso di attività**
-a = FL / Pop₁₅₊ = 110 / 120 = **0,9167 → ≈ 91,7%**
+      Passo 3 — Tasso di attività         (denominatore: POPOLAZIONE)
+      a = FL / Pop₁₅₊ = 110 / 120 = 0,9167   →  ≈ 91,7%
 
-**Passo 4 — Tasso di occupazione**
-n = N / Pop₁₅₊ = 100 / 120 = **0,8333 → ≈ 83,3%**
+      Passo 4 — Tasso di occupazione      (denominatore: POPOLAZIONE)
+      n = N / Pop₁₅₊ = 100 / 120 = 0,8333   →  ≈ 83,3%
+```
 
-**Verifica di coerenza**: n = a × (1 − u) → 0,9167 × (1 − 0,0909) = 0,9167 × 0,9091 ≈ 0,8333 ✓ (il tasso di occupazione è il prodotto del tasso di attività per il complemento a 1 del tasso di disoccupazione).
+**Verifica di coerenza**: `n = a · (1 − u)` → 0,9167 · (1 − 0,0909) = 0,9167 · 0,9091 ≈ 0,8333 ✓ (il tasso di occupazione è il prodotto del tasso di attività per il complemento a 1 del tasso di disoccupazione).
 
 **Nota metodologica**: se i dati forniti sono popolazione totale, popolazione in età lavorativa, occupati e in cerca di occupazione, il primo passo è sempre isolare Pop₁₅₊ e la FL prima di applicare le tre formule — non confondere la popolazione totale con la popolazione in età lavorativa se il testo le distingue.

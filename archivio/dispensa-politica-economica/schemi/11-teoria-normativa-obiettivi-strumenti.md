@@ -42,12 +42,18 @@ Sono **tre**, ed è la classificazione più probabile come domanda secca:
 
 Con due obiettivi (ridurre inflazione e disoccupazione), la funzione di benessere sociale ha forma:
 
-**W = a·ṗ + b·u**
+```
+      W = a · ṗ + b · u
+```
 
-- **a** e **b** sono i **pesi** attribuiti alle due variabili. Sono costanti **negative** se si misura il benessere (un aumento di ṗ o di u riduce il benessere); diventano **positive** se si ragiona in termini di *malessere*.
+**dove:** `W` = benessere (o malessere) sociale · `ṗ` = tasso di inflazione · `u` = tasso di disoccupazione · `a` e `b` = **pesi** che il policy maker attribuisce ai due mali
+
+- Attenzione al **segno**: `a` e `b` sono costanti **negative** se si misura il *benessere* (un aumento di inflazione o disoccupazione lo riduce), e **positive** se si ragiona in termini di *malessere*.
 - Nel caso particolare **a = b = 1** si ottiene l'**indice di malessere di Okun** (*misery index*):
 
-**W = ṗ + u**
+```
+      W = ṗ + u
+```
 
 - Somma tasso di inflazione e tasso di disoccupazione **dando lo stesso peso ai due mali**. Conseguenza analitica da ricordare: il **saggio marginale di sostituzione fra gli obiettivi è costante e pari a 1** (a/b = 1) → le curve di indifferenza sociale sono **rette** inclinate a −45°.
 - Se la funzione non è lineare, il s.m.s. diventa **variabile**: il policy maker è disposto a scambiare inflazione e disoccupazione a "prezzi" diversi a seconda del punto in cui si trova.
@@ -92,9 +98,20 @@ Con due obiettivi (ridurre inflazione e disoccupazione), la funzione di benesser
 
 1. **Forma strutturale** — l'insieme delle relazioni che descrivono il sistema (il modello IS-LM, o le equazioni qui sopra).
 2. **Forma ridotta** — l'**obiettivo in funzione degli strumenti** e delle altre esogene. Misura l'**efficacia** di ogni strumento sull'obiettivo:
-   **N = (1/θ) · [1 / (1 − c(1−t))] · (I + G)**
+
+```
+           1              1
+      N = ───  ·  ─────────────────  ·  ( I + G )
+           θ        1 − c(1−t)
+```
+
 3. **Forma ridotta inversa (modello di decisione)** — lo **strumento in funzione dell'obiettivo**: si assegna il valore desiderato all'obiettivo e si ricava il valore da dare allo strumento:
-   **G = θ · [1 − c(1−t)] · N − I**
+
+```
+      G = θ · [ 1 − c(1−t) ] · N  −  I
+```
+
+**dove:** `N` = occupazione (l'**obiettivo**) · `G` = spesa pubblica (lo **strumento**) · `θ` = produttività media del lavoro · `c` = propensione al consumo · `t` = aliquota fiscale · `I` = investimenti (dati)
 
 ## **7. La regola aurea di politica economica (Tinbergen)**
 
@@ -179,39 +196,68 @@ Curva di Phillips aumentata delle aspettative: **u = uⁿ + α(ṗᵉ − ṗ)**
 
 *(È l'esercizio proposto nelle slide della professoressa e non svolto a lezione.)*
 
-**Testo.** Modello obiettivo-strumento con θ = 30 (produttività media del lavoro), c = 0,8 (propensione al consumo), I = 2500. L'obiettivo è N = 2000 occupati.
-(a) Quale deve essere il livello della spesa pubblica G, se t = 0?
-(b) E se t = 0,2?
-(c) Qual è l'efficacia dello strumento G sull'obiettivo N nei due casi?
+**Testo.** Modello obiettivo-strumento con θ = 30 (produttività media del lavoro), c = 0,8 (propensione al consumo), I = 2500. L'obiettivo è N = 2000 occupati. Si chiede:
+
+- **(a)** Quale deve essere il livello della spesa pubblica G, se `t = 0`?
+- **(b)** E se `t = 0,2`?
+- **(c)** Qual è l'**efficacia** dello strumento G sull'obiettivo N nei due casi?
 
 **Il modello**
-Y^off = θN · Y^dom = C + I + G · C = c·Yᵈ · Yᵈ = (1−t)Y · Y^dom = Y^off = Y
+
+```
+      Y^off = θ · N                  offerta: quanto si produce con N occupati
+      Y^dom = C + I + G              domanda
+      C = c · Yᵈ                     consumi
+      Yᵈ = (1 − t) · Y               reddito disponibile, al netto delle imposte
+      Y^dom = Y^off = Y              condizione di equilibrio
+```
 
 **Forma ridotta** (obiettivo in funzione degli strumenti):
-N = (1/θ) · [1 / (1 − c(1−t))] · (I + G)
 
-**Forma ridotta inversa** (modello di decisione):
-**G = θ · [1 − c(1−t)] · N − I**
+```
+           1              1
+      N = ───  ·  ─────────────────  ·  ( I + G )
+           θ        1 − c(1−t)
+```
+
+**Forma ridotta inversa** (modello di decisione — è quella che serve per rispondere):
+
+```
+      G = θ · [ 1 − c(1−t) ] · N  −  I
+```
 
 ---
 
 **(a) Caso t = 0**
 
-Moltiplicatore: 1 − c(1−t) = 1 − 0,8 = **0,2**
+```
+      denominatore del moltiplicatore:
+      1 − c(1−t) = 1 − 0,8 = 0,2
 
-G = 30 × 0,2 × 2000 − 2500 = 12.000 − 2500 = **G = 9.500**
+      G = 30 · 0,2 · 2000 − 2500
+        = 12.000 − 2500
+        = 9.500
 
-*Verifica*: Y = θN = 30 × 2000 = 60.000. Dal lato della domanda: Y = (1/0,2) × (I+G) = 5 × 12.000 = 60.000 ✓
+      verifica:
+      Y = θ · N = 30 · 2000 = 60.000
+      dal lato della domanda: Y = (1/0,2) · (I + G) = 5 · 12.000 = 60.000  ✓
+```
 
 ---
 
 **(b) Caso t = 0,2**
 
-Moltiplicatore: 1 − c(1−t) = 1 − 0,8 × 0,8 = 1 − 0,64 = **0,36**
+```
+      denominatore del moltiplicatore:
+      1 − c(1−t) = 1 − 0,8 · 0,8 = 1 − 0,64 = 0,36
 
-G = 30 × 0,36 × 2000 − 2500 = 21.600 − 2500 = **G = 19.100**
+      G = 30 · 0,36 · 2000 − 2500
+        = 21.600 − 2500
+        = 19.100
 
-*Verifica*: Y = 60.000; (1/0,36) × (2500 + 19.100) = 2,778 × 21.600 = 60.000 ✓
+      verifica:
+      (1/0,36) · (2500 + 19.100) = 2,778 · 21.600 = 60.000  ✓
+```
 
 **Commento**: con l'imposta proporzionale serve **più del doppio** di spesa pubblica per lo stesso obiettivo occupazionale, perché il prelievo sottrae reddito disponibile a ogni giro del moltiplicatore.
 
@@ -221,7 +267,13 @@ G = 30 × 0,36 × 2000 − 2500 = 21.600 − 2500 = **G = 19.100**
 
 L'efficacia è la **derivata dell'obiettivo rispetto allo strumento**, cioè il coefficiente di G nella forma ridotta:
 
-**dN/dG = 1 / [θ · (1 − c(1−t))]**
+```
+      dN            1
+      ──  =  ─────────────────────
+      dG      θ · [ 1 − c(1−t) ]
+```
+
+**dove** `dN/dG` si legge "di quanto aumenta N se G aumenta di un'unità".
 
 | | Efficacia dN/dG | Lettura |
 |---|---|---|

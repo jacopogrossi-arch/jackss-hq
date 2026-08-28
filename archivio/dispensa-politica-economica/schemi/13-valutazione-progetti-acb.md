@@ -35,10 +35,22 @@ Sono le stesse fasi di un imprenditore privato, ma con contenuti diversi (vedi �
 
 **Le formule:**
 
-- **B = Σ₀ⁿ [ b_t / (1+i)^t ]** → somma dei valori attuali dei **benefici**
-- **C = Σ₀ⁿ [ c_t / (1+i)^t ]** → somma dei valori attuali dei **costi**
-- **VAN = B − C** → **valore attuale netto assoluto**
-- **VAN_r = (B − C) / C** → **valore attuale netto relativo**
+```
+              b_t                          c_t
+      B = Σ ─────────          C = Σ ─────────
+             (1+i)^t                    (1+i)^t
+
+      VAN   = B − C                (valore attuale netto assoluto)
+
+              B − C
+      VAN_r = ───────              (valore attuale netto relativo)
+                C
+```
+
+**dove:**
+- la `Σ` (sigma) significa "somma di tutti i periodi", da t = 0 fino all'ultimo anno del progetto
+- `(1+i)^t` = il **fattore di sconto** elevato al numero di anni: più un beneficio è lontano nel tempo, più viene ridotto
+- dividere per `C` nel VAN relativo serve a **eliminare l'effetto dimensione** del progetto
 
 **I due criteri:**
 
@@ -54,7 +66,13 @@ Sono le stesse fasi di un imprenditore privato, ma con contenuti diversi (vedi �
 
 **Definizione**: il TIR è il valore di **i** che rende **B − C = 0**, cioè che annulla il VAN:
 
-**Σ₀ⁿ [ b_t/(1+i)^t ] − Σ₀ⁿ [ c_t/(1+i)^t ] = 0**
+```
+              b_t              c_t
+      Σ ─────────  −  Σ ─────────  =  0
+           (1+i)^t          (1+i)^t
+```
+
+cioè si cerca quel valore di `i` che rende **B = C**.
 
 È quindi il tasso al quale benefici e costi attualizzati del progetto **si equivalgono**: il "rendimento interno" del progetto.
 
@@ -124,14 +142,29 @@ Si chiede di: (a) calcolare B, C e il **VAN assoluto** dei due progetti; (b) cal
 Il costo è **tutto al tempo 0**, quindi non va attualizzato: C = c₀.
 
 **Progetto A**
-B = 550/1,05 + 605/(1,05)² = 550/1,05 + 605/1,1025 = 523,81 + 548,75 = **1.072,56**
-C = **1.000**
-**VAN_A = 1.072,56 − 1.000 = +72,56**
+
+```
+      B = 550/1,05 + 605/(1,05)²
+        = 550/1,05 + 605/1,1025
+        = 523,81 + 548,75
+        = 1.072,56
+
+      C = 1.000
+
+      VAN_A = 1.072,56 − 1.000 = +72,56
+```
 
 **Progetto B**
-B = 180/1,05 + 180/1,1025 = 171,43 + 163,27 = **334,69**
-C = **300**
-**VAN_B = 334,69 − 300 = +34,69**
+
+```
+      B = 180/1,05 + 180/1,1025
+        = 171,43 + 163,27
+        = 334,69
+
+      C = 300
+
+      VAN_B = 334,69 − 300 = +34,69
+```
 
 Entrambi sono **ammissibili** (VAN > 0). Sul criterio del VAN assoluto **vince A**.
 
@@ -148,21 +181,44 @@ VAN_r = (B − C)/C
 
 Si pone VAN = 0 e si risolve in i. Con due periodi si ottiene un'equazione di secondo grado: posto **y = 1 + i**,
 
-**Progetto A**: 1.000·y² = 550·y + 605 → 1.000y² − 550y − 605 = 0 → 200y² − 110y − 121 = 0
-y = [110 ± √(110² + 4·200·121)] / (2·200) = [110 ± √(12.100 + 96.800)] / 400 = [110 ± 330] / 400
-y = 440/400 = **1,10** → **TIR_A = 10%**
+**Progetto A**
+
+```
+      1.000 · y² = 550 · y + 605
+      1.000y² − 550y − 605 = 0
+      200y² − 110y − 121 = 0        (diviso per 5)
+
+      y = [ 110 ± √(110² + 4 · 200 · 121) ] / (2 · 200)
+        = [ 110 ± √(12.100 + 96.800) ] / 400
+        = [ 110 ± 330 ] / 400
+
+      y = 440/400 = 1,10   →   TIR_A = 10%
+```
 
 *(verifica: 550/1,10 = 500 e 605/1,21 = 500, somma 1.000 = C ✓ il VAN si annulla esattamente)*
 
-**Progetto B**: 300·y² = 180·y + 180 → 5y² − 3y − 3 = 0
-y = [3 ± √(9 + 60)] / 10 = [3 ± 8,307] / 10 = **1,1307** → **TIR_B ≈ 13,1%**
+**Progetto B**
+
+```
+      300 · y² = 180 · y + 180
+      5y² − 3y − 3 = 0
+
+      y = [ 3 ± √(9 + 60) ] / 10
+        = [ 3 ± 8,307 ] / 10
+        = 1,1307   →   TIR_B ≈ 13,1%
+```
 
 Entrambi ammissibili (TIR > i = 5%); **sul criterio del TIR vince B**, coerentemente con il VAN relativo.
 
 ### **(d) Che cosa cambia con i = 12%**
 
-**A**: B = 550/1,12 + 605/1,2544 = 491,07 + 482,30 = 973,37 → **VAN_A = −26,63 < 0 → non ammissibile**
-**B**: B = 180/1,12 + 180/1,2544 = 160,71 + 143,49 = 304,21 → **VAN_B = +4,21 > 0 → ammissibile**
+```
+      A:  B = 550/1,12 + 605/1,2544 = 491,07 + 482,30 = 973,37
+          VAN_A = 973,37 − 1.000 = −26,63   <0  →  NON ammissibile
+
+      B:  B = 180/1,12 + 180/1,2544 = 160,71 + 143,49 = 304,21
+          VAN_B = 304,21 − 300 = +4,21      >0  →  ammissibile
+```
 
 **Commento finale.** Il risultato conferma i due punti teorici del §3-4:
 
