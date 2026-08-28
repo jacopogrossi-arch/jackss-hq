@@ -23,7 +23,28 @@ FILES_IN_ORDER = [
 ]
 
 parts = []
-parts.append("# Dispensa Politica Economica\n\n**Esame 08/09/2026**\n\n[TOC]\n\n<div class=\"pagebreak\"></div>\n\n")
+HEADER = """# Dispensa Politica Economica
+
+**Esame 08/09/2026**
+
+**Struttura della prova** (modalità d'esame 2026-2027)
+
+| Fase | Cosa | Tempo | Soglia |
+|---|---|---|---|
+| Preselezione | 11 domande a risposta multipla | 10 minuti | almeno 6 corrette, altrimenti non si accede allo scritto |
+| Scritto | 2 domande aperte + 1 esercizio | 1 ora | — |
+| Orale | facoltativo, oppure a richiesta del docente | — | — |
+
+Testo di riferimento: Paesani, P., *Manuale di politica economica*, II edizione, Giappichelli, 2020.
+
+Appelli a.a. 2026-27: 20 gennaio · 10 febbraio · 16 giugno · 14 luglio · 8 settembre.
+
+[TOC]
+
+<div class="pagebreak"></div>
+
+"""
+parts.append(HEADER)
 
 for i, fname in enumerate(FILES_IN_ORDER):
     text = (SCHEMI / fname).read_text(encoding="utf-8")

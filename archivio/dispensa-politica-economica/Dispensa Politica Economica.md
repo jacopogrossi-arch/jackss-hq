@@ -2,6 +2,18 @@
 
 **Esame 08/09/2026**
 
+**Struttura della prova** (modalità d'esame 2026-2027)
+
+| Fase | Cosa | Tempo | Soglia |
+|---|---|---|---|
+| Preselezione | 11 domande a risposta multipla | 10 minuti | almeno 6 corrette, altrimenti non si accede allo scritto |
+| Scritto | 2 domande aperte + 1 esercizio | 1 ora | — |
+| Orale | facoltativo, oppure a richiesta del docente | — | — |
+
+Testo di riferimento: Paesani, P., *Manuale di politica economica*, II edizione, Giappichelli, 2020.
+
+Appelli a.a. 2026-27: 20 gennaio · 10 febbraio · 16 giugno · 14 luglio · 8 settembre.
+
 [TOC]
 
 <div class="pagebreak"></div>
@@ -10,6 +22,13 @@
 # Mappa di priorità — argomento → esercizio tipo → pagina
 
 Vista d'insieme prima di aprire la dispensa per intero. Priorità stabilita analizzando 8 compiti/esercitazioni d'esame passati (non le lezioni).
+
+**Come è fatta la prova** (modalità d'esame 2026-2027): **preselezione** con 11 domande a risposta multipla in 10 minuti, superata con almeno 6 corrette → **scritto** di 1 ora con due domande aperte + un esercizio → **orale** facoltativo o a richiesta del docente. Testo di riferimento: Paesani, *Manuale di politica economica*, II ed., Giappichelli 2020.
+
+Le due fasi chiedono cose diverse, e la tabella qui sotto va letta due volte:
+
+- **Per la preselezione** conta l'ampiezza: 11 domande secche possono pescare su qualunque riga, incluse la 9 e la 10. ~55 secondi a domanda significa richiamo immediato — definizioni, formule, chi sostiene cosa. Materiale giusto: formulario + glossario, su tutte e 10 le righe.
+- **Per lo scritto** conta la profondità sulle prime righe: l'esercizio è **uno solo** e nei compiti passati è sempre venuto dai core 1-4 (o dai secondari 5-6). Le due domande aperte pescano dalla colonna "teoria".
 
 | # | Argomento | Priorità | Tipo di esercizio atteso |
 |---|---|---|---|
@@ -24,7 +43,7 @@ Vista d'insieme prima di aprire la dispensa per intero. Priorità stabilita anal
 | [9](09-crescita-sviluppo.md) | Crescita e sviluppo | 🟢 Copertura di sicurezza | Nessun esercizio nei compiti passati — misurazione PIL, crescita vs sviluppo |
 | [10](10-disuguaglianze-stato-sociale.md) | Disuguaglianze, Stato Sociale | 🟢 Copertura di sicurezza | Nessun esercizio nei compiti passati — Gini/Lorenz, redistribuzione, genere |
 
-**Se il tempo stringe**: studiare in ordine 1→8 copre tutto ciò che è comparso nei compiti passati. Gli schemi 9-10 sono una rete di sicurezza nel caso l'esame chieda qualcosa di mai visto prima nei compiti disponibili.
+**Se il tempo stringe**: studiare in ordine 1→8 copre tutto ciò che è comparso nei compiti passati, cioè lo scritto. Degli schemi 9-10 leggere comunque definizioni e indicatori: allo scritto sono improbabili, ma alla preselezione una domanda su due argomenti mai visti costa quanto una sui core, e lo sbarramento è a 6 risposte su 11.
 
 Per le formule vedi il [formulario](00a-formulario.md); per i simboli il [glossario](00b-glossario-simboli.md).
 
