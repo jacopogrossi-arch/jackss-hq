@@ -100,6 +100,20 @@ condizione di **non arbitraggio**: il rendimento atteso di un'attività in valut
 $$|\varepsilon_x| + |\varepsilon_m| > 1 \quad \text{(condizione di Marshall-Lerner)}$$
 dove $\varepsilon_x$ = elasticità delle esportazioni al cambio, $\varepsilon_m$ = elasticità delle importazioni al cambio.
 
+**Le quattro ipotesi su cui poggia la condizione** (da citare se la domanda chiede "quando la svalutazione funziona?"):
+
+1. **$p$ e $p^*$ dati e costanti**: non c'è trasferimento della variazione del cambio sui prezzi interni (niente *pass-through*);
+2. **Nessun vincolo di offerta**: il paese è in grado di produrre di più per soddisfare la maggiore domanda estera. In **pieno impiego** l'offerta non può crescere e l'aumento della domanda estera si scarica sui **prezzi** (aggravato dal rincaro dei beni importati);
+3. **Le quantità reagiscono più velocemente dei prezzi** — se non è vero, il saldo inizialmente **peggiora** (curva a J, qui sotto);
+4. **Nessun effetto sulle aspettative di deprezzamento futuro**: se la svalutazione genera attese di ulteriori svalutazioni, si innesca un **deflusso di capitali** che peggiora la BP invece di migliorarla.
+
+**La curva a J** — l'ipotesi 3 spiegata: se le quantità importate calano e quelle esportate crescono **lentamente**,
+
+- **nel primo periodo** prevale l'effetto prezzo: la svalutazione riduce il valore in valuta estera delle esportazioni ($p_x e$) e il saldo **peggiora**;
+- **dopo un certo tempo** le quantità si adeguano e, se vale Marshall-Lerner, il saldo **migliora**.
+
+Il saldo dei movimenti di beni disegna quindi nel tempo una **J**: prima scende, poi risale sopra il livello di partenza. È il motivo per cui gli effetti di una svalutazione **non si giudicano nel breve periodo**.
+
 **9. Politiche commerciali: liberismo, protezionismo, autarchia**
 
 | Politica commerciale | Definizione |
@@ -109,6 +123,19 @@ dove $\varepsilon_x$ = elasticità delle esportazioni al cambio, $\varepsilon_m$
 | **Autarchia** | chiusura totale dell'economia nazionale verso l'estero |
 
 - **Grado di apertura** $= \dfrac{X+M}{Y}$
+
+**Il principio dei costi comparati con i numeri** (schema dell'esempio tipico). Il paese B ha un vantaggio **assoluto** in entrambi i beni, ma conviene comunque specializzarsi e scambiare:
+
+| | Costo unitario in B (unità di lavoro) |
+|---|---|
+| Bene **x** | 10 |
+| Bene **y** | 30 |
+
+- **Ragione di scambio interna (autarchia)**: rinunciando a 1 unità di y si liberano 30 unità di lavoro = **3 unità di x** → il rapporto interno è **p_y/p_x = 3**.
+- Con **60 lavoratori**, B può: (i) produrre **2 unità di y** direttamente, oppure (ii) produrre **6 unità di x** e scambiarle.
+- Se i prezzi internazionali sono p_x = 30 e p_y = 50: le 6 unità di x valgono 6 × 30 = **180**, con cui si acquistano 180/50 = **3,6 unità di y** > 2. **Conviene lo scambio.**
+- **Regola generale**: conviene la "produzione indiretta" se 6·p_x > 2·p_y, cioè se **p_y/p_x < 3** — se la ragione di scambio **internazionale** è minore di quella **interna**.
+- **Conclusione da scrivere**: se la ragione di scambio internazionale è **compresa fra le due ragioni di scambio interne in autarchia**, l'apertura commerciale conviene **a entrambi i paesi** — anche a quello che ha il vantaggio assoluto in tutti i beni.
 - Strumenti del protezionismo:
   - **Tariffario**: **dazi** (imposta sui beni importati, genera gettito fiscale)
   - **Non tariffario**: **contingenti** (limiti fisici/di valore alle importazioni), regolamentazioni, sussidi alle esportazioni, svalutazione competitiva del cambio
@@ -120,11 +147,24 @@ dove $\varepsilon_x$ = elasticità delle esportazioni al cambio, $\varepsilon_m$
   - effetto entrate fiscali: + gettito (importazioni residue × aliquota del dazio)
   - effetto redistribuzione: consumatori pagano un prezzo più alto (trasferimento verso i produttori interni e lo Stato)
 
+**Lettura grafica del dazio** (domanda e offerta interne, prezzo internazionale dato). Con i segmenti sull'asse delle quantità:
+
+| | Prima del dazio (prezzo p) | Dopo il dazio (prezzo p(1+d)) |
+|---|---|---|
+| **Offerta interna** | OA | O**B** (aumenta) |
+| **Domanda interna** | OE | O**D** (diminuisce) |
+| **Importazioni** | **AE** (= domanda − offerta interna) | **BD** (ridotte) |
+
+- Il **gettito** per lo Stato è il rettangolo: importazioni residue **BD** × dazio unitario.
+- Il **dazio proibitivo** è quello che porta domanda e offerta interne a coincidere: le importazioni si azzerano (autarchia) e — punto controintuitivo da ricordare — **il gettito è nullo**, perché non c'è più nulla da tassare.
+
 - Giustificazioni del protezionismo:
-  - **Ragioni di scambio**: un dazio può spingere i produttori esteri a ridurre il prezzo al netto del dazio (*pricing to market*), migliorando la ragione di scambio $TT = \dfrac{p_x e}{p_m}$
-  - **Industria nascente**: economie di scala dinamiche (*learning by doing*) — una protezione temporanea permette al paese nuovo entrante di ridurre i costi unitari fino a essere competitivo
+  - **Ragioni di scambio**: un dazio può spingere i produttori esteri a ridurre il prezzo al netto del dazio (*pricing to market*), migliorando la ragione di scambio $TT = \dfrac{p_x e}{p_m}$. Vale però **solo se il paese non è piccolo**: serve che la sua riduzione di domanda sposti il prezzo internazionale. In tal caso il dazio è **efficace sulla ragione di scambio ma meno efficace nel proteggere la produzione interna** (il prezzo estero scende e compensa in parte il dazio)
+  - **Industria nascente**: economie di scala dinamiche (*learning by doing*) — una protezione temporanea permette al paese nuovo entrante di ridurre i costi unitari fino a essere competitivo. Benefici aggiuntivi di **spillover** su altri settori; problemi: individuare i settori che diventeranno vitali, e la difficoltà **politica** di rimuovere il dazio una volta introdotto
+  - **Difesa dal lavoro straniero a buon mercato** (*dumping sociale*): concorrenza di economie con salari molto più bassi. **Obiezione da conoscere**: i salari tendono a seguire la produttività, quindi le differenze in termini di **costo del lavoro per unità di prodotto** (w/q) sono molto più piccole di quelle in termini di salari
 
 - **Attenzione**: rischio di **contromisure** — un paese protezionista può subire ritorsioni simmetriche dagli altri paesi.
+- **Beggar-my-neighbour** ("impoverire il vicino"): dazi e svalutazione riducono la propensione a importare, aumentano il moltiplicatore e — se il sistema **non è in pieno impiego** — hanno effetti espansivi su reddito e occupazione. Ma lo fanno **riducendo le esportazioni del resto del mondo**: il guadagno interno è il danno altrui, da cui le ritorsioni. L'eccezione: se le politiche sono accompagnate da **politiche fiscali o monetarie espansive**, il maggior reddito interno fa risalire le importazioni e il resto del mondo non viene danneggiato.
 
 **10. Il modello Mundell-Fleming (IS-LM-BP)**
 

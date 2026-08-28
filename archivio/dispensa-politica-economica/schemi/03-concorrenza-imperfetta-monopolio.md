@@ -103,6 +103,15 @@ Metodo generale per una funzione di domanda lineare **P = a − bQ** e un costo 
 - **Impresa pubblica** (nazionalizzazione): rinuncia all'obiettivo di massimo profitto per perseguire finalità pubbliche (efficienza in monopolio naturale, sviluppo di un settore); criticata per carenze manageriali (relazione **agente-principale**) e clientelismo
 - **Regolamentazione**: controllo diretto tramite regole (entrata, concorrenza effettiva, tariffe/prezzi)
 
+**Le privatizzazioni (dagli anni '80)** — l'inversione di rotta rispetto all'impresa pubblica, in settori con economie di scala (comunicazioni, energia, trasporti: Trenitalia/Italo). **Sei motivazioni da conoscere:**
+
+1. **Mutamenti tecnologici** che hanno fatto venire meno alcune posizioni di monopolio naturale — le ferrovie richiedono il monopolio sulla **rete**, non sull'**offerta di servizi ai passeggeri** (da qui la separazione rete/servizio);
+2. **Teorie sui fallimenti dello Stato** (clientelismo, cattura del regolatore) → [schema 12](12-fallimenti-stato-political-economy.md);
+3. Affermarsi di **altri strumenti di controllo** (regolazione indipendente, price cap) che rendono superflua la proprietà pubblica;
+4. La **normativa europea vieta gli aiuti di Stato**: le perdite ripianate col debito pubblico sono considerate aiuto e distorsive della concorrenza;
+5. **Vincoli di bilancio pubblico**: eccessivo indebitamento a favore delle imprese pubbliche;
+6. **Sviluppo dei mercati finanziari**: in Italia si pensava che quotare grandi imprese pubbliche avrebbe irrobustito una borsa poco sviluppata.
+
 ### Tabella riassuntiva — confronto tra strutture di mercato
 
 | Caratteristica | Concorrenza perfetta | Monopolio (generico) | Monopolio naturale | Mercato contendibile |
@@ -192,6 +201,8 @@ Risolvendo: Q = [10 ± √(100 − 64)] / 2 = (10 ± 6) / 2 → **Q = 2 oppure Q
 - A **Q = 8**: P = 12 (ATC = 10+16/8 = 12) → oltre Q=8 il prezzo di domanda scende sotto l'ATC (non profittevole), quindi nessun entrante trova conveniente espandersi oltre → questo è l'equilibrio **stabile (hit-and-run-proof)**
 
 **Equilibrio contendibile: Q = 8, P = 12, profitto = 12·8 − (10·8+16) = 96 − 96 = 0**
+
+> ✅ **Convenzione confermata**: negli esercizi sul mercato contendibile si impone **P = costo medio** (non P = MC). Delle due radici si tiene quella **maggiore**, l'unica hit-and-run-proof. Il criterio è confermato da altri appunti dello stesso corso e non è più un punto aperto.
 
 Rispetto al monopolio "protetto" (Q=5, P=15, π=9), la contendibilità costringe il monopolista naturale ad aumentare la quantità (da 5 a 8) e abbassare il prezzo (da 15 a 12) fino ad azzerare il profitto, pur restando un'unica impresa a produrre (l'equilibrio non è comunque Pareto-efficiente perché P=12 > MC=10).
 

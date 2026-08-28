@@ -71,6 +71,7 @@
   **ẇ = γ(u)**
 
 - Curva decrescente e convessa. **uN (o u\*)** = tasso di disoccupazione naturale: al di sotto le imprese offrono salari più alti per attirare lavoratori (ẇ>0), al di sopra i salari ristagnano o scendono.
+- Sinonimo da riconoscere: **NAIRU** (*Non-Accelerating Inflation Rate of Unemployment*), il tasso di disoccupazione compatibile con un'inflazione **stabile** (non accelerante). Nell'impostazione Friedman-Phelps coincide con il tasso naturale: è il punto in cui la curva di Phillips di lungo periodo diventa verticale. **Attenzione**: non è il tasso a cui l'inflazione è *nulla*, ma quello a cui l'inflazione **non accelera**.
 
 **7. La curva di Phillips "menù di scelta" (Samuelson-Solow)**
 

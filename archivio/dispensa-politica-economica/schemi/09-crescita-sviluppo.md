@@ -32,6 +32,16 @@
 
 - **Tasso di crescita γ**: variazione percentuale del PIL reale tra due periodi: **γ = (Y_t − Y_{t-1}) / Y_{t-1}**. Obiettivo di politica economica: **γ > 0** (crescita); stagnazione/recessione = problemi da correggere.
 
+### La legge di Okun
+
+Mette in relazione la **disoccupazione ciclica** (u − u*, scarto tra disoccupazione effettiva e disoccupazione di pieno impiego, cioè quella solo frizionale) e l'**output gap** (Y* − Y).
+
+**Contenuto**: per ridurre il tasso di disoccupazione di **1 punto percentuale**, il prodotto deve crescere **oltre** il prodotto potenziale in misura **più che proporzionale — di circa il 2,5%**.
+
+**Perché più che proporzionale** (è il punto da spiegare, non solo il numero): perché nel frattempo crescono anche la **popolazione** e la **produttività**. Il reddito deve aumentare più della somma di queste due crescite prima di iniziare ad assorbire disoccupazione: una parte della crescita serve solo a "stare fermi". Ne segue che **una crescita positiva ma modesta può convivere con disoccupazione crescente**.
+
+> ⚠️ Da non confondere con l'**indice di malessere di Okun** ([schema 11](11-teoria-normativa-obiettivi-strumenti.md), §4), che è la funzione di benessere sociale W = ṗ + u. Stesso autore, due cose diverse.
+
 ## 3. **Crescita economica vs sviluppo — la distinzione chiave**
 
 | | **Crescita economica** | **Sviluppo** |

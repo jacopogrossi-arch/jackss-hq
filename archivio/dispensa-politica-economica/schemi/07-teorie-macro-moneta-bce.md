@@ -79,6 +79,28 @@
 - **Aggregati monetari BCE**: M1 (circolante + depositi overnight) ⊂ M2 (+ depositi vincolati ≤2 anni) ⊂ M3 (+ attività finanziarie molto liquide). **Base monetaria H = Circolante + Riserve bancarie**.
 - La moneta è creata **principalmente attraverso operazioni di credito**; il **moltiplicatore monetario** M = (1+h)/(h+j) · H (h = rapporto circolante/depositi, j = coefficiente di riserva) mostra come il sistema bancario, con riserva frazionaria, crei moneta oltre la base monetaria emessa dalla BC.
 
+### I quattro canali di creazione della base monetaria
+
+Dal lato degli **impieghi**: H = Circolante + Riserve bancarie. Dal lato della **creazione**, i canali sono quattro:
+
+| Canale | Meccanismo |
+|---|---|
+| **Estero** | Variazione delle **riserve ufficiali** contro base monetaria, per effetto di un avanzo o disavanzo della bilancia dei pagamenti (vedi [schema 06](06-economia-aperta-bilancia-pagamenti.md): in cambi fissi è il canale che rende **inefficace la politica monetaria**) |
+| **Tesoro** | La banca centrale acquista titoli di Stato **all'emissione** (mercato primario) → finanziamento monetario del disavanzo |
+| **Operazioni di mercato aperto** | Acquisto/vendita di titoli di Stato sul **mercato secondario**: si acquista per immettere liquidità, si vende per drenarla |
+| **Banche** | Risconto di cambiali (al tasso ufficiale di sconto) e anticipazioni su titoli |
+
+**Il canale Tesoro e l'indipendenza della banca centrale** — la vicenda italiana, ottima come domanda aperta:
+
+- Se la BC è **obbligata a finanziare la spesa del governo**, perde il controllo della creazione di base monetaria e **non è indipendente**.
+- **Fino al 1981** la Banca d'Italia era tenuta ad acquistare i BOT che il Tesoro non riusciva a collocare in asta → superato con il cosiddetto **"divorzio" fra Banca d'Italia e Tesoro (1981)**.
+- **Fino al 1993** la Banca d'Italia doveva anticipare al governo, su conto corrente di tesoreria, fino al **14% delle spese previste** → obbligo superato con gli accordi europei di **Maastricht**.
+- Oggi le regole europee sanciscono l'indipendenza della BCE e **vietano il finanziamento monetario diretto** dei governi.
+
+- **Signoraggio**: il vantaggio che lo Stato trae dalla possibilità di creare base monetaria per finanziare il disavanzo. Il finanziamento monetario genera inflazione, che riduce il valore reale del debito: da qui la **"tassa da inflazione"** a vantaggio del governo e a carico dei detentori di moneta e titoli (vedi [schema 01](01-politica-fiscale-bilancio-pubblico.md)).
+
+**I tre ruoli della banca centrale** (domanda secca probabile): 1) **creazione/distruzione di base monetaria**; 2) **prestatore di ultima istanza** verso le altre banche ("banca delle banche"); 3) **regolamentazione e controllo** della condotta bancaria (riserva obbligatoria, vigilanza).
+
 ## 9. **Le funzioni di domanda di moneta**
 
 - **Domanda di moneta per transazioni**: L1(Y) = Y/V — dipende positivamente dal reddito, serve per gli scambi correnti.

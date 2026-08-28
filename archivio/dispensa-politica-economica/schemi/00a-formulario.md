@@ -50,6 +50,17 @@ Tutte le formule chiave della dispensa in un unico posto, per il ripasso last-mi
 | **u = U / FL** | Tasso di disoccupazione |
 | **n = a × (1 − u)** | Identità di verifica tra i tre tassi |
 
+## Teoria normativa: obiettivi e strumenti ([schema 11](11-teoria-normativa-obiettivi-strumenti.md))
+
+| Formula | Significato |
+|---|---|
+| **W = a·ṗ + b·u** | Funzione di benessere sociale con due obiettivi (a, b = pesi) |
+| **W = ṗ + u** | **Indice di malessere di Okun** (caso a = b = 1); s.m.s. fra obiettivi costante e pari a 1 |
+| **N = (1/θ)·[1/(1−c(1−t))]·(I+G)** | Modello in **forma ridotta**: obiettivo in funzione degli strumenti |
+| **G = θ·[1−c(1−t)]·N − I** | Modello in **forma ridotta inversa**: strumento in funzione dell'obiettivo |
+| **dN/dG = 1/[θ(1−c(1−t))]** | **Efficacia** dello strumento sull'obiettivo |
+| **n. strumenti ≥ n. obiettivi** | **Regola aurea di Tinbergen** |
+
 ## Economia aperta e bilancia dei pagamenti ([schema 6](06-economia-aperta-bilancia-pagamenti.md))
 
 | Formula | Significato |
@@ -57,6 +68,18 @@ Tutte le formule chiave della dispensa in un unico posto, per il ripasso last-mi
 | **Y = C+I+G+X−M** | Equilibrio del mercato dei beni in economia aperta (curva IS aperta) |
 | **CC = (pₓe)qₓ − p_m q_m** | Saldo della bilancia commerciale in valuta estera |
 | **L_d(Y,i) = fY + L₀ − gi** | Domanda di moneta (curva LM) |
+| **\|εₓ\| + \|ε_m\| > 1** | **Condizione di Marshall-Lerner**: la svalutazione migliora il saldo solo se prevale l'effetto quantità |
+| **i = i\* − ė** | Condizione di **parità scoperta** (equilibrio dei movimenti di capitale) |
+| **(X+M)/Y** | Grado di apertura dell'economia |
+
+## Valutazione dei progetti pubblici ([schema 13](13-valutazione-progetti-acb.md))
+
+| Formula | Significato |
+|---|---|
+| **B = Σ b_t/(1+i)^t** · **C = Σ c_t/(1+i)^t** | Valore attuale di benefici e costi (i = tasso di sconto sociale) |
+| **VAN = B − C** | Valore attuale netto **assoluto**; ammissibile se **> 0** |
+| **VAN_r = (B−C)/C** | Valore attuale netto **relativo** (neutralizza l'effetto dimensione) |
+| **B − C = 0 → i = TIR** | Tasso interno di rendimento: il tasso che **annulla il VAN**; ammissibile se TIR > tasso di mercato |
 
 ## Teorie macro, moneta e BCE ([schema 7](07-teorie-macro-moneta-bce.md))
 
@@ -72,6 +95,13 @@ Tutte le formule chiave della dispensa in un unico posto, per il ripasso last-mi
 | **MC_S = MC_P + CME** | Costo marginale sociale = costo privato + costo esterno marginale (esternalità negativa) |
 | **MB_S = MB_P + BME** | Beneficio marginale sociale (esternalità positiva) |
 | **t = CME** | Tassa pigouviana ottimale = costo esterno marginale valutato all'ottimo sociale |
+
+## Crescita e sviluppo ([schema 9](09-crescita-sviluppo.md))
+
+| Formula | Significato |
+|---|---|
+| **OG = (Y − Y_p)/Y_p** | Output gap in percentuale |
+| **Δu = −1% ⟺ crescita ≈ +2,5% sopra il potenziale** | **Legge di Okun** (da non confondere con l'indice di malessere) |
 
 ## Disuguaglianze e Stato Sociale ([schema 10](10-disuguaglianze-stato-sociale.md))
 

@@ -33,3 +33,11 @@ I simboli ricorrono in schemi diversi con lo stesso significato — questa tabel
 | **H** | Base monetaria | Schema 7 |
 | **M** | Offerta di moneta (attenzione: in altri contesti M indica anche le importazioni — controllare sempre lo schema di riferimento) | Schemi 6, 7 |
 | **G** | Gini (indice di disuguaglianza) — non confondere con G = spesa pubblica usato negli schemi di politica fiscale/IS-LM | Schemi 1, 6, 10 |
+| **h, j** | Rapporto circolante/depositi (h) e coefficiente di riserva, obbligatoria + libera (j), nel moltiplicatore monetario | Schema 7 |
+| **θ** | Produttività media del lavoro nel modello obiettivo-strumento (Y^off = θN). **Attenzione**: θ̇ nello schema 2 è il *tasso di crescita* della produttività — grandezze diverse, stessa lettera | Schemi 2, 11 |
+| **c, t** | Propensione al consumo (c) e aliquota fiscale (t) nel moltiplicatore 1/[1−c(1−t)] | Schemi 1, 11 |
+| **W** | Funzione di benessere sociale (obiettivi flessibili, indice di Okun). **Attenzione**: non è il salario, che è w minuscolo | Schemi 4, 11 |
+| **b_t, c_t** | Benefici e costi del progetto pubblico al tempo t (analisi costi-benefici) | Schema 13 |
+| **VAN, VAN_r, TIR** | Valore attuale netto assoluto, relativo, e tasso interno di rendimento | Schema 13 |
+| **εₓ, ε_m** | Elasticità di esportazioni e importazioni rispetto al tasso di cambio (condizione di Marshall-Lerner) | Schema 6 |
+| **e** | Tasso di cambio nominale (e ė = suo tasso di variazione atteso, nella parità scoperta) | Schemi 6, 14 |

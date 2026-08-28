@@ -21,29 +21,41 @@ Appelli a.a. 2026-27: 20 gennaio · 10 febbraio · 16 giugno · 14 luglio · 8 s
 
 # Mappa di priorità — argomento → esercizio tipo → pagina
 
-Vista d'insieme prima di aprire la dispensa per intero. Priorità stabilita analizzando 8 compiti/esercitazioni d'esame passati (non le lezioni).
+Vista d'insieme prima di aprire la dispensa per intero.
 
 **Come è fatta la prova** (modalità d'esame 2026-2027): **preselezione** con 11 domande a risposta multipla in 10 minuti, superata con almeno 6 corrette → **scritto** di 1 ora con due domande aperte + un esercizio → **orale** facoltativo o a richiesta del docente. Testo di riferimento: Paesani, *Manuale di politica economica*, II ed., Giappichelli 2020.
 
-Le due fasi chiedono cose diverse, e la tabella qui sotto va letta due volte:
+Le due fasi chiedono cose diverse, e la tabella va letta due volte:
 
-- **Per la preselezione** conta l'ampiezza: 11 domande secche possono pescare su qualunque riga, incluse la 9 e la 10. ~55 secondi a domanda significa richiamo immediato — definizioni, formule, chi sostiene cosa. Materiale giusto: formulario + glossario, su tutte e 10 le righe.
-- **Per lo scritto** conta la profondità sulle prime righe: l'esercizio è **uno solo** e nei compiti passati è sempre venuto dai core 1-4 (o dai secondari 5-6). Le due domande aperte pescano dalla colonna "teoria".
+- **Per la preselezione** conta l'**ampiezza**: 11 domande secche possono pescare su qualunque riga. ~55 secondi a domanda significa richiamo immediato — definizioni, formule, chi sostiene cosa. Materiale giusto: **formulario + glossario su tutte e 14 le righe**, e le [domande di preselezione](00d-domande-preselezione.md) per allenare la velocità.
+- **Per lo scritto** conta la **profondità** sulle righe ad alta priorità: l'esercizio è **uno solo**, e nei compiti passati è sempre venuto dai core 1-4 (o dai secondari 5-6). Le due domande aperte pescano dalla colonna "teoria".
+
+> **Nota sulla numerazione.** Il numero del file **non** indica più la priorità: gli schemi 1-10 sono ordinati per priorità (stabilita analizzando 8 compiti passati), mentre gli 11-14 sono stati aggiunti dopo, per coprire capitoli del programma che nei compiti passati non erano mai comparsi. **La priorità la porta solo la colonna dedicata.**
 
 | # | Argomento | Priorità | Tipo di esercizio atteso |
 |---|---|---|---|
 | [1](01-politica-fiscale-bilancio-pubblico.md) | Politica fiscale, bilancio pubblico, debito | 🔴 Core | Calcolo tasso debito/PIL costante · saldo primario da tabella PA · teorema di Haavelmo (teoria) |
 | [2](02-inflazione-curva-phillips.md) | Inflazione, curva di Phillips | 🔴 Core | Curva dei salari/disoccupazione · salario reale · AD-AS grafico · teoria (cause inflazione, deflazione) |
 | [3](03-concorrenza-imperfetta-monopolio.md) | Concorrenza imperfetta, monopolio | 🔴 Core | Perdita secca da D e MC dati · monopolio naturale/mercato contendibile · caso antitrust (teoria) |
-| [4](04-economia-benessere-teoria-normativa.md) | Economia del benessere, teoria normativa | 🔴 Core | Pareto-efficienza da tabella utilità · FBS (3 criteri) · Primo Teorema (teoria) |
+| [4](04-economia-benessere-teoria-normativa.md) | Economia del benessere | 🔴 Core | Pareto-efficienza da tabella utilità · FBS (3 criteri) · Primo Teorema, second best (teoria) |
+| [11](11-teoria-normativa-obiettivi-strumenti.md) | **Teoria normativa: obiettivi e strumenti** | 🔴 Core | **Esercizio obiettivo-strumento** (ricavare G dato N, efficacia dello strumento) · regola aurea di Tinbergen · assegnazione appropriata (teoria) |
 | [5](05-mercato-del-lavoro.md) | Mercato del lavoro | 🟡 Secondario | Tassi di attività/occupazione/disoccupazione da dati |
-| [6](06-economia-aperta-bilancia-pagamenti.md) | Economia aperta, bilancia pagamenti | 🟡 Secondario | Modello IS-LM-BP completo · riserve ufficiali |
+| [6](06-economia-aperta-bilancia-pagamenti.md) | Economia aperta, bilancia pagamenti | 🟡 Secondario | Modello IS-LM-BP completo · riserve ufficiali · dazi e costi comparati |
 | [7](07-teorie-macro-moneta-bce.md) | Teorie macro, moneta, BCE | 🟡 Secondario | Tabella comparativa scuole di pensiero · moltiplicatore monetario · domanda di moneta |
 | [8](08-esternalita-fallimenti-mercato.md) | Esternalità, fallimenti di mercato | 🟡 Secondario | Confronto equilibrio privato/ottimo sociale con esternalità data · cambiamento climatico (teoria) |
-| [9](09-crescita-sviluppo.md) | Crescita e sviluppo | 🟢 Copertura di sicurezza | Nessun esercizio nei compiti passati — misurazione PIL, crescita vs sviluppo |
-| [10](10-disuguaglianze-stato-sociale.md) | Disuguaglianze, Stato Sociale | 🟢 Copertura di sicurezza | Nessun esercizio nei compiti passati — Gini/Lorenz, redistribuzione, genere |
+| [13](13-valutazione-progetti-acb.md) | **Valutazione progetti pubblici (ACB)** | 🟡 Secondario | **Calcolo di VAN assoluto e relativo, TIR, scelta fra due progetti** · prezzi ombra (teoria) |
+| [12](12-fallimenti-stato-political-economy.md) | **Fallimenti dello Stato, political economy** | 🟡 Secondario | Nessun esercizio — le tre cause, ciclo di Nordhaus, agenzia, corruzione (teoria) |
+| [9](09-crescita-sviluppo.md) | Crescita e sviluppo | 🟢 Copertura | Misurazione PIL, crescita vs sviluppo, legge di Okun, ISU |
+| [10](10-disuguaglianze-stato-sociale.md) | Disuguaglianze, Stato Sociale | 🟢 Copertura | Gini/Lorenz, redistribuzione, modelli di welfare, genere |
+| [14](14-sistema-monetario-internazionale.md) | **Sistema monetario internazionale** | 🟢 Copertura | Nessun esercizio — cambi fissi vs flessibili, gold standard, dilemma di Triffin |
 
-**Se il tempo stringe**: studiare in ordine 1→8 copre tutto ciò che è comparso nei compiti passati, cioè lo scritto. Degli schemi 9-10 leggere comunque definizioni e indicatori: allo scritto sono improbabili, ma alla preselezione una domanda su due argomenti mai visti costa quanto una sui core, e lo sbarramento è a 6 risposte su 11.
+**Ordine di studio consigliato**
+
+1. **I cinque core** (1, 2, 3, 4, 11): coprono tutto ciò che è comparso nei compiti passati, più il capitolo che dà il nome al corso. È qui che si gioca lo **scritto**.
+2. **I cinque secondari** (5, 6, 7, 8, 13): il 13 è l'unico degli aggiunti con un **esercizio numerico** proprio (VAN/TIR), quindi non trattarlo come teoria pura.
+3. **Le tre coperture** (9, 10, 14): definizioni e indicatori, per non perdere punti alla preselezione. Il **14** è l'unico schema senza riscontro nei PDF della docente: se il tempo manca, è il primo da sacrificare.
+
+**Se il tempo stringe davvero**: core + [formulario](00a-formulario.md) + [domande di preselezione](00d-domande-preselezione.md). Alla preselezione una domanda su un argomento mai visto costa quanto una sui core, e lo sbarramento è a 6 su 11.
 
 Per le formule vedi il [formulario](00a-formulario.md); per i simboli il [glossario](00b-glossario-simboli.md).
 
@@ -87,6 +99,14 @@ I simboli ricorrono in schemi diversi con lo stesso significato — questa tabel
 | **H** | Base monetaria | Schema 7 |
 | **M** | Offerta di moneta (attenzione: in altri contesti M indica anche le importazioni — controllare sempre lo schema di riferimento) | Schemi 6, 7 |
 | **G** | Gini (indice di disuguaglianza) — non confondere con G = spesa pubblica usato negli schemi di politica fiscale/IS-LM | Schemi 1, 6, 10 |
+| **h, j** | Rapporto circolante/depositi (h) e coefficiente di riserva, obbligatoria + libera (j), nel moltiplicatore monetario | Schema 7 |
+| **θ** | Produttività media del lavoro nel modello obiettivo-strumento (Y^off = θN). **Attenzione**: θ̇ nello schema 2 è il *tasso di crescita* della produttività — grandezze diverse, stessa lettera | Schemi 2, 11 |
+| **c, t** | Propensione al consumo (c) e aliquota fiscale (t) nel moltiplicatore 1/[1−c(1−t)] | Schemi 1, 11 |
+| **W** | Funzione di benessere sociale (obiettivi flessibili, indice di Okun). **Attenzione**: non è il salario, che è w minuscolo | Schemi 4, 11 |
+| **b_t, c_t** | Benefici e costi del progetto pubblico al tempo t (analisi costi-benefici) | Schema 13 |
+| **VAN, VAN_r, TIR** | Valore attuale netto assoluto, relativo, e tasso interno di rendimento | Schema 13 |
+| **εₓ, ε_m** | Elasticità di esportazioni e importazioni rispetto al tasso di cambio (condizione di Marshall-Lerner) | Schema 6 |
+| **e** | Tasso di cambio nominale (e ė = suo tasso di variazione atteso, nella parità scoperta) | Schemi 6, 14 |
 
 
 
@@ -145,6 +165,17 @@ Tutte le formule chiave della dispensa in un unico posto, per il ripasso last-mi
 | **u = U / FL** | Tasso di disoccupazione |
 | **n = a × (1 − u)** | Identità di verifica tra i tre tassi |
 
+## Teoria normativa: obiettivi e strumenti ([schema 11](11-teoria-normativa-obiettivi-strumenti.md))
+
+| Formula | Significato |
+|---|---|
+| **W = a·ṗ + b·u** | Funzione di benessere sociale con due obiettivi (a, b = pesi) |
+| **W = ṗ + u** | **Indice di malessere di Okun** (caso a = b = 1); s.m.s. fra obiettivi costante e pari a 1 |
+| **N = (1/θ)·[1/(1−c(1−t))]·(I+G)** | Modello in **forma ridotta**: obiettivo in funzione degli strumenti |
+| **G = θ·[1−c(1−t)]·N − I** | Modello in **forma ridotta inversa**: strumento in funzione dell'obiettivo |
+| **dN/dG = 1/[θ(1−c(1−t))]** | **Efficacia** dello strumento sull'obiettivo |
+| **n. strumenti ≥ n. obiettivi** | **Regola aurea di Tinbergen** |
+
 ## Economia aperta e bilancia dei pagamenti ([schema 6](06-economia-aperta-bilancia-pagamenti.md))
 
 | Formula | Significato |
@@ -152,6 +183,18 @@ Tutte le formule chiave della dispensa in un unico posto, per il ripasso last-mi
 | **Y = C+I+G+X−M** | Equilibrio del mercato dei beni in economia aperta (curva IS aperta) |
 | **CC = (pₓe)qₓ − p_m q_m** | Saldo della bilancia commerciale in valuta estera |
 | **L_d(Y,i) = fY + L₀ − gi** | Domanda di moneta (curva LM) |
+| **\|εₓ\| + \|ε_m\| > 1** | **Condizione di Marshall-Lerner**: la svalutazione migliora il saldo solo se prevale l'effetto quantità |
+| **i = i\* − ė** | Condizione di **parità scoperta** (equilibrio dei movimenti di capitale) |
+| **(X+M)/Y** | Grado di apertura dell'economia |
+
+## Valutazione dei progetti pubblici ([schema 13](13-valutazione-progetti-acb.md))
+
+| Formula | Significato |
+|---|---|
+| **B = Σ b_t/(1+i)^t** · **C = Σ c_t/(1+i)^t** | Valore attuale di benefici e costi (i = tasso di sconto sociale) |
+| **VAN = B − C** | Valore attuale netto **assoluto**; ammissibile se **> 0** |
+| **VAN_r = (B−C)/C** | Valore attuale netto **relativo** (neutralizza l'effetto dimensione) |
+| **B − C = 0 → i = TIR** | Tasso interno di rendimento: il tasso che **annulla il VAN**; ammissibile se TIR > tasso di mercato |
 
 ## Teorie macro, moneta e BCE ([schema 7](07-teorie-macro-moneta-bce.md))
 
@@ -167,6 +210,13 @@ Tutte le formule chiave della dispensa in un unico posto, per il ripasso last-mi
 | **MC_S = MC_P + CME** | Costo marginale sociale = costo privato + costo esterno marginale (esternalità negativa) |
 | **MB_S = MB_P + BME** | Beneficio marginale sociale (esternalità positiva) |
 | **t = CME** | Tassa pigouviana ottimale = costo esterno marginale valutato all'ottimo sociale |
+
+## Crescita e sviluppo ([schema 9](09-crescita-sviluppo.md))
+
+| Formula | Significato |
+|---|---|
+| **OG = (Y − Y_p)/Y_p** | Output gap in percentuale |
+| **Δu = −1% ⟺ crescita ≈ +2,5% sopra il potenziale** | **Legge di Okun** (da non confondere con l'indice di malessere) |
 
 ## Disuguaglianze e Stato Sociale ([schema 10](10-disuguaglianze-stato-sociale.md))
 
@@ -216,6 +266,7 @@ Tutte le formule chiave della dispensa in un unico posto, per il ripasso last-mi
 - **Progressiva**: t₀ + t(y)Y, aliquota crescente col reddito, finalità redistributiva.
 - L'imposizione **progressiva** è uno **stabilizzatore automatico**: in una recessione (Y↓) il prelievo fiscale medio scende più che proporzionalmente e i trasferimenti (sussidi di disoccupazione) salgono → si attutisce la caduta del reddito disponibile e dei consumi, senza bisogno di una manovra discrezionale.
 - **Drenaggio fiscale (fiscal drag)**: con inflazione e aliquote progressive non indicizzate, un aumento del reddito solo *nominale* fa scattare aliquote più alte → il reddito reale netto diminuisce anche se il reddito reale lordo è invariato. Rimedi: credito d'imposta compensativo, indicizzazione degli scaglioni.
+  **Esempio numerico** (scaglioni: 20% fino a 1.000, 30% da 1.000 a 2.000). Reddito 1.000 → imposta 200, **aliquota media 20%**. Con inflazione al 20%, il reddito nominale sale a 1.200 ma il **potere d'acquisto è invariato**: imposta = 200 + 0,30 × 200 = 260 → **aliquota media 21,7%**. Il contribuente paga più imposte in termini reali **senza che nessuna aliquota sia stata alzata** e senza essere diventato più ricco: è un aumento di imposizione deciso dall'inflazione, non dal Parlamento.
 - **Erosione, elusione, evasione** indeboliscono gettito ed equità: concentrano il carico fiscale su categorie meno capaci di sottrarsi (tipicamente il lavoro dipendente). Evasione in Italia stimata 110-130 mld/anno (~5% del debito pubblico).
 
 ---
@@ -260,6 +311,18 @@ Tutte le formule chiave della dispensa in un unico posto, per il ripasso last-mi
 - Questa è la formula-chiave per i calcoli d'esame su "tasso di interesse compatibile con debito/PIL costante": si impone **i − ṗ = Ẏ** (rapporto esattamente costante, caso limite) e si risolve per l'incognita richiesta.
 - Con **saldo primario non nullo**, la condizione si generalizza (bisogna tener conto anche del deficit/avanzo primario in % di PIL); la sostenibilità è più facile con: avanzo primario, finanziamento (parziale) con base monetaria, tasso di interesse basso, crescita del PIL alta, inflazione.
 - Perché un debito troppo alto è un male: il risparmio si dirige verso i titoli pubblici anziché altri impieghi produttivi; rischio di insolvenza/crisi finanziaria e aumento dei tassi; rende difficili le manovre anticicliche.
+
+**Le cinque cause della crescita del rapporto debito/PIL in Italia negli anni '80** (domanda aperta ricorrente — si noti che sono esattamente i termini della formula al punto 4 che peggiorano tutti insieme):
+
+1. **Elevati disavanzi primari**, fra il 3% e il 5% del PIL;
+2. **Spesa per interessi crescente**, dal 5% all'8,5% del PIL;
+3. **Aumento dei tassi di interesse internazionali**, per effetto della politica monetaria restrittiva USA;
+4. **Aumento dei tassi di interesse interni**, con la fine della politica monetaria accomodante dopo l'indipendenza della Banca d'Italia (il "divorzio" del 1981, vedi [schema 07](07-teorie-macro-moneta-bce.md));
+5. **Debole crescita di Y**, per gli effetti della stretta monetaria e per il mantenimento di un cambio forte della lira.
+
+**Le politiche di rientro dal debito:** contenimento del **disavanzo primario** (aumento delle entrate, anche via privatizzazioni · riduzione delle spese, con effetti redistributivi) · **politiche per la crescita** che non passino per maggiore spesa pubblica (politiche industriali) · **politiche monetarie accomodanti** fino al caso estremo della monetizzazione (**vietata** nell'unione monetaria) · **gestione del debito** e controllo dei tassi su mercato primario e secondario · **ripudio del debito** (il paese diventa inaffidabile e perde l'accesso ai mercati).
+
+**La spesa per interessi è una redistribuzione** in tre direzioni: dall'interno **all'estero** (per la quota di titoli in mani straniere) · dai **contribuenti ai sottoscrittori** dei titoli · dalle **generazioni future a quella presente**.
 
 ---
 
@@ -444,6 +507,7 @@ Tutte le formule chiave della dispensa in un unico posto, per il ripasso last-mi
   **ẇ = γ(u)**
 
 - Curva decrescente e convessa. **uN (o u\*)** = tasso di disoccupazione naturale: al di sotto le imprese offrono salari più alti per attirare lavoratori (ẇ>0), al di sopra i salari ristagnano o scendono.
+- Sinonimo da riconoscere: **NAIRU** (*Non-Accelerating Inflation Rate of Unemployment*), il tasso di disoccupazione compatibile con un'inflazione **stabile** (non accelerante). Nell'impostazione Friedman-Phelps coincide con il tasso naturale: è il punto in cui la curva di Phillips di lungo periodo diventa verticale. **Attenzione**: non è il tasso a cui l'inflazione è *nulla*, ma quello a cui l'inflazione **non accelera**.
 
 **7. La curva di Phillips "menù di scelta" (Samuelson-Solow)**
 
@@ -661,6 +725,15 @@ Metodo generale per una funzione di domanda lineare **P = a − bQ** e un costo 
 - **Impresa pubblica** (nazionalizzazione): rinuncia all'obiettivo di massimo profitto per perseguire finalità pubbliche (efficienza in monopolio naturale, sviluppo di un settore); criticata per carenze manageriali (relazione **agente-principale**) e clientelismo
 - **Regolamentazione**: controllo diretto tramite regole (entrata, concorrenza effettiva, tariffe/prezzi)
 
+**Le privatizzazioni (dagli anni '80)** — l'inversione di rotta rispetto all'impresa pubblica, in settori con economie di scala (comunicazioni, energia, trasporti: Trenitalia/Italo). **Sei motivazioni da conoscere:**
+
+1. **Mutamenti tecnologici** che hanno fatto venire meno alcune posizioni di monopolio naturale — le ferrovie richiedono il monopolio sulla **rete**, non sull'**offerta di servizi ai passeggeri** (da qui la separazione rete/servizio);
+2. **Teorie sui fallimenti dello Stato** (clientelismo, cattura del regolatore) → [schema 12](12-fallimenti-stato-political-economy.md);
+3. Affermarsi di **altri strumenti di controllo** (regolazione indipendente, price cap) che rendono superflua la proprietà pubblica;
+4. La **normativa europea vieta gli aiuti di Stato**: le perdite ripianate col debito pubblico sono considerate aiuto e distorsive della concorrenza;
+5. **Vincoli di bilancio pubblico**: eccessivo indebitamento a favore delle imprese pubbliche;
+6. **Sviluppo dei mercati finanziari**: in Italia si pensava che quotare grandi imprese pubbliche avrebbe irrobustito una borsa poco sviluppata.
+
 ### Tabella riassuntiva — confronto tra strutture di mercato
 
 | Caratteristica | Concorrenza perfetta | Monopolio (generico) | Monopolio naturale | Mercato contendibile |
@@ -751,6 +824,8 @@ Risolvendo: Q = [10 ± √(100 − 64)] / 2 = (10 ± 6) / 2 → **Q = 2 oppure Q
 
 **Equilibrio contendibile: Q = 8, P = 12, profitto = 12·8 − (10·8+16) = 96 − 96 = 0**
 
+> ✅ **Convenzione confermata**: negli esercizi sul mercato contendibile si impone **P = costo medio** (non P = MC). Delle due radici si tiene quella **maggiore**, l'unica hit-and-run-proof. Il criterio è confermato da altri appunti dello stesso corso e non è più un punto aperto.
+
 Rispetto al monopolio "protetto" (Q=5, P=15, π=9), la contendibilità costringe il monopolista naturale ad aumentare la quantità (da 5 a 8) e abbassare il prezzo (da 15 a 12) fino ad azzerare il profitto, pur restando un'unica impresa a produrre (l'equilibrio non è comunque Pareto-efficiente perché P=12 > MC=10).
 
 **Passo 4 — Perdita del monopolista con regolamentazione P = MC**
@@ -819,6 +894,19 @@ Verifica profitto: TR = 10·10 = 100; TC = 10·10 + 16 = 116
 
 ![Scatola di Edgeworth e frontiera di Pareto](grafici/edgeworth-pareto.svg)
 
+### I tipi di efficienza: non solo quella allocativa
+
+L'efficienza paretiana (o allocativa) è **una** delle nozioni di efficienza. Le altre compaiono spesso come domanda a risposta multipla:
+
+| | Tipo | Definizione |
+|---|---|---|
+| **Statica** | **Allocativa (paretiana)** | Le tre condizioni sopra: non si può migliorare qualcuno senza peggiorare qualcun altro |
+| **Statica** | **Efficienza "x"** | Capacità di scegliere programmi di produzione **tecnicamente efficienti**: organizzare lavoro e produzione in modo da massimizzare l'output, data la combinazione capitale-lavoro efficiente ai prezzi vigenti. L'inefficienza "x" è lo spreco organizzativo interno all'impresa — tipico del monopolista non pressato dalla concorrenza |
+| **Dinamica** | **Efficienza adattiva** | Capacità di **apprendere gradualmente** i problemi e le risposte corrette: abbassare nel tempo il costo di produzione, conoscere meglio la curva di domanda |
+| **Dinamica** | **Capacità innovativa** | Capacità di introdurre innovazioni **di processo** (riduzione dei costi) o **di prodotto** (nuovi prodotti) |
+
+**Perché conta**: la concorrenza perfetta assicura l'efficienza **allocativa statica**, ma può non assicurare quella **dinamica** — il monopolio temporaneo garantito dal brevetto incentiva la R&S. È la tensione che sta dietro alle politiche per l'innovazione ([schema 08](08-esternalita-fallimenti-mercato.md), §8).
+
 ---
 
 ## 4. **I tre criteri principali di Funzione di Benessere Sociale (FBS)**
@@ -871,8 +959,25 @@ In **equilibrio economico generale (EEG)** di concorrenza perfetta, **tutti** i 
 |---|---|
 | **Mercati non concorrenziali** | scarsa numerosità degli operatori · rendimenti di scala crescenti · barriere/costi di entrata-uscita · accordi e intese · informazione asimmetrica |
 | **Mercati non completi** | esternalità · beni pubblici · costi di transazione e asimmetrie informative |
+| **Pur in presenza di efficienza paretiana** | bisogni meritori · innovazione (efficienza dinamica) · equità |
 
-Quando questi presupposti vengono meno, il mercato **non riesce da solo a raggiungere un'allocazione efficiente** → sono i **limiti della mano invisibile**, che giustificano (ma non da soli: serve anche il confronto coi fallimenti dello Stato) l'intervento pubblico allocativo.
+La **terza riga** è quella che si dimentica più facilmente: anche quando il mercato *è* efficiente, ci sono tre ragioni per intervenire comunque — beni che la collettività ritiene di dover garantire al di là delle preferenze individuali, la spinta all'innovazione, e la distribuzione.
+
+Quando questi presupposti vengono meno, il mercato **non riesce da solo a raggiungere un'allocazione efficiente** → sono i **limiti della mano invisibile**, che giustificano (ma non da soli: serve anche il confronto coi **fallimenti dello Stato**, [schema 12](12-fallimenti-stato-political-economy.md)) l'intervento pubblico allocativo.
+
+### Il teorema del *second best*
+
+Il Primo Teorema **non è robusto**: piccoli allontanamenti dall'equilibrio concorrenziale allontanano dall'efficienza paretiana in modo non graduale.
+
+**Enunciato (in sostanza)**: se in un mercato la condizione di efficienza non può essere soddisfatta, **non è detto che convenga soddisfarla nel maggior numero possibile degli altri mercati**. O le condizioni valgono ovunque, oppure può essere preferibile allontanarsene anche altrove.
+
+**L'esempio controintuitivo da citare.** Quale situazione è migliore?
+- (a) un mercato in **monopolio** ma completo → **una** violazione;
+- (b) un mercato in **monopolio e con esternalità negativa** → **due** violazioni.
+
+La risposta è **(b)**. Il monopolio riduce la quantità sotto il livello efficiente; l'esternalità negativa la spinge sopra. Le due distorsioni **si compensano** e il risultato può essere più vicino all'ottimo sociale della situazione con una sola violazione.
+
+**Implicazione di politica economica**: correggere una singola distorsione lasciandone altre in piedi può **peggiorare** il benessere. È un argomento di prudenza contro le riforme parziali.
 
 ---
 
@@ -900,6 +1005,8 @@ Quando questi presupposti vengono meno, il mercato **non riesce da solo a raggiu
 - La **teoria normativa** della politica economica studia come lo Stato **dovrebbe** intervenire (il decisore pubblico come *pianificatore sociale benevolo*) per perseguire i fini collettivi, scegliendo obiettivi e strumenti — a differenza della **teoria positiva**, che descrive con modelli come il sistema economico funziona di fatto (e della *political economy*, che descrive come i policy-maker si comportano realmente).
 - Il Secondo Teorema fornisce la **giustificazione teorica** per intervenire sul lato distributivo **senza sacrificare l'efficienza**: basta agire sulle dotazioni iniziali (via fiscalità/trasferimenti) e lasciare che il mercato allochi efficientemente a valle.
 - In sintesi: **il mercato risolve l'efficienza, ma non l'equità — serve la politica economica per scegliere, tramite un giudizio di valore (una FBS), quale tra i molti ottimi paretiani sia socialmente preferibile, e per redistribuire in modo da raggiungerlo.**
+
+> **Da qui in poi**: *come* il policy maker traduce quel giudizio in decisioni — obiettivi, strumenti, modelli, regola aurea di Tinbergen, assegnazione appropriata — è il contenuto dello [schema 11](11-teoria-normativa-obiettivi-strumenti.md). *Che cosa* succede quando il policy maker non è benevolente è lo [schema 12](12-fallimenti-stato-political-economy.md). *Come* si sceglie fra progetti pubblici concreti è lo [schema 13](13-valutazione-progetti-acb.md).
 
 ---
 
@@ -946,6 +1053,243 @@ Nessuno dei tre stati domina paretianamente un altro (in ogni confronto qualcuno
 - Il criterio **rawlsiano diverge nettamente**, scegliendo lo stato **I**, l'unico **perfettamente egualitario** (4,4,4): pur avendo il totale più basso (12 contro 15 e 16), è quello in cui **l'individuo che sta peggio sta comunque meglio** che negli altri due stati.
 - Lo stato **II**, pur essendo Pareto-efficiente, **non viene mai scelto da nessuno dei tre criteri**: ha un totale intermedio (15) ma la distribuzione più sbilanciata verso i primi due individui, con l'individuo 3 ridotto a utilità 1 — il "peggio" possibile per il criterio rawlsiano, e non abbastanza alto nel totale/prodotto per essere preferito dagli altri due criteri.
 - **Conclusione generale**: la scelta tra stati ugualmente efficienti secondo Pareto dipende **interamente dal giudizio di valore** incorporato nella FBS scelta — cioè da quanto peso si dà all'efficienza (totale del benessere) rispetto all'equità (come è distribuito). Non esiste una risposta "neutra": è esattamente il compito della **teoria normativa della politica economica** dichiarare esplicitamente quale criterio si sta adottando.
+
+
+
+<div class="pagebreak"></div>
+
+
+# Teoria normativa: obiettivi, strumenti e modelli di politica economica
+
+**Domande d'esame collegate:** "Quali sono gli elementi di un programma di politica economica?" · "Che cosa afferma la regola aurea di Tinbergen?" · "Che cos'è l'assegnazione appropriata?" · Esercizio obiettivo-strumento: dato l'obiettivo di occupazione N, calcolare il livello di spesa pubblica G necessario, e l'efficacia dello strumento · Obiettivi fissi, metodo delle priorità e obiettivi flessibili sulla curva di Phillips · "Che cos'è l'incoerenza temporale delle politiche?" · Regole o discrezionalità
+
+> **Nota sulle fonti.** Le sezioni 1-8 e l'esercizio vengono dalle slide della professoressa (L2_25, Appendice cap. 1). Le sezioni 9-13 (critica di Lucas, teoria dei giochi, incoerenza temporale, banchiere conservatore) vengono dal manuale Paesani cap. 4: nei PDF del corso che abbiamo compare solo un riferimento all'incoerenza temporale tra le cause dei fallimenti dello Stato. Sono comunque parte del programma del testo di riferimento.
+
+---
+
+## **1. Teoria normativa, teoria positiva, political economy**
+
+| Approccio | Domanda a cui risponde |
+|---|---|
+| **Teoria normativa** | Come lo Stato **dovrebbe** intervenire per perseguire il benessere collettivo (policy maker come *pianificatore sociale benevolo*) |
+| **Teoria positiva** | Come funziona **di fatto** il sistema economico; la politica economica entra nel modello come dato esogeno |
+| **Political economy** (teoria positiva della politica economica) | Come i policy maker **si comportano realmente**, tenendo conto degli obiettivi propri di politici e burocrati → [schema 12](12-fallimenti-stato-political-economy.md) |
+
+- La teoria normativa si basa sulla **programmazione**: decisioni coordinate e coerenti, che tengono conto dell'insieme degli obiettivi e degli strumenti.
+- Punto chiave, che ritorna in tutto lo schema: **uno strumento può influenzare più obiettivi**; in tal caso, per ogni obiettivo si sceglie lo strumento con la maggiore **efficacia relativa**.
+
+## **2. Gli elementi di un programma di politica economica**
+
+Sono **tre**, ed è la classificazione più probabile come domanda secca:
+
+1. **Obiettivi** — traguardi di politica economica, generalmente misurabili: tasso di inflazione, tasso di disoccupazione, tasso di crescita del PIL, equilibrio della bilancia dei pagamenti. Sono **variabili endogene** del modello.
+2. **Strumenti** — grandezze economiche manovrabili dal policy maker: spesa pubblica, imposte, offerta di moneta, tassi di interesse, tasso di cambio. Sono **variabili esogene** del modello.
+3. **Modello** — l'insieme delle relazioni fra le variabili economiche che descrive il funzionamento del sistema, e che collega gli strumenti agli obiettivi. **Dipende dalla teoria economica adottata**: teorie diverse attribuiscono efficacia diversa allo stesso strumento (vedi [schema 07](07-teorie-macro-moneta-bce.md)).
+
+## **3. Gli obiettivi: definizione e gerarchia**
+
+- Gli obiettivi possono essere definiti in termini **qualitativi** (aumento dell'efficienza del sistema produttivo, riduzione della povertà, stabilità dei prezzi, pieno impiego) o **quantitativi** (valore puntuale, intervallo, incremento/riduzione di un indicatore), e riferirsi al **breve, medio o lungo periodo**.
+- Riguardano grandezze che le autorità sono in grado di influenzare e rispetto alle quali esprimono una preferenza. Da qui **pluralità e gerarchia degli obiettivi**, con tre metodi di scelta:
+
+| Metodo | Come opera il policy maker | Lettura sulla curva di Phillips |
+|---|---|---|
+| **Obiettivi fissi** | Attribuisce **valori prefissati** a tutte le variabili obiettivo | Sceglie un punto specifico, con quel tasso di inflazione **e** quel tasso di disoccupazione |
+| **Metodo delle priorità** | Fissa il valore dell'obiettivo **prioritario** e ottimizza (minimizza o massimizza) l'altro, che diventa **residuale** | Fissa ṗ, poi sceglie sulla curva il punto che minimizza u |
+| **Obiettivi flessibili** | Definisce una **funzione di benessere sociale** e massimizza sotto il vincolo dato dalla curva | Punto di **tangenza** tra la curva di indifferenza sociale e la curva di Phillips |
+
+- La curva di Phillips funziona qui come **vincolo**: indica il minimo valore raggiungibile di una variabile obiettivo per ogni dato livello dell'altra.
+
+## **4. L'indice di malessere di Okun**
+
+Con due obiettivi (ridurre inflazione e disoccupazione), la funzione di benessere sociale ha forma:
+
+**W = a·ṗ + b·u**
+
+- **a** e **b** sono i **pesi** attribuiti alle due variabili. Sono costanti **negative** se si misura il benessere (un aumento di ṗ o di u riduce il benessere); diventano **positive** se si ragiona in termini di *malessere*.
+- Nel caso particolare **a = b = 1** si ottiene l'**indice di malessere di Okun** (*misery index*):
+
+**W = ṗ + u**
+
+- Somma tasso di inflazione e tasso di disoccupazione **dando lo stesso peso ai due mali**. Conseguenza analitica da ricordare: il **saggio marginale di sostituzione fra gli obiettivi è costante e pari a 1** (a/b = 1) → le curve di indifferenza sociale sono **rette** inclinate a −45°.
+- Se la funzione non è lineare, il s.m.s. diventa **variabile**: il policy maker è disposto a scambiare inflazione e disoccupazione a "prezzi" diversi a seconda del punto in cui si trova.
+
+> ⚠️ **Da non confondere** con la **legge di Okun** ([schema 09](09-crescita-sviluppo.md)), che è tutt'altro: la relazione tra disoccupazione ciclica e output gap.
+
+## **5. Gli strumenti: proprietà e tipologie**
+
+**Le tre proprietà** (domanda secca molto probabile):
+
+1. **Controllabilità** — il policy maker può effettivamente deciderne il valore.
+2. **Efficacia** — lo strumento influenza l'obiettivo. Attenzione: l'efficacia è **ipotizzata dalla teoria economica** adottata, e teorie diverse la valutano in modo opposto (per i nuovi classici la politica fiscale è inefficace, per i keynesiani no).
+3. **Separabilità (o indipendenza)** — due strumenti che hanno la **stessa efficacia su tutti gli obiettivi** non sono due strumenti, ma **uno solo**.
+
+**Le tipologie:**
+
+| Criterio | Categorie |
+|---|---|
+| Portata dell'intervento | **Quantitative** (modificano il valore di uno strumento esistente: variazione di G) · **Qualitative** (introducono o cancellano uno strumento senza mutare la struttura: una nuova imposta) · **Di riforma** (mutano la struttura del sistema) |
+| Modo di agire | **Controllo diretto**: *impone* un comportamento (price cap, contingentamento, legislazione antimonopolistica, impresa pubblica, regolamentazione) · **Controllo indiretto**: *induce* un comportamento (incentivi, disincentivi, dazi, politica fiscale e monetaria) |
+| Attivazione | **Misure discrezionali** (valutazione caso per caso) · **Regole automatiche** (entrano in funzione senza valutazione) |
+
+- **Stabilizzatori automatici**: strumenti che riducono le oscillazioni cicliche senza alcuna decisione discrezionale. I due esempi canonici sono i **sussidi di disoccupazione** e l'**imposizione progressiva** (in espansione il prelievo cresce più che proporzionalmente e frena il reddito disponibile; in recessione cala e ne attenua la caduta). Vedi [schema 01](01-politica-fiscale-bilancio-pubblico.md).
+
+## **6. Il modello: equazioni, variabili e forme**
+
+**I quattro tipi di equazione** di un modello strutturale:
+
+| Tipo | Che cosa esprime | Esempio |
+|---|---|---|
+| **Di definizione** | Identità contabili | Y = C + I + G · Yᵈ = (1−t)Y |
+| **Tecniche** | Vincoli tecnologici | Y^off = θN (θ = produttività media del lavoro) |
+| **Di comportamento** | Come reagiscono gli agenti | C = c·Yᵈ (c = propensione al consumo) |
+| **Di equilibrio** | Condizioni di chiusura del modello | Y^dom = Y^off |
+
+**Le due categorie di variabili:**
+
+- **Esogene**: influenzano le altre ma non ne sono influenzate. Comprendono gli **strumenti** (G, t — manovrabili) e i **parametri** (c, θ — fissati all'esterno).
+- **Endogene**: determinate dentro il modello. Comprendono gli **obiettivi** (N) e le **variabili irrilevanti** ai fini del programma (C, Y).
+
+**Le tre forme del modello** — la sequenza logica che porta alla decisione:
+
+1. **Forma strutturale** — l'insieme delle relazioni che descrivono il sistema (il modello IS-LM, o le equazioni qui sopra).
+2. **Forma ridotta** — l'**obiettivo in funzione degli strumenti** e delle altre esogene. Misura l'**efficacia** di ogni strumento sull'obiettivo:
+   **N = (1/θ) · [1 / (1 − c(1−t))] · (I + G)**
+3. **Forma ridotta inversa (modello di decisione)** — lo **strumento in funzione dell'obiettivo**: si assegna il valore desiderato all'obiettivo e si ricava il valore da dare allo strumento:
+   **G = θ · [1 − c(1−t)] · N − I**
+
+## **7. La regola aurea di politica economica (Tinbergen)**
+
+**Per raggiungere tutti gli obiettivi, il numero di strumenti deve essere almeno pari al numero di obiettivi.**
+
+| Situazione | Nome | Conseguenza |
+|---|---|---|
+| **Strumenti > obiettivi** | Sistema **sotto-determinato** | Esistono **molteplici soluzioni** (più combinazioni di strumenti raggiungono gli stessi obiettivi) |
+| **Strumenti = obiettivi** | — | Soluzione **determinata** |
+| **Strumenti < obiettivi** | Sistema **sovradeterminato** | **Nessuna soluzione**: non tutti gli obiettivi sono raggiungibili |
+
+Nel caso sovradeterminato le alternative sono tre: **rinunciare** agli obiettivi in eccesso · **adottare nuovi strumenti** · **passare al metodo degli obiettivi flessibili**, definendo una funzione obiettivo da massimizzare (accettando "un po' meno" di un obiettivo per "un po' più" dell'altro).
+
+## **8. L'assegnazione appropriata**
+
+- Il problema si pone **quando la regola aurea è rispettata ma gli strumenti agiscono su più obiettivi**: a quale obiettivo assegnare ciascuno strumento?
+- **Criterio: a ogni obiettivo si assegna lo strumento su cui è relativamente più efficace** (quello che, modificato di poco, produce un grande effetto su quell'obiettivo).
+- **Esempio classico**: politica **monetaria** all'obiettivo **inflazione**, politica **fiscale** all'obiettivo **disoccupazione**.
+- Un secondo esempio, in economia aperta, è svolto nello [schema 06](06-economia-aperta-bilancia-pagamenti.md): politica fiscale all'equilibrio **interno** (Y = Y*), politica monetaria all'equilibrio **esterno** (BP = 0).
+
+## **9. La critica di Lucas** *(manuale)*
+
+- Il comportamento degli agenti privati **non è invariante rispetto alle azioni pubbliche**: i parametri delle funzioni di comportamento non sono stabili, perché reagiscono alle aspettative sulle politiche.
+- Conseguenza pratica: **i parametri stimati sui dati passati non sono affidabili** per prevedere gli effetti di una politica nuova, perché la politica stessa li modifica.
+- Conseguenza teorica: l'efficacia dell'azione pubblica può essere **annullata** se le aspettative degli operatori inducono una variazione nei parametri. I privati non sono soggetti passivi che si adattano, ma **agenti attivi che anticipano** le politiche.
+- Da qui il passaggio all'analisi dell'interazione fra policy maker e privati come **gioco strategico**.
+
+## **10. La politica economica come gioco** *(manuale)*
+
+- **Gioco** = interdipendenza strategica fra decisori autonomi con obiettivi contrapposti, in cui il guadagno di ciascuno dipende dalle scelte proprie **e** altrui.
+- **Elementi**: giocatori (policy maker e settore privato, politici ed elettori, governi di paesi diversi, autorità monetaria e fiscale) · strategie · guadagni (payoff) · informazioni e regole.
+- **Equilibrio di Nash**: coppia di strategie, una per giocatore, tale che ciascuno sceglie la **risposta ottimale** alla strategia di equilibrio dell'altro → **nessuno ha incentivo a cambiare** strategia unilateralmente.
+- **Giochi sequenziali e credibilità** — i due esempi da conoscere:
+  - **"La borsa o la vita"**: la minaccia del rapinatore di sparare è **poco credibile**, perché eseguirla gli costerebbe una condanna.
+  - **Deterrenza all'entrata**: l'impresa insediata (I) minaccia una guerra di prezzo se l'entrante (E) entra. Ma la guerra di prezzo produce perdite **anche a I**: la minaccia non è credibile, E anticipa la risposta razionale ed entra, e I accetta l'ingresso (duopolio).
+- Morale ricorrente: **un annuncio conta solo se chi lo fa avrà ancora interesse a mantenerlo quando arriverà il momento**.
+
+## **11. L'incoerenza temporale delle politiche** *(manuale)*
+
+**Definizione**: una politica è temporalmente incoerente quando, al momento di attuarla, per il policy maker è ottimale una condotta **diversa da quella annunciata**.
+
+Struttura in due periodi:
+
+1. **t = 0** — il policy maker **annuncia** un intervento; gli agenti formano aspettative e scelgono di conseguenza.
+2. **t = 1** — se gli agenti hanno creduto all'annuncio, al policy maker conviene **deviare**.
+
+Ma se gli agenti hanno **aspettative razionali**, al tempo 0 **prevedono l'incentivo a deviare**, non credono all'annuncio e scelgono di conseguenza → **il risultato è subottimale, e la causa è la non credibilità dell'annuncio**.
+
+**Esempio 1 — politiche per l'innovazione**: lo Stato promette che chi innova potrà appropriarsi dei frutti (profitti di monopolio). Ottenuta l'innovazione, allo Stato conviene rinnegare e diffonderla liberamente. Le imprese lo anticipano e **non investono in R&S**. La **legislazione sui brevetti** serve esattamente a vincolare lo Stato all'annuncio.
+
+**Esempio 2 — politica monetaria**: vedi sezione seguente.
+
+## **12. Il gioco di politica monetaria e il banchiere conservatore** *(manuale)*
+
+Curva di Phillips aumentata delle aspettative: **u = uⁿ + α(ṗᵉ − ṗ)**.
+
+1. Il governo si colloca in **A** (inflazione bassa) e **annuncia** che nel periodo 2 non farà politiche espansive.
+2. Se il sindacato **crede** all'annuncio, contratta moderazione salariale: la curva di Phillips rilevante resta quella bassa (curva 1).
+3. Ma a quel punto, nel periodo 2, al governo **conviene deviare**: una manovra espansiva lo porterebbe da A (second best) a **B** (first best), riducendo u al prezzo di più inflazione.
+4. Il sindacato, con aspettative razionali, **lo sa in anticipo** → incorpora l'inflazione attesa e contratta aumenti salariali elevati → la curva rilevante diventa la **2**, più alta.
+5. Sulla curva 2 al governo **non conviene più espandere**. Esito finale: **stessa disoccupazione, ma inflazione più alta**. Tutti stanno peggio, e nessuno ha commesso errori.
+
+**Soluzioni al problema:**
+
+- **Impegno vincolante (commitment)** → **delegare la politica monetaria a un banchiere centrale "conservatore"**, che attribuisce peso **nullo** alla disoccupazione (curve di benessere orizzontali) e quindi **non ha incentivo** a creare inflazione a sorpresa. L'annuncio di inflazione nulla diventa **credibile**.
+- **Indipendenza della banca centrale** con mandato esclusivo sulla stabilità dei prezzi (l'assetto della BCE, vedi [schema 07](07-teorie-macro-moneta-bce.md)).
+- **Reputazione**: in un **gioco ripetuto**, al policy maker conviene rispettare gli annunci per costruirsi una reputazione che renderà credibili quelli futuri.
+
+## **13. Regole o discrezionalità?**
+
+| Se si ritiene che… | …allora è preferibile |
+|---|---|
+| I mercati siano **instabili** e l'intervento pubblico sappia migliorare i risultati | **Discrezionalità** (posizione keynesiana) |
+| I mercati siano **stabili** e l'intervento pubblico sia fonte di instabilità ed errori | **Regole** (monetaristi, nuovi classici — vedi la regola monetaria di Friedman, [schema 07](07-teorie-macro-moneta-bce.md)) |
+
+- Attenzione: fin qui si è ipotizzato un policy maker **benevolente**. Il risultato subottimale non dipende da opportunismo o cattiva fede, ma dalla **struttura strategica** del problema. Se invece i policy maker sono **opportunisti**, si entra nel campo dei **fallimenti dello Stato** → [schema 12](12-fallimenti-stato-political-economy.md).
+- **Esigenza di coordinamento** degli interventi, per tre ragioni: molteplicità degli **strumenti** · molteplicità degli **obiettivi**, ciascuno influenzato da più strumenti · **legame fra le scelte in periodi diversi**.
+
+---
+
+## **Esercizio tipo svolto**
+
+*(È l'esercizio proposto nelle slide della professoressa e non svolto a lezione.)*
+
+**Testo.** Modello obiettivo-strumento con θ = 30 (produttività media del lavoro), c = 0,8 (propensione al consumo), I = 2500. L'obiettivo è N = 2000 occupati.
+(a) Quale deve essere il livello della spesa pubblica G, se t = 0?
+(b) E se t = 0,2?
+(c) Qual è l'efficacia dello strumento G sull'obiettivo N nei due casi?
+
+**Il modello**
+Y^off = θN · Y^dom = C + I + G · C = c·Yᵈ · Yᵈ = (1−t)Y · Y^dom = Y^off = Y
+
+**Forma ridotta** (obiettivo in funzione degli strumenti):
+N = (1/θ) · [1 / (1 − c(1−t))] · (I + G)
+
+**Forma ridotta inversa** (modello di decisione):
+**G = θ · [1 − c(1−t)] · N − I**
+
+---
+
+**(a) Caso t = 0**
+
+Moltiplicatore: 1 − c(1−t) = 1 − 0,8 = **0,2**
+
+G = 30 × 0,2 × 2000 − 2500 = 12.000 − 2500 = **G = 9.500**
+
+*Verifica*: Y = θN = 30 × 2000 = 60.000. Dal lato della domanda: Y = (1/0,2) × (I+G) = 5 × 12.000 = 60.000 ✓
+
+---
+
+**(b) Caso t = 0,2**
+
+Moltiplicatore: 1 − c(1−t) = 1 − 0,8 × 0,8 = 1 − 0,64 = **0,36**
+
+G = 30 × 0,36 × 2000 − 2500 = 21.600 − 2500 = **G = 19.100**
+
+*Verifica*: Y = 60.000; (1/0,36) × (2500 + 19.100) = 2,778 × 21.600 = 60.000 ✓
+
+**Commento**: con l'imposta proporzionale serve **più del doppio** di spesa pubblica per lo stesso obiettivo occupazionale, perché il prelievo sottrae reddito disponibile a ogni giro del moltiplicatore.
+
+---
+
+**(c) Efficacia dello strumento**
+
+L'efficacia è la **derivata dell'obiettivo rispetto allo strumento**, cioè il coefficiente di G nella forma ridotta:
+
+**dN/dG = 1 / [θ · (1 − c(1−t))]**
+
+| | Efficacia dN/dG | Lettura |
+|---|---|---|
+| **t = 0** | 1 / (30 × 0,2) = 1/6 ≈ **0,167** | Ogni euro di spesa pubblica crea 0,167 occupati → servono **6 €** per un occupato in più |
+| **t = 0,2** | 1 / (30 × 0,36) = 1/10,8 ≈ **0,093** | Servono **10,8 €** per un occupato in più |
+
+**Conclusione**: l'imposta proporzionale **riduce l'efficacia** dello strumento fiscale (da 0,167 a 0,093, cioè del 44%). È il punto teorico che collega questo esercizio al **teorema di Haavelmo** ([schema 01](01-politica-fiscale-bilancio-pubblico.md)): il moltiplicatore del bilancio in pareggio vale 1 con imposta in somma fissa, **ma non vale più** con aliquota proporzionale, esattamente per lo stesso motivo.
 
 
 
@@ -1166,6 +1510,20 @@ condizione di **non arbitraggio**: il rendimento atteso di un'attività in valut
 $$|\varepsilon_x| + |\varepsilon_m| > 1 \quad \text{(condizione di Marshall-Lerner)}$$
 dove $\varepsilon_x$ = elasticità delle esportazioni al cambio, $\varepsilon_m$ = elasticità delle importazioni al cambio.
 
+**Le quattro ipotesi su cui poggia la condizione** (da citare se la domanda chiede "quando la svalutazione funziona?"):
+
+1. **$p$ e $p^*$ dati e costanti**: non c'è trasferimento della variazione del cambio sui prezzi interni (niente *pass-through*);
+2. **Nessun vincolo di offerta**: il paese è in grado di produrre di più per soddisfare la maggiore domanda estera. In **pieno impiego** l'offerta non può crescere e l'aumento della domanda estera si scarica sui **prezzi** (aggravato dal rincaro dei beni importati);
+3. **Le quantità reagiscono più velocemente dei prezzi** — se non è vero, il saldo inizialmente **peggiora** (curva a J, qui sotto);
+4. **Nessun effetto sulle aspettative di deprezzamento futuro**: se la svalutazione genera attese di ulteriori svalutazioni, si innesca un **deflusso di capitali** che peggiora la BP invece di migliorarla.
+
+**La curva a J** — l'ipotesi 3 spiegata: se le quantità importate calano e quelle esportate crescono **lentamente**,
+
+- **nel primo periodo** prevale l'effetto prezzo: la svalutazione riduce il valore in valuta estera delle esportazioni ($p_x e$) e il saldo **peggiora**;
+- **dopo un certo tempo** le quantità si adeguano e, se vale Marshall-Lerner, il saldo **migliora**.
+
+Il saldo dei movimenti di beni disegna quindi nel tempo una **J**: prima scende, poi risale sopra il livello di partenza. È il motivo per cui gli effetti di una svalutazione **non si giudicano nel breve periodo**.
+
 **9. Politiche commerciali: liberismo, protezionismo, autarchia**
 
 | Politica commerciale | Definizione |
@@ -1175,6 +1533,19 @@ dove $\varepsilon_x$ = elasticità delle esportazioni al cambio, $\varepsilon_m$
 | **Autarchia** | chiusura totale dell'economia nazionale verso l'estero |
 
 - **Grado di apertura** $= \dfrac{X+M}{Y}$
+
+**Il principio dei costi comparati con i numeri** (schema dell'esempio tipico). Il paese B ha un vantaggio **assoluto** in entrambi i beni, ma conviene comunque specializzarsi e scambiare:
+
+| | Costo unitario in B (unità di lavoro) |
+|---|---|
+| Bene **x** | 10 |
+| Bene **y** | 30 |
+
+- **Ragione di scambio interna (autarchia)**: rinunciando a 1 unità di y si liberano 30 unità di lavoro = **3 unità di x** → il rapporto interno è **p_y/p_x = 3**.
+- Con **60 lavoratori**, B può: (i) produrre **2 unità di y** direttamente, oppure (ii) produrre **6 unità di x** e scambiarle.
+- Se i prezzi internazionali sono p_x = 30 e p_y = 50: le 6 unità di x valgono 6 × 30 = **180**, con cui si acquistano 180/50 = **3,6 unità di y** > 2. **Conviene lo scambio.**
+- **Regola generale**: conviene la "produzione indiretta" se 6·p_x > 2·p_y, cioè se **p_y/p_x < 3** — se la ragione di scambio **internazionale** è minore di quella **interna**.
+- **Conclusione da scrivere**: se la ragione di scambio internazionale è **compresa fra le due ragioni di scambio interne in autarchia**, l'apertura commerciale conviene **a entrambi i paesi** — anche a quello che ha il vantaggio assoluto in tutti i beni.
 - Strumenti del protezionismo:
   - **Tariffario**: **dazi** (imposta sui beni importati, genera gettito fiscale)
   - **Non tariffario**: **contingenti** (limiti fisici/di valore alle importazioni), regolamentazioni, sussidi alle esportazioni, svalutazione competitiva del cambio
@@ -1186,11 +1557,24 @@ dove $\varepsilon_x$ = elasticità delle esportazioni al cambio, $\varepsilon_m$
   - effetto entrate fiscali: + gettito (importazioni residue × aliquota del dazio)
   - effetto redistribuzione: consumatori pagano un prezzo più alto (trasferimento verso i produttori interni e lo Stato)
 
+**Lettura grafica del dazio** (domanda e offerta interne, prezzo internazionale dato). Con i segmenti sull'asse delle quantità:
+
+| | Prima del dazio (prezzo p) | Dopo il dazio (prezzo p(1+d)) |
+|---|---|---|
+| **Offerta interna** | OA | O**B** (aumenta) |
+| **Domanda interna** | OE | O**D** (diminuisce) |
+| **Importazioni** | **AE** (= domanda − offerta interna) | **BD** (ridotte) |
+
+- Il **gettito** per lo Stato è il rettangolo: importazioni residue **BD** × dazio unitario.
+- Il **dazio proibitivo** è quello che porta domanda e offerta interne a coincidere: le importazioni si azzerano (autarchia) e — punto controintuitivo da ricordare — **il gettito è nullo**, perché non c'è più nulla da tassare.
+
 - Giustificazioni del protezionismo:
-  - **Ragioni di scambio**: un dazio può spingere i produttori esteri a ridurre il prezzo al netto del dazio (*pricing to market*), migliorando la ragione di scambio $TT = \dfrac{p_x e}{p_m}$
-  - **Industria nascente**: economie di scala dinamiche (*learning by doing*) — una protezione temporanea permette al paese nuovo entrante di ridurre i costi unitari fino a essere competitivo
+  - **Ragioni di scambio**: un dazio può spingere i produttori esteri a ridurre il prezzo al netto del dazio (*pricing to market*), migliorando la ragione di scambio $TT = \dfrac{p_x e}{p_m}$. Vale però **solo se il paese non è piccolo**: serve che la sua riduzione di domanda sposti il prezzo internazionale. In tal caso il dazio è **efficace sulla ragione di scambio ma meno efficace nel proteggere la produzione interna** (il prezzo estero scende e compensa in parte il dazio)
+  - **Industria nascente**: economie di scala dinamiche (*learning by doing*) — una protezione temporanea permette al paese nuovo entrante di ridurre i costi unitari fino a essere competitivo. Benefici aggiuntivi di **spillover** su altri settori; problemi: individuare i settori che diventeranno vitali, e la difficoltà **politica** di rimuovere il dazio una volta introdotto
+  - **Difesa dal lavoro straniero a buon mercato** (*dumping sociale*): concorrenza di economie con salari molto più bassi. **Obiezione da conoscere**: i salari tendono a seguire la produttività, quindi le differenze in termini di **costo del lavoro per unità di prodotto** (w/q) sono molto più piccole di quelle in termini di salari
 
 - **Attenzione**: rischio di **contromisure** — un paese protezionista può subire ritorsioni simmetriche dagli altri paesi.
+- **Beggar-my-neighbour** ("impoverire il vicino"): dazi e svalutazione riducono la propensione a importare, aumentano il moltiplicatore e — se il sistema **non è in pieno impiego** — hanno effetti espansivi su reddito e occupazione. Ma lo fanno **riducendo le esportazioni del resto del mondo**: il guadagno interno è il danno altrui, da cui le ritorsioni. L'eccezione: se le politiche sono accompagnate da **politiche fiscali o monetarie espansive**, il maggior reddito interno fa risalire le importazioni e il resto del mondo non viene danneggiato.
 
 **10. Il modello Mundell-Fleming (IS-LM-BP)**
 
@@ -1363,6 +1747,28 @@ Il metodo (equazione IS → sostituzione in CC e nella componente transattiva di
 - Tipologie moderne: moneta legale (BC), moneta bancaria/fiduciaria (depositi), moneta elettronica, moneta virtuale (Bitcoin), moneta digitale/CBDC (in prospettiva).
 - **Aggregati monetari BCE**: M1 (circolante + depositi overnight) ⊂ M2 (+ depositi vincolati ≤2 anni) ⊂ M3 (+ attività finanziarie molto liquide). **Base monetaria H = Circolante + Riserve bancarie**.
 - La moneta è creata **principalmente attraverso operazioni di credito**; il **moltiplicatore monetario** M = (1+h)/(h+j) · H (h = rapporto circolante/depositi, j = coefficiente di riserva) mostra come il sistema bancario, con riserva frazionaria, crei moneta oltre la base monetaria emessa dalla BC.
+
+### I quattro canali di creazione della base monetaria
+
+Dal lato degli **impieghi**: H = Circolante + Riserve bancarie. Dal lato della **creazione**, i canali sono quattro:
+
+| Canale | Meccanismo |
+|---|---|
+| **Estero** | Variazione delle **riserve ufficiali** contro base monetaria, per effetto di un avanzo o disavanzo della bilancia dei pagamenti (vedi [schema 06](06-economia-aperta-bilancia-pagamenti.md): in cambi fissi è il canale che rende **inefficace la politica monetaria**) |
+| **Tesoro** | La banca centrale acquista titoli di Stato **all'emissione** (mercato primario) → finanziamento monetario del disavanzo |
+| **Operazioni di mercato aperto** | Acquisto/vendita di titoli di Stato sul **mercato secondario**: si acquista per immettere liquidità, si vende per drenarla |
+| **Banche** | Risconto di cambiali (al tasso ufficiale di sconto) e anticipazioni su titoli |
+
+**Il canale Tesoro e l'indipendenza della banca centrale** — la vicenda italiana, ottima come domanda aperta:
+
+- Se la BC è **obbligata a finanziare la spesa del governo**, perde il controllo della creazione di base monetaria e **non è indipendente**.
+- **Fino al 1981** la Banca d'Italia era tenuta ad acquistare i BOT che il Tesoro non riusciva a collocare in asta → superato con il cosiddetto **"divorzio" fra Banca d'Italia e Tesoro (1981)**.
+- **Fino al 1993** la Banca d'Italia doveva anticipare al governo, su conto corrente di tesoreria, fino al **14% delle spese previste** → obbligo superato con gli accordi europei di **Maastricht**.
+- Oggi le regole europee sanciscono l'indipendenza della BCE e **vietano il finanziamento monetario diretto** dei governi.
+
+- **Signoraggio**: il vantaggio che lo Stato trae dalla possibilità di creare base monetaria per finanziare il disavanzo. Il finanziamento monetario genera inflazione, che riduce il valore reale del debito: da qui la **"tassa da inflazione"** a vantaggio del governo e a carico dei detentori di moneta e titoli (vedi [schema 01](01-politica-fiscale-bilancio-pubblico.md)).
+
+**I tre ruoli della banca centrale** (domanda secca probabile): 1) **creazione/distruzione di base monetaria**; 2) **prestatore di ultima istanza** verso le altre banche ("banca delle banche"); 3) **regolamentazione e controllo** della condotta bancaria (riserva obbligatoria, vigilanza).
 
 ## 9. **Le funzioni di domanda di moneta**
 
@@ -1578,11 +1984,28 @@ La domanda di moneta aumenta (690 > 680): coerente con la pendenza negativa dell
 - I beni pubblici sono un caso particolare di **esternalità positiva**: chi li produce avvantaggia anche gli altri. La **condizione di Samuelson** di efficienza allocativa (SMS₁+SMS₂=SMT) **non è verificata** in un mercato di concorrenza perfetta → il mercato produce una quantità **subottimale o nulla** (esempio del faro: senza cooperazione nessuno lo costruisce, pur essendo socialmente conveniente farlo insieme).
 - **Soluzioni**: produzione pubblica, sussidio/finanziamento pubblico, regolamentazione (stesso set di strumenti delle esternalità positive).
 
+**L'esempio del faro con i numeri** — due armatori, beneficio individuale del faro **B = 6**, costo di costruzione **C = 5**. I quattro esiti possibili, in beneficio netto:
+
+- Costo diviso a metà: ciascuno ottiene 6 − 2,5 = **2** (arrotondato: A paga 3, B paga 2)
+- Costruisce da solo: **−1** (6 − 5 + …) · l'altro ottiene **5** da *free rider*
+- Nessuno costruisce: **0** ciascuno
+
+| A \ B | **Costruire** | **Non costruire** |
+|---|---|---|
+| **Costruire** | (2) (2) | (−1) (**5**) |
+| **Non costruire** | (**5**) (−1) | (0) (0) |
+
+**Lettura**: per ciascun armatore "non costruire" è la scelta migliore **qualunque cosa faccia l'altro** (5 > 2 e 0 > −1) → l'equilibrio è **(non costruire, non costruire)** con payoff (0,0), mentre l'esito socialmente efficiente sarebbe (2,2). È la struttura del **dilemma del prigioniero** applicata ai beni pubblici: **il free riding porta a un risultato peggiore per tutti**. Soluzioni: accordo vincolante fra le parti, produzione da parte dell'operatore pubblico, regolamentazione.
+
 ## 7. **Cenni: informazione asimmetrica**
 
 - **Informazione perfetta** (requisito ideale del mercato concorrenziale): completa, facilmente ottenibile, simmetrica tra le parti, esaustiva su effetti presenti e futuri.
 - **Relazione principale-agente**: il principale affida un compito all'agente ma non ne conosce perfettamente le caratteristiche o non ne osserva le azioni (es. azionisti/manager, impresa/lavoratore, elettori/politici, assicurazione/assicurato).
 - **Selezione avversa**: asimmetria **precedente** al contratto → esempio classico: mercato delle auto usate ("lemons"/bidoni). Con prezzo = valore medio, si vendono solo le auto di qualità inferiore, il prezzo scende ulteriormente, il mercato delle auto buone **sparisce** (risultato inefficiente: scambi vantaggiosi non avvengono).
+
+  **Il conto da saper rifare**: 100 auto, 50 di alta qualità (A) e 50 bidoni (B). Il venditore sa quale ha in mano, il compratore no. Disponibilità a pagare: **2.400** per una A, **1.200** per una B; prezzi minimi di vendita: **2.000** per una A, **1.000** per una B (per ogni tipo, singolarmente, lo scambio sarebbe vantaggioso). Ma per un'auto di **qualità ignota** il compratore è disposto a pagare al più il valore atteso:
+  **2.400 × 0,5 + 1.200 × 0,5 = 1.800 < 2.000**
+  Sotto il prezzo minimo del venditore di un'auto buona → **le auto di alta qualità escono dal mercato** e restano solo i bidoni, scambiati fra 1.000 e 1.200. L'asimmetria informativa ha distrutto metà degli scambi vantaggiosi.
 - **Azzardo morale**: asimmetria **successiva** al contratto → esempio: assicurazione, che aumenta la probabilità di comportamenti rischiosi (es. mercato assicurativo, uso eccessivo di assistenza sanitaria).
 - Esempio sanità: la selezione avversa fa sì che solo chi si aspetta spese elevate si assicuri, facendo salire il premio e restringendo ulteriormente il mercato (spirale); un'assicurazione pubblica universale **risolve la selezione avversa** ma **non l'azzardo morale** (soluzioni per quest'ultimo: ticket/franchigia, gatekeeping del medico di famiglia).
 
@@ -1590,7 +2013,7 @@ La domanda di moneta aumenta (690 > 680): coerente con la pendenza negativa dell
 
 - **Beni meritori**: lo Stato ne vuole imporre/impedire il consumo **al di là delle preferenze individuali** anche in presenza di efficienza paretiana (paternalismo, deviazione dal welfarismo). Esempi: casco obbligatorio, divieto di fumo nei locali pubblici, educazione fisica a scuola.
 - **Innovazione (efficienza dinamica)**: la concorrenza perfetta assicura l'efficienza statica, ma il **monopolio temporaneo da brevetto** incentiva l'investimento in R&S (maggiori profitti attesi → più innovazione).
-- **Fallimenti dello Stato**: l'intervento pubblico reale può discostarsi da quello ideale per **informazioni incomplete**, **opportunismo** di politici/burocrati (obiettivi propri: rielezione, potere), **ricerca della rendita** (lobbying, cattura del regolatore).
+- **Fallimenti dello Stato**: l'intervento pubblico reale può discostarsi da quello ideale per **informazioni incomplete**, **opportunismo** di politici/burocrati (obiettivi propri: rielezione, potere), **ricerca della rendita** (lobbying, cattura del regolatore). → Trattati per esteso nello [schema 12](12-fallimenti-stato-political-economy.md), insieme al ciclo politico-economico di Nordhaus e alla corruzione.
 
 ---
 
@@ -1661,6 +2084,323 @@ La domanda di moneta aumenta (690 > 680): coerente con la pendenza negativa dell
 <div class="pagebreak"></div>
 
 
+# La valutazione dei progetti pubblici e l'analisi costi-benefici
+
+**Domande d'esame collegate:** Calcolo del VAN (assoluto e relativo) di due progetti alternativi e scelta motivata · Calcolo del TIR e criterio di ammissibilità · "Che cosa sono i prezzi ombra e perché si usano?" · Differenze fra calcolo sociale e calcolo privato · Le fasi della scelta di un progetto pubblico · Come si valutano i beni non scambiati sul mercato
+
+> **Nota sulle fonti.** Interamente dalle slide della professoressa (cap. 1, "La valutazione dei progetti pubblici" e "L'analisi costi-benefici"). È un argomento **da esercizio numerico**: la parte teorica serve, ma la domanda tipica è un calcolo.
+
+---
+
+## **1. Il problema: quali progetti finanziare**
+
+- Prima di intervenire, i policy maker devono **valutare i potenziali progetti pubblici**: investimenti, nuovi servizi, regolamentazione.
+- Questi progetti comportano **benefici e costi non solo finanziari**, e devono tener conto di **tutti gli effetti sulla collettività** (non solo di quelli che passano per il bilancio pubblico).
+- Data la **scarsità delle risorse**, occorre decidere quali finanziare e in quale ordine.
+
+## **2. Le cinque fasi della scelta**
+
+Sono le stesse fasi di un imprenditore privato, ma con contenuti diversi (vedi §5):
+
+1. **Individuazione delle alternative** — incluso lo **status quo** (non fare nulla è sempre un'alternativa da valutare).
+2. **Individuazione delle conseguenze** di ogni progetto in **termini fisici** (quantità di input e output) e **per ogni periodo futuro**.
+3. **Valutazione di costi e benefici** in termini monetari.
+4. **Attualizzazione** di costi e benefici (renderli confrontabili riportandoli a oggi).
+5. **Calcolo del tasso di rendimento atteso** → si sceglie il progetto con il rendimento più alto.
+
+## **3. L'analisi costi-benefici (ACB): il VAN**
+
+**Notazione:**
+
+| Simbolo | Significato |
+|---|---|
+| **b_t** | Beneficio del progetto al tempo t |
+| **c_t** | Costo del progetto al tempo t |
+| **i** | **Tasso di sconto sociale** |
+| **1/(1+i)** | **Fattore di sconto sociale** (per t periodi: 1/(1+i)^t) |
+
+**Le formule:**
+
+- **B = Σ₀ⁿ [ b_t / (1+i)^t ]** → somma dei valori attuali dei **benefici**
+- **C = Σ₀ⁿ [ c_t / (1+i)^t ]** → somma dei valori attuali dei **costi**
+- **VAN = B − C** → **valore attuale netto assoluto**
+- **VAN_r = (B − C) / C** → **valore attuale netto relativo**
+
+**I due criteri:**
+
+- **Criterio di ammissibilità**: sono ammissibili i progetti con **VAN > 0**.
+- **Criterio di scelta**: fra i progetti ammissibili si sceglie quello con il **VAN più alto**.
+
+**Due avvertenze che valgono punti all'esame:**
+
+1. Il **VAN relativo** serve a **neutralizzare l'effetto dimensione**: un progetto grande ha quasi sempre un VAN assoluto più alto, ma non è detto che renda di più per euro speso. Se il VAN assoluto è positivo lo è anche quello relativo, **ma la graduatoria dei progetti secondo i due criteri può essere diversa** (lo si vede nell'esercizio).
+2. Il valore del VAN **dipende dal tasso di sconto adottato**: cambiando i, il segno e l'ordine dei progetti possono cambiare.
+
+## **4. Il tasso interno di rendimento (TIR)**
+
+**Definizione**: il TIR è il valore di **i** che rende **B − C = 0**, cioè che annulla il VAN:
+
+**Σ₀ⁿ [ b_t/(1+i)^t ] − Σ₀ⁿ [ c_t/(1+i)^t ] = 0**
+
+È quindi il tasso al quale benefici e costi attualizzati del progetto **si equivalgono**: il "rendimento interno" del progetto.
+
+- **Criterio di ammissibilità**: **TIR > tasso di interesse di mercato** (o del tasso di sconto sociale) → il progetto conviene rispetto agli investimenti alternativi.
+- **Criterio di scelta**: il progetto con il **TIR più alto**.
+
+**Relazione fra VAN e TIR** (utile per controllarsi negli esercizi): se il TIR è maggiore del tasso di sconto usato, il VAN calcolato a quel tasso è **positivo**; se è minore, è **negativo**. Se sono uguali, il VAN è zero.
+
+## **5. Calcolo sociale e calcolo privato: le tre differenze**
+
+Il policy maker deve tener conto di ciò che l'imprenditore privato ignora:
+
+| Differenza | Contenuto |
+|---|---|
+| **Effetti diretti e indiretti** | In particolare le **esternalità** (positive e negative) prodotte dal progetto. Esempio della metropolitana: effetti **diretti** = acquisto di cemento, ferro, lavoro (input) e maggiore disponibilità di trasporto (output); effetti **indiretti** = riduzione del traffico di superficie e della congestione in altri mercati |
+| **Costi e benefici incommensurabili e intangibili** | Non esistono prezzi di mercato per qualità della vita, salute, ambiente |
+| **Effetti distorsivi** | Il progetto stesso può modificare l'offerta e quindi i prezzi |
+
+## **6. I prezzi ombra**
+
+**Perché servono**: i prezzi di mercato spesso **non sono affidabili** per valutare costi e benefici, per tre ragioni:
+
+- sono **influenzati dal progetto stesso**, se di grandi dimensioni;
+- i mercati possono essere **distorti** (es. in monopolio, dove P > MC);
+- possono essere influenzati dalla **distribuzione dei redditi**.
+
+**Definizione**: il **prezzo ombra** (o sociale) esprime il **costo-opportunità**, cioè il valore del prodotto ottenibile impiegando le risorse in progetti alternativi ai quali si rinuncia per realizzare quello in esame.
+
+- I prezzi ombra corrispondono ai prezzi che si formerebbero in **mercati di concorrenza perfetta e completi** — quelli che rilevano correttamente la scarsità.
+- Analogamente, il **tasso di sconto sociale** può differire da quello di mercato: per esempio, uno Stato che tiene conto delle **generazioni future** adotterà un tasso più basso, dando più peso ai benefici lontani nel tempo.
+
+**In sintesi, l'ACB si distingue dall'analisi di redditività privata per due ragioni:**
+
+1. include fra costi e benefici anche quelli che ricadono su **soggetti diversi** da chi realizza il progetto (esternalità);
+2. valuta i costi come **costo-opportunità**, usando **prezzi ombra** al posto dei prezzi di mercato (e un tasso di sconto "ombra" per l'attualizzazione).
+
+## **7. I beni non scambiati sul mercato** *(integrazione dal manuale)*
+
+Alcuni beni non hanno prezzo e vanno comunque valutati:
+
+| Bene | Metodo di valutazione |
+|---|---|
+| **Valore della vita umana** | **QALY** (*Quality-Adjusted Life Years*): indice che pondera l'aspettativa di vita per la qualità (mobilità, assenza di dolore). In alternativa, dal mercato del lavoro: **flusso attualizzato dei redditi futuri** persi, oppure **preferenze rivelate** |
+| **Danno ambientale** | Costo da sostenere per riportare la situazione allo stato pre-intervento (metodologia **V.I.A.**, valutazione di impatto ambientale) |
+| **Tempo libero** | Costo-opportunità del tempo sottratto |
+| **Effetti redistributivi** | Rientrano come questione di **equità**, non riducibile a un prezzo |
+
+**L'esempio delle preferenze rivelate**: dall'altra parte della strada c'è una borsa con 1 milione di euro; attraversare comporta l'1% di probabilità di essere investiti e morire. Se accettate il rischio, **per voi stessi la vostra vita non vale più di 100 milioni** (1 milione ÷ 0,01). Il metodo mostra sia la logica sia il suo limite etico: chi ha il diritto di esprimere quel giudizio, e vale per tutti allo stesso modo?
+
+---
+
+## **Esercizio tipo svolto**
+
+**Testo.** Un comune deve scegliere tra due progetti alternativi. Il **tasso di sconto sociale è i = 5%**. I flussi (in migliaia di euro) sono:
+
+| Progetto | c₀ (costo, t=0) | b₁ (beneficio, t=1) | b₂ (beneficio, t=2) |
+|---|---|---|---|
+| **A** — linea tranviaria | 1.000 | 550 | 605 |
+| **B** — rete ciclabile | 300 | 180 | 180 |
+
+Si chiede di: (a) calcolare B, C e il **VAN assoluto** dei due progetti; (b) calcolare il **VAN relativo**; (c) calcolare il **TIR** di entrambi; (d) scegliere motivando, e verificare che cosa succede se il tasso di sconto sale al 12%.
+
+---
+
+### **(a) Valore attuale netto assoluto**
+
+Il costo è **tutto al tempo 0**, quindi non va attualizzato: C = c₀.
+
+**Progetto A**
+B = 550/1,05 + 605/(1,05)² = 550/1,05 + 605/1,1025 = 523,81 + 548,75 = **1.072,56**
+C = **1.000**
+**VAN_A = 1.072,56 − 1.000 = +72,56**
+
+**Progetto B**
+B = 180/1,05 + 180/1,1025 = 171,43 + 163,27 = **334,69**
+C = **300**
+**VAN_B = 334,69 − 300 = +34,69**
+
+Entrambi sono **ammissibili** (VAN > 0). Sul criterio del VAN assoluto **vince A**.
+
+### **(b) Valore attuale netto relativo**
+
+VAN_r = (B − C)/C
+
+- **A**: 72,56 / 1.000 = 0,0726 → **7,26%**
+- **B**: 34,69 / 300 = 0,1156 → **11,56%**
+
+**Sul criterio del VAN relativo vince B.** È esattamente il caso in cui **le due graduatorie divergono**: A produce più valore in assoluto, ma B ne produce di più **per ogni euro investito**. Con risorse illimitate si sceglie A; con un vincolo di bilancio stringente (o potendo replicare B più volte) conviene B.
+
+### **(c) Tasso interno di rendimento**
+
+Si pone VAN = 0 e si risolve in i. Con due periodi si ottiene un'equazione di secondo grado: posto **y = 1 + i**,
+
+**Progetto A**: 1.000·y² = 550·y + 605 → 1.000y² − 550y − 605 = 0 → 200y² − 110y − 121 = 0
+y = [110 ± √(110² + 4·200·121)] / (2·200) = [110 ± √(12.100 + 96.800)] / 400 = [110 ± 330] / 400
+y = 440/400 = **1,10** → **TIR_A = 10%**
+
+*(verifica: 550/1,10 = 500 e 605/1,21 = 500, somma 1.000 = C ✓ il VAN si annulla esattamente)*
+
+**Progetto B**: 300·y² = 180·y + 180 → 5y² − 3y − 3 = 0
+y = [3 ± √(9 + 60)] / 10 = [3 ± 8,307] / 10 = **1,1307** → **TIR_B ≈ 13,1%**
+
+Entrambi ammissibili (TIR > i = 5%); **sul criterio del TIR vince B**, coerentemente con il VAN relativo.
+
+### **(d) Che cosa cambia con i = 12%**
+
+**A**: B = 550/1,12 + 605/1,2544 = 491,07 + 482,30 = 973,37 → **VAN_A = −26,63 < 0 → non ammissibile**
+**B**: B = 180/1,12 + 180/1,2544 = 160,71 + 143,49 = 304,21 → **VAN_B = +4,21 > 0 → ammissibile**
+
+**Commento finale.** Il risultato conferma i due punti teorici del §3-4:
+
+- il **VAN dipende dal tasso di sconto**: alzandolo, i benefici futuri pesano meno e A — che ha i benefici più lontani e un costo iniziale più alto — diventa non conveniente, mentre B resiste;
+- il segno del VAN è **coerente con il TIR**: A ha TIR 10% < 12% → VAN negativo; B ha TIR 13,1% > 12% → VAN positivo. Il confronto fra TIR e tasso di sconto dice il segno del VAN **senza doverlo ricalcolare**.
+
+**Da dire sempre nel commento**: la scelta finale non è solo aritmetica. Vanno considerati gli **effetti indiretti** (decongestione, inquinamento evitato), i **benefici intangibili** (salute, qualità della vita) e gli **effetti redistributivi** — e se i prezzi usati non riflettono i valori sociali, l'intero calcolo andrebbe rifatto con i **prezzi ombra**.
+
+
+
+<div class="pagebreak"></div>
+
+
+# I fallimenti dello Stato e la political economy
+
+**Domande d'esame collegate:** "Che cosa si intende per fallimenti dello Stato?" · Le tre cause dei fallimenti dello Stato · "Che cos'è il ciclo politico-economico?" (Nordhaus) · La relazione elettori-politici-burocrati come problema di agenzia · Lobbying, ricerca della rendita e corruzione: effetti sulla crescita · Differenza tra teoria normativa e political economy
+
+> **Nota sulle fonti.** Sezioni 1-4 dalle slide della professoressa (2.7, slide 15-17). Sezioni 5-7 (ciclo di Nordhaus, doppio problema di agenzia, effetti della corruzione) dal manuale Paesani cap. 5.
+
+---
+
+## **1. Perché il capitolo esiste: il presupposto che salta**
+
+La **teoria normativa** ([schema 11](11-teoria-normativa-obiettivi-strumenti.md)) assume che i policy maker:
+
+- abbiano l'obiettivo di raggiungere il **massimo benessere sociale**;
+- assumano **sempre** le scelte e i comportamenti che assicurano il raggiungimento di quell'obiettivo.
+
+L'evidenza mostra però che:
+
+- i policy maker **non sempre perseguono il massimo benessere sociale**, ma hanno obiettivi propri (rielezione, potere, contributi monetari);
+- gli **esiti effettivi** delle politiche non sono quelli desiderati, per mancanza di informazioni e competenze adeguate.
+
+Cade quindi l'ipotesi del **pianificatore benevolente e onnisciente**, e con essa la simmetria del ragionamento: se studiamo i fallimenti del *mercato* per giustificare l'intervento pubblico, dobbiamo studiare anche i fallimenti dell'**intervento pubblico** prima di invocarlo.
+
+## **2. Definizione: i «fallimenti dello Stato» (o del non-mercato)**
+
+Si ha un fallimento dello Stato quando:
+
+- l'intervento pubblico **"reale" non corrisponde a quello "ideale"**;
+- non realizza l'interesse della collettività ma **persegue obiettivi diversi**;
+- i risultati sono **peggiori in termini di efficienza e/o equità**.
+
+**I quattro esempi da citare:**
+
+| Esempio | In che cosa consiste il fallimento |
+|---|---|
+| **Politiche redistributive regressive** | Redistribuiscono, ma **non a vantaggio dei poveri** (i benefici finiscono a chi ha più voce politica) |
+| **Imposte pigouviane che non rimuovono l'esternalità** | Aliquota fissata male perché il regolatore non conosce il costo marginale sociale (vedi [schema 08](08-esternalita-fallimenti-mercato.md)) |
+| **«Cattura» del regolatore** | Il regolatore finisce per operare nell'interesse dei **regolati** anziché dei consumatori |
+| **Politiche macroeconomiche che accentuano l'instabilità** | È il **ciclo politico-economico** (sezione 5) |
+
+## **3. Le tre cause dei fallimenti dello Stato**
+
+È la classificazione più probabile come domanda secca. **Sono tre:**
+
+### **a) Informazioni incomplete**
+
+Politici e burocrati non dispongono di tutte le informazioni sulle variabili rilevanti per definire e realizzare un intervento utile ed efficace. Tre casi tipici:
+
+- **individuazione dei beneficiari** delle politiche redistributive;
+- **conoscenza dei costi marginali** necessari a fissare correttamente le tasse pigouviane;
+- **mancata previsione delle reazioni degli agenti economici** → è qui che rientra l'**incoerenza temporale** ([schema 11](11-teoria-normativa-obiettivi-strumenti.md), §11).
+
+### **b) Opportunismo**
+
+Comportamenti finalizzati a ottenere vantaggi per sé anziché perseguire l'interesse collettivo, **anche in contrasto con norme morali o di legge**, e anche a costo di addossare i costi sulla collettività.
+
+- Si declina nelle stesse due forme dell'informazione asimmetrica: **selezione avversa** e **azzardo morale** (vedi [schema 08](08-esternalita-fallimenti-mercato.md)).
+- **Esempio con obiettivo rielezione**: scegliere interventi a favore dei gruppi che "premiano con il voto" — elettori **meno ideologizzati** (il cui voto è realmente contendibile), **minoranze con preferenze forti** (*single-issue voters*), **gruppi di interesse** che finanziano la campagna elettorale.
+- **Due cause dell'opportunismo**:
+  1. **selezione**: nel settore pubblico si concentrano persone inclini a cercare il proprio vantaggio — "la politica e il settore pubblico attraggono i peggiori"; elezioni e carriere nella PA non riescono a **escludere** gli opportunisti;
+  2. **mancanza di regole e istituzioni** efficaci nel sanzionare e scoraggiare quei comportamenti.
+- **Attenzione (punto sfumato, buono per l'orale)**: l'opportunismo esiste **anche nel settore privato**. La domanda vera è se le sanzioni del mercato siano più efficaci di quelle elettorali: a differenza dei consumatori, gli **elettori sono poco informati, miopi e influenzabili**, e il voto è un segnale molto più grossolano di un acquisto.
+
+### **c) Ricerca della rendita (*rent seeking*)**
+
+Poiché politici e burocrati esercitano un **potere discrezionale**, i gruppi di interesse cercano di influenzarne le decisioni a proprio vantaggio: **lobbying** o, nei casi estremi, **corruzione**.
+
+## **4. Che cos'è la political economy**
+
+La *political economy* (o teoria positiva della politica economica) definisce la politica economica come un **gioco fra quattro tipi di attori**:
+
+**cittadini/elettori · politici e partiti · gruppi di interesse (lobbies) · burocrati**
+
+- L'equilibrio del gioco **riflette il conflitto economico tra gruppi eterogenei**: le politiche adottate rispecchiano l'influenza politica relativa dei diversi gruppi.
+- I politici **non sono benevolenti**: hanno obiettivi propri, primo fra tutti essere rieletti.
+
+## **5. Il ciclo politico-economico (Nordhaus)** *(manuale)*
+
+**Le quattro ipotesi del modello:**
+
+1. L'obiettivo dei politici è **essere rieletti**, e usano le politiche macroeconomiche a questo scopo.
+2. Gli elettori sono più sensibili a **reddito e disoccupazione** che all'inflazione.
+3. Vale una **curva di Phillips inclinata negativamente** con **aspettative adattive**: il governo può muoversi lungo la curva nel breve periodo.
+4. Gli elettori sono **miopi**: votano sulla base della situazione economica **presente**, senza curarsi di quella futura (in un boom il policy maker è giudicato capace e rieletto).
+
+**La dinamica:**
+
+- **Prima delle elezioni** → politiche **espansive**: il reddito aumenta, la disoccupazione cala, il governo si presenta al voto in una fase favorevole.
+- **Dopo le elezioni** → l'inflazione sale e la curva di Phillips si sposta verso l'alto; servono politiche **restrittive** per riportarla giù, che però rallentano il reddito e fanno risalire la disoccupazione.
+
+**Risultato: l'economia è resa instabile dal ciclo elettorale.** È il caso in cui la politica economica, anziché stabilizzare, **è essa stessa la fonte dell'instabilità** — l'argomento più forte a favore delle **regole** contro la discrezionalità ([schema 11](11-teoria-normativa-obiettivi-strumenti.md), §13).
+
+## **6. Il doppio problema di agenzia** *(manuale)*
+
+La relazione **elettori → politici** è una relazione **principale-agente** (vedi [schema 08](08-esternalita-fallimenti-mercato.md)): il **principale** (elettore) delega un compito all'**agente** (politico), ma gli obiettivi dell'agente possono non coincidere con i suoi, e il principale non osserva pienamente né le caratteristiche né le azioni dell'agente.
+
+La delega però è **doppia**:
+
+**elettori → politici** (scelte di politica economica) **→ burocrati** (attuazione degli interventi)
+
+Ogni passaggio aggiunge un problema di agenzia e quindi di opportunismo. Le soluzioni possibili stanno nelle **regole e istituzioni** capaci di sanzionare e scoraggiare i comportamenti opportunistici, e nel disegno dei **sistemi elettorali** (proporzionale vs maggioritario: quale seleziona meglio?).
+
+## **7. Lobbying e corruzione** *(manuale)*
+
+**I gruppi di interesse hanno due obiettivi:**
+
+1. **Fornire informazioni ai politici** su materie che conoscono meglio di loro — questa è la faccia **potenzialmente utile** del lobbying;
+2. **Fare pressione**: per far eleggere certi politici (contributi alle campagne elettorali) o per influenzare le decisioni di quelli già eletti.
+
+**Corruzione** = pagamento di una **tangente** a un politico o a un burocrate per ottenere una decisione favorevole. In sostanza, **il corruttore compra dal corrotto una decisione a cui non avrebbe diritto**.
+
+**Perché ostacola la crescita economica** (quattro canali):
+
+| Canale | Meccanismo |
+|---|---|
+| **Ostacola la nascita di nuove imprese** | Burocrazia appesantita dalla corruzione → scoraggia l'ingresso di nuovi operatori (effetto simile a una **barriera all'entrata**, vedi [schema 03](03-concorrenza-imperfetta-monopolio.md)) |
+| **Scoraggia gli investimenti esteri** | Incertezza sui costi occulti e sull'applicazione delle regole |
+| **Penalizza l'innovazione** | Se ottenere un brevetto richiede tangenti, il rendimento atteso della R&S si riduce |
+| **Comporta costi diretti** | Tempo e risorse assorbiti dall'attività di pressione, sottratti alla produzione |
+
+La tangente in sé è un **trasferimento** (ha effetti distributivi), ma i quattro canali qui sopra sono **perdite secche** per il sistema.
+
+---
+
+## **Sintesi da ricordare**
+
+| | Fallimenti del **mercato** | Fallimenti dello **Stato** |
+|---|---|---|
+| **Chi fallisce** | Il meccanismo dei prezzi | L'intervento pubblico |
+| **Cause** | Mercati non concorrenziali · mercati incompleti (esternalità, beni pubblici, costi di transazione, asimmetrie informative) · bisogni meritori, innovazione, equità | Informazioni incomplete · opportunismo · ricerca della rendita |
+| **Rimedio proposto** | Intervento pubblico | Regole, istituzioni, trasparenza, indipendenza delle autorità, vincoli al potere discrezionale |
+| **Schema** | [08](08-esternalita-fallimenti-mercato.md) e [03](03-concorrenza-imperfetta-monopolio.md) | questo |
+
+**Il punto da non perdere**: l'esistenza di un fallimento del mercato è condizione **necessaria ma non sufficiente** per giustificare l'intervento pubblico. Va confrontato l'esito del mercato imperfetto con l'esito dell'intervento **realistico** — non con quello ideale.
+
+
+
+<div class="pagebreak"></div>
+
+
 # Crescita e sviluppo economico
 
 **Domande d'esame collegate:** nessuna trovata nei compiti passati analizzati — argomento a bassa priorità, copertura di sicurezza
@@ -1694,6 +2434,16 @@ La domanda di moneta aumenta (690 > 680): coerente con la pendenza negativa dell
   - **Y > Y_p** → fase di espansione; **Y < Y_p** → recessione.
 
 - **Tasso di crescita γ**: variazione percentuale del PIL reale tra due periodi: **γ = (Y_t − Y_{t-1}) / Y_{t-1}**. Obiettivo di politica economica: **γ > 0** (crescita); stagnazione/recessione = problemi da correggere.
+
+### La legge di Okun
+
+Mette in relazione la **disoccupazione ciclica** (u − u*, scarto tra disoccupazione effettiva e disoccupazione di pieno impiego, cioè quella solo frizionale) e l'**output gap** (Y* − Y).
+
+**Contenuto**: per ridurre il tasso di disoccupazione di **1 punto percentuale**, il prodotto deve crescere **oltre** il prodotto potenziale in misura **più che proporzionale — di circa il 2,5%**.
+
+**Perché più che proporzionale** (è il punto da spiegare, non solo il numero): perché nel frattempo crescono anche la **popolazione** e la **produttività**. Il reddito deve aumentare più della somma di queste due crescite prima di iniziare ad assorbire disoccupazione: una parte della crescita serve solo a "stare fermi". Ne segue che **una crescita positiva ma modesta può convivere con disoccupazione crescente**.
+
+> ⚠️ Da non confondere con l'**indice di malessere di Okun** ([schema 11](11-teoria-normativa-obiettivi-strumenti.md), §4), che è la funzione di benessere sociale W = ṗ + u. Stesso autore, due cose diverse.
 
 ## 3. **Crescita economica vs sviluppo — la distinzione chiave**
 
@@ -1881,3 +2631,374 @@ Tre settori produttivi: Agricoltura (produzione 200, consumi intermedi 50), Indu
     4. **Discriminazione intersezionale** inclusa per la prima volta nell'ambito di applicazione.
 
 - Piano italiano (pariopportunita.gov.it): target ridurre gender pay gap privato dal ~17% al ~10%, per i laureati dal ~22% a <15%; misure principali: definizione normativa del GPG, sistemi di misurazione dell'equal pay aziendale, policy di genere per le imprese, incremento indennità congedi parentali, microcredito per donne a basso reddito/vittime di violenza/madri sole, riduzione del pension gap da maternità.
+
+
+
+<div class="pagebreak"></div>
+
+
+# Il sistema monetario internazionale
+
+**Domande d'esame collegate:** Vantaggi e svantaggi dei cambi fissi rispetto ai cambi flessibili · "Che cos'è il sistema aureo?" · "Che cos'è il dilemma di Triffin?" · Bretton Woods e la fine della convertibilità del dollaro
+
+> ⚠️ **Nota sulle fonti — leggere.** Questo schema è l'unico della dispensa che **non trova riscontro nei PDF del corso** in nostro possesso: viene dal manuale di riferimento (Paesani, cap. 16) tramite appunti di terzi. Trattarlo come **copertura di sicurezza per la preselezione** — definizioni e nomi, non profondità. Se il tempo è poco, è il primo schema da sacrificare.
+>
+> Il resto dell'economia aperta (bilancia dei pagamenti, tasso di cambio, regimi, Mundell-Fleming, Marshall-Lerner) sta nello [schema 06](06-economia-aperta-bilancia-pagamenti.md), che è invece pienamente coperto dalle fonti della docente.
+
+---
+
+## **1. Definizione**
+
+Il **sistema monetario internazionale** è l'insieme delle **regole che disciplinano gli aspetti monetari delle relazioni internazionali**: come si determinano i cambi, quali attività fungono da riserva, quali obblighi hanno le banche centrali.
+
+## **2. Cambi flessibili: pro e contro**
+
+| Vantaggi | Svantaggi |
+|---|---|
+| Assicurano il **riequilibrio automatico** di domanda e offerta di valuta, attraverso le oscillazioni del cambio (e quindi della bilancia dei pagamenti) | **Incertezza** sui tassi di cambio e sui prezzi internazionali → ostacolo agli scambi di merci e di capitali |
+| **Eliminano la necessità di interventi pubblici** e di accumulare riserve di valuta estera per fronteggiare squilibri futuri | Nella realtà le difficoltà di riequilibrio automatico portano alla **"fluttuazione sporca"** (*dirty floating*): la banca centrale interviene comunque |
+| **Riducono** la speculazione sui cambi | …ma non la **annullano** |
+
+## **3. Cambi fissi: pro e contro**
+
+| Vantaggi | Svantaggi |
+|---|---|
+| **Impediscono alle imprese di aumentare i prezzi più dell'inflazione estera**: per restare competitive devono ridurre i costi → spinta all'**efficienza statica e dinamica** | Con **alta mobilità dei capitali**, il tasso di interesse interno resta **legato a quello estero**: la politica monetaria perde autonomia |
+| **Costringono i policy maker ad adottare politiche per la competitività** (non potendo svalutare) | Richiedono **riserve ufficiali** per difendere la parità, e la difesa può fallire (attacchi speculativi) |
+| Eliminano l'incertezza sul cambio, favorendo commercio e investimenti | L'aggiustamento degli squilibri ricade su **prezzi e redditi** (quindi su occupazione), non sul cambio |
+
+**Il collegamento da fare** con lo [schema 06](06-economia-aperta-bilancia-pagamenti.md): la scelta del regime di cambio determina **quale politica è efficace**. In cambi fissi con alta mobilità dei capitali è efficace la **politica fiscale** e inefficace quella **monetaria**; in cambi flessibili vale l'opposto. È il risultato centrale del modello **Mundell-Fleming**.
+
+## **4. Il sistema aureo (*gold standard*)**
+
+Si definisce il **contenuto aureo** dell'unità monetaria di ciascun paese. Caratteristiche:
+
+- La banca centrale detiene **riserve in oro pari alla quantità di moneta emessa**;
+- La moneta legale è **convertibile in oro**;
+- I cambi sono **(sostanzialmente) fissi**, perché derivano dal rapporto tra i contenuti aurei delle due monete.
+
+## **5. Il sistema a cambio aureo (*gold exchange standard*) e Bretton Woods**
+
+Un paese (il paese 1) adotta il gold standard; gli altri paesi:
+
+- **fissano la parità aurea** della propria moneta;
+- usano la **moneta del paese 1 come riserva** a fronte dell'emissione di moneta legale;
+- possono **convertire** la propria moneta nella valuta di riserva;
+- i cambi sono **fissi ma aggiustabili**.
+
+È l'assetto del sistema nato a **Bretton Woods nel 1944** (FMI), con il **dollaro** come valuta di riserva. Ha funzionato come gold exchange standard **fino al 1971**, quando gli Stati Uniti hanno dichiarato l'**inconvertibilità del dollaro** in oro. Da allora si è passati ai **cambi flessibili**.
+
+## **6. Il dilemma di Triffin**
+
+È il **difetto strutturale** del sistema a cambio aureo, e la domanda d'esame più probabile di questo schema.
+
+**Il problema**: la liquidità internazionale è costituita dalla valuta di riserva (il dollaro). Perché il commercio mondiale cresca, servono **sempre più dollari** all'estero — cioè disavanzi persistenti del paese emittente. Ma **se il contenuto in oro della moneta di riserva è mantenuto costante**, quei dollari in eccesso non sono più coperti dall'oro:
+
+- se il paese emittente **limita** l'emissione per mantenere la credibilità della conversione → **il sistema non fornisce liquidità internazionale sufficiente**;
+- se **emette abbastanza** liquidità → la **convertibilità diventa insostenibile** e la fiducia crolla.
+
+**È un dilemma perché le due esigenze — liquidità sufficiente e credibilità della conversione — sono in contraddizione**. Nel 1971 la contraddizione si è sciolta nel modo prevedibile: sospendendo la convertibilità.
+
+
+
+<div class="pagebreak"></div>
+
+
+# Banca domande per la preselezione
+
+**Come usarla.** La preselezione è **11 domande a risposta multipla in 10 minuti**, superata con **almeno 6 risposte corrette**: circa **55 secondi a domanda**. Non è una prova di ragionamento, è una prova di **richiamo immediato**. Queste 68 domande coprono tutti e 14 gli argomenti della dispensa, comprese le zone che nei compiti passati non erano mai comparse.
+
+**Metodo consigliato:** prima passata a libro aperto per fissare le definizioni; seconda passata a libro chiuso, argomento per argomento; poi le **tre simulazioni cronometrate** in fondo (11 domande, timer a 10 minuti, nessuna pausa). Se in una simulazione fai meno di 8/11, il problema non è la fortuna: rileggi gli schemi delle domande sbagliate.
+
+Le risposte sono raccolte **in fondo**, con il rimando allo schema: non sbirciare prima di aver risposto a tutto il blocco.
+
+---
+
+## Blocco 1 — Politica fiscale, bilancio pubblico e debito
+
+**1.** Il saldo primario è definito come:
+A) T − (G + INT) · B) T − G · C) Entrate correnti − Spese correnti · D) G + INT − T
+
+**2.** Il teorema di Haavelmo afferma che il moltiplicatore del bilancio in pareggio è pari a:
+A) 1/(1−c) · B) c/(1−c) · C) 1 · D) 0
+
+**3.** Il teorema di Haavelmo **non vale** più quando:
+A) l'economia è aperta · B) l'imposta è proporzionale al reddito · C) la politica monetaria è accomodante · D) esiste un avanzo primario
+
+**4.** Il rapporto debito/PIL è sostenibile (non crescente, con saldo primario nullo) se:
+A) il tasso di interesse nominale è inferiore all'inflazione · B) il tasso di interesse reale è inferiore al tasso di crescita reale del PIL · C) il saldo di bilancio è in pareggio · D) il debito è interamente detenuto da residenti
+
+**5.** Il drenaggio fiscale (*fiscal drag*) consiste in:
+A) l'aumento del prelievo reale dovuto alla crescita del reddito solo nominale con aliquote progressive non indicizzate · B) la fuga di capitali verso l'estero per motivi fiscali · C) la riduzione del gettito dovuta all'evasione · D) il trasferimento del carico fiscale dai lavoratori autonomi ai dipendenti
+
+**6.** Quale dei seguenti **non** è uno stabilizzatore automatico?
+A) I sussidi di disoccupazione · B) L'imposizione progressiva · C) Un provvedimento di aumento della spesa per investimenti pubblici · D) Nessuno dei precedenti è uno stabilizzatore automatico
+
+## Blocco 2 — Inflazione e curva di Phillips
+
+**7.** L'inflazione da costi si rappresenta graficamente come:
+A) spostamento della domanda aggregata verso destra · B) spostamento dell'offerta aggregata verso sinistra · C) spostamento di entrambe verso destra · D) rotazione della curva di offerta
+
+**8.** Secondo Friedman e Phelps, nel lungo periodo la curva di Phillips è:
+A) inclinata negativamente · B) inclinata positivamente · C) verticale in corrispondenza del tasso di disoccupazione naturale · D) orizzontale
+
+**9.** La lettura della curva di Phillips come "menù di scelta" per il policy maker implica che:
+A) si può ridurre la disoccupazione accettando più inflazione, muovendosi lungo la curva · B) inflazione e disoccupazione sono variabili indipendenti · C) la curva è verticale già nel breve periodo · D) si possono azzerare entrambe simultaneamente
+
+**10.** In un'inflazione **non anticipata**, chi è avvantaggiato?
+A) I creditori · B) I percettori di redditi fissi · C) I debitori · D) Chi detiene circolante
+
+**11.** I *menu costs* e gli *shoe-leather costs* sono costi tipici dell'inflazione:
+A) non prevista · B) anticipata · C) importata · D) da profitti
+
+**12.** Secondo il principio del costo pieno, il prezzo è fissato:
+A) uguagliando prezzo e costo marginale · B) applicando un *mark-up* al costo variabile unitario · C) in base alla sola elasticità della domanda · D) dal policy maker tramite price cap
+
+## Blocco 3 — Concorrenza imperfetta e monopolio
+
+**13.** L'indice di Lerner misura:
+A) la concentrazione del mercato · B) il potere di mercato, come (P − MC)/P · C) la disuguaglianza dei redditi · D) l'elasticità dell'offerta
+
+**14.** L'indice di Lerner è pari:
+A) all'elasticità della domanda al prezzo · B) all'inverso dell'elasticità della domanda al prezzo · C) al quadrato della quota di mercato · D) alla somma delle quote di mercato
+
+**15.** Un monopolio naturale è caratterizzato da:
+A) barriere legali all'entrata (brevetti) · B) rendimenti di scala crescenti e costo medio decrescente · C) prodotti differenziati · D) accordi collusivi tra poche imprese
+
+**16.** Se a un monopolista naturale si impone P = MC, l'impresa:
+A) realizza profitti nulli · B) subisce una perdita pari ai costi fissi · C) realizza profitti positivi · D) esce dal mercato immediatamente
+
+**17.** In un mercato **contendibile** l'equilibrio si calcola imponendo:
+A) P = MC · B) MR = MC · C) P = costo medio · D) P = MR
+
+**18.** L'articolo 102 del TFUE riguarda:
+A) le intese restrittive della concorrenza · B) l'abuso di posizione dominante · C) le concentrazioni e fusioni · D) gli aiuti di Stato
+
+## Blocco 4 — Economia del benessere
+
+**19.** Il teorema di impossibilità di Arrow afferma che:
+A) l'equilibrio concorrenziale è sempre un ottimo paretiano · B) non esiste una regola di aggregazione delle preferenze individuali che soddisfi contemporaneamente quattro proprietà desiderabili · C) ogni ottimo paretiano è raggiungibile con una redistribuzione iniziale · D) il criterio paretiano privilegia lo status quo
+
+**20.** La funzione di benessere sociale **rawlsiana**:
+A) somma le utilità individuali · B) massimizza l'utilità dell'individuo che sta peggio · C) moltiplica le utilità individuali · D) ignora completamente l'equità
+
+**21.** Il **secondo** teorema dell'economia del benessere implica una divisione dei compiti per cui:
+A) allo Stato l'allocazione, al mercato la redistribuzione · B) allo Stato la redistribuzione, al mercato l'allocazione · C) entrambi i compiti allo Stato · D) entrambi al mercato
+
+**22.** Il teorema del *second best* afferma che:
+A) è sempre preferibile soddisfare le condizioni di efficienza nel maggior numero possibile di mercati · B) se una condizione di efficienza non può essere soddisfatta, può essere preferibile allontanarsi dalle condizioni anche negli altri mercati · C) il secondo teorema del benessere non è dimostrabile · D) il monopolio è sempre preferibile alla concorrenza
+
+**23.** L'efficienza **adattiva** è una forma di:
+A) efficienza allocativa · B) efficienza statica · C) efficienza dinamica · D) equità
+
+## Blocco 5 — Mercato del lavoro
+
+**24.** Il tasso di disoccupazione ha come denominatore:
+A) la popolazione totale · B) la popolazione in età lavorativa · C) la forza lavoro · D) il numero degli occupati
+
+**25.** La disoccupazione **frizionale** è dovuta a:
+A) carenza di domanda aggregata · B) ostacoli all'incontro fra domanda e offerta di lavoro e mobilità insufficiente · C) fase discendente del ciclo economico · D) salari troppo elevati imposti dai sindacati
+
+**26.** La NASPI è un esempio di politica del lavoro:
+A) attiva microeconomica · B) passiva microeconomica · C) macroeconomica · D) di competitività
+
+**27.** Secondo la teoria **keynesiana**, la causa principale della disoccupazione è:
+A) un salario reale troppo elevato · B) la carenza di domanda aggregata · C) la rigidità dei prezzi verso l'alto · D) l'eccesso di offerta di moneta
+
+## Blocco 6 — Economia aperta e bilancia dei pagamenti
+
+**28.** Nella bilancia dei pagamenti, l'acquisto di titoli esteri da parte di residenti è una transazione:
+A) a credito · B) a debito · C) neutra · D) registrata solo nel conto capitale
+
+**29.** La condizione di Marshall-Lerner richiede che:
+A) |εx| + |εm| < 1 · B) |εx| + |εm| > 1 · C) εx = εm · D) εx · εm > 1
+
+**30.** La curva a J descrive:
+A) il peggioramento iniziale del saldo dei movimenti di beni dopo una svalutazione, seguito da un miglioramento · B) la relazione fra inflazione e disoccupazione · C) l'andamento del rapporto debito/PIL · D) la distribuzione cumulata del reddito
+
+**31.** In cambi **fissi** con **elevata mobilità dei capitali**, la politica monetaria è:
+A) molto efficace · B) inefficace, perché la difesa della parità annulla la variazione di base monetaria · C) efficace solo nel lungo periodo · D) efficace solo se accompagnata da dazi
+
+**32.** Secondo il principio dei costi comparati, a un paese con vantaggio assoluto in **entrambi** i beni:
+A) non conviene mai commerciare · B) conviene commerciare se la ragione di scambio internazionale è compresa fra le ragioni di scambio interne · C) conviene sempre l'autarchia · D) conviene produrre entrambi i beni e non esportare
+
+## Blocco 7 — Teorie macro, moneta e BCE
+
+**33.** La legge di Say afferma che:
+A) la domanda crea la propria offerta · B) l'offerta crea la propria domanda · C) la moneta non è neutrale · D) il risparmio è sempre uguale al consumo
+
+**34.** La domanda di moneta **speculativa** dipende:
+A) positivamente dal reddito · B) inversamente dal tasso di interesse · C) direttamente dal tasso di interesse · D) dal livello dei prezzi soltanto
+
+**35.** Il moltiplicatore monetario è pari a:
+A) 1/(h+j) · B) (1+h)/(h+j) · C) (h+j)/(1+h) · D) 1/j
+
+**36.** Con h = 0,2 e j = 0,1 il moltiplicatore monetario vale:
+A) 2 · B) 3 · C) 4 · D) 10
+
+**37.** Secondo la **nuova macroeconomia classica** (Lucas), la curva di Phillips è verticale:
+A) solo nel lungo periodo · B) anche nel breve periodo · C) mai · D) solo con aspettative adattive
+
+**38.** Il "divorzio" fra Banca d'Italia e Tesoro (1981) ha comportato:
+A) la fine dell'obbligo per la Banca d'Italia di acquistare i BOT non collocati in asta · B) l'ingresso dell'Italia nell'euro · C) l'abolizione della riserva obbligatoria · D) l'introduzione del price cap sulle tariffe
+
+## Blocco 8 — Esternalità e fallimenti del mercato
+
+**39.** In presenza di un'esternalità **negativa** di produzione, il mercato produce:
+A) una quantità inferiore a quella socialmente ottima · B) una quantità superiore a quella socialmente ottima · C) esattamente la quantità ottima · D) una quantità indeterminata
+
+**40.** La tassa pigouviana ottimale è pari:
+A) al costo marginale privato · B) alla differenza fra costo marginale sociale e costo marginale privato · C) al ricavo marginale · D) al costo medio
+
+**41.** I beni pubblici puri sono caratterizzati da:
+A) rivalità ed escludibilità · B) non rivalità e non escludibilità · C) non rivalità ed escludibilità · D) rivalità e non escludibilità
+
+**42.** Un bene **comune** (pascoli, riserve ittiche) è:
+A) escludibile e rivale · B) non escludibile e rivale · C) non escludibile e non rivale · D) escludibile e non rivale
+
+**43.** L'azzardo morale è un'asimmetria informativa che si manifesta:
+A) prima della stipula del contratto · B) dopo la stipula del contratto · C) solo nei mercati finanziari · D) solo in monopolio
+
+**44.** Secondo il teorema di Coase, in assenza di costi di transazione:
+A) l'esternalità si elimina solo con la tassazione · B) assegnando i diritti di proprietà le parti raggiungono un accordo efficiente, indipendentemente da chi li riceve · C) è sempre necessario l'intervento pubblico diretto · D) il risultato dipende necessariamente da chi riceve i diritti
+
+## Blocco 9 — Crescita e sviluppo
+
+**45.** Il PIL reale si distingue da quello nominale perché:
+A) include l'economia sommersa · B) valuta le quantità a prezzi costanti di un anno base · C) è calcolato al netto delle imposte · D) esclude i servizi
+
+**46.** Secondo la legge di Okun, per ridurre di 1 punto il tasso di disoccupazione il prodotto deve crescere sopra il potenziale di circa:
+A) 0,5% · B) 1% · C) 2,5% · D) 10%
+
+**47.** L'Indice di Sviluppo Umano (ISU) combina:
+A) reddito, inflazione e disoccupazione · B) longevità, scolarità e standard di vita · C) PIL, debito e deficit · D) Gini, povertà assoluta e top incomes
+
+**48.** Il PIL pro capite è un indicatore limitato di sviluppo soprattutto perché:
+A) non tiene conto della distribuzione del reddito · B) è espresso in valuta nazionale · C) non considera le esportazioni · D) è calcolato solo ogni cinque anni
+
+## Blocco 10 — Disuguaglianze e Stato sociale
+
+**49.** L'indice di Gini vale:
+A) 0 in caso di massima disuguaglianza e 1 in caso di massima uguaglianza · B) 0 in caso di massima uguaglianza e 1 in caso di massima disuguaglianza · C) sempre tra −1 e +1 · D) tra 0 e 100 per definizione
+
+**50.** La povertà **relativa** si misura:
+A) definendo un paniere di beni essenziali · B) rispetto alla distribuzione dei redditi (per l'UE, il 60% del reddito mediano equivalente) · C) contando i senza dimora · D) come quota di reddito del 10% più ricco
+
+**51.** Il modello di welfare **Bismarck** si basa su:
+A) fiscalità generale e copertura universale · B) assicurazione obbligatoria per i lavoratori, finanziata da contributi · C) prova dei mezzi e spesa minimale · D) sola assistenza privata
+
+**52.** La distinzione fra redistribuzione e **pre-distribuzione** sta nel fatto che la seconda:
+A) interviene sui redditi di mercato prima del prelievo (es. salario minimo) · B) avviene solo tramite imposte progressive · C) riguarda solo i trasferimenti in natura · D) è una redistribuzione fra generazioni
+
+## Blocco 11 — Teoria normativa: obiettivi e strumenti
+
+**53.** Gli elementi di un programma di politica economica sono:
+A) obiettivi, strumenti, modello · B) efficienza, equità, stabilità · C) allocazione, redistribuzione, stabilizzazione · D) entrate, spese, saldo
+
+**54.** La regola aurea di Tinbergen afferma che:
+A) il numero di strumenti deve essere almeno pari al numero di obiettivi · B) il bilancio deve essere in pareggio · C) l'inflazione deve restare sotto il 2% · D) ogni obiettivo richiede due strumenti
+
+**55.** Se gli strumenti sono **meno** degli obiettivi, il sistema è:
+A) sotto-determinato, con molteplici soluzioni · B) sovradeterminato, senza soluzione · C) sempre risolvibile · D) in equilibrio di Nash
+
+**56.** L'indice di malessere di Okun è dato da:
+A) ṗ − u · B) ṗ + u · C) ṗ × u · D) u/ṗ
+
+**57.** Il criterio dell'**assegnazione appropriata** prescrive di assegnare a ciascun obiettivo:
+A) lo strumento più economico · B) lo strumento su cui è relativamente più efficace · C) sempre la politica fiscale · D) due strumenti indipendenti
+
+**58.** Il problema dell'**incoerenza temporale** nasce quando:
+A) il policy maker non dispone di informazioni · B) al momento di attuare la politica annunciata, al policy maker conviene una condotta diversa · C) gli obiettivi sono più numerosi degli strumenti · D) i mercati sono incompleti
+
+## Blocco 12 — Fallimenti dello Stato
+
+**59.** Le tre cause dei fallimenti dello Stato sono:
+A) inflazione, disoccupazione, debito · B) informazioni incomplete, opportunismo, ricerca della rendita · C) esternalità, beni pubblici, asimmetrie informative · D) corruzione, evasione, elusione
+
+**60.** Il ciclo politico-economico di Nordhaus prevede che, **prima** delle elezioni, i governi attuino politiche:
+A) restrittive · B) espansive · C) neutrali · D) esclusivamente strutturali
+
+**61.** La "cattura del regolatore" indica:
+A) la nomina politica dei vertici delle autorità · B) il fatto che il regolatore finisce per operare nell'interesse dei soggetti regolati · C) l'accorpamento di due autorità di regolazione · D) la sanzione di un cartello
+
+**62.** La relazione fra elettori, politici e burocrati configura:
+A) un problema di esternalità · B) un doppio problema di agenzia · C) un monopolio naturale · D) un bene di club
+
+## Blocco 13 — Valutazione dei progetti pubblici
+
+**63.** Il criterio di ammissibilità di un progetto pubblico secondo l'ACB richiede:
+A) VAN > 0 · B) VAN < 0 · C) VAN = 0 · D) benefici lordi superiori a zero
+
+**64.** Il TIR è il tasso di sconto che:
+A) massimizza il VAN · B) rende il VAN pari a zero · C) è fissato dalla banca centrale · D) uguaglia benefici e costi non attualizzati
+
+**65.** Un progetto è ammissibile secondo il criterio del TIR se:
+A) TIR < tasso di interesse di mercato · B) TIR > tasso di interesse di mercato · C) TIR = 0 · D) TIR è negativo
+
+**66.** I **prezzi ombra** esprimono:
+A) i prezzi di listino al netto dell'IVA · B) il costo-opportunità, cioè i prezzi che si formerebbero in mercati concorrenziali e completi · C) i prezzi amministrati dal regolatore · D) i prezzi attesi fra dieci anni
+
+## Blocco 14 — Sistema monetario internazionale
+
+**67.** Il dilemma di Triffin evidenzia che:
+A) i cambi flessibili eliminano la speculazione · B) mantenere costante il contenuto aureo della valuta di riserva rischia di non fornire liquidità internazionale sufficiente · C) l'oro è un bene pubblico · D) i cambi fissi impediscono l'inflazione
+
+**68.** Il sistema di Bretton Woods ha funzionato come *gold exchange standard* fino al:
+A) 1944 · B) 1971 · C) 1981 · D) 1992
+
+---
+
+# Risposte
+
+| # | Risp. | Schema | # | Risp. | Schema |
+|---|---|---|---|---|---|
+| 1 | **B** | [01](01-politica-fiscale-bilancio-pubblico.md) | 35 | **B** | [07](07-teorie-macro-moneta-bce.md) |
+| 2 | **C** | [01](01-politica-fiscale-bilancio-pubblico.md) | 36 | **C** | [07](07-teorie-macro-moneta-bce.md) |
+| 3 | **B** | [01](01-politica-fiscale-bilancio-pubblico.md) | 37 | **B** | [07](07-teorie-macro-moneta-bce.md) |
+| 4 | **B** | [01](01-politica-fiscale-bilancio-pubblico.md) | 38 | **A** | [07](07-teorie-macro-moneta-bce.md) |
+| 5 | **A** | [01](01-politica-fiscale-bilancio-pubblico.md) | 39 | **B** | [08](08-esternalita-fallimenti-mercato.md) |
+| 6 | **C** | [01](01-politica-fiscale-bilancio-pubblico.md) | 40 | **B** | [08](08-esternalita-fallimenti-mercato.md) |
+| 7 | **B** | [02](02-inflazione-curva-phillips.md) | 41 | **B** | [08](08-esternalita-fallimenti-mercato.md) |
+| 8 | **C** | [02](02-inflazione-curva-phillips.md) | 42 | **B** | [08](08-esternalita-fallimenti-mercato.md) |
+| 9 | **A** | [02](02-inflazione-curva-phillips.md) | 43 | **B** | [08](08-esternalita-fallimenti-mercato.md) |
+| 10 | **C** | [02](02-inflazione-curva-phillips.md) | 44 | **B** | [08](08-esternalita-fallimenti-mercato.md) |
+| 11 | **B** | [02](02-inflazione-curva-phillips.md) | 45 | **B** | [09](09-crescita-sviluppo.md) |
+| 12 | **B** | [02](02-inflazione-curva-phillips.md) | 46 | **C** | [09](09-crescita-sviluppo.md) |
+| 13 | **B** | [03](03-concorrenza-imperfetta-monopolio.md) | 47 | **B** | [09](09-crescita-sviluppo.md) |
+| 14 | **B** | [03](03-concorrenza-imperfetta-monopolio.md) | 48 | **A** | [09](09-crescita-sviluppo.md) |
+| 15 | **B** | [03](03-concorrenza-imperfetta-monopolio.md) | 49 | **B** | [10](10-disuguaglianze-stato-sociale.md) |
+| 16 | **B** | [03](03-concorrenza-imperfetta-monopolio.md) | 50 | **B** | [10](10-disuguaglianze-stato-sociale.md) |
+| 17 | **C** | [03](03-concorrenza-imperfetta-monopolio.md) | 51 | **B** | [10](10-disuguaglianze-stato-sociale.md) |
+| 18 | **B** | [03](03-concorrenza-imperfetta-monopolio.md) | 52 | **A** | [10](10-disuguaglianze-stato-sociale.md) |
+| 19 | **B** | [04](04-economia-benessere-teoria-normativa.md) | 53 | **A** | [11](11-teoria-normativa-obiettivi-strumenti.md) |
+| 20 | **B** | [04](04-economia-benessere-teoria-normativa.md) | 54 | **A** | [11](11-teoria-normativa-obiettivi-strumenti.md) |
+| 21 | **B** | [04](04-economia-benessere-teoria-normativa.md) | 55 | **B** | [11](11-teoria-normativa-obiettivi-strumenti.md) |
+| 22 | **B** | [04](04-economia-benessere-teoria-normativa.md) | 56 | **B** | [11](11-teoria-normativa-obiettivi-strumenti.md) |
+| 23 | **C** | [04](04-economia-benessere-teoria-normativa.md) | 57 | **B** | [11](11-teoria-normativa-obiettivi-strumenti.md) |
+| 24 | **C** | [05](05-mercato-del-lavoro.md) | 58 | **B** | [11](11-teoria-normativa-obiettivi-strumenti.md) |
+| 25 | **B** | [05](05-mercato-del-lavoro.md) | 59 | **B** | [12](12-fallimenti-stato-political-economy.md) |
+| 26 | **B** | [05](05-mercato-del-lavoro.md) | 60 | **B** | [12](12-fallimenti-stato-political-economy.md) |
+| 27 | **B** | [05](05-mercato-del-lavoro.md) | 61 | **B** | [12](12-fallimenti-stato-political-economy.md) |
+| 28 | **B** | [06](06-economia-aperta-bilancia-pagamenti.md) | 62 | **B** | [12](12-fallimenti-stato-political-economy.md) |
+| 29 | **B** | [06](06-economia-aperta-bilancia-pagamenti.md) | 63 | **A** | [13](13-valutazione-progetti-acb.md) |
+| 30 | **A** | [06](06-economia-aperta-bilancia-pagamenti.md) | 64 | **B** | [13](13-valutazione-progetti-acb.md) |
+| 31 | **B** | [06](06-economia-aperta-bilancia-pagamenti.md) | 65 | **B** | [13](13-valutazione-progetti-acb.md) |
+| 32 | **B** | [06](06-economia-aperta-bilancia-pagamenti.md) | 66 | **B** | [13](13-valutazione-progetti-acb.md) |
+| 33 | **B** | [07](07-teorie-macro-moneta-bce.md) | 67 | **B** | [14](14-sistema-monetario-internazionale.md) |
+| 34 | **B** | [07](07-teorie-macro-moneta-bce.md) | 68 | **B** | [14](14-sistema-monetario-internazionale.md) |
+
+**Le tre domande più insidiose**, da rileggere il giorno prima: la **6** (un provvedimento discrezionale non è uno stabilizzatore automatico, per quanto stabilizzante sia), la **22** (il *second best* è controintuitivo: due violazioni possono essere meglio di una) e la **46** (2,5% — è un numero, si sa o non si sa).
+
+---
+
+# Tre simulazioni cronometrate
+
+**Regole**: timer a **10 minuti**, 11 domande, nessuna interruzione, niente appunti. Soglia di superamento: **6 corrette**. Obiettivo realistico: **8+**.
+
+| | Domande |
+|---|---|
+| **Simulazione A** | 2 · 9 · 15 · 20 · 25 · 29 · 35 · 41 · 46 · 54 · 63 |
+| **Simulazione B** | 4 · 12 · 17 · 22 · 27 · 31 · 37 · 44 · 50 · 59 · 67 |
+| **Simulazione C** | 5 · 8 · 14 · 23 · 24 · 32 · 38 · 39 · 48 · 58 · 65 |
+
+Ogni simulazione tocca **11 argomenti diversi** su 14: è la struttura più probabile della prova reale, dove è difficile che due domande cadano sullo stesso schema. Se dopo le tre simulazioni gli errori si concentrano su un blocco preciso, quello è lo schema da rileggere per primo — non tutta la dispensa.

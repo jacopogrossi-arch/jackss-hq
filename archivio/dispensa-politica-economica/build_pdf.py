@@ -6,20 +6,31 @@ BASE = Path(__file__).parent
 SCHEMI = BASE / "schemi"
 OUT_NAME = "Dispensa Politica Economica"
 
+# l'ordine segue la mappa di priorità, non la numerazione dei file: gli schemi
+# 11-14 sono stati aggiunti dopo, ma alcuni valgono più di quelli già presenti
 FILES_IN_ORDER = [
     "00c-mappa-priorita.md",
     "00b-glossario-simboli.md",
     "00a-formulario.md",
+    # core
     "01-politica-fiscale-bilancio-pubblico.md",
     "02-inflazione-curva-phillips.md",
     "03-concorrenza-imperfetta-monopolio.md",
     "04-economia-benessere-teoria-normativa.md",
+    "11-teoria-normativa-obiettivi-strumenti.md",
+    # secondari
     "05-mercato-del-lavoro.md",
     "06-economia-aperta-bilancia-pagamenti.md",
     "07-teorie-macro-moneta-bce.md",
     "08-esternalita-fallimenti-mercato.md",
+    "13-valutazione-progetti-acb.md",
+    "12-fallimenti-stato-political-economy.md",
+    # copertura di sicurezza
     "09-crescita-sviluppo.md",
     "10-disuguaglianze-stato-sociale.md",
+    "14-sistema-monetario-internazionale.md",
+    # autoverifica, in coda
+    "00d-domande-preselezione.md",
 ]
 
 parts = []
@@ -74,6 +85,11 @@ ANCHOR_MAP = {
     "08-esternalita-fallimenti-mercato.md": "#esternalita-e-fallimenti-di-mercato",
     "09-crescita-sviluppo.md": "#crescita-e-sviluppo-economico",
     "10-disuguaglianze-stato-sociale.md": "#disuguaglianze-economiche-di-genere-e-stato-sociale",
+    "11-teoria-normativa-obiettivi-strumenti.md": "#teoria-normativa-obiettivi-strumenti-e-modelli-di-politica-economica",
+    "12-fallimenti-stato-political-economy.md": "#i-fallimenti-dello-stato-e-la-political-economy",
+    "13-valutazione-progetti-acb.md": "#la-valutazione-dei-progetti-pubblici-e-lanalisi-costi-benefici",
+    "14-sistema-monetario-internazionale.md": "#il-sistema-monetario-internazionale",
+    "00d-domande-preselezione.md": "#banca-domande-per-la-preselezione",
 }
 for fname, anchor in ANCHOR_MAP.items():
     combined_md = combined_md.replace(f"]({fname})", f"]({anchor})")

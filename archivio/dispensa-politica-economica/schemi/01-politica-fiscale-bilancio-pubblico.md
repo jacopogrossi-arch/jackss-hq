@@ -35,6 +35,7 @@
 - **Progressiva**: t₀ + t(y)Y, aliquota crescente col reddito, finalità redistributiva.
 - L'imposizione **progressiva** è uno **stabilizzatore automatico**: in una recessione (Y↓) il prelievo fiscale medio scende più che proporzionalmente e i trasferimenti (sussidi di disoccupazione) salgono → si attutisce la caduta del reddito disponibile e dei consumi, senza bisogno di una manovra discrezionale.
 - **Drenaggio fiscale (fiscal drag)**: con inflazione e aliquote progressive non indicizzate, un aumento del reddito solo *nominale* fa scattare aliquote più alte → il reddito reale netto diminuisce anche se il reddito reale lordo è invariato. Rimedi: credito d'imposta compensativo, indicizzazione degli scaglioni.
+  **Esempio numerico** (scaglioni: 20% fino a 1.000, 30% da 1.000 a 2.000). Reddito 1.000 → imposta 200, **aliquota media 20%**. Con inflazione al 20%, il reddito nominale sale a 1.200 ma il **potere d'acquisto è invariato**: imposta = 200 + 0,30 × 200 = 260 → **aliquota media 21,7%**. Il contribuente paga più imposte in termini reali **senza che nessuna aliquota sia stata alzata** e senza essere diventato più ricco: è un aumento di imposizione deciso dall'inflazione, non dal Parlamento.
 - **Erosione, elusione, evasione** indeboliscono gettito ed equità: concentrano il carico fiscale su categorie meno capaci di sottrarsi (tipicamente il lavoro dipendente). Evasione in Italia stimata 110-130 mld/anno (~5% del debito pubblico).
 
 ---
@@ -79,6 +80,18 @@
 - Questa è la formula-chiave per i calcoli d'esame su "tasso di interesse compatibile con debito/PIL costante": si impone **i − ṗ = Ẏ** (rapporto esattamente costante, caso limite) e si risolve per l'incognita richiesta.
 - Con **saldo primario non nullo**, la condizione si generalizza (bisogna tener conto anche del deficit/avanzo primario in % di PIL); la sostenibilità è più facile con: avanzo primario, finanziamento (parziale) con base monetaria, tasso di interesse basso, crescita del PIL alta, inflazione.
 - Perché un debito troppo alto è un male: il risparmio si dirige verso i titoli pubblici anziché altri impieghi produttivi; rischio di insolvenza/crisi finanziaria e aumento dei tassi; rende difficili le manovre anticicliche.
+
+**Le cinque cause della crescita del rapporto debito/PIL in Italia negli anni '80** (domanda aperta ricorrente — si noti che sono esattamente i termini della formula al punto 4 che peggiorano tutti insieme):
+
+1. **Elevati disavanzi primari**, fra il 3% e il 5% del PIL;
+2. **Spesa per interessi crescente**, dal 5% all'8,5% del PIL;
+3. **Aumento dei tassi di interesse internazionali**, per effetto della politica monetaria restrittiva USA;
+4. **Aumento dei tassi di interesse interni**, con la fine della politica monetaria accomodante dopo l'indipendenza della Banca d'Italia (il "divorzio" del 1981, vedi [schema 07](07-teorie-macro-moneta-bce.md));
+5. **Debole crescita di Y**, per gli effetti della stretta monetaria e per il mantenimento di un cambio forte della lira.
+
+**Le politiche di rientro dal debito:** contenimento del **disavanzo primario** (aumento delle entrate, anche via privatizzazioni · riduzione delle spese, con effetti redistributivi) · **politiche per la crescita** che non passino per maggiore spesa pubblica (politiche industriali) · **politiche monetarie accomodanti** fino al caso estremo della monetizzazione (**vietata** nell'unione monetaria) · **gestione del debito** e controllo dei tassi su mercato primario e secondario · **ripudio del debito** (il paese diventa inaffidabile e perde l'accesso ai mercati).
+
+**La spesa per interessi è una redistribuzione** in tre direzioni: dall'interno **all'estero** (per la quota di titoli in mani straniere) · dai **contribuenti ai sottoscrittori** dei titoli · dalle **generazioni future a quella presente**.
 
 ---
 
