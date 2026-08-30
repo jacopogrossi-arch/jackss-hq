@@ -43,6 +43,7 @@ File: `inverso/`
 Materiale personale non legato a un progetto sta in `personale/`:
 
 - **Letture** (lista letture da affrontare con tracking, personali + Inverso) → `personale/letture.md`
+- **Mandal-Art set→dic 2026** (griglia 9×9 stile Ohtani: obiettivo "arrivarci intero" + 8 temi vita/Inverso + 64 azioni, compilata il 30/08/2026) → `personale/mandal-art-set-dic-2026.md`
 
 ## Archivio
 
