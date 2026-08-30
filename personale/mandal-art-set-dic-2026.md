@@ -3,6 +3,7 @@
 > Compilato il 30/08/2026 **a domande**: le otto aree e quasi tutte le azioni sono risposte di Jacopo, non proposte.
 > Dove non c'era una risposta, **la casella è rimasta vuota** (nove in tutto). Non sono state riempite per fare numero.
 > Versione visiva: artifact "Venduto a uno sconosciuto" — https://claude.ai/code/artifact/abf69ceb-58cd-492d-bde7-812378818fd4
+> **Da stampare e appendere:** `stampa/mandal-art-a4.pdf` — una pagina A4 verticale, griglia completa piu le tre regole (frasi accorciate per stare nelle caselle). Istruzioni e sorgente in `stampa/README.md`.
 
 **Legenda:** le voci senza segno sono parole sue · le voci marcate *(→)* sono conseguenze dirette di una sua risposta · *(vuota)* è da riempire in autunno.
 
