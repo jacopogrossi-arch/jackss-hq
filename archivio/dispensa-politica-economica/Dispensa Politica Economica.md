@@ -66,47 +66,186 @@ Per le formule vedi il [formulario](00a-formulario.md); per i simboli il [glossa
 
 # Glossario dei simboli
 
-I simboli ricorrono in schemi diversi con lo stesso significato — questa tabella li fissa una volta per tutte, per evitare confusione quando si passa da un argomento all'altro.
+Tutti i simboli e le sigle che ricorrono nella dispensa, raggruppati per area. Serve per due cose: capire una formula senza tornare indietro a cercare, e riconoscere i simboli nel testo d'esame, che usa la stessa notazione del manuale.
 
-| Simbolo | Significato | Dove compare |
+---
+
+## Come si legge la notazione
+
+Prima dei simboli, i **modi di scriverli**. Sono cinque, e una volta capiti si legge qualunque formula del corso.
+
+| Notazione | Come si chiama | Che cosa significa |
 |---|---|---|
-| **i** | Tasso di interesse (nominale, di policy o del modello IS-LM). **Coincide con r** usato nel modello dei prestiti in schema 1 §6 — stessa variabile, notazione diversa in quel solo paragrafo. | Schemi 1, 6, 7 |
-| **r** | Tasso di interesse reale (r = i − π); usato come sinonimo di i nel modello dei prestiti | Schema 1 |
-| **π, ṗ** | Tasso di inflazione (variazione % del livello dei prezzi) | Schemi 1, 2, 7 |
-| **ẇ** | Tasso di crescita dei salari monetari | Schema 2 |
-| **θ̇** | Tasso di crescita della produttività | Schema 2 |
-| **u** | Tasso di disoccupazione | Schemi 2, 5 |
-| **uN (o u\*)** | Tasso di disoccupazione naturale / NAIRU | Schema 2 |
-| **Y** | Reddito / prodotto (PIL) | Schemi 1, 2, 6, 7, 9 |
-| **Q, q** | Quantità (di un bene, in un mercato) — usato indifferentemente maiuscolo/minuscolo a seconda dello schema | Schemi 3, 8 |
-| **P, p** | Prezzo — stessa cosa, maiuscolo/minuscolo indifferente | Schemi 2, 3, 8 |
-| **MC** | Costo marginale | Schemi 1, 3, 8 |
-| **MR** | Ricavo marginale | Schema 3 |
-| **ATC / CMeT** | Costo medio totale | Schema 3 |
-| **DWL** | Perdita secca (deadweight loss) | Schemi 3, 8 |
-| **L** | Indice di Lerner (potere di mercato): L = (P−MC)/P | Schema 3 |
-| **MC_P, MC_S** | Costo marginale privato / sociale | Schema 8 |
-| **CME** | Costo esterno marginale | Schema 8 |
-| **FBS** | Funzione di Benessere Sociale | Schema 4 |
-| **EEG** | Equilibrio Economico Generale | Schemi 1, 4 |
-| **SMS** | Saggio Marginale di Sostituzione (tra beni, lato consumo) | Schema 4 |
-| **SMST** | Saggio Marginale di Sostituzione Tecnica (tra fattori, lato produzione) | Schema 4 |
-| **FL, N, U** | Forza lavoro, occupati, disoccupati | Schema 5 |
-| **a, n, u** | Tasso di attività, occupazione, disoccupazione (attenzione: qui u = tasso di disoccupazione, stesso simbolo della curva di Phillips ma calcolato su base censuaria, non macro) | Schema 5 |
-| **CC** | Saldo della bilancia commerciale (conto corrente) | Schema 6 |
-| **BP** | Bilancia dei pagamenti (anche come nome della curva nel modello Mundell-Fleming) | Schema 6 |
-| **IS / LM** | Curve di equilibrio del mercato dei beni / della moneta (modello IS-LM) | Schemi 1, 6, 7 |
-| **H** | Base monetaria | Schema 7 |
-| **M** | Offerta di moneta (attenzione: in altri contesti M indica anche le importazioni — controllare sempre lo schema di riferimento) | Schemi 6, 7 |
-| **G** | Gini (indice di disuguaglianza) — non confondere con G = spesa pubblica usato negli schemi di politica fiscale/IS-LM | Schemi 1, 6, 10 |
-| **h, j** | Rapporto circolante/depositi (h) e coefficiente di riserva, obbligatoria + libera (j), nel moltiplicatore monetario | Schema 7 |
-| **θ** | Produttività media del lavoro nel modello obiettivo-strumento (Y^off = θN). **Attenzione**: θ̇ nello schema 2 è il *tasso di crescita* della produttività — grandezze diverse, stessa lettera | Schemi 2, 11 |
-| **c, t** | Propensione al consumo (c) e aliquota fiscale (t) nel moltiplicatore 1/[1−c(1−t)] | Schemi 1, 11 |
-| **W** | Funzione di benessere sociale (obiettivi flessibili, indice di Okun). **Attenzione**: non è il salario, che è w minuscolo | Schemi 4, 11 |
-| **b_t, c_t** | Benefici e costi del progetto pubblico al tempo t (analisi costi-benefici) | Schema 13 |
-| **VAN, VAN_r, TIR** | Valore attuale netto assoluto, relativo, e tasso interno di rendimento | Schema 13 |
-| **εₓ, ε_m** | Elasticità di esportazioni e importazioni rispetto al tasso di cambio (condizione di Marshall-Lerner) | Schema 6 |
-| **e** | Tasso di cambio nominale (e ė = suo tasso di variazione atteso, nella parità scoperta) | Schemi 6, 14 |
+| **Q_M** | **pedice** (lettera piccola in basso) | Dice **di quale** Q si parla: `Q_M` è la quantità **di monopolio**. Non è una variabile nuova, è la stessa Q specificata meglio |
+| **(1+i)^t** | **apice** (lettera piccola in alto) | Elevamento a potenza: `(1+i)^t` è (1+i) elevato a t. Come apice compare anche il "tipo" di una grandezza: `Y^off` = Y di offerta |
+| **ṗ** (punto sopra) | **tasso di variazione** | Di quanto % cresce quella grandezza: `ṗ` = crescita dei prezzi (inflazione), `ẇ` = crescita dei salari, `Ẏ` = crescita del PIL |
+| **ΔB** | **variazione assoluta** | Di quanto è cambiata la grandezza, **in valore** (non in %): `ΔB` = quanti euro di debito in più |
+| **Y\*** | **asterisco** | Valore di **equilibrio**, **ottimo** o di **pieno impiego**: `u*` = disoccupazione di pieno impiego, `Q*` = quantità di equilibrio |
+| **Σ** | **sommatoria** | "Somma di tutti i termini": `Σ b_t` = somma dei benefici di tutti i periodi |
+
+**I pedici ricorrenti** — imparare questi dodici copre quasi tutte le formule della dispensa:
+
+| Pedice | Significa | Esempio |
+|---|---|---|
+| **M** | monopolio | `Q_M` quantità di monopolio |
+| **C** | concorrenza | `Q_C` quantità concorrenziale |
+| **CP** | concorrenza perfetta | `q_CP` quantità di equilibrio concorrenziale |
+| **OS** | ottimo sociale | `q_OS` quantità socialmente ottima |
+| **P** | privato | `MC_P` costo marginale privato |
+| **S** | sociale | `MC_S` costo marginale sociale |
+| **r** | reale (o relativo) | `e_r` cambio reale · `VAN_r` VAN relativo |
+| **w** | estero (*world*) | `i_w` tasso di interesse estero · `p_w` prezzi esteri |
+| **d** | domanda | `L_d` domanda di moneta |
+| **s** | offerta (*supply*) | `M_s` offerta di moneta |
+| **t** | tempo (periodo) | `b_t` beneficio al tempo t |
+| **x** / **m** | esportazioni / importazioni | `p_x` prezzo delle esportazioni · `q_m` quantità importate |
+| **p** | potenziale | `Y_p` PIL potenziale |
+| **N** | naturale | `u_N` tasso di disoccupazione naturale |
+
+---
+
+## Produzione, prezzi e costi
+
+| Simbolo | Significato | Schema |
+|---|---|---|
+| **Y** | Reddito / prodotto (PIL). `Y_p` = PIL potenziale · `Y_w` = reddito estero | 1, 2, 6, 7, 9 |
+| **P, p** | Prezzo (maiuscolo/minuscolo indifferente, dipende dallo schema) | 2, 3, 8 |
+| **Q, q** | Quantità (maiuscolo/minuscolo indifferente) | 3, 8 |
+| **θ** (theta) | **Produttività media del lavoro** (θ = Y/N, prodotto per occupato) | 2, 11 |
+| **CLUP** | **Costo del Lavoro per Unità di Prodotto** = w/θ | 2 |
+| **g** | Margine di profitto; **(1+g)** = **mark-up** applicato sul costo | 2 |
+| **MC** | **Costo marginale**: costo dell'ultima unità prodotta | 1, 3, 8 |
+| **MR** | **Ricavo marginale**: ricavo dell'ultima unità venduta | 3 |
+| **TR / TC** | Ricavo totale / Costo totale | 3 |
+| **ATC** (o CMeT) | **Costo medio totale** = TC/q, costo per unità prodotta | 3 |
+| **π** (pi greco) | Nello schema 3: **profitto**. Negli schemi 2 e 7: **tasso di inflazione**. Attenzione al contesto | 2, 3, 7 |
+| **DWL** | **Perdita secca** (*deadweight loss*): benessere che sparisce, non che si trasferisce | 3, 8 |
+| **L** | **Indice di Lerner** = (P−MC)/P, misura del potere di mercato | 3 |
+| **PdM** | Potere di mercato: capacità di fissare P > MC | 3 |
+| **SC / SP / BS** | Surplus del consumatore / del produttore / benessere sociale (BS = SC + SP) | 3 |
+| **PTF** | Produttività totale dei fattori | 9 |
+| **OG** | **Output gap**: scarto fra PIL effettivo e potenziale | 9 |
+
+## Lavoro
+
+| Simbolo | Significato | Schema |
+|---|---|---|
+| **FL** | **Forza lavoro** = occupati + disoccupati (FL = N + U) | 5 |
+| **N** | **Occupati** (negli schemi 2 e 11 anche: numero di lavoratori impiegati) | 2, 5, 11 |
+| **U** | **Disoccupati** (persone in cerca di occupazione) | 5 |
+| **Pop₁₅₊** | Popolazione in **età lavorativa** (15 anni e più) | 5 |
+| **a** | **Tasso di attività** = FL / Pop₁₅₊ | 5 |
+| **n** | **Tasso di occupazione** = N / Pop₁₅₊ | 5 |
+| **u** | **Tasso di disoccupazione** = U / FL (denominatore: la forza lavoro, non la popolazione) | 2, 5 |
+| **u_N**, **u\*** | Tasso di disoccupazione **naturale**, detto anche **NAIRU** | 2 |
+| **w** | **Salario nominale** (in euro) · **w/p** = **salario reale** (potere d'acquisto) | 2 |
+| **ẇ** | Tasso di crescita dei salari monetari | 2 |
+| **γ(u)** (gamma) | La **curva di Phillips**: relazione fra disoccupazione e dinamica salariale | 2 |
+| **λ** (lambda) | Velocità di **aggiustamento delle aspettative** (0 < λ < 1) | 2 |
+| **πᵉ** | Inflazione **attesa** (la "e" in alto = *expected*) | 2 |
+
+## Bilancio pubblico e debito
+
+| Simbolo | Significato | Schema |
+|---|---|---|
+| **G** | **Spesa pubblica**. ⚠️ Non confondere con la **G di Gini** dello schema 10 | 1, 6, 11 |
+| **T** | Entrate (imposte e contributi) | 1, 11 |
+| **t** | **Aliquota** dell'imposta proporzionale (T = t·Y) | 1, 11 |
+| **INT** | Spesa per **interessi** sul debito pubblico | 1 |
+| **B** | **Stock di debito pubblico**. `ΔB` = variazione del debito in un periodo | 1 |
+| **Bp / Bs** | **Saldo primario** (T − G) / **saldo di bilancio** o indebitamento netto (T − G − INT) | 1 |
+| **AAPP** | **Amministrazioni pubbliche**: l'aggregato di riferimento della finanza pubblica | 1 |
+| **c** | **Propensione marginale al consumo** (quanta parte di un euro in più viene consumata) | 1, 11 |
+| **1/(1−c)** | **Moltiplicatore** della spesa pubblica in economia chiusa | 1 |
+| **Ḃ, ṗ, Ẏ** | Tassi di variazione di debito, prezzi (inflazione) e PIL | 1 |
+| **EEG** | **Equilibrio Economico Generale** | 1, 4 |
+
+## Moneta e finanza
+
+| Simbolo | Significato | Schema |
+|---|---|---|
+| **H** | **Base monetaria** = circolante + riserve bancarie (la crea la banca centrale) | 7 |
+| **M** | **Offerta di moneta** (circolante + depositi). ⚠️ Nello schema 6, **M** sono le **importazioni** | 6, 7 |
+| **M_s** | Offerta di moneta, quando serve distinguerla dalla domanda | 6, 7 |
+| **M_1, M_2, M_3** | **Aggregati monetari BCE**, dal più liquido al meno liquido | 7 |
+| **L_d** | **Domanda di moneta** (cresce con Y, cala con i) | 6, 7 |
+| **L_1, L_2** | Domanda di moneta **transattiva** (dipende da Y) e **speculativa** (dipende da i) | 7 |
+| **L_0** | Componente **autonoma** della domanda speculativa | 7 |
+| **f, g** | Sensibilità della domanda di moneta al reddito (f) e al tasso di interesse (g) | 7 |
+| **h** | Rapporto **circolante / depositi**: quanto contante tiene il pubblico | 7 |
+| **j** | **Coefficiente di riserva** (obbligatoria + libera) delle banche | 7 |
+| **(1+h)/(h+j)** | **Moltiplicatore monetario**: quanta moneta il sistema bancario crea sopra la base monetaria | 7 |
+| **i** | **Tasso di interesse** nominale. `i_w` = tasso estero | 1, 6, 7 |
+| **r** | **Tasso di interesse reale** (r = i − ṗ); usato come sinonimo di i nel modello dei prestiti | 1 |
+| **P^B** | Prezzo dei titoli (relazione inversa col tasso: i = R/P^B) | 7 |
+| **BC** | **Banca centrale** | 6, 7 |
+| **IS / LM** | Curve di equilibrio del mercato **dei beni** / **della moneta** | 1, 6, 7 |
+| **AD / AS** | Curve di **domanda aggregata** / **offerta aggregata** | 2, 7 |
+| **V** | Velocità di circolazione della moneta (teoria quantitativa: MV = pY) | 7 |
+
+## Economia aperta
+
+| Simbolo | Significato | Schema |
+|---|---|---|
+| **X / M** | **Esportazioni** / **importazioni** | 6 |
+| **m** | **Propensione marginale a importare** (M = m·Y) | 6 |
+| **CC** | **Saldo di conto corrente** (bilancia commerciale): CC = X − M | 6 |
+| **MK** | **Movimenti di capitale** (dipendono dal differenziale dei tassi) | 6 |
+| **BP** | **Bilancia dei pagamenti**; anche il nome della terza curva del Mundell-Fleming | 6 |
+| **RU** | **Riserve ufficiali** di valuta estera detenute dalla banca centrale | 6 |
+| **e** | **Tasso di cambio nominale**. `ė ᵉ` = deprezzamento **atteso** | 6, 14 |
+| **e_r** | **Tasso di cambio reale** = (p·e)/p_w — misura la **competitività** | 6 |
+| **p_x / p_m** | Prezzo delle esportazioni / delle importazioni | 6 |
+| **q_x / q_m** | Quantità esportate / importate | 6 |
+| **ε_x / ε_m** (epsilon) | **Elasticità** di esportazioni e importazioni rispetto al cambio (condizione di Marshall-Lerner) | 6 |
+| **TT** | **Ragione di scambio** = (p_x·e)/p_m: quanto vendiamo caro rispetto a quanto compriamo | 6 |
+| **d** | Aliquota del **dazio** | 6 |
+
+## Benessere, equità e valutazione dei progetti
+
+| Simbolo | Significato | Schema |
+|---|---|---|
+| **SMS** | **Saggio Marginale di Sostituzione** fra beni (lato consumo) | 4 |
+| **SMST** | **Saggio Marginale di Sostituzione Tecnica** fra fattori (lato produzione) | 4 |
+| **SMT** | **Saggio Marginale di Trasformazione** (pendenza della frontiera produttiva) | 4 |
+| **FBS** | **Funzione di Benessere Sociale** (utilitarista, rawlsiana, Bergson-Samuelson) | 4 |
+| **U₁, U₂, Uᵢ** | Utilità dei singoli individui | 4 |
+| **W** | **Benessere sociale**. ⚠️ Non è il salario, che è **w** minuscolo | 4, 11 |
+| **a, b** | **Pesi** attribuiti agli obiettivi nella funzione di benessere (W = a·ṗ + b·u) | 11 |
+| **MC_P / MC_S** | Costo marginale **privato** / **sociale** | 8 |
+| **MB_P / MB_S** | Beneficio marginale **privato** / **sociale** | 8 |
+| **CME / BME** | **Costo esterno marginale** / **beneficio esterno marginale** (l'esternalità) | 8 |
+| **b_t / c_t** | Beneficio / costo del progetto pubblico **al tempo t** | 13 |
+| **B / C** | Somma dei valori **attualizzati** di benefici / costi | 13 |
+| **VAN** | **Valore Attuale Netto** = B − C. `VAN_r` = VAN **relativo** = (B−C)/C | 13 |
+| **TIR** | **Tasso Interno di Rendimento**: il tasso che annulla il VAN | 13 |
+| **QALY** | *Quality-Adjusted Life Years*, per dare un valore alla vita e alla salute | 13 |
+| **G** | **Indice di Gini** (0 = uguaglianza perfetta, 1 = disuguaglianza massima). ⚠️ Non è la spesa pubblica | 10 |
+
+## Lettere greche, tutte insieme
+
+| Lettera | Nome | Uso nella dispensa |
+|---|---|---|
+| **π** | pi greco | Tasso di **inflazione** (schemi 2, 7) · **profitto** (schema 3) |
+| **θ** | theta | **Produttività** media del lavoro. `θ̇` = suo tasso di crescita |
+| **γ** | gamma | La **curva di Phillips** γ(u) · il **tasso di crescita** del PIL (schema 9) |
+| **λ** | lambda | Velocità di aggiustamento delle **aspettative** |
+| **ε** | epsilon | **Elasticità** (delle esportazioni, delle importazioni, della domanda) |
+| **Δ** | delta maiuscolo | **Variazione assoluta** di una grandezza |
+| **Σ** | sigma maiuscolo | **Somma** di più termini |
+
+---
+
+## I quattro simboli che si confondono più facilmente
+
+Vale la pena rileggerli il giorno prima dell'esame:
+
+1. **G** — spesa pubblica negli schemi 1, 6 e 11; indice di **Gini** nello schema 10.
+2. **M** — offerta di **moneta** nello schema 7; **importazioni** nello schema 6.
+3. **W** — **benessere** sociale (schemi 4 e 11); il **salario** è `w` minuscolo.
+4. **π** — **inflazione** negli schemi 2 e 7; **profitto** nello schema 3.
+
+E due coppie che si assomigliano ma dicono cose diverse: **θ** (livello della produttività) contro **θ̇** (sua crescita); **legge di Okun** (crescita e disoccupazione, schema 9) contro **indice di malessere di Okun** (funzione di benessere, schema 11).
 
 
 
@@ -153,7 +292,7 @@ Tutte le formule chiave della dispensa in un unico posto, per il ripasso last-mi
 | **SMST_K,L = w_K/w_L** | Condizione di efficienza nella produzione (saggio marg. sostituzione tecnica = rapporto prezzi fattori) |
 | **W = ΣUᵢ** | FBS utilitarista |
 | **W = min(Uᵢ)** | FBS rawlsiana |
-| **W = U₁ × U₂** | FBS di Bergson-Samuelson (esempio) |
+| **W = U₁ · U₂** | FBS di Bergson-Samuelson (esempio) |
 
 ## Mercato del lavoro ([schema 5](05-mercato-del-lavoro.md))
 
@@ -163,7 +302,7 @@ Tutte le formule chiave della dispensa in un unico posto, per il ripasso last-mi
 | **a = FL / Pop₁₅₊** | Tasso di attività |
 | **n = N / Pop₁₅₊** | Tasso di occupazione |
 | **u = U / FL** | Tasso di disoccupazione |
-| **n = a × (1 − u)** | Identità di verifica tra i tre tassi |
+| **n = a · (1 − u)** | Identità di verifica tra i tre tassi |
 
 ## Teoria normativa: obiettivi e strumenti ([schema 11](11-teoria-normativa-obiettivi-strumenti.md))
 
@@ -184,7 +323,7 @@ Tutte le formule chiave della dispensa in un unico posto, per il ripasso last-mi
 | **CC = (pₓe)qₓ − p_m q_m** | Saldo della bilancia commerciale in valuta estera |
 | **L_d(Y,i) = fY + L₀ − gi** | Domanda di moneta (curva LM) |
 | **\|εₓ\| + \|ε_m\| > 1** | **Condizione di Marshall-Lerner**: la svalutazione migliora il saldo solo se prevale l'effetto quantità |
-| **i = i\* − ė** | Condizione di **parità scoperta** (equilibrio dei movimenti di capitale) |
+| **i = i_w − ė ᵉ** | Condizione di **parità scoperta**: tasso interno = tasso estero meno il deprezzamento atteso |
 | **(X+M)/Y** | Grado di apertura dell'economia |
 
 ## Valutazione dei progetti pubblici ([schema 13](13-valutazione-progetti-acb.md))
@@ -266,7 +405,7 @@ Tutte le formule chiave della dispensa in un unico posto, per il ripasso last-mi
 - **Progressiva**: t₀ + t(y)Y, aliquota crescente col reddito, finalità redistributiva.
 - L'imposizione **progressiva** è uno **stabilizzatore automatico**: in una recessione (Y↓) il prelievo fiscale medio scende più che proporzionalmente e i trasferimenti (sussidi di disoccupazione) salgono → si attutisce la caduta del reddito disponibile e dei consumi, senza bisogno di una manovra discrezionale.
 - **Drenaggio fiscale (fiscal drag)**: con inflazione e aliquote progressive non indicizzate, un aumento del reddito solo *nominale* fa scattare aliquote più alte → il reddito reale netto diminuisce anche se il reddito reale lordo è invariato. Rimedi: credito d'imposta compensativo, indicizzazione degli scaglioni.
-  **Esempio numerico** (scaglioni: 20% fino a 1.000, 30% da 1.000 a 2.000). Reddito 1.000 → imposta 200, **aliquota media 20%**. Con inflazione al 20%, il reddito nominale sale a 1.200 ma il **potere d'acquisto è invariato**: imposta = 200 + 0,30 × 200 = 260 → **aliquota media 21,7%**. Il contribuente paga più imposte in termini reali **senza che nessuna aliquota sia stata alzata** e senza essere diventato più ricco: è un aumento di imposizione deciso dall'inflazione, non dal Parlamento.
+  **Esempio numerico** (scaglioni: 20% fino a 1.000, 30% da 1.000 a 2.000). Reddito 1.000 → imposta 200, **aliquota media 20%**. Con inflazione al 20%, il reddito nominale sale a 1.200 ma il **potere d'acquisto è invariato**: imposta = 200 + 0,30 · 200 = 260 → **aliquota media 21,7%**. Il contribuente paga più imposte in termini reali **senza che nessuna aliquota sia stata alzata** e senza essere diventato più ricco: è un aumento di imposizione deciso dall'inflazione, non dal Parlamento.
 - **Erosione, elusione, evasione** indeboliscono gettito ed equità: concentrano il carico fiscale su categorie meno capaci di sottrarsi (tipicamente il lavoro dipendente). Evasione in Italia stimata 110-130 mld/anno (~5% del debito pubblico).
 
 ---
@@ -295,7 +434,7 @@ Tutte le formule chiave della dispensa in un unico posto, per il ripasso last-mi
 ```
                       B
       debito/PIL = ───────
-                     p · Y
+                    p · Y
 ```
 
 **dove:** `B` = stock di debito · `p` = livello dei prezzi · `Y` = PIL reale (quindi `p · Y` = PIL nominale). La sostenibilità richiede che questo rapporto sia **non crescente** nel tempo.
@@ -372,9 +511,9 @@ e si risolve per l'incognita richiesta.
 Sostituendo `C` dentro `Y` e risolvendo:
 
 ```
-                 1
+               1
       Y = ───────────  ·  ( Ī + G − c · T )
-              1 − c
+             1 − c
 ```
 
 Si passa alle **variazioni** (Δ = "variazione di"):
@@ -481,9 +620,9 @@ Ora si impone la condizione del teorema, `ΔG = ΔT` (bilancio in pareggio):
 1. Tasso di interesse reale: i − ṗ = 4% − 1,5% = 2,5%.
 2. Confronto con la crescita: Ẏ = 2% < 2,5% (tasso reale) → la componente "palla di neve" da sola farebbe **aumentare** il rapporto debito/PIL (perché il costo reale del debito supera la crescita).
 3. In più c'è un disavanzo primario dell'1% (G>T), che aggiunge ulteriore nuovo debito ogni anno.
-4. **Conclusione: il rapporto debito/PIL aumenta**, per due ragioni cumulative: (a) il tasso di interesse reale supera la crescita, (b) il paese produce nuovo debito anche al netto degli interessi (disavanzo primario). Per stabilizzare il rapporto servirebbe o un avanzo primario sufficiente a compensare il differenziale (i−ṗ−Ẏ)×(debito/PIL), oppure una riduzione di i, oppure più crescita/inflazione.
+4. **Conclusione: il rapporto debito/PIL aumenta**, per due ragioni cumulative: (a) il tasso di interesse reale supera la crescita, (b) il paese produce nuovo debito anche al netto degli interessi (disavanzo primario). Per stabilizzare il rapporto servirebbe o un avanzo primario sufficiente a compensare il differenziale (i−ṗ−Ẏ)·(debito/PIL), oppure una riduzione di i, oppure più crescita/inflazione.
 
-*(Nota per l'esame: se il testo dà anche il livello iniziale del rapporto debito/PIL, la variazione approssimata del rapporto nel periodo è: Δ(B/Y) ≈ [(i−ṗ−Ẏ)×(B/Y)] + (disavanzo primario/PIL). Utile per rispondere a domande che chiedono "di quanto cambia" e non solo "aumenta o diminuisce".)*
+*(Nota per l'esame: se il testo dà anche il livello iniziale del rapporto debito/PIL, la variazione approssimata del rapporto nel periodo è: Δ(B/Y) ≈ [(i−ṗ−Ẏ)·(B/Y)] + (disavanzo primario/PIL). Utile per rispondere a domande che chiedono "di quanto cambia" e non solo "aumenta o diminuisce".)*
 
 
 
@@ -524,9 +663,9 @@ Ora si impone la condizione del teorema, `ΔG = ΔT` (bilancio in pareggio):
 - Le imprese fissano il prezzo come **costo del lavoro per unità di prodotto** (CLUP = `w/θ`) maggiorato di un **mark-up**:
 
 ```
-                        w
+                       w
       p = (1 + g) · ───────
-                        θ
+                       θ
 ```
 
 **dove:**
@@ -555,7 +694,7 @@ Ora si impone la condizione del teorema, `ΔG = ΔT` (bilancio in pareggio):
 
 - **Salario reale** = w/p (potere d'acquisto del salario nominale w).
 - **PIL nominale** = pY (valore a prezzi correnti); **PIL reale** = Y (valore a prezzi costanti, "quantità"); **deflatore del PIL** = PIL nominale/PIL reale.
-- Due categorie di reddito: lavoratori e percettori di profitto → **pY = W + PR**, con **W = wN** (reddito da lavoro = salario nominale × occupati).
+- Due categorie di reddito: lavoratori e percettori di profitto → **pY = W + PR**, con **W = wN** (reddito da lavoro = salario nominale · occupati).
 - **Quota di reddito da lavoro** = wN/pY = (w/p)/θ (salario reale su produttività del lavoro).
 - La quota di reddito da lavoro **non varia** se: **ẇ − ṗ − θ̇ = 0**.
 - Se il mark-up è costante ((1+g)˙=0) e il salario cresce quanto la produttività (ẇ = θ̇), allora π = 0: nessuna inflazione e **quote distributive invariate**. Nei dati OECD reali, la quota salari su reddito è comunque scesa in quasi tutti i paesi G20 dal 1970 al 2011.
@@ -584,7 +723,7 @@ Ora si impone la condizione del teorema, `ΔG = ΔT` (bilancio in pareggio):
 
 **dove:** `ẇ` = tasso di crescita dei salari monetari · `u` = tasso di disoccupazione · `γ( )` indica semplicemente "è una funzione di" — la relazione è **decrescente**: più disoccupazione, meno spinta salariale.
 
-- Curva decrescente e convessa. **uN (o u\*)** = tasso di disoccupazione naturale: al di sotto le imprese offrono salari più alti per attirare lavoratori (ẇ>0), al di sopra i salari ristagnano o scendono.
+- Curva decrescente e convessa. **u_N** (scritto anche `u*`) = tasso di disoccupazione naturale: al di sotto le imprese offrono salari più alti per attirare lavoratori (ẇ>0), al di sopra i salari ristagnano o scendono.
 - Sinonimo da riconoscere: **NAIRU** (*Non-Accelerating Inflation Rate of Unemployment*), il tasso di disoccupazione compatibile con un'inflazione **stabile** (non accelerante). Nell'impostazione Friedman-Phelps coincide con il tasso naturale: è il punto in cui la curva di Phillips di lungo periodo diventa verticale. **Attenzione**: non è il tasso a cui l'inflazione è *nulla*, ma quello a cui l'inflazione **non accelera**.
 
 **7. La curva di Phillips "menù di scelta" (Samuelson-Solow)**
@@ -617,10 +756,10 @@ Cioè: la disoccupazione entra nell'equazione dell'inflazione **attraverso i sal
 ```
 
 **dove:** `λ` misura **quanto in fretta** si correggono le aspettative: λ vicino a 1 = correzione rapida, λ vicino a 0 = aspettative lente. Le imprese aggiustano le aspettative istantaneamente, i lavoratori con ritardo.
-- Esiste una famiglia di **curve di Phillips di breve periodo (SRPC)**, una per ogni livello di aspettative, e una **curva di lungo periodo (LRPC) verticale in corrispondenza di uN**: nel lungo periodo non c'è trade-off, solo nel breve.
-  - u < uN → π > πᵉ (l'economia "surriscalda")
-  - u = uN → π = πᵉ (equilibrio, aspettative corrette)
-  - u > uN → π < πᵉ
+- Esiste una famiglia di **curve di Phillips di breve periodo (SRPC)**, una per ogni livello di aspettative, e una **curva di lungo periodo (LRPC) verticale in corrispondenza di u_N**: nel lungo periodo non c'è trade-off, solo nel breve.
+  - u < u_N → π > πᵉ (l'economia "surriscalda")
+  - u = u_N → π = πᵉ (equilibrio, aspettative corrette)
+  - u > u_N → π < πᵉ
 
 - Con λ=1 (caso limite): πᵉt = π(t-1). Se u resta stabilmente sotto u\*, l'inflazione **accelera** periodo dopo periodo invece di stabilizzarsi (vedi esercizio tipo).
 
@@ -629,7 +768,7 @@ Cioè: la disoccupazione entra nell'equazione dell'inflazione **attraverso i sal
 **9. Perché in concorrenza perfetta non c'è disoccupazione volontaria**
 
 - In concorrenza perfetta il salario è determinato dall'incontro tra domanda e offerta di lavoro: al salario di equilibrio, domanda e offerta di lavoro coincidono e chi vuole lavorare a quel salario trova impiego.
-- Non essendoci rigidità di prezzi/salari né potere di mercato, non si generano eccessi di offerta di lavoro persistenti: eventuale disoccupazione osservata sarebbe solo frizionale/di breve aggiustamento, non "involontaria" nel senso di lavoratori disposti a lavorare al salario vigente ma esclusi dal mercato. La disoccupazione involontaria richiede invece imperfezioni di mercato (salari rigidi verso il basso, potere contrattuale, informazione imperfetta, principio del costo pieno con price-maker) — è per questo che nei modelli con conflitto distributivo (punto 3) e nella curva di Phillips esiste un uN "naturale" positivo anche in equilibrio.
+- Non essendoci rigidità di prezzi/salari né potere di mercato, non si generano eccessi di offerta di lavoro persistenti: eventuale disoccupazione osservata sarebbe solo frizionale/di breve aggiustamento, non "involontaria" nel senso di lavoratori disposti a lavorare al salario vigente ma esclusi dal mercato. La disoccupazione involontaria richiede invece imperfezioni di mercato (salari rigidi verso il basso, potere contrattuale, informazione imperfetta, principio del costo pieno con price-maker) — è per questo che nei modelli con conflitto distributivo (punto 3) e nella curva di Phillips esiste un u_N "naturale" positivo anche in equilibrio.
 
 **10. Modello AD-AS: inflazione da domanda vs da costi (rappresentazione grafica)**
 
@@ -679,12 +818,12 @@ Il mercato del lavoro di un paese è descritto dalla curva dei salari:
 
 **Ipotesi date dal testo:** `θ̇ = 0` (produttività costante) e `(1+g)˙ = 0` (mark-up costante).
 
-**a) Determinare il tasso di disoccupazione naturale (uN)**, cioè quello per cui i salari monetari sono **stabili** (`ẇ = 0`):
+**a) Determinare il tasso di disoccupazione naturale (u_N)**, cioè quello per cui i salari monetari sono **stabili** (`ẇ = 0`):
 
 ```
-      0,55 − 5 · uN = 0
-      5 · uN = 0,55
-      uN = 0,11        →  11%
+      0,55 − 5 · u_N = 0
+      5 · u_N = 0,55
+      u_N = 0,11        →  11%
 ```
 
 **b) Se il tasso di disoccupazione effettivo è u = 8% (0,08), calcolare ẇ e il tasso di inflazione π.**
@@ -713,7 +852,7 @@ Con `θ̇ = 0` e `(1+g)˙ = 0`, l'equazione del costo pieno `π = ẇ − θ̇ +
 
   Interpretazione: a parità di dinamica salariale desiderata più bassa, la curva dei salari implica che serve un tasso di disoccupazione leggermente più alto (dall'8% all'8,4%) per ottenerla — oppure, letto al contrario: un intervento di politica dei redditi che taglia direttamente i salari nominali del 2% (spostando la relazione, non muovendosi lungo di essa) permette di ottenere la stessa dinamica salariale (e quindi la stessa inflazione, visto il costo pieno) con un tasso di disoccupazione più basso di quanto richiederebbe il solo meccanismo di mercato — è esattamente l'obiettivo della politica dei redditi (punto 5): **controllare l'inflazione senza dover scaricare tutto l'aggiustamento sulla disoccupazione**, riducendo il "prezzo" in termini di posti di lavoro persi rispetto a una politica puramente restrittiva (monetaria/fiscale) che agirebbe solo alzando u lungo la curva.
 
-**d) Che succede se il governo cerca di mantenere u=8% (sotto uN=11%) periodo dopo periodo, con aspettative adattive e λ=1?**
+**d) Che succede se il governo cerca di mantenere u=8% (sotto u_N=11%) periodo dopo periodo, con aspettative adattive e λ=1?**
 
   Con la curva di Phillips aumentata πt = γ(ut) + πᵉt e πᵉt = π(t-1):
 
@@ -723,7 +862,7 @@ Con `θ̇ = 0` e `(1+g)˙ = 0`, l'equazione del costo pieno `π = ẇ − θ̇ +
   | 1 | 15% | 8% | γ(8%) + πᵉ1 = 15% + 15% = 30% |
   | 2 | 30% | 8% | 15% + 30% = 45% |
 
-  L'inflazione **non si stabilizza**, ma **accelera** di periodo in periodo (accelerazionismo di Friedman-Phelps): mantenere u permanentemente sotto uN non è sostenibile, perché ogni periodo le aspettative si aggiornano sull'inflazione passata e la spingono ulteriormente verso l'alto. L'unico modo per fermare l'accelerazione è lasciare che u torni a uN = 11%, dove ẇ = γ(uN) = 0 e l'inflazione si stabilizza al livello atteso (costante, non necessariamente zero se le aspettative pregresse erano positive).
+  L'inflazione **non si stabilizza**, ma **accelera** di periodo in periodo (accelerazionismo di Friedman-Phelps): mantenere u permanentemente sotto u_N non è sostenibile, perché ogni periodo le aspettative si aggiornano sull'inflazione passata e la spingono ulteriormente verso l'alto. L'unico modo per fermare l'accelerazione è lasciare che u torni a u_N = 11%, dove ẇ = γ(u_N) = 0 e l'inflazione si stabilizza al livello atteso (costante, non necessariamente zero se le aspettative pregresse erano positive).
 
 
 
@@ -815,7 +954,7 @@ Metodo generale per una funzione di domanda lineare **P = a − bQ** e un costo 
 
 - **Definizione**: si ha monopolio naturale quando i **costi fissi sono molto elevati** (barriera all'entrata) e i **costi variabili sono relativamente bassi**, tipico delle *utilities* (acqua, gas, energia elettrica, rifiuti, trasporto pubblico locale) che devono costruire e mantenere un'infrastruttura di rete.
 - **Come si verifica**: si confronta il **costo medio totale (ATC/CMeT)** con la **domanda** (o con il costo marginale). Se l'ATC è **decrescente** su tutto il range di quantità rilevante ed è sempre **superiore al MC** (per la presenza di costi fissi elevati spalmati su più unità), allora un'unica impresa produce a costo inferiore rispetto a più imprese che si dividono il mercato → è **subadditivo** → monopolio naturale.
-- Graficamente: ATC decrescente, MC = M costante e sotto l'ATC; MR e Domanda si incrociano con MC in Q\* (quantità di monopolio), mentre Domanda incrocia MC in Q\*\* > Q\* (quantità efficiente). Il rettangolo Π tra P\* e ATC è il profitto di monopolio; il triangolo S tra Q\* e Q\*\* è la perdita secca.
+- Graficamente: ATC decrescente, MC costante e sotto l'ATC; MR e Domanda si incrociano con MC in `Q*` (quantità di **monopolio**), mentre la Domanda incrocia MC in `Q**`, con `Q** > Q*` (quantità **efficiente**). Il rettangolo fra `P*` e ATC è il profitto di monopolio; il triangolo fra `Q*` e `Q**` è la perdita secca.
 
 ## 7. **Mercati contendibili**
 
@@ -1094,7 +1233,7 @@ L'efficienza paretiana (o allocativa) è **una** delle nozioni di efficienza. Le
 |---|---|---|---|
 | **Utilitarista** | **W = Σ Uᵢ** (somma delle utilità) | Massimizza il **benessere totale**, indipendentemente da come è distribuito | Nessuna avversione alla disuguaglianza: un'unità di utilità in più vale uguale per chiunque la riceva. Curve di indifferenza sociale = **rette a -45°** |
 | **Rawlsiana** | **W = min(Uᵢ)** | Massimizza l'utilità dell'**individuo peggiore** (criterio **maximin**) | Massima avversione alla disuguaglianza: conta solo chi sta peggio. Curve di indifferenza sociale a **"L"** (angolo retto) |
-| **Bergson-Samuelson** | Forma generale **W = f(U₁, U₂, …, Uₙ)**, es. **W = U1 × U2** | Forma flessibile che pesa efficienza ed equità in un continuum tra i due estremi precedenti | Avversione alla disuguaglianza intermedia e graduabile. Curve di indifferenza sociale **convesse verso l'origine** (tipo iperboli) |
+| **Bergson-Samuelson** | Forma generale **W = f(U₁, U₂, …, Uₙ)**, es. **W = U1 · U2** | Forma flessibile che pesa efficienza ed equità in un continuum tra i due estremi precedenti | Avversione alla disuguaglianza intermedia e graduabile. Curve di indifferenza sociale **convesse verso l'origine** (tipo iperboli) |
 
 - Punto chiave da scrivere all'esame: **le diverse FBS esprimono diversi giudizi di valore circa il peso relativo di efficienza ed equità** — non esiste un criterio "oggettivamente giusto", la scelta della FBS è normativa.
 - La FBS **richiede confronti interpersonali di utilità** (a differenza del criterio paretiano) e per questo riesce a dare un **ordinamento completo** anche tra stati Pareto-efficienti non confrontabili con Pareto.
@@ -1342,7 +1481,7 @@ Con due obiettivi (ridurre inflazione e disoccupazione), la funzione di benesser
 ```
            1              1
       N = ───  ·  ─────────────────  ·  ( I + G )
-           θ        1 − c(1−t)
+           θ          1 − c(1−t)
 ```
 
 3. **Forma ridotta inversa (modello di decisione)** — lo **strumento in funzione dell'obiettivo**: si assegna il valore desiderato all'obiettivo e si ricava il valore da dare allo strumento:
@@ -1457,7 +1596,7 @@ Curva di Phillips aumentata delle aspettative: **u = uⁿ + α(ṗᵉ − ṗ)**
 ```
            1              1
       N = ───  ·  ─────────────────  ·  ( I + G )
-           θ        1 − c(1−t)
+           θ          1 − c(1−t)
 ```
 
 **Forma ridotta inversa** (modello di decisione — è quella che serve per rispondere):
@@ -1508,7 +1647,7 @@ Curva di Phillips aumentata delle aspettative: **u = uⁿ + α(ṗᵉ − ṗ)**
 L'efficacia è la **derivata dell'obiettivo rispetto allo strumento**, cioè il coefficiente di G nella forma ridotta:
 
 ```
-      dN            1
+      dN               1
       ──  =  ─────────────────────
       dG      θ · [ 1 − c(1−t) ]
 ```
@@ -1517,8 +1656,8 @@ L'efficacia è la **derivata dell'obiettivo rispetto allo strumento**, cioè il 
 
 | | Efficacia dN/dG | Lettura |
 |---|---|---|
-| **t = 0** | 1 / (30 × 0,2) = 1/6 ≈ **0,167** | Ogni euro di spesa pubblica crea 0,167 occupati → servono **6 €** per un occupato in più |
-| **t = 0,2** | 1 / (30 × 0,36) = 1/10,8 ≈ **0,093** | Servono **10,8 €** per un occupato in più |
+| **t = 0** | 1 / (30 · 0,2) = 1/6 ≈ **0,167** | Ogni euro di spesa pubblica crea 0,167 occupati → servono **6 €** per un occupato in più |
+| **t = 0,2** | 1 / (30 · 0,36) = 1/10,8 ≈ **0,093** | Servono **10,8 €** per un occupato in più |
 
 **Conclusione**: l'imposta proporzionale **riduce l'efficacia** dello strumento fiscale (da 0,167 a 0,093, cioè del 44%). È il punto teorico che collega questo esercizio al **teorema di Haavelmo** ([schema 01](01-politica-fiscale-bilancio-pubblico.md)): il moltiplicatore del bilancio in pareggio vale 1 con imposta in somma fissa, **ma non vale più** con aliquota proporzionale, esattamente per lo stesso motivo.
 
@@ -1692,9 +1831,9 @@ Seconda distinzione, per **causa** (classificazione Treccani):
 - **Tasso di cambio reale**: misura la competitività, cioè quanto costano i beni interni rispetto a quelli esteri.
 
 ```
-             p · e
-      e_r = ───────
-              p_w
+        p · e
+      ─────────  =  e_r
+          p_w
 ```
 
 **dove:**
@@ -1825,7 +1964,7 @@ Il saldo dei movimenti di beni disegna quindi nel tempo una **J**: prima scende,
 - **Grado di apertura** dell'economia — quanto un paese commercia con l'estero rispetto a quanto produce:
 
 ```
-                          X + M
+                           X + M
       grado di apertura = ───────
                              Y
 ```
@@ -1841,7 +1980,7 @@ Il saldo dei movimenti di beni disegna quindi nel tempo una **J**: prima scende,
 
 - **Ragione di scambio interna (autarchia)**: rinunciando a 1 unità di y si liberano 30 unità di lavoro = **3 unità di x** → il rapporto interno è **p_y/p_x = 3**.
 - Con **60 lavoratori**, B può: (i) produrre **2 unità di y** direttamente, oppure (ii) produrre **6 unità di x** e scambiarle.
-- Se i prezzi internazionali sono p_x = 30 e p_y = 50: le 6 unità di x valgono 6 × 30 = **180**, con cui si acquistano 180/50 = **3,6 unità di y** > 2. **Conviene lo scambio.**
+- Se i prezzi internazionali sono p_x = 30 e p_y = 50: le 6 unità di x valgono 6 · 30 = **180**, con cui si acquistano 180/50 = **3,6 unità di y** > 2. **Conviene lo scambio.**
 - **Regola generale**: conviene la "produzione indiretta" se 6·p_x > 2·p_y, cioè se **p_y/p_x < 3** — se la ragione di scambio **internazionale** è minore di quella **interna**.
 - **Conclusione da scrivere**: se la ragione di scambio internazionale è **compresa fra le due ragioni di scambio interne in autarchia**, l'apertura commerciale conviene **a entrambi i paesi** — anche a quello che ha il vantaggio assoluto in tutti i beni.
 - Strumenti del protezionismo:
@@ -1852,7 +1991,7 @@ Il saldo dei movimenti di beni disegna quindi nel tempo una **J**: prima scende,
   - effetto consumo: -↓ consumo interno
   - effetto produzione: +↑ produzione interna
   - effetto importazione: ↓ importazioni
-  - effetto entrate fiscali: + gettito (importazioni residue × aliquota del dazio)
+  - effetto entrate fiscali: + gettito (importazioni residue · aliquota del dazio)
   - effetto redistribuzione: consumatori pagano un prezzo più alto (trasferimento verso i produttori interni e lo Stato)
 
 **Lettura grafica del dazio** (domanda e offerta interne, prezzo internazionale dato). Con i segmenti sull'asse delle quantità:
@@ -1863,7 +2002,7 @@ Il saldo dei movimenti di beni disegna quindi nel tempo una **J**: prima scende,
 | **Domanda interna** | OE | O**D** (diminuisce) |
 | **Importazioni** | **AE** (= domanda − offerta interna) | **BD** (ridotte) |
 
-- Il **gettito** per lo Stato è il rettangolo: importazioni residue **BD** × dazio unitario.
+- Il **gettito** per lo Stato è il rettangolo: importazioni residue **BD** · dazio unitario.
 - Il **dazio proibitivo** è quello che porta domanda e offerta interne a coincidere: le importazioni si azzerano (autarchia) e — punto controintuitivo da ricordare — **il gettito è nullo**, perché non c'è più nulla da tassare.
 
 - Giustificazioni del protezionismo:
@@ -1975,7 +2114,7 @@ Si divide tutto per 0,4:
       Y = 3250 − 1000 · i          ←  equazione della curva IS
 ```
 
-**Come si legge**: se il tasso di interesse sale di 1 punto (0,01), il reddito di equilibrio scende di 10 (1000 × 0,01), perché tassi più alti riducono gli investimenti.
+**Come si legge**: se il tasso di interesse sale di 1 punto (0,01), il reddito di equilibrio scende di 10 (1000 · 0,01), perché tassi più alti riducono gli investimenti.
 
 ### 2. Saldo della bilancia commerciale (CC = X − M) in funzione di i
 
@@ -1995,11 +2134,11 @@ Sostituendo dentro l'equazione IS trovata al punto 1:
 
 ### 3. Domanda di moneta transattiva in funzione di i
 
-La componente **transattiva** di `L_d` è `0,25 · Y` (solo la parte che dipende dal reddito). Sostituendo di nuovo la IS:
+La componente **transattiva** di `L_d` — che qui indichiamo `L_trans` — è `0,25 · Y` (solo la parte che dipende dal reddito). Sostituendo di nuovo la IS:
 
 ```
-      L_transattiva = 0,25 · Y = 0,25 · (3250 − 1000i)
-      L_transattiva = 812,5 − 250 · i
+      L_trans = 0,25 · Y = 0,25 · (3250 − 1000i)
+      L_trans = 812,5 − 250 · i
 ```
 
 ### 4. Chiusura numerica del sistema (nota metodologica)
@@ -2026,7 +2165,7 @@ Con i soli dati di questo esercizio (la IS e la funzione `L_d`, ma **senza** `M_
         = 3200   ✓
 
       CC = 100 · 0,05 − 5 = 0        (commercio in pareggio)
-      L_transattiva = 0,25 · 3200 = 800
+      L_trans = 0,25 · 3200 = 800
 ```
 
 Il metodo — **ricavare l'equazione IS, poi sostituirla dentro CC e dentro la componente transattiva della domanda di moneta** — resta identico qualunque sia il valore di `i` fornito dal testo d'esame.
@@ -2073,7 +2212,7 @@ Il metodo — **ricavare l'equazione IS, poi sostituirla dentro CC e dentro la c
 - Il **modello IS-LM** (Hicks) formalizza questo caso in economia chiusa.
 - Tre mercati interdipendenti (beni, moneta, titoli): se due sono in equilibrio lo è anche il terzo (**Legge di Walras**).
 - **Curva IS**: combinazioni (i, Y) che equilibrano il mercato dei beni; Y = C + I + G; pendenza negativa (↑i → ↓I → ↓Y).
-- **Curva LM**: combinazioni (i, Y) che equilibrano il mercato della moneta; M = L(Y,i) = fY + L0 − gi; pendenza positiva (↑Y → ↑domanda moneta transattiva → ↑i).
+- **Curva LM**: combinazioni (i, Y) che equilibrano il mercato della moneta; M = L(Y,i) = fY + L_0 − gi; pendenza positiva (↑Y → ↑domanda moneta transattiva → ↑i).
 - **Rimando**: il **moltiplicatore keynesiano** (politica fiscale efficace nella stabilizzazione della DA) e l'effetto **crowding-out** (spiazzamento finanziario: ↑G non accomodato da ↑M → ↑i → ↓I privati) sono trattati per esteso nello schema dedicato a Politica fiscale/bilancio pubblico — qui si richiama solo il collegamento concettuale entro il modello IS-LM.
 - **Politica monetaria nel modello IS-LM**: ↓M0 → ↑i → ↓I → ↓Y (non neutralità). L'efficacia dipende dalla pendenza delle curve (se IS verticale, effetto nullo; se IS quasi orizzontale, effetto massimo).
 
@@ -2104,8 +2243,8 @@ Il metodo — **ricavare l'equazione IS, poi sostituirla dentro CC e dentro la c
 | Scuola | Flessibilità dei prezzi | Domanda di moneta | Formazione delle aspettative | Ruolo della politica economica |
 |---|---|---|---|---|
 | **Classici** | Perfetta e istantanea (prezzi relativi e salario reale flessibili) | Non centrale nell'analisi; moneta velo, neutrale | Non tematizzata esplicitamente (equilibrio automatico) | Nulla: il mercato si autoregola (legge di Say), moneta neutrale |
-| **Keynesiani** | Vischiosi/rigidi nel breve periodo (specie salari verso il basso) | Dipende da Y (transattiva/precauzionale) **e da i** (speculativa, L2(i)); preferenza per la liquidità | Aspettative/animal spirits degli imprenditori, incertezza radicale | Politica fiscale e monetaria efficaci (moltiplicatore, non neutralità della moneta); trade-off inflazione-disoccupazione |
-| **Sintesi neoclassica (IS-LM)** | Rigidi nel breve periodo (caso particolare keynesiano) | L(Y,i) = fY + L0 − gi | Non esplicitamente modellate (si limita al b.p.) | Politica fiscale efficace (moltiplicatore); politica monetaria efficace ma con crowding-out se non accomodante |
+| **Keynesiani** | Vischiosi/rigidi nel breve periodo (specie salari verso il basso) | Dipende da Y (transattiva/precauzionale) **e da i** (speculativa, L_2(i)); preferenza per la liquidità | Aspettative/animal spirits degli imprenditori, incertezza radicale | Politica fiscale e monetaria efficaci (moltiplicatore, non neutralità della moneta); trade-off inflazione-disoccupazione |
+| **Sintesi neoclassica (IS-LM)** | Rigidi nel breve periodo (caso particolare keynesiano) | L(Y,i) = fY + L_0 − gi | Non esplicitamente modellate (si limita al b.p.) | Politica fiscale efficace (moltiplicatore); politica monetaria efficace ma con crowding-out se non accomodante |
 | **Monetaristi** | Flessibili nel lungo periodo (nel b.p. illusione monetaria) | M/p = kY, dipende SOLO dal reddito, non dal tasso d'interesse (no domanda speculativa) | Aspettative adattive con illusione monetaria nel b.p. | Politica monetaria neutrale nel l.p. (solo prezzi); politica fiscale inefficace (spiazzamento totale); serve "regola semplice" |
 | **Nuovi classici (NMC)** | Perfettamente flessibili, equilibrio istantaneo | Coerente con TQM | **Aspettative razionali** (uso ottimale di tutta l'informazione) | Politica economica neutrale/invariante anche nel b.p. se prevista; solo shock imprevisti hanno effetti temporanei |
 
@@ -2114,7 +2253,7 @@ Il metodo — **ricavare l'equazione IS, poi sostituirla dentro CC e dentro la c
 - **Moneta** = insieme dei mezzi di pagamento con tre funzioni: **unità di conto**, **mezzo di pagamento**, **riserva di valore**.
 - Qualunque cosa assolva queste funzioni può essere moneta (storicamente determinata): **moneta-merce** (conchiglie, metalli) vs **moneta-segno** (banconote, senza valore intrinseco, attestazione debitoria fiduciariamente accettata).
 - Tipologie moderne: moneta legale (BC), moneta bancaria/fiduciaria (depositi), moneta elettronica, moneta virtuale (Bitcoin), moneta digitale/CBDC (in prospettiva).
-- **Aggregati monetari BCE**: M1 (circolante + depositi overnight) ⊂ M2 (+ depositi vincolati ≤2 anni) ⊂ M3 (+ attività finanziarie molto liquide). **Base monetaria H = Circolante + Riserve bancarie**.
+- **Aggregati monetari BCE**: M_1 (circolante + depositi overnight) ⊂ M_2 (+ depositi vincolati ≤2 anni) ⊂ M_3 (+ attività finanziarie molto liquide). **Base monetaria H = Circolante + Riserve bancarie**.
 - La moneta è creata **principalmente attraverso operazioni di credito**; il **moltiplicatore monetario** M = (1+h)/(h+j) · H (h = rapporto circolante/depositi, j = coefficiente di riserva) mostra come il sistema bancario, con riserva frazionaria, crei moneta oltre la base monetaria emessa dalla BC.
 
 ### I quattro canali di creazione della base monetaria
@@ -2141,10 +2280,10 @@ Dal lato degli **impieghi**: H = Circolante + Riserve bancarie. Dal lato della *
 
 ## 9. **Le funzioni di domanda di moneta**
 
-- **Domanda di moneta per transazioni**: L1(Y) = Y/V — dipende positivamente dal reddito, serve per gli scambi correnti.
+- **Domanda di moneta per transazioni**: L_1(Y) = Y/V — dipende positivamente dal reddito, serve per gli scambi correnti.
 - **Domanda di moneta precauzionale**: legata all'incertezza sulle entrate/uscite future, anch'essa funzione crescente di Y (spesso accorpata alla transattiva: fY).
-- **Domanda di moneta speculativa**: L2(i) = L0 − gi — alternativa alla detenzione di titoli; è il **costo-opportunità** di tenere moneta invece di titoli. Relazione **inversa** tra tasso d'interesse e prezzo dei titoli (i = R/P^B per titoli irredimibili): più alto i, minore la domanda di moneta speculativa.
-- **Domanda di moneta keynesiana totale**: L = L1(Y) + L2(i) = fY + L0 − gi (funzione crescente in Y, decrescente in i).
+- **Domanda di moneta speculativa**: L_2(i) = L_0 − gi — alternativa alla detenzione di titoli; è il **costo-opportunità** di tenere moneta invece di titoli. Relazione **inversa** tra tasso d'interesse e prezzo dei titoli (i = R/P^B per titoli irredimibili): più alto i, minore la domanda di moneta speculativa.
+- **Domanda di moneta keynesiana totale**: L = L_1(Y) + L_2(i) = fY + L_0 − gi (funzione crescente in Y, decrescente in i).
 - Nella visione **monetarista/classica**, invece, la domanda di moneta dipende **solo** dal reddito (M/p = kY o M = kPY), senza componente speculativa, perché la moneta non ha sostituti finanziari.
 
 ## 10. **Il meccanismo di trasmissione della politica monetaria**
@@ -2155,7 +2294,7 @@ Dal lato degli **impieghi**: H = Circolante + Riserve bancarie. Dal lato della *
 - **Cinque circuiti/canali di trasmissione** (dettaglio):
     1. **Tassi d'interesse**: ↑M → ↓i → ↓r → ↑I,C → ↑Y (ostacolo: trappola della liquidità)
     2. **Tassi di cambio**: ↑M → ↓i → ↓e → ↑NX → ↑Y (economia aperta)
-    3. **Prezzo delle attività finanziarie**: ↑M → ↑P_attività → ↑ricchezza/garanzie → ↑I,C → ↑Y
+    3. **Prezzo delle attività finanziarie**: ↑M → ↑ prezzo delle attività → ↑ricchezza/garanzie → ↑I, ↑C → ↑Y
     4. **Prestito bancario**: ↑M → ↑Depositi → ↑prestiti bancari → ↑I,C → ↑Y
     5. **Condizioni di credito**: variazioni di garanzie/cash flow/patrimonio influenzano la selezione avversa e l'azzardo morale, quindi la disponibilità di credito
 
@@ -2220,7 +2359,7 @@ L'offerta di moneta si ottiene moltiplicando la base monetaria per il moltiplica
 ```
             1 + h
       M = ─────────  ·  H
-             h + j
+            h + j
 ```
 
 **dove:**
@@ -2235,7 +2374,7 @@ Con `h` = 0,2 e `j` = 0,1:
 ```
       1 + 0,2     1,2
       ───────  =  ───  =  4          moltiplicatore
-      0,2 + 0,1   0,3
+     0,2 + 0,1    0,3
 ```
 
 Quindi con `H` = 1.000:
@@ -2251,7 +2390,7 @@ Con `h` = 0,4 e `j` = 0,3:
 ```
       1 + 0,4     1,4
       ───────  =  ───  =  2          moltiplicatore dimezzato
-      0,4 + 0,3   0,7
+     0,4 + 0,3    0,7
 ```
 
 Con `H` raddoppiata a 2.000:
@@ -2296,7 +2435,7 @@ Se il tasso di interesse scende a `i` = 0,02 (2%), a parità di Y:
         = 690
 ```
 
-La domanda di moneta aumenta (690 > 680): coerente con la pendenza negativa della domanda di moneta rispetto al tasso di interesse (componente speculativa L2(i) = L0 − gi), e quindi con la pendenza positiva della curva LM nel piano (Y, i).
+La domanda di moneta aumenta (690 > 680): coerente con la pendenza negativa della domanda di moneta rispetto al tasso di interesse (componente speculativa L_2(i) = L_0 − gi), e quindi con la pendenza positiva della curva LM nel piano (Y, i).
 
 
 
@@ -2419,7 +2558,7 @@ La domanda di moneta aumenta (690 > 680): coerente con la pendenza negativa dell
 - **Selezione avversa**: asimmetria **precedente** al contratto → esempio classico: mercato delle auto usate ("lemons"/bidoni). Con prezzo = valore medio, si vendono solo le auto di qualità inferiore, il prezzo scende ulteriormente, il mercato delle auto buone **sparisce** (risultato inefficiente: scambi vantaggiosi non avvengono).
 
   **Il conto da saper rifare**: 100 auto, 50 di alta qualità (A) e 50 bidoni (B). Il venditore sa quale ha in mano, il compratore no. Disponibilità a pagare: **2.400** per una A, **1.200** per una B; prezzi minimi di vendita: **2.000** per una A, **1.000** per una B (per ogni tipo, singolarmente, lo scambio sarebbe vantaggioso). Ma per un'auto di **qualità ignota** il compratore è disposto a pagare al più il valore atteso:
-  **2.400 × 0,5 + 1.200 × 0,5 = 1.800 < 2.000**
+  **2.400 · 0,5 + 1.200 · 0,5 = 1.800 < 2.000**
   Sotto il prezzo minimo del venditore di un'auto buona → **le auto di alta qualità escono dal mercato** e restano solo i bidoni, scambiati fra 1.000 e 1.200. L'asimmetria informativa ha distrutto metà degli scambi vantaggiosi.
 - **Azzardo morale**: asimmetria **successiva** al contratto → esempio: assicurazione, che aumenta la probabilità di comportamenti rischiosi (es. mercato assicurativo, uso eccessivo di assistenza sanitaria).
 - Esempio sanità: la selezione avversa fa sì che solo chi si aspetta spese elevate si assicuri, facendo salire il premio e restringendo ulteriormente il mercato (spirale); un'assicurazione pubblica universale **risolve la selezione avversa** ma **non l'azzardo morale** (soluzioni per quest'ultimo: ticket/franchigia, gatekeeping del medico di famiglia).
@@ -2546,15 +2685,15 @@ Sono le stesse fasi di un imprenditore privato, ma con contenuti diversi (vedi �
 **Le formule:**
 
 ```
-              b_t                          c_t
+                b_t                       c_t
       B = Σ ─────────          C = Σ ─────────
-             (1+i)^t                    (1+i)^t
+              (1+i)^t                   (1+i)^t
 
-      VAN   = B − C                (valore attuale netto assoluto)
+      VAN = B − C                  (valore attuale netto assoluto)
 
-              B − C
-      VAN_r = ───────              (valore attuale netto relativo)
-                C
+        B − C
+      ─────────  =  VAN_r          (valore attuale netto relativo)
+          C
 ```
 
 **dove:**
@@ -2577,9 +2716,9 @@ Sono le stesse fasi di un imprenditore privato, ma con contenuti diversi (vedi �
 **Definizione**: il TIR è il valore di **i** che rende **B − C = 0**, cioè che annulla il VAN:
 
 ```
-              b_t              c_t
+            b_t              c_t
       Σ ─────────  −  Σ ─────────  =  0
-           (1+i)^t          (1+i)^t
+          (1+i)^t          (1+i)^t
 ```
 
 cioè si cerca quel valore di `i` che rende **B = C**.
@@ -2913,11 +3052,19 @@ La tangente in sé è un **trasferimento** (ha effetti distributivi), ma i quatt
   - **OG = Y − Y_p** (in livello) oppure **OG = (Y − Y_p)/Y_p** (in %)
   - **Y > Y_p** → fase di espansione; **Y < Y_p** → recessione.
 
-- **Tasso di crescita γ**: variazione percentuale del PIL reale tra due periodi: **γ = (Y_t − Y_{t-1}) / Y_{t-1}**. Obiettivo di politica economica: **γ > 0** (crescita); stagnazione/recessione = problemi da correggere.
+- **Tasso di crescita γ**: variazione percentuale del PIL reale fra due periodi.
+
+```
+              Y_t − Y_(t−1)
+      γ = ─────────────────
+                 Y_(t−1)
+```
+
+**dove:** `Y_t` = PIL reale del periodo corrente · `Y_(t−1)` = PIL reale del periodo precedente. Obiettivo di politica economica: `γ > 0` (crescita); stagnazione e recessione sono i casi da correggere.
 
 ### La legge di Okun
 
-Mette in relazione la **disoccupazione ciclica** (u − u*, scarto tra disoccupazione effettiva e disoccupazione di pieno impiego, cioè quella solo frizionale) e l'**output gap** (Y* − Y).
+Mette in relazione la **disoccupazione ciclica** (`u − u*`, scarto fra disoccupazione effettiva e disoccupazione di pieno impiego, cioè quella solo frizionale) e l'**output gap** (`Y* − Y`), dove l'asterisco indica il valore di **pieno impiego**.
 
 **Contenuto**: per ridurre il tasso di disoccupazione di **1 punto percentuale**, il prodotto deve crescere **oltre** il prodotto potenziale in misura **più che proporzionale — di circa il 2,5%**.
 
@@ -3005,18 +3152,18 @@ Tre settori produttivi: Agricoltura (produzione 200, consumi intermedi 50), Indu
 
 ```
       2020 (anno base):
-      pane  2,00 € × 1.000 =   2.000 €
-      auto 10.000 € ×    10 = 100.000 €
+      pane  2,00 € · 1.000 =   2.000 €
+      auto 10.000 € ·    10 = 100.000 €
       PIL 2020 = 102.000 €
 
       2025, a prezzi 2025 (PIL NOMINALE):
-      pane  2,50 € × 1.100 =   2.750 €
-      auto 12.000 € ×    12 = 144.000 €
+      pane  2,50 € · 1.100 =   2.750 €
+      auto 12.000 € ·    12 = 144.000 €
       PIL nominale 2025 = 146.750 €
 
       2025, a prezzi 2020 (PIL REALE):
-      pane  2,00 € × 1.100 =   2.200 €
-      auto 10.000 € ×    12 = 120.000 €
+      pane  2,00 € · 1.100 =   2.200 €
+      auto 10.000 € ·    12 = 120.000 €
       PIL reale 2025 = 122.200 €
 ```
 - Variazione: PIL nominale +44% (include inflazione) vs PIL reale +20% (solo crescita reale delle quantità) → la differenza tra le due variazioni è dovuta all'inflazione.
@@ -3311,7 +3458,7 @@ A) un salario reale troppo elevato · B) la carenza di domanda aggregata · C) l
 A) a credito · B) a debito · C) neutra · D) registrata solo nel conto capitale
 
 **29.** La condizione di Marshall-Lerner richiede che:
-A) |εx| + |εm| < 1 · B) |εx| + |εm| > 1 · C) εx = εm · D) εx · εm > 1
+A) |ε_x| + |ε_m| < 1 · B) |ε_x| + |ε_m| > 1 · C) ε_x = ε_m · D) ε_x · ε_m > 1
 
 **30.** La curva a J descrive:
 A) il peggioramento iniziale del saldo dei movimenti di beni dopo una svalutazione, seguito da un miglioramento · B) la relazione fra inflazione e disoccupazione · C) l'andamento del rapporto debito/PIL · D) la distribuzione cumulata del reddito
@@ -3402,7 +3549,7 @@ A) il numero di strumenti deve essere almeno pari al numero di obiettivi · B) i
 A) sotto-determinato, con molteplici soluzioni · B) sovradeterminato, senza soluzione · C) sempre risolvibile · D) in equilibrio di Nash
 
 **56.** L'indice di malessere di Okun è dato da:
-A) ṗ − u · B) ṗ + u · C) ṗ × u · D) u/ṗ
+A) ṗ − u · B) ṗ + u · C) ṗ · u · D) u/ṗ
 
 **57.** Il criterio dell'**assegnazione appropriata** prescrive di assegnare a ciascun obiettivo:
 A) lo strumento più economico · B) lo strumento su cui è relativamente più efficace · C) sempre la politica fiscale · D) due strumenti indipendenti

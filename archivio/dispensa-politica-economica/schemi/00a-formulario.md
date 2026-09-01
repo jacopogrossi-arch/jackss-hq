@@ -38,7 +38,7 @@ Tutte le formule chiave della dispensa in un unico posto, per il ripasso last-mi
 | **SMST_K,L = w_K/w_L** | Condizione di efficienza nella produzione (saggio marg. sostituzione tecnica = rapporto prezzi fattori) |
 | **W = ΣUᵢ** | FBS utilitarista |
 | **W = min(Uᵢ)** | FBS rawlsiana |
-| **W = U₁ × U₂** | FBS di Bergson-Samuelson (esempio) |
+| **W = U₁ · U₂** | FBS di Bergson-Samuelson (esempio) |
 
 ## Mercato del lavoro ([schema 5](05-mercato-del-lavoro.md))
 
@@ -48,7 +48,7 @@ Tutte le formule chiave della dispensa in un unico posto, per il ripasso last-mi
 | **a = FL / Pop₁₅₊** | Tasso di attività |
 | **n = N / Pop₁₅₊** | Tasso di occupazione |
 | **u = U / FL** | Tasso di disoccupazione |
-| **n = a × (1 − u)** | Identità di verifica tra i tre tassi |
+| **n = a · (1 − u)** | Identità di verifica tra i tre tassi |
 
 ## Teoria normativa: obiettivi e strumenti ([schema 11](11-teoria-normativa-obiettivi-strumenti.md))
 
@@ -69,7 +69,7 @@ Tutte le formule chiave della dispensa in un unico posto, per il ripasso last-mi
 | **CC = (pₓe)qₓ − p_m q_m** | Saldo della bilancia commerciale in valuta estera |
 | **L_d(Y,i) = fY + L₀ − gi** | Domanda di moneta (curva LM) |
 | **\|εₓ\| + \|ε_m\| > 1** | **Condizione di Marshall-Lerner**: la svalutazione migliora il saldo solo se prevale l'effetto quantità |
-| **i = i\* − ė** | Condizione di **parità scoperta** (equilibrio dei movimenti di capitale) |
+| **i = i_w − ė ᵉ** | Condizione di **parità scoperta**: tasso interno = tasso estero meno il deprezzamento atteso |
 | **(X+M)/Y** | Grado di apertura dell'economia |
 
 ## Valutazione dei progetti pubblici ([schema 13](13-valutazione-progetti-acb.md))

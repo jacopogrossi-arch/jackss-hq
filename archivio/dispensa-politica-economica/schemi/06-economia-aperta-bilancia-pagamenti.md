@@ -49,9 +49,9 @@
 - **Tasso di cambio reale**: misura la competitività, cioè quanto costano i beni interni rispetto a quelli esteri.
 
 ```
-             p · e
-      e_r = ───────
-              p_w
+        p · e
+      ─────────  =  e_r
+          p_w
 ```
 
 **dove:**
@@ -182,7 +182,7 @@ Il saldo dei movimenti di beni disegna quindi nel tempo una **J**: prima scende,
 - **Grado di apertura** dell'economia — quanto un paese commercia con l'estero rispetto a quanto produce:
 
 ```
-                          X + M
+                           X + M
       grado di apertura = ───────
                              Y
 ```
@@ -198,7 +198,7 @@ Il saldo dei movimenti di beni disegna quindi nel tempo una **J**: prima scende,
 
 - **Ragione di scambio interna (autarchia)**: rinunciando a 1 unità di y si liberano 30 unità di lavoro = **3 unità di x** → il rapporto interno è **p_y/p_x = 3**.
 - Con **60 lavoratori**, B può: (i) produrre **2 unità di y** direttamente, oppure (ii) produrre **6 unità di x** e scambiarle.
-- Se i prezzi internazionali sono p_x = 30 e p_y = 50: le 6 unità di x valgono 6 × 30 = **180**, con cui si acquistano 180/50 = **3,6 unità di y** > 2. **Conviene lo scambio.**
+- Se i prezzi internazionali sono p_x = 30 e p_y = 50: le 6 unità di x valgono 6 · 30 = **180**, con cui si acquistano 180/50 = **3,6 unità di y** > 2. **Conviene lo scambio.**
 - **Regola generale**: conviene la "produzione indiretta" se 6·p_x > 2·p_y, cioè se **p_y/p_x < 3** — se la ragione di scambio **internazionale** è minore di quella **interna**.
 - **Conclusione da scrivere**: se la ragione di scambio internazionale è **compresa fra le due ragioni di scambio interne in autarchia**, l'apertura commerciale conviene **a entrambi i paesi** — anche a quello che ha il vantaggio assoluto in tutti i beni.
 - Strumenti del protezionismo:
@@ -209,7 +209,7 @@ Il saldo dei movimenti di beni disegna quindi nel tempo una **J**: prima scende,
   - effetto consumo: -↓ consumo interno
   - effetto produzione: +↑ produzione interna
   - effetto importazione: ↓ importazioni
-  - effetto entrate fiscali: + gettito (importazioni residue × aliquota del dazio)
+  - effetto entrate fiscali: + gettito (importazioni residue · aliquota del dazio)
   - effetto redistribuzione: consumatori pagano un prezzo più alto (trasferimento verso i produttori interni e lo Stato)
 
 **Lettura grafica del dazio** (domanda e offerta interne, prezzo internazionale dato). Con i segmenti sull'asse delle quantità:
@@ -220,7 +220,7 @@ Il saldo dei movimenti di beni disegna quindi nel tempo una **J**: prima scende,
 | **Domanda interna** | OE | O**D** (diminuisce) |
 | **Importazioni** | **AE** (= domanda − offerta interna) | **BD** (ridotte) |
 
-- Il **gettito** per lo Stato è il rettangolo: importazioni residue **BD** × dazio unitario.
+- Il **gettito** per lo Stato è il rettangolo: importazioni residue **BD** · dazio unitario.
 - Il **dazio proibitivo** è quello che porta domanda e offerta interne a coincidere: le importazioni si azzerano (autarchia) e — punto controintuitivo da ricordare — **il gettito è nullo**, perché non c'è più nulla da tassare.
 
 - Giustificazioni del protezionismo:
@@ -332,7 +332,7 @@ Si divide tutto per 0,4:
       Y = 3250 − 1000 · i          ←  equazione della curva IS
 ```
 
-**Come si legge**: se il tasso di interesse sale di 1 punto (0,01), il reddito di equilibrio scende di 10 (1000 × 0,01), perché tassi più alti riducono gli investimenti.
+**Come si legge**: se il tasso di interesse sale di 1 punto (0,01), il reddito di equilibrio scende di 10 (1000 · 0,01), perché tassi più alti riducono gli investimenti.
 
 ### 2. Saldo della bilancia commerciale (CC = X − M) in funzione di i
 
@@ -352,11 +352,11 @@ Sostituendo dentro l'equazione IS trovata al punto 1:
 
 ### 3. Domanda di moneta transattiva in funzione di i
 
-La componente **transattiva** di `L_d` è `0,25 · Y` (solo la parte che dipende dal reddito). Sostituendo di nuovo la IS:
+La componente **transattiva** di `L_d` — che qui indichiamo `L_trans` — è `0,25 · Y` (solo la parte che dipende dal reddito). Sostituendo di nuovo la IS:
 
 ```
-      L_transattiva = 0,25 · Y = 0,25 · (3250 − 1000i)
-      L_transattiva = 812,5 − 250 · i
+      L_trans = 0,25 · Y = 0,25 · (3250 − 1000i)
+      L_trans = 812,5 − 250 · i
 ```
 
 ### 4. Chiusura numerica del sistema (nota metodologica)
@@ -383,7 +383,7 @@ Con i soli dati di questo esercizio (la IS e la funzione `L_d`, ma **senza** `M_
         = 3200   ✓
 
       CC = 100 · 0,05 − 5 = 0        (commercio in pareggio)
-      L_transattiva = 0,25 · 3200 = 800
+      L_trans = 0,25 · 3200 = 800
 ```
 
 Il metodo — **ricavare l'equazione IS, poi sostituirla dentro CC e dentro la componente transattiva della domanda di moneta** — resta identico qualunque sia il valore di `i` fornito dal testo d'esame.

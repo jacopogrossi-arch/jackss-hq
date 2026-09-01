@@ -73,7 +73,9 @@ Il PDF è generato da `build_pdf.py` con `python-markdown`, che **non traduce il
 
 **3. Frazioni composte su due righe**, con la linea di frazione `─` (U+2500). Il font monospace del PDF (DejaVu Sans Mono) copre `─ │ · × − ≈ √ Σ ε θ π Δ` e pedici/apici. Le frazioni semplici restano in linea, con `/`.
 
-**4. Simboli citati nel testo scorrevole → fra apici inversi singoli**: `` `L_d` ``, `` `MC_S` ``. Protegge allo stesso modo, e li fa risaltare.
+**4. Pedici e apici si scrivono `Q_M` e `(1+i)^t`** nel sorgente, e `build_pdf.py` li trasforma in pedici e apici **tipografici veri** al momento di generare l'HTML. Il sorgente resta leggibile, il PDF esce come il manuale. Per un pedice lungo o composto si usano le parentesi: `Y_(t−1)`, mai le graffe LaTeX.
+
+**5. Simboli citati nel testo scorrevole → fra apici inversi singoli**: `` `L_d` ``, `` `MC_S` ``. Protegge allo stesso modo, e li fa risaltare.
 
 Esempio completo:
 
@@ -88,7 +90,7 @@ Esempio completo:
     - `p` = prezzi interni · `p_w` = prezzi esteri
     - `e` = tasso di cambio nominale
 
-**Il controllo automatico.** `build_pdf.py` verifica a ogni generazione che non ci siano `$`, comandi LaTeX o corsivi inventati da markdown, e stampa **file e numero di riga** di ogni problema. Se stampa `Controllo formule: nessun problema rilevato`, il PDF è pulito. Non blocca la generazione: avvisa.
+**Il controllo automatico.** `build_pdf.py` verifica a ogni generazione che non ci siano `$`, comandi LaTeX, graffe nei pedici o corsivi inventati da markdown, **e che numeratori e denominatori restino centrati sulla barra di frazione** (il pedice reso è più stretto del sorgente, quindi le frazioni allineate a occhio si spostano). Stampa **file e numero di riga** di ogni problema. Se stampa `Controllo formule: nessun problema rilevato`, il PDF è pulito. Non blocca la generazione: avvisa.
 
 ## Provenienza delle fonti
 

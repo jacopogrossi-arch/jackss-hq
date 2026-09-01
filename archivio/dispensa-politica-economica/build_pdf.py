@@ -52,7 +52,92 @@ def controlla_formule(files):
                 avvisi.append(f"{fname}:{n}  simbolo $ fuori da un blocco (LaTeX non viene reso nel PDF)")
             if comando_latex.search(fuori_apici):
                 avvisi.append(f"{fname}:{n}  comando LaTeX (\\frac, \\dot...) non reso nel PDF")
+            if "_{" in fuori_apici or "^{" in fuori_apici:
+                avvisi.append(f"{fname}:{n}  graffe LaTeX in pedice/apice: usare _(...) o ^(...)")
     return avvisi
+
+
+# pedici e apici: nei sorgenti si scrivono Q_M e (1+i)^t, che restano leggibili e
+# facili da modificare; qui diventano pedici e apici tipografici veri, come sul manuale
+PEDICE_PAR = re.compile(r"(?<=[A-Za-zΔθπεωγλσ0-9)])_\(([^()]{1,12})\)")
+PEDICE = re.compile(r"(?<=[A-Za-zΔθπεωγλσ0-9)])_([A-Za-z]{1,2}(?:,[A-Za-z]{1,2})?[0-9]?|[0-9]{1,2}|trans)\b")
+APICE_PAR = re.compile(r"(?<=[A-Za-zΔθπεωγλσ0-9)])\^\(([^()]{1,12})\)")
+APICE = re.compile(r"(?<=[A-Za-zΔθπεωγλσ0-9)])\^([A-Za-z]{1,4}|[0-9]{1,2})\b")
+
+
+def _posizioni(riga):
+    """larghezza resa di ogni carattere: un pedice/apice occupa 0,75, il _ o ^ sparisce"""
+    x = 0.0; pos = []; i = 0
+    while i < len(riga):
+        m = PEDICE.match(riga, i) or APICE.match(riga, i) or PEDICE_PAR.match(riga, i) or APICE_PAR.match(riga, i)
+        if m and i > 0 and riga[i-1] != " ":
+            for ch in m.group(1).strip("()"):
+                pos.append((x, ch)); x += 0.75
+            i = m.end()
+        else:
+            pos.append((x, riga[i])); x += 1.0; i += 1
+    return pos
+
+
+def _gruppi(riga, char=None):
+    """blocchi di testo contigui (separati da 3+ spazi), come (x_inizio, x_fine)"""
+    out = []; cur = None; vuoti = 0
+    for x, ch in _posizioni(riga):
+        if ch.strip() and (char is None or ch == char):
+            cur = [x, x + 1] if cur is None else [cur[0], x + 1]
+            vuoti = 0
+        elif cur is not None:
+            vuoti += 1
+            if vuoti >= 3: out.append(tuple(cur)); cur = None
+    if cur is not None: out.append(tuple(cur))
+    return out
+
+
+def controlla_allineamento(files):
+    """Numeratori e denominatori devono restare centrati sulla barra di frazione:
+    il pedice reso e' piu' stretto del testo sorgente, quindi le frazioni scritte
+    a occhio si disallineano. Qui si misura la larghezza resa e si segnala."""
+    avvisi = []
+    for fname in files:
+        righe = (SCHEMI / fname).read_text(encoding="utf-8").split("\n")
+        dentro = False; blocco = []; inizio = 0
+        for n, l in enumerate(righe, 1):
+            if l.lstrip().startswith("```"):
+                if dentro:
+                    for k, riga in enumerate(blocco):
+                        for b in _gruppi(riga, "─"):
+                            centro_barra = (b[0] + b[1]) / 2
+                            for dk in (-1, 1):
+                                if not (0 <= k + dk < len(blocco)) or _gruppi(blocco[k + dk], "─"):
+                                    continue
+                                sopra = [g for g in _gruppi(blocco[k + dk]) if g[0] < b[1] and g[1] > b[0]]
+                                if not sopra: continue
+                                g = max(sopra, key=lambda g: min(g[1], b[1]) - max(g[0], b[0]))
+                                scarto = (g[0] + g[1]) / 2 - centro_barra
+                                if abs(scarto) > 0.75:
+                                    dove = "numeratore" if dk == -1 else "denominatore"
+                                    avvisi.append(f"{fname}:{inizio+k}  {dove} fuori centro di {scarto:+.1f} caratteri")
+                    blocco = []
+                dentro = not dentro; inizio = n; continue
+            if dentro: blocco.append(l)
+    return avvisi
+
+
+def applica_pedici_apici(html):
+    """Trasforma X_y in X<sub>y</sub> e X^y in X<sup>y</sup>.
+
+    Agisce SOLO sul testo fuori dai tag: dentro i tag ci sono le ancore dell'indice
+    (id="esercizio-tipo-svolto_3"), che verrebbero rotte insieme ai link che le puntano.
+    """
+    def converti(testo):
+        testo = PEDICE_PAR.sub(r"<sub>\1</sub>", testo)
+        testo = APICE_PAR.sub(r"<sup>\1</sup>", testo)
+        testo = PEDICE.sub(r"<sub>\1</sub>", testo)
+        testo = APICE.sub(r"<sup>\1</sup>", testo)
+        return testo
+
+    pezzi = re.split(r"(<[^>]+>)", html)
+    return "".join(p if i % 2 else converti(p) for i, p in enumerate(pezzi))
 
 
 def controlla_html(html):
@@ -78,7 +163,7 @@ def stampa_avvisi(avvisi):
         print("Controllo formule: nessun problema rilevato.")
 
 
-avvisi_sorgente = controlla_formule(FILES_IN_ORDER)
+avvisi_sorgente = controlla_formule(FILES_IN_ORDER) + controlla_allineamento(FILES_IN_ORDER)
 
 parts = []
 HEADER = """# Dispensa Politica Economica
@@ -141,13 +226,15 @@ ANCHOR_MAP = {
 for fname, anchor in ANCHOR_MAP.items():
     combined_md = combined_md.replace(f"]({fname})", f"]({anchor})")
 
-html_body = markdown.markdown(
+html_body_grezzo = markdown.markdown(
     combined_md,
     extensions=["tables", "toc", "fenced_code", "sane_lists", "md_in_html"],
     extension_configs={
         "toc": {"toc_depth": "1-2", "anchorlink": False, "permalink": False},
     },
 )
+
+html_body = applica_pedici_apici(html_body_grezzo)
 
 html_template = f"""<!DOCTYPE html>
 <html lang="it">
@@ -172,6 +259,11 @@ html_template = f"""<!DOCTYPE html>
         padding: 10px 14px; margin: 12px 0; page-break-inside: avoid; overflow-x: auto; }}
   pre code {{ background: none; padding: 0; font-size: 10.5pt; line-height: 1.35;
              white-space: pre; color: #16324f; }}
+  /* la tecnica classica: line-height 0 e posizionamento relativo, cosi' pedici e apici
+     non allargano l'interlinea ne' sfasano le righe delle frazioni nei riquadri */
+  sub, sup {{ font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }}
+  sub {{ bottom: -0.25em; }}
+  sup {{ top: -0.5em; }}
   blockquote {{ border-left: 3px solid #ccc; margin-left: 0; padding-left: 12px; color: #555; }}
   .pagebreak {{ page-break-before: always; }}
   a {{ color: #1a5276; text-decoration: none; }}
@@ -190,5 +282,5 @@ html_template = f"""<!DOCTYPE html>
 
 (BASE / f"{OUT_NAME}.html").write_text(html_template, encoding="utf-8")
 
-stampa_avvisi(avvisi_sorgente + controlla_html(html_body))
+stampa_avvisi(avvisi_sorgente + controlla_html(html_body_grezzo))
 print(f"OK: {OUT_NAME}.md e {OUT_NAME}.html generati")

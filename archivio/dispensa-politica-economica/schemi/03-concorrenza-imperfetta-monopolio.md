@@ -83,7 +83,7 @@ Metodo generale per una funzione di domanda lineare **P = a − bQ** e un costo 
 
 - **Definizione**: si ha monopolio naturale quando i **costi fissi sono molto elevati** (barriera all'entrata) e i **costi variabili sono relativamente bassi**, tipico delle *utilities* (acqua, gas, energia elettrica, rifiuti, trasporto pubblico locale) che devono costruire e mantenere un'infrastruttura di rete.
 - **Come si verifica**: si confronta il **costo medio totale (ATC/CMeT)** con la **domanda** (o con il costo marginale). Se l'ATC è **decrescente** su tutto il range di quantità rilevante ed è sempre **superiore al MC** (per la presenza di costi fissi elevati spalmati su più unità), allora un'unica impresa produce a costo inferiore rispetto a più imprese che si dividono il mercato → è **subadditivo** → monopolio naturale.
-- Graficamente: ATC decrescente, MC = M costante e sotto l'ATC; MR e Domanda si incrociano con MC in Q\* (quantità di monopolio), mentre Domanda incrocia MC in Q\*\* > Q\* (quantità efficiente). Il rettangolo Π tra P\* e ATC è il profitto di monopolio; il triangolo S tra Q\* e Q\*\* è la perdita secca.
+- Graficamente: ATC decrescente, MC costante e sotto l'ATC; MR e Domanda si incrociano con MC in `Q*` (quantità di **monopolio**), mentre la Domanda incrocia MC in `Q**`, con `Q** > Q*` (quantità **efficiente**). Il rettangolo fra `P*` e ATC è il profitto di monopolio; il triangolo fra `Q*` e `Q**` è la perdita secca.
 
 ## 7. **Mercati contendibili**
 

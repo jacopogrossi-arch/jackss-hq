@@ -105,7 +105,7 @@ A) un salario reale troppo elevato · B) la carenza di domanda aggregata · C) l
 A) a credito · B) a debito · C) neutra · D) registrata solo nel conto capitale
 
 **29.** La condizione di Marshall-Lerner richiede che:
-A) |εx| + |εm| < 1 · B) |εx| + |εm| > 1 · C) εx = εm · D) εx · εm > 1
+A) |ε_x| + |ε_m| < 1 · B) |ε_x| + |ε_m| > 1 · C) ε_x = ε_m · D) ε_x · ε_m > 1
 
 **30.** La curva a J descrive:
 A) il peggioramento iniziale del saldo dei movimenti di beni dopo una svalutazione, seguito da un miglioramento · B) la relazione fra inflazione e disoccupazione · C) l'andamento del rapporto debito/PIL · D) la distribuzione cumulata del reddito
@@ -196,7 +196,7 @@ A) il numero di strumenti deve essere almeno pari al numero di obiettivi · B) i
 A) sotto-determinato, con molteplici soluzioni · B) sovradeterminato, senza soluzione · C) sempre risolvibile · D) in equilibrio di Nash
 
 **56.** L'indice di malessere di Okun è dato da:
-A) ṗ − u · B) ṗ + u · C) ṗ × u · D) u/ṗ
+A) ṗ − u · B) ṗ + u · C) ṗ · u · D) u/ṗ
 
 **57.** Il criterio dell'**assegnazione appropriata** prescrive di assegnare a ciascun obiettivo:
 A) lo strumento più economico · B) lo strumento su cui è relativamente più efficace · C) sempre la politica fiscale · D) due strumenti indipendenti

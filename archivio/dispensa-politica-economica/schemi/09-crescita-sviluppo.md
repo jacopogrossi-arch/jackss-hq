@@ -30,11 +30,19 @@
   - **OG = Y − Y_p** (in livello) oppure **OG = (Y − Y_p)/Y_p** (in %)
   - **Y > Y_p** → fase di espansione; **Y < Y_p** → recessione.
 
-- **Tasso di crescita γ**: variazione percentuale del PIL reale tra due periodi: **γ = (Y_t − Y_{t-1}) / Y_{t-1}**. Obiettivo di politica economica: **γ > 0** (crescita); stagnazione/recessione = problemi da correggere.
+- **Tasso di crescita γ**: variazione percentuale del PIL reale fra due periodi.
+
+```
+              Y_t − Y_(t−1)
+      γ = ─────────────────
+                 Y_(t−1)
+```
+
+**dove:** `Y_t` = PIL reale del periodo corrente · `Y_(t−1)` = PIL reale del periodo precedente. Obiettivo di politica economica: `γ > 0` (crescita); stagnazione e recessione sono i casi da correggere.
 
 ### La legge di Okun
 
-Mette in relazione la **disoccupazione ciclica** (u − u*, scarto tra disoccupazione effettiva e disoccupazione di pieno impiego, cioè quella solo frizionale) e l'**output gap** (Y* − Y).
+Mette in relazione la **disoccupazione ciclica** (`u − u*`, scarto fra disoccupazione effettiva e disoccupazione di pieno impiego, cioè quella solo frizionale) e l'**output gap** (`Y* − Y`), dove l'asterisco indica il valore di **pieno impiego**.
 
 **Contenuto**: per ridurre il tasso di disoccupazione di **1 punto percentuale**, il prodotto deve crescere **oltre** il prodotto potenziale in misura **più che proporzionale — di circa il 2,5%**.
 
@@ -122,18 +130,18 @@ Tre settori produttivi: Agricoltura (produzione 200, consumi intermedi 50), Indu
 
 ```
       2020 (anno base):
-      pane  2,00 € × 1.000 =   2.000 €
-      auto 10.000 € ×    10 = 100.000 €
+      pane  2,00 € · 1.000 =   2.000 €
+      auto 10.000 € ·    10 = 100.000 €
       PIL 2020 = 102.000 €
 
       2025, a prezzi 2025 (PIL NOMINALE):
-      pane  2,50 € × 1.100 =   2.750 €
-      auto 12.000 € ×    12 = 144.000 €
+      pane  2,50 € · 1.100 =   2.750 €
+      auto 12.000 € ·    12 = 144.000 €
       PIL nominale 2025 = 146.750 €
 
       2025, a prezzi 2020 (PIL REALE):
-      pane  2,00 € × 1.100 =   2.200 €
-      auto 10.000 € ×    12 = 120.000 €
+      pane  2,00 € · 1.100 =   2.200 €
+      auto 10.000 € ·    12 = 120.000 €
       PIL reale 2025 = 122.200 €
 ```
 - Variazione: PIL nominale +44% (include inflazione) vs PIL reale +20% (solo crescita reale delle quantità) → la differenza tra le due variazioni è dovuta all'inflazione.

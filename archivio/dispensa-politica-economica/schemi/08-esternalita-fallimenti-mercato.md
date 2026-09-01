@@ -114,7 +114,7 @@
 - **Selezione avversa**: asimmetria **precedente** al contratto → esempio classico: mercato delle auto usate ("lemons"/bidoni). Con prezzo = valore medio, si vendono solo le auto di qualità inferiore, il prezzo scende ulteriormente, il mercato delle auto buone **sparisce** (risultato inefficiente: scambi vantaggiosi non avvengono).
 
   **Il conto da saper rifare**: 100 auto, 50 di alta qualità (A) e 50 bidoni (B). Il venditore sa quale ha in mano, il compratore no. Disponibilità a pagare: **2.400** per una A, **1.200** per una B; prezzi minimi di vendita: **2.000** per una A, **1.000** per una B (per ogni tipo, singolarmente, lo scambio sarebbe vantaggioso). Ma per un'auto di **qualità ignota** il compratore è disposto a pagare al più il valore atteso:
-  **2.400 × 0,5 + 1.200 × 0,5 = 1.800 < 2.000**
+  **2.400 · 0,5 + 1.200 · 0,5 = 1.800 < 2.000**
   Sotto il prezzo minimo del venditore di un'auto buona → **le auto di alta qualità escono dal mercato** e restano solo i bidoni, scambiati fra 1.000 e 1.200. L'asimmetria informativa ha distrutto metà degli scambi vantaggiosi.
 - **Azzardo morale**: asimmetria **successiva** al contratto → esempio: assicurazione, che aumenta la probabilità di comportamenti rischiosi (es. mercato assicurativo, uso eccessivo di assistenza sanitaria).
 - Esempio sanità: la selezione avversa fa sì che solo chi si aspetta spese elevate si assicuri, facendo salire il premio e restringendo ulteriormente il mercato (spirale); un'assicurazione pubblica universale **risolve la selezione avversa** ma **non l'azzardo morale** (soluzioni per quest'ultimo: ticket/franchigia, gatekeeping del medico di famiglia).

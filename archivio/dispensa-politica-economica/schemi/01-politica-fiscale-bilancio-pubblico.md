@@ -35,7 +35,7 @@
 - **Progressiva**: t₀ + t(y)Y, aliquota crescente col reddito, finalità redistributiva.
 - L'imposizione **progressiva** è uno **stabilizzatore automatico**: in una recessione (Y↓) il prelievo fiscale medio scende più che proporzionalmente e i trasferimenti (sussidi di disoccupazione) salgono → si attutisce la caduta del reddito disponibile e dei consumi, senza bisogno di una manovra discrezionale.
 - **Drenaggio fiscale (fiscal drag)**: con inflazione e aliquote progressive non indicizzate, un aumento del reddito solo *nominale* fa scattare aliquote più alte → il reddito reale netto diminuisce anche se il reddito reale lordo è invariato. Rimedi: credito d'imposta compensativo, indicizzazione degli scaglioni.
-  **Esempio numerico** (scaglioni: 20% fino a 1.000, 30% da 1.000 a 2.000). Reddito 1.000 → imposta 200, **aliquota media 20%**. Con inflazione al 20%, il reddito nominale sale a 1.200 ma il **potere d'acquisto è invariato**: imposta = 200 + 0,30 × 200 = 260 → **aliquota media 21,7%**. Il contribuente paga più imposte in termini reali **senza che nessuna aliquota sia stata alzata** e senza essere diventato più ricco: è un aumento di imposizione deciso dall'inflazione, non dal Parlamento.
+  **Esempio numerico** (scaglioni: 20% fino a 1.000, 30% da 1.000 a 2.000). Reddito 1.000 → imposta 200, **aliquota media 20%**. Con inflazione al 20%, il reddito nominale sale a 1.200 ma il **potere d'acquisto è invariato**: imposta = 200 + 0,30 · 200 = 260 → **aliquota media 21,7%**. Il contribuente paga più imposte in termini reali **senza che nessuna aliquota sia stata alzata** e senza essere diventato più ricco: è un aumento di imposizione deciso dall'inflazione, non dal Parlamento.
 - **Erosione, elusione, evasione** indeboliscono gettito ed equità: concentrano il carico fiscale su categorie meno capaci di sottrarsi (tipicamente il lavoro dipendente). Evasione in Italia stimata 110-130 mld/anno (~5% del debito pubblico).
 
 ---
@@ -64,7 +64,7 @@
 ```
                       B
       debito/PIL = ───────
-                     p · Y
+                    p · Y
 ```
 
 **dove:** `B` = stock di debito · `p` = livello dei prezzi · `Y` = PIL reale (quindi `p · Y` = PIL nominale). La sostenibilità richiede che questo rapporto sia **non crescente** nel tempo.
@@ -141,9 +141,9 @@ e si risolve per l'incognita richiesta.
 Sostituendo `C` dentro `Y` e risolvendo:
 
 ```
-                 1
+               1
       Y = ───────────  ·  ( Ī + G − c · T )
-              1 − c
+             1 − c
 ```
 
 Si passa alle **variazioni** (Δ = "variazione di"):
@@ -250,6 +250,6 @@ Ora si impone la condizione del teorema, `ΔG = ΔT` (bilancio in pareggio):
 1. Tasso di interesse reale: i − ṗ = 4% − 1,5% = 2,5%.
 2. Confronto con la crescita: Ẏ = 2% < 2,5% (tasso reale) → la componente "palla di neve" da sola farebbe **aumentare** il rapporto debito/PIL (perché il costo reale del debito supera la crescita).
 3. In più c'è un disavanzo primario dell'1% (G>T), che aggiunge ulteriore nuovo debito ogni anno.
-4. **Conclusione: il rapporto debito/PIL aumenta**, per due ragioni cumulative: (a) il tasso di interesse reale supera la crescita, (b) il paese produce nuovo debito anche al netto degli interessi (disavanzo primario). Per stabilizzare il rapporto servirebbe o un avanzo primario sufficiente a compensare il differenziale (i−ṗ−Ẏ)×(debito/PIL), oppure una riduzione di i, oppure più crescita/inflazione.
+4. **Conclusione: il rapporto debito/PIL aumenta**, per due ragioni cumulative: (a) il tasso di interesse reale supera la crescita, (b) il paese produce nuovo debito anche al netto degli interessi (disavanzo primario). Per stabilizzare il rapporto servirebbe o un avanzo primario sufficiente a compensare il differenziale (i−ṗ−Ẏ)·(debito/PIL), oppure una riduzione di i, oppure più crescita/inflazione.
 
-*(Nota per l'esame: se il testo dà anche il livello iniziale del rapporto debito/PIL, la variazione approssimata del rapporto nel periodo è: Δ(B/Y) ≈ [(i−ṗ−Ẏ)×(B/Y)] + (disavanzo primario/PIL). Utile per rispondere a domande che chiedono "di quanto cambia" e non solo "aumenta o diminuisce".)*
+*(Nota per l'esame: se il testo dà anche il livello iniziale del rapporto debito/PIL, la variazione approssimata del rapporto nel periodo è: Δ(B/Y) ≈ [(i−ṗ−Ẏ)·(B/Y)] + (disavanzo primario/PIL). Utile per rispondere a domande che chiedono "di quanto cambia" e non solo "aumenta o diminuisce".)*

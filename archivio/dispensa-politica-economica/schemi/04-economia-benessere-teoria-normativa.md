@@ -72,7 +72,7 @@ L'efficienza paretiana (o allocativa) è **una** delle nozioni di efficienza. Le
 |---|---|---|---|
 | **Utilitarista** | **W = Σ Uᵢ** (somma delle utilità) | Massimizza il **benessere totale**, indipendentemente da come è distribuito | Nessuna avversione alla disuguaglianza: un'unità di utilità in più vale uguale per chiunque la riceva. Curve di indifferenza sociale = **rette a -45°** |
 | **Rawlsiana** | **W = min(Uᵢ)** | Massimizza l'utilità dell'**individuo peggiore** (criterio **maximin**) | Massima avversione alla disuguaglianza: conta solo chi sta peggio. Curve di indifferenza sociale a **"L"** (angolo retto) |
-| **Bergson-Samuelson** | Forma generale **W = f(U₁, U₂, …, Uₙ)**, es. **W = U1 × U2** | Forma flessibile che pesa efficienza ed equità in un continuum tra i due estremi precedenti | Avversione alla disuguaglianza intermedia e graduabile. Curve di indifferenza sociale **convesse verso l'origine** (tipo iperboli) |
+| **Bergson-Samuelson** | Forma generale **W = f(U₁, U₂, …, Uₙ)**, es. **W = U1 · U2** | Forma flessibile che pesa efficienza ed equità in un continuum tra i due estremi precedenti | Avversione alla disuguaglianza intermedia e graduabile. Curve di indifferenza sociale **convesse verso l'origine** (tipo iperboli) |
 
 - Punto chiave da scrivere all'esame: **le diverse FBS esprimono diversi giudizi di valore circa il peso relativo di efficienza ed equità** — non esiste un criterio "oggettivamente giusto", la scelta della FBS è normativa.
 - La FBS **richiede confronti interpersonali di utilità** (a differenza del criterio paretiano) e per questo riesce a dare un **ordinamento completo** anche tra stati Pareto-efficienti non confrontabili con Pareto.

@@ -36,15 +36,15 @@ Sono le stesse fasi di un imprenditore privato, ma con contenuti diversi (vedi �
 **Le formule:**
 
 ```
-              b_t                          c_t
+                b_t                       c_t
       B = Σ ─────────          C = Σ ─────────
-             (1+i)^t                    (1+i)^t
+              (1+i)^t                   (1+i)^t
 
-      VAN   = B − C                (valore attuale netto assoluto)
+      VAN = B − C                  (valore attuale netto assoluto)
 
-              B − C
-      VAN_r = ───────              (valore attuale netto relativo)
-                C
+        B − C
+      ─────────  =  VAN_r          (valore attuale netto relativo)
+          C
 ```
 
 **dove:**
@@ -67,9 +67,9 @@ Sono le stesse fasi di un imprenditore privato, ma con contenuti diversi (vedi �
 **Definizione**: il TIR è il valore di **i** che rende **B − C = 0**, cioè che annulla il VAN:
 
 ```
-              b_t              c_t
+            b_t              c_t
       Σ ─────────  −  Σ ─────────  =  0
-           (1+i)^t          (1+i)^t
+          (1+i)^t          (1+i)^t
 ```
 
 cioè si cerca quel valore di `i` che rende **B = C**.

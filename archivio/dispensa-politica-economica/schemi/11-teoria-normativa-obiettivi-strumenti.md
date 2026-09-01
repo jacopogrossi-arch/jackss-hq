@@ -102,7 +102,7 @@ Con due obiettivi (ridurre inflazione e disoccupazione), la funzione di benesser
 ```
            1              1
       N = ───  ·  ─────────────────  ·  ( I + G )
-           θ        1 − c(1−t)
+           θ          1 − c(1−t)
 ```
 
 3. **Forma ridotta inversa (modello di decisione)** — lo **strumento in funzione dell'obiettivo**: si assegna il valore desiderato all'obiettivo e si ricava il valore da dare allo strumento:
@@ -217,7 +217,7 @@ Curva di Phillips aumentata delle aspettative: **u = uⁿ + α(ṗᵉ − ṗ)**
 ```
            1              1
       N = ───  ·  ─────────────────  ·  ( I + G )
-           θ        1 − c(1−t)
+           θ          1 − c(1−t)
 ```
 
 **Forma ridotta inversa** (modello di decisione — è quella che serve per rispondere):
@@ -268,7 +268,7 @@ Curva di Phillips aumentata delle aspettative: **u = uⁿ + α(ṗᵉ − ṗ)**
 L'efficacia è la **derivata dell'obiettivo rispetto allo strumento**, cioè il coefficiente di G nella forma ridotta:
 
 ```
-      dN            1
+      dN               1
       ──  =  ─────────────────────
       dG      θ · [ 1 − c(1−t) ]
 ```
@@ -277,7 +277,7 @@ L'efficacia è la **derivata dell'obiettivo rispetto allo strumento**, cioè il 
 
 | | Efficacia dN/dG | Lettura |
 |---|---|---|
-| **t = 0** | 1 / (30 × 0,2) = 1/6 ≈ **0,167** | Ogni euro di spesa pubblica crea 0,167 occupati → servono **6 €** per un occupato in più |
-| **t = 0,2** | 1 / (30 × 0,36) = 1/10,8 ≈ **0,093** | Servono **10,8 €** per un occupato in più |
+| **t = 0** | 1 / (30 · 0,2) = 1/6 ≈ **0,167** | Ogni euro di spesa pubblica crea 0,167 occupati → servono **6 €** per un occupato in più |
+| **t = 0,2** | 1 / (30 · 0,36) = 1/10,8 ≈ **0,093** | Servono **10,8 €** per un occupato in più |
 
 **Conclusione**: l'imposta proporzionale **riduce l'efficacia** dello strumento fiscale (da 0,167 a 0,093, cioè del 44%). È il punto teorico che collega questo esercizio al **teorema di Haavelmo** ([schema 01](01-politica-fiscale-bilancio-pubblico.md)): il moltiplicatore del bilancio in pareggio vale 1 con imposta in somma fissa, **ma non vale più** con aliquota proporzionale, esattamente per lo stesso motivo.
