@@ -13,6 +13,7 @@ FILES_IN_ORDER = [
     "00c-mappa-priorita.md",
     "00b-glossario-simboli.md",
     "00a-formulario.md",
+    "00e-quaderno-esercizi.md",
     # core
     "01-politica-fiscale-bilancio-pubblico.md",
     "02-inflazione-curva-phillips.md",
@@ -241,6 +242,7 @@ ANCHOR_MAP = {
     "00a-formulario.md": "#formulario-riassuntivo",
     "00b-glossario-simboli.md": "#glossario-dei-simboli",
     "00c-mappa-priorita.md": "#mappa-di-priorita-argomento-esercizio-tipo-pagina",
+    "00e-quaderno-esercizi.md": "#quaderno-di-esercizi-da-svolgere",
     "01-politica-fiscale-bilancio-pubblico.md": "#politica-fiscale-bilancio-pubblico-e-debito-pubblico",
     "02-inflazione-curva-phillips.md": "#inflazione-e-curva-di-phillips",
     "03-concorrenza-imperfetta-monopolio.md": "#concorrenza-imperfetta-monopolio-e-politiche-per-la-concorrenza",

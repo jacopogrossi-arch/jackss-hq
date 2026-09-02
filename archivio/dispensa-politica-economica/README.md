@@ -24,15 +24,16 @@ Tre fasi:
 
 ## Come studiare da qui
 
-**`Dispensa Politica Economica.pdf`** — il documento unico da cui studiare: 105 pagine, con struttura della prova e indice cliccabile in prima pagina che rimanda a ogni capitolo, i 14 schemi + formulario + glossario + mappa di priorità + banca domande per la preselezione + i 9 grafici. Generato da `build_pdf.py` (Python + Chrome headless — rilanciare lo script dopo qualsiasi modifica agli schemi per rigenerare il PDF).
+**`Dispensa Politica Economica.pdf`** — il documento unico da cui studiare: 151 pagine, con struttura della prova e indice cliccabile in prima pagina che rimanda a ogni capitolo, i 14 schemi + formulario + glossario + mappa di priorità + quaderno di esercizi + banca domande per la preselezione + i 9 grafici. Generato da `build_pdf.py` (Python + Chrome headless — rilanciare lo script dopo qualsiasi modifica agli schemi per rigenerare il PDF).
 
-L'ordine dei capitoli nel PDF segue la **priorità**, non la numerazione dei file: i core (1, 2, 3, 4, **11**) vengono per primi, poi i secondari (5, 6, 7, 8, **13**, **12**), poi le coperture di sicurezza (9, 10, **14**), e in coda la banca domande.
+L'ordine dei capitoli nel PDF segue la **priorità**, non la numerazione dei file: i core (1, 2, 3, 4, **11**) vengono per primi, poi i secondari (5, 6, 7, 8, **13**, **12**), poi le coperture di sicurezza (9, 10, **14**), e in coda la banca domande. Il **quaderno di esercizi** sta davanti a tutto, subito dopo il formulario: è materiale di lavoro quotidiano, non di lettura.
 
 ## Come orientarsi nei file sorgente
 
 - **`schemi/00c-mappa-priorita.md`** — vista d'insieme argomento → priorità → tipo di esercizio, prima di aprire la dispensa.
 - **`schemi/00b-glossario-simboli.md`** — i simboli (i, r, Q, MC, FBS, EEG...) usati in schemi diversi, fissati in un unico posto per evitare confusione.
 - **`schemi/00a-formulario.md`** — tutte le formule chiave per il ripasso last-minute, con rimando allo schema che le spiega.
+- **`schemi/00e-quaderno-esercizi.md`** — **23 tracce da svolgere a mano**, con le soluzioni in una sezione separata in fondo. Contiene anche nove **schede-procedura** (come riconosci l'esercizio, i passi in ordine, l'errore tipico) e il calendario degli ultimi giorni prima dell'esame. Cinque tracce (A1, A2, A3, B3, B10) sono **esercizi proposti dalla professoressa** nelle slide e mai svolti a lezione, recuperati da `appunti-grezzi/`.
 - **`schemi/00d-domande-preselezione.md`** — 68 domande a risposta multipla su tutti e 14 gli argomenti, con risposte e rimando allo schema, più **tre simulazioni cronometrate da 11 domande** per allenare i 55 secondi a domanda della preselezione.
 - **`schemi/`** — gli schemi di studio veri e propri. Ogni schema ha in testa le domande d'esame collegate e chiude con un esercizio tipo svolto (dove pertinente). ⚠️ **Il numero del file non indica la priorità**: gli schemi 01-10 sono ordinati per priorità, gli 11-14 sono stati aggiunti in un secondo momento per coprire capitoli del programma che nei compiti passati non erano mai comparsi, e alcuni di essi (11 e 13) sono più importanti di schemi con numero più basso. La priorità sta nella colonna dedicata della mappa.
 - **`grafici/`** — i grafici richiamati negli schemi (SVG disegnati a mano, non generati da AI, per garantire precisione su assi/curve/etichette): IS-LM con crowding-out, AD-AS domanda/costi, curva di Phillips, monopolio+perdita secca, monopolio naturale/contendibile, esternalità, Edgeworth/Pareto, Mundell-Fleming, Lorenz/Gini.
@@ -113,7 +114,7 @@ Alcuni esercizi tipo negli schemi sono stati ricostruiti dagli agenti perché i 
 - **Schema 02 (Phillips)**: la curva dei salari usata nell'esercizio (ẇ=0,55-5u) non è nei due PDF letti — verificare i numeri esatti sul compito originale.
 - ~~**Schema 03 (monopolio)**: convenzione sulla doppia radice nel mercato contendibile~~ → **risolto**: appunti di altri studenti dello stesso corso confermano che negli esercizi si impone **P = costo medio** e si tiene la radice maggiore (l'unica hit-and-run-proof), che è esattamente il metodo usato nel nostro esercizio. Restano ricostruiti con metodo standard di microeconomia gli altri due esercizi (perdita secca, monopolio naturale).
 - **Schema 04 (benessere)**: l'esercizio a 3 individui/3 stati è ricostruito da zero, coerente con le formule delle slide ma non è un esempio del corso.
-- **Schema 06 (economia aperta)**: l'esercizio IS-LM-BP fornito manca del dato di offerta di moneta o tasso d'interesse — il reddito di equilibrio non è calcolabile come numero unico senza quel dato. Verificare "Esercitazione ec aperta.pdf" per il valore mancante.
+- **Schema 06 (economia aperta)**: l'esercizio IS-LM-BP fornito manca del dato di offerta di moneta o tasso d'interesse — il reddito di equilibrio non è calcolabile come numero unico senza quel dato. Verificare "Esercitazione ec aperta.pdf" per il valore mancante. *(Aggirato: l'esercizio B5 del [quaderno](schemi/00e-quaderno-esercizi.md) è una versione completa e risolvibile dello stesso modello, con l'offerta di moneta data.)*
 
 ## Non coperti dai compiti passati (ma presenti nel programma)
 
