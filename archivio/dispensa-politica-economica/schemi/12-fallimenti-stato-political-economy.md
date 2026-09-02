@@ -73,7 +73,7 @@ La *political economy* (o teoria positiva della politica economica) definisce la
 - L'equilibrio del gioco **riflette il conflitto economico tra gruppi eterogenei**: le politiche adottate rispecchiano l'influenza politica relativa dei diversi gruppi.
 - I politici **non sono benevolenti**: hanno obiettivi propri, primo fra tutti essere rieletti.
 
-## **5. Il ciclo politico-economico (Nordhaus)** *(manuale)*
+## **5. Il ciclo politico-economico (Nordhaus)** *(dal manuale, non dalle slide)*
 
 **Le quattro ipotesi del modello:**
 
@@ -89,7 +89,7 @@ La *political economy* (o teoria positiva della politica economica) definisce la
 
 **Risultato: l'economia è resa instabile dal ciclo elettorale.** È il caso in cui la politica economica, anziché stabilizzare, **è essa stessa la fonte dell'instabilità** — l'argomento più forte a favore delle **regole** contro la discrezionalità ([schema 11](11-teoria-normativa-obiettivi-strumenti.md), §13).
 
-## **6. Il doppio problema di agenzia** *(manuale)*
+## **6. Il doppio problema di agenzia** *(dal manuale, non dalle slide)*
 
 La relazione **elettori → politici** è una relazione **principale-agente** (vedi [schema 08](08-esternalita-fallimenti-mercato.md)): il **principale** (elettore) delega un compito all'**agente** (politico), ma gli obiettivi dell'agente possono non coincidere con i suoi, e il principale non osserva pienamente né le caratteristiche né le azioni dell'agente.
 
@@ -99,7 +99,7 @@ La delega però è **doppia**:
 
 Ogni passaggio aggiunge un problema di agenzia e quindi di opportunismo. Le soluzioni possibili stanno nelle **regole e istituzioni** capaci di sanzionare e scoraggiare i comportamenti opportunistici, e nel disegno dei **sistemi elettorali** (proporzionale vs maggioritario: quale seleziona meglio?).
 
-## **7. Lobbying e corruzione** *(manuale)*
+## **7. Lobbying e corruzione** *(dal manuale, non dalle slide)*
 
 **I gruppi di interesse hanno due obiettivi:**
 

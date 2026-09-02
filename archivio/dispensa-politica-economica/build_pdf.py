@@ -214,6 +214,8 @@ Testo di riferimento: Paesani, P., *Manuale di politica economica*, II edizione,
 
 Appelli a.a. 2026-27: 20 gennaio · 10 febbraio · 16 giugno · 14 luglio · 8 settembre.
 
+**Una sigla da conoscere prima di iniziare.** Alcuni titoli di sezione portano la dicitura *(dal manuale, non dalle slide)*: quella parte viene dal **manuale di riferimento** (Paesani) e **non** trova riscontro nei PDF della professoressa. È materiale del programma, ma senza conferma che sia stato trattato a lezione: **da studiare per ultimo**, ed è la prima cosa da sacrificare se il tempo stringe. Tutto il resto viene dalle slide del corso. Lo schema 14 (sistema monetario internazionale) è interamente in questa condizione.
+
 [TOC]
 
 <div class="pagebreak"></div>

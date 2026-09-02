@@ -132,14 +132,14 @@ Nel caso sovradeterminato le alternative sono tre: **rinunciare** agli obiettivi
 - **Esempio classico**: politica **monetaria** all'obiettivo **inflazione**, politica **fiscale** all'obiettivo **disoccupazione**.
 - Un secondo esempio, in economia aperta, è svolto nello [schema 06](06-economia-aperta-bilancia-pagamenti.md): politica fiscale all'equilibrio **interno** (Y = Y*), politica monetaria all'equilibrio **esterno** (BP = 0).
 
-## **9. La critica di Lucas** *(manuale)*
+## **9. La critica di Lucas** *(dal manuale, non dalle slide)*
 
 - Il comportamento degli agenti privati **non è invariante rispetto alle azioni pubbliche**: i parametri delle funzioni di comportamento non sono stabili, perché reagiscono alle aspettative sulle politiche.
 - Conseguenza pratica: **i parametri stimati sui dati passati non sono affidabili** per prevedere gli effetti di una politica nuova, perché la politica stessa li modifica.
 - Conseguenza teorica: l'efficacia dell'azione pubblica può essere **annullata** se le aspettative degli operatori inducono una variazione nei parametri. I privati non sono soggetti passivi che si adattano, ma **agenti attivi che anticipano** le politiche.
 - Da qui il passaggio all'analisi dell'interazione fra policy maker e privati come **gioco strategico**.
 
-## **10. La politica economica come gioco** *(manuale)*
+## **10. La politica economica come gioco** *(dal manuale, non dalle slide)*
 
 - **Gioco** = interdipendenza strategica fra decisori autonomi con obiettivi contrapposti, in cui il guadagno di ciascuno dipende dalle scelte proprie **e** altrui.
 - **Elementi**: giocatori (policy maker e settore privato, politici ed elettori, governi di paesi diversi, autorità monetaria e fiscale) · strategie · guadagni (payoff) · informazioni e regole.
@@ -149,7 +149,7 @@ Nel caso sovradeterminato le alternative sono tre: **rinunciare** agli obiettivi
   - **Deterrenza all'entrata**: l'impresa insediata (I) minaccia una guerra di prezzo se l'entrante (E) entra. Ma la guerra di prezzo produce perdite **anche a I**: la minaccia non è credibile, E anticipa la risposta razionale ed entra, e I accetta l'ingresso (duopolio).
 - Morale ricorrente: **un annuncio conta solo se chi lo fa avrà ancora interesse a mantenerlo quando arriverà il momento**.
 
-## **11. L'incoerenza temporale delle politiche** *(manuale)*
+## **11. L'incoerenza temporale delle politiche** *(dal manuale, non dalle slide)*
 
 **Definizione**: una politica è temporalmente incoerente quando, al momento di attuarla, per il policy maker è ottimale una condotta **diversa da quella annunciata**.
 
@@ -164,7 +164,7 @@ Ma se gli agenti hanno **aspettative razionali**, al tempo 0 **prevedono l'incen
 
 **Esempio 2 — politica monetaria**: vedi sezione seguente.
 
-## **12. Il gioco di politica monetaria e il banchiere conservatore** *(manuale)*
+## **12. Il gioco di politica monetaria e il banchiere conservatore** *(dal manuale, non dalle slide)*
 
 Curva di Phillips aumentata delle aspettative: **u = uⁿ + α(ṗᵉ − ṗ)**.
 

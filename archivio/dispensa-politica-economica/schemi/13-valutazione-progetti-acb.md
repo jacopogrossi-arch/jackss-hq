@@ -109,7 +109,7 @@ Il policy maker deve tener conto di ciò che l'imprenditore privato ignora:
 1. include fra costi e benefici anche quelli che ricadono su **soggetti diversi** da chi realizza il progetto (esternalità);
 2. valuta i costi come **costo-opportunità**, usando **prezzi ombra** al posto dei prezzi di mercato (e un tasso di sconto "ombra" per l'attualizzazione).
 
-## **7. I beni non scambiati sul mercato** *(integrazione dal manuale)*
+## **7. I beni non scambiati sul mercato** *(dal manuale, non dalle slide)*
 
 Alcuni beni non hanno prezzo e vanno comunque valutati:
 

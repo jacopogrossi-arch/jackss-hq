@@ -16,6 +16,7 @@ Prima dei simboli, i **modi di scriverli**. Sono cinque, e una volta capiti si l
 | **ΔB** | **variazione assoluta** | Di quanto è cambiata la grandezza, **in valore** (non in %): `ΔB` = quanti euro di debito in più |
 | **Y\*** | **asterisco** | Valore di **equilibrio**, **ottimo** o di **pieno impiego**: `u*` = disoccupazione di pieno impiego, `Q*` = quantità di equilibrio |
 | **Σ** | **sommatoria** | "Somma di tutti i termini": `Σ b_t` = somma dei benefici di tutti i periodi |
+| *(dal manuale, non dalle slide)* | **etichetta sulla fonte** | Accanto a un titolo di sezione: quella parte viene dal **manuale Paesani**, non dai PDF della professoressa. Materiale del programma, ma non confermato a lezione → **da studiare per ultimo** |
 
 **I pedici ricorrenti** — imparare questi dodici copre quasi tutte le formule della dispensa:
 

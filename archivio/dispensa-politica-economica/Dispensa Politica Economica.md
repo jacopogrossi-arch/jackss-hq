@@ -14,6 +14,8 @@ Testo di riferimento: Paesani, P., *Manuale di politica economica*, II edizione,
 
 Appelli a.a. 2026-27: 20 gennaio · 10 febbraio · 16 giugno · 14 luglio · 8 settembre.
 
+**Una sigla da conoscere prima di iniziare.** Alcuni titoli di sezione portano la dicitura *(dal manuale, non dalle slide)*: quella parte viene dal **manuale di riferimento** (Paesani) e **non** trova riscontro nei PDF della professoressa. È materiale del programma, ma senza conferma che sia stato trattato a lezione: **da studiare per ultimo**, ed è la prima cosa da sacrificare se il tempo stringe. Tutto il resto viene dalle slide del corso. Lo schema 14 (sistema monetario internazionale) è interamente in questa condizione.
+
 [TOC]
 
 <div class="pagebreak"></div>
@@ -82,6 +84,7 @@ Prima dei simboli, i **modi di scriverli**. Sono cinque, e una volta capiti si l
 | **ΔB** | **variazione assoluta** | Di quanto è cambiata la grandezza, **in valore** (non in %): `ΔB` = quanti euro di debito in più |
 | **Y\*** | **asterisco** | Valore di **equilibrio**, **ottimo** o di **pieno impiego**: `u*` = disoccupazione di pieno impiego, `Q*` = quantità di equilibrio |
 | **Σ** | **sommatoria** | "Somma di tutti i termini": `Σ b_t` = somma dei benefici di tutti i periodi |
+| *(dal manuale, non dalle slide)* | **etichetta sulla fonte** | Accanto a un titolo di sezione: quella parte viene dal **manuale Paesani**, non dai PDF della professoressa. Materiale del programma, ma non confermato a lezione → **da studiare per ultimo** |
 
 **I pedici ricorrenti** — imparare questi dodici copre quasi tutte le formule della dispensa:
 
@@ -1511,14 +1514,14 @@ Nel caso sovradeterminato le alternative sono tre: **rinunciare** agli obiettivi
 - **Esempio classico**: politica **monetaria** all'obiettivo **inflazione**, politica **fiscale** all'obiettivo **disoccupazione**.
 - Un secondo esempio, in economia aperta, è svolto nello [schema 06](06-economia-aperta-bilancia-pagamenti.md): politica fiscale all'equilibrio **interno** (Y = Y*), politica monetaria all'equilibrio **esterno** (BP = 0).
 
-## **9. La critica di Lucas** *(manuale)*
+## **9. La critica di Lucas** *(dal manuale, non dalle slide)*
 
 - Il comportamento degli agenti privati **non è invariante rispetto alle azioni pubbliche**: i parametri delle funzioni di comportamento non sono stabili, perché reagiscono alle aspettative sulle politiche.
 - Conseguenza pratica: **i parametri stimati sui dati passati non sono affidabili** per prevedere gli effetti di una politica nuova, perché la politica stessa li modifica.
 - Conseguenza teorica: l'efficacia dell'azione pubblica può essere **annullata** se le aspettative degli operatori inducono una variazione nei parametri. I privati non sono soggetti passivi che si adattano, ma **agenti attivi che anticipano** le politiche.
 - Da qui il passaggio all'analisi dell'interazione fra policy maker e privati come **gioco strategico**.
 
-## **10. La politica economica come gioco** *(manuale)*
+## **10. La politica economica come gioco** *(dal manuale, non dalle slide)*
 
 - **Gioco** = interdipendenza strategica fra decisori autonomi con obiettivi contrapposti, in cui il guadagno di ciascuno dipende dalle scelte proprie **e** altrui.
 - **Elementi**: giocatori (policy maker e settore privato, politici ed elettori, governi di paesi diversi, autorità monetaria e fiscale) · strategie · guadagni (payoff) · informazioni e regole.
@@ -1528,7 +1531,7 @@ Nel caso sovradeterminato le alternative sono tre: **rinunciare** agli obiettivi
   - **Deterrenza all'entrata**: l'impresa insediata (I) minaccia una guerra di prezzo se l'entrante (E) entra. Ma la guerra di prezzo produce perdite **anche a I**: la minaccia non è credibile, E anticipa la risposta razionale ed entra, e I accetta l'ingresso (duopolio).
 - Morale ricorrente: **un annuncio conta solo se chi lo fa avrà ancora interesse a mantenerlo quando arriverà il momento**.
 
-## **11. L'incoerenza temporale delle politiche** *(manuale)*
+## **11. L'incoerenza temporale delle politiche** *(dal manuale, non dalle slide)*
 
 **Definizione**: una politica è temporalmente incoerente quando, al momento di attuarla, per il policy maker è ottimale una condotta **diversa da quella annunciata**.
 
@@ -1543,7 +1546,7 @@ Ma se gli agenti hanno **aspettative razionali**, al tempo 0 **prevedono l'incen
 
 **Esempio 2 — politica monetaria**: vedi sezione seguente.
 
-## **12. Il gioco di politica monetaria e il banchiere conservatore** *(manuale)*
+## **12. Il gioco di politica monetaria e il banchiere conservatore** *(dal manuale, non dalle slide)*
 
 Curva di Phillips aumentata delle aspettative: **u = uⁿ + α(ṗᵉ − ṗ)**.
 
@@ -2759,7 +2762,7 @@ Il policy maker deve tener conto di ciò che l'imprenditore privato ignora:
 1. include fra costi e benefici anche quelli che ricadono su **soggetti diversi** da chi realizza il progetto (esternalità);
 2. valuta i costi come **costo-opportunità**, usando **prezzi ombra** al posto dei prezzi di mercato (e un tasso di sconto "ombra" per l'attualizzazione).
 
-## **7. I beni non scambiati sul mercato** *(integrazione dal manuale)*
+## **7. I beni non scambiati sul mercato** *(dal manuale, non dalle slide)*
 
 Alcuni beni non hanno prezzo e vanno comunque valutati:
 
@@ -2957,7 +2960,7 @@ La *political economy* (o teoria positiva della politica economica) definisce la
 - L'equilibrio del gioco **riflette il conflitto economico tra gruppi eterogenei**: le politiche adottate rispecchiano l'influenza politica relativa dei diversi gruppi.
 - I politici **non sono benevolenti**: hanno obiettivi propri, primo fra tutti essere rieletti.
 
-## **5. Il ciclo politico-economico (Nordhaus)** *(manuale)*
+## **5. Il ciclo politico-economico (Nordhaus)** *(dal manuale, non dalle slide)*
 
 **Le quattro ipotesi del modello:**
 
@@ -2973,7 +2976,7 @@ La *political economy* (o teoria positiva della politica economica) definisce la
 
 **Risultato: l'economia è resa instabile dal ciclo elettorale.** È il caso in cui la politica economica, anziché stabilizzare, **è essa stessa la fonte dell'instabilità** — l'argomento più forte a favore delle **regole** contro la discrezionalità ([schema 11](11-teoria-normativa-obiettivi-strumenti.md), §13).
 
-## **6. Il doppio problema di agenzia** *(manuale)*
+## **6. Il doppio problema di agenzia** *(dal manuale, non dalle slide)*
 
 La relazione **elettori → politici** è una relazione **principale-agente** (vedi [schema 08](08-esternalita-fallimenti-mercato.md)): il **principale** (elettore) delega un compito all'**agente** (politico), ma gli obiettivi dell'agente possono non coincidere con i suoi, e il principale non osserva pienamente né le caratteristiche né le azioni dell'agente.
 
@@ -2983,7 +2986,7 @@ La delega però è **doppia**:
 
 Ogni passaggio aggiunge un problema di agenzia e quindi di opportunismo. Le soluzioni possibili stanno nelle **regole e istituzioni** capaci di sanzionare e scoraggiare i comportamenti opportunistici, e nel disegno dei **sistemi elettorali** (proporzionale vs maggioritario: quale seleziona meglio?).
 
-## **7. Lobbying e corruzione** *(manuale)*
+## **7. Lobbying e corruzione** *(dal manuale, non dalle slide)*
 
 **I gruppi di interesse hanno due obiettivi:**
 
