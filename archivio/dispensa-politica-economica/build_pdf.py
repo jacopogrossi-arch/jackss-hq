@@ -93,6 +93,36 @@ def _gruppi(riga, char=None):
     return out
 
 
+LARGHEZZA_MAX = 74   # nel riquadro ci stanno ~76 caratteri: 74 lascia un margine
+
+
+def _larghezza(riga):
+    tot = 0.0; i = 0
+    while i < len(riga):
+        m = PEDICE.match(riga, i) or APICE.match(riga, i) or PEDICE_PAR.match(riga, i) or APICE_PAR.match(riga, i)
+        if m and i > 0 and riga[i-1] != " ":
+            tot += 0.75 * len(m.group(1).strip("()")); i = m.end()
+        else:
+            tot += 1.0; i += 1
+    return tot
+
+
+def controlla_larghezza(files):
+    """Una riga piu' larga della pagina viene TAGLIATA nel PDF: a schermo compare una
+    barra di scorrimento, in stampa il testo oltre il bordo sparisce e basta."""
+    avvisi = []
+    for fname in files:
+        dentro = False
+        for n, riga in enumerate((SCHEMI / fname).read_text(encoding="utf-8").split("\n"), 1):
+            if riga.lstrip().startswith("```"):
+                dentro = not dentro; continue
+            if dentro:
+                w = _larghezza(riga.rstrip())
+                if w > LARGHEZZA_MAX:
+                    avvisi.append(f"{fname}:{n}  riga larga {w:.0f} caratteri (max {LARGHEZZA_MAX}): nel PDF verrebbe tagliata")
+    return avvisi
+
+
 def controlla_allineamento(files):
     """Numeratori e denominatori devono restare centrati sulla barra di frazione:
     il pedice reso e' piu' stretto del testo sorgente, quindi le frazioni scritte
@@ -163,7 +193,9 @@ def stampa_avvisi(avvisi):
         print("Controllo formule: nessun problema rilevato.")
 
 
-avvisi_sorgente = controlla_formule(FILES_IN_ORDER) + controlla_allineamento(FILES_IN_ORDER)
+avvisi_sorgente = (controlla_formule(FILES_IN_ORDER)
+                   + controlla_allineamento(FILES_IN_ORDER)
+                   + controlla_larghezza(FILES_IN_ORDER))
 
 parts = []
 HEADER = """# Dispensa Politica Economica
@@ -256,9 +288,11 @@ html_template = f"""<!DOCTYPE html>
   /* riquadro delle formule: il contenuto di un blocco recintato non viene toccato da
      markdown, quindi nessun simbolo puo' essere mangiato o interpretato come corsivo */
   pre {{ background: #f7f9fb; border: 1px solid #dde; border-left: 4px solid #1a5276;
-        padding: 10px 14px; margin: 12px 0; page-break-inside: avoid; overflow-x: auto; }}
+        padding: 10px 14px; margin: 12px 0; page-break-inside: avoid; }}
+  /* pre-wrap invece di pre: una riga troppo lunga va a capo (allineamento rovinato ma
+     visibile) invece di essere tagliata in silenzio dalla stampa, come faceva overflow-x */
   pre code {{ background: none; padding: 0; font-size: 10.5pt; line-height: 1.35;
-             white-space: pre; color: #16324f; }}
+             white-space: pre-wrap; overflow-wrap: break-word; color: #16324f; }}
   /* la tecnica classica: line-height 0 e posizionamento relativo, cosi' pedici e apici
      non allargano l'interlinea ne' sfasano le righe delle frazioni nei riquadri */
   sub, sup {{ font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }}

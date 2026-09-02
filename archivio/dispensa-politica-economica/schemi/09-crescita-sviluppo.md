@@ -115,7 +115,8 @@ Tre categorie di intervento pubblico, distinte per obiettivo:
 Tre settori produttivi: Agricoltura (produzione 200, consumi intermedi 50), Industria (produzione 300, consumi intermedi 100), Servizi (produzione 400, consumi intermedi 150).
 
 ```
-      Metodo del VALORE AGGIUNTO   (produzione − consumi intermedi, per settore)
+      Metodo del VALORE AGGIUNTO
+      (produzione − consumi intermedi, per ogni settore)
       V.A. = 150 + 200 + 250                       PIL = 600
 
       Metodo della SPESA           C + I + G + (X − M)
