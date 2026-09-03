@@ -40,6 +40,8 @@ L'ordine dei capitoli nel PDF segue la **priorità**, non la numerazione dei fil
 
 ## Come orientarsi nei file sorgente
 
+- **`PROGRESSO.md`** — a che punto è arrivato Jacopo: esercizi fatti, errori intercettati e corretti, punti deboli ancora aperti, calendario spuntato giorno per giorno. Prima cosa da leggere se si riprende il lavoro in una sessione nuova.
+- **`CONVENZIONI-ESERCIZI.md`** — come sono fatti gli esercizi che si generano di volta in volta (nei fogli di `giornate/` e nei ripassi improvvisati): struttura, regole non negoziabili sui numeri e sulla verifica, istruzioni per generare il PDF di un nuovo giorno restando coerenti con quelli già fatti.
 - **`schemi/00c-mappa-priorita.md`** — vista d'insieme argomento → priorità → tipo di esercizio, prima di aprire la dispensa.
 - **`schemi/00b-glossario-simboli.md`** — i simboli (i, r, Q, MC, FBS, EEG...) usati in schemi diversi, fissati in un unico posto per evitare confusione.
 - **`schemi/00a-formulario.md`** — tutte le formule chiave per il ripasso last-minute, con rimando allo schema che le spiega.
