@@ -43,6 +43,7 @@ File: `inverso/`
 Materiale personale non legato a un progetto sta in `personale/`:
 
 - **Letture** (lista letture da affrontare con tracking, personali + Inverso) → `personale/letture.md`
+- **Mandal-Art set→dic 2026** (griglia 9×9 stile Ohtani compilata a domande il 30/08/2026: centro "venduto a uno sconosciuto" + 8 aree scelte da Jacopo — capo, metterci la faccia, università, tempo, corpo, persone, Chiara, crescita. Nove caselle lasciate vuote apposta) → `personale/mandal-art-set-dic-2026.md`
 
 ## Archivio
 

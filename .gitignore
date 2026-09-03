@@ -29,3 +29,7 @@ uvx.exe
 
 # HTML intermedio di build (derivato da build_pdf.py, non serve tracciarlo)
 archivio/dispensa-politica-economica/Dispensa Politica Economica.html
+
+# HTML intermedio del foglio da stampare (rigenerato da personale/stampa/embed-fonts.py)
+personale/stampa/build.html
+personale/stampa/gf.css
