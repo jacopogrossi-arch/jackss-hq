@@ -5,6 +5,7 @@ from pathlib import Path
 
 BASE = Path(__file__).parent
 SCHEMI = BASE / "schemi"
+GIORNATE = BASE / "giornate"   # fogli di lavoro giornalieri, uno per giorno di studio
 OUT_NAME = "Dispensa Politica Economica"
 
 # l'ordine segue la mappa di priorità, non la numerazione dei file: gli schemi
@@ -35,14 +36,14 @@ FILES_IN_ORDER = [
     "00d-domande-preselezione.md",
 ]
 
-def controlla_formule(files):
+def controlla_formule(files, cartella=SCHEMI):
     """Segnala LaTeX rimasto e trattini bassi fuori da blocchi/apici, che markdown
     interpreta come corsivo mangiandosi pezzi di formula. Avvisa, non blocca."""
     comando_latex = re.compile(r"\\[a-zA-Z]+")
     avvisi = []
     for fname in files:
         dentro_blocco = False
-        for n, riga in enumerate((SCHEMI / fname).read_text(encoding="utf-8").split("\n"), 1):
+        for n, riga in enumerate((cartella / fname).read_text(encoding="utf-8").split("\n"), 1):
             if riga.lstrip().startswith("```"):
                 dentro_blocco = not dentro_blocco
                 continue
@@ -108,13 +109,13 @@ def _larghezza(riga):
     return tot
 
 
-def controlla_larghezza(files):
+def controlla_larghezza(files, cartella=SCHEMI):
     """Una riga piu' larga della pagina viene TAGLIATA nel PDF: a schermo compare una
     barra di scorrimento, in stampa il testo oltre il bordo sparisce e basta."""
     avvisi = []
     for fname in files:
         dentro = False
-        for n, riga in enumerate((SCHEMI / fname).read_text(encoding="utf-8").split("\n"), 1):
+        for n, riga in enumerate((cartella / fname).read_text(encoding="utf-8").split("\n"), 1):
             if riga.lstrip().startswith("```"):
                 dentro = not dentro; continue
             if dentro:
@@ -124,13 +125,13 @@ def controlla_larghezza(files):
     return avvisi
 
 
-def controlla_allineamento(files):
+def controlla_allineamento(files, cartella=SCHEMI):
     """Numeratori e denominatori devono restare centrati sulla barra di frazione:
     il pedice reso e' piu' stretto del testo sorgente, quindi le frazioni scritte
     a occhio si disallineano. Qui si misura la larghezza resa e si segnala."""
     avvisi = []
     for fname in files:
-        righe = (SCHEMI / fname).read_text(encoding="utf-8").split("\n")
+        righe = (cartella / fname).read_text(encoding="utf-8").split("\n")
         dentro = False; blocco = []; inizio = 0
         for n, l in enumerate(righe, 1):
             if l.lstrip().startswith("```"):
@@ -193,12 +194,6 @@ def stampa_avvisi(avvisi):
     else:
         print("Controllo formule: nessun problema rilevato.")
 
-
-avvisi_sorgente = (controlla_formule(FILES_IN_ORDER)
-                   + controlla_allineamento(FILES_IN_ORDER)
-                   + controlla_larghezza(FILES_IN_ORDER))
-
-parts = []
 HEADER = """# Dispensa Politica Economica
 
 **Esame 08/09/2026**
@@ -222,61 +217,74 @@ Appelli a.a. 2026-27: 20 gennaio · 10 febbraio · 16 giugno · 14 luglio · 8 s
 <div class="pagebreak"></div>
 
 """
-parts.append(HEADER)
 
-for i, fname in enumerate(FILES_IN_ORDER):
-    text = (SCHEMI / fname).read_text(encoding="utf-8")
-    # gli schemi referenziano le immagini come ../grafici/..., il documento unito vive
-    # nella cartella superiore, quindi il prefisso "../" va tolto
-    text = text.replace("](../grafici/", "](grafici/")
-    if i > 0:
-        parts.append('\n\n<div class="pagebreak"></div>\n\n')
-    parts.append(text)
+def costruisci(out_name, cartella, files, header, con_ancore=True):
+    """Assembla i .md in un documento unico e ne genera .md e .html.
 
-combined_md = "\n".join(parts)
-(BASE / f"{OUT_NAME}.md").write_text(combined_md, encoding="utf-8")
+    Stessa pipeline per la dispensa completa e per i fogli di lavoro giornalieri:
+    stessi cinque controlli, stessi pedici tipografici, stesso CSS. `con_ancore`
+    va spento sui documenti che non contengono gli schemi, dove i link fra file
+    non hanno una ancora corrispondente nella stessa pagina."""
+    avvisi_sorgente = (controlla_formule(files, cartella)
+                       + controlla_allineamento(files, cartella)
+                       + controlla_larghezza(files, cartella))
 
-# nel documento unico i link tra file .md diventano ancore alla stessa pagina;
-# nei file sorgente restano link a file separati (utili su GitHub/VSCode)
-ANCHOR_MAP = {
-    "00a-formulario.md": "#formulario-riassuntivo",
-    "00b-glossario-simboli.md": "#glossario-dei-simboli",
-    "00c-mappa-priorita.md": "#mappa-di-priorita-argomento-esercizio-tipo-pagina",
-    "00e-quaderno-esercizi.md": "#quaderno-di-esercizi-da-svolgere",
-    "01-politica-fiscale-bilancio-pubblico.md": "#politica-fiscale-bilancio-pubblico-e-debito-pubblico",
-    "02-inflazione-curva-phillips.md": "#inflazione-e-curva-di-phillips",
-    "03-concorrenza-imperfetta-monopolio.md": "#concorrenza-imperfetta-monopolio-e-politiche-per-la-concorrenza",
-    "04-economia-benessere-teoria-normativa.md": "#economia-del-benessere-e-teoria-normativa-della-politica-economica",
-    "05-mercato-del-lavoro.md": "#mercato-del-lavoro-disoccupazione-e-intervento-pubblico",
-    "06-economia-aperta-bilancia-pagamenti.md": "#economia-aperta-bilancia-dei-pagamenti-e-modello-is-lm-bp",
-    "07-teorie-macro-moneta-bce.md": "#is-lm-teorie-macro-comparate-moneta-e-politica-monetariabce",
-    "08-esternalita-fallimenti-mercato.md": "#esternalita-e-fallimenti-di-mercato",
-    "09-crescita-sviluppo.md": "#crescita-e-sviluppo-economico",
-    "10-disuguaglianze-stato-sociale.md": "#disuguaglianze-economiche-di-genere-e-stato-sociale",
-    "11-teoria-normativa-obiettivi-strumenti.md": "#teoria-normativa-obiettivi-strumenti-e-modelli-di-politica-economica",
-    "12-fallimenti-stato-political-economy.md": "#i-fallimenti-dello-stato-e-la-political-economy",
-    "13-valutazione-progetti-acb.md": "#la-valutazione-dei-progetti-pubblici-e-lanalisi-costi-benefici",
-    "14-sistema-monetario-internazionale.md": "#il-sistema-monetario-internazionale",
-    "00d-domande-preselezione.md": "#banca-domande-per-la-preselezione",
-}
-for fname, anchor in ANCHOR_MAP.items():
-    combined_md = combined_md.replace(f"]({fname})", f"]({anchor})")
+    parts = [header]
 
-html_body_grezzo = markdown.markdown(
-    combined_md,
-    extensions=["tables", "toc", "fenced_code", "sane_lists", "md_in_html"],
-    extension_configs={
-        "toc": {"toc_depth": "1-2", "anchorlink": False, "permalink": False},
-    },
-)
+    for i, fname in enumerate(files):
+        text = (cartella / fname).read_text(encoding="utf-8")
+        # gli schemi referenziano le immagini come ../grafici/..., il documento unito vive
+        # nella cartella superiore, quindi il prefisso "../" va tolto
+        text = text.replace("](../grafici/", "](grafici/")
+        if i > 0:
+            parts.append('\n\n<div class="pagebreak"></div>\n\n')
+        parts.append(text)
 
-html_body = applica_pedici_apici(html_body_grezzo)
+    combined_md = "\n".join(parts)
+    (BASE / f"{out_name}.md").write_text(combined_md, encoding="utf-8")
 
-html_template = f"""<!DOCTYPE html>
+    # nel documento unico i link tra file .md diventano ancore alla stessa pagina;
+    # nei file sorgente restano link a file separati (utili su GitHub/VSCode)
+    ANCHOR_MAP = {
+        "00a-formulario.md": "#formulario-riassuntivo",
+        "00b-glossario-simboli.md": "#glossario-dei-simboli",
+        "00c-mappa-priorita.md": "#mappa-di-priorita-argomento-esercizio-tipo-pagina",
+        "00e-quaderno-esercizi.md": "#quaderno-di-esercizi-da-svolgere",
+        "01-politica-fiscale-bilancio-pubblico.md": "#politica-fiscale-bilancio-pubblico-e-debito-pubblico",
+        "02-inflazione-curva-phillips.md": "#inflazione-e-curva-di-phillips",
+        "03-concorrenza-imperfetta-monopolio.md": "#concorrenza-imperfetta-monopolio-e-politiche-per-la-concorrenza",
+        "04-economia-benessere-teoria-normativa.md": "#economia-del-benessere-e-teoria-normativa-della-politica-economica",
+        "05-mercato-del-lavoro.md": "#mercato-del-lavoro-disoccupazione-e-intervento-pubblico",
+        "06-economia-aperta-bilancia-pagamenti.md": "#economia-aperta-bilancia-dei-pagamenti-e-modello-is-lm-bp",
+        "07-teorie-macro-moneta-bce.md": "#is-lm-teorie-macro-comparate-moneta-e-politica-monetariabce",
+        "08-esternalita-fallimenti-mercato.md": "#esternalita-e-fallimenti-di-mercato",
+        "09-crescita-sviluppo.md": "#crescita-e-sviluppo-economico",
+        "10-disuguaglianze-stato-sociale.md": "#disuguaglianze-economiche-di-genere-e-stato-sociale",
+        "11-teoria-normativa-obiettivi-strumenti.md": "#teoria-normativa-obiettivi-strumenti-e-modelli-di-politica-economica",
+        "12-fallimenti-stato-political-economy.md": "#i-fallimenti-dello-stato-e-la-political-economy",
+        "13-valutazione-progetti-acb.md": "#la-valutazione-dei-progetti-pubblici-e-lanalisi-costi-benefici",
+        "14-sistema-monetario-internazionale.md": "#il-sistema-monetario-internazionale",
+        "00d-domande-preselezione.md": "#banca-domande-per-la-preselezione",
+    }
+    if con_ancore:
+        for fname, anchor in ANCHOR_MAP.items():
+            combined_md = combined_md.replace(f"]({fname})", f"]({anchor})")
+
+    html_body_grezzo = markdown.markdown(
+        combined_md,
+        extensions=["tables", "toc", "fenced_code", "sane_lists", "md_in_html"],
+        extension_configs={
+            "toc": {"toc_depth": "1-2", "anchorlink": False, "permalink": False},
+        },
+    )
+
+    html_body = applica_pedici_apici(html_body_grezzo)
+
+    html_template = f"""<!DOCTYPE html>
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<title>Dispensa Politica Economica</title>
+<title>{out_name}</title>
 <style>
   @page {{ size: A4; margin: 18mm 16mm; }}
   body {{ font-family: 'Georgia', 'Times New Roman', serif; font-size: 11pt; line-height: 1.45; color: #1a1a1a; max-width: 100%; }}
@@ -318,7 +326,26 @@ html_template = f"""<!DOCTYPE html>
 </html>
 """
 
-(BASE / f"{OUT_NAME}.html").write_text(html_template, encoding="utf-8")
+    (BASE / f"{out_name}.html").write_text(html_template, encoding="utf-8")
 
-stampa_avvisi(avvisi_sorgente + controlla_html(html_body_grezzo))
-print(f"OK: {OUT_NAME}.md e {OUT_NAME}.html generati")
+    stampa_avvisi(avvisi_sorgente + controlla_html(html_body_grezzo))
+    print(f"OK: {out_name}.md e {out_name}.html generati")
+
+
+
+HEADER_GIORNO_1 = """# Giorno 1 — giovedì 3 settembre
+
+**Politica fiscale e inflazione.** Esercizi A1 → A8 del quaderno, con la spiegazione e il
+tutorial per svolgerli. Questo foglio è autosufficiente: tracce e soluzioni sono qui dentro,
+non serve aprire la dispensa.
+
+[TOC]
+
+<div class="pagebreak"></div>
+
+"""
+
+if __name__ == "__main__":
+    costruisci(OUT_NAME, SCHEMI, FILES_IN_ORDER, HEADER)
+    costruisci("Giorno 1 — giovedi 3 settembre", GIORNATE,
+               ["giorno-1-giovedi-3-settembre.md"], HEADER_GIORNO_1, con_ancore=False)

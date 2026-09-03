@@ -14,7 +14,7 @@ L'esame è **martedì 8 settembre**. Restano cinque giorni pieni.
 
 | Giorno | Argomenti | Esercizi |
 |---|---|---|
-| **Gio 3/9** | Politica fiscale (01) · Inflazione e Phillips (02) | A1 → A8 |
+| **Gio 3/9** | Politica fiscale (01) · Inflazione e Phillips (02) — foglio di lavoro dedicato: *Giorno 1 — giovedì 3 settembre* | A1 → A8 |
 | **Ven 4/9** | Monopolio (03) · Benessere (04) · Teoria normativa (11) | A9 → A13 |
 | **Sab 5/9** | Lavoro (05) · Economia aperta (06) · Moneta (07) | B1 → B8 |
 | **Dom 6/9** | Valutazione progetti (13) + gli argomenti lasciati in disparte: esternalità (08), crescita (09), disuguaglianze (10), fallimenti dello Stato (12), sistema monetario internazionale (14) | B9, B10 |

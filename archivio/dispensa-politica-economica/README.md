@@ -24,7 +24,17 @@ Tre fasi:
 
 ## Come studiare da qui
 
-**`Dispensa Politica Economica.pdf`** — il documento unico da cui studiare: 151 pagine, con struttura della prova e indice cliccabile in prima pagina che rimanda a ogni capitolo, i 14 schemi + formulario + glossario + mappa di priorità + quaderno di esercizi + banca domande per la preselezione + i 9 grafici. Generato da `build_pdf.py` (Python + Chrome headless — rilanciare lo script dopo qualsiasi modifica agli schemi per rigenerare il PDF).
+**`Dispensa Politica Economica.pdf`** — il documento unico da cui studiare: 151 pagine, con struttura della prova e indice cliccabile in prima pagina che rimanda a ogni capitolo, i 14 schemi + formulario + glossario + mappa di priorità + quaderno di esercizi + banca domande per la preselezione + i 9 grafici. Generato da `build_pdf.py`, che assembla gli schemi in un unico `.md` e `.html` (rilanciare lo script dopo qualsiasi modifica agli schemi). Il passaggio finale a PDF è **manuale**, con Chrome headless:
+
+```
+python3 build_pdf.py
+/opt/pw-browsers/chromium-*/chrome-linux/chrome --headless --disable-gpu \
+  --no-sandbox --no-pdf-header-footer \
+  --print-to-pdf="$PWD/Dispensa Politica Economica.pdf" \
+  "file://$PWD/Dispensa Politica Economica.html"
+```
+
+Lo stesso comando, cambiando nome al file, rigenera i fogli in `giornate/`.
 
 L'ordine dei capitoli nel PDF segue la **priorità**, non la numerazione dei file: i core (1, 2, 3, 4, **11**) vengono per primi, poi i secondari (5, 6, 7, 8, **13**, **12**), poi le coperture di sicurezza (9, 10, **14**), e in coda la banca domande. Il **quaderno di esercizi** sta davanti a tutto, subito dopo il formulario: è materiale di lavoro quotidiano, non di lettura.
 
@@ -36,6 +46,7 @@ L'ordine dei capitoli nel PDF segue la **priorità**, non la numerazione dei fil
 - **`schemi/00e-quaderno-esercizi.md`** — **23 tracce da svolgere a mano**, con le soluzioni in una sezione separata in fondo. Contiene anche nove **schede-procedura** (come riconosci l'esercizio, i passi in ordine, l'errore tipico) e il calendario degli ultimi giorni prima dell'esame. Cinque tracce (A1, A2, A3, B3, B10) sono **esercizi proposti dalla professoressa** nelle slide e mai svolti a lezione, recuperati da `appunti-grezzi/`.
 - **`schemi/00d-domande-preselezione.md`** — 68 domande a risposta multipla su tutti e 14 gli argomenti, con risposte e rimando allo schema, più **tre simulazioni cronometrate da 11 domande** per allenare i 55 secondi a domanda della preselezione.
 - **`schemi/`** — gli schemi di studio veri e propri. Ogni schema ha in testa le domande d'esame collegate e chiude con un esercizio tipo svolto (dove pertinente). ⚠️ **Il numero del file non indica la priorità**: gli schemi 01-10 sono ordinati per priorità, gli 11-14 sono stati aggiunti in un secondo momento per coprire capitoli del programma che nei compiti passati non erano mai comparsi, e alcuni di essi (11 e 13) sono più importanti di schemi con numero più basso. La priorità sta nella colonna dedicata della mappa.
+- **`giornate/`** — i **fogli di lavoro giornalieri**, uno per giorno del calendario del quaderno: teoria minima, tutorial svolto passo passo, tracce del giorno e soluzioni in coda. Sono autosufficienti (non serve aprire la dispensa) e passano dalla stessa pipeline di `build_pdf.py`, quindi dagli stessi cinque controlli automatici. Ogni foglio genera un PDF a sé.
 - **`grafici/`** — i grafici richiamati negli schemi (SVG disegnati a mano, non generati da AI, per garantire precisione su assi/curve/etichette): IS-LM con crowding-out, AD-AS domanda/costi, curva di Phillips, monopolio+perdita secca, monopolio naturale/contendibile, esternalità, Edgeworth/Pareto, Mundell-Fleming, Lorenz/Gini.
 - **`appunti-grezzi/`** — trascrizioni fedeli dei PDF sorgente, per argomento. Fonte per generare nuovi esercizi senza rileggere i PDF originali.
 - **`pdf-fonte/`** — i PDF originali del corso (esclusa da git, materiale della docente).
