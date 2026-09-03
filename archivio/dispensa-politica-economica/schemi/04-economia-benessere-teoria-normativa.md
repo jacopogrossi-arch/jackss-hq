@@ -51,6 +51,19 @@
 
 ![Scatola di Edgeworth e frontiera di Pareto](../grafici/edgeworth-pareto.svg)
 
+### I tipi di efficienza: non solo quella allocativa
+
+L'efficienza paretiana (o allocativa) è **una** delle nozioni di efficienza. Le altre compaiono spesso come domanda a risposta multipla:
+
+| | Tipo | Definizione |
+|---|---|---|
+| **Statica** | **Allocativa (paretiana)** | Le tre condizioni sopra: non si può migliorare qualcuno senza peggiorare qualcun altro |
+| **Statica** | **Efficienza "x"** | Capacità di scegliere programmi di produzione **tecnicamente efficienti**: organizzare lavoro e produzione in modo da massimizzare l'output, data la combinazione capitale-lavoro efficiente ai prezzi vigenti. L'inefficienza "x" è lo spreco organizzativo interno all'impresa — tipico del monopolista non pressato dalla concorrenza |
+| **Dinamica** | **Efficienza adattiva** | Capacità di **apprendere gradualmente** i problemi e le risposte corrette: abbassare nel tempo il costo di produzione, conoscere meglio la curva di domanda |
+| **Dinamica** | **Capacità innovativa** | Capacità di introdurre innovazioni **di processo** (riduzione dei costi) o **di prodotto** (nuovi prodotti) |
+
+**Perché conta**: la concorrenza perfetta assicura l'efficienza **allocativa statica**, ma può non assicurare quella **dinamica** — il monopolio temporaneo garantito dal brevetto incentiva la R&S. È la tensione che sta dietro alle politiche per l'innovazione ([schema 08](08-esternalita-fallimenti-mercato.md), §8).
+
 ---
 
 ## 4. **I tre criteri principali di Funzione di Benessere Sociale (FBS)**
@@ -59,7 +72,7 @@
 |---|---|---|---|
 | **Utilitarista** | **W = Σ Uᵢ** (somma delle utilità) | Massimizza il **benessere totale**, indipendentemente da come è distribuito | Nessuna avversione alla disuguaglianza: un'unità di utilità in più vale uguale per chiunque la riceva. Curve di indifferenza sociale = **rette a -45°** |
 | **Rawlsiana** | **W = min(Uᵢ)** | Massimizza l'utilità dell'**individuo peggiore** (criterio **maximin**) | Massima avversione alla disuguaglianza: conta solo chi sta peggio. Curve di indifferenza sociale a **"L"** (angolo retto) |
-| **Bergson-Samuelson** | Forma generale **W = f(U₁, U₂, …, Uₙ)**, es. **W = U1 × U2** | Forma flessibile che pesa efficienza ed equità in un continuum tra i due estremi precedenti | Avversione alla disuguaglianza intermedia e graduabile. Curve di indifferenza sociale **convesse verso l'origine** (tipo iperboli) |
+| **Bergson-Samuelson** | Forma generale **W = f(U₁, U₂, …, Uₙ)**, es. **W = U1 · U2** | Forma flessibile che pesa efficienza ed equità in un continuum tra i due estremi precedenti | Avversione alla disuguaglianza intermedia e graduabile. Curve di indifferenza sociale **convesse verso l'origine** (tipo iperboli) |
 
 - Punto chiave da scrivere all'esame: **le diverse FBS esprimono diversi giudizi di valore circa il peso relativo di efficienza ed equità** — non esiste un criterio "oggettivamente giusto", la scelta della FBS è normativa.
 - La FBS **richiede confronti interpersonali di utilità** (a differenza del criterio paretiano) e per questo riesce a dare un **ordinamento completo** anche tra stati Pareto-efficienti non confrontabili con Pareto.
@@ -103,8 +116,25 @@ In **equilibrio economico generale (EEG)** di concorrenza perfetta, **tutti** i 
 |---|---|
 | **Mercati non concorrenziali** | scarsa numerosità degli operatori · rendimenti di scala crescenti · barriere/costi di entrata-uscita · accordi e intese · informazione asimmetrica |
 | **Mercati non completi** | esternalità · beni pubblici · costi di transazione e asimmetrie informative |
+| **Pur in presenza di efficienza paretiana** | bisogni meritori · innovazione (efficienza dinamica) · equità |
 
-Quando questi presupposti vengono meno, il mercato **non riesce da solo a raggiungere un'allocazione efficiente** → sono i **limiti della mano invisibile**, che giustificano (ma non da soli: serve anche il confronto coi fallimenti dello Stato) l'intervento pubblico allocativo.
+La **terza riga** è quella che si dimentica più facilmente: anche quando il mercato *è* efficiente, ci sono tre ragioni per intervenire comunque — beni che la collettività ritiene di dover garantire al di là delle preferenze individuali, la spinta all'innovazione, e la distribuzione.
+
+Quando questi presupposti vengono meno, il mercato **non riesce da solo a raggiungere un'allocazione efficiente** → sono i **limiti della mano invisibile**, che giustificano (ma non da soli: serve anche il confronto coi **fallimenti dello Stato**, [schema 12](12-fallimenti-stato-political-economy.md)) l'intervento pubblico allocativo.
+
+### Il teorema del *second best*
+
+Il Primo Teorema **non è robusto**: piccoli allontanamenti dall'equilibrio concorrenziale allontanano dall'efficienza paretiana in modo non graduale.
+
+**Enunciato (in sostanza)**: se in un mercato la condizione di efficienza non può essere soddisfatta, **non è detto che convenga soddisfarla nel maggior numero possibile degli altri mercati**. O le condizioni valgono ovunque, oppure può essere preferibile allontanarsene anche altrove.
+
+**L'esempio controintuitivo da citare.** Quale situazione è migliore?
+- (a) un mercato in **monopolio** ma completo → **una** violazione;
+- (b) un mercato in **monopolio e con esternalità negativa** → **due** violazioni.
+
+La risposta è **(b)**. Il monopolio riduce la quantità sotto il livello efficiente; l'esternalità negativa la spinge sopra. Le due distorsioni **si compensano** e il risultato può essere più vicino all'ottimo sociale della situazione con una sola violazione.
+
+**Implicazione di politica economica**: correggere una singola distorsione lasciandone altre in piedi può **peggiorare** il benessere. È un argomento di prudenza contro le riforme parziali.
 
 ---
 
@@ -132,6 +162,8 @@ Quando questi presupposti vengono meno, il mercato **non riesce da solo a raggiu
 - La **teoria normativa** della politica economica studia come lo Stato **dovrebbe** intervenire (il decisore pubblico come *pianificatore sociale benevolo*) per perseguire i fini collettivi, scegliendo obiettivi e strumenti — a differenza della **teoria positiva**, che descrive con modelli come il sistema economico funziona di fatto (e della *political economy*, che descrive come i policy-maker si comportano realmente).
 - Il Secondo Teorema fornisce la **giustificazione teorica** per intervenire sul lato distributivo **senza sacrificare l'efficienza**: basta agire sulle dotazioni iniziali (via fiscalità/trasferimenti) e lasciare che il mercato allochi efficientemente a valle.
 - In sintesi: **il mercato risolve l'efficienza, ma non l'equità — serve la politica economica per scegliere, tramite un giudizio di valore (una FBS), quale tra i molti ottimi paretiani sia socialmente preferibile, e per redistribuire in modo da raggiungerlo.**
+
+> **Da qui in poi**: *come* il policy maker traduce quel giudizio in decisioni — obiettivi, strumenti, modelli, regola aurea di Tinbergen, assegnazione appropriata — è il contenuto dello [schema 11](11-teoria-normativa-obiettivi-strumenti.md). *Che cosa* succede quando il policy maker non è benevolente è lo [schema 12](12-fallimenti-stato-political-economy.md). *Come* si sceglie fra progetti pubblici concreti è lo [schema 13](13-valutazione-progetti-acb.md).
 
 ---
 

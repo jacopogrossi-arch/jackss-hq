@@ -79,7 +79,7 @@
 |---|---|---|---|
 | **Tassazione (tassa pigouviana)** | **t = E = MC_S − MC_P**, così che MC_S = MC_P + t = MC_P privato "aumentato". In concorrenza perfetta P = MC_P, quindi aumentando il costo privato con la tassa si raggiunge la soluzione efficiente: max_x[px − c(x) − tx] → p = c'(x) + t | Internalizzazione dell'esternalità, meccanismo di prezzo, incentivo a innovare | Difficoltà di implementazione (stima del costo esterno), evasione |
 | **Regolamentazione** | Imporre l'installazione di depuratori, una quota massima sulla produzione, fissazione di un livello massimo di esternalità (cap) | Semplicità e immediatezza, controllo diretto (obbligo) | Non incentiva la riduzione dell'esternalità oltre lo standard fissato |
-| **Diritti negoziabili (permessi scambiabili)** | Proposta da **Coase (1960)**, applicata dagli anni '80. Si creano diritti di proprietà scambiabili sull'esternalità (mercato dei permessi). Quantità di diritti immessi = livello ottimo di diseconomia E*, dove MC_S(E*) = MC_P(E*) | Efficiente indipendentemente da chi riceve i diritti iniziali (se costi di transazione nulli); flessibilità per le imprese | Richiede un ente che fissi il cap e gestisca l'assegnazione; rischio di cap fissato male (vedi EU ETS) |
+| **Diritti negoziabili (permessi scambiabili)** | Proposta da **Coase (1960)**, applicata dagli anni '80. Si creano diritti di proprietà scambiabili sull'esternalità (mercato dei permessi). Quantità di diritti immessi = livello ottimo di diseconomia `E*`, dove `MC_S(E*) = MC_P(E*)` | Efficiente indipendentemente da chi riceve i diritti iniziali (se costi di transazione nulli); flessibilità per le imprese | Richiede un ente che fissi il cap e gestisca l'assegnazione; rischio di cap fissato male (vedi EU ETS) |
 
 - **Teorema di Coase**: *"Se i costi di transazione sono nulli, lo scambio conduce all'ottimo sociale (se questo è unico) indipendentemente dall'attribuzione dei diritti negoziabili."*
 - **Cap and trade**: si fissa un limite (cap) all'inquinamento, si emettono permessi corrispondenti (es. tramite asta), le imprese li scambiano fino a che il prezzo del permesso = costo marginale di abbattimento di ciascuna impresa (Pareto-efficiente). Esempio: due imprese a 500 t CO2 ciascuna, il governo assegna 800 t di permessi; l'impresa con costi di abbattimento più bassi riduce a 300 t e vende 100 t di permessi all'altra.
@@ -94,11 +94,28 @@
 - I beni pubblici sono un caso particolare di **esternalità positiva**: chi li produce avvantaggia anche gli altri. La **condizione di Samuelson** di efficienza allocativa (SMS₁+SMS₂=SMT) **non è verificata** in un mercato di concorrenza perfetta → il mercato produce una quantità **subottimale o nulla** (esempio del faro: senza cooperazione nessuno lo costruisce, pur essendo socialmente conveniente farlo insieme).
 - **Soluzioni**: produzione pubblica, sussidio/finanziamento pubblico, regolamentazione (stesso set di strumenti delle esternalità positive).
 
+**L'esempio del faro con i numeri** — due armatori, beneficio individuale del faro **B = 6**, costo di costruzione **C = 5**. I quattro esiti possibili, in beneficio netto:
+
+- Costo diviso a metà: ciascuno ottiene 6 − 2,5 = **2** (arrotondato: A paga 3, B paga 2)
+- Costruisce da solo: **−1** (6 − 5 + …) · l'altro ottiene **5** da *free rider*
+- Nessuno costruisce: **0** ciascuno
+
+| A \ B | **Costruire** | **Non costruire** |
+|---|---|---|
+| **Costruire** | (2) (2) | (−1) (**5**) |
+| **Non costruire** | (**5**) (−1) | (0) (0) |
+
+**Lettura**: per ciascun armatore "non costruire" è la scelta migliore **qualunque cosa faccia l'altro** (5 > 2 e 0 > −1) → l'equilibrio è **(non costruire, non costruire)** con payoff (0,0), mentre l'esito socialmente efficiente sarebbe (2,2). È la struttura del **dilemma del prigioniero** applicata ai beni pubblici: **il free riding porta a un risultato peggiore per tutti**. Soluzioni: accordo vincolante fra le parti, produzione da parte dell'operatore pubblico, regolamentazione.
+
 ## 7. **Cenni: informazione asimmetrica**
 
 - **Informazione perfetta** (requisito ideale del mercato concorrenziale): completa, facilmente ottenibile, simmetrica tra le parti, esaustiva su effetti presenti e futuri.
 - **Relazione principale-agente**: il principale affida un compito all'agente ma non ne conosce perfettamente le caratteristiche o non ne osserva le azioni (es. azionisti/manager, impresa/lavoratore, elettori/politici, assicurazione/assicurato).
 - **Selezione avversa**: asimmetria **precedente** al contratto → esempio classico: mercato delle auto usate ("lemons"/bidoni). Con prezzo = valore medio, si vendono solo le auto di qualità inferiore, il prezzo scende ulteriormente, il mercato delle auto buone **sparisce** (risultato inefficiente: scambi vantaggiosi non avvengono).
+
+  **Il conto da saper rifare**: 100 auto, 50 di alta qualità (A) e 50 bidoni (B). Il venditore sa quale ha in mano, il compratore no. Disponibilità a pagare: **2.400** per una A, **1.200** per una B; prezzi minimi di vendita: **2.000** per una A, **1.000** per una B (per ogni tipo, singolarmente, lo scambio sarebbe vantaggioso). Ma per un'auto di **qualità ignota** il compratore è disposto a pagare al più il valore atteso:
+  **2.400 · 0,5 + 1.200 · 0,5 = 1.800 < 2.000**
+  Sotto il prezzo minimo del venditore di un'auto buona → **le auto di alta qualità escono dal mercato** e restano solo i bidoni, scambiati fra 1.000 e 1.200. L'asimmetria informativa ha distrutto metà degli scambi vantaggiosi.
 - **Azzardo morale**: asimmetria **successiva** al contratto → esempio: assicurazione, che aumenta la probabilità di comportamenti rischiosi (es. mercato assicurativo, uso eccessivo di assistenza sanitaria).
 - Esempio sanità: la selezione avversa fa sì che solo chi si aspetta spese elevate si assicuri, facendo salire il premio e restringendo ulteriormente il mercato (spirale); un'assicurazione pubblica universale **risolve la selezione avversa** ma **non l'azzardo morale** (soluzioni per quest'ultimo: ticket/franchigia, gatekeeping del medico di famiglia).
 
@@ -106,7 +123,7 @@
 
 - **Beni meritori**: lo Stato ne vuole imporre/impedire il consumo **al di là delle preferenze individuali** anche in presenza di efficienza paretiana (paternalismo, deviazione dal welfarismo). Esempi: casco obbligatorio, divieto di fumo nei locali pubblici, educazione fisica a scuola.
 - **Innovazione (efficienza dinamica)**: la concorrenza perfetta assicura l'efficienza statica, ma il **monopolio temporaneo da brevetto** incentiva l'investimento in R&S (maggiori profitti attesi → più innovazione).
-- **Fallimenti dello Stato**: l'intervento pubblico reale può discostarsi da quello ideale per **informazioni incomplete**, **opportunismo** di politici/burocrati (obiettivi propri: rielezione, potere), **ricerca della rendita** (lobbying, cattura del regolatore).
+- **Fallimenti dello Stato**: l'intervento pubblico reale può discostarsi da quello ideale per **informazioni incomplete**, **opportunismo** di politici/burocrati (obiettivi propri: rielezione, potere), **ricerca della rendita** (lobbying, cattura del regolatore). → Trattati per esteso nello [schema 12](12-fallimenti-stato-political-economy.md), insieme al ciclo politico-economico di Nordhaus e alla corruzione.
 
 ---
 
@@ -145,18 +162,27 @@
 
 **1. Equilibrio di mercato in concorrenza perfetta**
 
-- In concorrenza perfetta il mercato eguaglia il prezzo (= beneficio marginale privato, dalla domanda) al **costo marginale privato**: P = MC
-- 20 − 2q = 3q
-- 20 = 5q → **q_CP = 4**
-- P_CP = 20 − 2(4) = **12**
+In concorrenza perfetta il mercato eguaglia il prezzo (= beneficio marginale privato, letto sulla domanda) al **costo marginale privato**:
+
+```
+      P = MC_P
+      20 − 2q = 3q
+      20 = 5q      →   q_CP = 4
+      P_CP = 20 − 2 · 4 = 12
+```
 
 **2. Quantità socialmente ottima**
 
-- Il costo marginale **sociale** include il costo esterno: MC_S = MC_P + E = 3q + 10
-- L'ottimo sociale eguaglia domanda (beneficio marginale sociale, coincide con quella privata perché l'esternalità è di produzione) e costo marginale sociale: P = MC_S
-- 20 − 2q = 3q + 10
-- 10 = 5q → **q_OS = 2**
-- P_OS = 20 − 2(2) = **16**
+Il costo marginale **sociale** include anche il costo esterno: `MC_S = MC_P + E = 3q + 10`. L'ottimo sociale eguaglia la domanda al costo marginale **sociale**:
+
+```
+      P = MC_S
+      20 − 2q = 3q + 10
+      10 = 5q      →   q_OS = 2
+      P_OS = 20 − 2 · 2 = 16
+```
+
+**dove:** `MC_P` = costo marginale **privato** (quello che paga l'impresa) · `E` = costo esterno marginale (il danno scaricato sugli altri) · `MC_S` = costo marginale **sociale**, la somma dei due · `q_CP` = quantità di concorrenza perfetta · `q_OS` = quantità socialmente ottima
 
 **3. Spiegazione della differenza**
 
@@ -169,5 +195,5 @@
 
 - La tassa pigouviana ottimale è pari esattamente al costo esterno marginale (che qui è costante): **t = E = 10**
 - Verifica: con la tassa, il produttore massimizza max_q [P·q − c(q) − t·q], quindi eguaglia P = MC_P + t = 3q + 10, cioè esattamente la condizione dell'ottimo sociale calcolata al punto 2.
-- Infatti: 20 − 2q = 3q + 10 → q = 2 = q_OS, con prezzo pagato dal consumatore P = 16 (di cui 10 vanno allo Stato come imposta e servono a "internalizzare" il costo esterno).
+- Infatti: `20 − 2q = 3q + 10` → `q = 2 = q_OS`, con prezzo pagato dal consumatore P = 16 (di cui 10 vanno allo Stato come imposta e servono a "internalizzare" il costo esterno).
 - **Conclusione**: la tassa pigouviana di 10 riporta esattamente l'equilibrio di mercato dal punto A (q=4, P=12) al punto socialmente ottimo C (q=2, P=16), eliminando la sovra-produzione dell'esternalità negativa.

@@ -24,7 +24,13 @@
 - Deriva da: barriere all'entrata, economie di scala (monopolio naturale), accordi ed intese
 - Si misura con l'**indice di Lerner**:
 
-**L = (P − MC) / P**
+```
+            P − MC
+      L = ──────────
+              P
+```
+
+**dove:** `P` = prezzo praticato · `MC` = costo marginale · si divide per `P` per avere un numero **confrontabile** fra mercati diversi (una differenza di 40 pesa diversamente su un prezzo di 100 o di 1.000).
 
 - L varia tra 0 (concorrenza perfetta, P=MC) e valori prossimi a 1 (forte potere di mercato). Più L è alto, più l'impresa si allontana dall'equilibrio concorrenziale.
 
@@ -39,9 +45,12 @@
 
 Metodo generale per una funzione di domanda lineare **P = a − bQ** e un costo marginale **MC(Q)**:
 
-1. **Ricavo totale**: TR = P·Q = (a − bQ)·Q = aQ − bQ²
-2. **Ricavo marginale**: MR = dTR/dQ = a − 2bQ
-    - Regola pratica: il MR ha **la stessa intercetta** della domanda ma **pendenza doppia**
+```
+      1) Ricavo totale:      TR = P · Q = (a − bQ) · Q = aQ − bQ²
+      2) Ricavo marginale:   MR = dTR/dQ = a − 2bQ
+```
+
+**dove:** `a` = intercetta della domanda (prezzo massimo) · `b` = pendenza · Regola pratica: **il MR ha la stessa intercetta della domanda e pendenza doppia**.
 
 3. **Condizione di massimo profitto**: MR = MC → si risolve per **Q_M** (quantità di monopolio)
 4. **Prezzo di monopolio**: si sostituisce Q_M nella funzione di domanda → **P_M = a − bQ_M**
@@ -57,8 +66,15 @@ Metodo generale per una funzione di domanda lineare **P = a − bQ** e un costo 
 
 **Formula e metodo di calcolo della DWL:**
 
-- **Metodo del triangolo**: DWL = ½ · (Q_C − Q_M) · [P_M − MC(Q_M)]
-- **Metodo dell'integrale** (equivalente, utile quando MC non è costante): DWL = ∫ da Q_M a Q_C di [Domanda(Q) − MC(Q)] dQ
+```
+      metodo del triangolo:
+      DWL = ½ · (Q_C − Q_M) · [ P_M − MC(Q_M) ]
+
+      metodo dell'integrale (equivalente, se MC non è costante):
+      DWL = ∫ da Q_M a Q_C di [ Domanda(Q) − MC(Q) ] dQ
+```
+
+**dove:** `Q_C` = quantità **concorrenziale** (efficiente) · `Q_M` = quantità di **monopolio** · `P_M` = prezzo di monopolio · la base del triangolo è la quantità non prodotta, l'altezza è lo scarto fra prezzo e costo marginale.
 - I due metodi danno lo stesso risultato; con domanda e MC lineari conviene il metodo del triangolo.
 
 ![Equilibrio di monopolio e triangolo della perdita secca](../grafici/monopolio-perdita-secca.svg)
@@ -67,7 +83,7 @@ Metodo generale per una funzione di domanda lineare **P = a − bQ** e un costo 
 
 - **Definizione**: si ha monopolio naturale quando i **costi fissi sono molto elevati** (barriera all'entrata) e i **costi variabili sono relativamente bassi**, tipico delle *utilities* (acqua, gas, energia elettrica, rifiuti, trasporto pubblico locale) che devono costruire e mantenere un'infrastruttura di rete.
 - **Come si verifica**: si confronta il **costo medio totale (ATC/CMeT)** con la **domanda** (o con il costo marginale). Se l'ATC è **decrescente** su tutto il range di quantità rilevante ed è sempre **superiore al MC** (per la presenza di costi fissi elevati spalmati su più unità), allora un'unica impresa produce a costo inferiore rispetto a più imprese che si dividono il mercato → è **subadditivo** → monopolio naturale.
-- Graficamente: ATC decrescente, MC = M costante e sotto l'ATC; MR e Domanda si incrociano con MC in Q\* (quantità di monopolio), mentre Domanda incrocia MC in Q\*\* > Q\* (quantità efficiente). Il rettangolo Π tra P\* e ATC è il profitto di monopolio; il triangolo S tra Q\* e Q\*\* è la perdita secca.
+- Graficamente: ATC decrescente, MC costante e sotto l'ATC; MR e Domanda si incrociano con MC in `Q*` (quantità di **monopolio**), mentre la Domanda incrocia MC in `Q**`, con `Q** > Q*` (quantità **efficiente**). Il rettangolo fra `P*` e ATC è il profitto di monopolio; il triangolo fra `Q*` e `Q**` è la perdita secca.
 
 ## 7. **Mercati contendibili**
 
@@ -102,6 +118,15 @@ Metodo generale per una funzione di domanda lineare **P = a − bQ** e un costo 
 
 - **Impresa pubblica** (nazionalizzazione): rinuncia all'obiettivo di massimo profitto per perseguire finalità pubbliche (efficienza in monopolio naturale, sviluppo di un settore); criticata per carenze manageriali (relazione **agente-principale**) e clientelismo
 - **Regolamentazione**: controllo diretto tramite regole (entrata, concorrenza effettiva, tariffe/prezzi)
+
+**Le privatizzazioni (dagli anni '80)** — l'inversione di rotta rispetto all'impresa pubblica, in settori con economie di scala (comunicazioni, energia, trasporti: Trenitalia/Italo). **Sei motivazioni da conoscere:**
+
+1. **Mutamenti tecnologici** che hanno fatto venire meno alcune posizioni di monopolio naturale — le ferrovie richiedono il monopolio sulla **rete**, non sull'**offerta di servizi ai passeggeri** (da qui la separazione rete/servizio);
+2. **Teorie sui fallimenti dello Stato** (clientelismo, cattura del regolatore) → [schema 12](12-fallimenti-stato-political-economy.md);
+3. Affermarsi di **altri strumenti di controllo** (regolazione indipendente, price cap) che rendono superflua la proprietà pubblica;
+4. La **normativa europea vieta gli aiuti di Stato**: le perdite ripianate col debito pubblico sono considerate aiuto e distorsive della concorrenza;
+5. **Vincoli di bilancio pubblico**: eccessivo indebitamento a favore delle imprese pubbliche;
+6. **Sviluppo dei mercati finanziari**: in Italia si pensava che quotare grandi imprese pubbliche avrebbe irrobustito una borsa poco sviluppata.
 
 ### Tabella riassuntiva — confronto tra strutture di mercato
 
@@ -139,26 +164,52 @@ Metodo generale per una funzione di domanda lineare **P = a − bQ** e un costo 
 **Dati**: Domanda inversa P = 20 − 2q; Costo marginale MC = 3q
 
 **Passo 1 — Ricavo marginale**
-TR = P·q = (20 − 2q)·q = 20q − 2q²
-MR = dTR/dq = 20 − 4q
+
+```
+      TR = P · q = (20 − 2q) · q = 20q − 2q²
+      MR = dTR/dq = 20 − 4q
+```
+
+**dove:** `TR` = ricavo **totale** · `MR` = ricavo **marginale** (il ricavo in più dell'ultima unità venduta). Regola pratica: con domanda lineare, **il MR ha la stessa intercetta e pendenza doppia**.
 
 **Passo 2 — Equilibrio di monopolio (MR = MC)**
-20 − 4q = 3q → 20 = 7q → **q_M = 20/7 ≈ 2,857**
-P_M = 20 − 2·(20/7) = 20 − 40/7 = **100/7 ≈ 14,29**
 
-**Passo 3 — Equilibrio concorrenziale (P = MC, benchmark efficiente)**
-20 − 2q = 3q → 20 = 5q → **q_C = 4**
-P_C = 20 − 2·4 = **12**
+```
+      20 − 4q = 3q
+      20 = 7q
+      q_M = 20/7 ≈ 2,857
+      P_M = 20 − 2 · (20/7) = 20 − 40/7 = 100/7 ≈ 14,29
+```
+
+**Passo 3 — Equilibrio concorrenziale (P = MC, il termine di paragone efficiente)**
+
+```
+      20 − 2q = 3q
+      20 = 5q
+      q_C = 4
+      P_C = 20 − 2 · 4 = 12
+```
 
 **Passo 4 — Perdita secca (metodo del triangolo)**
-Al livello Q_M, il costo marginale vale: MC(q_M) = 3·(20/7) = 60/7 ≈ 8,571
-DWL = ½ · (q_C − q_M) · [P_M − MC(q_M)]
-DWL = ½ · (4 − 20/7) · (100/7 − 60/7)
-DWL = ½ · (8/7) · (40/7)
-DWL = 160/49 ≈ **3,27**
+
+Al livello `q_M` il costo marginale vale `MC(q_M) = 3 · (20/7) = 60/7 ≈ 8,571`. Il triangolo ha per base la quantità persa e per altezza la distanza fra prezzo e costo marginale:
+
+```
+      DWL = ½ · (q_C − q_M) · [ P_M − MC(q_M) ]
+          = ½ · (4 − 20/7) · (100/7 − 60/7)
+          = ½ · (8/7) · (40/7)
+          = 160/49 ≈ 3,27
+```
+
+**dove:** `DWL` = *deadweight loss*, la **perdita secca**: benessere che sparisce, non che passa da qualcuno a qualcun altro.
 
 **Verifica con il metodo dell'integrale** (stesso risultato):
-DWL = ∫ da q_M a q_C di (20 − 5q) dq = [20q − 2,5q²] da 20/7 a 4 = 40 − 36,73 ≈ **3,27** ✓
+
+```
+      DWL = ∫ da q_M a q_C di (20 − 5q) dq
+          = [ 20q − 2,5q² ] da 20/7 a 4
+          = 40 − 36,73 ≈ 3,27   ✓
+```
 
 **Conclusione**: rispetto al mercato concorrenziale, il monopolista riduce la quantità da 4 a 2,857 unità e alza il prezzo da 12 a 14,29. La perdita secca di benessere sociale è di circa **3,27** (unità monetarie).
 
@@ -169,36 +220,65 @@ DWL = ∫ da q_M a q_C di (20 − 5q) dq = [20q − 2,5q²] da 20/7 a 4 = 40 −
 **Dati**: Domanda inversa P = 20 − Q; Costo totale TC = 10q + 16 (quindi MC = 10 costante, costo fisso = 16)
 
 **Passo 1 — Verifica che sia un monopolio naturale**
-Costo medio totale: ATC = TC/q = 10 + 16/q
+
+```
+      ATC = TC/q = (10q + 16)/q = 10 + 16/q
+```
+
+**dove:** `ATC` = costo medio totale (costo per unità prodotta) · `TC` = costo totale · il pezzo `16/q` è il **costo fisso spalmato** sulle unità prodotte: più si produce, più si assottiglia.
 
 - ATC è **decrescente** al crescere di q (per la presenza del costo fisso 16 spalmato su più unità) e **sempre superiore al MC = 10**
 - Un'unica impresa produce a costo medio inferiore rispetto a due imprese che si dividano la stessa quantità totale (i costi fissi si duplicherebbero) → il costo è **subadditivo**
 → Si conferma che si tratta di un **monopolio naturale**
 
 **Passo 2 — Equilibrio di monopolio**
-TR = P·Q = (20 − Q)·Q = 20Q − Q²
-MR = 20 − 2Q
-MR = MC → 20 − 2Q = 10 → **Q_M = 5**
-P_M = 20 − 5 = **15**
-Profitto: π = TR − TC = (15·5) − (10·5 + 16) = 75 − 66 = **π = 9**
+
+```
+      TR = P · Q = (20 − Q) · Q = 20Q − Q²
+      MR = 20 − 2Q
+
+      MR = MC:   20 − 2Q = 10   →   Q_M = 5
+      P_M = 20 − 5 = 15
+
+      profitto:  π = TR − TC = (15 · 5) − (10 · 5 + 16)
+                   = 75 − 66 = 9
+```
 
 **Passo 3 — Equilibrio in mercato contendibile (profitti nulli, P = ATC)**
-Si impone P = ATC, cioè si cerca l'intersezione tra Domanda e ATC:
-20 − Q = 10 + 16/Q
-Moltiplicando per Q: 20Q − Q² = 10Q + 16 → Q² − 10Q + 16 = 0
-Risolvendo: Q = [10 ± √(100 − 64)] / 2 = (10 ± 6) / 2 → **Q = 2 oppure Q = 8**
+Si impone `P = ATC`, cioè si cerca l'intersezione fra la curva di domanda e il costo medio:
+
+```
+      20 − Q = 10 + 16/Q
+
+      moltiplicando tutto per Q:
+      20Q − Q² = 10Q + 16
+      Q² − 10Q + 16 = 0
+
+      formula risolutiva:
+      Q = [ 10 ± √(100 − 64) ] / 2 = (10 ± 6) / 2
+
+      Q = 2   oppure   Q = 8
+```
 
 - A Q = 2: P = 18 (ATC = 10+16/2 = 18) → ma non è un equilibrio stabile: per quantità intermedie (es. Q=5) il prezzo di domanda (15) è superiore all'ATC (13,2), quindi un entrante potrebbe inserirsi con un prezzo più basso e restare comunque profittevole → questo punto viene "eroso" dalla contendibilità
 - A **Q = 8**: P = 12 (ATC = 10+16/8 = 12) → oltre Q=8 il prezzo di domanda scende sotto l'ATC (non profittevole), quindi nessun entrante trova conveniente espandersi oltre → questo è l'equilibrio **stabile (hit-and-run-proof)**
 
 **Equilibrio contendibile: Q = 8, P = 12, profitto = 12·8 − (10·8+16) = 96 − 96 = 0**
 
+> ✅ **Convenzione confermata**: negli esercizi sul mercato contendibile si impone **P = costo medio** (non P = MC). Delle due radici si tiene quella **maggiore**, l'unica hit-and-run-proof. Il criterio è confermato da altri appunti dello stesso corso e non è più un punto aperto.
+
 Rispetto al monopolio "protetto" (Q=5, P=15, π=9), la contendibilità costringe il monopolista naturale ad aumentare la quantità (da 5 a 8) e abbassare il prezzo (da 15 a 12) fino ad azzerare il profitto, pur restando un'unica impresa a produrre (l'equilibrio non è comunque Pareto-efficiente perché P=12 > MC=10).
 
 **Passo 4 — Perdita del monopolista con regolamentazione P = MC**
-Si impone P = MC = 10:
-20 − Q = 10 → **Q = 10**
-Verifica profitto: TR = 10·10 = 100; TC = 10·10 + 16 = 116
-**π = 100 − 116 = −16**
+
+```
+      si impone P = MC = 10:
+      20 − Q = 10   →   Q = 10
+
+      TR = 10 · 10 = 100
+      TC = 10 · 10 + 16 = 116
+
+      π = 100 − 116 = −16
+```
 
 **Conclusione**: imponendo il prezzo efficiente P=MC=10, il monopolista naturale **subisce una perdita di 16**, esattamente pari ai costi fissi non recuperati (il prezzo copre solo il costo variabile/marginale ma non i costi fissi). Questo è il motivo per cui in pratica, per i monopoli naturali (utilities), non si impone P=MC ma si ricorre a strumenti come il **price cap** o al prezzo di equilibrio contendibile P=ATC (Passo 3), che garantiscono almeno la sopravvivenza economica dell'impresa.
