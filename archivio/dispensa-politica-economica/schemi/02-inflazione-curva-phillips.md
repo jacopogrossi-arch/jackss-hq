@@ -29,15 +29,33 @@
 **3. Il principio del costo pieno e l'inflazione come conflitto distributivo**
 
 - Ipotesi: mercati non concorrenziali → le imprese sono **price-maker**.
-- Le imprese fissano il prezzo come costo del lavoro per unità di prodotto (**CLUP** = w/θ) più un **mark-up** (1+g):
+- Le imprese fissano il prezzo come **costo del lavoro per unità di prodotto** (CLUP = `w/θ`) maggiorato di un **mark-up**:
 
-  **p = (1 + g) · w/θ**   dove θ = Y/N è la produttività media del lavoro
+```
+                       w
+      p = (1 + g) · ───────
+                       θ
+```
 
-- In termini dinamici, il **tasso di inflazione** (equazione del costo pieno):
+**dove:**
+- `p` = prezzo · `w` = salario **nominale** (in euro)
+- `θ` = **produttività media del lavoro** (`θ = Y/N`, prodotto per occupato)
+- `w/θ` = **CLUP**, costo del lavoro per unità di prodotto
+- `g` = margine di profitto, quindi `(1+g)` = **mark-up** applicato sul costo
 
-  **π = ṗ = ẇ − θ̇ + (1+g)˙**
+- In termini **dinamici** (tassi di variazione, indicati dal puntino) si ottiene l'**equazione del costo pieno**:
 
-  (ẇ = crescita salari nominali, θ̇ = crescita produttività, (1+g)˙ = variazione del mark-up)
+```
+      π = ṗ = ẇ − θ̇ + (1+g)˙
+```
+
+**dove:**
+- `π` (o `ṗ`) = tasso di **inflazione**
+- `ẇ` = tasso di crescita dei **salari nominali** → spinge i prezzi **su**
+- `θ̇` = tasso di crescita della **produttività** → spinge i prezzi **giù** (col segno meno: se ogni lavoratore produce di più, il costo unitario scende)
+- `(1+g)˙` = variazione del **mark-up** → spinge i prezzi **su**
+
+**Come si legge**: non c'è inflazione se i salari crescono quanto la produttività e il mark-up resta fermo. L'inflazione compare quando una delle due parti pretende una fetta più grande e l'altra non cede.
 
 - L'inflazione nasce dal **conflitto distributivo** tra imprese (che vogliono il mark-up) e sindacati (che vogliono il salario reale w/p) sulla ripartizione del reddito.
 
@@ -45,7 +63,7 @@
 
 - **Salario reale** = w/p (potere d'acquisto del salario nominale w).
 - **PIL nominale** = pY (valore a prezzi correnti); **PIL reale** = Y (valore a prezzi costanti, "quantità"); **deflatore del PIL** = PIL nominale/PIL reale.
-- Due categorie di reddito: lavoratori e percettori di profitto → **pY = W + PR**, con **W = wN** (reddito da lavoro = salario nominale × occupati).
+- Due categorie di reddito: lavoratori e percettori di profitto → **pY = W + PR**, con **W = wN** (reddito da lavoro = salario nominale · occupati).
 - **Quota di reddito da lavoro** = wN/pY = (w/p)/θ (salario reale su produttività del lavoro).
 - La quota di reddito da lavoro **non varia** se: **ẇ − ṗ − θ̇ = 0**.
 - Se il mark-up è costante ((1+g)˙=0) e il salario cresce quanto la produttività (ẇ = θ̇), allora π = 0: nessuna inflazione e **quote distributive invariate**. Nei dati OECD reali, la quota salari su reddito è comunque scesa in quasi tutti i paesi G20 dal 1970 al 2011.
@@ -68,15 +86,24 @@
 
 - Relazione empirica tra tasso di disoccupazione u e tasso di variazione dei **salari monetari** ẇ (Phillips, dati UK 1861-1957):
 
-  **ẇ = γ(u)**
+```
+      ẇ = γ(u)
+```
 
-- Curva decrescente e convessa. **uN (o u\*)** = tasso di disoccupazione naturale: al di sotto le imprese offrono salari più alti per attirare lavoratori (ẇ>0), al di sopra i salari ristagnano o scendono.
+**dove:** `ẇ` = tasso di crescita dei salari monetari · `u` = tasso di disoccupazione · `γ( )` indica semplicemente "è una funzione di" — la relazione è **decrescente**: più disoccupazione, meno spinta salariale.
+
+- Curva decrescente e convessa. **u_N** (scritto anche `u*`) = tasso di disoccupazione naturale: al di sotto le imprese offrono salari più alti per attirare lavoratori (ẇ>0), al di sopra i salari ristagnano o scendono.
+- Sinonimo da riconoscere: **NAIRU** (*Non-Accelerating Inflation Rate of Unemployment*), il tasso di disoccupazione compatibile con un'inflazione **stabile** (non accelerante). Nell'impostazione Friedman-Phelps coincide con il tasso naturale: è il punto in cui la curva di Phillips di lungo periodo diventa verticale. **Attenzione**: non è il tasso a cui l'inflazione è *nulla*, ma quello a cui l'inflazione **non accelera**.
 
 **7. La curva di Phillips "menù di scelta" (Samuelson-Solow)**
 
 - Sostituendo ẇ = γ(u) nell'equazione del costo pieno (π = ẇ − θ̇ + (1+g)˙) si ottiene:
 
-  **π = γ(u) − θ̇ + (1+g)˙**
+```
+      π = γ(u) − θ̇ + (1+g)˙
+```
+
+Cioè: la disoccupazione entra nell'equazione dell'inflazione **attraverso i salari**.
 
 - Mostra un **trade-off tra inflazione e disoccupazione**: il policymaker può ridurre u accettando più π, muovendosi **lungo** la curva (non spostandola).
 - La scelta ottimale è nel punto di tangenza tra il vincolo (CdP) e la funzione obiettivo del policymaker (curve di indifferenza tra i due "mali" inflazione e disoccupazione) — collegato alla **regola aurea di Tinbergen**: se n. strumenti < n. obiettivi non tutti gli obiettivi sono raggiungibili contemporaneamente; si rinuncia a qualche obiettivo, si aggiungono strumenti, o si passa a "obiettivi flessibili" (funzione di perdita da minimizzare).
@@ -85,13 +112,23 @@
 
 - La relazione non è stabile nel **lungo periodo** perché trascura l'**inflazione attesa** πᵉ:
 
-  **πt = γ(u) + πᵉt**
+```
+      π_t = γ(u) + πᵉ_t
+```
 
-- Con **aspettative adattive**: πᵉt = πᵉ(t-1) + λ(π(t-1) − πᵉ(t-1)), 0<λ<1. Le imprese aggiustano le aspettative istantaneamente, i lavoratori con ritardo.
-- Esiste una famiglia di **curve di Phillips di breve periodo (SRPC)**, una per ogni livello di aspettative, e una **curva di lungo periodo (LRPC) verticale in corrispondenza di uN**: nel lungo periodo non c'è trade-off, solo nel breve.
-  - u < uN → π > πᵉ (l'economia "surriscalda")
-  - u = uN → π = πᵉ (equilibrio, aspettative corrette)
-  - u > uN → π < πᵉ
+**dove:** `π_t` = inflazione nel periodo t · `πᵉ_t` = inflazione **attesa** per il periodo t (la "e" in alto sta per *attesa*) · il pedice `t` indica il periodo.
+
+- Con **aspettative adattive** (ci si aspetta quello che è successo, corretto per l'errore commesso):
+
+```
+      πᵉ_t = πᵉ_(t−1) + λ · ( π_(t−1) − πᵉ_(t−1) )       con 0 < λ < 1
+```
+
+**dove:** `λ` misura **quanto in fretta** si correggono le aspettative: λ vicino a 1 = correzione rapida, λ vicino a 0 = aspettative lente. Le imprese aggiustano le aspettative istantaneamente, i lavoratori con ritardo.
+- Esiste una famiglia di **curve di Phillips di breve periodo (SRPC)**, una per ogni livello di aspettative, e una **curva di lungo periodo (LRPC) verticale in corrispondenza di u_N**: nel lungo periodo non c'è trade-off, solo nel breve.
+  - u < u_N → π > πᵉ (l'economia "surriscalda")
+  - u = u_N → π = πᵉ (equilibrio, aspettative corrette)
+  - u > u_N → π < πᵉ
 
 - Con λ=1 (caso limite): πᵉt = π(t-1). Se u resta stabilmente sotto u\*, l'inflazione **accelera** periodo dopo periodo invece di stabilizzarsi (vedi esercizio tipo).
 
@@ -100,7 +137,7 @@
 **9. Perché in concorrenza perfetta non c'è disoccupazione volontaria**
 
 - In concorrenza perfetta il salario è determinato dall'incontro tra domanda e offerta di lavoro: al salario di equilibrio, domanda e offerta di lavoro coincidono e chi vuole lavorare a quel salario trova impiego.
-- Non essendoci rigidità di prezzi/salari né potere di mercato, non si generano eccessi di offerta di lavoro persistenti: eventuale disoccupazione osservata sarebbe solo frizionale/di breve aggiustamento, non "involontaria" nel senso di lavoratori disposti a lavorare al salario vigente ma esclusi dal mercato. La disoccupazione involontaria richiede invece imperfezioni di mercato (salari rigidi verso il basso, potere contrattuale, informazione imperfetta, principio del costo pieno con price-maker) — è per questo che nei modelli con conflitto distributivo (punto 3) e nella curva di Phillips esiste un uN "naturale" positivo anche in equilibrio.
+- Non essendoci rigidità di prezzi/salari né potere di mercato, non si generano eccessi di offerta di lavoro persistenti: eventuale disoccupazione osservata sarebbe solo frizionale/di breve aggiustamento, non "involontaria" nel senso di lavoratori disposti a lavorare al salario vigente ma esclusi dal mercato. La disoccupazione involontaria richiede invece imperfezioni di mercato (salari rigidi verso il basso, potere contrattuale, informazione imperfetta, principio del costo pieno con price-maker) — è per questo che nei modelli con conflitto distributivo (punto 3) e nella curva di Phillips esiste un u_N "naturale" positivo anche in equilibrio.
 
 **10. Modello AD-AS: inflazione da domanda vs da costi (rappresentazione grafica)**
 
@@ -138,35 +175,53 @@
 **Traccia (analoga a quella d'esame):**
 Il mercato del lavoro di un paese è descritto dalla curva dei salari:
 
-**ẇ = 0,55 − 5u**
+```
+      ẇ = 0,55 − 5 · u
+```
 
-dove ẇ è il tasso di variazione dei salari monetari e u il tasso di disoccupazione (in decimali, es. u=0,10 = 10%). Si ipotizzi θ̇ = 0 (produttività costante) e mark-up costante, (1+g)˙ = 0.
+**dove:**
+- `ẇ` = tasso di variazione dei **salari monetari**
+- `u` = tasso di disoccupazione, **in decimali** (10% si scrive 0,10)
+- `0,55` = intercetta: quanto crescerebbero i salari con disoccupazione nulla
+- `5` = pendenza: di quanto rallenta la crescita salariale per ogni punto di disoccupazione in più
 
-**a) Determinare il tasso di disoccupazione naturale (uN)**, cioè quello per cui i salari monetari sono stabili (ẇ = 0):
+**Ipotesi date dal testo:** `θ̇ = 0` (produttività costante) e `(1+g)˙ = 0` (mark-up costante).
 
-  0,55 − 5uN = 0
-  5uN = 0,55
-  **uN = 0,11 → 11%**
+**a) Determinare il tasso di disoccupazione naturale (u_N)**, cioè quello per cui i salari monetari sono **stabili** (`ẇ = 0`):
+
+```
+      0,55 − 5 · u_N = 0
+      5 · u_N = 0,55
+      u_N = 0,11        →  11%
+```
 
 **b) Se il tasso di disoccupazione effettivo è u = 8% (0,08), calcolare ẇ e il tasso di inflazione π.**
 
-  ẇ = 0,55 − 5(0,08) = 0,55 − 0,40 = **0,15 → 15%**
+```
+      ẇ = 0,55 − 5 · (0,08)
+         = 0,55 − 0,40
+         = 0,15           →  15%
+```
 
-  Con θ̇ = 0 e (1+g)˙ = 0, dall'equazione del costo pieno π = ẇ − θ̇ + (1+g)˙:
+Con `θ̇ = 0` e `(1+g)˙ = 0`, l'equazione del costo pieno `π = ẇ − θ̇ + (1+g)˙` si riduce a:
 
-  **π = ẇ = 15%**
+```
+      π = ẇ = 15%
+```
 
   (Con u=8% sotto il livello naturale dell'11%, il mercato del lavoro è "surriscaldato": i salari crescono più velocemente e questo si trasferisce interamente in inflazione, dato che produttività e mark-up sono fermi.)
 
 **c) Politica dei redditi: taglio dei salari nominali del 2% (Δẇ = −2 punti percentuali). Quale disoccupazione è compatibile con lo stesso tasso di crescita salariale, cioè quale u riporta ẇ al livello desiderato (es. si vuole ẇ = 15% − 2% = 13%)?**
 
-  13% = 0,55 − 5u
-  5u = 0,55 − 0,13 = 0,42
-  **u = 0,084 → 8,4%**
+```
+      0,13 = 0,55 − 5 · u
+      5 · u = 0,55 − 0,13 = 0,42
+      u = 0,084        →  8,4%
+```
 
   Interpretazione: a parità di dinamica salariale desiderata più bassa, la curva dei salari implica che serve un tasso di disoccupazione leggermente più alto (dall'8% all'8,4%) per ottenerla — oppure, letto al contrario: un intervento di politica dei redditi che taglia direttamente i salari nominali del 2% (spostando la relazione, non muovendosi lungo di essa) permette di ottenere la stessa dinamica salariale (e quindi la stessa inflazione, visto il costo pieno) con un tasso di disoccupazione più basso di quanto richiederebbe il solo meccanismo di mercato — è esattamente l'obiettivo della politica dei redditi (punto 5): **controllare l'inflazione senza dover scaricare tutto l'aggiustamento sulla disoccupazione**, riducendo il "prezzo" in termini di posti di lavoro persi rispetto a una politica puramente restrittiva (monetaria/fiscale) che agirebbe solo alzando u lungo la curva.
 
-**d) Che succede se il governo cerca di mantenere u=8% (sotto uN=11%) periodo dopo periodo, con aspettative adattive e λ=1?**
+**d) Che succede se il governo cerca di mantenere u=8% (sotto u_N=11%) periodo dopo periodo, con aspettative adattive e λ=1?**
 
   Con la curva di Phillips aumentata πt = γ(ut) + πᵉt e πᵉt = π(t-1):
 
@@ -176,4 +231,4 @@ dove ẇ è il tasso di variazione dei salari monetari e u il tasso di disoccupa
   | 1 | 15% | 8% | γ(8%) + πᵉ1 = 15% + 15% = 30% |
   | 2 | 30% | 8% | 15% + 30% = 45% |
 
-  L'inflazione **non si stabilizza**, ma **accelera** di periodo in periodo (accelerazionismo di Friedman-Phelps): mantenere u permanentemente sotto uN non è sostenibile, perché ogni periodo le aspettative si aggiornano sull'inflazione passata e la spingono ulteriormente verso l'alto. L'unico modo per fermare l'accelerazione è lasciare che u torni a uN = 11%, dove ẇ = γ(uN) = 0 e l'inflazione si stabilizza al livello atteso (costante, non necessariamente zero se le aspettative pregresse erano positive).
+  L'inflazione **non si stabilizza**, ma **accelera** di periodo in periodo (accelerazionismo di Friedman-Phelps): mantenere u permanentemente sotto u_N non è sostenibile, perché ogni periodo le aspettative si aggiornano sull'inflazione passata e la spingono ulteriormente verso l'alto. L'unico modo per fermare l'accelerazione è lasciare che u torni a u_N = 11%, dove ẇ = γ(u_N) = 0 e l'inflazione si stabilizza al livello atteso (costante, non necessariamente zero se le aspettative pregresse erano positive).

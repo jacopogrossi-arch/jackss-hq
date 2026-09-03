@@ -35,6 +35,7 @@
 - **Progressiva**: t₀ + t(y)Y, aliquota crescente col reddito, finalità redistributiva.
 - L'imposizione **progressiva** è uno **stabilizzatore automatico**: in una recessione (Y↓) il prelievo fiscale medio scende più che proporzionalmente e i trasferimenti (sussidi di disoccupazione) salgono → si attutisce la caduta del reddito disponibile e dei consumi, senza bisogno di una manovra discrezionale.
 - **Drenaggio fiscale (fiscal drag)**: con inflazione e aliquote progressive non indicizzate, un aumento del reddito solo *nominale* fa scattare aliquote più alte → il reddito reale netto diminuisce anche se il reddito reale lordo è invariato. Rimedi: credito d'imposta compensativo, indicizzazione degli scaglioni.
+  **Esempio numerico** (scaglioni: 20% fino a 1.000, 30% da 1.000 a 2.000). Reddito 1.000 → imposta 200, **aliquota media 20%**. Con inflazione al 20%, il reddito nominale sale a 1.200 ma il **potere d'acquisto è invariato**: imposta = 200 + 0,30 · 200 = 260 → **aliquota media 21,7%**. Il contribuente paga più imposte in termini reali **senza che nessuna aliquota sia stata alzata** e senza essere diventato più ricco: è un aumento di imposizione deciso dall'inflazione, non dal Parlamento.
 - **Erosione, elusione, evasione** indeboliscono gettito ed equità: concentrano il carico fiscale su categorie meno capaci di sottrarsi (tipicamente il lavoro dipendente). Evasione in Italia stimata 110-130 mld/anno (~5% del debito pubblico).
 
 ---
@@ -58,27 +59,69 @@
 **4. Il debito pubblico e la sua sostenibilità (formula dinamica debito/PIL)**
 
 - Il **debito pubblico** è lo *stock* accumulato nel tempo dai flussi di disavanzo, finanziato con emissione di titoli.
-- Indicatore chiave: rapporto **debito/PIL = B/(p·Y)**. La sostenibilità richiede che questo rapporto sia **non crescente** nel tempo.
+- Indicatore chiave, il **rapporto debito/PIL**:
+
+```
+                      B
+      debito/PIL = ───────
+                    p · Y
+```
+
+**dove:** `B` = stock di debito · `p` = livello dei prezzi · `Y` = PIL reale (quindi `p · Y` = PIL nominale). La sostenibilità richiede che questo rapporto sia **non crescente** nel tempo.
 
 **Derivazione step-by-step della condizione di sostenibilità:**
 
-1. Il rapporto debito/PIL aumenta se il tasso di crescita del debito supera la somma di inflazione e crescita reale:
- **Ḃ − ṗ − Ẏ > 0** (dove Ḃ = ΔB/B, ṗ = Δp/p, Ẏ = ΔY/Y)
+**Notazione**: il **puntino sopra una lettera** significa "tasso di variazione di quella grandezza". Quindi `Ḃ = ΔB/B` (di quanto % cresce il debito), `ṗ = Δp/p` (inflazione), `Ẏ = ΔY/Y` (crescita reale del PIL).
 
-2. Se non c'è finanziamento monetario, la variazione dello stock di debito in un periodo è pari al deficit primario più la spesa per interessi sul debito esistente:
- **ΔB = (G − T) + iB**
+**1.** Il rapporto debito/PIL **aumenta** se il debito cresce più in fretta del PIL nominale (inflazione + crescita reale):
 
-3. Caso particolare — **saldo primario nullo** (G − T = 0): allora ΔB = iB, quindi
- **Ḃ = ΔB/B = i**
+```
+      Ḃ − ṗ − Ẏ  >  0
+```
 
-4. Sostituendo nella condizione del punto 1 (Ḃ = i):
- **i − ṗ − Ẏ < 0 → i − ṗ < Ẏ**
+**2.** Se non c'è finanziamento monetario, la variazione dello stock di debito in un periodo è pari al **disavanzo primario** più la **spesa per interessi** sul debito già esistente:
 
- cioè: **il debito è sostenibile se il tasso di interesse reale (i − ṗ) è inferiore al tasso di crescita reale del PIL (Ẏ)**.
+```
+      ΔB = (G − T) + i · B
+```
 
-- Questa è la formula-chiave per i calcoli d'esame su "tasso di interesse compatibile con debito/PIL costante": si impone **i − ṗ = Ẏ** (rapporto esattamente costante, caso limite) e si risolve per l'incognita richiesta.
+**dove:** `G` = spesa pubblica · `T` = entrate · `i` = tasso di interesse nominale sul debito
+
+**3.** Caso particolare — **saldo primario nullo** (cioè `G − T = 0`): resta `ΔB = i · B`, quindi il debito cresce esattamente al tasso di interesse:
+
+```
+      Ḃ = ΔB/B = i
+```
+
+**4.** Si sostituisce `Ḃ = i` nella condizione del punto 1 e si rovescia la disuguaglianza (per avere la condizione di **sostenibilità**, non di esplosione):
+
+```
+      i − ṗ − Ẏ < 0        cioè        i − ṗ  <  Ẏ
+```
+
+**La regola da ricordare**: il debito è sostenibile se il **tasso di interesse reale** (`i − ṗ`) è inferiore al **tasso di crescita reale del PIL** (`Ẏ`). In sigla: **r < g**.
+
+- Questa è la formula-chiave per i calcoli d'esame su "tasso di interesse compatibile con debito/PIL costante": si impone l'**uguaglianza** (caso limite di rapporto esattamente costante)
+
+```
+      i − ṗ = Ẏ
+```
+
+e si risolve per l'incognita richiesta.
 - Con **saldo primario non nullo**, la condizione si generalizza (bisogna tener conto anche del deficit/avanzo primario in % di PIL); la sostenibilità è più facile con: avanzo primario, finanziamento (parziale) con base monetaria, tasso di interesse basso, crescita del PIL alta, inflazione.
 - Perché un debito troppo alto è un male: il risparmio si dirige verso i titoli pubblici anziché altri impieghi produttivi; rischio di insolvenza/crisi finanziaria e aumento dei tassi; rende difficili le manovre anticicliche.
+
+**Le cinque cause della crescita del rapporto debito/PIL in Italia negli anni '80** (domanda aperta ricorrente — si noti che sono esattamente i termini della formula al punto 4 che peggiorano tutti insieme):
+
+1. **Elevati disavanzi primari**, fra il 3% e il 5% del PIL;
+2. **Spesa per interessi crescente**, dal 5% all'8,5% del PIL;
+3. **Aumento dei tassi di interesse internazionali**, per effetto della politica monetaria restrittiva USA;
+4. **Aumento dei tassi di interesse interni**, con la fine della politica monetaria accomodante dopo l'indipendenza della Banca d'Italia (il "divorzio" del 1981, vedi [schema 07](07-teorie-macro-moneta-bce.md));
+5. **Debole crescita di Y**, per gli effetti della stretta monetaria e per il mantenimento di un cambio forte della lira.
+
+**Le politiche di rientro dal debito:** contenimento del **disavanzo primario** (aumento delle entrate, anche via privatizzazioni · riduzione delle spese, con effetti redistributivi) · **politiche per la crescita** che non passino per maggiore spesa pubblica (politiche industriali) · **politiche monetarie accomodanti** fino al caso estremo della monetizzazione (**vietata** nell'unione monetaria) · **gestione del debito** e controllo dei tassi su mercato primario e secondario · **ripudio del debito** (il paese diventa inaffidabile e perde l'accesso ai mercati).
+
+**La spesa per interessi è una redistribuzione** in tre direzioni: dall'interno **all'estero** (per la quota di titoli in mani straniere) · dai **contribuenti ai sottoscrittori** dei titoli · dalle **generazioni future a quella presente**.
 
 ---
 
@@ -88,20 +131,46 @@
 
 **Dimostrazione (modello reddito-spesa, imposta in somma fissa, economia chiusa):**
 
-- Y = C + I + G
-- C = c(Y − T), con I = Ī dato
-- Sostituendo: Y = c(Y−T) + Ī + G → **Y = 1/(1−c) · (Ī + G − cT)**
-- Differenziando: **ΔY = 1/(1−c) · (ΔG − cΔT)**
-- Se ΔG = ΔT:
- ΔY = 1/(1−c) · (ΔG − cΔG) = 1/(1−c) · (1−c)ΔG = **ΔG**
+```
+      Y = C + I + G
+      C = c · (Y − T)          con I = Ī  (investimenti dati)
+```
+
+**dove:** `c` = propensione marginale al consumo (0 < c < 1) · `T` = imposte in somma fissa · la barra sopra `Ī` significa "grandezza data, non spiegata dal modello"
+
+Sostituendo `C` dentro `Y` e risolvendo:
+
+```
+               1
+      Y = ───────────  ·  ( Ī + G − c · T )
+             1 − c
+```
+
+Si passa alle **variazioni** (Δ = "variazione di"):
+
+```
+      ΔY = 1/(1−c) · ( ΔG − c · ΔT )
+```
+
+Ora si impone la condizione del teorema, `ΔG = ΔT` (bilancio in pareggio):
+
+```
+      ΔY = 1/(1−c) · ( ΔG − c · ΔG )
+         = 1/(1−c) · (1 − c) · ΔG
+         = ΔG
+```
 
 **Intuizione economica:** l'aumento di G ha un effetto espansivo pieno (moltiplicatore 1/(1−c)) sulla domanda aggregata. L'aumento di T ha un effetto restrittivo minore, pari a c/(1−c), perché riduce il reddito disponibile ma i consumatori assorbono solo una quota c della minore disponibilità (il resto avrebbe comunque un peso minore rispetto all'iniezione diretta di spesa pubblica, che si traduce in domanda al 100%). La somma netta dei due effetti è esattamente pari a ΔG.
 
 **Attenzione — vale solo con imposta in somma fissa.** Con imposta **proporzionale** (T = tY), il teorema **non vale più**:
 
-- Y = 1/(1−c(1−t)) · (I₀ + G)
-- ΔY = 1/(1−c(1−t)) · ΔG
-- ΔT = t·ΔY = t/(1−c(1−t)) · ΔG
+```
+      Y  = 1/(1 − c(1−t)) · ( I₀ + G )
+      ΔY = 1/(1 − c(1−t)) · ΔG
+      ΔT = t · ΔY = t/(1 − c(1−t)) · ΔG
+```
+
+**dove:** `t` = aliquota dell'imposta proporzionale (`T = t · Y`), quindi il gettito **cresce insieme al reddito** invece di restare fisso
 - Si dimostra che **ΔT < ΔG** sempre (perché t < 1−c(1−t) quando t<1): quindi con imposta proporzionale l'aumento di spesa genera un aumento di reddito maggiore dell'aumento di gettito fiscale indotto, e il bilancio pubblico peggiora anche se G e T "partono" dallo stesso importo nominale — il legame ΔG=ΔT del teorema si riferisce a una manovra di variazione delle aliquote/della spesa impostata ex-ante, non all'esito automatico.
 
 ---
@@ -181,6 +250,6 @@
 1. Tasso di interesse reale: i − ṗ = 4% − 1,5% = 2,5%.
 2. Confronto con la crescita: Ẏ = 2% < 2,5% (tasso reale) → la componente "palla di neve" da sola farebbe **aumentare** il rapporto debito/PIL (perché il costo reale del debito supera la crescita).
 3. In più c'è un disavanzo primario dell'1% (G>T), che aggiunge ulteriore nuovo debito ogni anno.
-4. **Conclusione: il rapporto debito/PIL aumenta**, per due ragioni cumulative: (a) il tasso di interesse reale supera la crescita, (b) il paese produce nuovo debito anche al netto degli interessi (disavanzo primario). Per stabilizzare il rapporto servirebbe o un avanzo primario sufficiente a compensare il differenziale (i−ṗ−Ẏ)×(debito/PIL), oppure una riduzione di i, oppure più crescita/inflazione.
+4. **Conclusione: il rapporto debito/PIL aumenta**, per due ragioni cumulative: (a) il tasso di interesse reale supera la crescita, (b) il paese produce nuovo debito anche al netto degli interessi (disavanzo primario). Per stabilizzare il rapporto servirebbe o un avanzo primario sufficiente a compensare il differenziale (i−ṗ−Ẏ)·(debito/PIL), oppure una riduzione di i, oppure più crescita/inflazione.
 
-*(Nota per l'esame: se il testo dà anche il livello iniziale del rapporto debito/PIL, la variazione approssimata del rapporto nel periodo è: Δ(B/Y) ≈ [(i−ṗ−Ẏ)×(B/Y)] + (disavanzo primario/PIL). Utile per rispondere a domande che chiedono "di quanto cambia" e non solo "aumenta o diminuisce".)*
+*(Nota per l'esame: se il testo dà anche il livello iniziale del rapporto debito/PIL, la variazione approssimata del rapporto nel periodo è: Δ(B/Y) ≈ [(i−ṗ−Ẏ)·(B/Y)] + (disavanzo primario/PIL). Utile per rispondere a domande che chiedono "di quanto cambia" e non solo "aumenta o diminuisce".)*

@@ -35,7 +35,7 @@
 - Il **modello IS-LM** (Hicks) formalizza questo caso in economia chiusa.
 - Tre mercati interdipendenti (beni, moneta, titoli): se due sono in equilibrio lo è anche il terzo (**Legge di Walras**).
 - **Curva IS**: combinazioni (i, Y) che equilibrano il mercato dei beni; Y = C + I + G; pendenza negativa (↑i → ↓I → ↓Y).
-- **Curva LM**: combinazioni (i, Y) che equilibrano il mercato della moneta; M = L(Y,i) = fY + L0 − gi; pendenza positiva (↑Y → ↑domanda moneta transattiva → ↑i).
+- **Curva LM**: combinazioni (i, Y) che equilibrano il mercato della moneta; M = L(Y,i) = fY + L_0 − gi; pendenza positiva (↑Y → ↑domanda moneta transattiva → ↑i).
 - **Rimando**: il **moltiplicatore keynesiano** (politica fiscale efficace nella stabilizzazione della DA) e l'effetto **crowding-out** (spiazzamento finanziario: ↑G non accomodato da ↑M → ↑i → ↓I privati) sono trattati per esteso nello schema dedicato a Politica fiscale/bilancio pubblico — qui si richiama solo il collegamento concettuale entro il modello IS-LM.
 - **Politica monetaria nel modello IS-LM**: ↓M0 → ↑i → ↓I → ↓Y (non neutralità). L'efficacia dipende dalla pendenza delle curve (se IS verticale, effetto nullo; se IS quasi orizzontale, effetto massimo).
 
@@ -66,8 +66,8 @@
 | Scuola | Flessibilità dei prezzi | Domanda di moneta | Formazione delle aspettative | Ruolo della politica economica |
 |---|---|---|---|---|
 | **Classici** | Perfetta e istantanea (prezzi relativi e salario reale flessibili) | Non centrale nell'analisi; moneta velo, neutrale | Non tematizzata esplicitamente (equilibrio automatico) | Nulla: il mercato si autoregola (legge di Say), moneta neutrale |
-| **Keynesiani** | Vischiosi/rigidi nel breve periodo (specie salari verso il basso) | Dipende da Y (transattiva/precauzionale) **e da i** (speculativa, L2(i)); preferenza per la liquidità | Aspettative/animal spirits degli imprenditori, incertezza radicale | Politica fiscale e monetaria efficaci (moltiplicatore, non neutralità della moneta); trade-off inflazione-disoccupazione |
-| **Sintesi neoclassica (IS-LM)** | Rigidi nel breve periodo (caso particolare keynesiano) | L(Y,i) = fY + L0 − gi | Non esplicitamente modellate (si limita al b.p.) | Politica fiscale efficace (moltiplicatore); politica monetaria efficace ma con crowding-out se non accomodante |
+| **Keynesiani** | Vischiosi/rigidi nel breve periodo (specie salari verso il basso) | Dipende da Y (transattiva/precauzionale) **e da i** (speculativa, L_2(i)); preferenza per la liquidità | Aspettative/animal spirits degli imprenditori, incertezza radicale | Politica fiscale e monetaria efficaci (moltiplicatore, non neutralità della moneta); trade-off inflazione-disoccupazione |
+| **Sintesi neoclassica (IS-LM)** | Rigidi nel breve periodo (caso particolare keynesiano) | L(Y,i) = fY + L_0 − gi | Non esplicitamente modellate (si limita al b.p.) | Politica fiscale efficace (moltiplicatore); politica monetaria efficace ma con crowding-out se non accomodante |
 | **Monetaristi** | Flessibili nel lungo periodo (nel b.p. illusione monetaria) | M/p = kY, dipende SOLO dal reddito, non dal tasso d'interesse (no domanda speculativa) | Aspettative adattive con illusione monetaria nel b.p. | Politica monetaria neutrale nel l.p. (solo prezzi); politica fiscale inefficace (spiazzamento totale); serve "regola semplice" |
 | **Nuovi classici (NMC)** | Perfettamente flessibili, equilibrio istantaneo | Coerente con TQM | **Aspettative razionali** (uso ottimale di tutta l'informazione) | Politica economica neutrale/invariante anche nel b.p. se prevista; solo shock imprevisti hanno effetti temporanei |
 
@@ -76,15 +76,37 @@
 - **Moneta** = insieme dei mezzi di pagamento con tre funzioni: **unità di conto**, **mezzo di pagamento**, **riserva di valore**.
 - Qualunque cosa assolva queste funzioni può essere moneta (storicamente determinata): **moneta-merce** (conchiglie, metalli) vs **moneta-segno** (banconote, senza valore intrinseco, attestazione debitoria fiduciariamente accettata).
 - Tipologie moderne: moneta legale (BC), moneta bancaria/fiduciaria (depositi), moneta elettronica, moneta virtuale (Bitcoin), moneta digitale/CBDC (in prospettiva).
-- **Aggregati monetari BCE**: M1 (circolante + depositi overnight) ⊂ M2 (+ depositi vincolati ≤2 anni) ⊂ M3 (+ attività finanziarie molto liquide). **Base monetaria H = Circolante + Riserve bancarie**.
+- **Aggregati monetari BCE**: M_1 (circolante + depositi overnight) ⊂ M_2 (+ depositi vincolati ≤2 anni) ⊂ M_3 (+ attività finanziarie molto liquide). **Base monetaria H = Circolante + Riserve bancarie**.
 - La moneta è creata **principalmente attraverso operazioni di credito**; il **moltiplicatore monetario** M = (1+h)/(h+j) · H (h = rapporto circolante/depositi, j = coefficiente di riserva) mostra come il sistema bancario, con riserva frazionaria, crei moneta oltre la base monetaria emessa dalla BC.
+
+### I quattro canali di creazione della base monetaria
+
+Dal lato degli **impieghi**: H = Circolante + Riserve bancarie. Dal lato della **creazione**, i canali sono quattro:
+
+| Canale | Meccanismo |
+|---|---|
+| **Estero** | Variazione delle **riserve ufficiali** contro base monetaria, per effetto di un avanzo o disavanzo della bilancia dei pagamenti (vedi [schema 06](06-economia-aperta-bilancia-pagamenti.md): in cambi fissi è il canale che rende **inefficace la politica monetaria**) |
+| **Tesoro** | La banca centrale acquista titoli di Stato **all'emissione** (mercato primario) → finanziamento monetario del disavanzo |
+| **Operazioni di mercato aperto** | Acquisto/vendita di titoli di Stato sul **mercato secondario**: si acquista per immettere liquidità, si vende per drenarla |
+| **Banche** | Risconto di cambiali (al tasso ufficiale di sconto) e anticipazioni su titoli |
+
+**Il canale Tesoro e l'indipendenza della banca centrale** — la vicenda italiana, ottima come domanda aperta:
+
+- Se la BC è **obbligata a finanziare la spesa del governo**, perde il controllo della creazione di base monetaria e **non è indipendente**.
+- **Fino al 1981** la Banca d'Italia era tenuta ad acquistare i BOT che il Tesoro non riusciva a collocare in asta → superato con il cosiddetto **"divorzio" fra Banca d'Italia e Tesoro (1981)**.
+- **Fino al 1993** la Banca d'Italia doveva anticipare al governo, su conto corrente di tesoreria, fino al **14% delle spese previste** → obbligo superato con gli accordi europei di **Maastricht**.
+- Oggi le regole europee sanciscono l'indipendenza della BCE e **vietano il finanziamento monetario diretto** dei governi.
+
+- **Signoraggio**: il vantaggio che lo Stato trae dalla possibilità di creare base monetaria per finanziare il disavanzo. Il finanziamento monetario genera inflazione, che riduce il valore reale del debito: da qui la **"tassa da inflazione"** a vantaggio del governo e a carico dei detentori di moneta e titoli (vedi [schema 01](01-politica-fiscale-bilancio-pubblico.md)).
+
+**I tre ruoli della banca centrale** (domanda secca probabile): 1) **creazione/distruzione di base monetaria**; 2) **prestatore di ultima istanza** verso le altre banche ("banca delle banche"); 3) **regolamentazione e controllo** della condotta bancaria (riserva obbligatoria, vigilanza).
 
 ## 9. **Le funzioni di domanda di moneta**
 
-- **Domanda di moneta per transazioni**: L1(Y) = Y/V — dipende positivamente dal reddito, serve per gli scambi correnti.
+- **Domanda di moneta per transazioni**: L_1(Y) = Y/V — dipende positivamente dal reddito, serve per gli scambi correnti.
 - **Domanda di moneta precauzionale**: legata all'incertezza sulle entrate/uscite future, anch'essa funzione crescente di Y (spesso accorpata alla transattiva: fY).
-- **Domanda di moneta speculativa**: L2(i) = L0 − gi — alternativa alla detenzione di titoli; è il **costo-opportunità** di tenere moneta invece di titoli. Relazione **inversa** tra tasso d'interesse e prezzo dei titoli (i = R/P^B per titoli irredimibili): più alto i, minore la domanda di moneta speculativa.
-- **Domanda di moneta keynesiana totale**: L = L1(Y) + L2(i) = fY + L0 − gi (funzione crescente in Y, decrescente in i).
+- **Domanda di moneta speculativa**: L_2(i) = L_0 − gi — alternativa alla detenzione di titoli; è il **costo-opportunità** di tenere moneta invece di titoli. Relazione **inversa** tra tasso d'interesse e prezzo dei titoli (i = R/P^B per titoli irredimibili): più alto i, minore la domanda di moneta speculativa.
+- **Domanda di moneta keynesiana totale**: L = L_1(Y) + L_2(i) = fY + L_0 − gi (funzione crescente in Y, decrescente in i).
 - Nella visione **monetarista/classica**, invece, la domanda di moneta dipende **solo** dal reddito (M/p = kY o M = kPY), senza componente speculativa, perché la moneta non ha sostituti finanziari.
 
 ## 10. **Il meccanismo di trasmissione della politica monetaria**
@@ -95,7 +117,7 @@
 - **Cinque circuiti/canali di trasmissione** (dettaglio):
     1. **Tassi d'interesse**: ↑M → ↓i → ↓r → ↑I,C → ↑Y (ostacolo: trappola della liquidità)
     2. **Tassi di cambio**: ↑M → ↓i → ↓e → ↑NX → ↑Y (economia aperta)
-    3. **Prezzo delle attività finanziarie**: ↑M → ↑P_attività → ↑ricchezza/garanzie → ↑I,C → ↑Y
+    3. **Prezzo delle attività finanziarie**: ↑M → ↑ prezzo delle attività → ↑ricchezza/garanzie → ↑I, ↑C → ↑Y
     4. **Prestito bancario**: ↑M → ↑Depositi → ↑prestiti bancari → ↑I,C → ↑Y
     5. **Condizioni di credito**: variazioni di garanzie/cash flow/patrimonio influenzano la selezione avversa e l'azzardo morale, quindi la disponibilità di credito
 
@@ -155,22 +177,50 @@ Dato il coefficiente circolante/depositi h = 0,2 e il coefficiente di riserva (o
 
 **Punto 1**
 
-Il moltiplicatore monetario è:
-$$ M = \frac{1+h}{h+j} \cdot H $$
+L'offerta di moneta si ottiene moltiplicando la base monetaria per il moltiplicatore:
 
-Con h = 0,2 e j = 0,1:
-$$ \frac{1+h}{h+j} = \frac{1,2}{0,3} = 4 $$
+```
+            1 + h
+      M = ─────────  ·  H
+            h + j
+```
 
-Quindi con H = 1.000:
-$$ M = 4 \times 1.000 = 4.000 $$
+**dove:**
+- `M` = offerta di moneta (circolante + depositi)
+- `H` = **base monetaria** creata dalla banca centrale (circolante + riserve)
+- `h` = rapporto **circolante / depositi**: quanta parte del denaro il pubblico tiene in contanti invece che in banca
+- `j` = **coefficiente di riserva** (obbligatoria + libera): quanta parte dei depositi le banche non prestano
+- la frazione `(1+h)/(h+j)` è il **moltiplicatore monetario**: è sempre maggiore di 1, perché il sistema bancario crea moneta oltre quella emessa dalla banca centrale
+
+Con `h` = 0,2 e `j` = 0,1:
+
+```
+      1 + 0,2     1,2
+      ───────  =  ───  =  4          moltiplicatore
+     0,2 + 0,1    0,3
+```
+
+Quindi con `H` = 1.000:
+
+```
+      M = 4 · 1.000 = 4.000
+```
 
 **Punto 2**
 
-Con h = 0,4 e j = 0,3:
-$$ \frac{1+h}{h+j} = \frac{1,4}{0,7} = 2 $$
+Con `h` = 0,4 e `j` = 0,3:
 
-Con H raddoppiata a 2.000:
-$$ M = 2 \times 2.000 = 4.000 $$
+```
+      1 + 0,4     1,4
+      ───────  =  ───  =  2          moltiplicatore dimezzato
+     0,4 + 0,3    0,7
+```
+
+Con `H` raddoppiata a 2.000:
+
+```
+      M = 2 · 2.000 = 4.000
+```
 
 **Interpretazione**: nonostante la base monetaria raddoppi, l'offerta di moneta resta invariata (M = 4.000 in entrambi i casi), perché l'aumento di h e j (più contante trattenuto dal pubblico, più riserve trattenute dalle banche) dimezza il moltiplicatore monetario, compensando esattamente il raddoppio di H. Questo illustra il problema di **controllabilità**: la BC controlla direttamente solo H, ma h e j sono endogeni (sensibili ai tassi di interesse correnti e attesi, e ai comportamenti di banche e pubblico), quindi il controllo di H non garantisce automaticamente il controllo di M.
 
@@ -179,15 +229,33 @@ $$ M = 2 \times 2.000 = 4.000 $$
 **Esercizio aggiuntivo — domanda di moneta (esempio minimo tipo Ld = a + bY − ci)**
 
 Supponiamo una funzione di domanda di moneta keynesiana del tipo:
-$$ L(Y,i) = fY + L_0 - gi $$
-con f = 0,25, L0 = 200, g = 500, Y = 2.000, i = 0,04 (4%).
 
-**Calcolo**:
-$$ L = 0,25 \times 2.000 + 200 - 500 \times 0,04 = 500 + 200 - 20 = 680 $$
+```
+      L(Y, i) = f · Y + L_0 − g · i
+```
+
+**dove:**
+- `L` = quantità di moneta domandata
+- `f` = sensibilità della domanda di moneta al **reddito** (componente transattiva)
+- `L_0` = componente autonoma della domanda speculativa
+- `g` = sensibilità della domanda di moneta al **tasso di interesse** (con il segno meno: se `i` sale, conviene comprare titoli e si tiene meno moneta)
+
+Con `f` = 0,25, `L_0` = 200, `g` = 500, `Y` = 2.000, `i` = 0,04 (4%):
+
+```
+      L = 0,25 · 2.000 + 200 − 500 · 0,04
+        = 500 + 200 − 20
+        = 680
+```
 
 Se la banca centrale fissa l'offerta di moneta M = 680, il mercato della moneta è in equilibrio a questa combinazione (Y=2.000, i=4%): è uno dei punti della curva LM.
 
-Se il tasso di interesse scende a i = 0,02 (2%), a parità di Y:
-$$ L = 500 + 200 - 500 \times 0,02 = 500 + 200 - 10 = 690 $$
+Se il tasso di interesse scende a `i` = 0,02 (2%), a parità di Y:
 
-La domanda di moneta aumenta (690 > 680): coerente con la pendenza negativa della domanda di moneta rispetto al tasso di interesse (componente speculativa L2(i) = L0 − gi), e quindi con la pendenza positiva della curva LM nel piano (Y, i).
+```
+      L = 500 + 200 − 500 · 0,02
+        = 500 + 200 − 10
+        = 690
+```
+
+La domanda di moneta aumenta (690 > 680): coerente con la pendenza negativa della domanda di moneta rispetto al tasso di interesse (componente speculativa L_2(i) = L_0 − gi), e quindi con la pendenza positiva della curva LM nel piano (Y, i).
