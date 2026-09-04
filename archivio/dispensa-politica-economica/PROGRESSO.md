@@ -2,12 +2,12 @@
 
 > **Per una sessione Claude nuova**: leggi questo file per intero prima di rispondere a "a che punto sono". Non serve rileggere altre conversazioni.
 
-**Oggi**: giovedì 3 settembre 2026. **Esame**: martedì 8 settembre. **Giorni rimasti**: 5 (oggi compreso).
+**Oggi**: venerdì 4 settembre 2026. **Esame**: martedì 8 settembre. **Giorni rimasti**: 4 (oggi compreso).
 
 **Calendario** (da [`schemi/00e-quaderno-esercizi.md`](schemi/00e-quaderno-esercizi.md)):
 
 - [x] **Giorno 1 — gio 3/9**: politica fiscale (01) + inflazione e Phillips (02) — A1 → A8
-- [ ] Giorno 2 — ven 4/9: monopolio (03) + benessere (04) + teoria normativa (11) — A9 → A13
+- [x] **Giorno 2 — ven 4/9**: monopolio (03) + benessere (04) + teoria normativa (11) — A9 → A13 — foglio pronto, esercizi ancora da svolgere dal vivo
 - [ ] Giorno 3 — sab 5/9: lavoro (05) + economia aperta (06) + moneta (07) — B1 → B8
 - [ ] Giorno 4 — dom 6/9: valutazione progetti (13) + argomenti lasciati in disparte (08, 09, 10, 12, 14) — B9, B10
 - [ ] Giorno 5 — lun 7/9: le 3 simulazioni da 11 domande di `00d` + rifare a freddo gli esercizi sbagliati
@@ -47,9 +47,15 @@ Dopo A1-A8, Jacopo ha chiesto 30 minuti di ripasso a tempo. Ho costruito 4 blocc
 
 ---
 
+## Giorno 2 (ven 4/9) — il foglio è pronto, non ancora svolto dal vivo
+
+Creato [`giornate/giorno-2-venerdi-4-settembre.md`](giornate/giorno-2-venerdi-4-settembre.md) (PDF: `Giorno 2 — venerdi 4 settembre.pdf`), seguendo `CONVENZIONI-ESERCIZI.md`: stessa struttura del giorno 1, tre blocchi (monopolio/naturale/contendibile — Pareto e FBS — obiettivi/strumenti/Tinbergen), teoria minima, due tutorial svolti passo passo nel blocco 1 e nel blocco 3, tracce A9-A13 riportate identiche al quaderno, soluzioni ufficiali in coda. Tutti i numeri dei tutorial sono nuovi (mai usati altrove nella dispensa) e verificati con uno script Python usa-e-getta prima di essere scritti. `python3 build_pdf.py` stampa `Controllo formule: nessun problema rilevato`; verifica con `pymupdf` fatta: nessun blocco oltre il margine, nessun link interno rotto, tutte le tracce A9-A13 e le rispettive soluzioni presenti.
+
+**Non ancora fatto**: Jacopo non ha ancora svolto gli esercizi dal vivo in chat — questa sessione ha solo preparato il materiale su richiesta ("fai un file con gli esercizi del giorno"). Nessuna tabella di esiti da compilare finché non li fa.
+
 ## Come continuare da qui
 
-1. Se è ancora giovedì: nessuna azione, il giorno 1 è chiuso.
-2. Se è venerdì 4/9 o dopo: **prima cosa**, proporre a Jacopo di rifare a freddo un esercizio "al contrario" sulla Phillips (vedi sopra) prima di passare al giorno 2. Se lo risolve da solo, il punto debole è chiuso e non va più menzionato; se no, dedicare 5 minuti in più con un secondo esempio guidato prima di proseguire.
-3. Poi proseguire con il **giorno 2** (A9-A13): monopolio, benessere, teoria normativa. Verificare se esiste già `giornate/giorno-2-*.md` — se non esiste, crearlo seguendo `CONVENZIONI-ESERCIZI.md`.
-4. Aggiornare questo file a fine giornata con lo stesso schema usato per il giorno 1.
+1. **Prima cosa**, se non è già stato fatto: proporre a Jacopo di rifare a freddo un esercizio "al contrario" sulla Phillips (il punto debole del giorno 1, vedi sopra) prima di iniziare il giorno 2. Se lo risolve da solo, il punto debole è chiuso e non va più menzionato; se no, dedicare 5 minuti in più con un secondo esempio guidato.
+2. Poi lavorare dal vivo il **giorno 2** (A9-A13) sul foglio già pronto sopra.
+3. Aggiornare questo file a fine giornata con lo stesso schema di dettaglio usato per il giorno 1 (tabella esercizio/esito/note, punti deboli, ripasso lampo se fatto).
+4. Poi proseguire con il **giorno 3** (B1-B8): lavoro, economia aperta, moneta. Verificare se esiste già `giornate/giorno-3-*.md` — se non esiste, crearlo seguendo `CONVENZIONI-ESERCIZI.md`.
