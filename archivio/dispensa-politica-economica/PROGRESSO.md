@@ -2,12 +2,12 @@
 
 > **Per una sessione Claude nuova**: leggi questo file per intero prima di rispondere a "a che punto sono". Non serve rileggere altre conversazioni.
 
-**Oggi**: giovedì 3 settembre 2026. **Esame**: martedì 8 settembre. **Giorni rimasti**: 5 (oggi compreso).
+**Oggi**: venerdì 4 settembre 2026. **Esame**: martedì 8 settembre. **Giorni rimasti**: 4 (oggi compreso).
 
 **Calendario** (da [`schemi/00e-quaderno-esercizi.md`](schemi/00e-quaderno-esercizi.md)):
 
 - [x] **Giorno 1 — gio 3/9**: politica fiscale (01) + inflazione e Phillips (02) — A1 → A8
-- [ ] Giorno 2 — ven 4/9: monopolio (03) + benessere (04) + teoria normativa (11) — A9 → A13
+- [~] **Giorno 2 — ven 4/9**: monopolio (03) + benessere (04) + teoria normativa (11) — A9, A10, A11 fatti dal vivo; A12 e A13 lasciati a metà, da riprendere
 - [ ] Giorno 3 — sab 5/9: lavoro (05) + economia aperta (06) + moneta (07) — B1 → B8
 - [ ] Giorno 4 — dom 6/9: valutazione progetti (13) + argomenti lasciati in disparte (08, 09, 10, 12, 14) — B9, B10
 - [ ] Giorno 5 — lun 7/9: le 3 simulazioni da 11 domande di `00d` + rifare a freddo gli esercizi sbagliati
@@ -47,9 +47,44 @@ Dopo A1-A8, Jacopo ha chiesto 30 minuti di ripasso a tempo. Ho costruito 4 blocc
 
 ---
 
+## Giorno 2 (ven 4/9) — dettaglio
+
+Foglio: [`giornate/giorno-2-venerdi-4-settembre.md`](giornate/giorno-2-venerdi-4-settembre.md) (PDF: `Giorno 2 — venerdi 4 settembre.pdf`). Lavorato dal vivo in chat, passo passo su richiesta esplicita di Jacopo ("A9 e A10 li faccio piano piano che non ci ho capito veramente nulla") — molto più granulare del giorno 1: ogni formula scomposta in singoli pezzi (un numero alla volta), mai un conto in un colpo solo.
+
+| Esercizio | Esito | Note |
+|---|---|---|
+| Tutorial 1-2 (monopolio + naturale) | ✅ fatti prima della sessione | — |
+| A9 (a-b) | ✅ corretto | `q_M=7,5`, `P_M=45`, `q_C=10`, `P_C=40` |
+| A9 (c) | ⚠️ **errore corretto in chat** | Aveva calcolato base×altezza = 37,5 ma **dimenticato il `½`** della formula del DWL, facendo il conto in un colpo solo invece che a pezzi separati. Una volta scomposto (base, altezza, poi `½×`), l'ha visto da solo. Risultato corretto: `DWL=18,75` |
+| A9 (d) | ✅ corretto, con un errore di arrotondamento intercettato | Primo tentativo `L=0,3` (sbagliato: era `15/50` invece di `15/45`); rifatta la divisione, arrivato a `0,333...` da solo |
+| A10 (a-b) | ✅ corretto | Monopolio naturale verificato, `Q_M=12`, `P_M=18`, profitto=64 |
+| A10 (c) | ⚠️ **errore concettuale sulla formula risolutiva, corretto in chat** | Non sull'equazione di secondo grado in sé (discriminante fatto bene una volta scomposto: `b²=576`, `4ac=320`, `Δ=256`, `√Δ=16`), ma sulla **divisione finale**: pensava che nella formula `(−b±√Δ)/2a` si dovesse dividere per 2 **solo la radice**, non l'intero numeratore. Chiarito con parentesi esplicite `(24±16)/2`, in due passi separati (prima la somma/sottrazione, poi la divisione). Risultato corretto: radici 4 e 20, tenuta quella maggiore (`Q=20, P=10=ATC`) |
+| A10 (d) | ✅ dato in sintesi da Claude (concetto già acquisito) | perdita = −80, pari al costo fisso |
+| A11 (a-d) | ✅ **tutto corretto, fatto da solo**, senza guida | Buon segnale: la parte concettuale (Pareto, i tre criteri FBS, Kaldor) è passata bene una volta letta sul foglio, a differenza della meccanica di calcolo di A9-A10 |
+| A12 | 🔴 **non risolto, messo da parte** | Bloccato già al primo passaggio di sostituzione (`Y = θN` dentro il modello) — ha detto esplicitamente "non ho capito nulla" e ha chiesto di rimandarlo. Da riprendere ripartendo da zero con **solo numeri**, mai lettere, un conto alla volta (vedi sotto) |
+| A13 | 🔴 **non affrontato**, messo da parte su richiesta di Jacopo | Si era arrivati a impostare il sistema (`500=2G+e`, `0=−0,4G+0,8e`) ma non risolto |
+
+### Il pattern di oggi — errori di meccanica, non di logica
+
+A differenza del giorno 1 (dove il punto debole era concettuale, gli esercizi "al contrario" di Phillips), oggi gli errori erano tutti su **come si esegue un calcolo a più pezzi**, non su cosa significa:
+
+- dimenticare un fattore (`½`) quando la formula si prova a fare "a mente" in un colpo solo invece che a pezzi;
+- fraintendere **cosa copre la barra di frazione** in `(−b±√Δ)/2a` — pensare che la divisione riguardi solo l'ultimo pezzo scritto, non tutto il numeratore.
+
+**La correzione che ha funzionato**: costringerlo a scomporre ogni formula in passaggi separati e dargli **un solo numero per volta** da calcolare, mai una formula intera. Con questo metodo A9 e A10 sono stati chiusi bene. Su A12 lo stesso approccio (ma partendo da lettere/sostituzioni astratte invece che da numeri concreti) non ha funzionato — è saltato al primo passaggio.
+
+### A12 — cosa NON rifare, e come ripartire
+
+Il primo tentativo di oggi ha introdotto la sostituzione `Y_d = (1−t)·θN` troppo presto e in forma simbolica: Jacopo si è perso subito. **Da riprendere ripartendo da zero, sempre con i numeri della traccia (θ=25, c=0,75, I=2.000, N=1.600) mai con le lettere**, un pezzo alla volta:
+
+1. `Y = θ·N = 25·1.600 = 40.000` (fatto, gli è tornato)
+2. Poi (da fare): `C = c·Y = 0,75 · 40.000` con `t=0` (si era fermato qui)
+3. Poi: `Y = C + I + G` con i numeri → isolare `G`
+4. Solo alla fine, se regge, generalizzare con `t=0,2` e introdurre la formula in lettere come "scorciatoia" per il caso generale — mai come punto di partenza.
+
 ## Come continuare da qui
 
-1. Se è ancora giovedì: nessuna azione, il giorno 1 è chiuso.
-2. Se è venerdì 4/9 o dopo: **prima cosa**, proporre a Jacopo di rifare a freddo un esercizio "al contrario" sulla Phillips (vedi sopra) prima di passare al giorno 2. Se lo risolve da solo, il punto debole è chiuso e non va più menzionato; se no, dedicare 5 minuti in più con un secondo esempio guidato prima di proseguire.
-3. Poi proseguire con il **giorno 2** (A9-A13): monopolio, benessere, teoria normativa. Verificare se esiste già `giornate/giorno-2-*.md` — se non esiste, crearlo seguendo `CONVENZIONI-ESERCIZI.md`.
-4. Aggiornare questo file a fine giornata con lo stesso schema usato per il giorno 1.
+1. **Riprendere A12** con il metodo sopra (solo numeri, mai lettere all'inizio).
+2. Poi **A13** (Tinbergen): si era arrivati a impostare il sistema, manca solo risolverlo — dovrebbe scorrere più facile di A12 perché è puramente meccanico (stesso tipo di scomposizione a pezzi che ha funzionato per A9/A10).
+3. Rimane ancora aperto dal giorno 1: proporre a freddo un esercizio "al contrario" sulla curva di Phillips (vedi sopra) — non ancora fatto, va ripreso appena c'è occasione.
+4. Una volta chiusi A12-A13, il **giorno 2 è completo**. Poi proseguire con il **giorno 3** (B1-B8): lavoro, economia aperta, moneta. Verificare se esiste già `giornate/giorno-3-*.md` — se non esiste, crearlo seguendo `CONVENZIONI-ESERCIZI.md`.

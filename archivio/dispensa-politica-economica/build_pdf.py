@@ -345,7 +345,21 @@ non serve aprire la dispensa.
 
 """
 
+HEADER_GIORNO_2 = """# Giorno 2 — venerdì 4 settembre
+
+**Monopolio e teoria normativa.** Esercizi A9 → A13 del quaderno, con la spiegazione e il
+tutorial per svolgerli. Questo foglio è autosufficiente: tracce e soluzioni sono qui dentro,
+non serve aprire la dispensa.
+
+[TOC]
+
+<div class="pagebreak"></div>
+
+"""
+
 if __name__ == "__main__":
     costruisci(OUT_NAME, SCHEMI, FILES_IN_ORDER, HEADER)
     costruisci("Giorno 1 — giovedi 3 settembre", GIORNATE,
                ["giorno-1-giovedi-3-settembre.md"], HEADER_GIORNO_1, con_ancore=False)
+    costruisci("Giorno 2 — venerdi 4 settembre", GIORNATE,
+               ["giorno-2-venerdi-4-settembre.md"], HEADER_GIORNO_2, con_ancore=False)
