@@ -2,13 +2,13 @@
 
 > **Per una sessione Claude nuova**: leggi questo file per intero prima di rispondere a "a che punto sono". Non serve rileggere altre conversazioni.
 
-**Oggi**: venerdì 4 settembre 2026. **Esame**: martedì 8 settembre. **Giorni rimasti**: 4 (oggi compreso).
+**Oggi**: sabato 5 settembre 2026. **Esame**: martedì 8 settembre. **Giorni rimasti**: 3 (oggi compreso).
 
 **Calendario** (da [`schemi/00e-quaderno-esercizi.md`](schemi/00e-quaderno-esercizi.md)):
 
 - [x] **Giorno 1 — gio 3/9**: politica fiscale (01) + inflazione e Phillips (02) — A1 → A8
 - [~] **Giorno 2 — ven 4/9**: monopolio (03) + benessere (04) + teoria normativa (11) — A9, A10, A11 fatti dal vivo; A12 e A13 lasciati a metà, da riprendere
-- [ ] Giorno 3 — sab 5/9: lavoro (05) + economia aperta (06) + moneta (07) — B1 → B8
+- [~] **Giorno 3 — sab 5/9**: lavoro (05) + economia aperta (06) + moneta (07) — B1, B2 fatti dal vivo (tutti corretti); B3 → B8 da fare
 - [ ] Giorno 4 — dom 6/9: valutazione progetti (13) + argomenti lasciati in disparte (08, 09, 10, 12, 14) — B9, B10
 - [ ] Giorno 5 — lun 7/9: le 3 simulazioni da 11 domande di `00d` + rifare a freddo gli esercizi sbagliati
 
@@ -82,9 +82,22 @@ Il primo tentativo di oggi ha introdotto la sostituzione `Y_d = (1−t)·θN` tr
 3. Poi: `Y = C + I + G` con i numeri → isolare `G`
 4. Solo alla fine, se regge, generalizzare con `t=0,2` e introdurre la formula in lettere come "scorciatoia" per il caso generale — mai come punto di partenza.
 
+## Giorno 3 (sab 5/9) — dettaglio
+
+Foglio: [`giornate/giorno-3-sabato-5-settembre.md`](giornate/giorno-3-sabato-5-settembre.md) (PDF: `Giorno 3 — sabato 5 settembre.pdf`). Lavorato dal vivo in chat, esercizi B1-B2 del quaderno (Blocco 1 — mercato del lavoro e legge di Okun).
+
+| Esercizio | Esito | Note |
+|---|---|---|
+| B1 (a-d) | ✅ tutti corretti al primo tentativo | Tre tassi (`u=10%`, `a=66,7%`, `n=60%`), verifica `n=a(1−u)` ok, scoraggiati → `u=5,3%` con `n` invariato al 60% |
+| B2 (a-c) | ✅ tutti corretti al primo tentativo | Legge di Okun: `Δu=−0,6` → `8,4%`; crescita 7% necessaria per −2 punti, giudicata non realistica; spiegato il "più che proporzionale" |
+
+**Unico punto di chiarimento emerso**: nella verifica B1(b) `n = a·(1−u)`, un momento di confusione su che cosa fosse il numero `0,8889` nella formula — chiarito che è `(1−u)`, il complemento a 1 del tasso di disoccupazione trovato al punto (a), non `u` stesso. Non è un errore di calcolo, solo un'incertezza di lettura della formula: da tenere d'occhio se ricompare in altre verifiche con `(1−x)`.
+
+Nessun punto debole aperto su questo blocco: B1 e B2 passati senza guida e senza errori.
+
 ## Come continuare da qui
 
-1. **Riprendere A12** con il metodo sopra (solo numeri, mai lettere all'inizio).
-2. Poi **A13** (Tinbergen): si era arrivati a impostare il sistema, manca solo risolverlo — dovrebbe scorrere più facile di A12 perché è puramente meccanico (stesso tipo di scomposizione a pezzi che ha funzionato per A9/A10).
-3. Rimane ancora aperto dal giorno 1: proporre a freddo un esercizio "al contrario" sulla curva di Phillips (vedi sopra) — non ancora fatto, va ripreso appena c'è occasione.
-4. Una volta chiusi A12-A13, il **giorno 2 è completo**. Poi proseguire con il **giorno 3** (B1-B8): lavoro, economia aperta, moneta. Verificare se esiste già `giornate/giorno-3-*.md` — se non esiste, crearlo seguendo `CONVENZIONI-ESERCIZI.md`.
+1. Dal giorno 2: **riprendere A12** con il metodo "solo numeri, mai lettere all'inizio" (vedi sopra), poi **A13** (Tinbergen) — si era arrivati a impostare il sistema, manca solo risolverlo. Rimane anche aperto un esercizio "al contrario" sulla curva di Phillips da riproporre a freddo (dal giorno 1).
+2. Dal giorno 3: **proseguire con B3** (Blocco 2 — economia aperta: cambio reale, Marshall-Lerner, IS-LM-BP, costi comparati), poi B7-B8 (Blocco 3 — moneta).
+3. Punti 1 e 2 non sono in conflitto: Jacopo ha scelto di procedere col giorno 3 il 5/9 (data di calendario) e riprendere A12/A13 in un secondo momento — decisione presa insieme in chat, non un'omissione.
+4. Una volta chiuso B1-B8, il **giorno 3 è completo**. Poi proseguire con il **giorno 4** (B9-B10): valutazione progetti + argomenti lasciati in disparte. Verificare se esiste già `giornate/giorno-4-*.md` — se non esiste, crearlo seguendo `CONVENZIONI-ESERCIZI.md`.
