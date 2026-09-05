@@ -357,9 +357,23 @@ non serve aprire la dispensa.
 
 """
 
+HEADER_GIORNO_3 = """# Giorno 3 — sabato 5 settembre
+
+**Mercato del lavoro, economia aperta e moneta.** Esercizi B1 → B8 del quaderno, con la spiegazione e il
+tutorial per svolgerli. Questo foglio è autosufficiente: tracce e soluzioni sono qui dentro,
+non serve aprire la dispensa.
+
+[TOC]
+
+<div class="pagebreak"></div>
+
+"""
+
 if __name__ == "__main__":
     costruisci(OUT_NAME, SCHEMI, FILES_IN_ORDER, HEADER)
     costruisci("Giorno 1 — giovedi 3 settembre", GIORNATE,
                ["giorno-1-giovedi-3-settembre.md"], HEADER_GIORNO_1, con_ancore=False)
     costruisci("Giorno 2 — venerdi 4 settembre", GIORNATE,
                ["giorno-2-venerdi-4-settembre.md"], HEADER_GIORNO_2, con_ancore=False)
+    costruisci("Giorno 3 — sabato 5 settembre", GIORNATE,
+               ["giorno-3-sabato-5-settembre.md"], HEADER_GIORNO_3, con_ancore=False)
