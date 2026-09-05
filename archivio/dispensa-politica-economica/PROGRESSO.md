@@ -90,14 +90,16 @@ Foglio: [`giornate/giorno-3-sabato-5-settembre.md`](giornate/giorno-3-sabato-5-s
 |---|---|---|
 | B1 (a-d) | ✅ tutti corretti al primo tentativo | Tre tassi (`u=10%`, `a=66,7%`, `n=60%`), verifica `n=a(1−u)` ok, scoraggiati → `u=5,3%` con `n` invariato al 60% |
 | B2 (a-c) | ✅ tutti corretti al primo tentativo | Legge di Okun: `Δu=−0,6` → `8,4%`; crescita 7% necessaria per −2 punti, giudicata non realistica; spiegato il "più che proporzionale" |
+| B3 (a-c) | ✅ tutti corretti al primo tentativo | Cambio reale: `ė_r=+1%` (apprezzamento), inflazione relativa −1%, perdita di competitività |
+| B5 (a-e) | ✅ tutti corretti al primo tentativo | IS-LM-BP completo: `i=5%→7,5%`, `Y=2.000→2.100`, spiazzamento finanziario 100 (metà manovra), BP da pareggio ad avanzo +40, chiusura in cambi flessibili/fissi spiegata |
 
 **Unico punto di chiarimento emerso**: nella verifica B1(b) `n = a·(1−u)`, un momento di confusione su che cosa fosse il numero `0,8889` nella formula — chiarito che è `(1−u)`, il complemento a 1 del tasso di disoccupazione trovato al punto (a), non `u` stesso. Non è un errore di calcolo, solo un'incertezza di lettura della formula: da tenere d'occhio se ricompare in altre verifiche con `(1−x)`.
 
-Nessun punto debole aperto su questo blocco: B1 e B2 passati senza guida e senza errori.
+Nessun punto debole aperto su questo blocco: B1, B2, B3, B5 passati senza guida e senza errori. **Saltati per ora, da riprendere**: B4 (Marshall-Lerner), B6 (costi comparati), Tutorial 1 (punti a-c cambio reale + punto d Marshall-Lerner) e Tutorial 2 (IS-LM-BP) del foglio — Jacopo è passato direttamente alle tracce del quaderno senza fermarsi sui tutorial guidati né su B4/B6.
 
 ## Come continuare da qui
 
 1. Dal giorno 2: **riprendere A12** con il metodo "solo numeri, mai lettere all'inizio" (vedi sopra), poi **A13** (Tinbergen) — si era arrivati a impostare il sistema, manca solo risolverlo. Rimane anche aperto un esercizio "al contrario" sulla curva di Phillips da riproporre a freddo (dal giorno 1).
-2. Dal giorno 3: **proseguire con B3** (Blocco 2 — economia aperta: cambio reale, Marshall-Lerner, IS-LM-BP, costi comparati), poi B7-B8 (Blocco 3 — moneta).
+2. Dal giorno 3: **B4 e B6 restano da fare** (saltati), poi Blocco 3 — moneta (B7, B8). I tutorial 1 e 2 del foglio sono stati saltati: se Jacopo vuole rivederli per il metodo, sono lì; altrimenti si può andare dritti alle tracce.
 3. Punti 1 e 2 non sono in conflitto: Jacopo ha scelto di procedere col giorno 3 il 5/9 (data di calendario) e riprendere A12/A13 in un secondo momento — decisione presa insieme in chat, non un'omissione.
-4. Una volta chiuso B1-B8, il **giorno 3 è completo**. Poi proseguire con il **giorno 4** (B9-B10): valutazione progetti + argomenti lasciati in disparte. Verificare se esiste già `giornate/giorno-4-*.md` — se non esiste, crearlo seguendo `CONVENZIONI-ESERCIZI.md`.
+4. Una volta chiuso B1-B8 (mancano B4, B6, B7, B8), il **giorno 3 è completo**. Poi proseguire con il **giorno 4** (B9-B10): valutazione progetti + argomenti lasciati in disparte. Verificare se esiste già `giornate/giorno-4-*.md` — se non esiste, crearlo seguendo `CONVENZIONI-ESERCIZI.md`.
