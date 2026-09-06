@@ -52,6 +52,13 @@
   header.head h1{font-size:27px; font-weight:700; margin-bottom:8px;}
   header.head p{color:var(--ink-soft); font-size:15px; max-width:58ch; margin:0;}
 
+  .banner{
+    display:flex; gap:10px; align-items:flex-start; background:var(--accent-soft);
+    border:1px solid var(--accent-line); border-radius:10px; padding:12px 14px; margin:16px 0 4px;
+    font-size:13px; color:var(--ink-soft);
+  }
+  .banner b{color:var(--ink);}
+
   .stat-row{display:flex; gap:8px; flex-wrap:wrap; margin:20px 0 22px;}
   .stat-chip{
     display:flex; align-items:center; gap:6px; background:var(--surface); border:1px solid var(--line);
@@ -151,10 +158,16 @@
     <p>Le 23 tracce del quaderno (A1→A13, B1→B10), con teoria minima e soluzione completa. Leggi, pensa alla strada da seguire, poi apri la soluzione — niente da scrivere.</p>
   </header>
 
+  <div class="banner">
+    <span>🎯</span>
+    <span><b>Stasera si resta sui 5 core</b> (politica fiscale, Phillips, monopolio, benessere, teoria normativa/Tinbergen — A1→A13). B9, B10 e i secondari aspettano: contano meno per lo scritto e la preselezione li ha già confermati solidi.</span>
+  </div>
+
   <div class="stat-row" id="stat-row"></div>
 
   <div class="tabs">
-    <button class="tab active" data-tab="ripassare">Da ripassare</button>
+    <button class="tab active" data-tab="core">I 5 core (A1→A13)</button>
+    <button class="tab" data-tab="weak">Punti deboli (3)</button>
     <button class="tab" data-tab="tutti">Tutti (23)</button>
   </div>
 
@@ -838,20 +851,30 @@
     }).join("");
   }
 
-  var currentTab = "ripassare";
+  var currentTab = "core";
+  var CORE_DAYS = [1, 2]; // A1-A13: politica fiscale, Phillips, monopolio, benessere, Tinbergen
 
   function renderList(){
     var list = document.getElementById("list");
-    var items = EX;
-    if (currentTab === "ripassare"){
-      items = EX.filter(function(ex){
-        return (ex.status === "weak" || ex.status === "pending") && !doneMap[ex.id];
+
+    if (currentTab === "core"){
+      var byDayCore = {1:[], 2:[]};
+      EX.forEach(function(ex){ if (CORE_DAYS.indexOf(ex.giorno) !== -1) byDayCore[ex.giorno].push(ex); });
+      var htmlCore = "";
+      CORE_DAYS.forEach(function(g){
+        htmlCore += `<div class="day-heading">Giorno ${g}</div>`;
+        htmlCore += byDayCore[g].map(cardHtml).join("");
       });
-      if (items.length === 0){
-        list.innerHTML = `<div class="empty">Niente in sospeso: hai già ripassato tutti i punti deboli e le tracce non ancora fatte dal vivo. Passa a "Tutti" per un ripasso completo.</div>`;
+      list.innerHTML = htmlCore;
+    } else if (currentTab === "weak"){
+      var itemsWeak = EX.filter(function(ex){
+        return CORE_DAYS.indexOf(ex.giorno) !== -1 && ex.status === "weak";
+      });
+      if (itemsWeak.length === 0){
+        list.innerHTML = `<div class="empty">Nessun punto debole aperto nei 5 core: ottimo segno.</div>`;
         return;
       }
-      list.innerHTML = items.map(cardHtml).join("");
+      list.innerHTML = itemsWeak.map(cardHtml).join("");
     } else {
       var byDay = {1:[], 2:[], 3:[], 4:[]};
       EX.forEach(function(ex){ byDay[ex.giorno].push(ex); });
