@@ -2,13 +2,13 @@
 
 > **Per una sessione Claude nuova**: leggi questo file per intero prima di rispondere a "a che punto sono". Non serve rileggere altre conversazioni.
 
-**Oggi**: sabato 5 settembre 2026. **Esame**: martedì 8 settembre. **Giorni rimasti**: 3 (oggi compreso).
+**Oggi**: domenica 6 settembre 2026. **Esame**: martedì 8 settembre. **Giorni rimasti**: 2 (oggi compreso).
 
 **Calendario** (da [`schemi/00e-quaderno-esercizi.md`](schemi/00e-quaderno-esercizi.md)):
 
 - [x] **Giorno 1 — gio 3/9**: politica fiscale (01) + inflazione e Phillips (02) — A1 → A8
 - [~] **Giorno 2 — ven 4/9**: monopolio (03) + benessere (04) + teoria normativa (11) — A9, A10, A11 fatti dal vivo; A12 e A13 lasciati a metà, da riprendere
-- [~] **Giorno 3 — sab 5/9**: lavoro (05) + economia aperta (06) + moneta (07) — B1, B2 fatti dal vivo (tutti corretti); B3 → B8 da fare
+- [x] **Giorno 3 — sab 5/9**: lavoro (05) + economia aperta (06) + moneta (07) — B1-B5, B7-B8 fatti (tutti corretti); B6 escluso di proposito
 - [ ] Giorno 4 — dom 6/9: valutazione progetti (13) + argomenti lasciati in disparte (08, 09, 10, 12, 14) — B9, B10
 - [ ] Giorno 5 — lun 7/9: le 3 simulazioni da 11 domande di `00d` + rifare a freddo gli esercizi sbagliati
 
@@ -94,14 +94,15 @@ Foglio: [`giornate/giorno-3-sabato-5-settembre.md`](giornate/giorno-3-sabato-5-s
 | B5 (a-e) | ✅ tutti corretti al primo tentativo | IS-LM-BP completo: `i=5%→7,5%`, `Y=2.000→2.100`, spiazzamento finanziario 100 (metà manovra), BP da pareggio ad avanzo +40, chiusura in cambi flessibili/fissi spiegata |
 | B4 (a-d) | ✅ tutti corretti | Fatto e verificato da Jacopo per conto suo, non rivisto in dettaglio in chat |
 | B6 | ⏭️ **saltato deliberatamente, non da riprendere** | Decisione di Jacopo: giudicato non necessario per l'esame. Coerente con la scaletta del foglio, che segnala B6 come il primo taglio se il tempo stringe |
+| B7 (a-d) | ✅ tutti corretti al primo tentativo | Moltiplicatore monetario 4,8, `M=2.400`; base aggiuntiva 125 per `M=3.000`; con `j→0,10` l'offerta si ferma a 2.500 invece di 3.000 (problema di controllabilità) |
+| B8 (a-d) | ✅ tutti corretti al primo tentativo | Equilibrio mercato monetario `i=7,5%→2,5%` con offerta reale 600→700; motivi transattivo/speculativo distinti; trappola della liquidità come caso di inefficacia |
 
 **Unico punto di chiarimento emerso**: nella verifica B1(b) `n = a·(1−u)`, un momento di confusione su che cosa fosse il numero `0,8889` nella formula — chiarito che è `(1−u)`, il complemento a 1 del tasso di disoccupazione trovato al punto (a), non `u` stesso. Non è un errore di calcolo, solo un'incertezza di lettura della formula: da tenere d'occhio se ricompare in altre verifiche con `(1−x)`.
 
-Nessun punto debole aperto su questo blocco: B1, B2, B3, B4, B5 passati senza guida e senza errori. **Saltati senza intenzione di riprenderli**: B6 (per scelta di Jacopo) e i due tutorial guidati del foglio (Jacopo è passato direttamente alle tracce del quaderno).
+**Giorno 3 completo**: B1, B2, B3, B4, B5, B7, B8 tutti corretti, nessuno senza guida. Nessun punto debole aperto. B6 escluso deliberatamente (scelta di Jacopo, non da riprendere nemmeno nel giorno 5). I due tutorial guidati del foglio sono stati saltati (Jacopo è passato direttamente alle tracce del quaderno) — se servisse rivedere il metodo passo-passo prima dell'esame, sono lì.
 
 ## Come continuare da qui
 
 1. Dal giorno 2: **riprendere A12** con il metodo "solo numeri, mai lettere all'inizio" (vedi sopra), poi **A13** (Tinbergen) — si era arrivati a impostare il sistema, manca solo risolverlo. Rimane anche aperto un esercizio "al contrario" sulla curva di Phillips da riproporre a freddo (dal giorno 1).
-2. Dal giorno 3: **proseguire con il Blocco 3 — moneta (B7, B8)**, ultimo blocco del giorno. B6 è saltato in modo definitivo (scelta di Jacopo), non va riproposto nemmeno nel giorno 5.
-3. Punti 1 e 2 non sono in conflitto: Jacopo ha scelto di procedere col giorno 3 il 5/9 (data di calendario) e riprendere A12/A13 in un secondo momento — decisione presa insieme in chat, non un'omissione.
-4. Una volta chiuso B7-B8, il **giorno 3 è completo** (B6 escluso di proposito, non manca). Poi proseguire con il **giorno 4** (B9-B10): valutazione progetti + argomenti lasciati in disparte. Verificare se esiste già `giornate/giorno-4-*.md` — se non esiste, crearlo seguendo `CONVENZIONI-ESERCIZI.md`.
+2. **Giorno 3 chiuso.** Proseguire con il **giorno 4** (dom 6/9, oggi): B9-B10 (valutazione progetti + argomenti lasciati in disparte: esternalità, crescita, disuguaglianze, fallimenti dello Stato, sistema monetario internazionale). Verificare se esiste già `giornate/giorno-4-*.md` — se non esiste, crearlo seguendo `CONVENZIONI-ESERCIZI.md`.
+3. A12/A13 del giorno 2 restano il debito più vecchio ancora aperto: da chiudere prima del giorno 5 (ripasso), idealmente nel ritaglio di tempo tra giorno 4 e giorno 5.
