@@ -1,0 +1,612 @@
+<title>Preselezione Politica Economica</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap">
+<style>
+  :root{
+    --bg:#eef1f5; --surface:#ffffff; --surface-2:#e3e9f0;
+    --ink:#16233a; --ink-soft:#51617a; --ink-faint:#8592a6;
+    --line:#d3dae3; --line-strong:#b7c1cf;
+    --accent:#1a5276; --accent-ink:#ffffff; --accent-soft:#e3edf4; --accent-line:#b9d2e2;
+    --danger:#922b21; --danger-soft:#f7e7e4; --danger-line:#e3b9b2;
+    --correct:#276b4e; --correct-soft:#e3f0e9; --correct-line:#b7d9c8;
+    --shadow:0 1px 2px rgba(22,35,58,.06),0 10px 28px rgba(22,35,58,.08);
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#0f1520; --surface:#182231; --surface-2:#1e2a3c;
+      --ink:#e8edf4; --ink-soft:#aab6c8; --ink-faint:#77839a;
+      --line:#2c3a4e; --line-strong:#3c4d64;
+      --accent:#7bb0d6; --accent-ink:#0b1520; --accent-soft:#1b3145; --accent-line:#2f5170;
+      --danger:#e2988c; --danger-soft:#3a201d; --danger-line:#5b322c;
+      --correct:#8ecdac; --correct-soft:#1c3327; --correct-line:#2f5240;
+      --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 28px rgba(0,0,0,.45);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0f1520; --surface:#182231; --surface-2:#1e2a3c;
+    --ink:#e8edf4; --ink-soft:#aab6c8; --ink-faint:#77839a;
+    --line:#2c3a4e; --line-strong:#3c4d64;
+    --accent:#7bb0d6; --accent-ink:#0b1520; --accent-soft:#1b3145; --accent-line:#2f5170;
+    --danger:#e2988c; --danger-soft:#3a201d; --danger-line:#5b322c;
+    --correct:#8ecdac; --correct-soft:#1c3327; --correct-line:#2f5240;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 28px rgba(0,0,0,.45);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+    font-size:16px; line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:28px 20px 64px;}
+  h1,h2,h3{font-family:'Source Serif 4',Georgia,serif; text-wrap:balance; margin:0;}
+  .mono{font-family:'IBM Plex Mono',ui-monospace,monospace; font-variant-numeric:tabular-nums;}
+  [hidden]{display:none!important;}
+  a{color:var(--accent);}
+
+  /* ---------- cover ---------- */
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--ink-faint); margin-bottom:10px;
+  }
+  header.cover-head{margin-bottom:26px;}
+  header.cover-head h1{font-size:29px; font-weight:700; color:var(--ink); margin-bottom:8px;}
+  header.cover-head p{color:var(--ink-soft); font-size:15px; max-width:56ch; margin:0;}
+
+  .rules{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:22px 0 30px;
+  }
+  .rule-box{
+    background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:14px 12px; text-align:center; box-shadow:var(--shadow);
+  }
+  .rule-box .num{font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:22px; color:var(--accent);}
+  .rule-box .lbl{font-size:12px; color:var(--ink-soft); margin-top:3px;}
+
+  .sims{display:grid; grid-template-columns:repeat(3,1fr); gap:14px;}
+  @media (max-width:620px){ .sims{grid-template-columns:1fr;} .rules{grid-template-columns:1fr 1fr 1fr;} }
+  .sim-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:12px;
+    padding:18px 16px 16px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:10px;
+  }
+  .sim-badge{
+    width:40px; height:40px; border-radius:50%; border:2px solid var(--accent);
+    color:var(--accent); font-family:'Source Serif 4',serif; font-weight:700; font-size:19px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .sim-card h3{font-size:16px; color:var(--ink);}
+  .sim-card .sub{font-size:12.5px; color:var(--ink-faint);}
+  .sim-stats{display:flex; gap:8px; flex-wrap:wrap; font-size:12px; color:var(--ink-soft);}
+  .sim-stats span{
+    background:var(--surface-2); border:1px solid var(--line); border-radius:6px;
+    padding:2px 7px; font-family:'IBM Plex Mono',monospace;
+  }
+  .btn{
+    appearance:none; border:none; cursor:pointer; font-family:inherit; font-size:14.5px;
+    font-weight:600; border-radius:8px; padding:10px 16px; transition:transform .08s ease, opacity .15s ease;
+  }
+  .btn:active{transform:translateY(1px);}
+  .btn:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+  .btn-accent{background:var(--accent); color:var(--accent-ink);}
+  .btn-accent:hover{opacity:.92;}
+  .btn-ghost{background:transparent; color:var(--ink-soft); border:1px solid var(--line-strong);}
+  .btn-ghost:hover{color:var(--ink); border-color:var(--ink-faint);}
+  .btn[disabled]{opacity:.4; cursor:not-allowed;}
+  .sim-card .btn{margin-top:auto; width:100%;}
+
+  .foot-note{margin-top:30px; font-size:12.5px; color:var(--ink-faint); border-top:1px dashed var(--line); padding-top:14px;}
+
+  /* ---------- quiz ---------- */
+  .quizbar{
+    position:sticky; top:0; z-index:5; background:var(--bg);
+    padding:14px 0 10px; margin-bottom:10px; border-bottom:1px solid var(--line);
+  }
+  .quizbar-row{display:flex; align-items:center; justify-content:space-between; gap:12px;}
+  .quizbar .serie{font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--ink-faint); letter-spacing:.04em;}
+  .quizbar .qcount{font-family:'Source Serif 4',serif; font-weight:600; font-size:16px; color:var(--ink); margin-top:2px;}
+  .timer{
+    font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:20px;
+    padding:6px 12px; border-radius:8px; background:var(--surface-2); color:var(--ink);
+    border:1px solid var(--line); min-width:74px; text-align:center;
+  }
+  .timer.low{background:var(--danger-soft); color:var(--danger); border-color:var(--danger-line);
+    animation:pulse 1s ease-in-out infinite;}
+  @media (prefers-reduced-motion:reduce){ .timer.low{animation:none;} }
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.55;}}
+  .progress-track{height:4px; background:var(--surface-2); border-radius:2px; margin-top:10px; overflow:hidden;}
+  .progress-fill{height:100%; background:var(--accent); width:0%; transition:width .3s linear;}
+
+  .dots{display:flex; gap:6px; margin:12px 0 20px; flex-wrap:wrap;}
+  .dot{
+    width:26px; height:26px; border-radius:50%; border:1.5px solid var(--line-strong);
+    background:var(--surface); color:var(--ink-soft); font-family:'IBM Plex Mono',monospace; font-size:11px;
+    display:flex; align-items:center; justify-content:center; cursor:pointer; padding:0;
+  }
+  .dot.answered{background:var(--accent-soft); border-color:var(--accent-line); color:var(--accent);}
+  .dot.current{background:var(--accent); border-color:var(--accent); color:var(--accent-ink); font-weight:700;}
+
+  .qcard{
+    background:var(--surface); border:1px solid var(--line); border-radius:14px;
+    padding:24px 22px; box-shadow:var(--shadow);
+  }
+  .qnum{font-family:'IBM Plex Mono',monospace; font-size:12.5px; color:var(--accent); letter-spacing:.06em; margin-bottom:8px;}
+  .qtext{font-size:18px; line-height:1.45; margin-bottom:20px;}
+  .options{display:flex; flex-direction:column; gap:10px;}
+  .opt{
+    display:flex; align-items:center; gap:12px; width:100%; text-align:left;
+    background:var(--surface); border:1.5px solid var(--line); border-radius:10px;
+    padding:12px 14px; cursor:pointer; font-family:inherit; font-size:14.5px; color:var(--ink);
+  }
+  .opt:hover{border-color:var(--ink-faint);}
+  .opt .letter{
+    flex:0 0 auto; width:28px; height:28px; border-radius:50%; border:1.5px solid var(--line-strong);
+    display:flex; align-items:center; justify-content:center; font-family:'IBM Plex Mono',monospace;
+    font-weight:600; font-size:13px; color:var(--ink-soft);
+  }
+  .opt.selected{border-color:var(--accent); background:var(--accent-soft);}
+  .opt.selected .letter{background:var(--accent); border-color:var(--accent); color:var(--accent-ink);}
+
+  .quiz-nav{display:flex; justify-content:space-between; align-items:center; margin-top:20px;}
+  .hint{font-size:12px; color:var(--ink-faint); text-align:center; margin-top:14px;}
+
+  /* ---------- results ---------- */
+  .res-head{text-align:center; margin-bottom:22px;}
+  .res-score{font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:52px; color:var(--ink); line-height:1;}
+  .res-score span{font-size:26px; color:var(--ink-faint);}
+  .res-sub{color:var(--ink-soft); font-size:13.5px; margin-top:6px;}
+  .stamp{
+    display:inline-block; margin-top:16px; padding:8px 22px; border:2.5px dashed;
+    border-radius:8px; font-family:'IBM Plex Mono',monospace; font-weight:700;
+    font-size:15px; letter-spacing:.12em; text-transform:uppercase;
+    transform:rotate(-3deg);
+  }
+  .stamp.pass{color:var(--correct); border-color:var(--correct-line); background:var(--correct-soft);}
+  .stamp.fail{color:var(--danger); border-color:var(--danger-line); background:var(--danger-soft);}
+  @media (prefers-reduced-motion:no-preference){
+    .stamp{animation:stampin .28s cubic-bezier(.2,1.4,.4,1) both;}
+  }
+  @keyframes stampin{from{opacity:0; transform:rotate(-3deg) scale(1.5);}to{opacity:1; transform:rotate(-3deg) scale(1);}}
+
+  .rev-title{font-size:12.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--ink-faint); margin:26px 0 12px;}
+  .rev-item{
+    border-left:3px solid var(--line-strong); background:var(--surface); border-radius:0 10px 10px 0;
+    padding:12px 14px; margin-bottom:8px; box-shadow:var(--shadow);
+  }
+  .rev-item.correct{border-left-color:var(--correct);}
+  .rev-item.wrong{border-left-color:var(--danger);}
+  .rev-q{font-size:14px; margin-bottom:8px;}
+  .rev-q b{font-family:'IBM Plex Mono',monospace; color:var(--ink-faint); font-weight:600;}
+  .rev-ans{font-size:13px; display:flex; flex-wrap:wrap; gap:6px 14px; color:var(--ink-soft);}
+  .rev-ans .tag{
+    font-family:'IBM Plex Mono',monospace; font-size:11px; padding:2px 7px; border-radius:5px;
+    background:var(--surface-2); border:1px solid var(--line); color:var(--ink-faint);
+  }
+  .rev-ans .you.correct{color:var(--correct); font-weight:600;}
+  .rev-ans .you.wrong{color:var(--danger); font-weight:600;}
+
+  .res-actions{display:flex; gap:10px; margin-top:26px; flex-wrap:wrap;}
+</style>
+
+<div class="wrap">
+
+  <!-- ============ COVER ============ -->
+  <section id="screen-cover">
+    <div class="eyebrow">Politica economica — esame 8 settembre 2026</div>
+    <header class="cover-head">
+      <h1>Simulazione di preselezione</h1>
+      <p>Le tre serie cronometrate del quaderno di esercizi (<span class="mono">00d</span>), ciascuna su 11 argomenti diversi dei 14 della dispensa — la struttura più vicina alla prova reale.</p>
+    </header>
+
+    <div class="rules">
+      <div class="rule-box"><div class="num">11</div><div class="lbl">domande</div></div>
+      <div class="rule-box"><div class="num">10:00</div><div class="lbl">minuti, un unico timer</div></div>
+      <div class="rule-box"><div class="num">6/11</div><div class="lbl">soglia di superamento</div></div>
+    </div>
+
+    <div class="sims" id="sim-cards"><!-- generato via JS --></div>
+
+    <p class="foot-note">Regole della simulazione reale: nessuna interruzione, niente appunti. Obiettivo realistico: <strong>8+</strong> corrette. Il timer parte al primo "Inizia" e non si ferma finché non consegni — allenati alla pressione, non solo al contenuto.</p>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section id="screen-quiz" hidden>
+    <div class="quizbar">
+      <div class="quizbar-row">
+        <div>
+          <div class="serie">SERIE <span id="q-serie">A</span></div>
+          <div class="qcount">Domanda <span id="q-index">1</span> di 11</div>
+        </div>
+        <div class="timer mono" id="q-timer">10:00</div>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="q-progress"></div></div>
+    </div>
+
+    <div class="dots" id="q-dots"><!-- generato via JS --></div>
+
+    <div class="qcard">
+      <div class="qnum" id="q-schema-hidden">DOMANDA <span id="q-num-label">1</span></div>
+      <div class="qtext" id="q-text"></div>
+      <div class="options" id="q-options"><!-- generato via JS --></div>
+    </div>
+
+    <div class="quiz-nav">
+      <button class="btn btn-ghost" id="btn-prev">← Indietro</button>
+      <button class="btn btn-accent" id="btn-next">Avanti →</button>
+    </div>
+    <p class="hint">Puoi rispondere anche con i tasti 1-4 e passare con le frecce ← →.</p>
+  </section>
+
+  <!-- ============ RESULTS ============ -->
+  <section id="screen-results" hidden>
+    <div class="res-head">
+      <div class="eyebrow">Serie <span id="r-serie">A</span> — risultato</div>
+      <div class="res-score"><span id="r-score">0</span><span> / 11</span></div>
+      <div class="res-sub" id="r-time"></div>
+      <div class="stamp" id="r-stamp">PASSATO</div>
+    </div>
+
+    <div class="rev-title">Dettaglio risposte</div>
+    <div id="r-review"><!-- generato via JS --></div>
+
+    <div class="res-actions">
+      <button class="btn btn-accent" id="btn-retry">Rifai questa serie</button>
+      <button class="btn btn-ghost" id="btn-change">Cambia serie</button>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var SCHEMI = {
+    "01":"Politica fiscale e bilancio pubblico", "02":"Inflazione e curva di Phillips",
+    "03":"Concorrenza imperfetta e monopolio", "04":"Economia del benessere",
+    "05":"Mercato del lavoro", "06":"Economia aperta e bilancia dei pagamenti",
+    "07":"Teorie macro, moneta e BCE", "08":"Esternalità e fallimenti di mercato",
+    "09":"Crescita e sviluppo", "10":"Disuguaglianze e Stato sociale",
+    "11":"Teoria normativa: obiettivi e strumenti", "12":"Fallimenti dello Stato",
+    "13":"Valutazione dei progetti pubblici", "14":"Sistema monetario internazionale"
+  };
+
+  function Q(n, schema, text, a, b, c, d, correct){
+    return {n:n, schema:schema, text:text, options:{A:a,B:b,C:c,D:d}, correct:correct};
+  }
+
+  var QUIZ = {
+    A: [
+      Q(2,"01", `Il teorema di Haavelmo afferma che il moltiplicatore del bilancio in pareggio è pari a:`,
+        `1/(1−c)`, `c/(1−c)`, `1`, `0`, "C"),
+      Q(9,"02", `La lettura della curva di Phillips come "menù di scelta" per il policy maker implica che:`,
+        `si può ridurre la disoccupazione accettando più inflazione, muovendosi lungo la curva`,
+        `inflazione e disoccupazione sono variabili indipendenti`,
+        `la curva è verticale già nel breve periodo`,
+        `si possono azzerare entrambe simultaneamente`, "A"),
+      Q(15,"03", `Un monopolio naturale è caratterizzato da:`,
+        `barriere legali all'entrata (brevetti)`, `rendimenti di scala crescenti e costo medio decrescente`,
+        `prodotti differenziati`, `accordi collusivi tra poche imprese`, "B"),
+      Q(20,"04", `La funzione di benessere sociale rawlsiana:`,
+        `somma le utilità individuali`, `massimizza l'utilità dell'individuo che sta peggio`,
+        `moltiplica le utilità individuali`, `ignora completamente l'equità`, "B"),
+      Q(25,"05", `La disoccupazione frizionale è dovuta a:`,
+        `carenza di domanda aggregata`, `ostacoli all'incontro fra domanda e offerta di lavoro e mobilità insufficiente`,
+        `fase discendente del ciclo economico`, `salari troppo elevati imposti dai sindacati`, "B"),
+      Q(29,"06", `La condizione di Marshall-Lerner richiede che:`,
+        `|ε_x| + |ε_m| < 1`, `|ε_x| + |ε_m| > 1`, `ε_x = ε_m`, `ε_x · ε_m > 1`, "B"),
+      Q(35,"07", `Il moltiplicatore monetario è pari a:`,
+        `1/(h+j)`, `(1+h)/(h+j)`, `(h+j)/(1+h)`, `1/j`, "B"),
+      Q(41,"08", `I beni pubblici puri sono caratterizzati da:`,
+        `rivalità ed escludibilità`, `non rivalità e non escludibilità`,
+        `non rivalità ed escludibilità`, `rivalità e non escludibilità`, "B"),
+      Q(46,"09", `Secondo la legge di Okun, per ridurre di 1 punto il tasso di disoccupazione il prodotto deve crescere sopra il potenziale di circa:`,
+        `0,5%`, `1%`, `2,5%`, `10%`, "C"),
+      Q(54,"11", `La regola aurea di Tinbergen afferma che:`,
+        `il numero di strumenti deve essere almeno pari al numero di obiettivi`, `il bilancio deve essere in pareggio`,
+        `l'inflazione deve restare sotto il 2%`, `ogni obiettivo richiede due strumenti`, "A"),
+      Q(63,"13", `Il criterio di ammissibilità di un progetto pubblico secondo l'ACB richiede:`,
+        `VAN > 0`, `VAN < 0`, `VAN = 0`, `benefici lordi superiori a zero`, "A")
+    ],
+    B: [
+      Q(4,"01", `Il rapporto debito/PIL è sostenibile (non crescente, con saldo primario nullo) se:`,
+        `il tasso di interesse nominale è inferiore all'inflazione`, `il tasso di interesse reale è inferiore al tasso di crescita reale del PIL`,
+        `il saldo di bilancio è in pareggio`, `il debito è interamente detenuto da residenti`, "B"),
+      Q(12,"02", `Secondo il principio del costo pieno, il prezzo è fissato:`,
+        `uguagliando prezzo e costo marginale`, `applicando un mark-up al costo variabile unitario`,
+        `in base alla sola elasticità della domanda`, `dal policy maker tramite price cap`, "B"),
+      Q(17,"03", `In un mercato contendibile l'equilibrio si calcola imponendo:`,
+        `P = MC`, `MR = MC`, `P = costo medio`, `P = MR`, "C"),
+      Q(22,"04", `Il teorema del second best afferma che:`,
+        `è sempre preferibile soddisfare le condizioni di efficienza nel maggior numero possibile di mercati`,
+        `se una condizione di efficienza non può essere soddisfatta, può essere preferibile allontanarsi dalle condizioni anche negli altri mercati`,
+        `il secondo teorema del benessere non è dimostrabile`, `il monopolio è sempre preferibile alla concorrenza`, "B"),
+      Q(27,"05", `Secondo la teoria keynesiana, la causa principale della disoccupazione è:`,
+        `un salario reale troppo elevato`, `la carenza di domanda aggregata`,
+        `la rigidità dei prezzi verso l'alto`, `l'eccesso di offerta di moneta`, "B"),
+      Q(31,"06", `In cambi fissi con elevata mobilità dei capitali, la politica monetaria è:`,
+        `molto efficace`, `inefficace, perché la difesa della parità annulla la variazione di base monetaria`,
+        `efficace solo nel lungo periodo`, `efficace solo se accompagnata da dazi`, "B"),
+      Q(37,"07", `Secondo la nuova macroeconomia classica (Lucas), la curva di Phillips è verticale:`,
+        `solo nel lungo periodo`, `anche nel breve periodo`, `mai`, `solo con aspettative adattive`, "B"),
+      Q(44,"08", `Secondo il teorema di Coase, in assenza di costi di transazione:`,
+        `l'esternalità si elimina solo con la tassazione`,
+        `assegnando i diritti di proprietà le parti raggiungono un accordo efficiente, indipendentemente da chi li riceve`,
+        `è sempre necessario l'intervento pubblico diretto`, `il risultato dipende necessariamente da chi riceve i diritti`, "B"),
+      Q(50,"10", `La povertà relativa si misura:`,
+        `definendo un paniere di beni essenziali`, `rispetto alla distribuzione dei redditi (per l'UE, il 60% del reddito mediano equivalente)`,
+        `contando i senza dimora`, `come quota di reddito del 10% più ricco`, "B"),
+      Q(59,"12", `Le tre cause dei fallimenti dello Stato sono:`,
+        `inflazione, disoccupazione, debito`, `informazioni incomplete, opportunismo, ricerca della rendita`,
+        `esternalità, beni pubblici, asimmetrie informative`, `corruzione, evasione, elusione`, "B"),
+      Q(67,"14", `Il dilemma di Triffin evidenzia che:`,
+        `i cambi flessibili eliminano la speculazione`,
+        `mantenere costante il contenuto aureo della valuta di riserva rischia di non fornire liquidità internazionale sufficiente`,
+        `l'oro è un bene pubblico`, `i cambi fissi impediscono l'inflazione`, "B")
+    ],
+    C: [
+      Q(5,"01", `Il drenaggio fiscale (fiscal drag) consiste in:`,
+        `l'aumento del prelievo reale dovuto alla crescita del reddito solo nominale con aliquote progressive non indicizzate`,
+        `la fuga di capitali verso l'estero per motivi fiscali`, `la riduzione del gettito dovuta all'evasione`,
+        `il trasferimento del carico fiscale dai lavoratori autonomi ai dipendenti`, "A"),
+      Q(8,"02", `Secondo Friedman e Phelps, nel lungo periodo la curva di Phillips è:`,
+        `inclinata negativamente`, `inclinata positivamente`,
+        `verticale in corrispondenza del tasso di disoccupazione naturale`, `orizzontale`, "C"),
+      Q(14,"03", `L'indice di Lerner è pari:`,
+        `all'elasticità della domanda al prezzo`, `all'inverso dell'elasticità della domanda al prezzo`,
+        `al quadrato della quota di mercato`, `alla somma delle quote di mercato`, "B"),
+      Q(23,"04", `L'efficienza adattiva è una forma di:`,
+        `efficienza allocativa`, `efficienza statica`, `efficienza dinamica`, `equità`, "C"),
+      Q(24,"05", `Il tasso di disoccupazione ha come denominatore:`,
+        `la popolazione totale`, `la popolazione in età lavorativa`, `la forza lavoro`, `il numero degli occupati`, "C"),
+      Q(32,"06", `Secondo il principio dei costi comparati, a un paese con vantaggio assoluto in entrambi i beni:`,
+        `non conviene mai commerciare`, `conviene commerciare se la ragione di scambio internazionale è compresa fra le ragioni di scambio interne`,
+        `conviene sempre l'autarchia`, `conviene produrre entrambi i beni e non esportare`, "B"),
+      Q(38,"07", `Il "divorzio" fra Banca d'Italia e Tesoro (1981) ha comportato:`,
+        `la fine dell'obbligo per la Banca d'Italia di acquistare i BOT non collocati in asta`,
+        `l'ingresso dell'Italia nell'euro`, `l'abolizione della riserva obbligatoria`, `l'introduzione del price cap sulle tariffe`, "A"),
+      Q(39,"08", `In presenza di un'esternalità negativa di produzione, il mercato produce:`,
+        `una quantità inferiore a quella socialmente ottima`, `una quantità superiore a quella socialmente ottima`,
+        `esattamente la quantità ottima`, `una quantità indeterminata`, "B"),
+      Q(48,"09", `Il PIL pro capite è un indicatore limitato di sviluppo soprattutto perché:`,
+        `non tiene conto della distribuzione del reddito`, `è espresso in valuta nazionale`,
+        `non considera le esportazioni`, `è calcolato solo ogni cinque anni`, "A"),
+      Q(58,"11", `Il problema dell'incoerenza temporale nasce quando:`,
+        `il policy maker non dispone di informazioni`, `al momento di attuare la politica annunciata, al policy maker conviene una condotta diversa`,
+        `gli obiettivi sono più numerosi degli strumenti`, `i mercati sono incompleti`, "B"),
+      Q(65,"13", `Un progetto è ammissibile secondo il criterio del TIR se:`,
+        `TIR < tasso di interesse di mercato`, `TIR > tasso di interesse di mercato`, `TIR = 0`, `TIR è negativo`, "B")
+    ]
+  };
+
+  var TOTAL_SECONDS = 600;
+  var STORAGE_KEY = "polecon_preselezione_stats_v1";
+
+  var state = { sim:null, i:0, answers:[], secondsLeft:TOTAL_SECONDS, timerId:null, submitted:false };
+
+  var els = {
+    cover: document.getElementById("screen-cover"),
+    quiz: document.getElementById("screen-quiz"),
+    results: document.getElementById("screen-results"),
+    simCards: document.getElementById("sim-cards"),
+    qSerie: document.getElementById("q-serie"),
+    qIndex: document.getElementById("q-index"),
+    qNumLabel: document.getElementById("q-num-label"),
+    qTimer: document.getElementById("q-timer"),
+    qProgress: document.getElementById("q-progress"),
+    qDots: document.getElementById("q-dots"),
+    qText: document.getElementById("q-text"),
+    qOptions: document.getElementById("q-options"),
+    btnPrev: document.getElementById("btn-prev"),
+    btnNext: document.getElementById("btn-next"),
+    rSerie: document.getElementById("r-serie"),
+    rScore: document.getElementById("r-score"),
+    rTime: document.getElementById("r-time"),
+    rStamp: document.getElementById("r-stamp"),
+    rReview: document.getElementById("r-review"),
+    btnRetry: document.getElementById("btn-retry"),
+    btnChange: document.getElementById("btn-change")
+  };
+
+  function loadStats(){
+    try{
+      var raw = localStorage.getItem(STORAGE_KEY);
+      return raw ? JSON.parse(raw) : {};
+    }catch(e){ return {}; }
+  }
+  function saveStats(stats){
+    try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(stats)); }catch(e){}
+  }
+  function recordResult(simKey, score){
+    var stats = loadStats();
+    var prev = stats[simKey] || {best:0, last:0, attempts:0};
+    stats[simKey] = {
+      best: Math.max(prev.best||0, score),
+      last: score,
+      attempts: (prev.attempts||0) + 1
+    };
+    saveStats(stats);
+    return stats[simKey];
+  }
+
+  function fmtTime(s){
+    var m = Math.floor(s/60), sec = s%60;
+    return m + ":" + (sec<10?"0":"") + sec;
+  }
+
+  function renderCover(){
+    var stats = loadStats();
+    var html = "";
+    ["A","B","C"].forEach(function(key){
+      var st = stats[key];
+      var statHtml = st
+        ? `<span>ultimo ${st.last}/11</span><span>record ${st.best}/11</span>`
+        : `<span>non ancora fatta</span>`;
+      html += `
+        <div class="sim-card">
+          <div class="sim-badge">${key}</div>
+          <h3>Serie ${key}</h3>
+          <div class="sub">11 argomenti diversi su 14 · 10 minuti</div>
+          <div class="sim-stats">${statHtml}</div>
+          <button class="btn btn-accent" data-sim="${key}">Inizia la simulazione →</button>
+        </div>`;
+    });
+    els.simCards.innerHTML = html;
+    els.simCards.querySelectorAll("button[data-sim]").forEach(function(btn){
+      btn.addEventListener("click", function(){ startSimulation(btn.getAttribute("data-sim")); });
+    });
+  }
+
+  function showScreen(name){
+    els.cover.hidden = name !== "cover";
+    els.quiz.hidden = name !== "quiz";
+    els.results.hidden = name !== "results";
+    window.scrollTo(0,0);
+  }
+
+  function startSimulation(simKey){
+    state.sim = simKey;
+    state.i = 0;
+    state.answers = new Array(QUIZ[simKey].length).fill(null);
+    state.secondsLeft = TOTAL_SECONDS;
+    state.submitted = false;
+    els.qSerie.textContent = simKey;
+    renderDots();
+    renderQuestion();
+    showScreen("quiz");
+    if (state.timerId) clearInterval(state.timerId);
+    state.timerId = setInterval(tick, 1000);
+    updateTimerDisplay();
+  }
+
+  function tick(){
+    state.secondsLeft -= 1;
+    updateTimerDisplay();
+    if (state.secondsLeft <= 0){
+      clearInterval(state.timerId);
+      submitQuiz(true);
+    }
+  }
+
+  function updateTimerDisplay(){
+    els.qTimer.textContent = fmtTime(Math.max(0,state.secondsLeft));
+    els.qTimer.classList.toggle("low", state.secondsLeft <= 60);
+    var pct = 100 * (TOTAL_SECONDS - state.secondsLeft) / TOTAL_SECONDS;
+    els.qProgress.style.width = Math.min(100,pct) + "%";
+  }
+
+  function renderDots(){
+    var list = QUIZ[state.sim];
+    var html = "";
+    for (var k=0; k<list.length; k++){
+      html += `<button type="button" class="dot" data-i="${k}">${k+1}</button>`;
+    }
+    els.qDots.innerHTML = html;
+    els.qDots.querySelectorAll(".dot").forEach(function(dot){
+      dot.addEventListener("click", function(){
+        state.i = parseInt(dot.getAttribute("data-i"),10);
+        renderQuestion();
+      });
+    });
+  }
+
+  function updateDots(){
+    els.qDots.querySelectorAll(".dot").forEach(function(dot,idx){
+      dot.classList.toggle("current", idx === state.i);
+      dot.classList.toggle("answered", !!state.answers[idx]);
+    });
+  }
+
+  function renderQuestion(){
+    var q = QUIZ[state.sim][state.i];
+    els.qIndex.textContent = state.i+1;
+    els.qNumLabel.textContent = state.i+1;
+    els.qText.textContent = q.text;
+    var letters = ["A","B","C","D"];
+    var html = "";
+    letters.forEach(function(L){
+      var sel = state.answers[state.i] === L ? " selected" : "";
+      html += `<button type="button" class="opt${sel}" data-letter="${L}">
+        <span class="letter">${L}</span><span>${q.options[L]}</span>
+      </button>`;
+    });
+    els.qOptions.innerHTML = html;
+    els.qOptions.querySelectorAll(".opt").forEach(function(btn){
+      btn.addEventListener("click", function(){
+        state.answers[state.i] = btn.getAttribute("data-letter");
+        renderQuestion();
+        updateDots();
+      });
+    });
+    els.btnPrev.disabled = state.i === 0;
+    els.btnNext.textContent = (state.i === QUIZ[state.sim].length-1) ? "Consegna" : "Avanti →";
+    updateDots();
+  }
+
+  els.btnPrev.addEventListener("click", function(){
+    if (state.i > 0){ state.i -= 1; renderQuestion(); }
+  });
+  els.btnNext.addEventListener("click", function(){
+    var last = QUIZ[state.sim].length - 1;
+    if (state.i < last){ state.i += 1; renderQuestion(); }
+    else { submitQuiz(false); }
+  });
+
+  document.addEventListener("keydown", function(e){
+    if (els.quiz.hidden) return;
+    if (["1","2","3","4"].indexOf(e.key) !== -1){
+      var letter = ["A","B","C","D"][parseInt(e.key,10)-1];
+      state.answers[state.i] = letter;
+      renderQuestion(); updateDots();
+    } else if (e.key === "ArrowRight"){
+      els.btnNext.click();
+    } else if (e.key === "ArrowLeft"){
+      els.btnPrev.click();
+    }
+  });
+
+  function submitQuiz(timedOut){
+    if (state.submitted) return;
+    state.submitted = true;
+    if (state.timerId) clearInterval(state.timerId);
+
+    var list = QUIZ[state.sim];
+    var score = 0;
+    var reviewHtml = "";
+    list.forEach(function(q, idx){
+      var yours = state.answers[idx];
+      var ok = yours === q.correct;
+      if (ok) score += 1;
+      var yourLabel = yours ? (yours + ") " + q.options[yours]) : "nessuna risposta";
+      reviewHtml += `
+        <div class="rev-item ${ok ? "correct" : "wrong"}">
+          <div class="rev-q"><b>${q.n}.</b> ${q.text}</div>
+          <div class="rev-ans">
+            <span class="you ${ok ? "correct" : "wrong"}">tu: ${yourLabel}</span>
+            ${ok ? "" : `<span>corretta: ${q.correct}) ${q.options[q.correct]}</span>`}
+            <span class="tag">Schema ${q.schema} — ${SCHEMI[q.schema]}</span>
+          </div>
+        </div>`;
+    });
+
+    var stat = recordResult(state.sim, score);
+    var passed = score >= 6;
+
+    els.rSerie.textContent = state.sim;
+    els.rScore.textContent = score;
+    els.rTime.textContent = timedOut
+      ? "tempo scaduto"
+      : "consegnata con " + fmtTime(state.secondsLeft) + " ancora sul timer";
+    els.rStamp.textContent = passed ? "Passato" : "Non passato";
+    els.rStamp.className = "stamp " + (passed ? "pass" : "fail");
+    els.rReview.innerHTML = reviewHtml;
+
+    showScreen("results");
+  }
+
+  els.btnRetry.addEventListener("click", function(){ startSimulation(state.sim); });
+  els.btnChange.addEventListener("click", function(){ renderCover(); showScreen("cover"); });
+
+  renderCover();
+  showScreen("cover");
+})();
+</script>
