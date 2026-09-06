@@ -106,3 +106,22 @@ Foglio: [`giornate/giorno-3-sabato-5-settembre.md`](giornate/giorno-3-sabato-5-s
 1. Dal giorno 2: **riprendere A12** con il metodo "solo numeri, mai lettere all'inizio" (vedi sopra), poi **A13** (Tinbergen) — si era arrivati a impostare il sistema, manca solo risolverlo. Rimane anche aperto un esercizio "al contrario" sulla curva di Phillips da riproporre a freddo (dal giorno 1).
 2. **Giorno 3 chiuso.** Foglio del **giorno 4** creato: [`giornate/giorno-4-domenica-6-settembre.md`](giornate/giorno-4-domenica-6-settembre.md) (PDF: `Giorno 4 — domenica 6 settembre.pdf`), tre blocchi — VAN/VAN relativo/TIR con tutorial e B9, la domanda aperta IS-LM (B10) con il metodo per rispondere, e un ripasso lampo R1-R5 sui cinque capitoli lasciati indietro (esternalità, crescita, disuguaglianze, fallimenti dello Stato, sistema monetario). **Ancora da fare dal vivo con Jacopo**: nessun esercizio del giorno 4 è stato ancora svolto in chat — il foglio è pronto, manca la sessione di lavoro.
 3. A12/A13 del giorno 2 restano il debito più vecchio ancora aperto: da chiudere prima del giorno 5 (ripasso), idealmente nel ritaglio di tempo tra giorno 4 e giorno 5.
+
+## Domenica 6/9 sera — tre strumenti HTML e un cambio di rotta
+
+Costruiti tre strumenti interattivi (branch `claude/file-giorno-4-5nsilh`), tutti pubblicati come Artifact oltre che salvati nel repo:
+
+- `quiz-preselezione.html` — le tre simulazioni cronometrate da 11 domande (A/B/C) del `00d`. **Esito: 9/11 in tutte e tre**, ben sopra soglia (6/11) e sopra l'obiettivo realistico (8+). Nessun pattern di errore raccolto (Jacopo non ha annotato i numeri sbagliati).
+- `ripasso-esercizi.html` — ripasso passivo (leggi, rivela la soluzione, niente da scrivere) delle 23 tracce A1-A13/B1-B10, usato perché Jacopo era stanco.
+- `simulazione-scritto.html` — compito cronometrato da 60 minuti (2 domande aperte nuove + 1 esercizio nuovo su monopolio, mai visto altrove) da scrivere sull'iPad. **Esito: blocco totale.** Jacopo, testuali parole: "vedo i dati e dico boh non so qua che devo fa'", "potrei anche consegnarli in bianco".
+
+**Diagnosi di Jacopo, condivisa**: non è un problema di conoscenza dell'argomento (la preselezione lo dimostra), è la capacità di **collegare dati→formula→procedimento a freddo, senza preavviso e senza poter guardare prima la teoria** — lo stesso gap già isolato il 3/9 sull'esercizio "al contrario" di Phillips, ma qui emerso su tutto insieme in un colpo solo. Simulare l'intero scritto con una domanda aperta mai vista, in un colpo solo e a mente fredda, è stato un salto troppo grande rispetto a dove Jacopo è ora — utile come diagnosi, sbagliato come metodo di allenamento a questo punto della preparazione.
+
+**Decisione presa insieme — cambio di priorità per l'ultimo giorno pieno (lun 7/9):**
+
+- **Si abbandona l'ampiezza**: niente più tempo su argomenti secondari o di copertura (05-10, 12, 14) — la preselezione li ha già validati a sufficienza (9/11 x3).
+- **Si concentra tutto sui 5 core**: politica fiscale (01), Phillips (02), monopolio (03), benessere (04), teoria normativa/Tinbergen (11) — cioè esattamente gli esercizi **A1→A13**, già fatti bene una volta guidati (giorni 1-2) ma non ancora testati a freddo tutti insieme.
+- **Stasera (dom 6/9)**: attività leggera, non ancora definita a fine sessione — da chiedere a Jacopo cosa intende (ripasso a lettura solo sui 5 core, oppure stop per oggi).
+- **Domani (lun 7/9, ultimo giorno pieno)**: sprint sui 5 core, teoria + esercizi, al massimo possibile. Va progettato un formato **intermedio** fra il ripasso passivo (troppo facile, non allena il collegamento) e lo scritto cronometrato in un colpo solo (troppo difficile, ha bloccato tutto) — es. un drill che, traccia per traccia, chiede prima "quale scheda-procedura è questa, e quale formula chiave serve" e solo dopo il calcolo. Non ancora costruito: da fare quando si riprende domani.
+
+**Non toccare più stasera**: B9/B10 (giorno 4) restano non svolti dal vivo — a questo punto, dato il cambio di priorità, valutare con Jacopo se vale la pena farli (sono fuori dai 5 core) o se il tempo residuo va tutto sui core.
