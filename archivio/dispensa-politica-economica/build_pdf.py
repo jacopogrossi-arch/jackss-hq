@@ -369,6 +369,20 @@ non serve aprire la dispensa.
 
 """
 
+HEADER_GIORNO_4 = """# Giorno 4 — domenica 6 settembre
+
+**Valutazione dei progetti pubblici e i cinque capitoli lasciati indietro.** Esercizi B9 e B10
+del quaderno, più un ripasso lampo (R1 → R5) di esternalità, crescita, disuguaglianze,
+fallimenti dello Stato e sistema monetario internazionale — copertura di sicurezza per la
+preselezione. Questo foglio è autosufficiente: tracce e soluzioni sono qui dentro, non serve
+aprire la dispensa.
+
+[TOC]
+
+<div class="pagebreak"></div>
+
+"""
+
 if __name__ == "__main__":
     costruisci(OUT_NAME, SCHEMI, FILES_IN_ORDER, HEADER)
     costruisci("Giorno 1 — giovedi 3 settembre", GIORNATE,
@@ -377,3 +391,5 @@ if __name__ == "__main__":
                ["giorno-2-venerdi-4-settembre.md"], HEADER_GIORNO_2, con_ancore=False)
     costruisci("Giorno 3 — sabato 5 settembre", GIORNATE,
                ["giorno-3-sabato-5-settembre.md"], HEADER_GIORNO_3, con_ancore=False)
+    costruisci("Giorno 4 — domenica 6 settembre", GIORNATE,
+               ["giorno-4-domenica-6-settembre.md"], HEADER_GIORNO_4, con_ancore=False)
