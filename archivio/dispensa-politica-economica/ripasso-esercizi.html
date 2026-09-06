@@ -1,0 +1,908 @@
+<title>Ripasso Esercizi Politica Economica</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap">
+<style>
+  :root{
+    --bg:#eef1f5; --surface:#ffffff; --surface-2:#e3e9f0;
+    --ink:#16233a; --ink-soft:#51617a; --ink-faint:#8592a6;
+    --line:#d3dae3; --line-strong:#b7c1cf;
+    --accent:#1a5276; --accent-ink:#ffffff; --accent-soft:#e3edf4; --accent-line:#b9d2e2;
+    --warn:#8a5a12; --warn-soft:#f7edda; --warn-line:#e3c98f;
+    --danger:#922b21; --danger-soft:#f7e7e4; --danger-line:#e3b9b2;
+    --correct:#276b4e; --correct-soft:#e3f0e9; --correct-line:#b7d9c8;
+    --shadow:0 1px 2px rgba(22,35,58,.06),0 10px 28px rgba(22,35,58,.08);
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#0f1520; --surface:#182231; --surface-2:#1e2a3c;
+      --ink:#e8edf4; --ink-soft:#aab6c8; --ink-faint:#77839a;
+      --line:#2c3a4e; --line-strong:#3c4d64;
+      --accent:#7bb0d6; --accent-ink:#0b1520; --accent-soft:#1b3145; --accent-line:#2f5170;
+      --warn:#e0b667; --warn-soft:#332c19; --warn-line:#4d4126;
+      --danger:#e2988c; --danger-soft:#3a201d; --danger-line:#5b322c;
+      --correct:#8ecdac; --correct-soft:#1c3327; --correct-line:#2f5240;
+      --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 28px rgba(0,0,0,.45);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0f1520; --surface:#182231; --surface-2:#1e2a3c;
+    --ink:#e8edf4; --ink-soft:#aab6c8; --ink-faint:#77839a;
+    --line:#2c3a4e; --line-strong:#3c4d64;
+    --accent:#7bb0d6; --accent-ink:#0b1520; --accent-soft:#1b3145; --accent-line:#2f5170;
+    --warn:#e0b667; --warn-soft:#332c19; --warn-line:#4d4126;
+    --danger:#e2988c; --danger-soft:#3a201d; --danger-line:#5b322c;
+    --correct:#8ecdac; --correct-soft:#1c3327; --correct-line:#2f5240;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 28px rgba(0,0,0,.45);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+    font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:26px 18px 70px;}
+  h1,h2,h3{font-family:'Source Serif 4',Georgia,serif; text-wrap:balance; margin:0;}
+  .mono{font-family:'IBM Plex Mono',ui-monospace,monospace; font-variant-numeric:tabular-nums;}
+  [hidden]{display:none!important;}
+
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--ink-faint); margin-bottom:9px;
+  }
+  header.head h1{font-size:27px; font-weight:700; margin-bottom:8px;}
+  header.head p{color:var(--ink-soft); font-size:15px; max-width:58ch; margin:0;}
+
+  .stat-row{display:flex; gap:8px; flex-wrap:wrap; margin:20px 0 22px;}
+  .stat-chip{
+    display:flex; align-items:center; gap:6px; background:var(--surface); border:1px solid var(--line);
+    border-radius:20px; padding:5px 12px; font-size:12.5px; color:var(--ink-soft);
+  }
+  .stat-chip b{font-family:'IBM Plex Mono',monospace; color:var(--ink);}
+
+  .tabs{display:flex; gap:6px; margin-bottom:20px; border-bottom:1px solid var(--line); padding-bottom:0;}
+  .tab{
+    appearance:none; border:none; background:transparent; cursor:pointer; font-family:inherit;
+    font-size:14px; font-weight:600; color:var(--ink-faint); padding:9px 4px; margin-right:14px;
+    border-bottom:2.5px solid transparent; margin-bottom:-1px;
+  }
+  .tab.active{color:var(--accent); border-bottom-color:var(--accent);}
+  .tab:focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
+
+  .day-heading{
+    font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--ink-faint); margin:26px 0 10px; display:flex; align-items:center; gap:10px;
+  }
+  .day-heading:first-child{margin-top:0;}
+  .day-heading::after{content:""; flex:1; height:1px; background:var(--line);}
+
+  .card{
+    background:var(--surface); border:1px solid var(--line); border-radius:12px;
+    margin-bottom:10px; box-shadow:var(--shadow); overflow:hidden;
+  }
+  .card-head{
+    display:flex; align-items:center; gap:12px; padding:14px 16px; cursor:pointer; user-select:none;
+  }
+  .card-head:hover{background:var(--surface-2);}
+  .badge{
+    flex:0 0 auto; width:30px; height:30px; border-radius:8px; display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:12.5px; border:1.5px solid;
+  }
+  .badge.ok{color:var(--correct); border-color:var(--correct-line); background:var(--correct-soft);}
+  .badge.warn{color:var(--warn); border-color:var(--warn-line); background:var(--warn-soft);}
+  .badge.weak{color:var(--danger); border-color:var(--danger-line); background:var(--danger-soft);}
+  .badge.pending{color:var(--accent); border-color:var(--accent-line); background:var(--accent-soft);}
+  .badge.skip{color:var(--ink-faint); border-color:var(--line-strong); background:var(--surface-2);}
+  .card-head .id{font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:13px; color:var(--ink-faint); flex:0 0 auto; width:34px;}
+  .card-head .title{flex:1; font-size:14.5px; font-weight:600; color:var(--ink);}
+  .card-head .status-note{font-size:12px; color:var(--ink-faint); margin-top:2px; font-weight:400;}
+  .chev{flex:0 0 auto; color:var(--ink-faint); transition:transform .15s ease; font-size:13px;}
+  .card.open .chev{transform:rotate(90deg);}
+
+  .card-body{padding:0 18px 18px; display:none;}
+  .card.open .card-body{display:block;}
+  .traccia p{margin:0 0 10px; font-size:14.5px;}
+  .traccia .setup{margin-bottom:12px;}
+  .traccia ol{margin:0 0 4px; padding-left:22px;}
+  .traccia li{margin-bottom:6px; font-size:14.5px;}
+  .traccia table{border-collapse:collapse; margin:10px 0; font-size:13.5px;}
+  .traccia th,.traccia td{border:1px solid var(--line); padding:5px 10px; text-align:center;}
+  .traccia th{background:var(--surface-2);}
+
+  .reveal-btn{
+    appearance:none; border:1.5px dashed var(--accent-line); background:var(--accent-soft); color:var(--accent);
+    font-family:inherit; font-weight:600; font-size:13.5px; padding:9px 14px; border-radius:8px;
+    cursor:pointer; width:100%; margin-top:6px;
+  }
+  .reveal-btn:hover{opacity:.85;}
+
+  .soluzione{margin-top:14px; padding-top:14px; border-top:1px dashed var(--line); display:none;}
+  .soluzione.shown{display:block;}
+  .soluzione h4{font-size:13px; color:var(--accent); margin:14px 0 6px; font-family:'IBM Plex Sans',sans-serif; font-weight:700;}
+  .soluzione h4:first-child{margin-top:0;}
+  .soluzione p{font-size:14px; margin:0 0 10px; color:var(--ink);}
+  .soluzione pre{
+    background:var(--surface-2); border:1px solid var(--line); border-left:3px solid var(--accent);
+    padding:10px 14px; border-radius:0 8px 8px 0; overflow-x:auto; margin:0 0 10px;
+    font-family:'IBM Plex Mono',monospace; font-size:12.5px; line-height:1.5; color:var(--ink);
+  }
+  .soluzione table{border-collapse:collapse; margin:0 0 10px; font-size:13px;}
+  .soluzione th,.soluzione td{border:1px solid var(--line); padding:5px 10px;}
+  .soluzione th{background:var(--surface-2);}
+
+  .foot-row{display:flex; align-items:center; justify-content:space-between; margin-top:14px; gap:10px;}
+  .done-toggle{display:flex; align-items:center; gap:7px; font-size:13px; color:var(--ink-soft); cursor:pointer;}
+  .done-toggle input{width:16px; height:16px; accent-color:var(--correct); cursor:pointer;}
+  .schema-tag{
+    font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--ink-faint);
+    background:var(--surface-2); border:1px solid var(--line); border-radius:5px; padding:2px 8px;
+  }
+
+  .empty{color:var(--ink-faint); font-size:14px; padding:30px 0; text-align:center;}
+
+  .legend{margin-top:34px; border-top:1px dashed var(--line); padding-top:16px; font-size:12.5px; color:var(--ink-faint);}
+  .legend span{display:inline-flex; align-items:center; gap:5px; margin-right:16px; margin-bottom:6px;}
+  .legend .dot{width:9px; height:9px; border-radius:3px; display:inline-block;}
+</style>
+
+<div class="wrap">
+  <div class="eyebrow">Politica economica — esame 8 settembre 2026</div>
+  <header class="head">
+    <h1>Ripasso esercizi</h1>
+    <p>Le 23 tracce del quaderno (A1→A13, B1→B10), con teoria minima e soluzione completa. Leggi, pensa alla strada da seguire, poi apri la soluzione — niente da scrivere.</p>
+  </header>
+
+  <div class="stat-row" id="stat-row"></div>
+
+  <div class="tabs">
+    <button class="tab active" data-tab="ripassare">Da ripassare</button>
+    <button class="tab" data-tab="tutti">Tutti (23)</button>
+  </div>
+
+  <div id="list"></div>
+
+  <div class="legend" id="legend"></div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  function P(t){ return {t:"p", v:t}; }
+  function PRE(t){ return {t:"pre", v:t}; }
+  function H(t){ return {t:"h", v:t}; }
+  function TBL(headers, rows){ return {t:"table", headers:headers, rows:rows}; }
+
+  var EX = [
+    {
+      id:"A1", giorno:1, status:"ok", note:"tutti corretti al primo tentativo",
+      title:"Reddito di equilibrio e manovre di finanza pubblica",
+      schema:"01",
+      traccia:[
+        P(`Traccia della professoressa (proposta nelle slide sul bilancio pubblico, mai svolta a lezione). Un'economia chiusa è descritta da:`),
+        PRE(`Y = C + I + G\nC = 100 + 0,8 (Y − T)\nI = 100\nG = 100\nT = 75`),
+        {t:"ol", v:[
+          `Calcola il reddito di equilibrio.`,
+          `Che cosa accade se I passa da 100 a 50? Calcola il nuovo reddito e confrontalo col precedente.`,
+          `Ripartendo dalla situazione iniziale, che cosa accade se G passa da 100 a 150?`,
+          `E se, insieme a G, anche T aumenta di 50? Che nome ha il risultato che ottieni?`
+        ]}
+      ],
+      soluzione:[
+        H("(a) Reddito di equilibrio"),
+        PRE(`Y = C + I + G\nY = 100 + 0,8 (Y − 75) + 100 + 100\nY = 100 + 0,8Y − 60 + 200\nY − 0,8Y = 240\n0,2 Y = 240\nY = 1.200`),
+        P(`Il moltiplicatore è 1/(1 − 0,8) = 5.`),
+        H("(b) Investimenti da 100 a 50"),
+        PRE(`ΔY = 5 · ΔI = 5 · (−50) = −250\nY = 1.200 − 250 = 950`),
+        H("(c) Spesa pubblica da 100 a 150"),
+        PRE(`ΔY = 5 · ΔG = 5 · 50 = +250\nY = 1.200 + 250 = 1.450`),
+        P(`Una manovra di spesa di 50 compensa esattamente il crollo di 50 degli investimenti del punto (b): è la stabilizzazione keynesiana.`),
+        H("(d) G e T aumentano entrambi di 50"),
+        PRE(`effetto della spesa:    ΔY = +1/(1−c) · ΔG = 5 · 50 = +250\neffetto dell'imposta:   ΔY = −c/(1−c) · ΔT = −4 · 50 = −200\neffetto netto:          ΔY = +50`),
+        P(`È il teorema di Haavelmo: un aumento di spesa interamente finanziato da un pari aumento delle imposte fa crescere il reddito esattamente dell'importo della manovra — il moltiplicatore del bilancio in pareggio vale 1. G entra nella domanda per intero, mentre T la riduce solo per la quota consumata c: la differenza 1 − c è ciò che resta.`)
+      ]
+    },
+    {
+      id:"A2", giorno:1, status:"warn", note:"un errore intercettato e corretto (parentesi sciolta male)",
+      title:"Lo stesso modello con imposta proporzionale",
+      schema:"01",
+      traccia:[
+        P(`Stessa economia di A1, ma ora l'imposta è T = 75 + 0,25 Y.`),
+        {t:"ol", v:[
+          `Calcola il moltiplicatore della spesa pubblica e il reddito di equilibrio.`,
+          `Confronta moltiplicatore e reddito con quelli di A1: perché sono più bassi?`,
+          `Aumenta G di 50: di quanto cresce il reddito e di quanto cresce il gettito? Il bilancio migliora o peggiora?`,
+          `Aumenta contemporaneamente G di 50 e la parte fissa dell'imposta di 50: quanto vale ora il moltiplicatore del bilancio in pareggio? Il teorema di Haavelmo vale ancora?`
+        ]}
+      ],
+      soluzione:[
+        H("(a) Moltiplicatore e reddito"),
+        PRE(`Y = 100 + 0,8 [ Y − 75 − 0,25Y ] + 100 + 100\nY = 100 + 0,8 (0,75 Y − 75) + 200\nY = 100 + 0,6 Y − 60 + 200\n0,4 Y = 240\nY = 600\n\nmoltiplicatore = 1/(1 − c(1−t)) = 1/(1 − 0,8 · 0,75) = 1/0,4 = 2,5`),
+        H("(b) Confronto con A1"),
+        P(`Il moltiplicatore scende da 5 a 2,5 e il reddito da 1.200 a 600. A ogni giro del moltiplicatore lo Stato preleva il 25% del reddito aggiuntivo, quindi solo 0,75 arriva alle famiglie e solo 0,8 · 0,75 = 0,6 torna in consumo. È l'aspetto di stabilizzatore automatico dell'imposta proporzionale.`),
+        H("(c) Aumento di G di 50"),
+        PRE(`ΔY = 2,5 · 50 = +125          →  Y = 725\nΔT = 0,25 · ΔY = 0,25 · 125 = +31,25`),
+        P(`Il gettito cresce di 31,25 a fronte di una spesa in più di 50: il bilancio peggiora di 18,75.`),
+        H("(d) G e la parte fissa dell'imposta aumentano entrambi di 50"),
+        PRE(`effetto della spesa:     ΔY = +2,5 · 50 = +125\neffetto dell'imposta:    ΔY = −(0,8/0,4) · 50 = −100\neffetto netto:           ΔY = +25\n\nmoltiplicatore del bilancio in pareggio = 25/50 = 0,5`),
+        P(`Il teorema di Haavelmo non vale più: il moltiplicatore del bilancio in pareggio scende da 1 a 0,5.`)
+      ]
+    },
+    {
+      id:"A3", giorno:1, status:"ok", note:"risposte fornite, nessun errore riportato",
+      title:"Il modello reddito-spesa in economia aperta",
+      schema:"01",
+      traccia:[
+        P(`Traccia della professoressa, stessa sezione.`),
+        PRE(`Y = C + I + G + X − M\nC = c (1 − t) Y        con c = 0,8 e t = 0,25\nI = 100\nG = 100\nX = 50\nM = m Y                con m = 0,1`),
+        {t:"ol", v:[
+          `Calcola il moltiplicatore e il reddito di equilibrio.`,
+          `Qual è il saldo commerciale X − M all'equilibrio?`,
+          `Il governo aumenta G a 150: calcola il nuovo reddito e il nuovo saldo commerciale.`,
+          `Commenta: perché una manovra espansiva peggiora il saldo con l'estero? Come si chiama il fenomeno per cui la propensione a importare riduce il moltiplicatore?`
+        ]}
+      ],
+      soluzione:[
+        H("(a) Moltiplicatore e reddito"),
+        PRE(`Y = 0,8 · 0,75 Y + 100 + 100 + 50 − 0,1 Y\nY (1 − 0,6 + 0,1) = 250\n0,5 Y = 250\nY = 500\n\nmoltiplicatore = 1/(1 − c(1−t) + m) = 1/0,5 = 2`),
+        H("(b) Saldo commerciale"),
+        PRE(`M = 0,1 · 500 = 50\nX − M = 50 − 50 = 0        →  pareggio`),
+        H("(c) Spesa pubblica a 150"),
+        PRE(`Y = (100 + 150 + 50)/0,5 = 600\nM = 0,1 · 600 = 60\nX − M = 50 − 60 = −10      →  disavanzo`),
+        H("(d) Commento"),
+        P(`Il reddito più alto tira su le importazioni (dipendono da Y) mentre le esportazioni restano ferme (dipendono dal reddito estero). Il saldo commerciale passa da 0 a −10: è il vincolo estero alla politica fiscale, e la propensione a importare è una dispersione del moltiplicatore (2 contro 2,5 in economia chiusa).`)
+      ]
+    },
+    {
+      id:"A4", giorno:1, status:"ok", note:"tutti corretti, discussione su crescita vs tasso come leve",
+      title:"Sostenibilità del debito pubblico",
+      schema:"01",
+      traccia:[
+        P(`Un paese ha un tasso di interesse nominale sul debito i = 5%, un'inflazione ṗ = 2%, una crescita reale Ẏ = 1% e un rapporto debito/PIL pari al 130%.`),
+        {t:"ol", v:[
+          `Quale avanzo primario (in percentuale del PIL) serve per stabilizzare il rapporto debito/PIL?`,
+          `E se la crescita reale salisse al 3%, ferme le altre variabili?`,
+          `E se invece il tasso di interesse salisse al 7%, con crescita all'1%?`,
+          `Commenta: quale delle due leve — crescita o tasso di interesse — è nelle mani del governo, e quale no?`
+        ]}
+      ],
+      soluzione:[
+        H("(a) Avanzo primario necessario"),
+        PRE(`tasso reale:            i − ṗ = 5% − 2% = 3%\ndifferenziale:          3% − 1% = 2%\neffetto palla di neve:  2% · 1,30 = 2,6% del PIL\n\nper stabilizzare:  avanzo primario = 2,6% del PIL`),
+        H("(b) Crescita reale al 3%"),
+        PRE(`(5% − 2% − 3%) = 0   →   basta il PAREGGIO primario`),
+        H("(c) Tasso di interesse al 7%"),
+        PRE(`(7% − 2% − 1%) = 4%\n4% · 1,30 = 5,2% del PIL di avanzo primario`),
+        H("(d) Commento"),
+        P(`Due punti di interesse in più raddoppiano l'avanzo primario richiesto (2,6% → 5,2%): è la leva che il governo non controlla, perché i lo fissa il mercato (e, per l'euro, la BCE). La crescita è la leva "buona" ma lenta. Più il debito è alto, più ogni punto di interesse pesa.`)
+      ]
+    },
+    {
+      id:"A5", giorno:1, status:"warn", note:"metodo giusto, errore di esecuzione nell'ultima divisione",
+      title:"Fiscal drag",
+      schema:"01",
+      traccia:[
+        P(`Un sistema fiscale ha due scaglioni: 25% fino a 15.000 euro, 35% sulla parte eccedente. Un contribuente guadagna 20.000 euro. L'anno seguente l'inflazione è del 10% e il suo reddito nominale sale a 22.000 euro, quindi il suo reddito reale è invariato.`),
+        {t:"ol", v:[
+          `Calcola imposta pagata e aliquota media nei due anni.`,
+          `Il reddito netto reale del contribuente è aumentato, diminuito o rimasto uguale?`,
+          `Come si chiama il fenomeno e come si corregge?`
+        ]}
+      ],
+      soluzione:[
+        H("(a) Imposta e aliquota media"),
+        PRE(`Anno 1 — reddito 20.000\n15.000 · 0,25 = 3.750\n 5.000 · 0,35 = 1.750\nT = 5.500        aliquota media = 5.500/20.000 = 27,5%\n\nAnno 2 — reddito 22.000\n15.000 · 0,25 = 3.750\n 7.000 · 0,35 = 2.450\nT = 6.200        aliquota media = 6.200/22.000 = 28,18%`),
+        H("(b) Reddito netto reale"),
+        PRE(`Anno 1:  20.000 − 5.500 = 14.500\nAnno 2:  22.000 − 6.200 = 15.800 nominali\n         15.800 / 1,10 = 14.363,6 reali\n\nperdita reale = 14.500 − 14.363,6 ≈ 136 euro`),
+        H("(c) Nome e correzione"),
+        P(`È il fiscal drag (drenaggio fiscale): l'inflazione spinge il reddito nominale verso scaglioni più alti, alzando l'aliquota media anche a reddito reale invariato. Si corregge indicizzando all'inflazione gli scaglioni (e le detrazioni).`)
+      ]
+    },
+    {
+      id:"A6", giorno:1, status:"weak", note:"punto (c) — l'esercizio \"al contrario\" — bisogno di hint per partire",
+      title:"Curva dei salari e costo pieno",
+      schema:"02",
+      traccia:[
+        P(`Il mercato del lavoro di un paese è descritto dalla curva dei salari:`),
+        PRE(`ẇ = 0,42 − 4 · u`),
+        P(`con u espressa in decimali (10% si scrive 0,10).`),
+        {t:"ol", v:[
+          `Determina il tasso di disoccupazione naturale u_N.`,
+          `Se la disoccupazione effettiva è del 7% e la produttività cresce del 2% (θ̇ = 2%) con mark-up costante, calcola ẇ e l'inflazione π.`,
+          `La banca centrale vuole portare l'inflazione all'8%, sempre con θ̇ = 2%: quale tasso di disoccupazione è compatibile con quell'obiettivo?`,
+          `Commenta il "prezzo" della disinflazione in termini di posti di lavoro.`
+        ]}
+      ],
+      soluzione:[
+        H("(a) Tasso naturale"),
+        PRE(`ẇ = 0   →   0,42 − 4 u_N = 0\nu_N = 0,105        →  10,5%`),
+        H("(b) Disoccupazione al 7%"),
+        PRE(`ẇ = 0,42 − 4 · 0,07 = 0,14      →  14%\nπ = ẇ − θ̇ = 14% − 2% = 12%`),
+        P(`Con u = 7% sotto il naturale del 10,5%, i salari corrono; ma la produttività ne assorbe 2 punti.`),
+        H("(c) Obiettivo di inflazione all'8% — il punto \"al contrario\""),
+        P(`Qui la traccia dà il risultato finale (π) e chiede di risalire a u: si procede a ritroso rispetto al punto (b).`),
+        PRE(`π = ẇ − θ̇   →   8% = ẇ − 2%   →   ẇ = 10%\n\n0,10 = 0,42 − 4 u\n4 u = 0,32\nu = 0,08         →  8%`),
+        P(`Il trucco per partire: prima isola ẇ dalla formula dell'inflazione (passo che manca quasi sempre quando ci si blocca), solo dopo torni alla curva dei salari per isolare u.`),
+        H("(d) Commento"),
+        P(`Per far scendere l'inflazione dal 12% all'8% (4 punti) bisogna far salire la disoccupazione dal 7% all'8% (1 punto): è il tasso di sacrificio. Le alternative sono la politica dei redditi (sposta la curva) e le politiche per la produttività (alzano θ̇).`)
+      ]
+    },
+    {
+      id:"A7", giorno:1, status:"ok", note:"risolto con guida, tabella delle aspettative costruita bene una volta vista",
+      title:"Phillips con aspettative adattive",
+      schema:"02",
+      traccia:[
+        P(`Stessa curva dei salari di A6, ma ora con θ̇ = 0 e mark-up costante, quindi π_t = γ(u_t) + πᵉ_t, con aspettative adattive πᵉ_t = π_(t−1) (cioè λ = 1) e πᵉ inizialmente nulla.`),
+        {t:"ol", v:[
+          `Il governo mantiene la disoccupazione stabilmente al 7%, sotto il tasso naturale. Costruisci la tabella dell'inflazione per t = 0, 1, 2.`,
+          `Che cosa dimostra questa dinamica sul rapporto di lungo periodo fra inflazione e disoccupazione?`,
+          `Per ridurre l'inflazione di 10 punti in un periodo, quale disoccupazione servirebbe?`,
+          `Qual è la conclusione di Friedman e Phelps che questo esercizio illustra?`
+        ]}
+      ],
+      soluzione:[
+        H("(a) Tabella dell'inflazione"),
+        PRE(`γ(7%) = 0,42 − 4 · 0,07 = 0,14   →  14%  in ogni periodo`),
+        TBL(["t","πᵉ_t","u_t","π_t = γ(u_t) + πᵉ_t"], [["0","0%","7%","14%"],["1","14%","7%","28%"],["2","28%","7%","42%"]]),
+        H("(b) Che cosa dimostra"),
+        P(`Tenere la disoccupazione sotto il tasso naturale non produce un'inflazione più alta ma stabile: produce un'inflazione che accelera senza limite.`),
+        H("(c) Disinflazione"),
+        PRE(`serve γ(u) = −10%:\n−0,10 = 0,42 − 4 u\nu = 0,13         →  13%`),
+        P(`Per togliere 10 punti di inflazione serve portare la disoccupazione al 13%, 2,5 punti sopra il naturale.`),
+        H("(d) Conclusione di Friedman e Phelps"),
+        P(`Nel lungo periodo la curva di Phillips è verticale in corrispondenza del tasso naturale u_N. Non esiste un trade-off permanente: la politica monetaria compra occupazione solo finché inganna le aspettative.`)
+      ]
+    },
+    {
+      id:"A8", giorno:1, status:"ok", note:"punto (a) corretto",
+      title:"Prezzi di costo pieno (cost-plus)",
+      schema:"02",
+      traccia:[
+        P(`Un'impresa fissa il prezzo con un mark-up g = 25% sul costo del lavoro per unità di prodotto. Il salario annuo per addetto è w = 30.000 euro e la produttività è θ = 20 unità di prodotto per addetto.`),
+        {t:"ol", v:[
+          `Calcola il prezzo p.`,
+          `L'anno seguente i salari crescono del 6% e la produttività del 2%, con mark-up invariato: quanto vale l'inflazione?`,
+          `Se invece, oltre a quelle variazioni, l'impresa alza il mark-up dal 25% al 30%, quanto vale l'inflazione?`,
+          `Quali dei tre termini della formula del costo pieno può controllare un sindacato, e quali una politica dei redditi?`
+        ]}
+      ],
+      soluzione:[
+        H("(a) Prezzo"),
+        PRE(`p = (1 + g) · w/θ = 1,25 · 30.000/20 = 1,25 · 1.500 = 1.875`),
+        H("(b) Inflazione con mark-up costante"),
+        PRE(`π = ẇ − θ̇ = 6% − 2% = 4%`),
+        H("(c) Con aumento del mark-up dal 25% al 30%"),
+        PRE(`variazione del mark-up:  (1,30 − 1,25)/1,25 = 4%\nπ = 6% − 2% + 4% = 8%`),
+        P(`Attenzione: la variazione che entra in formula è quella di (1+g), da 1,25 a 1,30 — cioè 4%, non 5 punti percentuali.`),
+        H("(d) Chi controlla che cosa"),
+        P(`ẇ (salari): contrattazione sindacale / politica dei redditi. θ̇ (produttività): investimenti e innovazione, politiche strutturali lente. Mark-up: le imprese, tanto più liberamente quanto meno il mercato è concorrenziale — politiche per la concorrenza.`)
+      ]
+    },
+    {
+      id:"A9", giorno:2, status:"warn", note:"dimenticato il ½ nella formula del DWL, poi corretto scomponendo il calcolo",
+      title:"Perdita secca di monopolio e indice di Lerner",
+      schema:"03",
+      traccia:[
+        P(`Un mercato è descritto dalla domanda inversa P = 60 − 2q e dal costo marginale MC = 4q.`),
+        {t:"ol", v:[
+          `Determina quantità e prezzo di monopolio.`,
+          `Determina quantità e prezzo che si avrebbero in concorrenza perfetta.`,
+          `Calcola la perdita secca di benessere.`,
+          `Calcola l'indice di Lerner e commenta che cosa misura.`
+        ]}
+      ],
+      soluzione:[
+        H("(a) Equilibrio di monopolio"),
+        PRE(`TR = (60 − 2q) · q = 60q − 2q²\nMR = 60 − 4q\n\nMR = MC:   60 − 4q = 4q   →   q_M = 7,5\nP_M = 60 − 2 · 7,5 = 45`),
+        H("(b) Equilibrio concorrenziale"),
+        PRE(`P = MC:    60 − 2q = 4q   →   q_C = 10\nP_C = 60 − 2 · 10 = 40`),
+        H("(c) Perdita secca"),
+        PRE(`MC nel punto di monopolio:  MC(7,5) = 4 · 7,5 = 30\n\nDWL = ½ · (q_C − q_M) · [ P_M − MC(q_M) ]\n    = ½ · 2,5 · 15 = 18,75`),
+        H("(d) Indice di Lerner"),
+        PRE(`L = (P_M − MC(q_M))/P_M = (45 − 30)/45 = 1/3 ≈ 0,333`),
+        P(`Misura il potere di mercato: quanta parte del prezzo è ricarico sopra il costo marginale. Vale 0 in concorrenza perfetta. Lerner misura il ricarico, DWL misura il benessere distrutto — non confonderli.`)
+      ]
+    },
+    {
+      id:"A10", giorno:2, status:"warn", note:"errore concettuale sulla divisione nella formula risolutiva, corretto con parentesi esplicite",
+      title:"Monopolio naturale e mercato contendibile",
+      schema:"03",
+      traccia:[
+        P(`Domanda inversa P = 30 − Q; costo totale TC = 6Q + 80.`),
+        {t:"ol", v:[
+          `Verifica che si tratta di un monopolio naturale.`,
+          `Calcola quantità, prezzo e profitto del monopolista protetto.`,
+          `Calcola l'equilibrio in un mercato contendibile (profitti nulli) e spiega quale delle due radici va tenuta e perché.`,
+          `Che cosa succederebbe se il regolatore imponesse la regola di first best P = MC? Quale problema sorge e come si risolve?`
+        ]}
+      ],
+      soluzione:[
+        H("(a) Verifica del monopolio naturale"),
+        PRE(`ATC = TC/Q = 6 + 80/Q          MC = 6`),
+        P(`ATC è decrescente e resta sempre sopra MC: costo subadditivo, un'unica impresa produce a costo minore.`),
+        H("(b) Monopolista protetto"),
+        PRE(`MR = 30 − 2Q\nMR = MC:   30 − 2Q = 6   →   Q_M = 12\nP_M = 18\nprofitto = 18 · 12 − (6 · 12 + 80) = 64`),
+        H("(c) Mercato contendibile"),
+        PRE(`P = ATC:\n30 − Q = 6 + 80/Q\nQ² − 24Q + 80 = 0\nQ = (24 ± 16)/2\nQ = 4   oppure   Q = 20`),
+        P(`Si tiene sempre la radice maggiore: a Q=20, P=10=ATC, oltre quella quantità il prezzo di domanda scende sotto il costo medio e nessun entrante conviene — è l'equilibrio stabile, a prova di hit-and-run.`),
+        H("(d) Regola di first best P = MC"),
+        PRE(`P = 6   →   Q = 24\nricavi = 144      costi = 224\nperdita = −80  (esattamente il costo fisso)`),
+        P(`Pareto-efficiente ma in perdita, perché con costi medi decrescenti MC < ATC sempre. Soluzioni: sussidio pari al costo fisso, oppure regola di second best P = ATC.`)
+      ]
+    },
+    {
+      id:"A11", giorno:2, status:"ok", note:"tutto corretto, fatto da solo senza guida",
+      title:"Efficienza paretiana e funzioni di benessere sociale",
+      schema:"04",
+      traccia:[
+        P(`Tre individui (1, 2, 3) e tre stati sociali (I, II, III), con le utilità:`),
+        TBL(["Stato","U1","U2","U3"], [["I","6","6","6"],["II","10","7","2"],["III","3","8","9"]]),
+        {t:"ol", v:[
+          `Quali stati sono Pareto-efficienti?`,
+          `Quale stato si sceglie con la funzione di benessere utilitarista, con quella rawlsiana e con quella di Bergson-Samuelson (W = U1×U2×U3)?`,
+          `Nel passaggio da I a III l'individuo 1 perde 30 euro, gli individui 2 e 3 guadagnano 20 e 60. Il passaggio supera il criterio di compensazione di Kaldor?`,
+          `Che cosa dimostra il confronto fra i tre criteri?`
+        ]}
+      ],
+      soluzione:[
+        H("(a) Stati Pareto-efficienti"),
+        P(`I vs II, I vs III, II vs III: in ogni confronto qualcuno guadagna e qualcuno perde — confronto misto. Tutti e tre gli stati sono Pareto-efficienti: è il limite classico del criterio, ordinamento incompleto.`),
+        H("(b) Le tre funzioni di benessere"),
+        TBL(["Stato","Utilitarista ΣU","Rawlsiana min(U)","Bergson-Samuelson U1×U2×U3"], [["I","18","6","216"],["II","19","2","140"],["III","20","3","216"]]),
+        P(`Utilitarista → III (somma massima). Rawlsiana → I (chi sta peggio ha 6, il massimo possibile). Bergson-Samuelson → pareggio fra I e III.`),
+        H("(c) Criterio di compensazione (Kaldor)"),
+        PRE(`guadagni:  20 + 60 = 80\nperdite:   30\n80 > 30    →  il test è SUPERATO`),
+        P(`I vincitori potrebbero risarcire il perdente e restare in guadagno — ma "potrebbero": la compensazione è solo potenziale, non deve avvenire davvero.`),
+        H("(d) Che cosa dimostra il confronto"),
+        P(`I tre stati sono ugualmente efficienti secondo Pareto, ma i criteri li ordinano in modo diverso e inconciliabile: la scelta dipende dal giudizio di valore incorporato nella funzione di benessere.`)
+      ]
+    },
+    {
+      id:"A12", giorno:2, status:"weak", note:"bloccato al primo passaggio di sostituzione simbolica, messo da parte",
+      title:"Obiettivo occupazione e strumento spesa pubblica",
+      schema:"11",
+      traccia:[
+        P(`Variante numerica dell'esercizio della professoressa su teoria normativa. Modello:`),
+        PRE(`Y_off = θ N          θ = 25\nY_dom = C + I + G\nC = c Y_d            c = 0,75\nY_d = (1 − t) Y\nI = 2.000`),
+        P(`Obiettivo: occupazione N = 1.600.`),
+        {t:"ol", v:[
+          `Quale livello di spesa pubblica G raggiunge l'obiettivo se t = 0?`,
+          `E se t = 0,2?`,
+          `Qual è l'efficacia dello strumento sull'obiettivo nei due casi?`,
+          `Di quanto cala l'efficacia? A quale teorema visto in politica fiscale si collega il risultato?`
+        ]}
+      ],
+      soluzione:[
+        P(`Da riprendere ripartendo da zero, sempre con i numeri della traccia, mai con le lettere: prima Y = θN = 40.000, poi C = 0,75 · 40.000 (con t=0), poi Y = C+I+G per isolare G. Solo alla fine generalizzare con t=0,2.`),
+        H("(a) Spesa pubblica con t = 0"),
+        PRE(`forma ridotta:  N = (1/θ) · [1/(1 − c(1−t))] · (I + G)\nrovesciata:     G = θ (1 − c(1−t)) · N − I\n\nmoltiplicatore = 1/(1 − 0,75) = 4\nI + G = 1.600 · 25/4 = 10.000\nG = 10.000 − 2.000 = 8.000`),
+        H("(b) Spesa pubblica con t = 0,2"),
+        PRE(`moltiplicatore = 1/(1 − 0,75 · 0,8) = 1/0,4 = 2,5\nI + G = 1.600 · 25/2,5 = 16.000\nG = 16.000 − 2.000 = 14.000`),
+        H("(c) Efficacia dello strumento"),
+        PRE(`t = 0:     dN/dG = (1/25) · 4   = 0,16\nt = 0,2:   dN/dG = (1/25) · 2,5 = 0,10`),
+        H("(d) Calo dell'efficacia"),
+        PRE(`(0,16 − 0,10)/0,16 = 0,375     →  −37,5%`),
+        P(`Stesso meccanismo del teorema di Haavelmo (A2): l'imposta proporzionale drena reddito a ogni giro del moltiplicatore.`)
+      ]
+    },
+    {
+      id:"A13", giorno:2, status:"weak", note:"impostato il sistema ma non risolto, messo da parte",
+      title:"Due obiettivi, due strumenti (regola aurea di Tinbergen)",
+      schema:"11",
+      traccia:[
+        P(`Due obiettivi — reddito Y e saldo delle partite correnti CC — e due strumenti — spesa pubblica G e tasso di cambio e. Forma ridotta:`),
+        PRE(`Y  =  2 G + 1 e\nCC = −0,4 G + 0,8 e`),
+        P(`Obiettivi fissi: Y* = 500 e CC* = 0.`),
+        {t:"ol", v:[
+          `Calcola i livelli di G e e che raggiungono entrambi gli obiettivi.`,
+          `Verifica che il sistema sia risolvibile calcolando il determinante. Che cosa significa economicamente?`,
+          `Se il governo disponesse del solo strumento G, potrebbe raggiungere entrambi gli obiettivi? Che cosa dovrebbe fare?`,
+          `Supponi che la seconda equazione fosse invece CC = 1 G + 0,5 e. Calcola il determinante: che cosa scopri, e che cosa insegna sulla regola aurea di Tinbergen?`
+        ]}
+      ],
+      soluzione:[
+        H("(a) Livelli degli strumenti"),
+        PRE(`500 =  2 G + 1 e\n  0 = −0,4 G + 0,8 e\n\ndalla seconda:   e = 0,5 G\nsostituendo:     500 = 2,5 G   →   G = 200,  e = 100`),
+        H("(b) Determinante"),
+        PRE(`det = (2 · 0,8) − (1 · (−0,4)) = 2 ≠ 0`),
+        P(`Diverso da zero: soluzione unica. I due strumenti sono linearmente indipendenti — G alza Y e peggiora il saldo estero, e alza Y ma migliora il saldo estero: profili diversi, quindi combinabili per centrare qualsiasi coppia di obiettivi.`),
+        H("(c) Con il solo strumento G"),
+        P(`No. Con G=250 si otterrebbe Y=500 ma CC=−100. Il governo dovrebbe trattare CC come obiettivo flessibile, oppure usare il metodo delle priorità.`),
+        H("(d) Con CC = 1 G + 0,5 e"),
+        PRE(`det = (2 · 0,5) − (1 · 1) = 0`),
+        P(`Determinante nullo: nessuna soluzione (o infinite). I due strumenti hanno effetti esattamente proporzionali — la regola aurea non basta contare gli strumenti, servono linearmente indipendenti.`)
+      ]
+    },
+    {
+      id:"B1", giorno:3, status:"ok", note:"tutti corretti al primo tentativo",
+      title:"I tre tassi del mercato del lavoro",
+      schema:"05",
+      traccia:[
+        P(`In un paese: popolazione totale 200, popolazione in età lavorativa 150, occupati 90, persone in cerca di occupazione 10 (migliaia di persone).`),
+        {t:"ol", v:[
+          `Calcola tasso di disoccupazione, tasso di attività e tasso di occupazione.`,
+          `Verifica la coerenza con n = a · (1 − u).`,
+          `L'anno seguente 5 disoccupati si scoraggiano e smettono di cercare lavoro; gli occupati restano 90. Ricalcola i tre tassi.`,
+          `Commenta: il paese sta meglio o peggio? Quale dei tre tassi racconta la verità?`
+        ]}
+      ],
+      soluzione:[
+        H("(a) I tre tassi"),
+        PRE(`FL = N + U = 90 + 10 = 100\nu = U/FL = 10/100 = 10%\na = FL/Pop = 100/150 = 66,7%\nn = N/Pop = 90/150 = 60%`),
+        P(`La popolazione totale (200) è un dato-trappola: non entra in nessuna formula.`),
+        H("(b) Verifica"),
+        PRE(`n = a · (1 − u) = 0,6667 · 0,90 = 0,60      ✓`),
+        H("(c) Cinque disoccupati si scoraggiano"),
+        PRE(`FL = 90 + 5 = 95\nu = 5/95 = 5,3%   (era 10%)\na = 95/150 = 63,3%  (era 66,7%)\nn = 90/150 = 60%   (invariato)`),
+        H("(d) Commento"),
+        P(`Il tasso di disoccupazione si dimezza senza un solo posto di lavoro creato: effetto scoraggiati. Il tasso di occupazione (n, immobile) dice la verità.`)
+      ]
+    },
+    {
+      id:"B2", giorno:3, status:"ok", note:"tutti corretti al primo tentativo",
+      title:"Legge di Okun",
+      schema:"09",
+      traccia:[
+        P(`Il PIL di un paese cresce del 3,5%, mentre il PIL potenziale cresce del 2%. La disoccupazione di partenza è del 9%.`),
+        {t:"ol", v:[
+          `Di quanto varia il tasso di disoccupazione? A quanto arriva?`,
+          `Quale tasso di crescita servirebbe per portare la disoccupazione dal 9% al 7% in un anno? È realistico?`,
+          `Perché il rapporto è "più che proporzionale"?`
+        ]}
+      ],
+      soluzione:[
+        H("(a) Variazione della disoccupazione"),
+        PRE(`crescita oltre il potenziale = 3,5% − 2% = 1,5 punti\nΔu ≈ − 1,5/2,5 = −0,6 punti\nnuovo tasso: 9% − 0,6% = 8,4%`),
+        H("(b) Crescita necessaria per −2 punti"),
+        PRE(`servono 2 · 2,5 = 5 punti oltre il potenziale\ncrescita richiesta = 2% + 5% = 7%`),
+        P(`Non realistico per un'economia matura: 7% è da economia emergente.`),
+        H("(c) Perché più che proporzionale"),
+        P(`Crescono anche popolazione e produttività: una parte della crescita serve solo a stare fermi. Una crescita positiva ma modesta può convivere con disoccupazione crescente.`)
+      ]
+    },
+    {
+      id:"B3", giorno:3, status:"ok", note:"tutti corretti al primo tentativo",
+      title:"Variazione del cambio reale",
+      schema:"06",
+      traccia:[
+        P(`Traccia della professoressa. Il tasso di cambio nominale si apprezza del 2%, l'inflazione interna è dell'1% e quella estera del 2%. Convenzione: e_r = p·e/p_w, un aumento di e è un apprezzamento.`),
+        {t:"ol", v:[
+          `Calcola la variazione del tasso di cambio reale.`,
+          `L'inflazione relativa (interna meno estera) di quanto contribuisce?`,
+          `La variazione indica un aumento o una perdita di competitività? Perché?`
+        ]}
+      ],
+      soluzione:[
+        H("(a) Variazione del cambio reale"),
+        PRE(`ė_r = ṗ + ė − ṗ_w = 1% + 2% − 2% = +1%`),
+        H("(b) Contributo dell'inflazione relativa"),
+        PRE(`ṗ − ṗ_w = 1% − 2% = −1%`),
+        P(`Da sola migliorerebbe la competitività di 1 punto, ma l'apprezzamento nominale (2 punti) la peggiora di più.`),
+        H("(c) Aumento o perdita di competitività"),
+        P(`ė_r positivo → apprezzamento reale → perdita di competitività di 1 punto. In un'unione monetaria, senza cambio, l'aggiustamento passa tutto dai prezzi e dai salari.`)
+      ]
+    },
+    {
+      id:"B4", giorno:3, status:"ok", note:"fatto e verificato da Jacopo per conto suo",
+      title:"Condizione di Marshall-Lerner",
+      schema:"06",
+      traccia:[
+        P(`Un paese svaluta la propria moneta del 10%.`),
+        {t:"ol", v:[
+          `Se l'elasticità della domanda di esportazioni è 0,6 e quella delle importazioni 0,3, il saldo corrente migliora o peggiora?`,
+          `E se le elasticità fossero 0,9 e 0,5?`,
+          `Quali sono le quattro ipotesi sotto cui vale la condizione?`,
+          `Che cosa dice la curva a J sul comportamento del saldo nei mesi immediatamente successivi alla svalutazione, e perché?`
+        ]}
+      ],
+      soluzione:[
+        H("(a) Elasticità 0,6 e 0,3"),
+        PRE(`0,6 + 0,3 = 0,9 < 1     →  NON soddisfatta → il saldo PEGGIORA`),
+        H("(b) Elasticità 0,9 e 0,5"),
+        PRE(`0,9 + 0,5 = 1,4 > 1     →  soddisfatta → il saldo MIGLIORA`),
+        H("(c) Le quattro ipotesi"),
+        P(`Saldo corrente inizialmente in pareggio · offerta di beni perfettamente elastica · prezzi interni che non reagiscono alla svalutazione · nessun effetto sulle aspettative di svalutazione futura.`),
+        H("(d) Curva a J"),
+        P(`Nei primi mesi il saldo peggiora prima di migliorare: i prezzi cambiano subito, le quantità si aggiustano lentamente. Una svalutazione va giudicata dopo qualche trimestre, non subito.`)
+      ]
+    },
+    {
+      id:"B5", giorno:3, status:"ok", note:"tutti corretti al primo tentativo",
+      title:"IS-LM-BP completo",
+      schema:"06",
+      traccia:[
+        PRE(`IS:  Y = 2.200 − 4.000 i\nLM:  M_s/p = 0,25 Y − 1.000 i        con M_s/p = 450\nBP:  CC = 250 − 0,1 Y\n     MK = 2.000 i − 150`),
+        {t:"ol", v:[
+          `Calcola il tasso di interesse e il reddito di equilibrio interno.`,
+          `Verifica se la bilancia dei pagamenti è in pareggio.`,
+          `Il governo attua una manovra fiscale espansiva che sposta la IS a Y = 2.400 − 4.000 i. Calcola il nuovo equilibrio.`,
+          `Il reddito è cresciuto di 200, come lo spostamento della IS? Quanto vale lo spiazzamento finanziario?`,
+          `Che cosa succede ora alla bilancia dei pagamenti, e come si chiude il sistema in cambi flessibili e in cambi fissi?`
+        ]}
+      ],
+      soluzione:[
+        H("(a) Equilibrio interno"),
+        PRE(`LM esplicita:  Y = 1.800 + 4.000 i\nIS = LM:  2.200 − 4.000i = 1.800 + 4.000i\ni = 5%      Y = 2.000`),
+        H("(b) Bilancia dei pagamenti"),
+        PRE(`CC = 250 − 0,1 · 2.000 = +50\nMK = 2.000 · 0,05 − 150 = −50\nBP = 0     →  pareggio`),
+        H("(c) Manovra fiscale espansiva"),
+        PRE(`2.400 − 4.000i = 1.800 + 4.000i\ni = 7,5%      Y = 2.100`),
+        H("(d) Spiazzamento finanziario"),
+        PRE(`spostamento IS: +200      aumento effettivo di Y: +100      spiazzamento: 100`),
+        P(`Metà della manovra è spiazzata: più reddito → più domanda di moneta → con offerta ferma il tasso sale → scoraggia gli investimenti privati.`),
+        H("(e) Bilancia dei pagamenti dopo la manovra"),
+        PRE(`CC = 250 − 0,1 · 2.100 = +40\nMK = 2.000 · 0,075 − 150 = 0\nBP = +40    →  AVANZO`),
+        P(`Cambi flessibili: l'avanzo apprezza la moneta, riduce CC, riporta BP a zero — ma spiazza anche le esportazioni. Cambi fissi: la banca centrale compra valuta estera, la base monetaria aumenta, la LM si sposta a destra e la manovra fiscale viene rafforzata.`)
+      ]
+    },
+    {
+      id:"B6", giorno:3, status:"skip", note:"escluso deliberatamente da Jacopo — non necessario per l'esame, non da riprendere",
+      title:"Costi comparati",
+      schema:"06",
+      traccia:[
+        P(`Le ore di lavoro necessarie a produrre un'unità di ciascun bene: Paese A — vino 4, stoffa 2. Paese B — vino 12, stoffa 3.`),
+        {t:"ol", v:[
+          `Quale paese ha il vantaggio assoluto? In quali beni?`,
+          `Calcola i costi comparati.`,
+          `In quale bene si specializza ciascun paese?`,
+          `Entro quale intervallo deve stare la ragione di scambio perché convenga a entrambi?`
+        ]}
+      ],
+      soluzione:[
+        P(`Il paese A ha il vantaggio assoluto in entrambi (4 contro 12, 2 contro 3). Costi comparati: A → 1 vino = 2 stoffe, B → 1 vino = 4 stoffe. A si specializza nel vino (costo-opportunità minore), B nella stoffa. Ragione di scambio: fra 2 e 4 stoffe per un vino.`)
+      ]
+    },
+    {
+      id:"B7", giorno:3, status:"ok", note:"tutti corretti al primo tentativo",
+      title:"Moltiplicatore monetario",
+      schema:"07",
+      traccia:[
+        P(`Il rapporto circolante/depositi è h = 0,2, il coefficiente di riserva è j = 0,05, la base monetaria è H = 500.`),
+        {t:"ol", v:[
+          `Calcola il moltiplicatore monetario e l'offerta di moneta.`,
+          `La banca centrale vuole portare l'offerta di moneta a 3.000, a parità di h e j: quanta base monetaria deve creare in più?`,
+          `Le banche però aumentano le riserve libere e j sale a 0,10. Con la base monetaria del punto (b), quanto vale ora l'offerta di moneta?`,
+          `Come si chiama il problema illustrato dal punto (c)?`
+        ]}
+      ],
+      soluzione:[
+        H("(a) Moltiplicatore e offerta di moneta"),
+        PRE(`moltiplicatore = (1+h)/(h+j) = 1,2/0,25 = 4,8\nM = 4,8 · 500 = 2.400`),
+        H("(b) Base monetaria per M = 3.000"),
+        PRE(`H = 3.000/4,8 = 625\nbase aggiuntiva = 625 − 500 = 125`),
+        H("(c) Se j sale a 0,10"),
+        PRE(`nuovo moltiplicatore = 1,2/0,3 = 4\nM = 4 · 625 = 2.500        invece dei 3.000 desiderati`),
+        H("(d) Il problema"),
+        P(`Controllabilità dell'offerta di moneta: la banca centrale controlla solo H, ma h e j sono endogeni. È l'argomento contro il controllo diretto degli aggregati monetari.`)
+      ]
+    },
+    {
+      id:"B8", giorno:3, status:"ok", note:"tutti corretti al primo tentativo",
+      title:"Domanda di moneta ed equilibrio del mercato monetario",
+      schema:"07",
+      traccia:[
+        P(`La domanda di moneta è L = 0,3 Y + 150 − 2.000 i, l'offerta reale è M_s/p = 600 e il reddito è Y = 2.000.`),
+        {t:"ol", v:[
+          `Calcola il tasso di interesse di equilibrio.`,
+          `La banca centrale porta l'offerta reale a 700: quale diventa il tasso di equilibrio?`,
+          `Quale motivazione keynesiana rappresenta 0,3 Y e quale −2.000 i?`,
+          `In quale situazione la manovra del punto (b) non avrebbe alcun effetto sul tasso?`
+        ]}
+      ],
+      soluzione:[
+        H("(a) Tasso di equilibrio"),
+        PRE(`0,3 · 2.000 + 150 − 2.000 i = 600\ni = 7,5%`),
+        H("(b) Offerta reale a 700"),
+        PRE(`750 − 2.000 i = 700\ni = 2,5%`),
+        H("(c) I motivi keynesiani"),
+        P(`0,3 Y → transattivo/precauzionale (dipende dal reddito). −2.000 i → speculativo (segno meno: tasso più alto, conviene comprare titoli).`),
+        H("(d) Quando la manovra non avrebbe effetto"),
+        P(`Nella trappola della liquidità: la domanda di moneta è piatta rispetto a i, la LM è orizzontale e la politica monetaria perde presa.`)
+      ]
+    },
+    {
+      id:"B9", giorno:4, status:"pending", note:"foglio pronto, non ancora svolto dal vivo",
+      title:"Analisi costi-benefici: VAN, VAN relativo e TIR",
+      schema:"13",
+      traccia:[
+        P(`Un comune deve scegliere fra due progetti. Tasso di sconto sociale i = 4%. Flussi (migliaia di euro): A — costo 500, benefici 300 e 360. B — costo 200, benefici 150 e 125.`),
+        {t:"ol", v:[
+          `Calcola il VAN assoluto dei due progetti. Sono entrambi ammissibili?`,
+          `Calcola il VAN relativo. La graduatoria cambia?`,
+          `Calcola il TIR di entrambi.`,
+          `Quale progetto scegli, e con quale motivazione? Che cosa succede se il tasso di sconto sale al 20%?`
+        ]}
+      ],
+      soluzione:[
+        H("(a) VAN assoluto"),
+        PRE(`A:  B = 300/1,04 + 360/1,0816 = 621,30\n    VAN_A = 621,30 − 500 = +121,30\n\nB:  B = 150/1,04 + 125/1,0816 = 259,80\n    VAN_B = 259,80 − 200 = +59,80`),
+        P(`Entrambi ammissibili (VAN>0). Vince A sul VAN assoluto.`),
+        H("(b) VAN relativo"),
+        PRE(`A: 121,30/500 = 24,26%\nB:  59,80/200 = 29,90%`),
+        P(`La graduatoria si ribalta: vince B — rende di più per euro investito.`),
+        H("(c) TIR"),
+        PRE(`A:  500y² − 300y − 360 = 0   →   y = 1,20   →  TIR_A = 20%\nB:  200y² − 150y − 125 = 0   →   y = 1,25   →  TIR_B = 25%`),
+        P(`Anche sul TIR vince B.`),
+        H("(d) Scelta e sensibilità"),
+        P(`Senza vincolo di risorse si sceglie A (più valore assoluto); con vincolo di bilancio si sceglie B (rende di più per euro). Con tasso al 20%: VAN_A = 0 (proprio sulla soglia, 20% è il suo TIR), VAN_B = +11,81 (resta ammissibile). Il progetto grande è più sensibile al tasso di sconto.`)
+      ]
+    },
+    {
+      id:"B10", giorno:4, status:"pending", note:"foglio pronto (metodo in 4 mosse), non ancora svolto dal vivo",
+      title:"IS-LM: moltiplicatore e spiazzamento (domanda aperta con grafico)",
+      schema:"06",
+      traccia:[
+        P(`Formulazione esatta della professoressa. Non è un esercizio numerico: è una domanda aperta con grafico, il formato più probabile per una delle due domande dello scritto.`),
+        {t:"ol", v:[
+          `La politica fiscale (aumento della spesa pubblica) è efficace per la stabilizzazione della domanda aggregata (moltiplicatore keynesiano). Spiega anche graficamente.`,
+          `Un aumento della spesa pubblica non accompagnato da un aumento dell'offerta di moneta provoca un aumento del tasso di interesse e una riduzione degli investimenti privati (spiazzamento finanziario). Spiega anche graficamente.`
+        ]}
+      ],
+      soluzione:[
+        P(`Suggerimento: la risposta al punto (b) è già mezza fatta in B5(d). Fai il grafico prima di scrivere.`),
+        H("(a) Efficacia della politica fiscale"),
+        P(`Un aumento di G sposta la IS a destra di moltiplicatore × ΔG. Nel grafico: IS che trasla, LM ferma, equilibrio che risale lungo la LM — segna le due distanze (spostamento IS e aumento effettivo di Y).`),
+        H("(b) Spiazzamento finanziario"),
+        P(`Il reddito più alto alza la domanda di moneta transattiva; senza accomodamento monetario il tasso sale, riducendo gli investimenti privati. Numeri pronti da B5: la IS si sposta di 200 ma Y cresce solo di 100 — metà manovra spiazzata.`),
+        H("Le due estensioni che completano la risposta"),
+        P(`Politica accomodante: la LM si sposta anch'essa, lo spiazzamento sparisce. Casi limite: LM orizzontale (trappola di liquidità) → spiazzamento nullo; LM verticale (caso monetarista) → spiazzamento totale.`)
+      ]
+    }
+  ];
+
+  var STORAGE_KEY = "polecon_ripasso_done_v1";
+
+  function loadDone(){
+    try{ var raw = localStorage.getItem(STORAGE_KEY); return raw ? JSON.parse(raw) : {}; }
+    catch(e){ return {}; }
+  }
+  function saveDone(map){
+    try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(map)); }catch(e){}
+  }
+  var doneMap = loadDone();
+
+  var STATUS_LABEL = {
+    ok:{icon:"✓", label:"fatto senza problemi"},
+    warn:{icon:"!", label:"errore poi corretto"},
+    weak:{icon:"×", label:"punto debole, da rivedere"},
+    pending:{icon:"○", label:"non ancora svolto dal vivo"},
+    skip:{icon:"–", label:"saltato di proposito"}
+  };
+
+  function renderBlocks(blocks){
+    var html = "";
+    blocks.forEach(function(b){
+      if (b.t === "p") html += "<p>" + b.v + "</p>";
+      else if (b.t === "pre") html += "<pre>" + b.v + "</pre>";
+      else if (b.t === "h") html += "<h4>" + b.v + "</h4>";
+      else if (b.t === "ol") {
+        html += "<ol>" + b.v.map(function(li){ return "<li>" + li + "</li>"; }).join("") + "</ol>";
+      } else if (b.t === "table") {
+        html += "<table><tr>" + b.headers.map(function(h){return "<th>"+h+"</th>";}).join("") + "</tr>";
+        b.rows.forEach(function(row){
+          html += "<tr>" + row.map(function(c){return "<td>"+c+"</td>";}).join("") + "</tr>";
+        });
+        html += "</table>";
+      }
+    });
+    return html;
+  }
+
+  function cardHtml(ex){
+    var st = STATUS_LABEL[ex.status];
+    var done = doneMap[ex.id];
+    return `
+      <div class="card" data-id="${ex.id}">
+        <div class="card-head" data-toggle="${ex.id}">
+          <div class="badge ${ex.status}">${done ? "✓" : st.icon}</div>
+          <div class="id">${ex.id}</div>
+          <div style="flex:1">
+            <div class="title">${ex.title}</div>
+            <div class="status-note">${done ? "segnato come ripassato" : ex.note}</div>
+          </div>
+          <div class="chev">▶</div>
+        </div>
+        <div class="card-body">
+          <div class="traccia">${renderBlocks(ex.traccia)}</div>
+          <button class="reveal-btn" data-reveal="${ex.id}">Mostra soluzione</button>
+          <div class="soluzione" data-sol="${ex.id}">${renderBlocks(ex.soluzione)}</div>
+          <div class="foot-row">
+            <label class="done-toggle">
+              <input type="checkbox" data-done="${ex.id}" ${done ? "checked" : ""}>
+              Segna come ripassato
+            </label>
+            <span class="schema-tag">Schema ${ex.schema}</span>
+          </div>
+        </div>
+      </div>`;
+  }
+
+  function renderStats(){
+    var counts = {ok:0, warn:0, weak:0, pending:0, skip:0};
+    EX.forEach(function(ex){ counts[ex.status]++; });
+    var doneCount = Object.keys(doneMap).filter(function(k){ return doneMap[k]; }).length;
+    document.getElementById("stat-row").innerHTML = `
+      <div class="stat-chip"><b>${doneCount}/23</b> ripassati oggi</div>
+      <div class="stat-chip"><b>${counts.weak + counts.pending}</b> da guardare con più attenzione</div>
+      <div class="stat-chip"><b>${counts.ok + counts.warn}</b> già solidi</div>
+    `;
+  }
+
+  function renderLegend(){
+    var items = [
+      ["ok","fatto senza problemi"], ["warn","errore poi corretto"],
+      ["weak","punto debole"], ["pending","non ancora svolto dal vivo"], ["skip","saltato di proposito"]
+    ];
+    var colorVar = {ok:"--correct", warn:"--warn", weak:"--danger", pending:"--accent", skip:"--ink-faint"};
+    document.getElementById("legend").innerHTML = items.map(function(it){
+      return `<span><span class="dot" style="background:var(${colorVar[it[0]]})"></span>${it[1]}</span>`;
+    }).join("");
+  }
+
+  var currentTab = "ripassare";
+
+  function renderList(){
+    var list = document.getElementById("list");
+    var items = EX;
+    if (currentTab === "ripassare"){
+      items = EX.filter(function(ex){
+        return (ex.status === "weak" || ex.status === "pending") && !doneMap[ex.id];
+      });
+      if (items.length === 0){
+        list.innerHTML = `<div class="empty">Niente in sospeso: hai già ripassato tutti i punti deboli e le tracce non ancora fatte dal vivo. Passa a "Tutti" per un ripasso completo.</div>`;
+        return;
+      }
+      list.innerHTML = items.map(cardHtml).join("");
+    } else {
+      var byDay = {1:[], 2:[], 3:[], 4:[]};
+      EX.forEach(function(ex){ byDay[ex.giorno].push(ex); });
+      var html = "";
+      [1,2,3,4].forEach(function(g){
+        html += `<div class="day-heading">Giorno ${g}</div>`;
+        html += byDay[g].map(cardHtml).join("");
+      });
+      list.innerHTML = html;
+    }
+    attachHandlers();
+  }
+
+  function attachHandlers(){
+    document.querySelectorAll("[data-toggle]").forEach(function(head){
+      head.addEventListener("click", function(){
+        head.closest(".card").classList.toggle("open");
+      });
+    });
+    document.querySelectorAll("[data-reveal]").forEach(function(btn){
+      btn.addEventListener("click", function(e){
+        e.stopPropagation();
+        var id = btn.getAttribute("data-reveal");
+        var sol = document.querySelector('[data-sol="' + id + '"]');
+        sol.classList.toggle("shown");
+        btn.textContent = sol.classList.contains("shown") ? "Nascondi soluzione" : "Mostra soluzione";
+      });
+    });
+    document.querySelectorAll("[data-done]").forEach(function(chk){
+      chk.addEventListener("click", function(e){ e.stopPropagation(); });
+      chk.addEventListener("change", function(){
+        var id = chk.getAttribute("data-done");
+        doneMap[id] = chk.checked;
+        saveDone(doneMap);
+        renderStats();
+        renderList();
+      });
+    });
+  }
+
+  document.querySelectorAll(".tab").forEach(function(tab){
+    tab.addEventListener("click", function(){
+      document.querySelectorAll(".tab").forEach(function(t){ t.classList.remove("active"); });
+      tab.classList.add("active");
+      currentTab = tab.getAttribute("data-tab");
+      renderList();
+    });
+  });
+
+  renderStats();
+  renderLegend();
+  renderList();
+})();
+</script>
