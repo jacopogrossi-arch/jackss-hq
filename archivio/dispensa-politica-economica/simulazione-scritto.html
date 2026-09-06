@@ -1,0 +1,417 @@
+<title>Simulazione Scritto Politica Economica</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600;700&display=swap">
+<style>
+  :root{
+    --bg:#eef1f5; --surface:#ffffff; --surface-2:#e3e9f0;
+    --ink:#16233a; --ink-soft:#51617a; --ink-faint:#8592a6;
+    --line:#d3dae3; --line-strong:#b7c1cf;
+    --accent:#1a5276; --accent-ink:#ffffff; --accent-soft:#e3edf4; --accent-line:#b9d2e2;
+    --danger:#922b21; --danger-soft:#f7e7e4; --danger-line:#e3b9b2;
+    --correct:#276b4e; --correct-soft:#e3f0e9; --correct-line:#b7d9c8;
+    --shadow:0 1px 2px rgba(22,35,58,.06),0 10px 28px rgba(22,35,58,.08);
+  }
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]){
+      --bg:#0f1520; --surface:#182231; --surface-2:#1e2a3c;
+      --ink:#e8edf4; --ink-soft:#aab6c8; --ink-faint:#77839a;
+      --line:#2c3a4e; --line-strong:#3c4d64;
+      --accent:#7bb0d6; --accent-ink:#0b1520; --accent-soft:#1b3145; --accent-line:#2f5170;
+      --danger:#e2988c; --danger-soft:#3a201d; --danger-line:#5b322c;
+      --correct:#8ecdac; --correct-soft:#1c3327; --correct-line:#2f5240;
+      --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 28px rgba(0,0,0,.45);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0f1520; --surface:#182231; --surface-2:#1e2a3c;
+    --ink:#e8edf4; --ink-soft:#aab6c8; --ink-faint:#77839a;
+    --line:#2c3a4e; --line-strong:#3c4d64;
+    --accent:#7bb0d6; --accent-ink:#0b1520; --accent-soft:#1b3145; --accent-line:#2f5170;
+    --danger:#e2988c; --danger-soft:#3a201d; --danger-line:#5b322c;
+    --correct:#8ecdac; --correct-soft:#1c3327; --correct-line:#2f5240;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 28px rgba(0,0,0,.45);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:'IBM Plex Sans',system-ui,-apple-system,sans-serif;
+    font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:740px; margin:0 auto; padding:26px 18px 70px;}
+  h1,h2,h3{font-family:'Source Serif 4',Georgia,serif; text-wrap:balance; margin:0;}
+  .mono{font-family:'IBM Plex Mono',ui-monospace,monospace; font-variant-numeric:tabular-nums;}
+  [hidden]{display:none!important;}
+
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace; font-size:12.5px; letter-spacing:.09em;
+    text-transform:uppercase; color:var(--ink-faint); margin-bottom:9px;
+  }
+  header.head h1{font-size:27px; font-weight:700; margin-bottom:8px;}
+  header.head p{color:var(--ink-soft); font-size:15px; max-width:58ch; margin:0;}
+
+  .rules{display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:22px 0;}
+  @media (max-width:560px){ .rules{grid-template-columns:1fr 1fr 1fr;} }
+  .rule-box{
+    background:var(--surface); border:1px solid var(--line); border-radius:10px;
+    padding:13px 10px; text-align:center; box-shadow:var(--shadow);
+  }
+  .rule-box .num{font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:20px; color:var(--accent);}
+  .rule-box .lbl{font-size:11.5px; color:var(--ink-soft); margin-top:3px;}
+
+  .prep{
+    background:var(--surface); border:1px solid var(--line); border-radius:12px;
+    padding:18px 20px; margin:22px 0; box-shadow:var(--shadow);
+  }
+  .prep h3{font-size:14px; margin-bottom:10px; color:var(--ink);}
+  .prep ul{margin:0; padding-left:20px;}
+  .prep li{font-size:13.5px; color:var(--ink-soft); margin-bottom:7px;}
+  .prep li b{color:var(--ink);}
+
+  .order-note{
+    display:flex; gap:10px; align-items:flex-start; background:var(--accent-soft);
+    border:1px solid var(--accent-line); border-radius:10px; padding:12px 14px; margin:16px 0;
+    font-size:13px; color:var(--ink-soft);
+  }
+  .order-note b{color:var(--ink);}
+
+  .btn{
+    appearance:none; border:none; cursor:pointer; font-family:inherit; font-size:15px;
+    font-weight:700; border-radius:9px; padding:13px 20px; transition:opacity .15s ease, transform .08s ease;
+    width:100%;
+  }
+  .btn:active{transform:translateY(1px);}
+  .btn-accent{background:var(--accent); color:var(--accent-ink);}
+  .btn-accent:hover{opacity:.92;}
+  .btn-ghost{background:transparent; color:var(--ink-soft); border:1px solid var(--line-strong); font-weight:600; font-size:14px;}
+  .btn-ghost:hover{color:var(--ink); border-color:var(--ink-faint);}
+
+  /* ---------- exam screen ---------- */
+  .exambar{
+    position:sticky; top:0; z-index:5; background:var(--bg);
+    padding:14px 0 12px; margin-bottom:18px; border-bottom:1px solid var(--line);
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+  }
+  .exambar .lbl{font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--ink-faint); letter-spacing:.05em;}
+  .exambar .title{font-family:'Source Serif 4',serif; font-weight:600; font-size:16px; color:var(--ink); margin-top:2px;}
+  .timer{
+    font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:24px;
+    padding:8px 16px; border-radius:9px; background:var(--surface-2); color:var(--ink);
+    border:1px solid var(--line); min-width:96px; text-align:center;
+  }
+  .timer.mid{background:var(--accent-soft); color:var(--accent); border-color:var(--accent-line);}
+  .timer.low{background:var(--danger-soft); color:var(--danger); border-color:var(--danger-line); animation:pulse 1s ease-in-out infinite;}
+  @media (prefers-reduced-motion:reduce){ .timer.low{animation:none;} }
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.55;}}
+
+  .qpaper{
+    background:var(--surface); border:1px solid var(--line); border-radius:14px;
+    padding:22px 22px 20px; box-shadow:var(--shadow); margin-bottom:16px;
+  }
+  .qpaper .tag{
+    font-family:'IBM Plex Mono',monospace; font-size:11.5px; color:var(--accent); letter-spacing:.06em;
+    display:flex; justify-content:space-between; margin-bottom:8px;
+  }
+  .qpaper h2{font-size:17px; margin-bottom:10px;}
+  .qpaper p{font-size:15px; margin:0 0 10px;}
+  .qpaper pre{
+    background:var(--surface-2); border:1px solid var(--line); border-left:3px solid var(--accent);
+    padding:10px 14px; border-radius:0 8px 8px 0; margin:0 0 10px;
+    font-family:'IBM Plex Mono',monospace; font-size:13px; line-height:1.5;
+  }
+  .qpaper ol{margin:0; padding-left:20px;}
+  .qpaper li{font-size:14.5px; margin-bottom:6px;}
+
+  .consegna{margin-top:8px;}
+  .hint{font-size:12px; color:var(--ink-faint); text-align:center; margin-top:10px;}
+
+  /* ---------- solutions ---------- */
+  .res-head{text-align:center; margin-bottom:22px;}
+  .res-head .stamp{
+    display:inline-block; margin-top:6px; padding:7px 20px; border:2.5px dashed var(--correct-line);
+    border-radius:8px; font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:14px;
+    letter-spacing:.1em; text-transform:uppercase; color:var(--correct); background:var(--correct-soft);
+    transform:rotate(-2deg);
+  }
+  .sol-card{
+    background:var(--surface); border:1px solid var(--line); border-radius:12px;
+    margin-bottom:12px; box-shadow:var(--shadow); overflow:hidden;
+  }
+  .sol-head{display:flex; align-items:center; gap:10px; padding:14px 16px; cursor:pointer;}
+  .sol-head:hover{background:var(--surface-2);}
+  .sol-head .id{font-family:'IBM Plex Mono',monospace; font-weight:700; font-size:12px; color:var(--accent); flex:0 0 auto;}
+  .sol-head .t{flex:1; font-size:14.5px; font-weight:600;}
+  .chev{color:var(--ink-faint); transition:transform .15s ease;}
+  .sol-card.open .chev{transform:rotate(90deg);}
+  .sol-body{display:none; padding:0 18px 18px;}
+  .sol-card.open .sol-body{display:block;}
+  .sol-body h4{font-size:13px; color:var(--accent); margin:14px 0 6px;}
+  .sol-body h4:first-child{margin-top:0;}
+  .sol-body p{font-size:14px; margin:0 0 10px;}
+  .sol-body pre{
+    background:var(--surface-2); border:1px solid var(--line); border-left:3px solid var(--accent);
+    padding:10px 14px; border-radius:0 8px 8px 0; overflow-x:auto; margin:0 0 10px;
+    font-family:'IBM Plex Mono',monospace; font-size:12.5px; line-height:1.5;
+  }
+  .checklist{
+    background:var(--accent-soft); border:1px solid var(--accent-line); border-radius:8px;
+    padding:12px 14px; margin-top:4px;
+  }
+  .checklist .cl-title{font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:var(--accent); font-weight:700; margin-bottom:6px;}
+  .checklist ul{margin:0; padding-left:18px;}
+  .checklist li{font-size:13px; color:var(--ink-soft); margin-bottom:4px;}
+
+  .res-actions{display:flex; gap:10px; margin-top:22px;}
+</style>
+
+<div class="wrap">
+
+  <!-- ============ COVER ============ -->
+  <section id="screen-cover">
+    <div class="eyebrow">Politica economica — esame 8 settembre 2026</div>
+    <header class="head">
+      <h1>Simulazione dello scritto</h1>
+      <p>Un compito vero: due domande aperte più un esercizio, come il giorno dell'esame. Scrivi sull'iPad come faresti in aula — qui c'è solo il testo e il tempo.</p>
+    </header>
+
+    <div class="rules">
+      <div class="rule-box"><div class="num">2+1</div><div class="lbl">domande aperte + esercizio</div></div>
+      <div class="rule-box"><div class="num">60:00</div><div class="lbl">minuti, un unico timer</div></div>
+      <div class="rule-box"><div class="num">20'</div><div class="lbl">indicativi a testa</div></div>
+    </div>
+
+    <div class="order-note">
+      <span>📌</span>
+      <span><b>Ordine consigliato dal quaderno:</b> l'esercizio va fatto per primo o per ultimo, mai in mezzo — è l'unica parte in cui puoi restare bloccato, e non deve rubare tempo alle domande aperte. In questa simulazione è messo per ultimo.</span>
+    </div>
+
+    <div class="prep">
+      <h3>Prima di iniziare — i quattro gesti sempre uguali</h3>
+      <ul>
+        <li><b>Scrivi i dati</b> in colonna prima di calcolare qualsiasi cosa.</li>
+        <li><b>Scrivi l'incognita</b>: che cosa ti chiede, con che simbolo, in che unità.</li>
+        <li><b>Scrivi la condizione di equilibrio</b> in forma letterale, poi sostituisci, poi isola.</li>
+        <li><b>Commenta il risultato</b> in una riga — vale punti quanto il calcolo.</li>
+      </ul>
+    </div>
+
+    <button class="btn btn-accent" id="btn-start">Inizia la simulazione — parte il timer</button>
+  </section>
+
+  <!-- ============ EXAM ============ -->
+  <section id="screen-exam" hidden>
+    <div class="exambar">
+      <div>
+        <div class="lbl">SIMULAZIONE SCRITTO</div>
+        <div class="title">2 domande aperte + 1 esercizio</div>
+      </div>
+      <div class="timer mono" id="timer">60:00</div>
+    </div>
+
+    <div class="qpaper">
+      <div class="tag"><span>DOMANDA APERTA 1</span><span>~20 minuti</span></div>
+      <h2>Il teorema di Haavelmo</h2>
+      <p>Enuncia il teorema del moltiplicatore del bilancio in pareggio e dimostra algebricamente perché, nel caso base, il moltiplicatore vale esattamente 1. Spiega poi in quale condizione il teorema smette di valere, motivando il risultato.</p>
+    </div>
+
+    <div class="qpaper">
+      <div class="tag"><span>DOMANDA APERTA 2</span><span>~20 minuti</span></div>
+      <h2>Regola aurea di Tinbergen e incoerenza temporale</h2>
+      <p>Enuncia la regola aurea di Tinbergen e spiega che cosa succede quando il numero di strumenti è inferiore al numero di obiettivi, con le alternative a disposizione del policy maker. Spiega poi il problema dell'incoerenza temporale delle politiche: perché un annuncio di politica economica può non essere credibile, anche se il policy maker è sincero al momento dell'annuncio?</p>
+    </div>
+
+    <div class="qpaper">
+      <div class="tag"><span>ESERCIZIO</span><span>~20 minuti</span></div>
+      <h2>Monopolio, perdita secca e indice di Lerner</h2>
+      <p>Un mercato è descritto dalla domanda inversa e dal costo marginale:</p>
+      <pre>P = 40 − q
+MC = 3q</pre>
+      <ol>
+        <li>Determina quantità e prezzo di equilibrio in monopolio.</li>
+        <li>Determina quantità e prezzo che si avrebbero in concorrenza perfetta.</li>
+        <li>Calcola la perdita secca di benessere.</li>
+        <li>Calcola l'indice di Lerner e commenta che cosa misura.</li>
+      </ol>
+    </div>
+
+    <button class="btn btn-accent consegna" id="btn-consegna">Ho finito — vedi le soluzioni</button>
+    <p class="hint">Il timer non si ferma da solo se non a 0:00. Consegna quando hai davvero finito, come in aula.</p>
+  </section>
+
+  <!-- ============ RESULTS ============ -->
+  <section id="screen-results" hidden>
+    <div class="res-head">
+      <div class="eyebrow">Simulazione consegnata</div>
+      <h1 style="font-size:24px;">Autocorrezione</h1>
+      <div class="stamp" id="r-time">—</div>
+    </div>
+
+    <div class="sol-card" data-card="1">
+      <div class="sol-head" data-toggle="1"><span class="id">D1</span><span class="t">Il teorema di Haavelmo</span><span class="chev">▶</span></div>
+      <div class="sol-body">
+        <h4>La dimostrazione</h4>
+        <p>Modello base: Y = C + I + G, C = C₀ + c(Y − T). L'effetto di una manovra di spesa e di una manovra di imposte, prese separatamente:</p>
+        <pre>effetto di ΔG da solo:   ΔY = 1/(1−c) · ΔG
+effetto di ΔT da solo:   ΔY = −c/(1−c) · ΔT</pre>
+        <p>Nel bilancio in pareggio, ΔG = ΔT = Δ. Sommando i due effetti:</p>
+        <pre>ΔY = [1/(1−c)] · Δ − [c/(1−c)] · Δ = [(1−c)/(1−c)] · Δ = Δ</pre>
+        <p>Il moltiplicatore del bilancio in pareggio vale esattamente <b>1</b>: un aumento di spesa interamente finanziato da un pari aumento delle imposte fa crescere il reddito esattamente dell'importo della manovra. La ragione economica: G entra nella domanda aggregata per intero, mentre T la riduce solo per la quota che sarebbe stata consumata, c — la differenza 1−c è ciò che resta come stimolo netto.</p>
+        <h4>Quando smette di valere</h4>
+        <p>Il teorema richiede un'imposta <b>in somma fissa</b> (T = T₀). Se l'imposta è <b>proporzionale al reddito</b> (T = T₀ + tY), il moltiplicatore del bilancio in pareggio scende sotto 1: con c = 0,8 e t = 0,25 (l'esercizio A2 del quaderno) vale 0,5, non più 1. Il motivo: l'imposta proporzionale drena reddito a ogni giro del moltiplicatore, oltre all'effetto diretto sul reddito disponibile.</p>
+        <div class="checklist">
+          <div class="cl-title">La tua risposta doveva toccare</div>
+          <ul>
+            <li>Le due formule dei moltiplicatori (spesa e imposte) prese separatamente</li>
+            <li>La somma algebrica che dà esattamente 1</li>
+            <li>Il perché economico (1−c come "resto" della spesa pubblica)</li>
+            <li>La condizione di rottura: imposta proporzionale, non in somma fissa</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sol-card" data-card="2">
+      <div class="sol-head" data-toggle="2"><span class="id">D2</span><span class="t">Tinbergen e incoerenza temporale</span><span class="chev">▶</span></div>
+      <div class="sol-body">
+        <h4>La regola aurea di Tinbergen</h4>
+        <p>Per raggiungere tutti gli obiettivi di politica economica, il numero di strumenti (linearmente indipendenti) deve essere <b>almeno pari</b> al numero di obiettivi.</p>
+        <pre>strumenti &gt; obiettivi   →  sistema sotto-determinato   →  molteplici soluzioni
+strumenti = obiettivi   →  soluzione determinata
+strumenti &lt; obiettivi   →  sistema sovradeterminato    →  nessuna soluzione</pre>
+        <p>Con strumenti insufficienti (il caso sovradeterminato) il policy maker ha tre alternative: <b>rinunciare</b> agli obiettivi in eccesso, <b>adottare nuovi strumenti</b>, oppure passare al <b>metodo degli obiettivi flessibili</b> — definire una funzione obiettivo da massimizzare, accettando "un po' meno" di un obiettivo per "un po' più" di un altro (è quanto emerso nell'esercizio A13, punto c: con il solo strumento G non si raggiungono contemporaneamente Y* e CC*).</p>
+        <h4>L'incoerenza temporale</h4>
+        <p>Una politica è temporalmente incoerente quando, al momento di attuarla, per il policy maker è ottimale una condotta <b>diversa da quella annunciata</b>. Struttura in due periodi:</p>
+        <pre>t = 0:  il policy maker annuncia un intervento; gli agenti formano aspettative
+t = 1:  se gli agenti hanno creduto all'annuncio, al policy maker conviene deviare</pre>
+        <p>Se gli agenti hanno aspettative razionali, al tempo 0 <b>prevedono</b> l'incentivo a deviare: non credono all'annuncio e scelgono di conseguenza. Il risultato è subottimale, e la causa non è la cattiva volontà del policy maker ma la <b>non credibilità</b> dell'annuncio in sé — anche un policy maker sincero al momento di annunciare la politica ha, dopo, un incentivo a deviare. Esempio: lo Stato promette a chi innova di potersi appropriare dei profitti di monopolio; ottenuta l'innovazione, allo Stato conviene diffonderla liberamente — le imprese lo anticipano e non investono. La legislazione sui brevetti vincola lo Stato all'annuncio.</p>
+        <div class="checklist">
+          <div class="cl-title">La tua risposta doveva toccare</div>
+          <ul>
+            <li>L'enunciato esatto della regola (strumenti ≥ obiettivi, linearmente indipendenti)</li>
+            <li>Le tre alternative nel caso sovradeterminato</li>
+            <li>La definizione in due periodi dell'incoerenza temporale</li>
+            <li>Perché la non credibilità nasce anche senza malafede, per via delle aspettative razionali</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="sol-card" data-card="3">
+      <div class="sol-head" data-toggle="3"><span class="id">ES</span><span class="t">Monopolio, perdita secca, Lerner</span><span class="chev">▶</span></div>
+      <div class="sol-body">
+        <h4>(a) Equilibrio di monopolio</h4>
+        <pre>TR = (40 − q) · q = 40q − q²
+MR = 40 − 2q
+
+MR = MC:   40 − 2q = 3q
+           40 = 5q
+           q_M = 8
+           P_M = 40 − 8 = 32</pre>
+        <h4>(b) Equilibrio concorrenziale</h4>
+        <pre>P = MC:    40 − q = 3q
+           40 = 4q
+           q_C = 10
+           P_C = 40 − 10 = 30</pre>
+        <h4>(c) Perdita secca</h4>
+        <pre>MC nel punto di monopolio:  MC(8) = 3 · 8 = 24
+
+DWL = ½ · (q_C − q_M) · [ P_M − MC(q_M) ]
+    = ½ · (10 − 8) · (32 − 24)
+    = ½ · 2 · 8
+    = 8</pre>
+        <h4>(d) Indice di Lerner</h4>
+        <pre>L = (P_M − MC(q_M))/P_M = (32 − 24)/32 = 8/32 = 0,25</pre>
+        <p>Misura il potere di mercato: un quarto del prezzo di monopolio è puro ricarico sopra il costo marginale. Vale 0 in concorrenza perfetta (dove P = MC) e cresce quanto più l'impresa riesce a prezzare sopra i costi. Da non confondere con la perdita secca: Lerner misura il ricarico, DWL misura il benessere distrutto dal ricarico.</p>
+        <div class="checklist">
+          <div class="cl-title">Controlli di buon senso</div>
+          <ul>
+            <li>q_M &lt; q_C e P_M &gt; P_C — il monopolio produce meno e fa pagare di più, sempre</li>
+            <li>DWL e Lerner sono due misure diverse: una in euro, l'altra un rapporto fra 0 e 1</li>
+            <li>Se MC nel punto di monopolio &gt; P_C, hai sbagliato un segno da qualche parte</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="res-actions">
+      <button class="btn btn-accent" id="btn-retry">Rifai la simulazione</button>
+    </div>
+  </section>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var TOTAL_SECONDS = 3600;
+  var state = { secondsLeft: TOTAL_SECONDS, timerId: null, submitted: false };
+
+  var els = {
+    cover: document.getElementById("screen-cover"),
+    exam: document.getElementById("screen-exam"),
+    results: document.getElementById("screen-results"),
+    timer: document.getElementById("timer"),
+    btnStart: document.getElementById("btn-start"),
+    btnConsegna: document.getElementById("btn-consegna"),
+    btnRetry: document.getElementById("btn-retry"),
+    rTime: document.getElementById("r-time")
+  };
+
+  function showScreen(name){
+    els.cover.hidden = name !== "cover";
+    els.exam.hidden = name !== "exam";
+    els.results.hidden = name !== "results";
+    window.scrollTo(0,0);
+  }
+
+  function fmtTime(s){
+    var m = Math.floor(s/60), sec = s%60;
+    return (m<10?"0":"") + m + ":" + (sec<10?"0":"") + sec;
+  }
+
+  function updateTimer(){
+    els.timer.textContent = fmtTime(Math.max(0,state.secondsLeft));
+    els.timer.classList.remove("mid","low");
+    if (state.secondsLeft <= 300) els.timer.classList.add("low");
+    else if (state.secondsLeft <= 1200) els.timer.classList.add("mid");
+  }
+
+  function tick(){
+    state.secondsLeft -= 1;
+    updateTimer();
+    if (state.secondsLeft <= 0){
+      clearInterval(state.timerId);
+      submit(true);
+    }
+  }
+
+  function start(){
+    state.secondsLeft = TOTAL_SECONDS;
+    state.submitted = false;
+    showScreen("exam");
+    updateTimer();
+    if (state.timerId) clearInterval(state.timerId);
+    state.timerId = setInterval(tick, 1000);
+  }
+
+  function submit(timedOut){
+    if (state.submitted) return;
+    state.submitted = true;
+    if (state.timerId) clearInterval(state.timerId);
+    els.rTime.textContent = timedOut ? "tempo scaduto" : "consegnata con " + fmtTime(state.secondsLeft) + " sul timer";
+    showScreen("results");
+  }
+
+  els.btnStart.addEventListener("click", start);
+  els.btnConsegna.addEventListener("click", function(){ submit(false); });
+  els.btnRetry.addEventListener("click", function(){ showScreen("cover"); });
+
+  document.querySelectorAll("[data-toggle]").forEach(function(head){
+    head.addEventListener("click", function(){
+      head.closest(".sol-card").classList.toggle("open");
+    });
+  });
+
+  showScreen("cover");
+})();
+</script>
