@@ -2,7 +2,7 @@
 
 **Materia:** Fashion Design (ITS Digital, 1° anno)
 **Docente:** Raffaella La Rocca
-**Scadenza:** entro ottobre 2026 — *nota: il PDF originale della consegna riporta la data 27/04/2026, probabilmente da un'edizione precedente della verifica; confermare con la docente la data esatta di quest'anno*
+**Scadenza:** entro ottobre 2026 (il 27/04/2026 nel PDF è solo la data di redazione del documento di consegna, non la scadenza)
 **Consegna originale:** vedi PDF caricati in sessione (VERIFICA_1A_anno_FASHION_DESIGN_2026.pdf + materiale di supporto)
 
 ## Obiettivo
