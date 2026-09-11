@@ -5,6 +5,8 @@ Specchio del hub Notion **Jackss HQ → Jackss Study Space → Fashion Design**.
 
 **Perché conta anche per Inverso:** il mestiere imparato in accademia (metodo Müller, denim selvage, tecnica sartoriale) è la base tecnica del brand — vedi `inverso/piano-inverso.md` ("il mestiere imparato all'accademia e al banco di lavoro"). Università + accademia hanno sempre precedenza sul resto.
 
+**Regola di lavoro con Claude:** su questi progetti Claude aiuta con produttività e workflow (organizzazione, scadenze, struttura del lavoro, stimoli e domande di brainstorming) ma non fa il lavoro creativo al posto di Jacopo. Temi, concept, moodboard, disegni e ogni scelta creativa restano suoi al 100%.
+
 ---
 
 ## Progetti — Necchi
