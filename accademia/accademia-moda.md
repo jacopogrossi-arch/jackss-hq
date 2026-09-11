@@ -35,6 +35,10 @@ Progetto per l'accademia Necchi. Lavori in denim con tecnica sartoriale.
 
 *(appunti delle lezioni, organizzati per semestre o modulo — da iniziare)*
 
+## Compiti / Scadenze
+
+- **Digital Fashion Design** — "Da un brand iconico alla mia collezione" (17 tavole, PDF A3), scadenza prima lezione utile di ottobre → `progetto-digital-fashion-design.md`
+
 ## Strumenti
 
 - **Cartamodelli** (Generatore di Carta Modelli, tool SVG jeans) → `../cartamodelli/`
