@@ -100,7 +100,7 @@ Le nuove tecnologie spingono la moda verso la sostenibilità (meno sprechi, meno
 2. **Sahariana** — taglio laser su retro tasche e revers.
 3. **Giacca corta strutturata (stile napoleonico)** — collo ussaro, spalline strutturate, manica fluida a frange. Spalline in stampa 3D.
 4. **Caban estivo** — silhouette navale rivisitata in chiave leggera (no lana pesante tradizionale), materiale lucido lana-seta-lino **nero**. Stampa digitale piazzata con venature marmoree sulla schiena.
-5. **Biker vintage scrambler/café racer** (rif. Steve McQueen su Triumph, non biker americano tradizionale) — cotone cerato leggero ma coprente (sole + protezione in moto/bici). Taglio laser per micro-perforazioni di ventilazione.
+5. **Biker vintage scrambler/café racer** (rif. Steve McQueen su Triumph, non biker americano tradizionale) — cotone cerato leggero ma coprente (sole + protezione in moto/bici). Collo stile Harrington, chiudibile a tubo con un bottone per coprire il collo. Taglio laser per micro-perforazioni di ventilazione.
 
 ### Copertura lavorazioni tecnologiche (tutte e 4 richieste)
 
