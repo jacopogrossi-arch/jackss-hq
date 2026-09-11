@@ -83,6 +83,17 @@ Le nuove tecnologie spingono la moda verso la sostenibilità (meno sprechi, meno
 
 *(aggiornare qui: tema scelto, quali 5 tipologie di giacca, quale lavorazione tecnologica per ciascuna, stato avanzamento tavole)*
 
+### Brainstorming tema — appunti grezzi (11/09/2026)
+
+- **Riferimenti:** Costa Azzurra, bianco e azzurro, marmo bianco, La Dolce Vita / film con Marcello Mastroianni, architettura mediterranea (Nizza, Portofino).
+- **Cosa attira:** sia l'eleganza nonchalante della Dolce Vita sia l'immaginario del luogo (architettura, superfici, luce) — entrambe le componenti.
+- **Marmo bianco:** da tradurre in texture (venature come pattern).
+- **Chi lo indossa:** un uomo di oggi che veste come se fosse in quell'epoca.
+- **Concept guida:** contrasto tra visione retrò e tecnologia moderna, giocato sulla **struttura** (non solo superficie) — es. un revers classico ma tagliato al laser.
+- **Lavorazioni tecnologiche — primo istinto:** taglio laser + stampa digitale pattern per tradurre il marmo (venature). Azzurro Costa Azzurra: lavorazione ancora da assegnare.
+
+*(Questi sono appunti grezzi del brainstorming, non ancora il concept definitivo — titolo collezione, sottotitolo e descrizione in max 150 parole restano da scrivere.)*
+
 ## Link
 
 - Notion: Jackss HQ / Jackss Study Space / Fashion Design
