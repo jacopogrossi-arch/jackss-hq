@@ -94,6 +94,14 @@ Le nuove tecnologie spingono la moda verso la sostenibilità (meno sprechi, meno
 
 *(Questi sono appunti grezzi del brainstorming, non ancora il concept definitivo — titolo collezione, sottotitolo e descrizione in max 150 parole restano da scrivere.)*
 
+### Le 5 giacche — lavoro in corso
+
+1. **Blazer** — leggero, destrutturato (tema estivo). Taglio laser sul revers.
+2. **Sahariana** — taglio laser su retro tasche e revers.
+3. *(da definire)*
+4. *(da definire)*
+5. *(da definire)*
+
 ## Link
 
 - Notion: Jackss HQ / Jackss Study Space / Fashion Design
