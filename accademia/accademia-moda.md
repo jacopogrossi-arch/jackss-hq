@@ -38,6 +38,7 @@ Progetto per l'accademia Necchi. Lavori in denim con tecnica sartoriale.
 ## Compiti / Scadenze
 
 - **Digital Fashion Design** — "Da un brand iconico alla mia collezione" (17 tavole, PDF A3), scadenza prima lezione utile di ottobre → `progetto-digital-fashion-design.md`
+- **Fashion Design** — "Cinque giacche per cinque outfit" (capsule collection con lavorazioni tecnologiche sostenibili), scadenza entro ottobre → `progetto-fashion-design-cinque-giacche.md`
 
 ## Strumenti
 
