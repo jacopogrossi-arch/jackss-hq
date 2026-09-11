@@ -99,7 +99,7 @@ Le nuove tecnologie spingono la moda verso la sostenibilità (meno sprechi, meno
 1. **Blazer** — leggero, destrutturato (tema estivo). Taglio laser sul revers.
 2. **Sahariana** — taglio laser su retro tasche e revers.
 3. **Giacca corta strutturata (stile napoleonico)** — collo ussaro, spalline strutturate, manica fluida a frange. Spalline in stampa 3D.
-4. **Caban estivo** — silhouette navale rivisitata in chiave leggera (no lana pesante tradizionale), materiale lucido lana-seta-lino. Stampa digitale piazzata marmorea sulla schiena.
+4. **Caban estivo** — silhouette navale rivisitata in chiave leggera (no lana pesante tradizionale), materiale lucido lana-seta-lino **nero**. Stampa digitale piazzata con venature marmoree sulla schiena.
 5. **Biker vintage scrambler/café racer** (rif. Steve McQueen su Triumph, non biker americano tradizionale) — cotone cerato leggero ma coprente (sole + protezione in moto/bici). Taglio laser per micro-perforazioni di ventilazione.
 
 ### Copertura lavorazioni tecnologiche (tutte e 4 richieste)
