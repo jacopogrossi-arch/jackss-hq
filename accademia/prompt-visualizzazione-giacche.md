@@ -21,3 +21,9 @@ Prompt pronti per image generation (ChatGPT/GPT-image, DALL-E o simili), in ingl
 ## 5 — Biker vintage scrambler/café racer
 
 > Editorial fashion photograph, 1960s café racer mood in the style of Steve McQueen, not American biker style. A man wears a boxy, waxed cotton jacket in deep navy, snap-button front. The jacket has a Harrington-style collar that closes into a tall tubular shape with a single button, covering the neck when fastened — shown either buttoned up around the neck or open flat, whichever reads clearer. The chest and back panels show a fine laser-cut micro-perforation pattern for ventilation. Leaning against a vintage Triumph motorcycle on a coastal Mediterranean road, golden hour light, 35mm film photography, muted white/azure/stone color grading, Dolce Vita cinematic atmosphere, full body view, sharp focus on collar construction and perforation pattern.
+
+## Sfondo tavola titolo + descrizione (concept "Roue Libre", A3 orizzontale)
+
+Testato il 15/09/2026 su ChatGPT — risultato buono al primo tentativo: cielo e mare a sinistra restano puliti per il testo, la scogliera a destra è troppo dettagliata per sovrapporci scritte.
+
+> Minimalist editorial background photograph, 1960s French Riviera road trip mood, warm late-afternoon light. Wide, airy composition: a coastal road curving along pale cliffs in the distance, soft green Mediterranean pine trees on one side, sky fading into a muted azure sea on the other. Palette: white, sage green, soft azure, with warm golden undertones. 35mm film grain, subtle cinematic color grading, soft vignette. No text, no logos, no watermark, no people, no vehicles, no objects in the frame. Large empty negative space across the upper third and left side of the image for typography to be overlaid afterward — that area should stay soft, out of focus, low contrast. Landscape orientation matching A3 proportions (420x297mm), high resolution, editorial fashion photography style.
