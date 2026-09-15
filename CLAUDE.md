@@ -37,6 +37,7 @@ File: `inverso/`
 ## Progetti attivi
 
 - **Cartamodelli** (tool SVG jeans via Claude API, attivo) → `cartamodelli/`
+- **Accademia di Moda** (percorso Necchi: progetti denim, ricerche, note lezioni — specchio del hub Notion "Fashion Design") → `accademia/`
 
 ## Vita personale
 
