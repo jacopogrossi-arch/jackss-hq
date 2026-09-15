@@ -12,7 +12,7 @@ Progetto di una capsule collection: **cinque giacche per cinque outfit**, con:
 - **Tema d'ispirazione personale**
 - Le cinque giacche devono presentare **lavorazioni tecnologiche sostenibili** — stampa digitale pattern, stampa digitale piazzata, taglio laser, stampa 3D — anche più soluzioni sulla stessa giacca
 
-**Tema/brand scelto:** *da decidere*
+**Tema/brand scelto:** Roue Libre
 
 ## Checklist elaborati (tavole di supporto)
 
@@ -92,7 +92,24 @@ Le nuove tecnologie spingono la moda verso la sostenibilità (meno sprechi, meno
 - **Concept guida:** contrasto tra visione retrò e tecnologia moderna, giocato sulla **struttura** (non solo superficie) — es. un revers classico ma tagliato al laser.
 - **Lavorazioni tecnologiche — primo istinto:** taglio laser + stampa digitale pattern per tradurre il marmo (venature). Azzurro Costa Azzurra: lavorazione ancora da assegnare.
 
-*(Questi sono appunti grezzi del brainstorming, non ancora il concept definitivo — titolo collezione, sottotitolo e descrizione in max 150 parole restano da scrivere.)*
+*(Nota: il marmo bianco è stato eliminato dal concept definitivo — vedi sotto — perché troppo statico/strutturale rispetto all'idea di movimento emersa nel brainstorming successivo.)*
+
+### Concept definitivo (15/09/2026)
+
+**Titolo:** Roue Libre
+
+**Descrizione:**
+
+> Le mani che tornano a stringere un manubrio, non un bicchiere — ma l'anello resta al dito. Il sale resta sulla pelle più a lungo del profumo, e ogni curva della costa sembra già vista in un film di sessant'anni fa. Ogni lavorazione tecnologica risponde a un bisogno, non a un capriccio estetico: l'aria, la velocità, il peso da togliere. Bianco, verde, azzurro: i colori di una costa vista da un finestrino aperto. Il lino, leggero, si muove prima ancora che ti muova tu. Roue Libre: si va, senza dover spiegare dove.
+
+**Elementi del concept:**
+- Personaggio (implicito, non nominato nel testo): ex playboy tornato a muoversi con le mani — moto, vela, corse, fotografia; tenuto della vecchia vita: le donne, la Costa Azzurra.
+- Icona di riferimento: Steve McQueen — eleganza senza sforzo + mondo meccanico.
+- Ambientazione (implicita): road trip lungo la costa mediterranea francese, mood Dolce Vita anni '60.
+- Idea centrale: il movimento come causa, non decorazione — le lavorazioni tecnologiche sostenibili rispondono a un bisogno funzionale (aria, aerodinamica, peso), il lino leggero si muove col corpo.
+- Palette: bianco, verde, azzurro.
+
+**⚠️ Da rivedere:** la sezione "Copertura lavorazioni tecnologiche" sotto assegna ancora il motivo marmo alla giacca 1 (stampa digitale pattern) e alla giacca 4 (stampa digitale piazzata). Con il marmo fuori dal concept, queste due lavorazioni vanno ripensate quando riprendi il lavoro sulle giacche.
 
 ### Le 5 giacche — lavoro in corso
 
