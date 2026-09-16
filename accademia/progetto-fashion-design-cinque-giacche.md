@@ -113,7 +113,7 @@ Le nuove tecnologie spingono la moda verso la sostenibilità (meno sprechi, meno
 
 **Perché questa revisione:** rivedendo la moodboard evocativa, il caban risultava troppo elegante/navale rispetto al mood di nonchalance utility che il progetto vuole evocare (McQueen off-duty, non il playboy in giacca blu). Il blazer, allo stesso modo, andava reso più utility e meno "giacca elegante leggera".
 
-1. **Blazer utility** — leggero, destrutturato, taschini a toppa stile workwear/militare (non taschino a filo classico da blazer). **Stampa digitale pattern**: motivo ripetuto ispirato a un elemento tecnico/funzionale del mondo Roue Libre (es. texture asfalto, nodi di corda da vela, cartografia stradale) — sostituisce il motivo marmo eliminato dal concept.
+1. **Quasi-bomber utility** *(rivisto il 16/09 — non più "blazer utility")* — mix tra ricerca Armani anni '80 (collo a imbuto alto e richiudibile, tasconi simmetrici obliqui alti sul petto) e attitude vissuta/nonchalante (chiusura in vita a coulisse con cordoncino a vista invece di elastico, tessuto morbido non strutturato — canvas o cotone cerato leggero, hardware vissuto: passante porta-chiavi, bottone a pressione). Doppio registro voluto: da lontano capo pulito ("mi fermo a Nizza"), da vicino rivela l'anima meccanica ("vado in moto"). **Stampa digitale pattern**: motivo tono su tono che imita una superficie naturale asfalto-sabbia con depositi di sale cristallizzato ("il sale resta sulla pelle più a lungo del profumo") — deve leggersi come segno naturale/casuale, non come pattern disegnato (crepe irregolari, nessuna simmetria). Render texture approvato il 16/09.
 2. **Sahariana** — taglio laser su retro tasche e revers. *(invariata — il registro militare/utility è già coerente col mood)*
 3. **Giacca corta strutturata (stile napoleonico)** — reinterpretata liberamente da Jacopo, non fedele alla struttura storica. Collo ussaro, spalline strutturate, manica fluida a frange. Spalline in **stampa 3D**.
 4. **Denim jacket raw** *(sostituisce il caban)* — denim grezzo che simula i segni di usura/fading tipici dell'uso reale in movimento. **Stampa digitale piazzata**, piazzamento preciso sul cartamodello per far cadere lo sbiadimento esattamente nei punti anatomici giusti una volta montato il capo:
@@ -122,14 +122,18 @@ Le nuove tecnologie spingono la moda verso la sostenibilità (meno sprechi, meno
    - Fade su dorso e spalle (esposizione al sole)
    - Contrasto su bordi tasche e polsini (attrito continuo)
    - Atari sul collo (sfregamento collo/nuca)
-5. **Biker vintage scrambler/café racer** (rif. Steve McQueen su Triumph) — cotone cerato leggero ma coprente. Collo stile Harrington, chiudibile a tubo con un bottone. **Taglio laser** per micro-perforazioni di ventilazione.
+5. **Biker vintage scrambler/café racer** (rif. Steve McQueen su Triumph) — cotone cerato leggero ma coprente. Collo stile Harrington, chiudibile a tubo con un bottone — il collo alto con cinturino pensato inizialmente per la giacca 1 è stato spostato qui, più coerente storicamente con i giubbotti da moto/aviazione. **Taglio laser** per micro-perforazioni di ventilazione.
 
 ### Copertura lavorazioni tecnologiche (tutte e 4 richieste) — definitiva
 
 - **Taglio laser** → giacca 2 (retro tasche + revers), giacca 5 (perforazioni ventilazione)
-- **Stampa digitale pattern** → giacca 1 (blazer, motivo da definire)
+- **Stampa digitale pattern** → giacca 1 (quasi-bomber, motivo asfalto-sabbia-sale)
 - **Stampa 3D** → giacca 3 (spalline)
 - **Stampa digitale piazzata** → giacca 4 (denim, fading/usura da movimento)
+
+### Moodboard tecnica — materiale raccolto (16/09/2026)
+
+30 immagini organizzate in `Downloads/foto moodboard/moodboard-tecnica/` per categoria (`costruzione-tipologie/`, `hardware/`, `tecnologie/`, `dettagli-linea/`, `tessuto/`, `da-verificare/`). Scheda tecnica completa con scaletta delle 5 giacche + contact sheet fotografico esportata in PDF: `ROUE-LIBRE-Scheda-Tecnica.pdf` (stessa cartella). Include tra le immagini anche i riferimenti Armani (collo a imbuto, tasconi obliqui) che hanno guidato la revisione della giacca 1.
 
 ## Stato avanzamento (16/09/2026)
 
