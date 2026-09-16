@@ -109,22 +109,27 @@ Le nuove tecnologie spingono la moda verso la sostenibilità (meno sprechi, meno
 - Idea centrale: il movimento come causa, non decorazione — le lavorazioni tecnologiche sostenibili rispondono a un bisogno funzionale (aria, aerodinamica, peso), il lino leggero si muove col corpo.
 - Palette: bianco, verde, azzurro.
 
-**⚠️ Da rivedere:** la sezione "Copertura lavorazioni tecnologiche" sotto assegna ancora il motivo marmo alla giacca 1 (stampa digitale pattern) e alla giacca 4 (stampa digitale piazzata). Con il marmo fuori dal concept, queste due lavorazioni vanno ripensate quando riprendi il lavoro sulle giacche.
+### Le 5 giacche — versione definitiva (16/09/2026)
 
-### Le 5 giacche — lavoro in corso
+**Perché questa revisione:** rivedendo la moodboard evocativa, il caban risultava troppo elegante/navale rispetto al mood di nonchalance utility che il progetto vuole evocare (McQueen off-duty, non il playboy in giacca blu). Il blazer, allo stesso modo, andava reso più utility e meno "giacca elegante leggera".
 
-1. **Blazer** — leggero, destrutturato (tema estivo). Taglio laser sul revers.
-2. **Sahariana** — taglio laser su retro tasche e revers.
-3. **Giacca corta strutturata (stile napoleonico)** — collo ussaro, spalline strutturate, manica fluida a frange. Spalline in stampa 3D.
-4. **Caban estivo** — silhouette navale rivisitata in chiave leggera (no lana pesante tradizionale), materiale lucido lana-seta-lino **nero**. Stampa digitale piazzata con venature marmoree sulla schiena.
-5. **Biker vintage scrambler/café racer** (rif. Steve McQueen su Triumph, non biker americano tradizionale) — cotone cerato leggero ma coprente (sole + protezione in moto/bici). Collo stile Harrington, chiudibile a tubo con un bottone per coprire il collo. Taglio laser per micro-perforazioni di ventilazione.
+1. **Blazer utility** — leggero, destrutturato, taschini a toppa stile workwear/militare (non taschino a filo classico da blazer). **Stampa digitale pattern**: motivo ripetuto ispirato a un elemento tecnico/funzionale del mondo Roue Libre (es. texture asfalto, nodi di corda da vela, cartografia stradale) — sostituisce il motivo marmo eliminato dal concept.
+2. **Sahariana** — taglio laser su retro tasche e revers. *(invariata — il registro militare/utility è già coerente col mood)*
+3. **Giacca corta strutturata (stile napoleonico)** — reinterpretata liberamente da Jacopo, non fedele alla struttura storica. Collo ussaro, spalline strutturate, manica fluida a frange. Spalline in **stampa 3D**.
+4. **Denim jacket raw** *(sostituisce il caban)* — denim grezzo che simula i segni di usura/fading tipici dell'uso reale in movimento. **Stampa digitale piazzata**, piazzamento preciso sul cartamodello per far cadere lo sbiadimento esattamente nei punti anatomici giusti una volta montato il capo:
+   - Honeycomb ai gomiti (pieghe da flessione del braccio)
+   - Whiskers sotto le ascelle/dorso del braccio
+   - Fade su dorso e spalle (esposizione al sole)
+   - Contrasto su bordi tasche e polsini (attrito continuo)
+   - Atari sul collo (sfregamento collo/nuca)
+5. **Biker vintage scrambler/café racer** (rif. Steve McQueen su Triumph) — cotone cerato leggero ma coprente. Collo stile Harrington, chiudibile a tubo con un bottone. **Taglio laser** per micro-perforazioni di ventilazione.
 
-### Copertura lavorazioni tecnologiche (tutte e 4 richieste)
+### Copertura lavorazioni tecnologiche (tutte e 4 richieste) — definitiva
 
-- **Taglio laser** → giacca 1 (revers), giacca 2 (retro tasche + revers), giacca 5 (perforazioni ventilazione)
-- **Stampa digitale pattern** → giacca 1 (marmo)
+- **Taglio laser** → giacca 2 (retro tasche + revers), giacca 5 (perforazioni ventilazione)
+- **Stampa digitale pattern** → giacca 1 (blazer, motivo da definire)
 - **Stampa 3D** → giacca 3 (spalline)
-- **Stampa digitale piazzata** → giacca 4 (schiena, marmo)
+- **Stampa digitale piazzata** → giacca 4 (denim, fading/usura da movimento)
 
 ## Stato avanzamento (16/09/2026)
 
