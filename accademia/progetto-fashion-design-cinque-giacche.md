@@ -16,10 +16,10 @@ Progetto di una capsule collection: **cinque giacche per cinque outfit**, con:
 
 ## Checklist elaborati (tavole di supporto)
 
-- [ ] **Brainstorming**: individuazione tema d'ispirazione (INPUT)
-- [ ] **Descrizione tematica/concept**
-- [ ] **Moodboard evocativa**
-- [ ] **Moodboard tecnica**
+- [x] **Brainstorming**: individuazione tema d'ispirazione (INPUT)
+- [x] **Descrizione tematica/concept**
+- [x] **Moodboard evocativa** — chiusa 16/09, vedi sotto
+- [ ] **Moodboard tecnica** — in corso, Jacopo sta raccogliendo il materiale (16/09)
 - [ ] **Cartella cromatica**
 - [ ] **Cartella materiali**
 - [ ] **Costruzione idea** con utilizzo delle lavorazioni tecnologiche sostenibili richieste
@@ -125,6 +125,27 @@ Le nuove tecnologie spingono la moda verso la sostenibilità (meno sprechi, meno
 - **Stampa digitale pattern** → giacca 1 (marmo)
 - **Stampa 3D** → giacca 3 (spalline)
 - **Stampa digitale piazzata** → giacca 4 (schiena, marmo)
+
+## Stato avanzamento (16/09/2026)
+
+### Moodboard evocativa — chiusa
+- Costruita in Canva (link progetto salvato su Notion), 7 pagine totali nel documento.
+- **Pagina 1** — title card cinematografico stile locandina anni '60: strada costiera, titolo "ROUE LIBRE" in overlay, bande nere (letterbox). Generata con ChatGPT da prompt, ripulita da Claude (rimosso sottotitolo "UN FILM DE" via inpainting). Esiste anche versione A3 orizzontale pronta stampa.
+- **Pagina 2** — pagina di transizione: sfondo ad acquarello (stessa scena della cover ma dipinta, non fotorealistica — fa da ponte visivo verso le pagine successive ad acquarello) + testo del concept completo (citazione, personaggio, icona, ambientazione, idea centrale, palette). Editata direttamente in Canva via MCP.
+- **Pagine successive** — collage di polaroid con le foto selezionate, fatto a mano da Jacopo in Procreate (non da Claude — scelta creativa sua).
+- Foto sorgente organizzate in locale: `Downloads/foto moodboard/moodboard-evocativa/` con sottocartelle `quadra-finale/` (le migliori), `backup/` (alternative), `scarti/` (scartate), `elementi-decorativi/` (puntine, washi tape, titolo verticale — asset PNG generati per Procreate).
+
+⚠️ **Nota per prossima sessione:** durante la fase di riorganizzazione dei file il 16/09 ci sono stati alcuni errori di gestione file (cancellazioni premature, sovrascritture) che hanno causato la perdita permanente di 2-3 foto originali della moodboard (tra cui "moto mossa in spiaggia verde/bianco" e "vela Bardot/Delon"). Sostituite con alternative equivalenti già presenti nel set. Nessun impatto sul risultato finale (Jacopo ha completato la moodboard comunque), ma da tenere a mente: **non cancellare mai file media senza conferma esplicita**, anche se sembrano duplicati.
+
+### Moodboard tecnica — in corso
+Jacopo sta raccogliendo il materiale. Categorie concordate con Claude:
+1. Riferimenti di costruzione per tipologia di giacca (sahariana, ussara, caban, café racer, blazer destrutturato) — foto tecniche/archivio, non lifestyle
+2. Dettagli di chiusura e hardware (bottoni, fibbie, alamari)
+3. Campioni delle 4 lavorazioni tecnologiche richieste (taglio laser, stampa digitale pattern, stampa digitale piazzata, stampa 3D) — categoria spesso dimenticata, importante per la valutazione
+4. Dettagli di cucitura/costruzione (impunture, rifiniture)
+5. Comportamento del tessuto (drape lino, texture cotone cerato, lucentezza lana-seta-lino)
+
+Parole chiave di ricerca già fornite per ciascuna categoria (vedi cronologia sessione 16/09).
 
 ## Link
 
