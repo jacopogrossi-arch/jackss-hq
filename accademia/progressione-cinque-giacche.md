@@ -20,8 +20,8 @@ Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giac
    - Dettagli vissuti: fibbia invecchiata, passante porta-chiavi, scolorimento tono su tono
    - Sketch salvato in `accademia/img-cinque-giacche/giacca2-sahariana-sketch.png`
    - Ancora da fare: sketch retro
-3. **Giacca corta stile napoleonico** — ⚪ non ancora sketchata (collo ussaro, spalline in stampa 3D)
-4. **Denim jacket raw** — ⚪ non ancora sketchata (stampa digitale piazzata per fading anatomico)
+3. **Giacca corta stile napoleonico** — ⏸️ **in pausa** (18/09, richiede più lavoro di progettazione — si torna dopo la 4)
+4. **Denim jacket raw** — 🟡 **in lavorazione** (stampa digitale piazzata per fading anatomico)
 5. **Biker vintage scrambler/café racer** — ⚪ non ancora sketchata (collo Harrington con cinturino, variante propria distinta dalla giacca 1)
 
 ## Prossimi passi
