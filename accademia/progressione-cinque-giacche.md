@@ -30,7 +30,10 @@ Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giac
    - Silhouette: Type III ibrida (tasche a punta, doppie pieghe frontali) + cinghia posteriore con fibbia (dettaglio dalla Type I)
    - Stampa digitale piazzata: honeycomb gomiti, whiskers ascelle, fade dorso/spalle con fascia protetta sotto la cinghia, contrasto tasche/polsini, atari collo
    - Render fotorealistico fronte+retro approvato, sketch tecnico su figurino salvato in `accademia/img-cinque-giacche/giacca4-denim-sketch.png`
-5. **Biker vintage scrambler/café racer** — ⚪ non ancora sketchata (collo Harrington con cinturino, variante propria distinta dalla giacca 1) — colore **British Racing Green** (deciso 19/09)
+5. **Biker vintage scrambler/café racer** — 🟡 **flat fronte in corso (19/09)**, su riferimento fotografico Steve McQueen in moto
+   - Colore British Racing Green, collo a listino rigido chiuso a bottone a pressione (rivisto da Harrington con cinturino), doppia colonna di bottoni a pressione a contrasto (avorio su verde)
+   - Taglio laser: schiena interamente microforata per ventilazione
+   - Ancora da fare: flat fronte, poi flat/valutazione retro (per il dettaglio schiena microforata), poi ricalco
 
 ## Prossimi passi
 
