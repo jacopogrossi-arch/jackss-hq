@@ -20,11 +20,13 @@ Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giac
    - Dettagli vissuti: fibbia invecchiata, passante porta-chiavi, scolorimento tono su tono
    - Sketch salvato in `accademia/img-cinque-giacche/giacca2-sahariana-sketch.png`
    - Ancora da fare: sketch retro
-3. **Field/shirt jacket ibrida** — 🟡 **concept definito 19/09, ancora da renderizzare** (sostituisce l'idea ussara, scartata dopo 2 render — vedi dettaglio decisioni)
+3. **Field/shirt jacket ibrida** — 🟢 **sketch fronte+retro fatto** (sostituisce l'idea ussara, scartata dopo 2 render — vedi dettaglio decisioni)
    - Dritta, boxy, lunghezza fianchi; lino pesante crema, texture materica a vista
-   - Collo militare aperto, tasche a filo nascoste, chiusura a bottoni con martingala di rinforzo
+   - Collo militare aperto, tasche oblique senza patta (rivisto da "a filo nascoste", risultava troppo piatta), chiusura a bottoni con martingala di rinforzo
    - Stampa 3D: reticolo/honeycomb delicato tono su tono su martingala abbottonatura + rinforzi gomiti (rinforzo funzionale, non decorazione)
-   - Ancora da fare: render fronte (Step 1 di 2, Soul Cinema — capo su modello neutro), poi composite su figurino base, poi sketch tecnico
+   - **Nuovo workflow adottato (19/09):** per questa giacca si è saltato il passaggio render fotorealistico Higgsfield ed è stato generato lo sketch tecnico direttamente via ChatGPT da prompt testuale (figurino base + sketch approvato come riferimento di stile) — più veloce da iterare rispetto al render fotorealistico, usato ora come workflow alternativo quando serve iterare molto sul design prima di bloccarlo
+   - Sketch fronte+retro ottenuto in un solo giro, pronto da ricalcare in Procreate sul figurino
+   - Ancora da fare: ricalco manuale in Procreate
 4. **Denim jacket raw** — 🟢 **sketch fronte+retro fatto** — colore indaco denim grezzo
    - Silhouette: Type III ibrida (tasche a punta, doppie pieghe frontali) + cinghia posteriore con fibbia (dettaglio dalla Type I)
    - Stampa digitale piazzata: honeycomb gomiti, whiskers ascelle, fade dorso/spalle con fascia protetta sotto la cinghia, contrasto tasche/polsini, atari collo
