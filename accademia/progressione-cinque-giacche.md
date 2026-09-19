@@ -3,7 +3,7 @@
 File di stato rapido, da leggere a inizio sessione per riprendere da dove eravamo rimasti.
 Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giacche.md` — questo file è solo il "dove siamo ora".
 
-**Ultimo aggiornamento:** 18/09/2026 (giacca 2 completata)
+**Ultimo aggiornamento:** 19/09/2026 (giacca 4 completata; figurino base salvato)
 
 ---
 
@@ -20,15 +20,25 @@ Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giac
    - Dettagli vissuti: fibbia invecchiata, passante porta-chiavi, scolorimento tono su tono
    - Sketch salvato in `accademia/img-cinque-giacche/giacca2-sahariana-sketch.png`
    - Ancora da fare: sketch retro
-3. **Giacca corta stile napoleonico** — ⏸️ **in pausa** (18/09, richiede più lavoro di progettazione — si torna dopo la 4)
-4. **Denim jacket raw** — 🟡 **in lavorazione** (stampa digitale piazzata per fading anatomico)
+3. **Giacca corta stile napoleonico** — ⏸️ **in pausa** (18/09, richiede più lavoro di progettazione)
+4. **Denim jacket raw** — 🟢 **sketch fronte+retro fatto**
+   - Silhouette: Type III ibrida (tasche a punta, doppie pieghe frontali) + cinghia posteriore con fibbia (dettaglio dalla Type I)
+   - Stampa digitale piazzata: honeycomb gomiti, whiskers ascelle, fade dorso/spalle con fascia protetta sotto la cinghia, contrasto tasche/polsini, atari collo
+   - Render fotorealistico fronte+retro approvato, sketch tecnico su figurino salvato in `accademia/img-cinque-giacche/giacca4-denim-sketch.png`
 5. **Biker vintage scrambler/café racer** — ⚪ non ancora sketchata (collo Harrington con cinturino, variante propria distinta dalla giacca 1)
 
 ## Prossimi passi
 
 - Disegno tecnico retro delle giacche 1 e 2
-- Passare alla giacca 3 (corta stile napoleonico)
+- Riprendere la giacca 3 (corta stile napoleonico, richiede più progettazione)
+- Sketch della giacca 5
 - Cartella cromatica e cartella materiali — struttura creata, ancora da popolare
+
+## Workflow sketch tecnico (validato)
+
+Figurino base riutilizzabile: `accademia/img-cinque-giacche/figurino-base-fronte.png` (fronte, nudo, testa calva, posa neutra).
+
+Processo: (1) render fotorealistico del capo su modello neutro via banana-pro-director; (2) prompt a ChatGPT con il render + uno sketch già approvato come riferimento di stile, per un flat pulito senza sfumature con pieghe di panneggio esplicite. Chiedere all'AI di disegnare direttamente sopra un figurino esistente non ne rispetta le proporzioni esatte — se serve ricalcare a mano, meglio chiedere il capo "garment-only" e posizionarlo/scalarlo manualmente in Procreate.
 
 ## Link
 

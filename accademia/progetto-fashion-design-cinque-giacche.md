@@ -116,12 +116,14 @@ Le nuove tecnologie spingono la moda verso la sostenibilità (meno sprechi, meno
 1. **Quasi-bomber utility** *(rivisto il 16/09 — non più "blazer utility"; collo rivisto il 17/09)* — mix tra ricerca Armani anni '80 (tasconi simmetrici obliqui alti sul petto) e attitude vissuta/nonchalante (chiusura in vita a coulisse con cordoncino a vista invece di elastico, tessuto morbido non strutturato — canvas o cotone cerato leggero, hardware vissuto: passante porta-chiavi, bottone a pressione). **Collo**: stand collar alto con pattina e bottone a pressione (variante propria, distinta da quella della giacca 5 — vedi sotto), sostituisce l'idea iniziale di collo a imbuto. Doppio registro voluto: da lontano capo pulito ("mi fermo a Nizza"), da vicino rivela l'anima meccanica ("vado in moto"). **Stampa digitale pattern**: motivo tono su tono che imita una superficie naturale asfalto-sabbia con depositi di sale cristallizzato ("il sale resta sulla pelle più a lungo del profumo") — deve leggersi come segno naturale/casuale, non come pattern disegnato (crepe irregolari, nessuna simmetria). Render texture approvato il 16/09.
 2. **Sahariana** *(silhouette e lavorazione rivisti il 18/09)* — silhouette moderna/slim: corta (orlo sull'anca), corpo pulito e aderente, tasche a toppa piatte, cintura sottile con fibbia, collo classico a camicia. Nessun taglio sul bordo di tasche/revers (scartato, sembrava un trim applicato, poco autentico). **Taglio laser**: pannelli perforati a scatter irregolare (effetto "depositi di sale cristallizzato" — stesso linguaggio della stampa della giacca 1, "crepe irregolari nessuna simmetria") lungo sottobraccio e fianco, davanti e dietro, da ascella a orlo — zona di ventilazione funzionale, coerente col concept "l'aria, la velocità". Dettagli vissuti aggiunti per dare l'anima meccanica anche a questa giacca (come la 1): fibbia della cintura invecchiata/ossidata, passante porta-chiavi funzionale all'anca, leggero scolorimento tono su tono su spalle/gomiti/polsini. Render fotorealistico e sketch tecnico approvati il 18/09, sketch salvato in `accademia/img-cinque-giacche/giacca2-sahariana-sketch.png`.
 3. **Giacca corta strutturata (stile napoleonico)** — reinterpretata liberamente da Jacopo, non fedele alla struttura storica. Collo ussaro, spalline strutturate, manica fluida a frange. Spalline in **stampa 3D**.
-4. **Denim jacket raw** *(sostituisce il caban)* — denim grezzo che simula i segni di usura/fading tipici dell'uso reale in movimento. **Stampa digitale piazzata**, piazzamento preciso sul cartamodello per far cadere lo sbiadimento esattamente nei punti anatomici giusti una volta montato il capo:
+4. **Denim jacket raw** *(sostituisce il caban; silhouette e render finalizzati il 18-19/09)* — Type III ibrida: tasche a punta (pointed flap), doppie pieghe frontali verticali, fit corto in vita, PIÙ cinghia di regolazione posteriore con fibbia (dettaglio preso dalla Type I). Bottoni a pressione metallici. Denim grezzo indaco non lavato. **Stampa digitale piazzata**, piazzamento preciso sul cartamodello per far cadere lo sbiadimento esattamente nei punti anatomici giusti una volta montato il capo:
    - Honeycomb ai gomiti (pieghe da flessione del braccio)
    - Whiskers sotto le ascelle/dorso del braccio
-   - Fade su dorso e spalle (esposizione al sole)
-   - Contrasto su bordi tasche e polsini (attrito continuo)
+   - Fade su dorso e spalle (esposizione al sole), con una fascia non sbiadita esattamente dove passa la cinghia posteriore (il tessuto sotto la cinghia non prende sole/attrito — dettaglio di usura autentico legato alla costruzione)
+   - Contrasto su bordi tasche a punta e polsini (attrito continuo)
    - Atari sul collo (sfregamento collo/nuca)
+   
+   Render fotorealistico (fronte e retro) e sketch tecnico approvati il 18-19/09. Sketch salvato in `accademia/img-cinque-giacche/giacca4-denim-sketch.png`.
 5. **Biker vintage scrambler/café racer** (rif. Steve McQueen su Triumph) — cotone cerato leggero ma coprente. Collo stile Harrington con cinturino e bottone, variante propria distinta da quella della giacca 1 (entrambe le giacche useranno un collo a cinturino, ma diverso tra loro — deciso il 17/09). **Taglio laser** per micro-perforazioni di ventilazione.
 
 ### Copertura lavorazioni tecnologiche (tutte e 4 richieste) — definitiva
@@ -130,6 +132,10 @@ Le nuove tecnologie spingono la moda verso la sostenibilità (meno sprechi, meno
 - **Stampa digitale pattern** → giacca 1 (quasi-bomber, motivo asfalto-sabbia-sale)
 - **Stampa 3D** → giacca 3 (spalline)
 - **Stampa digitale piazzata** → giacca 4 (denim, fading/usura da movimento)
+
+### Figurino base (18/09/2026)
+
+Figurino nudo di Jacopo (fronte, testa calva, posa neutra) salvato come base riutilizzabile per tutti gli sketch della collezione: `accademia/img-cinque-giacche/figurino-base-fronte.png`. Workflow validato per gli sketch tecnici: (1) render fotorealistico del capo su modello neutro via banana-pro-director (Mode 1B), fronte e retro; (2) prompt a ChatGPT con render + uno sketch già approvato come riferimento di stile per ottenere un flat pulito (no sfumature/hatching, solo linework + pieghe di panneggio), garment-only se serve poi ricalcare a mano sul proprio figurino in Procreate — chiedere all'AI di ridisegnare direttamente sopra un figurino esistente non ne rispetta le proporzioni esatte.
 
 ### Moodboard tecnica — materiale raccolto (16/09/2026)
 
