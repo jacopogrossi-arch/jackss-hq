@@ -3,7 +3,7 @@
 File di stato rapido, da leggere a inizio sessione per riprendere da dove eravamo rimasti.
 Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giacche.md` — questo file è solo il "dove siamo ora".
 
-**Ultimo aggiornamento:** 19/09/2026 (giacca 4 completata; figurino base salvato)
+**Ultimo aggiornamento:** 19/09/2026 (giacca 3 sbloccata: coerenza concept + colore decisi; colore giacca 5 deciso)
 
 ---
 
@@ -14,18 +14,22 @@ Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giac
    - Tasche: grandi, frontali, stile Armani anni '80 — disegnate nello sketch
    - Sketch salvato in `accademia/img-cinque-giacche/giacca1-collo-sketch.png`
    - Ancora da fare: sketch retro; verificare in cartamodello che la pattina superiore della tasca sia solidale al pannello centrale (nota tecnica del 17/09); coulisse in vita con cordoncino a vista (non ancora nello sketch, che mostra costina elastica)
-2. **Sahariana** — 🟢 **sketch fronte fatto**
+2. **Sahariana** — 🟢 **sketch fronte fatto** — colore sabbia/kaki
    - Silhouette: rivista corta/slim (orlo anca), moderna ma DNA vintage — collo classico, 4 tasche pulite, cintura sottile
    - Taglio laser: pannelli perforati a scatter irregolare (sale cristallizzato, stesso linguaggio della stampa giacca 1) su sottobraccio/fianco, davanti e dietro
    - Dettagli vissuti: fibbia invecchiata, passante porta-chiavi, scolorimento tono su tono
    - Sketch salvato in `accademia/img-cinque-giacche/giacca2-sahariana-sketch.png`
    - Ancora da fare: sketch retro
-3. **Giacca corta stile napoleonico** — ⏸️ **in pausa** (18/09, richiede più lavoro di progettazione)
-4. **Denim jacket raw** — 🟢 **sketch fronte+retro fatto**
+3. **Giacca ussara** — 🟡 **concept sbloccato 19/09, ancora da renderizzare**
+   - Coerenza: ussaro = cavaliere della sua epoca (mezzo veloce, il cavallo) → stesso identikit del motociclista Roue Libre
+   - Spalline in stampa 3D a rete/honeycomb rigida, alleggerimento funzionale (non decorazione) — aggancio con passante in tessuto + bottone a pressione (non cucite, modulari/removibili come le spalline militari storiche)
+   - Colore: **azzurro** — outfit con pantalone bianco e maglia beige
+   - Ancora da fare: render fronte, poi sketch tecnico; tessuto ancora da decidere
+4. **Denim jacket raw** — 🟢 **sketch fronte+retro fatto** — colore indaco denim grezzo
    - Silhouette: Type III ibrida (tasche a punta, doppie pieghe frontali) + cinghia posteriore con fibbia (dettaglio dalla Type I)
    - Stampa digitale piazzata: honeycomb gomiti, whiskers ascelle, fade dorso/spalle con fascia protetta sotto la cinghia, contrasto tasche/polsini, atari collo
    - Render fotorealistico fronte+retro approvato, sketch tecnico su figurino salvato in `accademia/img-cinque-giacche/giacca4-denim-sketch.png`
-5. **Biker vintage scrambler/café racer** — ⚪ non ancora sketchata (collo Harrington con cinturino, variante propria distinta dalla giacca 1)
+5. **Biker vintage scrambler/café racer** — ⚪ non ancora sketchata (collo Harrington con cinturino, variante propria distinta dalla giacca 1) — colore **British Racing Green** (deciso 19/09)
 
 ## Prossimi passi
 
