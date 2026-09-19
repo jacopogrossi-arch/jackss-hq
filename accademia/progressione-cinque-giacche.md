@@ -3,7 +3,7 @@
 File di stato rapido, da leggere a inizio sessione per riprendere da dove eravamo rimasti.
 Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giacche.md` — questo file è solo il "dove siamo ora".
 
-**Ultimo aggiornamento:** 19/09/2026 (giacca 3 sbloccata: coerenza concept + colore decisi; colore giacca 5 deciso)
+**Ultimo aggiornamento:** 19/09/2026 (giacca 3: idea ussara scartata dopo 2 render, sostituita da field/shirt jacket; colore giacca 5 deciso)
 
 ---
 
@@ -20,11 +20,11 @@ Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giac
    - Dettagli vissuti: fibbia invecchiata, passante porta-chiavi, scolorimento tono su tono
    - Sketch salvato in `accademia/img-cinque-giacche/giacca2-sahariana-sketch.png`
    - Ancora da fare: sketch retro
-3. **Giacca ussara** — 🟡 **concept sbloccato 19/09, ancora da renderizzare**
-   - Coerenza: ussaro = cavaliere della sua epoca (mezzo veloce, il cavallo) → stesso identikit del motociclista Roue Libre
-   - Spalline in stampa 3D a rete/honeycomb rigida, alleggerimento funzionale (non decorazione) — aggancio con passante in tessuto + bottone a pressione (non cucite, modulari/removibili come le spalline militari storiche)
-   - Colore: **azzurro** — outfit con pantalone bianco e maglia beige
-   - Ancora da fare: render fronte, poi sketch tecnico; tessuto ancora da decidere
+3. **Field/shirt jacket ibrida** — 🟡 **concept definito 19/09, ancora da renderizzare** (sostituisce l'idea ussara, scartata dopo 2 render — vedi dettaglio decisioni)
+   - Dritta, boxy, lunghezza fianchi; lino pesante crema, texture materica a vista
+   - Collo militare aperto, tasche a filo nascoste, chiusura a bottoni con martingala di rinforzo
+   - Stampa 3D: reticolo/honeycomb delicato tono su tono su martingala abbottonatura + rinforzi gomiti (rinforzo funzionale, non decorazione)
+   - Ancora da fare: render fronte (Step 1 di 2, Soul Cinema — capo su modello neutro), poi composite su figurino base, poi sketch tecnico
 4. **Denim jacket raw** — 🟢 **sketch fronte+retro fatto** — colore indaco denim grezzo
    - Silhouette: Type III ibrida (tasche a punta, doppie pieghe frontali) + cinghia posteriore con fibbia (dettaglio dalla Type I)
    - Stampa digitale piazzata: honeycomb gomiti, whiskers ascelle, fade dorso/spalle con fascia protetta sotto la cinghia, contrasto tasche/polsini, atari collo
