@@ -3,7 +3,7 @@
 File di stato rapido, da leggere a inizio sessione per riprendere da dove eravamo rimasti.
 Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giacche.md` — questo file è solo il "dove siamo ora".
 
-**Ultimo aggiornamento:** 19/09/2026 (giacca 3: idea ussara scartata dopo 2 render, sostituita da field/shirt jacket; colore giacca 5 deciso)
+**Ultimo aggiornamento:** 22/09/2026 (giacca 3 sketch fronte completato e ricalcato; giacca 5 flat fronte completato e ricalcato, con pattern topografico aggiunto)
 
 ---
 
@@ -20,33 +20,34 @@ Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giac
    - Dettagli vissuti: fibbia invecchiata, passante porta-chiavi, scolorimento tono su tono
    - Sketch salvato in `accademia/img-cinque-giacche/giacca2-sahariana-sketch.png`
    - Ancora da fare: sketch retro
-3. **Field/shirt jacket ibrida** — 🟡 **silhouette rivista 19/09 su riferimento fotografico (field jacket M-65)** — sketch precedente (su figurino) superato, in attesa di nuovo flat tecnico
+3. **Field/shirt jacket ibrida** — 🟢 **sketch fronte ricalcato su figurino, completato**
    - Dritta, boxy, lunghezza fianchi; lino pesante crema (eventualmente misto per struttura), texture materica a vista
    - Collo a punta camicia/safari aperto, tasconi a toppa con patta e bottone, spalline a passante, chiusura a bottoni con martingala di rinforzo
    - Stampa 3D: reticolo/honeycomb delicato tono su tono su martingala abbottonatura + rinforzi gomiti (rinforzo funzionale, non decorazione)
-   - **Nuovo standard di lavoro (19/09):** le prove di design ora si fanno con flat tecnico (capo disteso, no figura, solo fronte, no ombreggiature, solo pieghe) — più veloce da correggere; lo sketch su figurino fronte/retro resta per gli elaborati finali una volta chiuso il design
-   - Ancora da fare: generare il flat fronte con le nuove decisioni, poi ricalco
+   - Flat tecnico → ricalco su figurino: workflow validato, esito ottimo
+   - Ancora da fare: sketch retro
 4. **Denim jacket raw** — 🟢 **sketch fronte+retro fatto** — colore indaco denim grezzo
    - Silhouette: Type III ibrida (tasche a punta, doppie pieghe frontali) + cinghia posteriore con fibbia (dettaglio dalla Type I)
    - Stampa digitale piazzata: honeycomb gomiti, whiskers ascelle, fade dorso/spalle con fascia protetta sotto la cinghia, contrasto tasche/polsini, atari collo
    - Render fotorealistico fronte+retro approvato, sketch tecnico su figurino salvato in `accademia/img-cinque-giacche/giacca4-denim-sketch.png`
-5. **Biker vintage scrambler/café racer** — 🟡 **flat fronte in corso (19/09)**, su riferimento fotografico Steve McQueen in moto
+5. **Biker vintage scrambler/café racer** — 🟢 **sketch fronte ricalcato su figurino, completato**, su riferimento fotografico Steve McQueen in moto
    - Colore British Racing Green, collo a listino rigido chiuso a bottone a pressione (rivisto da Harrington con cinturino), doppia colonna di bottoni a pressione a contrasto (avorio su verde)
+   - Stampa digitale pattern: motivo a linee di livello/mappa topografica tono su tono sulla fascia centrale tra i bottoni (seconda lavorazione sulla giacca, oltre al taglio laser)
    - Taglio laser: schiena interamente microforata per ventilazione
-   - Ancora da fare: flat fronte, poi flat/valutazione retro (per il dettaglio schiena microforata), poi ricalco
+   - Ancora da fare: sketch retro (per il dettaglio schiena microforata)
 
 ## Prossimi passi
 
-- Disegno tecnico retro delle giacche 1 e 2
-- Riprendere la giacca 3 (corta stile napoleonico, richiede più progettazione)
-- Sketch della giacca 5
+- Disegno tecnico retro di tutte e cinque le giacche (nessuna ha ancora il retro con il nuovo workflow flat, tranne la 4 che l'aveva già dal vecchio workflow render-based)
 - Cartella cromatica e cartella materiali — struttura creata, ancora da popolare
 
-## Workflow sketch tecnico (validato)
+## Workflow sketch tecnico (validato, aggiornato 22/09)
 
 Figurino base riutilizzabile: `accademia/img-cinque-giacche/figurino-base-fronte.png` (fronte, nudo, testa calva, posa neutra).
 
-Processo: (1) render fotorealistico del capo su modello neutro via banana-pro-director; (2) prompt a ChatGPT con il render + uno sketch già approvato come riferimento di stile, per un flat pulito senza sfumature con pieghe di panneggio esplicite. Chiedere all'AI di disegnare direttamente sopra un figurino esistente non ne rispetta le proporzioni esatte — se serve ricalcare a mano, meglio chiedere il capo "garment-only" e posizionarlo/scalarlo manualmente in Procreate.
+**Workflow attuale (dal 19/09, sostituisce il render fotorealistico per le prove di design):** genera direttamente un **flat tecnico** via ChatGPT — capo disteso, senza figura, solo fronte, no ombreggiature, solo linee di pieghe/panneggio. Molto più veloce da iterare rispetto al render fotorealistico Higgsfield (che resta comunque disponibile per gli elaborati finali/presentazione, se servisse).
+
+**Ricalco su figurino:** non chiedere a ChatGPT di rigenerare il flat "proporzionato" allegando il figurino come riferimento — non funziona in modo affidabile (vedi [[feedback_flat_proporzioni_warp]]). Andare dritti alla distorsione manuale in Procreate: livello del flat → Trasforma → Distorsione → trascinare i punti di controllo su spalle/vita/manica finché combacia col figurino sotto → ricalcare su nuovo livello.
 
 ## Link
 
