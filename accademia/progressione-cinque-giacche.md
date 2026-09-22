@@ -3,7 +3,7 @@
 File di stato rapido, da leggere a inizio sessione per riprendere da dove eravamo rimasti.
 Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giacche.md` — questo file è solo il "dove siamo ora".
 
-**Ultimo aggiornamento:** 22/09/2026 (giacca 3 sketch fronte completato e ricalcato; giacca 5 flat fronte completato e ricalcato, con pattern topografico aggiunto)
+**Ultimo aggiornamento:** 22/09/2026 (outfit 1 completato a colori — vedi sezione Outfit in fondo)
 
 ---
 
@@ -36,10 +36,16 @@ Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giac
    - Taglio laser: schiena interamente microforata per ventilazione — 🟢 **sketch retro fatto** (22/09), pannello ben leggibile, si ferma correttamente ai raccordi con le maniche
    - ⚠️ **Da decidere:** nello sketch retro sono comparse toppe ai gomiti con texture a trama, non previste nella scheda di questa giacca (probabile contaminazione dal riferimento di stile della giacca 3) — Jacopo deve decidere se toglierle o tenerle (in tal caso differenziare la texture da quella a nido d'ape della giacca 3)
 
+## Outfit — stato
+
+1. **Quasi-bomber utility** — 🟢 **outfit completo a colori, fronte** (`giacca1-outfit-FINALE.png`). Pantalone lino bianco dritto/caviglia scoperta, t-shirt verde scuro, driving shoes marroni.
+2-5. Da fare, uno alla volta — vedi standard di colorazione in `progetto-fashion-design-cinque-giacche.md`.
+
 ## Prossimi passi
 
+- Outfit giacca 2 (sahariana) — prossimo in coda
 - Decidere se tenere o togliere le toppe ai gomiti comparse per errore nello sketch retro della giacca 5
-- Disegno tecnico retro delle giacche 1, 2, 3 (mancano ancora)
+- Disegno tecnico retro delle giacche 1, 2, 3 (mancano ancora — solo fronte disegnato finora su tutte)
 - Cartella cromatica e cartella materiali — struttura creata, ancora da popolare
 
 ## Workflow sketch tecnico (validato, aggiornato 22/09)

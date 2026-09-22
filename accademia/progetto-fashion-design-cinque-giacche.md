@@ -157,6 +157,22 @@ Figurino nudo di Jacopo (fronte, testa calva, posa neutra) salvato come base riu
 
 *Bozza da validare — ogni giacca resta protagonista (texture, lavorazione tecnologica), il resto dell'outfit fa da fondo neutro/palette, mai lo stesso schema ripetuto su due giacche.*
 
+**Correzione colore giacca 1** (22/09): non è verde/bianco/azzurro come nelle opzioni proposte in bozza — è grigio/pietra con il pattern tono-su-tono "asfalto-sabbia-sale" reso come screpolature chiare/scure, deciso da Jacopo con un flat di riferimento colorato a parte (`giacca1-colore-pattern-reference.webp`).
+
+### Outfit 1 (quasi-bomber) — COMPLETATO (22/09/2026)
+
+**Metodo:** figurino disegnato a mano da Jacopo (linework fronte, giacca+pantalone+scarpe) ricalcato su Procreate dal proprio sketch base, poi colorato via ChatGPT con prompt in inglese su riferimento immagine. Niente render fotorealistico: stile fashion croquis colorato a mano, sfondo bianco pulito.
+
+**Standard di colorazione trovato dopo iterazioni (da riusare per le giacche 2-5):**
+- Contorni esterni (giacca, pantalone, scarpe): spessi, neri, arrotondati/"cicciotti" — stesso peso ovunque, non solo sulla giacca
+- Pieghe di panneggio: **disegnate come vero linework** (stesso peso delle linee costruttive), NON solo ombreggiatura — poi un velo di ombra leggera passato sopra, mai ombra da sola senza linee
+- Cuciture/tratteggi: leggermente imperfetti, "a mano libera" — non perfettamente regolari, qualche salto nel tratteggio
+- Colorazione generale: soft, leggera, tono piatto con ombreggiatura minima — mai lucida/renderizzata/fotorealistica
+- Regola pratica: se il risultato sembra un render digitale invece di un disegno colorato a mano, è sbagliato — target è "sembra colorato in Procreate"
+- **Metodo più affidabile**: quando serve massima fedeltà al linework, conviene che Jacopo ricalchi/disegni lui stesso a mano pantalone e scarpe (come fatto per l'outfit 1 finale), e si chiede a ChatGPT solo di colorare senza toccare le linee — risultato migliore rispetto a far generare/modificare il linework dall'AI.
+
+**File:** `accademia/img-cinque-giacche/giacca1-outfit-FINALE.png` (fronte). Iterazioni intermedie salvate come riferimento (`-v1-troppo-preciso`, `-v2-troppo-sketchy`, `-v3`, `-v4`, `-v5-ridisegnato-a-mano`).
+
 ### Moodboard tecnica — materiale raccolto (16/09/2026)
 
 30 immagini organizzate in `Downloads/foto moodboard/moodboard-tecnica/` per categoria (`costruzione-tipologie/`, `hardware/`, `tecnologie/`, `dettagli-linea/`, `tessuto/`, `da-verificare/`). Scheda tecnica completa con scaletta delle 5 giacche + contact sheet fotografico esportata in PDF: `ROUE-LIBRE-Scheda-Tecnica.pdf` (stessa cartella). Include tra le immagini anche i riferimenti Armani (collo a imbuto, tasconi obliqui) che hanno guidato la revisione della giacca 1.
