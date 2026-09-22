@@ -41,11 +41,12 @@ Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giac
 1. **Quasi-bomber utility** — 🟢 **outfit completo a colori, fronte** (`giacca1-outfit-FINALE.png`). Pantalone lino bianco dritto/caviglia scoperta, t-shirt verde scuro, driving shoes marroni.
 2. **Sahariana** — 🟢 **outfit completo a colori, fronte** (`giacca2-outfit-FINALE.png`). Pantalone lino bianco, maglia a righe bianco/blu, loafer scamosciati marroni.
 3. **Field/shirt jacket ibrida** — 🟢 **outfit completo a colori, fronte** (`giacca3-outfit-FINALE.png`). Pantalone verde militare bootcut (copre lo stivale), t-shirt bianca, stivali scamosciati marroni con lacci.
-4-5. Da fare, uno alla volta — workflow: Claude genera linework pantalone+scarpe sketchy da ricalcare (o direttamente colorabile se Jacopo salta il ricalco a mano) → Claude prepara prompt colorazione, blindato contro rigenerazione del linework e contro gradiente lucido. Vedi dettagli in `progetto-fashion-design-cinque-giacche.md`.
+4. **Denim jacket raw** — 🟢 **outfit completo a colori, fronte** (`giacca4-outfit-FINALE.png`). Pantalone bianco wide-leg, t-shirt verde scuro, driving shoes marroni. Giacca con fading honeycomb/whiskers.
+5. Da fare — workflow: Claude genera linework pantalone+scarpe sketchy da ricalcare (o direttamente colorabile) → Claude prepara prompt colorazione, blindato contro rigenerazione del linework, contro gradiente lucido, e **se lo sketch ha già pieghe disegnate a mano, non farle reinventare all'AI** — solo aerografo semplice sopra le linee esistenti. Vedi dettagli in `progetto-fashion-design-cinque-giacche.md`.
 
 ## Prossimi passi
 
-- Outfit giacca 4 (denim jacket) — prossimo in coda
+- Outfit giacca 5 (biker café racer) — ultima, poi la checklist "creazione outfit" è chiusa
 - Decidere se tenere o togliere le toppe ai gomiti comparse per errore nello sketch retro della giacca 5
 - Disegno tecnico retro delle giacche 1, 2, 3 (mancano ancora — solo fronte disegnato finora su tutte)
 - Cartella cromatica e cartella materiali — struttura creata, ancora da popolare

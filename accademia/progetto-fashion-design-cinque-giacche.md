@@ -200,6 +200,14 @@ Giacca crema lino pesante con pattern honeycomb tono-su-tono su placket/gomiti, 
 
 **File:** `accademia/img-cinque-giacche/giacca3-outfit-FINALE.png` (fronte). Linework pre-colore: `giacca3-outfit-completo-lineart.png` (dopo 2 correzioni sugli stivali: da chelsea a stringati, poi pantalone allungato a bootcut). Iterazioni colore intermedie: `-v1-silhouette-cambiata`, `-v2-troppo-lucido`, `-v3-troppa-grana`.
 
+### Outfit 4 (denim jacket) — COMPLETATO (23/09/2026)
+
+Giacca denim indaco raw con effetto fading (honeycomb gomiti, whiskers, schiarimento spalle/braccia), pantalone bianco ampio/wide-leg (uscito così dalla generazione AI, accettato invece del dritto/regular standard — unica eccezione alla regola pantalone), t-shirt verde scuro (sliver al collo), driving shoes marroni.
+
+**Lezione più importante di questa giacca (vale per tutte le prossime):** quando lo sketch di Jacopo ha già le pieghe di panneggio disegnate a mano (anche solo abbozzate, es. gli scarabocchi sotto le ascelle), **NON richiedere a ChatGPT di aggiungere/reinventare pieghe** — il rischio è che le cancelli o le sostituisca con pieghe "finte" da rendering. Il prompt corretto è quello letterale: "non aggiungere né ridisegnare nulla, usa esattamente le linee già presenti nel disegno, applica colore con tecnica aerografo semplice (ombra scura sotto/accanto alla piega, schiarimento sopra/accanto), niente texture, niente rendering". Tre iterazioni sbagliate (pieghe sparite, pieghe finte aggiunte, texture "editoriale" troppo densa) sono state necessarie prima di capire che bastava tornare al lineart originale e chiedere il minimo indispensabile.
+
+**File:** `accademia/img-cinque-giacche/giacca4-outfit-FINALE.png` (fronte). Linework pre-colore: `giacca4-outfit-lineart-v1.png`. Iterazioni colore intermedie: `-v1-giacca-da-rifare`, `-v2-troppo-render`, `-v3`, `-v4`.
+
 ### Moodboard tecnica — materiale raccolto (16/09/2026)
 
 30 immagini organizzate in `Downloads/foto moodboard/moodboard-tecnica/` per categoria (`costruzione-tipologie/`, `hardware/`, `tecnologie/`, `dettagli-linea/`, `tessuto/`, `da-verificare/`). Scheda tecnica completa con scaletta delle 5 giacche + contact sheet fotografico esportata in PDF: `ROUE-LIBRE-Scheda-Tecnica.pdf` (stessa cartella). Include tra le immagini anche i riferimenti Armani (collo a imbuto, tasconi obliqui) che hanno guidato la revisione della giacca 1.
