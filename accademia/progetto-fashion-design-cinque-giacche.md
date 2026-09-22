@@ -143,6 +143,20 @@ Le nuove tecnologie spingono la moda verso la sostenibilità (meno sprechi, meno
 
 Figurino nudo di Jacopo (fronte, testa calva, posa neutra) salvato come base riutilizzabile per tutti gli sketch della collezione: `accademia/img-cinque-giacche/figurino-base-fronte.png`. Workflow validato per gli sketch tecnici: (1) render fotorealistico del capo su modello neutro via banana-pro-director (Mode 1B), fronte e retro; (2) prompt a ChatGPT con render + uno sketch già approvato come riferimento di stile per ottenere un flat pulito (no sfumature/hatching, solo linework + pieghe di panneggio), garment-only se serve poi ricalcare a mano sul proprio figurino in Procreate — chiedere all'AI di ridisegnare direttamente sopra un figurino esistente non ne rispetta le proporzioni esatte.
 
+### Outfit — bozza (22/09/2026)
+
+**Standard pantalone per tutti e 5 gli outfit** (deciso 22/09): chino/lino silhouette dritta/regular (non slim), break minimo/assente, orlo a caviglia scoperta — mai pantaloncino corto né capri (letti fuori registro rispetto al mood utility-vissuto McQueen).
+
+| # | Giacca | Pantalone | Base (maglia/t-shirt) | Scarpe | Logica |
+|---|--------|-----------|------------------------|--------|--------|
+| 1 | Quasi-bomber utility (canvas/cerato) | Lino bianco | T-shirt verde scuro | Driving shoes / loafer senza calze | Bianco+verde = "la costa vista dal finestrino"; il bianco alleggerisce una giacca già ricca di texture/tasche |
+| 2 | Sahariana (sabbia/kaki) | Lino bianco | Maglia a righe (Breton) bianco/blu | Espadrillas o loafer scamosciato | Combo "safari costiero" classico; righe = riferimento nautico senza scivolare sul caban (scartato) |
+| 3 | Field jacket (crema, lino pesante) | Pantalone azzurro/verde militare | T-shirt bianca | Boots in pelle scamosciata | Giacca già texture/materica: pantalone a tinta unita colorata la fa respirare, azzurro chiude la palette |
+| 4 | Denim jacket raw (indaco) | Bianco o crema | T-shirt verde o azzurro | Driving shoes o sneaker in tela | Indaco+bianco = classico McQueen/anni '60, lascia risaltare le lavorazioni di fading |
+| 5 | Biker café racer (British Racing Green) | Bianco | T-shirt bianca o a righe sottili | Boots café racer / chukka | Verde+bianco netto, coerente col riferimento fotografico in moto |
+
+*Bozza da validare — ogni giacca resta protagonista (texture, lavorazione tecnologica), il resto dell'outfit fa da fondo neutro/palette, mai lo stesso schema ripetuto su due giacche.*
+
 ### Moodboard tecnica — materiale raccolto (16/09/2026)
 
 30 immagini organizzate in `Downloads/foto moodboard/moodboard-tecnica/` per categoria (`costruzione-tipologie/`, `hardware/`, `tecnologie/`, `dettagli-linea/`, `tessuto/`, `da-verificare/`). Scheda tecnica completa con scaletta delle 5 giacche + contact sheet fotografico esportata in PDF: `ROUE-LIBRE-Scheda-Tecnica.pdf` (stessa cartella). Include tra le immagini anche i riferimenti Armani (collo a imbuto, tasconi obliqui) che hanno guidato la revisione della giacca 1.
