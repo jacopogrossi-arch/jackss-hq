@@ -208,6 +208,27 @@ Giacca denim indaco raw con effetto fading (honeycomb gomiti, whiskers, schiarim
 
 **File:** `accademia/img-cinque-giacche/giacca4-outfit-FINALE.png` (fronte). Linework pre-colore: `giacca4-outfit-lineart-v1.png`. Iterazioni colore intermedie: `-v1-giacca-da-rifare`, `-v2-troppo-render`, `-v3`, `-v4`.
 
+### Metodologia di colorazione definitiva (fissata 23/09, dopo giacche 1-4)
+
+Sostituisce/consolida i tentativi precedenti. Due step netti, sempre nello stesso ordine:
+
+**Step 1 — colore flat di base:** riempimento piatto, opaco, di ogni pezzo (giacca, pantalone, maglia, scarpe, pelle) con i colori decisi in scheda. Nessuna ombra, nessuna sfumatura in questo step.
+
+**Step 2 — aerografo solo per ombra/luce:** passata di aerografo *esclusivamente* lungo le linee di piega/cucitura già disegnate nel lineart — scuro sotto/accanto a ogni piega, chiaro sopra/accanto. Niente altro: niente texture, niente grana, niente gradiente fotografico smooth, niente lucido/gloss.
+
+**Regola fissa:** il lineark è un layer intoccabile in entrambi gli step — non va mai ridisegnato, rigenerato, né arricchito di pieghe "inventate" dall'AI. Se lo sketch di Jacopo ha già pieghe disegnate a mano, quelle sono definitive: l'aerografo lavora solo sopra quelle, non ne aggiunge di nuove.
+
+**Prompt template riutilizzabile:**
+```
+This is a simple coloring task on this exact line drawing — nothing else. Do not add, remove, or redraw any linework — treat all lines as fixed and untouchable.
+
+Step 1: fill flat, matte base colors — [elenco colori per pezzo].
+
+Step 2: on top of the flat color, add a simple airbrush pass for shadow and light only — dark shadow directly under/beside each existing fold line, light highlight directly above/beside it, following exactly the lines already drawn. Nothing invented beyond that: no extra texture, no grain, no smooth photographic gradient, no shine/gloss.
+
+Keep all linework fully visible on top of the color. Result must read as a colored drawing, not a rendered illustration. Background stays clean white.
+```
+
 ### Moodboard tecnica — materiale raccolto (16/09/2026)
 
 30 immagini organizzate in `Downloads/foto moodboard/moodboard-tecnica/` per categoria (`costruzione-tipologie/`, `hardware/`, `tecnologie/`, `dettagli-linea/`, `tessuto/`, `da-verificare/`). Scheda tecnica completa con scaletta delle 5 giacche + contact sheet fotografico esportata in PDF: `ROUE-LIBRE-Scheda-Tecnica.pdf` (stessa cartella). Include tra le immagini anche i riferimenti Armani (collo a imbuto, tasconi obliqui) che hanno guidato la revisione della giacca 1.
