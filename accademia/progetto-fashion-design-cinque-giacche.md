@@ -189,6 +189,17 @@ Giacca colore sabbia/kaki, pantalone lino bianco, maglia a righe bianco/blu (vis
 
 **File:** `accademia/img-cinque-giacche/giacca2-outfit-FINALE.png` (fronte). Linework pre-colore: `giacca2-outfit-completo-lineart.png`. Iterazione intermedia: `-v1-troppo-render`.
 
+### Outfit 3 (field jacket) — COMPLETATO (22/09/2026)
+
+Giacca crema lino pesante con pattern honeycomb tono-su-tono su placket/gomiti, pantalone verde militare/azzurro spento, t-shirt bianca (sliver al collo), stivali scamosciati marroni con lacci (stile Guidi). Pantalone bootcut, copre interamente lo stivale (richiesta esplicita, diversa dalle giacche 1-2 a caviglia scoperta — coerente con lo stile più "boot-forward" di questa giacca).
+
+**Correzioni allo standard di colorazione (appreso da questa giacca, valgono anche per 4-5):**
+- ChatGPT tende a **rigenerare il linework invece di limitarsi a colorare**, quando il prompt lascia margine — capitato due volte (silhouette pantalone cambiata, lacci stivali persi). Prompt efficace: dichiarare esplicitamente "pure coloring task, non-redraw, non-reshape", trattare il linework come layer intoccabile
+- Tendenza opposta quando corretta: **troppo lucido/sfumato** (gradiente smooth, pieghe di panneggio nascoste sotto l'ombra) — chiedere esplicitamente "matte, no shine, no smooth gradient, existing crease linework stays visible on top"
+- Il "meno texture/grana" richiesto in un giro può poi ricomparire nel giro successivo per errore — ricontrollare sempre pantalone/scarpe per texture indesiderata aggiunta a caso, anche se non richiesta
+
+**File:** `accademia/img-cinque-giacche/giacca3-outfit-FINALE.png` (fronte). Linework pre-colore: `giacca3-outfit-completo-lineart.png` (dopo 2 correzioni sugli stivali: da chelsea a stringati, poi pantalone allungato a bootcut). Iterazioni colore intermedie: `-v1-silhouette-cambiata`, `-v2-troppo-lucido`, `-v3-troppa-grana`.
+
 ### Moodboard tecnica — materiale raccolto (16/09/2026)
 
 30 immagini organizzate in `Downloads/foto moodboard/moodboard-tecnica/` per categoria (`costruzione-tipologie/`, `hardware/`, `tecnologie/`, `dettagli-linea/`, `tessuto/`, `da-verificare/`). Scheda tecnica completa con scaletta delle 5 giacche + contact sheet fotografico esportata in PDF: `ROUE-LIBRE-Scheda-Tecnica.pdf` (stessa cartella). Include tra le immagini anche i riferimenti Armani (collo a imbuto, tasconi obliqui) che hanno guidato la revisione della giacca 1.
