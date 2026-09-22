@@ -200,6 +200,8 @@ Giacca crema lino pesante con pattern honeycomb tono-su-tono su placket/gomiti, 
 
 **File:** `accademia/img-cinque-giacche/giacca3-outfit-FINALE.png` (fronte). Linework pre-colore: `giacca3-outfit-completo-lineart.png` (dopo 2 correzioni sugli stivali: da chelsea a stringati, poi pantalone allungato a bootcut). Iterazioni colore intermedie: `-v1-silhouette-cambiata`, `-v2-troppo-lucido`, `-v3-troppa-grana`.
 
+**Aggiornamento 23/09:** rifatta da zero con la metodologia definitiva (flat + aerografo solo ombra/luce, vedi sezione sotto) — risultato migliore al primo tentativo, `giacca3-outfit-FINALE.png` sostituito con questa versione.
+
 ### Outfit 4 (denim jacket) — COMPLETATO (23/09/2026)
 
 Giacca denim indaco raw con effetto fading (honeycomb gomiti, whiskers, schiarimento spalle/braccia), pantalone bianco ampio/wide-leg (uscito così dalla generazione AI, accettato invece del dritto/regular standard — unica eccezione alla regola pantalone), t-shirt verde scuro (sliver al collo), driving shoes marroni.
