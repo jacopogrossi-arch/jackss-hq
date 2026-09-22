@@ -39,11 +39,12 @@ Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giac
 ## Outfit — stato
 
 1. **Quasi-bomber utility** — 🟢 **outfit completo a colori, fronte** (`giacca1-outfit-FINALE.png`). Pantalone lino bianco dritto/caviglia scoperta, t-shirt verde scuro, driving shoes marroni.
-2-5. Da fare, uno alla volta — vedi standard di colorazione in `progetto-fashion-design-cinque-giacche.md`.
+2. **Sahariana** — 🟢 **outfit completo a colori, fronte** (`giacca2-outfit-FINALE.png`). Pantalone lino bianco, maglia a righe bianco/blu, loafer scamosciati marroni.
+3-5. Da fare, uno alla volta — workflow: Claude genera linework pantalone+scarpe sketchy da ricalcare → Jacopo ricalca tutto a mano → Claude prepara prompt colorazione. Vedi dettagli in `progetto-fashion-design-cinque-giacche.md`.
 
 ## Prossimi passi
 
-- Outfit giacca 2 (sahariana) — prossimo in coda
+- Outfit giacca 3 (field jacket) — prossimo in coda
 - Decidere se tenere o togliere le toppe ai gomiti comparse per errore nello sketch retro della giacca 5
 - Disegno tecnico retro delle giacche 1, 2, 3 (mancano ancora — solo fronte disegnato finora su tutte)
 - Cartella cromatica e cartella materiali — struttura creata, ancora da popolare

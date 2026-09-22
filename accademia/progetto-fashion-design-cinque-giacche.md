@@ -173,6 +173,22 @@ Figurino nudo di Jacopo (fronte, testa calva, posa neutra) salvato come base riu
 
 **File:** `accademia/img-cinque-giacche/giacca1-outfit-FINALE.png` (fronte). Iterazioni intermedie salvate come riferimento (`-v1-troppo-preciso`, `-v2-troppo-sketchy`, `-v3`, `-v4`, `-v5-ridisegnato-a-mano`).
 
+### Workflow definitivo per le giacche 2-5 (deciso 22/09)
+
+Diverso da come è stata fatta la giacca 1 (troppe iterazioni di prompt): ora si procede così —
+1. Claude genera un prompt per ChatGPT che aggiunge pantalone+scarpe in **linework sketchy senza colore** (stile "V2": libero, pieghe di panneggio disegnate) sopra lo sketch esistente della giacca, per dare a Jacopo una base da ricalcare
+2. Jacopo ricalca a mano in Procreate l'intero figurino (giacca+pantalone+scarpe) — massima fedeltà al proprio tratto, l'AI non deve più generare/toccare linework definitivo
+3. Claude prepara il prompt di colorazione (stile "naturale", vedi standard sotto) sul figurino ricalcato
+4. Iterare la colorazione se serve, poi salvare come outfit definitivo
+
+**Correzione allo standard di colorazione** (appresa dalla giacca 2): chiedere "meno renderizzato/più naturale" a ChatGPT rischia di tradursi in "aggiungo texture/grana" invece di cambiare l'ombreggiatura. Il prompt efficace deve essere esplicito: ombreggiatura leggera e irregolare concentrata solo vicino a pieghe/cuciture, niente gradiente uniforme su tutta la superficie, niente texture/grana aggiunta — e conviene allegare un'immagine di riferimento già approvata (es. outfit 1) per mostrare il livello di renderizzazione voluto invece di descriverlo solo a parole.
+
+### Outfit 2 (sahariana) — COMPLETATO (22/09/2026)
+
+Giacca colore sabbia/kaki, pantalone lino bianco, maglia a righe bianco/blu (visibile solo al collo), scarpe loafer scamosciate marroni, fibbia cintura invecchiata. Ricalco integrale a mano di Jacopo su Procreate, poi colorazione ChatGPT.
+
+**File:** `accademia/img-cinque-giacche/giacca2-outfit-FINALE.png` (fronte). Linework pre-colore: `giacca2-outfit-completo-lineart.png`. Iterazione intermedia: `-v1-troppo-render`.
+
 ### Moodboard tecnica — materiale raccolto (16/09/2026)
 
 30 immagini organizzate in `Downloads/foto moodboard/moodboard-tecnica/` per categoria (`costruzione-tipologie/`, `hardware/`, `tecnologie/`, `dettagli-linea/`, `tessuto/`, `da-verificare/`). Scheda tecnica completa con scaletta delle 5 giacche + contact sheet fotografico esportata in PDF: `ROUE-LIBRE-Scheda-Tecnica.pdf` (stessa cartella). Include tra le immagini anche i riferimenti Armani (collo a imbuto, tasconi obliqui) che hanno guidato la revisione della giacca 1.
