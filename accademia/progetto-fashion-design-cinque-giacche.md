@@ -254,6 +254,8 @@ Keep all linework fully visible on top of the color. Result must read as a color
 
 30 immagini organizzate in `Downloads/foto moodboard/moodboard-tecnica/` per categoria (`costruzione-tipologie/`, `hardware/`, `tecnologie/`, `dettagli-linea/`, `tessuto/`, `da-verificare/`). Scheda tecnica completa con scaletta delle 5 giacche + contact sheet fotografico esportata in PDF: `ROUE-LIBRE-Scheda-Tecnica.pdf` (stessa cartella). Include tra le immagini anche i riferimenti Armani (collo a imbuto, tasconi obliqui) che hanno guidato la revisione della giacca 1.
 
+**Aggiunta 23/09:** +22 foto da Pinterest smistate nelle stesse categorie (numerazione proseguita): riferimenti M65 (giacca 3), denim Type I/III + retro con cinghia (giacca 4), biker racing e topografico (giacca 5), bomber anni '80 + collo montante con pattina (giacca 1), fading denim whiskers/honeycomb, honeycomb e rilievo 3D, cotone cerato, mesh da ventilazione, moschettone portachiavi, toppa al gomito in lino. Contact sheet e PDF scheda tecnica NON ancora aggiornati con le nuove foto.
+
 ## Stato avanzamento (16/09/2026)
 
 ### Moodboard evocativa — chiusa
