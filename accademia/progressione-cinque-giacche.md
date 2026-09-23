@@ -3,7 +3,7 @@
 File di stato rapido, da leggere a inizio sessione per riprendere da dove eravamo rimasti.
 Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giacche.md` — questo file è solo il "dove siamo ora".
 
-**Ultimo aggiornamento:** 23/09/2026 (retro figurini colorati completati, tutti e 5)
+**Ultimo aggiornamento:** 23/09/2026 (retro figurini + flat colorati fronte/retro completati, tutti e 5)
 
 ---
 
@@ -49,7 +49,7 @@ Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giac
 ## Cosa manca alla consegna (lista definita da Jacopo, 23/09)
 
 1. [x] **Retro figurini** — tutti e 5 completati il 23/09 via ChatGPT (`giaccaN-outfit-retro-FINALE.png`), prompt in `prompt-visualizzazione-giacche.md`
-2. [ ] **Flat colorati fronte + retro** — giacca 1 ✅ completa (`giacca1-flat-fronte-FINALE.png` + `giacca1-flat-retro-FINALE.png`, il fronte è il riferimento di stile per tutti); giacche 2, 3, 4 ✅ complete; manca giacca 5 (fronte e retro)
+2. [x] **Flat colorati fronte + retro** — tutte e 5 le giacche completate il 23/09 (`giaccaN-flat-fronte-FINALE.png` + `giaccaN-flat-retro-FINALE.png`); stile di riferimento = flat fronte giacca 1. Giacca 5 con colonna singola di bottoni (come outfit approvato, non doppia come in scheda)
 3. [ ] **Cartella colori**
 4. [ ] **Cartella materiali**
 5. [ ] **Moodboard tecnica** (materiale raccolto il 16/09, tavola da chiudere)
