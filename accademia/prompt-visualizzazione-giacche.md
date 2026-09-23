@@ -53,3 +53,61 @@ Testati il 15/09/2026 su ChatGPT, tutti confermati ok. A differenza del prompt s
 ### Costruzione idea (linee di movimento, più marcate/dinamiche)
 
 > Abstract gestural background, non-figurative. Bold sweeping azure blue ink lines and trails suggesting speed, wind and mechanical motion, layered with looser watercolor-like bleeds in warm off-white/sand — more dynamic and energetic than the moodboard background, carrying visible movement and directional energy across the page. Painterly but controlled, editorial, not chaotic. Enough calm negative space left for diagrams and construction notes on top. A3 landscape proportions (420x297mm), no text, no logos, no photographic elements, no figures.
+
+## Retro figurini colorati — 5 outfit (23/09/2026)
+
+**Come si usa:** in ChatGPT allega il file `giaccaN-outfit-FINALE.png` dell'outfit (e, se ce l'hai, lo sketch retro della giacca come riferimento di costruzione) e incolla il prompt corrispondente. Base comune + blocco dettagli specifico per ogni outfit. Stile = metodologia di colorazione definitiva (flat + aerografo solo su pieghe/cuciture).
+
+**Base comune (va in cima a ogni prompt):**
+
+```
+Attached is the final colored FRONT view of a fashion illustration. Create the BACK VIEW of the exact same figure wearing the exact same outfit, as the matching back page of the same fashion portfolio.
+
+Keep everything consistent with the attached front view:
+- Same figure: same proportions, height, bald head, skin tone, same neutral standing pose with arms relaxed at the sides — only seen from behind (back of the head and ears visible, no face).
+- Same garments, same fit, same lengths, same colors.
+- Same drawing style: clean dark linework; flat, matte base colors; then a light airbrush pass for shadow and light ONLY along the fold and seam lines (dark just beside each fold line, light just above it).
+- Drape folds must be drawn as visible lines, like in the front view: at the back of the knees, under the seat, at the elbows, at the waist and shoulder blades.
+- No texture, no grain, no smooth photographic gradient, no gloss. It must read as a colored fashion drawing, not a rendered illustration.
+- Clean white background, full body, same framing and scale as the front view, vertical A4.
+- Do not add anything that is not listed below: no logos, no labels, no extra pockets, patches or seams.
+
+Back details of this outfit:
+```
+
+**Outfit 1 — Quasi-bomber utility**
+```
+- Jacket: slate grey soft waxed canvas with the same tonal irregular "salt deposits on asphalt" pattern as the front, continuing across the whole back (random, no symmetry). Raglan sleeves: the raglan seams run diagonally from the collar to the underarm on the back too. Horizontal back yoke seam across the shoulder blades. Tall stand collar seen from behind (plain, the tab and snap are on the front only). Dark charcoal ribbed hem band and ribbed cuffs, same as the front. Boxy volume, sleeves full and rounded.
+- Trousers: off-white linen, straight leg, ankle length, two simple back welt pockets.
+- Shoes: brown suede loafers seen from the heel.
+```
+
+**Outfit 2 — Sahariana**
+```
+- Jacket: sand/khaki cotton, slim and short (hip length). Classic shirt collar seen from behind. The thin belt continues all around the back through side loops, same aged buckle only on the front. Laser-cut side panels with the same irregular scattered dark perforations as the front, running from underarm to hem — visible on both sides of the back. Light tone-on-tone fading on the shoulders and elbows. Plain back, no pockets.
+- Trousers: white, straight, with two simple back welt pockets.
+- Shoes: brown suede loafers seen from the heel.
+```
+
+**Outfit 3 — Field/shirt jacket ibrida**
+```
+- Jacket: heavy cream linen, straight and boxy, hip length. Pointed shirt collar seen from behind. Shoulder epaulettes visible at the top of the shoulders. Plain straight back with soft linen drape folds. The honeycomb 3D-printed elbow reinforcement patches, same tone-on-tone color as the front, must be clearly visible on both elbows — from behind they are more visible than from the front. Buttoned cuffs.
+- Trousers: military/olive green, bootcut, long, covering most of the boots, with two simple back pockets.
+- Shoes: brown suede lace-up boots, mostly covered by the trousers.
+```
+
+**Outfit 4 — Denim jacket raw**
+```
+- Jacket: raw indigo denim with tan/orange contrast stitching, short at the waist. Back with pointed Western yoke (Type III) and two vertical seams from the yoke to the hem band. Back cinch strap with metal buckle on the hem band (Type I detail). Placed digital print fading: lighter indigo on the back and shoulders (sun exposure), with a darker unfaded horizontal band exactly where the cinch strap passes; honeycomb fading at the back of both elbows; lighter abrasion on the collar edge and cuffs. Keep the fading drawn as flat color zones, not a photographic effect.
+- Trousers: white wide-leg, long, with two simple back welt pockets.
+- Shoes: brown leather driving shoes seen from the heel.
+```
+
+**Outfit 5 — Biker café racer**
+```
+- Jacket: British Racing Green light waxed cotton, close fit. Short rigid stand collar seen from behind. The whole back panel is laser-cut with a fine, even micro-perforation for ventilation, drawn as a dense grid of tiny dots — it stops cleanly at the armhole seams and at the hem, the sleeves are not perforated. The topographic pattern is ONLY on the front placket, not on the back. No elbow patches.
+- Trousers: white, long, covering the boots, with two simple back welt pockets.
+- Shoes: brown leather boots, mostly covered by the trousers.
+```
+
+*Nota: per l'outfit 5 il prompt è scritto SENZA toppe ai gomiti (decisione ancora aperta). Se Jacopo decide di tenerle, sostituire "No elbow patches." con la descrizione delle toppe.*
