@@ -3,7 +3,7 @@
 File di stato rapido, da leggere a inizio sessione per riprendere da dove eravamo rimasti.
 Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giacche.md` — questo file è solo il "dove siamo ora".
 
-**Ultimo aggiornamento:** 22/09/2026 (outfit 1 completato a colori — vedi sezione Outfit in fondo)
+**Ultimo aggiornamento:** 23/09/2026 (tutti e 5 gli outfit completati a colori — checklist outfit chiusa)
 
 ---
 
@@ -42,11 +42,14 @@ Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giac
 2. **Sahariana** — 🟢 **outfit completo a colori, fronte** (`giacca2-outfit-FINALE.png`). Pantalone lino bianco, maglia a righe bianco/blu, loafer scamosciati marroni.
 3. **Field/shirt jacket ibrida** — 🟢 **outfit completo a colori, fronte** (`giacca3-outfit-FINALE.png`). Pantalone verde militare bootcut (copre lo stivale), t-shirt bianca, stivali scamosciati marroni con lacci.
 4. **Denim jacket raw** — 🟢 **outfit completo a colori, fronte** (`giacca4-outfit-FINALE.png`). Pantalone bianco wide-leg, t-shirt verde scuro, driving shoes marroni. Giacca con fading honeycomb/whiskers.
-5. Da fare — workflow: Claude genera linework pantalone+scarpe sketchy da ricalcare (o direttamente colorabile) → Claude prepara prompt colorazione, blindato contro rigenerazione del linework, contro gradiente lucido, e **se lo sketch ha già pieghe disegnate a mano, non farle reinventare all'AI** — solo aerografo semplice sopra le linee esistenti. Vedi dettagli in `progetto-fashion-design-cinque-giacche.md`.
+5. **Biker café racer** — 🟢 **outfit completo a colori, fronte** (`giacca5-outfit-FINALE.png`). Pantalone bianco (copre lo stivale), boots con zip a punta quadrata, giacca British Racing Green con pattern topografico.
+
+**Tutti e 5 gli outfit fronte completati.** Metodologia di colorazione definitiva (flat + aerografo solo ombra/luce) fissata in `progetto-fashion-design-cinque-giacche.md`, riusabile per qualsiasi correzione futura o per il retro.
 
 ## Prossimi passi
 
-- Outfit giacca 5 (biker café racer) — ultima, poi la checklist "creazione outfit" è chiusa
+- Disegni tecnici retro delle cinque giacche (solo fronte fatto finora su tutte) — poi eventualmente outfit a colori anche sul retro
+- Cartella cromatica e cartella materiali — struttura creata, ancora da popolare
 - Decidere se tenere o togliere le toppe ai gomiti comparse per errore nello sketch retro della giacca 5
 - Disegno tecnico retro delle giacche 1, 2, 3 (mancano ancora — solo fronte disegnato finora su tutte)
 - Cartella cromatica e cartella materiali — struttura creata, ancora da popolare

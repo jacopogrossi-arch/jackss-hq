@@ -210,6 +210,23 @@ Giacca denim indaco raw con effetto fading (honeycomb gomiti, whiskers, schiarim
 
 **File:** `accademia/img-cinque-giacche/giacca4-outfit-FINALE.png` (fronte). Linework pre-colore: `giacca4-outfit-lineart-v1.png`. Iterazioni colore intermedie: `-v1-giacca-da-rifare`, `-v2-troppo-render`, `-v3`, `-v4`.
 
+### Outfit 5 (biker café racer) — COMPLETATO (23/09/2026)
+
+Giacca British Racing Green con pattern topografico tono-su-tono sulla fascia centrale, bottoni avorio a contrasto, pantalone bianco (copre lo stivale), boots con zip a punta quadrata stile Our Legacy (sostituiscono l'idea iniziale Converse, scartata subito). Colorata con la metodologia definitiva flat+aerografo al primo lineart, un solo giro di correzione (ombre troppo marcate → ammorbidite).
+
+**File:** `accademia/img-cinque-giacche/giacca5-outfit-FINALE.png` (fronte). Linework pre-colore: `giacca5-outfit-completo-lineart.png` (dopo correzione scarpe zip e allungamento pantalone). Iterazione colore intermedia: `-v1-ombre-forti`.
+
+## Tutti e 5 gli outfit completati (23/09/2026)
+
+Checklist "Creazione outfit relativi alle cinque giacche" chiusa (fronte). Riepilogo file finali:
+- Giacca 1 (quasi-bomber): `giacca1-outfit-FINALE.png`
+- Giacca 2 (sahariana): `giacca2-outfit-FINALE.png`
+- Giacca 3 (field jacket): `giacca3-outfit-FINALE.png`
+- Giacca 4 (denim jacket): `giacca4-outfit-FINALE.png`
+- Giacca 5 (biker café racer): `giacca5-outfit-FINALE.png`
+
+Prossimo step della checklist generale: disegni tecnici fronte/retro delle cinque giacche (solo fronte fatto finora su tutte).
+
 ### Metodologia di colorazione definitiva (fissata 23/09, dopo giacche 1-4)
 
 Sostituisce/consolida i tentativi precedenti. Due step netti, sempre nello stesso ordine:
