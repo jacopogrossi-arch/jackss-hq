@@ -3,7 +3,7 @@
 File di stato rapido, da leggere a inizio sessione per riprendere da dove eravamo rimasti.
 Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giacche.md` — questo file è solo il "dove siamo ora".
 
-**Ultimo aggiornamento:** 23/09/2026 (outfit fronte chiusi — definita la lista finale di cosa manca)
+**Ultimo aggiornamento:** 23/09/2026 (retro figurini colorati completati, tutti e 5)
 
 ---
 
@@ -48,7 +48,7 @@ Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giac
 
 ## Cosa manca alla consegna (lista definita da Jacopo, 23/09)
 
-1. [ ] **Retro figurini** — tutti e 5 gli outfit (figurino visto da dietro)
+1. [x] **Retro figurini** — tutti e 5 completati il 23/09 via ChatGPT (`giaccaN-outfit-retro-FINALE.png`), prompt in `prompt-visualizzazione-giacche.md`
 2. [ ] **Flat colorati fronte + retro** — giacche 2, 3, 4, 5 (fronte e retro); giacca 1 solo retro (fronte già fatto)
 3. [ ] **Cartella colori**
 4. [ ] **Cartella materiali**
@@ -56,7 +56,7 @@ Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giac
 
 Fatto questo, il progetto è completo.
 
-- Aperto: toppe ai gomiti comparse per errore nello sketch retro della giacca 5 — tenere o togliere (decidere prima del flat colorato retro)
+- Deciso 23/09: giacca 5 **senza toppe ai gomiti** (retro figurino generato così) — il flat retro va fatto coerente
 
 ## Workflow sketch tecnico (validato, aggiornato 22/09)
 
