@@ -50,7 +50,7 @@ Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giac
 
 1. [x] **Retro figurini** — tutti e 5 completati il 23/09 via ChatGPT (`giaccaN-outfit-retro-FINALE.png`), prompt in `prompt-visualizzazione-giacche.md`
 2. [x] **Flat colorati fronte + retro** — tutte e 5 le giacche completate il 23/09 (`giaccaN-flat-fronte-FINALE.png` + `giaccaN-flat-retro-FINALE.png`); stile di riferimento = flat fronte giacca 1. Giacca 5 con colonna singola di bottoni (come outfit approvato, non doppia come in scheda)
-3. [ ] **Cartella colori**
+3. [ ] **Cartella colori** — contenuti pronti in `cartella-cromatica-roue-libre.md` (23/09), da impaginare in Canva
 4. [ ] **Cartella materiali**
 5. [ ] **Moodboard tecnica** (materiale raccolto il 16/09, tavola da chiudere)
 
