@@ -1,5 +1,7 @@
 # Cartella materiali — Roue Libre
 
+Tavola in Canva: https://www.canva.com/d/OIWWA6QtFwiAXmo (copia della cartella cromatica, stesso sfondo e stile).
+
 Tavola A3 orizzontale, stessa impaginazione della cartella cromatica (5 colonne, una per giacca + fascia bassa per i materiali complementari).
 Sfondo: prompt "Cartella materiali (texture materiale astratta)" in `prompt-visualizzazione-giacche.md` — oppure lo stesso sfondo carta della cartella cromatica, per coerenza tra le tavole.
 
