@@ -51,7 +51,7 @@ Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giac
 1. [x] **Retro figurini** — tutti e 5 completati il 23/09 via ChatGPT (`giaccaN-outfit-retro-FINALE.png`), prompt in `prompt-visualizzazione-giacche.md`
 2. [x] **Flat colorati fronte + retro** — tutte e 5 le giacche completate il 23/09 (`giaccaN-flat-fronte-FINALE.png` + `giaccaN-flat-retro-FINALE.png`); stile di riferimento = flat fronte giacca 1. Giacca 5 con colonna singola di bottoni (come outfit approvato, non doppia come in scheda)
 3. [x] **Cartella colori** — tavola completata il 23/09 (Canva: https://www.canva.com/d/E32tYJdn0NqK4Kx, export `img-cinque-giacche/tavola-cartella-cromatica-FINALE.webp`), contenuti in `cartella-cromatica-roue-libre.md`
-4. [ ] **Cartella materiali** — tavola montata in Canva (23/09): https://www.canva.com/d/OIWWA6QtFwiAXmo — mancano i 5 campioni tessuto (prompt in `cartella-materiali-roue-libre.md`)
+4. [x] **Cartella materiali** — tavola completata il 23/09 (Canva: https://www.canva.com/d/OIWWA6QtFwiAXmo, export `img-cinque-giacche/tavola-cartella-materiali-FINALE.webp`); rifiniture suggerite: refuso "Selvadge"→"Selvedge", campione twill outfit 3 da rifare verde militare. Poliestere riciclato su giacche 2 e 5 confermato (motivazione tecnica taglio laser, dispensa La Rocca)
 5. [ ] **Moodboard tecnica** (materiale raccolto il 16/09, tavola da chiudere)
 
 Fatto questo, il progetto è completo.

@@ -1,5 +1,7 @@
 # Cartella materiali — Roue Libre
 
+✅ **Tavola completata il 23/09/2026** — export: `img-cinque-giacche/tavola-cartella-materiali-FINALE.webp`.
+
 Tavola in Canva: https://www.canva.com/d/OIWWA6QtFwiAXmo (copia della cartella cromatica, stesso sfondo e stile).
 
 Tavola A3 orizzontale, stessa impaginazione della cartella cromatica (5 colonne, una per giacca + fascia bassa per i materiali complementari).
