@@ -3,7 +3,7 @@
 File di stato rapido, da leggere a inizio sessione per riprendere da dove eravamo rimasti.
 Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giacche.md` — questo file è solo il "dove siamo ora".
 
-**Ultimo aggiornamento:** 23/09/2026 (tutti e 5 gli outfit completati a colori — checklist outfit chiusa)
+**Ultimo aggiornamento:** 23/09/2026 (outfit fronte chiusi — definita la lista finale di cosa manca)
 
 ---
 
@@ -46,13 +46,17 @@ Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giac
 
 **Tutti e 5 gli outfit fronte completati.** Metodologia di colorazione definitiva (flat + aerografo solo ombra/luce) fissata in `progetto-fashion-design-cinque-giacche.md`, riusabile per qualsiasi correzione futura o per il retro.
 
-## Prossimi passi
+## Cosa manca alla consegna (lista definita da Jacopo, 23/09)
 
-- Disegni tecnici retro delle cinque giacche (solo fronte fatto finora su tutte) — poi eventualmente outfit a colori anche sul retro
-- Cartella cromatica e cartella materiali — struttura creata, ancora da popolare
-- Decidere se tenere o togliere le toppe ai gomiti comparse per errore nello sketch retro della giacca 5
-- Disegno tecnico retro delle giacche 1, 2, 3 (mancano ancora — solo fronte disegnato finora su tutte)
-- Cartella cromatica e cartella materiali — struttura creata, ancora da popolare
+1. [ ] **Retro figurini** — tutti e 5 gli outfit (figurino visto da dietro)
+2. [ ] **Flat colorati fronte + retro** — giacche 2, 3, 4, 5 (fronte e retro); giacca 1 solo retro (fronte già fatto)
+3. [ ] **Cartella colori**
+4. [ ] **Cartella materiali**
+5. [ ] **Moodboard tecnica** (materiale raccolto il 16/09, tavola da chiudere)
+
+Fatto questo, il progetto è completo.
+
+- Aperto: toppe ai gomiti comparse per errore nello sketch retro della giacca 5 — tenere o togliere (decidere prima del flat colorato retro)
 
 ## Workflow sketch tecnico (validato, aggiornato 22/09)
 
