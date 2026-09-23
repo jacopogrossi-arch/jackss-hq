@@ -1,5 +1,7 @@
 # Cartella cromatica — Roue Libre
 
+✅ **Tavola completata il 23/09/2026** — Canva: https://www.canva.com/d/E32tYJdn0NqK4Kx · export: `img-cinque-giacche/tavola-cartella-cromatica-FINALE.webp`. Pantone TCX scelti da Jacopo con Pantone Connect.
+
 Tavola A3 orizzontale. Colori campionati direttamente dai disegni finali (outfit e flat colorati, 23/09/2026), così la cartella corrisponde a quello che si vede nelle altre tavole. Eccezione: Marrone Cuoio e Carbone sono stimati a occhio (zone troppo piccole da campionare) — verificarli col contagocce in Canva/Procreate.
 Sfondo: prompt "Cartella cromatica (quasi vuoto, velo minimo)" in `prompt-visualizzazione-giacche.md`.
 
@@ -30,11 +32,11 @@ Sfondo: prompt "Cartella cromatica (quasi vuoto, velo minimo)" in `prompt-visual
 
 | # | Giacca | Nome colore | HEX | RGB | Perché |
 |---|---|---|---|---|---|
-| 1 | Quasi-bomber utility | **Grigio Asfalto-Sale** | `#848789` | 132, 135, 137 | l'asfalto della strada costiera con i depositi di sale |
-| 2 | Sahariana | **Sabbia** | `#E6D7C7` | 230, 215, 199 | la spiaggia, il DNA safari |
-| 3 | Field jacket | **Crema Lino** | `#F1EBE1` | 241, 235, 225 | il lino grezzo, colore naturale della fibra |
-| 4 | Denim raw | **Indaco Grezzo** | `#304058` | 48, 64, 88 | il mare profondo, denim non lavato |
-| 5 | Biker café racer | **British Racing Green** | `#2C4A32` | 44, 74, 50 | il verde delle auto da corsa inglesi (Jaguar, Aston Martin) |
+| 1 | Quasi-bomber utility | **Grigio Asfalto-Sale** | `#848789` · TCX 14-4205 | 132, 135, 137 | l'asfalto della strada costiera con i depositi di sale |
+| 2 | Sahariana | **Sabbia** | `#E6D7C7` · TCX 13-1006 | 230, 215, 199 | la spiaggia, il DNA safari |
+| 3 | Field jacket | **Crema Lino** | `#F1EBE1` · TCX 11-0103 | 241, 235, 225 | il lino grezzo, colore naturale della fibra |
+| 4 | Denim raw | **Indaco Grezzo** | `#304058` · TCX 19-4118 | 48, 64, 88 | il mare profondo, denim non lavato |
+| 5 | Biker café racer | **British Racing Green** | `#2C4A32` · TCX 19-6311 | 44, 74, 50 | il verde delle auto da corsa inglesi (Jaguar, Aston Martin) |
 
 ## 3. Colori complementari (outfit e dettagli)
 
