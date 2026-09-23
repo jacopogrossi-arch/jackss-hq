@@ -16,15 +16,17 @@ Progetto di una capsule collection: **cinque giacche per cinque outfit**, con:
 
 ## Checklist elaborati (tavole di supporto)
 
+*(aggiornata 23/09/2026 — stato rapido in `progressione-cinque-giacche.md`)*
+
 - [x] **Brainstorming**: individuazione tema d'ispirazione (INPUT)
 - [x] **Descrizione tematica/concept**
-- [x] **Moodboard evocativa** — chiusa 16/09, vedi sotto
-- [ ] **Moodboard tecnica** — in corso, Jacopo sta raccogliendo il materiale (16/09)
-- [ ] **Cartella cromatica**
-- [ ] **Cartella materiali**
-- [ ] **Costruzione idea** con utilizzo delle lavorazioni tecnologiche sostenibili richieste
-- [ ] **Creazione outfit** relativi alle cinque giacche
-- [ ] **Disegni tecnici fronte/retro** delle cinque giacche, con descrizione delle stesse
+- [x] **Moodboard evocativa** — chiusa 16/09
+- [ ] **Moodboard tecnica** — struttura in Canva (23/09), mancano le foto nei riquadri: https://www.canva.com/d/Y97aOY4fseLKtkm
+- [x] **Cartella cromatica** — chiusa 23/09 (`cartella-cromatica-roue-libre.md`, Canva https://www.canva.com/d/E32tYJdn0NqK4Kx)
+- [x] **Cartella materiali** — chiusa 23/09 (`cartella-materiali-roue-libre.md`, Canva https://www.canva.com/d/OIWWA6QtFwiAXmo) — rifiniture: refuso "Selvadge"→"Selvedge", campione twill outfit 3 da rifare verde militare
+- [x] **Costruzione idea** con le lavorazioni tecnologiche sostenibili (integrata in cartella materiali + flat)
+- [x] **Creazione outfit** — 5 figurini colorati fronte + retro (`giaccaN-outfit-FINALE.png`, `giaccaN-outfit-retro-FINALE.png`)
+- [x] **Disegni tecnici fronte/retro** — 5 flat colorati fronte + retro (`giaccaN-flat-fronte-FINALE.png`, `giaccaN-flat-retro-FINALE.png`); descrizioni tessuti/lavorazioni nella cartella materiali
 
 ## Materiale di riferimento — Lavorazioni Tecnologiche Sostenibili
 
@@ -276,3 +278,12 @@ Parole chiave di ricerca già fornite per ciascuna categoria (vedi cronologia se
 ## Link
 
 - Notion: Jackss HQ / Jackss Study Space / Fashion Design
+
+## Sessione 23/09/2026 — riepilogo
+
+- **Retro figurini colorati** (5) generati via ChatGPT dal fronte FINALE come riferimento — prompt in `prompt-visualizzazione-giacche.md`. Giacca 5: toppe ai gomiti **tolte** (decisione chiusa).
+- **Flat colorati fronte + retro** (5 giacche): riferimento di stile = `giacca1-flat-fronte-FINALE.png`; fronte e retro nella stessa chat ChatGPT per coerenza. Giacca 5 con **colonna singola** di bottoni (come l'outfit approvato).
+- **Cartella cromatica**: colori campionati dai disegni finali, Pantone TCX scelti da Jacopo. Tavola chiusa.
+- **Cartella materiali**: tessuti, composizioni, pesi, finiture, lavorazioni. Poliestere riciclato su giacche 2 e 5 confermato (il laser funziona meglio su poliestere/pelle — dispensa La Rocca). Tavola chiusa.
+- **Moodboard tecnica**: struttura in Canva con 20 riquadri per giacca + 7 per lavorazioni/hardware; foto da inserire.
+- Nota tecnica: dall'ambiente cloud di Claude non si possono caricare immagini su Canva (rete bloccata) — le immagini le trascina Jacopo.
