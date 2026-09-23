@@ -34,7 +34,7 @@ Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giac
    - Colore British Racing Green, collo a listino rigido chiuso a bottone a pressione (rivisto da Harrington con cinturino), doppia colonna di bottoni a pressione a contrasto (avorio su verde)
    - Stampa digitale pattern: motivo a linee di livello/mappa topografica tono su tono sulla fascia centrale tra i bottoni (seconda lavorazione sulla giacca, oltre al taglio laser)
    - Taglio laser: schiena interamente microforata per ventilazione — 🟢 **sketch retro fatto** (22/09), pannello ben leggibile, si ferma correttamente ai raccordi con le maniche
-   - ⚠️ **Da decidere:** nello sketch retro sono comparse toppe ai gomiti con texture a trama, non previste nella scheda di questa giacca (probabile contaminazione dal riferimento di stile della giacca 3) — Jacopo deve decidere se toglierle o tenerle (in tal caso differenziare la texture da quella a nido d'ape della giacca 3)
+   - ✅ **Deciso 23/09:** toppe ai gomiti (comparse per errore nello sketch retro) **tolte** — retro figurino colorato generato senza
 
 ## Outfit — stato
 
