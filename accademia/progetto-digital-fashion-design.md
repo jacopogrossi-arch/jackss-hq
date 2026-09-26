@@ -11,6 +11,7 @@
 Sviluppare una capsule collection partendo dall'analisi approfondita di un brand esistente, per arrivare a una proposta personale coerente con l'identità del brand ma con un punto di vista autoriale.
 
 **Brand scelto:** **Gucci — era Tom Ford (1994–2004)** · **Collezione:** "After Hours", pigiami e loungewear da portare fuori → `concept-after-hours.md` (scelto 26/09)
+**Canva (portfolio A3, 17 tavole):** https://www.canva.com/d/nzl5iWZDsKXQt9- — copertina (tavola 01) salvata 26/09; manca la foto d'archivio A/I 1995 nel riquadro.
 Lista di 50 concept alternativi: `idee-concept-digital-fashion-design.md`.
 
 ## Formato consegna
@@ -69,3 +70,4 @@ Stesso metodo del progetto cinque giacche: testi e contenuti qui in repo → pro
 
 - Notion: Jackss HQ / Jackss Study Space / Fashion Design
 - **26/09** — Scritta la timeline storica (tavola 02) in `timeline-gucci.md`: 7 periodi, dal 1921 a Demna, con la colonna Tom Ford evidenziata. Scoperta utile: la prima sfilata di Demna per Gucci (A/I 2026) richiama Tom Ford 1995–97, quindi After Hours è in linea con la direzione attuale del brand. Da fare: cercare le foto d'archivio e montare la tavola.
+- **26/09** — Creato il design Canva del portfolio (A3 orizzontale, fondo nero/raso cioccolato, accento smeraldo) e salvata la copertina: intestazione, n. pagina, titolo, sottotitolo, parole chiave, motivazione chiusa sul punto di vista autoriale. Per le tavole successive: duplicare la pagina e cambiare il numero.
