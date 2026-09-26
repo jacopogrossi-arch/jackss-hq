@@ -75,4 +75,4 @@ Figurino base riutilizzabile: `accademia/img-cinque-giacche/figurino-base-fronte
 ## Slide figurini — sfondi (26/09/2026)
 
 ✅ 5 sfondi ad acquerello completati, uno per giacca (`img-cinque-giacche/sfondo-slide-giaccaN-FINALE.png`): 1 strada costiera · 2 dune · 3 pini marittimi · 4 porto all'ora blu · 5 strada di montagna con curve di livello. Prompt in `prompt-visualizzazione-giacche.md` (v1 acquerello; v2 editoriale e v3 poster scartate).
-Prossimo passo: montare le 5 slide in Canva (sfondo + figurino fronte e retro scontornati + numero/nome giacca). Slide 4: alzare un po' i figurini, l'acqua occupa il centro in basso.
+Slide 8-12 del portfolio Canva "Roue Libre" (https://www.canva.link/u9h8rapb62fkewb): sfondi caricati da Jacopo; Claude ha aggiunto (26/09) due segnaposto FRONTE/RETRO al centro (360×900 px ciascuno) e un pannello a destra con titolo e descrizione della giacca (silhouette, tessuto, lavorazione, outfit). Resta: trascinare i figurini scontornati sui segnaposto e poi cancellare i segnaposto.
