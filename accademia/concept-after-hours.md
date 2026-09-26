@@ -2,7 +2,7 @@
 
 Asset del concept per il progetto Digital Fashion Design (`progetto-digital-fashion-design.md`). Scelto il 26/09/2026 dalla lista `idee-concept-digital-fashion-design.md` (idea n. 1).
 
-**Brand:** Gucci · **Lente:** l'era Tom Ford (direttore creativo 1994–2004) · **Collezione:** pigiami e loungewear da portare fuori casa · **Target:** menswear *(da confermare: menswear o unisex)*
+**Brand:** Gucci · **Lente:** l'era Tom Ford (direttore creativo 1994–2004) · **Collezione:** pigiami e loungewear da portare fuori casa · **Target:** menswear (confermato 26/09) — tagliato per l'uomo, indossabile da chiunque
 
 > ⚠️ Date e fatti storici scritti a memoria: verificarli prima di impaginare (sito Gucci, Vogue Runway, libro *Tom Ford*, Rizzoli 2004).
 
@@ -26,14 +26,16 @@ Asset del concept per il progetto Digital Fashion Design (`progetto-digital-fash
 **Titolo collezione:** After Hours
 **Sottotitolo:** *La notte di Tom Ford, il mattino dopo.*
 
-**Concept (~120 parole, limite 150):**
+**Concept (~125 parole, limite 150):**
 > Le quattro del mattino. La festa è finita, ma nessuno vuole tornare a essere quello di prima.
 > After Hours parte dal Gucci di Tom Ford: il velluto, il raso che riflette la luce, le camicie aperte, la sensualità senza scuse. Poi sposta la scena. Non più la pista, ma le ore dopo: la stanza d'albergo, il balcone, la colazione alle due del pomeriggio.
 > Il pigiama diventa un abito da giorno. È tagliato come un completo, in raso, velluto e seta lavata, e il morsetto e la catena Gucci diventano stampe.
-> Cinque look per un uomo che porta addosso la notte anche quando fuori è già mattina.
+> Cinque look per un uomo che porta addosso la notte anche quando fuori è già mattina: tagliati per lui, indossabili da chiunque.
 > Lucido fuori, morbido dentro.
 
 **Il ribaltamento autoriale (da dire all'esame):** Tom Ford vestiva la notte *in pubblico* (il club, il red carpet). After Hours porta la stessa estetica nel momento *privato* dopo la notte, e trasforma il capo più intimo — il pigiama — in un capo da portare fuori. È il trend reale del *pajama dressing*, letto con i codici Gucci.
+
+**Perché solo uomo:** il pajama dressing oggi è soprattutto femminile, quindi l'uomo in raso e velluto è la scelta meno scontata — ed è esattamente ciò che Ford fece portando seta, velluto e lucido nel guardaroba maschile. Una sola silhouette rende la line-up (tavola 16) un racconto unico. Se chiedono dell'unisex: i capi sono tagliati per l'uomo ma indossabili da chiunque.
 
 ---
 

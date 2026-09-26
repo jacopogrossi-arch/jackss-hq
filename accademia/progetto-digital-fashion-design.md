@@ -62,7 +62,8 @@ Stesso metodo del progetto cinque giacche: testi e contenuti qui in repo → pro
 
 - **26/09** — Progetto avviato. Shortlist brand: Levi's / Barbour. In attesa del concept proposto da Jacopo.
 - **26/09** — Proposta di Jacopo: **Gucci, era Tom Ford (1994–2004) → collezione di pigiami** (satin lucido, look retrò, sensualità). Valutata fattibile e pertinente, a una condizione: la tavola 02 deve comunque coprire 4+ decadi di Gucci (anni '20 → oggi); l'era Tom Ford diventa la lente del tema personale (tavola 04).
-- **26/09** — **Scelto: Gucci × Tom Ford, "After Hours".** Scritti testi di tavola 01 (motivazione, 3 parole chiave) e 04 (titolo, sottotitolo, concept) + line-up provvisoria dei 5 look in `concept-after-hours.md`. Da confermare: menswear o unisex.
+- **26/09** — **Scelto: Gucci × Tom Ford, "After Hours".** Scritti testi di tavola 01 (motivazione, 3 parole chiave) e 04 (titolo, sottotitolo, concept) + line-up provvisoria dei 5 look in `concept-after-hours.md`. 
+- **26/09** — Confermato **solo uomo** (menswear), con la riga "tagliati per lui, indossabili da chiunque" nel concept.
 
 ## Link
 
