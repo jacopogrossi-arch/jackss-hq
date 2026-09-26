@@ -5,7 +5,7 @@ Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giac
 
 🏁 **PROGETTO CHIUSO il 26/09/2026** — portfolio finale: `accademia/Roue_Libre_portfolio_FINALE.pdf` (11 pagine: cover, concept, moodboard evocativa, moodboard tecnica, cartella cromatica, cartella materiali, 5 slide figurini fronte/retro).
 
-Controlli segnalati prima della consegna (non bloccanti per la chiusura, da decidere): flat tecnici fronte/retro → tavola "Disegni tecnici" aggiunta da Claude in Canva come pagina 7 (26/09), con 10 segnaposto e descrizione tecnica per giacca: Jacopo deve trascinare i 10 `giaccaN-flat-*-FINALE.png` e riesportare il PDF; refuso "Selvadge" in cartella materiali; campione twill outfit 3 ancora scuro invece che verde militare; testo segnaposto "RETRO trascina qui il figurino" ancora presente (nascosto) nella slide field jacket.
+Controlli segnalati prima della consegna (non bloccanti per la chiusura, da decidere): flat tecnici fronte/retro → tavola "Disegni tecnici" aggiunta da Claude in Canva come pagina 7 (26/09), con 10 segnaposto e descrizione tecnica per giacca: flat inseriti da Jacopo il 26/09 ✅ — resta da riesportare il PDF finale (12 pagine); refuso "Selvadge" in cartella materiali; campione twill outfit 3 ancora scuro invece che verde militare; testo segnaposto "RETRO trascina qui il figurino" ancora presente (nascosto) nella slide field jacket.
 
 **Ultimo aggiornamento:** 23/09/2026 (retro figurini + flat colorati fronte/retro completati, tutti e 5)
 
