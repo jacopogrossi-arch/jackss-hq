@@ -11,6 +11,7 @@
 Sviluppare una capsule collection partendo dall'analisi approfondita di un brand esistente, per arrivare a una proposta personale coerente con l'identità del brand ma con un punto di vista autoriale.
 
 **Brand scelto:** *in valutazione* — proposta forte: **Gucci (era Tom Ford) → collezione di pigiami**. Alternative: Levi's, Barbour.
+Lista di 50 concept alternativi: `idee-concept-digital-fashion-design.md`.
 
 ## Formato consegna
 
