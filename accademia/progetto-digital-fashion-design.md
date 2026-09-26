@@ -10,7 +10,7 @@
 
 Sviluppare una capsule collection partendo dall'analisi approfondita di un brand esistente, per arrivare a una proposta personale coerente con l'identità del brand ma con un punto di vista autoriale.
 
-**Brand scelto:** *da decidere* — shortlist (26/09): **Levi's** o **Barbour**. Jacopo ha un suo concept da proporre prima della scelta finale.
+**Brand scelto:** *in valutazione* — proposta forte: **Gucci (era Tom Ford) → collezione di pigiami**. Alternative: Levi's, Barbour.
 
 ## Formato consegna
 
@@ -60,6 +60,7 @@ Stesso metodo del progetto cinque giacche: testi e contenuti qui in repo → pro
 ## Note di lavoro
 
 - **26/09** — Progetto avviato. Shortlist brand: Levi's / Barbour. In attesa del concept proposto da Jacopo.
+- **26/09** — Proposta di Jacopo: **Gucci, era Tom Ford (1994–2004) → collezione di pigiami** (satin lucido, look retrò, sensualità). Valutata fattibile e pertinente, a una condizione: la tavola 02 deve comunque coprire 4+ decadi di Gucci (anni '20 → oggi); l'era Tom Ford diventa la lente del tema personale (tavola 04). Da confermare: menswear o unisex, titolo della collezione.
 
 ## Link
 
