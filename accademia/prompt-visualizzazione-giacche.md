@@ -146,3 +146,20 @@ Photo panel:
 3. **Field jacket (sinistra):** `duotone sage green and cream — dappled shadows of Mediterranean pine needles falling on raw heavy linen fabric.`
 4. **Denim raw (destra):** `duotone indigo and off-white — close-up of dark harbour water at blue hour with a thick mooring rope and the reflection of a sailboat mast.`
 5. **Biker café racer (sinistra):** `duotone British racing green and ivory — close-up of a vintage topographic map of a coastal mountain road, fine contour lines, a corner of glossy green racing car paintwork with a round ivory number disc, no readable digits.`
+
+### v3 — poster grafico anni '60 (26/09, scelta di Jacopo dopo v1 paesaggio e v2 fascia fotografica, entrambe scartate)
+
+Stile manifesto turistico Riviera anni '60 + ritagli alla Matisse: forme piatte, bordi un po' irregolari, 3-4 colori per slide (quelli della giacca + azzurro), grana da serigrafia. Centro vuoto per i figurini. Testi aggiunti in Canva.
+
+**Base comune:**
+```
+Flat graphic background in the style of a 1960s French Riviera travel poster mixed with Matisse paper cut-outs, A3 landscape (420x297mm), high resolution. Bold, simple flat shapes with slightly irregular hand-cut edges, a limited palette of 3-4 flat colors, subtle screen-print and paper grain texture, no gradients, no photographic details, no shading. Base color: warm off-white paper.
+Composition rule: the shapes live around the edges and along the bottom; the central area (about 55% of the width, full height) stays as clean empty off-white paper, because two fashion figures will be placed there. No text, no letters, no numbers, no logos, no people.
+Shapes:
+```
+
+1. **Quasi-bomber:** `a wide slate grey road band sweeping in from the bottom left corner with a white dashed centre line, grey rock shapes on the left edge, a big pale azure sun circle in the top right corner, a few small white star-like salt crystal shapes scattered on the grey. Palette: slate grey, warm grey, white, pale azure.`
+2. **Sahariana:** `large layered sand and khaki dune curves along the bottom, a big ochre sun circle in the top left corner, a thin azure sea band on the right edge, one agave cut-out silhouette on the right. Palette: sand, khaki, ochre, azure.`
+3. **Field jacket:** `umbrella pine cut-out silhouettes in sage and olive green on the left and right edges, a cream sun circle behind them, small azure sky shapes between the branches. Palette: sage green, olive, cream, azure.`
+4. **Denim raw:** `layered indigo and azure wave shapes along the bottom, white triangular sailboat sails on the left and right edges, a big navy circle moon in the top left corner. Palette: indigo, azure, navy, white.`
+5. **Biker café racer:** `British racing green hills on the edges filled with flat stripe bands like topographic contour lines, a winding ivory road ribbon across the bottom, a thin azure sea band, and a big ivory racing-number disc used as the sun in the top right corner, with no digits on it. Palette: British racing green, pine green, ivory, azure.`
