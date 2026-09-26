@@ -111,3 +111,22 @@ Back details of this outfit:
 ```
 
 *Nota: per l'outfit 5 il prompt è scritto SENZA toppe ai gomiti (decisione ancora aperta). Se Jacopo decide di tenerle, sostituire "No elbow patches." con la descrizione delle toppe.*
+
+## Sfondi slide figurini — uno per outfit (26/09/2026)
+
+Più "importanti" degli sfondi delle tavole (qui c'è un'ambientazione riconoscibile), ma sempre dipinti e non fotografici, e con il **centro calmo e chiaro** dove vanno i due figurini (fronte + retro). Fil rouge con le altre tavole: carta avorio/sabbia, acquerello, accento azzurro. Ogni sfondo prende il suo mood dalla giacca.
+
+**Base comune (in cima a ogni prompt):**
+```
+Painted background for a fashion portfolio page, A3 landscape (420x297mm), high resolution. Loose watercolor and gouache on warm off-white paper, visible paper grain, soft edges, 1960s French Riviera mood, muted and slightly faded like an old travel illustration. No people, no figures, no text, no logos, no vehicles in the foreground.
+Composition rule: the central area (about 60% of the width, full height) must stay calm, very light and low-contrast, almost empty paper, because two fashion figures will be placed there. The scene lives on the left and right edges and along the bottom, fading softly into the empty center. A faint azure blue accent must appear somewhere in the image.
+Scene:
+```
+
+1. **Quasi-bomber (grigio asfalto-sale):** `A coastal road at dusk seen from above: grey asphalt with pale cracks and white salt-like crystal deposits along the edges, a faded white road line curving in from the bottom left, a sliver of pale azure sea on the right edge. Palette: slate grey, warm grey, salt white, touch of azure.`
+2. **Sahariana (sabbia):** `Sun-bleached sand dunes and a quiet beach at midday, soft heat haze, wind ripples in the sand drawn with thin brushstrokes, a thin line of pale azure sea along the horizon at the far right. Palette: sand, khaki, warm cream, pale azure.`
+3. **Field jacket (crema lino):** `Dappled shade under Mediterranean umbrella pines, soft sage and olive green foliage on the left and right edges, warm light filtering through, raw linen-like texture in the paper. Palette: cream, sage green, olive, soft ochre, touch of azure sky between the branches.`
+4. **Denim raw (indaco):** `A small harbour at blue hour: deep indigo water with loose reflections along the bottom, the thin masts and ropes of sailing boats sketched in fine lines on the edges, pale sky. Palette: indigo, denim blue, soft azure, off-white.`
+5. **Biker café racer (British Racing Green):** `A winding mountain road above the sea, seen as a loose map: dark green hills on the edges, thin topographic contour lines drawn over them in fine ink, a few faint speed streaks along the curve of the road. Palette: British racing green, pine green, ivory, touch of azure sea.`
+
+**In Canva:** togli lo sfondo bianco ai figurini (Modifica → Rimuovi sfondo) prima di appoggiarli sulla slide.
