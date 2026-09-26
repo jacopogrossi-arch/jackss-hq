@@ -131,7 +131,9 @@ Scene:
 
 **In Canva:** togli lo sfondo bianco ai figurini (Modifica → Rimuovi sfondo) prima di appoggiarli sulla slide.
 
-### v2 — direzione editoriale (26/09, sostituisce la v1 paesaggistica)
+> ✅ **Scelta finale (26/09): v1 acquerello** — dopo aver provato v2 e v3, Jacopo torna alla v1. Sfondo giacca 1 salvato: `img-cinque-giacche/sfondo-slide-giacca1-FINALE.png`. v2 e v3 restano sotto solo come archivio.
+
+### v2 — direzione editoriale (26/09, scartata)
 
 La v1 (paesaggio ad acquerello) è stata scartata: troppo simile alla cover della moodboard evocativa. Nuova direzione: **pagina da lookbook/rivista** — una fascia fotografica verticale in duotono (dettaglio macro del mood della giacca) su un lato, il resto carta avorio vuota per i figurini. Testi (numero "01", nome giacca) aggiunti dopo in Canva, mai generati. Alternare la fascia a sinistra/destra da una slide all'altra per dare ritmo.
 
@@ -147,7 +149,7 @@ Photo panel:
 4. **Denim raw (destra):** `duotone indigo and off-white — close-up of dark harbour water at blue hour with a thick mooring rope and the reflection of a sailboat mast.`
 5. **Biker café racer (sinistra):** `duotone British racing green and ivory — close-up of a vintage topographic map of a coastal mountain road, fine contour lines, a corner of glossy green racing car paintwork with a round ivory number disc, no readable digits.`
 
-### v3 — poster grafico anni '60 (26/09, scelta di Jacopo dopo v1 paesaggio e v2 fascia fotografica, entrambe scartate)
+### v3 — poster grafico anni '60 (26/09, scartata)
 
 Stile manifesto turistico Riviera anni '60 + ritagli alla Matisse: forme piatte, bordi un po' irregolari, 3-4 colori per slide (quelli della giacca + azzurro), grana da serigrafia. Centro vuoto per i figurini. Testi aggiunti in Canva.
 
