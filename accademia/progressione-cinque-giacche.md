@@ -71,3 +71,8 @@ Figurino base riutilizzabile: `accademia/img-cinque-giacche/figurino-base-fronte
 - Dettaglio decisioni: `accademia/progetto-fashion-design-cinque-giacche.md`
 - Notion: [Roue Libre — Cinque giacche](https://app.notion.com/p/3dc30837a9e681f89f48cce4829ca19b)
 - Immagini/sketch: `accademia/img-cinque-giacche/`
+
+## Slide figurini — sfondi (26/09/2026)
+
+✅ 5 sfondi ad acquerello completati, uno per giacca (`img-cinque-giacche/sfondo-slide-giaccaN-FINALE.png`): 1 strada costiera · 2 dune · 3 pini marittimi · 4 porto all'ora blu · 5 strada di montagna con curve di livello. Prompt in `prompt-visualizzazione-giacche.md` (v1 acquerello; v2 editoriale e v3 poster scartate).
+Prossimo passo: montare le 5 slide in Canva (sfondo + figurino fronte e retro scontornati + numero/nome giacca). Slide 4: alzare un po' i figurini, l'acqua occupa il centro in basso.
