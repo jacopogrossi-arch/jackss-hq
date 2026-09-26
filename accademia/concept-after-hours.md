@@ -13,7 +13,7 @@ Asset del concept per il progetto Digital Fashion Design (`progetto-digital-fash
 **Titolo tavola:** GUCCI — After Hours
 
 **Perché Gucci (motivazione, ~90 parole):**
-> Gucci è un brand che ha cambiato identità più volte senza perdere i suoi codici: il morsetto, il bambù, il nastro verde-rosso-verde. L'ho scelto per il decennio di Tom Ford, quando una casa di pelletteria fiorentina quasi in crisi diventò il marchio più desiderato del mondo grazie a un'idea semplice: la sensualità. Velluto, raso lucido, camicie aperte, pantaloni a vita bassa. Mi interessa capire come pochi elementi, ripetuti con coerenza, possano riscrivere un intero brand — e come quell'estetica della notte possa parlare ancora oggi.
+> Gucci è un brand che ha cambiato identità più volte senza perdere i suoi codici: il morsetto, il bambù, il nastro verde-rosso-verde. L'ho scelto per il decennio di Tom Ford, quando una casa di pelletteria fiorentina quasi in crisi diventò il marchio più desiderato del mondo grazie a un'idea semplice: la sensualità. Velluto, raso lucido, camicie aperte, pantaloni a vita bassa. Il mio punto di vista: portare quella notte nelle ore private che vengono dopo, e trasformare il pigiama, il capo più intimo, in un abito da portare fuori.
 
 **3 parole chiave:** **Lucido · Sensuale · Notturno**
 
@@ -34,6 +34,15 @@ Asset del concept per il progetto Digital Fashion Design (`progetto-digital-fash
 > Lucido fuori, morbido dentro.
 
 **Il ribaltamento autoriale (da dire all'esame):** Tom Ford vestiva la notte *in pubblico* (il club, il red carpet). After Hours porta la stessa estetica nel momento *privato* dopo la notte, e trasforma il capo più intimo — il pigiama — in un capo da portare fuori. È il trend reale del *pajama dressing*, letto con i codici Gucci.
+
+**Obiettivo della consegna → come lo rispettiamo** *("proposta personale coerente con l'identità del brand ma con un punto di vista autoriale")*:
+
+| Metà della richiesta | Cosa lo dimostra in After Hours |
+|---|---|
+| **Coerente con Gucci** | codici Ford 1994–2004 (raso, velluto, camicie aperte, vita bassa) + codici storici (morsetto, catena, nastro web) usati nelle stampe e nei dettagli |
+| **Punto di vista autoriale** | lo spostamento di scena: non la notte in pubblico ma le ore private *dopo* la notte; il pigiama, capo intimo, diventa abito da portare fuori; collezione solo uomo |
+
+Regola per tutte le tavole: ogni tavola deve mostrare **sia** il codice Gucci **sia** il nostro ribaltamento. Se una tavola mostra solo Gucci è un'analisi; se mostra solo noi, perde il brand.
 
 **Perché solo uomo:** il pajama dressing oggi è soprattutto femminile, quindi l'uomo in raso e velluto è la scelta meno scontata — ed è esattamente ciò che Ford fece portando seta, velluto e lucido nel guardaroba maschile. Una sola silhouette rende la line-up (tavola 16) un racconto unico. Se chiedono dell'unisex: i capi sono tagliati per l'uomo ma indossabili da chiunque.
 
