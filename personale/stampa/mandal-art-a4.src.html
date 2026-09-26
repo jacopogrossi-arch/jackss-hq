@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<title>Mandal-Art — set/dic 2026</title>
+<style>
+/*FONTS*/
+
+@page { size: A4 portrait; margin: 0; }
+
+:root {
+  --ink:    #14161B;
+  --indaco: #27365C;
+  --oliva:  #4C512F;
+  --filo:   #A29B8C;
+  --filo-f: #CFC9BB;
+  --tinta:  #F2F0E9;
+  --ff-display: "Bodoni Moda", Georgia, serif;
+  --ff-body: "IBM Plex Sans", Helvetica, sans-serif;
+  --ff-mono: "IBM Plex Mono", monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { background: #fff; }
+
+body {
+  width: 210mm;
+  height: 297mm;
+  padding: 8mm 8mm 7mm;
+  font-family: var(--ff-body);
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* ---------- testata ---------- */
+
+.testata {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6mm;
+  padding-bottom: 1.6mm;
+  border-bottom: 0.5mm solid var(--ink);
+}
+
+.testata h1 {
+  font-family: var(--ff-display);
+  font-weight: 600;
+  font-size: 13pt;
+  line-height: 1;
+  letter-spacing: 0.005em;
+}
+.testata h1 em { font-style: italic; color: var(--indaco); }
+
+.meta {
+  font-family: var(--ff-mono);
+  font-size: 5pt;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--oliva);
+  text-align: right;
+  line-height: 1.5;
+}
+
+/* ---------- legenda ---------- */
+
+.legenda {
+  display: flex;
+  gap: 5mm;
+  padding: 1.4mm 0 2.2mm;
+  font-family: var(--ff-mono);
+  font-size: 4.4pt;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--oliva);
+}
+.legenda span { display: flex; align-items: center; gap: 1.2mm; }
+.campione { width: 3.2mm; height: 2.4mm; border: 0.2mm solid var(--filo); }
+.campione.der { border-left: 0.7mm solid var(--oliva); }
+.campione.vuo { border-style: dashed; }
+
+/* ---------- griglia ---------- */
+
+.griglia {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 1.5mm;
+  width: 194mm;
+  height: 216mm;
+}
+
+.blocco {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 0.25mm;
+  background: var(--filo-f);
+  border: 0.35mm solid var(--filo);
+}
+
+.c {
+  background: #fff;
+  padding: 1.4mm 1.4mm;
+  font-size: 6.4pt;
+  line-height: 1.2;
+  overflow: hidden;
+  hyphens: auto;
+}
+.c b { font-weight: 600; }
+
+.c.der { border-left: 0.7mm solid var(--oliva); }
+
+.c.vuo {
+  background: repeating-linear-gradient(45deg, #fff, #fff 1.4mm, var(--tinta) 1.4mm, var(--tinta) 2.8mm);
+}
+
+.tag {
+  display: block;
+  font-family: var(--ff-mono);
+  font-size: 4.2pt;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--oliva);
+  margin-bottom: 0.5mm;
+}
+
+/* celle-tema */
+.t {
+  background: var(--tinta);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.9mm;
+  padding: 1.1mm 1.3mm;
+  text-align: center;
+}
+.t .nome {
+  font-family: var(--ff-display);
+  font-weight: 600;
+  font-size: 8pt;
+  line-height: 1.02;
+  color: var(--indaco);
+}
+.t .ruolo {
+  font-family: var(--ff-mono);
+  font-size: 4pt;
+  line-height: 1.25;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--oliva);
+}
+
+.blocco.centro { border-color: var(--indaco); border-width: 0.5mm; }
+.blocco.centro .t { background: #fff; }
+
+.nucleo {
+  background: var(--indaco);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1mm;
+  padding: 1.4mm;
+  text-align: center;
+}
+.nucleo .quando {
+  font-family: var(--ff-mono);
+  font-size: 4pt;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: .82;
+}
+.nucleo .trg {
+  font-family: var(--ff-display);
+  font-weight: 600;
+  font-size: 8.4pt;
+  line-height: 1;
+}
+.nucleo .cls { font-size: 4.6pt; line-height: 1.25; }
+
+/* ---------- fascia regole ---------- */
+
+.regole {
+  flex: 0 0 auto;
+  padding-top: 6mm;
+}
+
+.regole-griglia {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6mm;
+  padding-top: 2.4mm;
+  border-top: 0.5mm solid var(--ink);
+}
+
+.regola h2 {
+  font-family: var(--ff-mono);
+  font-size: 4.6pt;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--oliva);
+  margin-bottom: 1mm;
+}
+.regola p { font-size: 6.2pt; line-height: 1.3; }
+.regola p b { font-weight: 600; }
+
+.piede {
+  margin-top: 2.4mm;
+  padding-top: 1.6mm;
+  border-top: 0.2mm solid var(--filo);
+  font-family: var(--ff-mono);
+  font-size: 4.4pt;
+  letter-spacing: 0.05em;
+  color: var(--oliva);
+  line-height: 1.4;
+}
+</style>
+</head>
+<body>
+
+<header class="testata">
+  <h1>Venduto a uno <em>sconosciuto</em></h1>
+  <p class="meta">Mandal-Art 9 × 9 · settembre → dicembre 2026<br>compilata a domande il 30.08.2026</p>
+</header>
+
+<div class="legenda">
+  <span><i class="campione"></i> parole tue</span>
+  <span><i class="campione der"></i> conseguenza di una tua risposta</span>
+  <span><i class="campione vuo"></i> ancora da riempire</span>
+</div>
+
+<main class="griglia">
+
+  <!-- riga 1 -->
+  <section class="blocco">
+    <div class="c"><b>Rifare il cartamodello.</b> Sblocca tutto il resto.</div>
+    <div class="c"><b>Poi cucirlo per bene.</b> Montato non vuol dire finito.</div>
+    <div class="c"><b>Due sessioni corte a settimana</b>, in calendario.</div>
+    <div class="c"><b>Non da solo.</b> Qualcuno accanto una volta su due.</div>
+    <div class="t"><p class="nome">Il capo</p><p class="ruolo">Le mani</p></div>
+    <div class="c der"><b>Le alternative si parcheggiano:</b> si scrive su un foglio e si va avanti.</div>
+    <div class="c der"><b>Il banco resta apparecchiato</b> tra una sessione e l'altra.</div>
+    <div class="c">Imparare le lavorazioni difficili: <b>patta a bottoni nascosti e tasca a filo.</b></div>
+    <div class="c"><span class="tag">la prova</span>Lo comprerei da un altro a 180 euro? Se no, non è finito.</div>
+  </section>
+
+  <section class="blocco">
+    <div class="c"><span class="tag">primo video</span><b>Mani, e la faccia di sfuggita.</b></div>
+    <div class="c"><b>Il giudizio di chi ti conosce non si aggira.</b> Il primo è il peggiore.</div>
+    <div class="c"><b>Si pubblica quando c'è qualcosa di vero.</b> Nessun calendario.</div>
+    <div class="c"><b>Non si spinge.</b> Mostri, dici quanti sono, apri i DM.</div>
+    <div class="t"><p class="nome">Metterci<br>la faccia</p><p class="ruolo">Pubblicare e vendere</p></div>
+    <div class="c"><b>Il prezzo si spiega:</b> tessuto, ore, perché 180.</div>
+    <div class="c der"><span class="tag">termometro</span>Tre settimane di silenzio = <b>non hai fatto niente al banco.</b></div>
+    <div class="c der"><b>Si gira mentre si lavora</b>, non dopo.</div>
+    <div class="c der"><b>La data di consegna si dice e si rispetta.</b></div>
+  </section>
+
+  <section class="blocco">
+    <div class="c"><span class="tag">8 set</span><b>Fino all'esame Inverso si ferma.</b></div>
+    <div class="c"><b>Da ottobre a dicembre niente esami:</b> la sessione è a gennaio.</div>
+    <div class="c"><b>Quando va male non è per le ore, è per il metodo.</b></div>
+    <div class="c der">Schemi, formulario, esercizi dai compiti passati. <b>Mai rilettura.</b></div>
+    <div class="t"><p class="nome">L'università</p><p class="ruolo">Non salta mai</p></div>
+    <div class="c der"><b>Segui i corsi da ottobre.</b> Recuperarli a dicembre è lo stesso errore.</div>
+    <div class="c der">A dicembre <b>la dispensa di gennaio è già avviata.</b></div>
+    <div class="c der"><span class="tag">la finestra</span><b>L'autunno senza esami è lo spazio più largo che avrai.</b></div>
+    <div class="c der">Segna le date di gennaio e guarda dove cadono col drop.</div>
+  </section>
+
+  <!-- riga 2 -->
+  <section class="blocco">
+    <div class="c"><span class="tag">fisso</span><b>Due sessioni al banco</b> a settimana.</div>
+    <div class="c"><span class="tag">fisso</span><b>Una sera con Chiara</b> a settimana.</div>
+    <div class="c"><b>La verità:</b> quando la settimana si stringe, salta per primo il capo.</div>
+    <div class="c der"><b>Salta perché nessuno lo aspetta.</b> La persona accanto è la scadenza che gli manca.</div>
+    <div class="t"><p class="nome">Il tempo</p><p class="ruolo">Chi vince quando<br>si scontrano</p></div>
+    <div class="c der">In calendario <b>prima</b> che cominci la settimana, non dentro.</div>
+    <div class="c der">Sessione saltata: si recupera <b>entro la settimana</b>, o niente.</div>
+    <div class="c"><span class="tag">collisione</span><b>Salta pubblicare, poi gli amici, poi la palestra.</b></div>
+    <div class="c der"><b>Capo, studio e la sera con Chiara non saltano.</b> Sono il pavimento.</div>
+  </section>
+
+  <section class="blocco centro">
+    <div class="t"><p class="nome">Il capo</p><p class="ruolo">Le mani</p></div>
+    <div class="t"><p class="nome">Metterci<br>la faccia</p><p class="ruolo">Pubblicare e vendere</p></div>
+    <div class="t"><p class="nome">L'università</p><p class="ruolo">Non salta mai</p></div>
+    <div class="t"><p class="nome">Il tempo</p><p class="ruolo">Chi vince quando<br>si scontrano</p></div>
+    <div class="nucleo">
+      <p class="quando">31 dicembre 2026</p>
+      <p class="trg">Venduto a uno sconosciuto</p>
+      <p class="cls">Un pantalone fatto da me, comprato da qualcuno che non conosco.</p>
+    </div>
+    <div class="t"><p class="nome">Il corpo</p><p class="ruolo">Cibo, aria,<br>allenamento</p></div>
+    <div class="t"><p class="nome">Le persone</p><p class="ruolo">Famiglia e amici</p></div>
+    <div class="t"><p class="nome">Chiara</p><p class="ruolo">Essere un ottimo<br>fidanzato</p></div>
+    <div class="t"><p class="nome">La crescita</p><p class="ruolo">Libri, esperienze,<br>viaggi</p></div>
+  </section>
+
+  <section class="blocco">
+    <div class="c"><b>Alimentazione pulita e corretta.</b> È la base, non un extra.</div>
+    <div class="c"><b>Stare fuori, all'aperto.</b></div>
+    <div class="c"><b>Allenarmi.</b></div>
+    <div class="c"><span class="tag">la falla</span>Sotto pressione <b>la prima cosa che si rompe è il mangiare.</b></div>
+    <div class="t"><p class="nome">Il corpo</p><p class="ruolo">Cibo, aria,<br>allenamento</p></div>
+    <div class="c der">Settimane storte: <b>spesa e pasti decisi prima.</b></div>
+    <div class="c der"><b>L'aria aperta è il contrappeso.</b> Studio, banco e montaggio sono tutti in una stanza.</div>
+    <div class="c der"><b>La palestra cade per terza</b>, non per prima.</div>
+    <div class="c vuo"></div>
+  </section>
+
+  <!-- riga 3 -->
+  <section class="blocco">
+    <div class="c"><b>Vedere gli amici senza programmare.</b></div>
+    <div class="c der"><b>Tieni ore non assegnate.</b> Senza vuoto l'imprevisto non esiste.</div>
+    <div class="c der">Se ti chiamano e sei libero, <b>di' sì.</b></div>
+    <div class="c der"><b>Non sparire per settimane</b> e poi riapparire.</div>
+    <div class="t"><p class="nome">Le persone</p><p class="ruolo">Famiglia e amici</p></div>
+    <div class="c der">Gli amici cadono per secondi: <b>proteggili prima.</b></div>
+    <div class="c vuo"></div>
+    <div class="c vuo"></div>
+    <div class="c vuo"></div>
+  </section>
+
+  <section class="blocco">
+    <div class="c"><span class="tag">fisso</span><b>Una sera a settimana</b>, comunque sia andata.</div>
+    <div class="c"><b>Sceglierla, ogni tanto:</b> salta una sessione al banco per lei — e diglielo.</div>
+    <div class="c"><span class="tag">la frase</span>Da non farle più dire: <b>«non sono una priorità per te».</b></div>
+    <div class="c"><span class="tag">a dicembre</span><b>Più leggerezza.</b></div>
+    <div class="t"><p class="nome">Chiara</p><p class="ruolo">Essere un ottimo<br>fidanzato</p></div>
+    <div class="c der"><b>La priorità si vede da cosa cede</b>, non da cosa dici.</div>
+    <div class="c der">Quando sei con lei <b>il progetto resta fuori.</b></div>
+    <div class="c der">Non trasformare ogni serata in <b>un recupero di arretrati.</b></div>
+    <div class="c vuo"></div>
+  </section>
+
+  <section class="blocco">
+    <div class="c"><b>Leggere tanti libri.</b></div>
+    <div class="c"><b>Essere un turista nella mia stessa città.</b></div>
+    <div class="c"><b>Viaggiare.</b> Da solo e in compagnia.</div>
+    <div class="c der"><b>Un libro per volta, finito.</b> Psycho-Cybernetics per primo.</div>
+    <div class="t"><p class="nome">La crescita</p><p class="ruolo">Libri, esperienze,<br>viaggi</p></div>
+    <div class="c der">Roma da turista è anche materia: <b>mercerie, tessutai, quartieri mai visti.</b></div>
+    <div class="c der"><b>Un viaggio in calendario prima di dicembre</b>, con una data vera.</div>
+    <div class="c vuo"></div>
+    <div class="c vuo"></div>
+  </section>
+
+</main>
+
+<section class="regole">
+  <div class="regole-griglia">
+    <div class="regola">
+      <h2>Ordine di collisione</h2>
+      <p>Quando la settimana esplode salta <b>pubblicare</b>, poi <b>gli amici</b>, poi <b>la palestra</b>. Il capo, lo studio e la sera con Chiara restano in piedi.</p>
+    </div>
+    <div class="regola">
+      <h2>I due fissi</h2>
+      <p><b>Due sessioni al banco</b> e <b>una sera con Chiara</b>, messe in calendario prima che la settimana cominci. Non dentro: prima.</p>
+    </div>
+    <div class="regola">
+      <h2>Il termometro</h2>
+      <p>Tre settimane di silenzio non sono un problema di contenuti: <b>sono un problema di banco.</b> Il capo salta per primo perché è l'unico che nessuno aspetta.</p>
+    </div>
+  </div>
+  <p class="piede">Nove caselle sono vuote apposta: il foglio è stato compilato a domande e dove non c'era una risposta non è stata messa una frase per fare numero. Si riempiono in autunno.</p>
+</section>
+
+</body>
+</html>
