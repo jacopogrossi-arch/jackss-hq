@@ -130,3 +130,19 @@ Scene:
 5. **Biker café racer (British Racing Green):** `A winding mountain road above the sea, seen as a loose map: dark green hills on the edges, thin topographic contour lines drawn over them in fine ink, a few faint speed streaks along the curve of the road. Palette: British racing green, pine green, ivory, touch of azure sea.`
 
 **In Canva:** togli lo sfondo bianco ai figurini (Modifica → Rimuovi sfondo) prima di appoggiarli sulla slide.
+
+### v2 — direzione editoriale (26/09, sostituisce la v1 paesaggistica)
+
+La v1 (paesaggio ad acquerello) è stata scartata: troppo simile alla cover della moodboard evocativa. Nuova direzione: **pagina da lookbook/rivista** — una fascia fotografica verticale in duotono (dettaglio macro del mood della giacca) su un lato, il resto carta avorio vuota per i figurini. Testi (numero "01", nome giacca) aggiunti dopo in Canva, mai generati. Alternare la fascia a sinistra/destra da una slide all'altra per dare ritmo.
+
+**Base comune:**
+```
+Editorial fashion magazine page background, A3 landscape (420x297mm), high resolution. Minimal and elegant, like a spread from a luxury menswear lookbook with a 1960s Riviera spirit. One tall vertical photographic panel covering the [LEFT/RIGHT] third of the page, full height, with a clean straight edge: grainy 35mm film photo, printed as a soft duotone. The remaining two thirds: plain warm off-white paper with a subtle fine texture, completely empty, with only a very faint wash of the panel color bleeding out from its edge, and one thin pale azure horizontal hairline near the bottom. No text, no logos, no numbers, no people. Lots of negative space, high-end print feel.
+Photo panel:
+```
+
+1. **Quasi-bomber (sinistra):** `duotone slate grey and warm white — extreme close-up of sun-bleached asphalt of a coastal road, pale cracks, white salt crystal deposits, a fragment of a faded white road line.`
+2. **Sahariana (destra):** `duotone sand and cream — close-up of wind ripples on a sun-bleached dune, long soft shadows, fine grains of sand.`
+3. **Field jacket (sinistra):** `duotone sage green and cream — dappled shadows of Mediterranean pine needles falling on raw heavy linen fabric.`
+4. **Denim raw (destra):** `duotone indigo and off-white — close-up of dark harbour water at blue hour with a thick mooring rope and the reflection of a sailboat mast.`
+5. **Biker café racer (sinistra):** `duotone British racing green and ivory — close-up of a vintage topographic map of a coastal mountain road, fine contour lines, a corner of glossy green racing car paintwork with a round ivory number disc, no readable digits.`
