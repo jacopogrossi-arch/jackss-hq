@@ -3,14 +3,15 @@
 **Materia:** Digital Fashion Design
 **Classe:** Fashion Design – A.S. 2025/2026
 **Docente:** Simona Ballirano
-**Scadenza:** prima lezione utile di "Digital Fashion Design" — *da confermare la data esatta di ottobre*
+**Scadenza:** prima lezione utile di "Digital Fashion Design" — inizio ottobre (1–7/10/2026), data esatta da confermare
 **Consegna originale:** vedi PDF caricato in sessione (Consegna_Progetto_Moda.pdf)
 
 ## Obiettivo
 
 Sviluppare una capsule collection partendo dall'analisi approfondita di un brand esistente, per arrivare a una proposta personale coerente con l'identità del brand ma con un punto di vista autoriale.
 
-**Brand scelto:** *da decidere*
+**Brand scelto:** *in valutazione* — proposta forte: **Gucci (era Tom Ford) → collezione di pigiami**. Alternative: Levi's, Barbour.
+Lista di 50 concept alternativi: `idee-concept-digital-fashion-design.md`.
 
 ## Formato consegna
 
@@ -37,9 +38,30 @@ Sviluppare una capsule collection partendo dall'analisi approfondita di un brand
 - [ ] **16 — Line-up Finale**: 5 look affiancati su silhouette neutra
 - [ ] **17 — Bibliografia & Crediti**: fonti immagini/libri/siti, brand e artisti referenziati
 
+## Programma di lavoro (avviato 26/09/2026)
+
+Ritmo serrato: ~10 giorni per 17 tavole, in parallelo con le rifiniture di Roue Libre (moodboard tecnica).
+Stesso metodo del progetto cinque giacche: testi e contenuti qui in repo → prompt immagini → montaggio in Canva (A3 orizzontale, un template unico con intestazione e numero pagina).
+
+| Giorno | Lavoro | Tavole |
+|---|---|---|
+| **Sab 26/09** | Brand + concept personale (titolo, sottotitolo, 150 parole) | 01, 04 |
+| **Dom 27/09** | Ricerca storica: timeline 4+ decenni + DNA del brand | 02, 03 |
+| **Lun 28/09** | Moodboard + template Canva (intestazione, numerazione) | 05 |
+| **Mar 29/09** | Cartella colori (Pantone TCX, 6–10 colori, %) + cartella materiali (5+ tessuti) | 07, 08 |
+| **Mer 30/09** | Techboard (3–4 dettagli costruttivi) + stampa piazzata | 06, 09 |
+| **Gio 01/10** | Stampa all-over (rapporto 1:1, 2 varianti, mockup) + schizzi dei 5 look | 10 |
+| **Ven 02/10** | Outfit 1–3 fronte/retro + flat con callout | 11–13 |
+| **Sab 03/10** | Outfit 4–5 fronte/retro + flat con callout | 14–15 |
+| **Dom 04/10** | Line-up + bibliografia + export PDF e controllo formato | 16, 17 |
+| **Lun 05/10** | Margine per revisioni | — |
+
+**Riuso da Roue Libre:** figurino base, flusso colore degli outfit, struttura di cartella cromatica/materiali, prompt per i campioni tessuto. Si risparmia circa un terzo del lavoro.
+
 ## Note di lavoro
 
-*(aggiornare qui man mano: brand scelto, idee per il tema personale, riferimenti moodboard, stato avanzamento tavole)*
+- **26/09** — Progetto avviato. Shortlist brand: Levi's / Barbour. In attesa del concept proposto da Jacopo.
+- **26/09** — Proposta di Jacopo: **Gucci, era Tom Ford (1994–2004) → collezione di pigiami** (satin lucido, look retrò, sensualità). Valutata fattibile e pertinente, a una condizione: la tavola 02 deve comunque coprire 4+ decadi di Gucci (anni '20 → oggi); l'era Tom Ford diventa la lente del tema personale (tavola 04). Da confermare: menswear o unisex, titolo della collezione.
 
 ## Link
 
