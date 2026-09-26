@@ -10,7 +10,7 @@
 
 Sviluppare una capsule collection partendo dall'analisi approfondita di un brand esistente, per arrivare a una proposta personale coerente con l'identità del brand ma con un punto di vista autoriale.
 
-**Brand scelto:** *in valutazione* — proposta forte: **Gucci (era Tom Ford) → collezione di pigiami**. Alternative: Levi's, Barbour.
+**Brand scelto:** **Gucci — era Tom Ford (1994–2004)** · **Collezione:** "After Hours", pigiami e loungewear da portare fuori → `concept-after-hours.md` (scelto 26/09)
 Lista di 50 concept alternativi: `idee-concept-digital-fashion-design.md`.
 
 ## Formato consegna
@@ -24,10 +24,10 @@ Lista di 50 concept alternativi: `idee-concept-digital-fashion-design.md`.
 
 ## Checklist tavole (17 totali)
 
-- [ ] **01 — Cover + Scelta del Brand**: nome brand, logo, motivazione scelta, 3 parole chiave
+- [~] **01 — Cover + Scelta del Brand**: nome brand, logo, motivazione scelta, 3 parole chiave
 - [ ] **02 — Analisi Storica del Brand**: timeline ≥4 decadi/periodi (per ognuno: silhouette, volume, dettagli iconici, tessuto ricorrente, palette)
 - [ ] **03 — DNA del Brand**: sintesi visiva codici stilistici (dettagli iconici, tecniche sartoriali, fit, accessori signature)
-- [ ] **04 — Tema Personale**: titolo collezione + sottotitolo, concept max 150 parole
+- [~] **04 — Tema Personale**: titolo collezione + sottotitolo, concept max 150 parole
 - [ ] **05 — Moodboard**: collage evocativo (arte, cinema, foto, street, texture) — atmosfera e target
 - [ ] **06 — Techboard**: 3–4 dettagli costruttivi/lavorazioni/finiture, schizzi tecnici + note
 - [ ] **07 — Cartella Colori**: palette Pantone TCX, min 6–max 10 colori, % utilizzo
@@ -61,7 +61,8 @@ Stesso metodo del progetto cinque giacche: testi e contenuti qui in repo → pro
 ## Note di lavoro
 
 - **26/09** — Progetto avviato. Shortlist brand: Levi's / Barbour. In attesa del concept proposto da Jacopo.
-- **26/09** — Proposta di Jacopo: **Gucci, era Tom Ford (1994–2004) → collezione di pigiami** (satin lucido, look retrò, sensualità). Valutata fattibile e pertinente, a una condizione: la tavola 02 deve comunque coprire 4+ decadi di Gucci (anni '20 → oggi); l'era Tom Ford diventa la lente del tema personale (tavola 04). Da confermare: menswear o unisex, titolo della collezione.
+- **26/09** — Proposta di Jacopo: **Gucci, era Tom Ford (1994–2004) → collezione di pigiami** (satin lucido, look retrò, sensualità). Valutata fattibile e pertinente, a una condizione: la tavola 02 deve comunque coprire 4+ decadi di Gucci (anni '20 → oggi); l'era Tom Ford diventa la lente del tema personale (tavola 04).
+- **26/09** — **Scelto: Gucci × Tom Ford, "After Hours".** Scritti testi di tavola 01 (motivazione, 3 parole chiave) e 04 (titolo, sottotitolo, concept) + line-up provvisoria dei 5 look in `concept-after-hours.md`. Da confermare: menswear o unisex.
 
 ## Link
 
