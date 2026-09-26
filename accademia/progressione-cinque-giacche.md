@@ -52,7 +52,7 @@ Il dettaglio completo delle decisioni è in `progetto-fashion-design-cinque-giac
 2. [x] **Flat colorati fronte + retro** — tutte e 5 le giacche completate il 23/09 (`giaccaN-flat-fronte-FINALE.png` + `giaccaN-flat-retro-FINALE.png`); stile di riferimento = flat fronte giacca 1. Giacca 5 con colonna singola di bottoni (come outfit approvato, non doppia come in scheda)
 3. [x] **Cartella colori** — tavola completata il 23/09 (Canva: https://www.canva.com/d/E32tYJdn0NqK4Kx, export `img-cinque-giacche/tavola-cartella-cromatica-FINALE.webp`), contenuti in `cartella-cromatica-roue-libre.md`
 4. [x] **Cartella materiali** — tavola completata il 23/09 (Canva: https://www.canva.com/d/OIWWA6QtFwiAXmo, export `img-cinque-giacche/tavola-cartella-materiali-FINALE.webp`); rifiniture suggerite: refuso "Selvadge"→"Selvedge", campione twill outfit 3 da rifare verde militare. Poliestere riciclato su giacche 2 e 5 confermato (motivazione tecnica taglio laser, dispensa La Rocca)
-5. [ ] **Moodboard tecnica** — struttura montata in Canva il 23/09 (https://www.canva.com/d/Y97aOY4fseLKtkm): 5 colonne × 4 riquadri etichettati + fascia 4 lavorazioni + 3 hardware/finiture. Jacopo deve trascinare le foto scaricate (Download) nei riquadri
+5. [x] **Moodboard tecnica** — v1 completata il 26/09 da Jacopo (collage polaroid su sfondo blueprint/acquerello, `img-cinque-giacche/tavola-moodboard-tecnica-v1.png`). Rifiniture suggerite: didascalie nelle fasce bianche delle polaroid, riferimento topografico + schiena microforata per la giacca 5, nastro rosso → colore della palette
 
 Fatto questo, il progetto è completo.
 
