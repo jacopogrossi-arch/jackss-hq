@@ -289,3 +289,7 @@ Parole chiave di ricerca già fornite per ciascuna categoria (vedi cronologia se
 - **Cartella materiali**: tessuti, composizioni, pesi, finiture, lavorazioni. Poliestere riciclato su giacche 2 e 5 confermato (il laser funziona meglio su poliestere/pelle — dispensa La Rocca). Tavola chiusa.
 - **Moodboard tecnica**: struttura in Canva con 20 riquadri per giacca + 7 per lavorazioni/hardware; foto da inserire.
 - Nota tecnica: dall'ambiente cloud di Claude non si possono caricare immagini su Canva (rete bloccata) — le immagini le trascina Jacopo.
+
+## 🏁 Progetto chiuso — 26/09/2026
+
+Portfolio finale consegnabile: `accademia/Roue_Libre_portfolio_FINALE.pdf` (11 pagine). Stato e controlli pre-consegna in `progressione-cinque-giacche.md`.
