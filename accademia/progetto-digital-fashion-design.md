@@ -11,7 +11,7 @@
 Sviluppare una capsule collection partendo dall'analisi approfondita di un brand esistente, per arrivare a una proposta personale coerente con l'identità del brand ma con un punto di vista autoriale.
 
 **Brand scelto:** **Gucci — era Tom Ford (1994–2004)** · **Collezione:** "After Hours", pigiami e loungewear da portare fuori → `concept-after-hours.md` (scelto 26/09)
-**Canva (portfolio A3, 17 tavole):** "GUCCI — After Hours (portfolio)" https://www.canva.com/d/nzl5iWZDsKXQt9- — pag. 1 copertina, pag. 2 timeline (27/09). Mancano le foto d'archivio nei riquadri.
+**Canva (portfolio A3, 17 tavole):** "GUCCI — After Hours (portfolio)" https://www.canva.com/d/nzl5iWZDsKXQt9- — pag. 1 copertina, pag. 2 timeline, pag. 3 DNA (27/09). Mancano le foto d'archivio nei riquadri.
 **Metodo per le tavole:** ogni tavola viene progettata dall'AI di Canva con un brief dettagliato (stile della copertina + testi esatti), poi Claude corregge testi e refusi e la inserisce nel portfolio. Rende molto meglio del montaggio a mano (che non permette di scegliere i font).
 Lista di 50 concept alternativi: `idee-concept-digital-fashion-design.md`.
 
@@ -73,3 +73,4 @@ Stesso metodo del progetto cinque giacche: testi e contenuti qui in repo → pro
 - **26/09** — Scritta la timeline storica (tavola 02) in `timeline-gucci.md`: 7 periodi, dal 1921 a Demna, con la colonna Tom Ford evidenziata. Scoperta utile: la prima sfilata di Demna per Gucci (A/I 2026) richiama Tom Ford 1995–97, quindi After Hours è in linea con la direzione attuale del brand. Da fare: cercare le foto d'archivio e montare la tavola.
 - **26/09** — Creato il design Canva del portfolio (A3 orizzontale, fondo nero/raso cioccolato, accento smeraldo) e salvata la copertina: intestazione, n. pagina, titolo, sottotitolo, parole chiave, motivazione chiusa sul punto di vista autoriale. Per le tavole successive: duplicare la pagina e cambiare il numero.
 - **27/09** — Tavola 02 (timeline) montata in Canva: prima versione a mano, poi rifatta con l'AI di Canva (stesso font e fondo della copertina), ripulita da doppioni e refusi e inserita nel portfolio al posto della prima. Da fare: foto d'archivio nelle cornici, font del titolo già coerente.
+- **27/09** — Tavola 03 (DNA di Gucci) scritta (`dna-gucci.md`), impaginata con l'AI di Canva, corretta (refusi, colore delle righe After Hours) e inserita come pagina 3 del portfolio.
