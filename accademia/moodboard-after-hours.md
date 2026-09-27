@@ -1,0 +1,78 @@
+# Tavola 05 — Moodboard After Hours
+
+Materiale per la tavola 05 del progetto After Hours (`concept-after-hours.md`). Preparato il 27/09/2026.
+
+**Richiesta della consegna:** collage evocativo (arte, cinema, foto, street, texture) che comunichi atmosfera e target. Moodboard originali: niente copia-incolla da Pinterest senza rielaborazione.
+
+**Obiettivo:** chi guarda deve sentire *le quattro del mattino dopo una festa del 1995*: luce bassa, raso che riflette, lenzuola sfatte, un uomo elegante e stanco. Metà Tom Ford, metà mattino dopo.
+
+---
+
+## Le 14 immagini da trovare (5 gruppi)
+
+### A. Il brand: Gucci di Tom Ford (3)
+1. **Sfilata Gucci A/I 1995**: camicia di raso aperta, pantalone di velluto a vita bassa. *Cerca:* "Gucci Fall 1995 Tom Ford runway". *Dove:* Vogue Runway, Getty.
+2. **Campagna Gucci anni '90** (fotografo Mario Testino, styling Carine Roitfeld): luce calda, pelle, sensualità. *Cerca:* "Gucci campaign 1996 Mario Testino".
+3. **Primo piano del morsetto** su un mocassino, metallo lucido. *Dove:* foto tua in negozio o immagine prodotto.
+
+### B. Cinema (4)
+4. ***Lost in Translation*** **(2003)**: la stanza d'hotel all'alba, la città fuori dal vetro. È *la* scena di After Hours.
+5. ***A Single Man*** **(2009)**: il film diretto da Tom Ford. Il legame più forte tra lui e il tuo concept, da citare all'esame.
+6. ***In the Mood for Love*** **(2000)**: raso, notte, luce al neon, sensualità trattenuta.
+7. ***Eyes Wide Shut*** **(1999)**: la notte come mondo a parte, interni caldi e scuri.
+
+*Cerca:* "[titolo] film still hotel room" oppure fai tu uno screenshot dal film, che è già una rielaborazione.
+
+### C. Arte e fotografia (2)
+8. **Helmut Newton**: foto in hotel, notte, eleganza provocante (lo stesso immaginario della Gucci di Ford).
+9. **Guy Bourdin** oppure una foto a flash sparato anni '90: colori saturi nel buio.
+
+### D. Street e luoghi (2)
+10. **Una via di Roma o Milano all'alba**, vuota, con i lampioni ancora accesi. *Meglio se è una foto tua*: originalità garantita.
+11. **Il balcone di un hotel la mattina**, una tazza di caffè, una sedia in ferro.
+
+### E. Texture (3)
+12. **Raso di seta stropicciato** con riflessi di luce (nero o cioccolato).
+13. **Velluto** scuro in primo piano, con il pelo che cambia colore alla luce.
+14. **Bambù** o un manico in bambù, oppure una catena in metallo dorato.
+
+> Le immagini dei gruppi A e B (brand e film) si usano come citazioni: annota sempre la fonte per la tavola 17.
+
+---
+
+## Come rielaborarle (per rispettare la regola "no copia-incolla")
+
+1. **Ritaglia**: mai l'immagine intera, prendi un dettaglio (una mano, una piega, una luce).
+2. **Uniforma il colore**: in Canva → *Modifica foto* → abbassa la saturazione e scalda i toni, così tutte le foto sembrano della stessa notte.
+3. **Sovrapponi**: qualche foto un po' sovrapposta alla vicina, come un collage vero.
+4. **Aggiungi 2–3 parole scritte a mano** (fotografate o in un font calligrafico): "4 a.m.", "room service", "lucido fuori".
+
+---
+
+## Prompt per le immagini d'atmosfera (ChatGPT / generatore AI)
+
+Da usare per le immagini che non trovi (soprattutto 10, 11, 12, 13). Stessa base per tutte, così sono coerenti.
+
+**Base comune:**
+```
+Cinematic 35mm film photograph, late 1990s editorial style, shot at dawn around 5 a.m. Warm low light mixed with cold blue window light, deep blacks, soft film grain, slightly desaturated. Palette: black, chocolate brown, ivory, a touch of emerald green. No text, no logos, no brand names. Mood: the quiet, elegant exhaustion after a long night.
+Subject:
+```
+
+1. **Stanza d'hotel all'alba:** `A luxury hotel room at dawn, unmade bed with ivory silk sheets and a dark chocolate satin robe thrown on the floor, heavy curtains half open, city lights still on outside the window.`
+2. **Balcone:** `A small hotel balcony in Rome at early morning, wrought iron chair, an espresso cup and a pair of velvet slippers, rooftops and domes in soft haze.`
+3. **Dettaglio raso:** `Extreme close-up of crumpled black silk satin fabric with sharp highlights reflecting a lamp, abstract folds filling the frame.`
+4. **Dettaglio velluto:** `Extreme close-up of dark emerald velvet, the pile changing tone where the light hits it, a thin gold chain resting on it.`
+5. **Uomo di spalle (senza volto):** `A man seen from behind standing at a tall window at dawn, wearing an open black satin pyjama shirt, holding a coffee cup, city below, face not visible.`
+
+---
+
+## Il target (da scrivere in piccolo sulla tavola)
+
+**Chi indossa After Hours:** uomo 25–40 anni, vive in città e spesso di notte: lavora nella moda, nella musica, nella creatività. Ama il lusso ma non il logo gridato, e cerca capi che siano insieme comodi e sensuali, da portare dalla camera al bar sotto casa.
+
+---
+
+## Impaginazione in Canva
+
+Stile uguale alle altre tavole (fondo nero con riflessi di raso, font serif, filo dorato). Un collage di 12–14 cornici di misure diverse: una grande al centro (la stanza d'hotel all'alba), le altre intorno. In basso a sinistra il riquadro del target, in alto il titolo "Moodboard — Le quattro del mattino".
