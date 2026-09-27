@@ -28,7 +28,7 @@ Lista di 50 concept alternativi: `idee-concept-digital-fashion-design.md`.
 
 - [~] **01 — Cover + Scelta del Brand**: nome brand, logo, motivazione scelta, 3 parole chiave
 - [~] **02 — Analisi Storica del Brand**: timeline ≥4 decadi/periodi (per ognuno: silhouette, volume, dettagli iconici, tessuto ricorrente, palette)
-- [ ] **03 — DNA del Brand**: sintesi visiva codici stilistici (dettagli iconici, tecniche sartoriali, fit, accessori signature)
+- [~] **03 — DNA del Brand**: sintesi visiva codici stilistici (dettagli iconici, tecniche sartoriali, fit, accessori signature)
 - [~] **04 — Tema Personale**: titolo collezione + sottotitolo, concept max 150 parole
 - [ ] **05 — Moodboard**: collage evocativo (arte, cinema, foto, street, texture) — atmosfera e target
 - [ ] **06 — Techboard**: 3–4 dettagli costruttivi/lavorazioni/finiture, schizzi tecnici + note
