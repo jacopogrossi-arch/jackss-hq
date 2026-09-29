@@ -62,7 +62,7 @@ Stesso metodo del progetto cinque giacche: testi e contenuti qui in repo → pro
 
 Lista delle cose rimaste aperte nelle tavole già montate, da sistemare prima dell'export PDF.
 
-- [ ] **Tavole 01–04** — foto d'archivio nelle cornici vuote (copertina A/I 1995, timeline, DNA, foto d'atmosfera del tema).
+- [x] **Tavole 01–04** — ✅ foto d'archivio inserite il 29/09, con cornici dorate uniformi (tavole 02, 03, 04).
 - [ ] **Tavola 05 (moodboard)** — raccogliere le 14 immagini (`moodboard-after-hours.md`) e montarla.
 - [ ] **Tavola 07 (colori)** — codici Pantone TCX sotto ogni colore (Pantone Connect → Trova corrispondenza); font dell'etichetta "Rosso Web" da uniformare (Copia stile).
 - [x] **Tavola 08 (materiali)** — ✅ risolto il 29/09: nuovi campioni velluto smeraldo, lana cioccolato, raso stampato (`img-after-hours/campione-*`). Problema di partenza:

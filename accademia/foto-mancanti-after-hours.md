@@ -6,7 +6,7 @@ Inventario del 29/09/2026 delle cornici ancora vuote o da sostituire nelle tavol
 
 ---
 
-## Tavola 02 — Timeline (8 cornici) · 📷 archivio
+## Tavola 02 — Timeline ✅ completata il 29/09 (bottega G. Gucci Firenze, Jackie Kennedy, coppia anni 70 in GG, sfilata A/I 1995, campagna Testino, Giannini, Michele uomo, De Sarno rosso Ancora — cartella Canva "foto tavola 2"; fonti da annotare per la tavola 17)
 
 | Periodo | Foto consigliata | Cerca |
 |---|---|---|
