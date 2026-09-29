@@ -28,7 +28,7 @@ Inventario del 29/09/2026 delle cornici ancora vuote o da sostituire nelle tavol
 | III. Fit | un look della sfilata **A/I 1995** a figura intera (aderente, vita bassa) | `Gucci Fall 1995 menswear` |
 | IV. Accessori signature | **mocassino horsebit** | `Gucci horsebit loafer` |
 
-## Tavola 04 — Tema personale (1 cornice grande) · 📷 + 🤖
+## Tavola 04 — Tema personale ✅ completata il 29/09: dittico Gucci A/I 1995 (Vogue Runway via Pinterest) + Il talento di Mr. Ripley (Minghella, 1999), Jude Law in vestaglia. Da fare a mano in Canva: scaldare e scurire la foto di Ripley.
 
 Sotto la cornice ci sono due didascalie affiancate, **"Tom Ford, 1995"** e **"After Hours"**. Proposta: dividere la cornice in due (dittico).
 - **Metà sinistra 📷:** un look della sfilata Gucci A/I 1995 (lo stesso tipo di foto della copertina, ma diverso).
