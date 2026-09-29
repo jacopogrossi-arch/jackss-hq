@@ -65,7 +65,7 @@ Lista delle cose rimaste aperte nelle tavole già montate, da sistemare prima de
 - [ ] **Tavole 01–04** — foto d'archivio nelle cornici vuote (copertina A/I 1995, timeline, DNA, foto d'atmosfera del tema).
 - [ ] **Tavola 05 (moodboard)** — raccogliere le 14 immagini (`moodboard-after-hours.md`) e montarla.
 - [ ] **Tavola 07 (colori)** — codici Pantone TCX sotto ogni colore (Pantone Connect → Trova corrispondenza); font dell'etichetta "Rosso Web" da uniformare (Copia stile).
-- [ ] **Tavola 08 (materiali)** — le foto dei campioni non corrispondono alla cartella colori:
+- [x] **Tavola 08 (materiali)** — ✅ risolto il 29/09: nuovi campioni velluto smeraldo, lana cioccolato, raso stampato (`img-after-hours/campione-*`). Problema di partenza:
   - velluto (look 2) è **bordeaux** → deve essere **Smeraldo Velluto** `#0F4D3A`;
   - lana tropicale (look 3) è **blu notte** → deve essere **Cioccolato Raso** `#3B2620`;
   - look 5 mostra ancora un **jacquard verde** → sostituire con un ritaglio del **raso stampato all-over** della tavola 10.

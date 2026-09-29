@@ -44,7 +44,7 @@ Lista completa in `moodboard-after-hours.md`. In sintesi:
 - **📷 da cercare (9):** 1 sfilata A/I 1995 · 2 campagna Testino · 3 morsetto su mocassino · 4 *Lost in Translation* · 5 *A Single Man* · 6 *In the Mood for Love* · 7 *Eyes Wide Shut* · 8 Helmut Newton · 9 Guy Bourdin (per i film vanno bene screenshot tuoi).
 - **🤖 da generare (5):** 10 via all'alba · 11 balcone d'hotel · 12 raso stropicciato · 13 velluto smeraldo · 14 bambù o catena dorata — prompt già pronti nel file della moodboard.
 
-## Tavola 08 — Materiali (2 campioni da rifare) · 🤖
+## Tavola 08 — Materiali ✅ completata il 29/09 (velluto smeraldo, lana cioccolato, raso stampato)
 
 - ✅ **Look 5, raso stampato:** fatto il 29/09 (modulo all-over).
 - **Velluto (look 2)** — ora è bordeaux, deve essere smeraldo:
