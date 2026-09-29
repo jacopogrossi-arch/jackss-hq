@@ -18,7 +18,7 @@ Contenuti per la tavola 08 del progetto After Hours (`concept-after-hours.md`). 
 **Frase:** *Tessuti della notte, tagliati per il mattino dopo.*
 
 **Testo breve (~55 parole):**
-> Raso e velluto vengono dritti dal Gucci di Tom Ford: riflettono la luce come una pista da ballo. La lana leggera porta la sartoria dello smoking dentro il pigiama. La seta lavata è il mattino: opaca, morbida, un po' stropicciata. Il jacquard tesse nel tessuto la catena del morsetto.
+> Raso e velluto vengono dritti dal Gucci di Tom Ford: riflettono la luce come una pista da ballo. La lana leggera porta la sartoria dello smoking dentro il pigiama. La seta lavata è il mattino: opaca, morbida, un po' stropicciata. La catena del morsetto corre stampata su tutto il raso.
 
 ---
 
@@ -36,7 +36,7 @@ Contenuti per la tavola 08 del progetto After Hours (`concept-after-hours.md`). 
 - Raso e velluto sono i due tessuti della sfilata A/I 1995 di Tom Ford (camicie di raso, pantaloni di velluto).
 - La lana tropicale è il tessuto dello smoking: il pigiama-smoking (look 3) è tagliato come un completo.
 - La seta lavata è il nostro ribaltamento: il lucido della notte diventa opaco al mattino.
-- Il jacquard porta la catena del morsetto dentro il tessuto invece che sopra; la stessa catena torna come stampa all-over (tavola 10).
+- Il raso stampato porta la catena del morsetto su tutta la pezza: è la stampa all-over della tavola 10.
 
 ## 2. Materiali complementari
 
@@ -64,9 +64,9 @@ Fabric:
 2. **Velluto:** `Deep emerald green silk-viscose velvet (#0F4D3A), short dense pile; the pile is brushed in two directions so one half looks lighter and one half darker.`
 3. **Lana tropicale:** `Dark chocolate brown lightweight tropical wool suiting (#3B2620), fine tight plain weave clearly visible, matte and crisp, lying perfectly flat.`
 4. **Seta lavata:** `Sandwashed silk in ivory (#EDE4D3), matte peach-skin surface, softly crumpled like a shirt left on a chair overnight; a fold of warm grey sandwashed silk (#6E6A66) overlapping one corner.`
-5. **Jacquard:** `Silk jacquard with a chocolate brown ground (#3B2620) and a woven gold horsebit-chain motif (#B8913F) in slight relief, repeating diagonally across the swatch.`
+5. **Raso stampato:** usare un ritaglio del modulo all-over della tavola 10 (catena oro su fondo cioccolato) invece di generarlo a parte.
 
-> Il motivo del jacquard è una catena di morsetti generica, non il logo Gucci: evita che il generatore rifiuti l'immagine e resta la nostra reinterpretazione.
+> Il motivo della catena è una catena di morsetti generica, non il logo Gucci: evita che il generatore rifiuti l'immagine e resta la nostra reinterpretazione.
 
 ---
 
