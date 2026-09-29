@@ -84,3 +84,16 @@ Stile identico alle tavole 07–08 (fondo nero con riflessi di raso, font serif,
 3. **Centro:** la variante B più piccola, con le etichette "Variante A — oro su smeraldo" e "Variante B — nero su avorio".
 4. **Metà destra:** il flat della vestaglia di schiena con la stampa posizionata, e una freccia verso un dettaglio del taschino.
 5. **In basso:** "Tecnica" con le due righe (lamina oro a caldo su velluto; serigrafia su seta lavata). Numero di pagina 09.
+
+---
+
+## Coerenza con il materiale della prof (PDF "Textile design: stampa piazzata e stampa all over", Digital Fashion Design, letto il 29/09)
+
+**Stampa piazzata, secondo la prof:** progettata per cadere in un punto esatto del capo finito. Sviluppo tecnico **sul cartamodello digitale** (il designer lavora sulle sagome di davanti, dietro, maniche). Sfide: precisione al taglio (1 cm fuori posto = disegno asimmetrico). Costi più alti per lo spreco di tessuto necessario a centrare la stampa. Nel suo esempio la tavola mostra: motivo, pallini dei colori, flat con la stampa, capo finito, foto indossata.
+
+**Cosa ho aggiunto alla tavola 09 per allinearla:**
+- il **pannello dietro del cartamodello** con il motivo posizionato e quotato (centro dietro, 12 cm sotto lo scollo, 20 × 30 cm, drittofilo) → `img-after-hours/cartamodello-dietro-stampa.png` (generato con uno script Python in scala 1 cm = 12 px, sagoma indicativa);
+- i **pallini dei colori** della stampa (oro, smeraldo, nero, avorio);
+- la riga **Produzione**: motivo rifinito in vettoriale, centraggio al taglio, più spreco rispetto all'all-over.
+
+**Per la tavola 10 (all-over), secondo la prof:** disegno che si ripete all'infinito sulla pezza. Serve il **modulo** (o rapporto): il quadrotto in cui ciò che esce a destra rientra a sinistra (seamless). Tipi di ripetizione: **grid** o **half-drop** (salto di metà modulo in verticale, più naturale). Output: un file del modulo, es. **64 × 64 cm a 300 dpi**, che la stampante tessile ripete su tutto il rotolo. Vantaggi: poco spreco, taglio libero, stesso tessuto per camicia, abito o fodera. Nel suo esempio: modulo ripetibile, rotolo di tessuto stampato, prodotto finale, foto indossata.
