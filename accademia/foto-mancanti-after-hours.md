@@ -19,7 +19,7 @@ Inventario del 29/09/2026 delle cornici ancora vuote o da sostituire nelle tavol
 | 2015–2022 | Alessandro Michele, uomo | `Gucci Alessandro Michele menswear 2015` |
 | 2023–oggi | De Sarno (rosso Ancora) o la prima sfilata di Demna | `Gucci Sabato De Sarno Ancora` · `Gucci Demna first show` |
 
-## Tavola 03 — DNA (4 cornici) · 📷 archivio
+## Tavola 03 — DNA ✅ completata il 29/09 (morsetto su borsa GG, manici Bamboo, look A/I 1995 raso blu + velluto, mocassino horsebit — fonti Pinterest da annotare per la tavola 17)
 
 | Blocco | Foto consigliata | Cerca |
 |---|---|---|
