@@ -10,6 +10,8 @@ Contenuti per la tavola 09 del progetto After Hours (`concept-after-hours.md`). 
 
 ## Il motivo: "Room Key"
 
+✅ **Variante A generata il 29/09** → `img-after-hours/stampa-room-key-A-FINALE.webp`. Versione finale: emblema verticale in cornice ovale; il morsetto fa da arco, la chiave pende al centro, targhetta con il **4** inciso (le quattro del mattino); i quattro ornamenti della cornice sono **gigli fiorentini** (Gucci nasce a Firenze nel 1921). La prima versione orizzontale (solo incisione) è stata scartata: troppo sottile per la lamina sul velluto e poco presente come stampa.
+
 Un morsetto classico (due anelli uniti da una barretta) in cui **la barretta è una vecchia chiave d'albergo**, con la sua targhetta ovale appesa sotto. Disegnato come un'incisione anni '90: linee sottili, tratteggio per le ombre, niente sfumature digitali.
 
 **Da dire all'esame:** Tom Ford usava il morsetto per vestire la notte in pubblico. Qui il morsetto diventa la chiave della stanza: la notte finisce in privato. È il ribaltamento del concept, disegnato in un solo segno.
