@@ -11,7 +11,7 @@
 Sviluppare una capsule collection partendo dall'analisi approfondita di un brand esistente, per arrivare a una proposta personale coerente con l'identità del brand ma con un punto di vista autoriale.
 
 **Brand scelto:** **Gucci — era Tom Ford (1994–2004)** · **Collezione:** "After Hours", pigiami e loungewear da portare fuori → `concept-after-hours.md` (scelto 26/09)
-**Canva (portfolio A3, 17 tavole):** "GUCCI — After Hours (portfolio)" https://www.canva.com/d/nzl5iWZDsKXQt9- — pag. 1 copertina, pag. 2 timeline, pag. 3 DNA, pag. 4 tema personale (27/09), pag. 5 cartella colori, pag. 6 cartella materiali, pag. 7 stampa piazzata (29/09, diventeranno pag. 7, 8, 9 quando arrivano 05 e 06). Mancano le foto d'archivio nei riquadri.
+**Canva (portfolio A3, 17 tavole):** "GUCCI — After Hours (portfolio)" https://www.canva.com/d/nzl5iWZDsKXQt9- — pag. 1 copertina, pag. 2 timeline, pag. 3 DNA, pag. 4 tema personale (27/09), pag. 5 cartella colori, pag. 6 cartella materiali, pag. 7 stampa piazzata, pag. 8 stampa all-over (29/09, diventeranno pag. 7–10 quando arrivano 05 e 06). Mancano le foto d'archivio nei riquadri.
 **Metodo per le tavole:** ogni tavola viene progettata dall'AI di Canva con un brief dettagliato (stile della copertina + testi esatti), poi Claude corregge testi e refusi e la inserisce nel portfolio. Rende molto meglio del montaggio a mano (che non permette di scegliere i font).
 Lista di 50 concept alternativi: `idee-concept-digital-fashion-design.md`.
 
@@ -35,7 +35,7 @@ Lista di 50 concept alternativi: `idee-concept-digital-fashion-design.md`.
 - [~] **07 — Cartella Colori**: palette Pantone TCX, min 6–max 10 colori, % utilizzo
 - [~] **08 — Cartella Materiali**: min 5 tessuti/materiali (foto, composizione, peso, mano, utilizzo)
 - [x] **09 — Sviluppo Stampa 1 (Piazzata)**: disegno in scala, variante colore, posizionamento, tecnica di stampa
-- [ ] **10 — Sviluppo Stampa 2 (All Over)**: rapporto ripetizione scala 1:1, 2 varianti colore, mockup
+- [x] **10 — Sviluppo Stampa 2 (All Over)**: rapporto ripetizione scala 1:1, 2 varianti colore, mockup
 - [ ] **11–15 — 5 Outfit Fronte/Retro**: figurino front+back colorato, flat tecnico con callout, tessuti e codici colore (look numerati 1–5)
 - [ ] **16 — Line-up Finale**: 5 look affiancati su silhouette neutra
 - [ ] **17 — Bibliografia & Crediti**: fonti immagini/libri/siti, brand e artisti referenziati
@@ -91,3 +91,4 @@ Lista delle cose rimaste aperte nelle tavole già montate, da sistemare prima de
 - **29/09** — Tavola 07 (cartella colori) scritta in `cartella-colori-after-hours.md`: 8 colori con % (nero, cioccolato, avorio, smeraldo, grigio fumo, tabacco, oro, rosso web) e colori look per look. Impaginata con l'AI di Canva, corretti HEX sbagliati e refusi, aggiunta l'etichetta Rosso Web, inserita nel portfolio dopo la tavola 04. Da fare in Canva: codici Pantone TCX con Pantone Connect, font dell'etichetta Rosso Web (Copia stile).
 - **29/09** — Tavola 08 (cartella materiali) scritta in `cartella-materiali-after-hours.md`: 5 tessuti (raso di seta, velluto seta/viscosa, lana tropicale, seta lavata, jacquard di seta con catena) + 5 complementari, con prompt ChatGPT per i campioni. Impaginata con l'AI di Canva, corretti i refusi, inserita nel portfolio dopo la 07. Da fare: foto dei campioni nelle 5 cornici.
 - **29/09** — Tavola 09 (stampa piazzata "Room Key") chiusa: motivo morsetto + chiave d'albergo con targhetta "4" e gigli fiorentini (ChatGPT, 2 varianti), vestaglia di schiena con la stampa, pannello dietro del cartamodello con il motivo quotato (script Python), pallini colore, tecnica e produzione. Allineata al PDF della prof su stampa piazzata/all-over (appunti in `stampa-piazzata-after-hours.md`). Inserita nel portfolio dopo la 08. Aperta: look 5 jacquard o raso stampato all-over (la prof intende l'all-over come stampa).
+- **29/09** — Tavola 10 (stampa all-over "Catena della notte") chiusa: elementi morsetto + chiave da ChatGPT, modulo half-drop 32 × 32 cm costruito via script (continuo sui bordi), varianti A oro su cioccolato / B avorio su smeraldo, anteprima 3 × 3 con il modulo evidenziato, mockup giacca da camera look 5. Impaginata duplicando la tavola 09 e inserita come pag. 8. Rotolo non fatto: è solo nell'esempio della prof, non richiesto dalla consegna.

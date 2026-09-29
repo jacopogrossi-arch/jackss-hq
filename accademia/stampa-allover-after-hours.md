@@ -1,5 +1,7 @@
 # Tavola 10 — Stampa all-over After Hours
 
+✅ **Tavola completata il 29/09/2026** — pag. 8 del portfolio Canva (duplicata dalla 09, stessi font e cornici).
+
 Contenuti per la tavola 10 del progetto After Hours (`concept-after-hours.md`). Avviata il 29/09/2026. Criteri dal PDF della prof (appunti in `stampa-piazzata-after-hours.md`, sezione finale).
 
 **Richiesta della consegna:** rapporto di ripetizione in scala 1:1, 2 varianti colore, mockup.
