@@ -11,7 +11,7 @@
 Sviluppare una capsule collection partendo dall'analisi approfondita di un brand esistente, per arrivare a una proposta personale coerente con l'identità del brand ma con un punto di vista autoriale.
 
 **Brand scelto:** **Gucci — era Tom Ford (1994–2004)** · **Collezione:** "After Hours", pigiami e loungewear da portare fuori → `concept-after-hours.md` (scelto 26/09)
-**Canva (portfolio A3, 17 tavole):** "GUCCI — After Hours (portfolio)" https://www.canva.com/d/nzl5iWZDsKXQt9- — pag. 1 copertina, pag. 2 timeline, pag. 3 DNA, pag. 4 tema personale (27/09). Mancano le foto d'archivio nei riquadri.
+**Canva (portfolio A3, 17 tavole):** "GUCCI — After Hours (portfolio)" https://www.canva.com/d/nzl5iWZDsKXQt9- — pag. 1 copertina, pag. 2 timeline, pag. 3 DNA, pag. 4 tema personale (27/09), pag. 5 cartella colori (29/09, diventerà pag. 7 quando arrivano 05 e 06). Mancano le foto d'archivio nei riquadri.
 **Metodo per le tavole:** ogni tavola viene progettata dall'AI di Canva con un brief dettagliato (stile della copertina + testi esatti), poi Claude corregge testi e refusi e la inserisce nel portfolio. Rende molto meglio del montaggio a mano (che non permette di scegliere i font).
 Lista di 50 concept alternativi: `idee-concept-digital-fashion-design.md`.
 
@@ -32,7 +32,7 @@ Lista di 50 concept alternativi: `idee-concept-digital-fashion-design.md`.
 - [~] **04 — Tema Personale**: titolo collezione + sottotitolo, concept max 150 parole
 - [~] **05 — Moodboard**: collage evocativo (arte, cinema, foto, street, texture) — atmosfera e target
 - [ ] **06 — Techboard**: 3–4 dettagli costruttivi/lavorazioni/finiture, schizzi tecnici + note
-- [ ] **07 — Cartella Colori**: palette Pantone TCX, min 6–max 10 colori, % utilizzo
+- [~] **07 — Cartella Colori**: palette Pantone TCX, min 6–max 10 colori, % utilizzo
 - [ ] **08 — Cartella Materiali**: min 5 tessuti/materiali (foto, composizione, peso, mano, utilizzo)
 - [ ] **09 — Sviluppo Stampa 1 (Piazzata)**: disegno in scala, variante colore, posizionamento, tecnica di stampa
 - [ ] **10 — Sviluppo Stampa 2 (All Over)**: rapporto ripetizione scala 1:1, 2 varianti colore, mockup
@@ -75,3 +75,4 @@ Stesso metodo del progetto cinque giacche: testi e contenuti qui in repo → pro
 - **27/09** — Tavola 02 (timeline) montata in Canva: prima versione a mano, poi rifatta con l'AI di Canva (stesso font e fondo della copertina), ripulita da doppioni e refusi e inserita nel portfolio al posto della prima. Da fare: foto d'archivio nelle cornici, font del titolo già coerente.
 - **27/09** — Tavola 03 (DNA di Gucci) scritta (`dna-gucci.md`), impaginata con l'AI di Canva, corretta (refusi, colore delle righe After Hours) e inserita come pagina 3 del portfolio.
 - **27/09** — Tavola 04 (tema personale) impaginata con l'AI di Canva: concept completo, frase finale e confronto "Tom Ford 1995 / After Hours"; inserita come pagina 4. Manca la foto d'atmosfera nella cornice.
+- **29/09** — Tavola 07 (cartella colori) scritta in `cartella-colori-after-hours.md`: 8 colori con % (nero, cioccolato, avorio, smeraldo, grigio fumo, tabacco, oro, rosso web) e colori look per look. Impaginata con l'AI di Canva, corretti HEX sbagliati e refusi, aggiunta l'etichetta Rosso Web, inserita nel portfolio dopo la tavola 04. Da fare in Canva: codici Pantone TCX con Pantone Connect, font dell'etichetta Rosso Web (Copia stile).

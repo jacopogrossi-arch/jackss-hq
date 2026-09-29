@@ -2,6 +2,8 @@
 
 Contenuti per la tavola 07 del progetto After Hours (`concept-after-hours.md`). Scritta il 29/09/2026, palette approvata da Jacopo lo stesso giorno.
 
+🟡 **Impaginata in Canva il 29/09** (design `Cartella colori moda A3`, inserita nel portfolio dopo la tavola 04). Mancano i codici Pantone TCX.
+
 **Richiesta della consegna:** palette Pantone TCX, minimo 6 e massimo 10 colori, con la % di utilizzo nella collezione.
 
 **Codici Pantone:** come per Roue Libre, si ricavano con l'app gratuita **Pantone Connect** → "Trova corrispondenza" → incolla l'HEX → scegli il **TCX** (tessile) più vicino. Non inventarli a mano. Gli HEX qui sotto sono il punto di partenza.
