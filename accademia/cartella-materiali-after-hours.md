@@ -2,6 +2,8 @@
 
 Contenuti per la tavola 08 del progetto After Hours (`concept-after-hours.md`). Scritta il 29/09/2026. Colori da `cartella-colori-after-hours.md`.
 
+🟡 **Impaginata in Canva il 29/09** (design `Tavola materiali moda A3`, inserita nel portfolio dopo la tavola 07). Mancano le foto dei campioni nelle 5 cornici.
+
 **Richiesta della consegna:** minimo 5 tessuti/materiali, per ognuno foto, composizione, peso, mano, utilizzo.
 
 **Principio della tavola:** *Lucido fuori, morbido dentro.* Ogni tessuto viene dal guardaroba notturno di Tom Ford (raso, velluto, lana da smoking) ed è scelto per stare sulla pelle come un pigiama.
