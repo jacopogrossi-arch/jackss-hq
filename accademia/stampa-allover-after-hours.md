@@ -26,6 +26,15 @@ I generatori di immagini non fanno moduli davvero senza interruzioni: i bordi no
 3. Le **due varianti colore** si ottengono ricolorando lo stesso modulo.
 4. **Rotolo e capo finito** li generiamo con ChatGPT allegando il modulo.
 
+## Stato (29/09)
+
+✅ **Elementi generati** con ChatGPT → `img-after-hours/allover-elementi.webp` (morsetto + chiave con targhetta "4").
+✅ **Modulo costruito** con `img-after-hours/modulo_allover.py`: 32 × 32 cm a 300 dpi, 4 colonne × 2 righe, colonne dispari sfalsate di mezza cella (half-drop). I morsetti formano una **catena in diagonale**, le chiavi corrono nella diagonale accanto. Continuo sui bordi (gli elementi che escono da un lato rientrano dal lato opposto).
+- moduli di produzione: `allover-modulo-A.jpg` (oro su cioccolato), `allover-modulo-B.jpg` (avorio su smeraldo);
+- anteprime 3 × 3 con il modulo riquadrato (come nell'esempio della prof): `allover-ripetizione-A.jpg`, `allover-ripetizione-B.jpg`.
+
+Mancano: rotolo di tessuto stampato e capo finito (giacca da camera look 5), da generare con ChatGPT allegando il modulo A.
+
 ## Varianti colore
 
 | Variante | Motivo | Fondo | Dove |
