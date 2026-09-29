@@ -8,7 +8,58 @@ Materiale per la tavola 05 del progetto After Hours (`concept-after-hours.md`). 
 
 ---
 
-## Le 14 immagini da trovare (5 gruppi)
+## ✅ VERSIONE SCELTA (29/09) — "Il letto sfatto", solo foto vere da Pinterest
+
+Niente griglia di riquadri: la tavola è un letto d'hotel alle 5 del mattino visto dall'alto, con i ricordi della notte sparsi sopra. **Niente immagini AI.** Si costruisce a tre strati in Canva:
+
+1. **Sfondo** — raso nero stropicciato dall'alto ✅ trovato (1200×1600, da ruotare in orizzontale).
+2. **Oggetti scontornati** (sfondo rimosso in Canva, ombra leggera) — le texture diventano oggetti sul letto.
+3. **Ricordi** — 6 polaroid (cornice elemento Canva) + 1 striscia di pellicola da 4 fotogrammi + foglio di carta intestata d'hotel con target e titolo.
+
+**Regola anti-doppioni:** niente immagini già usate nelle tavole 01–04 (sfilata A/I 1995, campagna Testino, mocassino horsebit, Ripley). Il morsetto resta ma su un oggetto diverso.
+
+Caricare tutto nella cartella Canva **"foto tavola 5"**. Oggetti: meglio dall'alto e su fondo chiaro uniforme (scontorno pulito).
+
+### Oggetti (6)
+
+| ☐ | Oggetto | Cerca su Pinterest |
+|---|---|---|
+| ☐ | Chiave d'albergo in ottone con targhetta | `vintage hotel room key brass tag` |
+| ☐ | Pantofola di velluto col morsetto (sostituisce il mocassino, già in tav. 03) | `Gucci velvet horsebit slipper` · `velvet slipper horsebit` |
+| ☐ | Catena dorata | `gold chain necklace flat lay white background` |
+| ☐ | Velluto smeraldo (foto vera, non il campione AI della tav. 08) | `emerald green velvet fabric` |
+| ☐ | Scatola di fiammiferi d'hotel | `vintage hotel matchbox` |
+| ☐ | Tazzina da espresso | `espresso cup saucer top view` |
+
+### Polaroid (6)
+
+| ☐ | Immagine | Cerca su Pinterest |
+|---|---|---|
+| ☐ | Backstage Gucci anni '90 (sostituisce la sfilata 1995, già 4 volte nel portfolio) | `Gucci backstage 1990s Tom Ford` · `90s fashion backstage polaroid` |
+| ☐ | Tom Ford negli anni '90 (sostituisce Testino, già in tav. 02) | `Tom Ford 1990s portrait` |
+| ☐ | Helmut Newton, hotel di notte | `Helmut Newton hotel` |
+| ☐ | Guy Bourdin, colori saturi nel buio | `Guy Bourdin` |
+| ☐ | Via di città all'alba, lampioni accesi | `empty street dawn streetlights film photography` |
+| ☐ | Balcone d'hotel la mattina | `hotel balcony morning espresso film photo` |
+
+### Pellicola (4 fotogrammi)
+
+| ☐ | Film | Cerca |
+|---|---|---|
+| ☐ | *Lost in Translation* (2003) | `Lost in Translation hotel window still` |
+| ☐ | *A Single Man* (2009, regia di Tom Ford) | `A Single Man film still` |
+| ☐ | *In the Mood for Love* (2000) | `In the Mood for Love film still` |
+| ☐ | *Eyes Wide Shut* (1999) | `Eyes Wide Shut film still interior` |
+
+### Carta intestata (1)
+
+| ☐ | Foglio | `vintage hotel letterhead paper` (vuoto o quasi, per scriverci target e titolo) |
+
+Fonti di tutto da annotare per la tavola 17.
+
+---
+
+## Versione precedente (27/09, superata) — le 14 immagini in 5 gruppi
 
 ### A. Il brand: Gucci di Tom Ford (3)
 1. **Sfilata Gucci A/I 1995**: camicia di raso aperta, pantalone di velluto a vita bassa. *Cerca:* "Gucci Fall 1995 Tom Ford runway". *Dove:* Vogue Runway, Getty.
