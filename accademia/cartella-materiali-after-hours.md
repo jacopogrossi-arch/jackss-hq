@@ -2,7 +2,7 @@
 
 Contenuti per la tavola 08 del progetto After Hours (`concept-after-hours.md`). Scritta il 29/09/2026. Colori da `cartella-colori-after-hours.md`.
 
-🟡 **Impaginata in Canva il 29/09** (design `Tavola materiali moda A3`, inserita nel portfolio dopo la tavola 07). Mancano le foto dei campioni nelle 5 cornici.
+🟡 **Impaginata in Canva il 29/09** (design `Tavola materiali moda A3`, inserita nel portfolio dopo la tavola 07). Foto dei campioni inserite da Jacopo. **29/09: look 5 cambiato da jacquard a raso stampato all-over** (per la prof l'all-over è una stampa, il jacquard è un tessuto): aggiornati titolo, peso, mano e testo in Canva. Correzioni aperte nella lista di revisione di `progetto-digital-fashion-design.md`.
 
 **Richiesta della consegna:** minimo 5 tessuti/materiali, per ognuno foto, composizione, peso, mano, utilizzo.
 
@@ -30,7 +30,7 @@ Contenuti per la tavola 08 del progetto After Hours (`concept-after-hours.md`). 
 | 2 | **Velluto di seta e viscosa** | 82% viscosa · 18% seta | ~180 g/m² | pelo corto e morbido, cade pesante, cambia tono alla luce | Smeraldo Velluto | vestaglia look 2 |
 | 3 | **Lana tropicale** | 100% lana vergine | ~220 g/m² | asciutta, compatta, non si sgualcisce | Cioccolato Raso | pigiama-smoking look 3 |
 | 4 | **Seta lavata (sandwashed)** | 100% seta | ~85 g/m² | opaca, vellutata "a buccia di pesca", leggermente stropicciata | Avorio Lenzuolo, Grigio Fumo | camicia e pantalone look 4 |
-| 5 | **Jacquard di seta con catena** | 100% seta | ~160 g/m² | corposa, con il disegno in leggero rilievo | fondo Cioccolato, catena Oro | giacca da camera look 5 |
+| 5 | **Raso di seta stampato all-over** | 100% seta | ~95 g/m² | fluida, lucida, con la catena stampata su tutta la pezza | fondo Cioccolato, catena Oro | giacca da camera look 5 |
 
 **Il legame con Gucci/Ford, tessuto per tessuto (da dire all'esame):**
 - Raso e velluto sono i due tessuti della sfilata A/I 1995 di Tom Ford (camicie di raso, pantaloni di velluto).

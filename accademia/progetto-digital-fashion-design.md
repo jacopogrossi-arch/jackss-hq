@@ -58,6 +58,19 @@ Stesso metodo del progetto cinque giacche: testi e contenuti qui in repo → pro
 | **Dom 04/10** | Line-up + bibliografia + export PDF e controllo formato | 16, 17 |
 | **Lun 05/10** | Margine per revisioni | — |
 
+## Da correggere nella revisione finale (Lun 05/10)
+
+Lista delle cose rimaste aperte nelle tavole già montate, da sistemare prima dell'export PDF.
+
+- [ ] **Tavole 01–04** — foto d'archivio nelle cornici vuote (copertina A/I 1995, timeline, DNA, foto d'atmosfera del tema).
+- [ ] **Tavola 05 (moodboard)** — raccogliere le 14 immagini (`moodboard-after-hours.md`) e montarla.
+- [ ] **Tavola 07 (colori)** — codici Pantone TCX sotto ogni colore (Pantone Connect → Trova corrispondenza); font dell'etichetta "Rosso Web" da uniformare (Copia stile).
+- [ ] **Tavola 08 (materiali)** — le foto dei campioni non corrispondono alla cartella colori:
+  - velluto (look 2) è **bordeaux** → deve essere **Smeraldo Velluto** `#0F4D3A`;
+  - lana tropicale (look 3) è **blu notte** → deve essere **Cioccolato Raso** `#3B2620`;
+  - look 5 mostra ancora un **jacquard verde** → sostituire con un ritaglio del **raso stampato all-over** della tavola 10.
+- [ ] **Riordino pagine** — quando arrivano 05 e 06, spostare 07–09 alle pagine giuste e controllare i numeri in basso a destra.
+
 **Riuso da Roue Libre:** figurino base, flusso colore degli outfit, struttura di cartella cromatica/materiali, prompt per i campioni tessuto. Si risparmia circa un terzo del lavoro.
 
 ## Note di lavoro
