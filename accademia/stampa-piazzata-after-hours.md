@@ -32,10 +32,12 @@ Un morsetto classico (due anelli uniti da una barretta) in cui **la barretta è 
 
 | Dove | Capo | Misura del motivo | Posizione |
 |---|---|---|---|
-| **Schiena** (principale) | vestaglia, look 2 | 28 × 14 cm | centrato, 18 cm sotto la cucitura del collo |
-| **Taschino** (richiamo) | vestaglia, look 2 | 6 × 3 cm | centrato sul taschino al petto, lato sinistro |
+| **Schiena** (principale) | vestaglia, look 2 | 20 × 30 cm (emblema verticale) | centrato, 12 cm sotto la cucitura del collo |
+| **Taschino** (richiamo) | vestaglia, look 2 | 4 × 6 cm | centrato sul taschino al petto, lato sinistro |
 
-Sulla tavola: il motivo disegnato grande con le quote (28 cm / 14 cm) e la scritta "scala 1:2" se lo riduciamo a metà.
+Sulla tavola: il motivo disegnato grande con le quote (20 cm / 30 cm) e la scritta "scala 1:2" se lo riduciamo a metà.
+
+✅ **Vestaglia di schiena con la stampa generata il 29/09** → `img-after-hours/vestaglia-retro-stampa-FINALE.webp`. Misure aggiornate all'emblema verticale (prima erano pensate per il motivo orizzontale scartato).
 
 ## Varianti colore
 
@@ -78,7 +80,7 @@ Allega al prompt l'immagine del motivo appena generata, così la stampa sulla ve
 Stile identico alle tavole 07–08 (fondo nero con riflessi di raso, font serif, testi oro, filo dorato).
 
 1. **In alto a sinistra:** titolo + frase. **In alto a destra:** il testo breve.
-2. **Metà sinistra, grande:** il motivo (variante A) con le quote 28 cm × 14 cm.
+2. **Metà sinistra, grande:** il motivo (variante A) con le quote 20 cm × 30 cm.
 3. **Centro:** la variante B più piccola, con le etichette "Variante A — oro su smeraldo" e "Variante B — nero su avorio".
 4. **Metà destra:** il flat della vestaglia di schiena con la stampa posizionata, e una freccia verso un dettaglio del taschino.
 5. **In basso:** "Tecnica" con le due righe (lamina oro a caldo su velluto; serigrafia su seta lavata). Numero di pagina 09.
