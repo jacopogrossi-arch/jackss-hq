@@ -33,7 +33,8 @@ I generatori di immagini non fanno moduli davvero senza interruzioni: i bordi no
 - moduli di produzione: `allover-modulo-A.jpg` (oro su cioccolato), `allover-modulo-B.jpg` (avorio su smeraldo);
 - anteprime 3 × 3 con il modulo riquadrato (come nell'esempio della prof): `allover-ripetizione-A.jpg`, `allover-ripetizione-B.jpg`.
 
-Mancano: rotolo di tessuto stampato e capo finito (giacca da camera look 5), da generare con ChatGPT allegando il modulo A.
+✅ **Mockup** (richiesto dalla consegna): giacca da camera look 5 in raso stampato → `img-after-hours/giacca-camera-allover-FINALE.webp` (ChatGPT con il modulo A allegato). Collo sciallato e polsi in raso liscio, alamari in bambù, profilo web verde-rosso-verde.
+Il **rotolo** non è richiesto dalla consegna (è solo nell'esempio della prof): da aggiungere solo se avanza spazio.
 
 ## Varianti colore
 
