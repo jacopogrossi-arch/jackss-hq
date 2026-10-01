@@ -69,6 +69,7 @@ Lista delle cose rimaste aperte nelle tavole già montate, da sistemare prima de
   - velluto (look 2) è **bordeaux** → deve essere **Smeraldo Velluto** `#0F4D3A`;
   - lana tropicale (look 3) è **blu notte** → deve essere **Cioccolato Raso** `#3B2620`;
   - look 5 mostra ancora un **jacquard verde** → sostituire con un ritaglio del **raso stampato all-over** della tavola 10.
+- [ ] **Tavola 09 (stampa piazzata)** — la vestaglia ora è corta (look 2): sostituire la vestaglia lunga con `img-after-hours/look2-flat-vestaglia-retro-FINALE.webp`.
 - [ ] **Riordino pagine** — quando arrivano 05 e 06, spostare 07–09 alle pagine giuste e controllare i numeri in basso a destra.
 
 **Riuso da Roue Libre:** figurino base, flusso colore degli outfit, struttura di cartella cromatica/materiali, prompt per i campioni tessuto. Si risparmia circa un terzo del lavoro.

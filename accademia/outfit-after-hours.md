@@ -31,6 +31,8 @@ File immagine in `img-after-hours/` con nomi `lookN-flat-fronte-FINALE`, `lookN-
 
 ## Look 2 — Vestaglia · velluto Smeraldo
 
+> ✅ **Look 2 CHIUSO il 01/10**: figurino fronte/retro (`look2-outfit-FINALE`, `look2-outfit-retro-FINALE`, con la stampa Room Key sulla schiena) + flat colorati fronte/retro (`look2-flat-vestaglia-*-FINALE`). Vestaglia sopra il ginocchio. Da fare in revisione: nella tavola 09 sostituire la vestaglia lunga con `look2-flat-vestaglia-retro-FINALE.webp`.
+
 - **Vestaglia:** già disegnata (`vestaglia-retro-stampa-FINALE.webp`). Lunga sotto il ginocchio, collo a scialle profilato, polsi risvoltati larghi, cintura in velluto con **fibbia G dorata**, due tasche a toppa. Sul retro la stampa piazzata Room Key.
 - **Sotto:** ~~pantalone del look 1~~ → **niente pantalone** (ricalco di Jacopo del 01/10): vestaglia sopra il ginocchio, gambe e piedi nudi, petto nudo nello scollo. Ricalco: `img-after-hours/look2-outfit-lineart.webp`.
 - **Pantofole:** pelle Tabacco, morsetto oro.
