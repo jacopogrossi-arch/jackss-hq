@@ -2,12 +2,14 @@
 
 Schede dei look e prompt per i figurini. Preparato il 01/10/2026.
 
-**Workflow (lo stesso di Roue Libre):**
-1. **Flat fronte** del completo via ChatGPT → allegare come riferimento di stile `img-cinque-giacche/giacca2-flat-fronte-FINALE.png`.
-2. **Flat retro**: si allega il flat fronte appena approvato e si chiede il retro.
-3. **Su figurino**: in Procreate il flat va sul figurino base (`img-cinque-giacche/figurino-base-fronte.png`), si adatta con Trasforma → Distorsione (mai rigenerarlo) e si ricalca. Pantofole a mano o con ChatGPT in linework.
-4. **Colore**: prima colore piatto, poi aerografo solo sulle pieghe già disegnate (prompt in fondo). Le linee non si toccano.
-5. **Retro del figurino**: stesso procedimento partendo dal flat retro.
+**Workflow (fissato da Jacopo il 01/10, quest'ordine e basta):**
+1. **Flat tecnico in bianco e nero**, solo linee, con le **pieghe di panneggio ben marcate**. **Sopra e sotto separati**: due prompt, due immagini (prima il capo sopra, poi il pantalone). Servono a Jacopo per ricalcarli pezzo per pezzo.
+2. **Ricalco sul figurino**: Jacopo lo fa a mano in Procreate sul figurino base (`img-cinque-giacche/figurino-base-fronte.png`), con Trasforma → Distorsione se le proporzioni non tornano (mai rigenerare il flat).
+3. **Render del figurino**: colore naturale, partendo dal figurino ricalcato (prompt colore in fondo: colore piatto + aerografo solo sulle pieghe già disegnate, le linee non si toccano).
+4. **Flat colorato**: per i callout della tavola.
+5. **Retro**: stesso ciclo.
+
+> Primo tentativo del 01/10 scartato: flat del completo a colori in un'unica immagine. Sbagliato per il ricalco. Il design del look 1 però era giusto, e quell'immagine si può allegare come riferimento di design.
 
 File immagine in `img-after-hours/` con nomi `lookN-flat-fronte-FINALE`, `lookN-outfit-FINALE`, ecc.
 
@@ -56,47 +58,52 @@ File immagine in `img-after-hours/` con nomi `lookN-flat-fronte-FINALE`, `lookN-
 
 ---
 
-## Prompt — flat fronte (look 1, 3, 4) · allegare `giacca2-flat-fronte-FINALE.png`
+## Prompt — flat tecnico B/N (step 1) · un prompt per il sopra, uno per il sotto
+
+Template, uguale per ogni pezzo:
+```
+Technical fashion flat drawing of ONE garment only: [CAPO]. Laid flat, front view, no body, no mannequin, no other garments. Black and white line drawing only: clean black outlines, stitching as fine dashed lines, and the drape folds drawn clearly as confident lines so they can be traced by hand. No color, no grey fill, no shading, no hatching, no texture. Plain white background, no text, no labels. Vertical format, garment centered and filling the frame.
+Details: [DETTAGLI]
+```
+Se c'è un'immagine di design già approvata (per esempio il flat a colori del look 1), allegarla e aggiungere: `Use the attached image only as design reference: same cut and details, converted to a black and white line drawing.`
+
+**Look 1 — sopra.** [CAPO]: `a men's long-sleeve pyjama shirt` · [DETTAGLI]:
+`flat notched pyjama collar (continuous revers), five buttons, one patch pocket on the left chest, straight cuffs with one button, a thin piping drawn as a double line along the collar edge, the front opening, the pocket opening and the cuffs. Relaxed but clean fit, natural shoulder. Soft folds at the elbows, under the arms and at the waist, as in fluid silk satin.`
+
+**Look 1 — sotto.** [CAPO]: `a pair of men's pyjama trousers` · [DETTAGLI]:
+`low-rise elasticated waist with gathers and a drawstring tied in a bow, side seam pockets, long straight wide leg, a thin piping drawn as a double line around the hem. Long vertical drape folds down the legs and a few soft folds at the hem, as in fluid silk satin.`
+
+**Look 2 — sopra (vestaglia, fronte).** Allegare `img-after-hours/vestaglia-retro-stampa-FINALE.webp` + la riga del riferimento di design (è il retro). [CAPO]: `a men's long dressing gown` · [DETTAGLI]:
+`front view of the robe in the attached image: length below the knee, piped shawl collar, wide turned-back cuffs, two patch pockets, belt tied at the waist with a G-shaped buckle. No print on the front. Heavy soft folds as in velvet, gathered under the belt.`
+**Look 2 — sotto:** stesso pantalone del look 1 → si riusa il flat del look 1.
+
+**Look 3 — sopra.** [CAPO]: `a men's unstructured tuxedo-style jacket` · [DETTAGLI]:
+`single button, peak lapels with satin facing (outlined with a fine inner line), two jetted pockets, no shoulder padding (shirt-like shoulder), hip length, slim waist. Few crisp folds, as in light tropical wool.`
+**Look 3 — sotto.** [CAPO]: `a pair of men's tuxedo trousers` · [DETTAGLI]:
+`low rise, flat front, satin stripe down the outer side seam (drawn as two parallel lines), long straight leg. Few crisp vertical folds, as in light tropical wool.`
+
+**Look 4 — sopra.** [CAPO]: `a men's oversized long shirt` · [DETTAGLI]:
+`small soft collar, unbuttoned down to the chest, buttons, long sleeves rolled up to the elbows, curved shirttail hem covering the hips. Many soft crumpled folds, as in sandwashed silk.`
+**Look 4 — sotto.** [CAPO]: `a pair of men's drawstring trousers` · [DETTAGLI]:
+`very low-rise drawstring waist with gathers, wide long leg pooling at the hem. Many soft folds and breaks at the hem, as in sandwashed silk.`
+
+**Look 5 — sopra (giacca da camera).** Allegare `img-after-hours/giacca-camera-allover-FINALE.webp` + la riga del riferimento di design. [CAPO]: `a men's smoking jacket` · [DETTAGLI]:
+`piped shawl collar, two frog closures with toggle buttons, welt chest pocket, two patch pockets with a top band, wide turned-back cuffs. Do NOT draw the print: plain fabric only. Soft folds as in silk satin.`
+**Look 5 — sotto.** [CAPO]: `a pair of men's evening trousers` · [DETTAGLI]:
+`low rise, flat front, no drawstring, long straight leg. Long fluid vertical folds as in silk satin.`
+
+## Prompt — flat retro B/N · allegare il flat fronte B/N di quel pezzo
 
 ```
-Technical fashion flat drawing of a men's [LOOK], laid flat, front view, no body, no mannequin. Top on the upper half, trousers below it, both centered, same scale. Use the attached image ONLY as style reference: same clean black outline, simple stitching lines as dashed lines, light flat color fill with soft hand-drawn texture, drape folds as simple lines. No heavy shading, no shine, no photographic rendering. Plain white background, no text, no labels. Vertical format.
-Garment details: [DETTAGLI]
+The attached image is the FRONT view of this garment. Draw the BACK view of the exact same garment as a black and white technical flat, same scale, same line style, same fold style. No color, no shading. Back details: [RETRO]. Plain white background, no text. Vertical format.
 ```
+- **Look 1 camicia:** `shoulder yoke with a central box pleat` · **pantalone:** `plain back, elastic waist, same hem piping`
+- **Look 2 vestaglia:** già fatta (si ricalca `vestaglia-retro-stampa-FINALE.webp`)
+- **Look 3 giacca:** `clean back with a single centre vent` · **pantalone:** `plain back, side stripe visible`
+- **Look 4 camicia:** `shoulder yoke with a central pleat, back hem longer than the front` · **pantalone:** `plain back, drawstring waist`
+- **Look 5 giacca:** `plain back with centre back seam, cuffs visible` · **pantalone:** `plain back`
 
-**Look 1 — [LOOK]:** `two-piece silk satin pyjama set` · **[DETTAGLI]:**
-```
-Shirt: classic pyjama shirt in deep black silk satin, flat notched pyjama collar (continuous revers), five mother-of-pearl buttons, one patch pocket on the left chest, straight cuffs with one button. A thin green-red-green ribbon piping runs along the collar edge, the chest pocket opening and the cuffs. Relaxed but clean fit, natural shoulder.
-Trousers: same black silk satin, low-rise elasticated waist with a satin drawstring, long straight wide leg, thin green-red-green piping around the hem.
-```
-
-**Look 3 — [LOOK]:** `pyjama tuxedo set` · **[DETTAGLI]:**
-```
-Jacket: soft unstructured tuxedo-style jacket in dark chocolate brown tropical wool, single button, peak lapels faced in glossy black silk satin, two jetted pockets, no shoulder padding (shirt-like shoulder), hip length, slim waist.
-Trousers: matching chocolate brown wool tuxedo trousers, low rise, flat front, black satin stripe down the outer side seam, long straight leg.
-```
-
-**Look 4 — [LOOK]:** `loose silk shirt and drawstring trousers` · **[DETTAGLI]:**
-```
-Shirt: oversized long shirt in ivory sandwashed silk, small soft collar, worn unbuttoned down to the chest, mother-of-pearl buttons, long sleeves rolled up to the elbows, curved shirttail hem covering the hips, slightly crumpled.
-Trousers: smoke grey sandwashed silk, very low-rise drawstring waist, wide long leg that pools over the foot.
-```
-
-**Look 2 — fronte della vestaglia** · allegare `img-after-hours/vestaglia-retro-stampa-FINALE.webp` + il flat di stile:
-```
-The first attached image is the BACK view of this robe. Draw the FRONT view of the exact same robe as a technical fashion flat, laid flat, no body: same emerald green velvet, same length below the knee, same piped shawl collar, same wide turned-back cuffs, same velvet belt (closed at the front with a gold G-shaped buckle), two patch pockets on the front. No print on the front. Use the second attached image only as style reference (clean outline, dashed stitching, light flat fill, simple fold lines, no heavy shading, no shine). Plain white background, no text. Vertical format.
-```
-
-## Prompt — flat retro (tutti i look) · allegare il flat fronte approvato
-
-```
-The attached image is the FRONT view of this outfit. Draw the BACK view of the exact same garments as a technical fashion flat, same scale, same style, same colors and line weight. Nothing on the front changes. Back details: [RETRO]. Plain white background, no text. Vertical format.
-```
-- **Look 1:** `shoulder yoke with a central box pleat on the shirt; trousers with plain back and the same hem piping`
-- **Look 3:** `clean jacket back with a single centre vent; trousers with plain back and the satin side stripe visible`
-- **Look 4:** `shoulder yoke with a central pleat, back hem longer than the front, sleeves rolled; trousers with plain back`
-- **Look 5** (allegare `giacca-camera-allover-FINALE.webp`): `plain back covered in the same all-over chain print, centre back seam, satin cuffs visible; add black satin flat-front trousers in the same image, plain back`
-
-## Prompt — colore (step 4), da adattare per ogni look
+## Prompt — render colore del figurino (step 3), da adattare per ogni look
 
 ```
 This is a simple coloring task on this exact line drawing — nothing else. Do not add, remove, or redraw any linework — treat all lines as fixed and untouchable.
