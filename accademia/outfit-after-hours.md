@@ -22,7 +22,7 @@ File immagine in `img-after-hours/` con nomi `lookN-flat-fronte-FINALE`, `lookN-
 
 ## Look 1 — Pigiama classico · raso di seta Nero Notte
 
-> ✅ 01/10 figurino fronte colorato: `img-after-hours/look1-outfit-FINALE.webp` (lineart: `look1-outfit-lineart.webp`). Piedi nudi. Da fare: retro, flat colorato.
+> ✅ 01/10 figurino fronte colorato: `img-after-hours/look1-outfit-FINALE.webp` (lineart: `look1-outfit-lineart.webp`). Piedi nudi. ✅ Retro: `look1-outfit-retro-FINALE.webp` (generato da ChatGPT dal fronte). Da fare: flat colorati.
 
 - **Camicia:** collo a revers da pigiama (rever piatto e continuo), abbottonatura a 5 bottoni di madreperla, taschino a toppa sul petto sinistro, polsi dritti con un bottone. Profilo web sottile sul bordo del revers, sul taschino e sui polsi.
 - **Pantalone:** vita bassa con elastico e coulisse in raso, gamba dritta e ampia, profilo web sull'orlo.
