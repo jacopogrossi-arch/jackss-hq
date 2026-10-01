@@ -34,7 +34,7 @@ File immagine in `img-after-hours/` con nomi `lookN-flat-fronte-FINALE`, `lookN-
 - **Vestaglia:** già disegnata (`vestaglia-retro-stampa-FINALE.webp`). Lunga sotto il ginocchio, collo a scialle profilato, polsi risvoltati larghi, cintura in velluto con **fibbia G dorata**, due tasche a toppa. Sul retro la stampa piazzata Room Key.
 - **Sotto:** petto nudo con la catena dorata + pantalone in raso Nero Notte (lo stesso del look 1, così la collezione si lega).
 - **Pantofole:** pelle Tabacco, morsetto oro.
-- **Da generare solo:** il flat fronte (il retro c'è già).
+- **Da generare solo:** il flat fronte (il retro c'è già). ✅ Flat B/N: `img-after-hours/look2-flat-vestaglia-BN.webp`. Chiusura con il lembo destro sopra ("da donna"): scelta di Jacopo del 01/10, si lascia così.
 
 ## Look 3 — Pigiama-smoking · lana tropicale Cioccolato + raso Nero Notte
 
