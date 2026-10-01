@@ -6,7 +6,7 @@ Schede dei look e prompt per i figurini. Preparato il 01/10/2026.
 1. **Flat tecnico in bianco e nero**, solo linee, con le **pieghe di panneggio ben marcate**. **Sopra e sotto separati**: due prompt, due immagini (prima il capo sopra, poi il pantalone). Servono a Jacopo per ricalcarli pezzo per pezzo.
 2. **Ricalco sul figurino**: Jacopo lo fa a mano in Procreate sul figurino base (`img-cinque-giacche/figurino-base-fronte.png`), con Trasforma → Distorsione se le proporzioni non tornano (mai rigenerare il flat).
 3. **Render del figurino**: colore naturale, partendo dal figurino ricalcato (prompt colore in fondo: colore piatto + aerografo solo sulle pieghe già disegnate, le linee non si toccano).
-4. **Flat colorato** per i callout della tavola: disegno tecnico pulito, **senza pieghe di panneggio** (solo contorni, cuciture, piping, bottoni, colore piatto).
+4. **Flat colorato** per i callout della tavola: disegno tecnico pulito, **senza pieghe di panneggio** (le linee a matita) ma **con le sfumature**: aerografo leggero scuro + aerografo leggero chiaro.
 5. **Retro**: stesso ciclo.
 
 > Primo tentativo del 01/10 scartato: flat del completo a colori in un'unica immagine. Sbagliato per il ricalco. Il design del look 1 però era giusto, e quell'immagine si può allegare come riferimento di design.
