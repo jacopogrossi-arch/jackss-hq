@@ -22,6 +22,8 @@ File immagine in `img-after-hours/` con nomi `lookN-flat-fronte-FINALE`, `lookN-
 
 ## Look 1 — Pigiama classico · raso di seta Nero Notte
 
+> ✅ 01/10 figurino fronte colorato: `img-after-hours/look1-outfit-FINALE.webp` (lineart: `look1-outfit-lineart.webp`). Piedi nudi. Da fare: retro, flat colorato.
+
 - **Camicia:** collo a revers da pigiama (rever piatto e continuo), abbottonatura a 5 bottoni di madreperla, taschino a toppa sul petto sinistro, polsi dritti con un bottone. Profilo web sottile sul bordo del revers, sul taschino e sui polsi.
 - **Pantalone:** vita bassa con elastico e coulisse in raso, gamba dritta e ampia, profilo web sull'orlo.
 - **Pantofole:** velluto nero, morsetto oro.
@@ -114,4 +116,6 @@ Step 2: on top of the flat color, add a simple airbrush pass for shadow and ligh
 
 Keep all linework fully visible on top of the color. Result must read as a colored drawing, not a rendered illustration. Background stays clean white.
 ```
+**Tessuti neri (look 1, pantalone del 2 e del 5):** usare base nero-carbone `#2B2829` + luci grigie `#6A6668` lungo le pieghe e scrivere che le linee delle pieghe devono restare visibili. Col nero pieno `#121112` le pieghe spariscono (provato il 01/10).
+
 I colori per ogni look sono in `cartella-colori-after-hours.md` (HEX). Allegare sempre `img-cinque-giacche/giacca2-outfit-FINALE.png` come riferimento dello stile di colore.
