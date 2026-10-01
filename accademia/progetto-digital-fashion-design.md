@@ -32,11 +32,11 @@ Lista di 50 concept alternativi: `idee-concept-digital-fashion-design.md`.
 - [~] **04 — Tema Personale**: titolo collezione + sottotitolo, concept max 150 parole
 - [~] **05 — Moodboard**: collage evocativo (arte, cinema, foto, street, texture) — atmosfera e target
 - [ ] **06 — Techboard**: 3–4 dettagli costruttivi/lavorazioni/finiture, schizzi tecnici + note
-- [~] **07 — Cartella Colori**: palette Pantone TCX, min 6–max 10 colori, % utilizzo
+- [x] **07 — Cartella Colori**: palette Pantone TCX, min 6–max 10 colori, % utilizzo
 - [~] **08 — Cartella Materiali**: min 5 tessuti/materiali (foto, composizione, peso, mano, utilizzo)
 - [x] **09 — Sviluppo Stampa 1 (Piazzata)**: disegno in scala, variante colore, posizionamento, tecnica di stampa
 - [x] **10 — Sviluppo Stampa 2 (All Over)**: rapporto ripetizione scala 1:1, 2 varianti colore, mockup
-- [ ] **11–15 — 5 Outfit Fronte/Retro**: figurino front+back colorato, flat tecnico con callout, tessuti e codici colore (look numerati 1–5)
+- [~] **11–15 — 5 Outfit Fronte/Retro**: figurino front+back colorato, flat tecnico con callout, tessuti e codici colore (look numerati 1–5) → schede e prompt in `outfit-after-hours.md` (01/10)
 - [ ] **16 — Line-up Finale**: 5 look affiancati su silhouette neutra
 - [ ] **17 — Bibliografia & Crediti**: fonti immagini/libri/siti, brand e artisti referenziati
 
@@ -64,7 +64,7 @@ Lista delle cose rimaste aperte nelle tavole già montate, da sistemare prima de
 
 - [x] **Tavole 01–04** — ✅ foto d'archivio inserite il 29/09, con cornici dorate uniformi (tavole 02, 03, 04).
 - [ ] **Tavola 05 (moodboard)** — raccogliere le 14 immagini (`moodboard-after-hours.md`) e montarla.
-- [ ] **Tavola 07 (colori)** — codici Pantone TCX sotto ogni colore (Pantone Connect → Trova corrispondenza); font dell'etichetta "Rosso Web" da uniformare (Copia stile).
+- [x] **Tavola 07 (colori)** — ✅ sistemata da Jacopo il 01/10: codici Pantone TCX sotto ogni colore (Pantone Connect → Trova corrispondenza); font dell'etichetta "Rosso Web" da uniformare (Copia stile).
 - [x] **Tavola 08 (materiali)** — ✅ risolto il 29/09: nuovi campioni velluto smeraldo, lana cioccolato, raso stampato (`img-after-hours/campione-*`). Problema di partenza:
   - velluto (look 2) è **bordeaux** → deve essere **Smeraldo Velluto** `#0F4D3A`;
   - lana tropicale (look 3) è **blu notte** → deve essere **Cioccolato Raso** `#3B2620`;
