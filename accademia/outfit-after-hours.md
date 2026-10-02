@@ -40,6 +40,8 @@ File immagine in `img-after-hours/` con nomi `lookN-flat-fronte-FINALE`, `lookN-
 
 ## Look 3 — Pigiama-smoking · lana tropicale Cioccolato + raso Nero Notte
 
+> ✅ **Look 3 CHIUSO il 02/10**: figurino fronte/retro (`look3-outfit-FINALE`, `look3-outfit-retro-FINALE`) + flat colorati fronte/retro di giacca e pantalone (`look3-flat-*-FINALE`). Giacca a pelle, sabot nere col morsetto. Render rifatto tutto opaco (il primo era troppo lucido).
+
 - **Giacca:** tagliata come uno smoking ma morbida: un bottone, revers a lancia rivestiti di raso nero lucido, tasche a filetto, senza imbottitura (spalla da camicia). Lunga fino ai fianchi.
 - **Camicia:** non c'è, la giacca si porta a pelle (il codice Ford: smoking senza camicia).
 - **Pantalone:** smoking, vita bassa, banda laterale di raso nero, gamba dritta.
