@@ -52,10 +52,11 @@ File immagine in `img-after-hours/` con nomi `lookN-flat-fronte-FINALE`, `lookN-
 
 > Ridisegnato il 02/10: la prima versione (camicia oversize stropicciata + pantalone largo) era "sciatta, poco sexy, poco Tom Ford" per Jacopo. Nuova formula = Gucci Ford 1995–96.
 
-- **Camicia:** seta avorio, sciancrata, collo lungo e appuntito anni '70, aperta fino all'ombelico (chiusi solo gli ultimi due bottoni), maniche lunghe con polsino chiuso, **infilata** nel pantalone.
-- **Pantalone:** grigio fumo, vita bassissima sui fianchi, aderente su fianchi e coscia, svasato dal ginocchio, lungo fino a coprire il piede.
-- **Cintura:** sottile, pelle tabacco, fibbia a morsetto dorata.
-- **Flat B/N:** generato come pezzo unico (camicia infilata + pantalone), scelta di Jacopo.
+> Seconda correzione del 02/10: la versione camicia da sera + pantalone con cintura era "sexy e Tom Ford ma non sembra un pigiama". Rimessi i codici del pigiama.
+
+- **Camicia:** seta avorio, sciancrata, collo da pigiama, aperta fino all'ombelico (chiusi solo gli ultimi due bottoni di madreperla), taschino a toppa, polsini risvoltati senza bottone, **profilo grigio fumo** su collo, apertura, taschino e polsini. Infilata morbida, un po' sbuffante sopra la vita.
+- **Pantalone:** grigio fumo, vita bassa a coulisse piatta (niente cintura, passanti o patta), **puntali della coulisse a morsetto dorati**, aderente su fianchi e coscia, svasato dal ginocchio, lungo fino a coprire il piede, profilo sull'orlo.
+- **Flat B/N:** generato come pezzo unico (camicia infilata + pantalone), scelta di Jacopo → `img-after-hours/look4-flat-completo-BN.png` ✅
 
 ## Look 5 — Giacca da camera · raso stampato all-over Cioccolato/Oro
 
