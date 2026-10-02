@@ -43,7 +43,7 @@ File immagine in `img-after-hours/` con nomi `lookN-flat-fronte-FINALE`, `lookN-
 - **Giacca:** tagliata come uno smoking ma morbida: un bottone, revers a lancia rivestiti di raso nero lucido, tasche a filetto, senza imbottitura (spalla da camicia). Lunga fino ai fianchi.
 - **Camicia:** non c'è, la giacca si porta a pelle (il codice Ford: smoking senza camicia).
 - **Pantalone:** smoking, vita bassa, banda laterale di raso nero, gamba dritta.
-- **Pantofole:** velluto Cioccolato, morsetto oro.
+- **Ai piedi:** sabot (mocassino a tallone aperto, stile Princetown) in **velluto nero col morsetto dorato** — idea di Jacopo del 02/10. Look 1 e 2 restano a piedi nudi.
 - **Retro:** schiena pulita con spacco centrale.
 
 ## Look 4 — Camicia da notte aperta · seta lavata Avorio + Grigio Fumo
