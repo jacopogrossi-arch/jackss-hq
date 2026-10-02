@@ -48,12 +48,14 @@ File immagine in `img-after-hours/` con nomi `lookN-flat-fronte-FINALE`, `lookN-
 - **Ai piedi:** sabot (mocassino a tallone aperto, stile Princetown) in **velluto nero col morsetto dorato** — idea di Jacopo del 02/10. Look 1 e 2 restano a piedi nudi.
 - **Retro:** schiena pulita con spacco centrale.
 
-## Look 4 — Camicia da notte aperta · seta lavata Avorio + Grigio Fumo
+## Look 4 — Camicia aperta + hip-huggers · seta Avorio + Grigio Fumo
 
-- **Camicia:** ampia e lunga (copre i fianchi), colletto morbido piccolo, portata aperta fino allo sterno, maniche lunghe arrotolate ai gomiti, bottoni di madreperla, orlo arrotondato. Leggermente stropicciata.
-- **Pantalone:** Grigio Fumo, molto basso in vita con coulisse, gamba ampia e lunga che fa le pieghe sul piede.
-- **Pantofole:** velluto Avorio, morsetto oro. È il look più chiaro.
-- **Retro:** carré e piega centrale, orlo più lungo dietro.
+> Ridisegnato il 02/10: la prima versione (camicia oversize stropicciata + pantalone largo) era "sciatta, poco sexy, poco Tom Ford" per Jacopo. Nuova formula = Gucci Ford 1995–96.
+
+- **Camicia:** seta avorio, sciancrata, collo lungo e appuntito anni '70, aperta fino all'ombelico (chiusi solo gli ultimi due bottoni), maniche lunghe con polsino chiuso, **infilata** nel pantalone.
+- **Pantalone:** grigio fumo, vita bassissima sui fianchi, aderente su fianchi e coscia, svasato dal ginocchio, lungo fino a coprire il piede.
+- **Cintura:** sottile, pelle tabacco, fibbia a morsetto dorata.
+- **Flat B/N:** generato come pezzo unico (camicia infilata + pantalone), scelta di Jacopo.
 
 ## Look 5 — Giacca da camera · raso stampato all-over Cioccolato/Oro
 
