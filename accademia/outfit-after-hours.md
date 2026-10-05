@@ -64,7 +64,7 @@ File immagine in `img-after-hours/` con nomi `lookN-flat-fronte-FINALE`, `lookN-
 
 - **Giacca:** già disegnata (`giacca-camera-allover-FINALE.webp`). Collo a scialle in raso cioccolato liscio con profilo web, chiusura con due alamari in cordoncino e olivette di bambù, polsi risvoltati e tasche in raso liscio, stampa catena all-over.
 - **Pantalone:** raso Nero Notte, gamba dritta, vita bassa piatta (senza coulisse, più "da sera").
-- **Pantofole:** velluto nero, morsetto oro.
+- **Ai piedi:** pantofole da smoking (slipper chiusa, tallone coperto) in **velluto nero col morsetto dorato** — confermato da Jacopo il 05/10.
 - **Da generare solo:** il flat retro (il fronte c'è già).
 
 ---
