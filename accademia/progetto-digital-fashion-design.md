@@ -37,8 +37,8 @@ Lista di 50 concept alternativi: `idee-concept-digital-fashion-design.md`.
 - [x] **09 — Sviluppo Stampa 1 (Piazzata)**: disegno in scala, variante colore, posizionamento, tecnica di stampa
 - [x] **10 — Sviluppo Stampa 2 (All Over)**: rapporto ripetizione scala 1:1, 2 varianti colore, mockup
 - [x] **11–15 — 5 Outfit Fronte/Retro** ✅ impaginate con callout sui flat e inserite nel portfolio il 05/10 (pagine 9–13, dopo la tavola 10): figurino front+back colorato, flat tecnico con callout, tessuti e codici colore (look numerati 1–5) → schede e prompt in `outfit-after-hours.md` (01/10)
-- [ ] **16 — Line-up Finale**: 5 look affiancati su silhouette neutra
-- [ ] **17 — Bibliografia & Crediti**: fonti immagini/libri/siti, brand e artisti referenziati
+- [x] **16 — Line-up Finale** (05/10, in portfolio): 5 look affiancati su silhouette neutra
+- [~] **17 — Bibliografia & Crediti** (05/10, in portfolio; da completare: autori foto Pinterest, colonna moodboard dopo la tavola 05 — testi in `bibliografia-after-hours.md`): fonti immagini/libri/siti, brand e artisti referenziati
 
 ## Programma di lavoro (avviato 26/09/2026)
 
@@ -96,3 +96,4 @@ Lista delle cose rimaste aperte nelle tavole già montate, da sistemare prima de
 - **29/09** — Tavola 04: montato il dittico nella cornice grande. Sinistra Gucci A/I 1995 (look in cappotto nero), destra *Il talento di Mr. Ripley* (Minghella, 1999), Jude Law in vestaglia di seta: scelta di Jacopo al posto dell'immagine AI. Crediti da riportare nella tavola 17. Da scaldare a mano in Canva.
 - **01–05/10** — Tavole 11–15: i 5 outfit completati (figurini fronte/retro + flat colorati fronte/retro) con il workflow flat B/N → ricalco → render → retro → flat colorati, fissato in memoria. Look 2 ora corto (vestaglia sopra il ginocchio), look 3 con sabot, look 4 ridisegnato sulla formula Tom Ford 1995–96 (camicia aperta infilata in pantalone a zampa a vita bassa, con i codici del pigiama), look 5 con pantofole di velluto. Dettagli in `outfit-after-hours.md`.
 - **05/10** — Tavole 11–15 impaginate in Canva con lo stile della tavola 10 (pannelli bianchi con cornice oro: figurini fronte/retro + flat fronte/retro con callout, testo concept, "Tessuti e colori" con HEX e pallini colore) e inserite nel portfolio dopo la tavola 10. Portfolio ora 13 pagine.
+- **05/10** — Tavole 16 (line-up dei 5 figurini fronte) e 17 (bibliografia e crediti, con dichiarazione degli strumenti AI) impaginate e aggiunte in fondo al portfolio, ora 15 pagine. Mancano 05 moodboard e 06 techboard, da inserire dopo la 04.
