@@ -11,7 +11,7 @@
 Sviluppare una capsule collection partendo dall'analisi approfondita di un brand esistente, per arrivare a una proposta personale coerente con l'identità del brand ma con un punto di vista autoriale.
 
 **Brand scelto:** **Gucci — era Tom Ford (1994–2004)** · **Collezione:** "After Hours", pigiami e loungewear da portare fuori → `concept-after-hours.md` (scelto 26/09)
-**Canva (portfolio A3, 17 tavole):** "GUCCI — After Hours (portfolio)" https://www.canva.com/d/nzl5iWZDsKXQt9- — pag. 1 copertina, pag. 2 timeline, pag. 3 DNA, pag. 4 tema personale (27/09), pag. 5 cartella colori, pag. 6 cartella materiali, pag. 7 stampa piazzata, pag. 8 stampa all-over (29/09, diventeranno pag. 7–10 quando arrivano 05 e 06). Mancano le foto d'archivio nei riquadri.
+**Canva (portfolio A3, 17 tavole):** "GUCCI — After Hours (portfolio)", design ID `DAHWVKgNsm8`, edit https://www.canva.com/d/MRfZJ6s-AR227fX (il vecchio link nzl5iWZDsKXQt9- non funziona più) · bozza tavole outfit 11–15: ID `DAHXKcbV3-o`, https://www.canva.com/d/HWjttZdgWPdpdRU — pag. 1 copertina, pag. 2 timeline, pag. 3 DNA, pag. 4 tema personale (27/09), pag. 5 cartella colori, pag. 6 cartella materiali, pag. 7 stampa piazzata, pag. 8 stampa all-over (29/09, diventeranno pag. 7–10 quando arrivano 05 e 06). Mancano le foto d'archivio nei riquadri.
 **Metodo per le tavole:** ogni tavola viene progettata dall'AI di Canva con un brief dettagliato (stile della copertina + testi esatti), poi Claude corregge testi e refusi e la inserisce nel portfolio. Rende molto meglio del montaggio a mano (che non permette di scegliere i font).
 Lista di 50 concept alternativi: `idee-concept-digital-fashion-design.md`.
 
@@ -36,7 +36,7 @@ Lista di 50 concept alternativi: `idee-concept-digital-fashion-design.md`.
 - [~] **08 — Cartella Materiali**: min 5 tessuti/materiali (foto, composizione, peso, mano, utilizzo)
 - [x] **09 — Sviluppo Stampa 1 (Piazzata)**: disegno in scala, variante colore, posizionamento, tecnica di stampa
 - [x] **10 — Sviluppo Stampa 2 (All Over)**: rapporto ripetizione scala 1:1, 2 varianti colore, mockup
-- [x] **11–15 — 5 Outfit Fronte/Retro** (immagini pronte il 05/10, da impaginare in Canva): figurino front+back colorato, flat tecnico con callout, tessuti e codici colore (look numerati 1–5) → schede e prompt in `outfit-after-hours.md` (01/10)
+- [x] **11–15 — 5 Outfit Fronte/Retro** (immagini pronte e impaginate il 05/10 nella bozza Canva `DAHXKcbV3-o`; da fare: callout sui flat se servono, poi inserire nel portfolio dopo la tavola 10): figurino front+back colorato, flat tecnico con callout, tessuti e codici colore (look numerati 1–5) → schede e prompt in `outfit-after-hours.md` (01/10)
 - [ ] **16 — Line-up Finale**: 5 look affiancati su silhouette neutra
 - [ ] **17 — Bibliografia & Crediti**: fonti immagini/libri/siti, brand e artisti referenziati
 
