@@ -1,5 +1,7 @@
 # Tavole 11–15 — I 5 outfit After Hours
 
+> ✅ **TUTTI E 5 I LOOK CHIUSI il 05/10/2026** — per ogni look: figurino fronte + retro e flat colorati fronte + retro, in `img-after-hours/lookN-*-FINALE`. Resta da impaginarli in Canva (tavole 11–15).
+
 Schede dei look e prompt per i figurini. Preparato il 01/10/2026.
 
 **Workflow (fissato da Jacopo il 01/10, quest'ordine e basta):**
@@ -61,6 +63,8 @@ File immagine in `img-after-hours/` con nomi `lookN-flat-fronte-FINALE`, `lookN-
 - **Flat B/N:** generato come pezzo unico (camicia infilata + pantalone), scelta di Jacopo → `img-after-hours/look4-flat-completo-BN.png` ✅
 
 ## Look 5 — Giacca da camera · raso stampato all-over Cioccolato/Oro
+
+> ✅ **Look 5 CHIUSO il 05/10**: figurino fronte/retro + flat colorati fronte/retro di giacca e pantalone (`look5-*-FINALE`). Pantofole da smoking in velluto nero col morsetto.
 
 - **Giacca:** già disegnata (`giacca-camera-allover-FINALE.webp`). Collo a scialle in raso cioccolato liscio con profilo web, chiusura con due alamari in cordoncino e olivette di bambù, polsi risvoltati e tasche in raso liscio, stampa catena all-over.
 - **Pantalone:** raso Nero Notte, gamba dritta, vita bassa piatta (senza coulisse, più "da sera").
