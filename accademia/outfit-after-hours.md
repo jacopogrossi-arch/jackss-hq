@@ -50,6 +50,8 @@ File immagine in `img-after-hours/` con nomi `lookN-flat-fronte-FINALE`, `lookN-
 
 ## Look 4 — Camicia aperta + hip-huggers · seta Avorio + Grigio Fumo
 
+> ✅ **Look 4 CHIUSO il 05/10**: figurino fronte/retro + flat colorati fronte/retro di camicia e pantalone (`look4-*-FINALE`). Flat ricalcati a mano da flat B/N separati. Piedi nudi; puntali della coulisse a pallina (coerenti tra figurino e flat).
+
 > Ridisegnato il 02/10: la prima versione (camicia oversize stropicciata + pantalone largo) era "sciatta, poco sexy, poco Tom Ford" per Jacopo. Nuova formula = Gucci Ford 1995–96.
 
 > Seconda correzione del 02/10: la versione camicia da sera + pantalone con cintura era "sexy e Tom Ford ma non sembra un pigiama". Rimessi i codici del pigiama.
