@@ -3,7 +3,7 @@
 **Materia:** Digital Fashion Design
 **Classe:** Fashion Design – A.S. 2025/2026
 **Docente:** Simona Ballirano
-**Scadenza:** prima lezione utile di "Digital Fashion Design" — inizio ottobre (1–7/10/2026), data esatta da confermare
+**Scadenza:** ✅ **giovedì 08/10/2026** (confermata da Jacopo il 05/10). Piano: mar 06/10 techboard (06) · mer 07/10 moodboard (05), vestaglia corta in tavola 09, ritocchi, export PDF · gio 08/10 consegna
 **Consegna originale:** vedi PDF caricato in sessione (Consegna_Progetto_Moda.pdf)
 
 ## Obiettivo
