@@ -63,7 +63,7 @@ Stesso metodo del progetto cinque giacche: testi e contenuti qui in repo → pro
 Lista delle cose rimaste aperte nelle tavole già montate, da sistemare prima dell'export PDF.
 
 - [x] **Tavole 01–04** — ✅ foto d'archivio inserite il 29/09, con cornici dorate uniformi (tavole 02, 03, 04).
-- [ ] **Tavola 05 (moodboard)** — raccogliere le 14 immagini (`moodboard-after-hours.md`) e montarla.
+- [x] **Tavola 05 (moodboard)** — montata da Jacopo il 06/10 ("letto sfatto": 15 polaroid e oggetti su raso nero, solo atmosfera), inserita come pag. 5 del portfolio. Da aggiungere: intestazione, numero 05, riga target.
 - [x] **Tavola 07 (colori)** — ✅ sistemata da Jacopo il 01/10: codici Pantone TCX sotto ogni colore (Pantone Connect → Trova corrispondenza); font dell'etichetta "Rosso Web" da uniformare (Copia stile).
 - [x] **Tavola 08 (materiali)** — ✅ risolto il 29/09: nuovi campioni velluto smeraldo, lana cioccolato, raso stampato (`img-after-hours/campione-*`). Problema di partenza:
   - velluto (look 2) è **bordeaux** → deve essere **Smeraldo Velluto** `#0F4D3A`;
