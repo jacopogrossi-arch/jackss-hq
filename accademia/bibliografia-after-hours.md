@@ -19,11 +19,14 @@ Testi della tavola 17, preparati il 05/10/2026. Le voci segnate ⚠️ vanno com
 - Gucci di Frida Giannini, Alessandro Michele, Sabato De Sarno — via Vogue Runway / Pinterest
 - *Il talento di Mr. Ripley* (Anthony Minghella, 1999), fotogramma con Jude Law — Paramount Pictures / Miramax
 
-## Moodboard (tavola 05) ⚠️ da compilare quando è montata
+## Moodboard (tavola 05) — polaroid del 06/10 ⚠️ link Pinterest da annotare
 
-- Cinema: *Lost in Translation* (Sofia Coppola, 2003) · *A Single Man* (Tom Ford, 2009) · *In the Mood for Love* (Wong Kar-wai, 2000) · *Eyes Wide Shut* (Stanley Kubrick, 1999)
-- Fotografia: Helmut Newton · Guy Bourdin
-- Oggetti e texture: immagini da Pinterest, autori da annotare
+- Cinema: *In the Mood for Love* (Wong Kar-wai, 2000) · *Eyes Wide Shut* (Stanley Kubrick, 1999) · *Lost in Translation* (Sofia Coppola, 2003) · *A Single Man* (Tom Ford, 2009, fotogramma da trovare)
+- Arte: Edward Hopper, *Morning Sun* (1952) — Columbus Museum of Art
+- Oggetti e luoghi: fiammiferi Chateau Marmont, chiave Hôtel Gonnet (Cannes), cartellino "Do not disturb", tazzina, tappo di champagne, secchielli di champagne, colazioni sul balcone, carta intestata Brown's Hotel Royal — via Pinterest
+- Campanello da reception: Dreamstime (con filigrana, da sostituire)
+
+Elenco completo anche su Notion: "Reference usate — After Hours".
 
 ## Codici Gucci citati
 
