@@ -20,27 +20,31 @@ Niente griglia di riquadri: la tavola è un letto d'hotel alle 5 del mattino vis
 
 Caricare tutto nella cartella Canva **"foto tavola 5"**. Oggetti: meglio dall'alto e su fondo chiaro uniforme (scontorno pulito).
 
-### Oggetti (6)
+**Regola (06/10):** la moodboard evocativa mostra solo il *mood* — niente vestiti, accessori o sfilate. Tolti pantofola horsebit, catena, backstage Gucci e ritratto di Tom Ford. Il legame con Gucci passa da colori, *A Single Man* e titolo.
 
-| ☐ | Oggetto | Cerca su Pinterest |
-|---|---|---|
-| ☐ | Chiave d'albergo in ottone con targhetta | `vintage hotel room key brass tag` |
-| ☐ | Pantofola di velluto col morsetto (sostituisce il mocassino, già in tav. 03) | `Gucci velvet horsebit slipper` · `velvet slipper horsebit` |
-| ☐ | Catena dorata | `gold chain necklace flat lay white background` |
-| ☐ | Velluto smeraldo (foto vera, non il campione AI della tav. 08) | `emerald green velvet fabric` |
-| ☐ | Scatola di fiammiferi d'hotel | `vintage hotel matchbox` |
-| ☐ | Tazzina da espresso | `espresso cup saucer top view` |
+### ✅ Polaroid pronte (06/10) — `img-after-hours/polaroid/`
 
-### Polaroid (6)
+15 immagini scelte da Jacopo su Pinterest, trasformate in polaroid (cornice avorio, toni caldi e desaturati, grana leggera: è la rielaborazione richiesta dalla consegna). Formato quadrato; le 4 orizzontali (Hopper, Eyes Wide Shut, campanello, Lost in Translation) in formato largo.
 
-| ☐ | Immagine | Cerca su Pinterest |
-|---|---|---|
-| ☐ | Backstage Gucci anni '90 (sostituisce la sfilata 1995, già 4 volte nel portfolio) | `Gucci backstage 1990s Tom Ford` · `90s fashion backstage polaroid` |
-| ☐ | Tom Ford negli anni '90 (sostituisce Testino, già in tav. 02) | `Tom Ford 1990s portrait` |
-| ☐ | Helmut Newton, hotel di notte | `Helmut Newton hotel` |
-| ☐ | Guy Bourdin, colori saturi nel buio | `Guy Bourdin` |
-| ☐ | Via di città all'alba, lampioni accesi | `empty street dawn streetlights film photography` |
-| ☐ | Balcone d'hotel la mattina | `hotel balcony morning espresso film photo` |
+| # | File | Cosa | Gruppo |
+|---|---|---|---|
+| 01 | fiammiferi | scatola di fiammiferi Chateau Marmont | oggetto |
+| 02 | in-the-mood-for-love | corridoio con tende rosse (Wong Kar-wai, 2000) | film |
+| 03 | champagne-letto | secchiello sul letto sfatto, suite di notte | luogo |
+| 04 | hopper-morning-sun | Edward Hopper, *Morning Sun* (1952) | arte |
+| 05 | eyes-wide-shut | corridoio dell'appartamento (Kubrick, 1999) | film |
+| 06 | campanello-reception | campanello dorato ⚠️ foto stock con filigrana: sostituire | oggetto |
+| 07 | lost-in-translation | stanza d'hotel in disordine sulla città (Coppola, 2003) | film |
+| 08 | champagne-vassoio | secchiello e flûte al mattino | luogo |
+| 09 | tazzina | tazzina d'espresso finita, dall'alto | oggetto |
+| 10 | non-disturbare | cartellino "Do not disturb" sulla maniglia | oggetto |
+| 11 | balcone | colazione sul balcone, giornale | luogo |
+| 12 | carta-intestata | carta intestata Hotel Royal | carta |
+| 13 | colazione-portofino | colazione con giornale, Portofino | luogo |
+| 14 | tappo-champagne | tappo e gabbietta dorata | oggetto |
+| 15 | chiave-hotel | chiave in ottone Hôtel Gonnet, Cannes | oggetto |
+
+Mancano rispetto alla lista: *A Single Man* (unico legame diretto con Tom Ford, consigliato), sfondo raso nero, eventuale velluto smeraldo.
 
 ### Pellicola (4 fotogrammi)
 
