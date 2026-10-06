@@ -30,8 +30,8 @@ Lista di 50 concept alternativi: `idee-concept-digital-fashion-design.md`.
 - [~] **02 — Analisi Storica del Brand**: timeline ≥4 decadi/periodi (per ognuno: silhouette, volume, dettagli iconici, tessuto ricorrente, palette)
 - [~] **03 — DNA del Brand**: sintesi visiva codici stilistici (dettagli iconici, tecniche sartoriali, fit, accessori signature)
 - [~] **04 — Tema Personale**: titolo collezione + sottotitolo, concept max 150 parole
-- [~] **05 — Moodboard**: collage evocativo (arte, cinema, foto, street, texture) — atmosfera e target
-- [ ] **06 — Techboard**: 3–4 dettagli costruttivi/lavorazioni/finiture, schizzi tecnici + note
+- [x] **05 — Moodboard**: collage evocativo (arte, cinema, foto, street, texture) — atmosfera e target ✅ 06/10, pag. 5 del portfolio
+- [~] **06 — Techboard**: 3–4 dettagli costruttivi/lavorazioni/finiture, schizzi tecnici + note → testi e prompt pronti in `techboard-after-hours.md` (06/10); mancano schizzi e impaginazione
 - [x] **07 — Cartella Colori**: palette Pantone TCX, min 6–max 10 colori, % utilizzo
 - [~] **08 — Cartella Materiali**: min 5 tessuti/materiali (foto, composizione, peso, mano, utilizzo)
 - [x] **09 — Sviluppo Stampa 1 (Piazzata)**: disegno in scala, variante colore, posizionamento, tecnica di stampa
@@ -97,3 +97,5 @@ Lista delle cose rimaste aperte nelle tavole già montate, da sistemare prima de
 - **01–05/10** — Tavole 11–15: i 5 outfit completati (figurini fronte/retro + flat colorati fronte/retro) con il workflow flat B/N → ricalco → render → retro → flat colorati, fissato in memoria. Look 2 ora corto (vestaglia sopra il ginocchio), look 3 con sabot, look 4 ridisegnato sulla formula Tom Ford 1995–96 (camicia aperta infilata in pantalone a zampa a vita bassa, con i codici del pigiama), look 5 con pantofole di velluto. Dettagli in `outfit-after-hours.md`.
 - **05/10** — Tavole 11–15 impaginate in Canva con lo stile della tavola 10 (pannelli bianchi con cornice oro: figurini fronte/retro + flat fronte/retro con callout, testo concept, "Tessuti e colori" con HEX e pallini colore) e inserite nel portfolio dopo la tavola 10. Portfolio ora 13 pagine.
 - **05/10** — Tavole 16 (line-up dei 5 figurini fronte) e 17 (bibliografia e crediti, con dichiarazione degli strumenti AI) impaginate e aggiunte in fondo al portfolio, ora 15 pagine. Mancano 05 moodboard e 06 techboard, da inserire dopo la 04.
+- **06/10** — Tavola 05 chiusa: moodboard "letto sfatto" montata da Jacopo con 15 polaroid (`img-after-hours/polaroid/`, solo atmosfera: niente vestiti né accessori), inserita come pag. 5. Pagine del portfolio riordinate (outfit 11→15, line-up 16, bibliografia 17); portfolio ora 16 pagine. Reference su Notion ("Reference usate — After Hours"). Tavola 06 techboard: testi, note e prompt schizzi pronti.
+- **Prossimi passi (06–07/10):** pomeriggio 06/10 techboard (4 schizzi in ChatGPT → impaginazione → inserimento come pag. 6) · revisione finale: intestazione/numero/target sulla moodboard, bibliografia moodboard (togliere Newton/Bourdin, aggiungere Hopper e oggetti), vestaglia corta in tavola 09, export PDF · consegna gio 08/10.
