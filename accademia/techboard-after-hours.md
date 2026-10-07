@@ -78,3 +78,16 @@ Stile identico alle altre tavole (fondo nero con riflessi di raso, font serif do
 3. **Fascia centrale:** 4 riquadri uguali su fondo bianco con cornice dorata (come i flat delle tavole 11–15), uno per dettaglio, numerati 01–04. Dentro lo schizzo tecnico, con 2–3 frecce di callout.
 4. **Sotto ogni riquadro:** nome del dettaglio, "Dove", lavorazione in 2 righe, note in piccolo con pallino colore.
 5. **In basso a destra:** numero **06**.
+
+---
+
+## Sfondo della tavola (prompt ChatGPT, 07/10)
+
+Stesso spirito delle slide del portfolio (nero, raso, oro) ma più artistico, come gli sfondi di Roue Libre: centro calmo per le foto, il "tecnico" vive sui bordi.
+
+```
+Artistic background for a luxury fashion portfolio page, A3 landscape (420x297mm), high resolution. Base: deep black silk satin with soft folds, lit at 4 a.m. by a single warm bedside lamp from the top right, so a few long highlights glide across the satin in warm gold and chocolate brown, the rest falls into deep black. Over the satin, as if drawn in fine gold ink, faint fragments of a tailor's technical drawing: pieces of a pyjama sewing pattern, dashed stitching lines, a curved collar outline, small measurement ticks and arrows, a tiny horsebit sketch, all very thin and semi-transparent, like gold thread caught in the light. Mood: Gucci in the Tom Ford era, elegant, nocturnal, quiet.
+Composition rule: the central area (about 65% of the width, full height) must stay calm, dark and low-contrast, with almost no lines, because photos and text will be placed there. The gold drawings live mainly along the edges and the corners, fading softly towards the center. No text, no letters, no numbers, no logos, no people, no clothes, no objects.
+```
+
+Variante più "carta": `Replace the satin with a sheet of dark chocolate-brown tracing paper laid on black velvet, slightly crumpled, with the same faint gold pattern drawings along the edges.`
