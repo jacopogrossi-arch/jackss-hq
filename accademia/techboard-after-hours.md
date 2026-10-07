@@ -49,24 +49,25 @@ Contenuti per la tavola 06 del portfolio After Hours. Preparati il 06/10/2026.
 
 ---
 
-## Schizzi tecnici (prompt per ChatGPT)
+## ✅ Scelta del 07/10 — foto vere da Pinterest, impaginate a mano da Jacopo
 
-Stessa base per tutti e 4, così sono coerenti con i flat delle tavole 11–15. Sfondo bianco, solo linea, nessun colore: i colori sono nelle note.
+Come la moodboard 05: niente schizzi AI, foto reali di dettagli e lavorazioni. Per ogni dettaglio 3 foto: **il dettaglio da vicino**, **come si fa** (interno, cucitura, componente), **il riferimento Gucci/Ford**. Qui i vestiti si possono vedere: è una tavola tecnica. Annotare il link di ogni pin per la bibliografia.
 
-**Base comune:**
-```
-Technical fashion flat detail drawing, black line art on pure white background, clean vector-style lines of even weight, no shading, no colour, no text, no labels, no people. Close-up of a single garment detail, drawn like a page of a technical pack, with dashed lines for stitching. Square format.
-Detail:
-```
-
-1. **Profilo web:** `Close-up of the corner of a pyjama collar (continuous notched revers) with a thin piping inserted along the edge, drawn as a double line; the piping is mitred at 45 degrees at the corner. Below it, a small cross-section showing the piping sandwiched between the outer fabric and the facing, with a stitch line 1 mm from the edge.`
-2. **Revers a lancia:** `Close-up of a peaked lapel of a soft one-button dinner jacket; the lapel facing is a separate smooth layer drawn on top of the jacket fabric, with a clean edge and no visible topstitching; one covered button at the waist; a welt pocket below.`
-3. **Alamari:** `Close-up of the front closure of a smoking jacket with two horizontal frog fastenings made of rolled cord: on one side a cord loop, on the other side an elongated bamboo toggle with visible bamboo nodes; small hand stitches holding the cord to the fabric.`
-4. **Coulisse a morsetto:** `Close-up of the front waistband of soft pyjama trousers with a flat drawstring coming out of two metal eyelets; each end of the drawstring finishes in a small horsebit-shaped metal tip (two rings joined by a bar); a reinforcement patch drawn with dashed lines behind the eyelets.`
-
-Salvare come `img-after-hours/techboard-01-profilo-web.png` … `techboard-04-coulisse.png`.
-
----
+| # | Dettaglio | Foto | Cerca su Pinterest |
+|---|---|---|---|
+| 01 | Profilo web | piping a contrasto su pigiama di seta | `silk pajama contrast piping detail` |
+| 01 | | piping inserito nella cucitura | `piping insertion seam sewing` |
+| 01 | | nastro web Gucci da vicino | `Gucci web stripe ribbon close up` |
+| 02 | Revers a lancia in raso | revers a lancia lucido su smoking | `peak lapel satin tuxedo close up` |
+| 02 | | interno giacca destrutturata, senza spalline | `unstructured jacket inside unlined` |
+| 02 | | smoking di Tom Ford | `Tom Ford tuxedo peak lapel` |
+| 03 | Alamari in bambù | alamari su giacca da camera | `smoking jacket frog closure` |
+| 03 | | olivetta / toggle in bambù | `bamboo toggle button` |
+| 03 | | manico Gucci Bamboo (riferimento) | `Gucci bamboo handle detail` *(diversa da quella della tav. 03)* |
+| 04 | Coulisse a morsetto | coulisse che esce da occhielli metallici | `drawstring waistband metal eyelets` |
+| 04 | | puntale metallico della coulisse | `metal drawstring tips aglets` |
+| 04 | | morsetto Gucci da vicino | `Gucci horsebit hardware close up` *(diverso da tav. 03)* |
+| + | Extra (facoltativo) | cucitura ribattuta su seta | `french seam silk close up` |
 
 ## Impaginazione (brief per l'AI di Canva)
 
