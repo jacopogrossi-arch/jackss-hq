@@ -31,7 +31,7 @@ Lista di 50 concept alternativi: `idee-concept-digital-fashion-design.md`.
 - [~] **03 — DNA del Brand**: sintesi visiva codici stilistici (dettagli iconici, tecniche sartoriali, fit, accessori signature)
 - [~] **04 — Tema Personale**: titolo collezione + sottotitolo, concept max 150 parole
 - [x] **05 — Moodboard**: collage evocativo (arte, cinema, foto, street, texture) — atmosfera e target ✅ 06/10, pag. 5 del portfolio
-- [~] **06 — Techboard**: 3–4 dettagli costruttivi/lavorazioni/finiture, schizzi tecnici + note → testi e prompt pronti in `techboard-after-hours.md` (06/10); mancano schizzi e impaginazione
+- [x] **06 — Techboard**: 3–4 dettagli costruttivi/lavorazioni/finiture, schizzi tecnici + note ✅ 07/10: montata da Jacopo — 9 cartellini da campionario con bordo a zig-zag (`img-after-hours/techboard/`) su raso nero con cartamodello oro, metro, forbici e rocchetti (`img-after-hours/tavola06-techboard.jpg`)
 - [x] **07 — Cartella Colori**: palette Pantone TCX, min 6–max 10 colori, % utilizzo
 - [~] **08 — Cartella Materiali**: min 5 tessuti/materiali (foto, composizione, peso, mano, utilizzo)
 - [x] **09 — Sviluppo Stampa 1 (Piazzata)**: disegno in scala, variante colore, posizionamento, tecnica di stampa
