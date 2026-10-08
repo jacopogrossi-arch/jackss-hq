@@ -21,15 +21,24 @@ Totale: 3 × 4 = **12 tavole**, più un'eventuale copertina.
 
 | Tema | Concept | Moodb. tecnica | Moodb. emotiva | Figurino |
 |---|---|---|---|---|
-| 1 — onlife | [x] Canva | [ ] | [ ] | [ ] |
-| 2 — body toll | [x] Canva | [ ] | [ ] | [ ] |
-| 3 — conviviality | [~] Canva (testo da rivedere con la pagina intro) | [ ] | [ ] | [ ] |
+| 1 — onlife | [x] Canva | [x] Canva | [x] Canva | [ ] |
+| 2 — body toll | [x] Canva | [x] Canva | [x] Canva | [ ] |
+| 3 — conviviality | [~] Canva (testo da rivedere con la pagina intro) | [x] Canva | [x] Canva | [ ] |
 
 **Canva, tavole concept (08/10):** una grafica per tema, ognuna con la sua identità visiva. Sono design separati, da unire nel PDF finale.
 - 02 onlife: zine skate, grigio intonaco + arancio, polaroid col nastro → ID `DAHXbfM3QME`, https://www.canva.com/d/YQ_H0P_Z8HtqzRh
 - 06 body toll: nude + rosso profondo, serif sottile, cornice alta → ID `DAHXbTPpv8Q`, https://www.canva.com/d/POqmoZpobG1mwOS
 - 10 conviviality: crema + marrone, cornice ottone stile copertina di vinile → ID `DAHXbZwifrY`, https://www.canva.com/d/8qVvla61ly7ljhw
 - Le cornici sono vuote: ci va una foto d'atmosfera per tema (scelta di Jacopo)
+
+**Canva, moodboard (08/10):** stesse identità visive delle tavole concept, design separati. Foto e campioni inseriti dall'AI di Canva (da verificare: da citare in bibliografia se sono stock, da sostituire se poco credibili). Testi corretti a mano (HEX sbagliati, "online/onlife", "Rivolto", trattini nelle intestazioni).
+- 03 onlife emotiva: polaroid col nastro su muro (skate al tramonto, carrello, vinile, flash, usa e getta, pattini) → `DAHXbSoCyP8`, https://www.canva.com/d/cT0siwwSAY_Qib6
+- 04 onlife tecnica: palette 6 colori · 5 tessuti · 4 dettagli → `DAHXbX93ei8`, https://www.canva.com/d/B16e94DmcbGs4N0
+- 07 body toll emotiva: galleria ariosa di frammenti di corpo, mani, tenda, rosso velluto → `DAHXbX3cmsE`, https://www.canva.com/d/awGnFODDfwGZjvh
+- 08 body toll tecnica: palette 7 colori · 5 tessuti · 4 dettagli → `DAHXbTJMO2k`, https://www.canva.com/d/nftRRMDUsk56f03
+- 11 conviviality emotiva: album caldo (band in garage, tavolata, vinili, chitarra, brindisi, bar) → `DAHXbdmqBHs`, https://www.canva.com/d/SAin7mLEG59vOI3
+- 12 conviviality tecnica: palette 6 colori · 5 tessuti · 4 dettagli (bottoni ottone, toppe gomiti, risvolto, trecce) → `DAHXbVGjYg0`, https://www.canva.com/d/BqN-t0qhesGygsX
+- Mancano i codici Pantone TCX nelle palette (Pantone Connect)
 
 **Ordine del PDF (13 pagine):** 01 copertina · per ogni tema: concept → moodboard emotiva → moodboard tecnica → figurino (onlife 02–05, body toll 06–09, conviviality 10–13).
 
