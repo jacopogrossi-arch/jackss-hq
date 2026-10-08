@@ -21,9 +21,15 @@ Totale: 3 × 4 = **12 tavole**, più un'eventuale copertina.
 
 | Tema | Concept | Moodb. tecnica | Moodb. emotiva | Figurino |
 |---|---|---|---|---|
-| 1 — onlife | [~] bozza | [ ] | [ ] | [ ] |
-| 2 — body toll | [~] bozza | [ ] | [ ] | [ ] |
-| 3 — conviviality | [~] bozza | [ ] | [ ] | [ ] |
+| 1 — onlife | [x] Canva | [ ] | [ ] | [ ] |
+| 2 — body toll | [x] Canva | [ ] | [ ] | [ ] |
+| 3 — conviviality | [~] Canva (testo da rivedere con la pagina intro) | [ ] | [ ] | [ ] |
+
+**Canva, tavole concept (08/10):** una grafica per tema, ognuna con la sua identità visiva. Sono design separati, da unire nel PDF finale.
+- 02 onlife: zine skate, grigio intonaco + arancio, polaroid col nastro → ID `DAHXbfM3QME`, https://www.canva.com/d/YQ_H0P_Z8HtqzRh
+- 06 body toll: nude + rosso profondo, serif sottile, cornice alta → ID `DAHXbTPpv8Q`, https://www.canva.com/d/POqmoZpobG1mwOS
+- 10 conviviality: crema + marrone, cornice ottone stile copertina di vinile → ID `DAHXbZwifrY`, https://www.canva.com/d/8qVvla61ly7ljhw
+- Le cornici sono vuote: ci va una foto d'atmosfera per tema (scelta di Jacopo)
 
 **Ordine del PDF (13 pagine):** 01 copertina · per ogni tema: concept → moodboard emotiva → moodboard tecnica → figurino (onlife 02–05, body toll 06–09, conviviality 10–13).
 
