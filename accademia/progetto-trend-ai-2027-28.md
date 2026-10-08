@@ -25,6 +25,8 @@ Totale: 3 × 4 = **12 tavole**, più un'eventuale copertina.
 | 2 — body toll | [x] Canva | [x] Canva | [x] Canva | [ ] |
 | 3 — conviviality | [~] Canva (testo da rivedere con la pagina intro) | [x] Canva | [x] Canva | [ ] |
 
+**Canva, PORTFOLIO UNICO (08/10):** "Trend A/I 2027-28 (portfolio)" → ID `DAHXbXjppDc`, https://www.canva.com/d/Omun6Fl0y5ZinTl. Contiene 10 pagine nell'ordine 01-02-03-04-06-07-08-10-11-12. I figurini (05, 09, 13) vanno inseriti dopo la 04, la 08 e la 12. **D'ora in poi si lavora qui**; i design singoli qui sotto restano come copia di partenza (modifiche fatte sui singoli NON arrivano nel portfolio).
+
 **Canva, copertina (08/10):** 01 → `DAHXbbnVss8`, https://www.canva.com/d/wR_Nyqh24l_gp5c. Tre fasce verticali, una per tema, con il suo colore, il suo font e una foto (skate al tramonto · collo in B/N · tavolata con giradischi), unite da una banda centrale chiara con "TREND A/I 2027-28 — Tre tematiche, tre uomini".
 
 **Canva, tavole concept (08/10):** una grafica per tema, ognuna con la sua identità visiva. Sono design separati, da unire nel PDF finale.
