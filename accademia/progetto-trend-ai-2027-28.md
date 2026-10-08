@@ -25,6 +25,8 @@ Totale: 3 × 4 = **12 tavole**, più un'eventuale copertina.
 | 2 — body toll | [x] Canva | [x] Canva | [x] Canva | [ ] |
 | 3 — conviviality | [~] Canva (testo da rivedere con la pagina intro) | [x] Canva | [x] Canva | [ ] |
 
+**Canva, copertina (08/10):** 01 → `DAHXbbnVss8`, https://www.canva.com/d/wR_Nyqh24l_gp5c. Tre fasce verticali, una per tema, con il suo colore, il suo font e una foto (skate al tramonto · collo in B/N · tavolata con giradischi), unite da una banda centrale chiara con "TREND A/I 2027-28 — Tre tematiche, tre uomini".
+
 **Canva, tavole concept (08/10):** una grafica per tema, ognuna con la sua identità visiva. Sono design separati, da unire nel PDF finale.
 - 02 onlife: zine skate, grigio intonaco + arancio, polaroid col nastro → ID `DAHXbfM3QME`, https://www.canva.com/d/YQ_H0P_Z8HtqzRh
 - 06 body toll: nude + rosso profondo, serif sottile, cornice alta → ID `DAHXbTPpv8Q`, https://www.canva.com/d/POqmoZpobG1mwOS
