@@ -2,7 +2,8 @@
 
 **Materia:** Digital Fashion Design (da confermare)
 **Avviato:** 08/10/2026
-**Scadenza / formato:** *da chiedere*
+**Formato:** PDF unico (A3 orizzontale come i progetti precedenti, da confermare) · **Scadenza:** *da chiedere*
+**Decisioni (08/10):** menswear · figurini "stile Procreate" (workflow e prompt → `figurini-trend-ai-2027-28.md`) · tavole impaginate in Canva
 **Materiale di partenza:** 20 foto delle pagine di un trend book A/I 2027-28 → Google Drive, cartella "PROGRETTO DIGITAL" (https://drive.google.com/drive/folders/1E2SQPL9tO8E33rtl_icfX6Nbfc8pFQeh)
 
 ## Consegna
@@ -24,7 +25,9 @@ Totale: 3 × 4 = **12 tavole**, più un'eventuale copertina.
 | 2 — body toll | [~] bozza | [ ] | [ ] | [ ] |
 | 3 — conviviality | [~] bozza | [ ] | [ ] | [ ] |
 
-**Scelta di partenza (da confermare):** figurini **menswear**, in linea con Inverso.
+**Ordine del PDF (13 pagine):** 01 copertina · per ogni tema: concept → moodboard emotiva → moodboard tecnica → figurino (onlife 02–05, body toll 06–09, conviviality 10–13).
+
+**Moodboard:** l'emotiva usa foto reali (fonti da citare, come fa il trend book: Unsplash/Pexels). La tecnica contiene palette Pantone TCX, campioni di tessuto (foto dal trend book o generati), dettagli e lavorazioni.
 
 ---
 
@@ -103,7 +106,6 @@ Totale: 3 × 4 = **12 tavole**, più un'eventuale copertina.
 
 ## Da chiarire con Jacopo
 
-- Scadenza e formato (A3 come il progetto Gucci? PDF unico?)
-- Menswear o libero?
+- Scadenza
 - Testo introduttivo del tema conviviality
 - Metodo tavole: come per After Hours (tavole generate con l'AI di Canva da un brief, poi corrette) e figurini con l'AI, colorati "stile Procreate"?
