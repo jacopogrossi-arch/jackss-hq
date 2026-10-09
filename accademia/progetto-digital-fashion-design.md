@@ -1,5 +1,7 @@
 # Progetto — Digital Fashion Design: "Da un brand iconico alla mia collezione"
 
+🏁 **PROGETTO CHIUSO** — consegnato da Jacopo (comunicato il 09/10/2026). Portfolio finale su Canva "GUCCI — After Hours (portfolio)", 17 tavole A3, PDF `Grossi_Jacopo_Gucci_FashionDesign.pdf`.
+
 **Materia:** Digital Fashion Design
 **Classe:** Fashion Design – A.S. 2025/2026
 **Docente:** Simona Ballirano
