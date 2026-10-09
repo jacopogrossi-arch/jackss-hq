@@ -38,6 +38,7 @@ Progetto per l'accademia Necchi. Lavori in denim con tecnica sartoriale.
 ## Compiti / Scadenze
 
 - **Digital Fashion Design** — "Da un brand iconico alla mia collezione" (17 tavole, PDF A3), scadenza inizio ottobre (1–7/10) — brand Gucci × Tom Ford, collezione "After Hours" → `progetto-digital-fashion-design.md` — 🏁 **consegnato** (chiuso il 09/10/2026)
+- **Trend A/I 2027-28** — 3 tematiche del trend book (onlife, body toll, conviviality): per ognuna concept, moodboard tecnica, moodboard emotiva, figurino → `progetto-trend-ai-2027-28.md` (avviato 08/10)
 - **Fashion Design** — "Cinque giacche per cinque outfit" (capsule collection con lavorazioni tecnologiche sostenibili), scadenza entro ottobre → `progetto-fashion-design-cinque-giacche.md`
 
 ## Strumenti
