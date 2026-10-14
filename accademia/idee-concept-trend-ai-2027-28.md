@@ -1,57 +1,51 @@
 # Idee concept — Trend A/I 2027-28 (menswear)
 
-15 direzioni per tema, da cui Jacopo sceglie (o mescola) il mini concept. Progetto: `progetto-trend-ai-2027-28.md`. Scritte il 14/10/2026.
+Direzioni per il mini concept di ogni tema, da cui Jacopo sceglie o mescola. Progetto: `progetto-trend-ai-2027-28.md`.
 
-## onlife — dall'online al mondo reale
+**v2 (14/10/2026): riscritte sulla persona di Jacopo.** Ogni idea parte dal trend book e passa per i punti fermi di Inverso (`inverso/concept-2026-07-21-il-ragazzo-di-mezzo.md`, `inverso/spiegazione-del-nome.md`, `inverso/concept-2026-08-10-valori-inverso.md`):
+- il ragazzo di mezzo: classe media romana che non si posiziona, né ostentazione né flexing
+- il rovescio del capo: la qualità si giudica da dentro
+- "una, non sei": pochi capi, buoni, che durano una vita
+- il capo che attraversa la città: dalle popolari al quartiere più bello
+- il banco di lavoro: studente che cuce davvero, la bellezza nel miglioramento
+- le persone: Chiara, gli amici, la famiglia; Roma vissuta da turista
+- da evitare: old money, quiet luxury, lusso come meta, toni da guru
 
-1. **Fuori dallo schermo** — ragazzi che lasciano il feed e tornano in strada; strati messi addosso di corsa, capi fatti per muoversi.
-2. **Cose che lasciano traccia** — il guardaroba come un vinile consumato: velluto liso, jeans che prende la forma del corpo, rammendi.
-3. **Batteria scarica** — il telefono si spegne e la serata comincia: capi notturni, nylon, tasche capienti, luci artificiali.
-4. **Rullino da 36** — si scatta poco e si sceglie bene; palette e grafiche prese dalle foto con il flash, imperfette e mosse.
-5. **Carrello** — il gioco di strada (carrello del supermercato, pallone, pattini) come prova di forza; capi rinforzati alle ginocchia e ai gomiti.
-6. **Cameretta aperta** — la felpa di casa esce in strada: comfort domestico (hoodie, pile, pantofola-sneaker) portato fuori.
-7. **Analogico** — giradischi, cassette, macchine fotografiche: dettagli presi dagli oggetti (manopole, etichette, anelli di metallo).
-8. **Senza filtro** — niente è costruito per l'inquadratura: abbinamenti sbagliati di proposito, taglie diverse una sopra l'altra.
-9. **Spazi occupati** — parcheggi, sottopassi, cortili diventano luoghi d'incontro; colori di cemento, intonaco e asfalto.
-10. **Il grande salto** — il momento in cui si esce di casa la prima volta: capi da "prima volta", rigidi, nuovi, che si ammorbidiscono con l'uso.
-11. **Dalla notte al giorno** — la stessa giornata senza ordine: un look che passa dal sole alla notte con un capo che si toglie e si mette.
-12. **Toccarsi** — riscoprire il contatto fisico (spingersi, abbracciarsi): tessuti da toccare, felpe garzate, velluti, imbottiture morbide.
-13. **Tavola da skate** — la grafica dello skate come unico lampo di colore in un look grigio; stampa piazzata ispirata alle tavole.
-14. **Stanza vissuta** — poster, foto e biglietti appesi al muro diventano patch, etichette e stampe sul capo.
-15. **Hikikomori, fine** — racconto della rinascita: dal guscio chiuso (cappuccio, collo alto, piumino) all'apertura (zip aperte, strati che cadono).
+## onlife: dall'online al mondo reale
 
-## body toll — la sensualità che sussurra
+1. **Fuori dal feed, dentro la città.** Il ragazzo di mezzo spegne il telefono e attraversa Roma a piedi, dalle popolari al centro. Un guardaroba che regge tutta la traversata: pochi capi, a strati, che stanno bene in entrambi i posti.
+2. **Il rovescio non si posta.** Online si mostra il dritto, fuori conta il rovescio. Capi con l'interno curato e visibile (cuciture ribattute, fodere a contrasto, etichette scritte a mano): la qualità si scopre solo dal vero.
+3. **Una, non sei.** Contro lo scroll infinito di cose da comprare: un solo giubbotto, portato ogni giorno finché prende la forma di chi lo indossa. Il capo come oggetto analogico che lascia traccia.
+4. **Turista a casa mia.** Riscoprire Roma come un ragazzo che esce dalla cameretta: mercerie, tessutai, cortili, bar sotto casa. Colori di intonaco e sampietrini, dettagli presi dalla città.
+5. **Dal banco alla strada.** Il ragazzo che invece di guardare tutorial cuce davvero: capi con i segni della lavorazione a mano (impunture visibili, rinforzi, toppe), fatti per essere usati e riparati.
+6. **Il motorino.** La Roma reale si gira in due ruote: giacca corta che non si alza, pantalone che regge la seduta, tasche che chiudono. Il capo funzionale come prova di vita vissuta fuori.
+7. **Amici senza programmare.** La serata che nasce per caso, senza gruppo WhatsApp: un look che va bene dal pomeriggio alla notte senza passare da casa.
+8. **Velluto e asfalto.** Il velluto a coste del liceo pubblico, consumato sulle ginocchia dei sampietrini: il tessuto che racconta gli anni passati fuori.
+9. **Analogico di quartiere.** Il negozio di dischi, il fotografo che sviluppa i rullini, il ciclista: dettagli presi dalle botteghe (grembiuli, tasche da lavoro, etichette di carta).
+10. **Metterci la faccia.** Il passaggio più difficile di questa generazione: dallo schermo alla faccia vera. Un capo semplice e sincero, senza loghi, in cui la persona conta più dell'immagine.
 
-1. **Sottovoce** — sensualità per sottrazione: maglia che lascia intravedere la pelle, voile sotto un cappotto pesante.
-2. **Seconda pelle** — tutto passa dal tatto: nappa morbida, maglia carnosa, velluto; il capo come carezza.
-3. **Tra le righe** — niente è dichiarato: dettagli nascosti (fodere colorate, spacchi, bottoni interni) che si scoprono solo da vicino.
-4. **Un bottone in più** — il gesto minimo dell'apertura: colli, scolli e polsi come unici punti in cui il corpo si mostra.
-5. **Distanza calibrata** — lo spazio tra due corpi: volumi che non toccano il corpo e poi improvvisamente lo seguono.
-6. **Luce radente** — la luce che accarezza la pelle: tessuti lucidi e opachi accostati, satin su lana.
-7. **Frammenti** — il corpo che si rivela a pezzi: tagli e trasparenze solo su schiena, nuca, polsi.
-8. **Rosso in profondità** — il rosso passione non si mostra, sta dentro: fodere, sottogiacche, cuciture rosse in un look nude e nero.
-9. **Il tempo che rallenta** — capi lenti, che cadono pesanti: drappeggi, maniche lunghe, pantaloni che scivolano sul piede.
-10. **Pelle come memoria** — la pelle che conserva il ricordo di un tocco: impronte, pieghe, stropicciature trattenute nel tessuto.
-11. **Controllo e abbandono** — il completo rigoroso che si scioglie: cravatta allentata, camicia fuori, giacca aperta.
-12. **Mano che sfiora** — la mano come motivo: guanti sottili, tasche profonde, maniche che coprono le dita.
-13. **Velo** — pizzo e voile al maschile, come strato intermedio tra pelle e lana.
-14. **Notte privata** — il guardaroba di dopo la festa: capi da camera portati fuori, ma senza ironia, con intimità.
-15. **Ombra** — il nero come ombra che ritaglia il corpo: silhouette scure su toni nude, contrasti di luce.
+## body toll: la sensualità che sussurra
 
-## conviviality — stare insieme
+1. **Il rovescio della pelle.** Come un capo si giudica dal rovescio, una persona si giudica da vicino. Interni morbidi, fodere color pelle, la parte più bella del capo la sente solo chi lo indossa.
+2. **Senza dimostrare niente.** La sensualità del ragazzo di mezzo: niente petto in vista né completi da vetrina. Un collo aperto, una maglia che cade bene, la sicurezza di chi non ha bisogno di farsi guardare.
+3. **La sera con Chiara.** La serata che non si sposta mai, una a settimana: un look intimo e curato per una persona sola, non per il pubblico. Il telefono resta in tasca.
+4. **Materiale che dura una vita.** La pelle e la lana che migliorano con gli anni, prendono la forma del corpo e trattengono i ricordi. Sensuale perché è vissuto, non perché è nuovo.
+5. **Un bottone in più.** Il gesto minimo: la camicia sbottonata di uno, il polso che esce dalla manica. Tutto il corpo racconta di sé da tre punti soltanto.
+6. **Le mani.** Le mani di chi cuce: il tatto come primo senso. Tessuti scelti toccandoli al banco, maniche e polsini che lasciano le mani libere e in vista.
+7. **Chiaroscuro romano.** La luce radente dei vicoli al tramonto, che accarezza i muri e le persone. Raso e lana opaca accostati, toni nude e ambra con un nero d'ombra.
+8. **Lentezza.** Il contrario della fretta applicato al corpo: capi pesanti che cadono lenti, gesti trattenuti, nessuna corsa. Mesi per fare un capo, una sera intera per toglierlo.
+9. **Qualità interiore.** Il rosso non si mostra, sta dentro: fodera rossa sotto un cappotto nude, cuciture rosse sul rovescio. Si vede solo quando il capo si apre.
+10. **Da vicino.** Un capo che da lontano sembra semplice e da vicino rivela tutto: grana, pieghe, la mano del tessuto. Pensato per chi ti sta accanto, non per chi ti guarda passare.
 
-1. **Stessa stanza** — la band che prova in garage: tweed ereditati, cardigan prestati, l'eleganza nasce dalla sintonia.
-2. **Tavola lunga** — la cena all'italiana che non finisce: giacche appese alla sedia, maglioni caldi, bottoni in ottone.
-3. **Non servono parole** — capire l'altro al volo: capi abbinati senza accordarsi, che "rispondono" tra loro.
-4. **Passioni condivise** — il club, la squadra, il gruppo: stemmi, ricami, colori sociali su lana e maglia.
-5. **Prestato e mai restituito** — il guardaroba che passa di mano: taglie sbagliate, iniziali di altri, capi ereditati.
-6. **Sala prove** — il musicista come figura: giacca da palco portata di giorno, cuoio delle tracolle, velluto da camerino.
-7. **Lato B** — il vinile da ascoltare insieme: grafiche e colori presi dalle copertine anni '70.
-8. **Bar di provincia** — il bancone sotto casa: tweed, gilet, coppola, colori di legno, fumo e ottone.
-9. **Fatto a mano** — maglia a trecce, crochet, rammendi visibili: il tempo passato insieme diventa lavoro manuale.
-10. **Sintonia** — accordarsi come strumenti: palette in cui ogni colore ha bisogno degli altri.
-11. **Rito della domenica** — vestirsi bene per stare insieme, non per farsi vedere: completo morbido, cravatta di lana.
-12. **Cerchio** — sedersi in cerchio a parlare: capi comodi da seduti, volumi morbidi, cardigan avvolgenti.
-13. **Brindisi** — il gesto del bicchiere alzato: dettagli in ottone, vetro, polsini ricamati.
-14. **Album di famiglia** — foto ingiallite di gruppo: palette seppia, quadri e spinati del guardaroba dei nonni.
-15. **Casa aperta** — la porta sempre aperta agli amici: capi da casa eleganti, pantofole in velluto, vestaglie di lana.
+## conviviality: stare insieme
+
+1. **La tavola della domenica.** Il pranzo in famiglia nella casa del quartiere di mezzo: la giacca tolta e appesa alla sedia, il maglione buono, il vino della casa. Vestirsi bene per stare insieme, non per farsi vedere.
+2. **Parlare con tutti.** Il ragazzo che sa stare alla tavola del bar di quartiere e a quella della cena colta. Un look che entra in entrambe le stanze senza cambiarsi.
+3. **Prestato da mio padre.** Il guardaroba che passa di generazione: la giacca di papà sistemata al banco, i bottoni in ottone del nonno. Il capo che dura una vita e poi ne fa un'altra.
+4. **Fatto a mano, insieme.** Il banco di lavoro condiviso: "non lavorare da solo". Cucire con qualcuno accanto, la maglia fatta a mano, i rammendi a vista come segno di tempo passato insieme.
+5. **Il bar sotto casa.** Il bancone dove si incontrano tutti, dal muratore all'avvocato. Tweed, gilet, colori di legno, caffè e ottone: l'eleganza popolare romana.
+6. **Non servono parole.** Gli amici di sempre che si capiscono al volo: capi semplici che "rispondono" tra loro, abbinati senza mettersi d'accordo.
+7. **Senza programmare.** La serata che si allunga perché nessuno ha fretta di andare: capi comodi da seduti, volumi morbidi, cardigan avvolgenti.
+8. **Passioni condivise.** Il gruppo che si riconosce da una cosa amata insieme (la squadra, la musica, i libri): un dettaglio comune, ricamato o in maglia, come segno di appartenenza discreto.
+9. **Casa piccola, porta aperta.** La casa da ristrutturare in centro dove passano sempre tutti: capi da casa eleganti, pantofole in velluto, maglie pesanti.
+10. **Una, per tutti.** Contro il "ognuno il suo look": un solo capo buono che il gruppo si passa e si presta, e che con gli anni porta i segni di tutti.
