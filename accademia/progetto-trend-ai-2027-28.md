@@ -19,11 +19,13 @@ Totale: 3 × 4 = **12 tavole**, più un'eventuale copertina.
 
 ## Checklist
 
+*Ripartenza del 14/10: le tavole Canva dell'08/10 restano come bozza; moodboard da rifare con le foto scelte da Jacopo su Pinterest.*
+
 | Tema | Concept | Moodb. tecnica | Moodb. emotiva | Figurino |
 |---|---|---|---|---|
-| 1 — onlife | [x] Canva | [x] Canva | [x] Canva | [ ] |
-| 2 — body toll | [x] Canva | [x] Canva | [x] Canva | [ ] |
-| 3 — conviviality | [~] Canva (testo da rivedere con la pagina intro) | [x] Canva | [x] Canva | [ ] |
+| 1 — onlife | [x] testo 14/10 (Canva da rifare) | [ ] | [ ] | [~] prompt pronti |
+| 2 — body toll | [x] testo 14/10 (Canva da rifare) | [ ] | [ ] | [~] prompt pronti |
+| 3 — conviviality | [x] testo 14/10 (Canva da rifare) | [ ] | [ ] | [~] prompt pronti |
 
 **Canva, PORTFOLIO UNICO (08/10):** "Trend A/I 2027-28 (portfolio)" → ID `DAHXbXjppDc`, https://www.canva.com/d/Omun6Fl0y5ZinTl. Contiene 10 pagine nell'ordine 01-02-03-04-06-07-08-10-11-12. I figurini (05, 09, 13) vanno inseriti dopo la 04, la 08 e la 12. **D'ora in poi si lavora qui**; i design singoli qui sotto restano come copia di partenza (modifiche fatte sui singoli NON arrivano nel portfolio).
 
@@ -72,6 +74,26 @@ Scelti da Jacopo dalla lista `idee-concept-trend-ai-2027-28.md` (onlife n.1, bod
 > Il pranzo della domenica nella casa di famiglia, che finisce quando è già buio. La giacca tolta e appesa alla sedia, il maglione buono, le maniche tirate su per passare i piatti. Nessuno si veste per farsi guardare: ci si veste bene per rispetto di chi siede allo stesso tavolo. Tweed e spinato che passano da padre a figlio, maglie fatte a mano, bottoni in ottone. Colori di legno, vino e pane.
 
 *Parole chiave:* sintonia · tavola · ereditato
+
+### Ricerca immagini su Pinterest (14/10/2026)
+
+Ricerche in inglese (risultati migliori). Una bacheca per tema e per tipo; salvarne 20-30, tenere le 8-12 più coerenti (stessa luce, stessa temperatura di colore); segnare fonte/fotografo per la bibliografia. Poi caricarle su Drive in una cartella per tema.
+
+**onlife — evocativa:** `rome street photography film` · `rome periferia photography` · `roman courtyard` · `sampietrini` · `walking city night 35mm` · `flash photography friends night` · `young men street candid film` · `bar tabacchi rome` · `vespa rome street` · `rome peeling plaster wall`. Strade vuote, lampioni, intonaco scrostato, gente di spalle, foto mosse. Evitare Roma da cartolina e foto di moda in posa.
+**onlife — tecnica:** `wide wale corduroy texture` · `ripstop nylon fabric close up` · `brushed fleece fabric` · `raw denim texture` · `knee patch topstitching trousers` · `two way zip jacket detail` · `drawcord hem jacket` · `layering menswear street` · colori `asphalt grey texture`, `rome plaster colors`.
+
+**body toll — evocativa:** `male body fragment black and white` · `collarbone photography` · `nape neck photography` · `hands touching fine art` · `raking light skin` · `chiaroscuro portrait man` · `sheer curtain light` · `crumpled sheets shadow` · `open collar shirt man film`. Frammenti, luce radente, spazio vuoto, niente volti espliciti. Evitare foto esplicite/da palestra e lusso ostentato.
+**body toll — tecnica:** `fine gauge knit close up` · `silk cashmere knit texture` · `lamb nappa leather soft` · `silk voile sheer fabric` · `double face wool coat fabric` · `open neck knit menswear` · `contrast lining coat red` · `draped trousers fabric fall` · colori `nude skin tones palette`, `oxblood red fabric`.
+
+**conviviality — evocativa:** `italian sunday lunch family` · `long table dinner italy film` · `nonna kitchen` · `jacket hanging on chair` · `wine glasses table candid` · `bread wine wooden table` · `italian family 1970s photo` · `kodachrome italy family` · `rolled up sleeves hands table`. Tavola dopo pranzo, mani, luce calda, foto di famiglia d'epoca. Evitare cene "instagrammabili" e matrimoni.
+**conviviality — tecnica:** `herringbone tweed close up` · `donegal tweed texture` · `cable knit cardigan close up` · `brushed wool flannel` · `hand knit wool texture` · `brass buttons jacket` · `elbow patch tweed jacket` · `trouser turn up cuff` · `darned knitwear visible mending` · colori `walnut wood texture`, `red wine color`, `bottle green wool`.
+
+### Figurini v2 (14/10/2026)
+
+Look rifatti sui mini concept → `figurini-trend-ai-2027-28.md` (prompt flat aggiornati).
+- **onlife:** giubbotto nylon nero aperto con fodera arancio · felpa grigio cemento · velluto a coste intonaco con toppe alle ginocchia · sneakers consumate · telefono non visibile.
+- **body toll:** maglia finissima nude · pantalone ampio in nappa nera con piega · cappotto cammello sulle spalle con fodera rossa visibile solo dall'apertura · mocassino nero.
+- **conviviality:** camicia bianca maniche arrotolate · cardigan a trecce panna con bottoni in ottone · flanella verde bottiglia con risvolto · giacca spinata marrone tenuta su una spalla · derby camoscio.
 
 ---
 

@@ -1,6 +1,7 @@
 # Figurini — Trend A/I 2027-28
 
-Un figurino menswear per ognuno dei 3 temi. Progetto: `progetto-trend-ai-2027-28.md`. Preparato l'08/10/2026.
+Un figurino menswear per ognuno dei 3 temi. Progetto: `progetto-trend-ai-2027-28.md`.
+**v2 (14/10/2026):** look rifatti sui mini concept definitivi ("Dentro la città", "Senza dimostrare niente", "La tavola della domenica"). Rispetto alla v1 dell'08/10: body toll ha il cappotto cammello con fodera rossa (il rosso resta nascosto), conviviality passa dalla sala prove alla tavola (camicia con maniche arrotolate, cardigan, giacca tenuta su una spalla).
 
 **Workflow (lo stesso di After Hours, `outfit-after-hours.md`):**
 1. **Flat B/N** su ChatGPT, **un capo per prompt**, con le pieghe ben marcate
@@ -22,33 +23,32 @@ Details: [DETTAGLI]
 
 ---
 
-## 1 — onlife · "Fuori dallo schermo"
+## 1 — onlife · "Dentro la città"
 
-Strati messi insieme di fretta: nylon aperto sopra una felpa, velluto a coste largo, sneakers consumate. Al collo una macchina fotografica usa e getta.
+Il ragazzo a metà della traversata, con uno strato già tolto. Giubbotto aperto sopra la felpa, velluto a coste, sneakers consumate. Il telefono non si vede: le mani sono in tasca o tengono una cosa vera (una busta di carta, un rullino).
 
-**Giacca.** [CAPO]: `a men's sports jacket in nylon` · [DETTAGLI]:
+**Giubbotto.** [CAPO]: `a men's sports jacket in nylon` · [DETTAGLI]:
 `boxy and slightly oversized, hip length, worn open. Stand-up collar, full front zip, two diagonal zip pockets at the hips, a small chest pocket with a zip, elasticated cuffs and hem band. Dropped shoulder. Crisp, crinkly folds at the elbows and along the sides, as in light matte ripstop nylon.`
 
 **Felpa.** [CAPO]: `a men's hoodie` · [DETTAGLI]:
-`oversized, hood with a drawstring, kangaroo pocket, ribbed cuffs and ribbed hem band, dropped shoulder, slightly cropped so it ends at the hip. Soft heavy folds at the elbows and above the hem band, as in thick brushed fleece.`
+`oversized, hood with a drawstring, kangaroo pocket, ribbed cuffs and ribbed hem band, dropped shoulder, long enough to show below the jacket hem. Soft heavy folds at the elbows and above the hem band, as in thick brushed fleece.`
 
 **Pantalone.** [CAPO]: `a pair of men's corduroy trousers` · [DETTAGLI]:
 `wide straight leg, mid rise, belt loops, two front slanted pockets, a rectangular reinforcement patch on each knee stitched with visible topstitching, long length with a small break on the shoe. Corduroy wales drawn only as a few fine vertical lines near the seams (not all over). Soft folds behind the knees and at the hem, as in medium-wale corduroy.`
 
-**Scarpe e accessorio:** sneakers basse in tela consumate e macchina fotografica usa e getta al collo, disegnate a mano direttamente sul figurino.
+**A mano sul figurino:** sneakers basse di tela consumate; busta di carta o rullino in mano.
 
 **Colori (HEX):**
-- Giacca nylon: nero-carbone `#2B2829` (luci `#6A6668` lungo le pieghe), fodera arancio da grafica skate `#E8692B` visibile nel collo aperto
+- Giubbotto nylon: nero-carbone `#2B2829` (luci `#6A6668` lungo le pieghe), fodera arancio `#E8692B` visibile nel collo aperto
 - Felpa: grigio cemento `#8E8C87`
-- Pantalone velluto: intonaco beige-rosato `#BFA58F`
-- Sneakers: tela sporca `#E3DDCF`, suola gomma `#D8D0BE`
-- Macchina fotografica: giallo `#E9C23A` con nero
+- Pantalone velluto: intonaco `#BFA58F`
+- Sneakers: tela sporca `#E3DDCF`, suola `#D8D0BE`
 
 ---
 
-## 2 — body toll · "Sottovoce"
+## 2 — body toll · "Senza dimostrare niente"
 
-Niente si mostra davvero. La maglia è così sottile che la pelle si intuisce, il cappotto è appoggiato sulle spalle e non indossato, il pantalone in nappa morbida ha la piega.
+Elegante ma senza pose: la sensualità sta in tre punti (collo, polsi, pelle). Il rosso non si mostra: è la fodera del cappotto, visibile solo dall'apertura.
 
 **Maglia.** [CAPO]: `a men's fine-gauge crew-neck sweater` · [DETTAGLI]:
 `slim but not tight, set-in sleeves, very fine rib at neckline, cuffs and hem. Very light and fluid: a few long soft folds that follow the body, slight drape at the elbows and at the waist, as in an ultra-fine silk-cashmere knit.`
@@ -57,39 +57,43 @@ Niente si mostra davvero. La maglia è così sottile che la pelle si intuisce, i
 `high rise, two forward pleats, sharp centre crease drawn as a single line down each leg, side pockets, no belt loops but side adjusters, wide leg falling straight to the floor. Few heavy rounded folds at the pleats and at the hem, as in very soft nappa leather.`
 
 **Cappotto (portato sulle spalle).** [CAPO]: `a men's long overcoat` · [DETTAGLI]:
-`drawn as if worn draped over the shoulders with the sleeves hanging empty, not worn. Below-the-knee length, wide notched lapels, single-breasted with concealed buttons, no pockets visible. Long heavy vertical folds, as in thick double-faced wool.`
+`drawn as if worn draped over the shoulders with the sleeves hanging empty, not worn. Below-the-knee length, wide notched lapels, single-breasted with concealed buttons, open at the front so the lining is visible along the opening (draw the lining edge as a second line inside the front edges). Long heavy vertical folds, as in thick double-faced wool.`
 
-**Scarpe:** mocassino nero lucido, disegnato a mano.
+**A mano sul figurino:** mocassino nero; nessun accessorio.
 
 **Colori (HEX):**
 - Maglia: nude `#D7B49E`
 - Pantalone nappa: nero-carbone `#2B2829` (luci `#6A6668`: col nero pieno le pieghe spariscono)
-- Cappotto: rosso profondo `#7A1F24`
+- Cappotto: cammello `#B08A6A`, fodera rosso profondo `#7A1F24` visibile solo nell'apertura
 - Mocassino: nero lucido `#1E1C1D`
 
 ---
 
-## 3 — conviviality · "Stessa stanza"
+## 3 — conviviality · "La tavola della domenica"
 
-Il guardaroba di chi suona nella stessa band da anni: una giacca spinata un po' larga, un cardigan a trecce prestato e mai restituito, bottoni in ottone.
+Il momento dopo pranzo: la giacca è stata tolta. Camicia con le maniche arrotolate, cardigan a trecce, flanella con il risvolto, e la giacca spinata (quella ereditata dal padre) tenuta su una spalla con un dito, come quando ci si alza da tavola.
 
-**Giacca.** [CAPO]: `a men's herringbone tweed jacket` · [DETTAGLI]:
-`relaxed, slightly oversized, single-breasted with three buttons, notched lapels, two flap patch pockets and a chest patch pocket, oval elbow patches, natural shoulder, hip length. Do NOT draw the herringbone pattern: plain fabric only. Medium folds at the elbows and at the button line, as in thick wool tweed.`
+**Camicia.** [CAPO]: `a men's classic shirt` · [DETTAGLI]:
+`soft point collar worn open at the neck (top two buttons undone), buttoned front, one chest pocket, long sleeves rolled up above the elbows (draw the rolled cuffs as thick bands). Relaxed fit. Soft folds at the rolled sleeves and at the waist, as in cotton poplin.`
 
 **Cardigan.** [CAPO]: `a men's cable-knit cardigan` · [DETTAGLI]:
-`V-neck, five buttons, two cables running vertically on each front panel drawn as simple twisted bands, ribbed cuffs and ribbed hem, set-in sleeves. Soft chunky folds at the elbows and at the hem, as in chunky hand-knitted wool.`
+`V-neck, five buttons, two cables running vertically on each front panel drawn as simple twisted bands, ribbed cuffs and ribbed hem, set-in sleeves pushed up to the elbows. Soft chunky folds at the elbows and at the hem, as in chunky hand-knitted wool.`
 
 **Pantalone.** [CAPO]: `a pair of men's wool flannel trousers` · [DETTAGLI]:
 `mid rise, single forward pleat, belt loops, side pockets, straight leg with turn-ups (cuffed hem drawn as a band). Soft folds at the pleat and at the knees, as in brushed wool flannel.`
 
-**Scarpe e accessorio:** derby in camoscio e tracolla di chitarra in pelle sulla spalla, disegnate a mano.
+**Giacca (tenuta su una spalla).** [CAPO]: `a men's herringbone tweed jacket` · [DETTAGLI]:
+`drawn folded lengthwise as if hung from one finger over the shoulder: we see the back and one sleeve hanging down, collar at the top. Natural shoulder, hip length, a hint of the lining at the collar. Do NOT draw the herringbone pattern: plain fabric only. Heavy soft folds where it hangs, as in thick wool tweed.`
+*(Se ChatGPT non la disegna bene "piegata", chiedere la giacca normale fronte e piegarla a mano in Procreate.)*
+
+**A mano sul figurino:** derby in camoscio; il dito che tiene la giacca.
 
 **Colori (HEX):**
-- Giacca spinata: marrone `#6B4A33`, bottoni ottone `#B08D57`
-- Cardigan: panna `#E9E0CC`
+- Camicia: bianco panna `#F2EEE6`
+- Cardigan: panna `#E9E0CC`, bottoni ottone `#B08D57`
 - Pantalone flanella: verde bottiglia `#2F4A3A`
+- Giacca spinata: marrone noce `#6B4A33`
 - Derby camoscio: tabacco `#8A5A36`
-- Tracolla: cuoio `#5A3A22`
 
 ---
 
