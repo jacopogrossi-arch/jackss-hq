@@ -35,3 +35,26 @@ Keep the bottom right corner empty (YouTube shows the video duration there).
 - **Ti ha cambiato la faccia** → "Keep the face identical to image 1, do not modify the facial features."
 - **Ha ridisegnato la giacca** → "Use images 3 and 4 as they are, as photos placed on the cards, do not redraw them."
 - **Testo sbagliato** (es. "E MIO", lettere strane) → lascia stare, generala senza testo ("no text") e aggiungi "È MIO?" dopo in Canva.
+
+---
+
+## v2 — stile "virale clean" (14/10/2026)
+
+La v1 (fondo scuro, due tavole, serif) è stata scartata da Jacopo: troppo scura e piena, illeggibile in piccolo.
+**Allegare:** 1) una foto vera di Jacopo · 2) `giacca2-sahariana-sketch.png` · 3) `giacca2-outfit-FINALE.png`
+
+```
+Create a clean, viral-style YouTube thumbnail, 16:9 (1280x720).
+
+COMPOSITION (only 3 elements):
+1. LEFT (about 40% of the frame): the young man from image 1, cut out cleanly, from the chest up, big in the frame, slightly turned toward the right, looking into the camera with a skeptical, curious expression (one eyebrow slightly raised, subtle — not exaggerated, no open mouth). Keep his face identical to image 1. Bright, soft studio light on his face, sharp and high detail, thin white outline around him.
+2. RIGHT: ONE large fashion illustration of the safari jacket, split vertically down the middle: the left half is the black line-art sketch from image 2, the right half is the colored version from image 3. A clean straight split line. Use the illustrations as they are, do not redraw the jacket. Crop from head to hips so it is big.
+3. TEXT: top right, 2 words in a very bold, heavy sans-serif font (like Montserrat Black), white with a thin black outline or on a solid black block: "È MIO?" — exactly this text, accent on the È.
+
+BACKGROUND: clean, light warm off-white / beige (#EFE8DC), plain, with a very soft shadow behind the man. No textures, no objects, no room.
+
+STYLE: bright, high contrast, high saturation, crisp, professional YouTube thumbnail like MKBHD or Ali Abdaal. Must be readable at very small size on a phone. No other text, no arrows, no logos, no emojis.
+Keep the bottom right corner empty.
+```
+
+Varianti testo: "BARARE?" · "MANO vs AI".
