@@ -48,6 +48,31 @@ Totale: 3 × 4 = **12 tavole**, più un'eventuale copertina.
 
 **Moodboard:** l'emotiva usa foto reali (fonti da citare, come fa il trend book: Unsplash/Pexels). La tecnica contiene palette Pantone TCX, campioni di tessuto (foto dal trend book o generati), dettagli e lavorazioni.
 
+## Mini concept definitivi (ripartenza 14/10/2026)
+
+Scelti da Jacopo dalla lista `idee-concept-trend-ai-2027-28.md` (onlife n.1, body toll n.2, conviviality n.1), riscritti sulla sua persona e su Inverso. **Sostituiscono le bozze "Fuori dallo schermo", "Sottovoce" e "Stessa stanza"** e le tavole Canva dell'08/10, che restano solo come bozza.
+
+### onlife — "Dentro la città"
+*Sottotitolo:* Fuori dal feed, a piedi da un quartiere all'altro.
+
+> Il telefono resta in tasca e la città torna a essere il posto dove le cose succedono. Un ragazzo attraversa Roma a piedi, dalle case popolari al centro, senza una meta ma con il bisogno di esserci. Il suo guardaroba deve reggere tutta la traversata: pochi capi, messi a strati e tolti strada facendo, che stanno bene al bar sotto casa come nella piazza più bella. Velluto a coste, nylon e felpa, nei colori dell'asfalto e dell'intonaco.
+
+*Parole chiave:* esserci · attraversare · a strati
+
+### body toll — "Senza dimostrare niente"
+*Sottotitolo:* La sensualità di chi non ha bisogno di farsi guardare.
+
+> Dopo anni di corpi in vetrina, la sensualità maschile abbassa la voce. Niente petto in mostra, niente completi da esibire: un collo aperto, una maglia sottile che segue il corpo senza stringerlo, una pelle morbida che migliora con gli anni. È la sicurezza di chi non deve dimostrare niente a nessuno. Il capo non chiede attenzione: la trattiene. Toni nude, nero come ombra e un rosso che resta nascosto dentro.
+
+*Parole chiave:* sussurro · da vicino · nessuna vetrina
+
+### conviviality — "La tavola della domenica"
+*Sottotitolo:* Vestirsi bene per stare insieme, non per farsi vedere.
+
+> Il pranzo della domenica nella casa di famiglia, che finisce quando è già buio. La giacca tolta e appesa alla sedia, il maglione buono, le maniche tirate su per passare i piatti. Nessuno si veste per farsi guardare: ci si veste bene per rispetto di chi siede allo stesso tavolo. Tweed e spinato che passano da padre a figlio, maglie fatte a mano, bottoni in ottone. Colori di legno, vino e pane.
+
+*Parole chiave:* sintonia · tavola · ereditato
+
 ---
 
 ## Tema 1 — onlife
