@@ -58,3 +58,26 @@ Keep the bottom right corner empty.
 ```
 
 Varianti testo: "BARARE?" · "MANO vs AI".
+
+---
+
+## v3 — rigenerazione senza beige e senza testo (14/10/2026)
+
+v2 approvata come impostazione (faccia + figurino split), ma: faccia imbronciata, font Impact brutto, fondo beige da togliere. Font scelto: **EB Garamond** (È corsivo + MIO? tondo), aggiunto dopo da Claude — ChatGPT genera senza testo.
+**Allegare:** 1) foto vera di Jacopo · 2) `giacca2-sahariana-sketch.png` · 3) `giacca2-outfit-FINALE.png`
+
+```
+Create a clean, viral-style YouTube thumbnail, 16:9 (1280x720).
+
+COMPOSITION (only 2 elements + empty space):
+1. LEFT (about 40% of the frame): the young man from image 1, cut out cleanly, from the chest up, big in the frame, slightly turned toward the right. Expression: curious and slightly skeptical, one eyebrow subtly raised, a hint of a smile — friendly, NOT sad, NOT pouting, mouth relaxed. Keep his face identical to image 1, do not change or beautify his features. Bright, soft studio light on his face, sharp and detailed, thin white outline around him.
+2. CENTER-RIGHT: ONE large fashion illustration of the safari jacket, split vertically down the middle: the left half is the black line-art sketch from image 2, the right half is the colored version from image 3. Clean straight split line. Use the illustrations as they are, do not redraw the jacket. Crop from head to hips, big in the frame.
+3. TOP RIGHT: leave an empty area (about 35% width, top 30% height) for a title that will be added later. NO TEXT anywhere in the image.
+
+BACKGROUND: plain clean light grey-white studio background (#F2F2F0), seamless, with a very soft shadow behind the man. No beige, no textures, no objects, no room.
+
+STYLE: bright, crisp, high contrast, minimal, professional YouTube thumbnail. Must read clearly at very small size on a phone. No text, no arrows, no logos, no emojis.
+Keep the bottom right corner empty.
+```
+
+Fondi alternativi (sostituire la riga BACKGROUND): bianco puro `#FFFFFF` · oliva scuro `#3F4A2E` (palette capi Inverso, scritta in avorio).
