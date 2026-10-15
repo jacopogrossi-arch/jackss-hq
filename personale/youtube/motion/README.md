@@ -38,6 +38,7 @@ DELIVERY: [length, resolution, fps, output path]
 
 | Scena | Brief | Stato |
 |---|---|---|
+| Prova Impaginazione (clip parlata 13 s) | timing da Whisper su `prova-impaginazione/trascrizione-parole.json` | **renderizzata** con voce: `02-prova-impaginazione.mp4` (loghi Claude e Canva, MCP, schermo che "scende") |
 | Capitoli (parte 2) | `02-capitoli-brief.md` | **v3 renderizzata** (`02-capitoli-v3.mp4` + versione senza audio; sorgenti in `v3/`, tempi provvisori) · v1 e v2 scartate (troppo "Claude" / troppo "Canva") |
 
 ## Come si rifà un render (v3)
