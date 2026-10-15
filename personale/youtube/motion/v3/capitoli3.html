@@ -1,0 +1,173 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:G;src:url(fonts/it400.ttf);font-style:italic}
+@font-face{font-family:T;src:url(fonts/it800.ttf);font-weight:800}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;overflow:hidden;background:#0E0D0C;color:#F2F2F0}
+.shot{position:absolute;inset:0;perspective:1300px;perspective-origin:50% 45%;display:none}
+.w3{position:absolute;inset:0;transform-style:preserve-3d}
+.abs{position:absolute}
+.ser{font-family:G;font-style:italic;font-weight:400;white-space:nowrap}
+.san{font-family:T;font-weight:800;white-space:nowrap;letter-spacing:-.035em}
+.mask{position:absolute;overflow:hidden;padding:0 .08em .12em 0}
+.mask>span{display:inline-block}
+.ov{position:absolute;inset:0;pointer-events:none}
+#grain{mix-blend-mode:overlay;opacity:.22}
+#black{position:absolute;inset:0;background:#0E0D0C;display:none}
+</style></head><body>
+
+<!-- 1: quattro -->
+<div class="shot" id="s1"><div class="w3" id="s1w">
+ <div class="mask" style="left:170px;top:270px"><span id="q4" class="ser" style="font-size:330px;line-height:1.05">quattro</span></div>
+ <div class="mask" style="left:186px;top:690px"><span id="q4b" class="san" style="font-size:54px;color:#6A6668">passaggi.</span></div>
+</div></div>
+
+<!-- 2: brainstorming -->
+<div class="shot" id="s2"><div class="w3" id="cloud"></div>
+ <div class="mask" style="right:170px;top:250px;text-align:right"><span id="n1" class="san" style="font-size:230px;line-height:1">01</span></div>
+ <div class="mask" style="right:170px;top:500px;text-align:right"><span id="t1" class="ser" style="font-size:140px;line-height:1.1">Brainstorming</span></div>
+ <div class="mask" style="right:176px;top:680px;text-align:right"><span id="c1" class="san" style="font-size:40px;color:#6A6668">30 idee <span style="color:#E8692B">→ 3</span></span></div>
+</div>
+
+<!-- 3: impaginazione -->
+<div class="shot" id="s3"><div class="w3">
+ <div class="mask" style="left:170px;top:250px"><span id="n2" class="san" style="font-size:230px;line-height:1">02</span></div>
+ <div class="mask" style="left:170px;top:500px"><span id="t2" class="ser" style="font-size:112px;line-height:1.1">Impaginazione</span></div>
+ <div id="board" class="abs" style="left:930px;top:220px;width:840px;height:600px;transform-style:preserve-3d">
+  <div class="abs" id="bbg" style="inset:0;background:#F2F2F0"></div>
+  <div class="abs pc" style="left:30px;top:30px;width:260px;height:540px;background:#E9E3D8;overflow:hidden"><img src="assets/outfit.png" style="position:absolute;height:520px;left:42px;top:12px"></div>
+  <div class="abs pc ser" style="left:322px;top:26px;font-size:62px;color:#0E0D0C">Dentro la città</div>
+  <div class="abs pc" style="left:322px;top:140px;width:230px;height:300px;background:#2B2829;overflow:hidden"><img src="assets/flat-lines.png" style="position:absolute;height:280px;left:8px;top:10px"></div>
+  <div class="abs pc" style="left:574px;top:140px;width:115px;height:145px;background:#2B2829"></div>
+  <div class="abs pc" style="left:699px;top:140px;width:115px;height:145px;background:#8E8C87"></div>
+  <div class="abs pc" style="left:574px;top:295px;width:115px;height:145px;background:#BFA58F"></div>
+  <div class="abs pc" style="left:699px;top:295px;width:115px;height:145px;background:#E8692B"></div>
+  <div class="abs pc ser" style="left:324px;top:478px;font-size:34px;color:#6A6668">velluto a coste, nylon, felpa</div>
+ </div>
+</div></div>
+
+<!-- 4: disegno -->
+<div class="shot" id="s4"><div class="w3" id="s4w">
+ <div id="flatbox" class="abs" style="left:300px;top:70px;width:720px;height:950px">
+  <img id="lines" src="assets/flat-lines.png" style="position:absolute;height:940px;left:0;top:0">
+  <img id="colr" src="assets/flat-color.png" style="position:absolute;height:940px;left:30px;top:0">
+  <div id="pen" class="abs" style="left:-40px;width:820px;height:3px;background:#E8692B;box-shadow:0 0 18px 4px rgba(232,105,43,.75)"></div>
+ </div>
+ <div class="mask" style="right:170px;top:250px;text-align:right"><span id="n3" class="san" style="font-size:230px;line-height:1">03</span></div>
+ <div class="mask" style="right:170px;top:500px;text-align:right"><span id="t3" class="ser" style="font-size:140px;line-height:1.1">Disegno</span></div>
+</div></div>
+
+<!-- 5: presentazione + recap -->
+<div class="shot" id="s5"><div class="w3" id="s5w">
+ <div class="mask" style="left:170px;top:250px"><span id="n4" class="san" style="font-size:230px;line-height:1">04</span></div>
+ <div class="mask" style="left:170px;top:500px"><span id="t4" class="ser" style="font-size:112px;line-height:1.1">Presentazione</span></div>
+ <div id="fig" class="abs" style="left:1130px;top:40px;width:400px;height:1010px">
+  <img src="assets/outfit.png" style="position:absolute;height:1000px;left:0;top:0;filter:drop-shadow(0 0 50px rgba(232,105,43,.22))">
+  <img id="sweep" src="assets/outfit.png" style="position:absolute;height:1000px;left:0;top:0;filter:brightness(2.1) saturate(.6);mix-blend-mode:screen">
+ </div>
+ <div id="recap"></div>
+</div></div>
+
+<div id="black"></div>
+<img class="ov" src="assets/leak.png" id="leak" style="mix-blend-mode:screen;left:-60px;width:2040px;height:1080px">
+<img class="ov" src="assets/vignette.png">
+<img class="ov gr" src="assets/grain0.png" style="mix-blend-mode:overlay;opacity:.22;display:none"><img class="ov gr" src="assets/grain1.png" style="mix-blend-mode:overlay;opacity:.22;display:none"><img class="ov gr" src="assets/grain2.png" style="mix-blend-mode:overlay;opacity:.22;display:none"><img class="ov gr" src="assets/grain3.png" style="mix-blend-mode:overlay;opacity:.22;display:none"><img class="ov gr" src="assets/grain4.png" style="mix-blend-mode:overlay;opacity:.22;display:none"><img class="ov gr" src="assets/grain5.png" style="mix-blend-mode:overlay;opacity:.22;display:none"><img class="ov gr" src="assets/grain6.png" style="mix-blend-mode:overlay;opacity:.22;display:none"><img class="ov gr" src="assets/grain7.png" style="mix-blend-mode:overlay;opacity:.22;display:none">
+
+<script>
+const $=id=>document.getElementById(id);
+const c=x=>Math.min(1,Math.max(0,x));
+const eo=x=>1-Math.pow(1-c(x),5);                       // snap
+const eio=x=>{x=c(x);return x<.5?16*x**5:1-Math.pow(-2*x+2,5)/2};
+const lerp=(a,b,p)=>a+(b-a)*p;
+function rnd(s){return()=>{s=(s*16807)%2147483647;return s/2147483647}}
+const R=rnd(42);
+
+// reveal per parola: maschera + da sfocato a nitido
+function rev(el,t0,t,dur=.7,blur=18){const p=eo((t-t0)/dur);
+ el.style.transform=`translateY(${(1-p)*105}%)`;el.style.filter=`blur(${(1-p)*blur}px)`;}
+
+// ---- nuvola di idee ----
+const IDEE="Fuori dal feed, dentro la città|Il rovescio non si posta|Una, non sei|Turista a casa mia|Dal banco alla strada|Il motorino|Amici senza programmare|Velluto e asfalto|Analogico di quartiere|Metterci la faccia|Il rovescio della pelle|Senza dimostrare niente|La sera con Chiara|Materiale che dura una vita|Un bottone in più|Le mani|Chiaroscuro romano|Lentezza|Qualità interiore|Da vicino|La tavola della domenica|Parlare con tutti|Prestato da mio padre|Fatto a mano, insieme|Il bar sotto casa|Non servono parole|Senza programmare|Passioni condivise|Casa piccola, porta aperta|Una, per tutti".split('|');
+const KEEP={"Fuori dal feed, dentro la città":[170,250],"Senza dimostrare niente":[300,500],"La tavola della domenica":[220,760]};
+const cloud=$('cloud');const P=[];
+IDEE.forEach((txt,i)=>{const e=document.createElement('div');e.className='abs ser';e.textContent=txt;
+ const k=KEEP[txt];
+ const p={e,k:!!k,x:k?k[0]:R()*1500-100,y:k?k[1]:R()*1000-20,z:k?-640:-2300+R()*1900,size:k?66:40+R()*40,fall:2.55+R()*0.65};
+ e.style.fontSize=p.size+'px';cloud.appendChild(e);P.push(p);});
+
+// ---- recap: 4 pannelli in profondità ----
+const recap=$('recap');const SL=[170,575,980,1385];const RP=[];
+['<div class="ser" style="position:absolute;left:30px;top:70px;font-size:84px;color:#E8692B">30 → 3</div>',
+ '<div style="position:absolute;inset:22px;background:#F2F2F0"><div style="position:absolute;left:14px;top:14px;width:90px;height:180px;background:#E9E3D8"></div><div style="position:absolute;left:118px;top:70px;width:70px;height:60px;background:#BFA58F"></div><div style="position:absolute;left:198px;top:70px;width:70px;height:60px;background:#E8692B"></div><div style="position:absolute;left:118px;top:140px;width:150px;height:54px;background:#2B2829"></div></div>',
+ '<img src="assets/flat-lines.png" style="position:absolute;height:210px;left:90px;top:12px">',
+ '<img src="assets/outfit.png" style="position:absolute;height:220px;left:132px;top:6px">'].forEach((h,i)=>{
+ const d=document.createElement('div');d.className='abs';d.style.cssText=`left:${SL[i]}px;top:360px;width:365px;height:235px;background:#1A1817;overflow:hidden;outline:1px solid #2a2725`;d.innerHTML=h;recap.appendChild(d);
+ const n=document.createElement('div');n.className='mask';n.style.cssText=`left:${SL[i]}px;top:630px`;n.innerHTML=`<span class="san" style="font-size:64px;color:${i==3?'#E8692B':'#F2F2F0'}">0${i+1}</span>`;recap.appendChild(n);
+ RP.push({d,n:n.firstChild});});
+
+// ---- tempi ----
+const CUTS=[0,1.4,3.6,5.8,8.0,11.0], WH=.32; // whip lungo .32 s
+function shotX(i,t){ // spostamento orizzontale per whip pan in entrata/uscita
+ let x=0;const a=CUTS[i],b=CUTS[i+1];
+ if(i>0&&t<a+WH/2)x=2300*(1-eio((t-(a-WH/2))/WH));
+ if(i<4&&t>b-WH/2)x=-2300*eio((t-(b-WH/2))/WH);
+ return x;}
+
+window.render=function(t){
+ ['s1','s2','s3','s4','s5'].forEach((id,i)=>{const on=t>=CUTS[i]-WH/2&&t<CUTS[i+1]+WH/2;const el=$(id);el.style.display=on?'block':'none';
+  if(on)el.style.transform=`translateX(${shotX(i,t)}px)`;});
+ if(t<CUTS[1]-WH/2) $('s1').style.transform='none';
+
+ // 1
+ rev($('q4'),0.15,t,.95,28); $('q4').style.letterSpacing=lerp(.06,-.01,eo((t-.15)/1.1))+'em';
+ rev($('q4b'),0.65,t,.6,10);
+ $('s1w').style.transform=`translateZ(${eio(t/1.6)*90}px)`;
+
+ // 2
+ const cam=eio((t-1.2)/2.6)*520;
+ P.forEach(p=>{const ze=p.z+cam;let blur=Math.min(16,Math.abs(ze+120)/70);let op=c(1-Math.abs(ze+120)/2200)*0.75+.12;
+  let y=p.y,col='#F2F2F0',glow='none',sc=1;
+  if(!p.k){const f=eio((t-p.fall)/.6);y+=f*f*520;op*=1-f;}
+  else{const g=eo((t-3.0)/.5);col=g>.5?'#E8692B':'#F2F2F0';op=lerp(op,1,g);blur=lerp(blur,0,g);sc=1+.06*g;glow=g>.3?'0 0 34px rgba(232,105,43,.55)':'none';}
+  if(p.k&&t<3.0){blur=Math.max(blur,3);}
+  p.e.style.transform=`translate3d(${p.x}px,${y}px,${ze}px) scale(${sc})`;p.e.style.filter=`blur(${blur}px)`;p.e.style.opacity=op;p.e.style.color=col;p.e.style.textShadow=glow;});
+ rev($('n1'),1.55,t,.55,14);rev($('t1'),1.8,t,.7,18);rev($('c1'),3.05,t,.5,8);
+
+ // 3
+ rev($('n2'),3.75,t,.55,14);rev($('t2'),3.95,t,.7,18);
+ const B=$('board');B.style.transform=`rotateY(${lerp(-18,-7,eio((t-3.5)/2.3))}deg) translateZ(${lerp(-140,0,eio((t-3.5)/2.3))}px)`;
+ $('bbg').style.transform=`scale(${.6+.4*eo((t-3.7)/.45)})`;$('bbg').style.opacity=c((t-3.7)/.08);
+ const beats=[3.95,4.2,4.45,4.65,4.8,4.95,5.1,5.3];const off=[[0,-500,300,-8],[-700,0,200,6],[0,0,700,0],[500,-400,200,14],[600,0,300,-10],[400,400,200,8],[600,500,250,-12],[0,300,400,0]];
+ document.querySelectorAll('#board .pc').forEach((e,i)=>{const p=eo((t-beats[i])/.38);const o=off[i];
+  e.style.transform=`translate3d(${o[0]*(1-p)}px,${o[1]*(1-p)}px,${o[2]*(1-p)}px) rotate(${o[3]*(1-p)}deg)`;e.style.opacity=c((t-beats[i])/.06);});
+
+ // 4
+ rev($('n3'),5.95,t,.55,14);rev($('t3'),6.15,t,.7,18);
+ const dl=c((t-5.95)/1.15), cl=eio((t-7.05)/.75);
+ $('lines').style.clipPath=`inset(0 0 ${(1-dl)*100}% 0)`;$('lines').style.opacity=1-cl*.85;
+ $('colr').style.clipPath=`inset(${(1-cl)*100}% 0 0 0)`;
+ const pen=$('pen');if(t<7.05){pen.style.top=dl*940+'px';pen.style.opacity=dl>0&&dl<1?1:0;}else{pen.style.top=(1-cl)*940+'px';pen.style.opacity=cl>0&&cl<1?1:0;}
+ $('s4w').style.transform=`translateZ(${eio((t-5.6)/2.6)*110}px) rotateY(${lerp(4,0,eio((t-5.6)/2.6))}deg)`;
+
+ // 5
+ rev($('n4'),8.15,t,.55,14);rev($('t4'),8.35,t,.7,18);
+ const sw=c((t-8.45)/.8);$('sweep').style.clipPath=`polygon(${-60+sw*220}% 0,${-30+sw*220}% 0,${-80+sw*220}% 100%,${-110+sw*220}% 100%)`;
+ $('sweep').style.opacity=sw>0&&sw<1?.55:0;
+ const pb=eio((t-9.35)/.75);
+ $('fig').style.transform=`translate3d(${lerp(0,SL[3]+40-1130,pb)}px,${lerp(0,330,pb)}px,0) scale(${lerp(1,.235,pb)})`;$('fig').style.transformOrigin='0 0';
+ $('fig').style.opacity=1-c((t-9.95)/.08);
+ ['n4','t4'].forEach(id=>{$(id).style.transform+=` translateX(${-pb*900}px)`;});
+ $('s5w').style.transform=`translateZ(${eio((t-7.9)/1.4)*70-pb*60}px)`;
+ RP.forEach((r,i)=>{const p=eo((t-9.5-i*.1)/.5);
+  r.d.style.transform=`translate3d(${(1-p)*-500}px,0,${(1-p)*-600}px)`;r.d.style.opacity=c((t-9.5-i*.1)/.06);
+  rev(r.n,10.2+i*.1,t,.4,8);});
+
+ // taglio netto al nero
+ $('black').style.display=t>=10.85?'block':'none';
+
+ // texture
+ document.querySelectorAll('.gr').forEach((g,i)=>g.style.display=i==Math.floor(t*24)%8?'block':'none');
+ $('leak').style.opacity=(.38+.12*Math.sin(t*1.3))*(t<10.85?1:0);
+ $('leak').style.transform=`translateX(${Math.sin(t*.6)*40}px)`;
+};
+render(0);
+</script></body></html>

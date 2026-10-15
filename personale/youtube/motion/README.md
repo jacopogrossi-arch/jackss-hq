@@ -38,4 +38,8 @@ DELIVERY: [length, resolution, fps, output path]
 
 | Scena | Brief | Stato |
 |---|---|---|
-| Capitoli (parte 2) | `02-capitoli-brief.md` | storyboard v3 in attesa di approvazione · v1 e v2 scartate (troppo "Claude" / troppo "Canva") |
+| Capitoli (parte 2) | `02-capitoli-brief.md` | **v3 renderizzata** (`02-capitoli-v3.mp4` + versione senza audio; sorgenti in `v3/`, tempi provvisori) · v1 e v2 scartate (troppo "Claude" / troppo "Canva") |
+
+## Come si rifà un render (v3)
+
+Dalla cartella `v3/`: `python3 grain.py` (una volta) → `node render.js capitoli3.html 11 90 frames` (90 fps = 3 sotto-fotogrammi per il motion blur) → `python3 audio.py capitoli3.wav` → ffmpeg con `tmix=frames=3` per tornare a 30 fps e unire l'audio. Fermi immagine di controllo: `node stills.js capitoli3.html 1.2 3.4 …`.
