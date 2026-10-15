@@ -1,6 +1,6 @@
 # YouTube #1 — Titolo, descrizione, tag
 
-> 14/10/2026. Testi pronti da incollare in YouTube Studio. Miniatura: `miniatura/miniatura-v3.jpg`.
+> ✅ **Pubblicato il 15/10/2026.** Testi incollati in YouTube Studio. Miniatura: `miniatura/miniatura-v3.jpg`.
 
 ## Titolo
 **Si può usare l'AI nella moda?**

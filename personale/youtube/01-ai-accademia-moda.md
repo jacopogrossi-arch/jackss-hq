@@ -1,6 +1,6 @@
 # Script YouTube #1 — L'AI all'accademia di moda
 
-> Scritto il 01/10/2026. Video lungo per il **canale personale** di Jacopo.
+> ✅ **Girato, montato e pubblicato il 15/10/2026** (titolo finale: *Si può usare l'AI nella moda?* — vedi `01-pubblicazione.md`). Scritto il 01/10/2026. Video lungo per il **canale personale** di Jacopo.
 > **Angolo:** spiegare come uso l'AI nei progetti dell'accademia, capire cosa può fare e cosa no, e dove passa il confine tra etico e non etico.
 > **Durata stimata:** 13–15 minuti (≈ 2.000 parole parlate).
 > **Materiale:** i due progetti chiusi a settembre — *Roue Libre* (cinque giacche, Fashion Design) e *After Hours* (Gucci × Tom Ford, Digital Fashion Design).
