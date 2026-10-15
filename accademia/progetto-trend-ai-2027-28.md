@@ -3,6 +3,7 @@
 **Materia:** Digital Fashion Design (da confermare)
 **Avviato:** 08/10/2026
 **Formato:** PDF unico (A3 orizzontale come i progetti precedenti, da confermare) · **Scadenza:** *da chiedere*
+**Decisione (15/10):** le palette colore NON vanno fatte; la moodboard tecnica ha solo tessuti, lavorazioni e dettagli.
 **Decisioni (08/10):** menswear · figurini "stile Procreate" (workflow e prompt → `figurini-trend-ai-2027-28.md`) · tavole impaginate in Canva
 **Materiale di partenza:** 20 foto delle pagine di un trend book A/I 2027-28 → Google Drive, cartella "PROGRETTO DIGITAL" (https://drive.google.com/drive/folders/1E2SQPL9tO8E33rtl_icfX6Nbfc8pFQeh)
 
@@ -51,7 +52,7 @@ Totale: 3 × 4 = **12 tavole**, più un'eventuale copertina.
 - 08 body toll tecnica: palette 7 colori · 5 tessuti · 4 dettagli → `DAHXbTJMO2k`, https://www.canva.com/d/nftRRMDUsk56f03
 - 11 conviviality emotiva: album caldo (band in garage, tavolata, vinili, chitarra, brindisi, bar) → `DAHXbdmqBHs`, https://www.canva.com/d/SAin7mLEG59vOI3
 - 12 conviviality tecnica: palette 6 colori · 5 tessuti · 4 dettagli (bottoni ottone, toppe gomiti, risvolto, trecce) → `DAHXbVGjYg0`, https://www.canva.com/d/BqN-t0qhesGygsX
-- Mancano i codici Pantone TCX nelle palette (Pantone Connect)
+- Palette e codici Pantone TCX: non richiesti (decisione 15/10) (Pantone Connect)
 
 **Ordine del PDF (13 pagine):** 01 copertina · per ogni tema: concept → moodboard emotiva → moodboard tecnica → figurino (onlife 02–05, body toll 06–09, conviviality 10–13).
 
