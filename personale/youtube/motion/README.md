@@ -27,6 +27,13 @@ DELIVERY: [length, resolution, fps, output path]
 - **Font:** EB Garamond corsivo (parole chiave) + Inter Tight 800 (numeri, parole di struttura)
 - **Vietato sempre:** testo centrato, gradienti di default, dissolvenze generiche, etichette piccole in maiuscolo spaziato sopra i titoli, linee sottili sotto i titoli, fasce colorate e cartoncini inclinati "stile Canva", blu/neon "tech AI", elenchi puntati da slide, icone ed emoji.
 
+## Timing sull'audio vero (dal 15/10/2026)
+
+1. Jacopo finisce i tagli in DaVinci ed esporta **solo l'audio** della timeline (Deliver → spunta solo Audio → WAV o MP3).
+2. Claude trascrive con i tempi parola per parola, oppure, se la trascrizione non è disponibile, usa i silenzi rilevati con ffmpeg e il copione. Ne esce una **tabella di timing**: tempo · frase detta · grafica.
+3. Jacopo approva la tabella (GATE).
+4. Ogni grafica viene renderizzata lunga esattamente quanto il suo pezzo, con il tempo d'inizio nel nome (es. `03m12s_capitoli.mp4`), così su DaVinci si trascina al punto giusto.
+
 ## Scene
 
 | Scena | Brief | Stato |
