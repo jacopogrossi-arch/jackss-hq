@@ -1,0 +1,55 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:G;src:url(fonts/r400.ttf);font-weight:400}
+@font-face{font-family:G;src:url(fonts/r500.ttf);font-weight:500}
+@font-face{font-family:G;src:url(fonts/it400.ttf);font-style:italic}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1920px;height:1080px;background:#F2F2F0;overflow:hidden;font-family:G,serif;color:#1d1c1b}
+#stage{position:absolute;inset:0}
+.abs{position:absolute}
+#label{left:240px;top:150px;font-size:30px;letter-spacing:.28em;text-transform:uppercase;color:#7b7a76}
+#title{left:240px;top:200px;font-size:104px;font-style:italic;line-height:1.05;white-space:nowrap}
+#rule{left:240px;top:350px;height:2px;width:1440px;background:#1d1c1b;transform-origin:left}
+.mask{overflow:hidden;position:absolute;height:120px}
+.txt{font-size:84px;font-weight:500;white-space:nowrap;line-height:120px}
+.num{font-size:34px;font-style:italic;color:#7b7a76}
+.dot{width:26px;height:26px;border-radius:50%;border:2px solid #1d1c1b;background:#F2F2F0}
+.dotfill{position:absolute;inset:4px;border-radius:50%;background:#1d1c1b}
+.seg{width:2px;background:#1d1c1b;transform-origin:top}
+.sub{font-size:34px;font-style:italic;color:#7b7a76;white-space:nowrap}
+</style></head><body><div id="stage">
+<div id="label" class="abs">Come è fatto il video</div>
+<div class="mask" id="tm" style="left:240px;top:200px;height:140px;width:1440px"><div id="title" class="abs" style="left:0;top:0;line-height:140px">Quattro capitoli</div></div>
+<div id="rule" class="abs"></div>
+</div>
+<script>
+const rows=[["01","Brainstorming e scelta","come è nato il concept"],["02","Impaginazione","le tavole"],["03","Disegno","il figurino"],["04","Presentazione","il risultato"]];
+const st=document.getElementById('stage');const Y0=470,DY=135,XD=262;
+const els=[];
+rows.forEach((r,i)=>{const y=Y0+i*DY;
+ const num=document.createElement('div');num.className='abs num';num.style.cssText=`left:140px;top:${y+40}px`;num.textContent=r[0];st.appendChild(num);
+ const dot=document.createElement('div');dot.className='abs dot';dot.style.cssText=`left:${XD}px;top:${y+47}px`;dot.innerHTML='<div class="dotfill"></div>';st.appendChild(dot);
+ const m=document.createElement('div');m.className='mask';m.style.cssText=`left:340px;top:${y}px;width:1100px`;const t=document.createElement('div');t.className='txt';t.textContent=r[1];m.appendChild(t);st.appendChild(m);
+ const s=document.createElement('div');s.className='abs sub';s.style.cssText=`left:1180px;top:${y+48}px`;s.textContent=r[2];st.appendChild(s);
+ let seg=null;if(i<rows.length-1){seg=document.createElement('div');seg.className='abs seg';seg.style.cssText=`left:${XD+12}px;top:${y+73}px;height:${DY-26}px`;st.appendChild(seg);}
+ els.push({num,dot,t,s,seg,fill:dot.firstChild});});
+const c=x=>Math.min(1,Math.max(0,x));
+const eo=x=>1-Math.pow(1-c(x),4), eio=x=>{x=c(x);return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2};
+const OUT=7.7;
+window.render=function(t){
+ const lab=document.getElementById('label'),ti=document.getElementById('title'),ru=document.getElementById('rule');
+ lab.style.opacity=eo((t-0.1)/0.6);lab.style.transform=`translateY(${(1-eo((t-0.1)/0.6))*14}px)`;
+ ti.style.transform=`translateY(${(1-eo((t-0.3)/0.9))*100}%)`;
+ ru.style.transform=`scaleX(${eio((t-0.7)/1.1)})`;
+ els.forEach((e,i)=>{const s=1.6+i*0.75;
+  const p=eo((t-s)/0.9);e.t.style.transform=`translateY(${(1-p)*120}%)`;
+  e.num.style.opacity=eo((t-s)/0.5);
+  e.dot.style.transform=`scale(${eo((t-s)/0.5)})`;
+  e.fill.style.transform=`scale(${eio((t-s-0.2)/0.4)})`;
+  e.s.style.opacity=eo((t-s-0.5)/0.6)*0.9;e.s.style.transform=`translateX(${(1-eo((t-s-0.5)/0.6))*-16}px)`;
+  if(e.seg)e.seg.style.transform=`scaleY(${eio((t-s-0.35)/0.7)})`;});
+ // uscita
+ const o=eio((t-OUT)/0.7);
+ st.style.opacity=1-o;st.style.transform=`translateY(${-o*30}px)`;
+};
+render(0);
+</script></body></html>
