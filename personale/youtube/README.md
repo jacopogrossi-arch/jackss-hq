@@ -7,6 +7,7 @@ Video lunghi sul **canale personale** di Jacopo (non Inverso, non Jago).
 | # | Titolo | Pubblicato | File |
 |---|---|---|---|
 | 1 | Si può usare l'AI nella moda? | 15/10/2026 | copione `01-ai-accademia-moda.md` · titolo/descrizione/tag `01-pubblicazione.md` · miniatura `miniatura/miniatura-v3.jpg` |
+| 2 | Ho lasciato Claude ideare una collezione al posto mio | in ideazione | scheletro `02-claude-idea-collezione.md` (esempio: tema onlife, progetto Trend A/I 2027-28) |
 
 ## Metodo (dal video 1, da riusare)
 
