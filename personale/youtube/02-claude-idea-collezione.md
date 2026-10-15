@@ -1,21 +1,21 @@
 # Script YouTube #2 — Ho lasciato Claude ideare una collezione al posto mio
 
-> 📝 **Scheletro rivisto il 15/10/2026** (struttura decisa da Jacopo). Video lungo per il **canale personale**, seguito diretto del #1.
+> 📝 **Punti salienti, scritti insieme il 15/10/2026.** Non si legge e non si impara a memoria: si ricordano i punti e si dicono con parole proprie (metodo del #1). Scritti per esteso solo hook e chiusura.
 > **Angolo:** il #1 diceva "dove passa il confine". Qui lo mostro su un caso reale: ho lasciato che Claude ideasse, e documento passo per passo chi ha deciso cosa.
 > **Durata stimata:** 12–15 minuti.
-> **Esempio usato:** un solo tema dei tre, quello che viene meglio. Gli altri due solo accennati nella presentazione finale.
-> **Materiale:** `accademia/progetto-trend-ai-2027-28.md` · `idee-concept-trend-ai-2027-28.md` · `figurini-trend-ai-2027-28.md` · commit dell'08/10 e del 14/10 (prova delle date).
+> **Esempio usato:** onlife, "Dentro la città". Gli altri due temi solo accennati nella presentazione finale.
+> **Materiale:** `accademia/progetto-trend-ai-2027-28.md` · `idee-concept-trend-ai-2027-28.md` · `figurini-trend-ai-2027-28.md`
+> **Motion graphics:** `motion/` (tabella brief, scena capitoli v3, metodo audio → timing).
 
 ---
 
 ## ⚠️ Da sistemare prima di girare
 
-1. **Quale tema.** Si sceglie a figurino finito. Proposta: **onlife — "Dentro la città"** (testo del trend book completo, flat già scritto, il più vicino a Inverso). Conviviality ha la pagina introduttiva mancante.
-2. **Il titolo è provocatorio.** Dice "al posto mio", ma tu hai scelto 3 idee su 30, hai scartato il primo giro e hai dato a Claude la tua persona e i valori di Inverso. Va detto chiaramente: è il punto del video.
-3. **Nome del libro.** Nei file è "trend book A/I 2027-28"; tu dici "Zoom". Conferma il nome esatto (e chi lo pubblica) per dirlo e citarlo giusto.
-4. **Il libro non è tuo.** Mostra le pagine solo brevi e di sfuggita, con la fonte a schermo.
-5. **Figurini non ancora fatti** (al 15/10 solo prompt). Registra lo schermo mentre lavori: ChatGPT, Procreate, Canva.
-6. **Docenti e voti:** come nel #1, solo se è vero.
+1. **Nome della rivista.** Quasi certamente *Zoom on Fashion Trends* (Nuova Libra Editrice, Bologna): verificare sulla copertina e citarla così a schermo.
+2. **La rivista non è tua.** Pagine solo brevi e di sfuggita, con la fonte a schermo.
+3. **Il titolo è provocatorio.** "Al posto mio" regge solo se nel video si vede chiaro che tu hai dato il contesto, scelto e riscritto. È il punto del video.
+4. **Figurino onlife da finire** (al 15/10 solo prompt). Registra o fotografa i passaggi mentre lavori: servono per il capitolo Disegno.
+5. **Docenti e voti:** come nel #1, solo se è vero.
 
 **Legenda:** 🎙 = parlato · 🎬 = cosa si vede · 📝 = testo a schermo
 
@@ -31,78 +31,63 @@
 
 ---
 
-## 0. Hook (0:00 – 0:45)
+## 0. Hook (≈ 40 s) — per esteso
 
-🎬 Il figurino finito dell'esempio sul tavolo, dall'alto.
+🎬 Figurino onlife finito sul tavolo, dall'alto. Poi taglio su di te.
 
-🎙 *(4 passaggi, non a memoria: chi sono → cosa ho fatto → cosa è successo → la domanda)*
-> Questo è un figurino che mi hanno chiesto per un esame. L'idea dietro non è venuta a me: me l'ha proposta un'intelligenza artificiale. Però l'ho scelta io, l'ho riscritta io, e l'ho disegnata io.
+🎙
+> Questo figurino fa parte di un esame dell'accademia di moda. L'idea dietro non l'ho avuta io: me l'ha proposta un'intelligenza artificiale. Però l'ho scelta io, l'ho riscritta io e l'ho disegnata io.
 >
-> Quindi di chi è? Dopo il video sul confine tra aiuto e barare, ho voluto provare sul serio: ho lasciato che Claude ideasse una collezione. Ti faccio vedere ogni passaggio e chi ha fatto cosa.
+> Quindi di chi è? Nel video precedente mi chiedevo dove passa il confine. Stavolta ho voluto provarlo davvero: ho lasciato che Claude ideasse una collezione al posto mio, e ti faccio vedere ogni passaggio.
 
 ---
 
-## 1. Il compito (0:45 – 2:15)
+## 1. Il compito (≈ 1 min) — punti
 
-🎬 Il libro Zoom di tendenze (pagine brevi, fonte a schermo). Le tre tematiche.
+- Chi sono, in una riga (chi ha visto il #1 lo sa già): studio economia e faccio un'accademia di moda a Roma.
+- La rivista di tendenze **Zoom** per l'autunno-inverno 2027-28: **tre tematiche**, onlife, body toll, conviviality.
+- Per ognuna: concept, moodboard emotiva, moodboard tecnica, figurino. **12 tavole.**
+- Le faccio tutte e tre, ma nel video ne seguo **una sola** dall'inizio alla fine: onlife.
 
-🎙
-> Il compito: il libro Zoom raccoglie le tendenze per l'autunno-inverno 2027-28, divise in tre tematiche. Io devo sceglierne il filo, e per ogni tematica consegnare quattro cose: un concept, una moodboard tecnica, una moodboard emotiva e un figurino. Dodici tavole in tutto.
->
-> Ho tre tematiche, ma nel video ne seguo una sola dall'inizio alla fine.
-
-📝 *Tre tematiche × quattro tavole = 12*
+🎬 Pagine della rivista (brevi, fonte a schermo) → grafica "3 × 4 = 12".
 
 ---
 
-## 2. Come lo organizzo: i capitoli (2:15 – 3:15)
+## 2. I capitoli (≈ 20 s)
 
-🎬 Schermata con l'elenco dei capitoli del video, o una lavagna/foglio con le fasi in fila.
+- Prima di entrare nei dettagli, come è fatto il video: brainstorming · impaginazione · disegno · presentazione.
 
-🎙
-> Prima di entrare nei dettagli ti dico come è fatto il video, così sai dove siamo.
->
-> Primo: il brainstorming, cioè come siamo arrivati al concept. Secondo: l'impaginazione, le tavole. Terzo: il disegno, il figurino. E alla fine la presentazione di quello che è venuto fuori, con le mie conclusioni su chi ha fatto cosa.
-
-📝 *1 Brainstorming e scelta · 2 Impaginazione · 3 Disegno · 4 Presentazione*
-
-*(Questa lista diventa anche i capitoli nella descrizione YouTube.)*
+🎬 Motion graphic `motion/02-capitoli-v3.mp4` (da rifare sui tempi della voce vera).
+*(La lista diventa anche i capitoli nella descrizione YouTube.)*
 
 ---
 
-## 3. Brainstorming e scelta del mini concept (3:15 – 7:15)
+## 3. Brainstorming e scelta del mini concept (≈ 3–4 min) — punti
 
-### 3a. Claude legge, io decido il metodo
+**Il punto di partenza (onesto):**
+- Non avevo un concept ben definito. Invece di bloccarmi, ho deciso di farmi dare **una lista lunga** e di scegliere tra tante idee.
+- Frase da tenere, con parole tue: *non avere un'idea non è un problema, se sai scegliere.*
 
-🎬 Registrazione schermo: le 20 foto del libro su Drive, Claude che riassume le tre tematiche.
+**Cosa ho dato a Claude prima di chiedere le idee:**
+- Le foto delle pagine della rivista, da cui ha fatto una sintesi di ogni tema.
+- Chi sono: il ragazzo di mezzo, la classe media romana, "una, non sei", il rovescio del capo che si giudica da dentro. E cosa non voglio essere: old money, quiet luxury, lusso come meta.
+- Una regola: ogni idea agganciata a **una frase della rivista**, così controllo che non si inventi niente.
 
-🎙
-> Gli ho dato le foto delle pagine e gli ho chiesto una sintesi per ogni tema. Qui l'AI è utile in modo banale: legge e mette in ordine. Ma è anche un punto dove sbaglia: nella tematica conviviality mancava una pagina, e quando manca un'informazione lui tende a riempire lo spazio.
+🎬 Grafica: la rivista e i tuoi valori che entrano in Claude → escono 30 idee.
 
-### 3b. Il primo giro lo butto
+**Cosa è uscito:**
+- **30 idee**, 10 per tema, ognuna con la sua citazione accanto. Questa parte l'ha fatta quasi tutta lui.
 
-🎬 Le bozze dell'8 ottobre ("Fuori dallo schermo", "Sottovoce", "Stessa stanza") e le tavole Canva con il segno rosso sopra.
+🎬 Le 30 idee nello spazio (come la scena capitoli v3).
 
-🎙
-> Il primo giro è venuto in un pomeriggio, tutto in ordine. E io l'ho rifatto da capo, perché era corretto ma non era mio: era la collezione che avrebbe fatto chiunque con quel libro in mano. L'AI ti dà la media, e la media non è uno stile.
-
-*(Usa le tue vere ragioni per averle scartate, non queste.)*
-
-### 3c. Gli do chi sono
-
-🎬 I file di contesto (`il-ragazzo-di-mezzo`, `spiegazione-del-nome`, `valori-inverso`) → la lista di 10 idee per tema, ognuna con la citazione del libro accanto.
-
-🎙
-> Il secondo giro è diverso. Prima delle idee gli ho dato io il materiale: chi sono, da dove vengo, cosa voglio essere e cosa no. E ho chiesto che ogni idea fosse agganciata a una frase del libro, così controllo se si inventa qualcosa. Ne sono uscite dieci per tema. Questa parte l'ha fatta quasi tutta lui.
-
-### 3d. La scelta
-
-🎬 Il cursore si ferma su onlife n.1 *"Fuori dal feed, dentro la città"*.
-
-🎙
-> Dieci idee, io ne tengo una. Non la più bella: quella che riconosco. Roma a piedi, dalle case popolari al centro, il telefono in tasca. L'ho riscritta con parole mie, e solo allora è diventata il mini concept: *Dentro la città*.
+**La scelta:**
+- Ho scelto d'istinto, ma con un ragionamento dietro: doveva essere **coerente con me** e con il tema di partenza della rivista.
+- Esempio onlife: *"Fuori dal feed, dentro la città"*. Roma a piedi, dalle case popolari al centro, il telefono in tasca. [Perché questa e non un'altra: con parole tue.]
+- Poi l'ho riscritta, ed è diventata il mini concept: *Dentro la città*.
 
 📝 *Claude: 30 idee · Io: 3 scelte*
+
+🎙 **Chiusura del capitolo (la tesi in piccolo):** l'AI ha fatto la quantità, io ho fatto la scelta.
 
 ---
 
