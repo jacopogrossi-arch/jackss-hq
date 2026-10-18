@@ -34,3 +34,7 @@ archivio/dispensa-politica-economica/Giorno *.html
 # HTML intermedio del foglio da stampare (rigenerato da personale/stampa/embed-fonts.py)
 personale/stampa/build.html
 personale/stampa/gf.css
+
+# Video editor: footage, render e cartelle di lavoro (file enormi, solo locale)
+videos/
+video-editor/shared/
