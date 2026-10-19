@@ -58,6 +58,8 @@ Totale: 3 × 4 = **12 tavole**, più un'eventuale copertina.
 
 **Moodboard:** l'emotiva usa foto reali (fonti da citare, come fa il trend book: Unsplash/Pexels). La tecnica contiene palette Pantone TCX, campioni di tessuto (foto dal trend book o generati), dettagli e lavorazioni.
 
+> ⚠️ **I 3 TEMI REALI (correzione di Jacopo, 19/10/2026): 1 = Royal Humor · 2 = Body Talk · 3 = Onlife.** "Body toll" e "conviviality" erano errori di lettura delle foto (conviviality probabilmente è solo una sezione/parola chiave dentro uno dei temi). Le sezioni "Tema 1/2/3" qui sotto vanno rifatte: il Tema 1 nelle note è sbagliato (è onlife, che è il 3).
+>
 > ⚠️ **CAMBIO DI ROTTA (19/10/2026, consegna 20/10):** i **concept sono i 3 temi del trend book stessi** (onlife, body toll, conviviality), non mini concept da inventare. La tavola concept = sintesi del tema dal trend book (sezioni "Tema 1/2/3" più sotto). I mini concept qui sotto ("Dentro la città", "Senza dimostrare niente", "La tavola della domenica") sono **superati**: restano solo come ispirazione per moodboard e figurini.
 
 ## Mini concept definitivi (ripartenza 14/10/2026) — SUPERATI il 19/10
