@@ -53,6 +53,13 @@ synthetic media and must end with `OK` (the media tests skip themselves without 
 - numpy scripts: `sync-tracks.py`, `tighten-cut.py`, `sliver.py`, `edge-audit.py`, `dead-air.py`. Node: `stutter-scan.py`
   (it runs `find-cut-candidates.mjs`) and the cut review page (`build-edl-review.mjs`).
 
+## Taste (read before designing a draft)
+
+`references/taste.md` holds the motion numbers (entrance 12 f, opacity 6 f, accelerate exits, cut on motion), the never-ship list
+(page chrome, deck layouts, small cards on empty ground, invented proof, long end holds), the judgment rules and the sound palette,
+distilled from motionmaxxing (Apache-2.0), motion-video-kit (MIT) and the Herk playbook (ideas only). `references/critic.md` has the
+prompts for the independent critic. A preset's README overrides them; Jacopo's own notes always win.
+
 ## Presets (editing types)
 
 The skill is a **general engine** (cut, transcribe, formats, camera, transitions, subtitles, sound, render, checks) plus **presets**: one preset
@@ -1148,6 +1155,10 @@ editing the manifest and running again: **the master is never hand-edited.**
 - **`verify-render.py` on every render:** black runs (one-frame flashes included), size, BT.709 tags, at least 40 Mb/s at
   4K, duration = `data-duration` ± 1 frame, A/V under 0.12 s; it writes `VERIFY.md` and `render-sheet.png`. Exit 1 = do
   not deliver. **Clipped words:** transcribe the render's audio and add `--words <that> --kept "$W/transcript.json"`.
+- **`qa-motion.py` on every draft** (`--video render.mp4 --out qa/`): frozen stretches over 0.6 s, an end hold over 1.4 s, black
+  runs, loudness and true peak, plus a contact sheet. Exit 1 = fix first. Then the **critic loop** (`references/critic.md`): a
+  fresh agent reviews the real render before Jacopo sees it, and the taste rules in `references/taste.md` are the bar
+  (motion numbers, never-ship list, sound palette). State what was measured and what nobody could check (e.g. the sound by ear).
 - **Motion on contiguous frames:** `ffmpeg -i out.mp4 -vf "select='between(n,A,B)',scale=480:270,tile=6x7" -frames:v 1
   strip.png` across every transition window; look for a jump-then-crawl, a dead stop between moves, a one-frame pop.
 - **Sound** as in "Sound"; **loudness** with `ebur128` (about -14 LUFS, true peak under -1); **lip sync** on a long cut:
