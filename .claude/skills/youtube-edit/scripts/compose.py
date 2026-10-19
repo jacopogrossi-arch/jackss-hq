@@ -2148,7 +2148,8 @@ for b in S.get("beats", []):
 import subprocess
 CUES = json.load(open(os.path.join(SKILL, "assets", "sfx", "cues.json"), encoding="utf-8"))
 SND = S.get("sound") or {}
-LEVEL = {"low": 0.6, "medium": 1.0, "high": 1.4}.get(SND.get("level", "medium"), 1.0)
+_lv = SND.get("level", "medium")
+LEVEL = float(_lv) if isinstance(_lv, (int, float)) else {"low": 0.6, "medium": 1.0, "high": 1.4}.get(_lv, 1.0)   # a word or a number (0.7 = 30% quieter than medium)
 def stage_cue(name):
     c = CUES["sounds"].get(name)
     if not c:

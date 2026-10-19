@@ -70,7 +70,7 @@
   },
   "sound": {
     "sfx": true,
-    "level": "medium",
+    "level": 0.7,
     "music": "light"
   }
 }
