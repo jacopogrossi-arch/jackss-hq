@@ -32,6 +32,7 @@ not law. A preset (`presets/<name>/README.md`) may override any of them. Jacopo'
 - **Author a cut as a pair:** A's last 6 frames and B's first 6 frames together; something concrete is identical across the cut (position within ~2% of frame, scale, colour, blur, direction).
 - **No empty frame** between a dive/zoom and the next scene (put B's first object on screen before A's exit ends; overlap ~2 f).
 - **End on a peak** (peak velocity), not a settled frame, except the very last hold.
+- **A transition must hide a real change of scene:** it builds on the old scene, peaks on the FIRST frame of the new one (`"scene": "<beat id>"`), and clears on the new scene. Never face -> effect -> the same face, with the actual scene change coming later (Jacopo, 20/10/2026).
 - **Our `fx` transitions** (flash, whip, zoomblur, lightleak, burn) dress a cut the edit already makes; the rule above still holds: rare (Jacopo: ~1 per minute), only at scene changes, never mid-sentence.
 - **Frame 0 is a finished composition,** not a half-entered word.
 

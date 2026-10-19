@@ -810,7 +810,7 @@ To add a sound: drop the file in a subfolder of `assets/sfx`, peak-normalise to 
 the credit in `CREDITS.md` (licence CC0 or equivalent only).
 
 **Transitions (`formats/fx.py`):** beat `{"type":"transition","id":..,"kind":..,"at":t,"dur":?,"color":?}` with kind
-flash | whip | zoomblur | lightleak | burn (glitch, shake and dip were tried and REJECTED by Jacopo: not in the library). `at` is the instant of the cut (the effect peaks
+flash | whip | zoomblur | lightleak | burn (glitch, shake and dip were tried and REJECTED by Jacopo: not in the library). **A transition covers a CHANGE OF SCENE, with the peak ON the first frame of the new scene** (face -> effect -> the page/graphic; never face -> effect -> same face, with the real scene change coming later: Jacopo's note 20/10). Use `"scene": "<beat id>"` (+ optional `"offset"`) instead of a hand-typed `at`; compose warns when a transition is not within 0.4 s of a graphic starting or ending. `at` is the instant of the cut (the effect peaks
 there; it dresses a cut the edit already makes). `{"type":"overlay","kind":"vignette"|"grain","in","out","opacity"}` for looks that
 stay on a stretch. **Rare and only at scene changes** (from one scene or clip to the next), never mid-sentence; the preset sets kinds and density (`transitions.density`, `max_per_minute`).
 

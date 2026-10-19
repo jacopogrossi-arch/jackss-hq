@@ -23,7 +23,7 @@ appaiono e spariscono, ma si muovono nello spazio e portano a una freccia.
 - Lavorare su finestre piccole (`window-patch.py`) e mettere nel video solo ciò che è approvato.
 
 - Transizioni e suoni (Jacopo, 20/10/2026): flash, whip, zoom-blur, light leak, film burn (glitch, shake e dip SCARTATI da Jacopo il 20/10/2026), pochissimi: solo nel passaggio da una
-  scena all'altra o da una clip all'altra, mai in mezzo a una frase (max ~1 al minuto); ogni transizione porta il suo suono (`assets/sfx/cues.json`), le grafiche che entrano un
+  scena all'altra (la transizione copre il cambio: il picco cade sul primo fotogramma della scena nuova, `"scene": id`), mai viso → effetto → stesso viso (max ~1 al minuto); ogni transizione porta il suo suono (`assets/sfx/cues.json`), le grafiche che entrano un
   whoosh morbido; musica leggera sotto la voce. Vignetta e grana molto leggere come finitura.
 
 ## Riferimenti

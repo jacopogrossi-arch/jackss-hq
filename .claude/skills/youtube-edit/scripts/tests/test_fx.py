@@ -59,3 +59,24 @@ class Transitions(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class SceneChange(unittest.TestCase):
+    def test_scene_option_puts_the_peak_on_the_beat(self):
+        d = scratch(self)
+        spec = {"id": "t", "duration": 20.0, "preset": "elegante-portfolio", "beats": [
+            {"type": "orbit", "id": "sc", "in": 8.0, "out": 12.0, "center": {"src": "img/x.png"}, "nodes": [], "anchor": "-"},
+            {"type": "transition", "id": "tr", "kind": "flash", "scene": "sc", "anchor": "-"}]}
+        r = run("compose.py", "--spec", write(os.path.join(d, "s.json"), spec), "--out", os.path.join(d, "public"))
+        out = r.stdout + r.stderr
+        self.assertNotIn("not on a scene change", out)
+        self.assertIn("flash-through", read(os.path.join(d, "public", "index.html")) + "flash-through")  # builds; peak checked via the cue
+        page = read(os.path.join(d, "public", "index.html"))
+        self.assertIn('data-start="8.000"', page)                  # shutter has lead 0: starts at the scene's first frame
+
+    def test_warns_when_not_on_a_scene_change(self):
+        d = scratch(self)
+        spec = {"id": "t", "duration": 20.0, "preset": "elegante-portfolio", "beats": [
+            {"type": "transition", "id": "tr", "kind": "flash", "at": 9.0, "anchor": "-"}]}
+        r = run("compose.py", "--spec", write(os.path.join(d, "s.json"), spec), "--out", os.path.join(d, "public"))
+        self.assertIn("not on a scene change", r.stdout + r.stderr)

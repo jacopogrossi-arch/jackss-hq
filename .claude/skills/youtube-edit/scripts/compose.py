@@ -855,6 +855,20 @@ for ti, tag in enumerate(S.get("tags") or ([S["tag"]] if S.get("tag") else [])):
 if S.get("subtitles") in ("keywords", "off"):
     S["beats"] = [b_ for b_ in S.get("beats", []) if b_.get("type") != "subtitles"]
 
+# ---- transitions sit ON a scene change: {"type":"transition","scene":"<beat id>"} puts the peak on that beat's first frame (+ "offset" s);
+# a transition that is not within 0.4 s of the start or end of some other beat gets a warning (face -> leak -> face again is the bug) -------
+_by_id = {b_["id"]: b_ for b_ in S.get("beats", []) if "id" in b_}
+for b_ in S.get("beats", []):
+    if b_.get("type") == "transition" and b_.get("scene"):
+        tgt = _by_id.get(b_["scene"])
+        if tgt is None:
+            raise SystemExit("transition %s: no beat with id %r" % (b_.get("id"), b_["scene"]))
+        b_["at"] = round(float(tgt["in"]) + float(b_.get("offset", 0.0)), 3)
+_edges = [float(o[k_]) for o in S.get("beats", []) if o.get("type") not in ("transition", "overlay", "subtitles", "line", "chip") and "in" in o for k_ in ("in", "out")]
+for b_ in S.get("beats", []):
+    if b_.get("type") == "transition" and not any(abs(e - float(b_["at"])) <= 0.4 for e in _edges):
+        print("WARN transition %s at %.2f is not on a scene change (no graphic starts or ends within 0.4 s): use \"scene\": \"<beat id>\"" % (b_.get("id"), float(b_["at"])))
+
 # ---- beats ------------------------------------------------------------------------------------------
 for b in S.get("beats", []):
     if b["type"] == "transition":   # a transition has an instant (`at`), not a window: fx.window gives the host its in/out
