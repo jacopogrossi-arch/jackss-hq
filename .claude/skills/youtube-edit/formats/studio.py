@@ -22,12 +22,13 @@ DEFAULT_STYLE = {
     "accent": "#d4af5f", "accent2": "#3f9a78", "accent3": "#e9e2d2",
     "chip": "#f4efe6", "chip_text": "#15100b",
     "font": '"DM Sans", ui-sans-serif, system-ui, sans-serif',
+    "hand": '"Caveat", "Segoe Print", cursive',
 }
 
 
 _TEMPLATE = """
   :root { --k-bg:@bg@; --k-bg2:@bg2@; --k-text:@text@; --k-mute:@mute@; --k-accent:@accent@; --k-accent2:@accent2@; --k-accent3:@accent3@;
-          --k-chip:@chip@; --k-chip-text:@chip_text@; --k-font:@font@; }
+          --k-chip:@chip@; --k-chip-text:@chip_text@; --k-font:@font@; --k-hand:@hand@; }
   /* ---- studio formats: a calm dark wash, no grid ---- */
   .k-cut { position:absolute; inset:0; font-family:var(--k-font); color:var(--k-text); background:
       radial-gradient(1100px 700px at 50% 112%, color-mix(in srgb, var(--k-accent) 26%, transparent), transparent 70%),
@@ -84,6 +85,22 @@ _TEMPLATE = """
   .k-dv-frame img { width:100%; height:100%; display:block; object-fit:fill; }
   .k-cursor { position:absolute; left:0; top:0; width:70px; height:70px; margin:-6px 0 0 -6px; opacity:0; z-index:5; filter:drop-shadow(0 4px 8px rgba(0,0,0,.55)); }
   .k-ring { position:absolute; left:0; top:0; width:90px; height:90px; margin:-45px 0 0 -45px; border-radius:50%; border:5px solid var(--k-accent); opacity:0; z-index:4; }
+  /* trail: a page rests, then the camera pulls back and an arrow leads to the next thing */
+  .k-tr-stage { position:absolute; inset:0; perspective:2600px; perspective-origin:50% 42%; }
+  .k-tr-rig { position:absolute; inset:0; transform-style:preserve-3d; transform-origin:960px 540px; }
+  .k-tr-svg { position:absolute; inset:0; width:1920px; height:1080px; overflow:visible; }
+  .k-tr-svg .ln { fill:none; stroke-width:5; stroke-linecap:round; } .k-tr-svg .hd { stroke:none; }
+  .k-tr-node { position:absolute; translate:-50% -50%; opacity:0; }
+  .k-tr-page { border-radius:14px; overflow:hidden; box-shadow:0 50px 120px rgba(0,0,0,.65), 0 0 0 2px rgba(255,255,255,.14); background:#0b0907; }
+  .k-tr-page img { width:100%; height:100%; display:block; object-fit:fill; }
+  .k-tr-key { font-family:var(--k-hand); font-weight:700; font-size:92px; line-height:1; white-space:nowrap; color:var(--k-accent); text-shadow:0 6px 30px rgba(0,0,0,.7); }
+  .k-tr-key .sub { display:block; font-family:var(--k-font); font-weight:500; font-size:30px; letter-spacing:.04em; color:var(--k-mute); margin-top:8px; }
+  .k-tr-ul { position:absolute; left:0; right:0; bottom:-18px; width:100%; height:22px; overflow:visible; }
+  .k-tr-ul path { fill:none; stroke:var(--k-accent); stroke-width:5; stroke-linecap:round; }
+  .k-tr-logo { width:190px; height:190px; border-radius:50%; background:#fff; border:6px solid var(--k-accent); box-shadow:0 22px 60px rgba(0,0,0,.55); display:flex; align-items:center; justify-content:center; }
+  .k-tr-logo img { width:62%; height:62%; object-fit:contain; }
+  .k-tr-card { padding:26px 38px; border-radius:22px; background:rgba(14,11,8,.82); border:2px solid color-mix(in srgb, var(--k-accent) 60%, transparent); box-shadow:0 30px 80px rgba(0,0,0,.55);
+    font-weight:700; font-size:44px; line-height:1.1; color:var(--k-text); text-align:center; }
   /* agenda */
   .k-ag { position:absolute; display:flex; flex-direction:column; gap:16px; font-family:var(--k-font); }
   .k-ag-item { padding:14px 28px 12px; border-radius:12px; font-weight:700; font-size:50px; line-height:1; letter-spacing:.03em; text-transform:uppercase; white-space:nowrap;
@@ -100,6 +117,8 @@ def css(style=None):
     out = _TEMPLATE
     for k, v in st.items():
         out = out.replace("@%s@" % k, str(v))
+    for ff in (style or {}).get("font_faces", []):   # {"family": "Inter", "file": "Inter.ttf", "weight": "100 900"} (the file lives in the skill's assets/fonts)
+        out += '\n  @font-face { font-family:"%s"; src:url("fonts/%s"); font-weight:%s; font-display:block; }' % (ff["family"], ff["file"], ff.get("weight", "400"))
     ln = (style or {}).get("lines")
     if ln:
         size = int(ln.get("size", 64)); weight = int(ln.get("weight", 600)); sp = ln.get("spacing", "0.01em")
@@ -109,7 +128,9 @@ def css(style=None):
   .lower .w, .lower .sp { font-size:%dpx; font-weight:%d; %s%s }
   .lower .w { color:var(--k-text); } .lower .w.em { color:var(--k-accent); } .lower.amber .w.em { color:var(--k-accent2); }
   .chip .inner { font-family:var(--k-font); } .chip .inner .em { color:var(--k-accent); }
-""" % (sp, int(ln.get("bottom", 84)), size, weight, "text-transform:uppercase;" if ln.get("upper") else "", "font-style:italic;" if ln.get("italic") else "")
+  %s
+""" % (sp, int(ln.get("bottom", 84)), size, weight, "text-transform:uppercase;" if ln.get("upper") else "", "font-style:italic;" if ln.get("italic") else "",
+                  (".lower .w.em { font-family:var(--k-hand); font-weight:700; font-size:%dpx; letter-spacing:0; }" % int(size * 1.22)) if ln.get("hand_em") else "")
     return out
 
 
@@ -305,3 +326,75 @@ def agenda(b, bid, t_in, t_out, js):
         js("tl.fromTo('#%s-a%d', { opacity: 0, x: -34 }, { opacity: 1, x: 0, duration: 0.42, ease: 'power2.out' }, %.3f);" % (bid, i, at))
     js("tl.to('#%s-list', { opacity: 0, duration: 0.3, ease: 'power2.in' }, %.3f);" % (bid, t_out - 0.34))
     return '<div class="k-ag" id="%s-list" style="%s">%s</div>' % (bid, AG_POS.get(b.get("pos", "ml"), AG_POS["ml"]), rows)
+
+
+# ---- trail ----------------------------------------------------------------------------------------------------------------
+import math as _m
+
+
+def _edge(cx, cy, w, h, tx, ty, pad=16):
+    """the point where the line from the centre (cx,cy) toward (tx,ty) leaves a w x h box, pushed out by pad"""
+    dx, dy = tx - cx, ty - cy
+    if dx == 0 and dy == 0:
+        return cx, cy
+    k = min((w / 2.0 + pad) / abs(dx) if dx else 1e9, (h / 2.0 + pad) / abs(dy) if dy else 1e9)
+    return cx + dx * k, cy + dy * k
+
+
+def trail(b, bid, t_in, t_out, js, sizes):
+    """A page (or any picture) rests on screen, then the camera pulls back through 3D space, the window shrinks and an arrow leads to the next thing.
+    nodes: [{"id": "p", "kind": "page", "src": "img/page.png", "w": 1100, "x": 0, "y": 0, "z": 0, "rot": -6, "at": t_in, "anchor": ".."},
+            {"id": "k", "kind": "key", "text": "Palette colori", "sub": "optional", "x": 1250, "y": -60, "z": 120, "at": t, "anchor": ".."},
+            {"id": "c", "kind": "logo", "src": "img/logos/claude.svg", "x": .., "y": .., "at": t}, {"id": "m", "kind": "card", "text": "..", "w": 420, "h": 130, ...}]
+    links: [{"from": "p", "to": "k", "at": t}]  (the arrow draws from the edge of one node to the edge of the other)
+    cam: [[t_in, cx, cy, zoom, rotY, rotX], [t, cx, cy, zoom, rotY, rotX, dur], ...]  the first is the starting pose, every other one a move (default 1.3 s)
+    All positions are canvas px from the stage centre; zoom 1 shows 1920 x 1080 of canvas."""
+    geo, html = {}, ""
+    for i, nd in enumerate(b["nodes"]):
+        kind = nd.get("kind", "page"); x, y, z = float(nd.get("x", 0)), float(nd.get("y", 0)), float(nd.get("z", 0))
+        at = float(nd.get("at", t_in)); nid = "%s-n%d" % (bid, i)
+        if kind == "page":
+            iw, ih = sizes[nd["src"]]; w = float(nd.get("w", 1100)); h = w * ih / float(iw)
+            inner = '<div class="k-tr-page" style="width:%.0fpx;height:%.0fpx"><img src="%s" alt="" /></div>' % (w, h, nd["src"]); rot = float(nd.get("rot", -6))
+        elif kind == "key":
+            txt = nd["text"]; w = float(nd.get("w", len(txt) * 46 + 60)); h = float(nd.get("h", 150 if nd.get("sub") else 120)); rot = float(nd.get("rot", 0))
+            sub = ('<span class="sub">%s</span>' % esc(nd["sub"])) if nd.get("sub") else ""
+            ul = '<svg class="k-tr-ul" viewBox="0 0 300 22" preserveAspectRatio="none"><path id="%s-ul" d="M4 13 C 55 4, 120 19, 178 10 S 268 7, 296 12"/></svg>' % nid
+            inner = '<div class="k-tr-key" style="position:relative">%s%s%s</div>' % (esc(txt), ul, sub)
+        elif kind == "logo":
+            w = h = float(nd.get("w", 190)); rot = float(nd.get("rot", 0))
+            inner = '<div class="k-tr-logo"><img src="%s" alt="" /></div>' % nd["src"]
+        else:   # card
+            w = float(nd.get("w", 420)); h = float(nd.get("h", 130)); rot = float(nd.get("rot", 0))
+            inner = '<div class="k-tr-card" style="width:%.0fpx">%s</div>' % (w, esc(nd["text"]))
+        geo[nd["id"]] = (960 + x, 540 + y, w, h)
+        html += '<div class="k-tr-node" id="%s" style="left:%.0fpx;top:%.0fpx"%s>%s</div>' % (nid, 960 + x, 540 + y, _attrs(at, nd.get("anchor", "-")), inner)
+        if kind == "page":
+            js("tl.fromTo('#%s', { opacity: 0, y: 140, rotationY: %.1f }, { opacity: 1, y: 0, rotationY: %.1f, z: %.0f, duration: 0.85, ease: 'power3.out' }, %.3f);" % (nid, rot + 22, rot, z, at))
+        else:
+            js("tl.fromTo('#%s', { opacity: 0, y: 36, scale: 0.86, rotationY: %.1f }, { opacity: 1, y: 0, scale: 1, z: %.0f, duration: 0.6, ease: 'power2.out' }, %.3f);" % (nid, rot, z, at))
+        if kind == "key":
+            js("(function(){ var u = document.getElementById('%s-ul'); var L = u.getTotalLength(); u.style.strokeDasharray = L; u.style.strokeDashoffset = L; tl.to(u, { strokeDashoffset: 0, duration: 0.5, ease: 'power2.out' }, %.3f); })();" % (nid, at + 0.35))
+    svg = ""
+    cols = ["var(--k-accent)", "var(--k-accent2)", "var(--k-accent3)"]
+    for j, lk in enumerate(b.get("links", [])):
+        a, c = geo[lk["from"]], geo[lk["to"]]
+        x1, y1 = _edge(a[0], a[1], a[2], a[3], c[0], c[1]); x2, y2 = _edge(c[0], c[1], c[2], c[3], a[0], a[1], pad=22)
+        ang = _m.atan2(y2 - y1, x2 - x1); col = cols[j % len(cols)]
+        hx = [(x2, y2), (x2 - 34 * _m.cos(ang - 0.42), y2 - 34 * _m.sin(ang - 0.42)), (x2 - 34 * _m.cos(ang + 0.42), y2 - 34 * _m.sin(ang + 0.42))]
+        svg += ('<line class="ln" id="%s-l%d" x1="%.0f" y1="%.0f" x2="%.0f" y2="%.0f" stroke="%s"/><polygon class="hd" id="%s-h%d" points="%s" fill="%s" opacity="0"/>'
+                % (bid, j, x1, y1, x2, y2, col, bid, j, " ".join("%.0f,%.0f" % pt for pt in hx), col))
+        ta = float(lk.get("at", t_in + 3.0))
+        js("(function(){ var l = document.getElementById('%s-l%d'); var L = Math.hypot(l.x2.baseVal.value - l.x1.baseVal.value, l.y2.baseVal.value - l.y1.baseVal.value);"
+           " l.style.strokeDasharray = L; l.style.strokeDashoffset = L; tl.to(l, { strokeDashoffset: 0, duration: 0.6, ease: 'power2.out' }, %.3f); })();" % (bid, j, ta))
+        js("tl.to('#%s-h%d', { opacity: 1, duration: 0.18 }, %.3f);" % (bid, j, ta + 0.5))
+    cam = b["cam"]
+
+    def pose(c):
+        cx, cy, zm = float(c[1]), float(c[2]), float(c[3]); ry = float(c[4]) if len(c) > 4 else 0.0; rx = float(c[5]) if len(c) > 5 else 0.0
+        return "x: %.1f, y: %.1f, scale: %.4f, rotationY: %.1f, rotationX: %.1f" % (-zm * cx, -zm * cy, zm, ry, rx)
+    js("tl.set('#%s-rig', { %s }, %.3f);" % (bid, pose(cam[0]), t_in))
+    for c in cam[1:]:
+        dur = float(c[6]) if len(c) > 6 else 1.3
+        js("tl.to('#%s-rig', { %s, duration: %.2f, ease: 'power2.inOut' }, %.3f);" % (bid, pose(c), dur, float(c[0])))
+    return ('<div class="k-cut"><div class="k-tr-stage"><div class="k-tr-rig" id="%s-rig"><svg class="k-tr-svg" viewBox="0 0 1920 1080">%s</svg>%s</div></div></div>' % (bid, svg, html))

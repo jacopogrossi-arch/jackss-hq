@@ -603,6 +603,7 @@ Added 19/10/2026 from the inspiration study (Iman Gadzhi, Callaway, Pedro Andrad
 | `annotate` | one picture (a flat, a figurino) with callouts whose lines DRAW onto it, each on its word | `{"type":"annotate","src":"img/flat.png","max_h":860,"callouts":[{"label":"..","sub":"..","x":.33,"y":.36,"side":"l|r","dy":0,"to":[x2,y2],"at":t,"anchor":".."}]}` (x/y fractions of the picture; `to` = a measured segment) |
 | `orbit` | a card beside the speaker that is carried into a dark space where satellites (logos, people) fly in and connect to it | `{"type":"orbit","center":{"src":".."}|{"text":"..","sub":".."},"card":[w,h],"pre":{"go_at":t},"nodes":[{"src":"img/logo.svg","logo":true,"caption":"..","at":t,"anchor":".."}]}` |
 | `dive` | a screen or page: starts zoomed on one detail, then the camera pulls back to reveal the whole | `{"type":"dive","src":"img/page.png","focus":{"x","y","w","h"},"reveal_at":t,"reveal_dur":0.75,"click":{"x","y","at"},"tilt":true}` |
+| `trail` | **a page, a still or a tool that rests on screen, then the camera pulls back through 3D space, the window shrinks and an arrow leads to the next thing** (a key word in handwriting, a logo, another page). The default for showing a page of the creator's work | `{"type":"trail","nodes":[{"id":"p","kind":"page","src":"img/p07.png","w":1100,"x":0,"y":0,"rot":-5,"at":t,"anchor":".."},{"id":"k","kind":"key","text":"Palette colori","x":1250,"y":-60,"z":140,"at":t2,"anchor":"-"}],"links":[{"from":"p","to":"k","at":t2}],"cam":[[t,0,0,1.2,-3,0],[t_pull,cx,cy,zoom,-13,2,1.35]]}` (kinds: page, key, logo, card; the camera's first row is the starting pose, the others are moves; zoom 1 = 1920 x 1080 of canvas) |
 | `agenda` | a fixed list beside the speaker that gets one more line at every topic and stays | `{"type":"agenda","pos":"tl|ml|bl|tr","items":[["Tessuti",t,"anchor"],["Costruzione",t]]}` |
 
 Rules from the creator's notes on the first test (apply to every build with these formats):
@@ -615,6 +616,12 @@ Rules from the creator's notes on the first test (apply to every build with thes
 - **`agenda` only where it matches the spoken moment:** each line enters on the word that names its topic; never a list the
   speaker is not reading out. **`annotate` is the creator's approved look** (lines drawing onto a figurino, label per spoken
   instruction); only the font and colours change.
+- **A page never just appears and leaves, and a plain note line over it is not enough** (creator's note on the v3 test): the page rests a few
+  seconds, then the camera pulls back, the window shrinks and an arrow leads somewhere else (`trail`). The key word on the other end is
+  **handwritten** (`--k-hand`, Caveat), underlined as it lands. Compute the pull-back camera to frame every node (the lab builder's `fit()`).
+- **Fonts.** The creator wants an SF Pro look for almost everything: **Inter** (SIL OFL, `assets/fonts/Inter.ttf`, declared with
+  `style.font_faces`) is the free match; real SF Pro is licensed only for Apple-platform UI, so it is not used in videos. Key words in the lower
+  line take the handwriting face with `style.lines.hand_em`. The skill's old DM Sans subsets remain the default when a storyboard has no `style`.
 - Pages of a portfolio shown as stills: a 3D window (`browser3d`) at most 6 s, whole page, never cropped; no slat-reveal slides.
 
 ### Rejected (do not rebuild)
@@ -860,6 +867,15 @@ fades are fine without backdrop-filter (lower lines). Glass that has not arrived
   by exact name (`snap-beats.py` does).
 
 ## Sourcing assets
+
+**Find the assets yourself (standing instruction from the creator, 19/10/2026).** Never ask the creator to supply logos, fonts or
+images: fetch them from a trustworthy source, check the file (an SVG must contain no script or external link), say in the report which
+file came from where, and keep it in the skill (`assets/logos`, `assets/fonts`) with its licence. What worked: tool and brand **logos** as
+single-colour SVGs from the open-source Simple Icons set through jsDelivr (`https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/<name>.svg`;
+a name missing in the newest release is often still in an older one), tinted with the brand colour on a white disc (`orbit`/`trail` `logo`);
+**fonts** from the Google Fonts repository (`https://raw.githubusercontent.com/google/fonts/main/ofl/<family>/<File>.ttf` plus its `OFL.txt`);
+anything behind a script or a login (a press kit, a brand page) through the browser tools (built-in browser, or Claude in Chrome when the
+page needs the person's own session). Never download from an unknown mirror, never run a downloaded file.
 
 - **Tool logos:** the brand's press kit, or `npx hyperframes capture <url>` and the `<svg>` out of `extracted/page.html`
   (the real vector; watch for `fill="none"` paths and near-black wordmarks, make white variants for dark plates). The

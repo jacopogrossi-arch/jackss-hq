@@ -126,7 +126,7 @@ def stage(src, dst):
 # glyph subsets, so Chrome draws the text in the system face (San Francisco on a Mac) with these exact metrics, and that
 # is the approved look. The full variable DM Sans reads rounder and wider. Do not "fix" this to the full DM Sans file.
 FONTS = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "fonts")
-fonts = sorted(glob.glob(os.path.join(FONTS, "*.woff2")))
+fonts = sorted(glob.glob(os.path.join(FONTS, "*.woff2")) + glob.glob(os.path.join(FONTS, "*.ttf")) + glob.glob(os.path.join(FONTS, "*.otf")))
 if not fonts:
     print("WARN no .woff2 fonts in %s: the text falls back to the system sans" % os.path.abspath(FONTS))
 for f in fonts:
@@ -145,6 +145,9 @@ GSAP_SRC = "vendor/gsap.min.js" if os.path.exists(os.path.join(OUT, "vendor", "g
 if GSAP_SRC == GSAP_CDN:
     print("note: no local gsap.min.js, the page loads GSAP from %s (drop a copy in %s to render offline)"
           % (GSAP_CDN, os.path.join(SKILL, "assets", "vendor")))
+LOGOS = os.path.join(SKILL, "assets", "logos")
+for f in glob.glob(os.path.join(LOGOS, "*")):
+    stage(f, os.path.join(OUT, "img", "logos", os.path.basename(f)))
 if args.shared:
     for f in glob.glob(os.path.join(args.shared, "img/*")):
         if os.path.isfile(f): stage(f, os.path.join(OUT, "img", os.path.basename(f)))
@@ -2073,7 +2076,7 @@ for b in S.get("beats", []):
                 js("tl.to('#%s-inner', { opacity: 0, duration: 0.28, ease: 'power2.in' }, %.3f);" % (bid, t_out - 0.40))
                 js("glassOut('#%s-glass', %.3f, 0.33);" % (bid, t_out - 0.35))
         transition(b, t_in, t_out)
-    elif t in ("build", "annotate", "orbit", "dive", "agenda"):
+    elif t in ("build", "annotate", "orbit", "dive", "agenda", "trail"):
         # studio formats (formats/studio.py): the graphic is built piece by piece on the spoken word
         if t == "build":
             inner = studio.build(b, bid, t_in, t_out, js)
@@ -2081,6 +2084,12 @@ for b in S.get("beats", []):
             inner = studio.orbit(b, bid, t_in, t_out, js)
         elif t == "agenda":
             inner = studio.agenda(b, bid, t_in, t_out, js)
+        elif t == "trail":
+            sizes = {}
+            for nd in b["nodes"]:
+                if nd.get("src") and nd.get("kind", "page") == "page":
+                    sizes[nd["src"]] = nd.get("size") or image_size(os.path.join(OUT, nd["src"]))
+            inner = studio.trail(b, bid, t_in, t_out, js, sizes)
         else:
             src_path = os.path.join(OUT, b["src"])
             size = b.get("size") or image_size(src_path)
