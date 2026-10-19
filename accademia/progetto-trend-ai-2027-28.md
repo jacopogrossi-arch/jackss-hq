@@ -68,6 +68,26 @@ Totale: 3 × 4 = **12 tavole**, più un'eventuale copertina.
 >
 > ⚠️ **CAMBIO DI ROTTA (19/10/2026, consegna 20/10):** i **concept sono i 3 temi del trend book stessi** (onlife, body toll, conviviality), non mini concept da inventare. La tavola concept = sintesi del tema dal trend book (sezioni "Tema 1/2/3" più sotto). I mini concept qui sotto ("Dentro la città", "Senza dimostrare niente", "La tavola della domenica") sono **superati**: restano solo come ispirazione per moodboard e figurini.
 
+## Canva — tavole concept dei 3 temi reali (19/10/2026)
+
+Tre design separati (A3 orizzontale, testi scritti da Claude dal libro, cornice foto vuota per la moodboard/foto scelta da Jacopo):
+- **Royal Humour** → `DAHYd9-4rfs`, https://www.canva.com/d/OFwSSFlLja4i9PV
+- **Body Talk** → `DAHYd3zlSoo`, https://www.canva.com/d/XR-S_GKDr-DgG26
+- **Onlife** → `DAHYd319PI4`, https://www.canva.com/d/2JV2YQN_Nq3In3V
+
+## Elenco foto moodboard (6-8 per tavola, 19/10)
+
+Ricerche in inglese (Pinterest / Unsplash / Pexels); tenere foto con stessa luce; segnare fonte per la bibliografia.
+
+**ROYAL HUMOUR — emotiva:** `baroque palace corridor` · `rococo salon interior` · `cardboard props set design fashion editorial` · `papier mache cloche` · `giant frog fashion editorial` · `pop up theatre stage` · `powdered wig baroque portrait` · `surreal fashion editorial queen` · `sugar cake banquet table baroque`. Evitare costume party e Halloween.
+**ROYAL HUMOUR — tecnica:** `damask fabric close up` · `brocade jacquard gold` · `metallic thread knit` · `lurex yarn` · `tassel fringe trim` · `feather trim fabric` · `Delft blue ceramic pattern` · `perforated filigree lace fabric` · `rococo gold frame detail` · `candy pink wool coating` · `lacquered red leather`.
+
+**BODY TALK — emotiva:** `collarbone photography` · `nape neck photography` · `hands almost touching fine art` · `sheer curtain light` · `crumpled sheets shadow` · `chiaroscuro portrait` · `raking light skin` · `open collar shirt man film`. Frammenti, luce radente, niente corpi espliciti.
+**BODY TALK — tecnica:** `fine gauge knit close up` · `silk cashmere knit texture` · `lamb nappa leather soft` · `silk voile sheer fabric` · `lace sheer fabric nude` · `velvet close up deep red` · `glossy patent leather` · `soft round tricot fleshy knit`.
+
+**ONLIFE — emotiva:** `skateboard street golden hour film` · `empty street night lamp` · `friends flash photography night` · `supermarket trolley street` · `vinyl records worn` · `polaroids pinned on wall` · `roller skates street` · `bedroom window sunlight film`. Foto mosse, candid, 35mm.
+**ONLIFE — tecnica:** `wide wale corduroy texture` · `ripstop nylon fabric close up` · `raw denim texture` · `brushed fleece fabric` · `quilted puffer jacket detail` · `drawcord hem jacket` · `knee patch trousers` · `asphalt grey texture` · `plaster wall pink beige`.
+
 ## Mini concept definitivi (ripartenza 14/10/2026) — SUPERATI il 19/10
 
 Scelti da Jacopo dalla lista `idee-concept-trend-ai-2027-28.md` (onlife n.1, body toll n.2, conviviality n.1), riscritti sulla sua persona e su Inverso. **Sostituiscono le bozze "Fuori dallo schermo", "Sottovoce" e "Stessa stanza"** e le tavole Canva dell'08/10, che restano solo come bozza.
