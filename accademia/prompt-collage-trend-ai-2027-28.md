@@ -27,6 +27,22 @@ A wide horizontal artistic moodboard collage on a black textured paper backgroun
 Real printed photographs and real fabric swatches, real paper grain with torn edges, soft natural shadows under each pinned piece, fine 35mm film grain across the whole frame. Photographed not generated.
 ```
 
+## v2 — tech board con CAPI veri (19/10, dopo il primo risultato Royal Humour)
+
+Il collage Royal Humour è piaciuto (moodboard a sinistra OK). La tech board a destra deve avere **capi interi e dettagli di capi** (giacche, pantaloni, camicie, colletti, bottoni, tasche, scarpe), non solo campioni di tessuto, come nel riferimento del collega.
+
+**Flusso:** in GPT-2 allegare (1) il collage già generato come riferimento di stile e (2) 5-8 foto di capi scaricate da Pinterest per tema. Chiedere di rifare SOLO la metà destra con quei capi. Poi in Canva si assembla la pagina (sinistra del collage vecchio + destra nuova) oppure si usa l'immagine nuova intera.
+
+**Prompt (uguale per i 3 temi, cambia solo [ELENCO]):**
+```
+Use the first attached image as the exact style reference for the collage: black textured paper background, torn paper scraps, aged tape, small gold pushpins, handmade scrapbook look. Keep the left half exactly as it is. Redo only the right half as a technical board made of the garments in the other attached images: cut out each garment and pin it on the black paper as a torn-edge scrap with tape and pushpins, overlapping slightly at different angles, a few of them as close-up details. Show whole garments and garment details (silhouettes, cuts, collars, pockets, buttons, trims, hems, shoes), not only fabric swatches, with two or three small fabric swatches as accents at most. Keep each garment exactly as in its reference photo, do not redesign them. [ELENCO]. No text, no letters, no captions, no logos. Real printed photographs, real paper grain, soft natural shadows under each pinned piece, fine film grain. Photographed not generated.
+```
+
+**[ELENCO] per tema** (e cosa scaricare da Pinterest, 5-8 foto):
+- **ROYAL HUMOUR:** `hussar jacket gold frogging men` · `lace jabot shirt men` · `black wide trousers gold side stripe` · `brocade damask coat men` · `tailcoat tassel fringe` · `ruffle collar shirt` · `gold button military jacket detail` · `black cowboy boots gold stitching`.
+- **BODY TALK:** `fine gauge knit open neck men` · `wide leg leather trousers pleated men` · `camel overcoat red lining` · `sheer voile shirt men` · `lace detail sleeve` · `draped scarf neck knit` · `bordeaux velvet jacket men` · `black cowboy boots pointed`.
+- **ONLIFE:** `black nylon bomber orange lining` · `baggy raw denim knee patch` · `wide corduroy trousers men` · `quilted puffer jacket men` · `drawcord hem jacket detail` · `ribbed fitted t-shirt white men` · `brushed fleece hoodie grey` · `worn canvas sneakers`.
+
 ## Dopo la generazione
 1. Salvare i 3 collage (uno per tema) e darmeli.
 2. Inserirli in Canva come pagina 2 di ogni tema, dopo la pagina concept.
