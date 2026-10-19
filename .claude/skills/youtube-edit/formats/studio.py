@@ -46,6 +46,10 @@ _TEMPLATE = """
   .k-an-wrap { position:absolute; inset:0; }
   .k-an-img { position:absolute; opacity:0; }
   .k-an-img img { width:100%; height:100%; object-fit:contain; filter: drop-shadow(0 26px 40px rgba(0,0,0,.5)); }
+  .k-an-img.page { border-radius:14px; overflow:hidden; box-shadow:0 50px 120px rgba(0,0,0,.65), 0 0 0 2px rgba(255,255,255,.14); background:#0b0907; }
+  .k-an-img.page img { filter:none; object-fit:fill; }
+  .k-sp-stage { position:absolute; inset:0; perspective:2400px; perspective-origin:50% 42%; }
+  .k-sp-rig { position:absolute; inset:0; transform-style:preserve-3d; }
   .k-an-svg { position:absolute; inset:0; width:1920px; height:1080px; overflow:visible; }
   .k-an-svg line, .k-an-svg polyline { fill:none; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
   .k-an-dot { position:absolute; width:22px; height:22px; margin:-11px 0 0 -11px; border-radius:50%; opacity:0; border:4px solid #fff; box-sizing:border-box; }
@@ -141,10 +145,14 @@ def build(b, bid, t_in, t_out, js):
 # ---- annotate -------------------------------------------------------------------------------------------------------------
 def annotate(b, bid, t_in, t_out, js, size):
     """src: the picture; callouts: [{"label": "SLEEVE LENGTH", "sub": "shoulder to cuff", "x": .62, "y": .30, "to": [x2, y2] (optional: a measured segment),
-    "side": "r"|"l", "dy": 0, "at": t, "anchor": "..."}]   x/y are fractions of the picture."""
+    "side": "r"|"l", "dy": 0, "at": t, "anchor": "..."}]   x/y are fractions of the picture.
+    space: true -> the picture is a window in 3D space (frame, entry turn, slow camera drift), the lines and labels are part of that space, so the
+    camera keeps moving while the notes connect (a page never just appears and sits still). frame: true/false forces the window frame."""
     iw, ih = size
-    pw, ph = _fit(iw, ih, b.get("max_w", 1000), b.get("max_h", 840))
-    left = (1920 - pw) / 2.0 + b.get("shift_x", 0); top = (1080 - ph) / 2.0 + b.get("shift_y", 0)
+    space = bool(b.get("space"))
+    framed = b.get("frame", space)
+    pw, ph = _fit(iw, ih, b.get("max_w", 1120 if space else 1000), b.get("max_h", 760 if space else 840))
+    left = (1920 - pw) / 2.0 + b.get("shift_x", -120 if space else 0); top = (1080 - ph) / 2.0 + b.get("shift_y", 10 if space else 0)
     cols = ["var(--k-accent)", "var(--k-accent2)", "var(--k-accent3)", "#e07a5f"]
     svg, dots, labs = "", "", ""
     for i, c in enumerate(b["callouts"]):
@@ -175,11 +183,18 @@ def annotate(b, bid, t_in, t_out, js, size):
         js("tl.fromTo('#%s-t%d', { opacity: 0, x: %d }, { opacity: 1, x: 0, duration: 0.38, ease: 'power2.out' }, %.3f);" % (bid, i, 18 if side == "r" else -18, at + 0.32 + (0.25 if c.get("to") else 0.0)))
     base_at = float(b.get("img_at", t_in + 0.05))
     js("tl.fromTo('#%s-img', { opacity: 0, y: 30, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: 'power2.out' }, %.3f);" % (bid, base_at))
+    if space:   # entry: the window turns into place, then the camera keeps drifting for the rest of the scene
+        d0, d1 = float(b.get("turn", [24, 9])[0]), float(b.get("turn", [24, 9])[1])
+        js("tl.fromTo('#%s-rig', { rotationY: %.1f, rotationX: 5 }, { rotationY: %.1f, rotationX: 2, duration: 0.9, ease: 'power3.out' }, %.3f);" % (bid, d0, d1, t_in))
+        js("tl.to('#%s-rig', { rotationY: %.1f, rotationX: -2, duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (bid, float(b.get("drift_to", -9)), max(1.0, t_out - t_in - 0.9), t_in + 0.9))
     title = ('<div class="k-title" id="%s-title">%s</div>' % (bid, esc(b["title"]))) if b.get("title") else ""
     if title:
         js("tl.fromTo('#%s-title', { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, %.3f);" % (bid, t_in + 0.05))
-    return ('<div class="k-cut">%s<div class="k-an-img" id="%s-img" style="left:%.0fpx;top:%.0fpx;width:%.0fpx;height:%.0fpx"><img src="%s" alt="" /></div>'
-            '<svg class="k-an-svg" viewBox="0 0 1920 1080">%s</svg>%s%s</div>' % (title, bid, left, top, pw, ph, b["src"], svg, dots, labs))
+    body = ('<div class="k-an-img%s" id="%s-img" style="left:%.0fpx;top:%.0fpx;width:%.0fpx;height:%.0fpx"><img src="%s" alt="" /></div>'
+            '<svg class="k-an-svg" viewBox="0 0 1920 1080">%s</svg>%s%s' % (" page" if framed else "", bid, left, top, pw, ph, b["src"], svg, dots, labs))
+    if space:
+        body = '<div class="k-sp-stage"><div class="k-sp-rig" id="%s-rig">%s</div></div>' % (bid, body)
+    return '<div class="k-cut">%s%s</div>' % (title, body)
 
 
 # ---- orbit ----------------------------------------------------------------------------------------------------------------
