@@ -605,7 +605,7 @@ Added 19/10/2026 from the inspiration study (Iman Gadzhi, Callaway, Pedro Andrad
 | `dive` | a screen or page: starts zoomed on one detail, then the camera pulls back to reveal the whole | `{"type":"dive","src":"img/page.png","focus":{"x","y","w","h"},"reveal_at":t,"reveal_dur":0.75,"click":{"x","y","at"},"tilt":true}` |
 | `trail` | **a page, a still or a tool that rests on screen, then the camera pulls back through 3D space, the window shrinks and an arrow leads to the next thing** (a key word, a logo, another page). The default for showing a page of the creator's work | `{"type":"trail","nodes":[{"id":"p","kind":"page","src":"img/p07.png","w":1100,"x":0,"y":0,"rot":-5,"at":t,"anchor":".."},{"id":"k","kind":"key","text":"Palette colori","x":1250,"y":-60,"z":140,"at":t2,"anchor":"-"}],"links":[{"from":"p","to":"k","at":t2}],"cam":[[t,0,0,1.2,-3,0],[t_pull,cx,cy,zoom,-13,2,1.35]]}` (kinds: page, key, logo, card; the camera's first row is the starting pose, the others are moves; zoom 1 = 1920 x 1080 of canvas) |
 | `captions` | **word-by-word captions in the middle of the frame** (bold sans, one word at a time with a small pop); the key words in the **italic serif** (Instrument Serif) | `{"type":"captions","top":650,"words":[{"text":"tecnicismi","at":t,"end":t2,"em":true,"color":"#e14a4a"}]}` |
-| `halo` | a dashed ring around the speaker's head with short labels that land on their words, plus a line above the head (lists said while on camera) | `{"type":"halo","cx":1010,"cy":540,"r":360,"top":{"text":"ASSET","at":t},"pills":[{"text":"Immagini","at":t,"angle":198}]}` (measure the head on a frame first; a glow behind the head needs a subject matte) |
+| `halo` | **REJECTED for long-form (creator, 19/10: "more vertical TikTok / Instagram than long content"); do not use it in a YouTube video.** A dashed ring around the speaker's head with short labels and a line above the head | `{"type":"halo","cx":1010,"cy":540,"r":360,"top":{"text":"ASSET","at":t},"pills":[{"text":"Immagini","at":t,"angle":198}]}` (measure the head on a frame first; a glow behind the head needs a subject matte) |
 | `gallery` | a wall of the creator's pages under a small tag ("Portfolio 17 tavole"); one is picked, the rest dim, and it flies to the centre at the size the next `trail` starts from (`enter: false` on that page) | `{"type":"gallery","images":[..],"cols":6,"tag":"Portfolio","tag_em":"17 tavole","select":{"index":0,"at":t,"w":1100}}` |
 | `agenda` | a fixed list beside the speaker that gets one more line at every topic and stays | `{"type":"agenda","pos":"tl|ml|bl|tr","items":[["Tessuti",t,"anchor"],["Costruzione",t]]}` |
 
@@ -627,6 +627,9 @@ Rules from the creator's notes on the first test (apply to every build with thes
   `space: true, frame: false, dolly: [1.12, 0.96], label_z: 110` keeps a garment centred, and **`follow: {"zoom": 1.24, "pan": 0.54}` swings the camera
   fast toward each arrow and its label (about 0.4 s), holds about 1 s while the text is read, and returns to the figure**; the swing stays modest so the
   head is not cut off. Clarity first.
+- **An explainer scene ends right after its last element has been read** (about 0.5 to 1 s), then back to the main camera; never hold it to the end of the
+  sentence (creator on the figurino test: "the end must be cut, it is too long"). **`gallery` into `trail` is approved ("practically perfect")**: the picked page
+  flies to the centre at the size the `trail` starts from (`enter: false`, `rot: 0`, first camera zoom 1.0), so there is no cut.
 - **Fonts: the base sans only** (Inter, the free SF Pro look; real SF Pro is licensed for Apple-platform UI only). **No handwriting font**
   (the creator rejected it; do not use Caveat, `style.hand`/`hand_em` stay off). On a scene with one plain background, give the key
   words **glow and gradients** instead (`text-shadow` glow in the accent colour, gradient text): no white bands or chips behind labels
@@ -640,6 +643,7 @@ Rules from the creator's notes on the first test (apply to every build with thes
 
 - Freeze-frame and paper-and-tape dressing; an outro or end card; a "Next video" pill at the end (the YouTube end screen
   does that job); payment or system notification banners.
+- The `halo` ring with pills around the head and short-form-style word-by-word captions over the face: vertical-feed language, not long-form (the creator discarded the ring; captions are on hold until he confirms).
 - Typing with a trailing caret for lower lines; word-by-word highlighter pacing on an article (one stroke, then zoom).
 - The flash cut on a return (two white blinks read as a mistake): for energy use the fast punch, or leave the cut naked.
 - Dark blue `#0005EE` for highlighted words (it disappears on dark footage); magenta outside the chip and payoffs.

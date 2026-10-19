@@ -259,8 +259,8 @@ def annotate(b, bid, t_in, t_out, js, size):
             for (at_, tx_, ty_, lx_, ly_, sd_) in pans:
                 px = (1 - wgt) * tx_ + wgt * (lx_ + (190 if sd_ == "r" else -190)); py = (1 - wgt) * ty_ + wgt * ly_
                 t0 = at_ - 0.12
-                if t0 > prev + 0.05:
-                    js("tl.to('#%s-rig', { x: 0, y: 0, scale: %.3f, duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (bid, base(t0), t0 - prev, prev))
+                if t0 > prev + 0.05:   # a long wait between two arrows: a slow push-in so the scene never sits still
+                    js("tl.to('#%s-rig', { x: 0, y: 0, scale: %.3f, duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (bid, base(t0) * (1.16 if t0 - prev > 2.2 else 1.0), t0 - prev, prev))
                 js("tl.to('#%s-rig', { x: %.1f, y: %.1f, scale: %.3f, duration: %.2f, ease: 'power3.out' }, %.3f);" % (bid, -zoom * (px - 960), -zoom * (py - 540), zoom, d_in, t0))
                 t1 = t0 + d_in + hold
                 js("tl.to('#%s-rig', { x: 0, y: 0, scale: %.3f, duration: %.2f, ease: 'power2.inOut' }, %.3f);" % (bid, base(t1 + d_out), d_out, t1))
