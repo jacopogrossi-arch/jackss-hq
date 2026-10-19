@@ -37,6 +37,7 @@ def css(style=None):
   .fx-fill { position:absolute; inset:0; opacity:0; }
   .fx-streak { position:absolute; top:-10%; height:120%; width:520px; left:-700px; opacity:0; transform:skewX(-16deg);
     background:linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.55) 45%, rgba(255,255,255,.9) 50%, rgba(255,255,255,.55) 55%, rgba(255,255,255,0)); }
+  .fx-burn { position:absolute; top:-10%; height:120%; width:1500px; left:0; opacity:0; filter:blur(26px); }
   .fx-blob { position:absolute; border-radius:50%; filter:blur(90px); opacity:0; }
   .fx-band { position:absolute; left:-6%; width:112%; opacity:0; }
   .fx-vig { position:absolute; inset:0; background:radial-gradient(ellipse at 50% 46%, rgba(0,0,0,0) 52%, rgba(0,0,0,.55) 100%); opacity:0; }
@@ -79,22 +80,34 @@ def transition(b, bid, js, style=None):
         js("tl.to('#%s-f', { opacity: 0, duration: %.3f, ease: 'power2.in' }, %.3f);" % (bid, h, at + 0.03))
         return '<div class="fx-fill" id="%s-f" style="background:%s"></div>' % (bid, _color(b, style, "white"))
     if k == "lightleak":
-        pk = at; h = d / 2
-        blobs = [("#ff7a1a", 1100, 900, -200, 250, 0.9), ("#ffd48a", 800, 700, 600, -150, 0.8), ("#ff2a55", 900, 800, 1300, 450, 0.65)]
+        # light that leaks in from ONE edge (like film), in the palette's warm tones, peaking on the cut; the footage itself lifts a little.
+        pk = at; h = d / 2; side = b.get("side", "left" if rnd.random() < 0.5 else "right"); st = style or {}
+        warm = [st.get("accent", "#d4af5f"), "#f0a548", st.get("accent3", "#fff1d6")]
+        x0 = -420 if side == "left" else 1920 - 900
+        blobs = [(warm[1], 900, 1500, x0, -200, 0.80, -18), (warm[0], 700, 1300, x0 + (260 if side == "left" else -160), 120, 0.85, 12), (warm[2], 380, 900, x0 + (180 if side == "left" else 40), 260, 0.60, -8)]
         html = ""
-        for i, (c, w, hh, x, y, op) in enumerate(blobs):
-            html += '<div class="fx-blob" id="%s-l%d" style="background:%s;width:%dpx;height:%dpx;left:%dpx;top:%dpx"></div>' % (bid, i, c, w, hh, x, y)
-            js("tl.fromTo('#%s-l%d', { opacity: 0, x: -140 }, { opacity: %.2f, x: 40, duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (bid, i, op, h, pk - h + 0.06 * i))
-            js("tl.to('#%s-l%d', { opacity: 0, x: 220, duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (bid, i, h, pk + 0.06 * i))
+        sgn = 1 if side == "left" else -1
+        for i, (c, w, hh, x, y, op, rot) in enumerate(blobs):
+            html += '<div class="fx-blob" id="%s-l%d" style="background:%s;width:%dpx;height:%dpx;left:%dpx;top:%dpx;transform:rotate(%ddeg);filter:blur(80px)"></div>' % (bid, i, c, w, hh, x, y, rot)
+            t_up = pk - h * 0.9 + 0.05 * i
+            js("tl.fromTo('#%s-l%d', { opacity: 0, x: %d }, { opacity: %.2f, x: %d, duration: %.3f, ease: 'power2.out' }, %.3f);" % (bid, i, -sgn * 90, op, sgn * 40, h * 0.9, t_up))
+            for q in range(3):   # a little flicker while it burns in
+                js("tl.set('#%s-l%d', { opacity: %.2f }, %.3f);" % (bid, i, op * (0.82 + 0.18 * rnd.random()), t_up + h * 0.9 + 0.05 * q))
+            js("tl.to('#%s-l%d', { opacity: 0, x: %d, duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (bid, i, sgn * 170, h * 1.2, pk + 0.15 + 0.05 * i))
+        js("tl.fromTo('%s', { filter: 'brightness(1) saturate(1)' }, { filter: 'brightness(1.22) saturate(1.12)', duration: %.3f, ease: 'power2.out', immediateRender: false }, %.3f);" % (W, h * 0.9, pk - h * 0.9))
+        js("tl.to('%s', { filter: 'brightness(1) saturate(1)', duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (W, h * 1.2, pk + 0.1))
         return html
     if k == "burn":
-        pk = at; h = d / 2
-        grad = "radial-gradient(circle at %d%% %d%%, #fff 0%%, #ffe3a8 16%%, #ff8a1f 38%%, #c01d00 60%%, rgba(120,0,0,0) 80%%)" % (b.get("x", 70), b.get("y", 60))
-        js("tl.fromTo('#%s-f', { opacity: 0, scale: 0.35 }, { opacity: 1, scale: 2.6, duration: %.3f, ease: 'power2.in' }, %.3f);" % (bid, h, pk - h))
-        for s in range(5):   # film flicker while it burns
-            js("tl.set('#%s-f', { opacity: %.2f }, %.3f);" % (bid, 0.7 + 0.3 * rnd.random(), pk - h + h * (s + 1) / 6))
-        js("tl.fromTo('#%s-f', { opacity: 1 }, { opacity: 0, scale: 2.9, duration: %.3f, ease: 'power2.out', immediateRender: false }, %.3f);" % (bid, h, pk))
-        return '<div class="fx-fill" id="%s-f" style="background:%s;transform-origin:%d%% %d%%"></div>' % (bid, grad, b.get("x", 70), b.get("y", 60))
+        # film burn: the footage over-exposes (warm, then washed) as a hot band sweeps across and a flicker runs; peak on the cut
+        pk = at; h = d / 2; sg = 1 if b.get("dir", "right") == "right" else -1
+        js("tl.fromTo('%s', { filter: 'brightness(1) sepia(0) saturate(1)' }, { filter: 'brightness(2.2) sepia(0.55) saturate(1.5)', duration: %.3f, ease: 'power2.in', immediateRender: false }, %.3f);" % (W, h, pk - h))
+        for q in range(4):   # flicker of the overexposure
+            js("tl.set('%s', { filter: 'brightness(%.2f) sepia(0.55) saturate(1.5)' }, %.3f);" % (W, 1.7 + 0.6 * rnd.random(), pk - h * 0.8 + h * 0.2 * q))
+        js("tl.to('%s', { filter: 'brightness(1) sepia(0) saturate(1)', duration: %.3f, ease: 'power2.out' }, %.3f);" % (W, h * 1.1, pk))
+        x_from, x_to = (-1900, 2000) if sg > 0 else (2000, -1900)
+        js("tl.fromTo('#%s-b', { x: %d, opacity: 1 }, { x: %d, opacity: 1, duration: %.3f, ease: 'power2.inOut' }, %.3f);" % (bid, x_from, x_to, d, pk - h))
+        js("tl.set('#%s-b', { opacity: 0 }, %.3f);" % (bid, pk + h + 0.02))
+        return '<div class="fx-burn" id="%s-b" style="background:linear-gradient(%ddeg, rgba(150,30,0,0) 0%%, rgba(255,110,25,.85) 34%%, rgba(255,226,170,1) 58%%, #fff 74%%, rgba(255,255,255,0) 100%%)"></div>' % (bid, 90 if sg > 0 else 270)
     raise SystemExit("unknown transition kind %r (flash, whip, zoomblur, lightleak, burn)" % k)
 
 
