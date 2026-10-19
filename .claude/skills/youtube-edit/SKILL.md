@@ -785,8 +785,27 @@ format, the step labels, in one short message): a diagram is 30 to 40 s of scree
 
 ## Sound
 
-**Silence is the default. A sound has to earn its place:** what on screen makes this noise? If nothing would physically
-make a sound, there is no sound. One or two per hook (eight in a 38 s hook was "way too busy").
+**Jacopo's rule (20/10/2026): sound goes on the graphics and on the transitions.** A transition always carries its sound
+(a flash is a shutter, a whip is a whoosh, a glitch is a glitch, a light leak is a long cinematic whoosh); a graphic that
+enters (trail, gallery, orbit, build, dive) gets a soft whoosh, an annotate arrow a tick. Not every moment: the level is
+set by the preset (`sound.level` low 0.6 / medium 1.0 / high 1.4 on top of each cue's own volume) and by spacing: never two
+cues closer than ~1.2 s, never a cue on plain speech. The old "typing / click / pop on a real cause" table below still
+holds for UI-like beats; the old ban on whooshes is **lifted for transitions and graphics**, still true for copy (a text
+line appears on motion, not on a sweep).
+
+**Cue system (use this, not hand-written `<audio>`):** `assets/sfx/cues.json` names every sound (whoosh, shutter, hit,
+glitch, riser, tick, ping, paper...) with file, max duration, volume and **lead** (seconds before the cut at which the
+file starts, so its peak lands ON the cut). `compose.py` reads it: a transition beat plays its default sound; a graphic
+plays its format's sound when the preset has `sound.sfx: true`. A beat can force one (`"sfx": "boom"`, or a list, or
+`{"name","at","vol"}`) or silence itself (`"sfx": null`). Files are trimmed, faded out and staged in `public/sfx` by
+compose (needs ffmpeg). 49 files, all CC0 or Pixabay licence, credits in `assets/sfx/CREDITS.md` (no attribution needed).
+To add a sound: drop the file in a subfolder of `assets/sfx`, peak-normalise to -3 dBFS, add a line in `cues.json`, and
+the credit in `CREDITS.md` (licence CC0 or equivalent only).
+
+**Transitions (`formats/fx.py`):** beat `{"type":"transition","id":..,"kind":..,"at":t,"dur":?,"color":?}` with kind
+flash | dip | whip | zoomblur | glitch | lightleak | burn | shake. `at` is the instant of the cut (the effect peaks
+there; it dresses a cut the edit already makes). `{"type":"overlay","kind":"vignette"|"grain","in","out","opacity"}` for looks that
+stay on a stretch. The preset says which kinds and how dense (`transitions.density`).
 
 | Sound | Allowed on | Volume | Never on |
 |---|---|---|---|
@@ -795,7 +814,7 @@ make a sound, there is no sound. One or two per hook (eight in a 38 s hook was "
 | Click | every on-screen cursor click | 0.28 | anything without a cursor |
 | Ping / notification | a phone notification, literally | to taste | a number landing, a reveal, an accent |
 | Cha-ching | a money count landing | 0.07 | anything louder than a whisper |
-| Whoosh / swish | nothing confirmed | | **copy of any kind**: text arrives on motion, never on a sweep (the most common mistake) |
+| Whoosh / swish | transitions and entering graphics (cue system) | per `cues.json` | **copy of any kind**: text arrives on motion, never on a sweep |
 
 **Wiring:** `<audio id="sfx-typing" src="sfx/typing.mp3" data-start="8.22" data-duration="1.50" data-track-index="10"
 data-volume="0.22"></audio>` as a direct child of the composition root, never inside a wrapper. Every `<audio>` needs an

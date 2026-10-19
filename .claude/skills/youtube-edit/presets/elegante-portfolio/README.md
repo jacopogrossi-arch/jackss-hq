@@ -22,6 +22,10 @@ appaiono e spariscono, ma si muovono nello spazio e portano a una freccia.
 - Sottotitoli: a frasi e scritte chiave, accendibili per video; mai parola per parola su video lunghi.
 - Lavorare su finestre piccole (`window-patch.py`) e mettere nel video solo ciò che è approvato.
 
+- Transizioni e suoni (Jacopo, 20/10/2026): flash, whip, glitch, zoom-blur, dip, light leak, film burn con parsimonia, un effetto ogni tanto
+  su un cambio di scena o di clip (non ogni 5 s); ogni transizione porta il suo suono (`assets/sfx/cues.json`), le grafiche che entrano un
+  whoosh morbido; musica leggera sotto la voce. Vignetta e grana molto leggere come finitura.
+
 ## Riferimenti
 Video analizzati: Iman Gadzhi, Callaway, Pedro Andrade, Marshall Crew, Reel "edited by Claude" (note in `videos/test-dji/inspo-analisi/ANALISI.md`).
 Font di esempio di Jacopo: corsivo serif ad alto contrasto (logotipo CleanMyMac) → Playfair Display Italic.

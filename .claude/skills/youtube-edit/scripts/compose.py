@@ -101,6 +101,7 @@ Positions: tl = left:70 top:96 (desk framing, clears the mic), tr = right:70 top
 """
 import argparse, json, os, shutil, glob, math, struct, sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "formats"))
+import fx   # transitions and overlays (flash, whip, glitch, light leak, burn, ...)
 import studio   # build / annotate / orbit / dive / agenda (the explainer formats, 19/10/2026)
 from html import escape as _esc
 
@@ -694,6 +695,7 @@ CSS = """
   .cl-list .item .t { font-weight:700; font-size:48px; line-height:1.05; color:#fff; white-space:nowrap; text-shadow: 0 2px 8px rgba(0,0,0,.85); }
 """.replace("ORIGIN", origin)
 CSS += studio.css(S.get("style"))
+CSS += fx.css(S.get("style"))
 def attr_anchor(anchor):
     """'-' marks a beat that is deliberately not tied to a spoken word (beat-check skips it)."""
     if anchor == "-":
@@ -850,6 +852,8 @@ for ti, tag in enumerate(S.get("tags") or ([S["tag"]] if S.get("tag") else [])):
 
 # ---- beats ------------------------------------------------------------------------------------------
 for b in S.get("beats", []):
+    if b["type"] == "transition":   # a transition has an instant (`at`), not a window: fx.window gives the host its in/out
+        b["in"], b["out"] = fx.window(b)
     t, bid, t_in, t_out = b["type"], b["id"], float(b["in"]), float(b["out"])
     anchor = b.get("anchor", "")
     if t == "line":
@@ -2130,9 +2134,56 @@ for b in S.get("beats", []):
             inner = (studio.annotate if t == "annotate" else studio.dive)(b, bid, t_in, t_out, js, size)
         html_parts.append(host(bid, t_in, t_out, track, inner, anchor))
         transition(b, t_in, t_out)
+    elif t in ("transition", "overlay"):
+        # fx (formats/fx.py): flash / dip / whip / zoomblur / glitch / lightleak / burn / shake, and vignette / grain overlays
+        f_in, f_out = fx.window(b)
+        inner = (fx.transition if t == "transition" else fx.overlay)(b, bid, js, S.get("style"))
+        h = host(bid, f_in, f_out, track, inner, anchor).replace('class="card-host clip"', 'class="card-host clip fx-host%s"' % (" screen" if fx.blend(b) else ""), 1)
+        html_parts.append(h)
     else:
         raise SystemExit("unknown beat type %r" % t)
     track += 1
+
+# ---- sound cues (assets/sfx/cues.json): explicit "sfx" on a beat always plays; automatic cues follow the preset (sound.sfx) ----------
+import subprocess
+CUES = json.load(open(os.path.join(SKILL, "assets", "sfx", "cues.json"), encoding="utf-8"))
+SND = S.get("sound") or {}
+LEVEL = {"low": 0.6, "medium": 1.0, "high": 1.4}.get(SND.get("level", "medium"), 1.0)
+def stage_cue(name):
+    c = CUES["sounds"].get(name)
+    if not c:
+        raise SystemExit("unknown sfx %r (see assets/sfx/cues.json)" % name)
+    dst = os.path.join(OUT, "sfx", name + ".mp3")
+    if not os.path.exists(dst):
+        os.makedirs(os.path.dirname(dst), exist_ok=True)
+        src = os.path.join(SKILL, "assets", "sfx", c["file"])
+        fade = min(0.15, c["dur"] / 3)
+        r = subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", src, "-t", str(c["dur"]), "-af", "afade=t=out:st=%.3f:d=%.3f" % (c["dur"] - fade, fade), "-codec:a", "libmp3lame", "-b:a", "192k", dst], capture_output=True, text=True)
+        if r.returncode:
+            raise SystemExit("ffmpeg failed staging sfx %s: %s" % (name, r.stderr[-300:]))
+    return c
+def add_cue(name, at, vol=None, bid=""):
+    global audio_track
+    c = stage_cue(name)
+    start = max(0.0, at - c["lead"])
+    v = (c["vol"] if vol is None else float(vol)) * LEVEL
+    audio_parts.append('    <audio id="sfx-%s-%d" src="sfx/%s.mp3" data-start="%.3f" data-duration="%.3f" data-track-index="%d" data-volume="%.3f"></audio>\n' % (bid or name, audio_track, name, start, c["dur"], audio_track, min(v, 1.0)))
+    audio_track += 1
+for b in S.get("beats", []):
+    spec = b.get("sfx", "auto")
+    t_ref = float(b["at"]) if b["type"] == "transition" else float(b["in"])
+    if spec == "auto":
+        if not SND.get("sfx"):
+            continue
+        name = (CUES["transitions"].get(b.get("kind")) if b["type"] == "transition" else CUES["formats"].get(b["type"]) if b["type"] in CUES["formats"] else None)
+        if name:
+            add_cue(name, t_ref, None, b["id"])
+    elif spec:
+        for sp in (spec if isinstance(spec, list) else [spec]):
+            if isinstance(sp, str):
+                add_cue(sp, t_ref, None, b["id"])
+            else:
+                add_cue(sp["name"], float(sp.get("at", t_ref)), sp.get("vol"), b["id"])
 
 # ---- camera -----------------------------------------------------------------------------------------
 cam = ["tl.set('#video-zoom', { scale: 1.0 }, 0);", "tl.set('#video-wrap', { scale: 1.0, x: 0 }, 0);"]
@@ -2267,7 +2318,7 @@ beats += [(float(b["in"]), b["id"]) for b in S.get("beats", [])]
 print("wrote %s/index.html: %d beats, %d camera ops, %d sounds" % (OUT, len(beats), len(S.get("camera", [])), len(audio_parts)))
 print("snapshot moments:", " ".join("%.2f" % (t + 0.9) for t, _ in beats))
 # format usage, for the "two formats compete: use the one used least so far in this video" rule (SKILL.md)
-seq = sorted((float(b["in"]), b["type"] + ("m" if b.get("morph") else "")) for b in S.get("beats", []))
+seq = sorted((float(b["in"]), b["type"] + ("m" if b.get("morph") else "")) for b in S.get("beats", []) if b["type"] not in ("transition", "overlay", "subtitles"))   # fx and subtitles are not "devices"
 counts = {}
 for _, ty in seq:
     counts[ty] = counts.get(ty, 0) + 1
