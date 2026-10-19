@@ -6,14 +6,14 @@ breathes back up in pauses). The voice is not touched. Video is copied (no re-en
 
 Usage:
   python3 add-music.py --video master.mp4 --out master-music.mp4 [--track lofi-02 | path/to/bed.mp3]
-                       [--db -9] [--fade 2.0] [--start 0]
+                       [--db -14] [--fade 2.0] [--start 0]
 --track: a name in assets/music (lofi-01..04, no extension) or any audio file. --db: bed level in dB relative to its own -20 LUFS
-normalisation (-9 = about 16 dB under the voice at -14 LUFS, before the ducking takes another ~6 dB). --start: where the bed begins.
+normalisation (-14 = about 21 dB under the voice at -14 LUFS, before the ducking takes another ~6 dB). --start: where the bed begins.
 """
 import argparse, os, subprocess, json, sys
 ap = argparse.ArgumentParser()
 ap.add_argument("--video", required=True); ap.add_argument("--out", required=True); ap.add_argument("--track", default="lofi-02")
-ap.add_argument("--db", type=float, default=-9.0)
+ap.add_argument("--db", type=float, default=-14.0)
 ap.add_argument("--fade", type=float, default=2.0); ap.add_argument("--start", type=float, default=0.0)
 a = ap.parse_args()
 SK = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))

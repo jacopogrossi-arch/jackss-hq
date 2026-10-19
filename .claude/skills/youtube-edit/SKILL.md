@@ -839,7 +839,7 @@ differ enough to hide a quiet effect.
 
 **Music (Jacopo: light lo-fi / chill hip-hop type beat, 20/10/2026):** `assets/music/lofi-01..04.mp3` (CC0, -20 LUFS, credits in
 `assets/music/CREDITS.md`). `python3 scripts/add-music.py --video master.mp4 --out master-music.mp4 --track lofi-02` lays the bed
-under a finished video, looped, faded in/out, **ducked by a sidechain keyed on the voice** (`--db -9` default = about 16 dB under
+under a finished video, looped, faded in/out, **ducked by a sidechain keyed on the voice** (`--db -14` default = about 21 dB under
 the voice; the bed rises in pauses). Video is copied, the voice is untouched; keep the no-music master. Do it after the render, so a
 music change never costs a render. To add tracks: CC0 only (Openverse API `audio/?q=...&license=cc0`), loudnorm to -20 LUFS, credit in CREDITS.md.
 Older note: a track with some tension under the hook (~18 s), then a calm lo-fi bed under the rest, ducked about 16 dB
