@@ -93,10 +93,23 @@ _TEMPLATE = """
 
 
 def css(style=None):
-    st = dict(DEFAULT_STYLE); st.update(style or {})
+    """The studio formats' CSS with the style tokens filled in. If the style carries a "lines" dict, the older lower-line format
+    (and the chip) follow the same palette and font; without it they keep the original look (nothing changes for old storyboards).
+    "lines": {"size": 64, "weight": 600, "spacing": "0.02em", "upper": false, "bottom": 84, "italic": false}"""
+    st = dict(DEFAULT_STYLE); st.update({k: v for k, v in (style or {}).items() if k != "lines"})
     out = _TEMPLATE
     for k, v in st.items():
-        out = out.replace("@%s@" % k, v)
+        out = out.replace("@%s@" % k, str(v))
+    ln = (style or {}).get("lines")
+    if ln:
+        size = int(ln.get("size", 64)); weight = int(ln.get("weight", 600)); sp = ln.get("spacing", "0.01em")
+        out += """
+  /* the lower line and the chip follow the studio style (opt-in: storyboard "style": {"lines": {...}}) */
+  .lower { font-family:var(--k-font); letter-spacing:%s; bottom:%dpx; }
+  .lower .w, .lower .sp { font-size:%dpx; font-weight:%d; %s%s }
+  .lower .w { color:var(--k-text); } .lower .w.em { color:var(--k-accent); } .lower.amber .w.em { color:var(--k-accent2); }
+  .chip .inner { font-family:var(--k-font); } .chip .inner .em { color:var(--k-accent); }
+""" % (sp, int(ln.get("bottom", 84)), size, weight, "text-transform:uppercase;" if ln.get("upper") else "", "font-style:italic;" if ln.get("italic") else "")
     return out
 
 
