@@ -604,6 +604,9 @@ Added 19/10/2026 from the inspiration study (Iman Gadzhi, Callaway, Pedro Andrad
 | `orbit` | a card beside the speaker that is carried into a dark space where satellites (logos, people) fly in and connect to it | `{"type":"orbit","center":{"src":".."}|{"text":"..","sub":".."},"card":[w,h],"pre":{"go_at":t},"nodes":[{"src":"img/logo.svg","logo":true,"caption":"..","at":t,"anchor":".."}]}` |
 | `dive` | a screen or page: starts zoomed on one detail, then the camera pulls back to reveal the whole | `{"type":"dive","src":"img/page.png","focus":{"x","y","w","h"},"reveal_at":t,"reveal_dur":0.75,"click":{"x","y","at"},"tilt":true}` |
 | `trail` | **a page, a still or a tool that rests on screen, then the camera pulls back through 3D space, the window shrinks and an arrow leads to the next thing** (a key word, a logo, another page). The default for showing a page of the creator's work | `{"type":"trail","nodes":[{"id":"p","kind":"page","src":"img/p07.png","w":1100,"x":0,"y":0,"rot":-5,"at":t,"anchor":".."},{"id":"k","kind":"key","text":"Palette colori","x":1250,"y":-60,"z":140,"at":t2,"anchor":"-"}],"links":[{"from":"p","to":"k","at":t2}],"cam":[[t,0,0,1.2,-3,0],[t_pull,cx,cy,zoom,-13,2,1.35]]}` (kinds: page, key, logo, card; the camera's first row is the starting pose, the others are moves; zoom 1 = 1920 x 1080 of canvas) |
+| `captions` | **word-by-word captions in the middle of the frame** (bold sans, one word at a time with a small pop); the key words in the **italic serif** (Instrument Serif) | `{"type":"captions","top":650,"words":[{"text":"tecnicismi","at":t,"end":t2,"em":true,"color":"#e14a4a"}]}` |
+| `halo` | a dashed ring around the speaker's head with short labels that land on their words, plus a line above the head (lists said while on camera) | `{"type":"halo","cx":1010,"cy":540,"r":360,"top":{"text":"ASSET","at":t},"pills":[{"text":"Immagini","at":t,"angle":198}]}` (measure the head on a frame first; a glow behind the head needs a subject matte) |
+| `gallery` | a wall of the creator's pages under a small tag ("Portfolio 17 tavole"); one is picked, the rest dim, and it flies to the centre at the size the next `trail` starts from (`enter: false` on that page) | `{"type":"gallery","images":[..],"cols":6,"tag":"Portfolio","tag_em":"17 tavole","select":{"index":0,"at":t,"w":1100}}` |
 | `agenda` | a fixed list beside the speaker that gets one more line at every topic and stays | `{"type":"agenda","pos":"tl|ml|bl|tr","items":[["Tessuti",t,"anchor"],["Costruzione",t]]}` |
 
 Rules from the creator's notes on the first test (apply to every build with these formats):
@@ -620,12 +623,14 @@ Rules from the creator's notes on the first test (apply to every build with thes
   seconds, then the camera pulls back, the window shrinks and an arrow leads somewhere else (`trail`). **Approved by the creator, "in every
   way it is used":** the arrow trail is the model for every page, flat and diagram in the video. The camera never stops: after the last move it keeps
   drifting until the scene ends. Frame every node in the pull-back (the lab builder's `fit()`).
-- **Camera on every explainer scene, figures included.** `annotate` with `space: true, frame: false, dolly: [1.16, 0.92], label_z: 110` keeps a
-  garment or figurino centred while the camera slowly pulls away and the labels sit at a different depth (parallax); clarity first.
+- **Camera on every explainer scene, figures included** (creator, 19/10: the figurino test "moves too little, we do not even notice"). `annotate` with
+  `space: true, frame: false, dolly: [1.12, 0.96], label_z: 110` keeps a garment centred, and **`follow: {"zoom": 1.24, "pan": 0.54}` swings the camera
+  fast toward each arrow and its label (about 0.4 s), holds about 1 s while the text is read, and returns to the figure**; the swing stays modest so the
+  head is not cut off. Clarity first.
 - **Fonts: the base sans only** (Inter, the free SF Pro look; real SF Pro is licensed for Apple-platform UI only). **No handwriting font**
   (the creator rejected it; do not use Caveat, `style.hand`/`hand_em` stay off). On a scene with one plain background, give the key
   words **glow and gradients** instead (`text-shadow` glow in the accent colour, gradient text): no white bands or chips behind labels
-  (`build` labels are gradient text with a glow line, not a white chip). The creator will send a reference font later; until then Inter.
+  (`build` labels are gradient text with a glow line, not a white chip). **Key words in captions use an italic serif, Instrument Serif** (SIL OFL, `assets/fonts/InstrumentSerif-Italic.ttf`; the creator's reference was a high-contrast italic logotype, and the inspiration reel emphasises words exactly this way); everything else Inter.
 - **Work in the lab, not on the whole video** (creator's request, 19/10/2026): test every change on a small window with
   `window-patch.py` (10 to 25 s, rendered in about a minute) and put it in the full video only after approval; a full render costs
   35 to 70 minutes and many tokens.

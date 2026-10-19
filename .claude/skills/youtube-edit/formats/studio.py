@@ -23,12 +23,13 @@ DEFAULT_STYLE = {
     "chip": "#f4efe6", "chip_text": "#15100b",
     "font": '"DM Sans", ui-sans-serif, system-ui, sans-serif',
     "hand": '"Caveat", "Segoe Print", cursive',
+    "serif": '"Instrument Serif", "Georgia", serif',
 }
 
 
 _TEMPLATE = """
   :root { --k-bg:@bg@; --k-bg2:@bg2@; --k-text:@text@; --k-mute:@mute@; --k-accent:@accent@; --k-accent2:@accent2@; --k-accent3:@accent3@;
-          --k-chip:@chip@; --k-chip-text:@chip_text@; --k-font:@font@; --k-hand:@hand@; }
+          --k-chip:@chip@; --k-chip-text:@chip_text@; --k-font:@font@; --k-hand:@hand@; --k-serif:@serif@; }
   /* ---- studio formats: a calm dark wash, no grid ---- */
   .k-cut { position:absolute; inset:0; font-family:var(--k-font); color:var(--k-text); background:
       radial-gradient(1100px 700px at 50% 112%, color-mix(in srgb, var(--k-accent) 26%, transparent), transparent 70%),
@@ -104,6 +105,25 @@ _TEMPLATE = """
   .k-tr-logo img { width:62%; height:62%; object-fit:contain; }
   .k-tr-card { padding:26px 38px; border-radius:22px; background:rgba(14,11,8,.82); border:2px solid color-mix(in srgb, var(--k-accent) 60%, transparent); box-shadow:0 30px 80px rgba(0,0,0,.55);
     font-weight:700; font-size:44px; line-height:1.1; color:var(--k-text); text-align:center; }
+  /* captions: word by word, bold sans; the key words in the italic serif */
+  .k-cap { position:absolute; left:0; right:0; font-family:var(--k-font); }
+  .k-cw { position:absolute; left:0; right:0; text-align:center; opacity:0; font-weight:700; font-size:78px; line-height:1.1; letter-spacing:-.01em; color:#fff;
+    text-shadow:0 3px 14px rgba(0,0,0,.7), 0 8px 40px rgba(0,0,0,.55); white-space:nowrap; }
+  .k-cw.em { font-family:var(--k-serif); font-style:italic; font-weight:400; font-size:104px; letter-spacing:0; color:var(--k-text);
+    text-shadow:0 0 36px color-mix(in srgb, var(--k-accent) 55%, transparent), 0 4px 18px rgba(0,0,0,.65); }
+  /* halo: a ring and short labels around the speaker's head */
+  .k-halo-svg { position:absolute; inset:0; width:1920px; height:1080px; overflow:visible; }
+  .k-halo-svg circle { fill:none; }
+  .k-halo-pill { position:absolute; translate:-50% -50%; opacity:0; padding:12px 26px; border-radius:999px; background:rgba(16,12,8,.72); border:2px solid color-mix(in srgb, var(--k-accent) 70%, transparent);
+    font-family:var(--k-font); font-weight:600; font-size:32px; line-height:1; color:var(--k-text); white-space:nowrap; box-shadow:0 14px 40px rgba(0,0,0,.45); }
+  .k-halo-top { position:absolute; translate:-50% -50%; opacity:0; font-family:var(--k-font); font-weight:700; font-size:54px; line-height:1; color:#fff; white-space:nowrap;
+    text-shadow:0 0 30px color-mix(in srgb, var(--k-accent) 50%, transparent), 0 4px 18px rgba(0,0,0,.7); }
+  /* gallery: a wall of pages, one is picked and flies to the centre */
+  .k-tag { position:absolute; left:50%; top:64px; translate:-50% 0; padding:12px 26px; border-radius:999px; font-family:var(--k-font); font-weight:600; font-size:30px; color:var(--k-text);
+    background:rgba(255,255,255,.08); border:2px solid rgba(255,255,255,.22); opacity:0; white-space:nowrap; }
+  .k-tag b { color:var(--k-accent); font-weight:700; }
+  .k-gl-item { position:absolute; border-radius:10px; overflow:hidden; opacity:0; box-shadow:0 18px 50px rgba(0,0,0,.55), 0 0 0 1.5px rgba(255,255,255,.14); background:#0b0907; }
+  .k-gl-item img { width:100%; height:100%; display:block; object-fit:fill; }
   /* agenda */
   .k-ag { position:absolute; display:flex; flex-direction:column; gap:16px; font-family:var(--k-font); }
   .k-ag-item { padding:14px 28px 12px; border-radius:12px; font-weight:700; font-size:50px; line-height:1; letter-spacing:.03em; text-transform:uppercase; white-space:nowrap;
@@ -193,6 +213,7 @@ def annotate(b, bid, t_in, t_out, js, size):
     left = (1920 - pw) / 2.0 + b.get("shift_x", -120 if space else 0); top = (1080 - ph) / 2.0 + b.get("shift_y", 10 if space else 0)
     cols = ["var(--k-accent)", "var(--k-accent2)", "var(--k-accent3)", "#e07a5f"]
     svg, dots, labs = "", "", ""
+    pans = []
     for i, c in enumerate(b["callouts"]):
         col = cols[i % len(cols)]
         tx, ty = left + c["x"] * pw, top + c["y"] * ph
@@ -200,6 +221,7 @@ def annotate(b, bid, t_in, t_out, js, size):
         lx = (left + pw + 70) if side == "r" else (left - 70)
         ly = ty + c.get("dy", 0)
         at = float(c["at"])
+        pans.append((at, tx, ty, lx, ly, side))
         seg = ""
         if c.get("to"):
             ex, ey = left + c["to"][0] * pw, top + c["to"][1] * ph
@@ -226,7 +248,26 @@ def annotate(b, bid, t_in, t_out, js, size):
         d0, d1 = float(b.get("turn", [24, 9])[0]), float(b.get("turn", [24, 9])[1])
         js("tl.fromTo('#%s-rig', { rotationY: %.1f, rotationX: 5 }, { rotationY: %.1f, rotationX: 2, duration: 0.9, ease: 'power3.out' }, %.3f);" % (bid, d0, d1, t_in))
         js("tl.to('#%s-rig', { rotationY: %.1f, rotationX: -2, duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (bid, float(b.get("drift_to", -9)), max(1.0, t_out - t_in - 0.9), t_in + 0.9))
-        if b.get("dolly"):   # the camera pulls away from the picture (or closes in) for the whole scene; the picture stays centred
+        if b.get("follow"):   # the camera swings fast toward each arrow and its label, then returns to the picture (which stays centred)
+            f = b["follow"] if isinstance(b["follow"], dict) else {}
+            zoom, wgt, d_in, hold, d_out = float(f.get("zoom", 1.3)), float(f.get("pan", 0.62)), float(f.get("dur", 0.42)), float(f.get("hold", 0.85)), float(f.get("back", 0.5))
+            dl = b.get("dolly") or [1.0, 1.0]
+            total = max(1.0, t_out - t_in)
+            base = lambda tt: float(dl[0]) + (float(dl[1]) - float(dl[0])) * min(1.0, max(0.0, (tt - t_in) / total))
+            js("tl.set('#%s-rig', { x: 0, y: 0, scale: %.3f }, %.3f);" % (bid, base(t_in), t_in))
+            prev = t_in
+            for (at_, tx_, ty_, lx_, ly_, sd_) in pans:
+                px = (1 - wgt) * tx_ + wgt * (lx_ + (190 if sd_ == "r" else -190)); py = (1 - wgt) * ty_ + wgt * ly_
+                t0 = at_ - 0.12
+                if t0 > prev + 0.05:
+                    js("tl.to('#%s-rig', { x: 0, y: 0, scale: %.3f, duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (bid, base(t0), t0 - prev, prev))
+                js("tl.to('#%s-rig', { x: %.1f, y: %.1f, scale: %.3f, duration: %.2f, ease: 'power3.out' }, %.3f);" % (bid, -zoom * (px - 960), -zoom * (py - 540), zoom, d_in, t0))
+                t1 = t0 + d_in + hold
+                js("tl.to('#%s-rig', { x: 0, y: 0, scale: %.3f, duration: %.2f, ease: 'power2.inOut' }, %.3f);" % (bid, base(t1 + d_out), d_out, t1))
+                prev = t1 + d_out
+            if t_out - prev > 0.1:
+                js("tl.to('#%s-rig', { x: 0, y: 0, scale: %.3f, duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (bid, base(t_out), t_out - prev, prev))
+        elif b.get("dolly"):   # the camera pulls away from the picture (or closes in) for the whole scene; the picture stays centred
             d0, d1 = float(b["dolly"][0]), float(b["dolly"][1])
             js("tl.fromTo('#%s-rig', { scale: %.3f }, { scale: %.3f, duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (bid, d0, d1, max(1.0, t_out - t_in), t_in))
     title = ('<div class="k-title" id="%s-title">%s</div>' % (bid, esc(b["title"]))) if b.get("title") else ""
@@ -377,7 +418,9 @@ def trail(b, bid, t_in, t_out, js, sizes):
             inner = '<div class="k-tr-card" style="width:%.0fpx">%s</div>' % (w, esc(nd["text"]))
         geo[nd["id"]] = (960 + x, 540 + y, w, h)
         html += '<div class="k-tr-node" id="%s" style="left:%.0fpx;top:%.0fpx"%s>%s</div>' % (nid, 960 + x, 540 + y, _attrs(at, nd.get("anchor", "-")), inner)
-        if kind == "page":
+        if kind == "page" and nd.get("enter") is False:   # already in place (it continues from the scene before, e.g. a gallery's picked page)
+            js("tl.set('#%s', { opacity: 1, rotationY: %.1f, z: %.0f }, %.3f);" % (nid, rot, z, at))
+        elif kind == "page":
             js("tl.fromTo('#%s', { opacity: 0, y: 140, rotationY: %.1f }, { opacity: 1, y: 0, rotationY: %.1f, z: %.0f, duration: 0.85, ease: 'power3.out' }, %.3f);" % (nid, rot + 22, rot, z, at))
         else:
             js("tl.fromTo('#%s', { opacity: 0, y: 36, scale: 0.86, rotationY: %.1f }, { opacity: 1, y: 0, scale: 1, z: %.0f, duration: 0.6, ease: 'power2.out' }, %.3f);" % (nid, rot, z, at))
@@ -412,3 +455,74 @@ def trail(b, bid, t_in, t_out, js, sizes):
         ry = (float(last[4]) if len(last) > 4 else 0.0) * 0.45
         js("tl.to('#%s-rig', { x: %.1f, y: %.1f, scale: %.4f, rotationY: %.1f, duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (bid, -zm * cx, -zm * cy, zm, ry, t_out - t_last, t_last))
     return ('<div class="k-cut"><div class="k-tr-stage"><div class="k-tr-rig" id="%s-rig"><svg class="k-tr-svg" viewBox="0 0 1920 1080">%s</svg>%s</div></div></div>' % (bid, svg, html))
+
+
+# ---- captions ---------------------------------------------------------------------------------------------------------------
+def captions(b, bid, t_in, t_out, js):
+    """Word-by-word captions in the middle of the frame: bold sans, one word at a time; "em" words in the italic serif (optionally coloured).
+    words: [{"text": "tecnicismi", "at": t, "end": t2 (optional), "em": true, "color": "#e14a4a" (optional)}]   top: pixel row of the caption (default 650)"""
+    ws = b["words"]; top = int(b.get("top", 650)); html = ""
+    for i, w in enumerate(ws):
+        at = float(w["at"]); nxt = float(ws[i + 1]["at"]) if i + 1 < len(ws) else float(w.get("end", at + 0.5)) + 0.25
+        end = float(w.get("end_show", nxt))
+        st = ' style="color:%s"' % w["color"] if w.get("color") else ""
+        anc = _attrs(at, w.get("anchor", w["text"])) if (i == 0 or w.get("anchor")) else ""
+        html += '<span class="k-cw%s" id="%s-w%d"%s%s>%s</span>' % (" em" if w.get("em") else "", bid, i, st, anc, esc(w["text"]))
+        js("tl.fromTo('#%s-w%d', { opacity: 0, scale: 0.88, y: 10 }, { opacity: 1, scale: 1, y: 0, duration: 0.11, ease: 'power2.out' }, %.3f);" % (bid, i, at - 0.02))
+        js("tl.to('#%s-w%d', { opacity: 0, duration: 0.07, ease: 'power1.in' }, %.3f);" % (bid, i, max(at + 0.12, end - 0.05)))
+    return '<div class="k-cap" style="top:%dpx">%s</div>' % (top, html)
+
+
+# ---- halo -----------------------------------------------------------------------------------------------------------------
+def halo(b, bid, t_in, t_out, js):
+    """A ring around the speaker's head with short labels that land on their words, and a line of text above the head.
+    cx, cy, r: the ring (px; the head's centre and about 1.4 x its height); pills: [{"text": "Immagini", "at": t, "angle": 200, "anchor": ".."}]; top: {"text": "ASSET", "at": t}"""
+    cx, cy, r = float(b.get("cx", 900)), float(b.get("cy", 430)), float(b.get("r", 330))
+    ring_at = float(b.get("ring_at", t_in + 0.05))
+    svg = ('<svg class="k-halo-svg" viewBox="0 0 1920 1080"><g id="%s-ring">'
+           '<circle id="%s-r1" cx="%.0f" cy="%.0f" r="%.0f" stroke="rgba(255,255,255,.75)" stroke-width="2.5" stroke-dasharray="5 11"/></g>'
+           '<circle id="%s-r2" cx="%.0f" cy="%.0f" r="%.0f" stroke="color-mix(in srgb, var(--k-accent) 55%%, transparent)" stroke-width="2"/></svg>'
+           % (bid, bid, cx, cy, r, bid, cx, cy, r + 38))
+    pills = ""
+    for i, pl in enumerate(b.get("pills", [])):
+        a = math.radians(float(pl.get("angle", 200 + 50 * i))); px, py = cx + r * math.cos(a), cy + r * math.sin(a); at = float(pl["at"])
+        pills += '<div class="k-halo-pill" id="%s-p%d" style="left:%.0fpx;top:%.0fpx"%s>%s</div>' % (bid, i, px, py, _attrs(at, pl.get("anchor", pl["text"])), esc(pl["text"]))
+        js("tl.fromTo('#%s-p%d', { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.38, ease: 'power2.out' }, %.3f);" % (bid, i, at))
+    top = ""
+    if b.get("top"):
+        tp = b["top"]; at = float(tp["at"])
+        top = '<div class="k-halo-top" id="%s-top" style="left:%.0fpx;top:%.0fpx"%s>%s</div>' % (bid, cx, cy - r - 88, _attrs(at, tp.get("anchor", tp["text"])), esc(tp["text"]))
+        js("tl.fromTo('#%s-top', { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, %.3f);" % (bid, at))
+    js("tl.fromTo('#%s-ring, #%s-r2', { opacity: 0, scale: 0.82, svgOrigin: '%.0f %.0f' }, { opacity: 1, scale: 1, duration: 0.7, ease: 'power2.out', svgOrigin: '%.0f %.0f' }, %.3f);" % (bid, bid, cx, cy, cx, cy, ring_at))
+    js("tl.to('#%s-r1', { rotation: 70, duration: %.3f, ease: 'none', svgOrigin: '%.0f %.0f' }, %.3f);" % (bid, max(1.0, t_out - t_in), cx, cy, t_in))
+    js("tl.to('#host-%s .k-halo-pill, #host-%s .k-halo-top, #%s-ring, #%s-r2', { opacity: 0, duration: 0.3, ease: 'power2.in' }, %.3f);" % (bid, bid, bid, bid, t_out - 0.34))
+    return svg + pills + top
+
+
+# ---- gallery --------------------------------------------------------------------------------------------------------------
+def gallery(b, bid, t_in, t_out, js):
+    """A wall of pages (or any pictures) that fill in one by one under a small tag; then one is picked, the rest dim and it flies to the centre at the
+    size the next scene starts from. images: [src, ...]; cols; tag: "Portfolio" / tag_em: "17 tavole"; select: {"index": 0, "at": t, "w": 1100}; ratio: height/width of a thumb"""
+    imgs = b["images"]; cols = int(b.get("cols", 6)); rows = (len(imgs) + cols - 1) // cols
+    tw = float(b.get("thumb_w", 270)); th = tw * float(b.get("ratio", 1685 / 2381.0)); gap = float(b.get("gap", 22))
+    left0 = (1920 - (cols * tw + (cols - 1) * gap)) / 2.0; top0 = (1080 - (rows * th + (rows - 1) * gap)) / 2.0 + 36
+    items = ""
+    for i, src in enumerate(imgs):
+        r, c = divmod(i, cols); x, y = left0 + c * (tw + gap), top0 + r * (th + gap)
+        items += '<div class="k-gl-item" id="%s-g%d" style="left:%.0fpx;top:%.0fpx;width:%.0fpx;height:%.0fpx"><img src="%s" alt="" /></div>' % (bid, i, x, y, tw, th, src)
+        js("tl.fromTo('#%s-g%d', { opacity: 0, y: 34, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 0.42, ease: 'power2.out' }, %.3f);" % (bid, i, t_in + 0.12 + 0.05 * i))
+    tag = ""
+    if b.get("tag"):
+        tag = '<div class="k-tag" id="%s-tag">%s%s</div>' % (bid, esc(b["tag"]), (" <b>%s</b>" % esc(b["tag_em"])) if b.get("tag_em") else "")
+        js("tl.fromTo('#%s-tag', { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, %.3f);" % (bid, t_in + 0.05))
+    sel = b.get("select")
+    if sel:
+        k = int(sel["index"]); r, c = divmod(k, cols); cxk, cyk = left0 + c * (tw + gap) + tw / 2.0, top0 + r * (th + gap) + th / 2.0
+        at = float(sel["at"]); S = float(sel.get("w", 1100)) / tw
+        others = ", ".join("#%s-g%d" % (bid, i) for i in range(len(imgs)) if i != k)
+        js("tl.to('%s', { opacity: 0.2, duration: 0.4, ease: 'power2.out' }, %.3f);" % (others, at))
+        js("tl.set('#%s-g%d', { zIndex: 10 }, %.3f);" % (bid, k, at))
+        js("tl.to('#%s-g%d', { x: %.1f, y: %.1f, scale: %.3f, duration: %.2f, ease: 'power2.inOut' }, %.3f);" % (bid, k, 960 - cxk, 540 - cyk, S, float(sel.get("dur", 0.85)), at + 0.1))
+        if tag:
+            js("tl.to('#%s-tag', { opacity: 0, duration: 0.3 }, %.3f);" % (bid, at))
+    return '<div class="k-cut">%s%s</div>' % (tag, items)

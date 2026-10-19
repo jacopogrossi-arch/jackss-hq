@@ -2076,7 +2076,7 @@ for b in S.get("beats", []):
                 js("tl.to('#%s-inner', { opacity: 0, duration: 0.28, ease: 'power2.in' }, %.3f);" % (bid, t_out - 0.40))
                 js("glassOut('#%s-glass', %.3f, 0.33);" % (bid, t_out - 0.35))
         transition(b, t_in, t_out)
-    elif t in ("build", "annotate", "orbit", "dive", "agenda", "trail"):
+    elif t in ("build", "annotate", "orbit", "dive", "agenda", "trail", "captions", "halo", "gallery"):
         # studio formats (formats/studio.py): the graphic is built piece by piece on the spoken word
         if t == "build":
             inner = studio.build(b, bid, t_in, t_out, js)
@@ -2084,6 +2084,12 @@ for b in S.get("beats", []):
             inner = studio.orbit(b, bid, t_in, t_out, js)
         elif t == "agenda":
             inner = studio.agenda(b, bid, t_in, t_out, js)
+        elif t == "captions":
+            inner = studio.captions(b, bid, t_in, t_out, js)
+        elif t == "halo":
+            inner = studio.halo(b, bid, t_in, t_out, js)
+        elif t == "gallery":
+            inner = studio.gallery(b, bid, t_in, t_out, js)
         elif t == "trail":
             sizes = {}
             for nd in b["nodes"]:
