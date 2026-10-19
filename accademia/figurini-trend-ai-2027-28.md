@@ -1,5 +1,43 @@
 # Figurini — Trend A/I 2027-28
 
+## v3 (19/10/2026) — I 3 TEMI REALI, menswear coerente con lo stile di Jacopo
+
+**Temi reali:** ROYAL HUMOUR · BODY TALK · ONLIFE (le sezioni v2 più sotto sono SUPERATE per nomi e concept: restano valide solo come base per i prompt dei capi).
+**Regola di stile (da `style_jacopo`):** sopra aderente, sotto largo/dritto · palette nero + indigo + oliva + bianco · firma = stivali texani neri con punta e tacco · tessuti con texture (selvage, ribbed) · niente colori vivaci, i colori del trend entrano come accento (fodera, bottone, dettaglio).
+**Pagine per tema:** 3 = COSTRUZIONE IDEE (3 capi/dettagli ritagliati) · 4 = FIGURINO.
+
+### ROYAL HUMOUR — "Il re in borghese"
+Un giovane uomo che veste la corte con ironia: la sartoria militare di palazzo ridotta a capi veri, con un pizzo di troppo.
+1. **Giacca corta da ussaro** in lana nera, aderente, collo alla coreana, alamari in passamaneria dorata sul petto, bottoni in ottone, polsini con un filo di pizzo nero.
+2. **Camicia bianca slim con jabot** di pizzo panna sotto la giacca (la nota ironica).
+3. **Pantalone largo dritto** in lana nera con banda laterale dorata (come la guardia di palazzo), cadente sulla scarpa.
+4. **Stivali texani neri** (firma di Jacopo) con cuciture dorate.
+Colori: nero-carbone `#2B2829` (luci `#6A6668`), oro `#B08D57`, panna `#F2EEE6`, fodera giacca rosso laccato `#7A1F24` visibile al colletto aperto.
+Costruzione idee (3 immagini da ritagliare): giacca ussaro con alamari · jabot/camicia con pizzo · pantalone con banda dorata (o bustino/dettaglio barocco come nel riferimento del collega).
+Ricerca foto: `hussar jacket gold frogging black wool` · `lace jabot shirt men` · `tuxedo trousers side stripe wide leg` · `black cowboy boots gold stitching`.
+
+### BODY TALK — "Senza dimostrare niente"
+Invariato nei capi del v2 (maglia nude finissima, pantalone ampio in nappa nera con piega, cappotto cammello sulle spalle con fodera rossa visibile solo dall'apertura), ma ai piedi gli **stivali texani neri** al posto del mocassino.
+Costruzione idee: maglia finissima nude aderente (collo aperto) · pantalone largo in nappa · cappotto cammello con fodera rossa.
+Ricerca foto: `fine gauge knit open neck men` · `wide leg leather trousers men pleated` · `camel overcoat red lining` · `black cowboy boots pointed`.
+
+### ONLIFE — "Dentro la città"
+Look da traversata a piedi, rifatto sul suo stile: top aderente, sotto largo.
+1. **T-shirt slim ribbed bianca** (o grigio cemento) aderente.
+2. **Giubbotto corto in nylon nero**, fodera arancio visibile, zip e coulisse (dal v2).
+3. **Jeans raw indigo larghi** con toppe a coste sulle ginocchia (denim alternato al corduroy, come dice il libro).
+4. **Sneakers consumate** (o stivali texani, a scelta).
+Colori: giubbotto `#2B2829` con fodera `#E8692B`, t-shirt `#F2EEE6`, jeans indigo `#2C3550`, toppe corduroy intonaco `#BFA58F`, sneakers `#E3DDCF`.
+Costruzione idee: giubbotto nylon nero con fodera arancio · jeans larghi con toppe al ginocchio · t-shirt ribbed.
+Ricerca foto: `black nylon bomber orange lining` · `baggy raw denim knee patch` · `ribbed fitted t-shirt white men`.
+
+### Prossimi passi per i figurini
+Workflow fisso dalla memoria (`workflow-outfit-colorazione`): flat B/N di ogni capo (prompt nei template v2 più sotto, cambiando solo [CAPO]/[DETTAGLI]) → ricalco in Procreate sul figurino base → colore con ChatGPT → pagina 4. Per la scadenza di domani si può fare il solo fronte (basta un figurino per tema).
+
+---
+
+## (SUPERATO) v2 — 14/10/2026
+
 Un figurino menswear per ognuno dei 3 temi. Progetto: `progetto-trend-ai-2027-28.md`.
 **v2 (14/10/2026):** look rifatti sui mini concept definitivi ("Dentro la città", "Senza dimostrare niente", "La tavola della domenica"). Rispetto alla v1 dell'08/10: body toll ha il cappotto cammello con fodera rossa (il rosso resta nascosto), conviviality passa dalla sala prove alla tavola (camicia con maniche arrotolate, cardigan, giacca tenuta su una spalla).
 
