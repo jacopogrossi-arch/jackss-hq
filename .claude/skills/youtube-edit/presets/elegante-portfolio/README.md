@@ -22,8 +22,8 @@ appaiono e spariscono, ma si muovono nello spazio e portano a una freccia.
 - Sottotitoli: a frasi e scritte chiave, accendibili per video; mai parola per parola su video lunghi.
 - Lavorare su finestre piccole (`window-patch.py`) e mettere nel video solo ciò che è approvato.
 
-- Transizioni e suoni (Jacopo, 20/10/2026): flash, whip, glitch, zoom-blur, dip, light leak, film burn con parsimonia, un effetto ogni tanto
-  su un cambio di scena o di clip (non ogni 5 s); ogni transizione porta il suo suono (`assets/sfx/cues.json`), le grafiche che entrano un
+- Transizioni e suoni (Jacopo, 20/10/2026): flash, whip, zoom-blur, light leak, film burn (glitch, shake e dip SCARTATI da Jacopo il 20/10/2026), pochissimi: solo nel passaggio da una
+  scena all'altra o da una clip all'altra, mai in mezzo a una frase (max ~2 al minuto); ogni transizione porta il suo suono (`assets/sfx/cues.json`), le grafiche che entrano un
   whoosh morbido; musica leggera sotto la voce. Vignetta e grana molto leggere come finitura.
 
 ## Riferimenti

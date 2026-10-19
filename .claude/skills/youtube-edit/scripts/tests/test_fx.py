@@ -2,7 +2,7 @@
 import os, unittest
 from .helpers import run, scratch, write, read, load
 
-KINDS = ["flash", "dip", "whip", "zoomblur", "glitch", "lightleak", "burn", "shake"]
+KINDS = ["flash", "whip", "zoomblur", "lightleak", "burn"]
 
 
 def build(test, beats, extra=None, preset=True):

@@ -57,14 +57,16 @@
     ]
   },
   "transitions": {
-    "density": "medium",
+    "density": "low",
     "kinds": [
       "flash",
       "whip",
-      "glitch",
       "zoomblur",
-      "dip"
-    ]
+      "lightleak",
+      "burn"
+    ],
+    "only_at": "scene-changes",
+    "max_per_minute": 2
   },
   "sound": {
     "sfx": true,

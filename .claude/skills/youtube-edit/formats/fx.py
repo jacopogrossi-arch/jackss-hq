@@ -1,4 +1,4 @@
-"""fx.py: transitions and overlays for the studio compositions (flash, dip, whip, zoomblur, glitch, lightleak, burn, shake; vignette, grain).
+"""fx.py: transitions and overlays for the studio compositions (flash, whip, zoomblur, lightleak, burn; vignette, grain).
 
 A transition is a beat {"type":"transition","id","kind","at","dur"?,"color"?,"sfx"?}. `at` is the instant of the cut: the effect peaks there
 (the video underneath is whatever the edit does at `at`; a transition hides/dresses the cut, it does not make one). Everything is seek-safe
@@ -8,8 +8,8 @@ All the kinds act on #video-wrap (the footage) except the overlays; they never t
 """
 import hashlib, random
 
-DEFAULT_DUR = {"flash": 0.34, "dip": 0.7, "whip": 0.42, "zoomblur": 0.46, "glitch": 0.5, "lightleak": 1.1, "burn": 0.9, "shake": 0.5}
-BLEND = {"lightleak", "burn", "glitch"}
+DEFAULT_DUR = {"flash": 0.34, "whip": 0.42, "zoomblur": 0.46, "lightleak": 1.1, "burn": 0.9}
+BLEND = {"lightleak", "burn"}
 
 
 def dur_of(b):
@@ -21,7 +21,7 @@ def window(b):
     if b["type"] == "overlay":
         return float(b["in"]), float(b["out"])
     at, d, k = float(b["at"]), dur_of(b), b["kind"]
-    pre = {"flash": 0.08, "dip": d * 0.5, "whip": d * 0.55, "zoomblur": d * 0.55, "glitch": d * 0.55, "lightleak": d * 0.5, "burn": d * 0.5, "shake": 0.05}[k]
+    pre = {"flash": 0.08, "whip": d * 0.55, "zoomblur": d * 0.55, "lightleak": d * 0.5, "burn": d * 0.5}[k]
     return max(0.0, at - pre), at + d + 0.05
 
 
@@ -63,12 +63,6 @@ def transition(b, bid, js, style=None):
         js("tl.fromTo('%s', { scale: 1.0 }, { scale: 1.05, duration: 0.05, ease: 'power2.out', immediateRender: false }, %.3f);" % (W, at - 0.05))
         js("tl.to('%s', { scale: 1.0, duration: %.3f, ease: 'power2.out' }, %.3f);" % (W, d, at))
         return '<div class="fx-fill" id="%s-f" style="background:%s"></div>' % (bid, col)
-    if k == "dip":
-        col = _color(b, style, "bg")
-        h = d * 0.45
-        js("tl.fromTo('#%s-f', { opacity: 0 }, { opacity: 1, duration: %.3f, ease: 'power2.in' }, %.3f);" % (bid, h, at - h))
-        js("tl.to('#%s-f', { opacity: 0, duration: %.3f, ease: 'power2.out' }, %.3f);" % (bid, h, at + 0.05))
-        return '<div class="fx-fill" id="%s-f" style="background:%s"></div>' % (bid, col)
     if k == "whip":
         h = d / 2
         sg = -1 if b.get("dir", "left") == "left" else 1
@@ -84,23 +78,6 @@ def transition(b, bid, js, style=None):
         js("tl.fromTo('#%s-f', { opacity: 0 }, { opacity: %.2f, duration: 0.06, ease: 'power2.out' }, %.3f);" % (bid, float(b.get("strength", 0.4)), at - 0.03))
         js("tl.to('#%s-f', { opacity: 0, duration: %.3f, ease: 'power2.in' }, %.3f);" % (bid, h, at + 0.03))
         return '<div class="fx-fill" id="%s-f" style="background:%s"></div>' % (bid, _color(b, style, "white"))
-    if k == "glitch":
-        n = max(4, int(d / 0.04)); t0 = at - d * 0.55
-        html = ""
-        for i in range(3):
-            c = ["rgba(0,255,255,.85)", "rgba(255,0,170,.85)", "rgba(255,255,255,.55)"][i]
-            html += '<div class="fx-band" id="%s-b%d" style="background:%s;height:%dpx;top:%dpx"></div>' % (bid, i, c, 34 + 24 * i, 200 + 260 * i)
-        for s in range(n):
-            t = t0 + s * (d / n)
-            on = rnd.random() < 0.8
-            for i in range(3):
-                js("tl.set('#%s-b%d', { opacity: %.2f, x: %d, y: %d }, %.3f);" % (bid, i, (0.5 + 0.5 * rnd.random()) if on else 0, rnd.randint(-160, 160), rnd.randint(-380, 380), t))
-            js("tl.set('%s', { x: %d, filter: '%s' }, %.3f);" % (W, rnd.randint(-26, 26), rnd.choice(["none", "hue-rotate(35deg) saturate(1.6)", "hue-rotate(-30deg) contrast(1.25)", "none"]), t))
-        t_end = t0 + n * (d / n)
-        js("tl.set('%s', { x: 0, filter: 'none' }, %.3f);" % (W, t_end))
-        for i in range(3):
-            js("tl.set('#%s-b%d', { opacity: 0 }, %.3f);" % (bid, i, t_end))
-        return html
     if k == "lightleak":
         pk = at; h = d / 2
         blobs = [("#ff7a1a", 1100, 900, -200, 250, 0.9), ("#ffd48a", 800, 700, 600, -150, 0.8), ("#ff2a55", 900, 800, 1300, 450, 0.65)]
@@ -118,14 +95,7 @@ def transition(b, bid, js, style=None):
             js("tl.set('#%s-f', { opacity: %.2f }, %.3f);" % (bid, 0.7 + 0.3 * rnd.random(), pk - h + h * (s + 1) / 6))
         js("tl.fromTo('#%s-f', { opacity: 1 }, { opacity: 0, scale: 2.9, duration: %.3f, ease: 'power2.out', immediateRender: false }, %.3f);" % (bid, h, pk))
         return '<div class="fx-fill" id="%s-f" style="background:%s;transform-origin:%d%% %d%%"></div>' % (bid, grad, b.get("x", 70), b.get("y", 60))
-    if k == "shake":
-        amp = float(b.get("amp", 22)); n = max(6, int(d / 0.03))
-        for s in range(n):
-            f = (1 - s / n) ** 1.6
-            js("tl.set('%s', { x: %.1f, y: %.1f, rotation: %.2f, scale: 1.045 }, %.3f);" % (W, rnd.uniform(-amp, amp) * f, rnd.uniform(-amp, amp) * f * 0.7, rnd.uniform(-1.2, 1.2) * f, at + s * (d / n)))
-        js("tl.set('%s', { x: 0, y: 0, rotation: 0, scale: 1.0 }, %.3f);" % (W, at + d))
-        return ""
-    raise SystemExit("unknown transition kind %r (flash, dip, whip, zoomblur, glitch, lightleak, burn, shake)" % k)
+    raise SystemExit("unknown transition kind %r (flash, whip, zoomblur, lightleak, burn)" % k)
 
 
 def overlay(b, bid, js, style=None):
