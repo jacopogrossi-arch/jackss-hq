@@ -87,6 +87,10 @@ def transition(b, bid, js, style=None):
         blobs = [(warm[1], 900, 1500, x0, -200, 0.80, -18), (warm[0], 700, 1300, x0 + (260 if side == "left" else -160), 120, 0.85, 12), (warm[2], 380, 900, x0 + (180 if side == "left" else 40), 260, 0.60, -8)]
         html = ""
         sgn = 1 if side == "left" else -1
+        # the cut hides under a FULL-FRAME wash: at the peak the whole picture is warm light (a leak that covers only half the frame shows the cut)
+        html += '<div class="fx-fill" id="%s-w" style="background:linear-gradient(%ddeg, %s 0%%, %s 55%%, %s 100%%)"></div>' % (bid, 90 if side == "left" else 270, warm[1], warm[0], warm[2])
+        js("tl.fromTo('#%s-w', { opacity: 0 }, { opacity: %.2f, duration: %.3f, ease: 'power2.in' }, %.3f);" % (bid, float(b.get("flood", 0.95)), h * 0.75, pk - h * 0.75 - 0.02))
+        js("tl.to('#%s-w', { opacity: 0, duration: %.3f, ease: 'power2.out' }, %.3f);" % (bid, h * 1.1, pk + 0.1))
         for i, (c, w, hh, x, y, op, rot) in enumerate(blobs):
             html += '<div class="fx-blob" id="%s-l%d" style="background:%s;width:%dpx;height:%dpx;left:%dpx;top:%dpx;transform:rotate(%ddeg);filter:blur(80px)"></div>' % (bid, i, c, w, hh, x, y, rot)
             t_up = pk - h * 0.9 + 0.05 * i
@@ -107,7 +111,9 @@ def transition(b, bid, js, style=None):
         x_from, x_to = (-1900, 2000) if sg > 0 else (2000, -1900)
         js("tl.fromTo('#%s-b', { x: %d, opacity: 1 }, { x: %d, opacity: 1, duration: %.3f, ease: 'power2.inOut' }, %.3f);" % (bid, x_from, x_to, d, pk - h))
         js("tl.set('#%s-b', { opacity: 0 }, %.3f);" % (bid, pk + h + 0.02))
-        return '<div class="fx-burn" id="%s-b" style="background:linear-gradient(%ddeg, rgba(150,30,0,0) 0%%, rgba(255,110,25,.85) 34%%, rgba(255,226,170,1) 58%%, #fff 74%%, rgba(255,255,255,0) 100%%)"></div>' % (bid, 90 if sg > 0 else 270)
+        js("tl.fromTo('#%s-w', { opacity: 0 }, { opacity: %.2f, duration: %.3f, ease: 'power2.in' }, %.3f);" % (bid, float(b.get("flood", 0.95)), h * 0.7, pk - h * 0.7 - 0.02))
+        js("tl.to('#%s-w', { opacity: 0, duration: %.3f, ease: 'power2.out' }, %.3f);" % (bid, h * 1.1, pk + 0.1))
+        return '<div class="fx-fill" id="%s-w" style="background:radial-gradient(circle at 60%% 50%%, #fff 0%%, #ffe3b0 45%%, #ff9a3c 100%%)"></div><div class="fx-burn" id="%s-b" style="background:linear-gradient(%ddeg, rgba(150,30,0,0) 0%%, rgba(255,110,25,.85) 34%%, rgba(255,226,170,1) 58%%, #fff 74%%, rgba(255,255,255,0) 100%%)"></div>' % (bid, bid, 90 if sg > 0 else 270)
     raise SystemExit("unknown transition kind %r (flash, whip, zoomblur, lightleak, burn)" % k)
 
 
