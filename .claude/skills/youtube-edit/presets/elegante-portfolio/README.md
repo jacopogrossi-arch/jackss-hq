@@ -5,7 +5,7 @@ vince sempre sul preset (si possono cambiare singoli valori per un video).
 
 ## Cos'è
 Video lunghi su YouTube (moda, progetti): sfondo scuro caldo, **Inter** per quasi tutto, **Playfair Display Italic** per le parole chiave,
-oro + smeraldo + avorio (palette ancora provvisoria). Il lavoro di Jacopo (pagine del portfolio, figurini) è il protagonista: le pagine non
+oro + smeraldo + avorio (**palette confermata il 20/10/2026**, variante A). Il lavoro di Jacopo (pagine del portfolio, figurini) è il protagonista: le pagine non
 appaiono e spariscono, ma si muovono nello spazio e portano a una freccia.
 
 ## Formati preferiti
@@ -31,3 +31,7 @@ Font di esempio di Jacopo: corsivo serif ad alto contrasto (logotipo CleanMyMac)
 2. Per ognuno: estrarre MP3 e fotogrammi, trascrivere a finestre, `teardown.py` (tagli, burst, loudness, parole al minuto), guardare i fotogrammi nei momenti chiave e annotare parola ↔ grafica.
 3. Proporre palette, font, formati (esistenti o nuovi), transizioni, livello suoni, sottotitoli; costruire un lab con finestre di 10-20 s e raccogliere i pareri.
 4. Salvare `presets/<nome>/preset.json` + `README.md` con le sue regole di gusto; i formati nuovi vanno nel motore (`formats/`), non nel preset.
+
+## Palette
+Confermata: **A** — sfondo `#0b0907` (nero caldo, bagliore oro in basso e verde a sinistra), testo avorio `#f4efe6`, accento oro `#d4af5f`, secondo accento smeraldo `#4aa585`.
+Provate e non scelte (restano come riferimento per altri preset): **B rame** (`bg #0f0816`, `bg2 #2a1238`, accento `#e08a3c`, `#f2b479`, crema `#fbe5c8`) e **C denim** (`bg #070a14`, `bg2 #18265a`, accento `#9db4ee`, oliva `#a3a85a`, osso `#ece6d6`).
