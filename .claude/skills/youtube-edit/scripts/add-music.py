@@ -26,7 +26,7 @@ L = max(1.0, dur - a.start)
 bed = ("[1:a]aloop=loop=-1:size=2e9,atrim=0:%.3f,asetpts=PTS-STARTPTS,%s,afade=t=in:st=0:d=%.2f,afade=t=out:st=%.3f:d=%.2f,adelay=%d|%d[bed]"
        % (L, "volume=%.1fdB" % a.db, a.fade, max(0.0, L - a.fade), a.fade, int(a.start * 1000), int(a.start * 1000)))
 fc = (bed + ";[0:a]asplit=2[voice][sc];[bed][sc]sidechaincompress=threshold=0.02:ratio=10:attack=15:release=350[duck];"
-      "[voice][duck]amix=inputs=2:duration=first:dropout_transition=0:normalize=0%s,alimiter=limit=0.84[a]" % (",loudnorm=I=%g:TP=-1.5:LRA=11" % a.lufs if a.lufs else ""))
+      "[voice][duck]amix=inputs=2:duration=first:dropout_transition=0:normalize=0%s,alimiter=limit=0.8:level=disabled[a]" % (",loudnorm=I=%g:TP=-2:LRA=11,aresample=48000" % a.lufs if a.lufs else ""))
 subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", a.video, "-i", tr, "-filter_complex", fc, "-map", "0:v:0", "-map", "[a]", "-c:v", "copy",
                 "-c:a", "aac", "-b:a", "256k", "-ar", "48000", "-movflags", "+faststart", a.out], check=True)
 print("wrote %s (bed %s at %.1f dB, ducked under the voice)" % (a.out, os.path.basename(tr), a.db))
