@@ -868,6 +868,12 @@ fades are fine without backdrop-filter (lower lines). Glass that has not arrived
   enters; prove alignment with `psnr` on the first and last frames (50 dB or more = the same frame). Anything held
   across a splice must be static on both sides.
 
+**Disk (Windows, small system drive)**
+- **`snapshot`, `check` and `render` record a revision of the project in `~/.cache/hyperframes/history/<id>/blobs`**, and every revision copies the media: a full
+  4K flat cut cost **2.2 GB per run** and filled a 223 GB `C:` to 0 bytes in one afternoon (tests then fail with "No space left on device"). Always export
+  `HYPERFRAMES_HISTORY_ROOT=D:\hf-history` (next to `TEMP=TMP=D:\hf-tmp` and `--frames-cache-dir`), take snapshots on a `window-patch.py` copy or a small
+  lab video instead of the full project, and clear old revisions (folders under `history/`) when `C:` runs low; they are only a rewind feature.
+
 **Encoding and files**
 - **`--gpu` ignores CRF** (`--quality high --gpu` gave 14 Mb/s at 4K): always `--video-bitrate 45M`.
 - **The render drops two colour tags:** always the BT.709 remux, or faces look redder than the camera original.

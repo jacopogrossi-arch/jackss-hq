@@ -125,6 +125,11 @@ _TEMPLATE = """
   .k-tag b { color:var(--k-accent); font-weight:700; }
   .k-gl-item { position:absolute; border-radius:10px; overflow:hidden; opacity:0; box-shadow:0 18px 50px rgba(0,0,0,.55), 0 0 0 1.5px rgba(255,255,255,.14); background:#0b0907; }
   .k-gl-item img { width:100%; height:100%; display:block; object-fit:fill; }
+  /* subtitles: phrase-level, bottom centre; key words in the italic serif */
+  .k-sub-grad { position:absolute; left:0; right:0; bottom:0; height:340px; background:linear-gradient(to top, rgba(0,0,0,.5), rgba(0,0,0,0)); }
+  .k-sub { position:absolute; left:0; right:0; bottom:64px; padding:0 230px; text-align:center; font-family:var(--k-font); font-weight:600; font-size:50px; line-height:1.2;
+    letter-spacing:.003em; color:#fff; opacity:0; text-shadow:0 2px 10px rgba(0,0,0,.75), 0 6px 30px rgba(0,0,0,.55); }
+  .k-sub .em { font-family:var(--k-serif); font-style:italic; font-weight:500; font-size:1.16em; color:var(--k-accent); letter-spacing:0; }
   /* agenda */
   .k-ag { position:absolute; display:flex; flex-direction:column; gap:16px; font-family:var(--k-font); }
   .k-ag-item { padding:14px 28px 12px; border-radius:12px; font-weight:700; font-size:50px; line-height:1; letter-spacing:.03em; text-transform:uppercase; white-space:nowrap;
@@ -143,6 +148,11 @@ def css(style=None):
         out = out.replace("@%s@" % k, str(v))
     for ff in (style or {}).get("font_faces", []):   # {"family": "Inter", "file": "Inter.ttf", "weight": "100 900"} (the file lives in the skill's assets/fonts)
         out += '\n  @font-face { font-family:"%s"; src:url("fonts/%s"); font-weight:%s; font-display:block; }' % (ff["family"], ff["file"], ff.get("weight", "400"))
+    sb = (style or {}).get("subtitles")
+    if isinstance(sb, dict):
+        out += "\n  .k-sub { font-size:%dpx; bottom:%dpx; }" % (int(sb.get("size", 50)), int(sb.get("bottom", 64)))
+        if sb.get("grad") is False:
+            out += "\n  .k-sub-grad { display:none; }"
     ln = (style or {}).get("lines")
     if ln:
         size = int(ln.get("size", 64)); weight = int(ln.get("weight", 600)); sp = ln.get("spacing", "0.01em")
@@ -529,3 +539,37 @@ def gallery(b, bid, t_in, t_out, js):
         if tag:
             js("tl.to('#%s-tag', { opacity: 0, duration: 0.3 }, %.3f);" % (bid, at))
     return '<div class="k-cut">%s%s</div>' % (tag, items)
+
+
+# ---- subtitles ------------------------------------------------------------------------------------------------------------
+def subtitles(b, bid, t_in, t_out, js):
+    """Phrase-level subtitles (the YouTube way: the sentence, not word by word). chunks come from scripts/subtitle-chunks.py:
+    [{"lines": ["first line", "second line"], "at": t, "end": t2, "em": [word indices in the whole chunk text]}]; the em words are set in the
+    italic serif in the accent colour. One host for the whole video; each chunk fades up (0.16 s) and out (0.14 s). `grad: false` removes the bottom gradient."""
+    html = ""
+    hide = [(float(a), float(z)) for a, z in b.get("hide", [])]   # windows where something else owns the bottom edge (a lower line): the chunk steps aside
+    for i, c in enumerate(b["chunks"]):
+        at, end = float(c["at"]), float(c["end"]); em = set(c.get("em", [])); k = 0; lines = []
+        for h0, h1 in hide:
+            if end <= h0 or at >= h1:
+                continue
+            if at >= h0 and end <= h1:
+                end = at; break                                       # fully inside a window: dropped
+            if at < h0 and end <= h1:
+                end = h0 - 0.05                                       # runs into the window: cut its tail
+            elif at >= h0 and end > h1:
+                at = h1 + 0.05                                        # starts inside: starts after the window
+            else:
+                end = h0 - 0.05                                       # the window sits in the middle: keep the first part
+        if end - at < 0.35:
+            continue
+        for ln in c.get("lines") or [c["text"]]:
+            ws = []
+            for w in ln.split(" "):
+                ws.append('<span class="em">%s</span>' % esc(w) if k in em else esc(w)); k += 1
+            lines.append(" ".join(ws))
+        html += '<div class="k-sub" id="%s-s%d">%s</div>' % (bid, i, "<br>".join(lines))
+        js("tl.fromTo('#%s-s%d', { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.16, ease: 'power2.out' }, %.3f);" % (bid, i, at))
+        js("tl.to('#%s-s%d', { opacity: 0, duration: 0.14, ease: 'power1.in' }, %.3f);" % (bid, i, max(at + 0.2, end - 0.14)))
+    grad = '' if b.get("grad") is False else '<div class="k-sub-grad"></div>'
+    return grad + html

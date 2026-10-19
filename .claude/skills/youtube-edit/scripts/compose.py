@@ -694,7 +694,6 @@ CSS = """
   .cl-list .item .t { font-weight:700; font-size:48px; line-height:1.05; color:#fff; white-space:nowrap; text-shadow: 0 2px 8px rgba(0,0,0,.85); }
 """.replace("ORIGIN", origin)
 CSS += studio.css(S.get("style"))
-
 def attr_anchor(anchor):
     """'-' marks a beat that is deliberately not tied to a spoken word (beat-check skips it)."""
     if anchor == "-":
@@ -2101,7 +2100,7 @@ for b in S.get("beats", []):
                 js("tl.to('#%s-inner', { opacity: 0, duration: 0.28, ease: 'power2.in' }, %.3f);" % (bid, t_out - 0.40))
                 js("glassOut('#%s-glass', %.3f, 0.33);" % (bid, t_out - 0.35))
         transition(b, t_in, t_out)
-    elif t in ("build", "annotate", "orbit", "dive", "agenda", "trail", "captions", "halo", "gallery"):
+    elif t in ("build", "annotate", "orbit", "dive", "agenda", "trail", "captions", "halo", "gallery", "subtitles"):
         # studio formats (formats/studio.py): the graphic is built piece by piece on the spoken word
         if t == "build":
             inner = studio.build(b, bid, t_in, t_out, js)
@@ -2111,6 +2110,10 @@ for b in S.get("beats", []):
             inner = studio.agenda(b, bid, t_in, t_out, js)
         elif t == "captions":
             inner = studio.captions(b, bid, t_in, t_out, js)
+        elif t == "subtitles":
+            if "hide" not in b:   # a lower line replaces the subtitle while it is on screen (no duplicated words)
+                b["hide"] = [[float(o["in"]), float(o["out"])] for o in S.get("beats", []) if o.get("type") in ("line", "chip")]
+            inner = studio.subtitles(b, bid, t_in, t_out, js)
         elif t == "halo":
             inner = studio.halo(b, bid, t_in, t_out, js)
         elif t == "gallery":
