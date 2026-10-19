@@ -590,6 +590,33 @@ Every full-frame scene sits on an ambient three-radial brand wash plus a 96 px g
   360x540 corner, right and bottom 48, radius 32; full to corner in 0.6 s `power3.inOut`, 0.3 s before the word),
   switched with `tl.set`, never a class toggle (not seek-safe).
 
+### Explainer formats (formats/studio.py): the graphic is built on the spoken word
+
+Added 19/10/2026 from the inspiration study (Iman Gadzhi, Callaway, Pedro Andrade, Marshall Crew; notes in the project's
+`inspo-analisi/ANALISI.md`). In every reference the graphic IS the explanation, built piece by piece on the word, with real objects
+(a logo, a swatch, a flat), a camera that moves through space, and one visual identity. Colours and font are CSS variables
+(`--k-*`, `DEFAULT_STYLE` in studio.py, overridable with `"style": {...}` in the storyboard), so the creator's palette changes once.
+
+| Type | Use for | Shape (all times are word starts; every item has an `anchor`) |
+|---|---|---|
+| `build` | a list said out loud: picture, then label, then value (swatches, assets, specs) | `{"type":"build","title":"ASSET","items":[{"img":"img/a.jpg","label":"Immagini","value":"..","at":t,"label_at":t,"value_at":t,"label_anchor":".."}]}` (1 to 4 items) |
+| `annotate` | one picture (a flat, a figurino) with callouts whose lines DRAW onto it, each on its word | `{"type":"annotate","src":"img/flat.png","max_h":860,"callouts":[{"label":"..","sub":"..","x":.33,"y":.36,"side":"l|r","dy":0,"to":[x2,y2],"at":t,"anchor":".."}]}` (x/y fractions of the picture; `to` = a measured segment) |
+| `orbit` | a card beside the speaker that is carried into a dark space where satellites (logos, people) fly in and connect to it | `{"type":"orbit","center":{"src":".."}|{"text":"..","sub":".."},"card":[w,h],"pre":{"go_at":t},"nodes":[{"src":"img/logo.svg","logo":true,"caption":"..","at":t,"anchor":".."}]}` |
+| `dive` | a screen or page: starts zoomed on one detail, then the camera pulls back to reveal the whole | `{"type":"dive","src":"img/page.png","focus":{"x","y","w","h"},"reveal_at":t,"reveal_dur":0.75,"click":{"x","y","at"},"tilt":true}` |
+| `agenda` | a fixed list beside the speaker that gets one more line at every topic and stays | `{"type":"agenda","pos":"tl|ml|bl|tr","items":[["Tessuti",t,"anchor"],["Costruzione",t]]}` |
+
+Rules from the creator's notes on the first test (apply to every build with these formats):
+- **A logo, not a word, for a tool or a brand** (`orbit` nodes with `src` + `"logo": true`; the text disc is a placeholder until the file exists).
+  **Never write a technical term the audience does not need** ("MCP"): say "Claude connected to Canva" with two logos, not three labels.
+- **`dive` must be fast.** It enters already zoomed, the pull-back starts within ~0.5 s of entering and lasts at most 0.8 s
+  (`reveal_dur`); never hold the zoomed state 2 to 3 s. The `focus` is a small detail (zoom 3x or more; a focus as tall as the
+  picture barely zooms). A giant face of a person as the zoomed start reads badly: pick a neutral detail or a title.
+- **`build` holds only as long as the last item needs** (end ~1 s after the last label), not until the sentence ends.
+- **`agenda` only where it matches the spoken moment:** each line enters on the word that names its topic; never a list the
+  speaker is not reading out. **`annotate` is the creator's approved look** (lines drawing onto a figurino, label per spoken
+  instruction); only the font and colours change.
+- Pages of a portfolio shown as stills: a 3D window (`browser3d`) at most 6 s, whole page, never cropped; no slat-reveal slides.
+
 ### Rejected (do not rebuild)
 
 - Freeze-frame and paper-and-tape dressing; an outro or end card; a "Next video" pill at the end (the YouTube end screen
