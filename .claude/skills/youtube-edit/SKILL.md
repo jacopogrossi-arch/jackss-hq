@@ -837,7 +837,12 @@ speech window, subtract, and read the RMS of the difference in each sound's wind
 against two control windows (a pop shows ~650 against ~30). Never compare against a previous render: two AAC encodes
 differ enough to hide a quiet effect.
 
-**Music:** a track with some tension under the hook (~18 s), then a calm lo-fi bed under the rest, ducked about 16 dB
+**Music (Jacopo: light lo-fi / chill hip-hop type beat, 20/10/2026):** `assets/music/lofi-01..04.mp3` (CC0, -20 LUFS, credits in
+`assets/music/CREDITS.md`). `python3 scripts/add-music.py --video master.mp4 --out master-music.mp4 --track lofi-02` lays the bed
+under a finished video, looped, faded in/out, **ducked by a sidechain keyed on the voice** (`--db -9` default = about 16 dB under
+the voice; the bed rises in pauses). Video is copied, the voice is untouched; keep the no-music master. Do it after the render, so a
+music change never costs a render. To add tracks: CC0 only (Openverse API `audio/?q=...&license=cc0`), loudnorm to -20 LUFS, credit in CREDITS.md.
+Older note: a track with some tension under the hook (~18 s), then a calm lo-fi bed under the rest, ducked about 16 dB
 (hook) and 19 dB (body) under your voice, then a -1 dB limiter, after the voice is at -14 LUFS (`assemble.py` levels it).
 The simplest bed is `assemble.py`'s `music` key; for a ducked bed on a finished master (keep a no-music twin):
 
