@@ -458,6 +458,12 @@ def trail(b, bid, t_in, t_out, js, sizes):
         cx, cy, zm = float(c[1]), float(c[2]), float(c[3]); ry = float(c[4]) if len(c) > 4 else 0.0; rx = float(c[5]) if len(c) > 5 else 0.0
         return "x: %.1f, y: %.1f, scale: %.4f, rotationY: %.1f, rotationX: %.1f" % (-zm * cx, -zm * cy, zm, ry, rx)
     js("tl.set('#%s-rig', { %s }, %.3f);" % (bid, pose(cam[0]), t_in))
+    # the page never rests dead: until the first pull-back the camera pushes in slowly (`rest_push`, default 4%; 0 = off). Found by the
+    # independent critic on the first full draft: 13 pages sat motionless for 2-4 s.
+    rp = float(b.get("rest_push", 0.04))
+    if rp > 0 and len(cam) > 1 and float(cam[1][0]) - t_in > 0.8:
+        c0 = list(cam[0]); c0[3] = float(c0[3]) * (1 + rp)
+        js("tl.to('#%s-rig', { %s, duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (bid, pose(c0), float(cam[1][0]) - t_in - 0.05, t_in))
     for c in cam[1:]:
         dur = float(c[6]) if len(c) > 6 else 1.3
         js("tl.to('#%s-rig', { %s, duration: %.2f, ease: 'power2.inOut' }, %.3f);" % (bid, pose(c), dur, float(c[0])))

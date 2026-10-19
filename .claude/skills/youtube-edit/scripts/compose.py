@@ -850,6 +850,11 @@ for ti, tag in enumerate(S.get("tags") or ([S["tag"]] if S.get("tag") else [])):
     js("glassOut('#%s-glass', %.3f, 0.33);" % (tid, tag["out"] - 0.35))
     js("tl.set('#%s-inner', { opacity: 0 }, %.3f);" % (tid, tag["out"] - 0.12))   # hard kill exactly where the fade ends
 
+# ---- subtitles mode (preset / storyboard "subtitles": "both" | "keywords" | "off"): "keywords" and "off" drop the phrase-level subtitle
+# beats, so only the key-word lines remain (Jacopo prefers keywords only, 20/10/2026) ---------------------------------------------------
+if S.get("subtitles") in ("keywords", "off"):
+    S["beats"] = [b_ for b_ in S.get("beats", []) if b_.get("type") != "subtitles"]
+
 # ---- beats ------------------------------------------------------------------------------------------
 for b in S.get("beats", []):
     if b["type"] == "transition":   # a transition has an instant (`at`), not a window: fx.window gives the host its in/out

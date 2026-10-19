@@ -59,7 +59,7 @@ class SubtitlesFormat(unittest.TestCase):
         subs = os.path.join(d, "subs.json")
         r = run("subtitle-chunks.py", "--transcript", transcript(d), "--out", subs, "--em", "palette")
         self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
-        spec = {"id": "t", "duration": 8.0, "preset": "elegante-portfolio",
+        spec = {"id": "t", "duration": 8.0, "preset": "elegante-portfolio", "subtitles": "both",
                 "beats": [{"type": "subtitles", "id": "sb", "in": 0.0, "out": 8.0, "anchor": "-", "chunks": load(subs)["chunks"]},
                           {"type": "line", "id": "l1", "text": "hello there", "em": [1], "color": "cyan", "in": 1.0, "out": 3.0, "anchor": "-"}]}
         sp = write(os.path.join(d, "storyboard.json"), spec)
@@ -95,3 +95,17 @@ class SubtitlesStepAside(unittest.TestCase):
     def test_chunk_outside_stays(self):
         page = self.build(9.2, 9.9)
         self.assertIn("four five six", page)
+
+
+class SubtitlesMode(unittest.TestCase):
+    def test_keywords_mode_drops_phrase_subtitles(self):
+        d = scratch(self)
+        chunks = [{"text": "one two three", "lines": ["one two three"], "at": 1.0, "end": 2.0, "em": []}]
+        spec = {"id": "t", "duration": 5.0, "subtitles": "keywords",
+                "beats": [{"type": "subtitles", "id": "sb", "in": 0.0, "out": 5.0, "anchor": "-", "chunks": chunks},
+                          {"type": "line", "id": "l1", "text": "hello there", "em": [1], "color": "cyan", "in": 3.0, "out": 4.5, "anchor": "-"}]}
+        r = run("compose.py", "--spec", write(os.path.join(d, "s.json"), spec), "--out", os.path.join(d, "public"))
+        self.assertEqual(r.returncode, 0, r.stdout + r.stderr)
+        page = read(os.path.join(d, "public", "index.html"))
+        self.assertNotIn("one two three", page)
+        self.assertIn("hello there", page)

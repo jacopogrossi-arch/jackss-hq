@@ -6,7 +6,7 @@ breathes back up in pauses). The voice is not touched. Video is copied (no re-en
 
 Usage:
   python3 add-music.py --video master.mp4 --out master-music.mp4 [--track lofi-02 | path/to/bed.mp3]
-                       [--db -14] [--fade 2.0] [--start 0]
+                       [--db -14] [--lufs -14] [--fade 2.0] [--start 0]
 --track: a name in assets/music (lofi-01..04, no extension) or any audio file. --db: bed level in dB relative to its own -20 LUFS
 normalisation (-14 = about 21 dB under the voice at -14 LUFS, before the ducking takes another ~6 dB). --start: where the bed begins.
 """
@@ -14,6 +14,7 @@ import argparse, os, subprocess, json, sys
 ap = argparse.ArgumentParser()
 ap.add_argument("--video", required=True); ap.add_argument("--out", required=True); ap.add_argument("--track", default="lofi-02")
 ap.add_argument("--db", type=float, default=-14.0)
+ap.add_argument("--lufs", type=float, default=-14.0, help="loudness of the delivered file (0 = leave as it is)")
 ap.add_argument("--fade", type=float, default=2.0); ap.add_argument("--start", type=float, default=0.0)
 a = ap.parse_args()
 SK = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
@@ -25,7 +26,7 @@ L = max(1.0, dur - a.start)
 bed = ("[1:a]aloop=loop=-1:size=2e9,atrim=0:%.3f,asetpts=PTS-STARTPTS,%s,afade=t=in:st=0:d=%.2f,afade=t=out:st=%.3f:d=%.2f,adelay=%d|%d[bed]"
        % (L, "volume=%.1fdB" % a.db, a.fade, max(0.0, L - a.fade), a.fade, int(a.start * 1000), int(a.start * 1000)))
 fc = (bed + ";[0:a]asplit=2[voice][sc];[bed][sc]sidechaincompress=threshold=0.02:ratio=10:attack=15:release=350[duck];"
-      "[voice][duck]amix=inputs=2:duration=first:dropout_transition=0:normalize=0,alimiter=limit=0.89[a]")
+      "[voice][duck]amix=inputs=2:duration=first:dropout_transition=0:normalize=0%s,alimiter=limit=0.84[a]" % (",loudnorm=I=%g:TP=-1.5:LRA=11" % a.lufs if a.lufs else ""))
 subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", a.video, "-i", tr, "-filter_complex", fc, "-map", "0:v:0", "-map", "[a]", "-c:v", "copy",
                 "-c:a", "aac", "-b:a", "256k", "-ar", "48000", "-movflags", "+faststart", a.out], check=True)
 print("wrote %s (bed %s at %.1f dB, ducked under the voice)" % (a.out, os.path.basename(tr), a.db))

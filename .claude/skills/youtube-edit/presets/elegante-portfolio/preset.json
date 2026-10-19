@@ -39,7 +39,7 @@
     "chip": "#f4efe6",
     "chip_text": "#15100b"
   },
-  "subtitles": "both",
+  "subtitles": "keywords",
   "formats": {
     "prefer": [
       "trail",
