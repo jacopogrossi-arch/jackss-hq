@@ -38,6 +38,7 @@ def css(style=None):
   .fx-streak { position:absolute; top:-10%; height:120%; width:520px; left:-700px; opacity:0; transform:skewX(-16deg);
     background:linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.55) 45%, rgba(255,255,255,.9) 50%, rgba(255,255,255,.55) 55%, rgba(255,255,255,0)); }
   .fx-burn { position:absolute; top:-10%; height:120%; width:1500px; left:0; opacity:0; filter:blur(26px); }
+  .fx-sun { position:absolute; top:-8%; width:1200px; height:1200px; opacity:0; }
   .fx-blob { position:absolute; border-radius:50%; filter:blur(90px); opacity:0; }
   .fx-band { position:absolute; left:-6%; width:112%; opacity:0; }
   .fx-vig { position:absolute; inset:0; background:radial-gradient(ellipse at 50% 46%, rgba(0,0,0,0) 52%, rgba(0,0,0,.55) 100%); opacity:0; }
@@ -80,26 +81,21 @@ def transition(b, bid, js, style=None):
         js("tl.to('#%s-f', { opacity: 0, duration: %.3f, ease: 'power2.in' }, %.3f);" % (bid, h, at + 0.03))
         return '<div class="fx-fill" id="%s-f" style="background:%s"></div>' % (bid, _color(b, style, "white"))
     if k == "lightleak":
-        # light that leaks in from ONE edge (like film), in the palette's warm tones, peaking on the cut; the footage itself lifts a little.
-        pk = at; h = d / 2; side = b.get("side", "left" if rnd.random() < 0.5 else "right"); st = style or {}
-        warm = [st.get("accent", "#d4af5f"), "#f0a548", st.get("accent3", "#fff1d6")]
-        x0 = -420 if side == "left" else 1920 - 900
-        blobs = [(warm[1], 900, 1500, x0, -200, 0.80, -18), (warm[0], 700, 1300, x0 + (260 if side == "left" else -160), 120, 0.85, 12), (warm[2], 380, 900, x0 + (180 if side == "left" else 40), 260, 0.60, -8)]
-        html = ""
+        # a soft warm wash from one edge: ONE smooth full-frame flood (no blurred blobs, no flicker: those read as glitches), peaking on the cut,
+        # plus one soft highlight that drifts across it; the footage lifts a little in brightness while it builds (same timing as burn).
+        pk = at; h = d / 2; side = b.get("side", "left"); st = style or {}
+        cx = 18 if side == "left" else 82
+        warm = (st.get("accent3", "#fff1d6"), st.get("accent", "#d4af5f"), "#f0a548")
+        html = ('<div class="fx-fill" id="%s-w" style="background:radial-gradient(ellipse at %d%% 42%%, %s 0%%, %s 42%%, %s 100%%)"></div>'
+                '<div class="fx-sun" id="%s-u" style="left:%dpx;background:radial-gradient(circle, rgba(255,246,226,.95) 0%%, rgba(255,230,180,.5) 38%%, rgba(255,230,180,0) 70%%)"></div>'
+                % (bid, cx, warm[0], warm[1], warm[2], bid, -300 if side == "left" else 1920 - 900))
         sgn = 1 if side == "left" else -1
-        # the cut hides under a FULL-FRAME wash: at the peak the whole picture is warm light (a leak that covers only half the frame shows the cut)
-        html += '<div class="fx-fill" id="%s-w" style="background:linear-gradient(%ddeg, %s 0%%, %s 55%%, %s 100%%)"></div>' % (bid, 90 if side == "left" else 270, warm[1], warm[0], warm[2])
         js("tl.fromTo('#%s-w', { opacity: 0 }, { opacity: %.2f, duration: %.3f, ease: 'power2.in' }, %.3f);" % (bid, float(b.get("flood", 0.95)), h * 0.75, pk - h * 0.75 - 0.02))
         js("tl.to('#%s-w', { opacity: 0, duration: %.3f, ease: 'power2.out' }, %.3f);" % (bid, h * 1.1, pk + 0.1))
-        for i, (c, w, hh, x, y, op, rot) in enumerate(blobs):
-            html += '<div class="fx-blob" id="%s-l%d" style="background:%s;width:%dpx;height:%dpx;left:%dpx;top:%dpx;transform:rotate(%ddeg);filter:blur(80px)"></div>' % (bid, i, c, w, hh, x, y, rot)
-            t_up = pk - h * 0.9 + 0.05 * i
-            js("tl.fromTo('#%s-l%d', { opacity: 0, x: %d }, { opacity: %.2f, x: %d, duration: %.3f, ease: 'power2.out' }, %.3f);" % (bid, i, -sgn * 90, op, sgn * 40, h * 0.9, t_up))
-            for q in range(3):   # a little flicker while it burns in
-                js("tl.set('#%s-l%d', { opacity: %.2f }, %.3f);" % (bid, i, op * (0.82 + 0.18 * rnd.random()), t_up + h * 0.9 + 0.05 * q))
-            js("tl.to('#%s-l%d', { opacity: 0, x: %d, duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (bid, i, sgn * 170, h * 1.2, pk + 0.15 + 0.05 * i))
-        js("tl.fromTo('%s', { filter: 'brightness(1) saturate(1)' }, { filter: 'brightness(1.22) saturate(1.12)', duration: %.3f, ease: 'power2.out', immediateRender: false }, %.3f);" % (W, h * 0.9, pk - h * 0.9))
-        js("tl.to('%s', { filter: 'brightness(1) saturate(1)', duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (W, h * 1.2, pk + 0.1))
+        js("tl.fromTo('#%s-u', { opacity: 0, x: %d }, { opacity: 1, x: %d, duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (bid, -sgn * 100, sgn * 380, h * 1.5, pk - h * 0.8))
+        js("tl.to('#%s-u', { opacity: 0, duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (bid, h * 0.8, pk + h * 0.3))
+        js("tl.fromTo('%s', { filter: 'brightness(1) saturate(1)' }, { filter: 'brightness(1.5) saturate(1.1)', duration: %.3f, ease: 'power2.in', immediateRender: false }, %.3f);" % (W, h * 0.8, pk - h * 0.8))
+        js("tl.to('%s', { filter: 'brightness(1) saturate(1)', duration: %.3f, ease: 'power2.out' }, %.3f);" % (W, h * 1.0, pk + 0.05))
         return html
     if k == "burn":
         # film burn: the footage over-exposes (warm, then washed) as a hot band sweeps across and a flicker runs; peak on the cut
