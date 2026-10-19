@@ -58,7 +58,9 @@ Totale: 3 × 4 = **12 tavole**, più un'eventuale copertina.
 
 **Moodboard:** l'emotiva usa foto reali (fonti da citare, come fa il trend book: Unsplash/Pexels). La tecnica contiene palette Pantone TCX, campioni di tessuto (foto dal trend book o generati), dettagli e lavorazioni.
 
-## Mini concept definitivi (ripartenza 14/10/2026)
+> ⚠️ **CAMBIO DI ROTTA (19/10/2026, consegna 20/10):** i **concept sono i 3 temi del trend book stessi** (onlife, body toll, conviviality), non mini concept da inventare. La tavola concept = sintesi del tema dal trend book (sezioni "Tema 1/2/3" più sotto). I mini concept qui sotto ("Dentro la città", "Senza dimostrare niente", "La tavola della domenica") sono **superati**: restano solo come ispirazione per moodboard e figurini.
+
+## Mini concept definitivi (ripartenza 14/10/2026) — SUPERATI il 19/10
 
 Scelti da Jacopo dalla lista `idee-concept-trend-ai-2027-28.md` (onlife n.1, body toll n.2, conviviality n.1), riscritti sulla sua persona e su Inverso. **Sostituiscono le bozze "Fuori dallo schermo", "Sottovoce" e "Stessa stanza"** e le tavole Canva dell'08/10, che restano solo come bozza.
 
