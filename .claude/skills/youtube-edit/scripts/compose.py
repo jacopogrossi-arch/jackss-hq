@@ -99,7 +99,9 @@ Icons (pipeline, world, deck, pills): doc browser bolt chat money check user cod
 Camera ops: set t scale | creep t0 t1 scale (power1.inOut) | punch t scale (0.32 s power2.out) | release t dur (to 1.0) | reveal t (1.10 to 1.00 as a card enters).
 Positions: tl = left:70 top:96 (desk framing, clears the mic), tr = right:70 top:96.
 """
-import argparse, json, os, shutil, glob, math, struct
+import argparse, json, os, shutil, glob, math, struct, sys
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "formats"))
+import studio   # build / annotate / orbit / dive / agenda (the explainer formats, 19/10/2026)
 from html import escape as _esc
 
 hesc = lambda s: _esc(s, quote=False)
@@ -663,6 +665,7 @@ CSS = """
   .cl-list .item { display:none; align-items:center; gap:20px; margin-bottom:20px; }
   .cl-list .item .t { font-weight:700; font-size:48px; line-height:1.05; color:#fff; white-space:nowrap; text-shadow: 0 2px 8px rgba(0,0,0,.85); }
 """.replace("ORIGIN", origin)
+CSS += studio.css(S.get("style"))
 
 def attr_anchor(anchor):
     """'-' marks a beat that is deliberately not tied to a spoken word (beat-check skips it)."""
@@ -2069,6 +2072,20 @@ for b in S.get("beats", []):
                         check_in("#%s-i%d" % (bid, i), float(it[1]))
                 js("tl.to('#%s-inner', { opacity: 0, duration: 0.28, ease: 'power2.in' }, %.3f);" % (bid, t_out - 0.40))
                 js("glassOut('#%s-glass', %.3f, 0.33);" % (bid, t_out - 0.35))
+        transition(b, t_in, t_out)
+    elif t in ("build", "annotate", "orbit", "dive", "agenda"):
+        # studio formats (formats/studio.py): the graphic is built piece by piece on the spoken word
+        if t == "build":
+            inner = studio.build(b, bid, t_in, t_out, js)
+        elif t == "orbit":
+            inner = studio.orbit(b, bid, t_in, t_out, js)
+        elif t == "agenda":
+            inner = studio.agenda(b, bid, t_in, t_out, js)
+        else:
+            src_path = os.path.join(OUT, b["src"])
+            size = b.get("size") or image_size(src_path)
+            inner = (studio.annotate if t == "annotate" else studio.dive)(b, bid, t_in, t_out, js, size)
+        html_parts.append(host(bid, t_in, t_out, track, inner, anchor))
         transition(b, t_in, t_out)
     else:
         raise SystemExit("unknown beat type %r" % t)
