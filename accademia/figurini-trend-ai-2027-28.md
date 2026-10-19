@@ -31,6 +31,22 @@ Colori: giubbotto `#2B2829` con fodera `#E8692B`, t-shirt `#F2EEE6`, jeans indig
 Costruzione idee: giubbotto nylon nero con fodera arancio · jeans larghi con toppe al ginocchio · t-shirt ribbed.
 Ricerca foto: `black nylon bomber orange lining` · `baggy raw denim knee patch` · `ribbed fitted t-shirt white men`.
 
+### Prompt flat B/N v3 — [CAPO] e [DETTAGLI] (template in "Prompt flat B/N", un capo per immagine)
+
+**ROYAL HUMOUR**
+- Giacca. [CAPO]: `a men's cropped hussar jacket` · [DETTAGLI]: `slim fitted, hip length, closed stand-up collar, double rows of horizontal braid frogging with toggle loops across the chest, small round buttons, braided trim at the cuffs and along the hem. Soft folds at the elbows and underarms, as in fine wool.`
+- Camicia. [CAPO]: `a men's shirt with a lace jabot` · [DETTAGLI]: `slim fit, high pleated collar, a cascading ruffle jabot down the front placket, long sleeves with ruffled lace-edged cuffs. Soft fluid folds at the elbows and ruffles, as in cotton poplin.`
+- Pantalone. [CAPO]: `a pair of men's wide trousers` · [DETTAGLI]: `high rise, two forward pleats, sharp centre crease drawn as a single line, side pockets, wide straight leg falling to the floor, a wide stripe along each outer side seam (drawn as a double line). Few heavy folds at the pleats and at the hem, as in wool.`
+- A mano: stivali texani neri con punta e tacco.
+
+**BODY TALK** (come v2) — maglia fine, pantalone nappa, cappotto sulle spalle; a mano: stivali texani.
+
+**ONLIFE**
+- T-shirt. [CAPO]: `a men's slim ribbed t-shirt` · [DETTAGLI]: `fitted, crew neck, short sleeves, fine vertical rib drawn only as a few lines near the seams. Light folds at the underarms and the hem.`
+- Giubbotto. [CAPO]: `a men's short nylon bomber jacket` · [DETTAGLI]: `boxy, waist length, ribbed collar, cuffs and hem band, full front zip, slanted pockets, a sleeve pocket with a zip, worn open to show the lining. Crisp crinkly folds at the elbows, as in matte nylon.`
+- Jeans. [CAPO]: `a pair of men's baggy jeans` · [DETTAGLI]: `wide straight leg, mid rise, belt loops, five-pocket construction with topstitching, a rectangular corduroy patch on each knee stitched with visible topstitching, long length stacking slightly at the hem. Soft folds behind the knees and at the hem, as in raw denim.`
+- A mano: sneakers consumate.
+
 ### Prossimi passi per i figurini
 Workflow fisso dalla memoria (`workflow-outfit-colorazione`): flat B/N di ogni capo (prompt nei template v2 più sotto, cambiando solo [CAPO]/[DETTAGLI]) → ricalco in Procreate sul figurino base → colore con ChatGPT → pagina 4. Per la scadenza di domani si può fare il solo fronte (basta un figurino per tema).
 
