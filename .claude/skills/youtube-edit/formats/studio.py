@@ -23,13 +23,14 @@ DEFAULT_STYLE = {
     "chip": "#f4efe6", "chip_text": "#15100b",
     "font": '"DM Sans", ui-sans-serif, system-ui, sans-serif',
     "hand": '"Caveat", "Segoe Print", cursive',
-    "serif": '"Instrument Serif", "Georgia", serif',
+    "serif": '"Playfair Display", "Georgia", serif',
+    "keyfont": '"DM Sans", ui-sans-serif, system-ui, sans-serif', "keystyle": "normal", "keyweight": "700", "keysize": "86px",
 }
 
 
 _TEMPLATE = """
   :root { --k-bg:@bg@; --k-bg2:@bg2@; --k-text:@text@; --k-mute:@mute@; --k-accent:@accent@; --k-accent2:@accent2@; --k-accent3:@accent3@;
-          --k-chip:@chip@; --k-chip-text:@chip_text@; --k-font:@font@; --k-hand:@hand@; --k-serif:@serif@; }
+          --k-chip:@chip@; --k-chip-text:@chip_text@; --k-font:@font@; --k-hand:@hand@; --k-serif:@serif@; --k-keyfont:@keyfont@; --k-keystyle:@keystyle@; --k-keyweight:@keyweight@; --k-keysize:@keysize@; }
   /* ---- studio formats: a calm dark wash, no grid ---- */
   .k-cut { position:absolute; inset:0; font-family:var(--k-font); color:var(--k-text); background:
       radial-gradient(1100px 700px at 50% 112%, color-mix(in srgb, var(--k-accent) 26%, transparent), transparent 70%),
@@ -96,7 +97,7 @@ _TEMPLATE = """
   .k-tr-node { position:absolute; translate:-50% -50%; opacity:0; }
   .k-tr-page { border-radius:14px; overflow:hidden; box-shadow:0 50px 120px rgba(0,0,0,.65), 0 0 0 2px rgba(255,255,255,.14); background:#0b0907; }
   .k-tr-page img { width:100%; height:100%; display:block; object-fit:fill; }
-  .k-tr-key { font-family:var(--k-font); font-weight:700; font-size:86px; line-height:1; letter-spacing:-.01em; white-space:nowrap; color:var(--k-text);
+  .k-tr-key { font-family:var(--k-keyfont); font-style:var(--k-keystyle); font-weight:var(--k-keyweight); font-size:var(--k-keysize); line-height:1; letter-spacing:-.01em; white-space:nowrap; color:var(--k-text);
     text-shadow:0 0 38px color-mix(in srgb, var(--k-accent) 55%, transparent), 0 6px 30px rgba(0,0,0,.7); }
   .k-tr-key .sub { display:block; font-family:var(--k-font); font-weight:500; font-size:30px; letter-spacing:.04em; color:var(--k-mute); margin-top:8px; }
   .k-tr-ul { position:absolute; left:0; right:0; bottom:-18px; width:100%; height:22px; overflow:visible; }
@@ -153,8 +154,10 @@ def css(style=None):
   .lower .w.em { text-shadow:0 0 30px color-mix(in srgb, var(--k-accent) 55%%, transparent), 0 3px 8px rgba(0,0,0,.85); }
   .chip .inner { font-family:var(--k-font); } .chip .inner .em { color:var(--k-accent); }
   %s
+  %s
 """ % (sp, int(ln.get("bottom", 84)), size, weight, "text-transform:uppercase;" if ln.get("upper") else "", "font-style:italic;" if ln.get("italic") else "",
-                  (".lower .w.em { font-family:var(--k-hand); font-weight:700; font-size:%dpx; letter-spacing:0; }" % int(size * 1.22)) if ln.get("hand_em") else "")
+                  (".lower .w.em { font-family:var(--k-hand); font-weight:700; font-size:%dpx; letter-spacing:0; }" % int(size * 1.22)) if ln.get("hand_em") else "",
+                  (".lower .w.em { font-family:var(--k-serif); font-style:italic; font-weight:400; font-size:%dpx; letter-spacing:0; }" % int(size * float(ln.get("serif_em_scale", 1.4)))) if ln.get("serif_em") else "")
     return out
 
 
@@ -406,7 +409,7 @@ def trail(b, bid, t_in, t_out, js, sizes):
             iw, ih = sizes[nd["src"]]; w = float(nd.get("w", 1100)); h = w * ih / float(iw)
             inner = '<div class="k-tr-page" style="width:%.0fpx;height:%.0fpx"><img src="%s" alt="" /></div>' % (w, h, nd["src"]); rot = float(nd.get("rot", -6))
         elif kind == "key":
-            txt = nd["text"]; w = float(nd.get("w", len(txt) * 50 + 60)); h = float(nd.get("h", 150 if nd.get("sub") else 120)); rot = float(nd.get("rot", 0))
+            txt = nd["text"]; w = float(nd.get("w", len(txt) * 54 + 60)); h = float(nd.get("h", 150 if nd.get("sub") else 120)); rot = float(nd.get("rot", 0))
             sub = ('<span class="sub">%s</span>' % esc(nd["sub"])) if nd.get("sub") else ""
             ul = '<svg class="k-tr-ul" viewBox="0 0 300 22" preserveAspectRatio="none"><path id="%s-ul" d="M2 11 L298 11"/></svg>' % nid
             inner = '<div class="k-tr-key" style="position:relative">%s%s%s</div>' % (esc(txt), ul, sub)
