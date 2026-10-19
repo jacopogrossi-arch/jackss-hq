@@ -22,7 +22,7 @@ WHAT = {"line": lambda b: "lower line (%s%s)" % (b.get("color", "cyan"), ", shim
 def text_of(b):
     if b.get("text"): return b["text"]
     if b.get("label"): return b["label"]
-    if b.get("items"): return ((b.get("eyebrow") + ": ") if b.get("eyebrow") else "") + ", ".join(i[0] for i in b["items"])
+    if b.get("items"): return ((b.get("eyebrow") + ": ") if b.get("eyebrow") else "") + ", ".join((i.get("label") or i.get("text") or "") if isinstance(i, dict) else i[0] for i in b["items"])
     if b.get("images"): return "%d of the channel's own thumbnails, click on tile %d" % (len(b["images"]), int(b.get("click_index", 0)) + 1)
     if b.get("src"): return os.path.basename(b["src"])
     return ""
