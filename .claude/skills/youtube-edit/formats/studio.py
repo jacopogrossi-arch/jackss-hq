@@ -39,10 +39,12 @@ _TEMPLATE = """
   .k-item { display:flex; flex-direction:column; align-items:center; gap:26px; width:480px; }
   .k-img { height:430px; display:flex; align-items:flex-end; justify-content:center; opacity:0; }
   .k-img img { max-width:520px; max-height:430px; object-fit:contain; filter: drop-shadow(0 30px 40px rgba(0,0,0,.55)); }
-  .k-label { font-weight:700; font-size:44px; line-height:1; letter-spacing:.03em; text-transform:uppercase; padding:14px 26px 12px; border-radius:10px;
-    background:var(--k-chip); color:var(--k-chip-text); opacity:0; white-space:nowrap; }
-  .k-value { font-weight:700; font-size:38px; line-height:1; letter-spacing:.04em; padding:11px 22px 9px; border-radius:10px; border:3px solid var(--k-accent);
-    color:var(--k-accent); background:rgba(0,0,0,.35); opacity:0; white-space:nowrap; }
+  .k-label { position:relative; font-weight:700; font-size:52px; line-height:1; letter-spacing:.05em; text-transform:uppercase; padding:6px 6px 14px; white-space:nowrap; opacity:0;
+    background:linear-gradient(90deg, var(--k-text) 8%, var(--k-accent) 100%); -webkit-background-clip:text; background-clip:text; color:transparent;
+    filter: drop-shadow(0 0 16px color-mix(in srgb, var(--k-accent) 50%, transparent)) drop-shadow(0 4px 10px rgba(0,0,0,.75)); }
+  .k-label::after { content:""; position:absolute; left:6%; right:6%; bottom:0; height:3px; border-radius:2px; background:linear-gradient(90deg, transparent, var(--k-accent), transparent); }
+  .k-value { font-weight:700; font-size:40px; line-height:1; letter-spacing:.06em; white-space:nowrap; color:var(--k-accent); opacity:0;
+    text-shadow:0 0 22px color-mix(in srgb, var(--k-accent) 55%, transparent), 0 3px 10px rgba(0,0,0,.7); }
   /* annotate */
   .k-an-wrap { position:absolute; inset:0; }
   .k-an-img { position:absolute; opacity:0; }
@@ -93,7 +95,8 @@ _TEMPLATE = """
   .k-tr-node { position:absolute; translate:-50% -50%; opacity:0; }
   .k-tr-page { border-radius:14px; overflow:hidden; box-shadow:0 50px 120px rgba(0,0,0,.65), 0 0 0 2px rgba(255,255,255,.14); background:#0b0907; }
   .k-tr-page img { width:100%; height:100%; display:block; object-fit:fill; }
-  .k-tr-key { font-family:var(--k-hand); font-weight:700; font-size:92px; line-height:1; white-space:nowrap; color:var(--k-accent); text-shadow:0 6px 30px rgba(0,0,0,.7); }
+  .k-tr-key { font-family:var(--k-font); font-weight:700; font-size:86px; line-height:1; letter-spacing:-.01em; white-space:nowrap; color:var(--k-text);
+    text-shadow:0 0 38px color-mix(in srgb, var(--k-accent) 55%, transparent), 0 6px 30px rgba(0,0,0,.7); }
   .k-tr-key .sub { display:block; font-family:var(--k-font); font-weight:500; font-size:30px; letter-spacing:.04em; color:var(--k-mute); margin-top:8px; }
   .k-tr-ul { position:absolute; left:0; right:0; bottom:-18px; width:100%; height:22px; overflow:visible; }
   .k-tr-ul path { fill:none; stroke:var(--k-accent); stroke-width:5; stroke-linecap:round; }
@@ -127,6 +130,7 @@ def css(style=None):
   .lower { font-family:var(--k-font); letter-spacing:%s; bottom:%dpx; }
   .lower .w, .lower .sp { font-size:%dpx; font-weight:%d; %s%s }
   .lower .w { color:var(--k-text); } .lower .w.em { color:var(--k-accent); } .lower.amber .w.em { color:var(--k-accent2); }
+  .lower .w.em { text-shadow:0 0 30px color-mix(in srgb, var(--k-accent) 55%%, transparent), 0 3px 8px rgba(0,0,0,.85); }
   .chip .inner { font-family:var(--k-font); } .chip .inner .em { color:var(--k-accent); }
   %s
 """ % (sp, int(ln.get("bottom", 84)), size, weight, "text-transform:uppercase;" if ln.get("upper") else "", "font-style:italic;" if ln.get("italic") else "",
@@ -214,13 +218,17 @@ def annotate(b, bid, t_in, t_out, js, size):
         js("(function(){ var l = document.getElementById('%s-k%d'); var L = l.getTotalLength(); l.style.strokeDasharray = L; l.style.strokeDashoffset = L;"
            " tl.to(l, { strokeDashoffset: 0, duration: 0.42, ease: 'power2.out' }, %.3f); })();" % (bid, i, at + (0.25 if c.get("to") else 0.0)))
         js("tl.fromTo('#%s-d%d', { opacity: 0, scale: 0.2 }, { opacity: 1, scale: 1, duration: 0.3, ease: 'power2.out' }, %.3f);" % (bid, i, at - 0.05))
-        js("tl.fromTo('#%s-t%d', { opacity: 0, x: %d }, { opacity: 1, x: 0, duration: 0.38, ease: 'power2.out' }, %.3f);" % (bid, i, 18 if side == "r" else -18, at + 0.32 + (0.25 if c.get("to") else 0.0)))
+        zz = float(b.get("label_z", 90)) if space else 0
+        js("tl.fromTo('#%s-t%d', { opacity: 0, x: %d }, { opacity: 1, x: 0, z: %.0f, duration: 0.38, ease: 'power2.out' }, %.3f);" % (bid, i, 18 if side == "r" else -18, zz, at + 0.32 + (0.25 if c.get("to") else 0.0)))
     base_at = float(b.get("img_at", t_in + 0.05))
     js("tl.fromTo('#%s-img', { opacity: 0, y: 30, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: 'power2.out' }, %.3f);" % (bid, base_at))
     if space:   # entry: the window turns into place, then the camera keeps drifting for the rest of the scene
         d0, d1 = float(b.get("turn", [24, 9])[0]), float(b.get("turn", [24, 9])[1])
         js("tl.fromTo('#%s-rig', { rotationY: %.1f, rotationX: 5 }, { rotationY: %.1f, rotationX: 2, duration: 0.9, ease: 'power3.out' }, %.3f);" % (bid, d0, d1, t_in))
         js("tl.to('#%s-rig', { rotationY: %.1f, rotationX: -2, duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (bid, float(b.get("drift_to", -9)), max(1.0, t_out - t_in - 0.9), t_in + 0.9))
+        if b.get("dolly"):   # the camera pulls away from the picture (or closes in) for the whole scene; the picture stays centred
+            d0, d1 = float(b["dolly"][0]), float(b["dolly"][1])
+            js("tl.fromTo('#%s-rig', { scale: %.3f }, { scale: %.3f, duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (bid, d0, d1, max(1.0, t_out - t_in), t_in))
     title = ('<div class="k-title" id="%s-title">%s</div>' % (bid, esc(b["title"]))) if b.get("title") else ""
     if title:
         js("tl.fromTo('#%s-title', { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, %.3f);" % (bid, t_in + 0.05))
@@ -357,9 +365,9 @@ def trail(b, bid, t_in, t_out, js, sizes):
             iw, ih = sizes[nd["src"]]; w = float(nd.get("w", 1100)); h = w * ih / float(iw)
             inner = '<div class="k-tr-page" style="width:%.0fpx;height:%.0fpx"><img src="%s" alt="" /></div>' % (w, h, nd["src"]); rot = float(nd.get("rot", -6))
         elif kind == "key":
-            txt = nd["text"]; w = float(nd.get("w", len(txt) * 46 + 60)); h = float(nd.get("h", 150 if nd.get("sub") else 120)); rot = float(nd.get("rot", 0))
+            txt = nd["text"]; w = float(nd.get("w", len(txt) * 50 + 60)); h = float(nd.get("h", 150 if nd.get("sub") else 120)); rot = float(nd.get("rot", 0))
             sub = ('<span class="sub">%s</span>' % esc(nd["sub"])) if nd.get("sub") else ""
-            ul = '<svg class="k-tr-ul" viewBox="0 0 300 22" preserveAspectRatio="none"><path id="%s-ul" d="M4 13 C 55 4, 120 19, 178 10 S 268 7, 296 12"/></svg>' % nid
+            ul = '<svg class="k-tr-ul" viewBox="0 0 300 22" preserveAspectRatio="none"><path id="%s-ul" d="M2 11 L298 11"/></svg>' % nid
             inner = '<div class="k-tr-key" style="position:relative">%s%s%s</div>' % (esc(txt), ul, sub)
         elif kind == "logo":
             w = h = float(nd.get("w", 190)); rot = float(nd.get("rot", 0))

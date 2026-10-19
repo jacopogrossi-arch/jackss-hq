@@ -603,7 +603,7 @@ Added 19/10/2026 from the inspiration study (Iman Gadzhi, Callaway, Pedro Andrad
 | `annotate` | one picture (a flat, a figurino) with callouts whose lines DRAW onto it, each on its word | `{"type":"annotate","src":"img/flat.png","max_h":860,"callouts":[{"label":"..","sub":"..","x":.33,"y":.36,"side":"l|r","dy":0,"to":[x2,y2],"at":t,"anchor":".."}]}` (x/y fractions of the picture; `to` = a measured segment) |
 | `orbit` | a card beside the speaker that is carried into a dark space where satellites (logos, people) fly in and connect to it | `{"type":"orbit","center":{"src":".."}|{"text":"..","sub":".."},"card":[w,h],"pre":{"go_at":t},"nodes":[{"src":"img/logo.svg","logo":true,"caption":"..","at":t,"anchor":".."}]}` |
 | `dive` | a screen or page: starts zoomed on one detail, then the camera pulls back to reveal the whole | `{"type":"dive","src":"img/page.png","focus":{"x","y","w","h"},"reveal_at":t,"reveal_dur":0.75,"click":{"x","y","at"},"tilt":true}` |
-| `trail` | **a page, a still or a tool that rests on screen, then the camera pulls back through 3D space, the window shrinks and an arrow leads to the next thing** (a key word in handwriting, a logo, another page). The default for showing a page of the creator's work | `{"type":"trail","nodes":[{"id":"p","kind":"page","src":"img/p07.png","w":1100,"x":0,"y":0,"rot":-5,"at":t,"anchor":".."},{"id":"k","kind":"key","text":"Palette colori","x":1250,"y":-60,"z":140,"at":t2,"anchor":"-"}],"links":[{"from":"p","to":"k","at":t2}],"cam":[[t,0,0,1.2,-3,0],[t_pull,cx,cy,zoom,-13,2,1.35]]}` (kinds: page, key, logo, card; the camera's first row is the starting pose, the others are moves; zoom 1 = 1920 x 1080 of canvas) |
+| `trail` | **a page, a still or a tool that rests on screen, then the camera pulls back through 3D space, the window shrinks and an arrow leads to the next thing** (a key word, a logo, another page). The default for showing a page of the creator's work | `{"type":"trail","nodes":[{"id":"p","kind":"page","src":"img/p07.png","w":1100,"x":0,"y":0,"rot":-5,"at":t,"anchor":".."},{"id":"k","kind":"key","text":"Palette colori","x":1250,"y":-60,"z":140,"at":t2,"anchor":"-"}],"links":[{"from":"p","to":"k","at":t2}],"cam":[[t,0,0,1.2,-3,0],[t_pull,cx,cy,zoom,-13,2,1.35]]}` (kinds: page, key, logo, card; the camera's first row is the starting pose, the others are moves; zoom 1 = 1920 x 1080 of canvas) |
 | `agenda` | a fixed list beside the speaker that gets one more line at every topic and stays | `{"type":"agenda","pos":"tl|ml|bl|tr","items":[["Tessuti",t,"anchor"],["Costruzione",t]]}` |
 
 Rules from the creator's notes on the first test (apply to every build with these formats):
@@ -617,11 +617,18 @@ Rules from the creator's notes on the first test (apply to every build with thes
   speaker is not reading out. **`annotate` is the creator's approved look** (lines drawing onto a figurino, label per spoken
   instruction); only the font and colours change.
 - **A page never just appears and leaves, and a plain note line over it is not enough** (creator's note on the v3 test): the page rests a few
-  seconds, then the camera pulls back, the window shrinks and an arrow leads somewhere else (`trail`). The key word on the other end is
-  **handwritten** (`--k-hand`, Caveat), underlined as it lands. Compute the pull-back camera to frame every node (the lab builder's `fit()`).
-- **Fonts.** The creator wants an SF Pro look for almost everything: **Inter** (SIL OFL, `assets/fonts/Inter.ttf`, declared with
-  `style.font_faces`) is the free match; real SF Pro is licensed only for Apple-platform UI, so it is not used in videos. Key words in the lower
-  line take the handwriting face with `style.lines.hand_em`. The skill's old DM Sans subsets remain the default when a storyboard has no `style`.
+  seconds, then the camera pulls back, the window shrinks and an arrow leads somewhere else (`trail`). **Approved by the creator, "in every
+  way it is used":** the arrow trail is the model for every page, flat and diagram in the video. The camera never stops: after the last move it keeps
+  drifting until the scene ends. Frame every node in the pull-back (the lab builder's `fit()`).
+- **Camera on every explainer scene, figures included.** `annotate` with `space: true, frame: false, dolly: [1.16, 0.92], label_z: 110` keeps a
+  garment or figurino centred while the camera slowly pulls away and the labels sit at a different depth (parallax); clarity first.
+- **Fonts: the base sans only** (Inter, the free SF Pro look; real SF Pro is licensed for Apple-platform UI only). **No handwriting font**
+  (the creator rejected it; do not use Caveat, `style.hand`/`hand_em` stay off). On a scene with one plain background, give the key
+  words **glow and gradients** instead (`text-shadow` glow in the accent colour, gradient text): no white bands or chips behind labels
+  (`build` labels are gradient text with a glow line, not a white chip). The creator will send a reference font later; until then Inter.
+- **Work in the lab, not on the whole video** (creator's request, 19/10/2026): test every change on a small window with
+  `window-patch.py` (10 to 25 s, rendered in about a minute) and put it in the full video only after approval; a full render costs
+  35 to 70 minutes and many tokens.
 - Pages of a portfolio shown as stills: a 3D window (`browser3d`) at most 6 s, whole page, never cropped; no slat-reveal slides.
 
 ### Rejected (do not rebuild)
