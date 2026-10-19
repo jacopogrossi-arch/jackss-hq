@@ -75,6 +75,9 @@ Tre design separati (A3 orizzontale, testi scritti da Claude dal libro, cornice 
 - **Body Talk** → `DAHYd3zlSoo`, https://www.canva.com/d/XR-S_GKDr-DgG26
 - **Onlife** → `DAHYd319PI4`, https://www.canva.com/d/2JV2YQN_Nq3In3V
 
+**Stato 19/10 sera:** pagine 1 (concept) + 2 (collage moodboard/tech board, GPT-2 con foto vere di Pinterest) fatte per tutti e 3 i temi, nello stesso design Canva (pagina 2 = collage). Mancano: pagina 3 (costruzione idee, 3 capi ritagliati) e pagina 4 (figurino) per ogni tema, più copertina e PDF finale. Foto scaricate in `Downloads\trend-ai-capi\<tema>\` (selezione capi + selezione-emotiva): fuori repo, repo pubblico.
+Collage nei design: Royal Humour `DAHYd9-4rfs` (p.2 formato 2:1) · Body Talk `DAHYd3zlSoo` (p.2 3:2) · Onlife `DAHYd319PI4` (p.2 16:9).
+
 ## Elenco foto moodboard (6-8 per tavola, 19/10)
 
 Ricerche in inglese (Pinterest / Unsplash / Pexels); tenere foto con stessa luce; segnare fonte per la bibliografia.
