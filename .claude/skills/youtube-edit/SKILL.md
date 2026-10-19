@@ -53,6 +53,25 @@ synthetic media and must end with `OK` (the media tests skip themselves without 
 - numpy scripts: `sync-tracks.py`, `tighten-cut.py`, `sliver.py`, `edge-audit.py`, `dead-air.py`. Node: `stutter-scan.py`
   (it runs `find-cut-candidates.mjs`) and the cut review page (`build-edl-review.mjs`).
 
+## Presets (editing types)
+
+The skill is a **general engine** (cut, transcribe, formats, camera, transitions, subtitles, sound, render, checks) plus **presets**: one preset
+is one *editing type* the creator likes (palette, fonts, which formats to prefer or avoid, how many transitions and which, how loud the sound
+is, subtitle mode, and its taste rules). The creator will add editing types over time; nothing in the engine should assume one look.
+
+- A preset lives in `presets/<name>/` as `preset.json` (machine-readable defaults) and `README.md` (the taste rules and the references it came from).
+  Use it with `compose.py --preset <name>` or `"preset": "<name>"` in the storyboard. The preset's `style` is merged under the storyboard's
+  own `style` key by key (the storyboard wins); `subtitles`, `formats`, `transitions` and `sound` become defaults the later steps read.
+- Shipped: **`elegante-portfolio`** (Jacopo's first editing type: warm dark, Inter + Playfair Display Italic, `trail` / `gallery` / `orbit` / `annotate`
+  with `follow`; palette still provisional).
+- **Where a rule goes.** A rule that holds for every look (seek-safe motion, anchors, render traps, loudness) stays in this file. A rule of
+  *taste* (no halo ring, serif key words, glow on plain backgrounds, a page rests then the camera pulls back) belongs to the preset README: in
+  the "Explainer formats" section below, every rule marked "creator" is the `elegante-portfolio` preset's taste, not a law of the engine.
+- **Adding a preset:** (1) the creator sends 2 to 4 reference videos of the new look; (2) for each, extract the MP3 and frames, transcribe in
+  windows, run `teardown.py`, view the frames at the key moments and note word ↔ graphic; (3) propose palette, fonts, formats (existing or
+  new), transitions, sound level and subtitle mode; (4) build a lab of 10 to 20 s windows and collect notes; (5) save `presets/<name>/` with its
+  README. New *formats* go into `formats/` (the engine); the preset only chooses and styles them.
+
 ## The routes
 
 | Input | Route |
@@ -107,7 +126,7 @@ when long); you answer in plain words ("keep the earlier take of the studio line
 | `stutter-scan.py` | word-level stutters and a retake pass on the flat-cut transcript, a second opinion | `--transcript --out-dir` |
 | `cutlist-to-edl.py` | the cut list as an EDL for the side-by-side review page (`node build-edl-review.mjs`) | `--cut-list --out` |
 | `phrase-times.py` | where a phrase is said (start of its first word, end of its last) | `--transcript "phrase" ... [--after T]` |
-| `compose.py` | `storyboard.json` → `public/index.html` | `--spec --out [--shared DIR]` |
+| `compose.py` | `storyboard.json` → `public/index.html` | `--spec --out [--shared DIR] [--preset NAME]` |
 | `beat-check.py` | each anchored element enters 0.10 s after to 0.60 s before its word; fails unanchored cards and a stale transcript | `--index --transcript [--suggest] [--allow-stale] [--video]` |
 | `snap-beats.py` | one snapshot per beat and per state inside a beat, tiled into `snaps/sheet.png` | `--project [--at T ...]` |
 | `gap-scan.py` | long-form coverage: stretches with no overlay and no camera move; density per 90 s | `--index [--early 15] [--body 20] [--max 30]` |
@@ -609,7 +628,7 @@ Added 19/10/2026 from the inspiration study (Iman Gadzhi, Callaway, Pedro Andrad
 | `gallery` | a wall of the creator's pages under a small tag ("Portfolio 17 tavole"); one is picked, the rest dim, and it flies to the centre at the size the next `trail` starts from (`enter: false` on that page) | `{"type":"gallery","images":[..],"cols":6,"tag":"Portfolio","tag_em":"17 tavole","select":{"index":0,"at":t,"w":1100}}` |
 | `agenda` | a fixed list beside the speaker that gets one more line at every topic and stays | `{"type":"agenda","pos":"tl|ml|bl|tr","items":[["Tessuti",t,"anchor"],["Costruzione",t]]}` |
 
-Rules from the creator's notes on the first test (apply to every build with these formats):
+Rules from the creator's notes on the first test (these are the taste of the `elegante-portfolio` preset; another preset may choose differently):
 - **A logo, not a word, for a tool or a brand** (`orbit` nodes with `src` + `"logo": true`; the text disc is a placeholder until the file exists).
   **Never write a technical term the audience does not need** ("MCP"): say "Claude connected to Canva" with two logos, not three labels.
 - **`dive` must be fast.** It enters already zoomed, the pull-back starts within ~0.5 s of entering and lasts at most 0.8 s

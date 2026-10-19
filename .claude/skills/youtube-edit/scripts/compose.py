@@ -110,9 +110,34 @@ ap = argparse.ArgumentParser()
 ap.add_argument("--spec", required=True)
 ap.add_argument("--out", required=True)
 ap.add_argument("--shared", default="")
+ap.add_argument("--preset", default="", help="an editing type from presets/<name>/preset.json (palette, fonts, subtitles, transitions, sound); the storyboard's own \"style\" wins")
 args = ap.parse_args()
 S = json.load(open(args.spec, encoding="utf-8"))
 OUT = args.out
+
+# ---- preset: one "editing type" = style tokens + defaults for subtitles / formats / transitions / sound ------------------
+def _deep_merge(base, over):
+    out = dict(base)
+    for k, v in (over or {}).items():
+        out[k] = _deep_merge(out[k], v) if isinstance(v, dict) and isinstance(out.get(k), dict) else v
+    return out
+
+def load_preset(name):
+    root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "presets")
+    path = os.path.join(root, name, "preset.json")
+    if not os.path.exists(path):
+        have = sorted(os.listdir(root)) if os.path.isdir(root) else []
+        raise SystemExit("unknown preset %r (available: %s)" % (name, ", ".join(have) or "none"))
+    return json.load(open(path, encoding="utf-8"))
+
+PRESET_NAME = args.preset or S.get("preset", "")
+PRESET = load_preset(PRESET_NAME) if PRESET_NAME else {}
+if PRESET:
+    S["style"] = _deep_merge(PRESET.get("style", {}), S.get("style"))      # the storyboard overrides single values
+    for key in ("subtitles", "formats", "transitions", "sound"):          # defaults that later steps read (S["x"] wins when set)
+        if key in PRESET and key not in S:
+            S[key] = PRESET[key]
+    print("preset: %s%s" % (PRESET_NAME, (" (%s)" % PRESET["palette_status"]) if PRESET.get("palette_status") else ""))
 os.makedirs(OUT, exist_ok=True)
 
 # ---- stage shared assets (fonts, gsap, logos, sfx) ---------------------------------------------------

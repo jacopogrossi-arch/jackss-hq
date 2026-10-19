@@ -1,0 +1,30 @@
+{
+  "name": "elegante-portfolio",
+  "title": "Elegante / portfolio (Jacopo, moda)",
+  "description": "Scuro caldo, serif elegante per le parole chiave, pagine del lavoro come finestre 3D con camera che si muove. Primo tipo di montaggio di Jacopo.",
+  "palette_status": "provvisoria (oro/smeraldo/avorio dal portfolio): da confermare con il confronto di 3 varianti",
+  "style": {
+    "font": "\"Inter\", \"Segoe UI\", system-ui, sans-serif",
+    "font_faces": [
+      {"family": "Inter", "file": "Inter.ttf", "weight": "100 900"},
+      {"family": "Playfair Display", "file": "PlayfairDisplay-Italic.ttf", "weight": "400 900"}
+    ],
+    "serif": "\"Playfair Display\", Georgia, serif",
+    "keyfont": "\"Playfair Display\", Georgia, serif",
+    "keystyle": "italic",
+    "keyweight": "500",
+    "keysize": "100px",
+    "text": "#f4efe6",
+    "accent": "#d4af5f",
+    "accent2": "#4aa585",
+    "accent3": "#e9e2d2",
+    "lines": {"size": 60, "weight": 600, "spacing": "0.005em", "serif_em": true, "serif_em_scale": 1.2}
+  },
+  "subtitles": "both",
+  "formats": {
+    "prefer": ["trail", "gallery", "orbit", "build", "annotate", "stats", "line"],
+    "avoid": ["halo", "chip", "image"]
+  },
+  "transitions": {"density": "medium", "kinds": ["flash", "whip", "glitch", "zoomblur", "dip"]},
+  "sound": {"sfx": true, "level": "medium", "music": "light"}
+}
