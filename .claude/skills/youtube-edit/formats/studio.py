@@ -397,4 +397,10 @@ def trail(b, bid, t_in, t_out, js, sizes):
     for c in cam[1:]:
         dur = float(c[6]) if len(c) > 6 else 1.3
         js("tl.to('#%s-rig', { %s, duration: %.2f, ease: 'power2.inOut' }, %.3f);" % (bid, pose(c), dur, float(c[0])))
+    # the camera never stops: after the last move it keeps drifting (a little closer, turning toward the front) until the scene ends
+    last = cam[-1]; t_last = float(last[0]) + (float(last[6]) if len(last) > 6 else 1.3) if len(cam) > 1 else t_in + 0.9
+    if b.get("drift", True) and t_last < t_out - 0.5:
+        cx, cy, zm = float(last[1]), float(last[2]), float(last[3]) * 1.06
+        ry = (float(last[4]) if len(last) > 4 else 0.0) * 0.45
+        js("tl.to('#%s-rig', { x: %.1f, y: %.1f, scale: %.4f, rotationY: %.1f, duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (bid, -zm * cx, -zm * cy, zm, ry, t_out - t_last, t_last))
     return ('<div class="k-cut"><div class="k-tr-stage"><div class="k-tr-rig" id="%s-rig"><svg class="k-tr-svg" viewBox="0 0 1920 1080">%s</svg>%s</div></div></div>' % (bid, svg, html))
