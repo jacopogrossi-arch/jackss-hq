@@ -40,8 +40,11 @@ pub = os.path.join(P, "public")
 env = dict(os.environ, PRODUCER_BROWSER_GPU_MODE="hardware")
 outs = []
 for t in moments:
-    subprocess.run(["npx", "hyperframes", "snapshot", pub, "--at", str(t)], env=env, capture_output=True)
+    subprocess.run([shutil.which("npx") or "npx", "hyperframes", "snapshot", pub, "--at", str(t)], env=env, capture_output=True)
     cands = sorted(glob.glob(os.path.join(pub, "snapshots", "frame-00-at-*.png")))
+    if not cands:    # newer HyperFrames saves each run in public/.hyperframes/artifacts/snapshots/<id>/
+        runs = sorted(glob.glob(os.path.join(pub, ".hyperframes", "artifacts", "snapshots", "*")), key=os.path.getmtime)
+        cands = sorted(glob.glob(os.path.join(runs[-1], "frame-00-at-*.png"))) if runs else []
     if not cands:
         print("no snapshot at", t); continue
     dst = os.path.join(snapdir, "at-%05.2f.png" % t)
