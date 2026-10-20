@@ -29,6 +29,7 @@ ap.add_argument("--fps", type=int, default=30)
 ap.add_argument("--crf", type=int, default=16)
 ap.add_argument("--preset", default="fast")
 ap.add_argument("--lut", default="", help="3D LUT (.cube) applied to the picture in the same encode (D-Log -> Rec.709)")
+ap.add_argument("--vf", default="", help="extra ffmpeg filters on the picture AFTER the LUT (a light grade), e.g. \"curves=all='0/0 0.25/0.22 0.5/0.5 0.75/0.78 1/0.95',eq=saturation=1.08:contrast=1.04\"")
 ap.add_argument("--encoder", default="x264", choices=["x264", "nvenc"], help="nvenc = h264_nvenc on the GPU (much faster at 4K)")
 args = ap.parse_args()
 
@@ -84,6 +85,9 @@ if args.lut:
     lp = os.path.abspath(args.lut).replace("\\", "/").replace(":", "\\:")
     chain.append("[v]lut3d=file='%s'[vl]" % lp)
     vlabel = "[vl]"
+if args.vf:
+    chain.append("%s%s[vg]" % (vlabel, args.vf))
+    vlabel = "[vg]"
 fc = ";".join(chain)
 
 if args.encoder == "nvenc":

@@ -37,7 +37,8 @@
     "bg2": "#1b140d",
     "mute": "rgba(244,239,230,.62)",
     "chip": "#f4efe6",
-    "chip_text": "#15100b"
+    "chip_text": "#15100b",
+    "theme_legacy": true
   },
   "subtitles": "keywords",
   "formats": {
@@ -57,20 +58,24 @@
     ]
   },
   "transitions": {
-    "density": "low",
+    "density": "medium",
     "kinds": [
-      "flash",
-      "whip",
-      "zoomblur",
       "lightleak",
-      "burn"
+      "burn",
+      "whip",
+      "flash",
+      "zoomblur"
     ],
     "only_at": "scene-changes",
-    "max_per_minute": 1
+    "max_per_minute": 2,
+    "prefer": [
+      "lightleak",
+      "burn"
+    ]
   },
   "sound": {
     "sfx": true,
-    "level": 0.7,
+    "level": 1.0,
     "music": "light"
   }
 }

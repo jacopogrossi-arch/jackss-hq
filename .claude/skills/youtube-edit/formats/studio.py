@@ -59,8 +59,8 @@ _TEMPLATE = """
   .k-an-svg line, .k-an-svg polyline { fill:none; stroke-width:4; stroke-linecap:round; stroke-linejoin:round; }
   .k-an-dot { position:absolute; width:22px; height:22px; margin:-11px 0 0 -11px; border-radius:50%; opacity:0; border:4px solid #fff; box-sizing:border-box; }
   .k-an-lab { position:absolute; opacity:0; max-width:520px; }
-  .k-an-lab .t { font-weight:700; font-size:34px; line-height:1.05; letter-spacing:.05em; text-transform:uppercase; }
-  .k-an-lab .s { font-weight:500; font-size:25px; line-height:1.15; margin-top:6px; color:var(--k-mute); }
+  .k-an-lab .t { font-family:var(--k-serif); font-style:italic; font-weight:500; font-size:50px; line-height:1.02; letter-spacing:0; text-transform:none; text-shadow:0 3px 18px rgba(0,0,0,.75); }
+  .k-an-lab .s { font-family:var(--k-font); font-weight:500; font-size:28px; line-height:1.15; margin-top:8px; color:var(--k-mute); }
   .k-an-lab.r { text-align:left; } .k-an-lab.l { text-align:right; }
   /* orbit */
   .k-or-scrim { position:absolute; inset:0; opacity:0; background:
@@ -125,6 +125,9 @@ _TEMPLATE = """
   .k-tag b { color:var(--k-accent); font-weight:700; }
   .k-gl-item { position:absolute; border-radius:10px; overflow:hidden; opacity:0; box-shadow:0 18px 50px rgba(0,0,0,.55), 0 0 0 1.5px rgba(255,255,255,.14); background:#0b0907; }
   .k-gl-item img { width:100%; height:100%; display:block; object-fit:fill; }
+  .k-gl-glow { position:absolute; left:50%; top:50%; width:1700px; height:1000px; translate:-50% -50%; border-radius:50%; opacity:0;
+    background:radial-gradient(closest-side, color-mix(in srgb, var(--k-accent) 58%, transparent), color-mix(in srgb, var(--k-accent) 14%, transparent) 55%, transparent 80%); filter:blur(40px); }
+  .k-gl-wall { position:absolute; inset:0; transform-origin:50% 50%; }
   /* subtitles: phrase-level, bottom centre; key words in the italic serif */
   .k-sub-grad { position:absolute; left:0; right:0; bottom:0; height:340px; background:linear-gradient(to top, rgba(0,0,0,.5), rgba(0,0,0,0)); }
   .k-sub { position:absolute; left:0; right:0; bottom:64px; padding:0 230px; text-align:center; font-family:var(--k-font); font-weight:600; font-size:50px; line-height:1.2;
@@ -544,7 +547,16 @@ def gallery(b, bid, t_in, t_out, js):
         js("tl.to('#%s-g%d', { x: %.1f, y: %.1f, scale: %.3f, duration: %.2f, ease: 'power2.inOut' }, %.3f);" % (bid, k, 960 - cxk, 540 - cyk, S, float(sel.get("dur", 0.85)), at + 0.1))
         if tag:
             js("tl.to('#%s-tag', { opacity: 0, duration: 0.3 }, %.3f);" % (bid, at))
-    return '<div class="k-cut">%s%s</div>' % (tag, items)
+    glow = ""
+    if b.get("glow"):     # a warm light that swells behind the wall (Jacopo 20/10: "si illumini con un glow dietro")
+        glow = '<div class="k-gl-glow" id="%s-glow"></div>' % bid
+        js("tl.fromTo('#%s-glow', { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1.05, duration: %.2f, ease: 'power2.out' }, %.3f);" % (bid, min(1.6, max(0.8, t_out - t_in)), t_in + 0.05))
+        js("tl.to('#%s-glow', { opacity: 0.55, duration: %.2f, ease: 'sine.inOut' }, %.3f);" % (bid, max(0.5, t_out - t_in - 1.7), t_in + 1.7))
+    wall_open, wall_close = "", ""
+    if b.get("zoom"):     # the images push in slowly for the whole scene
+        wall_open, wall_close = '<div class="k-gl-wall" id="%s-wall">' % bid, "</div>"
+        js("tl.fromTo('#%s-wall', { scale: 1.0 }, { scale: %.3f, duration: %.2f, ease: 'sine.inOut', immediateRender: false }, %.3f);" % (bid, float(b["zoom"]), max(0.5, t_out - t_in), t_in))
+    return '<div class="k-cut">%s%s%s%s%s</div>' % (glow, tag, wall_open, items, wall_close)
 
 
 # ---- subtitles ------------------------------------------------------------------------------------------------------------

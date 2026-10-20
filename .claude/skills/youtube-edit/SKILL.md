@@ -794,7 +794,7 @@ format, the step labels, in one short message): a diagram is 30 to 40 s of scree
 
 ## Sound
 
-**Jacopo's rule (20/10/2026): sound goes on the graphics and on the transitions.** A transition always carries its sound
+**Jacopo's rule (20/10/2026, reinforced after video #2): a small sound on EVERY text that appears on screen, a click on every chapter tag, a whoosh on every 3D camera move, a pop on every logo.** `compose.py` queues these itself (`sub_cues`) and drops the weaker of two cues closer than 0.28 s; an explicit `sfx` on a beat still wins. Earlier rule: Jacopo's rule (20/10/2026): sound goes on the graphics and on the transitions.** A transition always carries its sound
 (a flash is a shutter, a whip is a whoosh, a light leak is a long cinematic whoosh); a graphic that
 enters (trail, gallery, orbit, build, dive) gets a soft whoosh, an annotate arrow a tick. Not every moment: the level is
 set by the preset (`sound.level` low 0.6 / medium 1.0 / high 1.4 on top of each cue's own volume) and by spacing: never two

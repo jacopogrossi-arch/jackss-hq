@@ -26,6 +26,18 @@ appaiono e spariscono, ma si muovono nello spazio e portano a una freccia.
   scena all'altra (la transizione copre il cambio: il picco cade sul primo fotogramma della scena nuova, `"scene": id`), mai viso → effetto → stesso viso (max ~1 al minuto); ogni transizione porta il suo suono (`assets/sfx/cues.json`), le grafiche che entrano un
   whoosh morbido; musica leggera sotto la voce. Vignetta e grana molto leggere come finitura.
 
+## Pareri sul video #2 (Jacopo, 20/10/2026, pagina Notion "COMMENTO VIDEO 2") — regole salvate
+- **Suono su ogni testo:** ogni volta che compare un testo a schermo (scritta in basso, voce di lista, etichetta, freccia, logo) parte un piccolo suono (`tick`, `pop`); un `click` su ogni etichetta di capitolo; un whoosh morbido a ogni mossa di camera nello spazio 3D. Il motore lo fa da solo (`compose.py`, `sub_cues`), con filtro anti-sovrapposizione (due suoni a meno di 0,28 s: resta il piu' forte). Livello preset 1,0 (a 0,7 erano "bassi e pochi").
+- **Gancio:** riser (tensione) che segue la voce, immagini del concept con glow dietro e zoom lento (`gallery` con `glow`, `zoom`).
+- **Etichette dei capitoli piu' grandi** (`tags[].size` 1.45) e col click. Piacciono: scritta + pallino.
+- **Scritta chiave con `typewriter`** (campo `typewriter: true` nel beat `line`) e suono di battitura.
+- **Mai una scena ferma tra due voci** (retention): se tra due elementi passano piu' di ~3 s, inserire movimento (pillole sulle parole, un'altra scena, camera) o spezzare la scena. Ravvicinare le voci, non allungarle.
+- **Scene "motion graphic" = una sola scena continua**, non due formati in sequenza: i loghi e le frasi entrano come nodi di un unico `trail`, la camera si sposta a ogni passo (Claude -> Canva -> pagina; Claude -> Chrome -> naviga sul web -> Pinterest). "Poco fluide e coese, mancano di ritmo" = tagli tra formati diversi.
+- **Coerenza di stile:** tutte le grafiche nei colori del preset (oro/smeraldo, Inter + Playfair Display Italic; `style.theme_legacy`). Per "fatto bene / fatto male": STESSA lista, colori opposti (`tone: good` verde con spunte, `tone: bad` rosso con croci), mai due stili diversi.
+- **Font:** niente maiuscolo grassetto per le etichette del figurino (`annotate`): Playfair Display Italic per il testo, Inter per il sottotitolo.
+- **Film burn e light leak:** piacciono molto, "qualche transizione in piu'" (`max_per_minute` 2, almeno ogni ~30 s su un vero cambio di scena); il film burn un filo piu' basso (`hit` 0,38).
+- **Musica lo-fi** sotto la voce (`add-music.py`, lofi-02): Jacopo ha chiesto di "aggiungerla" anche se la bozza v1 l'aveva a -14 dB: probabilmente non si sentiva; ora -11.
+
 ## Riferimenti
 Video analizzati: Iman Gadzhi, Callaway, Pedro Andrade, Marshall Crew, Reel "edited by Claude" (note in `videos/test-dji/inspo-analisi/ANALISI.md`).
 Font di esempio di Jacopo: corsivo serif ad alto contrasto (logotipo CleanMyMac) → Playfair Display Italic.

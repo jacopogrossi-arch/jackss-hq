@@ -1,176 +1,188 @@
 {
-  "_doc": "Tavola dei suoni. 'sounds': nome logico -> file (in assets/sfx), durata massima in secondi (il resto viene tagliato con dissolvenza), volume base (0-1), lead = secondi di anticipo rispetto all'istante del cut/ingresso (il picco del suono deve cadere sul cut). 'transitions' e 'formats': quale suono parte da solo per ogni tipo; un beat puo' forzarne un altro con \"sfx\": \"nome\" oppure {\"name\",\"at\",\"vol\"} (o spegnerlo con \"sfx\": null). Il livello del preset (sound.level low/medium/high) moltiplica i volumi.",
-  "sounds": {
-    "whoosh": {
-      "file": "mixclap/whoosh.mp3",
-      "dur": 1.0,
-      "vol": 0.42,
-      "lead": 0.3
-    },
-    "whoosh-fast": {
-      "file": "mixclap/whoosh-fast.mp3",
-      "dur": 0.5,
-      "vol": 0.45,
-      "lead": 0.18
-    },
-    "whoosh-soft": {
-      "file": "core/whoosh-short.mp3",
-      "dur": 0.5,
-      "vol": 0.3,
-      "lead": 0.18
-    },
-    "whoosh-cine": {
-      "file": "core/whoosh-cinematic.mp3",
-      "dur": 1.8,
-      "vol": 0.4,
-      "lead": 0.8
-    },
-    "shutter": {
-      "file": "openverse/camera-shutter.mp3",
-      "dur": 0.9,
-      "vol": 0.45,
-      "lead": 0.0
-    },
-    "impact": {
-      "file": "mixclap/impact-short.mp3",
-      "dur": 1.6,
-      "vol": 0.5,
-      "lead": 0.0
-    },
-    "impact-low": {
-      "file": "core/impact-bass-1.mp3",
-      "dur": 1.4,
-      "vol": 0.5,
-      "lead": 0.0
-    },
-    "hit": {
-      "file": "mixclap/hybrid-hit.mp3",
-      "dur": 1.6,
-      "vol": 0.45,
-      "lead": 0.0
-    },
-    "boom": {
-      "file": "mixclap/low-impact.mp3",
-      "dur": 2.0,
-      "vol": 0.45,
-      "lead": 0.0
-    },
-    "subdrop": {
-      "file": "mixclap/sub-drop.mp3",
-      "dur": 1.6,
-      "vol": 0.42,
-      "lead": 0.0
-    },
-    "glitch": {
-      "file": "mixclap/glitch.mp3",
-      "dur": 0.8,
-      "vol": 0.4,
-      "lead": 0.0
-    },
-    "glitch-long": {
-      "file": "core/glitch-1.mp3",
-      "dur": 1.2,
-      "vol": 0.36,
-      "lead": 0.0
-    },
-    "riser": {
-      "file": "mixclap/riser.mp3",
-      "dur": 3.0,
-      "vol": 0.34,
-      "lead": 3.0
-    },
-    "riser-short": {
-      "file": "mixclap/reverse-cymbal.mp3",
-      "dur": 1.6,
-      "vol": 0.36,
-      "lead": 1.6
-    },
-    "downlifter": {
-      "file": "mixclap/downlifter.mp3",
-      "dur": 1.6,
-      "vol": 0.36,
-      "lead": 0.0
-    },
-    "tick": {
-      "file": "core/click-soft.mp3",
-      "dur": 0.34,
-      "vol": 0.3,
-      "lead": 0.0
-    },
-    "click": {
-      "file": "core/click.mp3",
-      "dur": 0.34,
-      "vol": 0.3,
-      "lead": 0.0
-    },
-    "ping": {
-      "file": "core/ping.mp3",
-      "dur": 0.9,
-      "vol": 0.3,
-      "lead": 0.0
-    },
-    "pop": {
-      "file": "core/pop.mp3",
-      "dur": 0.7,
-      "vol": 0.34,
-      "lead": 0.0
-    },
-    "sparkle": {
-      "file": "core/sparkle.mp3",
-      "dur": 1.2,
-      "vol": 0.26,
-      "lead": 0.0
-    },
-    "chime": {
-      "file": "core/chime.mp3",
-      "dur": 1.6,
-      "vol": 0.26,
-      "lead": 0.0
-    },
-    "paper": {
-      "file": "openverse/paper-rustle.mp3",
-      "dur": 0.9,
-      "vol": 0.34,
-      "lead": 0.0
-    },
-    "tape-stop": {
-      "file": "mixclap/tape-stop.mp3",
-      "dur": 1.2,
-      "vol": 0.36,
-      "lead": 0.0
-    },
-    "scratch": {
-      "file": "mixclap/scratch.mp3",
-      "dur": 0.67,
-      "vol": 0.34,
-      "lead": 0.0
-    },
-    "drumroll": {
-      "file": "mixclap/drumroll.mp3",
-      "dur": 1.7,
-      "vol": 0.32,
-      "lead": 1.7
-    },
-    "stinger-dark": {
-      "file": "mixclap/dark-title.mp3",
-      "dur": 3.0,
-      "vol": 0.4,
-      "lead": 0.0
-    }
+ "_doc": "Tavola dei suoni. 'sounds': nome logico -> file (in assets/sfx), durata massima in secondi (il resto viene tagliato con dissolvenza), volume base (0-1), lead = secondi di anticipo rispetto all'istante del cut/ingresso (il picco del suono deve cadere sul cut). 'transitions' e 'formats': quale suono parte da solo per ogni tipo; un beat puo' forzarne un altro con \"sfx\": \"nome\" oppure {\"name\",\"at\",\"vol\"} (o spegnerlo con \"sfx\": null). Il livello del preset (sound.level low/medium/high) moltiplica i volumi.",
+ "sounds": {
+  "whoosh": {
+   "file": "mixclap/whoosh.mp3",
+   "dur": 1.0,
+   "vol": 0.42,
+   "lead": 0.3
   },
-  "transitions": {
-    "flash": "shutter",
-    "whip": "whoosh-fast",
-    "zoomblur": "whoosh",
-    "lightleak": "whoosh-cine",
-    "burn": "hit"
+  "whoosh-fast": {
+   "file": "mixclap/whoosh-fast.mp3",
+   "dur": 0.5,
+   "vol": 0.45,
+   "lead": 0.18
   },
-  "formats": {
-    "trail": "whoosh-soft",
-    "gallery": "whoosh-soft",
-    "orbit": "whoosh-soft",
-    "build": "whoosh-soft",
-    "annotate": "tick",
-    "dive": "whoosh-fast"
+  "whoosh-soft": {
+   "file": "core/whoosh-short.mp3",
+   "dur": 0.5,
+   "vol": 0.3,
+   "lead": 0.18
+  },
+  "whoosh-cine": {
+   "file": "core/whoosh-cinematic.mp3",
+   "dur": 1.8,
+   "vol": 0.4,
+   "lead": 0.8
+  },
+  "shutter": {
+   "file": "openverse/camera-shutter.mp3",
+   "dur": 0.9,
+   "vol": 0.45,
+   "lead": 0.0
+  },
+  "impact": {
+   "file": "mixclap/impact-short.mp3",
+   "dur": 1.6,
+   "vol": 0.5,
+   "lead": 0.0
+  },
+  "impact-low": {
+   "file": "core/impact-bass-1.mp3",
+   "dur": 1.4,
+   "vol": 0.5,
+   "lead": 0.0
+  },
+  "hit": {
+   "file": "mixclap/hybrid-hit.mp3",
+   "dur": 1.6,
+   "vol": 0.38,
+   "lead": 0.0
+  },
+  "boom": {
+   "file": "mixclap/low-impact.mp3",
+   "dur": 2.0,
+   "vol": 0.45,
+   "lead": 0.0
+  },
+  "subdrop": {
+   "file": "mixclap/sub-drop.mp3",
+   "dur": 1.6,
+   "vol": 0.42,
+   "lead": 0.0
+  },
+  "glitch": {
+   "file": "mixclap/glitch.mp3",
+   "dur": 0.8,
+   "vol": 0.4,
+   "lead": 0.0
+  },
+  "glitch-long": {
+   "file": "core/glitch-1.mp3",
+   "dur": 1.2,
+   "vol": 0.36,
+   "lead": 0.0
+  },
+  "riser": {
+   "file": "mixclap/riser.mp3",
+   "dur": 3.0,
+   "vol": 0.34,
+   "lead": 3.0
+  },
+  "riser-short": {
+   "file": "mixclap/reverse-cymbal.mp3",
+   "dur": 1.6,
+   "vol": 0.36,
+   "lead": 1.6
+  },
+  "downlifter": {
+   "file": "mixclap/downlifter.mp3",
+   "dur": 1.6,
+   "vol": 0.36,
+   "lead": 0.0
+  },
+  "tick": {
+   "file": "core/click-soft.mp3",
+   "dur": 0.34,
+   "vol": 0.3,
+   "lead": 0.0
+  },
+  "click": {
+   "file": "core/click.mp3",
+   "dur": 0.34,
+   "vol": 0.3,
+   "lead": 0.0
+  },
+  "ping": {
+   "file": "core/ping.mp3",
+   "dur": 0.9,
+   "vol": 0.3,
+   "lead": 0.0
+  },
+  "pop": {
+   "file": "core/pop.mp3",
+   "dur": 0.7,
+   "vol": 0.34,
+   "lead": 0.0
+  },
+  "sparkle": {
+   "file": "core/sparkle.mp3",
+   "dur": 1.2,
+   "vol": 0.26,
+   "lead": 0.0
+  },
+  "chime": {
+   "file": "core/chime.mp3",
+   "dur": 1.6,
+   "vol": 0.26,
+   "lead": 0.0
+  },
+  "paper": {
+   "file": "openverse/paper-rustle.mp3",
+   "dur": 0.9,
+   "vol": 0.34,
+   "lead": 0.0
+  },
+  "tape-stop": {
+   "file": "mixclap/tape-stop.mp3",
+   "dur": 1.2,
+   "vol": 0.36,
+   "lead": 0.0
+  },
+  "scratch": {
+   "file": "mixclap/scratch.mp3",
+   "dur": 0.67,
+   "vol": 0.34,
+   "lead": 0.0
+  },
+  "drumroll": {
+   "file": "mixclap/drumroll.mp3",
+   "dur": 1.7,
+   "vol": 0.32,
+   "lead": 1.7
+  },
+  "stinger-dark": {
+   "file": "mixclap/dark-title.mp3",
+   "dur": 3.0,
+   "vol": 0.4,
+   "lead": 0.0
+  },
+  "typing": {
+   "file": "core/typing.mp3",
+   "dur": 2.2,
+   "vol": 0.26,
+   "lead": 0.0
+  },
+  "riser-hook": {
+   "file": "mixclap/riser.mp3",
+   "dur": 3.0,
+   "vol": 0.3,
+   "lead": 3.0
   }
+ },
+ "transitions": {
+  "flash": "shutter",
+  "whip": "whoosh-fast",
+  "zoomblur": "whoosh",
+  "lightleak": "whoosh-cine",
+  "burn": "hit"
+ },
+ "formats": {
+  "trail": "whoosh-soft",
+  "gallery": "whoosh-soft",
+  "orbit": "whoosh-soft",
+  "build": "whoosh-soft",
+  "annotate": "tick",
+  "dive": "whoosh-fast"
+ }
 }

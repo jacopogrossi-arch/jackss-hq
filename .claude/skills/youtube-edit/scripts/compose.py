@@ -213,13 +213,13 @@ CSS = """
     backdrop-filter: blur(30px) saturate(1.25); -webkit-backdrop-filter: blur(30px) saturate(1.25);
     border: 3px solid rgba(255,255,255,0); box-shadow: 0 24px 80px rgba(0,0,0,0); }
   /* 9. progress tag: 1-of-N pips + the section name, top corner, holds ~5 s */
-  .tag { position:absolute; display:flex; align-items:center; gap:22px; padding:18px 34px 18px 30px; border-radius:999px; }
-  .tag .inner { display:flex; align-items:center; gap:22px; opacity:0; }
-  .tag .pips { display:flex; gap:10px; }
-  .tag .pip { width:16px; height:16px; border-radius:50%; background:rgba(255,255,255,.28); }
+  .tag { position:absolute; display:flex; align-items:center; gap:calc(22px*var(--z,1)); padding:calc(18px*var(--z,1)) calc(34px*var(--z,1)) calc(18px*var(--z,1)) calc(30px*var(--z,1)); border-radius:999px; }
+  .tag .inner { display:flex; align-items:center; gap:calc(22px*var(--z,1)); opacity:0; }
+  .tag .pips { display:flex; gap:calc(10px*var(--z,1)); }
+  .tag .pip { width:calc(16px*var(--z,1)); height:calc(16px*var(--z,1)); border-radius:50%; background:rgba(255,255,255,.28); }
   .tag .pip.done { background:rgba(255,255,255,.85); }
   .tag .pip.now { background:var(--cyan); box-shadow: 0 0 14px rgba(10,240,240,.9); }
-  .tag .label { font-weight:700; font-size:34px; color:var(--white); line-height:1; text-shadow: 0 2px 10px rgba(0,0,0,.7); }
+  .tag .label { font-weight:700; font-size:calc(34px*var(--z,1)); color:var(--white); line-height:1; text-shadow: 0 2px 10px rgba(0,0,0,.7); }
   /* 4a. logo plate: logo only, big */
   .logo-plate { width:380px; height:386px; }
   .logo-plate .inner { opacity:0; width:100%; height:100%; display:flex; align-items:center; justify-content:center; }
@@ -695,6 +695,21 @@ CSS = """
   .cl-list .item .t { font-weight:700; font-size:48px; line-height:1.05; color:#fff; white-space:nowrap; text-shadow: 0 2px 8px rgba(0,0,0,.85); }
 """.replace("ORIGIN", origin)
 CSS += studio.css(S.get("style"))
+if (S.get("style") or {}).get("theme_legacy"):   # a preset can restyle the older formats (progress tag, list) with its own palette and fonts
+    CSS += """
+  /* theme_legacy: tag and list follow the preset palette and fonts */
+  .tag .label { font-family:var(--k-font); font-weight:600; letter-spacing:.01em; }
+  .tag .pip.now { background:var(--k-accent); box-shadow:0 0 16px color-mix(in srgb, var(--k-accent) 80%, transparent); }
+  .tag .pip.done { background:color-mix(in srgb, var(--k-accent) 62%, #fff); }
+  .list .eyebrow { font-family:var(--k-serif); font-style:italic; font-weight:500; font-size:48px; letter-spacing:0; color:var(--k-accent); margin-bottom:26px; }
+  .list .item .t { font-family:var(--k-font); font-weight:600; font-size:58px; letter-spacing:-.005em; }
+  .list.good .eyebrow { color:var(--k-accent2); } .list.bad .eyebrow { color:#e0645c; }
+  .list.good { box-shadow:0 0 0 2px color-mix(in srgb, var(--k-accent2) 55%, transparent); } .list.bad { box-shadow:0 0 0 2px rgba(224,100,92,.55); }
+  .mk .ring { stroke:rgba(255,255,255,.6); } .mk .tick { stroke:#0b0907; }
+  .list.bad .mk .tick { stroke:#fff; }
+  .pls .t { font-family:var(--k-serif); font-style:italic; font-weight:500; font-size:52px; letter-spacing:0; }
+  .pls.cyan .t { color:var(--k-accent); } .pls.cyan .ic { stroke:var(--k-accent); }
+"""
 CSS += fx.css(S.get("style"))
 def attr_anchor(anchor):
     """'-' marks a beat that is deliberately not tied to a spoken word (beat-check skips it)."""
@@ -721,9 +736,16 @@ def item_attrs(it):
 CHECK_SVG = ('<div class="mk"><svg viewBox="0 0 44 44"><circle class="ring" cx="22" cy="22" r="19"/>'
              '<path class="tick" d="M13 22.5 L19.5 29 L31 16" style="stroke-dasharray:30;stroke-dashoffset:30"/></svg></div>')
 
-def check_in(sel, t):
-    """The check marker: the ring fills cyan and the tick draws, a beat after the item lands."""
-    js("tl.to('%s .ring', { fill: 'rgba(10,240,240,1)', stroke: 'rgba(10,240,240,1)', duration: 0.26, ease: 'power2.out' }, %.3f);" % (sel, t + 0.22))
+X_SVG = ('<div class="mk"><svg viewBox="0 0 44 44"><circle class="ring" cx="22" cy="22" r="19"/>'
+         '<path class="tick" d="M15 15 L29 29 M29 15 L15 29" style="stroke-dasharray:40;stroke-dashoffset:40"/></svg></div>')
+
+def _rgb(hexc):
+    h = hexc.lstrip("#")
+    return "%d,%d,%d" % (int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16))
+
+def check_in(sel, t, rgb="10,240,240"):
+    """The check marker: the ring fills (cyan by default, a tone colour on a list with "tone") and the tick draws, a beat after the item lands."""
+    js("tl.to('%s .ring', { fill: 'rgba(%s,1)', stroke: 'rgba(%s,1)', duration: 0.26, ease: 'power2.out' }, %.3f);" % (sel, rgb, rgb, t + 0.22))
     js("tl.to('%s .tick', { strokeDashoffset: 0, duration: 0.30, ease: 'power2.out' }, %.3f);" % (sel, t + 0.32))
 
 # line icons for pipeline steps, 64x64, drawn in white strokes (no icon assets, no fills)
@@ -838,8 +860,8 @@ for ti, tag in enumerate(S.get("tags") or ([S["tag"]] if S.get("tag") else [])):
     tid = "tag" if ti == 0 else "tag%d" % ti
     pips = "".join('<span class="pip%s"></span>' % (" now" if i + 1 == tag["n"] else (" done" if i + 1 < tag["n"] else "")) for i in range(tag["of"]))
     pos = POS.get(tag.get("pos", "tr"), POS["tr"])
-    inner = ('<div class="glass tag" id="%s-glass" style="%s"><div class="inner" id="%s-inner"><div class="pips">%s</div><div class="label">%s</div></div></div>'
-             % (tid, pos, tid, pips, tag["label"]))
+    inner = ('<div class="glass tag" id="%s-glass" style="%s--z:%.2f;"><div class="inner" id="%s-inner"><div class="pips">%s</div><div class="label">%s</div></div></div>'
+             % (tid, pos, float(tag.get("size", 1.0)), tid, pips, tag["label"]))
     html_parts.append(host(tid, tag["in"], tag["out"], track, inner, tag.get("anchor", "")))
     track += 1
     js("glassIn('#%s-glass', %.3f, { y: -22 });" % (tid, tag["in"]))
@@ -880,7 +902,10 @@ for b in S.get("beats", []):
         em = ",".join(str(i) for i in b.get("em", []))
         inner = '<div class="%s" id="%s" data-text="%s" data-em="%s"></div>' % (cls, bid, b["text"].replace('"', "&quot;"), em)
         html_parts.append(host(bid, t_in, t_out, track, inner, anchor))
-        js("lowerIn('%s', %.3f);" % (bid, t_in + 0.05))
+        if b.get("typewriter"):   # typed one character at a time, with the typing sound (Jacopo 20/10: typewriter con un suono apposito)
+            js("typeIn('%s', %.3f, %.1f);" % (bid, t_in + 0.05, float(b.get("cps", 18))))
+        else:
+            js("lowerIn('%s', %.3f);" % (bid, t_in + 0.05))
         if b.get("shimmer"):    # 16. one cyan light band travels the line, twice, once the words have landed
             nwords = len(b["text"].split(" ")); t_sh = t_in + 0.05 + 0.4 + 0.055 * nwords + 0.35
             js("(function(){ var line = document.getElementById('%s'); var W = line.offsetWidth; var spans = line.querySelectorAll('.w');"
@@ -903,21 +928,24 @@ for b in S.get("beats", []):
             audio_track += 1
     elif t == "list":
         pos = POS.get(b.get("pos", "tl"), POS["tl"])
-        mark = CHECK_SVG if b.get("marker") == "check" else '<div class="d"></div>'
+        tone = b.get("tone", "")      # "good" (emerald, check) / "bad" (red, cross): same card, opposite colours (Jacopo 20/10)
+        marker = b.get("marker") or ("check" if tone == "good" else "x" if tone == "bad" else "")
+        mark = CHECK_SVG if marker == "check" else X_SVG if marker == "x" else '<div class="d"></div>'
+        rgb = {"good": _rgb(S.get("style", {}).get("accent2", "#3f9a78")), "bad": "224,100,92"}.get(tone, "10,240,240")
         items = "".join('<div class="item" id="%s-i%d"%s>%s<div class="t">%s</div></div>' % (bid, i, item_attrs(it), mark, it[0]) for i, it in enumerate(b["items"]))
         eyebrow = ('<div class="eyebrow"%s>%s</div>' % (' style="font-size:%dpx"' % int(b["eyebrow_size"]) if b.get("eyebrow_size") else "", b["eyebrow"])) if b.get("eyebrow") else ""
         extra = "width:%dpx;" % int(b["width"]) if b.get("width") else ""
         sz = ' style="font-size:%dpx"' % int(b["size"]) if b.get("size") else ""
         items = items.replace('<div class="t">', '<div class="t"%s>' % sz)
-        inner = '<div class="glass list" id="%s-glass" style="%s%s"><div class="inner" id="%s-inner">%s%s</div></div>' % (bid, pos, extra, bid, eyebrow, items)
+        inner = '<div class="glass list%s" id="%s-glass" style="%s%s"><div class="inner" id="%s-inner">%s%s</div></div>' % ((" " + tone) if tone else "", bid, pos, extra, bid, eyebrow, items)
         html_parts.append(host(bid, t_in, t_out, track, inner, anchor))
         js("glassIn('#%s-glass', %.3f, { x: %d });" % (bid, t_in, -40 if b.get("pos", "tl") == "tl" else 40))
         js("tl.fromTo('#%s-inner', { opacity: 0 }, { opacity: 1, duration: 0.36 }, %.3f);" % (bid, t_in + 0.04))
         for i, it in enumerate(b["items"]):
             js("tl.set('#%s-i%d', { display: 'flex' }, %.3f);" % (bid, i, float(it[1])))
             js("tl.fromTo('#%s-i%d', { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.40, ease: 'power2.out' }, %.3f);" % (bid, i, float(it[1])))
-            if b.get("marker") == "check":
-                check_in("#%s-i%d" % (bid, i), float(it[1]))
+            if marker in ("check", "x"):
+                check_in("#%s-i%d" % (bid, i), float(it[1]), rgb)
         js("tl.to('#%s-inner', { opacity: 0, duration: 0.30, ease: 'power2.in' }, %.3f);" % (bid, t_out - 0.40))
         js("glassOut('#%s-glass', %.3f, 0.35);" % (bid, t_out - 0.35))
         js("tl.set('#%s-inner', { opacity: 0 }, %.3f);" % (bid, t_out - 0.10))
@@ -2189,6 +2217,45 @@ def add_cue(name, at, vol=None, bid=""):
     v = (c["vol"] if vol is None else float(vol)) * LEVEL
     audio_parts.append('    <audio id="sfx-%s-%d" src="sfx/%s.mp3" data-start="%.3f" data-duration="%.3f" data-track-index="%d" data-volume="%.3f"></audio>\n' % (bid or name, audio_track, name, start, c["dur"], audio_track, min(v, 1.0)))
     audio_track += 1
+
+# Jacopo (20/10/2026): "ogni volta che c'e' un testo a schermo, sempre un piccolo sound effect"; whoosh when the camera moves, a click on a tag,
+# a pop on a logo. Every automatic cue is queued first; two cues closer than 0.28 s keep only the stronger (no stacked, unclean sounds).
+_q = []    # (time, name, vol or None, bid, explicit)
+def q(name, t, vol=None, bid="", explicit=False):
+    _q.append((float(t), name, vol, bid, explicit))
+
+def sub_cues(b):
+    """the small cues a beat carries inside itself (one per text that appears, per camera move, per logo)"""
+    t, t_in = b["type"], float(b["in"]); out = []
+    if t == "line":
+        out.append(("typing", t_in + 0.05, 0.26) if b.get("typewriter") else ("tick", t_in + 0.08, 0.30))
+    elif t in ("list", "bullets"):
+        out += [("tick", float(it[1]) + 0.02, 0.28) for it in b["items"]]
+    elif t == "pills":
+        out += [("tick", float(it[1] if isinstance(it, list) else it["at"]) + 0.02, 0.28) for it in b["items"]]
+    elif t == "trail":
+        for row in b["cam"][1:]:
+            out.append(("whoosh-soft", float(row[0]), 0.30))
+        for nd in b["nodes"]:
+            k = nd.get("kind", "page")
+            if k == "key":
+                out.append(("tick", float(nd["at"]) + 0.12, 0.30))
+            elif k in ("logo", "card") and float(nd.get("at", t_in)) > t_in + 0.2:
+                out.append(("pop", float(nd["at"]) + 0.05, 0.30))
+    elif t == "annotate":
+        for c in b["callouts"]:
+            out.append(("tick", float(c["at"]) + 0.05, 0.30))
+            if b.get("follow"):
+                out.append(("whoosh-fast", float(c["at"]) - 0.12, 0.20))
+    elif t == "orbit":
+        out += [("pop", float(n["at"]) + 0.05, 0.30) for n in b["nodes"]]
+    elif t == "build":
+        out += [("tick", float(it.get("label_at", it["at"] + 0.5)) + 0.02, 0.28) for it in b["items"]]
+    return out
+
+for ti, tag in enumerate(S.get("tags") or ([S["tag"]] if S.get("tag") else [])):    # a click on every chapter tag
+    if tag.get("sfx", "auto") and SND.get("sfx"):
+        q(tag["sfx"] if isinstance(tag.get("sfx"), str) else "click", float(tag["in"]) + 0.06, None, "tag%d" % ti)
 for b in S.get("beats", []):
     spec = b.get("sfx", "auto")
     t_ref = float(b["at"]) if b["type"] == "transition" else float(b["in"])
@@ -2197,13 +2264,34 @@ for b in S.get("beats", []):
             continue
         name = (CUES["transitions"].get(b.get("kind")) if b["type"] == "transition" else CUES["formats"].get(b["type"]) if b["type"] in CUES["formats"] else None)
         if name:
-            add_cue(name, t_ref, None, b["id"])
+            q(name, t_ref, None, b["id"])
+        for nm, tt, vv in sub_cues(b):
+            q(nm, tt, vv, b["id"])
     elif spec:
         for sp in (spec if isinstance(spec, list) else [spec]):
             if isinstance(sp, str):
-                add_cue(sp, t_ref, None, b["id"])
+                q(sp, t_ref, None, b["id"], True)
             else:
-                add_cue(sp["name"], float(sp.get("at", t_ref)), sp.get("vol"), b["id"])
+                q(sp["name"], float(sp.get("at", t_ref)), sp.get("vol"), b["id"], True)
+        if spec != "auto" and b["type"] != "transition":
+            for nm, tt, vv in sub_cues(b):    # an explicit "sfx" on the entrance does not silence the small cues inside the beat
+                q(nm, tt, vv, b["id"])
+
+def _eff(c):   # effective volume of a queued cue, to pick the stronger of two that collide
+    return (CUES["sounds"][c[1]]["vol"] if c[2] is None else float(c[2]))
+_q.sort(key=lambda c: c[0])
+_kept = []
+for c in _q:
+    clash = [k for k in _kept if abs((k[0] - CUES["sounds"][k[1]]["lead"]) - (c[0] - CUES["sounds"][c[1]]["lead"])) < 0.28 and not (k[4] and c[4])]
+    if clash:
+        if all(_eff(c) > _eff(k) for k in clash) and not any(k[4] for k in clash):
+            for k in clash:
+                _kept.remove(k)
+            _kept.append(c)
+        continue
+    _kept.append(c)
+for t_, nm, vv, bid_, ex_ in sorted(_kept, key=lambda c: c[0]):
+    add_cue(nm, t_, vv, bid_)
 
 # ---- camera -----------------------------------------------------------------------------------------
 cam = ["tl.set('#video-zoom', { scale: 1.0 }, 0);", "tl.set('#video-wrap', { scale: 1.0, x: 0 }, 0);"]
@@ -2233,6 +2321,18 @@ HELPERS = """
         };
         const lowerIn = function (lineId, t) {
           tl.fromTo('#' + lineId + ' .w', { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out', stagger: 0.055 }, t);
+        };
+        // typewriter: the line is revealed one character at a time from ONE proxy tween (seek-safe), `cps` characters a second
+        const typeIn = function (lineId, t, cps) {
+          const chars = [];
+          document.querySelectorAll('#' + lineId + ' .w').forEach(function (sp) {
+            const txt = sp.textContent; sp.textContent = '';
+            Array.from(txt).forEach(function (ch) { const c = document.createElement('span'); c.textContent = ch; c.style.opacity = '0'; sp.appendChild(c); chars.push(c); });
+            sp.style.opacity = '1';
+          });
+          const o = { n: 0 };
+          tl.fromTo(o, { n: 0 }, { n: chars.length, duration: chars.length / cps, ease: 'none', immediateRender: false,
+            onUpdate: function () { const k = Math.floor(o.n); for (let i = 0; i < chars.length; i++) { chars[i].style.opacity = i < k ? '1' : '0'; } } }, t);
         };
         const lowerOut = function (hostId, tEnd) {
           tl.to('#' + hostId + ' .lower', { opacity: 0, duration: 0.35, ease: 'power2.in' }, tEnd - 0.35);
