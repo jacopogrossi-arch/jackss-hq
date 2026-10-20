@@ -126,7 +126,7 @@ _TEMPLATE = """
   .k-gl-item { position:absolute; border-radius:10px; overflow:hidden; opacity:0; box-shadow:0 18px 50px rgba(0,0,0,.55), 0 0 0 1.5px rgba(255,255,255,.14); background:#0b0907; }
   .k-gl-item img { width:100%; height:100%; display:block; object-fit:fill; }
   .k-gl-glow { position:absolute; left:50%; top:50%; width:1700px; height:1000px; translate:-50% -50%; border-radius:50%; opacity:0;
-    background:radial-gradient(closest-side, color-mix(in srgb, var(--k-accent) 58%, transparent), color-mix(in srgb, var(--k-accent) 14%, transparent) 55%, transparent 80%); filter:blur(40px); }
+    background:radial-gradient(closest-side, color-mix(in srgb, var(--k-accent) 88%, transparent), color-mix(in srgb, var(--k-accent) 30%, transparent) 55%, transparent 82%); filter:blur(34px); }
   .k-gl-wall { position:absolute; inset:0; transform-origin:50% 50%; }
   /* subtitles: phrase-level, bottom centre; key words in the italic serif */
   .k-sub-grad { position:absolute; left:0; right:0; bottom:0; height:340px; background:linear-gradient(to top, rgba(0,0,0,.5), rgba(0,0,0,0)); }
