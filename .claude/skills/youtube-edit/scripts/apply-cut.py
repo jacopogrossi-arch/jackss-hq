@@ -28,6 +28,8 @@ ap.add_argument("--out", required=True)
 ap.add_argument("--fps", type=int, default=30)
 ap.add_argument("--crf", type=int, default=16)
 ap.add_argument("--preset", default="fast")
+ap.add_argument("--lut", default="", help="3D LUT (.cube) applied to the picture in the same encode (D-Log -> Rec.709)")
+ap.add_argument("--encoder", default="x264", choices=["x264", "nvenc"], help="nvenc = h264_nvenc on the GPU (much faster at 4K)")
 args = ap.parse_args()
 
 def probe(path, *entries):
@@ -77,11 +79,20 @@ for s in cl["kept"]:
 if not parts:
     sys.exit("no kept segment is at least one frame long")
 chain.append("".join(parts) + "concat=n=%d:v=1:a=1[v][a]" % len(parts))
+vlabel = "[v]"
+if args.lut:
+    lp = os.path.abspath(args.lut).replace("\\", "/").replace(":", "\\:")
+    chain.append("[v]lut3d=file='%s'[vl]" % lp)
+    vlabel = "[vl]"
 fc = ";".join(chain)
 
-cmd = ["ffmpeg", "-y", "-v", "error", "-i", args.input, "-filter_complex", fc, "-map", "[v]", "-map", "[a]",
-       "-r", str(args.fps), "-fps_mode", "cfr",
-       "-c:v", "libx264", "-preset", args.preset, "-crf", str(args.crf), "-g", str(args.fps), "-keyint_min", str(args.fps),
+if args.encoder == "nvenc":
+    venc = ["-c:v", "h264_nvenc", "-preset", "p5", "-rc", "vbr", "-cq", str(args.crf + 1), "-b:v", "0",
+            "-maxrate", "120M", "-bufsize", "240M", "-g", str(args.fps), "-bf", "2"]
+else:
+    venc = ["-c:v", "libx264", "-preset", args.preset, "-crf", str(args.crf), "-g", str(args.fps), "-keyint_min", str(args.fps)]
+cmd = ["ffmpeg", "-y", "-v", "error", "-i", args.input, "-filter_complex", fc, "-map", vlabel, "-map", "[a]",
+       "-r", str(args.fps), "-fps_mode", "cfr"] + venc + [
        "-pix_fmt", "yuv420p", "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709", "-color_range", "tv",
        "-c:a", "aac", "-b:a", "256k", "-ar", "48000", "-movflags", "+faststart+write_colr", args.out]
 subprocess.run(cmd, check=True)
