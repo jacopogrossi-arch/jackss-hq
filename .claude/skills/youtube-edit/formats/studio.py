@@ -213,7 +213,8 @@ def build(b, bid, t_in, t_out, js):
         cells += '<div class="k-item">%s</div>' % cell
     if title:
         js("tl.fromTo('#%s-title', { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, %.3f);" % (bid, t_in + 0.05))
-    return '<div class="k-cut">%s<div class="k-row">%s</div></div>' % (title, cells)
+    js("tl.fromTo('#%s-row', { scale: 1.0 }, { scale: 1.045, duration: %.2f, ease: 'sine.inOut', immediateRender: false }, %.3f);" % (bid, max(0.5, t_out - t_in), t_in))
+    return '<div class="k-cut">%s<div class="k-row" id="%s-row">%s</div></div>' % (title, bid, cells)
 
 
 # ---- annotate -------------------------------------------------------------------------------------------------------------
@@ -467,9 +468,14 @@ def trail(b, bid, t_in, t_out, js, sizes):
     if rp > 0 and len(cam) > 1 and float(cam[1][0]) - t_in > 0.8:
         c0 = list(cam[0]); c0[3] = float(c0[3]) * (1 + rp)
         js("tl.to('#%s-rig', { %s, duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (bid, pose(c0), float(cam[1][0]) - t_in - 0.05, t_in))
-    for c in cam[1:]:
+    for ci, c in enumerate(cam[1:], start=1):
         dur = float(c[6]) if len(c) > 6 else 1.3
         js("tl.to('#%s-rig', { %s, duration: %.2f, ease: 'power2.inOut' }, %.3f);" % (bid, pose(c), dur, float(c[0])))
+        if ci + 1 < len(cam):    # a hold of more than a second between two moves: the camera keeps creeping in (a still scene kills retention)
+            gap0 = float(c[0]) + dur; gap = float(cam[ci + 1][0]) - gap0
+            if gap > 1.0 and rp > 0:
+                c2 = list(c); c2[3] = float(c2[3]) * (1 + rp)
+                js("tl.to('#%s-rig', { %s, duration: %.3f, ease: 'sine.inOut' }, %.3f);" % (bid, pose(c2), gap - 0.05, gap0))
     # the camera never stops: after the last move it keeps drifting (a little closer, turning toward the front) until the scene ends
     last = cam[-1]; t_last = float(last[0]) + (float(last[6]) if len(last) > 6 else 1.3) if len(cam) > 1 else t_in + 0.9
     if b.get("drift", True) and t_last < t_out - 0.5:
