@@ -1,7 +1,7 @@
 # Script YouTube #2 — Ho lasciato Claude ideare una collezione al posto mio
 
 > 📝 **Versione 3, 20/10/2026**, sulla verità del progetto: Claude ha gestito tutto (temi, moodboard, foto Pinterest, look); Jacopo ha solo **ricalcato il flat sopra il figurino**. Non si legge e non si impara a memoria: si ricordano i punti e si dicono con parole proprie (metodo del #1). Scritti per esteso solo hook e chiusura; i testi sotto 🎙 in corsivo sono **esempi di tono**.
-> **Angolo:** il #1 diceva "dove passa il confine" e fissava la regola *se l'AI sceglie e io firmo, non va bene*. Qui faccio apposta l'esperimento opposto: **lascio decidere tutto a Claude** e guardo cosa esce da questa prova breve.
+> **Angolo (v4):** NON un video sull'accademia. È un **test**: "Ho testato Claude, gli ho fatto fare una collezione". Jacopo è **contrario** a lasciare fare tutto all'AI, ma voleva vedere quanto potesse fare da solo, senza ispirazione umana. Il compito d'esame resta sullo sfondo e non si nomina (vedi avviso 3).
 > **Durata stimata:** 10–13 minuti.
 > **Esempio seguito fino in fondo:** ONLIFE. Gli altri due temi (Royal Humour, Body Talk) nella presentazione finale.
 > **Materiale:** `accademia/progetto-trend-ai-2027-28.md` · `idee-concept-trend-ai-2027-28.md` · `figurini-trend-ai-2027-28.md`
@@ -11,14 +11,15 @@
 
 ## ⚠️ Da sistemare prima di girare
 
-1. **Il titolo ora è vero** alla lettera: Claude ha ideato e deciso, Jacopo ha solo ricalcato. Va detto chiaro fin dall'hook, senza ammorbidire.
-2. **Tensione con il #1 (è il bello del video).** Nel #1 dici che se l'AI sceglie e tu firmi, non va bene. Qui lo fai apposta, come **prova dichiarata**. Dillo in faccia: "è l'esatto caso che nel video scorso chiamavo barare. Volevo vedere cosa succede".
-3. **Docenti:** hanno saputo che era una prova? Il video dice "come uso l'AI, e l'ho detto". Giralo **solo se è vero** ❓. Se non l'hai detto, dillo prima di pubblicare. Il voto non va nominato se non lo hai.
-4. **I tre temi:** quelli veri, dalla copertina, sono **Royal Humour · Body Talk · Onlife**. "Body toll" e "conviviality" erano errori di lettura delle foto da parte di Claude (vedi sezione 3, l'errore).
-5. **Concept:** non c'erano sottotemi da inventare, bastava attenersi al concept del libro. "Dentro la città" resta come nome del look di Onlife.
-6. **La rivista non è tua.** Pagine brevi, fonte a schermo (nome da confermare: *Zoom on Fashion Trends*, Nuova Libra Editrice?).
-7. **Foto Pinterest/Unsplash:** fonti segnate. Repo pubblico: niente still protetti.
-8. **Colori e dettagli da confermare** ❓ (chi li ha scelti? se Claude, dillo).
+1. **Il titolo è vero alla lettera:** Claude ha ideato e deciso, Jacopo ha solo ricalcato il flat sul figurino. Va detto chiaro fin dall'hook.
+2. **"Senza ispirazione umana" va dosato.** Claude ha avuto in ingresso la rivista di tendenze (lavoro di altri) e due righe su chi sei e cosa non vuoi essere. Dillo: il test è "senza la mia ispirazione", non "dal nulla". Altrimenti qualcuno nei commenti te lo farà notare.
+3. **Il compito d'esame.** Non è il centro del video e puoi non nominarlo. Ma non dire il contrario (tipo "non è per l'accademia"): se la collezione è stata consegnata a un esame, ometterlo è una scelta, negarlo no. Se vuoi, una riga neutra basta: "il materiale veniva da un lavoro che avevo da fare". ❓ Decidi tu; il voto non va nominato.
+4. **La tua posizione è il filo del video:** sei contrario, e lo dici senza imbarazzo. Il test serve a capire se hai ragione o no, non a dimostrare che l'AI è fantastica.
+5. **I tre temi:** quelli veri, dalla copertina, sono **Royal Humour · Body Talk · Onlife**. "Body toll" e "conviviality" erano errori di lettura di Claude (sezione 3).
+6. **Concept:** non c'erano sottotemi da inventare, ci si atteneva al concept del libro. "Dentro la città" è il nome del look di Onlife.
+7. **La rivista non è tua.** Pagine brevi, fonte a schermo (nome da confermare: *Zoom on Fashion Trends*, Nuova Libra Editrice?).
+8. **Foto Pinterest/Unsplash:** fonti segnate. Repo pubblico: niente still protetti.
+9. **Colori e dettagli da confermare** ❓ (chi li ha scelti? se Claude, dillo).
 
 **Legenda:** 🎙 = parlato · 🎬 = cosa si vede · 📝 = testo a schermo · ❓ = da confermare tu
 
@@ -34,23 +35,25 @@
 
 ---
 
-## 0. Hook (≈ 40 s) — per esteso
+## 0. Hook (≈ 45 s) — per esteso
 
 🎬 Figurino onlife finito sul tavolo, dall'alto. Poi taglio su di te.
 
 🎙
-> Questo figurino fa parte di un esame dell'accademia di moda. L'idea dietro non l'ho avuta io. Il look, il moodboard, perfino le foto: ha deciso tutto un'intelligenza artificiale.
+> Questo look non l'ho ideato io. L'ha ideato un'intelligenza artificiale. Anche il moodboard, le foto, i testi: tutto lei. Io ho solo ricalcato il disegno.
 >
-> Nel video precedente ti dicevo che se l'AI sceglie e tu firmi, quello è barare. Stavolta l'ho fatto apposta, come prova. Ho preso una rivista di tendenze con tre temi diversi, ho lasciato a Claude le decisioni, e io ho solo ricalcato il disegno. Ti faccio vedere cosa è uscito, e cosa ne penso.
+> Premessa: io sono contro questa cosa. Non mi piace l'idea di lasciare a un'AI il lavoro creativo. Però volevo smettere di avere un'opinione e basta, e fare un test: quanto riesce a fare da sola, senza la mia ispirazione? Ho preso una rivista di tendenze con tre temi, ho dato a Claude il materiale, e l'ho lasciato fare una collezione intera. Ti faccio vedere cosa è uscito, e se ho cambiato idea.
 
 ---
 
-## 1. La prova (≈ 1 min) — punti
+## 1. Il test (≈ 1 min) — punti
 
-- Chi sono, in una riga (chi ha visto il #1 lo sa già): studio economia e faccio un'accademia di moda a Roma.
-- Il compito d'esame: una rivista di tendenze per l'autunno-inverno 2027-28 con **tre temi**: *Royal Humour*, *Body Talk*, *Onlife*. Per ognuno: concept, moodboard emotiva, moodboard tecnica, figurino. Menswear.
-- **La regola della prova:** non invento sottotemi, ci si attiene al concept del libro. Claude gestisce i temi, il moodboard, le ricerche, le foto di Pinterest, il look. **A me resta una cosa: ricalcare il flat sopra il figurino.**
-- È una prova breve, non una verità: un solo esame, tre temi, pochi giorni. Il risultato vale per questo caso.
+- Chi sono, in una riga: Jacopo, Roma, faccio moda e sto costruendo un brand mio (Inverso).
+- **Perché lo faccio:** sono contro il lasciare decidere tutto all'AI. Ma un'opinione senza prova non vale molto. Quindi la provo.
+- **La domanda del test:** quanto può fare da sola, senza la mia ispirazione?
+- **Il materiale che gli do:** una rivista di tendenze per l'autunno-inverno 2027-28 con **tre temi** (*Royal Humour*, *Body Talk*, *Onlife*) e due righe su chi sono e cosa non voglio essere. *(Onesto: non è "dal nulla". Ha in ingresso il lavoro di chi ha scritto la rivista.)*
+- **Le regole:** per ogni tema Claude fa concept, moodboard emotiva e tecnica, figurino. Non invento sottotemi, ci si attiene al concept della rivista. **A me resta una cosa: ricalcare il flat sopra il figurino.**
+- È una prova breve, non una verità: un solo caso, tre temi, pochi giorni.
 - Nel video ne seguo uno solo dall'inizio alla fine: **Onlife**.
 
 🎬 Pagine della rivista (brevi, fonte a schermo) → grafica "3 temi × 4 tavole".
@@ -134,7 +137,7 @@
 
 ## 6. Presentazione finale (≈ 2 min) — punti + chiusura per esteso
 
-🎬 Il PDF finale sfogliato: copertina, le tavole di Onlife (concept, collage, costruzione idee, figurino), poi un colpo d'occhio su Royal Humour e Body Talk.
+🎬 Il risultato sfogliato: copertina, le tavole di Onlife (concept, collage, costruzione idee, figurino), poi un colpo d'occhio su Royal Humour e Body Talk.
 
 🎙 *(da dire a modo tuo)*
 > Ecco il risultato. [commenta cosa ti piace e cosa non ti convince.] ❓ stato reale alla consegna.
@@ -143,14 +146,16 @@
 - Cosa ha fatto Claude: tutto tranne il ricalco. Veloce, e con un risultato presentabile.
 - Cosa ho fatto io: il ricalco, e (forse) accorgermi dell'errore sui temi. ❓
 - Dove ha sbagliato: i temi (2 su 3), i colori HEX, i testi, le foto poco credibili.
-- Quello che non ha fatto nessuno: un perché. ❓ Sai dire perché proprio quel look? Se non lo sai, è il punto: in un esame te lo chiedono.
+- Quello che non ha fatto nessuno: un perché. ❓ Sai dire perché proprio quel look? Se non lo sai, è il punto: è la domanda che resta senza risposta.
 
 **Chiusura (per esteso):**
 
 🎙
-> Di chi è, allora? Io non lo so con certezza. Il disegno l'ho ricalcato io, ma l'idea, il look, il moodboard e le foto sono di un'intelligenza artificiale. Nel video scorso avrei detto che questo è il caso in cui si bara. Dopo averlo fatto davvero, non sono più sicuro che la risposta sia così semplice.
+> Quindi, ho cambiato idea? Non del tutto. Ho visto che l'AI da sola riesce a fare tanto, e in fretta: più di quanto pensassi. Ma ha anche sbagliato con sicurezza, e non c'è stato un perché dietro quel look, solo un risultato che sta in piedi.
 >
-> Una cosa però la so: l'AI ha deciso tanto, e ha anche sbagliato con sicurezza, e senza qualcuno che controlli quello sbaglio resta. Quindi la domanda per te: se lasci fare tutto all'AI e ti dice una cosa sbagliata, di chi è l'errore? Scrivimelo nei commenti, sono curioso davvero.
+> Resto contrario a lasciarle decidere tutto. Ma ora so dire perché, e so cosa manca davvero: non la velocità, ma qualcuno che dica "questo è giusto, questo no, e perché".
+>
+> E tu? Lasceresti fare a Claude una collezione per te? Scrivimelo nei commenti, sono curioso davvero.
 
 🎬 Musica abbassata o tolta (come nel #1).
 📝 *@thejacopogrossi · @inversorome*
@@ -160,8 +165,8 @@
 ## Capitoli per la descrizione YouTube (bozza, da riallineare ai tempi veri)
 
 ```
-0:00 Di chi è questo figurino?
-0:45 La prova: decide Claude
+0:00 Questo look l'ha ideato un'AI
+0:45 Il test: cosa può fare da sola
 1:45 Come è fatto il video
 2:10 Brainstorming: le idee di Claude
 5:00 L'errore di Claude
