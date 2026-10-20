@@ -127,7 +127,7 @@ when long); you answer in plain words ("keep the earlier take of the studio line
 | `tighten-cut.py` | trims lead-ins, tails and inner pauses by the sound | `--audio --cut-list --out [--lead 0.07] [--tail 0.11] [--maxgap 0.30]` |
 | `sliver.py` | what edge-audit lets through: breath-only segments, heads carrying a dropped word's decay, tails leaking the next onset, edges under 40 ms | `--cut-list --audio [--fix]` |
 | `edge-audit.py` | every cut edge checked by the audio: starts or ends mid-sound, restart fragments | `--audio --cut-list --transcript [--keeps FILE] [--fix] [--threshold 300]` |
-| `apply-cut.py` | one frame-accurate re-encode into `public/input-video.mp4` + `cut-map.json` (every jump cut) | `--input --cut-list --out [--fps 30] [--crf 16]` |
+| `apply-cut.py` | one frame-accurate re-encode into `public/input-video.mp4` + `cut-map.json` (every jump cut); `--lut file.cube` puts the log-to-Rec.709 conversion in the SAME encode, `--encoder nvenc` uses the GPU (4K 6:43 in ~20 min instead of ~45) | `--input --cut-list --out [--fps 30] [--crf 16] [--lut LUT] [--encoder x264\|nvenc]` |
 | `dead-air.py` | every pause in the flat cut over 0.40 s after a sentence end (0.45 s elsewhere), by the audio | `W [--plan] [--keep T] [--max 0.45] [--max-sentence 0.40] [--target 0.30]` |
 | `patch-cut.py` | small fixes to a cut list | `--cut-list` with `--add A-B`, `--drop T` or `--drop-flat A-B` (flat time, mapped back through `cut-map.json`) |
 | `stutter-scan.py` | word-level stutters and a retake pass on the flat-cut transcript, a second opinion | `--transcript --out-dir` |
@@ -209,6 +209,8 @@ keyframe every 30 frames, 30 fps, BT.709) straight into `public/input-video.mp4`
 grid (without the snap, the picture drifted 4 frames behind the voice over 24 segments). The output is checked against
 `cut-map.json` (duration within a frame, A/V under 0.12 s); a DRIFT line means do not dress that file. `cut-map.json`
 lists every jump cut: put cutaways on those cuts and dress at most one or two of the rest.
+
+**Log footage (DJI Osmo Pocket 4P, D-Log2):** the official LUTs are in `assets/luts/` (`DJI-Pocket4P-DLog2-to-Rec709-size65.cube` is the one to use; D-Log2 is not D-Log: never mix them). Apply it with `apply-cut.py --lut`, only on camera clips, never on stills or B-roll. Phone exports from DJI Mimo stay in D-Log2 too. Run ffmpeg from the project folder with a relative `lut.cube` or let apply-cut escape the path (a Windows `D:` path breaks `lut3d` otherwise).
 
 ## Pipeline (flat cut to 4K MP4)
 
