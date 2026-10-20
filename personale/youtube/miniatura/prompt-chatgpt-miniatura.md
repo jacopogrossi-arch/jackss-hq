@@ -81,3 +81,26 @@ Keep the bottom right corner empty.
 ```
 
 Fondi alternativi (sostituire la riga BACKGROUND): bianco puro `#FFFFFF` · oliva scuro `#3F4A2E` (palette capi Inverso, scritta in avorio).
+
+---
+
+## Video #2 — "Ho lasciato Claude ideare una collezione al posto mio" (21/10/2026)
+
+Concept: stile #1 (fondo #F2F2F0, faccia a sinistra, UN oggetto grande), figurino Onlife finito a destra. **Testo e logo Claude aggiunti dopo da Claude Code** (ChatGPT sbaglia font e loghi). Parola scelta: **"CHI?"** (alternative: "IDEA SUA").
+**Allegare (cartella `v2-da-caricare/`):** 1) `1-foto-jacopo.jpg` · 2) `2-figurino-onlife.png` · 3) `miniatura-v3.jpg` (riferimento di layout)
+
+```
+Create a clean, viral-style YouTube thumbnail, 16:9 (1280x720). Use image 3 only as a layout reference (same composition, same plain light background, same white outline around the man).
+
+COMPOSITION (only 2 elements + empty space):
+1. LEFT (about 40% of the frame): the young man from image 1, cut out cleanly, from the chest up, big in the frame, slightly turned toward the right, looking into the camera. Expression: curious and slightly skeptical, one eyebrow subtly raised, mouth closed and relaxed — NOT sad, NOT pouting. Keep his face, hair and black t-shirt identical to image 1, do not change or beautify his features. Bright, soft studio light on his face, sharp and detailed, thin white outline around him.
+2. CENTER-RIGHT: the full-length fashion illustration from image 2 (man in black bomber jacket, white tee, yellow shirt tied at the waist, blue jeans with a beige patch, white sneakers), big in the frame, cropped from head to mid-thigh. Use the illustration exactly as it is, do not redraw or change any garment or color.
+3. TOP RIGHT: leave an empty area (about 35% width, top 30% height) for a title that will be added later. Also keep a small empty area next to the illustration for a logo. NO TEXT and NO LOGOS anywhere in the image.
+
+BACKGROUND: plain clean light grey-white studio background (#F2F2F0), seamless, with a very soft shadow behind the man. No beige, no textures, no objects, no room.
+
+STYLE: bright, crisp, high contrast, minimal, professional YouTube thumbnail. Must read clearly at very small size on a phone. No text, no arrows, no logos, no emojis.
+Keep the bottom right corner empty.
+```
+
+Se non va: faccia cambiata → "Keep the face identical to image 1"; figurino ridisegnato → "use image 2 as a photo placed on the canvas, do not redraw".
