@@ -1,7 +1,7 @@
 # Script YouTube #2 — Ho lasciato Claude ideare una collezione al posto mio
 
 > 📝 **Versione 2, riscritta il 20/10/2026** sullo stato reale del progetto (19/10). Non si legge e non si impara a memoria: si ricordano i punti e si dicono con parole proprie (metodo del #1). Scritti per esteso solo hook e chiusura; le frasi in corsivo sotto 🎙 sono **esempi di tono**, da dire a modo tuo.
-> **Angolo:** il #1 diceva "dove passa il confine". Qui lo mostro su un caso reale: ho lasciato fare a Claude quanto più possibile, e documento passo per passo chi ha deciso cosa, **compresi gli errori dell'AI**.
+> **Angolo:** il #1 diceva "dove passa il confine". Qui lo mostro su un caso reale: una prova in cui decide Claude (tre temi dalla rivista), e documento passo per passo chi ha deciso cosa, **compresi gli errori dell'AI**.
 > **Durata stimata:** 12–15 minuti.
 > **Esempio seguito fino in fondo:** ONLIFE ("Dentro la città"). Gli altri due temi (Royal Humour, Body Talk) solo nella presentazione finale.
 > **Materiale:** `accademia/progetto-trend-ai-2027-28.md` · `idee-concept-trend-ai-2027-28.md` · `figurini-trend-ai-2027-28.md`
@@ -41,19 +41,20 @@ Alternative più oneste, se dopo il montaggio il "al posto mio" suona troppo:
 🎬 Figurino onlife finito sul tavolo, dall'alto. Poi taglio su di te.
 
 🎙
-> Questo figurino fa parte di un esame dell'accademia di moda. L'idea dietro non l'ho avuta io: me l'ha proposta un'intelligenza artificiale. Però l'ho scelta io, l'ho riscritta io e l'ho disegnata io.
+> Questo figurino fa parte di un esame dell'accademia di moda. L'idea dietro non l'ho avuta io: l'ha avuta un'intelligenza artificiale.
 >
-> Quindi di chi è? Nel video precedente mi chiedevo dove passa il confine. Stavolta ho voluto provarlo davvero: ho lasciato fare a Claude più che potevo, e ti faccio vedere ogni passaggio. Compreso quello in cui ha sbagliato.
+> In questo video faccio una prova. Ho preso una rivista di tendenze con tre temi diversi, e ho lasciato che fosse Claude a decidere cosa sarebbe diventata la collezione: idee, direzione, look. Io dovevo eseguire. Ti faccio vedere cosa è uscito da questa prova, e dove la regola ha tenuto e dove no.
 
 ---
 
-## 1. Il compito (≈ 1 min) — punti
+## 1. La prova (≈ 1 min) — punti
 
 - Chi sono, in una riga (chi ha visto il #1 lo sa già): studio economia e faccio un'accademia di moda a Roma.
-- Il compito: un **trend book** di tendenze per l'autunno-inverno 2027-28, con **tre temi**: *Royal Humour*, *Body Talk*, *Onlife*.
-- Per ogni tema: concept, moodboard emotiva, moodboard tecnica, figurino. Tutto menswear.
-- Faccio tutti e tre, ma nel video ne seguo **uno solo** dall'inizio alla fine: **Onlife**.
-- La regola che mi sono dato: Claude fa tutto ciò che è lettura, ordine e proposta. Io faccio ciò che richiede gusto.
+- Il compito d'esame: una rivista di tendenze per l'autunno-inverno 2027-28 con **tre temi**: *Royal Humour*, *Body Talk*, *Onlife*. Per ognuno: concept, moodboard emotiva, moodboard tecnica, figurino.
+- **La regola della prova:** le decisioni le prende Claude. Io gli do il materiale (le foto delle pagine, chi sono, cosa non voglio essere) e poi eseguo quello che decide.
+- È una prova breve, non una verità: un solo esame, tre temi, pochi giorni. Il risultato vale per questo caso.
+- Nel video ne seguo uno solo dall'inizio alla fine: **Onlife**. Gli altri due nella presentazione finale.
+- ❓ **Da dirti chiaro prima di girare:** quanto la regola è stata davvero rispettata? Dove hai deciso tu (scelta delle foto, ricalco, colori, correzione dell'errore sui temi) va detto, perché è il risultato della prova, non un imbarazzo.
 
 🎬 Pagine della rivista (brevi, fonte a schermo) → grafica "3 temi × 4 tavole".
 
