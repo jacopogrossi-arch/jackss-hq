@@ -1,6 +1,6 @@
 # YouTube #2 — Titolo, descrizione, tag
 
-> Bozza del 21/10/2026, da incollare in YouTube Studio. Video: `videos/02-claude-collezione/output-4k-v3-finale.mp4` (6:43). Miniatura: `miniatura/miniatura-02-v1.jpg`.
+> Bozza del 21/10/2026, da incollare in YouTube Studio. Video: `videos/02-claude-collezione/output-4k-v3-finale.mp4` (6:43). Miniatura: `miniatura/miniatura-02-v2.jpg`.
 > ❓ Da verificare prima di pubblicare: il nome esatto della rivista (nel video dici "Zoom on Fashion Trends"? controlla la copertina), e se vuoi citarla.
 
 ## Titolo
