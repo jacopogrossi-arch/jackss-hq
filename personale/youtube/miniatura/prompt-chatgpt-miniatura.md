@@ -104,3 +104,5 @@ Keep the bottom right corner empty.
 ```
 
 Se non va: faccia cambiata → "Keep the face identical to image 1"; figurino ridisegnato → "use image 2 as a photo placed on the canvas, do not redraw".
+
+**Esito (21/10/2026):** ChatGPT ha rispettato faccia e figurino al primo colpo (`miniatura-v4-chatgpt-base.png`). Titolo "CHI?" EB Garamond + logo Claude + freccia aggiunti dopo → `miniatura-v6-freccia.jpg` (finale). Playfair Display provato e scartato.

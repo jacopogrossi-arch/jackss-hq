@@ -7,7 +7,7 @@ Video lunghi sul **canale personale** di Jacopo (non Inverso, non Jago).
 | # | Titolo | Pubblicato | File |
 |---|---|---|---|
 | 1 | Si può usare l'AI nella moda? | 15/10/2026 | copione `01-ai-accademia-moda.md` · titolo/descrizione/tag `01-pubblicazione.md` · miniatura `miniatura/miniatura-v3.jpg` |
-| 2 | Ho lasciato Claude ideare una collezione al posto mio | girato 20/10/2026, in montaggio (bozza v1 4K in `videos/02-claude-collezione/`) | script `02-claude-idea-collezione.md` (v4: è un test, decide Claude; Jacopo ha solo ricalcato i flat) |
+| 2 | Ho lasciato Claude ideare una collezione al posto mio | girato 20/10/2026, in montaggio (bozza v1 4K in `videos/02-claude-collezione/`) | script `02-claude-idea-collezione.md` (v4: è un test, decide Claude; Jacopo ha solo ricalcato i flat) · miniatura `miniatura/miniatura-v6-freccia.jpg` ("CHI?", 21/10) |
 
 ## Metodo (dal video 1, da riusare)
 
@@ -21,6 +21,6 @@ Video lunghi sul **canale personale** di Jacopo (non Inverso, non Jago).
 3. *Audio*: voce normalizzata a **-16 LUFS** (tasto destro → Normalize Audio Levels, ITU-R BS.1770). Musica dalla **YouTube Audio Library** (attribuzione non richiesta) su A2 a circa **-22 dB**, dissolvenze in entrata/uscita, abbassata o tolta nella parte personale/etica (keyframe con `Alt+clic` sulla linea del volume).
 4. *Deliver*: preset YouTube, MP4 H.264, risoluzione di ripresa (4K se girato in 4K), bitrate 40.000 Kb/s (1080p) / 80.000 (4K), audio AAC 320.
 
-**Miniatura.** Stile "virale clean": fondo chiaro grigio-bianco (#F2F2F0), faccia grande a sinistra con contorno bianco, UN oggetto grande al centro, 2 parole. Generata in ChatGPT con i nostri asset e **senza testo** (ChatGPT sbaglia i font e gli accenti); il titolo si aggiunge dopo in **EB Garamond** (corsivo + tondo). Prompt e versioni scartate in `miniatura/prompt-chatgpt-miniatura.md`. Controllare sempre l'anteprima a 320×180.
+**Miniatura.** Stile "virale clean": fondo chiaro grigio-bianco (#F2F2F0), faccia grande a sinistra con contorno bianco, UN oggetto grande al centro, 2 parole. Generata in ChatGPT con i nostri asset e **senza testo** (ChatGPT sbaglia i font e gli accenti); il titolo si aggiunge dopo in **EB Garamond** (corsivo + tondo). Prompt e versioni scartate in `miniatura/prompt-chatgpt-miniatura.md`. Controllare sempre l'anteprima a 320×180. **Anche logo e frecce si aggiungono dopo** (ChatGPT sbaglia i loghi): HTML + Edge headless `--screenshot` (metodo del #2, sorgente `miniatura/miniatura-v6-sorgente.html`).
 
 **Pubblicazione.** Titolo = domanda; miniatura = parola che la completa, non la ripete. Descrizione: prima riga chi sono + cosa è successo, domanda per i commenti, capitoli (il primo a 0:00), @thejacopogrossi, riga su @inversorome.
