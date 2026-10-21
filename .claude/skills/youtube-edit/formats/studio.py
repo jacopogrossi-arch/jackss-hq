@@ -128,6 +128,8 @@ _TEMPLATE = """
   .k-gl-glow { position:absolute; left:50%; top:50%; width:1700px; height:1000px; translate:-50% -50%; border-radius:50%; opacity:0;
     background:radial-gradient(closest-side, color-mix(in srgb, var(--k-accent) 88%, transparent), color-mix(in srgb, var(--k-accent) 30%, transparent) 55%, transparent 82%); filter:blur(34px); }
   .k-gl-wall { position:absolute; inset:0; transform-origin:50% 50%; }
+  .k-gl-pg { position:absolute; translate:-50% -50%; border-radius:50%; opacity:0;
+    background:radial-gradient(closest-side, color-mix(in srgb, var(--k-accent) 92%, transparent), color-mix(in srgb, var(--k-accent) 32%, transparent) 55%, transparent 80%); filter:blur(22px); }
   /* subtitles: phrase-level, bottom centre; key words in the italic serif */
   .k-sub-grad { position:absolute; left:0; right:0; bottom:0; height:340px; background:linear-gradient(to top, rgba(0,0,0,.5), rgba(0,0,0,0)); }
   .k-sub { position:absolute; left:0; right:0; bottom:64px; padding:0 230px; text-align:center; font-family:var(--k-font); font-weight:600; font-size:50px; line-height:1.2;
@@ -553,6 +555,22 @@ def gallery(b, bid, t_in, t_out, js):
         js("tl.to('#%s-g%d', { x: %.1f, y: %.1f, scale: %.3f, duration: %.2f, ease: 'power2.inOut' }, %.3f);" % (bid, k, 960 - cxk, 540 - cyk, S, float(sel.get("dur", 0.85)), at + 0.1))
         if tag:
             js("tl.to('#%s-tag', { opacity: 0, duration: 0.3 }, %.3f);" % (bid, at))
+    pops = b.get("pops") or []     # [{"index": 3, "at": t}, ...]: those thumbnails swell like a pop-up with a glow behind, the others step back
+    pop_glows = ""
+    if pops:
+        PS = float(b.get("pop_scale", 1.45))
+        first = min(float(pp["at"]) for pp in pops)
+        popped = {int(pp["index"]) for pp in pops}
+        rest = ", ".join("#%s-g%d" % (bid, i) for i in range(len(imgs)) if i not in popped)
+        if rest:
+            js("tl.to('%s', { opacity: 0.32, duration: 0.45, ease: 'power2.out' }, %.3f);" % (rest, first))
+        for pp in pops:
+            k = int(pp["index"]); at = float(pp["at"]); r, c = divmod(k, cols)
+            cxk, cyk = left0 + c * (tw + gap) + tw / 2.0, top0 + r * (th + gap) + th / 2.0
+            pop_glows += ('<div class="k-gl-pg" id="%s-pg%d" style="left:%.0fpx;top:%.0fpx;width:%.0fpx;height:%.0fpx"></div>' % (bid, k, cxk, cyk, tw * PS * 1.9, th * PS * 1.9))
+            js("tl.fromTo('#%s-pg%d', { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.55, ease: 'power2.out' }, %.3f);" % (bid, k, at))
+            js("tl.set('#%s-g%d', { zIndex: 20 }, %.3f);" % (bid, k, at))
+            js("tl.to('#%s-g%d', { scale: %.3f, duration: 0.5, ease: 'back.out(1.5)' }, %.3f);" % (bid, k, PS, at))
     glow = ""
     if b.get("glow"):     # a warm light that swells behind the wall (Jacopo 20/10: "si illumini con un glow dietro")
         glow = '<div class="k-gl-glow" id="%s-glow"></div>' % bid
@@ -562,7 +580,7 @@ def gallery(b, bid, t_in, t_out, js):
     if b.get("zoom"):     # the images push in slowly for the whole scene
         wall_open, wall_close = '<div class="k-gl-wall" id="%s-wall">' % bid, "</div>"
         js("tl.fromTo('#%s-wall', { scale: 1.0 }, { scale: %.3f, duration: %.2f, ease: 'sine.inOut', immediateRender: false }, %.3f);" % (bid, float(b["zoom"]), max(0.5, t_out - t_in), t_in))
-    return '<div class="k-cut">%s%s%s%s%s</div>' % (glow, tag, wall_open, items, wall_close)
+    return '<div class="k-cut">%s%s%s%s%s%s</div>' % (glow, tag, wall_open, pop_glows, items, wall_close)
 
 
 # ---- subtitles ------------------------------------------------------------------------------------------------------------
