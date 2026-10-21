@@ -861,6 +861,24 @@ ffmpeg -i master.mp4 -stream_loop -1 -i bed.mp3 -filter_complex \
  -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 256k -shortest master-music.mp4
 ```
 
+## Sound iteration without a render (`mix-audio.py`)
+
+The sound design is rebuilt from `public/index.html` (every `<audio data-start data-duration data-volume>`) + the voice of the flat cut, so a note
+like "lower the effects", "change the music" or "that whoosh is ugly" costs about a minute, not a render:
+
+```bash
+python3 "$SK/scripts/mix-audio.py" --index "$W/public/index.html" --voice "$W/public/input-video.mp4" --video "$W/output-4k-raw.mp4"   --out "$W/final.mp4" --sfx-gain -3 --music lofi-02 --music-db -7
+```
+
+It mixes voice + cues (x `--sfx-gain`), measures and applies loudnorm to -14 LUFS (voice + effects), lays the music bed (ducked, same rules as
+`add-music.py`) and muxes it onto the picture of a render (copied, not re-encoded). So the order for a delivery is: picture render -> `mix-audio.py` ->
+`verify-render.py`. To compare tracks, mix 30 s with each and send them to Jacopo as mp3 (he picks a letter).
+
+**Music facts measured on video #2:** the old bed (-14 dB, ratio 10) sat 20+ dB under the voice and was inaudible on a phone; -3 dB with `threshold 0.2 ratio 2.5`
+sat ~10 dB under and Jacopo found it too loud and "terrible" (lofi-02): the track matters more than the level (prefer soft, non-busy beds), and the
+bed should stay about 13-15 dB under the voice. Candidate beds beyond `assets/music`: CC0 tracks of `kmilo93sd/agent-video-editor` (OpenGameArt: ambient piano,
+acoustic, lofi lobby/tea), see its `library/LICENSES.md`.
+
 ## Animating glass (read before writing any entrance)
 
 **Never fade a glass element through an ancestor's `opacity`:** Chrome drops `backdrop-filter` while any ancestor is
