@@ -2197,65 +2197,79 @@ CUES = json.load(open(os.path.join(SKILL, "assets", "sfx", "cues.json"), encodin
 SND = S.get("sound") or {}
 _lv = SND.get("level", "medium")
 LEVEL = float(_lv) if isinstance(_lv, (int, float)) else {"low": 0.6, "medium": 1.0, "high": 1.4}.get(_lv, 1.0)   # a word or a number (0.7 = 30% quieter than medium)
-def stage_cue(name):
+POOLS = CUES.get("pools", {})
+_rot = {}
+def resolve(name):
+    """a pool name (swish, pop, text...) rotates through its variants so the same sound never repeats back to back"""
+    if name in POOLS:
+        i = _rot.get(name, 0); _rot[name] = i + 1
+        return POOLS[name][i % len(POOLS[name])]
+    return name
+def base(name):
+    return POOLS[name][0] if name in POOLS else name
+def stage_cue(name, dur=None):
     c = CUES["sounds"].get(name)
     if not c:
         raise SystemExit("unknown sfx %r (see assets/sfx/cues.json)" % name)
-    dst = os.path.join(OUT, "sfx", name + ".mp3")
+    d = float(dur) if dur else c["dur"]
+    key = name if not dur else "%s-%dms" % (name, int(d * 1000))
+    dst = os.path.join(OUT, "sfx", key + ".mp3")
     if not os.path.exists(dst):
         os.makedirs(os.path.dirname(dst), exist_ok=True)
         src = os.path.join(SKILL, "assets", "sfx", c["file"])
-        fade = min(0.15, c["dur"] / 3)
-        r = subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", src, "-t", str(c["dur"]), "-af", "afade=t=out:st=%.3f:d=%.3f" % (c["dur"] - fade, fade), "-codec:a", "libmp3lame", "-b:a", "192k", dst], capture_output=True, text=True)
+        fade = min(0.15, d / 3)
+        r = subprocess.run(["ffmpeg", "-y", "-v", "error", "-stream_loop", "-1", "-i", src, "-t", str(d), "-af", "afade=t=out:st=%.3f:d=%.3f" % (d - fade, fade), "-codec:a", "libmp3lame", "-b:a", "192k", dst], capture_output=True, text=True)
         if r.returncode:
             raise SystemExit("ffmpeg failed staging sfx %s: %s" % (name, r.stderr[-300:]))
-    return c
-def add_cue(name, at, vol=None, bid=""):
+    return dict(c, dur=d, _key=key)
+def add_cue(name, at, vol=None, bid="", lead=None, dur=None):
     global audio_track
-    c = stage_cue(name)
-    start = max(0.0, at - c["lead"])
+    name = resolve(name)
+    c = stage_cue(name, dur)
+    start = max(0.0, at - (c["lead"] if lead is None else float(lead)))
     v = (c["vol"] if vol is None else float(vol)) * LEVEL
-    audio_parts.append('    <audio id="sfx-%s-%d" src="sfx/%s.mp3" data-start="%.3f" data-duration="%.3f" data-track-index="%d" data-volume="%.3f"></audio>\n' % (bid or name, audio_track, name, start, c["dur"], audio_track, min(v, 1.0)))
+    audio_parts.append('    <audio id="sfx-%s-%d" src="sfx/%s.mp3" data-start="%.3f" data-duration="%.3f" data-track-index="%d" data-volume="%.3f"></audio>\n' % (bid or name, audio_track, c["_key"], start, c["dur"], audio_track, min(v, 1.0)))
     audio_track += 1
 
 # Jacopo (20/10/2026): "ogni volta che c'e' un testo a schermo, sempre un piccolo sound effect"; whoosh when the camera moves, a click on a tag,
 # a pop on a logo. Every automatic cue is queued first; two cues closer than 0.28 s keep only the stronger (no stacked, unclean sounds).
 _q = []    # (time, name, vol or None, bid, explicit)
-def q(name, t, vol=None, bid="", explicit=False):
-    _q.append((float(t), name, vol, bid, explicit))
+def q(name, t, vol=None, bid="", explicit=False, lead=None, dur=None):
+    _q.append((float(t), name, vol, bid, explicit, lead, dur))
 
 def sub_cues(b):
-    """the small cues a beat carries inside itself (one per text that appears, per camera move, per logo)"""
+    """the small cues a beat carries inside itself, as (pool or sound, time, volume, lead, dur): one per text that appears, per camera move, per logo.
+    Jacopo 21/10: pop when something appears, the swish IN PARALLEL with the camera move (starts with it), no click on a trail's closing key word,
+    typing sound for text that is revealed progressively."""
     t, t_in = b["type"], float(b["in"]); out = []
     if t == "line":
-        out.append(("typing", t_in + 0.05, 0.26) if b.get("typewriter") else ("tick", t_in + 0.08, 0.30))
+        n = len(b["text"].split(" ")); reveal = (len(b["text"]) / float(b.get("cps", 18))) if b.get("typewriter") else (0.4 + 0.055 * n)
+        out.append(("typ1", t_in + 0.05, 0.50, 0.0, round(max(0.45, reveal), 2)))    # progressive text: the typing sound runs as long as the reveal
     elif t in ("list", "bullets"):
-        out += [("tick", float(it[1]) + 0.02, 0.28) for it in b["items"]]
+        out += [("text", float(it[1]) + 0.02, 0.50, None, None) for it in b["items"]]
     elif t == "pills":
-        out += [("tick", float(it[1] if isinstance(it, list) else it["at"]) + 0.02, 0.28) for it in b["items"]]
+        out += [("text", float(it[1] if isinstance(it, list) else it["at"]) + 0.02, 0.50, None, None) for it in b["items"]]
     elif t == "trail":
         for row in b["cam"][1:]:
-            out.append(("whoosh-soft", float(row[0]), 0.30))
+            out.append(("swish", float(row[0]) + 0.05, None, 0.0, None))
         for nd in b["nodes"]:
             k = nd.get("kind", "page")
-            if k == "key":
-                out.append(("tick", float(nd["at"]) + 0.12, 0.30))
-            elif k in ("logo", "card") and float(nd.get("at", t_in)) > t_in + 0.2:
-                out.append(("pop", float(nd["at"]) + 0.05, 0.30))
+            if k in ("logo", "card") and float(nd.get("at", t_in)) > t_in + 0.2:
+                out.append(("pop", float(nd["at"]) + 0.03, None, None, None))
     elif t == "annotate":
         for c in b["callouts"]:
-            out.append(("tick", float(c["at"]) + 0.05, 0.30))
+            out.append(("text", float(c["at"]) + 0.05, 0.50, None, None))
             if b.get("follow"):
-                out.append(("whoosh-fast", float(c["at"]) - 0.12, 0.20))
+                out.append(("swish", float(c["at"]) - 0.1, 0.30, 0.0, None))
     elif t == "orbit":
-        out += [("pop", float(n["at"]) + 0.05, 0.30) for n in b["nodes"]]
+        out += [("pop", float(n["at"]) + 0.05, None, None, None) for n in b["nodes"]]
     elif t == "build":
-        out += [("tick", float(it.get("label_at", it["at"] + 0.5)) + 0.02, 0.28) for it in b["items"]]
+        out += [("text", float(it.get("label_at", it["at"] + 0.5)) + 0.02, 0.50, None, None) for it in b["items"]]
     return out
 
 for ti, tag in enumerate(S.get("tags") or ([S["tag"]] if S.get("tag") else [])):    # a click on every chapter tag
     if tag.get("sfx", "auto") and SND.get("sfx"):
-        q(tag["sfx"] if isinstance(tag.get("sfx"), str) else "click", float(tag["in"]) + 0.06, None, "tag%d" % ti)
+        q(tag["sfx"] if isinstance(tag.get("sfx"), str) else "click", float(tag["in"]) + 0.06, 0.60, "tag%d" % ti)
 for b in S.get("beats", []):
     spec = b.get("sfx", "auto")
     t_ref = float(b["at"]) if b["type"] == "transition" else float(b["in"])
@@ -2265,24 +2279,26 @@ for b in S.get("beats", []):
         name = (CUES["transitions"].get(b.get("kind")) if b["type"] == "transition" else CUES["formats"].get(b["type"]) if b["type"] in CUES["formats"] else None)
         if name:
             q(name, t_ref, None, b["id"])
-        for nm, tt, vv in sub_cues(b):
-            q(nm, tt, vv, b["id"])
+        for nm, tt, vv, ld, du in sub_cues(b):
+            q(nm, tt, vv, b["id"], False, ld, du)
     elif spec:
         for sp in (spec if isinstance(spec, list) else [spec]):
             if isinstance(sp, str):
                 q(sp, t_ref, None, b["id"], True)
             else:
-                q(sp["name"], float(sp.get("at", t_ref)), sp.get("vol"), b["id"], True)
+                q(sp["name"], float(sp.get("at", t_ref)), sp.get("vol"), b["id"], True, sp.get("lead"), sp.get("dur"))
         if spec != "auto" and b["type"] != "transition":
-            for nm, tt, vv in sub_cues(b):    # an explicit "sfx" on the entrance does not silence the small cues inside the beat
-                q(nm, tt, vv, b["id"])
+            for nm, tt, vv, ld, du in sub_cues(b):    # an explicit "sfx" on the entrance does not silence the small cues inside the beat
+                q(nm, tt, vv, b["id"], False, ld, du)
 
 def _eff(c):   # effective volume of a queued cue, to pick the stronger of two that collide
-    return (CUES["sounds"][c[1]]["vol"] if c[2] is None else float(c[2]))
+    return (CUES["sounds"][base(c[1])]["vol"] if c[2] is None else float(c[2]))
+def _t0(c):    # the instant the sound starts
+    return c[0] - (CUES["sounds"][base(c[1])]["lead"] if c[5] is None else float(c[5]))
 _q.sort(key=lambda c: c[0])
 _kept = []
 for c in _q:
-    clash = [k for k in _kept if abs((k[0] - CUES["sounds"][k[1]]["lead"]) - (c[0] - CUES["sounds"][c[1]]["lead"])) < 0.28 and not (k[4] and c[4])]
+    clash = [k for k in _kept if abs(_t0(k) - _t0(c)) < 0.28 and not (k[4] and c[4])]
     if clash:
         if all(_eff(c) > _eff(k) for k in clash) and not any(k[4] for k in clash):
             for k in clash:
@@ -2290,8 +2306,8 @@ for c in _q:
             _kept.append(c)
         continue
     _kept.append(c)
-for t_, nm, vv, bid_, ex_ in sorted(_kept, key=lambda c: c[0]):
-    add_cue(nm, t_, vv, bid_)
+for t_, nm, vv, bid_, ex_, ld_, du_ in sorted(_kept, key=lambda c: c[0]):
+    add_cue(nm, t_, vv, bid_, ld_, du_)
 
 # ---- camera -----------------------------------------------------------------------------------------
 cam = ["tl.set('#video-zoom', { scale: 1.0 }, 0);", "tl.set('#video-wrap', { scale: 1.0, x: 0 }, 0);"]
