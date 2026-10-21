@@ -8,14 +8,14 @@ Usage:
   python3 add-music.py --video master.mp4 --out master-music.mp4 [--track lofi-02 | path/to/bed.mp3]
                        [--db -14] [--lufs -14] [--fade 2.0] [--start 0]
 --track: a name in assets/music (lofi-01..04, no extension) or any audio file. --db: bed level in dB relative to its own -20 LUFS
-normalisation (-14 = about 21 dB under the voice at -14 LUFS, before the ducking takes another ~6 dB). --start: where the bed begins.
+normalisation (measured on video #2: -3 with threshold 0.2 / ratio 2.5 puts the ducked bed about 10 dB under a -14 LUFS voice; the old default, -14, left it 20+ dB under, inaudible on a phone). --start: where the bed begins.
 """
 import argparse, os, subprocess, json, sys
 ap = argparse.ArgumentParser()
 ap.add_argument("--video", required=True); ap.add_argument("--out", required=True); ap.add_argument("--track", default="lofi-02")
-ap.add_argument("--db", type=float, default=-5.0)
-ap.add_argument("--duck-ratio", type=float, default=4.0, help="sidechain ratio: 10 = the bed nearly disappears while the voice speaks, 3-4 = it dips about 3-4 dB")
-ap.add_argument("--duck-threshold", type=float, default=0.03)
+ap.add_argument("--db", type=float, default=-3.0)
+ap.add_argument("--duck-ratio", type=float, default=2.5, help="sidechain ratio: 10 = the bed nearly disappears while the voice speaks, 3-4 = it dips about 3-4 dB")
+ap.add_argument("--duck-threshold", type=float, default=0.2)
 ap.add_argument("--lufs", type=float, default=-14.0, help="loudness of the delivered file (0 = leave as it is)")
 ap.add_argument("--fade", type=float, default=2.0); ap.add_argument("--start", type=float, default=0.0)
 a = ap.parse_args()
