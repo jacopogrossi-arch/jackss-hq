@@ -1,4 +1,4 @@
-# Video #2 — montaggio (stato 21/10/2026)
+# Video #2 — montaggio (✅ pubblicato il 21/10/2026)
 
 File di lavoro in `videos/02-claude-collezione/` (fuori da git: file enormi). Qui solo il registro delle decisioni.
 
@@ -19,3 +19,6 @@ Suono su ogni testo/capitolo/mossa di camera (motore: `sub_cues`); riser + glow 
 ## Miniatura (21/10/2026)
 File finale: `miniatura/miniatura-v6-freccia.jpg` (1280x720; anteprima 320x180 in `miniatura-v6-anteprima-piccola.jpg`). Impostazione del #1: fondo #F2F2F0, faccia a sinistra con contorno bianco, figurino Onlife al centro, logo Claude arancione (#D97757) a destra con freccia nera ricurva verso il figurino, titolo **"CHI?"** in EB Garamond (scelto su Playfair Display, scartato).
 Processo: fotogramma a 11 s dal 4K (`output-4k-final.mp4`) + `fig_onlife.png` + layout v3 caricati in ChatGPT (prompt in `miniatura/prompt-chatgpt-miniatura.md`, sezione video #2; base senza testo `miniatura-v4-chatgpt-base.png`); titolo, logo e freccia aggiunti dopo in HTML renderizzato con Edge headless (`miniatura-v6-sorgente.html`). Alternativa non usata: "IDEA SUA".
+
+## Esito
+Montaggio chiuso e video pubblicato il 21/10/2026: taglio 9:33 -> 6:43, 4K, grading B, musica = brano della raccolta YouTube Audio Library scelto da Jacopo, effetti -3 dB. Pareri di Jacopo (Notion: COMMENTO VIDEO 2 e SECONDA REVISIONE VIDEO 2) tutti applicati; regole salvate nella skill `youtube-edit` (preset `elegante-portfolio`, `SKILL.md`, `mix-audio.py`).

@@ -1,6 +1,6 @@
 # YouTube #2 — Titolo, descrizione, tag
 
-> Bozza del 21/10/2026, da incollare in YouTube Studio. Video: `videos/02-claude-collezione/output-4k-v3-finale.mp4` (6:43). Miniatura: `miniatura/miniatura-02-v2.jpg`.
+> ✅ **Pubblicato il 21/10/2026.** Testi incollati in YouTube Studio. Video: `videos/02-claude-collezione/output-4k-v3-finale.mp4` (6:43). Miniatura: `miniatura/miniatura-02-v2.jpg`.
 > Nome della rivista confermato da Jacopo (21/10/2026): ZoomOnFashionTrends → "Zoom on Fashion Trends".
 
 ## Titolo
