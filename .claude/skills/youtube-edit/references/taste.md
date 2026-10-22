@@ -68,7 +68,7 @@ Slide test (30 s): cover all the text with your hand. If more than half the fram
 - A raw recording caps the edit: script the hook before recording.
 - Encoding segments separately and concatenating drifts lip sync: select exact frames in one pass.
 
-## 6. Sound palette (merged with `SKILL.md` "Sound")
+## 6. Sound palette (merged with `references/sound.md`)
 
 - Effects follow **visible actions**: a soft air whoosh on a real spatial move, a damped tap when something lands, a dry click for small UI, paper for documents, one short warm tone for a check. No laser zaps, pitch-drop plops, sci-fi chirps, boomy air-wind whooshes.
 - Choose whooshes with little energy below ~150 Hz and a gentle 80-400 ms rise; high-pass ~150-220 Hz, low-pass ~9-11 kHz, click-free fades.

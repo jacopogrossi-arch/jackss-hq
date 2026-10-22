@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """compose.py: build public/index.html for a talking-head edit from a storyboard.json, using the proven
-formats of the youtube-edit skill exactly as the reference builds render them (the format library in SKILL.md).
+formats of the youtube-edit skill exactly as the reference builds render them (the format library in references/formats.md).
 
 The storyboard is the review artifact AND the source of truth; retiming a beat is editing one number.
 Formats covered here (the ones every segment intro / hook uses): progress tag (9, with 1-of-N pips),
@@ -2125,7 +2125,7 @@ for b in S.get("beats", []):
         transition(b, t_in, t_out)
     elif t == "clip":
         # 20c. full-frame video cutaway in the composer (format 20's rules: a direct child of the root, muted, z 20, a 1.00 to
-        # 1.04 drift). For screen recordings, archive footage, and AI b-roll shots (the AI b-roll route in SKILL.md).
+        # 1.04 drift). For screen recordings, archive footage, and AI b-roll shots (the AI b-roll route in references/assets.md).
         # Optional over it: a caption ("label") or a glass checklist top-left ("items"), on a host above the video.
         html_parts.append('    <video class="cutaway-video clip" id="%s" src="%s" muted playsinline data-start="%.3f" data-duration="%.3f" data-media-start="%.3f" data-track-index="%d"%s></video>\n'
                           % (bid, b["src"], t_in, t_out - t_in, float(b.get("media_start", 0)), track, attr_anchor(anchor)))
@@ -2453,7 +2453,7 @@ beats = [(S["tag"]["in"], "tag") ] if S.get("tag") else []
 beats += [(float(b["in"]), b["id"]) for b in S.get("beats", [])]
 print("wrote %s/index.html: %d beats, %d camera ops, %d sounds" % (OUT, len(beats), len(S.get("camera", [])), len(audio_parts)))
 print("snapshot moments:", " ".join("%.2f" % (t + 0.9) for t, _ in beats))
-# format usage, for the "two formats compete: use the one used least so far in this video" rule (SKILL.md)
+# format usage, for the "two formats compete: use the one used least so far in this video" rule (references/formats.md)
 seq = sorted((float(b["in"]), b["type"] + ("m" if b.get("morph") else "")) for b in S.get("beats", []) if b["type"] not in ("transition", "overlay", "subtitles"))   # fx and subtitles are not "devices"
 counts = {}
 for _, ty in seq:
