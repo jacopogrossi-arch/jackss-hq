@@ -142,6 +142,7 @@ when long); you answer in plain words ("keep the earlier take of the studio line
 | `window-patch.py` | a render-ready copy covering only [T0, T1], for a fix inside a long render | `--public --t0 --t1 --out` |
 | `verify-render.py` | checks the rendered file: black runs, size, BT.709 tags, bitrate, duration, A/V, clipped words | `--render [--index] [--res] [--words --kept] [--out]`; exit 1 on a FAIL |
 | `check-frames.py` | the render as a viewer watches it: 10 frames a second in sheets with a gap between tiles, one full-size frame on demand, a word said twice, a card too brief to read | `--video --out [--fps 10] [--start T --end T] [--transcript] [--index]` or `--frame T` |
+| `render-queue.py` | runs any heavy command (a render, `apply-cut`) one at a time: a second one waits in line on a lock file; the command's flags pass through untouched | `[--lock F] [--wait-minutes 240] -- <command>` |
 | `assemble.py` | `assembly.json` → one 4K master at -14 LUFS + `ASSEMBLY.md` + `chapters.txt` | `--manifest --out [--gpu] [--keep-work]` |
 | `tella-pull-source.py` | downloads a Tella raw recording from the signed URL `list_sources` returns | `--url-file --out [--wav] [--audio-only]` |
 | `tella-cuts.py` | `cut-list.json` → the `cuts` array for Tella's `update_clip`, lead-in offset applied | `--cut-list --source-duration --clip-max` |
@@ -233,10 +234,13 @@ python3 "$SK/scripts/compose.py" --spec "$W/storyboard.json" --out "$W/public" -
 npx hyperframes check "$W/public"
 python3 "$SK/scripts/beat-check.py" --index "$W/public/index.html" --transcript "$W/transcript.json"
 python3 "$SK/scripts/snap-beats.py" --project "$W"
-# 5. Render 4K: the 1920x1080 composition renders at 2x. --gpu ignores CRF, so give the bitrate (45M = YouTube's 2160p
+# 5a. DRAFT first, every time: 1080p at draft quality (flags from `hyperframes render --help`; the Video #2 drafts ran this way).
+#     check-frames.py + qa-motion.py on the draft, Jacopo's notes, fixes, a new draft. Only an approved draft earns the 4K below.
+python3 "$SK/scripts/render-queue.py" -- npx hyperframes render "$W/public" --quality draft --resolution 1080p --gpu --workers 1 -o "$W/draft-1080p.mp4"
+# 5b. Render 4K (only after the draft is approved): the 1920x1080 composition renders at 2x. --gpu ignores CRF, so give the bitrate (45M = YouTube's 2160p
 #    figure). About a minute per 30 s on a recent Mac; without a hardware encoder, drop --gpu.
 PRODUCER_BROWSER_GPU_MODE=hardware NODE_OPTIONS=--max-old-space-size=8192 \
-  npx hyperframes render "$W/public" --resolution 4k --video-bitrate 45M --gpu --workers 4 -o "$W/output-4k-raw.mp4"
+  python3 "$SK/scripts/render-queue.py" -- npx hyperframes render "$W/public" --resolution 4k --video-bitrate 45M --gpu --workers 4 -o "$W/output-4k-raw.mp4"
 # 6. Full BT.709 tags (the render leaves them "unknown" and QuickTime shows faces darker and redder). Lossless.
 ffmpeg -y -v error -i "$W/output-4k-raw.mp4" -c copy -color_primaries bt709 -color_trc bt709 -colorspace bt709 \
   -color_range tv -movflags +write_colr+faststart "$W/output-4k.mp4"
