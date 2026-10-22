@@ -1233,6 +1233,12 @@ words, a specific reason to stay in the first three seconds that the video pays 
 - **"Save this to the skill":** write the note as one plain rule in the section it belongs to, with its number when it
   has one. When it changes the look, update `STYLE-GUIDE.md` and the composer's tokens too. When a new rule contradicts
   an old one, replace the old one; never leave both.
+- **Every note becomes a REWRITTEN rule, with a log line:** fix the video, then ask "which rule, had it existed, would have
+  prevented this?", find it (grep a keyword), rewrite that same rule so it covers the case, and add one line to
+  `references/NOTES_LOG.md` (date | the note | the rule rewritten | new wording). Two rules that now say the same thing are
+  merged; "earlier rule" and "older note" paragraphs are never left behind (stacked rules drift, bloat and contradict each
+  other: the sound and music paragraphs once did). The code is the truth for numbers: before writing a level or a time in
+  prose, read what `compose.py` / `cues.json` / the preset actually do.
 - **A liked result becomes a format:** a row in the library table plus a spec with its numbers.
 - **A new format starts with a state sheet:** name every state before any code (what is on screen, where, size, colour)
   and every change between two states (what moves, the property, the ease, the time). Build to the sheet, snapshot each
