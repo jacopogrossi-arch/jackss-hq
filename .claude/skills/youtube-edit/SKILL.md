@@ -141,6 +141,7 @@ when long); you answer in plain words ("keep the earlier take of the studio line
 | `broll-conform.py` | a stock clip, generated clip or still → a cutaway (30 fps, no audio, a keyframe every 15 frames, BT.709) + a 3-frame sheet + the beat to paste | `--in --out [--start] [--dur] [--4k] [--grade] [--push 1.08] [--vf FILTERS]` |
 | `window-patch.py` | a render-ready copy covering only [T0, T1], for a fix inside a long render | `--public --t0 --t1 --out` |
 | `verify-render.py` | checks the rendered file: black runs, size, BT.709 tags, bitrate, duration, A/V, clipped words | `--render [--index] [--res] [--words --kept] [--out]`; exit 1 on a FAIL |
+| `check-frames.py` | the render as a viewer watches it: 10 frames a second in sheets with a gap between tiles, one full-size frame on demand, a word said twice, a card too brief to read | `--video --out [--fps 10] [--start T --end T] [--transcript] [--index]` or `--frame T` |
 | `assemble.py` | `assembly.json` → one 4K master at -14 LUFS + `ASSEMBLY.md` + `chapters.txt` | `--manifest --out [--gpu] [--keep-work]` |
 | `tella-pull-source.py` | downloads a Tella raw recording from the signed URL `list_sources` returns | `--url-file --out [--wav] [--audio-only]` |
 | `tella-cuts.py` | `cut-list.json` → the `cuts` array for Tella's `update_clip`, lead-in offset applied | `--cut-list --source-duration --clip-max` |
@@ -1179,6 +1180,13 @@ editing the manifest and running again: **the master is never hand-edited.**
   runs, loudness and true peak, plus a contact sheet. Exit 1 = fix first. Then the **critic loop** (`references/critic.md`): a
   fresh agent reviews the real render before Jacopo sees it, and the taste rules in `references/taste.md` are the bar
   (motion numbers, never-ship list, sound palette). State what was measured and what nobody could check (e.g. the sound by ear).
+- **`check-frames.py` on every draft, before `qa-motion.py`'s sheet:** nobody watches a video one frame a second, so look at it
+  at 10 (`--video draft.mp4 --out check/ --transcript transcript.json --index public/index.html`; a long video: one section at a
+  time with `--start/--end`). Read EVERY sheet in order and hunt six things, by time: an animation that plays twice; a graphic that
+  flashes (under 0.5 s) or a pop; text that lands too late to read; a graphic over the face; a word said twice; lips out of sync
+  (compare mouth and word at five moments). Say what you saw ("card at 8.2 s covers the chin"), never "looks good". Tiles have a gap
+  because tiles that touch make two neighbouring frames look like one glitch: before calling a defect, look at ONE full-size frame
+  (`--frame 8.2`). When the checker has never failed on something real, plant a defect (a 2-frame flash, a doubled word) and see it caught.
 - **Motion on contiguous frames:** `ffmpeg -i out.mp4 -vf "select='between(n,A,B)',scale=480:270,tile=6x7" -frames:v 1
   strip.png` across every transition window; look for a jump-then-crawl, a dead stop between moves, a one-frame pop.
 - **Sound** as in "Sound"; **loudness** with `ebur128` (about -14 LUFS, true peak under -1); **lip sync** on a long cut:
