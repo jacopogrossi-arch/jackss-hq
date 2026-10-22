@@ -168,6 +168,7 @@ Opus planned and directed, Sonnet builders did the sections; Opus plans at high 
 | `broll-conform.py` | a stock clip, generated clip or still → a cutaway (30 fps, no audio, a keyframe every 15 frames, BT.709) + a 3-frame sheet + the beat to paste | `--in --out [--start] [--dur] [--4k] [--grade] [--push 1.08] [--vf FILTERS]` |
 | `window-patch.py` | a render-ready copy covering only [T0, T1], for a fix inside a long render | `--public --t0 --t1 --out` |
 | `verify-render.py` | checks the rendered file: black runs, size, BT.709 tags, bitrate, duration, A/V, clipped words | `--render [--index] [--res] [--words --kept] [--out]`; exit 1 on a FAIL |
+| `ab-compare.py` | a blind A/B of two renders of the same bench window: shuffled into 1 and 2, side by side and in sequence, the key only in `KEY.md` | `--a --b --out [--labels "current,new"]` |
 | `fact-list.py` | the sentences of the RAW transcript with a number, year, date, price, percentage or tool name, as `FACTS.md` to confirm at Checkpoint A; it lists, never verifies | `--transcript --out [--tools "A,B"]` |
 | `check-frames.py` | the render as a viewer watches it: 10 frames a second in sheets with a gap between tiles, one full-size frame on demand, a word said twice, a card too brief to read | `--video --out [--fps 10] [--start T --end T] [--transcript] [--index]` or `--frame T` |
 | `render-queue.py` | runs any heavy command (a render, `apply-cut`) one at a time: a second one waits in line on a lock file; the command's flags pass through untouched | `[--lock F] [--wait-minutes 240] -- <command>` |
@@ -464,11 +465,24 @@ words, a specific reason to stay in the first three seconds that the video pays 
   merged; "earlier rule" and "older note" paragraphs are never left behind (stacked rules drift, bloat and contradict each
   other: the sound and music paragraphs once did). The code is the truth for numbers: before writing a level or a time in
   prose, read what `compose.py` / `cues.json` / the preset actually do.
-- **A liked result becomes a format:** a row in the library table plus a spec with its numbers.
-- **A new format starts with a state sheet:** name every state before any code (what is on screen, where, size, colour)
-  and every change between two states (what moves, the property, the ease, the time). Build to the sheet, snapshot each
-  state, fix round by round, run the seek-back check (`references/traps.md`) and add a test under `scripts/tests/`. A format without a
-  state sheet drifts, and the review has nothing to point at.
+- **A new animation or graphic enters the skill only after it wins a blind A/B on the bench** (Jacopo, 22/10/2026).
+  1. **State sheet first:** name every state before any code (what is on screen, where, size, colour) and every change
+     between two states (what moves, the property, the ease, the time). A format without a state sheet drifts, and the review
+     has nothing to point at.
+  2. **Build it on the bench, not on a real video:** `videos/_bench/` holds fixed 1080p windows with their own
+     `transcript.json` (`strumenti` 10 s: tools named; `lista` 12 s: a four-item list; `processo` 16 s: a chain of steps). Pick
+     the window that fits the new graphic; always the same windows, so tests stay comparable. Missing bench (a new PC): cut
+     them again from `videos/02-claude-collezione/public/input-video.mp4` at 41.45-51.45, 101.95-113.65 and 187.55-204.0 s, shifting
+     the transcript.
+  3. **Two versions of the same moment:** B = the new graphic; A = what the skill does today at that moment (the current best
+     format). Same window, same timing, same sound level: only the graphic differs. Snapshot each state, fix round by round,
+     run the seek-back check (`references/traps.md`), render both at 1080p draft.
+  4. **Blind:** `scripts/ab-compare.py --a A.mp4 --b B.mp4 --out videos/_bench/ab/<name>/ --labels "current,new"` shuffles them into
+     1 and 2; show `side-by-side.mp4` and `in-sequence.mp4` without saying which is new. Jacopo picks and says why.
+  5. **Only the winner enters:** a row in the library table (`references/formats.md`) plus a spec with its numbers, a test under
+     `scripts/tests/`, and a line in `references/NOTES_LOG.md` with the result and Jacopo's reason. A loser is listed under
+     "Rejected (do not rebuild)" with the reason, so nobody builds it again. The same A/B settles a model question (the scene
+     built by Opus versus by Sonnet from one plan: `--labels "sonnet,opus"`).
 - **Model and tokens:** the strongest model plans, a mid-size one builds (see "Who plans, who builds"). Most tokens go to
   snapshots and tool output: one snapshot per moment, scripts over retyping.
 - **Where a saved rule goes:** in the file that holds that topic (`SKILL.md` for the pipeline and the cut, `references/` for
