@@ -19,4 +19,4 @@ Esempio (cancella quando hai righe vere): `2026-10-15 | l'ultima parola della fr
 
 ## Registro
 
-2026-10-22 | (nostra revisione con lo starter kit del Claude Code Club) le regole sul suono e sulla musica in `SKILL.md` si erano accumulate: "Earlier rule" accanto alla regola nuova, "mai un suono su un testo" accanto a "un suono su OGNI testo", tre livelli diversi per la musica | Sound | in attesa dell'OK di Jacopo, vedi proposta in chat
+2026-10-22 | (revisione con lo starter kit del Claude Code Club) regole su suono e musica accumulate: "Earlier rule" accanto alla nuova, "mai un suono su un testo" accanto a "un suono su OGNI testo", tre livelli di musica, un default (`--db -14`) che non esisteva più | SKILL.md, sezione Sound e Sound iteration | una sola regola: un suono piccolo su ogni testo, pop sui logo, click sui tag, swish con la camera, whoosh solo per transizioni e grafiche; musica a 13-15 dB sotto la voce con i default veri degli script (`add-music --db -3`, `mix-audio --music-db -7`); tolta la ricetta ffmpeg a mano

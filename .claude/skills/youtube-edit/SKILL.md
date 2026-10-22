@@ -799,13 +799,7 @@ format, the step labels, in one short message): a diagram is 30 to 40 s of scree
 
 ## Sound
 
-**Jacopo's rule (20/10/2026, reinforced after video #2): a small sound on EVERY text that appears on screen, a click on every chapter tag, a whoosh on every 3D camera move, a pop on every logo.** `compose.py` queues these itself (`sub_cues`) and drops the weaker of two cues closer than 0.28 s; an explicit `sfx` on a beat still wins. Earlier rule: Jacopo's rule (20/10/2026): sound goes on the graphics and on the transitions.** A transition always carries its sound
-(a flash is a shutter, a whip is a whoosh, a light leak is a long cinematic whoosh); a graphic that
-enters (trail, gallery, orbit, build, dive) gets a soft whoosh, an annotate arrow a tick. Not every moment: the level is
-set by the preset (`sound.level` low 0.6 / medium 1.0 / high 1.4 on top of each cue's own volume) and by spacing: never two
-cues closer than ~1.2 s, never a cue on plain speech. The old "typing / click / pop on a real cause" table below still
-holds for UI-like beats; the old ban on whooshes is **lifted for transitions and graphics**, still true for copy (a text
-line appears on motion, not on a sweep).
+**Sound rule (Jacopo, 20/10/2026, after video #2): a small sound on EVERY text that appears on screen, a pop on every logo, a click on every chapter tag, a swish that starts together with every 3D camera move.** `compose.py` queues these itself (`sub_cues`): a typing sound for text revealed progressively, a soft tap for list and callout items. Two cues closer than 0.28 s: the stronger stays. An explicit `sfx` on a beat still wins; `"sfx": null` silences it. A transition always carries its own sound (a flash is a shutter, a whip is a whoosh, a light leak is a long cinematic whoosh); a graphic that enters (trail, gallery, orbit, build, dive) gets a soft whoosh, an annotate arrow a tick. The overall level is set by the preset (`sound.level` low 0.6 / medium 1.0 / high 1.4 on top of each cue's own volume). Never a cue on plain speech. Whooshes belong to transitions and entering graphics, not to copy: a text line carries its small typing or tap sound, never a sweep. The "typing / click / pop on a real cause" table below holds for UI-like beats.
 
 **Cue system (use this, not hand-written `<audio>`):** `assets/sfx/cues.json` names every sound (whoosh, shutter, hit,
 glitch, riser, tick, ping, paper...) with file, max duration, volume and **lead** (seconds before the cut at which the
@@ -824,11 +818,11 @@ stay on a stretch. **Rare and only at scene changes** (from one scene or clip to
 | Sound | Allowed on | Volume | Never on |
 |---|---|---|---|
 | Typing | real typing, a prompt window or a search typing in, for exactly the typing time | 0.22 | anything that is not a keyboard |
-| Pop | a logo appearing (4a, 21) | 0.34 | copy: not a chip, not a caption |
+| Pop | a logo appearing (4a, 21) | 0.34 | a chip or a caption (those carry the text cue) |
 | Click | every on-screen cursor click | 0.28 | anything without a cursor |
 | Ping / notification | a phone notification, literally | to taste | a number landing, a reveal, an accent |
 | Cha-ching | a money count landing | 0.07 | anything louder than a whisper |
-| Whoosh / swish | transitions and entering graphics (cue system) | per `cues.json` | **copy of any kind**: text arrives on motion, never on a sweep |
+| Whoosh / swish | transitions and entering graphics (cue system) | per `cues.json` | copy: a text line carries its small typing or tap cue, never a sweep |
 
 **Wiring:** `<audio id="sfx-typing" src="sfx/typing.mp3" data-start="8.22" data-duration="1.50" data-track-index="10"
 data-volume="0.22"></audio>` as a direct child of the composition root, never inside a wrapper. Every `<audio>` needs an
@@ -853,18 +847,13 @@ differ enough to hide a quiet effect.
 
 **Music (Jacopo: light lo-fi / chill hip-hop type beat, 20/10/2026):** `assets/music/lofi-01..04.mp3` (CC0, -20 LUFS, credits in
 `assets/music/CREDITS.md`). `python3 scripts/add-music.py --video master.mp4 --out master-music.mp4 --track lofi-02` lays the bed
-under a finished video, looped, faded in/out, **ducked by a sidechain keyed on the voice** (`--db -14` default = about 21 dB under
-the voice; the bed rises in pauses). Video is copied, the voice is untouched; keep the no-music master. Do it after the render, so a
-music change never costs a render. To add tracks: CC0 only (Openverse API `audio/?q=...&license=cc0`), loudnorm to -20 LUFS, credit in CREDITS.md.
-Older note: a track with some tension under the hook (~18 s), then a calm lo-fi bed under the rest, ducked about 16 dB
-(hook) and 19 dB (body) under your voice, then a -1 dB limiter, after the voice is at -14 LUFS (`assemble.py` levels it).
-The simplest bed is `assemble.py`'s `music` key; for a ducked bed on a finished master (keep a no-music twin):
-
-```bash
-ffmpeg -i master.mp4 -stream_loop -1 -i bed.mp3 -filter_complex \
- "[0:a]asplit=2[voice][sc];[1:a]volume=-16dB,afade=t=in:d=1[bed];[bed][sc]sidechaincompress=threshold=0.02:ratio=10:attack=15:release=350[duck];[voice][duck]amix=inputs=2:duration=first:normalize=0,alimiter=limit=0.89[a]" \
- -map 0:v -map "[a]" -c:v copy -c:a aac -b:a 256k -shortest master-music.mp4
-```
+under a finished video, looped, faded in/out, **ducked by a sidechain keyed on the voice** (defaults `--db -3`, `--duck-ratio 2.5`,
+`--duck-threshold 0.2`; the bed rises in pauses). Video is copied, the voice is untouched; keep the no-music master. Do it after the
+render, so a music change never costs a render. To add tracks: CC0 only (Openverse API `audio/?q=...&license=cc0`), loudnorm to -20 LUFS,
+credit in CREDITS.md. **Level:** the bed sits about 13-15 dB under the voice (measured on video #2: the first bed, ratio 10, was inaudible
+on a phone; -3 dB with ratio 2.5 and the track lofi-02 was "too loud"): the track matters more than the level, so prefer soft, non-busy
+beds, and change the level with `mix-audio.py --music-db` (default -7), which costs a minute, not a render. `assemble.py`'s `music` key is
+the simplest bed (levelled after the voice reaches -14 LUFS); there is no hand-written ffmpeg recipe any more: use the scripts.
 
 ## Sound iteration without a render (`mix-audio.py`)
 
@@ -879,10 +868,8 @@ It mixes voice + cues (x `--sfx-gain`), measures and applies loudnorm to -14 LUF
 `add-music.py`) and muxes it onto the picture of a render (copied, not re-encoded). So the order for a delivery is: picture render -> `mix-audio.py` ->
 `verify-render.py`. To compare tracks, mix 30 s with each and send them to Jacopo as mp3 (he picks a letter).
 
-**Music facts measured on video #2:** the old bed (-14 dB, ratio 10) sat 20+ dB under the voice and was inaudible on a phone; -3 dB with `threshold 0.2 ratio 2.5`
-sat ~10 dB under and Jacopo found it too loud and "terrible" (lofi-02): the track matters more than the level (prefer soft, non-busy beds), and the
-bed should stay about 13-15 dB under the voice. Candidate beds beyond `assets/music`: CC0 tracks of `kmilo93sd/agent-video-editor` (OpenGameArt: ambient piano,
-acoustic, lofi lobby/tea), see its `library/LICENSES.md`.
+**Music beds beyond `assets/music`:** CC0 tracks of `kmilo93sd/agent-video-editor` (OpenGameArt: ambient piano, acoustic, lofi lobby/tea), see its
+`library/LICENSES.md`. The level rule is under "Music" above.
 
 ## Animating glass (read before writing any entrance)
 
