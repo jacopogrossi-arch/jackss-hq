@@ -63,6 +63,7 @@ against, and to hand-build the rest.
 | 39 | World camera | a system you walk through: push in, pull back to reveal, travel | `world` |
 | 40 | Numbered deck | the full-frame opener of each part of a numbered video | `deck` |
 | 41 | Pills around the head | two to six short labels while you stay on camera | `pills` |
+| 41b | Hanging chips | one to four tools or labels with real logos hung around the head, arrows to the face, a slow camera that carries them: **the default with the `elegante-portfolio` preset** | `formats/chips.py` |
 | 42 | Chat (bubbles, window, phone) | a conversation | `chat` |
 | 43 | Dot grid | a count you say out loud, in groups ("three outfits, three mood boards..."): one row per group fills on its word | `formats/dotgrid.py` |
 | 44 | Outline rail | a list read out as an outline (what came out, the parts of a plan): rail, dots, names, ×N and bars | `formats/scaletta.py` |
@@ -79,6 +80,7 @@ counts). Still tied: the one used least in your last video.
 |---|---|---|
 | saying a count in groups ("three of each") | 43, 44, 3a | 43 when the numbers are the point; 44 when it is an outline or plan; 3a when the names alone are |
 | naming one tool | 4a, 34 | 4a; three or more tools in a row: 34 |
+| naming tools or labels while staying on camera | 41b, 41 | 41b with `elegante-portfolio` and real logos; 41 for five or six labels or icons only |
 | showing a website | 4b, 4c | 4b for a glance under 3 s; 4c when you talk about it or it scrolls |
 | giving numbers | 1, 24, 25 | 1 for one stakes figure; 24 for two to four that belong together; 25 when it grew and the shape matters (25m when the trend is the point) |
 | explaining a process | 6, 7, 8, 27, 30 | 7 each step earns the next; 8 volume narrows to money; 30 one thing becomes several; 27 a quick sequence; 6 a long one |
@@ -124,6 +126,20 @@ background: rgba(255,255,255,.18); backdrop-filter: blur(30px) saturate(1.25);
 border: 3px solid rgba(255,255,255,.58); border-radius: 26px; box-shadow: 0 24px 80px rgba(0,0,0,.38);
 ```
 
+- **41b. Hanging chips** (won the blind A/B of 23/10/2026 against 41 on the `strumenti` bench window; idea from the
+  @realskytan reel; creator: "more coherent with the style we are building"; an earlier slower build was "a bit slow").
+  `formats/chips.py`: `chips(items, t_out, duration, phrase, camera)`. Dark glass chips 320x96 (radius 48, fill
+  rgba(20,15,10,.55), 2 px ivory .28 border, 24 px backdrop blur), real logo 56 px + name Inter 600 36 px, hung in the free
+  space beside the head (bench: Claude centre (470, 420), Procreate (1450, 380), Canva (1480, 620)). Each from 0.05 s before
+  its word: scale .94 to 1, y 10 to 0, blur 4 to 0 px in 0.4 s `expo.out`, a gold glow rising to .35 and falling once (0.8 s);
+  a dotted curved arrow (3 px, dash 2/9, ivory .55, small head) draws 0.08 s later in 0.45 s `power2.out` and stops 25-45 px
+  short of the face: **place the arrows on a snapshot**, the head leans (on the bench to x ~725 at 9.5 s). An optional phrase
+  sits in a matching pill 18 px under its chip (Playfair Display Italic 36 px gold): never a radial veil behind text, it reads
+  as a stain on a light wall. **Camera:** one function of time moves the footage and every chip host with the same scale and
+  origin, so the chips stay pinned to the head; slow creep toward the first chip (1.00 to 1.07 over 3 s), a 0.6-0.7 s push of
+  framing toward each new chip (`power3.inOut`, to 1.09-1.10), back toward the phrase, release to 1.03 at the end. Exits
+  0.4 s (y -8, blur to 4 px), 0.05 s apart, the first chip last. No idle wobble, no sound. 41 stays when icons are enough or
+  there are five or six labels.
 - **43. Dot grid** (won the blind A/B of 23/10/2026 against 3a on the `lista` bench window; idea from the @realskytan reel,
   100 people as 100 dots; creator: "perfect"). `formats/dotgrid.py`: `dotgrid(rows, title, t_in, t_out, cols=3, right=1780,
   cy=540)` returns `html` + `js` for `raw_html`/`raw_js`. Two to five rows (one per spoken group), two to six dots a row (the
