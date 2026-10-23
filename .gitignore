@@ -41,3 +41,6 @@ video-editor/shared/
 
 # Playwright MCP: snapshot e download temporanei
 .playwright-mcp/
+
+# Suoni con licenza personale (Artlist/Epidemic): mai su GitHub, il repo e pubblico
+.claude/skills/youtube-edit/assets/sfx/licensed/
