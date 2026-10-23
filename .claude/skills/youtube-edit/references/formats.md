@@ -64,6 +64,7 @@ against, and to hand-build the rest.
 | 40 | Numbered deck | the full-frame opener of each part of a numbered video | `deck` |
 | 41 | Pills around the head | two to six short labels while you stay on camera | `pills` |
 | 42 | Chat (bubbles, window, phone) | a conversation | `chat` |
+| 43 | Dot grid | a count you say out loud, in groups ("three outfits, three mood boards..."): one row per group fills on its word | `formats/dotgrid.py` |
 | - | Check marker* | done and to-do lists: a check draws on each item | `"marker": "check"` on `list`, `bullets`, `popout` |
 | - | Thumbnail grid | your own thumbnails; the cursor clicks one | `grid` |
 | - | Coded scenes | money, catalog, room, plate, profile: B-roll with no stock | `scene` |
@@ -75,6 +76,7 @@ counts). Still tied: the one used least in your last video.
 
 | You are... | Candidates | Pick |
 |---|---|---|
+| saying a count in groups ("three of each") | 43, 3a | 43 when the numbers are the point; 3a when the names are |
 | naming one tool | 4a, 34 | 4a; three or more tools in a row: 34 |
 | showing a website | 4b, 4c | 4b for a glance under 3 s; 4c when you talk about it or it scrolls |
 | giving numbers | 1, 24, 25 | 1 for one stakes figure; 24 for two to four that belong together; 25 when it grew and the shape matters (25m when the trend is the point) |
@@ -121,6 +123,16 @@ background: rgba(255,255,255,.18); backdrop-filter: blur(30px) saturate(1.25);
 border: 3px solid rgba(255,255,255,.58); border-radius: 26px; box-shadow: 0 24px 80px rgba(0,0,0,.38);
 ```
 
+- **43. Dot grid** (won the blind A/B of 23/10/2026 against 3a on the `lista` bench window; idea from the @realskytan reel,
+  100 people as 100 dots; creator: "perfect"). `formats/dotgrid.py`: `dotgrid(rows, title, t_in, t_out, cols=3, right=1780,
+  cy=540)` returns `html` + `js` for `raw_html`/`raw_js`. Two to five rows (one per spoken group), two to six dots a row (the
+  spoken count). Dots 64 px, 22 px apart, on the free side of the face (right edge x 1780, centred on y 540); title in
+  Playfair Display Italic 44 px above, right-aligned; labels Inter 600 32 px ivory, right-aligned 28 px left of their row,
+  dark soft text-shadow. At `t_in` the title rises (y 12 to 0, 0.4 s) and every dot appears empty (2 px ivory .35 ring,
+  scale .8 to 1, 0.02 s apart). On each group's word its row fills left to right (scale .5 to 1, 0.3 s `power2.out`,
+  0.07 s apart, 24 px glow of its colour) and its label slides in (x -14 to 0, 0.4 s); the previous label drops to .65.
+  Colours: gold, emerald, then both mixed 45 % toward ivory. Exit at `t_out`: opacity to 0, x +30, 0.4 s. No sound.
+  Hold the last row at least 2 s before `t_out` (on the bench the window ends early and "Concept" reads only 0.8 s).
 - **3a. Glass card.** 600 px, monochrome (colour lives in the lower line): eyebrow 30 px/700 white at .92, items 64 to
   72 px/700 with white dots and no sub-text (each item stands alone: "Invite teammates", not "Invite feature" plus an
   explainer). Items start `display:none` and appear on their word, so the card grows with the list. Every text gets a
