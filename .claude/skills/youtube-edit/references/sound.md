@@ -28,6 +28,7 @@ stay on a stretch. **Rare and only at scene changes** (from one scene or clip to
 | Ping / notification | a phone notification, literally | to taste | a number landing, a reveal, an accent |
 | Cha-ching | a money count landing | 0.07 | anything louder than a whisper |
 | Whoosh / swish | transitions and entering graphics (cue system) | per `cues.json` | copy: a text line carries its small typing or tap cue, never a sweep |
+| Riser | a build-up into a reveal or a scene change, **always a METALLIC riser** (Jacopo, 23/10/2026: "when I say riser I mean a metallic riser"); the library has none yet: source a CC0 one before using a riser, never fall back to `riser`/`breathy-riser` | per `cues.json` | copy, logos, every beat: a riser is rare |
 
 **Wiring:** `<audio id="sfx-typing" src="sfx/typing.mp3" data-start="8.22" data-duration="1.50" data-track-index="10"
 data-volume="0.22"></audio>` as a direct child of the composition root, never inside a wrapper. Every `<audio>` needs an
