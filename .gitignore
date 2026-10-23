@@ -38,3 +38,6 @@ personale/stampa/gf.css
 # Video editor: footage, render e cartelle di lavoro (file enormi, solo locale)
 videos/
 video-editor/shared/
+
+# Playwright MCP: snapshot e download temporanei
+.playwright-mcp/

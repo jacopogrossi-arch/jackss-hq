@@ -10,8 +10,26 @@ file came from where, and keep it in the skill (`assets/logos`, `assets/fonts`) 
 single-colour SVGs from the open-source Simple Icons set through jsDelivr (`https://cdn.jsdelivr.net/npm/simple-icons@11.14.0/icons/<name>.svg`;
 a name missing in the newest release is often still in an older one), tinted with the brand colour on a white disc (`orbit`/`trail` `logo`);
 **fonts** from the Google Fonts repository (`https://raw.githubusercontent.com/google/fonts/main/ofl/<family>/<File>.ttf` plus its `OFL.txt`);
-anything behind a script or a login (a press kit, a brand page) through the browser tools (built-in browser, or Claude in Chrome when the
-page needs the person's own session). Never download from an unknown mirror, never run a downloaded file.
+anything behind a script or a login (a press kit, a brand page) through the browser tools: **Playwright first** (see below), the
+built-in browser to look at a page, Claude in Chrome only when the page needs the person's own session. Never download from an unknown
+mirror, never run a downloaded file.
+
+**Playwright (`mcp__playwright__*`, standing instruction 23/10/2026): search and download on its own, no asking.** It is the default
+tool for finding a page, reading it and pulling a file whenever the plain `curl`/API route does not reach it (a "Download" button, a
+script-rendered page, a search that needs a browser). Load the tools with ToolSearch ("playwright"). The routine:
+1. `browser_navigate` to the source, `browser_snapshot` to read it (text beats screenshots); `browser_find`, `browser_click`,
+   `browser_type` to search and open the right item.
+2. Download with `browser_run_code_unsafe`, waiting for the browser's own download event (tested 23/10: it works, a file with a
+   `Content-Disposition: attachment` header lands on disk): `const dp = page.waitForEvent('download'); await page.click(<button>)`
+   (or `page.goto(url).catch(()=>{})` for a direct link), then `const d = await dp; await d.saveAs('<abs path under $W/broll/raw/ or the skill assets>')`.
+   Inside that code `require` does not exist: only the `page` object. A cross-site `<a download>` link does not trigger a download; click
+   the site's real button or use the direct file URL. Plain files with no script (logos on jsDelivr, fonts on GitHub raw) stay on `curl`.
+3. Check the file as always (SVG without script or external link, clip duration/resolution with ffprobe), then conform it.
+4. Same limits as every other route: licence first (Pexels, Coverr, Mixkit free, Simple Icons, OFL fonts, NASA), no login or
+   payment, no bot-detection or CAPTCHA workaround (a "Just a moment..." page is retried once, then you switch source), nothing from an
+   unknown mirror, nothing executed. Report in the storyboard note which file came from which page and licence.
+Playwright's own scratch (snapshots, default downloads) goes to `.playwright-mcp/`, which is git-ignored; only files you moved into the
+project count.
 
 - **Tool logos:** the brand's press kit, or `npx hyperframes capture <url>` and the `<svg>` out of `extracted/page.html`
   (the real vector; watch for `fill="none"` paths and near-black wordmarks, make white variants for dark plates). The
@@ -49,7 +67,7 @@ you would rather approve a shortlist first, say so and note it here.
 - **Look:** real people, a dark or moody room lit by screens, horizontal, 4K, no watermark, nobody looking into the lens,
   no readable brand logo or third-party UI (a recognisable but unreadable editor is fine).
 - **Download** through the Pexels API (a free key in the `Authorization` header; take the 3840-wide entry in
-  `video_files`) or the page's download button, into `$W/broll/raw/`.
+  `video_files`) or the page's download button via Playwright (see "Playwright" above), into `$W/broll/raw/`.
 - **Clean and conform** in one script per video (`$W/broll/conform-stock.sh`, the record of every window):
   `python3 "$SK/scripts/broll-conform.py" --4k --in "$W/broll/raw/<file>" --out "$W/public/broll/<job>.mp4" --start
   <s> --dur <slot + 1>`. Blur anything readable with `--vf "split[a][b];[b]crop=W:H:X:Y,boxblur=8[bb];[a][bb]overlay=X:Y"` in SOURCE
