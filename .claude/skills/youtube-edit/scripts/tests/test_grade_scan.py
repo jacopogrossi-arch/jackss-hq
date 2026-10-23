@@ -6,10 +6,11 @@ from .helpers import needs_ffmpeg, run, scratch
 
 @needs_ffmpeg
 class GradeScan(unittest.TestCase):
-    def clip(self, d, name, colour):
+    def clip(self, d, name, colour, gamma=None):
         v = os.path.join(d, name)
+        meta = ["-movflags", "use_metadata_tags", "-metadata", "com.dji.camera.ColorGammaSxS=%s" % gamma] if gamma else []
         subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", "color=c=%s:s=320x180:d=3:r=30" % colour,
-                        "-pix_fmt", "yuv420p10le", "-c:v", "libx265", "-x265-params", "log-level=error", v], check=True)
+                        "-pix_fmt", "yuv420p10le", "-c:v", "libx265", "-x265-params", "log-level=error"] + meta + [v], check=True)
         return v
 
     def scan(self, d, v, *extra):
@@ -45,6 +46,29 @@ class GradeScan(unittest.TestCase):
         rep, _ = self.scan(d, self.clip(d, "given.mp4", "0x606060"), "--profile", "dlog2")
         self.assertTrue(rep["profile"]["certain"])
         self.assertEqual(rep["profile"]["chosen"], "dlog2")
+
+    def test_profile_is_read_from_the_dji_tag(self):
+        d = scratch(self)
+        for gamma, key in (("D-Log", "dlog"), ("D-Log2", "dlog2"), ("D-LogM", "dlogm")):
+            rep, _ = self.scan(d, self.clip(d, "t-%s.mp4" % key, "0x606060", gamma))
+            self.assertTrue(rep["profile"]["certain"], gamma)
+            self.assertEqual(rep["profile"]["chosen"], key, gamma)
+
+    def test_skin_pixels_are_found_and_anchor_the_proposal(self):
+        import importlib.util
+        import numpy as np
+        spec = importlib.util.spec_from_file_location("grade_scan", os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "grade-scan.py"))
+        gs = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(gs)
+        skin = np.zeros((90, 160, 3), np.float32)
+        skin[:] = (0.78, 0.59, 0.47)                      # a skin colour, on the graded signal
+        st = gs.frame_stats(skin)
+        self.assertGreater(st["skin_frac"], 0.9)
+        blue = np.zeros((90, 160, 3), np.float32)
+        blue[:] = (0.3, 0.5, 0.8)                         # sky: never skin
+        self.assertLess(gs.frame_stats(blue)["skin_frac"], 0.01)
+        p = gs.propose([st, st, st])
+        self.assertEqual(p["exposure_anchor"], "skin")
 
 
 if __name__ == "__main__":

@@ -76,6 +76,12 @@ def probe(path):
 
 def read_profile_from_metadata(meta):
     """Return (profiles, why). profiles: list of keys; [] = nothing found. Looks only at the text the file carries."""
+    gamma = str(meta["tags"].get("com.dji.camera.ColorGammaSxS", "")).strip().lower()   # DJI writes the profile here
+    if gamma:
+        g = re.sub(r"[^a-z0-9]", "", gamma)
+        for key, hit in (("dlogm", "dlogm"), ("dlog2", "dlog2"), ("dlog", "dlog")):
+            if g == key:
+                return [hit], "the file says so (com.dji.camera.ColorGammaSxS = %s)" % meta["tags"]["com.dji.camera.ColorGammaSxS"].strip()
     blob = " ".join(str(x) for x in meta["tags"].values()).lower() + " " + " ".join(meta["data_streams"]).lower()
     if re.search(r"d-?log\s*-?m\b", blob):
         return ["dlogm"], "metadata names D-Log M"
@@ -146,7 +152,12 @@ def frame_stats(rgb):
     p = np.percentile(y, [0.5, 1, 5, 25, 50, 75, 95, 99, 99.5])
     cb = (rgb[..., 2] - luma(rgb)) / 1.8556
     cr = (rgb[..., 0] - luma(rgb)) / 1.5748
+    ang = np.degrees(np.arctan2(cr, cb)) % 360
+    chroma = np.sqrt(cb ** 2 + cr ** 2)
+    yy = luma(rgb)
+    skin = (ang > 108) & (ang < 138) & (chroma > 0.03) & (chroma < 0.22) & (yy > 0.2) & (yy < 0.92)
     return {
+        "skin_frac": float(skin.mean()), "skin_luma": float(np.median(yy[skin])) if skin.sum() > 50 else None,
         "p0.5": float(p[0]), "p1": float(p[1]), "p5": float(p[2]), "p25": float(p[3]), "median": float(p[4]),
         "p75": float(p[5]), "p95": float(p[6]), "p99": float(p[7]), "p99.5": float(p[8]),
         "mean": float(y.mean()),
@@ -178,16 +189,24 @@ def lin(x):
 
 
 def propose(graded_stats):
-    med = float(np.mean([s["median"] for s in graded_stats]))
+    """Exposure is anchored on skin when the frame has some (a beach or a snow field would fool a median);
+    otherwise on the median. Inside the band nothing is proposed."""
+    skin = [s["skin_luma"] for s in graded_stats if s["skin_luma"] is not None and s["skin_frac"] >= 0.01]
     p995 = float(np.mean([s["p99.5"] for s in graded_stats]))
-    want = math.log2(lin(TARGET_MID) / lin(med))
-    why = "median of the graded signal %.0f IRE -> aim at %.0f IRE" % (med * 100, TARGET_MID * 100)
-    # highlight room: a gain of g stops multiplies linear light by 2**g; keep p99.5 under 0.98
+    if len(skin) >= max(2, len(graded_stats) // 3):
+        anchor, kind, lo, hi, centre = float(np.median(skin)), "skin", 0.50, 0.68, 0.60
+    else:
+        anchor, kind, lo, hi, centre = float(np.mean([s["median"] for s in graded_stats])), "median", 0.35, 0.55, 0.42
+    if lo <= anchor <= hi:
+        stops, why = 0.0, "%s at %.0f IRE, inside the %.0f-%.0f band: no exposure change" % (kind, anchor * 100, lo * 100, hi * 100)
+    else:
+        stops = math.log2(lin(centre) / lin(anchor))
+        why = "%s at %.0f IRE, outside the %.0f-%.0f band: aim at %.0f IRE" % (kind, anchor * 100, lo * 100, hi * 100, centre * 100)
     room = math.log2(lin(0.98) / lin(max(p995, 1e-3)))
-    stops = max(-MAX_STOPS, min(MAX_STOPS, want))
     if stops > room:
-        stops = max(min(stops, room), -MAX_STOPS)
+        stops = min(stops, room)
         why += "; held back to protect the highlights (the top 0.5 %% reaches %.0f IRE)" % (p995 * 100)
+    stops = max(-MAX_STOPS, min(MAX_STOPS, stops))
     cb = float(np.mean([s["cb_mean"] for s in graded_stats]))
     cr = float(np.mean([s["cr_mean"] for s in graded_stats]))
     mag = math.hypot(cb, cr)
@@ -196,7 +215,8 @@ def propose(graded_stats):
         warm = cr > 0 and cb < 0
         cool = cb > 0 and cr < 0
         tend = "warm" if warm else "cool" if cool else "tinted (%s%s)" % ("red/magenta " if cr > 0 else "green ", "blue" if cb > 0 else "yellow")
-    return {"exposure_stops": round(stops, 2), "exposure_why": why, "wb_tendency": tend, "wb_offset": round(mag, 3),
+    return {"exposure_stops": round(stops, 2), "exposure_anchor": kind, "exposure_anchor_ire": round(anchor * 100, 1), "exposure_why": why,
+            "wb_tendency": tend, "wb_offset": round(mag, 3),
             "wb_note": "Estimated from the average colour: a scene full of sea, sky or sand leans that way on purpose. "
                        "Judge it by eye and on the vectorscope, never apply it blindly."}
 
