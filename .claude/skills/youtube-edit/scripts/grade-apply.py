@@ -1,0 +1,219 @@
+#!/usr/bin/env python3
+"""grade-apply.py: grade a LOG clip with the official DJI LUT plus the approved exposure, and check the result.
+
+It reads the report that grade-scan.py wrote for the same clip (profile, LUT, proposed exposure). Two steps, on purpose:
+
+  PREVIEW (default)  no video is written. It draws before / after sheets for a few frames: the LOG picture, the picture
+                     with the LUT alone, the picture with the LUT and the exposure, zebra on the last one, and its
+                     waveform, vectorscope and histogram. This is what you approve.
+  --render           encodes the graded clip (4K, 10-bit HEVC by default), then reads the FILE back and checks it:
+                     the measured frames must match what the preview predicted, highlights must not clip, skin must
+                     sit where the proposal aimed. Writes CHECK.md next to the render. Exit 1 on a FAIL.
+
+The exposure is a gain on the graded Rec.709 signal, in stops of display light (gamma 2.4): code value x 2**(stops / 2.4).
+It is applied after the LUT, never on the log signal. Highlights above 100 % clip, so scan's proposal already stops short
+of them; --stops overrides the proposal.
+
+Usage:
+  python3 grade-apply.py --video clip.MP4 --scan DIR/report.json --out DIR [--stops 0.5] [--frames 3]      # preview
+  python3 grade-apply.py --video clip.MP4 --scan DIR/report.json --out DIR --render [--stops 0.5]
+                         [--encoder x265|nvenc] [--crf 16]
+Writes DIR/preview-NN.png (+ preview-sheet.png); with --render also DIR/graded.mp4 and DIR/CHECK.md."""
+import argparse, importlib.util, json, os, shutil, subprocess, sys, tempfile
+
+import numpy as np
+from PIL import Image, ImageDraw
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+spec = importlib.util.spec_from_file_location("grade_scan", os.path.join(HERE, "grade-scan.py"))
+gs = importlib.util.module_from_spec(spec)
+spec.loader.exec_module(gs)
+
+GAMMA = 2.4
+TOL_PRED = 0.015         # measured vs predicted luma, mean absolute, 1.5 IRE (compression and 8/10 bit round-trips)
+MAX_CLIP, MAX_CRUSH = 0.01, 0.05
+MAX_STOPS = 2.0          # ffmpeg's colorchannelmixer takes a gain up to x2 (= 2.4 stops); stay clear of it
+
+
+def gain(stops):
+    return 2.0 ** (stops / GAMMA)
+
+
+def expose(rgb, stops):
+    return np.clip(rgb * gain(stops), 0.0, 1.0)
+
+
+def pick(samples, n):
+    if n >= len(samples):
+        return list(range(len(samples)))
+    return sorted(set(int(round(i * (len(samples) - 1) / (n - 1))) for i in range(n))) if n > 1 else [len(samples) // 2]
+
+
+def tile(img, w, h, label):
+    t = Image.fromarray((np.clip(img, 0, 1) * 255).astype(np.uint8) if img.dtype != np.uint8 else img).resize((w, h))
+    ImageDraw.Draw(t).text((6, 4), label, fill=(255, 255, 255))
+    return t
+
+
+def sheet(log_rgb, lut_rgb, final_rgb, t, label):
+    H, Wd, _ = log_rgb.shape
+    tw = 400
+    th = int(tw * H / Wd)
+    out = Image.new("RGB", (tw * 3 + 16, th + 8 + 256 + 24), (20, 20, 20))
+    out.paste(tile(log_rgb, tw, th, "LOG as shot"), (0, 20))
+    out.paste(tile(lut_rgb, tw, th, "LUT only"), (tw + 8, 20))
+    out.paste(tile(gs.zebra_image(final_rgb), tw, th, label), (tw * 2 + 16, 20))
+    wf = gs.waveform_parade(final_rgb, w=tw, h=256)
+    hg = gs.histogram_img(final_rgb, w=tw, h=160)
+    vs = gs.vectorscope(final_rgb, size=256)
+    out.paste(wf, (0, th + 28))
+    out.paste(hg, (tw + 8, th + 28))
+    out.paste(vs, (tw * 2 + 16, th + 28))
+    ImageDraw.Draw(out).text((4, 4), "t=%.1fs   final signal: waveform, histogram, vectorscope (zebra on the right picture)" % t, fill=(220, 220, 220))
+    return out
+
+
+def has_nvenc():
+    try:
+        enc = subprocess.run(["ffmpeg", "-hide_banner", "-encoders"], capture_output=True, text=True).stdout
+        return "hevc_nvenc" in enc and subprocess.run(["nvidia-smi", "-L"], capture_output=True).returncode == 0
+    except OSError:
+        return False
+
+
+def encode(video, lut_path, stops, out, encoder, crf, meta):
+    tmp = tempfile.mkdtemp(prefix="grade-apply-")
+    try:
+        shutil.copy(lut_path, os.path.join(tmp, "lut.cube"))       # a relative name: a Windows 'D:' path breaks lut3d
+        g = gain(stops)
+        vf = "format=gbrp10le,lut3d=file=lut.cube:interp=tetrahedral"
+        if abs(stops) > 1e-6:
+            vf += ",colorchannelmixer=rr=%.6f:gg=%.6f:bb=%.6f" % (g, g, g)
+        vf += ",format=yuv420p10le"
+        if encoder == "nvenc":
+            venc = ["-c:v", "hevc_nvenc", "-preset", "p5", "-rc", "vbr", "-cq", str(crf + 4), "-b:v", "0", "-profile:v", "main10", "-pix_fmt", "p010le"]
+        else:
+            venc = ["-c:v", "libx265", "-preset", "medium", "-crf", str(crf), "-x265-params", "log-level=error", "-pix_fmt", "yuv420p10le"]
+        cmd = ["ffmpeg", "-y", "-v", "error", "-i", os.path.abspath(video), "-map", "0:v:0", "-map", "0:a:0?", "-vf", vf] + venc + [
+            "-c:a", "copy", "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709", "-color_range", "tv",
+            "-tag:v", "hvc1", "-movflags", "+faststart+use_metadata_tags", "-metadata", "comment=" + meta, os.path.abspath(out)]
+        p = subprocess.run(cmd, cwd=tmp, capture_output=True, text=True)
+        if p.returncode != 0:
+            raise RuntimeError(p.stderr[-600:])
+    finally:
+        shutil.rmtree(tmp, ignore_errors=True)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--video", required=True)
+    ap.add_argument("--scan", required=True, help="report.json from grade-scan.py for this clip")
+    ap.add_argument("--out", required=True)
+    ap.add_argument("--stops", type=float, help="exposure in stops; default = the scan's proposal")
+    ap.add_argument("--frames", type=int, default=3, help="frames in the preview")
+    ap.add_argument("--render", action="store_true", help="encode the graded clip and check it (needs your approval of the preview)")
+    ap.add_argument("--encoder", default="auto", choices=["auto", "x265", "nvenc"], help="auto = the video card when ffmpeg and the driver offer it (about 4x faster), else the CPU")
+    ap.add_argument("--crf", type=int, default=16)
+    args = ap.parse_args()
+
+    rep = json.load(open(args.scan, encoding="utf8"))
+    prof = rep["profile"]
+    if not prof["certain"]:
+        print("The scan says the profile is NOT certain (%s). Settle the profile first: rerun grade-scan with --profile." % prof["why"])
+        return 1
+    lut_path = os.path.join(gs.LUTS, prof["lut"])
+    lut_t = gs.load_cube(lut_path)
+    stops = rep["proposal"]["exposure_stops"] if args.stops is None else args.stops
+    if abs(stops) > MAX_STOPS:
+        print("%+.2f stops is out of range: the limit is +-%.1f (a bigger push is a re-shoot, not a grade)." % (stops, MAX_STOPS))
+        return 1
+    os.makedirs(args.out, exist_ok=True)
+
+    meta = rep["meta"]
+    w = gs.W_STATS
+    h = int(round(w * meta["h"] / meta["w"] / 2) * 2)
+    samples = rep["samples"]
+    idx = pick(samples, args.frames)
+    sheets = []
+    for k, i in enumerate(idx):
+        t = samples[i]["t"]
+        f = gs.grab(args.video, t, w, h)
+        lut_rgb = gs.apply_lut(f, lut_t)
+        fin = expose(lut_rgb, stops)
+        s = sheet(f, lut_rgb, fin, t, "LUT %+.2f stops" % stops)
+        s.save(os.path.join(args.out, "preview-%02d.png" % (k + 1)))
+        sheets.append(s)
+    big = Image.new("RGB", (sheets[0].width, sum(x.height for x in sheets)), (20, 20, 20))
+    y = 0
+    for s in sheets:
+        big.paste(s, (0, y))
+        y += s.height
+    big.save(os.path.join(args.out, "preview-sheet.png"))
+    print("Profile: %s | LUT: %s | exposure: %+.2f stops (%s)" % (prof["label"], prof["lut"], stops,
+                                                              "your value" if args.stops is not None else "the scan's proposal"))
+    print("Preview: %s" % os.path.join(args.out, "preview-sheet.png"))
+    if not args.render:
+        print("No video written. Look at the preview, then run again with --render (and --stops N if you want another value).")
+        return 0
+
+    # ------------------------------------------------------------------ render and check the FILE
+    if args.encoder == "auto":
+        args.encoder = "nvenc" if has_nvenc() else "x265"
+    out_mp4 = os.path.join(args.out, "graded.mp4")
+    print("Encoder: %s" % args.encoder)
+    note = "graded with %s, exposure %+.2f stops (grade-apply.py)" % (prof["lut"], stops)
+    print("Rendering %s ..." % out_mp4)
+    try:
+        encode(args.video, lut_path, stops, out_mp4, args.encoder, args.crf, note)
+    except Exception as e:  # noqa
+        print("render failed:", e)
+        return 1
+
+    fails, lines = [], []
+    pred_err, meas = [], []
+    for i in range(len(samples)):
+        t = samples[i]["t"]
+        src = gs.grab(args.video, t, w, h)
+        got = gs.grab(out_mp4, t, w, h)
+        if src is None or got is None:
+            continue
+        predicted = expose(gs.apply_lut(src, lut_t), stops)
+        pred_err.append(float(np.abs(gs.luma(predicted) - gs.luma(got)).mean()))
+        meas.append(gs.frame_stats(got))
+    perr = float(np.mean(pred_err))
+    clip = float(np.mean([m["clip"] for m in meas]))
+    crush = float(np.mean([m["crush"] for m in meas]))
+    p995 = float(np.mean([m["p99.5"] for m in meas]))
+    skin = [m["skin_luma"] for m in meas if m["skin_luma"] is not None and m["skin_frac"] >= 0.01]
+    before = rep["proposal"]
+
+    def check(ok, text):
+        lines.append("- %s %s" % ("PASS" if ok else "FAIL", text))
+        if not ok:
+            fails.append(text)
+
+    check(perr <= TOL_PRED, "the file matches the preview's prediction: mean luma difference %.1f IRE (limit %.1f)" % (perr * 100, TOL_PRED * 100))
+    check(clip <= MAX_CLIP, "clipped highlights %.2f %% of the picture (limit %.0f %%)" % (clip * 100, MAX_CLIP * 100))
+    check(crush <= MAX_CRUSH, "crushed blacks %.2f %% of the picture (limit %.0f %%)" % (crush * 100, MAX_CRUSH * 100))
+    if skin and before.get("exposure_anchor") == "skin":
+        sk = float(np.median(skin)) * 100
+        lo, hi = 50, 68
+        was = before["exposure_anchor_ire"]
+        moved_right = (lo <= sk <= hi) or abs(sk - 60) < abs(was - 60)
+        check(moved_right, "skin at %.0f IRE (was %.0f, band %d-%d)" % (sk, was, lo, hi))
+        if not lo <= sk <= hi:
+            lines.append("- INFO skin is still outside the band: the highlights leave no room to lift the whole picture. "
+                         "Lifting the subject alone needs a local adjustment (a mask), which this step does not do.")
+    else:
+        lines.append("- INFO no skin anchor for this clip; exposure was judged on the median")
+    lines.append("- INFO highlights (99.5th percentile) now at %.0f IRE; median %.0f IRE" % (p995 * 100, float(np.mean([m["median"] for m in meas])) * 100))
+    md = ["# Check of the graded file", "", "File: `%s`" % out_mp4, "Recipe: " + note, "", "## Result: %s" % ("FAIL" if fails else "PASS"), ""] + lines + [
+        "", "The file was read back and measured at the same %d moments as the scan; nothing here is read from the encoder's settings." % len(meas)]
+    with open(os.path.join(args.out, "CHECK.md"), "w", encoding="utf8") as fh:
+        fh.write("\n".join(md) + "\n")
+    print("\n".join(md))
+    return 1 if fails else 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -177,6 +177,8 @@ Opus planned and directed, Sonnet builders did the sections; Opus plans at high 
 | `tella-cuts.py` | `cut-list.json` → the `cuts` array for Tella's `update_clip`, lead-in offset applied | `--cut-list --source-duration --clip-max` |
 | `tella-timeline.py` | a cut Tella clip's sentences on the playback timeline, with clicks and screen activity | `--clip-dir --cuts-json --key [--tella-words] [--clicks] [--activity]` |
 | `screen-activity.py` | how much a screen recording changes over time (`activity.json`) | `--video --out [--fps 2]` |
+| `grade-scan.py` | measures a LOG clip (D-Log, D-Log2, D-Log M) before grading: profile from the file's DJI tag (or camera name + the picture), LUT effect, zebra 95 / clip, crushed blacks, skin and median, scopes sheet (waveform parade, vectorscope, histogram), exposure proposal anchored on skin. Writes, never changes | `--video --out [--profile auto\|dlog\|dlog2\|dlogm] [--samples 12]` |
+| `grade-apply.py` | LUT + approved exposure. Without `--render` only a before/after preview with scopes; with it the graded 4K 10-bit HEVC (video card by default) read back and checked against the preview's prediction (`CHECK.md`, exit 1 on a FAIL) | `--video --scan report.json --out [--stops N] [--frames 3] [--render] [--encoder auto\|x265\|nvenc]` |
 | `teardown.py` | measures any video; counts a storyboard exactly; compares reports | `--video` / `--storyboard` / `--compare`, `--out [--transcript] [--every 2]` |
 
 `formats/claude_chat.py` is the AI chat window (format 13b). `formats/chain3d.py` is the 3D card chain (format 27b). `formats/dotgrid.py` is the dot grid (format 43). `formats/scaletta.py` is the outline rail (format 44). `formats/chips.py` is the hanging chips with the camera (format 41b).
@@ -241,6 +243,15 @@ keyframe every 30 frames, 30 fps, BT.709) straight into `public/input-video.mp4`
 grid (without the snap, the picture drifted 4 frames behind the voice over 24 segments). The output is checked against
 `cut-map.json` (duration within a frame, A/V under 0.12 s); a DRIFT line means do not dress that file. `cut-map.json`
 lists every jump cut: put cutaways on those cuts and dress at most one or two of the rest.
+
+**Grading log footage (holiday clips): scan, approve, apply.** `grade-scan.py` first, always: it reads the profile from the file's tag
+(`com.dji.camera.ColorGammaSxS` on the Pocket 4P: D-Log or D-Log2; the Osmo Nano carries only its model, so D-Log M is "probable" and is confirmed
+only if the LUT visibly adds colour). A profile that is not certain is never graded: `grade-apply.py` refuses it. Then look at `scopes-sheet.png` and
+the proposal, run `grade-apply.py` without `--render` for the before/after preview, and only on a yes run it with `--render`. Rules learned on real
+clips (23/10/2026): exposure is anchored on **skin**, not on the median (a bright beach fooled the median); the highlight limit looks at the brightest
+**colour channel** of the worst frame (sea and sky clip in green or blue while luma is still low); a gain above x2 is refused (ffmpeg limit); the exposure is a gain on the graded
+signal (code x 2^(stops/2.4)), never on the log signal; lifting a subject that the highlights do not leave room for needs a local mask, which these scripts do not do.
+LUTs per profile are in `assets/luts/` (CREDITS.md): never cross D-Log, D-Log2 and D-Log M.
 
 **Log footage (DJI Osmo Pocket 4P, D-Log2):** the official LUTs are in `assets/luts/` (`DJI-Pocket4P-DLog2-to-Rec709-size65.cube` is the one to use; D-Log2 is not D-Log: never mix them). Apply it with `apply-cut.py --lut`, only on camera clips, never on stills or B-roll. Phone exports from DJI Mimo stay in D-Log2 too. Run ffmpeg from the project folder with a relative `lut.cube` or let apply-cut escape the path (a Windows `D:` path breaks `lut3d` otherwise).
 

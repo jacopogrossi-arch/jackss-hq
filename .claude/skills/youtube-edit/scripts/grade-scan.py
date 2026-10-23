@@ -42,6 +42,7 @@ W_STATS = 960            # decode width for the measurements
 ZEBRA_HI, ZEBRA_CLIP, CRUSH = 0.95, 0.995, 0.02
 TARGET_MID = 0.42        # graded median luma the exposure proposal aims at (Rec.709 signal, 0-1)
 MAX_STOPS = 1.5
+GAMMA_APPLY = 2.4        # exposure is a gain on the graded signal: code x 2**(stops / 2.4), the same law grade-apply.py uses
 
 
 def sh(cmd, binary=False):
@@ -157,6 +158,7 @@ def frame_stats(rgb):
     yy = luma(rgb)
     skin = (ang > 108) & (ang < 138) & (chroma > 0.03) & (chroma < 0.22) & (yy > 0.2) & (yy < 0.92)
     return {
+        "pmax99": float(np.percentile(rgb.max(axis=2), 99)),       # the brightest CHANNEL: sea and sky clip in green or blue before luma gets high
         "skin_frac": float(skin.mean()), "skin_luma": float(np.median(yy[skin])) if skin.sum() > 50 else None,
         "p0.5": float(p[0]), "p1": float(p[1]), "p5": float(p[2]), "p25": float(p[3]), "median": float(p[4]),
         "p75": float(p[5]), "p95": float(p[6]), "p99": float(p[7]), "p99.5": float(p[8]),
@@ -192,7 +194,6 @@ def propose(graded_stats):
     """Exposure is anchored on skin when the frame has some (a beach or a snow field would fool a median);
     otherwise on the median. Inside the band nothing is proposed."""
     skin = [s["skin_luma"] for s in graded_stats if s["skin_luma"] is not None and s["skin_frac"] >= 0.01]
-    p995 = float(np.mean([s["p99.5"] for s in graded_stats]))
     if len(skin) >= max(2, len(graded_stats) // 3):
         anchor, kind, lo, hi, centre = float(np.median(skin)), "skin", 0.50, 0.68, 0.60
     else:
@@ -202,10 +203,11 @@ def propose(graded_stats):
     else:
         stops = math.log2(lin(centre) / lin(anchor))
         why = "%s at %.0f IRE, outside the %.0f-%.0f band: aim at %.0f IRE" % (kind, anchor * 100, lo * 100, hi * 100, centre * 100)
-    room = math.log2(lin(0.98) / lin(max(p995, 1e-3)))
+    worst = max(s["pmax99"] for s in graded_stats)          # worst frame, brightest channel: the top 1 % must stay under 97 IRE
+    room = math.log2(0.97 / max(worst, 1e-3)) * GAMMA_APPLY
     if stops > room:
         stops = min(stops, room)
-        why += "; held back to protect the highlights (the top 0.5 %% reaches %.0f IRE)" % (p995 * 100)
+        why += "; held back to protect the highlights (in the worst frame the brightest 1 %% of a colour channel reaches %.0f IRE)" % (worst * 100)
     stops = max(-MAX_STOPS, min(MAX_STOPS, stops))
     cb = float(np.mean([s["cb_mean"] for s in graded_stats]))
     cr = float(np.mean([s["cr_mean"] for s in graded_stats]))
