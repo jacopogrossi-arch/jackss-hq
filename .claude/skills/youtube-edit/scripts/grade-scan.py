@@ -400,6 +400,14 @@ def main():
     gspan = np.mean([s["p99"] - s["p1"] for s in g_stats])
     contrast_gain = float(gspan / max(lspan, 1e-6))
     chroma_gain = float(np.mean([s["chroma_mean"] for s in g_stats]) / max(np.mean([s["chroma_mean"] for s in log_stats]), 1e-6))
+    # Calibration on real clips (23/10/2026): D-Log x1.76 contrast / x2.11 colour, D-Log2 x2.08 / x3.53, D-Log M (a full-range arena) x1.13 / x1.70.
+    # D-Log M is the mildest curve, so the "not log" flag needs BOTH gains low.
+    if certain and "names the camera" in why:       # profile guessed from the camera name only: the picture must agree
+        if chroma_gain >= 1.25:
+            why += "; the picture agrees (the LUT adds colour x%.2f)" % chroma_gain
+        else:
+            certain = False
+            why += "; but the LUT adds almost no colour (x%.2f), so it may not be log" % chroma_gain
     flags = []
     if contrast_gain < 1.25 and chroma_gain < 1.25:
         flags.append("the LUT adds almost no contrast (x%.2f) or colour (x%.2f): this clip may NOT be log (a standard profile, or already graded). "
