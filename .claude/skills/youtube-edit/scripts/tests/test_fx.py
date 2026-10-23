@@ -27,8 +27,12 @@ class Transitions(unittest.TestCase):
         self.assertTrue(os.path.exists(os.path.join(pub, "sfx", "shutter.mp3")))
 
     def test_cue_lands_on_the_cut(self):
+        # the cue starts its own lead before the cut, read from cues.json (whip -> the swish pool since 21/10/2026, lead 0)
+        cues = load(os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), "assets", "sfx", "cues.json"))
+        name = cues["transitions"]["whip"]
+        first = cues["pools"].get(name, [name])[0]
         page, _ = build(self, [{"type": "transition", "id": "w", "kind": "whip", "at": 5.0, "anchor": "-"}])
-        self.assertIn('data-start="4.820"', page)                  # whoosh-fast leads by 0.18 s
+        self.assertIn('src="sfx/%s.mp3" data-start="%.3f"' % (first, 5.0 - cues["sounds"][first]["lead"]), page)
 
     def test_sfx_null_silences_and_explicit_overrides(self):
         beats = [{"type": "transition", "id": "a", "kind": "flash", "at": 3.0, "sfx": None, "anchor": "-"},
