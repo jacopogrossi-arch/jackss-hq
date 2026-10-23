@@ -65,6 +65,7 @@ against, and to hand-build the rest.
 | 41 | Pills around the head | two to six short labels while you stay on camera | `pills` |
 | 42 | Chat (bubbles, window, phone) | a conversation | `chat` |
 | 43 | Dot grid | a count you say out loud, in groups ("three outfits, three mood boards..."): one row per group fills on its word | `formats/dotgrid.py` |
+| 44 | Outline rail | a list read out as an outline (what came out, the parts of a plan): rail, dots, names, ×N and bars | `formats/scaletta.py` |
 | - | Check marker* | done and to-do lists: a check draws on each item | `"marker": "check"` on `list`, `bullets`, `popout` |
 | - | Thumbnail grid | your own thumbnails; the cursor clicks one | `grid` |
 | - | Coded scenes | money, catalog, room, plate, profile: B-roll with no stock | `scene` |
@@ -76,7 +77,7 @@ counts). Still tied: the one used least in your last video.
 
 | You are... | Candidates | Pick |
 |---|---|---|
-| saying a count in groups ("three of each") | 43, 3a | 43 when the numbers are the point; 3a when the names are |
+| saying a count in groups ("three of each") | 43, 44, 3a | 43 when the numbers are the point; 44 when it is an outline or plan; 3a when the names alone are |
 | naming one tool | 4a, 34 | 4a; three or more tools in a row: 34 |
 | showing a website | 4b, 4c | 4b for a glance under 3 s; 4c when you talk about it or it scrolls |
 | giving numbers | 1, 24, 25 | 1 for one stakes figure; 24 for two to four that belong together; 25 when it grew and the shape matters (25m when the trend is the point) |
@@ -133,6 +134,17 @@ border: 3px solid rgba(255,255,255,.58); border-radius: 26px; box-shadow: 0 24px
   0.07 s apart, 24 px glow of its colour) and its label slides in (x -14 to 0, 0.4 s); the previous label drops to .65.
   Colours: gold, emerald, then both mixed 45 % toward ivory. Exit at `t_out`: opacity to 0, x +30, 0.4 s. No sound.
   Hold the last row at least 2 s before `t_out` (on the bench the window ends early and "Concept" reads only 0.8 s).
+- **44. Outline rail** (won the blind A/B of 23/10/2026 against 3a on the `lista` bench window; idea from the @realskytan
+  reel, his Introduction / Struggle / Rise outline; creator: "perfect"). `formats/scaletta.py`: `scaletta(items, title,
+  t_in, t_out)`, items `(name, t, anchor, count)`. Left of the face: title Playfair Display Italic 40 px at (110, 250);
+  a 2 px dotted ivory .35 rail at x 139; items 118 px apart from y 330. Per item, from its word t: the rail segment draws
+  down to it (clip-path, t-0.15, 0.35 s; scaleY would stretch the dashes), a 16 px dot in its colour pops (scale .6 to 1,
+  t-0.05), the name Inter 600 38 px in its colour rises (y 12 to 0, 0.4 s) with "×N" Playfair Italic 40 px beside it, and N
+  bars 8 px (300/240/270 px, .8) draw from the left (t+0.1, 0.08 s apart, 0.5 s). The previous item drops to .65.
+  **No card and no radial veil** (a radial veil read as a dark stain on a light wall): a linear wash from the left edge
+  (rgba .62 to 0 over 760 px) fades in with the first item; text carries a dark soft text-shadow. Exit at `t_out`: x -30,
+  opacity 0, 0.4 s. Colours gold, emerald and their light mixes. No sound. Use 44 when the list is a plan or an outcome
+  read as a structure; 43 when the numbers are the point; 3a when the names alone are the point.
 - **3a. Glass card.** 600 px, monochrome (colour lives in the lower line): eyebrow 30 px/700 white at .92, items 64 to
   72 px/700 with white dots and no sub-text (each item stands alone: "Invite teammates", not "Invite feature" plus an
   explainer). Items start `display:none` and appear on their word, so the card grows with the list. Every text gets a
