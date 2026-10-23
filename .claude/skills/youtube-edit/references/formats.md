@@ -47,7 +47,8 @@ against, and to hand-build the rest.
 | 25* | Growth card | one number that grew, with its shape | `growth` |
 | 25m* | Chart morph | the growth bars turn into the trend line | `"morph": true` on `growth` |
 | 26* | Bar comparison | "this takes X, that takes Y" | `bars` |
-| 27* | Pipeline | three to five steps lit one by one | `pipeline` |
+| 27* | Pipeline | three to five steps lit one by one: the fast version, a step about every 2 s | `pipeline` |
+| 27b | 3D card chain | three to five spoken steps when there is time to glide (about 3 s a step or more): the smooth, slow version | `formats/chain3d.py` |
 | 28* | Hub | one idea and the parts it is made of | `hub` |
 | 29* | Equation | "A + B = C" said as one line | `equation` |
 | 30* | Flowing paths | one thing becoming several, then one result | `flow` |
@@ -223,6 +224,21 @@ Every full-frame scene sits on an ambient three-radial brand wash plus a 96 px g
   .66, never lower or contrast fails).
 - **27. Pipeline\*.** Three to five 290 px glass nodes; each lands on its word as a cyan light runs the connector, lit
   cyan while the previous settles white; `payoff: true` lands magenta. The fast version of 6.
+- **27b. 3D card chain** (won the blind A/B of 23/10/2026 against 27 on the `processo` bench window; creator: "much smoother",
+  asked for the arrows, hated the pop sounds). `formats/chain3d.py`: `chain3d(steps, t_in, t_out)` returns `html` + `js`
+  for `raw_html`/`raw_js`; `write_swish(public)` makes `sfx/swish.mp3`. Three to five glass cards 560x340 (badge icon, number,
+  one-line title 56 px/700 of three words at most) on a `perspective: 1500px` stage; card centres X = 0/980/1960/..., Y = 0/-70/+60/-50/0,
+  Z = 0/-120/0/-120/0, rotY = -10/+10 alternating. The camera is `#bcc` (x, y, z) with `sine.inOut`: the next card is at rest in
+  the centre 0.1 s before its word (travel [word-2.0, word-0.1], never under 1.4 s, 0.6 s of rest after the previous arrival);
+  the new card fades/scales in during the last second (`power3.out`, scale .92 to 1, rotY to 0), the old one goes behind
+  (opacity .4, z -160, `power2.inOut`, 1.0 s); the title has 60 px of parallax; at rest the stage drifts 0.6 %/s. Cyan edge on the
+  active card, magenta on the last. **Soft arrows** card to card (right edge to left edge, 3D, inside the same camera): 6 px body
+  with 0 to .9 to 0 opacity along its length and 1.6 px blur, a 26x30 px head with a soft glow, 36 px short so it stops about 16 px
+  before the next card; drawn in 0.6 s (`power2.inOut`) at the start of each travel, head fading in at +0.5 s, back to .4 with the
+  old card; the last arrow is magenta. **Sound: one soft swish per travel, no pops, no clicks**: `assets/sfx/mixclap/whoosh-ethereal.mp3`
+  cut to 1.9 s (attack 0.08 s, release 0.5 s), volume 0.25, at the start of each travel. Measured peak camera speed on the bench
+  is 750 to 1100 px/s (the creator found it smooth, not fast); a longer window than 16 s allows slower travels, never faster.
+  State sheet: `videos/_bench/ab/processo-glide/lab-B/STATE-SHEET.md`. Pipeline (27) stays for steps closer than 2.5 s apart.
 - **28. Hub\*.** The idea in a 300 px glass circle with a cyan ring closing (`ring_at`), two to six parts arriving at the
   ends of spokes; `resolve_at` dims them to .56 and lights the centre ("all of that is really this").
 - **30. Flowing paths\*.** An input pill left, two to four outputs, an optional result right, joined by S-curves and dim
@@ -356,4 +372,5 @@ Rules from the creator's notes on the first test (these are the taste of the `el
 - Typing with a trailing caret for lower lines; word-by-word highlighter pacing on an article (one stroke, then zoom).
 - The flash cut on a return (two white blinks read as a mistake): for energy use the fast punch, or leave the cut naked.
 - Dark blue `#0005EE` for highlighted words (it disappears on dark footage); magenta outside the chip and payoffs.
+- Pop sounds (`pop1`) on the 3D card chain's steps (creator, 23/10/2026: the sound effects are bad); on that format only the soft swish per camera travel.
 - Bounces, elastic type, spring stacks, particle logos, idle wobble; generic stock of a smiling founder at a laptop.
