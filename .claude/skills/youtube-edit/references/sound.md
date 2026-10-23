@@ -14,6 +14,12 @@ plays its format's sound when the preset has `sound.sfx: true`. A beat can force
 compose (needs ffmpeg). 49 files, all CC0 or Pixabay licence, credits in `assets/sfx/CREDITS.md` (no attribution needed).
 To add a sound: drop the file in a subfolder of `assets/sfx`, peak-normalise to -3 dBFS, add a line in `cues.json`, and
 the credit in `CREDITS.md` (licence CC0 or equivalent only).
+**Licensed sounds (Jacopo's own Artlist and Epidemic Sound subscriptions, 23/10/2026):** they live in
+`assets/sfx/licensed/` (git-ignored: the repo is public and these files must never be redistributed), with their own
+`cues.json` (same shape; `file` relative to `assets/sfx`) and `CREDITS.md`. `compose.py` merges that `cues.json` when the
+folder exists, so a beat can name them (`"sfx": "al-whoosh-scrapy"`); on a machine without the folder they simply do not
+exist, and nothing public may depend on them (tests, presets, the default cue maps). Names: `al-` Artlist, `es-` Epidemic.
+Only sounds from those two libraries go there; a shared pack's file of unknown origin stays out.
 
 **Transitions (`formats/fx.py`):** beat `{"type":"transition","id":..,"kind":..,"at":t,"dur":?,"color":?}` with kind
 flash | whip | zoomblur | lightleak | burn (glitch, shake and dip were tried and REJECTED by Jacopo: not in the library). **A transition covers a CHANGE OF SCENE, with the peak ON the first frame of the new scene** (face -> effect -> the page/graphic; never face -> effect -> same face, with the real scene change coming later: Jacopo's note 20/10). Use `"scene": "<beat id>"` (+ optional `"offset"`) instead of a hand-typed `at`; compose warns when a transition is not within 0.4 s of a graphic starting or ending. `at` is the instant of the cut (the effect peaks

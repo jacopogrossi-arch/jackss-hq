@@ -2194,6 +2194,13 @@ for b in S.get("beats", []):
 # ---- sound cues (assets/sfx/cues.json): explicit "sfx" on a beat always plays; automatic cues follow the preset (sound.sfx) ----------
 import subprocess
 CUES = json.load(open(os.path.join(SKILL, "assets", "sfx", "cues.json"), encoding="utf-8"))
+# sounds licensed to the creator's own Artlist / Epidemic subscriptions live in assets/sfx/licensed/ (git-ignored, never
+# published): their own cues.json adds sounds and pools on this machine only; files are paths relative to assets/sfx
+_LIC = os.path.join(SKILL, "assets", "sfx", "licensed", "cues.json")
+if os.path.exists(_LIC):
+    _lic = json.load(open(_LIC, encoding="utf-8"))
+    for _k in ("sounds", "pools"):
+        CUES.setdefault(_k, {}).update(_lic.get(_k, {}))
 SND = S.get("sound") or {}
 _lv = SND.get("level", "medium")
 LEVEL = float(_lv) if isinstance(_lv, (int, float)) else {"low": 0.6, "medium": 1.0, "high": 1.4}.get(_lv, 1.0)   # a word or a number (0.7 = 30% quieter than medium)
