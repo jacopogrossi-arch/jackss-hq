@@ -53,7 +53,7 @@ def pick(samples, n):
 
 
 def tile(img, w, h, label):
-    t = Image.fromarray((np.clip(img, 0, 1) * 255).astype(np.uint8) if img.dtype != np.uint8 else img).resize((w, h))
+    t = Image.fromarray(gs.to_u8(img) if img.dtype != np.uint8 else img).resize((w, h))
     ImageDraw.Draw(t).text((6, 4), label, fill=(255, 255, 255))
     return t
 

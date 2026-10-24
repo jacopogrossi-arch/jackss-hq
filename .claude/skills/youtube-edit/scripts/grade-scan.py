@@ -162,6 +162,13 @@ def grab(path, t, w, h):
     return (np.frombuffer(raw[: w * h * 6], dtype="<u2").reshape(h, w, 3).astype(np.float32)) / 65535.0
 
 
+def to_u8(img):
+    """Float 0-1 -> 8-bit with a little noise first (dither): without it a smooth sky shows false bands in the preview PNG that the 10-bit video does not have."""
+    rng = np.random.default_rng(7)
+    noise = (rng.random(img.shape, dtype=np.float32) + rng.random(img.shape, dtype=np.float32) - 1.0) * 0.5
+    return np.clip(np.floor(np.clip(img, 0, 1) * 255 + 0.5 + noise), 0, 255).astype(np.uint8)
+
+
 def luma(rgb):
     return rgb[..., 0] * 0.2126 + rgb[..., 1] * 0.7152 + rgb[..., 2] * 0.0722
 
@@ -276,7 +283,7 @@ def propose(graded_stats):
 
 # ---------------------------------------------------------------- scopes (numpy + PIL)
 def zebra_image(rgb):
-    img = (np.clip(rgb, 0, 1) * 255).astype(np.uint8).copy()
+    img = to_u8(rgb).copy()
     y = luma(rgb)
     h, w = y.shape
     yy, xx = np.mgrid[0:h, 0:w]
@@ -359,7 +366,7 @@ def monitor(log_rgb, graded_rgb, label, t):
     H, Wd, _ = log_rgb.shape
     tw = 480
     th = int(tw * H / Wd)
-    a = Image.fromarray((log_rgb * 255).astype(np.uint8)).resize((tw, th))
+    a = Image.fromarray(to_u8(log_rgb)).resize((tw, th))
     b = Image.fromarray(zebra_image(graded_rgb)).resize((tw, th))
     wf = waveform_parade(graded_rgb)
     vs = vectorscope(graded_rgb)
