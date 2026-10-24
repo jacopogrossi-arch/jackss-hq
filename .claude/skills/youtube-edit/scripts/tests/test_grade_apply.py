@@ -79,6 +79,24 @@ class GradeApply(unittest.TestCase):
         self.assertIn("matches the preview's prediction", r.stdout)          # the file has the colour shift the preview predicted
         self.assertNotIn("FAIL the file matches", r.stdout)
 
+    def test_unknown_look_is_refused(self):
+        d = scratch(self)
+        v = self.clip(d)
+        rep = self.scan(d, v, "--profile", "dlogm")
+        r = run("grade-apply.py", "--video", v, "--scan", rep, "--out", os.path.join(d, "a"), "--look", "no-such-look")
+        self.assertEqual(r.returncode, 1)
+        self.assertIn("unknown look", r.stdout)
+
+    def test_render_with_a_look_matches_the_prediction(self):
+        d = scratch(self)
+        v = self.clip(d)
+        rep = self.scan(d, v, "--profile", "dlogm")
+        out = os.path.join(d, "a")
+        r = run("grade-apply.py", "--video", v, "--scan", rep, "--out", out, "--frames", "2", "--render", "--encoder", "x265", "--stops", "0", "--look", "blockbuster")
+        self.assertIn("look: blockbuster", r.stdout, r.stdout + r.stderr)
+        self.assertIn("PASS the file matches the preview's prediction", r.stdout, r.stdout + r.stderr)   # the baked 3D table does what the numpy look does
+        self.assertIn("look blockbuster", open(os.path.join(out, "CHECK.md"), encoding="utf8").read())
+
 
 if __name__ == "__main__":
     unittest.main()

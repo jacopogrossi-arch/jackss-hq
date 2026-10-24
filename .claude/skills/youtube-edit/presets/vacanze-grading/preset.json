@@ -289,6 +289,7 @@
           "skin_luma": 1.233
         }
       }
-    }
+    },
+    "look_max_crush": 0.12
   }
 }
