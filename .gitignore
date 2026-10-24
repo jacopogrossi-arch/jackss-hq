@@ -47,3 +47,6 @@ video-editor/shared/
 
 # third-party creative LUTs (their own licences): local only
 .claude/skills/youtube-edit/assets/looks/external/
+
+# Free editing packs from the Cashflow Contents bonus (Saturn's Ring / Ali Abdaal): no licence file, personal use only, never pushed
+.claude/skills/youtube-edit/assets/packs/
