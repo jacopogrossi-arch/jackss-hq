@@ -18,6 +18,8 @@ moments = []
 if S.get("tag"):
     moments.append(S["tag"]["in"] + 0.9)
 for b in S.get("beats", []):
+    if b["type"] == "transition":   # a transition has an instant ("at"), not an in/out: snap its peak
+        moments.append(float(b["at"])); continue
     moments.append(float(b["in"]) + (1.5 if b["type"] == "pointer" else 0.9))
     if b["type"] in ("list", "bullets") and b.get("items"):
         moments.append(float(b["items"][-1][1]) + 0.6)
