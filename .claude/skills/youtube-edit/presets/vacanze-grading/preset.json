@@ -317,39 +317,7 @@
       },
       "jacopo-cinema-wow": {
         "title": "Jacopo + cinema WOW",
-        "desc": "Colori molto spinti su acqua e cielo, pelle viva ma non carica (circa +15% di colore sulla pelle rispetto al look base).",
-        "p": {
-          "contrast": 0.55,
-          "crush": 0.03,
-          "gamma": 1.04,
-          "sat": 0.924,
-          "vibrance": 0.27,
-          "sea_sat": 1.47,
-          "temp": -0.017,
-          "shadows": [
-            0.011,
-            -0.007,
-            -0.005
-          ],
-          "highlights": [
-            0.0,
-            0.007,
-            -0.008
-          ],
-          "skin_sat": 0.702,
-          "chroma_map": "jacopo-chroma",
-          "chroma_gain": 1.0,
-          "wow": {
-            "sat": 1.08,
-            "vibrance": 0.35,
-            "sea_sat": 1.45,
-            "skin_sat": 0.836
-          }
-        }
-      },
-      "jacopo-cinema-wow-pelle-piu": {
-        "title": "Jacopo + cinema WOW (pelle piu' viva)",
-        "desc": "Come il WOW ma con la pelle piu' viva (circa +27% sul look base).",
+        "desc": "Il look scelto da Jacopo il 24/10/2026: i suoi colori molto spinti su acqua e cielo, pelle viva (saturazione pelle laguna 0,57), contrasto cinema.",
         "p": {
           "contrast": 0.55,
           "crush": 0.03,
@@ -378,8 +346,41 @@
             "skin_sat": 1.029
           }
         }
+      },
+      "jacopo-cinema-wow-pelle-media": {
+        "title": "Jacopo + cinema WOW (pelle media)",
+        "desc": "Come il WOW scelto ma con la pelle meno viva (via di mezzo verso il look base).",
+        "p": {
+          "contrast": 0.55,
+          "crush": 0.03,
+          "gamma": 1.04,
+          "sat": 0.924,
+          "vibrance": 0.27,
+          "sea_sat": 1.47,
+          "temp": -0.017,
+          "shadows": [
+            0.011,
+            -0.007,
+            -0.005
+          ],
+          "highlights": [
+            0.0,
+            0.007,
+            -0.008
+          ],
+          "skin_sat": 0.702,
+          "chroma_map": "jacopo-chroma",
+          "chroma_gain": 1.0,
+          "wow": {
+            "sat": 1.08,
+            "vibrance": 0.35,
+            "sea_sat": 1.45,
+            "skin_sat": 0.836
+          }
+        }
       }
     },
-    "look_max_crush": 0.12
+    "look_max_crush": 0.12,
+    "default_look": "jacopo-cinema-wow"
   }
 }

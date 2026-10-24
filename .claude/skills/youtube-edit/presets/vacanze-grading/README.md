@@ -44,6 +44,15 @@ li esaspera (x1,5). Verificato su fotogrammi non usati nell'allenamento: errore 
 Limite: la mappa conosce solo i colori delle sue due clip (589 celle su 4913); gli altri colori (rossi, gialli, interni) restano come li lascia il look.
 `--smooth 1|2` aggiunge una leggera riduzione del rumore prima della LUT (il suo grading e' piu' morbido della camera: nitidezza 0,37 contro 0,52).
 
+## Il look scelto e come si usa su una clip nuova (24/10/2026)
+Dopo V1-V5 Jacopo ha scelto **`jacopo-cinema-wow`**: i suoi colori molto spinti su acqua e cielo, **pelle "piu' viva"** (saturazione pelle laguna 0,57; la
+variante `jacopo-cinema-wow-pelle-media` e' piu' sobria), contrasto cinema. Ricetta per ogni clip log nuova, in quest'ordine:
+1. `grade-scan.py --video clip --out scan` (profilo dal tag DJI; sulla Nano "probabile" e confermato dall'immagine). Guarda `REPORT.md` e la proposta di esposizione.
+2. `grade-apply.py --video clip --scan scan/report.json --out out --look jacopo-cinema-wow --smooth 1` (senza `--render` = solo anteprima), poi con `--render`.
+3. Il controllo `CHECK.md` deve dire PASS. Se la pelle o il mare non convincono, si regola con `--stops` o si scelgono le varianti del preset.
+Nota: la mappa colore e' stata appresa solo sulle sue due clip (acqua, cielo, pelle, rosso): su scene con altri colori (interni, verdi, gialli) il WOW agisce solo con
+il secondo passaggio di colore e va guardato prima di fidarsene.
+
 ## Limiti noti (da non scordare)
 - Una clip dove la pelle e' scura e il mare e' chiaro (es. D-Log, 23/10) non si schiarisce abbastanza: le luci non lasciano margine. Servirebbe una **maschera locale** o un
   **roll-off morbido delle luci**: non fatti.
