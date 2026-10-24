@@ -172,6 +172,7 @@ Opus planned and directed, Sonnet builders did the sections; Opus plans at high 
 | `window-patch.py` | a render-ready copy covering only [T0, T1], for a fix inside a long render | `--public --t0 --t1 --out` |
 | `verify-render.py` | checks the rendered file: black runs, size, BT.709 tags, bitrate, duration, A/V, clipped words | `--render [--index] [--res] [--words --kept] [--out]`; exit 1 on a FAIL |
 | `ab-compare.py` | a blind A/B of two renders of the same bench window: shuffled into 1 and 2, side by side and in sequence, the key only in `KEY.md` | `--a --b --out [--labels "current,new"]` |
+| `sound-report.py` | the numbers of a mix (Claude cannot listen): voice, effects and music loudness and distance under the voice, every effect against the voice, master LUFS and true peak, WARN outside the house targets | `--stems --index --final --out` (stems from `mix-audio.py --stems DIR`) |
 | `fact-list.py` | the sentences of the RAW transcript with a number, year, date, price, percentage or tool name, as `FACTS.md` to confirm at Checkpoint A; it lists, never verifies | `--transcript --out [--tools "A,B"]` |
 | `check-frames.py` | the render as a viewer watches it: 10 frames a second in sheets with a gap between tiles, one full-size frame on demand, a word said twice, a card too brief to read | `--video --out [--fps 10] [--start T --end T] [--transcript] [--index]` or `--frame T` |
 | `render-queue.py` | runs any heavy command (a render, `apply-cut`) one at a time: a second one waits in line on a lock file; the command's flags pass through untouched | `[--lock F] [--wait-minutes 240] -- <command>` |
@@ -430,7 +431,7 @@ editing the manifest and running again: **the master is never hand-edited.**
   (`--frame 8.2`). When the checker has never failed on something real, plant a defect (a 2-frame flash, a doubled word) and see it caught.
 - **Motion on contiguous frames:** `ffmpeg -i out.mp4 -vf "select='between(n,A,B)',scale=480:270,tile=6x7" -frames:v 1
   strip.png` across every transition window; look for a jump-then-crawl, a dead stop between moves, a one-frame pop.
-- **Sound** as in `references/sound.md`; **loudness** with `ebur128` (about -14 LUFS, true peak under -1); **lip sync** on a long cut:
+- **Sound** as in `references/sound.md`, with `sound-report.py` on the mix (its numbers go in the report); **loudness** with `ebur128` (about -14 LUFS, true peak under -1); **lip sync** on a long cut:
   a flat frame matches the source near `src_start + x` within one frame for a few late segments.
 - **Deliver** to `~/Movies/YouTube Renders/<project>/<project>-4k.mp4` (md5 it against the render) with `STORYBOARD.md`
   next to it (`storyboard-md.py`: time / beat / what is on screen, what changed, your concerns, every stock clip with

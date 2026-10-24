@@ -82,8 +82,16 @@ python3 "$SK/scripts/mix-audio.py" --index "$W/public/index.html" --voice "$W/pu
 ```
 
 It mixes voice + cues (x `--sfx-gain`), measures and applies loudnorm to -14 LUFS (voice + effects), lays the music bed (ducked, same rules as
-`add-music.py`) and muxes it onto the picture of a render (copied, not re-encoded). So the order for a delivery is: picture render -> `mix-audio.py` ->
-`verify-render.py`. To compare tracks, mix 30 s with each and send them to Jacopo as mp3 (he picks a letter).
+`add-music.py`) and muxes it onto the picture of a render (copied, not re-encoded). So the order for a delivery is: picture render ->
+`mix-audio.py --stems W/stems` -> `sound-report.py` -> `verify-render.py`.
+
+**Sound report on every mix (from Jacopo's sound-design guide, 24/10/2026: Claude cannot listen, so it measures):**
+`python3 "$SK/scripts/sound-report.py" --stems "$W/stems" --index "$W/public/index.html" --final "$W/final.mp4" --out "$W/SOUND-REPORT.md"`.
+It gives the loudness of voice, effects and music (the bed after ducking) and how far each sits under the voice, every effect with
+its time, file, level against the voice and whether the voice is speaking under it, and the master's LUFS and true peak. House
+targets (WARN, never fail): effects about 7 dB under the voice, music 13-15 dB under the voice, master -14 LUFS with true peak at
+most -1.0 dBTP. Quote its numbers in the delivery report and say what nobody listened to. Its first run found a real bug: the
+music limiter's auto level pushed the master to 0 dBTP (now `alimiter=limit=0.84:level=0`). To compare tracks, mix 30 s with each and send them to Jacopo as mp3 (he picks a letter).
 
 **Music beds beyond `assets/music`:** CC0 tracks of `kmilo93sd/agent-video-editor` (OpenGameArt: ambient piano, acoustic, lofi lobby/tea), see its
 `library/LICENSES.md`. The level rule is under "Music" above.
