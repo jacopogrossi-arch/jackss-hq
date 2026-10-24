@@ -288,6 +288,30 @@
           "skin_sat": 0.556,
           "skin_luma": 1.233
         }
+      },
+      "jacopo-cinema": {
+        "title": "Jacopo + cinema",
+        "desc": "Il tuo colore (acqua e cielo molto vivi, pelle naturale) sopra la profondita' del cinema (neri profondi, contrasto pieno). Adattato dal tuo grading veloce delle due clip del 23/10.",
+        "p": {
+          "contrast": 0.55,
+          "crush": 0.03,
+          "gamma": 1.04,
+          "sat": 0.924,
+          "vibrance": 0.27,
+          "sea_sat": 1.47,
+          "temp": -0.017,
+          "shadows": [
+            0.011,
+            -0.007,
+            -0.005
+          ],
+          "highlights": [
+            0.0,
+            0.007,
+            -0.008
+          ],
+          "skin_sat": 0.702
+        }
       }
     },
     "look_max_crush": 0.12
