@@ -97,6 +97,23 @@ class GradeApply(unittest.TestCase):
         self.assertIn("PASS the file matches the preview's prediction", r.stdout, r.stdout + r.stderr)   # the baked 3D table does what the numpy look does
         self.assertIn("look blockbuster", open(os.path.join(out, "CHECK.md"), encoding="utf8").read())
 
+    def test_a_third_party_cube_works_as_a_look_and_the_file_matches_the_preview(self):
+        d = scratch(self)
+        v = self.clip(d)
+        rep = self.scan(d, v, "--profile", "dlogm")
+        cube = os.path.join(d, "warm.cube")
+        n = 9
+        with open(cube, "w") as fh:                                  # a toy creative LUT: warmer reds, cooler blues
+            fh.write("LUT_3D_SIZE %d" % n + chr(10))
+            for b in range(n):
+                for g in range(n):
+                    for r in range(n):
+                        fh.write("%.6f %.6f %.6f" % (min(1.0, r / (n - 1) * 1.15), g / (n - 1), b / (n - 1) * 0.9) + chr(10))
+        out = os.path.join(d, "a")
+        r = run("grade-apply.py", "--video", v, "--scan", rep, "--out", out, "--frames", "2", "--render", "--encoder", "x265", "--stops", "0", "--look-cube", cube, "--look-mix", "0.8")
+        self.assertIn("look: cube:warm.cube@80%", r.stdout, r.stdout + r.stderr)
+        self.assertIn("PASS the file matches the preview's prediction", r.stdout, r.stdout + r.stderr)
+
 
 if __name__ == "__main__":
     unittest.main()

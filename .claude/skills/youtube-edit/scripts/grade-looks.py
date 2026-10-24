@@ -62,6 +62,15 @@ def sea_weight(rgb):
 
 
 _MAPS = {}
+_CUBES = {}
+EXTERNAL = os.path.join(os.path.dirname(HERE), "assets", "looks", "external")      # third-party creative LUTs: local only, never committed (their licences are theirs)
+
+
+def external_cube(name):
+    path = name if os.path.isabs(name) else os.path.join(EXTERNAL, name)
+    if path not in _CUBES:
+        _CUBES[path] = gs.load_cube(path)
+    return _CUBES[path]
 
 
 def chroma_delta(rgb, name, gain):
@@ -87,6 +96,9 @@ def apply_look(rgb, p):
     x = np.clip(rgb.astype(np.float32), 0, 1)
     if not p:
         return x
+    if p.get("cube"):                                             # a ready-made creative LUT (made for Rec.709) as the base of the look; the numbers below then adjust it
+        mix = p.get("cube_mix", 1.0)
+        x = x * (1 - mix) + gs.apply_lut(x, external_cube(p["cube"])) * mix
     if p.get("gamma", 1.0) != 1.0:
         x = x ** p["gamma"]
     if p.get("crush", 0):
@@ -150,12 +162,18 @@ def main():
     ap.add_argument("--out", required=True)
     ap.add_argument("--t", type=float, help="seconds into the clip (default: the scan's middle sample)")
     ap.add_argument("--looks", help="comma-separated names (default: all)")
+    ap.add_argument("--cube-dir", help="a folder of .cube files: show each as a look on the frame (no preset looks), to pick a starting point")
+    ap.add_argument("--mix", type=float, default=1.0, help="with --cube-dir: how much of each LUT (0-1)")
     ap.add_argument("--cols", type=int, default=3)
     ap.add_argument("--tile", type=int, default=640)
     args = ap.parse_args()
     rep = json.load(open(args.scan, encoding="utf8"))
     prof = rep["profile"]
     looks = gs.CFG.get("looks", {})
+    if args.cube_dir:
+        cubes = sorted(f for f in os.listdir(args.cube_dir) if f.lower().endswith(".cube"))
+        looks = {"cube%02d" % i: {"title": os.path.splitext(f)[0][:42] + ("" if args.mix == 1 else " (%.0f%%)" % (args.mix * 100)), "desc": f,
+                                   "p": {"cube": os.path.join(os.path.abspath(args.cube_dir), f), "cube_mix": args.mix}} for i, f in enumerate(cubes)}
     names = args.looks.split(",") if args.looks else list(looks)
     t = args.t if args.t is not None else rep["samples"][len(rep["samples"]) // 2]["t"]
     meta = rep["meta"]

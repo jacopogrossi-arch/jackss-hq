@@ -98,6 +98,26 @@ class GradeLooks(unittest.TestCase):
             self.assertGreater(sat(wow), sat(plain) * 1.05)                                       # clearly more colour
             self.assertTrue(np.allclose(gl.gs.luma(wow), gl.gs.luma(plain), atol=0.03))           # about the same light
 
+    def test_a_cube_file_is_a_look_and_mix_blends_it_with_the_original(self):
+        import tempfile
+        gl = self.gl
+        d = tempfile.mkdtemp(prefix="cube-test-")
+        self.addCleanup(__import__("shutil").rmtree, d, True)
+        n = 5
+        lin = np.linspace(0, 1, n)
+        with open(os.path.join(d, "red.cube"), "w") as fh:                       # a toy LUT: every colour gets 30 % more red
+            fh.write("LUT_3D_SIZE %d" % n + chr(10))
+            for b in lin:
+                for g in lin:
+                    for r in lin:
+                        fh.write("%.6f %.6f %.6f" % (min(1, r * 1.3), g, b) + chr(10))
+        x = flat((0.5, 0.5, 0.5))
+        full = gl.apply_look(x, {"cube": os.path.join(d, "red.cube")})
+        half = gl.apply_look(x, {"cube": os.path.join(d, "red.cube"), "cube_mix": 0.5})
+        self.assertAlmostEqual(float(full[0, 0, 0]), 0.65, places=2)
+        self.assertAlmostEqual(float(half[0, 0, 0]), 0.575, places=2)            # halfway between 0.5 and 0.65
+        self.assertAlmostEqual(float(full[0, 0, 1]), 0.5, places=2)
+
 
 if __name__ == "__main__":
     unittest.main()

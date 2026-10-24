@@ -137,6 +137,8 @@ def main():
     ap.add_argument("--wb", action="store_true", help="also apply the white-balance gains the scan measured on near-neutral objects (only if it found some)")
     ap.add_argument("--wb-gains", help="your own white-balance gains, 'R,B' (green = 1), e.g. 1.03,0.97; wins over --wb")
     ap.add_argument("--smooth", type=int, default=0, choices=[0, 1, 2], help="light (1) or medium (2) noise reduction before the LUT: smoother skin and water, softer detail (Jacopo's own grade is softer than the camera file)")
+    ap.add_argument("--look-cube", help="a ready-made creative .cube LUT (made for Rec.709) used as the look; --look-mix says how much (0-1). Third-party LUTs stay local, in assets/looks/external/")
+    ap.add_argument("--look-mix", type=float, default=1.0)
     ap.add_argument("--look", help="a look from the preset (see grade-looks.py), applied after the LUT, exposure and white balance, e.g. blockbuster")
     ap.add_argument("--frames", type=int, default=3, help="frames in the preview")
     ap.add_argument("--render", action="store_true", help="encode the graded clip and check it (needs your approval of the preview)")
@@ -156,7 +158,10 @@ def main():
         print("%+.2f stops is out of range: the limit is +-%.1f (a bigger push is a re-shoot, not a grade)." % (stops, MAX_STOPS))
         return 1
     look = None
-    if args.look:
+    if args.look_cube:
+        look = {"cube": args.look_cube, "cube_mix": args.look_mix}
+        args.look = "cube:" + os.path.basename(args.look_cube) + ("@%.0f%%" % (args.look_mix * 100) if args.look_mix != 1 else "")
+    elif args.look:
         looks = gs.CFG.get("looks", {})
         if args.look not in looks:
             print("unknown look %r (have: %s)" % (args.look, ", ".join(looks)))
