@@ -45,13 +45,13 @@ def window(h, centre, width):
 
 # hue windows (HSV hue, 0-1): orange skin 0.02-0.12, water and sky from green-cyan to blue 0.35-0.65
 SEA = (0.50, 0.15)
-SKIN = (0.07, 0.05)
+SKIN = (0.065, 0.075)      # wide and soft: a narrow window turns colour noise into visible blotches on skin
 
 
 def skin_weight(rgb):
     h, s = hue_sat(rgb)
     y = gs.luma(rgb)
-    gate = np.clip((s - 0.15) / 0.10, 0, 1) * np.clip((0.75 - s) / 0.15, 0, 1) * np.clip((y - 0.12) / 0.10, 0, 1)   # coloured enough, not too saturated, not black
+    gate = np.clip((s - 0.06) / 0.22, 0, 1) * np.clip((0.85 - s) / 0.25, 0, 1) * np.clip((y - 0.05) / 0.25, 0, 1)   # smooth ramps, no hard thresholds
     return window(h, *SKIN) * gate
 
 
