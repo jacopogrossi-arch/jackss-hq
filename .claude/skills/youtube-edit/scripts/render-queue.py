@@ -10,7 +10,7 @@ Usage:  python3 render-queue.py [--lock FILE] [--wait-minutes 240] [--stale-minu
 The lock defaults to render-queue.lock in the system temp folder (one queue per machine). A lock older than --stale-minutes
 (a crashed render) is removed. Exit code = the command's exit code; 3 = gave up waiting.
 """
-import argparse, os, subprocess, sys, tempfile, time
+import argparse, os, shutil, subprocess, sys, tempfile, time
 
 ap = argparse.ArgumentParser()
 ap.add_argument("--lock", default=os.path.join(tempfile.gettempdir(), "youtube-edit-render-queue.lock"))
@@ -22,6 +22,10 @@ a = ap.parse_args()
 cmd = a.cmd[1:] if a.cmd and a.cmd[0] == "--" else a.cmd
 if not cmd:
     ap.error("give the command after --")
+# Windows: npx, npm and friends are .cmd files, which subprocess does not find without the full path
+exe = shutil.which(cmd[0])
+if exe:
+    cmd = [exe] + cmd[1:]
 
 deadline = time.time() + a.wait_minutes * 60
 told = False

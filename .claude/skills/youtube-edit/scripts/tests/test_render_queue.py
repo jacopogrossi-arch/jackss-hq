@@ -1,5 +1,5 @@
 """render-queue.py: the second command waits for the first (they never overlap), the exit code passes through, a stale lock is cleared."""
-import os, subprocess, sys, time, unittest
+import os, shutil, subprocess, sys, time, unittest
 from .helpers import SCRIPTS, run, scratch
 
 PY = sys.executable
@@ -34,6 +34,11 @@ class RenderQueue(unittest.TestCase):
         open(lock, "w").write("1 busy\n")                              # a fresh lock, nobody will release it
         r = run("render-queue.py", "--lock", lock, "--wait-minutes", "0.02", "--poll", "0.2", "--", PY, "-c", "pass")
         self.assertEqual(r.returncode, 3)
+
+    def test_finds_a_program_on_the_path_by_name(self):
+        d = scratch(self)
+        r = run("render-queue.py", "--lock", os.path.join(d, "q.lock"), "--", "ffmpeg" if shutil.which("ffmpeg") else "python", "-version")
+        self.assertEqual(r.returncode, 0, r.stderr)                    # a bare name (npx.cmd on Windows) resolves like in a shell
 
 
 if __name__ == "__main__":
