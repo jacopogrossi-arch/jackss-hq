@@ -4,6 +4,13 @@ _Moved out of `SKILL.md` on 22/10/2026, text unchanged. Read this when: you need
 
 ## Sourcing assets
 
+**Local editing packs (`assets/packs/`, never pushed).** Real light leaks (25, 1080p60, blend `screen`, warm 1-10 fit the
+`elegante-portfolio` look), 12 creative LUTs (Rec.709 + log versions), paper sounds and a camera shutter, paper and dot overlays, from the
+free Saturn's Ring / Ali Abdaal packs Jacopo got with a course bonus (24/10/2026). No licence file: Jacopo's own videos only. The catalogue
+with every clip's look is `assets/packs/README.md`. They are **candidates**: each enters a format, a transition or the cue list only after it
+wins a blind A/B on the bench. A missing folder (a new PC) means the packs were not downloaded there: ask Jacopo, never fetch them again
+unasked.
+
 **Find the assets yourself (standing instruction from the creator, 19/10/2026).** Never ask the creator to supply logos, fonts or
 images: fetch them from a trustworthy source, check the file (an SVG must contain no script or external link), say in the report which
 file came from where, and keep it in the skill (`assets/logos`, `assets/fonts`) with its licence. What worked: tool and brand **logos** as
