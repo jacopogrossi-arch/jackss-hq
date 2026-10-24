@@ -59,6 +59,34 @@ class GradeLooks(unittest.TestCase):
         self.assertGreater(right, left)                                      # the slope survives
         self.assertLess(abs((right - left) - 0.01 * 255 * 0.9), 0.6)         # and is not lost to hard 8-bit steps
 
+    def test_learned_colour_map_changes_chroma_not_luma_and_gain_scales_it(self):
+        gl = self.gl
+        base = {"contrast": 0.0}
+        cands = [(r, g, b) for r in (0.45, 0.6, 0.75) for g in (0.6, 0.72, 0.85) for b in (0.55, 0.7, 0.82)]
+        chroma = lambda a: np.stack([(a[..., 2] - gl.gs.luma(a)) / 1.8556, (a[..., 0] - gl.gs.luma(a)) / 1.5748], axis=-1)
+        best, bd = None, 0.0
+        for c in cands:                                          # a colour the map actually moves (it only moves colours his clips contained)
+            x = flat(c)
+            dd = float(np.abs(chroma(gl.apply_look(x, dict(base, chroma_map="jacopo-chroma"))) - chroma(x)).max())
+            if dd > bd:
+                best, bd = c, dd
+        self.assertGreater(bd, 0.002, "the learned map moves no colour at all")
+        x = flat(best)
+        one = gl.apply_look(x, dict(base, chroma_map="jacopo-chroma", chroma_gain=1.0))
+        wow = gl.apply_look(x, dict(base, chroma_map="jacopo-chroma", chroma_gain=1.5))
+        self.assertTrue(np.allclose(gl.gs.luma(one), gl.gs.luma(x), atol=2e-3))            # the light is the look's job, not the map's
+        d1, d15 = chroma(one) - chroma(x), chroma(wow) - chroma(x)
+        self.assertTrue(np.allclose(d15, 1.5 * d1, atol=2e-3))                              # the gain scales the shift
+        far = flat((0.9, 0.1, 0.9))                                                         # a colour his clips never had: left almost alone
+        self.assertLess(float(np.abs(gl.apply_look(far, dict(base, chroma_map="jacopo-chroma")) - far).max()), 0.02)
+
+    def test_jacopo_looks_are_in_the_preset(self):
+        looks = self.gl.gs.CFG["looks"]
+        self.assertEqual(looks["jacopo-cinema"]["p"]["chroma_map"], "jacopo-chroma")
+        self.assertGreater(looks["jacopo-cinema-wow"]["p"]["chroma_gain"], looks["jacopo-cinema"]["p"]["chroma_gain"])
+        lo, hi = self.gl.gs.CFG["skin_band"]
+        self.assertLess(hi, 0.55)                                                               # his skin sits at 34-42 IRE: the exposure band follows it
+
 
 if __name__ == "__main__":
     unittest.main()

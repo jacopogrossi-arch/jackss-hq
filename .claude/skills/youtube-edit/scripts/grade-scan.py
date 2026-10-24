@@ -37,7 +37,7 @@ DEFAULTS = {
         "dlogm": ["D-Log M (Osmo Nano)", "DJI-OsmoNano-DLogM-to-Rec709-V1.cube"],
     },
     "zebra": 0.95, "clip": 0.995, "crush": 0.02,
-    "skin_band": [0.50, 0.68], "skin_target": 0.60, "median_band": [0.35, 0.55], "median_target": 0.42,
+    "skin_band": [0.30, 0.50], "skin_target": 0.40, "median_band": [0.35, 0.55], "median_target": 0.42,
     "highlight_ceiling": 0.97, "max_stops_scan": 1.5, "max_stops_apply": 2.0, "max_wb_gain": 0.12,
     "wb_neutral_chroma": 0.02, "wb_min_frac": 0.01,     # a pixel counts as neutral under this chroma; a frame needs this share of them (measured 23/10: at 0.06 it took 67 % of a beach)
 }
@@ -243,8 +243,9 @@ def propose(graded_stats):
     if lo <= anchor <= hi:
         stops, why = 0.0, "%s at %.0f IRE, inside the %.0f-%.0f band: no exposure change" % (kind, anchor * 100, lo * 100, hi * 100)
     else:
-        stops = math.log2(lin(centre) / lin(anchor))
-        why = "%s at %.0f IRE, outside the %.0f-%.0f band: aim at %.0f IRE" % (kind, anchor * 100, lo * 100, hi * 100, centre * 100)
+        edge = lo if anchor < lo else hi                      # the smallest correction that brings it inside the band, not a jump to its centre
+        stops = math.log2(lin(edge) / lin(anchor))
+        why = "%s at %.0f IRE, outside the %.0f-%.0f band: move it to the edge, %.0f IRE" % (kind, anchor * 100, lo * 100, hi * 100, edge * 100)
     worst = max(s["pmax99"] for s in graded_stats)          # worst frame, brightest channel: the top 1 % must stay under the highlight ceiling
     room = math.log2(CFG["highlight_ceiling"] / max(worst, 1e-3)) * GAMMA_APPLY
     if stops > room:

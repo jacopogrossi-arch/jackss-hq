@@ -101,12 +101,13 @@ def has_nvenc():
         return False
 
 
-def encode(video, lut_path, stops, wb, look, out, encoder, crf, meta):
+def encode(video, lut_path, stops, wb, look, out, encoder, crf, meta, smooth=0):
     tmp = tempfile.mkdtemp(prefix="grade-apply-")
     try:
         shutil.copy(lut_path, os.path.join(tmp, "lut.cube"))       # a relative name: a Windows 'D:' path breaks lut3d
         g = gain(stops)
-        vf = "format=gbrp10le,lut3d=file=lut.cube:interp=tetrahedral"
+        denoise = {1: "hqdn3d=1.5:1.5:3:3,", 2: "hqdn3d=3:3:5:5,"}.get(smooth, "")      # before the LUT: the noise is smaller there, the LUT stretches it
+        vf = denoise + "format=gbrp10le,lut3d=file=lut.cube:interp=tetrahedral"
         if abs(stops) > 1e-6 or wb:
             vf += ",colorchannelmixer=rr=%.6f:gg=%.6f:bb=%.6f" % (g * (wb[0] if wb else 1.0), g, g * (wb[1] if wb else 1.0))
         if look:
@@ -135,6 +136,7 @@ def main():
     ap.add_argument("--stops", type=float, help="exposure in stops; default = the scan's proposal")
     ap.add_argument("--wb", action="store_true", help="also apply the white-balance gains the scan measured on near-neutral objects (only if it found some)")
     ap.add_argument("--wb-gains", help="your own white-balance gains, 'R,B' (green = 1), e.g. 1.03,0.97; wins over --wb")
+    ap.add_argument("--smooth", type=int, default=0, choices=[0, 1, 2], help="light (1) or medium (2) noise reduction before the LUT: smoother skin and water, softer detail (Jacopo's own grade is softer than the camera file)")
     ap.add_argument("--look", help="a look from the preset (see grade-looks.py), applied after the LUT, exposure and white balance, e.g. blockbuster")
     ap.add_argument("--frames", type=int, default=3, help="frames in the preview")
     ap.add_argument("--render", action="store_true", help="encode the graded clip and check it (needs your approval of the preview)")
@@ -214,7 +216,7 @@ def main():
     note = "graded with %s, exposure %+.2f stops%s%s (grade-apply.py)" % (prof["lut"], stops, (", white balance R x%.3f B x%.3f" % tuple(wb)) if wb else "", (", look %s" % args.look) if look else "")
     print("Rendering %s ..." % out_mp4)
     try:
-        encode(args.video, lut_path, stops, wb, look, out_mp4, args.encoder, args.crf, note)
+        encode(args.video, lut_path, stops, wb, look, out_mp4, args.encoder, args.crf, note, args.smooth)
     except Exception as e:  # noqa
         print("render failed:", e)
         return 1

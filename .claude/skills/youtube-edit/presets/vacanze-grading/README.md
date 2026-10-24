@@ -25,7 +25,7 @@ Tutti i numeri qui sotto stanno in `preset.json` (chiave `grade`): per cambiarli
    previsione, non avere luci bruciate (max 1 %) ne' neri schiacciati (max 5 %), e la pelle deve essere piu' vicina alla fascia di prima. `CHECK.md`: PASS o FAIL.
 
 ## Regole imparate sulle clip vere (23/10/2026)
-- **L'esposizione si ancora sulla pelle** (fascia 50-68 IRE, bersaglio 60), non sulla mediana: una spiaggia luminosa faceva proporre -1,5 stop a una clip gia' giusta.
+- **L'esposizione si ancora sulla pelle** (fascia 30-50 IRE: e' dove il suo stesso grading porta la pelle, 34-42 IRE; con la fascia 50-68 che avevo supposto schiarivo troppo; si sposta solo fino al bordo della fascia, non al centro), non sulla mediana: una spiaggia luminosa faceva proporre -1,5 stop a una clip gia' giusta.
   Se in scena non c'e' pelle si usa la mediana (fascia 35-55, bersaglio 42).
 - **Il limite delle luci guarda il canale di colore piu' luminoso** del fotogramma peggiore (il 99° percentile non deve passare 97 IRE): il mare satura in verde
   mentre la luminanza e' ancora bassa. Con la luminanza sola, +1 stop bruciava il mare.
@@ -35,6 +35,14 @@ Tutti i numeri qui sotto stanno in `preset.json` (chiave `grade`): per cambiarli
   mancano (spiaggia) o si contraddicono tra i fotogrammi, lo scan lo dice e non propone niente. Si applica solo se lo chiedi: `grade-apply.py --wb` (guadagni dello scan)
   o `--wb-gains R,B` (tuoi), massimo ±12 %. Sulle tre clip vere: D-Log2 e Nano gia' neutre (scarto 1,3 % e 0,5 %), D-Log da spiaggia senza oggetti neutri.
 - Un frame con pochi neri veri (laguna luminosa) ha il 1° percentile alto: non e' un errore, non si segnala.
+
+## Il gusto di Jacopo (24/10/2026): meraviglioso, non realistico
+Jacopo vuole **esaltare la bellezza dei posti**, non rappresentare la realta': preferisce il suo grading veloce (acqua e cielo ciano molto vividi, "quasi finti")
+al naturale. Il suo grading e' stato misurato su due clip (acqua e cielo saturazione x1,9-2,3, pelle x1,2, pelle a 34-42 IRE, immagine piu' morbida della camera)
+e il look `jacopo-cinema` ne impara i colori con una **mappa colore** (`assets/looks/jacopo-chroma.npz`, 17^3 celle) sopra il contrasto cinema. `jacopo-cinema-wow`
+li esaspera (x1,5). Verificato su fotogrammi non usati nell'allenamento: errore di colore dal suo grading dimezzato rispetto al look a manopole (2,9/2,6 -> 1,4/1,4 su 255).
+Limite: la mappa conosce solo i colori delle sue due clip (589 celle su 4913); gli altri colori (rossi, gialli, interni) restano come li lascia il look.
+`--smooth 1|2` aggiunge una leggera riduzione del rumore prima della LUT (il suo grading e' piu' morbido della camera: nitidezza 0,37 contro 0,52).
 
 ## Limiti noti (da non scordare)
 - Una clip dove la pelle e' scura e il mare e' chiaro (es. D-Log, 23/10) non si schiarisce abbastanza: le luci non lasciano margine. Servirebbe una **maschera locale** o un

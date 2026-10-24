@@ -23,10 +23,10 @@
     "clip": 0.995,
     "crush": 0.02,
     "skin_band": [
-      0.5,
-      0.68
+      0.3,
+      0.5
     ],
-    "skin_target": 0.6,
+    "skin_target": 0.4,
     "median_band": [
       0.35,
       0.55
@@ -291,7 +291,7 @@
       },
       "jacopo-cinema": {
         "title": "Jacopo + cinema",
-        "desc": "Il tuo colore (acqua e cielo molto vivi, pelle naturale) sopra la profondita' del cinema (neri profondi, contrasto pieno). Adattato dal tuo grading veloce delle due clip del 23/10.",
+        "desc": "Il tuo colore (appreso dal tuo grading veloce: acqua e cielo ciano vividi, pelle naturale) sopra la profondita' del cinema (neri profondi, contrasto pieno).",
         "p": {
           "contrast": 0.55,
           "crush": 0.03,
@@ -310,7 +310,35 @@
             0.007,
             -0.008
           ],
-          "skin_sat": 0.702
+          "skin_sat": 0.702,
+          "chroma_map": "jacopo-chroma",
+          "chroma_gain": 1.0
+        }
+      },
+      "jacopo-cinema-wow": {
+        "title": "Jacopo + cinema WOW",
+        "desc": "Come 'Jacopo + cinema' ma con i suoi colori esasperati (x1,5): posti da cartolina, volutamente non realistici.",
+        "p": {
+          "contrast": 0.55,
+          "crush": 0.03,
+          "gamma": 1.04,
+          "sat": 0.924,
+          "vibrance": 0.27,
+          "sea_sat": 1.47,
+          "temp": -0.017,
+          "shadows": [
+            0.011,
+            -0.007,
+            -0.005
+          ],
+          "highlights": [
+            0.0,
+            0.007,
+            -0.008
+          ],
+          "skin_sat": 0.702,
+          "chroma_map": "jacopo-chroma",
+          "chroma_gain": 1.5
         }
       }
     },

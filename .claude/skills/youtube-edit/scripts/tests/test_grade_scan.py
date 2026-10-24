@@ -79,8 +79,8 @@ class GradeScan(unittest.TestCase):
             self.assertTrue(os.path.exists(os.path.join(gs.LUTS, fname)), "%s: LUT %s missing" % (key, fname))
         self.assertEqual(sorted(gs.PROFILES), ["dlog", "dlog2", "dlogm"])
         cfg = gs.load_cfg("no-such-preset")                   # a missing preset falls back to the built-in values
-        self.assertEqual(cfg["skin_band"], [0.50, 0.68])
-        self.assertEqual(gs.CFG["skin_target"], 0.60)
+        self.assertEqual(cfg["skin_band"], [0.30, 0.50])
+        self.assertEqual(gs.CFG["skin_target"], 0.40)
 
     def load_gs(self):
         import importlib.util

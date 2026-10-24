@@ -61,6 +61,28 @@ def sea_weight(rgb):
     return window(h, *SEA) * np.clip((s - 0.04) / 0.08, 0, 1) * np.clip((y - 0.10) / 0.10, 0, 1)   # turquoise water is pale: it is only a little coloured
 
 
+_MAPS = {}
+
+
+def chroma_delta(rgb, name, gain):
+    """A learned colour map (assets/looks/<name>.npz): shift the chroma of every colour by the amount the map holds. Luma is not touched."""
+    if name not in _MAPS:
+        _MAPS[name] = np.load(os.path.join(os.path.dirname(HERE), "assets", "looks", name + ".npz"))["grid"].astype(np.float32)
+    grid = _MAPS[name]
+    g = grid.shape[0]
+    lut = np.zeros((g, g, g, 3), np.float32)
+    lut[..., 0:2] = grid + 0.5                                     # stored with an offset so the 0-1 clamp of the lookup does not cut negative shifts
+    lut[..., 2] = 0.5
+    d = gs.apply_lut(rgb, (lut, 0.0, 1.0))[..., 0:2] - 0.5
+    y = gs.luma(rgb)
+    cb = (rgb[..., 2] - y) / 1.8556 + d[..., 0] * gain
+    cr = (rgb[..., 0] - y) / 1.5748 + d[..., 1] * gain
+    r = y + 1.5748 * cr
+    b = y + 1.8556 * cb
+    gch = (y - 0.2126 * r - 0.0722 * b) / 0.7152
+    return np.clip(np.stack([r, gch, b], axis=-1), 0, 1)
+
+
 def apply_look(rgb, p):
     x = np.clip(rgb.astype(np.float32), 0, 1)
     if not p:
@@ -103,7 +125,10 @@ def apply_look(rgb, p):
         s2 = 1 + (p.get("skin_sat", 1.0) - 1) * w
         x = yy + (x - yy) * s2
         x = x * (1 + (p.get("skin_luma", 1.0) - 1) * w)
-    return np.clip(x, 0, 1)
+    x = np.clip(x, 0, 1)
+    if p.get("chroma_map"):
+        x = chroma_delta(x, p["chroma_map"], p.get("chroma_gain", 1.0))
+    return x
 
 
 def tile(img, w, label, sub=""):
