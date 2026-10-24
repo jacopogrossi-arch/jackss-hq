@@ -29,19 +29,37 @@ from PIL import Image, ImageDraw
 HERE = os.path.dirname(os.path.abspath(__file__))
 LUTS = os.path.join(os.path.dirname(HERE), "assets", "luts")
 
-# profile -> (label, LUT file in assets/luts/). One entry per log curve, not per camera.
-PROFILES = {
-    "dlog2": ("D-Log2 (Osmo Pocket 4P)", "DJI-Pocket4P-DLog2-to-Rec709-size65.cube"),
-    "dlog": ("D-Log (Osmo Pocket 4P)", "DJI-Pocket4P-DLog-to-Rec709-V2.0-size33.cube"),
-    "dlogm": ("D-Log M (Osmo Nano)", "DJI-OsmoNano-DLogM-to-Rec709-V1.cube"),
+# Every tunable value lives in presets/vacanze-grading/preset.json ("grade"); these are the same values, used if the file is missing.
+DEFAULTS = {
+    "luts": {
+        "dlog2": ["D-Log2 (Osmo Pocket 4P)", "DJI-Pocket4P-DLog2-to-Rec709-size65.cube"],
+        "dlog": ["D-Log (Osmo Pocket 4P)", "DJI-Pocket4P-DLog-to-Rec709-V2.0-size33.cube"],
+        "dlogm": ["D-Log M (Osmo Nano)", "DJI-OsmoNano-DLogM-to-Rec709-V1.cube"],
+    },
+    "zebra": 0.95, "clip": 0.995, "crush": 0.02,
+    "skin_band": [0.50, 0.68], "skin_target": 0.60, "median_band": [0.35, 0.55], "median_target": 0.42,
+    "highlight_ceiling": 0.97, "max_stops_scan": 1.5, "max_stops_apply": 2.0,
 }
+
+
+def load_cfg(preset="vacanze-grading"):
+    cfg = json.loads(json.dumps(DEFAULTS))
+    path = os.path.join(os.path.dirname(HERE), "presets", preset, "preset.json")
+    if os.path.exists(path):
+        with open(path, encoding="utf8") as fh:
+            cfg.update(json.load(fh).get("grade", {}))
+    return cfg
+
+
+CFG = load_cfg()
+# profile -> (label, LUT file in assets/luts/). One entry per log curve, not per camera.
+PROFILES = {k: tuple(v) for k, v in CFG["luts"].items()}
 # camera name found in the metadata -> the profiles it can record
 CAMERAS = {"nano": ["dlogm"], "pocket 4p": ["dlog", "dlog2"], "pocket4p": ["dlog", "dlog2"]}
 
 W_STATS = 960            # decode width for the measurements
-ZEBRA_HI, ZEBRA_CLIP, CRUSH = 0.95, 0.995, 0.02
-TARGET_MID = 0.42        # graded median luma the exposure proposal aims at (Rec.709 signal, 0-1)
-MAX_STOPS = 1.5
+ZEBRA_HI, ZEBRA_CLIP, CRUSH = CFG["zebra"], CFG["clip"], CFG["crush"]
+MAX_STOPS = CFG["max_stops_scan"]
 GAMMA_APPLY = 2.4        # exposure is a gain on the graded signal: code x 2**(stops / 2.4), the same law grade-apply.py uses
 
 
@@ -195,16 +213,16 @@ def propose(graded_stats):
     otherwise on the median. Inside the band nothing is proposed."""
     skin = [s["skin_luma"] for s in graded_stats if s["skin_luma"] is not None and s["skin_frac"] >= 0.01]
     if len(skin) >= max(2, len(graded_stats) // 3):
-        anchor, kind, lo, hi, centre = float(np.median(skin)), "skin", 0.50, 0.68, 0.60
+        anchor, kind, (lo, hi), centre = float(np.median(skin)), "skin", CFG["skin_band"], CFG["skin_target"]
     else:
-        anchor, kind, lo, hi, centre = float(np.mean([s["median"] for s in graded_stats])), "median", 0.35, 0.55, 0.42
+        anchor, kind, (lo, hi), centre = float(np.mean([s["median"] for s in graded_stats])), "median", CFG["median_band"], CFG["median_target"]
     if lo <= anchor <= hi:
         stops, why = 0.0, "%s at %.0f IRE, inside the %.0f-%.0f band: no exposure change" % (kind, anchor * 100, lo * 100, hi * 100)
     else:
         stops = math.log2(lin(centre) / lin(anchor))
         why = "%s at %.0f IRE, outside the %.0f-%.0f band: aim at %.0f IRE" % (kind, anchor * 100, lo * 100, hi * 100, centre * 100)
-    worst = max(s["pmax99"] for s in graded_stats)          # worst frame, brightest channel: the top 1 % must stay under 97 IRE
-    room = math.log2(0.97 / max(worst, 1e-3)) * GAMMA_APPLY
+    worst = max(s["pmax99"] for s in graded_stats)          # worst frame, brightest channel: the top 1 % must stay under the highlight ceiling
+    room = math.log2(CFG["highlight_ceiling"] / max(worst, 1e-3)) * GAMMA_APPLY
     if stops > room:
         stops = min(stops, room)
         why += "; held back to protect the highlights (in the worst frame the brightest 1 %% of a colour channel reaches %.0f IRE)" % (worst * 100)
@@ -217,7 +235,7 @@ def propose(graded_stats):
         warm = cr > 0 and cb < 0
         cool = cb > 0 and cr < 0
         tend = "warm" if warm else "cool" if cool else "tinted (%s%s)" % ("red/magenta " if cr > 0 else "green ", "blue" if cb > 0 else "yellow")
-    return {"exposure_stops": round(stops, 2), "exposure_anchor": kind, "exposure_anchor_ire": round(anchor * 100, 1), "exposure_why": why,
+    return {"exposure_stops": round(stops, 2), "exposure_anchor": kind, "exposure_anchor_ire": round(anchor * 100, 1), "band": [lo, hi], "target": centre, "exposure_why": why,
             "wb_tendency": tend, "wb_offset": round(mag, 3),
             "wb_note": "Estimated from the average colour: a scene full of sea, sky or sand leans that way on purpose. "
                        "Judge it by eye and on the vectorscope, never apply it blindly."}

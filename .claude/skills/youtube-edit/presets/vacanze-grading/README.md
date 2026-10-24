@@ -1,0 +1,45 @@
+# Preset `vacanze-grading` — grading scientifico dei video vacanza di Jacopo
+
+Secondo tipo di montaggio di Jacopo (idea del 23/10/2026). **Solo grading**: niente tagli, grafiche, suoni o musica (per ora). Vale per le clip girate
+in log con le camere DJI di Jacopo. Non si usa con `compose.py`: si usa con `grade-scan.py` e `grade-apply.py` (cartella `scripts/`).
+Tutti i numeri qui sotto stanno in `preset.json` (chiave `grade`): per cambiarli si cambia una riga, non il codice.
+
+## Quale camera, quale profilo, quale LUT
+
+| Camera | Profilo | Come lo riconosciamo | LUT (`assets/luts/`) |
+|---|---|---|---|
+| Osmo Pocket 4P | D-Log2 | tag `com.dji.camera.ColorGammaSxS` = D-Log2 (anche negli export di DJI Mimo) | `DJI-Pocket4P-DLog2-to-Rec709-size65.cube` |
+| Osmo Pocket 4P | D-Log | stesso tag = D-Log | `DJI-Pocket4P-DLog-to-Rec709-V2.0-size33.cube` |
+| Osmo Nano | D-Log M | il file porta solo il modello: "probabile", confermato solo se la LUT aggiunge colore | `DJI-OsmoNano-DLogM-to-Rec709-V1.cube` |
+
+- **Mai incrociare** D-Log, D-Log2 e D-Log M: sono tre curve diverse. Se il profilo non e' certo, `grade-apply.py` rifiuta di lavorare.
+- Per usare un'altra versione (V1.0 invece di V2.0, o la vivid) basta cambiare il nome del file in `preset.json` → `grade.luts`.
+- Un'altra camera in log (drone, Action...) richiede la sua LUT ufficiale DJI e una riga nuova in `grade.luts`.
+
+## Il metodo (sempre in questo ordine)
+1. **Scan:** `grade-scan.py --video clip --out cartella`. Misura 12 fotogrammi: zebra a 95 IRE e sulle luci bruciate, neri schiacciati, mediana, pelle,
+   waveform, vectorscope, istogramma. Scrive `REPORT.md`, `scopes-sheet.png` e una **proposta** di esposizione. Non cambia niente.
+2. **Anteprima:** `grade-apply.py --video clip --scan cartella/report.json --out cartella2` (senza `--render`). Tre colonne: log come girato / solo LUT /
+   LUT piu' esposizione con zebra, piu' gli scope. Nessun video scritto. **Jacopo guarda e approva** (o dice un altro valore con `--stops`).
+3. **Render:** stesso comando con `--render`. 4K, HEVC 10 bit, la scheda video se c'e'. Poi il file viene **riletto e misurato**: deve coincidere con la
+   previsione, non avere luci bruciate (max 1 %) ne' neri schiacciati (max 5 %), e la pelle deve essere piu' vicina alla fascia di prima. `CHECK.md`: PASS o FAIL.
+
+## Regole imparate sulle clip vere (23/10/2026)
+- **L'esposizione si ancora sulla pelle** (fascia 50-68 IRE, bersaglio 60), non sulla mediana: una spiaggia luminosa faceva proporre -1,5 stop a una clip gia' giusta.
+  Se in scena non c'e' pelle si usa la mediana (fascia 35-55, bersaglio 42).
+- **Il limite delle luci guarda il canale di colore piu' luminoso** del fotogramma peggiore (il 99° percentile non deve passare 97 IRE): il mare satura in verde
+  mentre la luminanza e' ancora bassa. Con la luminanza sola, +1 stop bruciava il mare.
+- **L'esposizione e' un guadagno sul segnale gia' graduato** (codice x 2^(stop/2.4)), mai sul log. Massimo ±2 stop: oltre non e' un grading, e' da rigirare (limite di ffmpeg incluso).
+- **Il bilanciamento del bianco e' solo una tendenza** stimata dal colore medio: una scena di mare o sabbia pende da quella parte di proposito. Si giudica a occhio e sul
+  vectorscope, mai applicata alla cieca.
+- Un frame con pochi neri veri (laguna luminosa) ha il 1° percentile alto: non e' un errore, non si segnala.
+
+## Limiti noti (da non scordare)
+- Una clip dove la pelle e' scura e il mare e' chiaro (es. D-Log, 23/10) non si schiarisce abbastanza: le luci non lasciano margine. Servirebbe una **maschera locale** o un
+  **roll-off morbido delle luci**: non fatti.
+- Il bilanciamento del bianco non e' ancora una correzione applicata. Idea: partire dai Kelvin scelti in camera (`WhiteBalanceKelvin`, `WhiteBalanceTintCc` nei metadati).
+- Nessun "look" (caldo mediterraneo, filmico...) e' ancora stato scelto: quando si fa, con il test A/B alla cieca della skill.
+
+## Verificato su
+Tre clip vere di Jacopo (23/10/2026): Pocket 4P D-Log (11,6 s), Pocket 4P D-Log2 (30,7 s), Osmo Nano D-Log M (9,2 s, arena al chiuso). Il file renderizzato coincide con la
+previsione entro 0,2 IRE. Le clip stanno in `videos/_grade-test/` (fuori da GitHub).

@@ -71,6 +71,9 @@ is, subtitle mode, and its taste rules). The creator will add editing types over
   own `style` key by key (the storyboard wins); `subtitles`, `formats`, `transitions` and `sound` become defaults the later steps read.
 - Shipped: **`elegante-portfolio`** (Jacopo's first editing type: warm dark, Inter + Playfair Display Italic, `trail` / `gallery` / `orbit` / `annotate`
   with `follow`; palette still provisional).
+- Shipped: **`vacanze-grading`** (Jacopo's second editing type, 23/10/2026: a *grading-only* preset for log clips from his DJI cameras. It has no overlays and
+  does not go through `compose.py`; its `grade` key holds every threshold and the LUT per profile for `grade-scan.py` and `grade-apply.py`; method and
+  limits in its README).
 - **Where a rule goes.** A rule that holds for every look (seek-safe motion, anchors, render traps, loudness) stays in this file. A rule of
   *taste* (no halo ring, serif key words, glow on plain backgrounds, a page rests then the camera pulls back) belongs to the preset README: in
   the "Explainer formats" section of `references/formats.md`, every rule marked "creator" is the `elegante-portfolio` preset's taste, not a law of the engine.
@@ -251,7 +254,7 @@ the proposal, run `grade-apply.py` without `--render` for the before/after previ
 clips (23/10/2026): exposure is anchored on **skin**, not on the median (a bright beach fooled the median); the highlight limit looks at the brightest
 **colour channel** of the worst frame (sea and sky clip in green or blue while luma is still low); a gain above x2 is refused (ffmpeg limit); the exposure is a gain on the graded
 signal (code x 2^(stops/2.4)), never on the log signal; lifting a subject that the highlights do not leave room for needs a local mask, which these scripts do not do.
-LUTs per profile are in `assets/luts/` (CREDITS.md): never cross D-Log, D-Log2 and D-Log M.
+LUTs per profile and every threshold are in `presets/vacanze-grading/preset.json` (`grade`; LUT files in `assets/luts/`, CREDITS.md): never cross D-Log, D-Log2 and D-Log M.
 
 **Log footage (DJI Osmo Pocket 4P, D-Log2):** the official LUTs are in `assets/luts/` (`DJI-Pocket4P-DLog2-to-Rec709-size65.cube` is the one to use; D-Log2 is not D-Log: never mix them). Apply it with `apply-cut.py --lut`, only on camera clips, never on stills or B-roll. Phone exports from DJI Mimo stay in D-Log2 too. Run ffmpeg from the project folder with a relative `lut.cube` or let apply-cut escape the path (a Windows `D:` path breaks `lut3d` otherwise).
 

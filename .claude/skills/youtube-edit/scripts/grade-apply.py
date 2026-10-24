@@ -32,7 +32,7 @@ spec.loader.exec_module(gs)
 GAMMA = 2.4
 TOL_PRED = 0.015         # measured vs predicted luma, mean absolute, 1.5 IRE (compression and 8/10 bit round-trips)
 MAX_CLIP, MAX_CRUSH = 0.01, 0.05
-MAX_STOPS = 2.0          # ffmpeg's colorchannelmixer takes a gain up to x2 (= 2.4 stops); stay clear of it
+MAX_STOPS = gs.CFG["max_stops_apply"]   # ffmpeg's colorchannelmixer takes a gain up to x2 (= 2.4 stops); stay clear of it
 
 
 def gain(stops):
@@ -197,9 +197,10 @@ def main():
     check(crush <= MAX_CRUSH, "crushed blacks %.2f %% of the picture (limit %.0f %%)" % (crush * 100, MAX_CRUSH * 100))
     if skin and before.get("exposure_anchor") == "skin":
         sk = float(np.median(skin)) * 100
-        lo, hi = 50, 68
+        lo, hi = [round(x * 100) for x in before.get("band", gs.CFG["skin_band"])]
+        centre = before.get("target", gs.CFG["skin_target"]) * 100
         was = before["exposure_anchor_ire"]
-        moved_right = (lo <= sk <= hi) or abs(sk - 60) < abs(was - 60)
+        moved_right = (lo <= sk <= hi) or abs(sk - centre) < abs(was - centre)
         check(moved_right, "skin at %.0f IRE (was %.0f, band %d-%d)" % (sk, was, lo, hi))
         if not lo <= sk <= hi:
             lines.append("- INFO skin is still outside the band: the highlights leave no room to lift the whole picture. "

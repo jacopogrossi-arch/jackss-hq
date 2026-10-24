@@ -70,6 +70,18 @@ class GradeScan(unittest.TestCase):
         p = gs.propose([st, st, st])
         self.assertEqual(p["exposure_anchor"], "skin")
 
+    def test_preset_names_real_luts_and_drives_the_thresholds(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("grade_scan", os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "grade-scan.py"))
+        gs = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(gs)
+        for key, (label, fname) in gs.PROFILES.items():
+            self.assertTrue(os.path.exists(os.path.join(gs.LUTS, fname)), "%s: LUT %s missing" % (key, fname))
+        self.assertEqual(sorted(gs.PROFILES), ["dlog", "dlog2", "dlogm"])
+        cfg = gs.load_cfg("no-such-preset")                   # a missing preset falls back to the built-in values
+        self.assertEqual(cfg["skin_band"], [0.50, 0.68])
+        self.assertEqual(gs.CFG["skin_target"], 0.60)
+
 
 if __name__ == "__main__":
     unittest.main()

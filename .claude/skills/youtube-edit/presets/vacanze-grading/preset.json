@@ -1,0 +1,24 @@
+{
+  "name": "vacanze-grading",
+  "title": "Vacanze / grading scientifico (Jacopo, clip in log)",
+  "kind": "grade",
+  "description": "Solo grading: clip girate in D-Log, D-Log2 o D-Log M, misurate con zebra, istogramma, waveform e vectorscope, graduate con la LUT ufficiale DJI piu' una correzione di esposizione approvata da Jacopo. Niente tagli, grafiche o suoni.",
+  "style": {},
+  "grade": {
+    "luts": {
+      "dlog2": ["D-Log2 (Osmo Pocket 4P)", "DJI-Pocket4P-DLog2-to-Rec709-size65.cube"],
+      "dlog": ["D-Log (Osmo Pocket 4P)", "DJI-Pocket4P-DLog-to-Rec709-V2.0-size33.cube"],
+      "dlogm": ["D-Log M (Osmo Nano)", "DJI-OsmoNano-DLogM-to-Rec709-V1.cube"]
+    },
+    "zebra": 0.95,
+    "clip": 0.995,
+    "crush": 0.02,
+    "skin_band": [0.50, 0.68],
+    "skin_target": 0.60,
+    "median_band": [0.35, 0.55],
+    "median_target": 0.42,
+    "highlight_ceiling": 0.97,
+    "max_stops_scan": 1.5,
+    "max_stops_apply": 2.0
+  }
+}
