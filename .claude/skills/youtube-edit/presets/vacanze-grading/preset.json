@@ -317,7 +317,7 @@
       },
       "jacopo-cinema-wow": {
         "title": "Jacopo + cinema WOW",
-        "desc": "Come 'Jacopo + cinema' ma con i suoi colori esasperati (x1,5): posti da cartolina, volutamente non realistici.",
+        "desc": "Come 'Jacopo + cinema' ma con acqua, cielo e pelle molto piu' vividi (un secondo passaggio di colore): posti da cartolina, volutamente non realistici.",
         "p": {
           "contrast": 0.55,
           "crush": 0.03,
@@ -338,7 +338,13 @@
           ],
           "skin_sat": 0.702,
           "chroma_map": "jacopo-chroma",
-          "chroma_gain": 1.5
+          "chroma_gain": 1.0,
+          "wow": {
+            "sat": 1.08,
+            "vibrance": 0.35,
+            "sea_sat": 1.45,
+            "skin_sat": 1.15
+          }
         }
       }
     },

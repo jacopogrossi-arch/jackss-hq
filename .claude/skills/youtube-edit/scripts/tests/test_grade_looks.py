@@ -83,9 +83,20 @@ class GradeLooks(unittest.TestCase):
     def test_jacopo_looks_are_in_the_preset(self):
         looks = self.gl.gs.CFG["looks"]
         self.assertEqual(looks["jacopo-cinema"]["p"]["chroma_map"], "jacopo-chroma")
-        self.assertGreater(looks["jacopo-cinema-wow"]["p"]["chroma_gain"], looks["jacopo-cinema"]["p"]["chroma_gain"])
+        self.assertIn("wow", looks["jacopo-cinema-wow"]["p"])                                     # the WOW is a real second colour pass, not a bigger gain on a near-zero correction
         lo, hi = self.gl.gs.CFG["skin_band"]
         self.assertLess(hi, 0.55)                                                               # his skin sits at 34-42 IRE: the exposure band follows it
+
+    def test_wow_adds_colour_to_water_and_skin_without_touching_light(self):
+        gl = self.gl
+        looks = gl.gs.CFG["looks"]
+        water, skin = flat((0.45, 0.70, 0.68)), flat((0.62, 0.45, 0.35))
+        sat = lambda a: float(np.abs(a - gl.gs.luma(a)[..., None]).max(axis=-1).mean())
+        for c in (water, skin):
+            plain = gl.apply_look(c, looks["jacopo-cinema"]["p"])
+            wow = gl.apply_look(c, looks["jacopo-cinema-wow"]["p"])
+            self.assertGreater(sat(wow), sat(plain) * 1.05)                                       # clearly more colour
+            self.assertTrue(np.allclose(gl.gs.luma(wow), gl.gs.luma(plain), atol=0.03))           # about the same light
 
 
 if __name__ == "__main__":

@@ -128,6 +128,8 @@ def apply_look(rgb, p):
     x = np.clip(x, 0, 1)
     if p.get("chroma_map"):
         x = chroma_delta(x, p["chroma_map"], p.get("chroma_gain", 1.0))
+    if p.get("wow"):                                              # a second pass on the finished look: more colour where Jacopo wants it (water, sky, skin), same light
+        x = apply_look(x, p["wow"])
     return x
 
 
