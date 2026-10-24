@@ -2184,9 +2184,21 @@ for b in S.get("beats", []):
     elif t in ("transition", "overlay"):
         # fx (formats/fx.py): flash / dip / whip / zoomblur / glitch / lightleak / burn / shake, and vignette / grain overlays
         f_in, f_out = fx.window(b)
+        leak = fx.real_leak(b)          # a real light leak from the local packs (A/B 24/10/2026), else the coded wash
+        if leak:
+            b["_real"] = True
+            clip = os.path.join(OUT, "fx", "leak%s.mp4" % leak["name"])
+            if not os.path.exists(clip):
+                import subprocess
+                os.makedirs(os.path.dirname(clip), exist_ok=True)
+                subprocess.run(["ffmpeg", "-y", "-v", "error", "-ss", str(leak["start"]), "-t", str(leak["dur"]), "-i", leak["path"], "-an",
+                                "-vf", "fps=30,scale=1920:1080,setsar=1", "-c:v", "libx264", "-crf", "18", "-preset", "fast", "-g", "15", "-keyint_min", "15",
+                                "-pix_fmt", "yuv420p", "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709", "-movflags", "+faststart", clip], check=True)
         inner = (fx.transition if t == "transition" else fx.overlay)(b, bid, js, S.get("style"))
         h = host(bid, f_in, f_out, track, inner, anchor).replace('class="card-host clip"', 'class="card-host clip fx-host%s"' % (" screen" if fx.blend(b) else ""), 1)
         html_parts.append(h)
+        if leak:
+            html_parts.append(fx.leak_video(b, bid, leak, 200 + track, js))
     else:
         raise SystemExit("unknown beat type %r" % t)
     track += 1

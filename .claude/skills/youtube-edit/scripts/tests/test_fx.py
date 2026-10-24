@@ -1,17 +1,17 @@
 """fx.py transitions/overlays and the sound cues (assets/sfx/cues.json) wired into compose.py."""
-import os, unittest
-from .helpers import run, scratch, write, read, load
+import os, subprocess, unittest
+from .helpers import needs_ffmpeg, run, scratch, write, read, load
 
 KINDS = ["flash", "whip", "zoomblur", "lightleak", "burn"]
 
 
-def build(test, beats, extra=None, preset=True):
+def build(test, beats, extra=None, preset=True, env=None):
     d = scratch(test)
     spec = {"id": "t", "duration": 20.0, "beats": beats}
     if preset:
         spec["preset"] = "elegante-portfolio"
     spec.update(extra or {})
-    r = run("compose.py", "--spec", write(os.path.join(d, "s.json"), spec), "--out", os.path.join(d, "public"))
+    r = run("compose.py", "--spec", write(os.path.join(d, "s.json"), spec), "--out", os.path.join(d, "public"), env=env)
     test.assertEqual(r.returncode, 0, r.stdout + r.stderr)
     return read(os.path.join(d, "public", "index.html")), os.path.join(d, "public")
 
@@ -59,6 +59,31 @@ class Transitions(unittest.TestCase):
         spec = {"id": "t", "duration": 5.0, "beats": [{"type": "transition", "id": "z", "kind": "nope", "at": 2.0, "anchor": "-"}]}
         r = run("compose.py", "--spec", write(os.path.join(d, "s.json"), spec), "--out", os.path.join(d, "public"))
         self.assertNotEqual(r.returncode, 0)
+
+
+@needs_ffmpeg
+class RealLightLeak(unittest.TestCase):
+    """A/B of 24/10/2026: a real leak from the local packs beats the coded wash; without the packs the coded wash stays."""
+    def packs(self):
+        d = scratch(self)
+        os.makedirs(os.path.join(d, "light-leaks"))
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "lavfi", "-i", "color=c=orange:s=320x180:r=60:d=4", "-pix_fmt", "yuv420p",
+                        os.path.join(d, "light-leaks", "Light Leaks (5).mp4")], check=True)
+        return d
+
+    def test_real_leak_when_the_pack_exists(self):
+        page, pub = build(self, [{"type": "transition", "id": "w", "kind": "lightleak", "at": 5.0, "anchor": "-"}], env={"YTE_PACKS": self.packs()})
+        self.assertIn('<video class="fx-leak" id="w-leak" src="fx/leak05.mp4"', page)
+        self.assertIn('data-start="4.200"', page)                   # its gold peak (0.8 s in) lands on the cut at 5.0
+        self.assertNotIn('class="fx-sun"', page)                    # the coded light is off
+        self.assertEqual(page.count("<audio"), 1)                   # the transition keeps its sound
+        self.assertTrue(os.path.getsize(os.path.join(pub, "fx", "leak05.mp4")) > 0)
+
+    def test_coded_wash_without_packs_or_when_forced(self):
+        page, _ = build(self, [{"type": "transition", "id": "w", "kind": "lightleak", "at": 5.0, "anchor": "-"}])
+        self.assertNotIn("fx-leak\" id=", page); self.assertIn('class="fx-sun"', page)
+        page, _ = build(self, [{"type": "transition", "id": "w", "kind": "lightleak", "at": 5.0, "anchor": "-", "leak": None}], env={"YTE_PACKS": self.packs()})
+        self.assertNotIn('id="w-leak"', page); self.assertIn('class="fx-sun"', page)
 
 
 if __name__ == "__main__":

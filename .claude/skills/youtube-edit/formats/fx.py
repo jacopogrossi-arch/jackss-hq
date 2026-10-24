@@ -6,10 +6,39 @@ GSAP (tweens and sets with explicit times); the hosts sit above the graphics (z-
 blended with `screen` on the host itself, so they add light to the picture instead of painting over it.
 All the kinds act on #video-wrap (the footage) except the overlays; they never touch the graphics in the studio layer.
 """
-import hashlib, random
+import hashlib, os, random
 
 DEFAULT_DUR = {"flash": 0.34, "whip": 0.42, "zoomblur": 0.46, "lightleak": 1.1, "burn": 0.9}
 BLEND = {"lightleak", "burn"}
+
+# Real light leaks (won the blind A/B of 24/10/2026 on the `processo` bench against the coded wash: "molto piu smooth e fluidi").
+# They live in the local packs (assets/packs/light-leaks/, git-ignored, see assets/packs/README.md): when the file is missing
+# the transition falls back to the coded wash, so nothing public depends on them. Each entry: the source file, the stretch used
+# (start, dur: the part that stays GOLD, never the near-white or red parts), the second of that stretch where its glow peaks
+# (it lands on the cut) and the opacity (a near-white leak at 0.9 blew the frame out; 0.6 went grey/olive).
+REAL_LEAKS = {"05": {"file": "Light Leaks (5).mp4", "start": 1.2, "dur": 1.6, "peak": 0.8, "op": 0.85, "fade_in": 0.45, "hold": 0.30, "fade_out": 0.50}}
+DEFAULT_LEAK = "05"
+PACKS = os.environ.get("YTE_PACKS") or os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets", "packs")
+
+
+def real_leak(b):
+    """The REAL_LEAKS entry a lightleak beat uses, or None (coded wash): "leak": null forces the coded one."""
+    if b.get("type") != "transition" or b.get("kind") != "lightleak" or b.get("leak", DEFAULT_LEAK) is None:
+        return None
+    spec = REAL_LEAKS.get(str(b.get("leak", DEFAULT_LEAK)))
+    if not spec or not os.path.exists(os.path.join(PACKS, "light-leaks", spec["file"])):
+        return None
+    return dict(spec, name=str(b.get("leak", DEFAULT_LEAK)), path=os.path.join(PACKS, "light-leaks", spec["file"]))
+
+
+def leak_video(b, bid, spec, track, js):
+    """The root-level <video> of a real leak (a video must be a direct child of the root) blended screen above everything,
+    its glow peak on the cut. The clip file is fx/leak<name>.mp4 in public/ (compose conforms it)."""
+    at = float(b["at"]); v0 = at - spec["peak"]; op = float(b.get("leak_op", spec["op"]))
+    js("tl.fromTo('#%s-leak', { opacity: 0 }, { opacity: %.2f, duration: %.3f, ease: 'power2.in' }, %.3f);" % (bid, op, spec["fade_in"], v0))
+    js("tl.fromTo('#%s-leak', { opacity: %.2f }, { opacity: 0, duration: %.3f, ease: 'power2.inOut', immediateRender: false }, %.3f);" % (bid, op, spec["fade_out"], at + spec["hold"]))
+    return ('    <video class="fx-leak" id="%s-leak" src="fx/leak%s.mp4" muted playsinline data-start="%.3f" data-duration="%.3f" data-track-index="%d"></video>\n'
+            % (bid, spec["name"], v0, spec["dur"], track))
 
 
 def dur_of(b):
@@ -34,6 +63,7 @@ def css(style=None):
   /* fx: transitions and overlays (formats/fx.py) */
   .fx-host { z-index:60; }
   .fx-host.screen { mix-blend-mode:screen; }
+  .fx-leak { position:absolute; left:0; top:0; width:1920px; height:1080px; object-fit:cover; z-index:61; mix-blend-mode:screen; opacity:0; pointer-events:none; }
   .fx-fill { position:absolute; inset:0; opacity:0; }
   .fx-streak { position:absolute; top:-10%; height:120%; width:520px; left:-700px; opacity:0; transform:skewX(-16deg);
     background:linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.55) 45%, rgba(255,255,255,.9) 50%, rgba(255,255,255,.55) 55%, rgba(255,255,255,0)); }
@@ -80,6 +110,12 @@ def transition(b, bid, js, style=None):
         js("tl.fromTo('#%s-f', { opacity: 0 }, { opacity: %.2f, duration: 0.06, ease: 'power2.out' }, %.3f);" % (bid, float(b.get("strength", 0.4)), at - 0.03))
         js("tl.to('#%s-f', { opacity: 0, duration: %.3f, ease: 'power2.in' }, %.3f);" % (bid, h, at + 0.03))
         return '<div class="fx-fill" id="%s-f" style="background:%s"></div>' % (bid, _color(b, style, "white"))
+    if k == "lightleak" and b.get("_real"):
+        # a real leak carries the light (compose adds its <video>); this host keeps only the footage lift of the coded one
+        pk = at; h = d / 2
+        js("tl.fromTo('%s', { filter: 'brightness(1) saturate(1)' }, { filter: 'brightness(1.5) saturate(1.1)', duration: %.3f, ease: 'power2.in', immediateRender: false }, %.3f);" % (W, h * 0.8, pk - h * 0.8))
+        js("tl.to('%s', { filter: 'brightness(1) saturate(1)', duration: %.3f, ease: 'power2.out' }, %.3f);" % (W, h * 1.0, pk + 0.05))
+        return ''
     if k == "lightleak":
         # a soft warm wash from one edge: ONE smooth full-frame flood (no blurred blobs, no flicker: those read as glitches), peaking on the cut,
         # plus one soft highlight that drifts across it; the footage lifts a little in brightness while it builds (same timing as burn).

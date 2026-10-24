@@ -7,8 +7,12 @@ HAS_FFMPEG = bool(shutil.which("ffmpeg") and shutil.which("ffprobe"))
 needs_ffmpeg = unittest.skipUnless(HAS_FFMPEG, "ffmpeg / ffprobe not on PATH")
 
 
-def run(script, *args):
-    return subprocess.run([sys.executable, os.path.join(SCRIPTS, script)] + [str(a) for a in args], capture_output=True, text=True)
+def run(script, *args, env=None):
+    """env: extra environment variables. YTE_PACKS defaults to a folder that does not exist, so the local editing packs
+    (assets/packs/, git-ignored) never change a test's result on the creator's machine."""
+    e = dict(os.environ, YTE_PACKS=os.path.join(SCRIPTS, "tests", "_no_packs_"))
+    e.update(env or {})
+    return subprocess.run([sys.executable, os.path.join(SCRIPTS, script)] + [str(a) for a in args], capture_output=True, text=True, env=e)
 
 
 def scratch(test):

@@ -24,7 +24,12 @@ Only sounds from those two libraries go there; a shared pack's file of unknown o
 **Transitions (`formats/fx.py`):** beat `{"type":"transition","id":..,"kind":..,"at":t,"dur":?,"color":?}` with kind
 flash | whip | zoomblur | lightleak | burn (glitch, shake and dip were tried and REJECTED by Jacopo: not in the library). **A transition covers a CHANGE OF SCENE, with the peak ON the first frame of the new scene** (face -> effect -> the page/graphic; never face -> effect -> same face, with the real scene change coming later: Jacopo's note 20/10). Use `"scene": "<beat id>"` (+ optional `"offset"`) instead of a hand-typed `at`; compose warns when a transition is not within 0.4 s of a graphic starting or ending. `at` is the instant of the cut (the effect peaks
 there; it dresses a cut the edit already makes). `{"type":"overlay","kind":"vignette"|"grain","in","out","opacity"}` for looks that
-stay on a stretch. **Rare and only at scene changes** (from one scene or clip to the next), never mid-sentence; the preset sets kinds and density (`transitions.density`, `max_per_minute`).
+stay on a stretch. **`lightleak` uses a REAL light leak** (won the blind A/B of 24/10/2026 on the `processo` bench, creator: "molto piu
+smooth e fluidi"): `fx.REAL_LEAKS` names the clip from the local packs (default `05`: the golden 1.2-2.8 s of `Light Leaks (5).mp4`,
+peak 0.8 s in, on the cut, opacity 0.85, fade in 0.45 s, out from cut + 0.3 s over 0.5 s); compose conforms it to `public/fx/leak05.mp4`,
+puts it as a root `<video>` blended `screen`, and keeps the transition's sound and footage lift. Only gold stretches of a leak: a
+near-white leak at 0.9 burnt the frame to white, at 0.6 it went grey and olive. Without the packs (another machine) or with
+`"leak": null` it falls back to the coded wash. A new leak in `REAL_LEAKS` needs its own A/B. **Rare and only at scene changes** (from one scene or clip to the next), never mid-sentence; the preset sets kinds and density (`transitions.density`, `max_per_minute`).
 
 | Sound | Allowed on | Volume | Never on |
 |---|---|---|---|
