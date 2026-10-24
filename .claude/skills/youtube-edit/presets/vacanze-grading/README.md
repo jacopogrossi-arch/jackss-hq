@@ -30,14 +30,17 @@ Tutti i numeri qui sotto stanno in `preset.json` (chiave `grade`): per cambiarli
 - **Il limite delle luci guarda il canale di colore piu' luminoso** del fotogramma peggiore (il 99° percentile non deve passare 97 IRE): il mare satura in verde
   mentre la luminanza e' ancora bassa. Con la luminanza sola, +1 stop bruciava il mare.
 - **L'esposizione e' un guadagno sul segnale gia' graduato** (codice x 2^(stop/2.4)), mai sul log. Massimo ±2 stop: oltre non e' un grading, e' da rigirare (limite di ffmpeg incluso).
-- **Il bilanciamento del bianco e' solo una tendenza** stimata dal colore medio: una scena di mare o sabbia pende da quella parte di proposito. Si giudica a occhio e sul
-  vectorscope, mai applicata alla cieca.
+- **Il bilanciamento del bianco si misura solo su oggetti quasi neutri** (nuvole, barca bianca, muro grigio: colore sotto 0,02, luminosita' 45-92 %, almeno l'1 % del fotogramma),
+  mai sul colore medio: il mare e il cielo sono colorati di proposito. Con la soglia larga (0,06) lo scan "correggeva" del 9 % il blu della laguna. Se gli oggetti neutri
+  mancano (spiaggia) o si contraddicono tra i fotogrammi, lo scan lo dice e non propone niente. Si applica solo se lo chiedi: `grade-apply.py --wb` (guadagni dello scan)
+  o `--wb-gains R,B` (tuoi), massimo ±12 %. Sulle tre clip vere: D-Log2 e Nano gia' neutre (scarto 1,3 % e 0,5 %), D-Log da spiaggia senza oggetti neutri.
 - Un frame con pochi neri veri (laguna luminosa) ha il 1° percentile alto: non e' un errore, non si segnala.
 
 ## Limiti noti (da non scordare)
 - Una clip dove la pelle e' scura e il mare e' chiaro (es. D-Log, 23/10) non si schiarisce abbastanza: le luci non lasciano margine. Servirebbe una **maschera locale** o un
   **roll-off morbido delle luci**: non fatti.
-- Il bilanciamento del bianco non e' ancora una correzione applicata. Idea: partire dai Kelvin scelti in camera (`WhiteBalanceKelvin`, `WhiteBalanceTintCc` nei metadati).
+- Il bianco corretto dagli oggetti neutri e' solo una proposta: un tramonto caldo o un'ombra blu non sono dominanti. I Kelvin scelti in camera (`WhiteBalanceKelvin`, `WhiteBalanceTintCc`
+  nei metadati) per ora sono solo letti, non usati.
 - Nessun "look" (caldo mediterraneo, filmico...) e' ancora stato scelto: quando si fa, con il test A/B alla cieca della skill.
 
 ## Verificato su

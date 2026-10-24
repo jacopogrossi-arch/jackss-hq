@@ -38,7 +38,8 @@ DEFAULTS = {
     },
     "zebra": 0.95, "clip": 0.995, "crush": 0.02,
     "skin_band": [0.50, 0.68], "skin_target": 0.60, "median_band": [0.35, 0.55], "median_target": 0.42,
-    "highlight_ceiling": 0.97, "max_stops_scan": 1.5, "max_stops_apply": 2.0,
+    "highlight_ceiling": 0.97, "max_stops_scan": 1.5, "max_stops_apply": 2.0, "max_wb_gain": 0.12,
+    "wb_neutral_chroma": 0.02, "wb_min_frac": 0.01,     # a pixel counts as neutral under this chroma; a frame needs this share of them (measured 23/10: at 0.06 it took 67 % of a beach)
 }
 
 
@@ -166,6 +167,20 @@ def luma(rgb):
 
 
 # ---------------------------------------------------------------- measurements
+def wb_estimate(rgb):
+    """Gains (R, B; green = 1) that would make the near-neutral objects of the frame neutral: clouds, a white boat, a grey wall.
+    Returns (gains or None, fraction of the picture used). Pixels: mid-to-light, barely coloured, not clipped."""
+    y = luma(rgb)
+    cb = (rgb[..., 2] - y) / 1.8556
+    cr = (rgb[..., 0] - y) / 1.5748
+    m = (y > 0.45) & (y < 0.92) & (np.sqrt(cb ** 2 + cr ** 2) < CFG["wb_neutral_chroma"]) & (rgb.max(axis=2) < 0.97)
+    frac = float(m.mean())
+    if m.sum() < 200:
+        return None, frac
+    r, g, b = (float(rgb[..., c][m].mean()) for c in range(3))
+    return [g / max(r, 1e-6), g / max(b, 1e-6)], frac
+
+
 def frame_stats(rgb):
     y = luma(rgb).ravel()
     p = np.percentile(y, [0.5, 1, 5, 25, 50, 75, 95, 99, 99.5])
@@ -175,7 +190,9 @@ def frame_stats(rgb):
     chroma = np.sqrt(cb ** 2 + cr ** 2)
     yy = luma(rgb)
     skin = (ang > 108) & (ang < 138) & (chroma > 0.03) & (chroma < 0.22) & (yy > 0.2) & (yy < 0.92)
+    wb, wbf = wb_estimate(rgb)
     return {
+        "wb": wb, "wb_frac": wbf,
         "pmax99": float(np.percentile(rgb.max(axis=2), 99)),       # the brightest CHANNEL: sea and sky clip in green or blue before luma gets high
         "skin_frac": float(skin.mean()), "skin_luma": float(np.median(yy[skin])) if skin.sum() > 50 else None,
         "p0.5": float(p[0]), "p1": float(p[1]), "p5": float(p[2]), "p25": float(p[3]), "median": float(p[4]),
@@ -235,7 +252,23 @@ def propose(graded_stats):
         warm = cr > 0 and cb < 0
         cool = cb > 0 and cr < 0
         tend = "warm" if warm else "cool" if cool else "tinted (%s%s)" % ("red/magenta " if cr > 0 else "green ", "blue" if cb > 0 else "yellow")
-    return {"exposure_stops": round(stops, 2), "exposure_anchor": kind, "exposure_anchor_ire": round(anchor * 100, 1), "band": [lo, hi], "target": centre, "exposure_why": why,
+    wbs = [x for x in graded_stats if x.get("wb") and x["wb_frac"] >= CFG["wb_min_frac"]]
+    wb_gains, wb_why = None, "no near-neutral objects in enough frames (a scene of sea, skin and sand has none): judge the white by eye"
+    if len(wbs) >= max(2, len(graded_stats) // 3):
+        gr = float(np.median([x["wb"][0] for x in wbs]))
+        gb = float(np.median([x["wb"][1] for x in wbs]))
+        spread = max(float(np.std([x["wb"][0] for x in wbs])), float(np.std([x["wb"][1] for x in wbs])))
+        dev = max(abs(gr - 1), abs(gb - 1))
+        if spread > 0.05:
+            wb_why = "the near-neutral objects disagree between frames (spread %.3f): the light changes, no single correction fits" % spread
+        elif dev < 0.02:
+            wb_why = "near-neutral objects are already neutral (off by %.1f %%)" % (dev * 100)
+        else:
+            lim = CFG["max_wb_gain"]
+            wb_gains = [round(min(1 + lim, max(1 - lim, gr)), 4), round(min(1 + lim, max(1 - lim, gb)), 4)]
+            wb_why = "near-neutral objects (%.1f %% of the picture) lean off by %.1f %%; gains red x%.3f, blue x%.3f. A warm sunset or a blue shade is not a cast: apply only if you agree" % (
+                100 * float(np.median([x["wb_frac"] for x in wbs])), dev * 100, wb_gains[0], wb_gains[1])
+    return {"wb_gains": wb_gains, "wb_gains_why": wb_why, "exposure_stops": round(stops, 2), "exposure_anchor": kind, "exposure_anchor_ire": round(anchor * 100, 1), "band": [lo, hi], "target": centre, "exposure_why": why,
             "wb_tendency": tend, "wb_offset": round(mag, 3),
             "wb_note": "Estimated from the average colour: a scene full of sea, sky or sand leans that way on purpose. "
                        "Judge it by eye and on the vectorscope, never apply it blindly."}
@@ -483,7 +516,8 @@ def main():
     L.extend(["- " + x for x in flags] or ["- nothing wrong found"])
     L.append("\n## Proposal (nothing is applied until you approve)\n")
     L.append("- **Exposure:** %+.2f stops on the graded signal. %s." % (prop["exposure_stops"], prop["exposure_why"]))
-    L.append("- **White balance:** %s (offset %.3f). %s\n" % (prop["wb_tendency"], prop["wb_offset"], prop["wb_note"]))
+    L.append("- **White balance:** %s (offset %.3f). %s" % (prop["wb_tendency"], prop["wb_offset"], prop["wb_note"]))
+    L.append("- **White balance, measured on near-neutral objects:** %s\n" % prop["wb_gains_why"])
     L.append("## How to read the sheet\n")
     L.append("`scopes-sheet.png`: for each sample, the LOG picture as shot (left), the graded picture with zebra (centre: amber = 95 IRE and above, "
              "red stripes = clipped, blue stripes = crushed), the vectorscope (right, the orange line is the skin-tone direction), the RGB parade waveform "

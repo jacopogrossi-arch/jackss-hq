@@ -39,8 +39,11 @@ def gain(stops):
     return 2.0 ** (stops / GAMMA)
 
 
-def expose(rgb, stops):
-    return np.clip(rgb * gain(stops), 0.0, 1.0)
+def expose(rgb, stops, wb=None):
+    """The whole correction after the LUT: exposure, and the white-balance gains (red, blue; green = 1) when given."""
+    g = gain(stops)
+    mul = np.array([g * (wb[0] if wb else 1.0), g, g * (wb[1] if wb else 1.0)], dtype=np.float32)
+    return np.clip(rgb * mul, 0.0, 1.0)
 
 
 def pick(samples, n):
@@ -81,14 +84,14 @@ def has_nvenc():
         return False
 
 
-def encode(video, lut_path, stops, out, encoder, crf, meta):
+def encode(video, lut_path, stops, wb, out, encoder, crf, meta):
     tmp = tempfile.mkdtemp(prefix="grade-apply-")
     try:
         shutil.copy(lut_path, os.path.join(tmp, "lut.cube"))       # a relative name: a Windows 'D:' path breaks lut3d
         g = gain(stops)
         vf = "format=gbrp10le,lut3d=file=lut.cube:interp=tetrahedral"
-        if abs(stops) > 1e-6:
-            vf += ",colorchannelmixer=rr=%.6f:gg=%.6f:bb=%.6f" % (g, g, g)
+        if abs(stops) > 1e-6 or wb:
+            vf += ",colorchannelmixer=rr=%.6f:gg=%.6f:bb=%.6f" % (g * (wb[0] if wb else 1.0), g, g * (wb[1] if wb else 1.0))
         vf += ",format=yuv420p10le"
         if encoder == "nvenc":
             venc = ["-c:v", "hevc_nvenc", "-preset", "p5", "-rc", "vbr", "-cq", str(crf + 4), "-b:v", "0", "-profile:v", "main10", "-pix_fmt", "p010le"]
@@ -110,6 +113,8 @@ def main():
     ap.add_argument("--scan", required=True, help="report.json from grade-scan.py for this clip")
     ap.add_argument("--out", required=True)
     ap.add_argument("--stops", type=float, help="exposure in stops; default = the scan's proposal")
+    ap.add_argument("--wb", action="store_true", help="also apply the white-balance gains the scan measured on near-neutral objects (only if it found some)")
+    ap.add_argument("--wb-gains", help="your own white-balance gains, 'R,B' (green = 1), e.g. 1.03,0.97; wins over --wb")
     ap.add_argument("--frames", type=int, default=3, help="frames in the preview")
     ap.add_argument("--render", action="store_true", help="encode the graded clip and check it (needs your approval of the preview)")
     ap.add_argument("--encoder", default="auto", choices=["auto", "x265", "nvenc"], help="auto = the video card when ffmpeg and the driver offer it (about 4x faster), else the CPU")
@@ -127,6 +132,22 @@ def main():
     if abs(stops) > MAX_STOPS:
         print("%+.2f stops is out of range: the limit is +-%.1f (a bigger push is a re-shoot, not a grade)." % (stops, MAX_STOPS))
         return 1
+    wb = None
+    if args.wb_gains:
+        try:
+            wb = [float(x) for x in args.wb_gains.split(",")]
+            assert len(wb) == 2
+        except (ValueError, AssertionError):
+            print("--wb-gains wants two numbers, 'R,B', for example 1.03,0.97")
+            return 1
+    elif args.wb:
+        wb = rep["proposal"].get("wb_gains")
+        if not wb:
+            print("No white-balance correction: %s" % rep["proposal"].get("wb_gains_why", "the scan found none"))
+    lim = gs.CFG["max_wb_gain"]
+    if wb and (max(abs(wb[0] - 1), abs(wb[1] - 1)) > lim + 1e-9 or gain(stops) * max(wb) > 2.0):
+        print("White-balance gains %s are out of range (limit +-%.0f %%, and exposure times gain must stay under x2)." % (wb, lim * 100))
+        return 1
     os.makedirs(args.out, exist_ok=True)
 
     meta = rep["meta"]
@@ -139,8 +160,8 @@ def main():
         t = samples[i]["t"]
         f = gs.grab(args.video, t, w, h)
         lut_rgb = gs.apply_lut(f, lut_t)
-        fin = expose(lut_rgb, stops)
-        s = sheet(f, lut_rgb, fin, t, "LUT %+.2f stops" % stops)
+        fin = expose(lut_rgb, stops, wb)
+        s = sheet(f, lut_rgb, fin, t, "LUT %+.2f stops%s" % (stops, (" WB R x%.3f B x%.3f" % tuple(wb)) if wb else ""))
         s.save(os.path.join(args.out, "preview-%02d.png" % (k + 1)))
         sheets.append(s)
     big = Image.new("RGB", (sheets[0].width, sum(x.height for x in sheets)), (20, 20, 20))
@@ -149,8 +170,9 @@ def main():
         big.paste(s, (0, y))
         y += s.height
     big.save(os.path.join(args.out, "preview-sheet.png"))
-    print("Profile: %s | LUT: %s | exposure: %+.2f stops (%s)" % (prof["label"], prof["lut"], stops,
-                                                              "your value" if args.stops is not None else "the scan's proposal"))
+    print("Profile: %s | LUT: %s | exposure: %+.2f stops (%s) | white balance: %s" % (
+        prof["label"], prof["lut"], stops, "your value" if args.stops is not None else "the scan's proposal",
+        ("R x%.3f, B x%.3f" % tuple(wb)) if wb else "untouched"))
     print("Preview: %s" % os.path.join(args.out, "preview-sheet.png"))
     if not args.render:
         print("No video written. Look at the preview, then run again with --render (and --stops N if you want another value).")
@@ -161,10 +183,10 @@ def main():
         args.encoder = "nvenc" if has_nvenc() else "x265"
     out_mp4 = os.path.join(args.out, "graded.mp4")
     print("Encoder: %s" % args.encoder)
-    note = "graded with %s, exposure %+.2f stops (grade-apply.py)" % (prof["lut"], stops)
+    note = "graded with %s, exposure %+.2f stops%s (grade-apply.py)" % (prof["lut"], stops, (", white balance R x%.3f B x%.3f" % tuple(wb)) if wb else "")
     print("Rendering %s ..." % out_mp4)
     try:
-        encode(args.video, lut_path, stops, out_mp4, args.encoder, args.crf, note)
+        encode(args.video, lut_path, stops, wb, out_mp4, args.encoder, args.crf, note)
     except Exception as e:  # noqa
         print("render failed:", e)
         return 1
@@ -177,7 +199,7 @@ def main():
         got = gs.grab(out_mp4, t, w, h)
         if src is None or got is None:
             continue
-        predicted = expose(gs.apply_lut(src, lut_t), stops)
+        predicted = expose(gs.apply_lut(src, lut_t), stops, wb)
         pred_err.append(float(np.abs(gs.luma(predicted) - gs.luma(got)).mean()))
         meas.append(gs.frame_stats(got))
     perr = float(np.mean(pred_err))

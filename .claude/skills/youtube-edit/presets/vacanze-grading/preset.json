@@ -6,19 +6,37 @@
   "style": {},
   "grade": {
     "luts": {
-      "dlog2": ["D-Log2 (Osmo Pocket 4P)", "DJI-Pocket4P-DLog2-to-Rec709-size65.cube"],
-      "dlog": ["D-Log (Osmo Pocket 4P)", "DJI-Pocket4P-DLog-to-Rec709-V2.0-size33.cube"],
-      "dlogm": ["D-Log M (Osmo Nano)", "DJI-OsmoNano-DLogM-to-Rec709-V1.cube"]
+      "dlog2": [
+        "D-Log2 (Osmo Pocket 4P)",
+        "DJI-Pocket4P-DLog2-to-Rec709-size65.cube"
+      ],
+      "dlog": [
+        "D-Log (Osmo Pocket 4P)",
+        "DJI-Pocket4P-DLog-to-Rec709-V2.0-size33.cube"
+      ],
+      "dlogm": [
+        "D-Log M (Osmo Nano)",
+        "DJI-OsmoNano-DLogM-to-Rec709-V1.cube"
+      ]
     },
     "zebra": 0.95,
     "clip": 0.995,
     "crush": 0.02,
-    "skin_band": [0.50, 0.68],
-    "skin_target": 0.60,
-    "median_band": [0.35, 0.55],
+    "skin_band": [
+      0.5,
+      0.68
+    ],
+    "skin_target": 0.6,
+    "median_band": [
+      0.35,
+      0.55
+    ],
     "median_target": 0.42,
     "highlight_ceiling": 0.97,
     "max_stops_scan": 1.5,
-    "max_stops_apply": 2.0
+    "max_stops_apply": 2.0,
+    "max_wb_gain": 0.12,
+    "wb_neutral_chroma": 0.02,
+    "wb_min_frac": 0.01
   }
 }

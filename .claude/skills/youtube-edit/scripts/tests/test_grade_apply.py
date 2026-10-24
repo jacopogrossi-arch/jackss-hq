@@ -64,6 +64,21 @@ class GradeApply(unittest.TestCase):
         self.assertEqual(r.returncode, 1)
         self.assertIn("out of range", r.stdout)
 
+    def test_white_balance_gains_are_checked_and_applied(self):
+        d = scratch(self)
+        v = self.clip(d)
+        rep = self.scan(d, v, "--profile", "dlogm")
+        bad = run("grade-apply.py", "--video", v, "--scan", rep, "--out", os.path.join(d, "a1"), "--wb-gains", "1.5,0.7")
+        self.assertEqual(bad.returncode, 1)
+        self.assertIn("out of range", bad.stdout)
+        junk = run("grade-apply.py", "--video", v, "--scan", rep, "--out", os.path.join(d, "a2"), "--wb-gains", "red")
+        self.assertEqual(junk.returncode, 1)
+        out = os.path.join(d, "a3")
+        r = run("grade-apply.py", "--video", v, "--scan", rep, "--out", out, "--frames", "2", "--render", "--encoder", "x265", "--stops", "0", "--wb-gains", "1.05,0.95")
+        self.assertIn("white balance: R x1.050, B x0.950", r.stdout, r.stdout + r.stderr)
+        self.assertIn("matches the preview's prediction", r.stdout)          # the file has the colour shift the preview predicted
+        self.assertNotIn("FAIL the file matches", r.stdout)
+
 
 if __name__ == "__main__":
     unittest.main()

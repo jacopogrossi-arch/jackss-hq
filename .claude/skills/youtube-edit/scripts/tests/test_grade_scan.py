@@ -82,6 +82,32 @@ class GradeScan(unittest.TestCase):
         self.assertEqual(cfg["skin_band"], [0.50, 0.68])
         self.assertEqual(gs.CFG["skin_target"], 0.60)
 
+    def load_gs(self):
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("grade_scan", os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "grade-scan.py"))
+        gs = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(gs)
+        return gs
+
+    def test_white_balance_uses_only_near_neutral_pixels(self):
+        import numpy as np
+        gs = self.load_gs()
+        warm = np.zeros((90, 160, 3), np.float32)
+        warm[:] = (0.66, 0.60, 0.54)                       # a grey wall under a warm light: a real cast
+        gains, frac = gs.wb_estimate(warm)
+        self.assertIsNone(gains)                           # (0.66,0.6,0.54) has chroma above the neutral limit: a coloured wall, not a neutral one
+        grey = np.zeros((90, 160, 3), np.float32)
+        grey[:] = (0.61, 0.60, 0.585)                      # nearly neutral, a slight warm lean
+        gains, frac = gs.wb_estimate(grey)
+        self.assertGreater(frac, 0.9)
+        self.assertLess(gains[0], 1.0)                      # too much red -> red is pulled down
+        self.assertGreater(gains[1], 1.0)                   # too little blue -> blue is pushed up
+        sea = np.zeros((90, 160, 3), np.float32)
+        sea[:] = (0.35, 0.65, 0.62)                         # a lagoon: coloured on purpose, never "corrected"
+        gains, frac = gs.wb_estimate(sea)
+        self.assertIsNone(gains)
+        self.assertLess(frac, 0.01)
+
 
 if __name__ == "__main__":
     unittest.main()

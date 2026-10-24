@@ -252,7 +252,7 @@ lists every jump cut: put cutaways on those cuts and dress at most one or two of
 only if the LUT visibly adds colour). A profile that is not certain is never graded: `grade-apply.py` refuses it. Then look at `scopes-sheet.png` and
 the proposal, run `grade-apply.py` without `--render` for the before/after preview, and only on a yes run it with `--render`. Rules learned on real
 clips (23/10/2026): exposure is anchored on **skin**, not on the median (a bright beach fooled the median); the highlight limit looks at the brightest
-**colour channel** of the worst frame (sea and sky clip in green or blue while luma is still low); a gain above x2 is refused (ffmpeg limit); the exposure is a gain on the graded
+**colour channel** of the worst frame (sea and sky clip in green or blue while luma is still low); a gain above x2 is refused (ffmpeg limit); white balance is measured only on near-neutral objects (never on the average colour: sea and sky are coloured on purpose) and applied only on request (`--wb`, `--wb-gains R,B`, max 12 %); the exposure is a gain on the graded
 signal (code x 2^(stops/2.4)), never on the log signal; lifting a subject that the highlights do not leave room for needs a local mask, which these scripts do not do.
 LUTs per profile and every threshold are in `presets/vacanze-grading/preset.json` (`grade`; LUT files in `assets/luts/`, CREDITS.md): never cross D-Log, D-Log2 and D-Log M.
 
