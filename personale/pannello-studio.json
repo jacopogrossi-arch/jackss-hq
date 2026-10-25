@@ -1,0 +1,17 @@
+{
+  "youtube": [
+    { "stato": "✅", "titolo": "#1 Si può usare l'AI nella moda?", "dettaglio": "Pubblicato 15/10/2026" },
+    { "stato": "✅", "titolo": "#2 Ho lasciato Claude ideare una collezione", "dettaglio": "Pubblicato 21/10/2026" },
+    { "stato": "➡️", "titolo": "#3 Idea da decidere", "dettaglio": "Metodo: copione → montaggio → miniatura (vedi README)" }
+  ],
+  "accademia": [
+    { "stato": "🏁", "titolo": "Digital Fashion Design — After Hours", "dettaglio": "Consegnato 09/10/2026" },
+    { "stato": "🔨", "titolo": "Trend A/I 2027-28", "dettaglio": "3 temi: onlife, body toll, conviviality — avviato 08/10" },
+    { "stato": "🔨", "titolo": "Fashion Design — Cinque giacche", "dettaglio": "Scadenza entro ottobre" }
+  ],
+  "universita": [
+    { "stato": "✅", "titolo": "Diritto Pubblico", "dettaglio": "30/30 — 25/06/2026" },
+    { "stato": "✅", "titolo": "Ragioneria", "dettaglio": "24/30 — 16/07/2026" },
+    { "stato": "❓", "titolo": "Politica Economica", "dettaglio": "Esame 8/09/2026 — aggiungi l'esito" }
+  ]
+}
