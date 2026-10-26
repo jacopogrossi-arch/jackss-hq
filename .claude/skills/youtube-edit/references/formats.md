@@ -435,6 +435,8 @@ Rules from the creator's notes on the first test (these are the taste of the `el
 - Dark blue `#0005EE` for highlighted words (it disappears on dark footage); magenta outside the chip and payoffs.
 - Pop sounds (`pop1`) on the 3D card chain's steps (creator, 23/10/2026: the sound effects are bad); on that format only the soft swish per camera travel.
 - Bounces, elastic type, spring stacks, particle logos, idle wobble; generic stock of a smiling founder at a laptop.
+- From the @toolandtea reel (26/10/2026, muted demos in `videos/_bench/ab/`): the paper-cutout collage of torn photos
+  (`collage-onlife`, "inguardabile") and the stylized street map with a walking route (`mappa-tessutai`, "inguardabile").
 - The curved wall of pages (camera inside a cylinder of the creator's boards, columns lit by group): lost the blind A/B of
   26/10/2026 against the dot grid (43) on the `lista` bench window ("I prefer the grid, even if it is simpler"). Bench files
   `videos/_bench/ab/lista-muro/`.

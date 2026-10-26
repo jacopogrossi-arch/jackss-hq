@@ -102,6 +102,8 @@ when long) and `FACTS.md`, the numbers, dates, prices and tool claims the script
 
 **The hook gate** (every hook, at Checkpoint B):
 - The first 3 seconds convince someone to watch to the end. The first frame is a meaningful image, not a settling camera.
+- Jacopo's face stays on screen through the hook (Jacopo, 26/10/2026): full-frame graphics (46 hero line, the kinetic phrase
+  candidate) start right after the hook, on the first line that follows it, never inside it.
 - It works muted: the first overlay says the promise on its own. The first spoken word survives: no sound, card
   entrance or cut lands on it.
 - The promise has a payoff time: `"loops": [{"question": "...", "planted": 2.1, "payoff": 412.0}]` in the storyboard,
