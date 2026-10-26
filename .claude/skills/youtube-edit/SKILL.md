@@ -387,6 +387,7 @@ any prompt wraps (non-breaking spaces once made a prompt run out of the box). Ca
 | `references/tella.md` | the input is a Tella screen tutorial or a two-file face + screen recording |
 | `references/taste.md`, `references/critic.md` | before designing a draft; before the critic reviews a render |
 | `references/NOTES_LOG.md` | after any note from Jacopo that changes a rule |
+| `references/format-history.md` | planning a storyboard (which formats the last videos used) and after each delivery (add the video's line) |
 
 Each file is the same text that used to sit in this one, moved so that a routine pass does not have to read ~45,000 tokens of it. A rule
 still lives in exactly one place: a new note rewrites it there.
@@ -481,6 +482,17 @@ words, a specific reason to stay in the first three seconds that the video pays 
   merged; "earlier rule" and "older note" paragraphs are never left behind (stacked rules drift, bloat and contradict each
   other: the sound and music paragraphs once did). The code is the truth for numbers: before writing a level or a time in
   prose, read what `compose.py` / `cues.json` / the preset actually do.
+- **The planner chooses, adapts and invents formats on its own, inside Jacopo's style** (Jacopo, 26/10/2026: "ogni video non
+  deve avere sempre le solite 5 grafiche"; Video #2 used 6 formats for 20 graphics, 14 of them `trail` or `line`). Three levels:
+  1. **Choose** (no question to Jacopo): pick the format that fits each spoken moment from `references/formats.md`, reading
+     "When two formats compete" and the variety rule there, which counts the last videos in `references/format-history.md`.
+  2. **Adapt** (no A/B): change an approved format to fit the moment (the content, the count of items, the side, the size,
+     the timing, a preset colour, a logo or image instead of an icon, two approved formats joined into one continuous scene).
+     The style never changes: preset palette and fonts, eases, sound rules, nothing from "Rejected". Name each adaptation at
+     Checkpoint B; if Jacopo likes it, it becomes a variant line in the format's spec.
+  3. **Invent** (blind A/B): when no format fits a moment, or a reference shows a device the library lacks, design a new one in
+     the preset's style and test it as below; it can run on the video's own window instead of the bench, against the format
+     it would replace. Every video brings at least one new or adapted format: the library grows with every video.
 - **A new animation or graphic enters the skill only after it wins a blind A/B on the bench** (Jacopo, 22/10/2026).
   1. **State sheet first:** name every state before any code (what is on screen, where, size, colour) and every change
      between two states (what moves, the property, the ease, the time). A format without a state sheet drifts, and the review

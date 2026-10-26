@@ -4,7 +4,7 @@ _Moved out of `SKILL.md` on 22/10/2026, text unchanged. Read this when: the plan
 
 ## Format library
 
-Vary the formats; never the same device twice in a row. `*` = built and snapshot-tested but used in fewer real
+Vary the formats; never the same device twice in a row. **Variety across the video** (Jacopo, 26/10/2026): apart from the lower line (2) and transitions, no format takes more than a quarter of a video's graphics; each video uses at least three formats the previous video did not use, plus at least one new or adapted format (see `SKILL.md` > Keeping the skill yours); the counts of past videos are in `references/format-history.md`. `*` = built and snapshot-tested but used in fewer real
 deliveries: read its first real snapshot with extra care and name it at Checkpoint B. The composer builds every format
 with a type below (the JSON shapes are in compose.py's docstring); the specs give the numbers to check a snapshot
 against, and to hand-build the rest.
