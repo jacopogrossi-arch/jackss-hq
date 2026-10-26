@@ -293,8 +293,8 @@ Every full-frame scene sits on an ambient three-radial brand wash plus a 96 px g
 - **45. Living shape** (won the blind A/B of 26/10/2026 against 27b on the `processo` bench window; idea from the
   @themilesholden reel, one neon shape that becomes a search bar, a price card, an eye; notes in
   `videos/_teardown/INSPO-NOTES.md` section 3). `formats/morph.py`: `morph(steps, t_in, t_out, public)`, steps are dicts with a
-  `kind`: `pill` (logo + text typed letter by letter behind a gold spark, optional cursor `click`), `circle` (`icon`, "globe" turns),
-  `square` (`logo`), `grid` (2 to 6 images), `page` (the grid's tiles fly into a moodboard layout, `title` in Playfair Italic,
+  `kind`: `pill` (logo + text typed letter by letter behind a gold spark, optional cursor `click`), `circle` (`icon`; the "globe" stands still as approved, `spin: true` turns it),
+  `square` (`logo`, `logo_color` for a single-colour svg), `grid` (2 to 6 images; only the 6-image layout is checked on a render), `page` (the grid's tiles fly into a moodboard layout, `title` in Playfair Italic,
   `check_at` an emerald check). ONE shape, never a cut: it starts as a line with a spark, each change is 0.7 s `power3.inOut`
   ending 0.1 s before the word; old content blurs out (0.25 s), new content blurs in (0.35 s). Border 3 px gradient
   gold → ivory → emerald, dark glass inside, gold + emerald glow, two soft colour blobs (gold, emerald) following the shape 0.12 s
