@@ -50,3 +50,11 @@ video-editor/shared/
 
 # Free editing packs from the Cashflow Contents bonus (Saturn's Ring / Ali Abdaal): no licence file, personal use only, never pushed
 .claude/skills/youtube-edit/assets/packs/
+
+# Credenziali API (Higgsfield ecc.): mai su GitHub, il repo e pubblico
+.env
+.env.*
+!.env.example
+
+# Ambienti virtuali Python
+.venv/
