@@ -48,7 +48,7 @@ against, and to hand-build the rest.
 | 25m* | Chart morph | the growth bars turn into the trend line | `"morph": true` on `growth` |
 | 26* | Bar comparison | "this takes X, that takes Y" | `bars` |
 | 27* | Pipeline | three to five steps lit one by one: the fast version, a step about every 2 s | `pipeline` |
-| 27b | 3D card chain | three to five spoken steps when there is time to glide (about 3 s a step or more): the smooth, slow version | `formats/chain3d.py` |
+| 27b | 3D card chain | three to five spoken steps that are abstract labels (nothing to draw), when there is time to glide (about 3 s a step or more); steps you can draw go to 45 | `formats/chain3d.py` |
 | 28* | Hub | one idea and the parts it is made of | `hub` |
 | 29* | Equation | "A + B = C" said as one line | `equation` |
 | 30* | Flowing paths | one thing becoming several, then one result | `flow` |
@@ -67,6 +67,8 @@ against, and to hand-build the rest.
 | 42 | Chat (bubbles, window, phone) | a conversation | `chat` |
 | 43 | Dot grid | a count you say out loud, in groups ("three outfits, three mood boards..."): one row per group fills on its word | `formats/dotgrid.py` |
 | 44 | Outline rail | a list read out as an outline (what came out, the parts of a plan): rail, dots, names, ×N and bars | `formats/scaletta.py` |
+| 45 | Living shape | three to six spoken steps of one process, told as ONE glowing shape that turns into the next thing (search bar, globe, logo, image grid, finished page): **the default for a process with ~2 s or more per step** | `formats/morph.py` |
+| 46 | Hero line | the one sentence of a section that must land: full frame on a living warm gradient, words out of blur on their word, a logo slipping in | `formats/herotitle.py` |
 | - | Check marker* | done and to-do lists: a check draws on each item | `"marker": "check"` on `list`, `bullets`, `popout` |
 | - | Thumbnail grid | your own thumbnails; the cursor clicks one | `grid` |
 | - | Coded scenes | money, catalog, room, plate, profile: B-roll with no stock | `scene` |
@@ -83,14 +85,14 @@ counts). Still tied: the one used least in your last video.
 | naming tools or labels while staying on camera | 41b, 41 | 41b with `elegante-portfolio` and real logos; 41 for five or six labels or icons only |
 | showing a website | 4b, 4c | 4b for a glance under 3 s; 4c when you talk about it or it scrolls |
 | giving numbers | 1, 24, 25 | 1 for one stakes figure; 24 for two to four that belong together; 25 when it grew and the shape matters (25m when the trend is the point) |
-| explaining a process | 6, 7, 8, 27, 30 | 7 each step earns the next; 8 volume narrows to money; 30 one thing becomes several; 27 a quick sequence; 6 a long one |
+| explaining a process | 45, 27b, 6, 7, 8, 27, 30 | 45 when each step is a thing you can draw (a tool, a page, images) and steps are 1.2 s or more apart; 27b when the steps are abstract labels; 7 each step earns the next; 8 volume narrows to money; 30 one thing becomes several; 27 a quick sequence; 6 a long one |
 | comparing | 26, 32, 21 | 26 for sizes (time, money); 32 for values read off a table; 21 for tool versus tool |
 | listing | 3a, 3b, 3c, 41, check marker | never the same device twice in a row; the check marker for done or to-do; long form: no list panels |
 | opening a section | 9, 9b, 9c, 35, 40 | 9c on a video with a spine; 40 for two to four numbered parts; 9b on a numbered series; 35 for a long break; 9 otherwise |
 | showing an image or footage | 19, 20c, 37 | 19 for a named person; 20c for moving footage (20 when it needs hand work); 37 for a still |
 | showing screenshots | 4d, 31, 4c | 31 when one number on it is the point; 4d for two or three; 4c for one site |
 | typing | 13, 13b, 33 | 13 or 13b for a prompt to an AI (13b when the app itself matters); 33 for a search |
-| saying one line | 2, 29, 5 | 29 only for an "A + B = C" line; 5 for a punchline; 2 otherwise |
+| saying one line | 2, 46, 29, 5 | 46 for the one sentence a section is about (at most one per section, 2 to 7 s, the face can leave the frame); 29 only for an "A + B = C" line; 5 for a punchline; 2 otherwise |
 | showing parts of a whole | 28, 38, 39 | 38 for layers of a product or stack; 28 for parts of an idea; 39 when the camera should move between them |
 | naming a few short things on camera | 3a, 41 | 41 for labels of one to three words around you; 3a when you count a list |
 | a conversation | 13, 42 | 42 for people talking; 13 for a prompt to an AI |
@@ -103,6 +105,15 @@ counts). Still tied: the one used least in your last video.
   ~100 to 104 px/700, letter-spacing -.015em, white with the key phrase cyan (amber for money). Words rise in staggered
   ~0.055 s (opacity 0→1, y 26→0, `power2.out`), never typed; animate `opacity`, not `display`, so the line never shifts.
   One span per word from `data-text` at load, container `font-size:0` (or whitespace doubles the gaps). Holds 5 to 7 s.
+- **46. Hero line** (won the blind A/B of 26/10/2026 against 2 on the `strumenti` bench window; idea from the @zeecreative
+  Apple Intelligence reel). `formats/herotitle.py`: `herotitle(lines, t_in, t_out, logo, logo_at, gold_at)`. Full frame: a radial
+  mask blooms from the centre over the face (0.45 s `power3.out`) onto a living gradient (four blurred blobs, gold, dark gold
+  `#8a5a1c`, emerald, ivory, gathered in a vertical band that opens like a curtain in 1.2 s, then drifting; grain .06; push
+  1.00 → 1.05). Line 1 Inter 700 120 px ivory, line 2 Playfair Display Italic 110 px gold → ivory gradient with a blurred
+  duplicate as glow; each word comes out of blur (14 → 0 px, y 20 → 0, 0.5 s) on its spoken word. Both lines are laid out in
+  their final place from frame one (only opacity and blur move): the one allowed move is the logo tile slipping in left of the
+  first word and pushing it (0.5 s `power3.inOut`); `gold_at` turns line 1 to the gold gradient. Out: the mask closes (0.4 s).
+  Two lines and six words at most, 2 to 7 s, once per section at most, no sound. Bench files `videos/_bench/ab/strumenti-titolo/`.
 - **5. Punchline chip.** `rgba(17,17,17,.45)` glass, blur 18 px, radius 16, 64 to 76 px/700, the emphasis word solid
   magenta, bottom-centre 80 px up.
 - **12. Key-word highlight (long form only).** A navy `#0005EE` block behind a word as you say it, white text, a glow;
@@ -279,6 +290,16 @@ Every full-frame scene sits on an ambient three-radial brand wash plus a 96 px g
   cut to 1.9 s (attack 0.08 s, release 0.5 s), volume 0.25, at the start of each travel. Measured peak camera speed on the bench
   is 750 to 1100 px/s (the creator found it smooth, not fast); a longer window than 16 s allows slower travels, never faster.
   State sheet: `videos/_bench/ab/processo-glide/lab-B/STATE-SHEET.md`. Pipeline (27) stays for steps closer than 2.5 s apart.
+- **45. Living shape** (won the blind A/B of 26/10/2026 against 27b on the `processo` bench window; idea from the
+  @themilesholden reel, one neon shape that becomes a search bar, a price card, an eye; notes in
+  `videos/_teardown/INSPO-NOTES.md` section 3). `formats/morph.py`: `morph(steps, t_in, t_out, public)`, steps are dicts with a
+  `kind`: `pill` (logo + text typed letter by letter behind a gold spark, optional cursor `click`), `circle` (`icon`, "globe" turns),
+  `square` (`logo`), `grid` (2 to 6 images), `page` (the grid's tiles fly into a moodboard layout, `title` in Playfair Italic,
+  `check_at` an emerald check). ONE shape, never a cut: it starts as a line with a spark, each change is 0.7 s `power3.inOut`
+  ending 0.1 s before the word; old content blurs out (0.25 s), new content blurs in (0.35 s). Border 3 px gradient
+  gold → ivory → emerald, dark glass inside, gold + emerald glow, two soft colour blobs (gold, emerald) following the shape 0.12 s
+  late; the label (gold number + 44 px Inter name) rides 80 px under the shape. The camera drifts 1.00 → 1.05 in every state.
+  Sound: the 27b swish once per change, nothing else. Steps closer than 1.2 s: use 27. Bench files `videos/_bench/ab/processo-morph/`.
 - **28. Hub\*.** The idea in a 300 px glass circle with a cyan ring closing (`ring_at`), two to six parts arriving at the
   ends of spokes; `resolve_at` dims them to .56 and lights the centre ("all of that is really this").
 - **30. Flowing paths\*.** An input pill left, two to four outputs, an optional result right, joined by S-curves and dim
@@ -414,3 +435,6 @@ Rules from the creator's notes on the first test (these are the taste of the `el
 - Dark blue `#0005EE` for highlighted words (it disappears on dark footage); magenta outside the chip and payoffs.
 - Pop sounds (`pop1`) on the 3D card chain's steps (creator, 23/10/2026: the sound effects are bad); on that format only the soft swish per camera travel.
 - Bounces, elastic type, spring stacks, particle logos, idle wobble; generic stock of a smiling founder at a laptop.
+- The curved wall of pages (camera inside a cylinder of the creator's boards, columns lit by group): lost the blind A/B of
+  26/10/2026 against the dot grid (43) on the `lista` bench window ("I prefer the grid, even if it is simpler"). Bench files
+  `videos/_bench/ab/lista-muro/`.

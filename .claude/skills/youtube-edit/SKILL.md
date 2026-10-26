@@ -186,7 +186,7 @@ Opus planned and directed, Sonnet builders did the sections; Opus plans at high 
 | `grade-looks.py` | the preset's looks (numbers in `presets/vacanze-grading/preset.json` -> `grade.looks`) applied to ONE frame of a clip as a labelled contact sheet, to choose a look with the eyes. A look is a pure colour function (contrast curve, saturation, tints, hue windows on skin and water), so it can later be baked into a 3D LUT | `--video --scan report.json --out sheet.png [--t SEC] [--looks a,b] [--cube-dir DIR [--mix 0-1]] [--cols 3]` |
 | `teardown.py` | measures any video; counts a storyboard exactly; compares reports | `--video` / `--storyboard` / `--compare`, `--out [--transcript] [--every 2]` |
 
-`formats/claude_chat.py` is the AI chat window (format 13b). `formats/chain3d.py` is the 3D card chain (format 27b). `formats/dotgrid.py` is the dot grid (format 43). `formats/scaletta.py` is the outline rail (format 44). `formats/chips.py` is the hanging chips with the camera (format 41b).
+`formats/claude_chat.py` is the AI chat window (format 13b). `formats/chain3d.py` is the 3D card chain (format 27b). `formats/dotgrid.py` is the dot grid (format 43). `formats/scaletta.py` is the outline rail (format 44). `formats/chips.py` is the hanging chips with the camera (format 41b). `formats/morph.py` is the living shape (format 45). `formats/herotitle.py` is the hero line on a living gradient (format 46).
 
 ## Cut stage (raw clip to flat cut)
 
