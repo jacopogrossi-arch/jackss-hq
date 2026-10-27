@@ -42,8 +42,11 @@ def gain(stops):
     return 2.0 ** (stops / GAMMA)
 
 
-def expose(rgb, stops, wb=None, look=None):
-    """The whole correction after the LUT: exposure, the white-balance gains (red, blue; green = 1) when given, then the look."""
+def expose(rgb, stops, wb=None, look=None, white=None):
+    """The whole correction after the LUT: exposure, the white-balance gains (red, blue; green = 1) when given, then the look.
+    A film look (one with a "film" key) does all of it in linear light instead: see grade-film.py; `white` is the clip's measured white."""
+    if gf.is_film(look):
+        return gf.apply(rgb, look, stops, wb, white)
     g = gain(stops)
     mul = np.array([g * (wb[0] if wb else 1.0), g, g * (wb[1] if wb else 1.0)], dtype=np.float32)
     out = np.clip(rgb * mul, 0.0, 1.0)
@@ -101,19 +104,24 @@ def has_nvenc():
         return False
 
 
-def encode(video, lut_path, stops, wb, look, out, encoder, crf, meta, smooth=0):
+def encode(video, lut_path, stops, wb, look, out, encoder, crf, meta, smooth=0, white=None, size=None, fps=25):
     tmp = tempfile.mkdtemp(prefix="grade-apply-")
     try:
         shutil.copy(lut_path, os.path.join(tmp, "lut.cube"))       # a relative name: a Windows 'D:' path breaks lut3d
         g = gain(stops)
         denoise = {1: "hqdn3d=1.5:1.5:3:3,", 2: "hqdn3d=3:3:5:5,"}.get(smooth, "")      # before the LUT: the noise is smaller there, the LUT stretches it
         vf = denoise + "format=gbrp10le,lut3d=file=lut.cube:interp=tetrahedral"
-        if abs(stops) > 1e-6 or wb:
-            vf += ",colorchannelmixer=rr=%.6f:gg=%.6f:bb=%.6f" % (g * (wb[0] if wb else 1.0), g, g * (wb[1] if wb else 1.0))
-        if look:
-            bake_look(look, os.path.join(tmp, "look.cube"))
+        if gf.is_film(look):                                       # exposure, white balance, tone and colour in one table; then the finish graph
+            gf.bake(look, os.path.join(tmp, "look.cube"), stops, wb, white)
             vf += ",lut3d=file=look.cube:interp=tetrahedral"
-        vf += ",format=yuv420p10le"
+            vf = "[0:v]" + vf + "[in];" + gf.finish_graph(size[0], size[1], look, fps=fps) + ";[out]format=yuv420p10le[v]"
+        else:
+            if abs(stops) > 1e-6 or wb:
+                vf += ",colorchannelmixer=rr=%.6f:gg=%.6f:bb=%.6f" % (g * (wb[0] if wb else 1.0), g, g * (wb[1] if wb else 1.0))
+            if look:
+                bake_look(look, os.path.join(tmp, "look.cube"))
+                vf += ",lut3d=file=look.cube:interp=tetrahedral"
+            vf += ",format=yuv420p10le"
         if encoder == "nvenc":
             venc = ["-c:v", "hevc_nvenc", "-preset", "p5", "-rc", "vbr", "-cq", str(crf + 4), "-b:v", "0", "-profile:v", "main10", "-pix_fmt", "p010le"]
         else:
