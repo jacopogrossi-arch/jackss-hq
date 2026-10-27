@@ -16,6 +16,20 @@ Tutti i numeri qui sotto stanno in `preset.json` (chiave `grade`): per cambiarli
 - Per usare un'altra versione (V1.0 invece di V2.0, o la vivid) basta cambiare il nome del file in `preset.json` → `grade.luts`.
 - Un'altra camera in log (drone, Action...) richiede la sua LUT ufficiale DJI e una riga nuova in `grade.luts`.
 
+## LUT creative pronte per il Pocket 4P (adimology, aggiunte il 27/10/2026)
+Pack gratuito di @adimology (Google Drive "adimology - DJI Pocket 4P Creative LUTs"): 5 LUT `.cube` che leggono **direttamente il log** e sostituiscono
+la LUT tecnica DJI. Stanno in `assets/looks/external/adimology-p4p/` — **solo in locale**: la licenza vieta di ridistribuirle, quindi mai su GitHub.
+Si usano con `grade-apply.py --log-cube adimology-p4p/adimology-P4P-<Nome>.cube` (scan, anteprima e render restano uguali).
+
+- **Sono costruite sulla curva D-Log**, non D-Log2 (misurato su una rampa di grigi: distanza dalla LUT DJI D-Log 0,03-0,05, dalla D-Log2 0,12-0,14).
+  Su D-Log2 vengono piu' scure: l'autore consiglia di girare D-Log a EV +1 e D-Log2 a EV +2.
+- Prova sulla clip D-Log della spiaggia (`videos/_grade-test/adimology/confronto-adimology.png`):
+  - **IndieHaze**: la piu' vicina alla DJI ufficiale, acqua turchese, neri leggermente sollevati — la piu' adatta ai video vacanza.
+  - **RetroWarm**: pelle calda e abbronzata, mare piu' spento.
+  - **UrbanSlate**: desaturata fredda, mare grigio — da citta', non da mare.
+  - **GoldenHour** e **StreetNoir** (bianco e nero): molto scure, pensate per girato a EV +1 o piu'; su clip esposte normalmente servono +1/+2 stop.
+- Regola del pacchetto: bilanciamento del bianco ed esposizione si correggono **prima** della LUT (e' gia' l'ordine di `grade-apply.py`).
+
 ## Il metodo (sempre in questo ordine)
 1. **Scan:** `grade-scan.py --video clip --out cartella`. Misura 12 fotogrammi: zebra a 95 IRE e sulle luci bruciate, neri schiacciati, mediana, pelle,
    waveform, vectorscope, istogramma. Scrive `REPORT.md`, `scopes-sheet.png` e una **proposta** di esposizione. Non cambia niente.

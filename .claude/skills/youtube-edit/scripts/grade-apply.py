@@ -156,6 +156,7 @@ def main():
     ap.add_argument("--smooth", type=int, default=0, choices=[0, 1, 2], help="light (1) or medium (2) noise reduction before the LUT: smoother skin and water, softer detail (Jacopo's own grade is softer than the camera file)")
     ap.add_argument("--look-cube", help="a ready-made creative .cube LUT (made for Rec.709) used as the look; --look-mix says how much (0-1). Third-party LUTs stay local, in assets/looks/external/")
     ap.add_argument("--look-mix", type=float, default=1.0)
+    ap.add_argument("--log-cube", help="a ready-made creative .cube LUT that reads the LOG file directly and replaces the technical DJI LUT (e.g. adimology-p4p/adimology-P4P-IndieHaze.cube, built on the Pocket 4P D-Log curve); a bare name is looked up in assets/looks/external/")
     ap.add_argument("--look", help="a look from the preset (see grade-looks.py), applied after the LUT, exposure and white balance, e.g. blockbuster")
     ap.add_argument("--match", help="match.json from grade-match.py: this clip's exposure and white balance come from the shot matching (--stops / --wb-gains still win)")
     ap.add_argument("--frames", type=int, default=3, help="frames in the preview")
@@ -170,6 +171,8 @@ def main():
         print("The scan says the profile is NOT certain (%s). Settle the profile first: rerun grade-scan with --profile." % prof["why"])
         return 1
     lut_path = os.path.join(gs.LUTS, prof["lut"])
+    if args.log_cube:
+        lut_path = args.log_cube if os.path.isabs(args.log_cube) else os.path.join(os.path.dirname(gs.LUTS), "looks", "external", args.log_cube)
     lut_t = gs.load_cube(lut_path)
     matched = None
     if args.match:
