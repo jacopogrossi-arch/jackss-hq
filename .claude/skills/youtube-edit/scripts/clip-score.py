@@ -10,8 +10,10 @@ UniMatch; Farneback ranks clips the same way at a fraction of the cost).
 Needs the D:/tools/video-ai environment (torch + open_clip + opencv):
   D:/tools/video-ai/Scripts/python.exe clip-score.py --dir FOLDER --out scores.csv [--frames 5]
 
-Score graded or Rec.709 clips: on flat log footage every score drops
-about one point, so compare log clips only with each other.
+Compare like with like: log clips score a bit lower than graded ones.
+Measure MOTION on clips without film grain (raw log or plain Rec.709):
+grain reads as flow (27/10/2026: the same lagoon clip gave 1.15 raw and
+3.96 with the pellicola-oro grain). Aesthetic is fine on either.
 """
 import argparse
 import csv
