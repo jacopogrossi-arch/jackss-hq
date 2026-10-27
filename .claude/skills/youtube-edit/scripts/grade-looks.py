@@ -184,11 +184,22 @@ def main():
     stops = rep["proposal"]["exposure_stops"]
     base = np.clip(base * (2.0 ** (stops / 2.4)), 0, 1)
     tiles = [tile(f, args.tile, "0 · LOG come girato (piatto: e' normale)")]
+    gf = None
     for i, n in enumerate(names, 1):
         if n not in looks:
             print("unknown look", n, "(have: %s)" % ", ".join(looks))
             return 1
-        tiles.append(tile(apply_look(base, looks[n]["p"]), args.tile, "%d · %s" % (i, looks[n]["title"])))
+        p = looks[n]["p"]
+        if "film" in p:                                           # a film look works in linear light from the LUT output (grade-film.py), with its finish
+            if gf is None:
+                sp = importlib.util.spec_from_file_location("grade_film", os.path.join(HERE, "grade-film.py"))
+                gf = importlib.util.module_from_spec(sp)
+                sp.loader.exec_module(gf)
+            raw = gs.apply_lut(f, gs.load_cube(os.path.join(gs.LUTS, prof["lut"])))
+            img = gf.finish_image(gf.apply(raw, p, stops, None, gf.measure_white([raw])), p)
+        else:
+            img = apply_look(base, p)
+        tiles.append(tile(img, args.tile, "%d · %s" % (i, looks[n]["title"])))
     cols = args.cols
     rows = (len(tiles) + cols - 1) // cols
     tw, th = tiles[0].size

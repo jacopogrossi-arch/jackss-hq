@@ -378,6 +378,46 @@
             "skin_sat": 0.836
           }
         }
+      },
+      "pellicola-oro": {
+        "title": "Pellicola oro (pipeline film)",
+        "desc": "27/10/2026, dai video d'ispirazione di Jacopo (Hawaii, Dolomiti, Tokyo, travel film): i suoi colori WOW su acqua e pelle, ma luci dorate, ombre teal, bianchi che arrivano al bianco con spalla morbida, grana, alone e vignetta leggeri. Usa la pipeline in luce lineare di grade-film.py.",
+        "p": {
+          "sat": 0.924,
+          "vibrance": 0.27,
+          "sea_sat": 1.47,
+          "skin_sat": 0.702,
+          "chroma_map": "jacopo-chroma",
+          "chroma_gain": 1.0,
+          "wow": {
+            "sat": 1.08,
+            "vibrance": 0.35,
+            "sea_sat": 1.45,
+            "skin_sat": 1.029
+          },
+          "film": {
+            "contrast": 1.12,
+            "shoulder": 1.5,
+            "white_target": 0.95,
+            "stretch_from": 1.0,
+            "black": 0.006,
+            "hl_desat": 0.2,
+            "warm": [
+              [0.04, 0.018, -0.045],
+              [-0.015, 0.006, 0.015]
+            ],
+            "density": 0.15,
+            "hue": [
+              [219, 30, -5]
+            ]
+          },
+          "finish": {
+            "halation": 0.25,
+            "grain": 0.12,
+            "grain_size": 2.0,
+            "vignette": 0.25
+          }
+        }
       }
     },
     "look_max_crush": 0.12,

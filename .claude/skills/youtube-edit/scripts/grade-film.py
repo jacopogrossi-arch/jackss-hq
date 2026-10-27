@@ -103,8 +103,8 @@ def tone(rgb709, look, stops=0.0, wb=None, white_lin=None):
     """Steps 1-6: LUT output (Rec.709 code values) -> toned code values. Exposure in stops of linear light."""
     f = film_params(look)
     lin = to_lin(rgb709) * (2.0 ** stops)
-    if wb:
-        lin = lin * np.array([wb[0], 1.0, wb[1]], np.float32)
+    if wb:                                                   # the scan measures gains on code values; in linear light the same correction is gain ** 2.4
+        lin = lin * np.array([wb[0] ** GAMMA, 1.0, wb[1] ** GAMMA], np.float32)
     y = np.maximum(lin_luma(lin), 1e-7)
     d = np.log2(y / GREY) * f["contrast"]
     k = stretch_for(None if white_lin is None else white_lin * (2.0 ** stops), f)
@@ -175,13 +175,17 @@ def measure_white(lut_frames, pct=99.9):
     return float(np.percentile(ys, pct))
 
 
-def bake(look, path, stops=0.0, wb=None, white_lin=None, n=65):
-    """The colour function as a .cube (red fastest), for ffmpeg's lut3d after the DJI LUT."""
+def bake(look, path, stops=0.0, wb=None, white_lin=None, n=65, pre=None):
+    """The colour function as a .cube (red fastest). With `pre` (a loaded DJI LUT) the table goes straight from the LOG file:
+    DJI LUT and grade in ONE lookup, half the work of two 4K lookups in a row."""
     lin = np.linspace(0, 1, n, dtype=np.float32)
     r = np.tile(lin, n * n)
     g = np.tile(np.repeat(lin, n), n)
     b = np.repeat(lin, n * n)
-    out = apply(np.stack([r, g, b], axis=-1)[:, None, :], look, stops, wb, white_lin)[:, 0, :]
+    grid = np.stack([r, g, b], axis=-1)[:, None, :]
+    if pre is not None:
+        grid = gs.apply_lut(grid, pre)
+    out = apply(grid, look, stops, wb, white_lin)[:, 0, :]
     with open(path, "w") as fh:
         for line in ("LUT_3D_SIZE %d" % n, "DOMAIN_MIN 0 0 0", "DOMAIN_MAX 1 1 1"):
             fh.write(line + "\n")
@@ -209,13 +213,18 @@ def finish_graph(w, h, look, inp="in", out="out", fps=25):
                      % (qw, qh, fin["halation_threshold"], max(0.5, fin["halation_radius"] * w / 4), r, g, b, w, h))
         parts.append("[hb][hg]blend=all_mode=screen:all_opacity=%.3f[h1]" % fin["halation"])
         cur = "h1"
-    if fin["sky_grad"]:                                      # a graduated filter: the top of the frame a little darker, only where it is bright
+    if fin["sky_grad"]:                                      # a graduated filter: the top of the frame darker, the bright parts (sky) most
         k = fin["sky_grad"]
-        e = "%s(X,Y)*(1-" + "%.3f" % k + "*max(0,1-Y/(H*0.45))*%s(X,Y)/1023)"
-        parts.append("[%s]geq=r='%s':g='%s':b='%s'[sg]" % (cur, e % ("r", "r"), e % ("g", "g"), e % ("b", "b")))
+        ramp = "1023*max(0\\,1-Y/(H*0.45))"                  # 1 at the top edge, 0 from 45 % of the height down
+        parts.append("[%s]split=3[sa][sb][sc]" % cur)
+        parts.append("[sb]curves=all='0/0 0.5/%.3f 1/%.3f'[sd]" % (0.5 * (1 - k * 0.4), 1 - k))
+        # the ramp is drawn on a 2x64 copy of each frame (cheap) and enlarged: it stays in step with the video and ends with it
+        # (a per-pixel geq on 4K cost 48 s per second of video; a looped still never ends, maskedmerge has no 'shortest')
+        parts.append("[sc]scale=2:64,geq=r='%s':g='%s':b='%s',scale=%d:%d:flags=bilinear[sm]" % (ramp, ramp, ramp, w, h))
+        parts.append("[sa][sd][sm]maskedmerge[sg]")
         cur = "sg"
     if fin["vignette"]:
-        parts.append("[%s]vignette=angle=%.3f:mode=forward[vg]" % (cur, fin["vignette"]))
+        parts.append("[%s]vignette=angle=%.3f:mode=forward:dither=0[vg]" % (cur, fin["vignette"]))   # dither=1 (default) tripled its cost on 4K
         cur = "vg"
     if fin["grain"]:
         gw, gh = max(16, int(w / fin["grain_size"]) // 2 * 2), max(16, int(h / fin["grain_size"]) // 2 * 2)

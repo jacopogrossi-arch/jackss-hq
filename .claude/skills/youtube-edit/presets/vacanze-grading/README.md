@@ -53,6 +53,38 @@ variante `jacopo-cinema-wow-pelle-media` e' piu' sobria), contrasto cinema. Rice
 Nota: la mappa colore e' stata appresa solo sulle sue due clip (acqua, cielo, pelle, rosso): su scene con altri colori (interni, verdi, gialli) il WOW agisce solo con
 il secondo passaggio di colore e va guardato prima di fidarsene.
 
+## Il grading professionale (27/10/2026): pipeline pellicola, match tra clip, look da riferimento
+Nato da cinque video d'ispirazione di Jacopo (travel film Tokyo/Dolomiti/canyon, "the power of color grading" Hawaii/Tokyo/sott'acqua, Dolomiti):
+"mi piace la grana, l'effetto film, colori belli senza essere esagerati". Copie locali in `videos/inspo-grading/` (fuori da GitHub).
+
+**Cosa avevano in comune (misurato):** luci dorate (R+12/+21, B−20/−32), bianchi che arrivano al bianco, neri profondi (1° percentile 5-8),
+ombre neutre o teal, cielo verso il ciano. Il nostro `jacopo-cinema` faceva il contrario: luci leggermente fredde, ombre magenta, e sulla laguna
+le luci ferme a 189/255 (nuvole grigie). La causa non era la LUT DJI (sul Pocket le clip non arrivano nemmeno alla sua spalla) ma l'esposizione
+come guadagno *dopo* la LUT. Sulla Nano invece la LUT D-Log M e' quasi una retta senza spalla: li' serve una spalla nostra.
+
+**I cinque pezzi:**
+1. **Pipeline pellicola** (`scripts/grade-film.py`, look con la chiave `film`, es. `pellicola-oro`): esposizione e bianco in luce lineare,
+   contrasto attorno al grigio medio, le luci piu' forti di ogni clip portate verso il 95 % (misurate una volta per clip, a partire da 1 stop sopra
+   il grigio cosi' la pelle non si sposta), spalla morbida che non brucia mai, luci dorate con **acqua e cielo protetti dalla maschera colore**
+   (senza maschera il turchese diventa verde), densita' del colore. LUT DJI + grading in UNA sola tabella (meta' del lavoro).
+2. **Match tra clip** (`grade-match.py`): esposizione (ancora pelle) e dominante portate a meta' strada verso il gruppo, max 0,3 stop e 3 %.
+   Il match pieno e' stato provato e scartato: spegneva la laguna e ingrigiva un muro caldo.
+3. **Correzioni mirate:** cielo sfumato (`finish.sky_grad`, scurisce l'alto del quadro piu' sulle zone chiare) e soggetto piu' luminoso
+   (`skin_luma`), entrambi spenti di default; maschera pelle e acqua gia' esistenti.
+4. **Finitura** (`finish`): alone sulle luci forti, grana ingrandita (la grana della pellicola e' piu' grande di un pixel 4K), vignetta.
+   Costo: ~10 s ogni 3 s di 4K in piu' (una clip di 40 s ~7 min). Il cielo sfumato con `geq` per pixel costava 48 s al secondo: ora la
+   sfumatura si disegna su una copia 2x64 del fotogramma e si ingrandisce.
+5. **Look da riferimento** (`grade-ref.py`): misura luci/ombre/neri/contrasto/colore sui fotogrammi che piacciono e sposta il look al 60 %.
+   Le tinte si misurano solo su cio' che la scena non colora da se' (la prima prova scambiava l'acqua turchese per "ombre teal").
+   **Mai copiare il prima/dopo di un creator come LUT:** il loro log non e' il nostro DJI (luci viola, pelle scura, provato).
+
+**Ricetta per un video con piu' clip:** `grade-scan.py` su ogni clip → `grade-match.py --clip A=scanA --clip B=scanB --out match` →
+`grade-apply.py --video A --scan scanA --out outA --match match/match.json --look pellicola-oro --smooth 1` (anteprima, poi `--render`).
+Verificato: render della spiaggia D-Log 4K, il file coincide con l'anteprima (0,4 IRE), nessuna luce bruciata.
+
+**Cosa il grading non puo' fare (lo fa Jacopo in ripresa):** luce dell'ora d'oro, bilanciamento del bianco fisso (non automatico), filtro ND
+per il mosso del cinema (tempo di scatto circa il doppio dei fps). E' meta' del look dei video che gli piacciono.
+
 ## Limiti noti (da non scordare)
 - Una clip dove la pelle e' scura e il mare e' chiaro (es. D-Log, 23/10) non si schiarisce abbastanza: le luci non lasciano margine. Servirebbe una **maschera locale** o un
   **roll-off morbido delle luci**: non fatti.

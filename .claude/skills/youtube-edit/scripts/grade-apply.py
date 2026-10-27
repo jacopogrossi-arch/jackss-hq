@@ -31,6 +31,9 @@ spec.loader.exec_module(gs)
 spec_l = importlib.util.spec_from_file_location("grade_looks", os.path.join(HERE, "grade-looks.py"))
 gl = importlib.util.module_from_spec(spec_l)
 spec_l.loader.exec_module(gl)
+spec_f = importlib.util.spec_from_file_location("grade_film", os.path.join(HERE, "grade-film.py"))
+gf = importlib.util.module_from_spec(spec_f)
+spec_f.loader.exec_module(gf)
 
 GAMMA = 2.4
 TOL_PRED = 0.015         # measured vs predicted luma, mean absolute, 1.5 IRE (compression and 8/10 bit round-trips)
@@ -64,6 +67,12 @@ def bake_look(look_params, path, n=65):
         for line in ("LUT_3D_SIZE %d" % n, "DOMAIN_MIN 0 0 0", "DOMAIN_MAX 1 1 1"):
             fh.write(line + "\n")
         np.savetxt(fh, out, fmt="%.6f")
+
+
+def soften(y, r=3):
+    """A luma picture blurred a little: grain and its random pattern average out, the grade itself stays."""
+    from PIL import ImageFilter
+    return np.asarray(Image.fromarray(gs.to_u8(y)).filter(ImageFilter.GaussianBlur(r))).astype(np.float32) / 255.0
 
 
 def pick(samples, n):
@@ -111,10 +120,9 @@ def encode(video, lut_path, stops, wb, look, out, encoder, crf, meta, smooth=0, 
         g = gain(stops)
         denoise = {1: "hqdn3d=1.5:1.5:3:3,", 2: "hqdn3d=3:3:5:5,"}.get(smooth, "")      # before the LUT: the noise is smaller there, the LUT stretches it
         vf = denoise + "format=gbrp10le,lut3d=file=lut.cube:interp=tetrahedral"
-        if gf.is_film(look):                                       # exposure, white balance, tone and colour in one table; then the finish graph
-            gf.bake(look, os.path.join(tmp, "look.cube"), stops, wb, white)
-            vf += ",lut3d=file=look.cube:interp=tetrahedral"
-            vf = "[0:v]" + vf + "[in];" + gf.finish_graph(size[0], size[1], look, fps=fps) + ";[out]format=yuv420p10le[v]"
+        if gf.is_film(look):                                       # DJI LUT, exposure, white balance, tone and colour in ONE table; then the finish graph
+            gf.bake(look, os.path.join(tmp, "film.cube"), stops, wb, white, pre=gs.load_cube(lut_path))
+            vf = "[0:v]" + denoise + "format=gbrp10le,lut3d=file=film.cube:interp=tetrahedral[in];" + gf.finish_graph(size[0], size[1], look, fps=fps) + ";[out]format=yuv420p10le[v]"
         else:
             if abs(stops) > 1e-6 or wb:
                 vf += ",colorchannelmixer=rr=%.6f:gg=%.6f:bb=%.6f" % (g * (wb[0] if wb else 1.0), g, g * (wb[1] if wb else 1.0))
@@ -126,7 +134,8 @@ def encode(video, lut_path, stops, wb, look, out, encoder, crf, meta, smooth=0, 
             venc = ["-c:v", "hevc_nvenc", "-preset", "p5", "-rc", "vbr", "-cq", str(crf + 4), "-b:v", "0", "-profile:v", "main10", "-pix_fmt", "p010le"]
         else:
             venc = ["-c:v", "libx265", "-preset", "medium", "-crf", str(crf), "-x265-params", "log-level=error", "-pix_fmt", "yuv420p10le"]
-        cmd = ["ffmpeg", "-y", "-v", "error", "-i", os.path.abspath(video), "-map", "0:v:0", "-map", "0:a:0?", "-vf", vf] + venc + [
+        vsel = ["-filter_complex", vf, "-map", "[v]"] if gf.is_film(look) else ["-map", "0:v:0", "-vf", vf]
+        cmd = ["ffmpeg", "-y", "-v", "error", "-i", os.path.abspath(video)] + vsel + ["-map", "0:a:0?"] + venc + [
             "-c:a", "copy", "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709", "-color_range", "tv",
             "-tag:v", "hvc1", "-movflags", "+faststart+use_metadata_tags", "-metadata", "comment=" + meta, os.path.abspath(out)]
         p = subprocess.run(cmd, cwd=tmp, capture_output=True, text=True)
@@ -148,6 +157,7 @@ def main():
     ap.add_argument("--look-cube", help="a ready-made creative .cube LUT (made for Rec.709) used as the look; --look-mix says how much (0-1). Third-party LUTs stay local, in assets/looks/external/")
     ap.add_argument("--look-mix", type=float, default=1.0)
     ap.add_argument("--look", help="a look from the preset (see grade-looks.py), applied after the LUT, exposure and white balance, e.g. blockbuster")
+    ap.add_argument("--match", help="match.json from grade-match.py: this clip's exposure and white balance come from the shot matching (--stops / --wb-gains still win)")
     ap.add_argument("--frames", type=int, default=3, help="frames in the preview")
     ap.add_argument("--render", action="store_true", help="encode the graded clip and check it (needs your approval of the preview)")
     ap.add_argument("--encoder", default="auto", choices=["auto", "x265", "nvenc"], help="auto = the video card when ffmpeg and the driver offer it (about 4x faster), else the CPU")
@@ -161,7 +171,16 @@ def main():
         return 1
     lut_path = os.path.join(gs.LUTS, prof["lut"])
     lut_t = gs.load_cube(lut_path)
-    stops = rep["proposal"]["exposure_stops"] if args.stops is None else args.stops
+    matched = None
+    if args.match:
+        mt = json.load(open(args.match, encoding="utf8"))["clips"]
+        matched = mt.get(os.path.basename(args.video))
+        if not matched:
+            print("%s is not in %s (have: %s)" % (os.path.basename(args.video), args.match, ", ".join(mt)))
+            return 1
+        if args.wb_gains is None and matched.get("wb_gains"):
+            args.wb_gains = "%.4f,%.4f" % tuple(matched["wb_gains"])
+    stops = (matched["stops"] if matched else rep["proposal"]["exposure_stops"]) if args.stops is None else args.stops
     if abs(stops) > MAX_STOPS:
         print("%+.2f stops is out of range: the limit is +-%.1f (a bigger push is a re-shoot, not a grade)." % (stops, MAX_STOPS))
         return 1
@@ -197,13 +216,21 @@ def main():
     w = gs.W_STATS
     h = int(round(w * meta["h"] / meta["w"] / 2) * 2)
     samples = rep["samples"]
+    fps = meta.get("fps") or "25"
+    film = gf.is_film(look)
+    white = None
+    if film:                                                   # the clip's white, measured once: the highlight stretch is the same on every frame (no flicker)
+        white = gf.measure_white([gs.apply_lut(gs.grab(args.video, s["t"], w, h), lut_t) for s in samples])
+        print("Film look: clip white %.3f (linear), highlight stretch x%.2f" % (white, gf.stretch_for(white * 2.0 ** stops, gf.film_params(look))))
     idx = pick(samples, args.frames)
     sheets = []
     for k, i in enumerate(idx):
         t = samples[i]["t"]
         f = gs.grab(args.video, t, w, h)
         lut_rgb = gs.apply_lut(f, lut_t)
-        fin = expose(lut_rgb, stops, wb, look)
+        fin = expose(lut_rgb, stops, wb, look, white)
+        if film:
+            fin = gf.finish_image(fin, look, fps)
         s = sheet(f, lut_rgb, fin, t, "LUT %+.2f stops%s%s" % (stops, (" WB R x%.3f B x%.3f" % tuple(wb)) if wb else "", (" + look " + args.look) if look else ""))
         s.save(os.path.join(args.out, "preview-%02d.png" % (k + 1)))
         sheets.append(s)
@@ -214,7 +241,7 @@ def main():
         y += s.height
     big.save(os.path.join(args.out, "preview-sheet.png"))
     print("Profile: %s | LUT: %s | exposure: %+.2f stops (%s) | white balance: %s" % (
-        prof["label"], prof["lut"], stops, "your value" if args.stops is not None else "the scan's proposal",
+        prof["label"], prof["lut"], stops, "your value" if args.stops is not None else ("the shot matching" if matched else "the scan's proposal"),
         ("R x%.3f, B x%.3f" % tuple(wb)) if wb else "untouched") + " | look: %s" % (args.look or "none"))
     print("Preview: %s" % os.path.join(args.out, "preview-sheet.png"))
     if not args.render:
@@ -229,7 +256,7 @@ def main():
     note = "graded with %s, exposure %+.2f stops%s%s (grade-apply.py)" % (prof["lut"], stops, (", white balance R x%.3f B x%.3f" % tuple(wb)) if wb else "", (", look %s" % args.look) if look else "")
     print("Rendering %s ..." % out_mp4)
     try:
-        encode(args.video, lut_path, stops, wb, look, out_mp4, args.encoder, args.crf, note, args.smooth)
+        encode(args.video, lut_path, stops, wb, look, out_mp4, args.encoder, args.crf, note, args.smooth, white, (meta["w"], meta["h"]), fps)
     except Exception as e:  # noqa
         print("render failed:", e)
         return 1
@@ -242,8 +269,12 @@ def main():
         got = gs.grab(out_mp4, t, w, h)
         if src is None or got is None:
             continue
-        predicted = expose(gs.apply_lut(src, lut_t), stops, wb, look)
-        pred_err.append(float(np.abs(gs.luma(predicted) - gs.luma(got)).mean()))
+        predicted = expose(gs.apply_lut(src, lut_t), stops, wb, look, white)
+        if film:                                               # the finish is in the file too; grain is random, so compare softened pictures
+            predicted = gf.finish_image(predicted, look, fps)
+            pred_err.append(float(np.abs(soften(gs.luma(predicted)) - soften(gs.luma(got))).mean()))
+        else:
+            pred_err.append(float(np.abs(gs.luma(predicted) - gs.luma(got)).mean()))
         meas.append(gs.frame_stats(got))
     perr = float(np.mean(pred_err))
     clip = float(np.mean([m["clip"] for m in meas]))
