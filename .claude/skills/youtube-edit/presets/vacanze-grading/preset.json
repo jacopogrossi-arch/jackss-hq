@@ -317,7 +317,7 @@
       },
       "jacopo-cinema-wow": {
         "title": "Jacopo + cinema WOW",
-        "desc": "Il look scelto da Jacopo il 24/10/2026: i suoi colori molto spinti su acqua e cielo, pelle viva (saturazione pelle laguna 0,57), contrasto cinema.",
+        "desc": "Il look scelto da Jacopo il 24/10/2026: i suoi colori molto spinti su acqua e cielo, pelle viva (saturazione pelle laguna 0,57), contrasto cinema. Predefinito fino al 27/10, poi sostituito da pellicola-oro: Jacopo lo tiene salvato come alternativa (piu' pop, senza grana) da usare quando ne ha voglia.",
         "p": {
           "contrast": 0.55,
           "crush": 0.03,
