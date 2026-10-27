@@ -58,6 +58,15 @@ class GradeFilm(unittest.TestCase):
         self.assertGreater(dd[0], 0.02)
         self.assertLess(dd[2], -0.02)
 
+    def test_saturation_per_hue_touches_only_its_hue(self):
+        red, sea = flat((0.7, 0.25, 0.28)), flat((0.25, 0.70, 0.68))
+        look = {"film": {"sat_hue": [[355, 25, 1.3]]}}
+        plain = {"film": {}}
+        def chroma(a):
+            return float(a.max(-1).mean() - a.min(-1).mean())
+        self.assertGreater(chroma(self.gf.colour(red, look)), chroma(self.gf.colour(red, plain)) * 1.15)
+        self.assertAlmostEqual(chroma(self.gf.colour(sea, look)), chroma(self.gf.colour(sea, plain)), delta=0.005)
+
     def test_bake_with_the_dji_lut_equals_lut_then_grade(self):
         d = scratch(self)
         lut_path = os.path.join(self.gf.gs.LUTS, "DJI-OsmoNano-DLogM-to-Rec709-V1.cube")

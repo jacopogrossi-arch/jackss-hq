@@ -39,7 +39,7 @@ GAMMA = 2.4
 GREY = 0.18
 WHITE_STOPS = float(np.log2(1.0 / GREY))                 # display white, 2.47 stops above middle grey
 FILM = {"contrast": 1.12, "shoulder": 1.5, "white_target": 0.95, "stretch_from": 1.0, "stretch_max": 2.5, "stretch_min": 0.85,
-        "black": 0.004, "hl_desat": 0.2, "warm": None, "density": 0.0, "hue": []}
+        "black": 0.004, "hl_desat": 0.2, "warm": None, "sat_hue": [], "density": 0.0, "hue": []}
 FINISH = {"halation": 0.0, "halation_threshold": 0.8, "halation_radius": 0.006, "halation_color": [1.0, 0.42, 0.16],
           "grain": 0.0, "grain_size": 2.0, "vignette": 0.0, "sky_grad": 0.0}
 LOOK_LIGHT_KEYS = ("gamma", "crush", "lift", "gain", "temp", "contrast", "shadows", "highlights")   # the film tone replaces these
@@ -156,6 +156,14 @@ def colour(x, look):
         yy = np.clip(gs.luma(x), 0, 1)[..., None]
         hl, sh = np.array(f["warm"][0], np.float32), np.array(f["warm"][1], np.float32)
         x = np.clip(x + keep * ((yy ** 2) * hl + ((1 - yy) ** 2) * sh), 0, 1)
+    if f["sat_hue"]:                                         # saturation per hue, like a colourist's HSL panel: [(centre_deg, width_deg, gain), ...]
+        h, s = gl.hue_sat(x)
+        gain = np.ones_like(h)
+        for c, w, g in f["sat_hue"]:
+            gain += gl.window(h, c / 360.0, w / 360.0) * (g - 1.0)
+        gain = 1.0 + (gain - 1.0) * np.clip((s - 0.04) / 0.08, 0, 1)     # leave the near-greys alone
+        yy = gs.luma(x)[..., None]
+        x = np.clip(yy + (x - yy) * gain[..., None], 0, 1)
     if f["density"]:                                         # saturated colours a little darker: rich, not neon
         c = x.max(axis=-1, keepdims=True) - x.min(axis=-1, keepdims=True)
         x = x * (1.0 - f["density"] * c)
