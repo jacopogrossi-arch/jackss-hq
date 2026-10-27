@@ -381,7 +381,7 @@
       },
       "pellicola-oro": {
         "title": "Pellicola oro (pipeline film)",
-        "desc": "27/10/2026, dai video d'ispirazione di Jacopo (Hawaii, Dolomiti, Tokyo, travel film): i suoi colori WOW su acqua e pelle, ma luci dorate, ombre teal, bianchi che arrivano al bianco con spalla morbida, grana, alone e vignetta leggeri. Usa la pipeline in luce lineare di grade-film.py. Verdetto 27/10 sul render della laguna: 'buon risultato, manca poco poco di colore sulla pelle e sul costume' -> pelle e rossi spinti con sat_hue (rosso x1,28, pelle x1,18), vibranza 0,45, densita' 0,10.",
+        "desc": "27/10/2026, dai video d'ispirazione di Jacopo (Hawaii, Dolomiti, Tokyo, travel film): i suoi colori WOW su acqua e pelle, ma luci dorate, ombre teal, bianchi che arrivano al bianco con spalla morbida, grana, alone e vignetta leggeri. Usa la pipeline in luce lineare di grade-film.py. Verdetto 27/10 sul render della laguna: 'buon risultato, manca poco poco di colore sulla pelle e sul costume' -> provati due livelli, scelto il piu' leggero (B): sat_hue rosso x1,15, pelle x1,10, pelle WOW 1,08, vibranza 0,40, densita' 0,12. Look predefinito dal 27/10.",
         "p": {
           "sat": 0.924,
           "vibrance": 0.27,
@@ -391,9 +391,9 @@
           "chroma_gain": 1.0,
           "wow": {
             "sat": 1.08,
-            "vibrance": 0.45,
+            "vibrance": 0.4,
             "sea_sat": 1.45,
-            "skin_sat": 1.12
+            "skin_sat": 1.08
           },
           "film": {
             "contrast": 1.12,
@@ -407,10 +407,10 @@
               [-0.015, 0.006, 0.015]
             ],
             "sat_hue": [
-              [355, 25, 1.28],
-              [22, 22, 1.18]
+              [355, 25, 1.15],
+              [22, 22, 1.1]
             ],
-            "density": 0.1,
+            "density": 0.12,
             "hue": [
               [219, 30, -5]
             ]
@@ -425,6 +425,6 @@
       }
     },
     "look_max_crush": 0.12,
-    "default_look": "jacopo-cinema-wow"
+    "default_look": "pellicola-oro"
   }
 }

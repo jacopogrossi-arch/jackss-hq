@@ -49,6 +49,7 @@ Dopo V1-V5 Jacopo ha scelto **`jacopo-cinema-wow`**: i suoi colori molto spinti 
 variante `jacopo-cinema-wow-pelle-media` e' piu' sobria), contrasto cinema. Ricetta per ogni clip log nuova, in quest'ordine:
 1. `grade-scan.py --video clip --out scan` (profilo dal tag DJI; sulla Nano "probabile" e confermato dall'immagine). Guarda `REPORT.md` e la proposta di esposizione.
 2. `grade-apply.py --video clip --scan scan/report.json --out out --look jacopo-cinema-wow --smooth 1` (senza `--render` = solo anteprima), poi con `--render`.
+   **Dal 27/10 il look predefinito e' `pellicola-oro`** (vedi "Il grading professionale" piu' sotto): stessa ricetta con `--look pellicola-oro`.
 3. Il controllo `CHECK.md` deve dire PASS. Se la pelle o il mare non convincono, si regola con `--stops` o si scelgono le varianti del preset.
 Nota: la mappa colore e' stata appresa solo sulle sue due clip (acqua, cielo, pelle, rosso): su scene con altri colori (interni, verdi, gialli) il WOW agisce solo con
 il secondo passaggio di colore e va guardato prima di fidarsene.
