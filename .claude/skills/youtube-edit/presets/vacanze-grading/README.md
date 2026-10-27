@@ -19,6 +19,7 @@ Tutti i numeri qui sotto stanno in `preset.json` (chiave `grade`): per cambiarli
 ## LUT creative pronte per il Pocket 4P (adimology, aggiunte il 27/10/2026)
 Pack gratuito di @adimology (Google Drive "adimology - DJI Pocket 4P Creative LUTs"): 5 LUT `.cube` che leggono **direttamente il log** e sostituiscono
 la LUT tecnica DJI. Stanno in `assets/looks/external/adimology-p4p/` — **solo in locale**: la licenza vieta di ridistribuirle, quindi mai su GitHub.
+**Non sono il predefinito** (deciso da Jacopo il 27/10/2026): il grading resta LUT tecnica DJI + look `pellicola-oro`; queste si usano solo se le chiede.
 Si usano con `grade-apply.py --log-cube adimology-p4p/adimology-P4P-<Nome>.cube` (scan, anteprima e render restano uguali).
 
 - **Sono costruite sulla curva D-Log**, non D-Log2 (misurato su una rampa di grigi: distanza dalla LUT DJI D-Log 0,03-0,05, dalla D-Log2 0,12-0,14).
