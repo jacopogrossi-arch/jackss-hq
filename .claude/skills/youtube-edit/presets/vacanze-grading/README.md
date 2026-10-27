@@ -63,3 +63,10 @@ il secondo passaggio di colore e va guardato prima di fidarsene.
 ## Verificato su
 Tre clip vere di Jacopo (23/10/2026): Pocket 4P D-Log (11,6 s), Pocket 4P D-Log2 (30,7 s), Osmo Nano D-Log M (9,2 s, arena al chiuso). Il file renderizzato coincide con la
 previsione entro 0,2 IRE. Le clip stanno in `videos/_grade-test/` (fuori da GitHub).
+
+## Stabilizzazione (27/10/2026, prima prova su clip Nano camminata, 41 s)
+Si stabilizza **dopo** il grading, sul file graduato (stessa risoluzione: le trasformazioni misurate sul log valgono pari pari). Due passaggi ffmpeg (vidstab):
+1. `ffmpeg -i clip-log.mp4 -vf "vidstabdetect=shakiness=6:accuracy=15:stepsize=6:result=transforms.trf" -f null -` (4K, ~8 min su 41 s)
+2. `ffmpeg -i graded.mp4 -vf "vidstabtransform=input=transforms.trf:smoothing=25:optzoom=1:interpol=bicubic,unsharp=5:5:0.4:3:3:0,format=p010le" -c:v hevc_nvenc -preset p6 -rc vbr -cq 18 -b:v 0 -tag:v hvc1 -c:a copy stabilizzato.mp4`
+- `smoothing=25` (1 s a 25 fps) tiene le panoramiche volute e toglie il saltellio del passo; `optzoom=1` = zoom fisso minimo, niente bordi neri (~10-15 % di crop).
+- Misurato (vidstabdetect ascii, `fileformat=1`, su copie 960 px): scatti verticali -65 %, orizzontali -40 %. Il mosso (motion blur) dei fotogrammi resta: la stabilizzazione non lo toglie.
