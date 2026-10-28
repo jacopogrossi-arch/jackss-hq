@@ -261,13 +261,18 @@ Every full-frame scene sits on an ambient three-radial brand wash plus a 96 px g
 **Words:** Jacopo calls these scenes **motion plates** (not "motion graphics"): a full-frame graphic that replaces the
 camera shot. When he says "motion plate" he means any format in this section, `world`, `deck`, `studio`, `chain3d`.
 
-**Face PiP on every motion plate** (Jacopo, 28/10/2026; not built yet, to A/B before it becomes default): the talking
-shot keeps running in a small window. Starting spec, borrowed from 23: a rounded crop of the face (about 400x400 at 1080p,
-radius 32, margin 48 from the edges, a soft shadow and a 1-2 px light border so it reads as an object on the wash),
-the same video in sync (one audio, never a second voice track), in the corner the plate leaves free (bottom-right by
-default; the plate's content is laid out around it, never under it). It arrives with the plate (scales out of the full
-frame into its corner in ~0.5 s `power3.inOut`, the reverse on the way out), never pops in separately, never moves
-while the plate's camera moves. Not on 46, 35 or stock cutaways of other people.
+**Face PiP on every motion plate** (Jacopo, 28/10/2026, A/B on `videos/_bench/ab/plate-pip/`, pick "la 1 però quadrata"):
+the talking shot keeps running in a small window. **Spec (the default):** a square crop of the face, 320x320 at 1080p,
+corners radius 28, bottom-right with a 48 px margin (left 1552, top 712), a 3 px cyan ring `rgba(10,240,240,.85)` with a
+cyan glow `0 0 28px rgba(10,240,240,.45)` plus a dark drop shadow. Not a second video: the base video's wrapper
+(`#video-wrap`) rises above the plate (`zIndex` 20; `#bg-video` alone stays under the card hosts) and is scaled with
+`transformOrigin 0 0` + a `clipPath: inset(... round r)` tween, so lips stay in sync and there is one audio. It arrives
+with the plate (scales from full frame into its corner in 0.55 s `power3.inOut`, the reverse on the way out); the ring
+fades in as it lands. Not on 46, 35 or stock cutaways of other people. Builder: `videos/_bench/ab/plate-pip/build.py`.
+- **Graphics never pass under the face** (Jacopo, 28/10/2026), not even for a frame during a camera move: lay the plate
+  out around the PiP corner (on the chain3d plate the whole scene is lifted 140 px) and let the plate's first element
+  enter only after the face has landed in its corner. Prove it on a no-face render of the same plate: crop the PiP corner
+  plus a 40 px margin and check with `signalstats` that YMAX stays at wash level (under ~70) for every frame of the plate.
 
 - **6. Flow diagram.** A rail 1840 px wide at left 40: N nodes of 320 px, 56 px gaps, a 44 px arrow centred in each
   (five nodes: lefts 0/376/752/1128/1504, arrows 326/702/1078/1454; recompute for another N). A node: a cyan number
