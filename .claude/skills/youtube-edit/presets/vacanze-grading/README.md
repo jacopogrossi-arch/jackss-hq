@@ -65,6 +65,11 @@ variante `jacopo-cinema-wow-pelle-media` e' piu' sobria), contrasto cinema. Rice
 1. `grade-scan.py --video clip --out scan` (profilo dal tag DJI; sulla Nano "probabile" e confermato dall'immagine). Guarda `REPORT.md` e la proposta di esposizione.
 2. `grade-apply.py --video clip --scan scan/report.json --out out --look jacopo-cinema-wow --smooth 1` (senza `--render` = solo anteprima), poi con `--render`.
    **Dal 27/10 il look predefinito e' `pellicola-oro`** (vedi "Il grading professionale" piu' sotto): stessa ricetta con `--look pellicola-oro`.
+   **Reel montati (28/10, reel Zanzibar):** sull'intero reel pellicola-oro sembrava "un po' flat". Sopra il look, al montaggio, va una curva a S
+   `curves=all='0/0 0.25/0.21 0.5/0.5 0.75/0.79 1/1',eq=saturation=1.12` ("decisamente meglio"). Giudicare il colore su fotogrammi a piena
+   risoluzione: la copia 480p per il telefono appiattisce.
+   Su clip corte con acqua veloce (scia, schiuma) il controllo "file uguale all'anteprima" puo' fallire (3,5 IRE) senza un vero difetto:
+   i momenti misurati cadono su fotogrammi diversi. Guardare il file invece di rifarlo.
 3. Il controllo `CHECK.md` deve dire PASS. Se la pelle o il mare non convincono, si regola con `--stops` o si scelgono le varianti del preset.
 Nota: la mappa colore e' stata appresa solo sulle sue due clip (acqua, cielo, pelle, rosso): su scene con altri colori (interni, verdi, gialli) il WOW agisce solo con
 il secondo passaggio di colore e va guardato prima di fidarsene.
