@@ -109,6 +109,10 @@ def main():
     casts = [c["cast"] for c in clips if c["cast"] is not None]
     cast_t = (float(np.median([x[0] for x in casts])), float(np.median([x[1] for x in casts]))) if len(casts) >= 2 else None
 
+    # clips with the same file name (e.g. every shot cut to its own folder as log.mov) are keyed by their full path:
+    # keyed by name they overwrote each other and every clip got the last clip's exposure (Zanzibar reel, 28/10/2026)
+    names = [c["name"] for c in clips]
+    key = lambda c: os.path.abspath(c["video"]) if names.count(c["name"]) > 1 else c["name"]
     out, rows = {}, []
     for c in clips:
         why = []
@@ -133,7 +137,7 @@ def main():
                 why.append("colour already in line with the set")
         else:
             why.append("colour left alone: too few near-neutral areas (%.1f %%)" % (c["neutral_frac"] * 100) if c["cast"] is None else "colour left alone: only one clip to compare")
-        out[c["name"]] = {"video": c["video"], "scan": c["scan"], "stops": stops, "wb_gains": wb, "why": why}
+        out[key(c)] = {"video": c["video"], "scan": c["scan"], "stops": stops, "wb_gains": wb, "why": why}
         mid = c["frames"][len(c["frames"]) // 2]
         rows.append([tile(grade(mid, c["stops"], None, look, c["white"]), 480, "%s  PRIMA" % c["name"][:34]),
                      tile(grade(mid, stops, wb, look, c["white"]), 480, "%s  DOPO il match" % c["name"][:30])])

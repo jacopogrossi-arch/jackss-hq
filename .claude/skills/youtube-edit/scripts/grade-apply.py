@@ -177,7 +177,7 @@ def main():
     matched = None
     if args.match:
         mt = json.load(open(args.match, encoding="utf8"))["clips"]
-        matched = mt.get(os.path.basename(args.video))
+        matched = mt.get(os.path.abspath(args.video)) or mt.get(os.path.basename(args.video))
         if not matched:
             print("%s is not in %s (have: %s)" % (os.path.basename(args.video), args.match, ", ".join(mt)))
             return 1
