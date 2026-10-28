@@ -44,6 +44,7 @@ video-editor/shared/
 
 # Suoni con licenza personale (Artlist/Epidemic): mai su GitHub, il repo e pubblico
 .claude/skills/youtube-edit/assets/sfx/licensed/
+.claude/skills/youtube-edit/assets/music/licensed/
 
 # third-party creative LUTs (their own licences): local only
 .claude/skills/youtube-edit/assets/looks/external/

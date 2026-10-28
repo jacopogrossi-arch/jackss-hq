@@ -46,9 +46,16 @@ data-volume="0.22"></audio>` as a direct child of the composition root, never in
 `id`, or it is silent in the render while the preview plays fine (`check` reports `media_missing_id`). Overlapping sounds
 need separate `data-track-index` values; trim any sound that would run past `data-duration`.
 
-**Sourcing:** the Epidemic Sound connector (`SearchSoundEffects` filtered by duration, `DownloadSoundEffect`; for music
-`SearchRecordings`, `DownloadRecording` with stems, `EditRecording` to an exact `targetDurationMs`), checked as attached
-first; or the free HyperFrames library (typing, key-press, click, click-soft, pop, ping, notification, chime and more).
+**Sourcing: Epidemic Sound first** (Jacopo, 28/10/2026: his subscription is connected through the MCP connector and is the
+sound-design source for ALL video editing: YouTube, the travel reels, the b-roll format). Sound effects:
+`SearchSoundEffects` filtered by duration, `DownloadSoundEffect`. Music: `SearchRecordings`, `DownloadRecording` with
+stems, `EditRecording` to an exact `targetDurationMs` (a bed cut to the video's length, or a reel's track cut on the
+drop). Check the connector's tools are loaded in the session first (a new connector shows up after a restart); if
+they are not, say so and fall back to the local libraries (CC0 `assets/sfx`, `licensed/`, the free HyperFrames library:
+typing, key-press, click, click-soft, pop, ping, notification, chime and more). Every Epidemic download is saved
+locally only: effects in `assets/sfx/licensed/` (`es-` name, a line in its `cues.json` and `CREDITS.md`), music in
+`assets/music/licensed/`; both are git-ignored, never committed, never in tests or public presets. Jacopo's taste
+still decides: no pops, a riser is metallic, nothing under elegant titles (see the table above and `NOTES_LOG.md`).
 
 **Align the audible peak, not the file start:** trim the silence before the transient (`ffmpeg -af
 silenceremove=start_periods=1:start_threshold=-40dB`) so the peak lands within two frames of its cause.
