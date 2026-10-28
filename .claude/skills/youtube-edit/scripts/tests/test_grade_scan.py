@@ -70,6 +70,19 @@ class GradeScan(unittest.TestCase):
         p = gs.propose([st, st, st])
         self.assertEqual(p["exposure_anchor"], "skin")
 
+    def test_bright_fake_skin_does_not_darken_a_well_exposed_frame(self):
+        import numpy as np
+        gs = self.load_gs()
+        f = np.zeros((90, 160, 3), np.float32)
+        f[:] = (0.25, 0.32, 0.38)                          # shade, leaves, sea: a frame exposed right, nothing near white
+        f[:30] = (0.92, 0.72, 0.60)                        # warm paving in the sun: skin-coloured, at ~76 IRE
+        st = gs.frame_stats(f)
+        self.assertGreater(st["skin_luma"], gs.CFG["skin_band"][1])
+        p = gs.propose([st, st, st])
+        self.assertEqual(p["exposure_anchor"], "median")
+        self.assertGreaterEqual(p["exposure_stops"], 0.0)
+        self.assertIn("probably not skin", p["exposure_why"])
+
     def test_preset_names_real_luts_and_drives_the_thresholds(self):
         import importlib.util
         spec = importlib.util.spec_from_file_location("grade_scan", os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "grade-scan.py"))

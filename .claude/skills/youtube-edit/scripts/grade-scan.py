@@ -236,17 +236,25 @@ def propose(graded_stats):
     """Exposure is anchored on skin when the frame has some (a beach or a snow field would fool a median);
     otherwise on the median. Inside the band nothing is proposed."""
     skin = [s["skin_luma"] for s in graded_stats if s["skin_luma"] is not None and s["skin_frac"] >= 0.01]
+    median = float(np.mean([s["median"] for s in graded_stats]))
+    worst = max(s["pmax99"] for s in graded_stats)          # worst frame, brightest channel: the top 1 % must stay under the highlight ceiling
+    suspect = ""
     if len(skin) >= max(2, len(graded_stats) // 3):
         anchor, kind, (lo, hi), centre = float(np.median(skin)), "skin", CFG["skin_band"], CFG["skin_target"]
+        # "skin" brighter than the band, while the frame itself is not bright and nothing clips: warm paving, sand or pink
+        # flowers read as skin (28/10/2026, Zanzibar arch, no people: -1.3 stops on a clip exposed right). Trust the median.
+        if anchor > hi and median <= CFG["median_band"][1] and worst < CFG["highlight_ceiling"]:
+            suspect = "; the skin-coloured pixels (%.0f IRE) asked to darken a frame whose median is fine and whose highlights do not clip: probably not skin (sand, paving, flowers), anchored on the median" % (anchor * 100)
+            anchor, kind, (lo, hi), centre = median, "median", CFG["median_band"], CFG["median_target"]
     else:
-        anchor, kind, (lo, hi), centre = float(np.mean([s["median"] for s in graded_stats])), "median", CFG["median_band"], CFG["median_target"]
+        anchor, kind, (lo, hi), centre = median, "median", CFG["median_band"], CFG["median_target"]
     if lo <= anchor <= hi:
         stops, why = 0.0, "%s at %.0f IRE, inside the %.0f-%.0f band: no exposure change" % (kind, anchor * 100, lo * 100, hi * 100)
     else:
         edge = lo if anchor < lo else hi                      # the smallest correction that brings it inside the band, not a jump to its centre
         stops = math.log2(lin(edge) / lin(anchor))
         why = "%s at %.0f IRE, outside the %.0f-%.0f band: move it to the edge, %.0f IRE" % (kind, anchor * 100, lo * 100, hi * 100, edge * 100)
-    worst = max(s["pmax99"] for s in graded_stats)          # worst frame, brightest channel: the top 1 % must stay under the highlight ceiling
+    why += suspect
     room = math.log2(CFG["highlight_ceiling"] / max(worst, 1e-3)) * GAMMA_APPLY
     if stops > room:
         stops = min(stops, room)
