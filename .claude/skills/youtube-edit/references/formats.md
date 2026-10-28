@@ -258,6 +258,17 @@ border: 3px solid rgba(255,255,255,.58); border-radius: 26px; box-shadow: 0 24px
 
 Every full-frame scene sits on an ambient three-radial brand wash plus a 96 px grid at .28, never flat black.
 
+**Words:** Jacopo calls these scenes **motion plates** (not "motion graphics"): a full-frame graphic that replaces the
+camera shot. When he says "motion plate" he means any format in this section, `world`, `deck`, `studio`, `chain3d`.
+
+**Face PiP on every motion plate** (Jacopo, 28/10/2026; not built yet, to A/B before it becomes default): the talking
+shot keeps running in a small window. Starting spec, borrowed from 23: a rounded crop of the face (about 400x400 at 1080p,
+radius 32, margin 48 from the edges, a soft shadow and a 1-2 px light border so it reads as an object on the wash),
+the same video in sync (one audio, never a second voice track), in the corner the plate leaves free (bottom-right by
+default; the plate's content is laid out around it, never under it). It arrives with the plate (scales out of the full
+frame into its corner in ~0.5 s `power3.inOut`, the reverse on the way out), never pops in separately, never moves
+while the plate's camera moves. Not on 46, 35 or stock cutaways of other people.
+
 - **6. Flow diagram.** A rail 1840 px wide at left 40: N nodes of 320 px, 56 px gaps, a 44 px arrow centred in each
   (five nodes: lefts 0/376/752/1128/1504, arrows 326/702/1078/1454; recompute for another N). A node: a cyan number
   badge, a hand-drawn SVG glyph, a 30 px/700 two-line title, chips for specifics. One beat per spoken step (~6.4 s

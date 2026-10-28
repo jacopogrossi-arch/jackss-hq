@@ -60,9 +60,13 @@ format, the step labels, in one short message): a diagram is 30 to 40 s of scree
   heavy-overlay budget, and a note costs one section's render.
 
 **The house rules for long form:**
-- **Your face is not the default background.** Aim for 40% or more of a talking section full-frame on the brand wash,
-  the animation alone on screen. An abstract explanation (what a tool can do: files, programs, an output folder) goes
-  full-frame as a `world` scene, never as a card over your face.
+- **Your face is not the default background.** Aim for 40% or more of a talking section as **motion plates** (Jacopo's
+  word for the full-frame graphic scenes on the brand wash). An abstract explanation (what a tool can do: files, programs,
+  an output folder) goes on a plate as a `world` scene, never as a card over your face.
+- **Every motion plate carries your face in picture-in-picture** (Jacopo, 28/10/2026, from an Ali Abdaal video): the same
+  footage, in sync, in a small rounded crop in a corner, so the viewer never loses the person talking. Spec in
+  `references/formats.md`, "Explainers (full frame)". Exceptions: the 46 hero line and 35 masked title (one sentence, a
+  few seconds) and stock `clip` cutaways of other people.
 - **Variety over lists.** No list or bullet panel in a long-form body: each list becomes a device (pills on each phrase,
   a `world` loop, one device per number, a pipeline).
 - **Every person or job you name gets footage of that person:** a 2.6 to 3.4 s full-frame stock `clip` right after you
