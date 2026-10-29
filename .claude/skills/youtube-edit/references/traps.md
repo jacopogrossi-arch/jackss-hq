@@ -46,7 +46,10 @@ fades are fine without backdrop-filter (lower lines). Glass that has not arrived
 - **`snapshot`, `check` and `render` record a revision of the project in `~/.cache/hyperframes/history/<id>/blobs`**, and every revision copies the media: a full
   4K flat cut cost **2.2 GB per run** and filled a 223 GB `C:` to 0 bytes in one afternoon (tests then fail with "No space left on device"). Always export
   `HYPERFRAMES_HISTORY_ROOT=D:\hf-history` (next to `TEMP=TMP=D:\hf-tmp` and `--frames-cache-dir`), take snapshots on a `window-patch.py` copy or a small
-  lab video instead of the full project, and clear old revisions (folders under `history/`) when `C:` runs low; they are only a rewind feature.
+  lab video instead of the full project. **Clean up with the CLI, not by hand** (HyperFrames 0.8.214, 29/10/2026): after each approved checkpoint
+  and after every delivery, `npx hyperframes clean "$W" --dry-run` lists what it would remove (history media copies, extracted frames), then
+  `npx hyperframes clean "$W"` removes it; add `--snapshots` only once the snapshots are approved. Never while a render runs. The first dry run
+  found 1.8 GB of history copies; the revisions are only a rewind feature.
 
 **Encoding and files**
 - **`--gpu` ignores CRF** (`--quality high --gpu` gave 14 Mb/s at 4K): always `--video-bitrate 45M`.

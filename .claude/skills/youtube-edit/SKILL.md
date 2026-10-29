@@ -501,6 +501,11 @@ words, a specific reason to stay in the first three seconds that the video pays 
   3. **Invent** (blind A/B): when no format fits a moment, or a reference shows a device the library lacks, design a new one in
      the preset's style and test it as below; it can run on the video's own window instead of the bench, against the format
      it would replace. Every video brings at least one new or adapted format: the library grows with every video.
+     **Search the registry before building from zero** (29/10/2026): HyperFrames ships about 450 ready blocks and components
+     (titles, kinetic type, captions, charts, transitions, overlays). At every storyboard, for the moments the library covers
+     badly, run `npx hyperframes catalog <words> --json` (the `hyperframes-registry` skill explains install and editing) and
+     propose at least one block at Checkpoint B. A block enters as an invented format: restyled into the preset (palette,
+     fonts, eases, no "Rejected" device), then the blind A/B below. Blocks already installed for tests live in `videos/_registry/`.
 - **A new animation or graphic enters the skill only after it wins a blind A/B on the bench** (Jacopo, 22/10/2026).
   1. **State sheet first:** name every state before any code (what is on screen, where, size, colour) and every change
      between two states (what moves, the property, the ease, the time). A format without a state sheet drifts, and the review
