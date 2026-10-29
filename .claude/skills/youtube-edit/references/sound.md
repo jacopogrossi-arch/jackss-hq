@@ -58,6 +58,16 @@ locally only: effects in `assets/sfx/licensed/` (`es-` name, a line in its `cues
 `assets/music/licensed/`; both are git-ignored, never committed, never in tests or public presets. Jacopo's taste
 still decides: no pops, a riser is metallic, nothing under elegant titles (see the table above and `NOTES_LOG.md`).
 
+**Music-only travel reels (Jacopo, reel Zanzibar #2, 29/10/2026):** the song tells the story, so the sound design is
+almost invisible. Measure the clips' own audio first; on a boat it is wind on the mic and engine (most energy under
+200 Hz), so use Epidemic ambiences instead. One real ambience on the opening shot (~18 dB under the song, -32 LUFS with
+the song at -14); after that only a quiet sea bed on the sea shots (-40 LUFS, "si deve quasi non sentire"), a specific
+sound only where the picture asks for it (the outboard under the boat driver), one diegetic hit where something really
+happens (the splash on the dive cut). Under underwater shots the song goes muffled (lowpass 420 Hz x2), shuts in
+0.08 s and reopens in 0.04 s on the next cut: Jacopo loved it ("la B è bellissima"). On a cut that already carries a
+strong sound (the splash) leave a hard cut: zoom-blur, horizontal whip and a vertical "dive" whip were all rejected
+("forse è meglio senza transition"). No palms, no crickets, no whoosh under the song.
+
 **Align the audible peak, not the file start:** trim the silence before the transient (`ffmpeg -af
 silenceremove=start_periods=1:start_threshold=-40dB`) so the peak lands within two frames of its cause.
 

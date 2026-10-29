@@ -29,3 +29,12 @@ Questa cartella è la **copia su git** di scaletta e script. Clip, render e prov
 | `script/prepara_jacopo.py` | Versione col look di Jacopo: i suoi export Mimo dove ci sono, altrimenti la ricetta (`personale/look-jacopo/`) |
 | `script/edl.py` | EDL per mh-video-editor: curva a S + sharpening, spinta lenta 5% (`--jacopo` per l'altra versione) |
 | `script/finale.py` | Render 16:9, ritaglio 4:3 sul fotogramma reale degli stacchi, versione telefono, export Instagram (`--4k`, `--jacopo`) |
+
+## Suono (29/10)
+File finale su iCloud: `REEL ZANZIBAR/reel2-like-a-tattoo_FINALE-CON-SUONO_INSTAGRAM_4x3.mp4`. Script: `script/suono-mix.py`, che va messo in `videos/zanzibar/reel2/suono/mix.py`. I suoni Epidemic stanno in `suono/es/` e restano solo in locale.
+- **Audio originale delle clip:** scartato. Misurandolo, in barca c'è solo vento sul microfono e motore (70% dell'energia sotto 200 Hz, picchi a 0 dB), e in un paio di clip si sentono voci.
+- **Ambiente:** un'onda/barca a vela solo sulla prima clip, a -32 LUFS, cioè ~18 dB sotto la canzone. Dopo c'è un altro mare (acqua calma) solo sulle clip di mare, a -40 LUFS, "si deve quasi non sentire": Jacopo l'ha chiesto prima più basso (-43), poi "un filo di più". Palme e grilli della sera sono stati provati e tolti.
+- **Clip del capitano (13,0–16,5):** un motoscafo, cioè fuoribordo e acqua che corre, a -32.
+- **Tuffo:** splash sullo stacco a 19,93. Sotto le due clip subacquee la canzone si ovatta (passa-basso 420 Hz) e si riapre di colpo sulla barca a 23,5. Era la "versione B": Jacopo pensava che sarebbe venuta male, invece "la B è bellissima".
+- **Giorno → sera (29,13):** light leak dorato (05, 1,25–2,0 s, 35%) con un soffio d'aria al posto del whoosh.
+- **Sullo stacco laguna → sott'acqua niente transizione.** Provati uno swoosh e tre transizioni visive: zoom con sfocatura ("non mi piace"), whip pan orizzontale ("non so se mi convince"), tuffo verticale con lampo. Alla fine Jacopo: "forse è meglio senza transition".
