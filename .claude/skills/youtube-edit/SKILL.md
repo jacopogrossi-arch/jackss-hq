@@ -396,6 +396,7 @@ any prompt wraps (non-breaking spaces once made a prompt run out of the box). Ca
 | `references/taste.md`, `references/critic.md` | before designing a draft; before the critic reviews a render |
 | `references/NOTES_LOG.md` | after any note from Jacopo that changes a rule |
 | `references/format-history.md` | planning a storyboard (which formats the last videos used) and after each delivery (add the video's line) |
+| `references/hyperframes-app.md` | taking notes from Jacopo in Studio; looking for a motion plate idea in the Moments gallery; borrowing from the app's own skills |
 
 Each file is the same text that used to sit in this one, moved so that a routine pass does not have to read ~45,000 tokens of it. A rule
 still lives in exactly one place: a new note rewrites it there.
