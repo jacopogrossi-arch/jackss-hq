@@ -8,7 +8,7 @@ Questa cartella è la **copia su git** di piano, script e smistamento. Il lavoro
 - Titolo "The beauty of ZANZIBAR" con l'effetto macchina da scrivere e i tasti veri di una macchina antica (Sonniss GDC 2026).
 - Colore pellicola-oro con una curva a S in più. Le clip 1-2 hanno l'esposizione misurata clip per clip, le altre il colore della versione approvata.
 - Sotto la musica: onde (0–17 s), giungla (17–26 s), poi di nuovo onde. Una light leak leggerissima con uno swoosh sul passaggio al tramonto.
-- Il 4:3 è inquadrato clip per clip sui terzi (`crop43_x` in `shots.json`).
+- Il 4:3 è inquadrato clip per clip sui terzi (`crop43_x` in `shots.json`). Il ritaglio cambia sul numero del fotogramma dove avviene davvero lo stacco nel 16:9, misurato, e non sul tempo della battuta. Il render arrotonda lo stacco al fotogramma prima: con il tempo, per un fotogramma la clip nuova usciva con l'inquadratura vecchia e si vedeva uno scatto (corretto il 29/10).
 - La versione per Instagram è H.264 High, 25 Mbps in due passate, con i tag colore BT.709.
 
 ## File
