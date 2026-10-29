@@ -39,7 +39,7 @@ near-white leak at 0.9 burnt the frame to white, at 0.6 it went grey and olive. 
 | Ping / notification | a phone notification, literally | to taste | a number landing, a reveal, an accent |
 | Cha-ching | a money count landing | 0.07 | anything louder than a whisper |
 | Whoosh / swish | transitions and entering graphics (cue system) | per `cues.json` | copy: a text line carries its small typing or tap cue, never a sweep |
-| Riser | a build-up into a reveal or a scene change, **always a METALLIC riser** (Jacopo, 23/10/2026: "when I say riser I mean a metallic riser"); the library has none yet: source a CC0 one before using a riser, never fall back to `riser`/`breathy-riser` | per `cues.json` | copy, logos, every beat: a riser is rare |
+| Riser | a build-up into a reveal or a scene change, **always a METALLIC riser** (Jacopo, 23/10/2026: "when I say riser I mean a metallic riser"); use Jacopo's own risers from the CapCut clip of 29/10/2026 (the first ones he likes): `riser-jg` (4.06 s, peak at 3.77) for a long build, `riser-jg-short` / `riser-jg-short-b` (1.55 s, peak at 0.93) for a quick one; never fall back to `riser`/`breathy-riser` | per `cues.json` | copy, logos, every beat: a riser is rare |
 
 **Wiring:** `<audio id="sfx-typing" src="sfx/typing.mp3" data-start="8.22" data-duration="1.50" data-track-index="10"
 data-volume="0.22"></audio>` as a direct child of the composition root, never inside a wrapper. Every `<audio>` needs an
