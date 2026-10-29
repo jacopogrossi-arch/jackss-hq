@@ -360,8 +360,8 @@
    "vol": 0.3,
    "lead": 0.0
   },
-  "cc-swoosh": {
-   "file": "licensed/cc-swoosh.mp3",
+  "cc-camera": {
+   "file": "licensed/cc-camera.mp3",
    "dur": 1.43,
    "vol": 0.35,
    "lead": 0.24
@@ -378,14 +378,14 @@
    "vol": 0.35,
    "lead": 0.0
   },
-  "cc-shimmer": {
-   "file": "licensed/cc-shimmer.mp3",
+  "cc-shutter-canon": {
+   "file": "licensed/cc-shutter-canon.mp3",
    "dur": 0.96,
    "vol": 0.3,
    "lead": 0.05
   },
-  "cc-boom": {
-   "file": "licensed/cc-boom.mp3",
+  "cc-zoom-whoosh": {
+   "file": "licensed/cc-zoom-whoosh.mp3",
    "dur": 0.92,
    "vol": 0.4,
    "lead": 0.39
