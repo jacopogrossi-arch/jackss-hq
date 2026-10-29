@@ -1,0 +1,106 @@
+{
+ "_nota": "Reel Zanzibar #2 su 'Like a Tattoo' (Sade). Tagli = stacchi del video di riferimento fino a 29,13 s (primo attacco 2,43 confermato da Jacopo), poi 33,11 (attacco) e fine a 36,3 (la musica sfuma; a 36,5 c'e' il logo TikTok). Formato cinemascope 2,39:1. cam p = Pocket, n = Nano.",
+ "cuts": [
+  0,
+  2.433,
+  5.7,
+  7.367,
+  8.7,
+  11.167,
+  13.0,
+  16.467,
+  19.933,
+  21.367,
+  23.5,
+  24.8,
+  29.133,
+  33.11,
+  36.3
+ ],
+ "shots": [
+  {
+   "id": "0128",
+   "cam": "p",
+   "start": 4.0,
+   "cosa": "aggancio: barca a vela al tramonto (dopo l assestamento 1-3 s)"
+  },
+  {
+   "id": "0075",
+   "cam": "p",
+   "start": 2.5,
+   "cosa": "mattina: palme dal basso"
+  },
+  {
+   "id": "0009",
+   "cam": "p",
+   "start": 2.0,
+   "cosa": "l arco scopre il mare (entra la voce)"
+  },
+  {
+   "id": "0077",
+   "cam": "p",
+   "start": 8.0,
+   "cosa": "spiaggia vuota in bassa marea, la camera scivola di lato"
+  },
+  {
+   "id": "0031",
+   "cam": "p",
+   "start": 7.8,
+   "cosa": "si parte: la costa con le palme vista dal mare"
+  },
+  {
+   "id": "0029",
+   "cam": "p",
+   "start": 3.0,
+   "cosa": "si parte: l isola all orizzonte dalla barca"
+  },
+  {
+   "id": "0028",
+   "cam": "p",
+   "start": 0.1,
+   "cosa": "il capitano al timone"
+  },
+  {
+   "id": "0043",
+   "cam": "p",
+   "start": 10.5,
+   "cosa": "si arriva: la laguna cristallina"
+  },
+  {
+   "id": "0196",
+   "cam": "n",
+   "start": 2.8,
+   "cosa": "il tuffo"
+  },
+  {
+   "id": "0191",
+   "cam": "n",
+   "start": 0.3,
+   "cosa": "lei nuota verso la camera"
+  },
+  {
+   "id": "0153",
+   "cam": "p",
+   "start": 14.0,
+   "cosa": "la barca ferma sul banco di sabbia"
+  },
+  {
+   "id": "0166",
+   "cam": "p",
+   "start": 11.3,
+   "cosa": "Jacopo sul banco, la camera scopre l isola"
+  },
+  {
+   "id": "0129",
+   "cam": "p",
+   "start": 9.0,
+   "cosa": "sera: barca a vela nel tramonto"
+  },
+  {
+   "id": "0137",
+   "cam": "p",
+   "start": 0.3,
+   "cosa": "silhouette sulla riva davanti al sole"
+  }
+ ]
+}
