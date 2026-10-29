@@ -19,3 +19,9 @@ Not yet used in a real video (candidates for the next one): 41b hanging chips, 4
   face). A/B against 46 hero line on the first line after a hook.
 - **Liquid gold** (`videos/_bench/ab/liquido-oro/liquido-oro-v2.mp4`): a glossy gold drop that splits into the parts of an idea
   and merges back. "Buona ma da migliorare": improve before any A/B.
+- **IN VERSO specimen plate** (29/10/2026, `videos/_bench/ab/inverso-flora/inverso-flora-draft.mp4`, code in `lab/`): Moment M1061
+  from the HyperFrames gallery ported 1:1 in timing and restyled into `elegante-portfolio` (Playfair Italic display, gold scan,
+  emerald tags): five reference trousers as specimen panels → IN VERSO → giant VERSO → SARTORIA / STRUTTURA around the olive trouser
+  → scan, flash, point cloud of the trouser silhouette → DETTAGLI zoom on pleats. 4.7 s of hard cuts: a section-opening plate, not
+  an explainer. "Molto carina come prova". Before a real video: real photos of the toile or the finished trouser instead of the
+  AI research images, and a sound from Epidemic. A/B against Blueprint the first time a video opens the trouser research.
