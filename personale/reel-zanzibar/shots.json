@@ -1,0 +1,174 @@
+{
+ "_nota": "Reel 'The beauty of Zanzibar'. Tagli sulle battute di mh-video-editor; la clip 1 finisce sul tempo di 5,409 s (nota di Jacopo). La musica sfuma a silenzio a 37,4 s, poi c'e' il suono di Instagram: si chiude a 37,45. Trampolieri (0131) tolti per i due tramonti. src = mp4 (originale 4K) o lrf (proxy 720p).",
+ "cuts": [
+  0,
+  5.409,
+  7.921,
+  9.931,
+  11.94,
+  13.95,
+  15.959,
+  17.969,
+  19.979,
+  21.988,
+  23.998,
+  26.007,
+  28.017,
+  30.027,
+  32.036,
+  34.046,
+  36.055,
+  37.45
+ ],
+ "shots": [
+  {
+   "id": "0008",
+   "src": "mp4",
+   "start": 7.0,
+   "profile": "dlog2",
+   "cosa": "arco che si apre sul mare + titolo",
+   "crop43_x": 480
+  },
+  {
+   "id": "0017",
+   "src": "mp4",
+   "start": 4.0,
+   "profile": "dlog",
+   "cosa": "barca a vela tradizionale",
+   "smooth": 2,
+   "nota": "tele 60mm: rumore -> riduzione rumore media (28/10)",
+   "crop43_x": 0
+  },
+  {
+   "id": "0042",
+   "src": "mp4",
+   "start": 3.0,
+   "profile": "dlog",
+   "cosa": "acqua cristallina della laguna",
+   "stops": -0.55,
+   "nota": "controllo 28/10: -0,83 la spegneva (cielo grigio), via di mezzo",
+   "crop43_x": 960
+  },
+  {
+   "id": "0041",
+   "src": "mp4",
+   "start": 2.5,
+   "profile": "dlog",
+   "cosa": "scia turchese",
+   "crop43_x": 480
+  },
+  {
+   "id": "0070",
+   "src": "mp4",
+   "start": 27.5,
+   "profile": "dlog",
+   "cosa": "ragazzo maglia rossa a prua che saluta",
+   "stops": 0.0,
+   "nota": "controllo 28/10: +0,25 bruciava il cielo",
+   "crop43_x": 614
+  },
+  {
+   "id": "0052",
+   "src": "mp4",
+   "start": 0.3,
+   "profile": "dlog",
+   "cosa": "capitano maglia Inter sorride",
+   "stops": 0.6,
+   "nota": "controllo 28/10: l'ancora sulla pelle (+0,9) schiariva troppo il mare: la misura della pelle e' tarata su pelle chiara",
+   "crop43_x": 0
+  },
+  {
+   "id": "0083",
+   "src": "mp4",
+   "start": 2.0,
+   "profile": "dlog",
+   "cosa": "donna col fagotto rosso sulla spiaggia",
+   "crop43_x": 500
+  },
+  {
+   "id": "0108",
+   "src": "mp4",
+   "start": 2.4,
+   "profile": "dlog",
+   "cosa": "scimmie sui rami",
+   "crop43_x": 576
+  },
+  {
+   "id": "0112",
+   "src": "mp4",
+   "start": 1.0,
+   "profile": "dlog",
+   "cosa": "passerella nelle mangrovie",
+   "crop43_x": 400
+  },
+  {
+   "id": "0116",
+   "src": "mp4",
+   "start": 1.5,
+   "profile": "dlog",
+   "cosa": "tessitore al telaio",
+   "crop43_x": 307
+  },
+  {
+   "id": "0124",
+   "src": "mp4",
+   "start": 3.0,
+   "profile": "dlog",
+   "cosa": "donne del villaggio",
+   "nota": "specchietto del pulmino a sinistra: per toglierlo il taglio elimina le donne sedute; lasciata intera (28/10)",
+   "crop43_x": 540
+  },
+  {
+   "id": "0117",
+   "src": "mp4",
+   "start": 3.5,
+   "profile": "dlog",
+   "cosa": "tartarughe",
+   "crop43_x": 960
+  },
+  {
+   "id": "0158",
+   "src": "mp4",
+   "start": 12.5,
+   "profile": "dlog",
+   "cosa": "Jacopo di spalle si gira, banco di sabbia",
+   "extra": "huesaturation=saturation=-0.22:colors=r+y:strength=1,curves=all='0/0 0.6/0.6 0.85/0.82 1/0.93'",
+   "nota": "pelle -22% e luci alte recuperate (28/10)",
+   "crop43_x": 960
+  },
+  {
+   "id": "0085",
+   "src": "mp4",
+   "start": 26.0,
+   "profile": "dlog",
+   "cosa": "ragazza bikini bianco cammina sulla spiaggia",
+   "extra": "huesaturation=saturation=-0.22:colors=r+y:strength=1",
+   "nota": "pelle -22% (28/10)",
+   "crop43_x": 350
+  },
+  {
+   "id": "0072",
+   "src": "mp4",
+   "start": 11.0,
+   "profile": "dlog",
+   "cosa": "barca di amici che passa e saluta",
+   "crop43_x": 480
+  },
+  {
+   "id": "0138",
+   "src": "mp4",
+   "start": 5.0,
+   "profile": "dlog",
+   "cosa": "bandiera davanti al tramonto",
+   "crop43_x": 200
+  },
+  {
+   "id": "0129",
+   "src": "mp4",
+   "start": 38.0,
+   "profile": "dlog",
+   "cosa": "barca a vela al tramonto, colpo forte",
+   "crop43_x": 690
+  }
+ ]
+}
