@@ -93,6 +93,7 @@ Materiale personale non legato a un progetto sta in `personale/`:
 - **Mandal-Art set→dic 2026** (griglia 9×9 stile Ohtani del 30/08/2026: centro "venduto a uno sconosciuto" + 8 aree — capo, metterci la faccia, università, tempo, corpo, persone, Chiara, crescita; nove caselle vuote apposta) → `personale/mandal-art-set-dic-2026.md`, versione da stampare in `personale/stampa/`
 - **Pannello studio** (stato rapido YouTube/accademia/università) → `personale/pannello-studio.json`
 - **Reel Corsica** (serie per amici e famiglia) → `personale/reel-corsica/`
+- **Reel Zanzibar** ("The beauty of Zanzibar", IG 4:3/16:9, finito 29/10/2026) → `personale/reel-zanzibar/` (piano, script, smistamento Pocket + Nano); clip e render in `videos/zanzibar/`, video finiti su iCloud in REEL ZANZIBAR
 - **Quadretto compleanno papà** → `personale/compleanno-papa/`
 
 ---
