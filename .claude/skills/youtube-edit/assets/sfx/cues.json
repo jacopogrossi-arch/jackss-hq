@@ -329,66 +329,6 @@
    "vol": 0.55,
    "lead": 0.0,
    "credit": "impact-soft-3 (CC0, agent-video-editor)"
-  },
-  "riser-jg": {
-   "file": "licensed/cc-riser-lungo.mp3",
-   "dur": 4.06,
-   "vol": 0.4,
-   "lead": 3.77
-  },
-  "riser-jg-short": {
-   "file": "licensed/cc-riser-corto.mp3",
-   "dur": 1.55,
-   "vol": 0.4,
-   "lead": 0.93
-  },
-  "riser-jg-short-b": {
-   "file": "licensed/cc-riser-corto-b.mp3",
-   "dur": 1.62,
-   "vol": 0.4,
-   "lead": 0.93
-  },
-  "cc-tick": {
-   "file": "licensed/cc-tick.mp3",
-   "dur": 0.18,
-   "vol": 0.3,
-   "lead": 0.0
-  },
-  "cc-click": {
-   "file": "licensed/cc-click.mp3",
-   "dur": 0.26,
-   "vol": 0.3,
-   "lead": 0.0
-  },
-  "cc-camera": {
-   "file": "licensed/cc-camera.mp3",
-   "dur": 1.43,
-   "vol": 0.35,
-   "lead": 0.24
-  },
-  "cc-impact": {
-   "file": "licensed/cc-impact.mp3",
-   "dur": 0.81,
-   "vol": 0.4,
-   "lead": 0.15
-  },
-  "cc-knock": {
-   "file": "licensed/cc-knock.mp3",
-   "dur": 0.15,
-   "vol": 0.35,
-   "lead": 0.0
-  },
-  "cc-shutter-canon": {
-   "file": "licensed/cc-shutter-canon.mp3",
-   "dur": 0.96,
-   "vol": 0.3,
-   "lead": 0.05
-  },
-  "cc-zoom-whoosh": {
-   "file": "licensed/cc-zoom-whoosh.mp3",
-   "dur": 0.92,
-   "vol": 0.4,
-   "lead": 0.39
   }
  },
  "transitions": {

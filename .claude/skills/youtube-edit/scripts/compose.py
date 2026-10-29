@@ -2309,6 +2309,11 @@ for b in S.get("beats", []):
         if spec != "auto" and b["type"] != "transition":
             for nm, tt, vv, ld, du in sub_cues(b):    # an explicit "sfx" on the entrance does not silence the small cues inside the beat
                 q(nm, tt, vv, b["id"], False, ld, du)
+# Jacopo 29/10/2026: "zoom whoosh su punch in" (his own CapCut sound, licensed/ on this machine only; skipped where it is missing)
+if SND.get("sfx") and "cc-zoom-whoosh" in CUES["sounds"]:
+    for op in S.get("camera", []):
+        if op[0] == "punch":
+            q("cc-zoom-whoosh", float(op[1]), None, "punch")
 
 def _eff(c):   # effective volume of a queued cue, to pick the stronger of two that collide
     return (CUES["sounds"][base(c[1])]["vol"] if c[2] is None else float(c[2]))
