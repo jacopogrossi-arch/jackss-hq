@@ -100,8 +100,17 @@ come guadagno *dopo* la LUT. Sulla Nano invece la LUT D-Log M e' quasi una retta
    **Mai copiare il prima/dopo di un creator come LUT:** il loro log non e' il nostro DJI (luci viola, pelle scura, provato).
 
 **Ricetta per un video con piu' clip:** `grade-scan.py` su ogni clip → `grade-match.py --clip A=scanA --clip B=scanB --out match` →
-`grade-apply.py --video A --scan scanA --out outA --match match/match.json --look pellicola-oro --smooth 1` (anteprima, poi `--render`).
+`grade-apply.py --video A --scan scanA --out outA --match match/match.json --look pellicola-oro --smooth 0` (anteprima, poi `--render`).
 Verificato: render della spiaggia D-Log 4K, il file coincide con l'anteprima (0,4 IRE), nessuna luce bruciata.
+
+**Nitidezza (29/10/2026, reel Zanzibar #2, confermato da Jacopo: "ha cambiato totalmente l'aspetto della pellicola oro, è molto meglio"):**
+`--smooth 0` di default. La riduzione rumore va solo su una clip davvero rumorosa (tele 60 mm), clip per clip. Al montaggio, dopo il look:
+`unsharp=5:5:0.8:5:5:0`, tarato sul 4K: a 1,3 frizza e ingrandisce la grana, e in 1080 equivale al doppio.
+Il perché, misurato sulla stessa scritta (varianza del Laplaciano): l'export di DJI Mimo 59,9, la sola LUT DJI 37,5, pellicola-oro con smooth 1
+28,2, la bozza 1080 ridotta per il telefono 10,7. Mimo aggiunge uno sharpening, mentre alone, grana e hqdn3d di pellicola-oro tolgono dettaglio.
+Con smooth 0 + unsharp il 4K finale arriva a 54,5. Le bozze da giudicare si mandano in 4K: una versione ridotta sembra sfocata e inganna.
+Il look di Jacopo in Mimo (bianchi neutri, niente grana) è un'alternativa per i video puliti e solari: ricetta in `personale/look-jacopo/`.
+Pellicola-oro resta per i video lenti e sognanti (Jacopo: "più fairy, più dreamy").
 
 **Cosa il grading non puo' fare (lo fa Jacopo in ripresa):** luce dell'ora d'oro, bilanciamento del bianco fisso (non automatico), filtro ND
 per il mosso del cinema (tempo di scatto circa il doppio dei fps). E' meta' del look dei video che gli piacciono.
