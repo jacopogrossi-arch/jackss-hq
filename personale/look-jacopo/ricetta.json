@@ -1,0 +1,11 @@
+{
+ "curva 0,05": 0.028,
+ "curva 0,25": 0.208,
+ "curva 0,50": 0.387,
+ "curva 0,75": 0.75,
+ "curva 0,95": 1.0,
+ "saturazione": 1.219,
+ "blu-turchese": -0.059,
+ "verde": -0.11,
+ "caldi-pelle": 0.345
+}

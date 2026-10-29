@@ -22,7 +22,8 @@
    "id": "0128",
    "cam": "p",
    "start": 4.0,
-   "cosa": "aggancio: barca a vela al tramonto (dopo l assestamento 1-3 s)"
+   "cosa": "aggancio: barca a vela al tramonto (dopo l assestamento 1-3 s)",
+   "j_extra": "eq=gamma=1.08"
   },
   {
    "id": "0075",
@@ -34,7 +35,9 @@
    "id": "0009",
    "cam": "p",
    "start": 2.0,
-   "cosa": "l arco scopre il mare (entra la voce)"
+   "cosa": "l arco scopre il mare (entra la voce)",
+   "stops": 0.4,
+   "nota": "match +0,75 da falsa pelle (fiori/sabbia)"
   },
   {
    "id": "0077",
@@ -46,19 +49,27 @@
    "id": "0031",
    "cam": "p",
    "start": 7.8,
-   "cosa": "si parte: la costa con le palme vista dal mare"
+   "cosa": "si parte: la costa con le palme vista dal mare",
+   "stops": -0.6,
+   "nota": "match -1,5 la spegneva (cielo coperto)",
+   "crop43_x": 0,
+   "j_extra": "eq=saturation=1.15"
   },
   {
    "id": "0029",
    "cam": "p",
    "start": 3.0,
-   "cosa": "si parte: l isola all orizzonte dalla barca"
+   "cosa": "si parte: l isola all orizzonte dalla barca",
+   "stops": -0.5,
+   "nota": "match -1,08 la spegneva",
+   "j_extra": "eq=saturation=1.15"
   },
   {
    "id": "0028",
    "cam": "p",
    "start": 0.1,
-   "cosa": "il capitano al timone"
+   "cosa": "il capitano al timone",
+   "crop43_x": 480
   },
   {
    "id": "0043",
@@ -82,13 +93,15 @@
    "id": "0153",
    "cam": "p",
    "start": 14.0,
-   "cosa": "la barca ferma sul banco di sabbia"
+   "cosa": "la barca ferma sul banco di sabbia",
+   "crop43_x": 480
   },
   {
    "id": "0166",
    "cam": "p",
    "start": 11.3,
-   "cosa": "Jacopo sul banco, la camera scopre l isola"
+   "cosa": "Jacopo sul banco, la camera scopre l isola",
+   "crop43_x": 400
   },
   {
    "id": "0129",
