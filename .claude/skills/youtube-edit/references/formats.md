@@ -445,6 +445,9 @@ Rules from the creator's notes on the first test (these are the taste of the `el
 
 - Freeze-frame and paper-and-tape dressing; an outro or end card; a "Next video" pill at the end (the YouTube end screen
   does that job); payment or system notification banners.
+- Short-form sound tricks from @aima_social (A/B 29/10/2026 on video #2, both lost to the published cut): the riser cut
+  dry right before a reveal with the music dropping out, and the music stop + 0.9 s freeze with a push on the face after a
+  deliberate joke line. Keep the bed continuous and the face moving.
 - The `halo` ring with pills around the head and short-form-style word-by-word captions over the face: vertical-feed language, not long-form (the creator discarded the ring; captions are on hold until he confirms).
 - Typing with a trailing caret for lower lines; word-by-word highlighter pacing on an article (one stroke, then zoom).
 - The flash cut on a return (two white blinks read as a mistake): for energy use the fast punch, or leave the cut naked.
