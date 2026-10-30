@@ -9,6 +9,17 @@ Video lunghi sul **canale personale** di Jacopo (non Inverso, non Jago).
 | 1 | Si può usare l'AI nella moda? | 15/10/2026 | copione `01-ai-accademia-moda.md` · titolo/descrizione/tag `01-pubblicazione.md` · miniatura `miniatura/miniatura-v3.jpg` |
 | 2 | Ho lasciato Claude ideare una collezione al posto mio | **21/10/2026** · [link](https://youtu.be/KySnU629RFk) | script `02-claude-idea-collezione.md` · montaggio `02-montaggio.md` · titolo/descrizione/tag `02-pubblicazione.md` · miniatura `miniatura/miniatura-02-v2.jpg` |
 
+## Posizionamento (dal 30/10/2026)
+
+**Per chi è il canale:** per chi vuole aprire il proprio brand di moda. È il Jacopo di sei mesi fa: un ragazzo con un'idea, pochi soldi e nessuna esperienza di produzione, che studi moda oppure no.
+**Cosa racconto:** come si avvia un brand oggi, in modo diverso, usando l'AI. La moda vista da chi la vuole *fare*, non da chi la guarda.
+**Principio:** meglio 10 persone che si riconoscono in ogni parola che 100 che pensano "contenuto decente".
+
+- **Il filo è Inverso:** ogni video è una tappa vera verso il Drop 1 (tela di prova, materiali, costi, laboratorio, pre-order). Il canale documenta, Inverso fa.
+- **Due tipi di video:** *percorso* (cosa mi è successo, errori compresi: crea il legame) e *pratico* (come si fa X con l'AI: fa trovare il canale). Ideale: un percorso che insegna anche qualcosa.
+- **Nicchia nel contenuto, non nel titolo:** il titolo deve parlare anche a chi ancora non sa di essere il target.
+- **Test per ogni idea:** "Il Jacopo di sei mesi fa lo guarderebbe fino alla fine, e ne uscirebbe con qualcosa da fare?" Se no, non è un video del canale.
+
 ## Metodo (dal video 1, da riusare)
 
 **Copione.** Hook a camera *autentico*: chi sono → cosa ho fatto → cosa è successo (es. la frase di un collega) → la domanda. Non a memoria: si ricordano i 4 passaggi e si dice con parole proprie, 3 prese, si tiene la più naturale.
