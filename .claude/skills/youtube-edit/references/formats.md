@@ -523,3 +523,19 @@ neon). With the default preset `plates-verde` (style key `look: "ivory"`), `comp
   The animations run in the real render with the new look (satellites fly in and connect, the dive pulls back, the trail's arrow leads to the key word, world nodes land and the stat counts up, the dashboard card lifts and counts).
   `hyperframes check` on both zoos: the only errors also exist in the old look (a missing `sfx/pop.mp3` that the test storyboard never staged, and the doc format's blurred soft layer reported as occluded text); contrast 6/6 AA.
 - **Still not checked:** the `doc` format's text-occlusion errors (older than this work), `halo` (rejected anyway), `clip` (needs footage), `layers`, `image`, `hex`/`alerts` of world. Camera kicks and the smooth per-element sound are still only in the plate formats 47-51.
+
+
+### Smooth sound and camera on the whole older engine (01/11/2026)
+
+Jacopo: "sì" to porting the camera and the smooth sound to the older engine. Switched on by the preset's `sound.smooth: true` (plates-verde); `--preset none` / `elegante-portfolio` keep their own sound and no camera.
+- **Sound.** `compose.py` queues its cues by pool name (`pop`, `text`, `click`, `swish`); with `smooth` the pools `pop`/`text`/`click` become three rotating Epidemic swishes (`es-whoosh-soft-resonant`, `es-whoosh-generic-air`,
+  `es-swish-classic-filter`, peaks -25/-25/-26 dBFS) and `swish` (camera moves, whip, zoom-blur) the quiet airy ones (`es-whoosh-soft-airy`, `es-whoosh-generic-air`, -31); a `vol` passed by a format is ignored, the level is the cue-table entry
+  (recomputed from each file's real peak with `volumedetect`: the first guesses were up to 4 dB off). A line that is not typed out gets a smooth swish, not a typing sound; the logo's explicit `pop.mp3` becomes a smooth cue.
+  **Every thing that appears gets one**: `beat_events(b)` lists the appearance times of stats, growth, bars, pipeline, hub, equation, wall, pop-out, flow, lens, dock, deck, chat, search, world, fan3d, dash zoom, player, browser3d, doc, agenda, gallery
+  (plus the beat's own entrance); two cues closer than 0.28 s keep one (the old rule). Without the licensed folder (another machine) the CC0 `whoosh-short` plays at 0.05.
+- **Camera.** The full-frame formats without a camera of their own (`CAM_TYPES`: stats, bars, pipeline, hub, flow, lens, search, dock, masktitle) get the plates' camera: a slow push-in on the host (scale 1.035, scale only, about the corner of the face PiP's
+  zone so the picture always covers the frame and nothing can move under the face) plus a kick on every event and a soft kick wherever more than 2.3 s would pass with nothing moving (`plates_base.plan_kicks`). Skipped: formats with their own camera
+  (world, deck, trail, dive, dashzoom, the 3D ones), beats with a `transition`, and any beat with `"cam": false`.
+- **Measured** on the 22-format zoo (real renders, optical flow at 15 fps, the stretch where each format is fully on screen): the nine camera formats were moving **51 %** of the time with a longest still run of 1.27 s; now **94 %** and 0.33 s.
+  The over-the-face formats (lists, lines, pills, chat...) can not be measured this way (the face moves anyway) and have no camera: they get the sound.
+- **Not done:** the camera for the over-the-face formats, the real face PiP inside `compose.py` (it still lives in the bench builder `videos/_bench/ab/plate-pip/build.py`), and nobody has listened to any of this.

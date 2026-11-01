@@ -123,3 +123,8 @@ without asking for reviews. What nobody measured: the level and the real sounds 
 What we take: **the sound belongs to the cut, not to the text**, and the choice comes from the creator's taste. What we do NOT take: pops, clicks and hits on every element (Jacopo, 23/10
 and 28/10/2026). For our plates: one soft swish in and out of each plate (`plates_base.write_plate_sounds`), typing and click only where there is a real keyboard or cursor, a metallic
 riser only on a built suspense (the rule above), **a smooth Epidemic swish on every element that appears (Jacopo, 01/11/2026: "ogni volta che appare qualcosa va messo un sound effect, sempre smooth, swish")**, the cut swish quiet (peak -31 dBFS), and any extra layer (a low "body" under the whoosh, a second sound on a hard cut) is proposed to Jacopo as an A/B, not added on our own.
+
+
+## Smooth sound on the older engine (01/11/2026)
+With the default preset `plates-verde` (`sound.smooth: true`) the engine's pops, taps and clicks are replaced by the three smooth Epidemic swishes of the plates, one for every thing that appears (`beat_events` in `compose.py`), and the swish
+pool (camera moves, whip, zoom-blur) by the quiet airy ones. Levels are the cue-table entries in `assets/sfx/licensed/cues.json` (peaks -25/-25/-26 and -31 dBFS); change them there. Details: `formats.md`, "Smooth sound and camera on the whole older engine".

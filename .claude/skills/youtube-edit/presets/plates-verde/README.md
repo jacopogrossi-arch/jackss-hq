@@ -53,3 +53,6 @@ Da evitare (come in elegante-portfolio): `halo`, `chip`, `image`. Moduli in `for
 
 ## Look avorio sui formati vecchi (01/11/2026)
 `look: "ivory"` nel preset: tutti i formati vecchi di `compose.py` (liste, statistiche, barre, pipeline, hub, equazione, muro, flow, lente, dock, titolo mascherato, mazzo, pillole, chat, ricerca, tag, catena 3D) portano card avorio piene, testo scuro in Inter 800, parola chiave in corsivo serif, menta per gli stati, niente neon. Vedi `formats/look_ivory.py` e `references/formats.md` ("The ivory look on the older formats").
+
+## Suono smooth e camera su tutto il motore (01/11/2026)
+`sound.smooth: true` nel preset: i formati vecchi di `compose.py` hanno uno swish morbido Epidemic per ogni cosa che appare e i formati a tutto schermo hanno deriva lenta + scatti di camera. Misurato sullo zoo: da 51% a 94% del tempo in movimento. Vedi `references/formats.md`.
