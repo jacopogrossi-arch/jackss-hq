@@ -2,6 +2,8 @@
 
 Video lunghi sul **canale personale** di Jacopo (non Inverso, non Jago).
 
+**Direzione (dal 01/11/2026):** "il laboratorio prima del brand" — *tra un anno apro il mio brand, nel frattempo provo ogni strumento AI e ogni metodo per costruirlo*. Tre tipi di video (esperimenti, analisi e metodo, dietro le quinte di Inverso) e idee in `direzione-canale.md`. Prossimo grande video: "Come lancerei un brand di moda con l'AI (prima di lanciare il mio)".
+
 ## Video pubblicati
 
 | # | Titolo | Pubblicato | File |
