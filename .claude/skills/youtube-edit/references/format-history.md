@@ -8,7 +8,8 @@ Counts come from the delivered `storyboard.json` (transitions left out)._
 | #2 Claude ha ideato una collezione | 21/10/2026 | trail 7, line 7, gallery 2, list 2, build 1, annotate 1 (6 formats, 20 graphics) | gallery → trail, annotate with follow |
 
 Not yet used in a real video (candidates for the next one): 41b hanging chips, 43 dot grid, 44 outline rail, 27b 3D card chain,
-45 living shape, 46 hero line.
+45 living shape, 46 hero line. Plus the plate formats 47 tracker, 48 counter, 49 versus, 50 diagram, 51 UI plane
+(preset `plates-verde`, built 01/11/2026, stills only: blind A/B on a real window before the first delivery).
 
 **Candidates** (muted demos Jacopo liked, 26/10/2026; each enters the library only after a blind A/B in a real video):
 - **Blueprint** (`videos/_bench/ab/blueprint/blueprint-v2.mp4`): a garment drawn as a technical flat on a pattern grid, parts

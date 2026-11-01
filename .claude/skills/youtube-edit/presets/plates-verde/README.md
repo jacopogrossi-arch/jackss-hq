@@ -1,0 +1,49 @@
+# Preset `plates-verde` — motion plate su verde con griglia
+
+Per usarlo: `compose.py --preset plates-verde` oppure `"preset": "plates-verde"` nello storyboard. Il `style` dello storyboard vince sempre sul preset.
+
+## Cos'è
+Le **motion plate** (scene grafiche a tutto schermo, vedi `references/formats.md` → Explainers) su **verde profondo con griglia blueprint**, parola-chiave
+in **oro**, spunte/connettori/barre in **verde menta**. Nato il 01/11/2026 dal teardown del video di Joseph (`personale/youtube/inspo-motion-plates-joseph.md`):
+prendiamo la *logica* (una plate per idea, ingresso sulla parola che la nomina), non il suo blu elettrico. Font identici al preset `elegante-portfolio`
+(Inter + Playfair Display Italic), quindi i due preset si possono alternare nello stesso canale.
+
+**Palette: scelta da Claude, da confermare con Jacopo su una finestra reale.** Variante D "verde vivo" del lab `videos/_bench/plates-verde/lab/`
+(A bosco, B nero caldo + griglia verde, C ibrido, D vivo, E medio). Le altre restano come alternative.
+
+## Palette
+| Ruolo | Valore | Nota |
+|---|---|---|
+| Fondo plate | `#0A2B1E` | verde bosco profondo; sul fondo due aloni `#17613F` (in basso al centro, in alto a sinistra) |
+| Griglia | `rgba(120,235,180,.13)`, passo 80 px | linee da 1 px; si può far scorrere del 3-4% perché non ci siano fotogrammi morti |
+| Testo | `#f4efe6` avorio | |
+| Parola chiave | `#e3c47f` oro, Playfair Display Italic | una per frase al massimo |
+| Verde menta | `#5EE6A8` | spunte, connettori, barre di avanzamento, anello del PiP, bottoni "fatto" |
+| Card | avorio `rgba(244,239,230,.95)` su testo nero caldo | numero della card in menta scuro |
+| Plate interfaccia | nero caldo `#121110` | chat, piano, finestre: due fondi, come nel video di Joseph (blu + grigio carbone) |
+| Errore / da non fare | `#e0645c` | solo per il barrato |
+
+**Regola d'uso del colore (verde su verde):** sul fondo verde la parola-chiave è **oro o avorio**, mai verde; il menta si usa per strutture e stati.
+Su nero caldo (plate interfaccia) la parola-chiave può essere menta.
+**Anello del PiP:** menta `#5EE6A8` (token `ring`), non più ciano, quando la plate è di questo preset.
+
+## Formati preferiti (nuovi, 01/11/2026)
+`tracker` (47: mappa dei passi con spunte che torna ai cambi di capitolo), `counter` (48: valori che salgono sulla parola + barra divisa),
+`versus` (49: confronto sempre affiancato), `diagram` (50: metafora con linee tratteggiate, barrato per ciò che non serve più),
+`uiplane` (51: interfaccia ridisegnata in 3D con manina che clicca). In più `trail`, `build`, `annotate`, `line`.
+Da evitare (come in elegante-portfolio): `halo`, `chip`, `image`. Moduli in `formats/` (`plates_base.py` per le parti comuni); prove senza pipeline: `scripts/format-still.py`.
+
+## Regole di gusto
+- Una plate per idea; ogni elemento entra **sulla parola che lo nomina** (`data-at` + `data-anchor`, lo verifica `beat-check.py`).
+- Parola-chiave nel corsivo serif; mai etichette piccole in maiuscolo spaziato, mai linee sotto i titoli (restano nel "vietato sempre").
+- Le grafiche non passano mai sotto il PiP (box 320x320 a left 1552/top 712 più 40 px di margine): i formati lo controllano con `check_pip()`.
+- Interfacce **ridisegnate**, mai screen recording grezze; manina 3D che arriva e preme.
+- Confronto = sempre affiancato; numeri = contatori vivi, non testo fermo.
+- Ciò che non serve più si **barra e si abbassa** (strike + opacità .4), non sparisce.
+- Il resto delle regole (movimento, transizioni, suoni) è quello di `references/taste.md` e di elegante-portfolio.
+
+## Test e limiti
+- 11 test nuovi in `scripts/tests/test_plates.py` (forma, ancore parlate, seek-safety, nessun suono, guardia PiP).
+- Verificato con still a risoluzione piena (`format-still.py`) su 5 formati con il PiP disegnato: nessuna grafica nell'angolo.
+- **Non ancora provato** su un render completo con voce e faccia (pipeline HyperFrames): serve una finestra reale del prossimo video.
+- Il suono non c'è nei formati (Jacopo scarta i pop): per i tracker/diagram un whoosh morbido a ogni cambio, come nel resto della skill.

@@ -21,6 +21,10 @@ DEFAULT_STYLE = {
     "bg": "#0b0907", "bg2": "#1b140d", "text": "#f4efe6", "mute": "rgba(244,239,230,.62)",
     "accent": "#d4af5f", "accent2": "#3f9a78", "accent3": "#e9e2d2",
     "chip": "#f4efe6", "chip_text": "#15100b",
+    # blueprint grid under full-frame plates (off by default: alpha 0). A preset turns it on, e.g. plates-verde: "grid_a": ".13"
+    "grid_rgb": "255,255,255", "grid_a": "0", "grid_size": "80px",
+    # the two corner washes under a plate: colour + strength (defaults = the old accent / accent2 mixes)
+    "glow": "var(--k-accent)", "glow_a": "26%", "glow2": "var(--k-accent2)", "glow2_a": "18%",
     "font": '"DM Sans", ui-sans-serif, system-ui, sans-serif',
     "hand": '"Caveat", "Segoe Print", cursive',
     "serif": '"Playfair Display", "Georgia", serif',
@@ -30,11 +34,15 @@ DEFAULT_STYLE = {
 
 _TEMPLATE = """
   :root { --k-bg:@bg@; --k-bg2:@bg2@; --k-text:@text@; --k-mute:@mute@; --k-accent:@accent@; --k-accent2:@accent2@; --k-accent3:@accent3@;
-          --k-chip:@chip@; --k-chip-text:@chip_text@; --k-font:@font@; --k-hand:@hand@; --k-serif:@serif@; --k-keyfont:@keyfont@; --k-keystyle:@keystyle@; --k-keyweight:@keyweight@; --k-keysize:@keysize@; }
-  /* ---- studio formats: a calm dark wash, no grid ---- */
-  .k-cut { position:absolute; inset:0; font-family:var(--k-font); color:var(--k-text); background:
-      radial-gradient(1100px 700px at 50% 112%, color-mix(in srgb, var(--k-accent) 26%, transparent), transparent 70%),
-      radial-gradient(900px 600px at 10% 0%, color-mix(in srgb, var(--k-accent2) 18%, transparent), transparent 70%), var(--k-bg); overflow:hidden; }
+          --k-chip:@chip@; --k-chip-text:@chip_text@; --k-font:@font@; --k-hand:@hand@; --k-serif:@serif@; --k-keyfont:@keyfont@; --k-keystyle:@keystyle@; --k-keyweight:@keyweight@; --k-keysize:@keysize@;
+          --k-grid-rgb:@grid_rgb@; --k-grid-a:@grid_a@; --k-grid-size:@grid_size@; --k-glow:@glow@; --k-glow-a:@glow_a@; --k-glow2:@glow2@; --k-glow2-a:@glow2_a@; }
+  /* ---- studio formats: a calm dark wash; the blueprint grid shows only when a preset sets grid_a > 0 ---- */
+  .k-cut, .k-wash { position:absolute; inset:0; font-family:var(--k-font); color:var(--k-text); background:
+      linear-gradient(rgba(var(--k-grid-rgb), var(--k-grid-a)) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(var(--k-grid-rgb), var(--k-grid-a)) 1px, transparent 1px),
+      radial-gradient(1100px 700px at 50% 112%, color-mix(in srgb, var(--k-glow) var(--k-glow-a), transparent), transparent 70%),
+      radial-gradient(900px 600px at 10% 0%, color-mix(in srgb, var(--k-glow2) var(--k-glow2-a), transparent), transparent 70%), var(--k-bg);
+      background-size:var(--k-grid-size) var(--k-grid-size), var(--k-grid-size) var(--k-grid-size), auto, auto, auto; overflow:hidden; }
   .k-title { position:absolute; left:0; right:0; top:70px; text-align:center; font-weight:700; font-size:54px; letter-spacing:.02em; color:var(--k-text); opacity:0; }
   /* build */
   .k-row { position:absolute; left:0; right:0; top:170px; bottom:120px; display:flex; justify-content:center; align-items:center; gap:90px; }

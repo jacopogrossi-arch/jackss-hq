@@ -69,6 +69,11 @@ against, and to hand-build the rest.
 | 44 | Outline rail | a list read out as an outline (what came out, the parts of a plan): rail, dots, names, ×N and bars | `formats/scaletta.py` |
 | 45 | Living shape | three to six spoken steps of one process, told as ONE glowing shape that turns into the next thing (search bar, globe, logo, image grid, finished page): **the default for a process with ~2 s or more per step** | `formats/morph.py` |
 | 46 | Hero line | the one sentence of a section that must land: full frame on a living warm gradient, words out of blur on their word, a logo slipping in | `formats/herotitle.py` |
+| 47 | Step tracker | a numbered map of the steps that comes back at each chapter change (~3 s): finished ticked, the current one lifted and ringed | `formats/tracker.py` |
+| 48 | Counter + split bar | numbers said out loud: values count up on their word; a bar that splits "mine" from "the whole" | `formats/counter.py` |
+| 49 | Versus | a comparison: two cards side by side, each on its word, then a verdict | `formats/versus.py` |
+| 50 | Metaphor diagram | an abstract idea as one centre node, inputs left, outputs right, dashed connectors, what you no longer need struck through | `formats/diagram.py` |
+| 51 | UI plane | a prompt, an answer or an approval shown as a redrawn dark window in 3D with a hand cursor that clicks | `formats/uiplane.py` |
 | - | Check marker* | done and to-do lists: a check draws on each item | `"marker": "check"` on `list`, `bullets`, `popout` |
 | - | Thumbnail grid | your own thumbnails; the cursor clicks one | `grid` |
 | - | Coded scenes | money, catalog, room, plate, profile: B-roll with no stock | `scene` |
@@ -459,3 +464,31 @@ Rules from the creator's notes on the first test (these are the taste of the `el
 - The curved wall of pages (camera inside a cylinder of the creator's boards, columns lit by group): lost the blind A/B of
   26/10/2026 against the dot grid (43) on the `lista` bench window ("I prefer the grid, even if it is simpler"). Bench files
   `videos/_bench/ab/lista-muro/`.
+
+
+### Plate formats 47-51 (01/11/2026, from the teardown of Joseph's video)
+
+Source: `personale/youtube/inspo-motion-plates-joseph.md` (what each plate does and when he places it). Built for the **`plates-verde` preset** (deep green,
+80 px blueprint grid, gold key word, mint for structure) but they only use the `--k-*` tokens, so any preset restyles them. Shared helpers in
+`formats/plates_base.py`; stills without the pipeline with `scripts/format-still.py`; tests in `scripts/tests/test_plates.py`.
+**Not yet used in a real video**: first use needs a blind A/B on a real window (see `format-history.md`).
+
+Common rules: full frame on the preset wash + grid (`k-wash`); the whole plate fades in 0.3 s and out 0.3 s; every element enters on the word that
+names it (`data-at` + `data-anchor`, so `beat-check.py` proves it); entrances are `y +40`, `blur(8px)` to 0, 0.5 s `power3.out`, 0.07 s apart in a row;
+**nothing enters the face PiP corner** (`plates_base.check_pip`: PiP 320x320 at left 1552 / top 712, plus 40 px: layouts stay left of x 1512 or above y 672
+and the builder raises otherwise); key word = `*word*` in the italic serif; no sound (the creator rejects pops).
+
+- **47. Step tracker.** `tracker(steps, active, title, t_in, t_out, at, anchor, done, sub)`. Three to seven cards (width up to 250, height 270) in one row at y 330;
+  the steps before the active one carry a mint tick (pop 0.3 s) and a filled bar; the pending ones rest at .6; at `at` the active card lifts 26 px,
+  scales 1.07 and takes a mint ring + glow (0.45 s). Show it at every chapter change for ~3 s: the viewer always knows where they are.
+- **48. Counter + split bar.** `counter(items, title, t_in, t_out, bar, sub)`. Two to five cards (up to 340 wide, 330 high), value 66 px/800 at the bottom of each card;
+  the first integer counts up 0.6 s `power2.out` on its word (`put()/onUpdate`, the compose.py pattern), the rest ("≈", "min", "ore") stays. Bar: 26 px track at y 690
+  (max 1380 wide), mint fill to `frac` in 0.8 s, one line under it with a `*key*` ("≈30 min miei, dentro *1h40* in tutto").
+- **49. Versus.** `versus(left, right, title, t_in, t_out, win, win_at)`. Two 700x400 cards at y 250 (x 130 and 1090), each slides in 70 px with blur on its word; a mint "vs"
+  chip pops between them once both are in; at `win_at` the winner scales 1.04 with a mint ring and the other dims to .55. Always side by side, never in sequence.
+- **50. Metaphor diagram.** `diagram(center, inputs, outputs, title, t_in, t_out, sub)`. Node (gold sphere, 200 px) at (940, 490) with a slow 8 px breath; one to four input pills left
+  (x 100, 460x76), one to three output pills right (x 1360); a dashed mint connector per pill reveals with a `clip-path` tween (0.7 s) right after its pill lands; `strike_t`
+  draws a red line over a pill (0.35 s) and dims it to .4 (and its connector to .25): what you no longer need. `kind: "prompt"` rings a pill in mint (the sentence you typed).
+- **51. UI plane.** `uiplane(title, prompt, t_in, t_out, replies, button)`. A 1260x640 dark window at (120, 240), tilted from -26 to -8 degrees on entry (0.9 s) and drifting to -5;
+  the prompt types out at ~24 characters/s in the field; each reply (a gold spark + text) lands on its time; the pointing-hand cursor arrives in 0.8 s, presses (scale .86), and the
+  button turns mint and reads "✓ Approvato". Redrawn clean: never a raw screen recording.

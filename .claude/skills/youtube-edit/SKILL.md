@@ -190,9 +190,10 @@ Opus planned and directed, Sonnet builders did the sections; Opus plans at high 
 | `grade-ref.py` | a film look started from reference frames: split tone, blacks, contrast, saturation measured on what the scene does not colour, moved 60 % of the way; `look.json` + sheet (base / 50 % / 100 %) | `--ref IMG\|VIDEO@SEC [--ref ...] --video --scan report.json --out DIR [--base pellicola-oro] [--save NAME]` |
 | `grade-looks.py` | the preset's looks (numbers in `presets/vacanze-grading/preset.json` -> `grade.looks`) applied to ONE frame of a clip as a labelled contact sheet, to choose a look with the eyes. A look is a pure colour function (contrast curve, saturation, tints, hue windows on skin and water), so it can later be baked into a 3D LUT | `--video --scan report.json --out sheet.png [--t SEC] [--looks a,b] [--cube-dir DIR [--mix 0-1]] [--cols 3]` |
 | `clip-score.py` | pre-selection of footage (b-roll library, travel reels): Open-Sora v1.2 aesthetic score 1-10 (CLIP ViT-L/14 + LAION MLP; 5.5 fair, 6.5 high) and optical-flow motion per clip, sorted CSV + JSON. Runs on the GPU with `D:/tools/video-ai/Scripts/python.exe`, not the system Python. Motion only on clips without grain (grain reads as motion). A first sort, never the choice: the eyes still decide | `--dir FOLDER --out scores.csv [--frames 5]` |
+| `format-still.py` | stills of one plate format at chosen times without the whole pipeline (headless Chrome + GSAP seek, preset tokens, optional face-PiP square, contact sheet): the way to build and check a format fast. Not a render: no audio, no video underneath | `BUILD.py --times T... --out DIR [--preset NAME] [--pip] [--sheet]` |
 | `teardown.py` | measures any video; counts a storyboard exactly; compares reports | `--video` / `--storyboard` / `--compare`, `--out [--transcript] [--every 2]` |
 
-`formats/claude_chat.py` is the AI chat window (format 13b). `formats/chain3d.py` is the 3D card chain (format 27b). `formats/dotgrid.py` is the dot grid (format 43). `formats/scaletta.py` is the outline rail (format 44). `formats/chips.py` is the hanging chips with the camera (format 41b). `formats/morph.py` is the living shape (format 45). `formats/herotitle.py` is the hero line on a living gradient (format 46).
+`formats/claude_chat.py` is the AI chat window (format 13b). `formats/chain3d.py` is the 3D card chain (format 27b). `formats/dotgrid.py` is the dot grid (format 43). `formats/scaletta.py` is the outline rail (format 44). `formats/chips.py` is the hanging chips with the camera (format 41b). `formats/morph.py` is the living shape (format 45). `formats/herotitle.py` is the hero line on a living gradient (format 46). `formats/tracker.py`, `counter.py`, `versus.py`, `diagram.py`, `uiplane.py` are the plate formats 47-51 (preset `plates-verde`, shared helpers in `plates_base.py`).
 
 ## Cut stage (raw clip to flat cut)
 
@@ -396,6 +397,8 @@ any prompt wraps (non-breaking spaces once made a prompt run out of the box). Ca
 | `references/taste.md`, `references/critic.md` | before designing a draft; before the critic reviews a render |
 | `references/NOTES_LOG.md` | after any note from Jacopo that changes a rule |
 | `references/format-history.md` | planning a storyboard (which formats the last videos used) and after each delivery (add the video's line) |
+| `references/plate-plan.md` | planning a video with motion plates: the sentence-by-sentence plan table Jacopo approves before the storyboard, and how timecoded notes become rules |
+| `references/inspo-library.md` | choosing which plate to build for a sentence; adding a reference video's analysis (the *why* of each graphic) |
 | `references/hyperframes-app.md` | taking notes from Jacopo in Studio; looking for a motion plate idea in the Moments gallery; borrowing from the app's own skills |
 
 Each file is the same text that used to sit in this one, moved so that a routine pass does not have to read ~45,000 tokens of it. A rule

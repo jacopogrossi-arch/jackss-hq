@@ -92,3 +92,21 @@ Before Jacopo sees a draft, a **fresh reviewer** looks at the real render, not a
 ## 8. Never certify your own work
 
 State what you looked at and quote the numbers. "Verified" without numbers is not a result (a black render was once certified clean). Say plainly what could not be checked (for example: nobody has listened to the sound).
+
+
+## 9. Rules from the Joseph teardown (01/11/2026)
+
+From `personale/youtube/inspo-motion-plates-joseph.md` (his motion plates, and the way he places them). They sit on top of sections 1-8 and of Jacopo's own notes, which win.
+1. **One plate per idea, never to decorate.** Before building one: *what must the viewer understand at this second?* Name -> a logo; process -> a metaphor; number -> a counter;
+   comparison -> side by side; what to avoid -> struck through and dimmed.
+2. **Land on the word.** An element enters on the word that names it, not before, not after; a list of five names is five entrances ~0.5 s apart.
+3. **The key word changes font** (sans -> italic serif, in the key colour); one per sentence at most.
+4. **Show the default before the better thing** ("the Claude look" -> our look): the contrast is the argument.
+5. **A recurring map in long videos**: the same plate again at every chapter change, state different (done ticked, current lifted).
+6. **Redraw interfaces, tilt them in 3D, add a hand cursor**; never a raw screen recording.
+7. **Numbers are alive**: counters, chips landing as the number is said, a bar that splits "mine" from "the whole".
+8. **What you no longer need is struck through and dimmed**, not removed: leaving carries meaning as much as arriving.
+9. **The face is the anchor**: it comes back every 20-40 s to keep the relationship; big text enters at the sides, never over it.
+10. **The video demonstrates what it says**: use the method on screen (real prompt, real result) instead of describing it.
+11. **Cutaways of the creator** (at the desk, waiting, surprised) serve the story's emotion; they are not filler. Shoot them with the checklist, not stock.
+12. **Notes with a timecode become rules**: "0:14 the whoosh stronger here" is saved in `NOTES_LOG.md` and, when it repeats, in this file (see `plate-plan.md`).

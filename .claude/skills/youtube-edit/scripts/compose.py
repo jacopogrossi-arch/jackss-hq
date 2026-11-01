@@ -710,6 +710,16 @@ if (S.get("style") or {}).get("theme_legacy"):   # a preset can restyle the olde
   .pls .t { font-family:var(--k-serif); font-style:italic; font-weight:500; font-size:52px; letter-spacing:0; }
   .pls.cyan .t { color:var(--k-accent); } .pls.cyan .ic { stroke:var(--k-accent); }
 """
+if str((S.get("style") or {}).get("grid_a", "0")) not in ("0", "0.0", "", "None"):   # a preset with a blueprint grid (plates-verde): the B-roll takeovers follow its wash and grid
+    CSS += """
+  /* grid preset: takeover scenes (.cut) use the preset wash + grid instead of the fixed blue one */
+  .cut { background:
+      radial-gradient(1100px 700px at 50% 112%, color-mix(in srgb, var(--k-glow) var(--k-glow-a), transparent), transparent 70%),
+      radial-gradient(900px 600px at 10% 0%, color-mix(in srgb, var(--k-glow2) var(--k-glow2-a), transparent), transparent 70%), var(--k-bg); }
+  .gridbg { opacity:1; background-image:
+      linear-gradient(rgba(var(--k-grid-rgb), var(--k-grid-a)) 1px, transparent 1px), linear-gradient(90deg, rgba(var(--k-grid-rgb), var(--k-grid-a)) 1px, transparent 1px);
+      background-size:var(--k-grid-size) var(--k-grid-size); }
+"""
 CSS += fx.css(S.get("style"))
 def attr_anchor(anchor):
     """'-' marks a beat that is deliberately not tied to a spoken word (beat-check skips it)."""
