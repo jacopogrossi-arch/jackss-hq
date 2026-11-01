@@ -58,6 +58,19 @@ class Presets(unittest.TestCase):
         self.assertNotIn("preset:", r.stdout)
         self.assertIn("--k-accent:#d4af5f", page)                       # studio.py's own default palette
 
+    def test_default_preset_is_plates_verde(self):
+        """No --preset and none in the storyboard: the whole system wears plates-verde (Jacopo, 01/11/2026); --preset none gives the old look back."""
+        d = scratch(self)
+        spec = write(os.path.join(d, "s.json"), {"id": "t", "duration": 8.0, "video": "x.mp4", "beats": [{"type": "line", "id": "a", "text": "Hello *world*", "in": 1.0, "out": 3.0, "anchor": "-"}], "camera": []})
+        r = run("compose.py", "--spec", spec, "--out", os.path.join(d, "public"), env={"YTE_DEFAULT_PRESET": "1"})
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertIn("preset: plates-verde", r.stdout)
+        page = read(os.path.join(d, "public", "index.html"))
+        self.assertIn("--k-bg:#0A2B1E", page)                 # the preset's tokens reached the page
+        self.assertNotIn("0AF0F0", page.upper())              # the old cyan was repainted (legacy_swap)
+        r2 = run("compose.py", "--spec", spec, "--out", os.path.join(d, "public2"), "--preset", "none")
+        self.assertNotIn("preset:", r2.stdout)
+
     def test_unknown_preset_lists_the_available_ones(self):
         r, _, _ = self.build(board(), "--preset", "does-not-exist")
         self.assertNotEqual(r.returncode, 0)

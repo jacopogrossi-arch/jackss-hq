@@ -37,31 +37,32 @@ def check_pip(x, y, w, h, what=""):
         raise ValueError("%s box (%d,%d,%d,%d) enters the face PiP corner (left %d, top %d)" % (what or "plate", x, y, w, h, L - MARGIN, T - MARGIN))
 
 
-CAM_ORIGIN = (1500, 700)   # the camera scales about a point beside the face PiP corner: every plate element moves AWAY from the PiP, never under it
-CAM_DRIFT = (1.03, -22, -8)  # a plate's slow push-in: scale, x, y over its whole life (~0.2-0.4 %/s; Joseph's plates: median 0.4 %/s)
+CAM_ORIGIN = (PIP[0] - MARGIN, PIP[1] - MARGIN)   # (1512, 672): the camera scales about the corner of the PiP's forbidden zone. A point outside the zone has x < 1512 or y < 672, and scaling by s >= 1 (with a translation <= 0) moves it further away from that corner: nothing can ever enter the zone, at any zoom
+CAM_DRIFT = (1.035, -24, -10)  # a plate's slow push-in: scale, x, y over its whole life (~0.25 %/s on a 14 s plate; Joseph's plates: median 0.4 %/s)
+KICK_STRONG, KICK_SOFT = 0.024, 0.012  # camera kicks: +2.4 % on an event, +1.2 % to fill a gap (Joseph: zoom bursts up to 4.5 %/s). Peak total scale 1.035 x 1.024 = 1.06: the first card of a 7-step row ends 26 px from the left edge
 GAP = 2.3                    # longest stretch without a camera event (Joseph: a motion burst every ~2 s, never a still run above ~0.3 s at p90)
 
 
 def plan_kicks(events, t_in, t_out):
-    """Camera kicks: a strong one (+1.6 %) on every event time (events closer than 1 s share one), a soft one (+0.8 %) wherever more than GAP s would pass
+    """Camera kicks: a strong one (+2.4 %) on every event time (events closer than 1 s share one), a soft one (+1.2 %) wherever more than GAP s would pass
     with nothing moving. Returns [(t, amplitude)] sorted."""
     ev = sorted(e for e in events if t_in + 0.3 <= e <= t_out - 0.7)
     strong = []
     for e in ev:
         if not strong or e - strong[-1][0] >= 1.0:
-            strong.append((e, 0.016))
+            strong.append((e, KICK_STRONG))
     out, prev = [], t_in + 0.3
     for t, a in strong + [(t_out - 0.7, 0)]:
         while t - prev > GAP:
             prev += 1.9
-            out.append((prev, 0.008))
+            out.append((prev, KICK_SOFT))
         if a:
             out.append((t, a)); prev = t
     out = sorted(out)
     keep = []   # a soft filler never crowds a neighbour: at least 1 s from the kick before and the one after (else the two tweens overlap)
     for i, (t, a) in enumerate(out):
         nxt = out[i + 1][0] if i + 1 < len(out) else t_out
-        if a < 0.016 and (nxt - t < 1.0 or (keep and t - keep[-1][0] < 1.0)):
+        if a < KICK_STRONG and (nxt - t < 1.0 or (keep and t - keep[-1][0] < 1.0)):
             continue
         keep.append((t, a))
     return keep

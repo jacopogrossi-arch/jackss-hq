@@ -113,3 +113,13 @@ music limiter's auto level pushed the master to 0 dBTP (now `alimiter=limit=0.84
 
 **Music beds beyond `assets/music`:** CC0 tracks of `kmilo93sd/agent-video-editor` (OpenGameArt: ambient piano, acoustic, lofi lobby/tea), see its
 `library/LICENSES.md`. The level rule is under "Music" above.
+
+
+## Sound of the plates (01/11/2026, from the Joseph teardown; the taste is Jacopo's)
+
+What the teardown showed with certainty (a timeline drawn in the video at 8:40-8:50): the sound design is attached to the **scene cuts**, **two layers per cut on two tracks**
+(Whoosh / Hit / Pop / Camera / Swipe / Glitch on one, Click / Riser / Whoosh / Hit on the other), about one cut every 2.2 s, chosen by studying the author's own earlier projects,
+without asking for reviews. What nobody measured: the level and the real sounds (the voice covers the file; see the addendum of `inspo-motion-plates-joseph.md`: no level or type here is measured).
+What we take: **the sound belongs to the cut, not to the text**, and the choice comes from the creator's taste. What we do NOT take: pops, clicks and hits on every element (Jacopo, 23/10
+and 28/10/2026). For our plates: one soft swish in and out of each plate (`plates_base.write_plate_sounds`), typing and click only where there is a real keyboard or cursor, a metallic
+riser only on a built suspense (the rule above), and any extra layer (a low "body" under the whoosh, a second sound on a hard cut) is proposed to Jacopo as an A/B, not added on our own.

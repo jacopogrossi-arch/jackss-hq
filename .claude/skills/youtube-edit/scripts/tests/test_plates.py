@@ -4,7 +4,7 @@ import os, re, sys, unittest
 from .helpers import SCRIPTS
 
 sys.path.insert(0, os.path.join(os.path.dirname(SCRIPTS), "formats"))
-from plates_base import check_pip, keyword, plan_kicks, CAM_ORIGIN, CAM_DRIFT, PIP, MARGIN, GAP  # noqa: E402
+from plates_base import check_pip, keyword, plan_kicks, CAM_ORIGIN, CAM_DRIFT, KICK_STRONG, KICK_SOFT, PIP, MARGIN, GAP  # noqa: E402
 from tracker import tracker  # noqa: E402
 from counter import counter  # noqa: E402
 from versus import versus  # noqa: E402
@@ -46,12 +46,12 @@ class Camera(unittest.TestCase):
         times = [t for t, _ in ks]
         self.assertEqual(times, sorted(times))
         self.assertTrue(all(b - a <= GAP + 0.01 for a, b in zip([0.3] + times, times + [11.3])), ks)   # nothing waits longer than GAP
-        self.assertEqual(sum(1 for t, a in ks if a == 0.016), 2)                                      # the strong kicks: 2.0 and 9.0
+        self.assertEqual(sum(1 for t, a in ks if a == KICK_STRONG), 2)                                      # the strong kicks: 2.0 and 9.0
         self.assertTrue(all(b - a >= 1.0 for (a, _), (b, _) in zip(ks, ks[1:])))
 
     def test_camera_never_pushes_anything_into_the_pip(self):
         """The camera scales about CAM_ORIGIN with at most CAM_DRIFT[0] * 1.016 and translates (x, y): a point outside the PiP zone must stay outside."""
-        ox, oy = CAM_ORIGIN; sc, tx, ty = CAM_DRIFT; smax = sc * 1.016 * 1.008
+        ox, oy = CAM_ORIGIN; sc, tx, ty = CAM_DRIFT; smax = sc * (1 + KICK_STRONG) * (1 + KICK_SOFT)   # the worst case: every kick stacked
         zx, zy = PIP[0] - MARGIN, PIP[1] - MARGIN
         for x in range(0, zx, 24):
             for y in list(range(0, 1080, 24)):

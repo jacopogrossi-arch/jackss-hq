@@ -12,6 +12,17 @@ def run(script, *args, env=None):
     (assets/packs/, git-ignored) never change a test's result on the creator's machine."""
     e = dict(os.environ, YTE_PACKS=os.path.join(SCRIPTS, "tests", "_no_packs_"))
     e.update(env or {})
+    args = list(args)
+    if script == "compose.py" and "--preset" not in args and "--spec" in args:
+        # compose.py defaults to the plates-verde preset (01/11/2026); the older tests check the formats' own look, so they ask for no preset
+        # unless the storyboard names one. test_presets.test_default_preset_is_plates_verde runs compose.py without this.
+        try:
+            with open(args[args.index("--spec") + 1], encoding="utf-8") as f:
+                named = "preset" in json.load(f)
+        except (OSError, ValueError):
+            named = False
+        if not named and not (env or {}).get("YTE_DEFAULT_PRESET"):
+            args += ["--preset", "none"]
     return subprocess.run([sys.executable, os.path.join(SCRIPTS, script)] + [str(a) for a in args], capture_output=True, text=True, env=e)
 
 

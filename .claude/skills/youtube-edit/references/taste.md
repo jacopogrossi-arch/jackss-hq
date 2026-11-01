@@ -110,3 +110,7 @@ From `personale/youtube/inspo-motion-plates-joseph.md` (his motion plates, and t
 10. **The video demonstrates what it says**: use the method on screen (real prompt, real result) instead of describing it.
 11. **Cutaways of the creator** (at the desk, waiting, surprised) serve the story's emotion; they are not filler. Shoot them with the checklist, not stock.
 12. **Notes with a timecode become rules**: "0:14 the whoosh stronger here" is saved in `NOTES_LOG.md` and, when it repeats, in this file (see `plate-plan.md`).
+13. **A plate is never still for more than ~0.5 s** (measured: moving 86 % of the time, longest still run 0.53 s, a burst every ~2 s): slow push-in always, a kick on every event, a soft
+    kick to fill any gap longer than 2.3 s. Frequency matters more than amplitude (Joseph has almost no pan or rotation).
+14. **The green plates are the look of the whole system** (Jacopo, 01/11/2026, blind A/B on the 16.5 s window of Video #2: "decisamente meglio, una spanna"): preset `plates-verde`
+    is the default of `compose.py`; `--preset none` gives the old fixed cyan/blue look back, `--preset elegante-portfolio` the portfolio look.

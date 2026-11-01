@@ -476,7 +476,21 @@ Source: `personale/youtube/inspo-motion-plates-joseph.md` (what each plate does 
 Common rules: full frame on the preset wash + grid (`k-wash`); the whole plate fades in 0.3 s and out 0.3 s; every element enters on the word that
 names it (`data-at` + `data-anchor`, so `beat-check.py` proves it); entrances are `y +40`, `blur(8px)` to 0, 0.5 s `power3.out`, 0.07 s apart in a row;
 **nothing enters the face PiP corner** (`plates_base.check_pip`: PiP 320x320 at left 1552 / top 712, plus 40 px: layouts stay left of x 1512 or above y 672
-and the builder raises otherwise); key word = `*word*` in the italic serif; no sound (the creator rejects pops).
+and the builder raises otherwise); key word = `*word*` in the italic serif.
+
+**Camera (Jacopo, 01/11/2026: "decisamente meglio, ma voglio più movimento di camera"; numbers from the teardown, `inspo-motion-plates-joseph.md` addendum).** The first green
+version was calm: 32 % of the time moving, a motion burst every 14 s. Joseph's plates are moving 63-66 % of the time, a motion burst every ~2 s, still runs at p90 0.27 s,
+and the camera is almost all slow zoom (median 0.4 %/s) with kicks up to 4.5 %/s, almost no pan or rotation. So `plates_base.wrap` gives every plate: (1) a **slow push-in**
+(`CAM_DRIFT`: 1.035 and -24/-10 px over the plate's life); (2) a **kick on every event** (`KICK_STRONG` +2.4 %, 0.3 s `power2.out`, relax 1.3 s `sine.inOut`; events closer than 1 s share
+one) and a **soft kick** (+1.2 %) wherever more than `GAP` 2.3 s would pass with nothing moving; (3) a **parallax grid** (the wash drifts 6 %, slower than the content). The
+camera scales about the corner of the PiP's forbidden zone (1512, 672): any point outside the zone moves further from it at any zoom, so **nothing can ever enter the face corner**
+(proved in `test_plates.Camera`, measured on a no-face render: corner luminance 87 max against ~80 of the bare wash). Measured on the 16.5 s window of Video #2: 86.6 % moving,
+longest still run 0.53 s, 5.2 bursts per 10 s (Joseph 4.8, the 3D chain 5.2). The amplitude is still about a third of Joseph's biggest kicks: raise `KICK_STRONG` only together with
+more inner margin on the layouts (a 7-card row already ends 26 px from the left edge at the peak of 1.06).
+
+**Sound of the plates (`write_plate_sounds(public)`, `sound=True` by default; Jacopo's taste, `sound.md`):** a soft swish on the way in (`whoosh-ethereal` 1.9 s, 0.25, started 0.3 s
+early so the peak lands on the cut) and a shorter one on the way out (0.9 s, 0.18); `uiplane` adds typing for exactly the typing time (0.22) and a click on the click (0.28). No pops,
+no hits or risers under titles, nothing on the camera kicks. `sound=False` silences a plate.
 
 - **47. Step tracker.** `tracker(steps, active, title, t_in, t_out, at, anchor, done, sub)`. Three to seven cards (width up to 250, height 270) in one row at y 330;
   the steps before the active one carry a mint tick (pop 0.3 s) and a filled bar; the pending ones rest at .6; at `at` the active card lifts 26 px,

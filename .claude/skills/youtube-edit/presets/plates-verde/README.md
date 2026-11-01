@@ -1,6 +1,6 @@
 # Preset `plates-verde` — motion plate su verde con griglia
 
-Per usarlo: `compose.py --preset plates-verde` oppure `"preset": "plates-verde"` nello storyboard. Il `style` dello storyboard vince sempre sul preset.
+**È il preset predefinito di `compose.py` dal 01/11/2026** (nessun `--preset` = plates-verde; `--preset none` = look vecchio con ciano/blu fissi; `--preset elegante-portfolio` = look portfolio). `legacy_swap` ridipinge ciano, magenta, ambra e blu fissi dei formati più vecchi nella palette verde/oro/menta. Il `style` dello storyboard vince sempre sul preset.
 
 ## Cos'è
 Le **motion plate** (scene grafiche a tutto schermo, vedi `references/formats.md` → Explainers) su **verde profondo con griglia blueprint**, parola-chiave
@@ -48,5 +48,5 @@ Da evitare (come in elegante-portfolio): `halo`, `chip`, `image`. Moduli in `for
 - **Provato con HyperFrames il 01/11/2026** su una finestra reale (16,5 s del Video #2, `videos/_bench/plates-verde/ab/`): `compose.py --preset plates-verde` + `npx hyperframes check` (0 errori,
   contrasto 28/28 AA, un solo avviso: l'ultima riga a schermo 0,94 s perché la finestra finisce lì) + render 1080p bozza in 57 s. Render di controllo senza faccia: nell'angolo del PiP l'indicatore YMAX
   resta 80 (max 86) durante la plate, quindi nessuna grafica ci entra. `qa-motion.py` ha trovato il diagramma troppo fermo tra una parola e l'altra: aggiunti i trattini che scorrono sui connettori.
-- **A/B alla cieca con la catena 3D (27b) inviato a Jacopo**: esito da registrare in `references/format-history.md`. Dati misurati: A 39 % di fotogrammi quasi fermi, B 65 % (nessuno stallo oltre 1,2 s): B è più calmo.
+- **A/B alla cieca con la catena 3D (27b), 01/11/2026: vince il verde "decisamente meglio, di una spanna"** (Jacopo), ma "voglio più movimento di camera". Dati: la prima versione aveva 32 % del tempo in movimento e 0,7 scatti ogni 10 s (A: 56 % e 5,2); con la camera di `plates_base` (deriva + scatti ai momenti chiave + scatti di riempimento) 86,6 % e 5,2 scatti, pausa massima 0,53 s. Joseph: 63-66 % e 4,8.
 - Il suono non c'è nei formati (Jacopo scarta i pop): per i tracker/diagram un whoosh morbido a ogni cambio, come nel resto della skill.

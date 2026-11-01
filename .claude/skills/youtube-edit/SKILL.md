@@ -539,3 +539,6 @@ words, a specific reason to stay in the first three seconds that the video pays 
   snapshots and tool output: one snapshot per moment, scripts over retyping.
 - **Where a saved rule goes:** in the file that holds that topic (`SKILL.md` for the pipeline and the cut, `references/` for
   formats, sound, traps, assets, long form, Tella), never copied into two files.
+
+
+**Default preset (01/11/2026):** `compose.py` wears `plates-verde` when no preset is named (the green plates won the blind A/B "di una spanna"); `--preset none` gives the old fixed cyan/blue look, `--preset elegante-portfolio` the portfolio look.

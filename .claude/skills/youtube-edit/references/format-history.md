@@ -9,7 +9,7 @@ Counts come from the delivered `storyboard.json` (transitions left out)._
 
 Not yet used in a real video (candidates for the next one): 41b hanging chips, 43 dot grid, 44 outline rail, 27b 3D card chain,
 45 living shape, 46 hero line. Plus the plate formats 47 tracker, 48 counter, 49 versus, 50 diagram, 51 UI plane
-(preset `plates-verde`, built 01/11/2026, stills only: blind A/B on a real window before the first delivery).
+(preset `plates-verde`, built 01/11/2026, A/B 01/11/2026: the diagram plate on `plates-verde` beat the 3D chain on the 16.5 s window of Video #2, "decisamente meglio, di una spanna"; asked for more camera movement, added the same day).
 
 **Candidates** (muted demos Jacopo liked, 26/10/2026; each enters the library only after a blind A/B in a real video):
 - **Blueprint** (`videos/_bench/ab/blueprint/blueprint-v2.mp4`): a garment drawn as a technical flat on a pattern grid, parts
