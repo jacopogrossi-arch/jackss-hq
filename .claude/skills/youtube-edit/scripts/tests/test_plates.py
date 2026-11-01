@@ -10,6 +10,7 @@ from counter import counter  # noqa: E402
 from versus import versus  # noqa: E402
 from diagram import diagram  # noqa: E402
 from uiplane import uiplane  # noqa: E402
+from pip import pip  # noqa: E402
 
 STEPS = ["Reference", "Audio", "Piano", "Storyboard", "Montaggio", "Revisioni", "Suoni"]
 
@@ -93,6 +94,20 @@ class ElementSounds(unittest.TestCase):
             self.assertTrue(float(m.group(1)) <= t)
         self.assertTrue(all(SOUNDS[n][4] <= -25 for n in POOL))        # element sounds peak at -25 dBFS or lower (~16 dB under the voice peaks)
         self.assertTrue(SOUNDS["plate-in"][4] <= -31 and SOUNDS["plate-out"][4] <= -31)   # the cut swish stays ~10 dB under the old one (Jacopo: too loud)
+
+
+class Pip(unittest.TestCase):
+    def test_corner_ring_and_sync(self):
+        p = pip(10.0, 15.0, crop=(630, 250, 700), cid="p1")
+        self.assertIn('id="p1-ring"', p["html"]); self.assertIn("#5EE6A8", p["html"])
+        self.assertIn("left:1549px;top:709px", p["html"])                       # the ring sits 3 px outside the 320 px square at (1552, 712)
+        self.assertIn("#video-wrap", p["js"]); self.assertIn("zIndex:20", p["js"])  # the base video's wrapper, not a second video
+        self.assertEqual(p["js"].count("immediateRender:false"), 4)             # move in, ring in, ring out, move out: all seek-safe fromTo
+        self.assertNotIn("tl.to(", p["js"])
+
+    def test_two_pips_need_their_own_ids(self):
+        a, b = pip(1, 5, cid="pa"), pip(20, 25, cid="pb")
+        self.assertNotEqual(a["html"].split('id="host-')[1][:3], b["html"].split('id="host-')[1][:3])
 
 
 class Tracker(unittest.TestCase):
