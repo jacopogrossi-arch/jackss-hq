@@ -26,7 +26,7 @@ def main():
     name = a.name or os.path.basename(lab.rstrip("\\/"))
     dest = os.path.join(os.path.expanduser("~"), "HyperFrames", name)
     shutil.rmtree(dest, ignore_errors=True)
-    shutil.copytree(pub, dest, ignore=lambda d, names: [n for n in names if n in SKIP or n.endswith((".log", ".tmp"))])
+    shutil.copytree(pub, dest, dirs_exist_ok=True, ignore=lambda d, names: [n for n in names if n in SKIP or n.endswith((".log", ".tmp"))])
     size = sum(os.path.getsize(os.path.join(r, f)) for r, _, fs in os.walk(dest) for f in fs) / 1e6
     print("copy: %s (%.1f MB)" % (dest, size))
     if a.open:
