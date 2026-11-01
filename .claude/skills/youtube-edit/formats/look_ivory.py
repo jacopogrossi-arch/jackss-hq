@@ -84,6 +84,19 @@ def css():
   .wd-stat .v { color:%(deep)s; font-weight:800; } .wd-stat .track { background:rgba(11,9,7,.14); } .wd-stat .fill { background:%(deep)s; box-shadow:none; }
   .wd-hex .wd-lab, .wd-text { font-weight:800; } .wd-hex polygon { stroke:rgba(244,239,230,.8); }
   .dq-head { font-family:var(--k-serif); font-style:italic; font-weight:500; font-size:60px; letter-spacing:0; color:var(--k-accent); }
+  /* build (picture, label, value): sentence-case Inter label, the value in the italic serif; never spaced capitals */
+  .k-label { text-transform:none; letter-spacing:-.01em; font-weight:800; background:none; color:#f4efe6; -webkit-text-fill-color:currentColor; filter:none; font-size:54px; }
+  .k-label::after { display:none; }
+  .k-value { font-family:var(--k-serif); font-style:italic; font-weight:500; letter-spacing:0; text-transform:none; font-size:52px; text-shadow:none; }
+  /* orbit card, agenda chips, dashboard-zoom card, player */
+  .k-or-card { background:rgba(244,239,230,.97); box-shadow:0 40px 90px rgba(0,0,0,.5); }
+  .k-or-card .t { color:%(ink)s; font-weight:800; text-transform:none; letter-spacing:-.02em; } .k-or-card .s { color:%(ink2)s; }
+  .k-or-cap { text-transform:none; letter-spacing:0; font-weight:800; }
+  .k-ag-item { background:rgba(244,239,230,.97) !important; color:%(ink)s !important; text-transform:none; letter-spacing:-.01em; font-weight:800; box-shadow:0 14px 34px rgba(0,0,0,.35); }
+  .k-ag-item .n { color:%(deep)s; font-family:var(--k-serif); font-style:italic; font-weight:500; }
+  .dz-lab { color:%(ink2)s; } .dz-num { color:%(deep)s; font-weight:800; } .dz-delta { background:%(deep)s; color:#f4efe6; } .dz-spark path { stroke:%(deep)s; }
+  .pv .pill, .pv .ttl { color:%(ink)s; } .pv .tm { color:%(ink2)s; } .pv .track { background:rgba(11,9,7,.15); } .pv .fillx { background:%(deep)s; }
+  .pv .tri, .pv .ptri { border-color:transparent transparent transparent %(ink)s; }
   /* chat: ivory for them, mint for me (already), ink text */
   .chat-me, .bub.me { color:#06140d; }
 """ % {"ink": INK, "ink2": INK2, "deep": DEEP}
