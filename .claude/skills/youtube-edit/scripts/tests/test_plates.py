@@ -4,7 +4,7 @@ import os, re, sys, unittest
 from .helpers import SCRIPTS
 
 sys.path.insert(0, os.path.join(os.path.dirname(SCRIPTS), "formats"))
-from plates_base import check_pip, keyword  # noqa: E402
+from plates_base import check_pip, keyword, plan_kicks, CAM_ORIGIN, CAM_DRIFT, PIP, MARGIN, GAP  # noqa: E402
 from tracker import tracker  # noqa: E402
 from counter import counter  # noqa: E402
 from versus import versus  # noqa: E402
@@ -22,7 +22,10 @@ def seek_safe(test, o):
             test.fail("not seek-safe: " + line)
         if "tl.fromTo(" in line:
             test.assertIn("immediateRender", line)
-    test.assertNotIn("<audio", o["html"])
+    for tag in re.findall(r"<audio[^>]*>", o["html"]):   # every sound has an id (else it is silent in the render) and its own track
+        test.assertRegex(tag, r'id="sfx-')
+        test.assertRegex(tag, r'data-track-index="\d+"')
+        test.assertNotIn("@TRACK@", tag)
 
 
 class PlatesBase(unittest.TestCase):
@@ -35,6 +38,43 @@ class PlatesBase(unittest.TestCase):
             check_pip(110, 600, 1700, 200)       # a wide strip across the PiP corner
         with self.assertRaises(ValueError):
             check_pip(1500, 700, 200, 100)       # inside the PiP margin
+
+
+class Camera(unittest.TestCase):
+    def test_kicks_fill_gaps_and_keep_spacing(self):
+        ks = plan_kicks([2.0, 2.3, 9.0], 0.0, 12.0)           # 2.0 and 2.3 are one event; 2.0 -> 9.0 is a 7 s gap
+        times = [t for t, _ in ks]
+        self.assertEqual(times, sorted(times))
+        self.assertTrue(all(b - a <= GAP + 0.01 for a, b in zip([0.3] + times, times + [11.3])), ks)   # nothing waits longer than GAP
+        self.assertEqual(sum(1 for t, a in ks if a == 0.016), 2)                                      # the strong kicks: 2.0 and 9.0
+        self.assertTrue(all(b - a >= 1.0 for (a, _), (b, _) in zip(ks, ks[1:])))
+
+    def test_camera_never_pushes_anything_into_the_pip(self):
+        """The camera scales about CAM_ORIGIN with at most CAM_DRIFT[0] * 1.016 and translates (x, y): a point outside the PiP zone must stay outside."""
+        ox, oy = CAM_ORIGIN; sc, tx, ty = CAM_DRIFT; smax = sc * 1.016 * 1.008
+        zx, zy = PIP[0] - MARGIN, PIP[1] - MARGIN
+        for x in range(0, zx, 24):
+            for y in list(range(0, 1080, 24)):
+                x2, y2 = ox + (x - ox) * smax + tx, oy + (y - oy) * smax + ty
+                self.assertFalse(x2 >= zx and y2 >= zy, (x, y, x2, y2))
+        for y in range(0, zy, 24):
+            for x in range(0, 1920, 24):
+                x2, y2 = ox + (x - ox) * smax + tx, oy + (y - oy) * smax + ty
+                self.assertFalse(x2 >= zx and y2 >= zy, (x, y, x2, y2))
+
+
+class Sound(unittest.TestCase):
+    def test_plate_sounds_on_and_off(self):
+        on = tracker(STEPS, 3, "x", 0.0, 6.0)
+        self.assertIn('id="sfx-tk-in"', on["html"]); self.assertIn('id="sfx-tk-out"', on["html"])
+        off = tracker(STEPS, 3, "x", 0.0, 6.0, sound=False)
+        self.assertNotIn("<audio", off["html"])
+
+    def test_ui_typing_and_click_only_with_a_cursor(self):
+        o = uiplane("P", {"text": "abc", "t": 2.0, "anchor": "a"}, 0, 12, button={"label": "Ok", "click_at": 9.5})
+        self.assertIn('id="sfx-ui-type"', o["html"]); self.assertIn('id="sfx-ui-click"', o["html"])
+        o2 = uiplane("P", {"text": "abc", "t": 2.0, "anchor": "a"}, 0, 12)
+        self.assertNotIn("sfx-ui-click", o2["html"])
 
 
 class Tracker(unittest.TestCase):

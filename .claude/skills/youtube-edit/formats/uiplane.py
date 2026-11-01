@@ -24,7 +24,7 @@ HAND = ('<svg id="uiH" viewBox="0 0 40 48" style="position:absolute;left:0;top:0
 SPARK = '<svg viewBox="0 0 44 44" style="position:absolute;inset:0"><path d="M22 9v26M10.7 15.5l22.6 13M10.7 28.5l22.6-13" stroke="#1a1405" stroke-width="4.2" stroke-linecap="round" fill="none"/></svg>'
 
 
-def uiplane(title, prompt, t_in, t_out, replies=(), button=None, bg=True, cid="ui"):
+def uiplane(title, prompt, t_in, t_out, replies=(), button=None, bg=True, cid="ui", sound=True):
     check_pip(WX, WY, WW, WH, "uiplane window")
     css = BASE_CSS + """
   .ui-st { position:absolute; inset:0; perspective:1800px; perspective-origin:50%% 40%%; }
@@ -49,7 +49,13 @@ def uiplane(title, prompt, t_in, t_out, replies=(), button=None, bg=True, cid="u
     if button:
         inner += '<div class="ui-b" id="uiB"%s>%s</div>' % (at_attrs(button["click_at"], button.get("anchor", "")), esc(button["label"]))
     inner += '</div></div></div>\n' + HAND
-    html, pre, post = wrap(cid, t_in, t_out, css, inner, bg=bg)
+    extra = []
+    if sound:   # typing for exactly the typing time, a click on the click (sound.md table: typing 0.22, click 0.28)
+        extra.append('<audio id="sfx-%s-type" src="sfx/typing.mp3" data-start="%.3f" data-duration="%.3f" data-track-index="@TRACK@" data-volume="0.22"></audio>'
+                     % (cid, float(prompt["t"]), min(max(len(prompt["text"]) / 24.0, 0.5), 2.2)))
+        if button:
+            extra.append('<audio id="sfx-%s-click" src="sfx/click.mp3" data-start="%.3f" data-duration="0.34" data-track-index="@TRACK@" data-volume="0.28"></audio>' % (cid, float(button["click_at"])))
+    html, pre, post = wrap(cid, t_in, t_out, css, inner, bg=bg, kicks=[prompt["t"]] + [r["t"] for r in replies] + ([button["click_at"]] if button else []), sound=sound, audio=extra)
     js = list(pre)
     js.append("tl.set('#uiW', { opacity:0, rotateY:-26, rotateX:5, y:30, scale:0.94 }, 0);")
     js.append(fromto("#uiW", "{opacity:0,rotateY:-26,rotateX:5,y:30,scale:0.94}", "{opacity:1,rotateY:-8,rotateX:3,y:0,scale:1}", t_in + 0.2, 0.9, "power3.out"))

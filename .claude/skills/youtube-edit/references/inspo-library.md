@@ -15,7 +15,7 @@ stored as a table `word -> graphic -> job`, plus the measured numbers, not as a 
 ## Index
 | Reference | Date | What it taught | Where |
 |---|---|---|---|
-| Joseph (Content AI Academy), "Ho automatizzato completamente il montaggio video con Claude" (11:49, 9:16) | 01/11/2026 | the 7-step system, the "plate has a job, lands on the word" logic, formats 47-51, taste section 9 | `personale/youtube/inspo-motion-plates-joseph.md` |
+| Joseph (Content AI Academy), "Ho automatizzato completamente il montaggio video con Claude" (11:49, 16:9) | 01/11/2026 | the 7-step system, the "plate has a job, lands on the word" logic, formats 47-51, taste section 9 | `personale/youtube/inspo-motion-plates-joseph.md` |
 | Ali Abdaal (motion plates + PiP face) | 28/10/2026 | the face PiP on every plate | `formats.md`, Explainers |
 | Iman Gadzhi, Callaway, Pedro Andrade, Marshall Crew, @realskytan | 19-23/10/2026 | build / annotate / orbit / dive / agenda, dot grid, outline rail | `studio.py`, `formats.md` |
 

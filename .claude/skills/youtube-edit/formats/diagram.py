@@ -27,7 +27,7 @@ def _ys(n):
     return [CY + (i - (n - 1) / 2) * 108 for i in range(n)]
 
 
-def diagram(center, inputs, outputs, title, t_in, t_out, sub=None, bg=True, cid="dg"):
+def diagram(center, inputs, outputs, title, t_in, t_out, sub=None, bg=True, cid="dg", sound=True):
     assert 1 <= len(inputs) <= 4 and 1 <= len(outputs) <= 3, "one to four inputs, one to three outputs (a fourth output would enter the face PiP corner)"
     yi, yo = _ys(len(inputs)), _ys(len(outputs))
     for y in yi:
@@ -67,7 +67,8 @@ def diagram(center, inputs, outputs, title, t_in, t_out, sub=None, bg=True, cid=
             inner += '<div class="%s" id="dgp%s%d" style="left:%dpx;top:%dpx"%s>%s</div>\n' % (cls, side, k, x, ys[k] - PILL_H / 2, at_attrs(d["t"], d.get("anchor", "")), esc(d["label"]))
             if d.get("strike_t") is not None:
                 inner += '<div class="dg-x" id="dgx%s%d" style="left:%dpx;top:%dpx;width:%dpx"></div>\n' % (side, k, x + 16, ys[k] - 2, PILL_W - 32)
-    html, pre, post = wrap(cid, t_in, t_out, css, inner, bg=bg)
+    html, pre, post = wrap(cid, t_in, t_out, css, inner, bg=bg, sound=sound,
+                           kicks=[center["t"]] + [d["t"] for d in inputs + outputs] + [d["strike_t"] for d in inputs + outputs if d.get("strike_t") is not None])
     js = list(pre)
     js.append("tl.set('#dgT', { opacity:0, y:14 }, 0);")
     js.append(fromto("#dgT", "{opacity:0,y:14}", "{opacity:1,y:0}", t_in + 0.15, 0.45))

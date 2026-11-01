@@ -46,7 +46,14 @@
     "grid_rgb": "120,235,180",
     "grid_a": ".13",
     "grid_size": "80px",
-    "ring": "#5EE6A8"
+    "ring": "#5EE6A8",
+    "legacy_swap": {
+      "0AF0F0": "#5EE6A8",
+      "CD00EE": "#e3c47f",
+      "FFB904": "#e3c47f",
+      "0005EE": "#17613F",
+      "05060c": "#0A2B1E"
+    }
   },
   "subtitles": "keywords",
   "formats": {

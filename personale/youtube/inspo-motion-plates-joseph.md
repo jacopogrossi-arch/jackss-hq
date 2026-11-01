@@ -1,6 +1,6 @@
 # Teardown — "Ho automatizzato completamente il montaggio video con Claude (processo completo)"
 
-*Analisi del 01/11/2026. Video di ispirazione di Joseph (Content AI Academy), 11:49, verticale 9:16. Fonte: MOTION PLATES su iCloud Drive.*
+*Analisi del 01/11/2026. Video di ispirazione di Joseph (Content AI Academy), 11:49, 16:9 orizzontale (il file ha una etichetta di rotazione -90 sbagliata). Fonte: MOTION PLATES su iCloud Drive.*
 *Metodo: trascrizione Whisper + 142 frame (uno ogni 5 s) + finestre dense a 2 fps su hook, cervello, fight, revisioni.*
 *Limiti: sorgente a 480p. Whisper ha storpiato alcune parole ("Cloud" = Claude); manca la trascrizione dei secondi 357-387 (sono coperti dai frame). I frame stanno solo in locale in `videos/motion-plates/` (fuori da git).*
 
@@ -130,3 +130,36 @@ Ogni plate ha **una funzione didattica precisa**. Le ho raggruppate per funzione
 - **Bookend:** stesso oggetto in apertura e chiusura con significato cambiato.
 
 **Attenzione:** è il suo stile (blu elettrico + serif corsivo), non il nostro. Prendiamo la *logica* (quando e perché), non palette e font: i nostri restano quelli di Jacopo (vedi `motion/` e `taste.md`).
+
+
+---
+
+## Addendum (01/11/2026, sera) — dinamismo e sound design MISURATI
+
+*Correzione:* il video è **16:9 orizzontale** (11:49). Il file ha un tag di rotazione -90 sbagliato: per questo i primi fogli di anteprima uscivano storti.
+
+### 1. Dinamismo (flusso ottico a 15 fotogrammi al secondo, 10.638 fotogrammi)
+Classificati per colore: plate blu 39% del tempo, plate scure a interfaccia 37%, faccia 24%. Stesse misure sui nostri A (catena 3D) e B (diagramma verde, prima versione) sulla finestra di 16,5 s del Video #2.
+
+| Misura (solo plate) | Joseph | A catena 3D | B (prima versione) |
+|---|---|---|---|
+| Tempo in movimento | 63-66% | 56% | 32% |
+| Pausa ferma più lunga | 2,1 s (blu), 4,7 s (UI) | 2,7 s | 4,1 s |
+| Pausa ferma, 90° percentile | 0,2-0,3 s | 2,1 s | 1,0 s |
+| Scatti di movimento ogni 10 s | 4,8 | 5,2 | 0,7 |
+| Movimento tra un fotogramma e l'altro, 90° percentile | 5-7 | 3,1 | 0,8 |
+| Pan mentre si muove (px/s a 1080p), mediana / 90° | 2 / 44-51 | 85 / 159 | 2 / 9 |
+| Zoom mentre si muove (%/s), mediana / 90° | 0,4 / 4,5 | 1,9 / 4,2 | 0,2 / 0,9 |
+| Rotazione (gradi/s), mediana / 90° | 0,1 / 1,1 | 1,7 / 3,3 | 0,1 / 0,3 |
+
+Lettura: **Joseph non fa grandi giri di camera.** Ha (1) uno **zoom lento continuo** (~0,4%/s, quasi una deriva), (2) **uno scatto di movimento ogni ~2 s** (un elemento che entra, uno che reagisce, un piccolo push-in fino al 4,5%/s) e (3) pan e rotazione quasi nulli. Ciò che si vede come "non sta mai fermo" è la **frequenza degli scatti**, non la loro ampiezza: la pausa di 4,7 s è un caso isolato (una schermata UI), nel 90% del tempo non si resta fermi più di 0,3 s.
+La nostra B era ferma perché aveva 0,7 scatti ogni 10 s: ogni elemento entrava e poi tutto restava immobile fino alla parola dopo.
+
+### 2. Sound design (cosa so e cosa NO)
+**Cosa NON posso dire:** non posso ascoltare e la voce domina il file (parla il 95% del tempo; il file scaricato è ricompresso, banda utile fino a ~16 kHz). Spettrogrammi e rilevatori di eventi non separano in modo affidabile gli effetti dalla voce: i miei rilevatori automatici hanno contato centinaia di "eventi" che erano consonanti e armoniche. **Nessun valore di livello o di tipo dei suoni è quindi misurato.** Se Jacopo ricorda dei momenti precisi in cui il suono lo ha colpito, indicarli e li misuro lì.
+**Cosa vedo con certezza:**
+- Nella spiegazione del passo 7 (8:40-8:50) la timeline mostrata dal video piazza i suoni **sui tagli di scena**, **due suoni per taglio su due tracce** (A2 e A3), con questi nomi di file: *Whoosh, Hit, Pop, Camera, Swipe, Glitch* (A2) e *Click, Riser, Whoosh, Click 4, Hit* (A3). 10 scene in ~22 s = un taglio ogni ~2,2 s, circa 20 suoni.
+- Le cartelle della libreria (mostrate a 8:25): Whoosh, Riser, Camera, Impatti, Click, Pop, Glitch, Swipe, Hit, Texture, circa 100 file ciascuna.
+- Il sistema li sceglie **studiando i progetti vecchi dell'autore** ("come avevo usato quei suoni in video simili") e non chiede revisioni sul suono.
+- Nella forma d'onda del tratto 507-510 s si vedono righe tonali tra 7 e 11 kHz in corrispondenza del contatore "507 → 1000+ sound effects": probabili tick digitali del contatore (una sola osservazione, da confermare all'orecchio).
+**Per noi:** ciò che si copia è la *struttura* (il suono è attaccato ai tagli di scena, due strati, scelto dal gusto dell'autore), non i file: i gusti di Jacopo (niente pop, whoosh morbido, riser metallico solo su suspense, niente sotto i titoli eleganti) restano la regola. Vedi `references/sound.md` ("Suono delle plate").

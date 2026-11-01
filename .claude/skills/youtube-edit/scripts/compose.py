@@ -99,7 +99,7 @@ Icons (pipeline, world, deck, pills): doc browser bolt chat money check user cod
 Camera ops: set t scale | creep t0 t1 scale (power1.inOut) | punch t scale (0.32 s power2.out) | release t dur (to 1.0) | reveal t (1.10 to 1.00 as a card enters).
 Positions: tl = left:70 top:96 (desk framing, clears the mic), tr = right:70 top:96.
 """
-import argparse, json, os, shutil, glob, math, struct, sys
+import argparse, json, os, re, shutil, glob, math, struct, sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "formats"))
 import fx   # transitions and overlays (flash, whip, glitch, light leak, burn, ...)
 import studio   # build / annotate / orbit / dive / agenda (the explainer formats, 19/10/2026)
@@ -111,7 +111,7 @@ ap = argparse.ArgumentParser()
 ap.add_argument("--spec", required=True)
 ap.add_argument("--out", required=True)
 ap.add_argument("--shared", default="")
-ap.add_argument("--preset", default="", help="an editing type from presets/<name>/preset.json (palette, fonts, subtitles, transitions, sound); the storyboard's own \"style\" wins")
+ap.add_argument("--preset", default="", help="an editing type from presets/<name>/preset.json (palette, fonts, subtitles, transitions, sound); the storyboard's own \"style\" wins. Default: plates-verde; \"none\" = no preset")
 args = ap.parse_args()
 S = json.load(open(args.spec, encoding="utf-8"))
 OUT = args.out
@@ -131,7 +131,10 @@ def load_preset(name):
         raise SystemExit("unknown preset %r (available: %s)" % (name, ", ".join(have) or "none"))
     return json.load(open(path, encoding="utf-8"))
 
-PRESET_NAME = args.preset or S.get("preset", "")
+DEFAULT_PRESET = "plates-verde"   # Jacopo, 01/11/2026: the green plates won the blind A/B "di una spanna": the look of the whole system. --preset none = no preset (old behaviour)
+PRESET_NAME = args.preset or S.get("preset", "") or DEFAULT_PRESET
+if PRESET_NAME == "none":
+    PRESET_NAME = ""
 PRESET = load_preset(PRESET_NAME) if PRESET_NAME else {}
 if PRESET:
     S["style"] = _deep_merge(PRESET.get("style", {}), S.get("style"))      # the storyboard overrides single values
@@ -2477,6 +2480,21 @@ page = """<!doctype html>
 </html>
 """ % (CSS, S["id"], D, S.get("video", "input-video.mp4"), D, "".join(html_parts), S.get("raw_html", ""), "".join(audio_parts),
        GSAP_SRC, HELPERS, "\n        ".join(cam), "\n        ".join(js_parts), S.get("raw_js", ""), D, S["id"])
+def swap_legacy_colours(html, style):
+    """A preset with "legacy_swap" repaints the older formats' fixed colours (cyan, magenta, amber, the blue wash) in its own palette, in CSS, JS and inline styles alike,
+    so the whole system follows the preset (Jacopo, 01/11/2026: the green look applies to everything)."""
+    sw = (style or {}).get("legacy_swap")
+    if not sw:
+        return html
+    hexrgb = lambda h: ",".join(str(int(h.lstrip("#")[i:i + 2], 16)) for i in (0, 2, 4))
+    for old, new in sw.items():                       # {"0AF0F0": "#5EE6A8", ...}: hex literal and its rgb() triple
+        o = old.lstrip("#")
+        html = re.sub("#" + o, new, html, flags=re.I)
+        html = html.replace(hexrgb(o), hexrgb(new))
+    return html
+
+
+page = swap_legacy_colours(page, S.get("style"))
 open(os.path.join(OUT, "index.html"), "w", encoding="utf-8").write(page)
 open(os.path.join(OUT, "hyperframes.json"), "w", encoding="utf-8").write(json.dumps({
     "$schema": "https://hyperframes.heygen.com/schema/hyperframes.json",

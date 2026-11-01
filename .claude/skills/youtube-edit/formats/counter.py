@@ -15,7 +15,7 @@ import json, re
 from plates_base import *
 
 
-def counter(items, title, t_in, t_out, bar=None, sub=None, bg=True, cid="ct"):
+def counter(items, title, t_in, t_out, bar=None, sub=None, bg=True, cid="ct", sound=True):
     n = len(items)
     assert 2 <= n <= 5, "two to five cards"
     gap = 30; cw = min(340, (1700 - gap * (n - 1)) // n); ch = 330; barw = min(n * cw + (n - 1) * gap, 1380)
@@ -44,7 +44,7 @@ def counter(items, title, t_in, t_out, bar=None, sub=None, bg=True, cid="ct"):
     if bar:
         frac, line, tb, ab = bar
         inner += '<div class="ct-bar" id="ctB"%s><i id="ctBi"></i></div>\n<div class="pl-sub" id="ctBl" style="left:112px;top:734px;font-size:34px">%s</div>\n' % (at_attrs(tb, ab), keyword(line))
-    html, pre, post = wrap(cid, t_in, t_out, css, inner, bg=bg)
+    html, pre, post = wrap(cid, t_in, t_out, css, inner, bg=bg, kicks=[it[2] for it in items] + ([bar[2]] if bar else []), sound=sound)
     js = list(pre)
     js.append("tl.set('#ctT', { opacity:0, y:14 }, 0);")
     js.append(fromto("#ctT", "{opacity:0,y:14}", "{opacity:1,y:0}", t_in + 0.15, 0.45))

@@ -14,7 +14,7 @@ when both are in. The cards stop at y 640, clear of the face PiP corner (checked
 from plates_base import *
 
 
-def versus(left, right, title, t_in, t_out, win=None, win_at=None, win_anchor="", vs=True, sub=None, bg=True, cid="vs"):
+def versus(left, right, title, t_in, t_out, win=None, win_at=None, win_anchor="", vs=True, sub=None, bg=True, cid="vs", sound=True):
     cw, ch, y0 = 700, 400, 250
     xl, xr = 130, 1090
     check_pip(xl, y0 - 20, xr + cw - xl, ch + 40, "versus cards")
@@ -36,7 +36,7 @@ def versus(left, right, title, t_in, t_out, win=None, win_at=None, win_anchor=""
     inner += card("l", xl, left, "l") + card("r", xr, right, "r")
     if vs:
         inner += '<div class="vs-v" id="vsV">vs</div>\n'
-    html, pre, post = wrap(cid, t_in, t_out, css, inner, bg=bg)
+    html, pre, post = wrap(cid, t_in, t_out, css, inner, bg=bg, kicks=[left["t"], right["t"], max(left["t"], right["t"]) + 0.35] + ([win_at] if win_at else []), sound=sound)
     js = list(pre)
     js.append("tl.set('#vsT', { opacity:0, y:14 }, 0);")
     js.append(fromto("#vsT", "{opacity:0,y:14}", "{opacity:1,y:0}", t_in + 0.15, 0.45))
