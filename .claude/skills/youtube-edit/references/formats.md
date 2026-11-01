@@ -277,7 +277,7 @@ fades in as it lands. Not on 46, 35 or stock cutaways of other people. Builder: 
 - **Graphics never pass under the face** (Jacopo, 28/10/2026), not even for a frame during a camera move: lay the plate
   out around the PiP corner (on the chain3d plate the whole scene is lifted 140 px) and let the plate's first element
   enter only after the face has landed in its corner. Prove it on a no-face render of the same plate: crop the PiP corner
-  plus a 40 px margin and check with `signalstats` that YMAX stays at wash level (under ~70) for every frame of the plate.
+  plus a 40 px margin and check with `signalstats` that YMAX stays at wash level for every frame of the plate (the dark wash of elegante-portfolio: under ~70; **plates-verde: its wash and grid read ~80, max 86 on the 01/11/2026 control**, while any ivory card reads above 200).
 
 - **6. Flow diagram.** A rail 1840 px wide at left 40: N nodes of 320 px, 56 px gaps, a 44 px arrow centred in each
   (five nodes: lefts 0/376/752/1128/1504, arrows 326/702/1078/1454; recompute for another N). A node: a cyan number
@@ -488,7 +488,8 @@ and the builder raises otherwise); key word = `*word*` in the italic serif; no s
   chip pops between them once both are in; at `win_at` the winner scales 1.04 with a mint ring and the other dims to .55. Always side by side, never in sequence.
 - **50. Metaphor diagram.** `diagram(center, inputs, outputs, title, t_in, t_out, sub)`. Node (gold sphere, 200 px) at (940, 490) with a slow 8 px breath; one to four input pills left
   (x 100, 460x76), one to three output pills right (x 1360); a dashed mint connector per pill reveals with a `clip-path` tween (0.7 s) right after its pill lands; `strike_t`
-  draws a red line over a pill (0.35 s) and dims it to .4 (and its connector to .25): what you no longer need. `kind: "prompt"` rings a pill in mint (the sentence you typed).
+  draws a red line over a pill (0.35 s) and dims it to .4 (and its connector to .25): what you no longer need. `kind: "prompt"` rings a pill in mint (the sentence you typed). **Alive between words** (found by `qa-motion.py` on the first real render, 01/11/2026: 67 % of frames nearly frozen,
+  a 1.5 s hold): the connector dashes march along the lines (~45 px/s, into the node or out of it) for the plate's whole life, the node breathes.
 - **51. UI plane.** `uiplane(title, prompt, t_in, t_out, replies, button)`. A 1260x640 dark window at (120, 240), tilted from -26 to -8 degrees on entry (0.9 s) and drifting to -5;
   the prompt types out at ~24 characters/s in the field; each reply (a gold spark + text) lands on its time; the pointing-hand cursor arrives in 0.8 s, presses (scale .86), and the
   button turns mint and reads "✓ Approvato". Redrawn clean: never a raw screen recording.

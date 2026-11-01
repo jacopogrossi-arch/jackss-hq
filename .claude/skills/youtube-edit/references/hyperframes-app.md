@@ -11,6 +11,9 @@ looking for a motion plate idea, or borrowing from the app's own workflows._
   and shows nothing. Work on a light copy under `C:\Users\<name>\HyperFrames\<project>` (a lab window from `window-patch.py`, never the
   full 4K project: `C:` is small, see `traps.md`), then copy the changed `index.html` back.
 - **First launch:** the welcome screen ("What do you want to make?") hides any project opened behind it; Jacopo clicks Skip all once.
+- **Rule (01/11/2026): offer Studio at every lab** (new format, style or palette change, A/B). `scripts/studio-lab.py <lab> --open` does the light copy and the
+  opening; `npx hyperframes preview <copy> --background` gives the `#project/...` URL when Jacopo prefers the browser; `npx hyperframes catch-up <copy>` reads his
+  comments and edits. Only for YouTube work. Propose first, open on his yes.
 - The panel on the left of the preview ("Talk to Claude Code") starts a separate agent in the app. For notes meant for this session,
   Jacopo uses the Comment and Draw tools on the preview, not that chat.
 

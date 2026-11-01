@@ -190,6 +190,7 @@ Opus planned and directed, Sonnet builders did the sections; Opus plans at high 
 | `grade-ref.py` | a film look started from reference frames: split tone, blacks, contrast, saturation measured on what the scene does not colour, moved 60 % of the way; `look.json` + sheet (base / 50 % / 100 %) | `--ref IMG\|VIDEO@SEC [--ref ...] --video --scan report.json --out DIR [--base pellicola-oro] [--save NAME]` |
 | `grade-looks.py` | the preset's looks (numbers in `presets/vacanze-grading/preset.json` -> `grade.looks`) applied to ONE frame of a clip as a labelled contact sheet, to choose a look with the eyes. A look is a pure colour function (contrast curve, saturation, tints, hue windows on skin and water), so it can later be baked into a 3D LUT | `--video --scan report.json --out sheet.png [--t SEC] [--looks a,b] [--cube-dir DIR [--mix 0-1]] [--cols 3]` |
 | `clip-score.py` | pre-selection of footage (b-roll library, travel reels): Open-Sora v1.2 aesthetic score 1-10 (CLIP ViT-L/14 + LAION MLP; 5.5 fair, 6.5 high) and optical-flow motion per clip, sorted CSV + JSON. Runs on the GPU with `D:/tools/video-ai/Scripts/python.exe`, not the system Python. Motion only on clips without grain (grain reads as motion). A first sort, never the choice: the eyes still decide | `--dir FOLDER --out scores.csv [--frames 5]` |
+| `studio-lab.py` | puts a lab in HyperFrames Studio: a light copy under `C:\\Users\\<name>\\HyperFrames\\<name>` (the app only sees the home folder) and, with `--open`, opens it so Jacopo can watch and comment live. Proposed at every lab, opened only on his yes | `LAB_DIR [--name N] [--open]` |
 | `format-still.py` | stills of one plate format at chosen times without the whole pipeline (headless Chrome + GSAP seek, preset tokens, optional face-PiP square, contact sheet): the way to build and check a format fast. Not a render: no audio, no video underneath | `BUILD.py --times T... --out DIR [--preset NAME] [--pip] [--sheet]` |
 | `teardown.py` | measures any video; counts a storyboard exactly; compares reports | `--video` / `--storyboard` / `--compare`, `--out [--transcript] [--every 2]` |
 
@@ -510,6 +511,12 @@ words, a specific reason to stay in the first three seconds that the video pays 
      badly, run `npx hyperframes catalog <words> --json` (the `hyperframes-registry` skill explains install and editing) and
      propose at least one block at Checkpoint B. A block enters as an invented format: restyled into the preset (palette,
      fonts, eases, no "Rejected" device), then the blind A/B below. Blocks already installed for tests live in `videos/_registry/`.
+- **Every lab is offered in HyperFrames Studio** (Jacopo, 01/11/2026): whenever we build something new (a format, an adapted format, a palette
+  or style change, an A/B), say so as soon as the first window renders and PROPOSE opening it in Studio, so Jacopo watches it play and comments
+  on the picture while we work, instead of waiting for a file. Propose, never open on your own (it starts the app on his PC). On a yes:
+  `python3 "$SK/scripts/studio-lab.py" <lab> --open` (light copy under `C:\\Users\\<name>\\HyperFrames`, the Windows trap in
+  `references/hyperframes-app.md`), then `npx hyperframes catch-up <copy>` to read what he did there. YouTube work only: reels and travel
+  videos keep going through drafts on the phone (Jacopo, 29/10/2026). If he says no for a lab, send the stills/MP4 as before.
 - **A new animation or graphic enters the skill only after it wins a blind A/B on the bench** (Jacopo, 22/10/2026).
   1. **State sheet first:** name every state before any code (what is on screen, where, size, colour) and every change
      between two states (what moves, the property, the ease, the time). A format without a state sheet drifts, and the review

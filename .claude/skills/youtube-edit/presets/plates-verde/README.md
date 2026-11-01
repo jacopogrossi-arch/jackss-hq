@@ -8,7 +8,7 @@ in **oro**, spunte/connettori/barre in **verde menta**. Nato il 01/11/2026 dal t
 prendiamo la *logica* (una plate per idea, ingresso sulla parola che la nomina), non il suo blu elettrico. Font identici al preset `elegante-portfolio`
 (Inter + Playfair Display Italic), quindi i due preset si possono alternare nello stesso canale.
 
-**Palette: scelta da Claude, da confermare con Jacopo su una finestra reale.** Variante D "verde vivo" del lab `videos/_bench/plates-verde/lab/`
+**Palette: scelta da Claude, confermata da Jacopo il 01/11/2026 ("il verde va benissimo").** Variante D "verde vivo" del lab `videos/_bench/plates-verde/lab/`
 (A bosco, B nero caldo + griglia verde, C ibrido, D vivo, E medio). Le altre restano come alternative.
 
 ## Palette
@@ -45,5 +45,8 @@ Da evitare (come in elegante-portfolio): `halo`, `chip`, `image`. Moduli in `for
 ## Test e limiti
 - 11 test nuovi in `scripts/tests/test_plates.py` (forma, ancore parlate, seek-safety, nessun suono, guardia PiP).
 - Verificato con still a risoluzione piena (`format-still.py`) su 5 formati con il PiP disegnato: nessuna grafica nell'angolo.
-- **Non ancora provato** su un render completo con voce e faccia (pipeline HyperFrames): serve una finestra reale del prossimo video.
+- **Provato con HyperFrames il 01/11/2026** su una finestra reale (16,5 s del Video #2, `videos/_bench/plates-verde/ab/`): `compose.py --preset plates-verde` + `npx hyperframes check` (0 errori,
+  contrasto 28/28 AA, un solo avviso: l'ultima riga a schermo 0,94 s perché la finestra finisce lì) + render 1080p bozza in 57 s. Render di controllo senza faccia: nell'angolo del PiP l'indicatore YMAX
+  resta 80 (max 86) durante la plate, quindi nessuna grafica ci entra. `qa-motion.py` ha trovato il diagramma troppo fermo tra una parola e l'altra: aggiunti i trattini che scorrono sui connettori.
+- **A/B alla cieca con la catena 3D (27b) inviato a Jacopo**: esito da registrare in `references/format-history.md`. Dati misurati: A 39 % di fotogrammi quasi fermi, B 65 % (nessuno stallo oltre 1,2 s): B è più calmo.
 - Il suono non c'è nei formati (Jacopo scarta i pop): per i tracker/diagram un whoosh morbido a ogni cambio, come nel resto della skill.

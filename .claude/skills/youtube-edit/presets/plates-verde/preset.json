@@ -2,7 +2,7 @@
   "name": "plates-verde",
   "title": "Plates verdi con griglia (Jacopo, motion plates)",
   "description": "Motion plate a tutto schermo su verde profondo con griglia blueprint, oro sulla parola chiave, menta per spunte/connettori/barre. Nato dal teardown del video di Joseph (01/11/2026); i nostri font e la nostra logica, non il suo blu.",
-  "palette_status": "scelta da Claude il 01/11/2026 (variante D \"verde vivo\" del lab videos/_bench/plates-verde/lab), da confermare con Jacopo su una finestra reale",
+  "palette_status": "confermata da Jacopo il 01/11/2026 (\"il verde va benissimo\"), variante D del lab; provata con HyperFrames su una finestra reale",
   "style": {
     "font": "\"Inter\", \"Segoe UI\", system-ui, sans-serif",
     "font_faces": [

@@ -12,6 +12,7 @@ Usage (compose.py "raw_html"/"raw_js", or a build script):
 center: label (shown under the node), t, anchor, logo (optional image path), initial (letter shown when there is no logo).
 inputs: 1 to 4, outputs: 1 to 3, {label, t, anchor, kind ("prompt" = ringed pill), strike_t (the pill is crossed out and dims at that time)}.
 Layout: centre at (940, 490); inputs left (x 100..560), outputs right (x 1360..1820, y <= 560), all above the face PiP corner (checked).
+Alive between words: the connector dashes march along the lines (into the node / out of it) for the plate's whole life, the node breathes.
 Seek-safe: connectors reveal with a clip-path tween, strikes with scaleX; every tween is a fromTo.
 """
 from plates_base import *
@@ -84,6 +85,10 @@ def diagram(center, inputs, outputs, title, t_in, t_out, sub=None, bg=True, cid=
             js.append("tl.set('%s', { opacity:0, x:%d, filter:'blur(8px)' }, 0); tl.set('%s', { clipPath:'inset(0 100%% 0 0)' }, 0);" % (p, dx, cn))
             js.append(fromto(p, "{opacity:0,x:%d,filter:'blur(8px)'}" % dx, "{opacity:1,x:0,filter:'blur(0px)'}", d["t"] - 0.05, 0.5))
             js.append(fromto(cn, "{clipPath:'inset(0 100% 0 0)'}", "{clipPath:'inset(0 0% 0 0)'}", d["t"] + 0.1, 0.7, "power2.inOut"))
+            run_from = d["t"] + 0.8   # alive: the dashes march along the connector (into the node, or out of it) until the plate ends; ~45 px/s
+            js.append("tl.set('%s path', { strokeDashoffset:0 }, 0);" % cn)
+            js.append("tl.fromTo('%s path', { strokeDashoffset:0 }, { strokeDashoffset:%d, duration:%.3f, ease:'none', immediateRender:false }, %.3f);"
+                      % (cn, -int(45 * max(t_out - run_from, 1.0)), max(t_out - run_from, 1.0), run_from))
             if d.get("strike_t") is not None:   # crossed out, then dimmed: what you no longer need
                 s = "#dgx%s%d" % (side, k)
                 js.append("tl.set('%s', { scaleX:0 }, 0);" % s)
