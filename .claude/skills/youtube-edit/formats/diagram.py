@@ -10,8 +10,8 @@ Usage (compose.py "raw_html"/"raw_js", or a build script):
                           {"label": "Premiere", "t": 66.0, "anchor": "premiere", "strike_t": 67.2}],
                   outputs=[{"label": "Lavoro finito", "t": 69.0, "anchor": "lavoro"}], title="Claude come un *cervello*", t_in=59.0, t_out=75.0)
 center: label (shown under the node), t, anchor, logo (optional image path, e.g. `logos/claude.svg` copied from assets/logos into the project's public folder: it sits on an ivory disc), initial (a letter, only a fallback: use the real logo whenever the centre is a product such as Claude or Canva).
-inputs: 1 to 4, outputs: 1 to 3, {label, t, anchor, kind ("prompt" = ringed pill), strike_t (the pill is crossed out and dims at that time)}.
-Layout: centre at (940, 490); inputs left (x 100..560), outputs right (x 1360..1820, y <= 560), all above the face PiP corner (checked).
+inputs: 1 to 4, outputs: 1 to 3, {label, t, anchor, logo (optional image path shown left of the label: Chrome, Pinterest... from assets/logos), kind ("prompt" = ringed pill), strike_t (the pill is crossed out and dims at that time)}.
+Layout: centre at (940, 490); inputs left (x 150..610), outputs right (x 1360..1820, y <= 560), all above the face PiP corner (checked).
 Alive between words: the connector dashes march along the lines (into the node / out of it) for the plate's whole life, the node breathes.
 Seek-safe: connectors reveal with a clip-path tween, strikes with scaleX; every tween is a fromTo.
 """
@@ -19,7 +19,7 @@ from plates_base import *
 
 CX, CY = 940, 490
 PILL_W, PILL_H = 460, 76
-XL, XR = 100, 1360
+XL, XR = 150, 1360
 BAD = "#e0645c"
 
 
@@ -42,7 +42,8 @@ def diagram(center, inputs, outputs, title, t_in, t_out, sub=None, bg=True, cid=
   .dg-n img { width:62%%; height:62%%; object-fit:contain; } .dg-n b { font-family:var(--k-serif); font-style:italic; font-weight:500; font-size:96px; color:#2a1d05; }
   .dg-nl { position:absolute; left:%dpx; top:%dpx; width:300px; text-align:center; font-family:var(--k-font); font-weight:700; font-size:34px; color:var(--k-text); opacity:0; }
   .dg-p { position:absolute; width:%dpx; height:%dpx; border-radius:20px; background:rgba(244,239,230,.95); color:#0b0907; opacity:0;
-          font-family:var(--k-font); font-weight:700; font-size:32px; line-height:%dpx; text-align:center; box-shadow:0 22px 44px rgba(0,0,0,.45); white-space:nowrap; }
+          font-family:var(--k-font); font-weight:700; font-size:32px; line-height:%dpx; text-align:center; display:flex; align-items:center; justify-content:center; gap:16px; box-shadow:0 22px 44px rgba(0,0,0,.45); white-space:nowrap; }
+  .dg-p img { height:46px; width:46px; flex:none; object-fit:contain; }
   .dg-p.prompt { background:rgba(11,9,7,.55); color:var(--k-text); box-shadow:0 0 0 3px var(--k-accent2), 0 0 34px rgba(94,230,168,.35); font-weight:600; }
   .dg-x { position:absolute; height:5px; border-radius:3px; background:%s; transform-origin:0 50%%; box-shadow:0 0 16px rgba(224,100,92,.6); }
   .dg-svg { position:absolute; inset:0; width:1920px; height:1080px; overflow:visible; }
@@ -65,7 +66,7 @@ def diagram(center, inputs, outputs, title, t_in, t_out, sub=None, bg=True, cid=
     for side, items, ys, x in (("i", inputs, yi, XL), ("o", outputs, yo, XR)):
         for k, d in enumerate(items):
             cls = "dg-p prompt" if d.get("kind") == "prompt" else "dg-p"
-            inner += '<div class="%s" id="dgp%s%d" style="left:%dpx;top:%dpx"%s>%s</div>\n' % (cls, side, k, x, ys[k] - PILL_H / 2, at_attrs(d["t"], d.get("anchor", "")), esc(d["label"]))
+            inner += '<div class="%s" id="dgp%s%d" style="left:%dpx;top:%dpx"%s>%s</div>\n' % (cls, side, k, x, ys[k] - PILL_H / 2, at_attrs(d["t"], d.get("anchor", "")), (('<img src="%s" alt="">' % esc(d["logo"]) if d.get("logo") else "") + esc(d["label"])))
             if d.get("strike_t") is not None:
                 inner += '<div class="dg-x" id="dgx%s%d" style="left:%dpx;top:%dpx;width:%dpx"></div>\n' % (side, k, x + 16, ys[k] - 2, PILL_W - 32)
     html, pre, post = wrap(cid, t_in, t_out, css, inner, bg=bg, sound=sound,
