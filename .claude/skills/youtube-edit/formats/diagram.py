@@ -9,7 +9,7 @@ Usage (compose.py "raw_html"/"raw_js", or a build script):
                   inputs=[{"label": "Reference", "t": 63.0, "anchor": "informazioni"}, {"label": "Le tue indicazioni", "t": 64.5, "anchor": "indicazioni"},
                           {"label": "Premiere", "t": 66.0, "anchor": "premiere", "strike_t": 67.2}],
                   outputs=[{"label": "Lavoro finito", "t": 69.0, "anchor": "lavoro"}], title="Claude come un *cervello*", t_in=59.0, t_out=75.0)
-center: label (shown under the node), t, anchor, logo (optional image path), initial (letter shown when there is no logo).
+center: label (shown under the node), t, anchor, logo (optional image path, e.g. `logos/claude.svg` copied from assets/logos into the project's public folder: it sits on an ivory disc), initial (a letter, only a fallback: use the real logo whenever the centre is a product such as Claude or Canva).
 inputs: 1 to 4, outputs: 1 to 3, {label, t, anchor, kind ("prompt" = ringed pill), strike_t (the pill is crossed out and dims at that time)}.
 Layout: centre at (940, 490); inputs left (x 100..560), outputs right (x 1360..1820, y <= 560), all above the face PiP corner (checked).
 Alive between words: the connector dashes march along the lines (into the node / out of it) for the plate's whole life, the node breathes.
@@ -38,6 +38,7 @@ def diagram(center, inputs, outputs, title, t_in, t_out, sub=None, bg=True, cid=
   .dg-n { position:absolute; left:%dpx; top:%dpx; width:200px; height:200px; border-radius:50%%; opacity:0;
           background:radial-gradient(circle at 38%% 32%%, #fff6e0, var(--k-accent) 60%%, color-mix(in srgb, var(--k-accent) 55%%, #3a2a08)); box-shadow:0 0 90px color-mix(in srgb, var(--k-accent) 55%%, transparent), 0 30px 60px rgba(0,0,0,.5);
           display:flex; align-items:center; justify-content:center; }
+  .dg-n.logo { background:radial-gradient(circle at 38%% 32%%, #ffffff, #f4efe6 70%%, #e2d9c6); border:6px solid var(--k-accent); box-sizing:border-box; }   /* a real logo sits on an ivory disc (the orange Claude mark is lost on gold) */
   .dg-n img { width:62%%; height:62%%; object-fit:contain; } .dg-n b { font-family:var(--k-serif); font-style:italic; font-weight:500; font-size:96px; color:#2a1d05; }
   .dg-nl { position:absolute; left:%dpx; top:%dpx; width:300px; text-align:center; font-family:var(--k-font); font-weight:700; font-size:34px; color:var(--k-text); opacity:0; }
   .dg-p { position:absolute; width:%dpx; height:%dpx; border-radius:20px; background:rgba(244,239,230,.95); color:#0b0907; opacity:0;
@@ -60,7 +61,7 @@ def diagram(center, inputs, outputs, title, t_in, t_out, sub=None, bg=True, cid=
     inner += svg + "\n"
     c = center
     face = '<img src="%s" alt="">' % esc(c["logo"]) if c.get("logo") else "<b>%s</b>" % esc(c.get("initial", c["label"][:1]))
-    inner += '<div class="dg-n" id="dgN"%s>%s</div><div class="dg-nl" id="dgNl">%s</div>\n' % (at_attrs(c["t"], c.get("anchor", "")), face, esc(c["label"]))
+    inner += '<div class="dg-n%s" id="dgN"%s>%s</div><div class="dg-nl" id="dgNl">%s</div>\n' % (" logo" if c.get("logo") else "", at_attrs(c["t"], c.get("anchor", "")), face, esc(c["label"]))
     for side, items, ys, x in (("i", inputs, yi, XL), ("o", outputs, yo, XR)):
         for k, d in enumerate(items):
             cls = "dg-p prompt" if d.get("kind") == "prompt" else "dg-p"

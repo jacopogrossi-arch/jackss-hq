@@ -149,6 +149,12 @@ class Diagram(unittest.TestCase):
         self.assertNotIn('id="dgxi0"', o["html"])
         seek_safe(self, o)
 
+    def test_logo_sits_on_an_ivory_disc(self):
+        o = diagram({"label": "Claude", "t": 1.2, "anchor": "c", "logo": "logos/claude.svg"}, [{"label": "A", "t": 2.0, "anchor": "a"}], [{"label": "B", "t": 3.0, "anchor": "b"}], "x", 0, 9)
+        self.assertIn('class="dg-n logo"', o["html"]); self.assertIn('<img src="logos/claude.svg"', o["html"])
+        o2 = diagram({"label": "Claude", "t": 1.2, "anchor": "c"}, [{"label": "A", "t": 2.0, "anchor": "a"}], [{"label": "B", "t": 3.0, "anchor": "b"}], "x", 0, 9)
+        self.assertNotIn("<img", o2["html"])
+
     def test_pip_and_size_guards(self):
         with self.assertRaises(AssertionError):
             diagram({"label": "C", "t": 1}, [{"label": "a", "t": 2}], [{"label": str(i), "t": 3} for i in range(4)], "x", 0, 9)   # a 4th output would enter the PiP corner
