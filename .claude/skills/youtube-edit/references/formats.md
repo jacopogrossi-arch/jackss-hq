@@ -506,3 +506,17 @@ no hits or risers under titles, nothing on the camera kicks. `sound=False` silen
 - **51. UI plane.** `uiplane(title, prompt, t_in, t_out, replies, button)`. A 1260x640 dark window at (120, 240), tilted from -26 to -8 degrees on entry (0.9 s) and drifting to -5;
   the prompt types out at ~24 characters/s in the field; each reply (a gold spark + text) lands on its time; the pointing-hand cursor arrives in 0.8 s, presses (scale .86), and the
   button turns mint and reads "✓ Approvato". Redrawn clean: never a raw screen recording.
+
+
+### The ivory look on the older formats (01/11/2026)
+
+Jacopo: "vorrei portare quello stile che abbiamo usato su questa nuova motion plate anche a queste vecchie" (the older formats still had the grey glass cards, thin white text and
+neon). With the default preset `plates-verde` (style key `look: "ivory"`), `compose.py` repaints **every older format** with `formats/look_ivory.py`:
+- **Cards:** `glassIn` and the fixed glass tweens land on **solid ivory** (`rgba(244,239,230,.97)`, shadow `0 30px 60px`, no white border) instead of translucent white.
+- **Text:** near-black on ivory (Inter 800), the key word in the **italic serif** (gold on the green plate, deep green `#17613F` on ivory), numbers in deep green, mint for state.
+- **Font:** the fixed DM Sans becomes the preset's Inter (the `@font-face` lines keep DM Sans). No text shadows on ivory. The masked-title eyebrow and the deck head become an italic serif line, never small spaced capitals.
+- **Formats covered** (checked on a 22-format zoo, `videos/_bench/plates-verde/zoo/`, old look vs new): line, logo, list, bullets, chip, stats, growth, bars, pipeline, hub, equation, wall, pop-out, flow, lens,
+  dock, masked title, deck, pills, chat, search, tag, the 3D card chain (late CSS right before `</body>`, because it ships its own style). Formats already in Inter + Playfair (chips, morph, hero line, dot grid,
+  outline rail) follow the preset tokens as before. `--preset none` and `elegante-portfolio` keep their own look (tests: `test_presets.test_ivory_look_reaches_the_older_formats`).
+- **Not covered, not looked at:** world (only the card/orb/pill/stat CSS is mapped, never rendered), dashboard zoom, player, fan3d, doc read, site/browser cutaways, annotate/orbit/dive/trail (they use the `--k-*` tokens).
+  Camera kicks and the smooth per-element sound are still only in the plate formats 47-51.

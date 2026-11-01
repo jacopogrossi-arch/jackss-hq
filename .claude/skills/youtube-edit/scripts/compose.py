@@ -103,6 +103,7 @@ import argparse, json, os, re, shutil, glob, math, struct, sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "formats"))
 import fx   # transitions and overlays (flash, whip, glitch, light leak, burn, ...)
 import studio   # build / annotate / orbit / dive / agenda (the explainer formats, 19/10/2026)
+import look_ivory   # the plates-verde look (ivory cards, Inter, italic serif key word) on the older formats; runs only when the preset's style has look: "ivory"
 from html import escape as _esc
 
 hesc = lambda s: _esc(s, quote=False)
@@ -723,6 +724,8 @@ if str((S.get("style") or {}).get("grid_a", "0")) not in ("0", "0.0", "", "None"
       linear-gradient(rgba(var(--k-grid-rgb), var(--k-grid-a)) 1px, transparent 1px), linear-gradient(90deg, rgba(var(--k-grid-rgb), var(--k-grid-a)) 1px, transparent 1px);
       background-size:var(--k-grid-size) var(--k-grid-size); }
 """
+if (S.get("style") or {}).get("look") == "ivory":   # plates-verde: the older formats wear the new look (solid ivory cards, Inter, italic serif key word)
+    CSS += look_ivory.css()
 CSS += fx.css(S.get("style"))
 def attr_anchor(anchor):
     """'-' marks a beat that is deliberately not tied to a spoken word (beat-check skips it)."""
@@ -2431,8 +2434,10 @@ HELPERS = """
 # "glass_bg_cut": the tint for glass INSIDE a full-frame scene on the brand wash
 # (world nodes, stat tiles in a row, ...). A dark glass_bg keeps the glass over a bright set legible, but on the dark wash the
 # approved look is the light glass. Defaults to glass_bg, so a storyboard without the key renders exactly as before.
-HELPERS = HELPERS.replace("GLASS_BG_CUT", S.get("glass_bg_cut", S.get("glass_bg", "rgba(255,255,255,0.18)")))
-HELPERS = HELPERS.replace("GLASS_BG", S.get("glass_bg", "rgba(255,255,255,0.18)"))
+_ivory = (S.get("style") or {}).get("look") == "ivory"
+_gb = S.get("glass_bg", look_ivory.GLASS["bg"] if _ivory else "rgba(255,255,255,0.18)")   # the ivory look lands the glass on solid ivory
+HELPERS = HELPERS.replace("GLASS_BG_CUT", S.get("glass_bg_cut", _gb))
+HELPERS = HELPERS.replace("GLASS_BG", _gb)
 
 page = """<!doctype html>
 <html lang="en">
@@ -2483,6 +2488,10 @@ page = """<!doctype html>
 def swap_legacy_colours(html, style):
     """A preset with "legacy_swap" repaints the older formats' fixed colours (cyan, magenta, amber, the blue wash) in its own palette, in CSS, JS and inline styles alike,
     so the whole system follows the preset (Jacopo, 01/11/2026: the green look applies to everything)."""
+    if (style or {}).get("look") == "ivory":
+        html = look_ivory.swap_literals(html)
+        html = html.replace("</body>", ("<style>%s</style>" % look_ivory.css_late()) + chr(10) + "</body>", 1)
+        html = re.sub(r'font-family:\s*"DM Sans"(?!;\s*src)', 'font-family:"Inter"', html)   # the older formats' fixed DM Sans -> the preset's Inter (the @font-face lines keep DM Sans)
     sw = (style or {}).get("legacy_swap")
     if not sw:
         return html

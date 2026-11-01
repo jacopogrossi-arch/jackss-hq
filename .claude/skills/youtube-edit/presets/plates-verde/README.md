@@ -50,3 +50,6 @@ Da evitare (come in elegante-portfolio): `halo`, `chip`, `image`. Moduli in `for
   resta 80 (max 86) durante la plate, quindi nessuna grafica ci entra. `qa-motion.py` ha trovato il diagramma troppo fermo tra una parola e l'altra: aggiunti i trattini che scorrono sui connettori.
 - **A/B alla cieca con la catena 3D (27b), 01/11/2026: vince il verde "decisamente meglio, di una spanna"** (Jacopo), ma "voglio più movimento di camera". Dati: la prima versione aveva 32 % del tempo in movimento e 0,7 scatti ogni 10 s (A: 56 % e 5,2); con la camera di `plates_base` (deriva + scatti ai momenti chiave + scatti di riempimento) 86,6 % e 5,2 scatti, pausa massima 0,53 s. Joseph: 63-66 % e 4,8.
 - Il suono non c'è nei formati (Jacopo scarta i pop): per i tracker/diagram un whoosh morbido a ogni cambio, come nel resto della skill.
+
+## Look avorio sui formati vecchi (01/11/2026)
+`look: "ivory"` nel preset: tutti i formati vecchi di `compose.py` (liste, statistiche, barre, pipeline, hub, equazione, muro, flow, lente, dock, titolo mascherato, mazzo, pillole, chat, ricerca, tag, catena 3D) portano card avorio piene, testo scuro in Inter 800, parola chiave in corsivo serif, menta per gli stati, niente neon. Vedi `formats/look_ivory.py` e `references/formats.md` ("The ivory look on the older formats").

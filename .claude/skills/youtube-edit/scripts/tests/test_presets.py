@@ -71,6 +71,23 @@ class Presets(unittest.TestCase):
         r2 = run("compose.py", "--spec", spec, "--out", os.path.join(d, "public2"), "--preset", "none")
         self.assertNotIn("preset:", r2.stdout)
 
+    def test_ivory_look_reaches_the_older_formats(self):
+        """plates-verde: the older formats get solid ivory cards, Inter instead of DM Sans, an italic serif key word; --preset none keeps the glass look."""
+        d = scratch(self)
+        spec = write(os.path.join(d, "s.json"), {"id": "t", "duration": 8.0, "video": "x.mp4", "beats": [
+            {"type": "list", "id": "l", "eyebrow": "Cosa serve", "items": [["Una camera", 1.5, "-"]], "in": 1.0, "out": 4.0, "pos": "tl"},
+            {"type": "stats", "id": "s", "layout": "row", "title": "I *numeri*", "items": [{"value": 5, "label": "x", "at": 5.0}], "in": 4.5, "out": 7.0}], "camera": []})
+        r = run("compose.py", "--spec", spec, "--out", os.path.join(d, "public"), env={"YTE_DEFAULT_PRESET": "1"})
+        self.assertEqual(r.returncode, 0, r.stderr)
+        page = read(os.path.join(d, "public", "index.html"))
+        self.assertIn("look ivory", page)                                       # the stylesheet layer
+        self.assertIn("rgba(244,239,230,0.97)", page)                           # glassIn lands on ivory
+        self.assertNotIn("rgba(255,255,255,0.18)", page.split("<script>")[-1])   # no light-glass tint left in the scripts
+        self.assertNotRegex(page, r'font-family:\s*"DM Sans"(?!;\s*src)')        # only the @font-face lines still name DM Sans
+        r2 = run("compose.py", "--spec", spec, "--out", os.path.join(d, "public2"), "--preset", "none")
+        page2 = read(os.path.join(d, "public2", "index.html"))
+        self.assertNotIn("look ivory", page2); self.assertIn("rgba(255,255,255,0.18)", page2)
+
     def test_unknown_preset_lists_the_available_ones(self):
         r, _, _ = self.build(board(), "--preset", "does-not-exist")
         self.assertNotEqual(r.returncode, 0)
