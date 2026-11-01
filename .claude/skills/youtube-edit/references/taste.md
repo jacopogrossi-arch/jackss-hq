@@ -114,3 +114,6 @@ From `personale/youtube/inspo-motion-plates-joseph.md` (his motion plates, and t
     kick to fill any gap longer than 2.3 s. Frequency matters more than amplitude (Joseph has almost no pan or rotation).
 14. **The green plates are the look of the whole system** (Jacopo, 01/11/2026, blind A/B on the 16.5 s window of Video #2: "decisamente meglio, una spanna"): preset `plates-verde`
     is the default of `compose.py`; `--preset none` gives the old fixed cyan/blue look back, `--preset elegante-portfolio` the portfolio look.
+
+
+14b. **Scene improvvisate, non formati da catalogo (01/11/2026).** Ogni spiegazione = una motion plate su misura nei canoni di Joseph (vedi `formats.md`, "Scene improvvisate"). Non fermarsi a "quale formato uso"; non rimettere le vecchie grafiche su sfondo verde (Jacopo: "così le migliori" non basta). Le linee tratteggiate compaiono solo quando collegano due elementi già in scena.

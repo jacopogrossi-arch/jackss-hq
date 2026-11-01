@@ -40,6 +40,7 @@ CSS = """
   .sc-tx i, .sc-big i { font-family:var(--k-serif); font-style:italic; font-weight:500; color:var(--k-accent); letter-spacing:0; }
   .sc-big { font-family:var(--k-serif); font-style:italic; font-weight:500; color:var(--k-accent); line-height:1; white-space:nowrap; }
   .sc-x { height:5px; border-radius:3px; background:#e0645c; transform-origin:0 50%; box-shadow:0 0 16px rgba(224,100,92,.6); }
+  .sc-lk { left:0; top:0; width:1920px; height:1080px; }
   .sc-svg { position:absolute; inset:0; width:1920px; height:1080px; overflow:visible; }
   .sc-svg path { fill:none; stroke:var(--k-accent2); stroke-width:4; stroke-linecap:round; stroke-dasharray:3 12; }
 """
@@ -51,7 +52,7 @@ class Scene:
     def __init__(self, cid, t_in, t_out, title=None, title_t=None, sub=None, track=3, track_audio=20, fade_in=0.3, fade_out=0.3, bg=True, sound=True):
         self.cid, self.t_in, self.t_out = cid, t_in, t_out
         self.track, self.track_audio, self.fade_in, self.fade_out, self.bg, self.sound = track, track_audio, fade_in, fade_out, bg, sound
-        self.html, self.js, self.events, self.box, self.n = [], [], [], {}, 0
+        self.html, self.js, self.events, self.box, self.when, self.n = [], [], [], {}, {}, 0
         self.pre_title = ""
         if title:
             self.html.append('<div class="sc-e sc-tx" id="%s-T" style="left:110px;top:100px;font-size:96px;line-height:1.05">%s</div>' % (cid, keyword(title).replace("pl-key", "pl-key")))
@@ -73,9 +74,11 @@ class Scene:
         self.js.append(fromto("#" + i, "{opacity:0,x:%d,y:%d,filter:'blur(%dpx)'}" % (dx, dy, blur), "{opacity:%s,x:0,y:0,filter:'blur(0px)'}" % rest, t - 0.05, d, ease))
         self.events.append(t)
 
-    def _box(self, i, x, y, w, h, what):
+    def _box(self, i, x, y, w, h, what, t=None):
         check_pip(x, y, w, h, what)
         self.box[i] = (x, y, w, h)
+        if t is not None:
+            self.when[i] = t
 
     # ---- elements
     def pill(self, x, y, label, t, anchor="", w=None, h=76, kind="card", logo=None, img=None, size=32, dx=0, dy=36):
@@ -84,7 +87,7 @@ class Scene:
         i = self._id("p")
         inner = ('<img class="lg" src="%s" alt="">' % esc(logo) if logo else "") + ('<img class="th" src="%s" alt="">' % esc(img) if img else "") + keyword(label).replace('class="pl-key"', "")
         self.html.append('<div class="sc-e sc-p %s" id="%s" style="left:%dpx;top:%dpx;width:%dpx;height:%dpx;font-size:%dpx"%s>%s</div>' % (kind if kind != "card" else "", i, x, y, w, h, size, at_attrs(t, anchor), inner))
-        self._box(i, x, y, w, h, "pill " + label)
+        self._box(i, x, y, w, h, "pill " + label, t)
         self._appear(i, t, dx, dy)
         return i
 
@@ -92,7 +95,7 @@ class Scene:
         i = self._id("d")
         face = '<img src="%s" alt="">' % esc(logo) if logo else '<b style="font-size:%dpx">%s</b>' % (size or int(r * 0.95), esc(text or ""))
         self.html.append('<div class="sc-e sc-d" id="%s" style="left:%dpx;top:%dpx;width:%dpx;height:%dpx"%s>%s</div>' % (i, cx - r, cy - r, 2 * r, 2 * r, at_attrs(t, anchor), face))
-        self._box(i, cx - r, cy - r, 2 * r, 2 * r, "disc")
+        self._box(i, cx - r, cy - r, 2 * r, 2 * r, "disc", t)
         self.js.append("tl.set('#%s', { opacity:0, scale:0.7 }, 0);" % i)
         self.js.append(fromto("#" + i, "{opacity:0,scale:0.7}", "{opacity:1,scale:1}", t - 0.1, 0.6, "power2.out"))
         self.js.append("tl.fromTo('#%s', { y:0 }, { y:-8, duration:%.3f, ease:'sine.inOut', immediateRender:false }, %.3f);" % (i, max(self.t_out - t - 0.6, 1.0), t + 0.6))   # alive: a slow breath
@@ -110,7 +113,7 @@ class Scene:
         ih = h - 24 - (62 if caption else 0)
         cap = "<span>%s</span>" % esc(caption) if caption else ""
         self.html.append('<div class="sc-e sc-ph" id="%s" style="left:%dpx;top:%dpx;width:%dpx;height:%dpx;transform:rotate(%sdeg)"%s><img src="%s" style="height:%dpx" alt="">%s</div>' % (i, x, y, w, h, rot, at_attrs(t, anchor), esc(src), ih, cap))
-        self._box(i, x, y, w, h, "photo")
+        self._box(i, x, y, w, h, "photo", t)
         self._appear(i, t, dx, dy)
         return i
 
@@ -141,10 +144,12 @@ class Scene:
             x1, y1, x2, y2 = (ax + aw / 2, ay + ah, bx + bw / 2, by) if by >= ay + ah else (ax + aw / 2, ay, bx + bw / 2, by + bh)
             c = abs(y2 - y1) * 0.45 * (1 if y2 >= y1 else -1)
             p = "M%d %d C %d %d, %d %d, %d %d" % (x1, y1, x1, y1 + c, x2, y2 - c, x2, y2)
+        t = max(t, self.when.get(a, 0) + 0.3, self.when.get(b, 0) + 0.3)   # RULE (Jacopo, 01/11/2026): a dashed line never shows before the two things it joins; it draws only when one element connects to another
         i = self._id("l")
-        self.html.append('<svg class="sc-svg" id="%s"><path d="%s"/></svg>' % (i, p))
+        self.html.append('<div class="sc-e sc-lk" id="%s"><svg class="sc-svg"><path d="%s"/></svg></div>' % (i, p))
         clip0 = "inset(0 100%% 0 0)" if mode == "h" else "inset(0 0 100%% 0)"
-        self.js.append("tl.set('#%s', { clipPath:'%s' }, 0);" % (i, clip0))
+        self.js.append("tl.set('#%s', { opacity:0, clipPath:'%s' }, 0);" % (i, clip0))
+        self.js.append("tl.set('#%s', { opacity:1 }, %.3f);" % (i, t))
         self.js.append(fromto("#" + i, "{clipPath:'%s'}" % clip0, "{clipPath:'inset(0 0% 0 0)'}", t, d, "power2.inOut"))
         run = t + d + 0.1
         self.js.append("tl.set('#%s path', { strokeDashoffset:0 }, 0);" % i)

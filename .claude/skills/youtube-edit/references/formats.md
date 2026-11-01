@@ -539,3 +539,22 @@ Jacopo: "sì" to porting the camera and the smooth sound to the older engine. Sw
 - **Measured** on the 22-format zoo (real renders, optical flow at 15 fps, the stretch where each format is fully on screen): the nine camera formats were moving **51 %** of the time with a longest still run of 1.27 s; now **94 %** and 0.33 s.
   The over-the-face formats (lists, lines, pills, chat...) can not be measured this way (the face moves anyway) and have no camera: they get the sound.
 - **Not done:** the camera for the over-the-face formats, the real face PiP inside `compose.py` (it still lives in the bench builder `videos/_bench/ab/plate-pip/build.py`), and nobody has listened to any of this.
+
+
+## Scene improvvisate in stile Joseph (metodo, 01/11/2026)
+
+Jacopo, dopo il capitolo 1 del Video #2 ("un ottimo risultato"): il metodo giusto NON è scegliere un formato dal catalogo e adattarlo, né riusare le vecchie grafiche su sfondo verde. **Ogni volta che c'è da spiegare qualcosa allo spettatore, si inventa
+una motion plate su misura** (anche mai vista), nei canoni di Joseph. Se ne possono fare "100.000 diverse": conta che rispettino i canoni. Strumento: `formats/scene.py` (classe `Scene`), esempio completo: `videos/02-claude-collezione/compare/build_ch1.py`.
+
+**Metodo (nell'ordine):**
+1. Leggere il testo parlato con i tempi delle parole (`transcript.json`) e dividerlo in unità di spiegazione: ogni idea che lo spettatore deve capire = una scena (cosa fa, in che relazione sta con cosa).
+2. Per ogni scena scegliere la *metafora visiva* più semplice (A + B -> C; strumenti che entrano in una persona; foto che entrano in Claude; una cosa barrata = non serve; 3+3+3+3 = 12; titoli scambiati e poi rimessi a posto con le spunte). Se serve un oggetto nuovo, lo si disegna con gli elementi di `Scene` (pill, disc, photo, text, big, link, strike, tick, glow, shift): non si aspetta che esista un formato.
+3. Titolo in alto a sinistra con UNA parola chiave in serif corsivo oro (`*parola*`); ogni elemento entra sulla parola che lo nomina (`t` = tempo della parola nel transcript); barrato ciò che non serve; la camera non sta mai ferma (la dà `plates_base.wrap`).
+4. Faccia nel quadratino PiP (`pip.py`) per tutta la durata della scena; più scene vicine (< 1,5 s) = una catena con un solo PiP (scene che si sovrappongono di 0,3 s) invece di far entrare e uscire la faccia di continuo.
+5. Usare immagini e loghi VERI del video (tavole, Claude, Canva...); niente segnaposto inventati. Dove non c'è un'immagine vera, solo etichette.
+6. Verificare con `npx hyperframes check` + `snapshot --at` su un fotogramma per scena PRIMA del render; poi render della sola finestra (capitolo) e consegna in 480p + copia piena su iCloud.
+
+**Regola sulle linee tratteggiate (Jacopo, 01/11/2026):** un tratteggio non deve MAI comparire prima dei due elementi che collega. Appare solo nel momento in cui un elemento si collega a un altro nella narrazione grafica; una schermata con solo linee non va bene.
+`Scene.link()` lo garantisce da sé (parte al più presto 0,3 s dopo il più tardivo dei due estremi) e usa un contenitore `div` con clip-path (il clip-path sull'`<svg>` direttamente NON nasconde il tratto: era il bug che mostrava linee a vuoto).
+
+Scene del capitolo 1 (Video #2, 0-127 s): carta bianca -> Claude -> "da solo" / "mano umana" barrata; Io + strumenti -> risultati / tempo / "sostituisce l'umano" barrato; mappa dei capitoli (tracker); tre trend -> Claude -> "analizza"; Claude -> outfit / mood board / concept con miniature vere; 3+3+3+3 = 12; titoli scambiati e rimessi a posto.
