@@ -94,6 +94,7 @@
   "sound": {
     "sfx": true,
     "level": 1.0,
-    "music": "light"
+    "music": "light",
+    "smooth": true
   }
 }

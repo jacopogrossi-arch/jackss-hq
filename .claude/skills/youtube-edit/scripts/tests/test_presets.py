@@ -1,5 +1,5 @@
 """Presets (editing types): compose.py loads presets/<name>/preset.json, merges its style under the storyboard's own, and fails clearly on a typo."""
-import json, os, unittest
+import json, os, re, unittest
 from .helpers import run, scratch, write, read
 
 SCRIPTS = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -87,6 +87,26 @@ class Presets(unittest.TestCase):
         r2 = run("compose.py", "--spec", spec, "--out", os.path.join(d, "public2"), "--preset", "none")
         page2 = read(os.path.join(d, "public2", "index.html"))
         self.assertNotIn("look ivory", page2); self.assertIn("rgba(255,255,255,0.18)", page2)
+
+    def test_smooth_sound_and_camera_reach_the_older_formats(self):
+        """plates-verde (sound.smooth): every thing that appears gets a smooth swish, the full-frame formats get a push-in and kicks; --preset none keeps pops and no camera."""
+        d = scratch(self)
+        spec = write(os.path.join(d, "s.json"), {"id": "t", "duration": 14.0, "video": "x.mp4", "beats": [
+            {"type": "stats", "id": "st", "layout": "row", "title": "I *numeri*", "items": [{"value": 5, "label": "a", "at": 2.0}, {"value": 7, "label": "b", "at": 3.5}], "in": 1.0, "out": 6.0},
+            {"type": "pipeline", "id": "pl", "title": "", "steps": [{"label": "Idea", "icon": "chat", "at": 8.0}, {"label": "Video", "icon": "video", "at": 9.5}], "in": 7.0, "out": 13.0},
+            {"type": "line", "id": "ln", "text": "Hello world", "em": [1], "in": 6.2, "out": 6.9, "anchor": "-"}], "camera": []})
+        r = run("compose.py", "--spec", spec, "--out", os.path.join(d, "public"), env={"YTE_DEFAULT_PRESET": "1"})
+        self.assertEqual(r.returncode, 0, r.stderr)
+        page = read(os.path.join(d, "public", "index.html"))
+        smooth = re.findall(r'<audio id="sfx-[^"]*" src="sfx/(?:es-[a-z-]+|pl-soft)\.mp3"', page)
+        self.assertGreaterEqual(len(smooth), 6)                               # entrance + 2 items for stats, entrance + 2 steps for the pipeline, the line: some may share a cue
+        self.assertNotIn("sfx/typing", page)                                  # a line that is not typed out gets a smooth swish, not a typing sound
+        self.assertIn("#host-st .card", page); self.assertIn("#host-pl .card", page)   # camera kicks on the cards of the full-frame formats
+        self.assertIn("scale:1.035", page.replace(" ", ""))                   # the slow push-in
+        r2 = run("compose.py", "--spec", spec, "--out", os.path.join(d, "public2"), "--preset", "none")
+        page2 = read(os.path.join(d, "public2", "index.html"))
+        self.assertNotIn("#host-st .card", page2)                             # no camera without the preset
+        self.assertNotRegex(page2, r'src="sfx/(?:es-[a-z-]+|pl-soft)\.mp3"')
 
     def test_unknown_preset_lists_the_available_ones(self):
         r, _, _ = self.build(board(), "--preset", "does-not-exist")

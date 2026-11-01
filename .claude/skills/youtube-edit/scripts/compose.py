@@ -103,6 +103,7 @@ import argparse, json, os, re, shutil, glob, math, struct, sys
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "formats"))
 import fx   # transitions and overlays (flash, whip, glitch, light leak, burn, ...)
 import studio   # build / annotate / orbit / dive / agenda (the explainer formats, 19/10/2026)
+import plates_base   # the camera planner (kicks + drift) shared with the plate formats 47-51
 import look_ivory   # the plates-verde look (ivory cards, Inter, italic serif key word) on the older formats; runs only when the preset's style has look: "ivory"
 from html import escape as _esc
 
@@ -143,6 +144,7 @@ if PRESET:
         if key in PRESET and key not in S:
             S[key] = PRESET[key]
     print("preset: %s%s" % (PRESET_NAME, (" (%s)" % PRESET["palette_status"]) if PRESET.get("palette_status") else ""))
+SMOOTH = bool((S.get("sound") or {}).get("smooth"))   # plates-verde: every automatic cue is a smooth swish, one per thing that appears; the whole engine moves like the plates
 os.makedirs(OUT, exist_ok=True)
 
 # ---- stage shared assets (fonts, gsap, logos, sfx) ---------------------------------------------------
@@ -939,7 +941,7 @@ for b in S.get("beats", []):
         js("tl.to('#%s-inner', { opacity: 0, duration: 0.28, ease: 'power2.in' }, %.3f);" % (bid, t_out - 0.38))
         js("glassOut('#%s-glass', %.3f, 0.33);" % (bid, t_out - 0.34))
         js("tl.set('#%s-inner', { opacity: 0 }, %.3f);" % (bid, t_out - 0.10))
-        if b.get("pop") is not None:
+        if b.get("pop") is not None and not SMOOTH:
             audio_parts.append('    <audio id="sfx-pop-%s" src="sfx/pop.mp3" data-start="%.3f" data-duration="0.72" data-track-index="%d" data-volume="0.34"></audio>\n' % (bid, float(b["pop"]), audio_track))
             audio_track += 1
     elif t == "list":
@@ -2233,6 +2235,17 @@ SND = S.get("sound") or {}
 _lv = SND.get("level", "medium")
 LEVEL = float(_lv) if isinstance(_lv, (int, float)) else {"low": 0.6, "medium": 1.0, "high": 1.4}.get(_lv, 1.0)   # a word or a number (0.7 = 30% quieter than medium)
 POOLS = CUES.get("pools", {})
+# Jacopo, 01/11/2026: "ogni volta che appare qualcosa va messo un sound effect, sempre smooth, swish; prendili da Epidemic". With sound.smooth the pops, taps and clicks become three smooth Epidemic
+# swishes that rotate, and the swish pool (camera moves, whip/zoom-blur) becomes the quiet airy ones; their levels (peaks -25 / -31 dBFS) live in the cue table, a `vol` passed by a format is ignored.
+SMOOTH_ELEMENT = ("es-whoosh-soft-resonant", "es-whoosh-generic-air", "es-swish-classic-filter")
+SMOOTH_CUT = ("es-whoosh-soft-airy", "es-whoosh-generic-air")
+if SMOOTH:
+    if not all(_n in CUES["sounds"] for _n in SMOOTH_ELEMENT + SMOOTH_CUT):   # a machine without the licensed folder: the CC0 soft whoosh, very quiet
+        CUES["sounds"]["pl-soft"] = {"file": "core/whoosh-short.mp3", "dur": 0.5, "vol": 0.05, "lead": 0.12}
+        SMOOTH_ELEMENT = SMOOTH_CUT = ("pl-soft",)
+    for _n in ("pop", "text", "click"):
+        POOLS[_n] = list(SMOOTH_ELEMENT)
+    POOLS["swish"] = list(SMOOTH_CUT)
 _rot = {}
 def resolve(name):
     """a pool name (swish, pop, text...) rotates through its variants so the same sound never repeats back to back"""
@@ -2260,6 +2273,8 @@ def stage_cue(name, dur=None):
 def add_cue(name, at, vol=None, bid="", lead=None, dur=None):
     global audio_track
     name = resolve(name)
+    if SMOOTH and (name.startswith("es-") or name == "pl-soft"):
+        vol = None   # the level of a smooth sound is its cue-table entry, never a format's own number
     c = stage_cue(name, dur)
     start = max(0.0, at - (c["lead"] if lead is None else float(lead)))
     v = (c["vol"] if vol is None else float(vol)) * LEVEL
@@ -2272,6 +2287,63 @@ _q = []    # (time, name, vol or None, bid, explicit)
 def q(name, t, vol=None, bid="", explicit=False, lead=None, dur=None):
     _q.append((float(t), name, vol, bid, explicit, lead, dur))
 
+ENTRY_TYPES = {"chip", "masktitle", "stats", "bars", "pipeline", "hub", "flow", "lens", "search", "dock", "deck", "world", "equation", "wall", "growth", "popout", "chat",
+               "agenda", "doc", "player", "fan3d", "dashzoom", "browser3d", "gallery"}   # beats whose own appearance gets a sound in smooth mode
+
+
+def beat_events(b):
+    """The times at which something appears INSIDE a beat: what gets a smooth sound and a camera kick in smooth mode."""
+    t, ev = b["type"], []
+    def add(x):
+        if x is not None:
+            ev.append(float(x))
+    if t == "stats":
+        [add(i.get("at")) for i in b["items"]]
+    elif t == "growth":
+        add(b.get("count_at")); add(b.get("bars_at"))
+    elif t == "bars":
+        [add(r.get("at")) for r in b["rows"]]
+    elif t == "pipeline":
+        [add(x.get("at")) for x in b["steps"]]
+    elif t == "hub":
+        add(b.get("ring_at")); [add(sp[1]) for sp in b["spokes"]]; add(b.get("resolve_at"))
+    elif t == "equation":
+        [add(tm[1]) for tm in b["terms"]]
+    elif t == "wall":
+        add(b.get("fill_at"))
+    elif t == "popout":
+        [add(it[1]) for it in b["items"]]
+    elif t == "flow":
+        add((b.get("source") or {}).get("at")); [add(o.get("at")) for o in b.get("outputs", [])]; add((b.get("result") or {}).get("at"))
+    elif t == "lens":
+        [add(st[1]) for st in b.get("stops", [])]
+    elif t == "dock":
+        [add(it[2]) for it in b["items"]]
+    elif t == "deck":
+        add(b.get("focus_at")); add(b.get("recap_at"))
+    elif t == "chat":
+        [add(m[2]) for m in b["messages"]]
+    elif t == "search":
+        [add(r.get("at")) for r in b.get("results", [])]
+    elif t == "world":
+        [add(n.get("at")) for n in b.get("nodes", [])]
+    elif t == "fan3d":
+        [add(x) for x in b.get("at", [])]
+    elif t == "dashzoom":
+        add(b.get("find_at")); add(b.get("lift_at"))
+    elif t == "player":
+        add(b.get("morph_at"))
+    elif t == "browser3d":
+        add((b.get("callout") or {}).get("at"))
+    elif t == "doc":
+        [add(m.get("at")) for m in b.get("marks", [])]
+    elif t == "agenda":
+        [add(it[1]) for it in b["items"]]
+    elif t == "gallery":
+        add((b.get("select") or {}).get("at"))
+    return ev
+
+
 def sub_cues(b):
     """the small cues a beat carries inside itself, as (pool or sound, time, volume, lead, dur): one per text that appears, per camera move, per logo.
     Jacopo 21/10: pop when something appears, the swish IN PARALLEL with the camera move (starts with it), no click on a trail's closing key word,
@@ -2279,7 +2351,10 @@ def sub_cues(b):
     t, t_in = b["type"], float(b["in"]); out = []
     if t == "line":
         n = len(b["text"].split(" ")); reveal = (len(b["text"]) / float(b.get("cps", 18))) if b.get("typewriter") else (0.4 + 0.055 * n)
-        out.append(("typ1", t_in + 0.05, 0.50, 0.0, round(max(0.45, reveal), 2)))    # progressive text: the typing sound runs as long as the reveal
+        if SMOOTH and not b.get("typewriter"):
+            out.append(("text", t_in + 0.08, None, None, None))    # smooth mode: a line that is not typed out gets a smooth swish, not a typing sound
+        else:
+            out.append(("typ1", t_in + 0.05, 0.50, 0.0, round(max(0.45, reveal), 2)))    # progressive text: the typing sound runs as long as the reveal
     elif t in ("list", "bullets"):
         out += [("text", float(it[1]) + 0.02, 0.50, None, None) for it in b["items"]]
     elif t == "pills":
@@ -2300,6 +2375,11 @@ def sub_cues(b):
         out += [("pop", float(n["at"]) + 0.05, None, None, None) for n in b["nodes"]]
     elif t == "build":
         out += [("text", float(it.get("label_at", it["at"] + 0.5)) + 0.02, 0.50, None, None) for it in b["items"]]
+    if SMOOTH and t not in ("list", "bullets", "pills", "trail", "annotate", "orbit", "build", "line"):
+        if t == "logo" and b.get("pop") is not None:
+            out.append(("pop", float(b["pop"]) + 0.03, None, None, None))
+        ent = [t_in + 0.08] if t in ENTRY_TYPES else []
+        out += [("text", x + 0.03, None, None, None) for x in ent + beat_events(b)]
     return out
 
 for ti, tag in enumerate(S.get("tags") or ([S["tag"]] if S.get("tag") else [])):    # a click on every chapter tag
@@ -2365,6 +2445,26 @@ for op in S.get("camera", []):
         cam.append("tl.to('#video-zoom', { scale: 1.00, duration: %.3f, ease: 'power2.inOut' }, %.3f);" % (float(op[2]), float(op[1])))
     else:
         raise SystemExit("unknown camera op %r" % op)
+
+# Jacopo, 01/11/2026: "voglio più movimento di camera, è poco dinamico". In smooth mode every full-frame format without a camera of its own gets what the plate formats have: a slow push-in on the whole
+# host (scale only, about the corner of the face PiP's zone, so the picture always covers the frame and nothing can ever move under the face) plus a kick on every event and a soft kick wherever
+# more than 2.3 s would pass with nothing moving (plates_base.plan_kicks). Formats with their own camera (world, deck, trail, dive, dashzoom, the 3D ones) and beats with a "transition" are left alone.
+CAM_TYPES = {"stats", "bars", "pipeline", "hub", "flow", "lens", "search", "dock", "masktitle"}
+if SMOOTH:
+    _ox, _oy = plates_base.CAM_ORIGIN
+    for b in S.get("beats", []):
+        if b["type"] not in CAM_TYPES or b.get("transition") or b.get("cam") is False:
+            continue
+        ti, to = float(b["in"]), float(b["out"])
+        host_sel, card_sel = "#host-%s" % b["id"], "#host-%s .card" % b["id"]
+        cam.append("tl.set('%s', { transformOrigin:'%dpx %dpx', scale:1 }, 0); tl.set('%s', { transformOrigin:'%dpx %dpx', scale:1 }, 0);" % (host_sel, _ox, _oy, card_sel, _ox, _oy))
+        cam.append("tl.fromTo('%s', { scale:1 }, { scale:%.3f, duration:%.3f, ease:'none', immediateRender:false }, %.3f);" % (host_sel, plates_base.CAM_DRIFT[0], to - ti, ti))
+        ks = plates_base.plan_kicks(beat_events(b), ti, to)
+        for i, (kt, ka) in enumerate(ks):
+            nxt = ks[i + 1][0] if i + 1 < len(ks) else to
+            down = max(min(1.3, nxt - 0.05 - (kt + 0.25) - 0.02), 0.3)
+            cam.append("tl.fromTo('%s', { scale:1 }, { scale:%.4f, duration:0.3, ease:'power2.out', immediateRender:false }, %.3f);" % (card_sel, 1 + ka, kt - 0.05))
+            cam.append("tl.fromTo('%s', { scale:%.4f }, { scale:1, duration:%.3f, ease:'sine.inOut', immediateRender:false }, %.3f);" % (card_sel, 1 + ka, down, kt + 0.25))
 
 HELPERS = """
         const glassIn = function (sel, t, from, dur) {
