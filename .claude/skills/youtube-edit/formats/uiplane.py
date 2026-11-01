@@ -55,7 +55,8 @@ def uiplane(title, prompt, t_in, t_out, replies=(), button=None, bg=True, cid="u
                      % (cid, float(prompt["t"]), min(max(len(prompt["text"]) / 24.0, 0.5), 2.2)))
         if button:
             extra.append('<audio id="sfx-%s-click" src="sfx/click.mp3" data-start="%.3f" data-duration="0.34" data-track-index="@TRACK@" data-volume="0.28"></audio>' % (cid, float(button["click_at"])))
-    html, pre, post = wrap(cid, t_in, t_out, css, inner, bg=bg, kicks=[prompt["t"]] + [r["t"] for r in replies] + ([button["click_at"]] if button else []), sound=sound, audio=extra)
+    html, pre, post = wrap(cid, t_in, t_out, css, inner, bg=bg, kicks=[prompt["t"]] + [r["t"] for r in replies] + ([button["click_at"]] if button else []), sound=sound, audio=extra,
+                          sfx_events=[t_in + 0.6] + [r["t"] for r in replies])
     js = list(pre)
     js.append("tl.set('#uiW', { opacity:0, rotateY:-26, rotateX:5, y:30, scale:0.94 }, 0);")
     js.append(fromto("#uiW", "{opacity:0,rotateY:-26,rotateX:5,y:30,scale:0.94}", "{opacity:1,rotateY:-8,rotateX:3,y:0,scale:1}", t_in + 0.2, 0.9, "power3.out"))

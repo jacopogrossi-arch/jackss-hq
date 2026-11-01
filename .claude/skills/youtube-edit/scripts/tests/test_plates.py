@@ -4,7 +4,7 @@ import os, re, sys, unittest
 from .helpers import SCRIPTS
 
 sys.path.insert(0, os.path.join(os.path.dirname(SCRIPTS), "formats"))
-from plates_base import check_pip, keyword, plan_kicks, CAM_ORIGIN, CAM_DRIFT, KICK_STRONG, KICK_SOFT, PIP, MARGIN, GAP  # noqa: E402
+from plates_base import check_pip, keyword, plan_kicks, plan_sfx, SOUNDS, POOL, CAM_ORIGIN, CAM_DRIFT, KICK_STRONG, KICK_SOFT, PIP, MARGIN, GAP  # noqa: E402
 from tracker import tracker  # noqa: E402
 from counter import counter  # noqa: E402
 from versus import versus  # noqa: E402
@@ -75,6 +75,24 @@ class Sound(unittest.TestCase):
         self.assertIn('id="sfx-ui-type"', o["html"]); self.assertIn('id="sfx-ui-click"', o["html"])
         o2 = uiplane("P", {"text": "abc", "t": 2.0, "anchor": "a"}, 0, 12)
         self.assertNotIn("sfx-ui-click", o2["html"])
+
+
+class ElementSounds(unittest.TestCase):
+    def test_plan_sfx_spacing_and_edges(self):
+        out = plan_sfx([0.2, 0.8, 1.0, 1.4, 3.0, 11.9], 0.0, 12.0)    # 0.2 is inside the entrance swish, 1.0 is 0.2 s after 0.8, 11.9 is inside the exit
+        self.assertEqual(out, [0.8, 1.4, 3.0])
+
+    def test_every_event_gets_a_smooth_sound_and_they_rotate(self):
+        o = diagram({"label": "C", "t": 1.2, "anchor": "c"}, [{"label": "A", "t": 2.0, "anchor": "a"}, {"label": "B", "t": 3.0, "anchor": "b"}],
+                    [{"label": "D", "t": 4.5, "anchor": "d"}], "x", 0, 9)
+        tags = re.findall(r'<audio id="sfx-dg-e\d+" src="sfx/(pl-[abc])\.mp3"', o["html"])
+        self.assertEqual(len(tags), 4)                                  # centre + three pills
+        self.assertEqual(tags, [POOL[i % 3] for i in range(4)])
+        for t, nm in zip([1.2, 2.0, 3.0, 4.5], tags):                    # each sound starts early enough that its energy peak lands on the element
+            m = re.search(r'id="sfx-dg-e\d+" src="sfx/%s.mp3" data-start="([0-9.]+)"' % nm, o["html"])
+            self.assertTrue(float(m.group(1)) <= t)
+        self.assertTrue(all(SOUNDS[n][4] <= -25 for n in POOL))        # element sounds peak at -25 dBFS or lower (~16 dB under the voice peaks)
+        self.assertTrue(SOUNDS["plate-in"][4] <= -31 and SOUNDS["plate-out"][4] <= -31)   # the cut swish stays ~10 dB under the old one (Jacopo: too loud)
 
 
 class Tracker(unittest.TestCase):

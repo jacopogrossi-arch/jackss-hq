@@ -41,7 +41,7 @@ def tracker(steps, active, title, t_in, t_out, at=None, anchor="", done=None, su
         bar = '<div class="tk-bar"><i id="tkb%d"></i></div>' % i if i in done else ""
         inner += ('<div class="pl-card tk-c" id="tkc%d" style="left:%dpx"%s><div class="tk-n">%02d</div><div class="tk-l">%s</div>%s%s</div>\n'
                   % (i, x, at_attrs(t_act, anchor) if i == active else "", i + 1, esc(name), ck, bar))
-    html, pre, post = wrap(cid, t_in, t_out, css, inner, bg=bg, kicks=[t_in + 0.4, t_act], sound=sound)
+    html, pre, post = wrap(cid, t_in, t_out, css, inner, bg=bg, kicks=[t_in + 0.4, t_act], sfx_events=[t_in + 0.5, t_act], sound=sound)
     js = list(pre)
     js.append("tl.set('#tkT', { opacity:0, y:14 }, 0);")
     js.append(fromto("#tkT", "{opacity:0,y:14}", "{opacity:1,y:0}", t_in + 0.15, 0.45))

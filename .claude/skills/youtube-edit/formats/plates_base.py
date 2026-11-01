@@ -68,17 +68,44 @@ def plan_kicks(events, t_in, t_out):
     return keep
 
 
-def wrap(cid, t_in, t_out, css, inner, bg=True, track=3, fade_in=0.3, fade_out=0.3, kicks=(), sound=True, audio=(), track_audio=20):
+SOUNDS = {   # Plate sounds (Jacopo, 01/11/2026: the swipe between face and plate was too loud; a smooth sound on EVERYTHING that appears, taken from Epidemic Sound).
+    # name: (licensed file, CC0 fallback, trimmed duration s, lead = seconds from the file start to its energy peak, target peak dBFS baked into the file)
+    "plate-in": ("licensed/es-whoosh-soft-airy.mp3", "core/whoosh-short.mp3", 0.90, 0.39, -31),
+    "plate-out": ("licensed/es-whoosh-generic-air.mp3", "core/whoosh-short.mp3", 0.55, 0.31, -32),
+    "pl-a": ("licensed/es-whoosh-soft-resonant.mp3", "core/whoosh-short.mp3", 0.57, 0.42, -25),
+    "pl-b": ("licensed/es-whoosh-generic-air.mp3", "core/whoosh-short.mp3", 0.55, 0.31, -25),
+    "pl-c": ("licensed/es-swish-classic-filter.mp3", "core/whoosh-short.mp3", 0.67, 0.18, -26),
+}
+POOL = ("pl-a", "pl-b", "pl-c")   # element sounds rotate so the same swish never repeats twice in a row
+SFX_MIN_GAP = 0.30                # two element sounds closer than this share one (sound.md: the stronger stays)
+
+
+def plan_sfx(events, t_in, t_out):
+    """Times of the element sounds: every event after the plate's own entrance swish (t_in + 0.45) and before its exit (t_out - 0.4), at least SFX_MIN_GAP apart."""
+    out = []
+    for e in sorted(x for x in events if t_in + 0.45 <= x <= t_out - 0.4):
+        if not out or e - out[-1] >= SFX_MIN_GAP:
+            out.append(e)
+    return out
+
+
+def wrap(cid, t_in, t_out, css, inner, bg=True, track=3, fade_in=0.3, fade_out=0.3, kicks=(), sound=True, audio=(), track_audio=20, sfx_events=None):
     """The host: a full-frame card with the wash + grid behind it (bg=True), a fade in/out of the whole plate, a CAMERA (slow push-in + kicks on the events,
-    see plan_kicks) and the plate's sound (a soft swish on the way in and out when sound=True; `audio` adds format-specific <audio> tags).
+    see plan_kicks) and the plate's sound (a soft swish on the way in and out, and a smooth sound on every event, when sound=True; `audio` adds format-specific <audio> tags; `sfx_events` overrides the times of the element sounds, default: the camera events).
     Returns (html, js_prefix, js_suffix): put the format's own tweens between prefix and suffix."""
     ox, oy = CAM_ORIGIN
     css = css + "\n  .pl-cam, .pl-kick { position:absolute; inset:0; transform-origin:%dpx %dpx; }" % (ox, oy)
     bgd = '<div class="k-wash" id="%s-bg"></div>' % cid if bg else ""
     snd = ""
-    if sound:   # sfx/swish.mp3 and sfx/swish-short.mp3 come from write_plate_sounds(public)
-        snd += '<audio id="sfx-%s-in" src="sfx/swish.mp3" data-start="%.3f" data-duration="1.9" data-track-index="%d" data-volume="0.25"></audio>\n' % (cid, max(t_in - 0.3, 0), track_audio)
-        snd += '<audio id="sfx-%s-out" src="sfx/swish-short.mp3" data-start="%.3f" data-duration="0.9" data-track-index="%d" data-volume="0.18"></audio>\n' % (cid, max(t_out - 0.75, 0), track_audio + 1)
+    if sound:   # sfx/plate-in.mp3, plate-out.mp3 and pl-a/b/c.mp3 come from write_plate_sounds(public); levels are baked into the files (data-volume 1)
+        li, di = SOUNDS["plate-in"][3], SOUNDS["plate-in"][2]
+        lo, do = SOUNDS["plate-out"][3], SOUNDS["plate-out"][2]
+        snd += '<audio id="sfx-%s-in" src="sfx/plate-in.mp3" data-start="%.3f" data-duration="%.2f" data-track-index="%d" data-volume="1"></audio>\n' % (cid, max(t_in - li, 0), di, track_audio)
+        snd += '<audio id="sfx-%s-out" src="sfx/plate-out.mp3" data-start="%.3f" data-duration="%.2f" data-track-index="%d" data-volume="1"></audio>\n' % (cid, max(t_out - fade_out - lo, 0), do, track_audio + 1)
+        for i, t in enumerate(plan_sfx(list(kicks) if sfx_events is None else list(sfx_events), t_in, t_out)):   # a smooth sound every time something appears
+            nm = POOL[i % len(POOL)]
+            snd += ('<audio id="sfx-%s-e%d" src="sfx/%s.mp3" data-start="%.3f" data-duration="%.2f" data-track-index="%d" data-volume="1"></audio>\n'
+                    % (cid, i, nm, max(t - SOUNDS[nm][3], 0), SOUNDS[nm][2], track_audio + 10 + (i % len(POOL))))
     for k, tag in enumerate(audio):
         snd += tag.replace("@TRACK@", str(track_audio + 2 + k)) + "\n"
     html = ('<style>%s</style>\n<div class="card-host clip" id="host-%s" data-card-id="%s" data-unanchored="1" data-start="%.3f" data-duration="%.3f" data-track-index="%d"'
@@ -103,14 +130,23 @@ def wrap(cid, t_in, t_out, css, inner, bg=True, track=3, fade_in=0.3, fade_out=0
 
 
 def write_plate_sounds(public, sk=None):
-    """sfx/swish.mp3 (whoosh-ethereal 1.9 s), sfx/swish-short.mp3 (0.9 s for the exit), sfx/typing.mp3 and sfx/click.mp3 in the project's public folder."""
-    import os, subprocess
+    """Writes into <public>/sfx: plate-in.mp3, plate-out.mp3, pl-a/b/c.mp3 (the SOUNDS table: Epidemic Sound files from assets/sfx/licensed when present, the CC0 `core/whoosh-short`
+    otherwise; each trimmed, faded and gained to its target peak) plus typing.mp3 and click.mp3 (sound.md table)."""
+    import os, re, subprocess
     sk = sk or os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
     d = os.path.join(public, "sfx"); os.makedirs(d, exist_ok=True)
-    src = os.path.join(sk, "assets/sfx/mixclap/whoosh-ethereal.mp3")
     run = lambda *a: subprocess.run(["ffmpeg", "-y", "-v", "error", *a], check=True)
-    run("-i", src, "-t", "1.9", "-af", "afade=t=in:d=0.08,afade=t=out:st=1.4:d=0.5", os.path.join(d, "swish.mp3"))
-    run("-i", src, "-t", "0.9", "-af", "afade=t=in:d=0.05,afade=t=out:st=0.5:d=0.4", os.path.join(d, "swish-short.mp3"))
+
+    def peak_db(path):
+        r = subprocess.run(["ffmpeg", "-v", "info", "-i", path, "-af", "volumedetect", "-f", "null", "-"], capture_output=True, text=True)
+        m = re.search(r"max_volume: (-?[0-9.]+) dB", r.stderr)
+        return float(m.group(1)) if m else -3.0
+    for name, (lic, fb, dur, lead, target) in SOUNDS.items():
+        src = os.path.join(sk, "assets/sfx", lic)
+        if not os.path.exists(src):
+            src = os.path.join(sk, "assets/sfx", fb)
+        fo = min(0.25, dur * 0.4)
+        run("-i", src, "-t", "%.2f" % dur, "-af", "afade=t=in:d=0.03,afade=t=out:st=%.2f:d=%.2f,volume=%.2fdB" % (dur - fo, fo, target - peak_db(src)), os.path.join(d, name + ".mp3"))
     run("-i", os.path.join(sk, "assets/sfx/core/typing.mp3"), "-t", "2.2", "-af", "afade=t=out:st=1.9:d=0.3", os.path.join(d, "typing.mp3"))
     run("-i", os.path.join(sk, "assets/sfx/core/click.mp3"), "-t", "0.34", "-af", "afade=t=out:st=0.2:d=0.14", os.path.join(d, "click.mp3"))
 
