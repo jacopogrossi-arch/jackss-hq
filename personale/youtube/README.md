@@ -24,3 +24,9 @@ Video lunghi sul **canale personale** di Jacopo (non Inverso, non Jago).
 **Miniatura.** Stile "virale clean": fondo chiaro grigio-bianco (#F2F2F0), faccia grande a sinistra con contorno bianco, UN oggetto grande al centro, 2 parole. Generata in ChatGPT con i nostri asset e **senza testo** (ChatGPT sbaglia i font e gli accenti); il titolo si aggiunge dopo in **EB Garamond** (corsivo + tondo). Prompt e versioni scartate in `miniatura/prompt-chatgpt-miniatura.md`. Controllare sempre l'anteprima a 320×180. **Anche logo e frecce si aggiungono dopo** (ChatGPT sbaglia i loghi): HTML + Edge headless `--screenshot` (metodo del #2, sorgente `miniatura/miniatura-v6-sorgente.html`).
 
 **Pubblicazione.** Titolo = domanda; miniatura = parola che la completa, non la ripete. Descrizione: prima riga chi sono + cosa è successo, domanda per i commenti, capitoli (il primo a 0:00), @thejacopogrossi, riga su @inversorome.
+
+## Ispirazione (creator studiati)
+
+| Creator | Cosa studiare | File |
+|---|---|---|
+| Joseph (JOEDIT) — "Come monto i miei video con Claude" | Sistema Claude + Remotion in 7 step, piano blu con grafiche, mappa ricorrente degli step, *quando* entra ogni grafica rispetto al parlato | `ispirazione/joedit-motion-plates.md` (01/11/2026) |
