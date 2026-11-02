@@ -14,7 +14,7 @@ from reportlab.platypus import PageBreak, Paragraph, SimpleDocTemplate, Spacer, 
 # --- da modificare se serve ---
 NOME = "Jacopo"
 COGNOME = "Grossi"
-TITOLO = "Canotta modulare in stampa 3D"
+TITOLO = "Abysal Organica"
 OUT_NAME = "Grossi_Jacopo_Verifica_Stampa3D.pdf"
 # ------------------------------
 
