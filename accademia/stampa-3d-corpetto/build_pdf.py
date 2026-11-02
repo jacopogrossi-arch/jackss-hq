@@ -84,7 +84,7 @@ s += [Spacer(1, 2 * cm), Paragraph("VERIFICA<br/>Laboratorio Stampa 3D", BIG), S
 s += [Paragraph("Parte 1 - Immagini del modulo", H1),
       Paragraph("Il capo è una canotta sagomata interamente in stampa 3D. Il busto è costruito ripetendo un unico modulo "
                 "esagonale in TPU 95A, con nervatura a Y in rilievo su una base sottile e flessibile. Il modulo è in scala 1:1, "
-                "con quote in mm. È stato modellato con uno script Python (CadQuery), esportato in formato STEP e verificato in Fusion 360.", P),
+                "con quote in mm, e le misure sono verificate in Fusion 360.", P),
       Spacer(1, 6), img("04-posizione-modulo-figurino.png", width=W * 0.95, max_h=15.5 * cm),
       Paragraph("Dove si colloca il modulo nel figurino: zone a moduli sul centro del busto e sul petto, "
                 "fianchi a branchie e parti sotto le braccia lisci.", CAP), PageBreak(),
