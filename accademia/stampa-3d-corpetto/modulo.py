@@ -18,7 +18,6 @@ DIAM_VERTICI = 60.0   # da vertice a vertice
 SPESSORE_BASE = 0.8
 ALTEZZA_TOT = 2.4     # base + nervatura
 LARG_NERV = 4.0
-LARG_RAMO = 2.0
 DIAM_FORO = 3.0
 INSET_FORO = 0.86     # posizione del foro lungo il raggio verso il vertice
 
@@ -38,9 +37,7 @@ def px(x, y):
 
 def nervatura():
     bracci = [((0, 0), px(190, 61)), ((0, 0), px(96, 224)), ((0, 0), px(284, 224))]
-    rami = [(px(190, 112), px(222, 96)), (px(240, 199), px(256, 168)), (px(140, 199), px(124, 168))]
     forme = [LineString(b).buffer(LARG_NERV / 2) for b in bracci]
-    forme += [LineString(r).buffer(LARG_RAMO / 2) for r in rami]
     return unary_union(forme)
 
 

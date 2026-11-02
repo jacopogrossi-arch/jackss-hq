@@ -40,8 +40,6 @@ def pianta():
                 arrowprops=dict(arrowstyle="-", color=NERO, lw=0.7))
     ax.annotate("nervatura 4 mm", xy=(0, 14), xytext=(-R - 6, h * 0.8), fontsize=9, ha="right",
                 arrowprops=dict(arrowstyle="-", color=NERO, lw=0.7))
-    ax.annotate("rami 2 mm", xy=M.px(222, 96), xytext=(-R - 6, h * 1.05 + 2), fontsize=9, ha="right",
-                arrowprops=dict(arrowstyle="-", color=NERO, lw=0.7))
     ax.set_aspect("equal")
     ax.set_xlim(-R - 22, R + 24)
     ax.set_ylim(-h - 14, h + 8)
@@ -71,7 +69,6 @@ def sezione():
     k = 10
     ax.add_patch(Rectangle((0, 0), 30, M.SPESSORE_BASE * k, fc=GRIGIO, ec=NERO, lw=0.8))
     ax.add_patch(Rectangle((13, M.SPESSORE_BASE * k), M.LARG_NERV, (M.ALTEZZA_TOT - M.SPESSORE_BASE) * k, fc=VERDE, ec="#0F6E56", lw=0.8))
-    ax.add_patch(Rectangle((22, M.SPESSORE_BASE * k), M.LARG_RAMO, (M.ALTEZZA_TOT - M.SPESSORE_BASE) * k * 0.0 + 0.001, fc=VERDE))
     arr = dict(arrowstyle="<->", color=NERO, lw=0.9)
     ax.annotate("", xy=(33, 0), xytext=(33, M.SPESSORE_BASE * k), arrowprops=arr)
     ax.text(34, 4, "base 0,8 mm", va="center", fontsize=10)
