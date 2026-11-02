@@ -153,7 +153,33 @@ def costruisci(file_foglia):
             p = trimesh.creation.extrude_polygon(pezzo, alt + 0.01)
             p.apply_translation([0, 0, z - 0.01])   # piccola compenetrazione per un'unione pulita
             parti.append(p)
-    return trimesh.boolean.union(parti, engine="manifold"), foglia, forme
+    return trimesh.boolean.union(parti, engine="manifold"), foglia, z, forme
+
+
+def esporta_step(foglia, z, forme, file_step):
+    """Solido CAD vero (B-rep) per Fusion: lastra + venature estruse dalle stesse forme 2D."""
+    import cadquery as cq
+
+    def estrudi(poligono, z0, alt, foro_esatto=False):
+        pts = list(poligono.simplify(0.02).exterior.coords)[:-1]
+        solido = cq.Workplane("XY", origin=(0, 0, z0)).polyline(pts).close().extrude(alt)
+        for buco in poligono.interiors:
+            b = Polygon(buco)
+            if foro_esatto:   # il foro del picciolo torna un cerchio vero
+                r = np.sqrt(b.area / np.pi)
+                taglio = cq.Workplane("XY").center(b.centroid.x, b.centroid.y).circle(r).extrude(z0 + alt)
+            else:
+                taglio = cq.Workplane("XY").polyline(list(b.coords)[:-1]).close().extrude(z0 + alt)
+            solido = solido.cut(taglio)
+        return solido
+
+    pezzo = estrudi(foglia, 0, z, foro_esatto=True)
+    for forma, alt in zip(forme, (ALT_CENTRALE, ALT_LATERALI, ALT_RAMI)):
+        for p in getattr(forma, "geoms", [forma]):
+            pezzo = pezzo.union(estrudi(p, z, alt))
+    pezzo = pezzo.clean()
+    cq.exporters.export(pezzo, str(file_step))
+    return pezzo
 
 
 def anteprima(foglia, forme, file_png):
@@ -176,10 +202,11 @@ def anteprima(foglia, forme, file_png):
 
 if __name__ == "__main__":
     sorgente = Path(sys.argv[1]) if len(sys.argv) > 1 else OUT / "foglia.3mf"
-    mesh, foglia, forme = costruisci(sorgente)
+    mesh, foglia, z, forme = costruisci(sorgente)
     mesh.export(OUT / "foglia-venature.stl")
     mesh.export(OUT / "foglia-venature.3mf")
     anteprima(foglia, forme, OUT / "foglia-venature.png")
+    solido = esporta_step(foglia, z, forme, OUT / "foglia-venature.step")
     print("watertight:", mesh.is_watertight)
     print("ingombro mm:", np.round(mesh.extents, 2))
-    print("volume mm3:", round(mesh.volume, 1))
+    print("volume mm3:", round(mesh.volume, 1), " volume STEP:", round(solido.val().Volume(), 1))
