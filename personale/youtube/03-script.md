@@ -1,6 +1,6 @@
 # Script YouTube #3 — Come lancerei un brand di moda con l'AI (prima di lanciare il mio)
 
-> 📝 **Versione 1, 03/11/2026.** Scritto sulla struttura v2 (`03-come-lancerei-un-brand.md`). Come nel #1 e nel #2: **non si legge e non si impara a memoria**. Per esteso solo hook e chiusura; il resto sono punti da ricordare, e le frasi in corsivo sotto 🎙 sono **esempi di tono**: dille con parole tue.
+> 📝 **Versione 1.1, 03/11/2026** (esperimento spostato dopo le cinque tappe, su proposta di Jacopo). Scritto sulla struttura v2 (`03-come-lancerei-un-brand.md`). Come nel #1 e nel #2: **non si legge e non si impara a memoria**. Per esteso solo hook e chiusura; il resto sono punti da ricordare, e le frasi in corsivo sotto 🎙 sono **esempi di tono**: dille con parole tue.
 > **Durata stimata:** 13–16 minuti.
 > **Prima di girare:** l'esperimento della tappa 1 va fatto davvero. Le parti `[RISULTATO …]` si riempiono con quello che esce, non prima. Anche i costi `[€ …]` vanno riempiti con cifre vere.
 
@@ -26,7 +26,7 @@
 >
 > Nel frattempo voglio fare una cosa: provare ogni strumento di intelligenza artificiale e ogni metodo che serve per costruire un brand, dall'idea al primo capo venduto. Prima di farlo sul mio, lo provo qui. E vi faccio vedere cosa funziona davvero e cosa no.
 >
-> In questo video vi faccio vedere la mappa: i cinque passi con cui lancerei un brand oggi. E al primo passo facciamo subito un esperimento.
+> In questo video vi faccio vedere la mappa: i cinque passi con cui lancerei un brand oggi. E alla fine mettiamo alla prova il primo passo con un esperimento.
 
 🟩 **"1 anno":** una linea del tempo da oggi al lancio; un punto si accende su "sei qui", la data del lancio in fondo resta in grigio.
 
@@ -54,47 +54,17 @@
 
 ---
 
-## 3. Tappa 1 — L'idea e l'identità (≈ 4–5 min)
+## 3. Tappa 1 — L'idea e l'identità (≈ 1,5 min)
 
-### Cosa fa l'AI, cosa fai tu (≈ 40 s)
 - **AI:** sparring partner. Ti fa le domande giuste, ti smonta le idee deboli, ti propone nomi.
 - **Tu:** la storia. Da dove vieni, cosa hai visto, perché proprio tu. Questa l'AI non la sa.
+- **Già provato:** il nome Inverso e i valori, scritti a mano e rivisti con Claude.
+- 🎙 *"Questa tappa alla fine del video la mettiamo alla prova."*
 
 🟩 **"Cosa fa l'AI / cosa fai tu":** due colonne. La stessa grafica torna in ogni tappa, cambia solo il contenuto.
 
-🎙 *"Ma invece di dirvelo, proviamo."*
+- Costo: abbonamento Claude `[€ …/mese]`.
 
-### 🧪 L'esperimento (≈ 3 min)
-
-**Le regole (a voce, veloce):**
-- Chat nuova, memoria spenta: Claude non sa niente di me né di Inverso.
-- Dieci minuti a giro, timer a schermo.
-- La stessa scheda da riempire: nome, perché esiste, tre valori, il cliente, tre parole, cosa non è, il primo capo.
-
-🎬 Registrazione schermo accelerata, timer in alto, la tua faccia in PiP che legge.
-
-**Giro 1 — senza la mia storia.**
-🎙 *"Gli do solo quello che sa chiunque voglia aprire un brand: età, Roma, studio moda, voglio fare abbigliamento uomo. Niente di più."*
-- Leggi 2–3 risposte ad alta voce, così come sono.
-- `[RISULTATO giro 1: i nomi proposti, la frase, il cliente]`
-- La tua reazione sincera. 🎙 *"[es. 'Questo potrebbe essere qualsiasi brand' oppure 'Ok, questa non me l'aspettavo']"*
-
-**Giro 2 — con la mia storia.**
-🎙 *"Adesso gli do una cosa in più: un testo che ho scritto io a luglio, di getto, su da dove vengo. La storia del ragazzo di mezzo."*
-- Leggi a voce una riga del tuo testo: *"Poteva avere la scarpa da 150 euro, ma ne aveva una. Non sei."*
-- `[RISULTATO giro 2: cosa cambia nella scheda]`
-
-### Il confronto (≈ 1 min)
-🟩 **Le tre schede affiancate:** giro 1 · giro 2 · **Inverso vero**. Le righe uguali si illuminano, quelle diverse restano spente.
-
-- Cosa ha preso l'AI dalla tua storia, e cosa non poteva sapere.
-- Cosa ti ha detto di nuovo, se c'è qualcosa.
-- La lezione: `[da scrivere sul risultato vero. Ipotesi: "l'AI non ti dà un'identità, amplifica quella che porti". Se l'esperimento dice altro, si dice altro.]`
-
-🎙 *"Inverso ci ho messo mesi a costruirlo. Il nome ha tre significati, e nessuno dei tre me l'ha dato un'AI. Però [RISULTATO: cosa ti è stato utile]."*
-
-### Costo della tappa
-- Abbonamento Claude: `[€ …/mese]`.
 
 ---
 
@@ -147,12 +117,51 @@
 
 ---
 
-## 8. Chiusura (≈ 1 min) — per esteso
+## 8. Proviamo subito la tappa 1 — l'esperimento (≈ 4 min)
+
+🎙 *"Questa è la mappa. Adesso proviamo la prima tappa, l'idea, con un esperimento: l'AI può inventarti un brand?"*
+
+🟩 Le 5 tappe nell'angolo: si riaccende la tappa 1.
+
+### Come funziona
+
+**In parole semplici:** chiedo a Claude di inventare da zero l'identità di un brand (nome, valori, cliente…) due volte. La prima volta senza dirgli niente di me, la seconda dandogli la mia storia. Poi metto le due schede accanto a Inverso, quello vero che ho costruito in mesi, e guardo quanto ci si avvicina.
+
+**Le regole (a voce, veloce):**
+- Chat nuova, memoria spenta: Claude non sa niente di me né di Inverso.
+- Dieci minuti a giro, timer a schermo.
+- La stessa scheda da riempire: nome, perché esiste, tre valori, il cliente, tre parole, cosa non è, il primo capo.
+
+🎬 Registrazione schermo accelerata, timer in alto, la tua faccia in PiP che legge.
+
+**Giro 1 — senza la mia storia.**
+🎙 *"Gli do solo quello che sa chiunque voglia aprire un brand: età, Roma, studio moda, voglio fare abbigliamento uomo. Niente di più."*
+- Leggi 2–3 risposte ad alta voce, così come sono.
+- `[RISULTATO giro 1: i nomi proposti, la frase, il cliente]`
+- La tua reazione sincera. 🎙 *"[es. 'Questo potrebbe essere qualsiasi brand' oppure 'Ok, questa non me l'aspettavo']"*
+
+**Giro 2 — con la mia storia.**
+🎙 *"Adesso gli do una cosa in più: un testo che ho scritto io a luglio, di getto, su da dove vengo. La storia del ragazzo di mezzo."*
+- Leggi a voce una riga del tuo testo: *"Poteva avere la scarpa da 150 euro, ma ne aveva una. Non sei."*
+- `[RISULTATO giro 2: cosa cambia nella scheda]`
+
+### Il confronto
+🟩 **Le tre schede affiancate:** giro 1 · giro 2 · **Inverso vero**. Le righe uguali si illuminano, quelle diverse restano spente.
+
+- Cosa ha preso l'AI dalla tua storia, e cosa non poteva sapere.
+- Cosa ti ha detto di nuovo, se c'è qualcosa.
+- La lezione: `[da scrivere sul risultato vero. Ipotesi: "l'AI non ti dà un'identità, amplifica quella che porti". Se l'esperimento dice altro, si dice altro.]`
+
+🎙 *"Inverso ci ho messo mesi a costruirlo. Il nome ha tre significati, e nessuno dei tre me l'ha dato un'AI. Però [RISULTATO: cosa ti è stato utile]."*
+
+---
+
+## 9. Chiusura (≈ 1 min) — per esteso
 
 🎬 Di nuovo il primo piano dell'inizio, la tela sul tavolo.
 
 🎙
-> Questa è la mappa. Cinque tappe, e io sono ancora alla terza, con un pantalone sbagliato.
+> Cinque tappe, e io sono ancora alla terza, con un pantalone sbagliato.
 >
 > Da qui in avanti le provo per davvero, una alla volta, prima di farle sul mio brand. Se uno strumento funziona, lo uso. Se non funziona, ve lo dico.
 >
@@ -168,10 +177,11 @@
 
 0:00 Tra un anno apro il mio brand
 `[…]` La mappa: cinque tappe
-`[…]` 1 · L'idea (esperimento)
+`[…]` 1 · L'idea
 `[…]` 2 · Ricerca e design
 `[…]` 3 · Prototipo
 `[…]` 4 · Campagna
 `[…]` 5 · Vendita
 `[…]` Quanto costa davvero
+`[…]` Esperimento: l'AI può inventarti un brand?
 `[…]` Il prossimo esperimento
