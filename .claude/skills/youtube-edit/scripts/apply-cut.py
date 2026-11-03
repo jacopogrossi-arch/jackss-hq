@@ -31,6 +31,7 @@ ap.add_argument("--preset", default="fast")
 ap.add_argument("--lut", default="", help="3D LUT (.cube) applied to the picture in the same encode (D-Log -> Rec.709)")
 ap.add_argument("--vf", default="", help="extra ffmpeg filters on the picture AFTER the LUT (a light grade), e.g. \"curves=all='0/0 0.25/0.22 0.5/0.5 0.75/0.78 1/0.95',eq=saturation=1.08:contrast=1.04\"")
 ap.add_argument("--encoder", default="x264", choices=["x264", "nvenc"], help="nvenc = h264_nvenc on the GPU (much faster at 4K)")
+ap.add_argument("--hwdec", action="store_true", help="decode the source on the GPU (-hwaccel cuda): the slow part of a 4K HEVC 10-bit source is the decode, not the encode")
 args = ap.parse_args()
 
 def probe(path, *entries):
@@ -99,7 +100,7 @@ else:
 fc_path = os.path.splitext(args.out)[0] + ".filter.txt"
 with open(fc_path, "w", encoding="utf-8") as f:
     f.write(fc)
-cmd = ["ffmpeg", "-y", "-v", "error", "-i", args.input, "-filter_complex_script", fc_path, "-map", vlabel, "-map", "[a]",
+cmd = ["ffmpeg", "-y", "-v", "error"] + (["-hwaccel", "cuda"] if args.hwdec else []) + ["-i", args.input, "-filter_complex_script", fc_path, "-map", vlabel, "-map", "[a]",
        "-r", str(args.fps), "-fps_mode", "cfr"] + venc + [
        "-pix_fmt", "yuv420p", "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709", "-color_range", "tv",
        "-c:a", "aac", "-b:a", "256k", "-ar", "48000", "-movflags", "+faststart+write_colr", args.out]
