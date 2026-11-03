@@ -252,7 +252,8 @@ after every apply scan the flat transcript for the same 3 to 4 word phrase twice
   silences, shift each window's word times by its start, merge.
 
 **No 4K until the end** (Jacopo, 03/11/2026: "è inutile renderizzare in 4K quando non serve"). While the cut is being reviewed and
-fixed, every apply-cut goes to a 1080p proxy (`--out proxy/flat-1080p.mp4 --vf "scale=1920:1080:flags=lanczos"`), and the drafts
+fixed, every apply-cut goes to a 1080p proxy (`--out proxy/flat-1080p.mp4 --proxy`: it scales before the LUT, because the LUT on 4K
+frames is the slow step, not the decode or the encode; `--vf scale` after the LUT saved nothing on Video #3), and the drafts
 build on it; the 4K `public/input-video.mp4` is encoded once, from the approved cut list, right before the final 4K render.
 
 **apply-cut.py** does one frame-accurate re-encode (trim/atrim + concat, 20 ms audio fades at every join, CRF 16, a

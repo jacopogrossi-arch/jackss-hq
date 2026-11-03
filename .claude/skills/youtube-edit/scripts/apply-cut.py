@@ -31,7 +31,8 @@ ap.add_argument("--preset", default="fast")
 ap.add_argument("--lut", default="", help="3D LUT (.cube) applied to the picture in the same encode (D-Log -> Rec.709)")
 ap.add_argument("--vf", default="", help="extra ffmpeg filters on the picture AFTER the LUT (a light grade), e.g. \"curves=all='0/0 0.25/0.22 0.5/0.5 0.75/0.78 1/0.95',eq=saturation=1.08:contrast=1.04\"")
 ap.add_argument("--encoder", default="x264", choices=["x264", "nvenc"], help="nvenc = h264_nvenc on the GPU (much faster at 4K)")
-ap.add_argument("--hwdec", action="store_true", help="decode the source on the GPU (-hwaccel cuda): the slow part of a 4K HEVC 10-bit source is the decode, not the encode")
+ap.add_argument("--hwdec", action="store_true", help="decode the source on the GPU (-hwaccel cuda); measured 03/11/2026 it did NOT speed up a 4K D-Log cut (the LUT was the slow step): use --proxy for review copies")
+ap.add_argument("--proxy", action="store_true", help="1080p review copy: scale to 1920x1080 before the LUT (a quarter of the LUT work); the 4K final runs without it")
 args = ap.parse_args()
 
 def probe(path, *entries):
@@ -82,9 +83,14 @@ if not parts:
     sys.exit("no kept segment is at least one frame long")
 chain.append("".join(parts) + "concat=n=%d:v=1:a=1[v][a]" % len(parts))
 vlabel = "[v]"
+if args.proxy:
+    # Scale BEFORE the LUT: lut3d on 4K runs on the CPU and is the slow step (a 15 min 4K D-Log cut: ~40 min either way,
+    # GPU decode at 7 % busy); on a 1080p frame it is a quarter of the work.
+    chain.append("[v]scale=1920:1080:flags=lanczos[vp]")
+    vlabel = "[vp]"
 if args.lut:
     lp = os.path.abspath(args.lut).replace("\\", "/").replace(":", "\\:")
-    chain.append("[v]lut3d=file='%s'[vl]" % lp)
+    chain.append("%slut3d=file='%s'[vl]" % (vlabel, lp))
     vlabel = "[vl]"
 if args.vf:
     chain.append("%s%s[vg]" % (vlabel, args.vf))
