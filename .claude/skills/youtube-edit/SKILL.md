@@ -251,6 +251,10 @@ after every apply scan the flat transcript for the same 3 to 4 word phrase twice
 - **Raw files over ~3 minutes:** Parakeet can drop whole sentences. Transcribe ~25 s windows cut at auto-editor
   silences, shift each window's word times by its start, merge.
 
+**No 4K until the end** (Jacopo, 03/11/2026: "è inutile renderizzare in 4K quando non serve"). While the cut is being reviewed and
+fixed, every apply-cut goes to a 1080p proxy (`--out proxy/flat-1080p.mp4 --vf "scale=1920:1080:flags=lanczos"`), and the drafts
+build on it; the 4K `public/input-video.mp4` is encoded once, from the approved cut list, right before the final 4K render.
+
 **apply-cut.py** does one frame-accurate re-encode (trim/atrim + concat, 20 ms audio fades at every join, CRF 16, a
 keyframe every 30 frames, 30 fps, BT.709) straight into `public/input-video.mp4`, every edge snapped to the source frame
 grid (without the snap, the picture drifted 4 frames behind the voice over 24 segments). The output is checked against
