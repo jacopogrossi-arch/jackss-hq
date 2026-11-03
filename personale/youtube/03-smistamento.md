@@ -37,7 +37,15 @@ Legenda: ✅ ripresa da tenere · ✂️ da tagliare · ⚠️ da decidere tu
 
 ---
 
-## ⚠️ Domande per te (Checkpoint A)
+## ✅ Risposte di Jacopo (03/11/2026)
+
+- Intro all'esperimento: **0194** (seconda prova del "come funziona"), più dalla 0193 solo "Questo è un esperimento che parte adesso e vorrei approfondire più nel dettaglio nel prossimo video", messa dopo le regole.
+- **Niente tela di prova** nel video: scelta voluta, non serve rigirare. **Niente nome Inverso**, né a voce né a schermo.
+- "Una merda" (0197) e Civico 12 / "bori di Roma" (0196): **si tengono**.
+- Cifre dette a camera (Higgsfield 40 €, GPT 10 €, prototipi 100–150 €, "centinaia di migliaia"): **vanno bene così**.
+- Colore: il file dice D-Log, confermato da `grade-scan.py` → LUT `DJI-Pocket4P-DLog-to-Rec709-V2.0-size33.cube` nel taglio.
+
+## Domande (Checkpoint A, chiuse)
 
 1. **Introduzione all'esperimento: 0193 o 0194?** Dicono la stessa cosa. La 0194 ha il raccordo con la mappa e dice "chat incognita, stesse domande"; la 0193 dice che l'esperimento continua nel prossimo video. Proposta: **0194** (più chiara), più la riga della 0193 "vorrei approfondire più nel dettaglio nel prossimo video".
 2. **La tela di prova non c'è mai.** Lo script la voleva nell'hook ("questo è il primo pantalone che ho cucito, è sbagliato") e nella tappa 3. Si gira un pezzo corto (10–20 s) oppure si va senza?
