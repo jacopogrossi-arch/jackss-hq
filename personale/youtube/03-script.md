@@ -1,6 +1,7 @@
 # Script YouTube #3 — Come lancerei un brand di moda con l'AI (prima di lanciare il mio)
 
 > 📝 **Versione 1.2, 03/11/2026** (esperimento spostato dopo le cinque tappe; costi veri e risposte di Jacopo inseriti). Scritto sulla struttura v2 (`03-come-lancerei-un-brand.md`). Come nel #1 e nel #2: **non si legge e non si impara a memoria**. Per esteso solo hook e chiusura; il resto sono punti da ricordare, e le frasi in corsivo sotto 🎙 sono **esempi di tono**: dille con parole tue.
+> **Stato (03/11/2026):** ✅ girato tutto a camera (gancio, chi sono, mappa, 5 tappe, chiusura) col Pocket in D-Log2, bilanciamento del bianco fisso a 4300K. Da fare: esperimento (dopo il girato, su decisione di Jacopo) → confronto e lezione nello script → montaggio con `youtube-edit`.
 > **Durata stimata:** 13–16 minuti.
 > **Prima di girare:** l'esperimento della tappa 1 va fatto davvero. Le parti `[RISULTATO …]` si riempiono con quello che esce, non prima. Anche i costi `[€ …]` vanno riempiti con cifre vere.
 
