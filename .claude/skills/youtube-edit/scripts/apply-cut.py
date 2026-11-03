@@ -95,7 +95,11 @@ if args.encoder == "nvenc":
             "-maxrate", "120M", "-bufsize", "240M", "-g", str(args.fps), "-bf", "2"]
 else:
     venc = ["-c:v", "libx264", "-preset", args.preset, "-crf", str(args.crf), "-g", str(args.fps), "-keyint_min", str(args.fps)]
-cmd = ["ffmpeg", "-y", "-v", "error", "-i", args.input, "-filter_complex", fc, "-map", vlabel, "-map", "[a]",
+# The graph goes through a file: inline, ~170 segments pass Windows' 32k command-line limit (WinError 206).
+fc_path = os.path.splitext(args.out)[0] + ".filter.txt"
+with open(fc_path, "w", encoding="utf-8") as f:
+    f.write(fc)
+cmd = ["ffmpeg", "-y", "-v", "error", "-i", args.input, "-filter_complex_script", fc_path, "-map", vlabel, "-map", "[a]",
        "-r", str(args.fps), "-fps_mode", "cfr"] + venc + [
        "-pix_fmt", "yuv420p", "-color_primaries", "bt709", "-color_trc", "bt709", "-colorspace", "bt709", "-color_range", "tv",
        "-c:a", "aac", "-b:a", "256k", "-ar", "48000", "-movflags", "+faststart+write_colr", args.out]
