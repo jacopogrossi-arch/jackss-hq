@@ -10,7 +10,7 @@
 2. **Controlla le preferenze personali:** Impostazioni → Profilo → "Preferenze personali". Se lì c'è scritto qualcosa su di te o su Inverso, copialo da parte e svuotalo per la durata del test (poi lo rimetti). Altrimenti il test è truccato.
 3. **Avvia la registrazione dello schermo** prima di incollare il primo prompt. Registra tutto, si taglia dopo.
 4. **Giro 2 in una chat incognito nuova**, non nella stessa del giro 1: Claude non deve ricordarsi la prima scheda.
-5. Nel prompt sostituisci **[la tua età]** con la tua età vera. Il resto non si tocca: i due prompt devono essere identici tranne la riga della storia.
+5. I due prompt sono già pronti: non si toccano, devono essere identici tranne la riga della storia.
 
 ---
 
@@ -19,7 +19,7 @@
 Copia e incolla così:
 
 ```
-Ho [la tua età] anni, vivo a Roma, studio moda in accademia ed economia all'università. Voglio aprire un brand di abbigliamento uomo.
+Ho 20 anni, vivo a Roma, studio moda in accademia ed economia all'università. Voglio aprire un brand di abbigliamento uomo.
 
 Inventami l'identità del brand. Non farmi domande: decidi tu, con quello che sai.
 
@@ -41,7 +41,7 @@ Rispondi solo con questa scheda, in italiano, breve:
 In una **nuova** chat incognito: allega il file **`il-ragazzo-di-mezzo.txt`** (graffetta o trascinalo nella chat), poi copia e incolla così:
 
 ```
-Ho [la tua età] anni, vivo a Roma, studio moda in accademia ed economia all'università. Voglio aprire un brand di abbigliamento uomo.
+Ho 20 anni, vivo a Roma, studio moda in accademia ed economia all'università. Voglio aprire un brand di abbigliamento uomo.
 
 In allegato c'è un testo che ho scritto io, di getto, su da dove vengo. Usalo.
 

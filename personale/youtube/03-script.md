@@ -1,6 +1,6 @@
 # Script YouTube #3 — Come lancerei un brand di moda con l'AI (prima di lanciare il mio)
 
-> 📝 **Versione 1.1, 03/11/2026** (esperimento spostato dopo le cinque tappe, su proposta di Jacopo). Scritto sulla struttura v2 (`03-come-lancerei-un-brand.md`). Come nel #1 e nel #2: **non si legge e non si impara a memoria**. Per esteso solo hook e chiusura; il resto sono punti da ricordare, e le frasi in corsivo sotto 🎙 sono **esempi di tono**: dille con parole tue.
+> 📝 **Versione 1.2, 03/11/2026** (esperimento spostato dopo le cinque tappe; costi veri e risposte di Jacopo inseriti). Scritto sulla struttura v2 (`03-come-lancerei-un-brand.md`). Come nel #1 e nel #2: **non si legge e non si impara a memoria**. Per esteso solo hook e chiusura; il resto sono punti da ricordare, e le frasi in corsivo sotto 🎙 sono **esempi di tono**: dille con parole tue.
 > **Durata stimata:** 13–16 minuti.
 > **Prima di girare:** l'esperimento della tappa 1 va fatto davvero. Le parti `[RISULTATO …]` si riempiono con quello che esce, non prima. Anche i costi `[€ …]` vanno riempiti con cifre vere.
 
@@ -10,10 +10,9 @@
 
 ## ⚠️ Da sistemare prima di girare
 
-1. **Esperimento:** due giri da 10 minuti in una chat nuova di Claude con la **memoria spenta**. Registra lo schermo dall'inizio alla fine (anche le parti noiose: si tagliano dopo).
-2. **Costi:** tabella in `03-come-lancerei-un-brand.md`. Nel video solo cifre spese davvero; le altre si dicono come stime.
-3. **Età:** ❓ nel prompt dell'esperimento e nella presentazione.
-4. **La tela di prova** sempre a portata di mano: apre il video e torna nella tappa 3.
+1. **Esperimento: si fa DOPO aver girato il resto** (decisione di Jacopo: è la fine del video, va fatto sapendo cosa hai detto prima). Due giri da 10 minuti in una chat nuova di Claude con la **memoria spenta**. Registra lo schermo dall'inizio alla fine (anche le parti noiose: si tagliano dopo).
+2. **Costi:** ✅ inseriti nelle tappe. Il libro Armstrong non si nomina tra i costi.
+3. **La tela di prova** sempre a portata di mano: apre il video e torna nella tappa 3.
 
 ---
 
@@ -63,7 +62,7 @@
 
 🟩 **"Cosa fa l'AI / cosa fai tu":** due colonne. La stessa grafica torna in ogni tappa, cambia solo il contenuto.
 
-- Costo: abbonamento Claude `[€ …/mese]`.
+- Costo: abbonamento Claude **20 € al mese**. È l'unico strumento che pago.
 
 
 ---
@@ -73,10 +72,10 @@
 - **AI:** ricerca storica, tendenze, moodboard, figurini. È la tappa dove fa di più.
 - **Tu:** scegliere. L'AI ti dà cento strade, il gusto per sceglierne una è tuo.
 - **Già provato:** nel video #2 ho lasciato che Claude ideasse una collezione intera. E per il pantalone del mio brand ho fatto una ricerca su silhouette e stili storici. 🎬 Le tavole delle silhouette dallo schermo.
-- Cosa ho imparato: 🎙 *"[una cosa vera dal #2, es. 'fa moodboard ottimi, ma tende al già visto']"* ❓
+- Cosa ho imparato: 🎙 *"Anche lasciata da sola, l'AI sta iniziando a essere meno slop. Non è più solo roba già vista: inizia a tirare fuori risultati interessanti."*
 
 🟩 **"Cosa fa l'AI / cosa fai tu"** con le voci della tappa 2.
-- Costo: `[€ …]` (o "lo stesso abbonamento").
+- Costo: lo stesso abbonamento, niente in più.
 
 ---
 
@@ -89,7 +88,7 @@
 
 🎬 Mani che girano la tela al rovescio, dettaglio del fianco (B-roll).
 🟩 **"Cosa fa l'AI / cosa fai tu"** con le voci della tappa 3.
-- Costo: teletta `[€ …]` + merceria `[€ …]` + libro `[€ …]` ❓ macchina da cucire tua o prestata?
+- Costo: teletta **5 €** (2 metri) + merceria **una decina di euro**. Circa **15 €** per la prima tela. La macchina da cucire è mia, vale sui **200 €**: è la spesa vera di questa tappa, ma si compra una volta.
 
 ---
 
@@ -98,11 +97,11 @@
 - **AI:** modello virtuale, foto lookbook, video di campagna. Quello che prima costava migliaia di euro.
 - **Tu:** la direzione creativa. E decidere quanto mostrare di vero.
 - **Già provato:** Jago, il modello virtuale con cui ho fatto sette video. 🎬 2–3 clip di Jago.
-- La tua posizione ❓: 🎙 *"[es. 'Per il lookbook userò un modello virtuale, ma il capo deve essere vero e la faccia del brand resto io']"*
+- La tua posizione: 🎙 *"Il modello virtuale è interessante, si può usare. Però non è per forza la scelta migliore: restare sull'analogico, con foto vere e persone vere, può essere ancora ottimo."*
 - Stima già nel piano, detta come stima: 🎙 *"Uno shooting vero costa dai 3 agli 8 mila euro. Questo è il motivo per cui la tappa 4 è quella che l'AI cambia di più."*
 
 🟩 **"Cosa fa l'AI / cosa fai tu"** con le voci della tappa 4.
-- Costo: abbonamento Magnific `[€ …/mese]`.
+- Costo: oggi **0 €**. Lo strumento che usavo per Jago non lo uso più.
 
 ---
 
@@ -114,6 +113,12 @@
 - Il piano, in una riga: pre-order di pochi pezzi numerati.
 
 🟩 **"Quanto costa":** le cinque tappe con accanto la cifra vera spesa finora; le caselle non ancora spese restano vuote, con la stima in grigio.
+  - Idea + design: **20 €/mese** (Claude)
+  - Prototipo: **~15 €** (teletta 5 € + merceria ~10 €) · macchina da cucire **~200 €** (una volta)
+  - Campagna: **0 €** oggi · stima di uno shooting vero 3–8 mila € (in grigio)
+  - Vendita: **ancora niente** (in grigio)
+
+🎙 *"Fin qui, per arrivare a un pantalone sbagliato: un abbonamento da 20 euro al mese, 15 euro di stoffa e merceria, e una macchina da cucire che avevo già."*
 
 ---
 
@@ -165,7 +170,7 @@
 >
 > Da qui in avanti le provo per davvero, una alla volta, prima di farle sul mio brand. Se uno strumento funziona, lo uso. Se non funziona, ve lo dico.
 >
-> E si riparte dall'inizio: nel prossimo video costruisco l'identità di un brand con l'AI, molto più a fondo di quello che avete visto oggi. [❓ nome, logo, tono di voce, etichetta]
+> E si riparte dall'inizio: nel prossimo video costruisco un'identità forte, molto più a fondo di quello che avete visto oggi. A chi parla il brand, chi è la persona che lo compra, e un'idea solida su cui costruire tutto il resto.
 >
 > Se volete vedere come va a finire tra un anno, iscrivetevi. Ci vediamo lì.
 
