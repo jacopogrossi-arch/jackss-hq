@@ -27,6 +27,23 @@ exe = shutil.which(cmd[0])
 if exe:
     cmd = [exe] + cmd[1:]
 
+def owner_alive(lock):
+    """False when the PID written in the lock is gone (a stopped task never reaches the finally below)."""
+    try:
+        pid = int(open(lock, encoding="utf-8", errors="replace").read().split()[0])
+    except (OSError, ValueError, IndexError):
+        return True                                       # unreadable or half-written: trust it, the age check still applies
+    if os.name == "nt":
+        out = subprocess.run(["tasklist", "/FI", "PID eq %d" % pid, "/NH"], capture_output=True).stdout.decode("ascii", "replace")
+        return str(pid) in out and "python" in out.lower()   # Windows reuses PIDs fast (one came back as chrome.exe)
+    try:
+        os.kill(pid, 0)
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        pass
+    return True
+
 deadline = time.time() + a.wait_minutes * 60
 told = False
 while True:
@@ -36,7 +53,7 @@ while True:
         break
     except FileExistsError:
         try:
-            if time.time() - os.stat(a.lock).st_mtime > a.stale_minutes * 60:
+            if time.time() - os.stat(a.lock).st_mtime > a.stale_minutes * 60 or not owner_alive(a.lock):
                 os.remove(a.lock); print("render-queue: removed a stale lock", file=sys.stderr); continue
         except FileNotFoundError:
             continue                                      # released between our two calls: try again at once

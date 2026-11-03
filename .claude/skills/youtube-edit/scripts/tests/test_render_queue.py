@@ -31,9 +31,17 @@ class RenderQueue(unittest.TestCase):
         open(lock, "w").write("999 crashed\n"); old = time.time() - 3600; os.utime(lock, (old, old))
         r = run("render-queue.py", "--lock", lock, "--stale-minutes", "30", "--", PY, "-c", "pass")
         self.assertEqual(r.returncode, 0, r.stderr)                    # the 1 h old lock was cleared
-        open(lock, "w").write("1 busy\n")                              # a fresh lock, nobody will release it
+        open(lock, "w").write("%d busy\n" % os.getpid())               # a fresh lock held by a live Python (this test)
         r = run("render-queue.py", "--lock", lock, "--wait-minutes", "0.02", "--poll", "0.2", "--", PY, "-c", "pass")
         self.assertEqual(r.returncode, 3)
+
+    def test_fresh_lock_of_a_dead_process_is_removed(self):
+        d = scratch(self)
+        lock = os.path.join(d, "q.lock")
+        p = subprocess.Popen([PY, "-c", "pass"]); p.wait()             # a PID that existed and is now gone
+        open(lock, "w").write("%d stopped task\n" % p.pid)
+        r = run("render-queue.py", "--lock", lock, "--wait-minutes", "0.02", "--poll", "0.2", "--", PY, "-c", "pass")
+        self.assertEqual(r.returncode, 0, r.stderr)
 
     def test_finds_a_program_on_the_path_by_name(self):
         d = scratch(self)
