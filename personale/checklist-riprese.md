@@ -6,6 +6,7 @@
 - [ ] Batterie cariche, scheda vuota
 - [ ] **Zebra accesa** sul Pocket
 - [ ] Bilanciamento del bianco **fisso** (mai auto)
+- [ ] **Video parlati (YouTube): microfono esterno acceso e collegato.** Prova 5 s e riascolta prima di girare (video #3, 03/11: girato tutto col microfono del Pocket per dimenticanza)
 
 ## Per ogni posto: 3 + 1
 1. **Larga** — dove siamo
