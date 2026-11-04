@@ -43,7 +43,8 @@ GAP = 2.3                    # longest stretch without a camera event (Joseph: a
 
 def plan_kicks(events, t_in, t_out):
     """Camera kicks: a strong one (+2.4 %) on every event time (events closer than 1 s share one), a soft one (+1.2 %) wherever more than GAP s would pass
-    with nothing moving. Returns [(t, amplitude)] sorted."""
+    with nothing moving. Returns [(t, amplitude)] sorted. Switched off 04/11/2026 (Jacopo: no bounce, motion is a fluid camera, see board.py)."""
+    return []
     ev = sorted(e for e in events if t_in + 0.3 <= e <= t_out - 0.7)
     strong = []
     for e in ev:

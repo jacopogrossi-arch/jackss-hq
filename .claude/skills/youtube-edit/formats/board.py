@@ -60,7 +60,11 @@ def _groups(scene):
 
 class Board:
     def __init__(self, cid, track=10, track_audio=300, enter=True, leave=True):
-        self.cid, self.track, self.ta, self.enter, self.leave, self.pages = cid, track, track_audio, enter, leave, []
+        self.cid, self.track, self.ta, self.enter, self.leave, self.pages, self.holes = cid, track, track_audio, enter, leave, [], []
+
+    def away(self, t0, t1):
+        """The face comes back between t0 and t1 (a long stretch with nothing new on the board): the same swipe out and in."""
+        self.holes.append((t0, t1))
 
     def page(self, scene, at, a, b, cam=None, overview=True):
         self.pages.append(dict(scene=scene, ox=at[0] * PITCH[0], oy=at[1] * PITCH[1], a=a, b=b, cam=cam, overview=overview))
@@ -80,7 +84,10 @@ class Board:
                 todo = []
                 for k, (t, b) in enumerate(gs):
                     nxt = gs[k + 1][0] if k + 1 < len(gs) else end
-                    todo.append((t - 0.45, _focus(b), max(0.7, min(1.4, nxt - t))))
+                    f = _focus(b)
+                    todo.append((t - 0.45, f, max(0.7, min(1.4, nxt - t))))
+                    if nxt - t > 2.8:   # a long wait between two elements: the camera eases slowly back instead of standing still
+                        todo.append((t + 1.0, (f[0] + (960 - f[0]) * 0.5, f[1] + (540 - f[1]) * 0.5, max(1.0, f[2] * 0.86)), nxt - t - 1.6))
             for t0, (x, y, s), d in todo:
                 t0 = max(t0, free)
                 d = min(d, end - t0)
@@ -141,6 +148,13 @@ class Board:
             js.append("tl.fromTo('%s', { x:0 }, { x:-1920, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (R, PUSH, SWIPE_EASE, h1 - PUSH))
             js.append("tl.fromTo('#video-wrap', { x:1920 }, { x:0, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (PUSH, SWIPE_EASE, h1 - PUSH))
             snd.append('<audio id="sfx-%s-out" src="sfx/plate-out.mp3" data-start="%.3f" data-duration="%.2f" data-track-index="%d" data-volume="1"></audio>' % (cid, h1 - 0.5 * PUSH - lo, do, self.ta))
+        for k, (a, b) in enumerate(self.holes):
+            js.append("tl.fromTo('%s', { x:0 }, { x:-1920, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (R, PUSH, SWIPE_EASE, a - 0.5 * PUSH))
+            js.append("tl.fromTo('#video-wrap', { x:1920 }, { x:0, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (PUSH, SWIPE_EASE, a - 0.5 * PUSH))
+            js.append("tl.fromTo('%s', { x:1920 }, { x:0, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (R, PUSH, SWIPE_EASE, b - 0.5 * PUSH))
+            js.append("tl.fromTo('#video-wrap', { x:0 }, { x:-1920, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (PUSH, SWIPE_EASE, b - 0.5 * PUSH))
+            snd.append('<audio id="sfx-%s-ho%d" src="sfx/plate-out.mp3" data-start="%.3f" data-duration="%.2f" data-track-index="%d" data-volume="1"></audio>' % (cid, k, a - lo, do, self.ta + 2))
+            snd.append('<audio id="sfx-%s-hi%d" src="sfx/plate-in.mp3" data-start="%.3f" data-duration="%.2f" data-track-index="%d" data-volume="1"></audio>' % (cid, k, b - li, di, self.ta + 3))
         html = ('<style>%s</style>\n<div class="card-host clip" id="host-%s" data-card-id="%s" data-unanchored="1" data-start="%.3f" data-duration="%.3f" data-track-index="%d"'
                 ' style="left:0;top:0;width:1920px;height:1080px;visibility:hidden;opacity:1;">\n<div id="%s-root" style="position:absolute;inset:0;overflow:hidden"><div class="bd-bg"></div>'
                 '<div class="bd-w" id="%s-w">%s\n%s</div></div></div>\n%s'
