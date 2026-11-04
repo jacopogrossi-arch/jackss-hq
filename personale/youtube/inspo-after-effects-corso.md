@@ -24,6 +24,8 @@ Sono parti del corso "Cash Flow Contents". Legenda: **Metodo** = serve per fare 
 | *mancante* | AE 5 | Maschere e Continua Testi | Non registrata |
 | v6 `14-20-28` | AE 6 | Motion tracking | Medio |
 | v7 `14-51-15` | AE 7 | Lock-on tracking | Medio |
+| v8 `15-09-55` | AE 8 | Fake 3D, griglia, espressioni, primo pezzo dell'animazione finale | **Alto** |
+| v9 `15-38-21` | AE 9 | Green screen, marionetta, cilindri, ritocchi dell'animazione finale | Medio-alto |
 
 Le code di v4 (dopo 39:00), v5 (dopo 20:30) e v7 (dopo 13:05) sono solo schermate ferme: lì non c'è nulla.
 
@@ -127,6 +129,46 @@ Le code di v4 (dopo 39:00), v5 (dopo 20:30) e v7 (dopo 13:05) sono solo schermat
 | 09:44-11:18 | Scritta su un punto del soggetto che segue anche la rotazione | Metodo | Come v6 |
 | 12:37 | Mostra "lo stretto necessario": ciò che si vede ogni giorno sui suoi profili | Metodo | Focus su ciò che serve |
 
+### v8: Lezione AE 8, fake 3D (26 min)
+
+Le ultime lezioni costruiscono un solo spot verticale: due creme, cilindri, bottone "Compra" cliccato da una mano. Ogni tecnica nasce per servire quel risultato.
+
+| Minuto | Cosa | Tipo | Collegamento |
+|---|---|---|---|
+| 01:06 | Quasi tutto fatto dentro il programma: scaricati solo la crema e la freccia | Metodo | Le nostre plate sono già fatte così |
+| **02:42-05:25** | Sfondo in sfumatura più griglia generata, colore vicino allo sfondo, opacità bassa | **Metodo** | È il nostro preset `plates-verde`: stessa ricetta, arrivata per altra strada |
+| 03:38 | "Ci sarà un effetto che lo fa": cerca nel menu invece di inventare | Metodo | Cercare prima nel registry di HyperFrames |
+| 05:38 | Tutto lo sfondo in una precomposizione, per non perderlo di vista | Metodo | Come i gruppi in `formats/board.py` |
+| **07:04-09:27** | **La regola del fake 3D:** ciò che sta davanti si muove più veloce di ciò che sta dietro. Sfondo ingrandito per avere margine | **Metodo, il punto chiave** | Oggi sulla lavagna griglia e contenuto si muovono insieme: qui c'è profondità gratis |
+| 10:48 | Lo sfondo parte un attimo dopo il soggetto | Metodo | Sfasare i livelli, non muoverli insieme |
+| 11:48-13:58 | Tappo separato con le maschere, perno spostato sul punto giusto, rotazione | Metodo | Il punto di ancoraggio è il `transform-origin` |
+| 14:12-16:25 | Crema che esce: tracciato a zigzag più taglia tracciati | Metodo | Le linee che si disegnano da sole (v3, v6) |
+| **16:40-17:15** | Spostamento turbolenza: il liquido ondeggia da solo nel tempo | Metodo, da adattare | Filtro SVG, da provare: può pesare sul render |
+| **17:20-19:26** | Espressione `wiggle`: tremolio continuo senza keyframe, "dà vita" | **Metodo** | "Mantieni vivo" di v4 e la nota "mai ferme". Per noi serve un tremolio uguale a ogni render |
+| 19:45 | Collega tappo e liquido alla crema: si muovono tutti insieme | Metodo | La ragnatela di v4 |
+| **22:49-23:06** | Posterizza tempo a 14-17 frame: movimento a scatti voluto | Altro, stile | Il contrario della fluidità che cerchi: non per le plate |
+| **23:28-24:05** | Zoom su un livello di regolazione, cioè una camera su tutto. "Più ritardo all'inizio" sulla curva | **Metodo** | La nostra camera: vedi la curva qui sotto |
+| 24:24 | Cambio colore dello sfondo sincronizzato col livello madre | Metodo | Il colore cambia su un evento del racconto |
+| 26:14 | Le creme crescono più dello sfondo: sembrano uscire dallo schermo | Metodo | Il fake 3D funziona anche con la scala |
+
+### v9: Lezione AE 9, marionetta e chiusura dello spot (31 min)
+
+| Minuto | Cosa | Tipo | Collegamento |
+|---|---|---|---|
+| 01:23-03:17 | Green screen con Keylight, perché verde e non rosso: la pelle ha il rosso | Altro | Se mai gireremo su green screen |
+| 03:42-07:24 | Blocca fotogramma, ordine inverso, dilatazione del tempo | Altro | Lo facciamo già con ffmpeg |
+| **09:09-12:21** | Marionetta: un perno che non muovi tiene fermo il punto. Un perno per ogni osso | Salta per noi, idea utile | Solo After Effects. L'idea resta: fissa ciò che non deve muoversi |
+| **14:02-16:29** | Cilindro finto: ellisse sopra, rettangolo sotto, sfumature. Niente 3D | **Metodo** | Rifattibile con le sfumature in CSS |
+| **17:04-18:29** | Ombre dirette verso l'oggetto dietro, per dare profondità. "Spingi i parametri per capire cosa fanno" | Metodo | Stessa logica del fake 3D |
+| **19:08-20:00** | Niente precomposizione: i cilindri devono partire sfalsati | **Metodo** | Raggruppa solo ciò che si muove insieme |
+| 20:43-21:14 | Il bordo del bottone è la versione più chiara del suo colore | Metodo | Dettaglio per le card delle plate |
+| **22:21-22:52** | Bottone collegato al cilindro principale, scelto provando e guardando | **Metodo** | Il filo del corso: un elemento porta il movimento |
+| 23:13 | Il bottone compare dopo, così non resta lì sopra da subito | Metodo | L'elemento entra sulla parola |
+| 23:33-24:19 | Light sweep: una luce passa sul bottone | Metodo, da adattare | Una sfumatura che scorre: si rifà facilmente |
+| **24:44-27:50** | Turbolenza su tutto come onda di passaggio. Dice che è ricercatissima: è una sua opinione | Metodo, da adattare | Possibile transizione, solo dopo una prova |
+| 28:22 | Prima costruisce la mano, poi la porta nello spot | Metodo | Pezzi separati, poi assemblati |
+| **28:47-30:03** | Bottone premuto: scala 90, 93, 110 sul clic | Da evitare sulle plate | È il rimbalzo che hai bocciato il 04/11. Ha senso solo su un clic vero |
+
 ### Il filo che lega i video
 
 1. **Una gerarchia, non tanti oggetti:** scatole (v2), ragnatela (v4), precomposizione (v5), oggetto Null (v6) sono la stessa idea detta quattro volte. Un elemento porta il movimento, gli altri lo seguono.
@@ -157,6 +199,8 @@ Ho digitalizzato le curve pixel per pixel:
 | `power2.inOut` (skill) | | 3,0 | 50% | 50% | 71% |
 
 Correzione del 04/11: picco e percentuali della riga "A mano, quadrato" sono misurati sulla curva disegnata. La formula `cubic-bezier(.54, 0, 0, 1)` calcolata da sola ha un picco un po' più alto: 5,1 volte la media, al 30% della durata, con il 90% della strada al 57%. La forma è la stessa, ma per il passo in pixel vale il 5,1.
+
+**Nuovo dalla Lezione 8 (min 24:01):** lo zoom di camera ha la stessa famiglia di curva, ma con il picco più avanti, circa al 40%, e dura circa 2 secondi. Valori letti a occhio sul grafico, non digitalizzati. Prima dello scatto c'è una rincorsa più lunga, ed è il "più ritardo all'inizio" che dice lui. Nella stessa lezione (min 16:26) sulla crema che esce si vede una curva simmetrica, ma è proprio il momento in cui dice di voler cambiare la velocità: non sappiamo se la lascia così.
 
 **Cosa significa, a parole:** il movimento parte piano per un attimo, scatta forte intorno al 30% della durata, poi passa quasi metà del tempo ad assestarsi sull'ultimo 10% di strada. Prima lo stacco, poi la planata.
 
