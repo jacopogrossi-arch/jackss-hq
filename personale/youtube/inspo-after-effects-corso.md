@@ -579,72 +579,72 @@ Spiega il grafico di velocità in un solo passaggio esteso e non dà mai numeri:
 
 ## Prove da fare a fine corso
 
-Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una finestra corta del Video #3 prima di propagarla. Questa lista si aggiorna a ogni nuova lezione.
+Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una finestra corta del Video #3 prima di propagarla. Questa lista si aggiorna a ogni nuova lezione. Spuntata = prova preparata nella notte del 04/11, non applicata: il voto di Jacopo è sulla pagina delle prove.
 
 **Già scelta, da applicare**
 
-- [ ] **Curva sugli swipe:** `cubic-bezier(.54, 0, 0, 1)` a 1,3 s in `formats/board.py`, con il suono anticipato sul picco, a 0,39 s dall'inizio. Il codice oggi passa la curva come nome tra virgolette: serve un piccolo ritocco. Va rifatta la prova vera in HyperFrames.
+- [x] **Curva sugli swipe:** `cubic-bezier(.54, 0, 0, 1)` a 1,3 s in `formats/board.py`, con il suono anticipato sul picco, a 0,39 s dall'inizio. Il codice oggi passa la curva come nome tra virgolette: serve un piccolo ritocco. Va rifatta la prova vera in HyperFrames.
 
 **Movimento**
 
-- [ ] **Profondità sulla lavagna (fake 3D, L8):** durante lo swipe la griglia si muove meno del contenuto.
-- [ ] **Curva sulla camera (L8):** stessa famiglia con picco al 40% circa, contro `power2.inOut`, su uno zoom vero. Prima va misurata sul grafico.
-- [ ] **Curva a cupola contro curva D (v13):** stesso swipe, per capire quale regge meglio una camera.
-- [ ] **Swipe dal lato corto (Premiere L4):** stessa mossa in verticale contro quella in orizzontale di oggi. In 16:9 la strada è più breve, quindi la velocità di picco scende.
-- [ ] **Un solo gesto con leggera rotazione (v13):** posizione e orientamento insieme, 3 keyframe invece di 4.
-- [ ] **Sfondo fermo senza griglia (v13):** contro la griglia di oggi e contro il fake 3D.
-- [ ] **Frase che si accumula e camera che arretra (v13):** la parola nuova entra colorata.
-- [ ] **Scala lenta unica su tutta la plate (L3):** continua dopo l'ultimo elemento, per la regola "mai ferma".
-- [ ] **Tremolio leggero sugli elementi (`wiggle`, L8):** deve uscire uguale a ogni render e restare appena percepibile.
-- [ ] **Un maestro per plate (L3, L9):** gli elementi seguono un gruppo che fa il movimento principale, con partenze sfalsate.
+- [x] **Profondità sulla lavagna (fake 3D, L8):** durante lo swipe la griglia si muove meno del contenuto.
+- [x] **Curva sulla camera (L8):** stessa famiglia con picco al 40% circa, contro `power2.inOut`, su uno zoom vero. Picco stimato a occhio, non misurato sul grafico.
+- [x] **Curva a cupola contro curva D (v13):** stesso swipe, per capire quale regge meglio una camera.
+- [x] **Swipe dal lato corto (Premiere L4):** stessa mossa in verticale contro quella in orizzontale di oggi. In 16:9 la strada è più breve, quindi la velocità di picco scende.
+- [x] **Un solo gesto con leggera rotazione (v13):** posizione e orientamento insieme, 3 keyframe invece di 4.
+- [x] **Sfondo fermo senza griglia (v13):** contro la griglia di oggi e contro il fake 3D.
+- [x] **Frase che si accumula e camera che arretra (v13):** la parola nuova entra colorata.
+- [x] **Scala lenta unica su tutta la plate (L3):** continua dopo l'ultimo elemento, per la regola "mai ferma".
+- [x] **Tremolio leggero sugli elementi (`wiggle`, L8):** deve uscire uguale a ogni render e restare appena percepibile.
+- [x] **Un maestro per plate (L3, L9):** gli elementi seguono un gruppo che fa il movimento principale, con partenze sfalsate.
 
-- [ ] **60 frame al secondo (L11, Premiere L5):** stesso swipe a 30 e a 60 fps, con il filmato che resta a 30. Il render costa il doppio, va capito se si vede.
-- [ ] **Il fuoco segue la parola (L20):** più elementi a profondità diverse, quello nominato è nitido e gli altri leggermente sfocati. Va misurato quanto pesa sul render.
-- [ ] **Sfocatura di movimento (L19):** stesso swipe con e senza. Va capito come ottenerla in HyperFrames e quanto pesa sul render.
-- [ ] **Transizione a cavallo del taglio (L11):** la plate entra prima che finisca la frase.
+- [x] **60 frame al secondo (L11, Premiere L5):** stesso swipe a 30 e a 60 fps, con il filmato che resta a 30. Il render costa il doppio, va capito se si vede.
+- [x] **Il fuoco segue la parola (L20):** più elementi a profondità diverse, quello nominato è nitido e gli altri leggermente sfocati. Va misurato quanto pesa sul render.
+- [x] **Sfocatura di movimento (L19):** stesso swipe con e senza. Va capito come ottenerla in HyperFrames e quanto pesa sul render.
+- [x] **Transizione a cavallo del taglio (L11):** la plate entra prima che finisca la frase.
 
-- [ ] **Transizione col taglio nel picco (L14):** una sola mossa, picco stretto, cambio di plate sul massimo.
-- [ ] **Flash bianco contro light leak (L14):** uno contro l'altro sulla stessa transizione del Video #3. Restano disponibili entrambi.
-- [ ] **Colori invertiti su una frase forte (L14):** cambio di mood, da usare poco.
+- [x] **Transizione col taglio nel picco (L14):** una sola mossa, picco stretto, cambio di plate sul massimo.
+- [x] **Flash bianco contro light leak (L14):** uno contro l'altro sulla stessa transizione del Video #3. Restano disponibili entrambi.
+- [x] **Colori invertiti su una frase forte (L14):** cambio di mood, da usare poco.
 
 **Testi**
 
-- [ ] **Testo che esce da un bordo invisibile (L5):** per i titoli delle plate.
-- [ ] **Video dentro le lettere (L5):** su una parola chiave, o in un reel.
-- [ ] **Numero enorme dietro, parola davanti (L11):** per i capitoli e gli elenchi.
-- [ ] **Testo nascosto col mosaico (L11):** gli step coperti finché non li dici.
-- [ ] **Scritte dietro la testa (L10):** a Jacopo piace se fatta bene, in alcuni contesti. Pochi secondi, scontorno pulito, momento scelto.
+- [x] **Testo che esce da un bordo invisibile (L5):** per i titoli delle plate.
+- [x] **Video dentro le lettere (L5):** su una parola chiave, o in un reel.
+- [x] **Numero enorme dietro, parola davanti (L11):** per i capitoli e gli elenchi.
+- [x] **Testo nascosto col mosaico (L11):** gli step coperti finché non li dici.
+- [x] **Scritte dietro la testa (L10):** a Jacopo piace se fatta bene, in alcuni contesti. Pochi secondi, scontorno pulito, momento scelto.
 
-- [ ] **Spaziatura che si stringe (v14):** titolo che si compone, con la curva scelta.
-- [ ] **Numero che sale dentro un anello (L20):** per percentuali e dati, con l'anello che si riempie.
-- [ ] **Parola che viaggia su una linea (L19):** la linea si disegna tra due concetti e la parola ci corre sopra, con la curva scelta.
-- [ ] **Scritta 3D con spessore (v14):** per l'intro, rosso o oro su nero.
+- [x] **Spaziatura che si stringe (v14):** titolo che si compone, con la curva scelta.
+- [x] **Numero che sale dentro un anello (L20):** per percentuali e dati, con l'anello che si riempie.
+- [x] **Parola che viaggia su una linea (L19):** la linea si disegna tra due concetti e la parola ci corre sopra, con la curva scelta.
+- [x] **Scritta 3D con spessore (v14):** per l'intro, rosso o oro su nero.
 
 **Abbellimenti**
 
-- [ ] **Luce che scopre il titolo e fa da transizione (v14):** la scritta sparisce seguendo la luce.
-- [ ] **Camera che parte dentro la scritta e arretra (v14):** per intro e capitoli.
-- [ ] **Griglia circolare inclinata (L15):** griglia solo in una macchia sfumata, contro la griglia intera di oggi.
-- [ ] **Maschera a lente (L15):** una finestra che scorre e scopre un'immagine, per il moodboard.
-- [ ] **Light sweep (L9):** una luce che passa su una card o un bottone.
-- [ ] **Prossimità (L17):** un punto attraversa la plate e gli elementi vicini si scostano piano, con poca forza e distanza alta. Il punto deve voler dire qualcosa, per esempio il passaggio da un concetto all'altro.
-- [ ] **Bordo che segue la luce (L17):** sulle card il bordo luminoso gira verso il punto e si spegne con la distanza.
-- [ ] **Bagliore e vignettatura in cima alla plate (L17):** un solo strato di finish sopra a tutto, con e senza.
-- [ ] **Pezzi che si compongono (L18):** mattonelle in 3D CSS che arrivano e si chiudono in una forma, animate dalla forma finale all'indietro. Per intro e capitoli.
-- [ ] **Picco in ritardo contro curva D (L18):** sugli stessi pezzi, per capire se l'arresto secco regge o sembra un colpo.
-- [ ] **Luce che arriva con l'evento (L18):** bagliore e raggi salgono solo quando i pezzi si chiudono, contro un bagliore fisso.
-- [ ] **Forme finte 3D (L9):** cilindri con ellisse, rettangolo e sfumature, con le ombre verso l'oggetto dietro.
-- [ ] **Transizione con una forma ripetuta (L20):** la stessa forma torna a ogni cambio, va capito se regge o stanca.
-- [ ] **Onda di turbolenza (L8, L9):** come transizione, prima misurando quanto pesa sul render.
+- [x] **Luce che scopre il titolo e fa da transizione (v14):** la scritta sparisce seguendo la luce.
+- [x] **Camera che parte dentro la scritta e arretra (v14):** per intro e capitoli.
+- [x] **Griglia circolare inclinata (L15):** griglia solo in una macchia sfumata, contro la griglia intera di oggi.
+- [x] **Maschera a lente (L15):** una finestra che scorre e scopre un'immagine, per il moodboard.
+- [x] **Light sweep (L9):** una luce che passa su una card o un bottone.
+- [x] **Prossimità (L17):** un punto attraversa la plate e gli elementi vicini si scostano piano, con poca forza e distanza alta. Il punto deve voler dire qualcosa, per esempio il passaggio da un concetto all'altro.
+- [x] **Bordo che segue la luce (L17):** sulle card il bordo luminoso gira verso il punto e si spegne con la distanza.
+- [x] **Bagliore e vignettatura in cima alla plate (L17):** un solo strato di finish sopra a tutto, con e senza.
+- [x] **Pezzi che si compongono (L18):** mattonelle in 3D CSS che arrivano e si chiudono in una forma, animate dalla forma finale all'indietro. Per intro e capitoli.
+- [x] **Picco in ritardo contro curva D (L18):** sugli stessi pezzi, per capire se l'arresto secco regge o sembra un colpo.
+- [x] **Luce che arriva con l'evento (L18):** bagliore e raggi salgono solo quando i pezzi si chiudono, contro un bagliore fisso.
+- [x] **Forme finte 3D (L9):** cilindri con ellisse, rettangolo e sfumature, con le ombre verso l'oggetto dietro.
+- [x] **Transizione con una forma ripetuta (L20):** la stessa forma torna a ogni cambio, va capito se regge o stanca.
+- [x] **Onda di turbolenza (L8, L9):** come transizione, prima misurando quanto pesa sul render.
 
 **Taglio**
 
-- [ ] **Taglio a J sulle reazioni (Premiere L2):** la voce della frase dopo parte sotto la fine della reazione. Da provare su un passaggio del Video #3 o sul prossimo video, serve il tuo orecchio.
+- [x] **Taglio a J sulle reazioni (Premiere L2):** la voce della frase dopo parte sotto la fine della reazione. Da provare su un passaggio del Video #3 o sul prossimo video, serve il tuo orecchio.
 
 **Reel travel**
 
-- [ ] **Controllo 10-90 sul grading (Premiere L7):** misurare con la forma d'onda quanto dei nostri grading esce da 10-90, a partire da `pellicola-oro`. Il giudizio resta sull'occhio: il numero segnala soltanto dove si perde dettaglio.
-- [ ] **Rampa di velocità morbida (Premiere L6):** veloce, poi lento sul momento forte, con il passaggio a curva e non a scalino. Per una clip girata a 60 o 120 fps e una normale con frame inventati.
+- [x] **Controllo 10-90 sul grading (Premiere L7):** misurare con la forma d'onda quanto dei nostri grading esce da 10-90, a partire da `pellicola-oro`. Il giudizio resta sull'occhio: il numero segnala soltanto dove si perde dettaglio.
+- [x] **Rampa di velocità morbida (Premiere L6):** veloce, poi lento sul momento forte, con il passaggio a curva e non a scalino. Per una clip girata a 60 o 120 fps e una normale con frame inventati.
 
 **Suono**
 
@@ -671,3 +671,21 @@ Stesso swipe del Video #3, da "Uno strumento" a "La mappa", 2500 px a 30 fps, se
 | C: curva del corso, 1,6 s | a 0,49 s | 263 px per frame | 0,93 s | 44 px |
 
 **Cosa insegna:** la curva da sola, a parità di durata, peggiora lo scatto a 30 fps. Funziona con la sua durata: nel corso le curve durano 1,7-1,9 s. A 1,6 s il picco cade quasi dove cade oggi, quindi inizio dello swipe e suono possono restare dove sono: cambia soltanto l'atterraggio, 0,6 s più lungo. Il giudizio a occhio spetta a Jacopo.
+
+## Prove della notte (04-05/11)
+
+Tutte su materiale di prova o su copie: il taglio approvato del Video #3 e il suo 4K non sono stati toccati. Le clip si votano sulla pagina https://claude.ai/artifact/JBkKXuCWwJo6ZE5GX21SxW
+
+**Cosa ho imparato facendole**
+
+- **Render di una finestra:** `--start/--end` su un progetto lungo prepara comunque tutto il film, supera il tetto di 2 GB e si ferma dopo 20-45 minuti senza lasciare un file. Per il Video #3 si usa `window-patch.py`: 90-200 secondi per finestra. `window-patch` toglie l'audio, quindi voce ed effetti si rimettono con `mix-audio.py` su un indice ridotto alla finestra.
+- **Sfocatura di movimento:** quella nativa di HyperFrames qui non fa niente. A 240 fps e fusione dei frame si vedono scalini, perché nel picco il passo è 39 px tra una copia e l'altra. Serve una copia rallentata 4 volte, renderizzata a 240 fps: vale 960 fps.
+- **Transizione a cavallo del taglio:** anticipare solo la plate lascia quasi un secondo di lavagna vuota. Va anticipato anche il titolo, su una parola della frase che sta finendo.
+- **Tremolio:** è così leggero che la compressione normale lo cancella. Si vede solo su un file a qualità alta.
+- **Controllo 10-90:** Reel Zanzibar #2 in `pellicola-oro`, sotto il 10 in media 13,9% (punte 59,8%), sopra il 90 in media 6,2% (punte 23,5%). Faccia del Video #3, sotto il 10 in media 18,8% (punte 23,7%), sopra il 90 quasi niente.
+- **30 contro 60 fps:** render di 79 s contro 57 s su questa prova, misurati mentre girava il 4K.
+
+**Non fatto**
+
+- Un suono per elemento con tono abbassato: servono suoni scelti da Jacopo.
+- La curva al 40% resta stimata a occhio: gli originali della lezione L8 non ci sono più.
