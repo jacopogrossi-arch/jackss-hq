@@ -194,7 +194,7 @@ Registrata per ultima: nel corso viene tra v5 e v6.
 | 00:28-01:13 | Roto Bézier: si pennella il soggetto da tenere, il resto sparisce | Altro | Solo After Effects. Da noi servirebbe uno scontorno video |
 | 01:13-01:41 | Funziona per pochi secondi su video grezzi; per un video intero meglio il green screen vero | Altro | Limite dichiarato da lui |
 | 03:05 | Esporta il pezzo scontornato prima di aggiungere altro, se no il computer non regge | Metodo | Come v10 e i nostri `window-patch` |
-| **04:10-04:37** | Te scontornato sopra te vero: scritte e forme finiscono **dietro** la persona | **Metodo, da adattare** | Testo tra Jacopo e lo sfondo: effetto forte. Attenzione alla regola "mai grafiche sotto la faccia" |
+| **04:10-04:37** | Te scontornato sopra te vero: scritte e forme finiscono **dietro** la persona | **Metodo, da adattare** | Testo tra Jacopo e lo sfondo: effetto forte, da usare in contesti scelti |
 
 ### v12: Lezione AE 11, come ragiona su un video vero (31 min)
 
@@ -311,7 +311,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 - [ ] **Video dentro le lettere (L5):** su una parola chiave, o in un reel.
 - [ ] **Numero enorme dietro, parola davanti (L11):** per i capitoli e gli elenchi.
 - [ ] **Testo nascosto col mosaico (L11):** gli step coperti finché non li dici.
-- [ ] **Scritte dietro la persona (L10):** con lo scontorno, solo su pochi secondi.
+- [ ] **Scritte dietro la testa (L10):** a Jacopo piace se fatta bene, in alcuni contesti. Pochi secondi, scontorno pulito, momento scelto.
 
 **Abbellimenti**
 
