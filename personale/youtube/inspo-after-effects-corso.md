@@ -32,6 +32,7 @@ Sono parti del corso "Cash Flow Contents". Legenda: **Metodo** = serve per fare 
 | v18 `18-17-28` | AE 17 (probabile) | Effetto di prossimità: l'ambiente reagisce a un punto | Medio-alto: un'idea nuova |
 | v19 `18-33-32` | AE 18 (probabile) | Cubi in 3D classico: pezzi che si compongono in un logo | Medio-alto: una quarta curva |
 | v20 `18-49-23` | AE 19 (probabile) | Testo su un tracciato che corre dentro un tubo colorato | Medio: utile per i collegamenti |
+| v21 `18-57-51` | AE 20, ultima | Profondità di campo: il fuoco si sposta tra gli elementi | **Alto: nuova per le plate** |
 | v6 `14-20-28` | AE 6 | Motion tracking | Medio |
 | v7 `14-51-15` | AE 7 | Lock-on tracking | Medio |
 | v8 `15-09-55` | AE 8 | Fake 3D, griglia, espressioni, primo pezzo dell'animazione finale | **Alto** |
@@ -384,6 +385,25 @@ La scritta scorre lungo una linea curva e un tubo colorato la segue: se la linea
 
 Per le plate il pezzo buono non è l'effetto a tubo, che è molto suo. È la parola che viaggia sulla linea che collega due concetti.
 
+### v21: Lezione AE 20, profondità di campo (14 min)
+
+È l'ultima del modulo: la pagina dice "Lezione 20 of 20, Modulo 3, After Effects". Lui dice che usa questa tecnica "spessissimo". L'esempio è un anello di caricamento in stile Apple Watch col numero 70.
+
+| Minuto | Cosa | Tipo | Collegamento |
+|---|---|---|---|
+| 00:37-01:30, 13:04-13:31 | Pubblicità delle consulenze a pagamento | Salta | |
+| **01:57-02:52** | Cos'è: la camera sfoca ciò che non è alla distanza di fuoco. Non funziona col 3D avanzato | **Metodo** | Da noi non esiste la camera vera: si imita con una sfocatura per elemento, in base alla distanza |
+| 03:36-04:02 | Liquid Glass: sa farlo ma non lo insegna, è "una roba estetica" | Metodo | Stessa logica di L14: niente effetti di moda senza una funzione |
+| 04:30-05:13 | Anello che si riempie, angoli arrotondati e font SF Rounded | Metodo | Il riempimento è il disegno progressivo di L19. Il font è di Apple, non lo useremmo |
+| **05:13-06:26** | Il numero sale da dentro il cerchio grazie a una maschera sul cerchio duplicato | **Metodo** | Il bordo invisibile di L5, con un cerchio al posto del rettangolo |
+| **06:54-08:23** | Null e camera collegati, il fuoco cambia muovendosi in profondità. "Simula il fuoco di una videocamera reale" in una scena di elementi 2D | **Metodo** | Si somma al fake 3D di L8: prima la profondità nel movimento, ora anche nella nitidezza |
+| **08:37-09:30** | Si regola l'apertura per mettere a fuoco ciò che serve. Livello di sfocatura non troppo alto, altrimenti "diventa irrealistico" | **Metodo** | Sfocatura leggera: è il limite da tenere |
+| **10:06-11:38** | Tre copie a profondità diverse, la camera passa dall'una all'altra e mette a fuoco quella giusta | **Metodo, il cuore** | La plate con più concetti: il fuoco segue la parola che stai dicendo, il resto resta in scena ma arretra |
+| 11:53-12:19 | Transizioni con la stessa forma ripetuta, cita un trailer di Apple | Metodo | Da guardare con occhio critico, dice lui |
+| **12:19-13:04** | Questi strumenti vanno dentro una scena costruita, con uno script di base. Lavora con Premiere e After Effects, senza nemmeno Dynamic Link | **Metodo** | La nostra regola: la plate nasce dalla frase. Il flusso semplice conferma il principio del repo |
+
+Il rischio per noi: la sfocatura su più elementi può pesare sul render, va misurata.
+
 ### Il filo che lega i video
 
 1. **Una gerarchia, non tanti oggetti:** scatole (v2), ragnatela (v4), precomposizione (v5), oggetto Null (v6) sono la stessa idea detta quattro volte. Un elemento porta il movimento, gli altri lo seguono.
@@ -424,6 +444,8 @@ Correzione del 04/11: picco e percentuali della riga "A mano, quadrato" sono mis
 **Nuovo dalla Lezione 18 (circa min 11):** due curve nella stessa mossa. I pezzi hanno il **picco in ritardo**: accelerano e si fermano di colpo, con il massimo circa all'85% della durata. La camera ha un picco stretto circa al 40% e una coda lunga, la stessa famiglia dello zoom di L8. Valori letti a occhio su frame sfocati. Le famiglie diventano quattro: la nuova serve quando dei pezzi si chiudono su qualcosa. L'arresto secco va provato con attenzione, perché può sembrare il colpo che non ti piace.
 
 **Nuovo dalla Lezione 19 (circa min 4:30):** nel grafico visibile la velocità sale subito, con il massimo circa al 20% della durata, e poi scende in una coda lunga. La cima è tagliata dallo schermo e la proprietà non si legge bene: probabilmente è il testo che scorre. Letto a occhio. È la stessa famiglia del picco in anticipo, come la rotazione finale di v5.
+
+**Nuovo dalla Lezione 20 (circa min 11:30):** è il grafico più vicino alla nostra lavagna, perché mostra due spostamenti di camera uno dopo l'altro, con una sosta in mezzo. Ognuno ha il picco circa al 20% e una coda lunga, e dura circa 1,8 secondi: più della nostra D a 1,3 s. Valori letti a occhio. Conferma il picco in anticipo per le mosse di scena. Il riempimento dell'anello (circa min 4) è invece una cupola quasi simmetrica.
 
 **Cosa significa, a parole:** il movimento parte piano per un attimo, scatta forte intorno al 30% della durata, poi passa quasi metà del tempo ad assestarsi sull'ultimo 10% di strada. Prima lo stacco, poi la planata.
 
@@ -475,6 +497,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 - [ ] **Un maestro per plate (L3, L9):** gli elementi seguono un gruppo che fa il movimento principale, con partenze sfalsate.
 
 - [ ] **60 frame al secondo (L11):** stesso swipe a 30 e a 60 fps. Il render costa il doppio, va capito se si vede.
+- [ ] **Il fuoco segue la parola (L20):** più elementi a profondità diverse, quello nominato è nitido e gli altri leggermente sfocati. Va misurato quanto pesa sul render.
 - [ ] **Sfocatura di movimento (L19):** stesso swipe con e senza. Va capito come ottenerla in HyperFrames e quanto pesa sul render.
 - [ ] **Transizione a cavallo del taglio (L11):** la plate entra prima che finisca la frase.
 
@@ -491,6 +514,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 - [ ] **Scritte dietro la testa (L10):** a Jacopo piace se fatta bene, in alcuni contesti. Pochi secondi, scontorno pulito, momento scelto.
 
 - [ ] **Spaziatura che si stringe (v14):** titolo che si compone, con la curva scelta.
+- [ ] **Numero che sale dentro un anello (L20):** per percentuali e dati, con l'anello che si riempie.
 - [ ] **Parola che viaggia su una linea (L19):** la linea si disegna tra due concetti e la parola ci corre sopra, con la curva scelta.
 - [ ] **Scritta 3D con spessore (v14):** per l'intro, rosso o oro su nero.
 
@@ -508,6 +532,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 - [ ] **Picco in ritardo contro curva D (L18):** sugli stessi pezzi, per capire se l'arresto secco regge o sembra un colpo.
 - [ ] **Luce che arriva con l'evento (L18):** bagliore e raggi salgono solo quando i pezzi si chiudono, contro un bagliore fisso.
 - [ ] **Forme finte 3D (L9):** cilindri con ellisse, rettangolo e sfumature, con le ombre verso l'oggetto dietro.
+- [ ] **Transizione con una forma ripetuta (L20):** la stessa forma torna a ogni cambio, va capito se regge o stanca.
 - [ ] **Onda di turbolenza (L8, L9):** come transizione, prima misurando quanto pesa sul render.
 
 **Suono**
@@ -519,7 +544,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 ## Limiti
 
 - La mappa nasce dall'intero parlato di tutti i video e da un frame ogni 30 secondi: i frame sono stati studiati da vicino solo nei punti sui grafici.
-- Lezioni AE 1-11 e il modulo avanzato registrato fino alla 19. Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
+- Modulo After Effects registrato tutto, dalla 1 alla 20: la pagina di v21 dice 20 di 20, quindi l'ordine dedotto regge. Per v13 e v14 il numero resta probabile. Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
 - Video a 720p e compressi. La curva è stata letta con precisione solo in v3 e nella scala di v5.
 - Sono esercizi su forme e testi: le lezioni viste non mostrano motion graphics montate su un video con il volto.
 - Il trascritto è automatico e alcuni nomi sono storpiati. Il creator citato in v3 è probabilmente Iman Gadzhi, da confermare.
