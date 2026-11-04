@@ -385,7 +385,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 - [ ] **Transizione a cavallo del taglio (L11):** la plate entra prima che finisca la frase.
 
 - [ ] **Transizione col taglio nel picco (L14):** una sola mossa, picco stretto, cambio di plate sul massimo.
-- [ ] **Flash bianco (L14):** da aggiungere accanto ai light leak, che restano. Capire quando usare l'uno e quando l'altro.
+- [ ] **Flash bianco contro light leak (L14):** uno contro l'altro sulla stessa transizione del Video #3. Restano disponibili entrambi.
 - [ ] **Colori invertiti su una frase forte (L14):** cambio di mood, da usare poco.
 
 **Testi**
