@@ -22,6 +22,8 @@ Sono parti del corso "Cash Flow Contents". Legenda: **Metodo** = serve per fare 
 | v4 `13-01-11` | AE 3 | Titolo animato, collegare i livelli | Alto |
 | v5 `13-49-38` | AE 4 | Shape morphing, tracciato Bézier | Alto |
 | v10 `16-10-22` | AE 5 | Testo con il video dentro, testo che esce da un bordo | Medio-alto |
+| v11 `16-25-02` | AE 10 | Scontorno senza green screen | Basso |
+| v12 `16-31-01` | AE 11 | Montaggio completo di un video cliente, dal grezzo alla plate | **Alto, il ragionamento intero** |
 | v6 `14-20-28` | AE 6 | Motion tracking | Medio |
 | v7 `14-51-15` | AE 7 | Lock-on tracking | Medio |
 | v8 `15-09-55` | AE 8 | Fake 3D, griglia, espressioni, primo pezzo dell'animazione finale | **Alto** |
@@ -185,6 +187,43 @@ Registrata per ultima: nel corso viene tra v5 e v6.
 | 11:43 | Differenza tra alfa e luma: la spiega "detto facile", in modo approssimativo | Salta | Non è un riferimento tecnico |
 | 12:13-13:16 | Maschera disegnata con il tracciato Bézier | Metodo | v5 |
 
+### v11: Lezione AE 10, fake green screen (5 min)
+
+| Minuto | Cosa | Tipo | Collegamento |
+|---|---|---|---|
+| 00:28-01:13 | Roto Bézier: si pennella il soggetto da tenere, il resto sparisce | Altro | Solo After Effects. Da noi servirebbe uno scontorno video |
+| 01:13-01:41 | Funziona per pochi secondi su video grezzi; per un video intero meglio il green screen vero | Altro | Limite dichiarato da lui |
+| 03:05 | Esporta il pezzo scontornato prima di aggiungere altro, se no il computer non regge | Metodo | Come v10 e i nostri `window-patch` |
+| **04:10-04:37** | Te scontornato sopra te vero: scritte e forme finiscono **dietro** la persona | **Metodo, da adattare** | Testo tra Jacopo e lo sfondo: effetto forte. Attenzione alla regola "mai grafiche sotto la faccia" |
+
+### v12: Lezione AE 11, come ragiona su un video vero (31 min)
+
+Chiude la parte tecnica e apre il modulo sugli short. Monta un video verticale da zero e improvvisa: è la lezione che mette insieme tutte le altre.
+
+| Minuto | Cosa | Tipo | Collegamento |
+|---|---|---|---|
+| 00:57-01:50 | Video iPhone troppo luminoso: si cambia lo spazio colore di lavoro, non l'esposizione | Altro, utile | Il nostro D-Log → 709: prima il tag giusto, poi il colore |
+| 01:50-03:08 | Ordine: prima la correzione colore, poi l'inquadratura, poi i tagli | Metodo | La nostra pipeline |
+| 03:31 | Occhi sempre alla stessa altezza | Metodo | Da controllare sulla faccia in PiP |
+| 04:10-07:33 | Taglia ascoltando, fino a far sentire tutte le lettere | Metodo | Le nostre regole di taglio |
+| **07:34** | Dice che lavora a 60 frame al secondo | **Metodo, da verificare** | Noi siamo a 30: con la curva il passo dello swipe si dimezzerebbe. La registrazione è a 30, quindi sul video non si può controllare |
+| 07:45-07:49 | Livello di regolazione con scala sopra la clip: la camera si muove anche sulla faccia | Metodo | Il nostro zoom sulla faccia |
+| 07:58-08:45 | Non sai cosa animare? Metti un B-roll di quello che dice | Metodo | La nostra regola B-roll |
+| 08:45-09:11 | I primi 5 secondi sono l'hook: rimanda al modulo successivo | Altro | Virality Predictor: leva sui primi 15 secondi |
+| **09:11-09:40** | **"Sono questi quattro step": se lo dice, devi farli vedere.** La plate nasce dalla frase | **Metodo, il punto chiave** | Stessa regola di Joseph: la plate sulla parola che la nomina |
+| 10:08-11:23 | Sfondo sfumatura più griglia, titolo, bagliore: lo fai una volta e lo copi su tutto | Metodo | Il preset è questo |
+| 13:52 | "Sto improvvisando": niente progetto prima | Metodo | Scene improvvisate, nota del 01/11 |
+| 15:09-16:32 | Il numero enorme dietro, la parola davanti, fusi con una modalità | **Metodo** | Gerarchia: numero grande e testo sopra. Provabile con `mix-blend-mode` |
+| 17:24-17:51 | Prima di copiare un gruppo, tira fuori il contenuto: se no cambiano tutte le copie | Salta | Solo After Effects |
+| 18:19 | Cambia colore a ogni copia con un solo effetto | Metodo | Per noi basta una variabile CSS |
+| **19:46-20:12** | Il testo vero non serve: lorem ipsum e mosaico, per creare curiosità | **Metodo, da decidere** | Nascondere gli step finché non li dice |
+| **21:03-21:49** | Ogni pallina collegata al suo testo, timeline pulita: "si lavora così" | **Metodo** | Il filo del corso |
+| **24:25** | Gioca con i tempi: elementi sfalsati a scala | **Metodo** | Sulla timeline si vede una scaletta precisa |
+| 24:46-25:19 | Wiggle su tutto e posterizza: il suo stile short | Altro, stile | Non per le nostre plate |
+| **26:12-27:34** | Scala finale sul livello di regolazione, con la curva a picco | **Metodo** | Nel grafico si vede la stessa famiglia, a occhio |
+| **28:11-28:49** | Niente "mortume" tra le clip: la transizione sta **a cavallo** del taglio | **Metodo** | Plate che entra prima che finisca la frase |
+| **29:27-30:20** | Sound design: un clic per ogni elemento, abbassa il tono di 10 per dargli peso | **Metodo, da sentire** | Tu non vuoi i pop: va provato solo con suoni scelti da te. Il tono cambiato è un'idea nuova |
+
 ### Il filo che lega i video
 
 1. **Una gerarchia, non tanti oggetti:** scatole (v2), ragnatela (v4), precomposizione (v5), oggetto Null (v6) sono la stessa idea detta quattro volte. Un elemento porta il movimento, gli altri lo seguono.
@@ -263,10 +302,16 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 - [ ] **Tremolio leggero sugli elementi (`wiggle`, L8):** deve uscire uguale a ogni render e restare appena percepibile.
 - [ ] **Un maestro per plate (L3, L9):** gli elementi seguono un gruppo che fa il movimento principale, con partenze sfalsate.
 
+- [ ] **60 frame al secondo (L11):** stesso swipe a 30 e a 60 fps. Il render costa il doppio, va capito se si vede.
+- [ ] **Transizione a cavallo del taglio (L11):** la plate entra prima che finisca la frase.
+
 **Testi**
 
 - [ ] **Testo che esce da un bordo invisibile (L5):** per i titoli delle plate.
 - [ ] **Video dentro le lettere (L5):** su una parola chiave, o in un reel.
+- [ ] **Numero enorme dietro, parola davanti (L11):** per i capitoli e gli elenchi.
+- [ ] **Testo nascosto col mosaico (L11):** gli step coperti finché non li dici.
+- [ ] **Scritte dietro la persona (L10):** con lo scontorno, solo su pochi secondi.
 
 **Abbellimenti**
 
@@ -274,12 +319,16 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 - [ ] **Forme finte 3D (L9):** cilindri con ellisse, rettangolo e sfumature, con le ombre verso l'oggetto dietro.
 - [ ] **Onda di turbolenza (L8, L9):** come transizione, prima misurando quanto pesa sul render.
 
+**Suono**
+
+- [ ] **Un suono per elemento con tono abbassato (L11):** solo con suoni scelti da te, da giudicare a orecchio.
+
 **Da lasciare fuori:** posterizza tempo sulle plate, rimbalzo del bottone, marionetta, green screen.
 
 ## Limiti
 
 - La mappa nasce dall'intero parlato di tutti i video e da un frame ogni 30 secondi: i frame sono stati studiati da vicino solo nei punti sui grafici.
-- Lezioni 1-9 registrate. La Lezione 9 annuncia almeno un'altra lezione, su come scontornare senza green screen e sul lavoro tra After Effects e Premiere.
+- Lezioni AE 1-11 registrate: la parte tecnica è chiusa. La Lezione 11 annuncia il modulo sugli short: retention e hook.
 - Video a 720p e compressi. La curva è stata letta con precisione solo in v3 e nella scala di v5.
 - Sono esercizi su forme e testi: le lezioni viste non mostrano motion graphics montate su un video con il volto.
 - Il trascritto è automatico e alcuni nomi sono storpiati. Il creator citato in v3 è probabilmente Iman Gadzhi, da confermare.
