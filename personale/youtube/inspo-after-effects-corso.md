@@ -39,6 +39,7 @@ Sono parti del corso "Cash Flow Contents". Legenda: **Metodo** = serve per fare 
 | p4 `19-56-21` | Premiere 5 | Stabilizzazione ed esportazione | Basso per le plate |
 | p5 `20-37-09` | Premiere 6 | Time remapping: rallenty, accelerazioni | Medio: per i reel travel |
 | p6 `20-26-27` | Premiere 6 | Falsa partenza della stessa lezione, 25 secondi | Nullo |
+| p7 `20-45-27` | Premiere 7 | Colore: correzione, grading, forma d'onda, LUT | Medio: una regola di controllo per il grading |
 | v6 `14-20-28` | AE 6 | Motion tracking | Medio |
 | v7 `14-51-15` | AE 7 | Lock-on tracking | Medio |
 | v8 `15-09-55` | AE 8 | Fake 3D, griglia, espressioni, primo pezzo dell'animazione finale | **Alto** |
@@ -483,7 +484,24 @@ Per le plate non serve. Serve per i reel travel. La registrazione è completa.
 | **04:37-05:49** | Rampa: veloce, poi lento, poi normale, con due tagli | **Metodo** | Vicino ai tuoi stacchi a tempo di musica. Vedi la prova in lista |
 | 05:58-07:15 | Con la curva Bézier il cambio di velocità diventa morbido. Sulla sua versione non c'è e lo mostra sull'opacità | Metodo | La stessa regola delle plate: anche la velocità del filmato non va a scalini |
 
-La prossima è la Lezione 7.
+### p7: Premiere, Lezione 7, il colore (31 min, più un minuto di coda)
+
+La lezione separa due passaggi. La **color correction** è oggettiva: porta il video a uno standard fedele all'occhio, guardando i grafici. Il **color grading** viene dopo ed è gusto: dà l'impronta del brand. Non si fa il secondo senza il primo.
+
+**Cosa ci serve:**
+
+- **La regola 10-90 (min 13:46):** sulla forma d'onda i valori restano tra 10 e 90 circa. Sotto e sopra si perde dettaglio. È un numero che possiamo controllare da soli sui nostri grading.
+- **Il vettorscopio (min 12:28):** più la macchia è piccola, meno il video è saturo. Da lì si legge anche il colore dominante.
+- **Ombre fredde, luci calde (min 25:34):** il suo look alla 007 tiene la pelle calda e lo sfondo freddo, così aumenta la distanza tra i due. Lavora anche con le curve tonalità/saturazione, un perno per colore.
+- **Ritocchi piccoli (min 20:23):** toglie un po' di rosso dalle luci con la curva. Lo definisce impercettibile, ma importante.
+
+**Dove non coincide con noi:**
+
+- Sconsiglia il formato log nel 90% dei casi, perché per i suoi lavori non serve. Noi giriamo in D-Log e il flusso funziona, quindi il consiglio non cambia niente.
+- Sconsiglia le LUT perché lasciano meno margine. Noi usiamo le LUT ufficiali DJI solo per passare da D-Log a Rec.709, che è un altro uso.
+- Il trucco di appiattire una clip normale per metterci sopra una LUT lo chiama lui stesso "maccheronico". Da non copiare.
+
+L'ultimo fotogramma mostra la pagina del corso sulla **Lezione 8, Maschere e Testi**: è la prossima.
 
 ### Il filo che lega i video
 
@@ -625,6 +643,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 
 **Reel travel**
 
+- [ ] **Controllo 10-90 sul grading (Premiere L7):** misurare con la forma d'onda quanto dei nostri grading esce da 10-90, a partire da `pellicola-oro`. Il giudizio resta sull'occhio: il numero segnala soltanto dove si perde dettaglio.
 - [ ] **Rampa di velocità morbida (Premiere L6):** veloce, poi lento sul momento forte, con il passaggio a curva e non a scalino. Per una clip girata a 60 o 120 fps e una normale con frame inventati.
 
 **Suono**
@@ -636,7 +655,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 ## Limiti
 
 - La mappa nasce dall'intero parlato di tutti i video e da un frame ogni 30 secondi: i frame sono stati studiati da vicino solo nei punti sui grafici.
-- Modulo After Effects registrato tutto, dalla 1 alla 20: la pagina di v21 dice 20 di 20, quindi l'ordine dedotto regge. Per v13 e v14 il numero resta probabile. Del modulo Premiere sono mappate le lezioni 2-6 su 10. Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
+- Modulo After Effects registrato tutto, dalla 1 alla 20: la pagina di v21 dice 20 di 20, quindi l'ordine dedotto regge. Per v13 e v14 il numero resta probabile. Del modulo Premiere sono mappate le lezioni 2-7 su 10. Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
 - Video a 720p e compressi. La curva è stata letta con precisione solo in v3 e nella scala di v5.
 - Sono esercizi su forme e testi: le lezioni viste non mostrano motion graphics montate su un video con il volto.
 - Il trascritto è automatico e alcuni nomi sono storpiati. Il creator citato in v3 è probabilmente Iman Gadzhi, da confermare.
