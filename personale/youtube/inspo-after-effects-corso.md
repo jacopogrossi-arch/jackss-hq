@@ -682,6 +682,7 @@ Tutte su materiale di prova o su copie: il taglio approvato del Video #3 e il su
 - **Sfocatura di movimento:** quella nativa di HyperFrames qui non fa niente. A 240 fps e fusione dei frame si vedono scalini, perché nel picco il passo è 39 px tra una copia e l'altra. Serve una copia rallentata 4 volte, renderizzata a 240 fps: vale 960 fps.
 - **Transizione a cavallo del taglio:** anticipare solo la plate lascia quasi un secondo di lavagna vuota. Va anticipato anche il titolo, su una parola della frase che sta finendo.
 - **Tremolio:** è così leggero che la compressione normale lo cancella. Si vede solo su un file a qualità alta.
+- **Peso sul render:** turbolenza 74 s contro 65 s di una prova senza effetto. Il fuoco ha 20 s di cattura per 150 frame, il valore più basso: la prova base di confronto era falsata dall'avvio. Sfocatura di movimento a mano 600 s contro 57 s, circa dieci volte.
 - **Controllo 10-90:** Reel Zanzibar #2 in `pellicola-oro`, sotto il 10 in media 13,9% (punte 59,8%), sopra il 90 in media 6,2% (punte 23,5%). Faccia del Video #3, sotto il 10 in media 18,8% (punte 23,7%), sopra il 90 quasi niente.
 - **30 contro 60 fps:** render di 79 s contro 57 s su questa prova, misurati mentre girava il 4K.
 
