@@ -247,27 +247,34 @@ Spiega il grafico di velocità in un solo passaggio esteso e non dà mai numeri:
 - **Una precomposizione raggruppa, poi si anima il gruppo.** Morphing e tracciato finiscono in un solo blocco: bagliore, rotazione e scala vanno sul blocco intero. Così il movimento finale è uno solo, non tanti.
 - **Spinge i parametri al massimo per capirli**, poi torna indietro.
 
-## Cosa applicherei alla skill
+## Prove da fare a fine corso
 
-Da provare su una finestra corta prima di propagare, come da nota del 04/11:
+Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una finestra corta del Video #3 prima di propagarla. Questa lista si aggiorna a ogni nuova lezione.
 
-1. **Nuova curva `stacco`, `cubic-bezier(.54, 0, 0, 1)`, sullo swipe di lavagna** in `formats/board.py`, al posto di `SWIPE_EASE = "power3.inOut"`. È il candidato più diretto per il movimento di camera che cerchi. GSAP accetta una funzione come curva; il codice oggi passa un nome tra virgolette, quindi serve un piccolo ritocco. La funzione è già provata in Node, non ancora in un render.
-2. **Una sola scala lenta su tutta la plate**, che continua dopo l'ultimo elemento, per la regola "mai ferma".
-3. **Un maestro per plate:** gli elementi figli di un gruppo che fa il movimento finale.
+**Già scelta, da applicare**
 
-Nei suoi esempi la curva dura 1,7-1,9 secondi. Su mosse molto più corte il picco potrebbe diventare uno scatto: da verificare sulla prova.
+- [ ] **Curva sugli swipe:** `cubic-bezier(.54, 0, 0, 1)` a 1,3 s in `formats/board.py`, con il suono anticipato sul picco, a 0,39 s dall'inizio. Il codice oggi passa la curva come nome tra virgolette: serve un piccolo ritocco. Va rifatta la prova vera in HyperFrames.
 
-### Dopo le lezioni 5, 8 e 9
+**Movimento**
 
-In ordine di convenienza:
+- [ ] **Profondità sulla lavagna (fake 3D, L8):** durante lo swipe la griglia si muove meno del contenuto.
+- [ ] **Curva sulla camera (L8):** stessa famiglia con picco al 40% circa, contro `power2.inOut`, su uno zoom vero. Prima va misurata sul grafico.
+- [ ] **Scala lenta unica su tutta la plate (L3):** continua dopo l'ultimo elemento, per la regola "mai ferma".
+- [ ] **Tremolio leggero sugli elementi (`wiggle`, L8):** deve uscire uguale a ogni render e restare appena percepibile.
+- [ ] **Un maestro per plate (L3, L9):** gli elementi seguono un gruppo che fa il movimento principale, con partenze sfalsate.
 
-1. **Profondità sulla lavagna (fake 3D):** durante lo swipe la griglia di sfondo si muove meno del contenuto. Costa poco e rende la scena più ricca senza aggiungere grafiche. Da provare su una finestra.
-2. **Curva anche sulla camera:** stessa famiglia, picco più avanti, come lo zoom della Lezione 8. Da confrontare con `power2.inOut` su uno zoom vero.
-3. **Testo che esce da un bordo:** per i titoli delle plate, con la curva scelta.
-4. **Testo con il video dentro:** solo su una parola che lo merita.
-5. **Light sweep e turbolenza:** dopo una prova di peso sul render.
+**Testi**
 
-Da lasciare fuori: posterizza tempo sulle plate, rimbalzo del bottone, marionetta, green screen.
+- [ ] **Testo che esce da un bordo invisibile (L5):** per i titoli delle plate.
+- [ ] **Video dentro le lettere (L5):** su una parola chiave, o in un reel.
+
+**Abbellimenti**
+
+- [ ] **Light sweep (L9):** una luce che passa su una card o un bottone.
+- [ ] **Forme finte 3D (L9):** cilindri con ellisse, rettangolo e sfumature, con le ombre verso l'oggetto dietro.
+- [ ] **Onda di turbolenza (L8, L9):** come transizione, prima misurando quanto pesa sul render.
+
+**Da lasciare fuori:** posterizza tempo sulle plate, rimbalzo del bottone, marionetta, green screen.
 
 ## Limiti
 
