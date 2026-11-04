@@ -81,7 +81,7 @@ if a.music:
     if not os.path.exists(tr):
         sys.exit("track not found: " + a.music)
     final = os.path.join(tmp, "music.wav")
-    fcm = ("[1:a]loudnorm=I=-20:TP=-2:LRA=11,aloop=loop=-1:size=2e9,atrim=0:%.3f,asetpts=PTS-STARTPTS,volume=%.1fdB,afade=t=in:d=2,afade=t=out:st=%.3f:d=2[bed];"
+    fcm = ("[1:a]loudnorm=I=-20:TP=-2:LRA=11,aresample=48000,aloop=loop=-1:size=2e9,atrim=0:%.3f,asetpts=PTS-STARTPTS,volume=%.1fdB,afade=t=in:d=2,afade=t=out:st=%.3f:d=2[bed];"
            "[0:a]asplit=2[voice][sc];[bed][sc]sidechaincompress=threshold=%g:ratio=%g:attack=15:release=450[duck];[voice][duck]amix=inputs=2:duration=first:dropout_transition=0:normalize=0,alimiter=limit=0.84:level=0[a]"
            % (dur, a.music_db, max(0.0, dur - 2), a.duck_threshold, a.duck_ratio))
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", norm, "-i", tr, "-filter_complex", fcm, "-map", "[a]", "-ar", "48000", final], check=True)
