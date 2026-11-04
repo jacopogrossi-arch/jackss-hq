@@ -17,9 +17,15 @@ from scene import CSS as SCENE_CSS
 
 PITCH = (2500, 1500)         # distance between pages on the board: the camera always crosses empty grid
 PUSH = 0.9                   # face <-> board swipe, seconds
-SWIPE = 1.0                  # page -> page swipe, seconds
-SWIPE_EASE = "power3.inOut"  # slow start, fast middle, soft landing
+SWIPE = 1.3                  # page -> page swipe, seconds: the course curve at 1.3 s (curve D, chosen by Jacopo 04/11; 1.6 s was too slow, and at 1.0 s it jumps at 30 fps)
+SWIPE_EASE = "window.__hand" # cubic-bezier(.54,0,0,1), a JS function: fast early, long soft landing
+SWIPE_PEAK = 0.3             # where the curve is fastest, as a share of the swipe: the sound sits there
+SWIPE_LEAD = 0.05 + SWIPE_PEAK * SWIPE   # the peak falls 0.05 s before the page's time, where the old swipe had it
+PUSH_EASE = "power3.inOut"   # face <-> board: slow start, fast middle, soft landing
 GLIDE_EASE = "power2.inOut"
+HAND_JS = ("window.__hand = window.__hand || function (x) { if (x <= 0) return 0; if (x >= 1) return 1; var a = 0, b = 1, t = x, k, u, X;"
+           " for (k = 0; k < 40; k++) { t = (a + b) / 2; u = 1 - t; X = 3 * u * u * t * .54 + 3 * u * t * t * 0 + t * t * t; if (X < x) a = t; else b = t; }"
+           " u = 1 - t; return 3 * u * t * t + t * t * t; };")   # cubic-bezier(.54,0,0,1): y1 is 0 and y2 is 1, solved by bisection so every frame gives the same value
 DRIFT = 0.006                # between two moves the camera keeps pushing in, per second
 GROUP = 0.8                  # elements landing closer than this share one framing
 CSS = """
@@ -73,9 +79,9 @@ class Board:
         moves = []   # (start, duration, (board x, board y, scale), ease)
         for n, p in enumerate(self.pages):
             ox, oy = p["ox"], p["oy"]
-            end = p["b"] - (0.5 * SWIPE if n + 1 < len(self.pages) else 0.45 * PUSH)
+            end = p["b"] - (SWIPE_LEAD + 0.06 if n + 1 < len(self.pages) else 0.45 * PUSH)
             if n:
-                moves.append((p["a"] - 0.55 * SWIPE, SWIPE, (ox + 960, oy + 540, 1.0), SWIPE_EASE))
+                moves.append((p["a"] - SWIPE_LEAD, SWIPE, (ox + 960, oy + 540, 1.0), SWIPE_EASE))
             free = moves[-1][0] + moves[-1][1] if moves else p["a"] + 0.45 * PUSH
             if p["cam"]:
                 todo = [(t - 0.45, (x, y, s), d) for t, x, y, s, d in p["cam"]]
@@ -106,7 +112,7 @@ class Board:
         h0, h1 = t_in - 0.5 * PUSH, t_out + 0.5 * PUSH
         W, R = "#%s-w" % cid, "#%s-root" % cid
         tf = lambda c: "x:%.1f,y:%.1f,scale:%.4f" % (960 - c[2] * c[0], 540 - c[2] * c[1], c[2])
-        js, inner, snd = [], [], []
+        js, inner, snd = [HAND_JS], [], []
         xs, ys = [p["ox"] for p in P], [p["oy"] for p in P]
         grid = '<div class="bd-grid" style="left:%dpx;top:%dpx;width:%dpx;height:%dpx"></div>' % (min(xs) - 2400, min(ys) - 2400, max(xs) - min(xs) + 6720, max(ys) - min(ys) + 5840)
         n_snd = 0
@@ -134,25 +140,25 @@ class Board:
                 cur = dr
             if to is None:
                 break
-            js.append("tl.fromTo('%s', { %s }, { %s, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (W, tf(cur), tf(to), d, ease, t0))
+            js.append("tl.fromTo('%s', { %s }, { %s, duration:%.3f, ease:%s, immediateRender:false }, %.3f);" % (W, tf(cur), tf(to), d, ease if ease == SWIPE_EASE else "'%s'" % ease, t0))
             cur, t = to, t0 + d
             if ease == SWIPE_EASE:
-                snd.append('<audio id="sfx-%s-s%d" src="sfx/plate-in.mp3" data-start="%.3f" data-duration="%.2f" data-track-index="%d" data-volume="1"></audio>' % (cid, len(snd), t0 + 0.5 * d - li, di, self.ta + 1))
+                snd.append('<audio id="sfx-%s-s%d" src="sfx/plate-in.mp3" data-start="%.3f" data-duration="%.2f" data-track-index="%d" data-volume="1"></audio>' % (cid, len(snd), t0 + SWIPE_PEAK * d - li, di, self.ta + 1))
         # face <-> board: one continuous swipe, the face goes out as the board comes in
         js.append("tl.set('%s', { x:%d }, 0);" % (R, 1920 if self.enter else 0))
         if self.enter:
-            js.append("tl.fromTo('%s', { x:1920 }, { x:0, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (R, PUSH, SWIPE_EASE, h0))
-            js.append("tl.fromTo('#video-wrap', { x:0 }, { x:-1920, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (PUSH, SWIPE_EASE, h0))
+            js.append("tl.fromTo('%s', { x:1920 }, { x:0, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (R, PUSH, PUSH_EASE, h0))
+            js.append("tl.fromTo('#video-wrap', { x:0 }, { x:-1920, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (PUSH, PUSH_EASE, h0))
             snd.append('<audio id="sfx-%s-in" src="sfx/plate-in.mp3" data-start="%.3f" data-duration="%.2f" data-track-index="%d" data-volume="1"></audio>' % (cid, max(h0 + 0.5 * PUSH - li, 0), di, self.ta))
         if self.leave:
-            js.append("tl.fromTo('%s', { x:0 }, { x:-1920, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (R, PUSH, SWIPE_EASE, h1 - PUSH))
-            js.append("tl.fromTo('#video-wrap', { x:1920 }, { x:0, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (PUSH, SWIPE_EASE, h1 - PUSH))
+            js.append("tl.fromTo('%s', { x:0 }, { x:-1920, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (R, PUSH, PUSH_EASE, h1 - PUSH))
+            js.append("tl.fromTo('#video-wrap', { x:1920 }, { x:0, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (PUSH, PUSH_EASE, h1 - PUSH))
             snd.append('<audio id="sfx-%s-out" src="sfx/plate-out.mp3" data-start="%.3f" data-duration="%.2f" data-track-index="%d" data-volume="1"></audio>' % (cid, h1 - 0.5 * PUSH - lo, do, self.ta))
         for k, (a, b) in enumerate(self.holes):
-            js.append("tl.fromTo('%s', { x:0 }, { x:-1920, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (R, PUSH, SWIPE_EASE, a - 0.5 * PUSH))
-            js.append("tl.fromTo('#video-wrap', { x:1920 }, { x:0, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (PUSH, SWIPE_EASE, a - 0.5 * PUSH))
-            js.append("tl.fromTo('%s', { x:1920 }, { x:0, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (R, PUSH, SWIPE_EASE, b - 0.5 * PUSH))
-            js.append("tl.fromTo('#video-wrap', { x:0 }, { x:-1920, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (PUSH, SWIPE_EASE, b - 0.5 * PUSH))
+            js.append("tl.fromTo('%s', { x:0 }, { x:-1920, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (R, PUSH, PUSH_EASE, a - 0.5 * PUSH))
+            js.append("tl.fromTo('#video-wrap', { x:1920 }, { x:0, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (PUSH, PUSH_EASE, a - 0.5 * PUSH))
+            js.append("tl.fromTo('%s', { x:1920 }, { x:0, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (R, PUSH, PUSH_EASE, b - 0.5 * PUSH))
+            js.append("tl.fromTo('#video-wrap', { x:0 }, { x:-1920, duration:%.3f, ease:'%s', immediateRender:false }, %.3f);" % (PUSH, PUSH_EASE, b - 0.5 * PUSH))
             snd.append('<audio id="sfx-%s-ho%d" src="sfx/plate-out.mp3" data-start="%.3f" data-duration="%.2f" data-track-index="%d" data-volume="1"></audio>' % (cid, k, a - lo, do, self.ta + 2))
             snd.append('<audio id="sfx-%s-hi%d" src="sfx/plate-in.mp3" data-start="%.3f" data-duration="%.2f" data-track-index="%d" data-volume="1"></audio>' % (cid, k, b - li, di, self.ta + 3))
         html = ('<style>%s</style>\n<div class="card-host clip" id="host-%s" data-card-id="%s" data-unanchored="1" data-start="%.3f" data-duration="%.3f" data-track-index="%d"'
