@@ -82,12 +82,13 @@ s += [Spacer(1, 2 * cm), Paragraph("VERIFICA<br/>Laboratorio Stampa 3D", BIG), S
 
 # --- Parte 1 ---
 s += [Paragraph("Parte 1 - Immagini del modulo", H1),
-      Paragraph("Il capo è una canotta sagomata interamente in stampa 3D. Il busto è costruito ripetendo un unico modulo "
-                "esagonale in TPU 95A, con nervatura a Y in rilievo su una base sottile e flessibile. Il modulo è in scala 1:1, "
-                "con quote in mm, e le misure sono verificate in Fusion 360.", P),
+      Paragraph("Per il mio figurino ho pensato una canotta sagomata stampata tutta in 3D. Invece di stampare un pezzo unico, "
+                "ho scelto di ripetere un solo modulo esagonale in TPU 95A. Ha una base sottile e flessibile e sopra una "
+                "nervatura a Y in rilievo. Le immagini mostrano il modulo in scala 1:1, "
+                "con le quote in mm, e le misure le ho controllate su Fusion 360.", P),
       Spacer(1, 6), img("04-posizione-modulo-figurino.png", width=W * 0.95, max_h=15.5 * cm),
-      Paragraph("Dove si colloca il modulo nel figurino: zone a moduli sul centro del busto e sul petto, "
-                "fianchi a branchie e parti sotto le braccia lisci.", CAP), PageBreak(),
+      Paragraph("Dove metterei il modulo sul figurino: al centro del busto e sul petto. I fianchi sono a branchie "
+                "e sotto le braccia lascio le parti lisce.", CAP), PageBreak(),
       Paragraph("Vista d'insieme del modulo", H2), img("03-vista-insieme.png", width=W * 0.7, max_h=9 * cm),
       Paragraph("Vista d'insieme del modulo (altezza ingrandita x2 per leggibilità).", CAP),
       Paragraph("Pianta quotata", H2), img("01-pianta-quotata.png", width=W * 0.7, max_h=9.5 * cm),
@@ -128,10 +129,10 @@ s += [Paragraph("Parte 2 - Scheda tecnica del singolo modulo", H1),
                ["Filamento per 1 modulo", "2,74 g (0,94 m)"]],
               [6 * cm, 10 * cm]),
       Spacer(1, 8),
-      Paragraph("<b>Scelta del materiale.</b> Il TPU 95A è un filamento flessibile ed elastico. Un capo indossato si piega e si "
-                "torce di continuo, e un materiale rigido come il PLA si spezzerebbe. Con una base di soli 0,8 mm il TPU "
-                "permette ai moduli di seguire le curve del busto e di muoversi con il corpo, mantenendo la nervatura in rilievo. "
-                "Resiste bene alle piegature ripetute ed è leggero.", P),
+      Paragraph("<b>Perché ho scelto il TPU.</b> Il TPU 95A è un filamento flessibile ed elastico. Una canotta si piega e si "
+                "torce di continuo mentre la si indossa, e un materiale rigido come il PLA si spezzerebbe. Con la base di soli 0,8 mm "
+                "il TPU lascia ai moduli la libertà di seguire le curve del busto e di muoversi col corpo, e la nervatura resta comunque "
+                "in rilievo. In più è leggero e regge bene le piegature ripetute.", P),
       Spacer(1, 4), img("screenshot-orca/01-slicing-1-modulo.webp", width=W, max_h=6.8 * cm),
       Paragraph("Slicing di un modulo in OrcaSlicer: tempo di stampa del modello 12 min 10 s, filamento 2,74 g.", CAP),
       img("screenshot-orca/02-impostazioni-resistenza.webp", width=W, max_h=6.8 * cm),
@@ -139,10 +140,10 @@ s += [Paragraph("Parte 2 - Scheda tecnica del singolo modulo", H1),
 
 # --- Parte 3 ---
 s += [Paragraph("Parte 3 - Dati dell'intero capo", H1),
-      Paragraph("<b>Quanti moduli.</b> Le zone a moduli sono il davanti del busto, stimato in circa 30 x 40 cm, cioè 1.200 cm². "
-                "Un modulo esagonale copre circa 23,4 cm² (area dell'esagono con lato 30 mm). "
-                "1.200 / 23,4 = circa 52 moduli. Aggiungo il 10% di scorta per errori di stampa e riprove: "
-                "52 x 1,10 = <b>57 moduli da stampare</b> (modulo 1 x 57 pz).", P),
+      Paragraph("<b>Quanti moduli servono.</b> Ho stimato la zona a moduli sul figurino: il davanti del busto è circa "
+                "30 x 40 cm, quindi 1.200 cm². Un modulo esagonale copre circa 23,4 cm² (area di un esagono con lato 30 mm). "
+                "Faccio 1.200 / 23,4 e ottengo circa 52 moduli. Ne aggiungo un 10% di scorta, perché qualche pezzo può "
+                "venire male e va rifatto: 52 x 1,10 = <b>57 moduli da stampare</b>, tutti uguali.", P),
       Spacer(1, 6),
       tabella([["Dato", "Calcolo", "Totale"],
                ["Numero di moduli", "1.200 cm² / 23,4 cm²", "52 (57 con scorta del 10%)"],
@@ -152,12 +153,12 @@ s += [Paragraph("Parte 3 - Dati dell'intero capo", H1),
                ["Filamento totale", "57 x 2,70 g", "circa 154 g (0,15 kg)"]],
               [5 * cm, 6 * cm, 5.5 * cm]),
       Spacer(1, 6),
-      Paragraph("Sul piatto dell'H2D ne entrano circa 20 per volta (stima con spazio tra i pezzi): "
-                "servono quindi 3 piatti (20 + 20 + 17). Una bobina da 1 kg basta con un grande margine.", P),
+      Paragraph("Sul piatto dell'H2D ne entrano circa 20 per volta, lasciando un po' di spazio tra un pezzo e l'altro. "
+                "Quindi mi servono 3 piatti (20 + 20 + 17). Una bobina da 1 kg basta e avanza.", P),
       Paragraph("Stima complessiva dei tempi", H2),
-      Paragraph("Aggiungo il 20% di margine per riprove, pulizia del piatto e piccoli errori: 11 h 45 min x 1,2 = circa 14 ore di stampa "
-                "con una sola stampante. A questo si aggiunge l'assemblaggio: unire 57 moduli con filo attraverso i fori richiede "
-                "circa 3 minuti a modulo, cioè circa 3 ore.", P),
+      Paragraph("Per stare tranquillo aggiungo un 20% di margine, per riprove, pulizia del piatto e piccoli errori: "
+                "11 h 45 min x 1,2 = circa 14 ore di stampa con una sola stampante. Poi c'è l'assemblaggio: i 57 moduli si uniscono "
+                "con il filo passato nei fori. Calcolo circa 3 minuti a modulo, quindi circa 3 ore in più.", P),
       Spacer(1, 4),
       tabella([["Stampanti disponibili", "Tempo di stampa", "In giorni di laboratorio (8 h)"],
                ["1 stampante (H2D)", "circa 14 h", "circa 2 giorni"],
@@ -166,8 +167,8 @@ s += [Paragraph("Parte 3 - Dati dell'intero capo", H1),
               [5 * cm, 4.5 * cm, 7 * cm]),
       Spacer(1, 4),
       img("screenshot-orca/03-slicing-3-moduli.webp", width=W, max_h=6.5 * cm),
-      Paragraph("Prova di stampa con 3 moduli sullo stesso piatto: 8,11 g di filamento, 36 min di stampa e 42 min totali "
-                "con la preparazione. Questo campione sarà consegnato in forma cartacea insieme al PDF.", CAP)]
+      Paragraph("Prova con 3 moduli sullo stesso piatto: 8,11 g di filamento, 36 min di stampa e 42 min in tutto "
+                "con la preparazione. Questi 3 moduli li porto al professore insieme al PDF.", CAP)]
 
 doc = SimpleDocTemplate(str(DIR / OUT_NAME), pagesize=A4, leftMargin=2 * cm, rightMargin=2 * cm, topMargin=1.8 * cm, bottomMargin=2 * cm,
                         title=f"{TITOLO} - {NOME} {COGNOME}", author=f"{NOME} {COGNOME}")
