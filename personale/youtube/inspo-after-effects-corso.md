@@ -28,6 +28,7 @@ Sono parti del corso "Cash Flow Contents". Legenda: **Metodo** = serve per fare 
 | v14 `17-25-55` | Avanzato, 3D | Scritta 3D vera, luci, camera che entra nella scritta | Medio: titoli e intro |
 | v15 `17-41-05` | AE 14 | Transizioni avanzate: continuità e flash | **Altissimo: una regola precisa** |
 | v16 `17-55-55` | AE 15 | Maschere avanzate: griglia circolare, finestra sul video | Medio-alto, breve |
+| v17 `18-03-02` | AE 16 (probabile) | Controlli cursore ed espressioni | Basso: da noi c'è già |
 | v6 `14-20-28` | AE 6 | Motion tracking | Medio |
 | v7 `14-51-15` | AE 7 | Lock-on tracking | Medio |
 | v8 `15-09-55` | AE 8 | Fake 3D, griglia, espressioni, primo pezzo dell'animazione finale | **Alto** |
@@ -309,6 +310,22 @@ Promette tre usi, animazioni, tracciamento e bordi, e li mostra in fretta.
 | 05:03-05:32 | Essendo una forma, puoi animare gli angoli e aggiungere un bordo tratteggiato | Metodo | Dettaglio per le card |
 | 05:32-06:16 | Maschera sull'orecchio che segue il soggetto: più punti, più precisione | Salta per noi | Solo After Effects |
 
+### v17: Lezione AE 16, controlli cursore ed espressioni (14 min)
+
+Lui la presenta come molto difficile. Per noi è la più facile: è il modo in cui After Effects imita quello che il codice fa già. Il numero 16 è dedotto: la pagina a fine video mostra la 17 come successiva.
+
+| Minuto | Cosa | Tipo | Collegamento |
+|---|---|---|---|
+| **00:29** | Un solo cursore comanda tanti parametri, tenuto su un Null: un centro di controllo | **Metodo, già nostro** | Le costanti in cima a `formats/board.py` (`PUSH`, `SWIPE`) e i preset |
+| 03:09-05:01 | Opacità e colore collegati a un controllo | Salta | In CSS sono le variabili |
+| 05:24-08:31 | Posizione: un cursore per asse, con variabili e parentesi quadre | Salta | Sintassi di After Effects |
+| 08:58-12:22 | Stessa cosa su tre assi: un cubo che diventa parallelepipedo | Salta | Il cubo arriva nelle prossime lezioni |
+| 11:23 | Il cursore si ferma a 100: si cambia l'intervallo | Salta | Solo After Effects |
+
+Nessuna prova nuova. Il parlato finisce a 12:41 mentre sta per mostrare un'altra cosa, poi la registrazione continua per circa un minuto: forse manca un pezzo.
+
+La prossima è la 17, "Prossimità col Null: Quando l'Ambiente Risponde…" (titolo tagliato nel frame).
+
 ### Il filo che lega i video
 
 1. **Una gerarchia, non tanti oggetti:** scatole (v2), ragnatela (v4), precomposizione (v5), oggetto Null (v6) sono la stessa idea detta quattro volte. Un elemento porta il movimento, gli altri lo seguono.
@@ -432,7 +449,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 ## Limiti
 
 - La mappa nasce dall'intero parlato di tutti i video e da un frame ogni 30 secondi: i frame sono stati studiati da vicino solo nei punti sui grafici.
-- Lezioni AE 1-11 e le prime quattro del modulo avanzato registrate, fino alla 15. Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
+- Lezioni AE 1-11 e il modulo avanzato registrato fino alla 16. Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
 - Video a 720p e compressi. La curva è stata letta con precisione solo in v3 e nella scala di v5.
 - Sono esercizi su forme e testi: le lezioni viste non mostrano motion graphics montate su un video con il volto.
 - Il trascritto è automatico e alcuni nomi sono storpiati. Il creator citato in v3 è probabilmente Iman Gadzhi, da confermare.
