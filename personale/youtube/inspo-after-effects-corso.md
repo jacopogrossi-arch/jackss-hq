@@ -156,6 +156,8 @@ Ho digitalizzato le curve pixel per pixel:
 | `power3.out` (skill) | | 4,0 | 0% | 16% | 44% |
 | `power2.inOut` (skill) | | 3,0 | 50% | 50% | 71% |
 
+Correzione del 04/11: picco e percentuali della riga "A mano, quadrato" sono misurati sulla curva disegnata. La formula `cubic-bezier(.54, 0, 0, 1)` calcolata da sola ha un picco un po' più alto: 5,1 volte la media, al 30% della durata, con il 90% della strada al 57%. La forma è la stessa, ma per il passo in pixel vale il 5,1.
+
 **Cosa significa, a parole:** il movimento parte piano per un attimo, scatta forte intorno al 30% della durata, poi passa quasi metà del tempo ad assestarsi sull'ultimo 10% di strada. Prima lo stacco, poi la planata.
 
 Nessuna curva della skill ha questa forma. Le `inOut` sono simmetriche, con il picco a metà. Le `.out` partono già al massimo, senza alcuna rincorsa.
@@ -202,3 +204,15 @@ Nei suoi esempi la curva dura 1,7-1,9 secondi. Su mosse molto più corte il picc
 - Video a 720p e compressi. La curva è stata letta con precisione solo in v3 e nella scala di v5.
 - Sono esercizi su forme e testi: le lezioni viste non mostrano motion graphics montate su un video con il volto.
 - Il trascritto è automatico e alcuni nomi sono storpiati. Il creator citato in v3 è probabilmente Iman Gadzhi, da confermare.
+
+## Prima prova sulla lavagna (04/11)
+
+Stesso swipe del Video #3, da "Uno strumento" a "La mappa", 2500 px a 30 fps, senza sfocatura di movimento. Montato a parte con i frame veri del render, perché la coda era occupata dal render completo: non è ancora passato da HyperFrames.
+
+| Versione | Picco di velocità | Passo più lungo | 90% della strada | Ultimi 10 frame |
+|---|---|---|---|---|
+| A: `power3.inOut`, 1,0 s (oggi) | a 0,50 s | 301 px per frame | 0,67 s | 247 px |
+| B: curva del corso, 1,0 s | a 0,30 s | 397 px per frame | 0,60 s | 130 px |
+| C: curva del corso, 1,6 s | a 0,49 s | 263 px per frame | 0,93 s | 44 px |
+
+**Cosa insegna:** la curva da sola, a parità di durata, peggiora lo scatto a 30 fps. Funziona con la sua durata: nel corso le curve durano 1,7-1,9 s. A 1,6 s il picco cade quasi dove cade oggi, quindi inizio dello swipe e suono possono restare dove sono: cambia soltanto l'atterraggio, 0,6 s più lungo. Il giudizio a occhio spetta a Jacopo.
