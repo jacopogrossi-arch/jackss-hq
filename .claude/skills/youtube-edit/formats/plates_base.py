@@ -31,10 +31,8 @@ def safe_bottom():
 
 
 def check_pip(x, y, w, h, what=""):
-    """Raise if the box (left, top, width, height) overlaps the PiP plus its margin."""
-    L, T, W, H = PIP
-    if x < L + W + MARGIN and x + w > L - MARGIN and y < T + H + MARGIN and y + h > T - MARGIN:
-        raise ValueError("%s box (%d,%d,%d,%d) enters the face PiP corner (left %d, top %d)" % (what or "plate", x, y, w, h, L - MARGIN, T - MARGIN))
+    """No longer enforced: plates have no face PiP since 04/11/2026 (taste 9e), the corner is free."""
+    return
 
 
 CAM_ORIGIN = (PIP[0] - MARGIN, PIP[1] - MARGIN)   # (1512, 672): the camera scales about the corner of the PiP's forbidden zone. A point outside the zone has x < 1512 or y < 672, and scaling by s >= 1 (with a translation <= 0) moves it further away from that corner: nothing can ever enter the zone, at any zoom

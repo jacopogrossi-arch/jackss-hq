@@ -132,7 +132,7 @@ class Scene:
         self.events.append(t)
         return i
 
-    def link(self, a, b, t, mode="h", d=0.7):
+    def link(self, a, b, t, mode="h", d=0.55):
         """A dashed connector from element a to element b (their facing edges), drawn left to right / top to bottom, then marching until the plate ends."""
         ax, ay, aw, ah = self.box[a]
         bx, by, bw, bh = self.box[b]
@@ -144,13 +144,17 @@ class Scene:
             x1, y1, x2, y2 = (ax + aw / 2, ay + ah, bx + bw / 2, by) if by >= ay + ah else (ax + aw / 2, ay, bx + bw / 2, by + bh)
             c = abs(y2 - y1) * 0.45 * (1 if y2 >= y1 else -1)
             p = "M%d %d C %d %d, %d %d, %d %d" % (x1, y1, x1, y1 + c, x2, y2 - c, x2, y2)
-        t = max(t, self.when.get(a, 0) + 0.3, self.when.get(b, 0) + 0.3)   # RULE (Jacopo, 01/11/2026): a dashed line never shows before the two things it joins; it draws only when one element connects to another
+        t = max(t, (self.when.get(a) or 0) + 0.05, (self.when.get(b) or 0) + 0.05)   # RULE (Jacopo, 01/11/2026): a dashed line never shows before the two things it joins; 04/11: it draws WITH the card that lands, not after it
         i = self._id("l")
         self.html.append('<div class="sc-e sc-lk" id="%s"><svg class="sc-svg"><path d="%s"/></svg></div>' % (i, p))
-        clip0 = "inset(0 100%% 0 0)" if mode == "h" else "inset(0 0 100%% 0)"
+        # the reveal runs over the line's own span, not the whole 1920 frame (04/11: over the frame the line stayed hidden, then popped in late)
+        if mode == "h":
+            clip0, clip1 = (("inset(-20px %dpx -20px 0px)" % (1920 - x1), "inset(-20px %dpx -20px 0px)" % (1920 - x2)) if x2 >= x1 else ("inset(-20px 0px -20px %dpx)" % x1, "inset(-20px 0px -20px %dpx)" % x2))
+        else:
+            clip0, clip1 = (("inset(0px -20px %dpx -20px)" % (1080 - y1), "inset(0px -20px %dpx -20px)" % (1080 - y2)) if y2 >= y1 else ("inset(%dpx -20px 0px -20px)" % y1, "inset(%dpx -20px 0px -20px)" % y2))
         self.js.append("tl.set('#%s', { opacity:0, clipPath:'%s' }, 0);" % (i, clip0))
         self.js.append("tl.set('#%s', { opacity:1 }, %.3f);" % (i, t))
-        self.js.append(fromto("#" + i, "{clipPath:'%s'}" % clip0, "{clipPath:'inset(0 0% 0 0)'}", t, d, "power2.inOut"))
+        self.js.append(fromto("#" + i, "{clipPath:'%s'}" % clip0, "{clipPath:'%s'}" % clip1, t, d, "sine.inOut"))
         run = t + d + 0.1
         self.js.append("tl.set('#%s path', { strokeDashoffset:0 }, 0);" % i)
         self.js.append("tl.fromTo('#%s path', { strokeDashoffset:0 }, { strokeDashoffset:%d, duration:%.3f, ease:'none', immediateRender:false }, %.3f);" % (i, -int(45 * max(self.t_out - run, 1.0)), max(self.t_out - run, 1.0), run))
@@ -181,6 +185,10 @@ class Scene:
         """Move an element from offset frm to (dx, dy) (absolute offsets from its place), e.g. two titles swapping."""
         self.js.append(fromto("#" + i, "{x:%d,y:%d}" % frm, "{x:%d,y:%d}" % (dx, dy), t, d, "power2.inOut"))
         self.events.append(t)
+
+    def parts(self):
+        """For board.py: the plate's raw content, with no host, camera or sound of its own."""
+        return "\n".join(self.html), list(self.js)
 
     def build(self):
         inner = "\n".join(self.html)
