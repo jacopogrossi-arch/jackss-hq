@@ -31,6 +31,7 @@ Sono parti del corso "Cash Flow Contents". Legenda: **Metodo** = serve per fare 
 | v17 `18-03-02` | AE 16 (probabile) | Controlli cursore ed espressioni | Basso: da noi c'è già |
 | v18 `18-17-28` | AE 17 (probabile) | Effetto di prossimità: l'ambiente reagisce a un punto | Medio-alto: un'idea nuova |
 | v19 `18-33-32` | AE 18 (probabile) | Cubi in 3D classico: pezzi che si compongono in un logo | Medio-alto: una quarta curva |
+| v20 `18-49-23` | AE 19 (probabile) | Testo su un tracciato che corre dentro un tubo colorato | Medio: utile per i collegamenti |
 | v6 `14-20-28` | AE 6 | Motion tracking | Medio |
 | v7 `14-51-15` | AE 7 | Lock-on tracking | Medio |
 | v8 `15-09-55` | AE 8 | Fake 3D, griglia, espressioni, primo pezzo dell'animazione finale | **Alto** |
@@ -365,6 +366,24 @@ Quattro mattonelle arrivano da punti diversi e si chiudono in una finestra, ispi
 
 Colori magenta e blu su nero: sono i suoi, non la nostra direzione.
 
+### v20: Lezione AE 19, testo su tracciato e "effetto elastico" (8 min)
+
+La scritta scorre lungo una linea curva e un tubo colorato la segue: se la linea si deforma, si deformano entrambi. Viene da un suo video. Il numero 19 è dedotto dall'ordine. Dice che siamo alle "ultime lezioni" del capitolo. La lezione è completa.
+
+| Minuto | Cosa | Tipo | Collegamento |
+|---|---|---|---|
+| **00:46-01:47** | Testo su tracciato: si disegna una maschera e il testo la segue | **Metodo** | In SVG è `textPath`, si fa senza fatica |
+| **02:03-03:37** | Forma e maschera collegate: una sola linea comanda testo e tubo | **Metodo** | Il "centro di controllo" di v17: una sola curva nel codice, usata due volte |
+| 03:57-04:11 | Il tubo prende una sfumatura dal rosso al viola | Metodo | Da noi sarebbe nei colori del preset |
+| **04:13-04:37** | Il testo scorre spostando il primo margine | **Metodo** | In SVG è `startOffset`. Curva: vedi sezione sotto |
+| **04:37-05:45** | Il tubo si disegna insieme al testo con "taglia tracciati" | **Metodo** | Lo stesso disegno progressivo delle linee, in SVG con `stroke-dashoffset`. Vale la regola già tua: il tratto parte dopo i due elementi che collega |
+| 04:54 e 06:41 | Zigzag sul tubo, poi lo toglie perché non combacia col testo | Salta | Lui stesso lo scarta |
+| 05:45-06:12 | Livello 3D e camera che ruota attorno | Metodo | Già visto in v13 |
+| **06:31** | Sfocatura di movimento attivata prima del finale | **Metodo** | Vedi la prova in lista |
+| 06:54-07:57 | Preset di Animation Composer con overshoot sul testo, poi bagliore | Salta | Plugin, e l'overshoot è il rimbalzo che non vuoi |
+
+Per le plate il pezzo buono non è l'effetto a tubo, che è molto suo. È la parola che viaggia sulla linea che collega due concetti.
+
 ### Il filo che lega i video
 
 1. **Una gerarchia, non tanti oggetti:** scatole (v2), ragnatela (v4), precomposizione (v5), oggetto Null (v6) sono la stessa idea detta quattro volte. Un elemento porta il movimento, gli altri lo seguono.
@@ -403,6 +422,8 @@ Correzione del 04/11: picco e percentuali della riga "A mano, quadrato" sono mis
 **Nuovo dalla Lezione 14 (min 12:30):** la curva della transizione è un picco strettissimo, quasi simmetrico, con il massimo circa al 47% della durata e code lunghe e morbide. Tocca 20.000 px al secondo: in quel momento non si legge nulla, e lì sta il taglio. Valori letti a occhio. Abbiamo quindi tre famiglie: **picco in anticipo** per le mosse di scena, **cupola** per la camera che si sposta, **picco centrale stretto** per le transizioni.
 
 **Nuovo dalla Lezione 18 (circa min 11):** due curve nella stessa mossa. I pezzi hanno il **picco in ritardo**: accelerano e si fermano di colpo, con il massimo circa all'85% della durata. La camera ha un picco stretto circa al 40% e una coda lunga, la stessa famiglia dello zoom di L8. Valori letti a occhio su frame sfocati. Le famiglie diventano quattro: la nuova serve quando dei pezzi si chiudono su qualcosa. L'arresto secco va provato con attenzione, perché può sembrare il colpo che non ti piace.
+
+**Nuovo dalla Lezione 19 (circa min 4:30):** nel grafico visibile la velocità sale subito, con il massimo circa al 20% della durata, e poi scende in una coda lunga. La cima è tagliata dallo schermo e la proprietà non si legge bene: probabilmente è il testo che scorre. Letto a occhio. È la stessa famiglia del picco in anticipo, come la rotazione finale di v5.
 
 **Cosa significa, a parole:** il movimento parte piano per un attimo, scatta forte intorno al 30% della durata, poi passa quasi metà del tempo ad assestarsi sull'ultimo 10% di strada. Prima lo stacco, poi la planata.
 
@@ -454,6 +475,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 - [ ] **Un maestro per plate (L3, L9):** gli elementi seguono un gruppo che fa il movimento principale, con partenze sfalsate.
 
 - [ ] **60 frame al secondo (L11):** stesso swipe a 30 e a 60 fps. Il render costa il doppio, va capito se si vede.
+- [ ] **Sfocatura di movimento (L19):** stesso swipe con e senza. Va capito come ottenerla in HyperFrames e quanto pesa sul render.
 - [ ] **Transizione a cavallo del taglio (L11):** la plate entra prima che finisca la frase.
 
 - [ ] **Transizione col taglio nel picco (L14):** una sola mossa, picco stretto, cambio di plate sul massimo.
@@ -469,6 +491,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 - [ ] **Scritte dietro la testa (L10):** a Jacopo piace se fatta bene, in alcuni contesti. Pochi secondi, scontorno pulito, momento scelto.
 
 - [ ] **Spaziatura che si stringe (v14):** titolo che si compone, con la curva scelta.
+- [ ] **Parola che viaggia su una linea (L19):** la linea si disegna tra due concetti e la parola ci corre sopra, con la curva scelta.
 - [ ] **Scritta 3D con spessore (v14):** per l'intro, rosso o oro su nero.
 
 **Abbellimenti**
@@ -496,7 +519,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 ## Limiti
 
 - La mappa nasce dall'intero parlato di tutti i video e da un frame ogni 30 secondi: i frame sono stati studiati da vicino solo nei punti sui grafici.
-- Lezioni AE 1-11 e il modulo avanzato registrato fino alla 18. Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
+- Lezioni AE 1-11 e il modulo avanzato registrato fino alla 19. Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
 - Video a 720p e compressi. La curva è stata letta con precisione solo in v3 e nella scala di v5.
 - Sono esercizi su forme e testi: le lezioni viste non mostrano motion graphics montate su un video con il volto.
 - Il trascritto è automatico e alcuni nomi sono storpiati. Il creator citato in v3 è probabilmente Iman Gadzhi, da confermare.
