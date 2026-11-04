@@ -25,6 +25,7 @@ Sono parti del corso "Cash Flow Contents". Legenda: **Metodo** = serve per fare 
 | v11 `16-25-02` | AE 10 | Scontorno senza green screen | Basso |
 | v12 `16-31-01` | AE 11 | Montaggio completo di un video cliente, dal grezzo alla plate | **Alto, il ragionamento intero** |
 | v13 `17-04-23` | Aggiornamento, camera | Videocamera 3D e oggetto Null su un foglio infinito | **Altissimo: è la nostra lavagna** |
+| v14 `17-25-55` | Avanzato, 3D | Scritta 3D vera, luci, camera che entra nella scritta | Medio: titoli e intro |
 | v6 `14-20-28` | AE 6 | Motion tracking | Medio |
 | v7 `14-51-15` | AE 7 | Lock-on tracking | Medio |
 | v8 `15-09-55` | AE 8 | Fake 3D, griglia, espressioni, primo pezzo dell'animazione finale | **Alto** |
@@ -250,6 +251,25 @@ Apre una parte nuova del corso, più avanzata. Testo su sfondo chiaro, nessuna g
 
 Cita lezioni che non abbiamo: "tecniche di manipolazione visiva" e la "regola del box" per i testi. Annuncia le "transizioni avanzate".
 
+### v14: Modulo avanzato, 3D avanzato (15 min)
+
+Titolo cinematografico, rosso su nero, in formato orizzontale. Serve per intro e titoli, non per le plate di spiegazione. Negli ultimi frame si vede che la lezione dopo è la 14, "Transizioni Avanzate": quindi v13 e v14 sono probabilmente la 12 e la 13.
+
+| Minuto | Cosa | Tipo | Collegamento |
+|---|---|---|---|
+| 00:55 | Dice che After Effects potrà sostituire un po' Blender | Altro | Opinione sua |
+| 01:25 | Formato orizzontale e sfondo nero per un risultato "cinematico" | Metodo | Il nostro 16:9 |
+| 02:31-03:26 | Due strade: plugin Element 3D a pagamento, o 3D avanzato incluso | Salta | Solo After Effects |
+| **03:26-04:42** | Col 3D gli effetti non funzionano sul livello: il bagliore va su un livello di regolazione sopra | Metodo | Separare forma ed effetti |
+| 04:42 | Esporta con la trasparenza e lavora poi solo sul testo | Metodo | Pezzi separati, come v10 e v11 |
+| **05:10-06:21** | Estrusione e smusso: lo spessore della scritta | Metodo, da adattare | In HTML: strati di testo o il 3D del registry |
+| **07:54-09:29** | Senza una luce scelta da te il risultato è casuale. Consiglia il faretto: illumina solo una parte | **Metodo** | Scelta valida anche in 2D: un alone che illumina il titolo |
+| 10:06-10:18 | La luce si anima: il movimento è nella luce, non nel testo | **Metodo** | La scena vive anche se il testo è fermo: nota "mai ferme" |
+| 10:38-11:06 | Anche foto, forme e file vettoriali possono avere spessore | Altro | Logo in 3D, se servirà |
+| **11:36-11:45** | Animatore testo: la spaziatura si stringe fino a comporre la scritta. "Molto figo" | **Metodo** | Facile: `letter-spacing` con la nostra curva |
+| **11:45-12:45** | Camera che parte dentro la scritta e arretra | **Metodo, da adattare** | Ingresso per intro e capitoli |
+| **12:52-13:09** | "Prendo la palla al balzo": la luce va a destra, e la scritta sparisce seguendola | **Metodo** | La transizione nasce da un movimento che c'è già. Come "a cavallo del taglio" di v12 |
+
 ### Il filo che lega i video
 
 1. **Una gerarchia, non tanti oggetti:** scatole (v2), ragnatela (v4), precomposizione (v5), oggetto Null (v6) sono la stessa idea detta quattro volte. Un elemento porta il movimento, gli altri lo seguono.
@@ -345,8 +365,13 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 - [ ] **Testo nascosto col mosaico (L11):** gli step coperti finché non li dici.
 - [ ] **Scritte dietro la testa (L10):** a Jacopo piace se fatta bene, in alcuni contesti. Pochi secondi, scontorno pulito, momento scelto.
 
+- [ ] **Spaziatura che si stringe (v14):** titolo che si compone, con la curva scelta.
+- [ ] **Scritta 3D con spessore (v14):** per l'intro, rosso o oro su nero.
+
 **Abbellimenti**
 
+- [ ] **Luce che scopre il titolo e fa da transizione (v14):** la scritta sparisce seguendo la luce.
+- [ ] **Camera che parte dentro la scritta e arretra (v14):** per intro e capitoli.
 - [ ] **Light sweep (L9):** una luce che passa su una card o un bottone.
 - [ ] **Forme finte 3D (L9):** cilindri con ellisse, rettangolo e sfumature, con le ombre verso l'oggetto dietro.
 - [ ] **Onda di turbolenza (L8, L9):** come transizione, prima misurando quanto pesa sul render.
@@ -360,7 +385,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 ## Limiti
 
 - La mappa nasce dall'intero parlato di tutti i video e da un frame ogni 30 secondi: i frame sono stati studiati da vicino solo nei punti sui grafici.
-- Lezioni AE 1-11 e la prima dell'aggiornamento registrate. Annunciati: transizioni avanzate e modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
+- Lezioni AE 1-11 e le prime due del modulo avanzato registrate. La prossima è la 14, "Transizioni Avanzate". Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
 - Video a 720p e compressi. La curva è stata letta con precisione solo in v3 e nella scala di v5.
 - Sono esercizi su forme e testi: le lezioni viste non mostrano motion graphics montate su un video con il volto.
 - Il trascritto è automatico e alcuni nomi sono storpiati. Il creator citato in v3 è probabilmente Iman Gadzhi, da confermare.
