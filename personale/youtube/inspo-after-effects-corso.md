@@ -27,6 +27,7 @@ Sono parti del corso "Cash Flow Contents". Legenda: **Metodo** = serve per fare 
 | v13 `17-04-23` | Aggiornamento, camera | Videocamera 3D e oggetto Null su un foglio infinito | **Altissimo: è la nostra lavagna** |
 | v14 `17-25-55` | Avanzato, 3D | Scritta 3D vera, luci, camera che entra nella scritta | Medio: titoli e intro |
 | v15 `17-41-05` | AE 14 | Transizioni avanzate: continuità e flash | **Altissimo: una regola precisa** |
+| v16 `17-55-55` | AE 15 | Maschere avanzate: griglia circolare, finestra sul video | Medio-alto, breve |
 | v6 `14-20-28` | AE 6 | Motion tracking | Medio |
 | v7 `14-51-15` | AE 7 | Lock-on tracking | Medio |
 | v8 `15-09-55` | AE 8 | Fake 3D, griglia, espressioni, primo pezzo dell'animazione finale | **Alto** |
@@ -295,6 +296,19 @@ Il corso si contraddice: in v9 chiamava "oro" l'onda di turbolenza dei creator f
 
 La prossima lezione è la 15, "Maschere Avanzate: Precisione, Effetti e Compositing da Pro".
 
+### v16: Lezione AE 15, maschere avanzate (7 min)
+
+Promette tre usi, animazioni, tracciamento e bordi, e li mostra in fretta.
+
+| Minuto | Cosa | Tipo | Collegamento |
+|---|---|---|---|
+| **01:09-02:53** | Griglia circolare inclinata: griglia, maschera rotonda sfumata, rotazione in 3D. "L'unico modo in cui apprezzo la griglia" | **Metodo** | Risponde alla domanda aperta dalla lezione sulla camera: la griglia non a tutto schermo, ma come macchia sfumata. Rifattibile in CSS |
+| 01:35-02:27 | La griglia non accetta maschere finché non è in una precomposizione | Salta | Solo After Effects |
+| **03:20-03:51** | Maschera come lente: la finestra si muove, il contenuto resta fermo sotto | **Metodo** | Un riquadro che scorre e scopre parti di un'immagine |
+| **03:51-05:03** | Maschera che si porta dietro il contenuto: il video in una card arrotondata che si apre | **Metodo** | Lo facciamo già con `clipPath` su `#video-wrap` all'apertura delle plate |
+| 05:03-05:32 | Essendo una forma, puoi animare gli angoli e aggiungere un bordo tratteggiato | Metodo | Dettaglio per le card |
+| 05:32-06:16 | Maschera sull'orecchio che segue il soggetto: più punti, più precisione | Salta per noi | Solo After Effects |
+
 ### Il filo che lega i video
 
 1. **Una gerarchia, non tanti oggetti:** scatole (v2), ragnatela (v4), precomposizione (v5), oggetto Null (v6) sono la stessa idea detta quattro volte. Un elemento porta il movimento, gli altri lo seguono.
@@ -403,6 +417,8 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 
 - [ ] **Luce che scopre il titolo e fa da transizione (v14):** la scritta sparisce seguendo la luce.
 - [ ] **Camera che parte dentro la scritta e arretra (v14):** per intro e capitoli.
+- [ ] **Griglia circolare inclinata (L15):** griglia solo in una macchia sfumata, contro la griglia intera di oggi.
+- [ ] **Maschera a lente (L15):** una finestra che scorre e scopre un'immagine, per il moodboard.
 - [ ] **Light sweep (L9):** una luce che passa su una card o un bottone.
 - [ ] **Forme finte 3D (L9):** cilindri con ellisse, rettangolo e sfumature, con le ombre verso l'oggetto dietro.
 - [ ] **Onda di turbolenza (L8, L9):** come transizione, prima misurando quanto pesa sul render.
@@ -416,7 +432,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 ## Limiti
 
 - La mappa nasce dall'intero parlato di tutti i video e da un frame ogni 30 secondi: i frame sono stati studiati da vicino solo nei punti sui grafici.
-- Lezioni AE 1-11 e le prime tre del modulo avanzato registrate.  La prossima è la 15, "Maschere Avanzate". Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
+- Lezioni AE 1-11 e le prime quattro del modulo avanzato registrate, fino alla 15. Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
 - Video a 720p e compressi. La curva è stata letta con precisione solo in v3 e nella scala di v5.
 - Sono esercizi su forme e testi: le lezioni viste non mostrano motion graphics montate su un video con il volto.
 - Il trascritto è automatico e alcuni nomi sono storpiati. Il creator citato in v3 è probabilmente Iman Gadzhi, da confermare.
