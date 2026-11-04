@@ -26,6 +26,7 @@ Sono parti del corso "Cash Flow Contents". Legenda: **Metodo** = serve per fare 
 | v12 `16-31-01` | AE 11 | Montaggio completo di un video cliente, dal grezzo alla plate | **Alto, il ragionamento intero** |
 | v13 `17-04-23` | Aggiornamento, camera | Videocamera 3D e oggetto Null su un foglio infinito | **Altissimo: è la nostra lavagna** |
 | v14 `17-25-55` | Avanzato, 3D | Scritta 3D vera, luci, camera che entra nella scritta | Medio: titoli e intro |
+| v15 `17-41-05` | AE 14 | Transizioni avanzate: continuità e flash | **Altissimo: una regola precisa** |
 | v6 `14-20-28` | AE 6 | Motion tracking | Medio |
 | v7 `14-51-15` | AE 7 | Lock-on tracking | Medio |
 | v8 `15-09-55` | AE 8 | Fake 3D, griglia, espressioni, primo pezzo dell'animazione finale | **Alto** |
@@ -253,7 +254,7 @@ Cita lezioni che non abbiamo: "tecniche di manipolazione visiva" e la "regola de
 
 ### v14: Modulo avanzato, 3D avanzato (15 min)
 
-Titolo cinematografico, rosso su nero, in formato orizzontale. Serve per intro e titoli, non per le plate di spiegazione. Negli ultimi frame si vede che la lezione dopo è la 14, "Transizioni Avanzate": quindi v13 e v14 sono probabilmente la 12 e la 13.
+Titolo cinematografico, rosso su nero, in formato orizzontale. Serve per intro e titoli, non per le plate di spiegazione. Negli ultimi frame si vede che la lezione dopo è la 14, "Transizioni Avanzate": quindi v13 e v14 sono probabilmente la 12 e la 13. L'ha poi confermato v15, che è la 14.
 
 | Minuto | Cosa | Tipo | Collegamento |
 |---|---|---|---|
@@ -269,6 +270,30 @@ Titolo cinematografico, rosso su nero, in formato orizzontale. Serve per intro e
 | **11:36-11:45** | Animatore testo: la spaziatura si stringe fino a comporre la scritta. "Molto figo" | **Metodo** | Facile: `letter-spacing` con la nostra curva |
 | **11:45-12:45** | Camera che parte dentro la scritta e arretra | **Metodo, da adattare** | Ingresso per intro e capitoli |
 | **12:52-13:09** | "Prendo la palla al balzo": la luce va a destra, e la scritta sparisce seguendola | **Metodo** | La transizione nasce da un movimento che c'è già. Come "a cavallo del taglio" di v12 |
+
+### v15: Lezione AE 14, transizioni avanzate (14 min)
+
+Tesi: servono solo due transizioni, continuità e flash. Il resto distrae.
+
+| Minuto | Cosa | Tipo | Collegamento |
+|---|---|---|---|
+| **00:34-01:18** | Le transizioni piene di roba piacciono ai nerd. Pensa a un cinquantenne: capisce o no? | **Metodo** | Ogni plate ha una funzione, come in Joseph |
+| 01:18-01:46 | Le uniche due: continuità (o movimento) e flash | **Metodo** | Sostituisce un catalogo di transizioni |
+| **02:11** | Ordine: animazioni sulla sola voce, poi suono e musica alla fine | **Metodo** | Così il suono cade esattamente sulla transizione |
+| **02:38-03:07** | Continuità: la scena dopo prosegue il movimento di quella prima | **Metodo, il punto chiave** | Lo swipe tra due plate è già questo |
+| 03:21-06:51 | Versione semplice: una camera spara fuori, taglio, la seconda entra con la stessa velocità | Metodo | Due mosse che si incontrano |
+| 06:20 | "Risulta stonata perché è troppo lenta" | Metodo | Le transizioni vogliono velocità, a differenza delle mosse di camera |
+| 07:18 | Si può anche far entrare la scena dal lato opposto | Metodo | Variante |
+| **07:18-07:45** | Regola: cambiare qualcosa ogni 5 secondi circa. È una sua regola, senza dati | Metodo, da tenere d'occhio | La tua nota "mai ferme" |
+| **07:56-08:21** | Colori invertiti da un taglio in poi: cambia il mood con un solo effetto | **Metodo** | Il cambio di tono su una frase forte |
+| **09:30-10:46** | **La regola più utile:** una sola mossa col Null, e la massima velocità cade esattamente sul cambio di scena | **Metodo, il punto chiave** | Il taglio si nasconde nel picco. Vedi la curva qui sotto |
+| **10:46-11:27** | Flash: solido bianco sul taglio, opacità dal massimo a zero | **Metodo** | Facilissimo da rifare |
+| **11:27** | "Light leak e overlay bruciati sono passati di moda, fanno schifo" | Opinione da valutare | Nel Video #3 usiamo i light leak, e il 20/10 ne avevi chiesti di più: decidi tu |
+| 11:27-13:04 | Scena che va indietro, solido del colore dello sfondo, dissolvenza | Metodo | Uscita pulita |
+
+Il corso si contraddice: in v9 chiamava "oro" l'onda di turbolenza dei creator famosi, qui critica quegli stessi stili. Conta il principio di questa lezione, che è il più recente.
+
+La prossima lezione è la 15, "Maschere Avanzate: Precisione, Effetti e Compositing da Pro".
 
 ### Il filo che lega i video
 
@@ -304,6 +329,8 @@ Correzione del 04/11: picco e percentuali della riga "A mano, quadrato" sono mis
 **Nuovo dalla Lezione 8 (min 24:01):** lo zoom di camera ha la stessa famiglia di curva, ma con il picco più avanti, circa al 40%, e dura circa 2 secondi. Valori letti a occhio sul grafico, non digitalizzati. Prima dello scatto c'è una rincorsa più lunga, ed è il "più ritardo all'inizio" che dice lui. Nella stessa lezione (min 16:26) sulla crema che esce si vede una curva simmetrica, ma è proprio il momento in cui dice di voler cambiare la velocità: non sappiamo se la lascia così.
 
 **Nuovo dall'aggiornamento sulla camera (v13, min 12:51):** qui il grafico è diverso dal picco stretto. Nella mossa d'ingresso la velocità parte al massimo e cala; nella seconda è una cupola larga, a zero solo agli estremi. Letto a occhio, non digitalizzato. Quindi la curva a picco non è l'unica: la scelta dipende dalla mossa. Sugli swipe resta la D, che ti è piaciuta a occhio; la cupola va confrontata.
+
+**Nuovo dalla Lezione 14 (min 12:30):** la curva della transizione è un picco strettissimo, quasi simmetrico, con il massimo circa al 47% della durata e code lunghe e morbide. Tocca 20.000 px al secondo: in quel momento non si legge nulla, e lì sta il taglio. Valori letti a occhio. Abbiamo quindi tre famiglie: **picco in anticipo** per le mosse di scena, **cupola** per la camera che si sposta, **picco centrale stretto** per le transizioni.
 
 **Cosa significa, a parole:** il movimento parte piano per un attimo, scatta forte intorno al 30% della durata, poi passa quasi metà del tempo ad assestarsi sull'ultimo 10% di strada. Prima lo stacco, poi la planata.
 
@@ -357,6 +384,10 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 - [ ] **60 frame al secondo (L11):** stesso swipe a 30 e a 60 fps. Il render costa il doppio, va capito se si vede.
 - [ ] **Transizione a cavallo del taglio (L11):** la plate entra prima che finisca la frase.
 
+- [ ] **Transizione col taglio nel picco (L14):** una sola mossa, picco stretto, cambio di plate sul massimo.
+- [ ] **Flash bianco contro light leak (L14):** stessa transizione del Video #3, per scegliere.
+- [ ] **Colori invertiti su una frase forte (L14):** cambio di mood, da usare poco.
+
 **Testi**
 
 - [ ] **Testo che esce da un bordo invisibile (L5):** per i titoli delle plate.
@@ -385,7 +416,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 ## Limiti
 
 - La mappa nasce dall'intero parlato di tutti i video e da un frame ogni 30 secondi: i frame sono stati studiati da vicino solo nei punti sui grafici.
-- Lezioni AE 1-11 e le prime due del modulo avanzato registrate. La prossima è la 14, "Transizioni Avanzate". Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
+- Lezioni AE 1-11 e le prime tre del modulo avanzato registrate.  La prossima è la 15, "Maschere Avanzate". Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
 - Video a 720p e compressi. La curva è stata letta con precisione solo in v3 e nella scala di v5.
 - Sono esercizi su forme e testi: le lezioni viste non mostrano motion graphics montate su un video con il volto.
 - Il trascritto è automatico e alcuni nomi sono storpiati. Il creator citato in v3 è probabilmente Iman Gadzhi, da confermare.
