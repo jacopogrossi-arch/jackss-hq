@@ -36,7 +36,8 @@ for m in re.finditer(r"<audio\b([^>]*)>", html):
     cues.append((os.path.join(base, src), float(at["data-start"]), float(at.get("data-duration", 0) or 0), float(at.get("data-volume", 1) or 1)))
 dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", a.video], capture_output=True, text=True).stdout.strip())
 gain = 10 ** (a.sfx_gain / 20.0)
-inputs = ["-i", a.voice]
+_ms = re.search(r'id="bg-video"[^>]*data-media-start="([\d.]+)"', open(a.index, encoding="utf-8").read())   # a window-patch window starts inside the footage: the voice must start there too
+inputs = (["-ss", _ms.group(1)] if _ms else []) + ["-i", a.voice]
 fc = ["[0:a]aresample=48000,aformat=channel_layouts=stereo,volume=1[v0]"]
 labels = ["[v0]"]
 for i, (path, start, d, vol) in enumerate(cues, start=1):
