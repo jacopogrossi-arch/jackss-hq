@@ -29,6 +29,7 @@ Sono parti del corso "Cash Flow Contents". Legenda: **Metodo** = serve per fare 
 | v15 `17-41-05` | AE 14 | Transizioni avanzate: continuità e flash | **Altissimo: una regola precisa** |
 | v16 `17-55-55` | AE 15 | Maschere avanzate: griglia circolare, finestra sul video | Medio-alto, breve |
 | v17 `18-03-02` | AE 16 (probabile) | Controlli cursore ed espressioni | Basso: da noi c'è già |
+| v18 `18-17-28` | AE 17 (probabile) | Effetto di prossimità: l'ambiente reagisce a un punto | Medio-alto: un'idea nuova |
 | v6 `14-20-28` | AE 6 | Motion tracking | Medio |
 | v7 `14-51-15` | AE 7 | Lock-on tracking | Medio |
 | v8 `15-09-55` | AE 8 | Fake 3D, griglia, espressioni, primo pezzo dell'animazione finale | **Alto** |
@@ -324,7 +325,25 @@ Lui la presenta come molto difficile. Per noi è la più facile: è il modo in c
 
 Nessuna prova nuova. Il parlato finisce a 12:41 mentre sta per mostrare un'altra cosa, poi la registrazione continua per circa un minuto: forse manca un pezzo.
 
-La prossima è la 17, "Prossimità col Null: Quando l'Ambiente Risponde…" (titolo tagliato nel frame).
+### v18: Lezione AE 17, effetto di prossimità (16 min)
+
+Un punto luce si muove nella scena e tutto ciò che ha vicino reagisce: le sfere scappano e si illuminano dal lato giusto. È tutto 2D. Il numero 17 viene dal titolo visto a fine v17. La lezione è completa, stavolta si chiude a 15:20.
+
+| Minuto | Cosa | Tipo | Collegamento |
+|---|---|---|---|
+| **00:05-01:50** | L'idea: l'ambiente risponde a un punto. Lui la vede come base per personaggi e cartoni | **Metodo** | Nuova per noi: oggi sulle plate ogni elemento si muove per conto suo, nessuno reagisce agli altri |
+| 02:42-03:25 | Un Null che si muove, più un Controller con due cursori: distanza massima e forza | **Metodo** | Due soli numeri comandano tutto, come in v17. Nel codice è una formula sulla distanza tra due punti |
+| 03:55-05:39 | Errori perché i nomi nell'espressione devono combaciare, e After Effects in italiano dice "cursore" | Salta | Solo After Effects |
+| **07:51-08:12** | Consiglio: poca forza e distanza molto alta, così il movimento è morbido | **Metodo** | La reazione si sente su tutta la scena invece di scattare da vicino. Va d'accordo con la regola "niente rimbalzo" |
+| **09:04-11:49** | Ombra interna usata come luce: l'angolo segue il punto, l'opacità cala con la distanza | **Metodo** | Bordo luminoso che gira attorno a una card. Rifattibile in CSS. Parente del light sweep di L9 |
+| 11:54-12:31 | Copia lo stile su tutte le sfere | Salta | Nel codice è una classe |
+| 12:36-13:29 | Il punto luce è una sferetta bianca con bagliore, legata al Null | Metodo | Facile da rifare |
+| **13:37-14:06** | Bagliore e vignettatura su un livello di regolazione bloccato in cima | **Metodo** | Stesso trucco di L14 e v14: il finish sta sopra a tutto e non intralcia |
+| 14:52-15:18 | Cambio di colore di tutta la scena con un solo effetto | Metodo, già nostro | Le variabili colore dei preset |
+
+Le espressioni sono un file del corso: qui si vede il risultato, non il codice completo. A noi non serve, la formula si riscrive.
+
+Il rischio per le plate: il movimento nasce da una formula, quindi va calcolato frame per frame in modo che esca uguale a ogni render. Serve anche una ragione per il punto che si muove, altrimenti resta una demo.
 
 ### Il filo che lega i video
 
@@ -437,6 +456,9 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 - [ ] **Griglia circolare inclinata (L15):** griglia solo in una macchia sfumata, contro la griglia intera di oggi.
 - [ ] **Maschera a lente (L15):** una finestra che scorre e scopre un'immagine, per il moodboard.
 - [ ] **Light sweep (L9):** una luce che passa su una card o un bottone.
+- [ ] **Prossimità (L17):** un punto attraversa la plate e gli elementi vicini si scostano piano, con poca forza e distanza alta. Il punto deve voler dire qualcosa, per esempio il passaggio da un concetto all'altro.
+- [ ] **Bordo che segue la luce (L17):** sulle card il bordo luminoso gira verso il punto e si spegne con la distanza.
+- [ ] **Bagliore e vignettatura in cima alla plate (L17):** un solo strato di finish sopra a tutto, con e senza.
 - [ ] **Forme finte 3D (L9):** cilindri con ellisse, rettangolo e sfumature, con le ombre verso l'oggetto dietro.
 - [ ] **Onda di turbolenza (L8, L9):** come transizione, prima misurando quanto pesa sul render.
 
@@ -449,7 +471,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 ## Limiti
 
 - La mappa nasce dall'intero parlato di tutti i video e da un frame ogni 30 secondi: i frame sono stati studiati da vicino solo nei punti sui grafici.
-- Lezioni AE 1-11 e il modulo avanzato registrato fino alla 16. Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
+- Lezioni AE 1-11 e il modulo avanzato registrato fino alla 17. Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
 - Video a 720p e compressi. La curva è stata letta con precisione solo in v3 e nella scala di v5.
 - Sono esercizi su forme e testi: le lezioni viste non mostrano motion graphics montate su un video con il volto.
 - Il trascritto è automatico e alcuni nomi sono storpiati. Il creator citato in v3 è probabilmente Iman Gadzhi, da confermare.
