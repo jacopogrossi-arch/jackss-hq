@@ -37,6 +37,8 @@ Sono parti del corso "Cash Flow Contents". Legenda: **Metodo** = serve per fare 
 | p2 `19-24-40` | Premiere 3 | Sincronia audio, livello di regolazione, primi keyframe | Basso: da noi c'è già |
 | p3 `19-35-39` | Premiere 4 | Keyframe, grafico velocità, testi | **Alto: regole su curve e direzione** |
 | p4 `19-56-21` | Premiere 5 | Stabilizzazione ed esportazione | Basso per le plate |
+| p5 `20-37-09` | Premiere 6 | Time remapping: rallenty, accelerazioni | Medio: per i reel travel |
+| p6 `20-26-27` | Premiere 6 | Falsa partenza della stessa lezione, 25 secondi | Nullo |
 | v6 `14-20-28` | AE 6 | Motion tracking | Medio |
 | v7 `14-51-15` | AE 7 | Lock-on tracking | Medio |
 | v8 `15-09-55` | AE 8 | Fake 3D, griglia, espressioni, primo pezzo dell'animazione finale | **Alto** |
@@ -469,7 +471,19 @@ La lezione finisce a 8:20. Il resto della registrazione, circa 21 minuti, è la 
 | **05:16-05:42** | Esportando a 60 fps un video a 30, il filmato resta a 30 ma scritte e movimenti sopra vanno a 60 | **Metodo** | Risponde a metà della prova sui 60 fps: la faccia resta a 30, le plate no |
 | 06:07-06:34 | Dice che il profilo H.264 "Alto" sbiadisce i colori e consiglia "Principale" | Da verificare | Mi sembra dubbio: il profilo di compressione di norma non cambia i colori. Non lo prendo per buono senza una prova |
 
-La prossima è la Lezione 6, "Time Remapping: rallentamenti, accelerazioni, effetto wow".
+### p5: Premiere, Lezione 6, time remapping (7 min)
+
+Per le plate non serve. Serve per i reel travel. La registrazione è completa.
+
+| Minuto | Cosa | Tipo | Collegamento |
+|---|---|---|---|
+| 00:48-01:46 | Si isola il pezzo con due tagli e si cambia la velocità solo lì | **Metodo** | I reel: il rallenty sta sul momento forte, non su tutta la clip |
+| **01:46-03:32** | Al 20% un video a 25 fps diventa 5 immagini al secondo e scatta. Il flusso ottico inventa quelle mancanti | **Metodo** | Sui reel si può fare con l'interpolazione. Meglio ancora evitarla: se sai che vuoi il rallenty, gira a 60 o 120 fps |
+| **03:32-04:10** | Più il rallenty è marcato, più si vedono difetti nei punti delicati | **Metodo** | Il limite: rallenty leggeri sui filmati normali, marcati solo su quelli girati apposta |
+| **04:37-05:49** | Rampa: veloce, poi lento, poi normale, con due tagli | **Metodo** | Vicino ai tuoi stacchi a tempo di musica. Vedi la prova in lista |
+| 05:58-07:15 | Con la curva Bézier il cambio di velocità diventa morbido. Sulla sua versione non c'è e lo mostra sull'opacità | Metodo | La stessa regola delle plate: anche la velocità del filmato non va a scalini |
+
+La prossima è la Lezione 7.
 
 ### Il filo che lega i video
 
@@ -609,6 +623,10 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 
 - [ ] **Taglio a J sulle reazioni (Premiere L2):** la voce della frase dopo parte sotto la fine della reazione. Da provare su un passaggio del Video #3 o sul prossimo video, serve il tuo orecchio.
 
+**Reel travel**
+
+- [ ] **Rampa di velocità morbida (Premiere L6):** veloce, poi lento sul momento forte, con il passaggio a curva e non a scalino. Per una clip girata a 60 o 120 fps e una normale con frame inventati.
+
 **Suono**
 
 - [ ] **Un suono per elemento con tono abbassato (L11):** solo con suoni scelti da te, da giudicare a orecchio.
@@ -618,7 +636,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 ## Limiti
 
 - La mappa nasce dall'intero parlato di tutti i video e da un frame ogni 30 secondi: i frame sono stati studiati da vicino solo nei punti sui grafici.
-- Modulo After Effects registrato tutto, dalla 1 alla 20: la pagina di v21 dice 20 di 20, quindi l'ordine dedotto regge. Per v13 e v14 il numero resta probabile. Del modulo Premiere sono mappate le lezioni 2-5 su 10. Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
+- Modulo After Effects registrato tutto, dalla 1 alla 20: la pagina di v21 dice 20 di 20, quindi l'ordine dedotto regge. Per v13 e v14 il numero resta probabile. Del modulo Premiere sono mappate le lezioni 2-6 su 10. Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
 - Video a 720p e compressi. La curva è stata letta con precisione solo in v3 e nella scala di v5.
 - Sono esercizi su forme e testi: le lezioni viste non mostrano motion graphics montate su un video con il volto.
 - Il trascritto è automatico e alcuni nomi sono storpiati. Il creator citato in v3 è probabilmente Iman Gadzhi, da confermare.
