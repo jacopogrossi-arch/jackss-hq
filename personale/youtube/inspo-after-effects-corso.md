@@ -30,6 +30,7 @@ Sono parti del corso "Cash Flow Contents". Legenda: **Metodo** = serve per fare 
 | v16 `17-55-55` | AE 15 | Maschere avanzate: griglia circolare, finestra sul video | Medio-alto, breve |
 | v17 `18-03-02` | AE 16 (probabile) | Controlli cursore ed espressioni | Basso: da noi c'è già |
 | v18 `18-17-28` | AE 17 (probabile) | Effetto di prossimità: l'ambiente reagisce a un punto | Medio-alto: un'idea nuova |
+| v19 `18-33-32` | AE 18 (probabile) | Cubi in 3D classico: pezzi che si compongono in un logo | Medio-alto: una quarta curva |
 | v6 `14-20-28` | AE 6 | Motion tracking | Medio |
 | v7 `14-51-15` | AE 7 | Lock-on tracking | Medio |
 | v8 `15-09-55` | AE 8 | Fake 3D, griglia, espressioni, primo pezzo dell'animazione finale | **Alto** |
@@ -345,6 +346,25 @@ Le espressioni sono un file del corso: qui si vede il risultato, non il codice c
 
 Il rischio per le plate: il movimento nasce da una formula, quindi va calcolato frame per frame in modo che esca uguale a ogni render. Serve anche una ragione per il punto che si muove, altrimenti resta una demo.
 
+### v19: Lezione AE 18, cubi in 3D classico e logo che si compone (16 min)
+
+Quattro mattonelle arrivano da punti diversi e si chiudono in una finestra, ispirata a Windows, poi esplode la luce. Il cubo è il "bello cubo" annunciato in v17. Il numero 18 è dedotto dall'ordine: nel video non è scritto. La lezione è completa.
+
+| Minuto | Cosa | Tipo | Collegamento |
+|---|---|---|---|
+| **00:27** | Tutto in 3D classico, senza estrusione e senza plugin | **Metodo** | Risponde al limite di v14: il 3D avanzato non accetta effetti, quello classico sì |
+| **01:26-04:48** | Il cubo si costruisce come un origami: sei facce piatte, ruotate e accostate | **Metodo** | In CSS si fa allo stesso modo, con sei `div` e `transform` in 3D. Niente Blender |
+| 04:26 | "Non è precisissimo, tanto non si vede" | Metodo | Stessa logica di L11: conta quello che arriva all'occhio |
+| 05:48-07:02 | Precomposizione col 3D mantenuto, punto di ancoraggio al centro del cubo | Salta | In CSS è il `transform-origin`, il principio è lo stesso: si ruota attorno al centro |
+| 07:39-08:24 | Il cubo schiacciato diventa una mattonella, quattro copie fanno la finestra | **Metodo** | Un solo pezzo riusato: è il "maestro" di L3 e L9 |
+| **08:43-09:57** | Si parte dalla posizione finale e si smonta: ogni pezzo va via e ruota, uno resta al centro | **Metodo, il cuore** | Si anima al contrario, così la forma finale è sicuramente giusta. Vale per qualsiasi cosa si componga |
+| **10:41-11:11** | Curva dei pezzi: lenti all'inizio, veloci alla fine | **Metodo** | Quarta curva, vedi sezione sotto |
+| **11:23-12:47** | La camera fa la mossa vera quando i pezzi si chiudono. Prova varie versioni, ne boccia due: "più siamo semplici, meglio è" | **Metodo** | Due mosse sincronizzate su un solo istante. Conferma la tua regola: meno, ma giusto |
+| **12:47-14:35** | Bagliore su un livello di regolazione, raggi di luce su un altro, con l'opacità che sale solo quando tutto si compone | **Metodo** | Il finish non è fisso: arriva con l'evento. Si lega allo strato di L17 |
+| 14:35-15:15 | Light Burst attorno all'oggetto | Metodo | Da usare poco, va vicino al look "effetto" che lui stesso critica in L14 |
+
+Colori magenta e blu su nero: sono i suoi, non la nostra direzione.
+
 ### Il filo che lega i video
 
 1. **Una gerarchia, non tanti oggetti:** scatole (v2), ragnatela (v4), precomposizione (v5), oggetto Null (v6) sono la stessa idea detta quattro volte. Un elemento porta il movimento, gli altri lo seguono.
@@ -381,6 +401,8 @@ Correzione del 04/11: picco e percentuali della riga "A mano, quadrato" sono mis
 **Nuovo dall'aggiornamento sulla camera (v13, min 12:51):** qui il grafico è diverso dal picco stretto. Nella mossa d'ingresso la velocità parte al massimo e cala; nella seconda è una cupola larga, a zero solo agli estremi. Letto a occhio, non digitalizzato. Quindi la curva a picco non è l'unica: la scelta dipende dalla mossa. Sugli swipe resta la D, che ti è piaciuta a occhio; la cupola va confrontata.
 
 **Nuovo dalla Lezione 14 (min 12:30):** la curva della transizione è un picco strettissimo, quasi simmetrico, con il massimo circa al 47% della durata e code lunghe e morbide. Tocca 20.000 px al secondo: in quel momento non si legge nulla, e lì sta il taglio. Valori letti a occhio. Abbiamo quindi tre famiglie: **picco in anticipo** per le mosse di scena, **cupola** per la camera che si sposta, **picco centrale stretto** per le transizioni.
+
+**Nuovo dalla Lezione 18 (circa min 11):** due curve nella stessa mossa. I pezzi hanno il **picco in ritardo**: accelerano e si fermano di colpo, con il massimo circa all'85% della durata. La camera ha un picco stretto circa al 40% e una coda lunga, la stessa famiglia dello zoom di L8. Valori letti a occhio su frame sfocati. Le famiglie diventano quattro: la nuova serve quando dei pezzi si chiudono su qualcosa. L'arresto secco va provato con attenzione, perché può sembrare il colpo che non ti piace.
 
 **Cosa significa, a parole:** il movimento parte piano per un attimo, scatta forte intorno al 30% della durata, poi passa quasi metà del tempo ad assestarsi sull'ultimo 10% di strada. Prima lo stacco, poi la planata.
 
@@ -459,6 +481,9 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 - [ ] **Prossimità (L17):** un punto attraversa la plate e gli elementi vicini si scostano piano, con poca forza e distanza alta. Il punto deve voler dire qualcosa, per esempio il passaggio da un concetto all'altro.
 - [ ] **Bordo che segue la luce (L17):** sulle card il bordo luminoso gira verso il punto e si spegne con la distanza.
 - [ ] **Bagliore e vignettatura in cima alla plate (L17):** un solo strato di finish sopra a tutto, con e senza.
+- [ ] **Pezzi che si compongono (L18):** mattonelle in 3D CSS che arrivano e si chiudono in una forma, animate dalla forma finale all'indietro. Per intro e capitoli.
+- [ ] **Picco in ritardo contro curva D (L18):** sugli stessi pezzi, per capire se l'arresto secco regge o sembra un colpo.
+- [ ] **Luce che arriva con l'evento (L18):** bagliore e raggi salgono solo quando i pezzi si chiudono, contro un bagliore fisso.
 - [ ] **Forme finte 3D (L9):** cilindri con ellisse, rettangolo e sfumature, con le ombre verso l'oggetto dietro.
 - [ ] **Onda di turbolenza (L8, L9):** come transizione, prima misurando quanto pesa sul render.
 
@@ -471,7 +496,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 ## Limiti
 
 - La mappa nasce dall'intero parlato di tutti i video e da un frame ogni 30 secondi: i frame sono stati studiati da vicino solo nei punti sui grafici.
-- Lezioni AE 1-11 e il modulo avanzato registrato fino alla 17. Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
+- Lezioni AE 1-11 e il modulo avanzato registrato fino alla 18. Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
 - Video a 720p e compressi. La curva è stata letta con precisione solo in v3 e nella scala di v5.
 - Sono esercizi su forme e testi: le lezioni viste non mostrano motion graphics montate su un video con il volto.
 - Il trascritto è automatico e alcuni nomi sono storpiati. Il creator citato in v3 è probabilmente Iman Gadzhi, da confermare.
