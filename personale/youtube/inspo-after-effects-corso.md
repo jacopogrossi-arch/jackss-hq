@@ -21,7 +21,7 @@ Sono parti del corso "Cash Flow Contents". Legenda: **Metodo** = serve per fare 
 | v3 `12-33-52` | AE 2 | Forme, sfumature, grafico di velocità | **Il più importante** |
 | v4 `13-01-11` | AE 3 | Titolo animato, collegare i livelli | Alto |
 | v5 `13-49-38` | AE 4 | Shape morphing, tracciato Bézier | Alto |
-| *mancante* | AE 5 | Maschere e Continua Testi | Non registrata |
+| v10 `16-10-22` | AE 5 | Testo con il video dentro, testo che esce da un bordo | Medio-alto |
 | v6 `14-20-28` | AE 6 | Motion tracking | Medio |
 | v7 `14-51-15` | AE 7 | Lock-on tracking | Medio |
 | v8 `15-09-55` | AE 8 | Fake 3D, griglia, espressioni, primo pezzo dell'animazione finale | **Alto** |
@@ -169,6 +169,22 @@ Le ultime lezioni costruiscono un solo spot verticale: due creme, cilindri, bott
 | 28:22 | Prima costruisce la mano, poi la porta nello spot | Metodo | Pezzi separati, poi assemblati |
 | **28:47-30:03** | Bottone premuto: scala 90, 93, 110 sul clic | Da evitare sulle plate | È il rimbalzo che hai bocciato il 04/11. Ha senso solo su un clic vero |
 
+### v10: Lezione AE 5, maschere e testi (14 min)
+
+Registrata per ultima: nel corso viene tra v5 e v6.
+
+| Minuto | Cosa | Tipo | Collegamento |
+|---|---|---|---|
+| **00:30-05:47** | Video dentro le lettere della scritta: testo sopra la clip, modalità alfa stencil | **Metodo** | Rifattibile: `background-clip:text` o maschera in CSS. Adatto a una parola chiave, oppure ai reel |
+| 01:53-02:47 | Esporta i pezzi finiti e lavora in parallelo: i progetti enormi pesano e non escono | Metodo | Le nostre finestre di prova e i `window-patch` |
+| 03:38-04:28 | Ripasso del "collega a" (ragnatela) e delle modalità di fusione | Metodo | v4 |
+| 06:12 | Il testo resta modificabile finché non diventa immagine | Metodo | Da noi il testo è già HTML: si cambia sempre |
+| **06:46-11:25** | Testo che esce da sotto un bordo invisibile: forma sopra, modalità alfa sagoma | **Metodo** | Il classico ingresso dei titoli. Da noi: testo che sale dentro un contenitore con `overflow:hidden` |
+| 08:11-10:14 | Con un livello selezionato il rettangolo crea una maschera, senza livello crea una forma | Salta | Solo After Effects |
+| 09:07-09:43 | Lettera per lettera con le maschere: lui stesso dice che è lento | Salta | Da noi basta separare le lettere |
+| 11:43 | Differenza tra alfa e luma: la spiega "detto facile", in modo approssimativo | Salta | Non è un riferimento tecnico |
+| 12:13-13:16 | Maschera disegnata con il tracciato Bézier | Metodo | v5 |
+
 ### Il filo che lega i video
 
 1. **Una gerarchia, non tanti oggetti:** scatole (v2), ragnatela (v4), precomposizione (v5), oggetto Null (v6) sono la stessa idea detta quattro volte. Un elemento porta il movimento, gli altri lo seguono.
@@ -241,10 +257,22 @@ Da provare su una finestra corta prima di propagare, come da nota del 04/11:
 
 Nei suoi esempi la curva dura 1,7-1,9 secondi. Su mosse molto più corte il picco potrebbe diventare uno scatto: da verificare sulla prova.
 
+### Dopo le lezioni 5, 8 e 9
+
+In ordine di convenienza:
+
+1. **Profondità sulla lavagna (fake 3D):** durante lo swipe la griglia di sfondo si muove meno del contenuto. Costa poco e rende la scena più ricca senza aggiungere grafiche. Da provare su una finestra.
+2. **Curva anche sulla camera:** stessa famiglia, picco più avanti, come lo zoom della Lezione 8. Da confrontare con `power2.inOut` su uno zoom vero.
+3. **Testo che esce da un bordo:** per i titoli delle plate, con la curva scelta.
+4. **Testo con il video dentro:** solo su una parola che lo merita.
+5. **Light sweep e turbolenza:** dopo una prova di peso sul render.
+
+Da lasciare fuori: posterizza tempo sulle plate, rimbalzo del bottone, marionetta, green screen.
+
 ## Limiti
 
 - La mappa nasce dall'intero parlato di tutti i video e da un frame ogni 30 secondi: i frame sono stati studiati da vicino solo nei punti sui grafici.
-- Manca la Lezione 5 (Maschere e Continua Testi): si vede ferma in coda a v5, ma non è stata registrata.
+- Lezioni 1-9 registrate. La Lezione 9 annuncia almeno un'altra lezione, su come scontornare senza green screen e sul lavoro tra After Effects e Premiere.
 - Video a 720p e compressi. La curva è stata letta con precisione solo in v3 e nella scala di v5.
 - Sono esercizi su forme e testi: le lezioni viste non mostrano motion graphics montate su un video con il volto.
 - Il trascritto è automatico e alcuni nomi sono storpiati. Il creator citato in v3 è probabilmente Iman Gadzhi, da confermare.
