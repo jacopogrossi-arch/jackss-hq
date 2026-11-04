@@ -35,6 +35,8 @@ Sono parti del corso "Cash Flow Contents". Legenda: **Metodo** = serve per fare 
 | v21 `18-57-51` | AE 20, ultima | Profondità di campo: il fuoco si sposta tra gli elementi | **Alto: nuova per le plate** |
 | p1 `19-12-02` | Premiere 2 | Scorciatoie, tagli sui silenzi, taglio a J | Medio: una tecnica di taglio nuova |
 | p2 `19-24-40` | Premiere 3 | Sincronia audio, livello di regolazione, primi keyframe | Basso: da noi c'è già |
+| p3 `19-35-39` | Premiere 4 | Keyframe, grafico velocità, testi | **Alto: regole su curve e direzione** |
+| p4 `19-56-21` | Premiere 5 | Stabilizzazione ed esportazione | Basso per le plate |
 | v6 `14-20-28` | AE 6 | Motion tracking | Medio |
 | v7 `14-51-15` | AE 7 | Lock-on tracking | Medio |
 | v8 `15-09-55` | AE 8 | Fake 3D, griglia, espressioni, primo pezzo dell'animazione finale | **Alto** |
@@ -435,7 +437,39 @@ Il numero viene dalla pagina: la lezione dopo è la 3. La Lezione 1 non è regis
 | 07:27-08:19 | Colore su un livello unico sopra tutto il montaggio | Metodo, già nostro | Il look passa da un solo punto |
 | 08:19-09:43 | Keyframe: da A a B | Salta | Già visti nelle lezioni AE |
 
-La prossima è la Lezione 4, "Movimenti coi Keyframes e Testi", 20 minuti: è la parte di Premiere più vicina alle plate.
+### p3: Premiere, Lezione 4, keyframe, velocità e testi (20 min)
+
+La lezione più utile di Premiere. Qui spiega a parole cosa aveva solo mostrato in After Effects: quando usare quale curva, e da dove far entrare le cose.
+
+| Minuto | Cosa | Tipo | Collegamento |
+|---|---|---|---|
+| 00:29-03:19 | Keyframe, posizione a due valori, scala a uno | Salta | Base |
+| 03:19-03:52 | Keyframe più lontani = più lento, più vicini = più veloce | Metodo, già nostro | La durata in `board.py` |
+| 04:51-05:34 | La traiettoria si può curvare | Metodo | Da noi la camera va dritta. Un arco leggero si può aggiungere al gesto unico di v13 |
+| 08:00-09:15 | Punto di ancoraggio: è il cardine di una porta, di solito va al centro | Metodo | `transform-origin` |
+| **10:20-11:12** | Velocità costante: "macchinosa", parte e si blocca | **Metodo** | Il motivo di ogni curva |
+| **11:12-12:25** | Tre curve: entrata, uscita e picco centrale, la sua preferita | **Metodo** | Attenzione ai nomi, vedi sezione sulla curva |
+| **12:25-12:50** | Due cunette nel grafico tra un keyframe e l'altro: il movimento diventa macchinoso | **Metodo** | Se una mossa è fatta di due pezzi, la velocità deve restare una sola curva. Vale per le mosse concatenate |
+| **13:22-14:23** | La curva che parte veloce va bene solo sulla prima cosa che si vede. Più avanti è incoerente | **Metodo, nuovo** | Una mossa a metà video deve accelerare da ferma: conferma le curve con partenza morbida |
+| **14:50** | Curva dolce: se è troppo veloce "stacca l'occhio" | **Metodo** | La tua scelta di D contro B |
+| **15:16-16:34** | Regola: si entra dal lato corto. In 16:9 dall'alto o dal basso, in verticale di lato: meno strada da fare | **Metodo, nuovo** | I nostri swipe vanno in orizzontale, sul lato lungo. Vedi la prova in lista |
+| 16:34-19:36 | Pannello testi, usa SF Pro. "Qua faremo poche scritte", le fa in After Effects | Salta | |
+| 19:36-20:07 | Testo che cambia a ogni taglio | Metodo | Scritte a tempo, semplici |
+
+### p4: Premiere, Lezione 5, stabilizzazione ed esportazione (8 min)
+
+La lezione finisce a 8:20. Il resto della registrazione, circa 21 minuti, è la pagina della Lezione 6 ferma, senza audio.
+
+| Minuto | Cosa | Tipo | Collegamento |
+|---|---|---|---|
+| 00:31-02:25 | Stabilizzatore alterazione: toglie i sobbalzi in automatico | Metodo | Può servire sui reel travel, con filmati mossi |
+| **02:25-03:44** | Non lavorare sulla clip con l'effetto sopra: esportala e reimportala | **Metodo, già nostro** | Il principio di render a pezzi e di grade applicato prima del montaggio |
+| 03:44-04:09 | Attacco e stacco per esportare un pezzo | Salta | |
+| 04:09-05:16 | H.264, impostazioni come la sorgente | Metodo, già nostro | L'export della skill |
+| **05:16-05:42** | Esportando a 60 fps un video a 30, il filmato resta a 30 ma scritte e movimenti sopra vanno a 60 | **Metodo** | Risponde a metà della prova sui 60 fps: la faccia resta a 30, le plate no |
+| 06:07-06:34 | Dice che il profilo H.264 "Alto" sbiadisce i colori e consiglia "Principale" | Da verificare | Mi sembra dubbio: il profilo di compressione di norma non cambia i colori. Non lo prendo per buono senza una prova |
+
+La prossima è la Lezione 6, "Time Remapping: rallentamenti, accelerazioni, effetto wow".
 
 ### Il filo che lega i video
 
@@ -480,6 +514,8 @@ Correzione del 04/11: picco e percentuali della riga "A mano, quadrato" sono mis
 
 **Nuovo dalla Lezione 20 (circa min 11:30):** è il grafico più vicino alla nostra lavagna, perché mostra due spostamenti di camera uno dopo l'altro, con una sosta in mezzo. Ognuno ha il picco circa al 20% e una coda lunga, e dura circa 1,8 secondi: più della nostra D a 1,3 s. Valori letti a occhio. Conferma il picco in anticipo per le mosse di scena. Il riempimento dell'anello (circa min 4) è invece una cupola quasi simmetrica.
 
+**Nuovo dalla Lezione 4 di Premiere (min 11:12):** i nomi del corso sono diversi da quelli del codice. Per lui "Ease In" è un'entrata che parte veloce e rallenta, cioè quello che in CSS e GSAP si chiama `out`. "Ease Out" è il contrario. Il "picco centrale" è quello che da noi è `inOut`. Lui usa la prima per le entrate, la seconda per le uscite, quella centrale "per tutto il resto del video".
+
 **Cosa significa, a parole:** il movimento parte piano per un attimo, scatta forte intorno al 30% della durata, poi passa quasi metà del tempo ad assestarsi sull'ultimo 10% di strada. Prima lo stacco, poi la planata.
 
 Nessuna curva della skill ha questa forma. Le `inOut` sono simmetriche, con il picco a metà. Le `.out` partono già al massimo, senza alcuna rincorsa.
@@ -522,6 +558,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 - [ ] **Profondità sulla lavagna (fake 3D, L8):** durante lo swipe la griglia si muove meno del contenuto.
 - [ ] **Curva sulla camera (L8):** stessa famiglia con picco al 40% circa, contro `power2.inOut`, su uno zoom vero. Prima va misurata sul grafico.
 - [ ] **Curva a cupola contro curva D (v13):** stesso swipe, per capire quale regge meglio una camera.
+- [ ] **Swipe dal lato corto (Premiere L4):** stessa mossa in verticale contro quella in orizzontale di oggi. In 16:9 la strada è più breve, quindi la velocità di picco scende.
 - [ ] **Un solo gesto con leggera rotazione (v13):** posizione e orientamento insieme, 3 keyframe invece di 4.
 - [ ] **Sfondo fermo senza griglia (v13):** contro la griglia di oggi e contro il fake 3D.
 - [ ] **Frase che si accumula e camera che arretra (v13):** la parola nuova entra colorata.
@@ -529,7 +566,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 - [ ] **Tremolio leggero sugli elementi (`wiggle`, L8):** deve uscire uguale a ogni render e restare appena percepibile.
 - [ ] **Un maestro per plate (L3, L9):** gli elementi seguono un gruppo che fa il movimento principale, con partenze sfalsate.
 
-- [ ] **60 frame al secondo (L11):** stesso swipe a 30 e a 60 fps. Il render costa il doppio, va capito se si vede.
+- [ ] **60 frame al secondo (L11, Premiere L5):** stesso swipe a 30 e a 60 fps, con il filmato che resta a 30. Il render costa il doppio, va capito se si vede.
 - [ ] **Il fuoco segue la parola (L20):** più elementi a profondità diverse, quello nominato è nitido e gli altri leggermente sfocati. Va misurato quanto pesa sul render.
 - [ ] **Sfocatura di movimento (L19):** stesso swipe con e senza. Va capito come ottenerla in HyperFrames e quanto pesa sul render.
 - [ ] **Transizione a cavallo del taglio (L11):** la plate entra prima che finisca la frase.
@@ -581,7 +618,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 ## Limiti
 
 - La mappa nasce dall'intero parlato di tutti i video e da un frame ogni 30 secondi: i frame sono stati studiati da vicino solo nei punti sui grafici.
-- Modulo After Effects registrato tutto, dalla 1 alla 20: la pagina di v21 dice 20 di 20, quindi l'ordine dedotto regge. Per v13 e v14 il numero resta probabile. Del modulo Premiere sono registrate solo le lezioni 2 e 3 su 10. Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
+- Modulo After Effects registrato tutto, dalla 1 alla 20: la pagina di v21 dice 20 di 20, quindi l'ordine dedotto regge. Per v13 e v14 il numero resta probabile. Del modulo Premiere sono mappate le lezioni 2-5 su 10. Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
 - Video a 720p e compressi. La curva è stata letta con precisione solo in v3 e nella scala di v5.
 - Sono esercizi su forme e testi: le lezioni viste non mostrano motion graphics montate su un video con il volto.
 - Il trascritto è automatico e alcuni nomi sono storpiati. Il creator citato in v3 è probabilmente Iman Gadzhi, da confermare.
