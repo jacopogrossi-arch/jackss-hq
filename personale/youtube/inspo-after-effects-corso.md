@@ -288,7 +288,7 @@ Tesi: servono solo due transizioni, continuità e flash. Il resto distrae.
 | **07:56-08:21** | Colori invertiti da un taglio in poi: cambia il mood con un solo effetto | **Metodo** | Il cambio di tono su una frase forte |
 | **09:30-10:46** | **La regola più utile:** una sola mossa col Null, e la massima velocità cade esattamente sul cambio di scena | **Metodo, il punto chiave** | Il taglio si nasconde nel picco. Vedi la curva qui sotto |
 | **10:46-11:27** | Flash: solido bianco sul taglio, opacità dal massimo a zero | **Metodo** | Facilissimo da rifare |
-| **11:27** | "Light leak e overlay bruciati sono passati di moda, fanno schifo" | Opinione da valutare | Nel Video #3 usiamo i light leak, e il 20/10 ne avevi chiesti di più: decidi tu |
+| **11:27** | "Light leak e overlay bruciati sono passati di moda, fanno schifo" | Opinione da valutare | Deciso il 04/11: teniamo sia i flash sia i light leak |
 | 11:27-13:04 | Scena che va indietro, solido del colore dello sfondo, dissolvenza | Metodo | Uscita pulita |
 
 Il corso si contraddice: in v9 chiamava "oro" l'onda di turbolenza dei creator famosi, qui critica quegli stessi stili. Conta il principio di questa lezione, che è il più recente.
@@ -385,7 +385,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 - [ ] **Transizione a cavallo del taglio (L11):** la plate entra prima che finisca la frase.
 
 - [ ] **Transizione col taglio nel picco (L14):** una sola mossa, picco stretto, cambio di plate sul massimo.
-- [ ] **Flash bianco contro light leak (L14):** stessa transizione del Video #3, per scegliere.
+- [ ] **Flash bianco (L14):** da aggiungere accanto ai light leak, che restano. Capire quando usare l'uno e quando l'altro.
 - [ ] **Colori invertiti su una frase forte (L14):** cambio di mood, da usare poco.
 
 **Testi**
