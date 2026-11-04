@@ -86,3 +86,5 @@ fades are fine without backdrop-filter (lower lines). Glass that has not arrived
 - **Always pass `--engine parakeet`:** with `auto`, a missing Parakeet falls back to whisper without a word.
 - **Snapshot filenames:** `snapshot --at 8.0` writes `frame-00-at-8s.png` (no ".0") and wipes the folder each run; copy
   by exact name (`snap-beats.py` does).
+- **SVG line that draws slowly:** with `pathLength="1"` and a dash offset from 1 to 0 Chrome pops the line in one go; use `pathLength="1000"` (Video #3, plate p24).
+- **Two stacked sheets, the top one moved sideways:** the one below shows in the strip it leaves. Fade the lower sheet out once the upper is opaque (Video #3, reaction panel).
