@@ -24,6 +24,7 @@ Sono parti del corso "Cash Flow Contents". Legenda: **Metodo** = serve per fare 
 | v10 `16-10-22` | AE 5 | Testo con il video dentro, testo che esce da un bordo | Medio-alto |
 | v11 `16-25-02` | AE 10 | Scontorno senza green screen | Basso |
 | v12 `16-31-01` | AE 11 | Montaggio completo di un video cliente, dal grezzo alla plate | **Alto, il ragionamento intero** |
+| v13 `17-04-23` | Aggiornamento, camera | Videocamera 3D e oggetto Null su un foglio infinito | **Altissimo: è la nostra lavagna** |
 | v6 `14-20-28` | AE 6 | Motion tracking | Medio |
 | v7 `14-51-15` | AE 7 | Lock-on tracking | Medio |
 | v8 `15-09-55` | AE 8 | Fake 3D, griglia, espressioni, primo pezzo dell'animazione finale | **Alto** |
@@ -224,6 +225,31 @@ Chiude la parte tecnica e apre il modulo sugli short. Monta un video verticale d
 | **28:11-28:49** | Niente "mortume" tra le clip: la transizione sta **a cavallo** del taglio | **Metodo** | Plate che entra prima che finisca la frase |
 | **29:27-30:20** | Sound design: un clic per ogni elemento, abbassa il tono di 10 per dargli peso | **Metodo, da sentire** | Tu non vuoi i pop: va provato solo con suoni scelti da te. Il tono cambiato è un'idea nuova |
 
+### v13: Aggiornamento, videocamera e movimento 3D (21 min)
+
+Apre una parte nuova del corso, più avanzata. Testo su sfondo chiaro, nessuna grafica: conta solo il movimento. È il caso più vicino alla nostra lavagna.
+
+| Minuto | Cosa | Tipo | Collegamento |
+|---|---|---|---|
+| 01:36-02:01 | Costruisce sull'audio e pensa solo al movimento, non alla grafica | Metodo | Provare il movimento prima di rifinire |
+| **03:52-04:18** | La camera è meglio del livello di regolazione: "infinito foglio bianco" dove metti tutto | **Metodo, il punto chiave** | È `formats/board.py`, arrivato da solo alla stessa idea |
+| **04:45-05:37** | Lo sfondo resta fuori dal 3D, quindi non finisce mai. La griglia invece finisce | **Metodo** | Sfondo fermo, si muove solo il contenuto |
+| 06:03-06:58 | Camera comandata da un Null, anche un parametro alla volta | Metodo | Un contenitore in più in HTML |
+| 07:27-08:46 | Senza Null è più veloce ma scomodo: l'orientamento è sensibile e deforma | Salta | Solo After Effects |
+| 09:08-09:35 | Pochi preset con la stellina, gli altri non li guarda | Metodo | Poche curve fisse nella skill |
+| 09:35 | Preset "overshoot 3D" | Da evitare | Rimbalzo |
+| **10:06-10:36** | Spazio vuoto intorno all'unica scritta: effetto premium, attenzione sul centro | **Metodo** | Meno elementi per plate, nota del 04/11 |
+| **10:59-12:09** | **Correzione del suo stesso metodo:** prima usava 4 keyframe, ora 3, muovendo insieme posizione e orientamento | **Metodo, il punto chiave** | Un solo gesto invece di due mosse |
+| **12:35-13:31** | Grafico: la mossa d'ingresso parte già al massimo, "sul muro", e rallenta. La seconda è una cupola. "Mai troppo piatta", se no scatta | **Metodo** | Vedi la curva qui sotto |
+| 14:09-15:05 | Tiene la griglia per mostrare quanto stona, prova la sfocatura di camera, poi toglie tutto | **Metodo** | Prova e togli. Da confrontare con la nostra griglia |
+| **15:09-15:49** | Zoom sul testo col Null, separato dalla camera | Metodo | Zoom e spostamento su due contenitori diversi |
+| 16:38 | "Pezzettino dopo pezzettino", riascoltando ogni volta la voce | Metodo | Il nostro metodo a finestre |
+| **17:03-17:59** | La frase si accumula, la parola nuova entra rossa e l'occhio va lì | **Metodo** | Il nostro oro sulla parola chiave |
+| **18:21-18:47** | Niente sfondo e niente griglia: è bello perché il movimento è buono e il testo pulito | **Metodo** | Il valore sta nel movimento, non nella decorazione |
+| 19:26 | Anche su una foto: meglio la camera 3D che la sola scala | **Metodo** | Il moodboard del Video #3 |
+
+Cita lezioni che non abbiamo: "tecniche di manipolazione visiva" e la "regola del box" per i testi. Annuncia le "transizioni avanzate".
+
 ### Il filo che lega i video
 
 1. **Una gerarchia, non tanti oggetti:** scatole (v2), ragnatela (v4), precomposizione (v5), oggetto Null (v6) sono la stessa idea detta quattro volte. Un elemento porta il movimento, gli altri lo seguono.
@@ -256,6 +282,8 @@ Ho digitalizzato le curve pixel per pixel:
 Correzione del 04/11: picco e percentuali della riga "A mano, quadrato" sono misurati sulla curva disegnata. La formula `cubic-bezier(.54, 0, 0, 1)` calcolata da sola ha un picco un po' più alto: 5,1 volte la media, al 30% della durata, con il 90% della strada al 57%. La forma è la stessa, ma per il passo in pixel vale il 5,1.
 
 **Nuovo dalla Lezione 8 (min 24:01):** lo zoom di camera ha la stessa famiglia di curva, ma con il picco più avanti, circa al 40%, e dura circa 2 secondi. Valori letti a occhio sul grafico, non digitalizzati. Prima dello scatto c'è una rincorsa più lunga, ed è il "più ritardo all'inizio" che dice lui. Nella stessa lezione (min 16:26) sulla crema che esce si vede una curva simmetrica, ma è proprio il momento in cui dice di voler cambiare la velocità: non sappiamo se la lascia così.
+
+**Nuovo dall'aggiornamento sulla camera (v13, min 12:51):** qui il grafico è diverso dal picco stretto. Nella mossa d'ingresso la velocità parte al massimo e cala; nella seconda è una cupola larga, a zero solo agli estremi. Letto a occhio, non digitalizzato. Quindi la curva a picco non è l'unica: la scelta dipende dalla mossa. Sugli swipe resta la D, che ti è piaciuta a occhio; la cupola va confrontata.
 
 **Cosa significa, a parole:** il movimento parte piano per un attimo, scatta forte intorno al 30% della durata, poi passa quasi metà del tempo ad assestarsi sull'ultimo 10% di strada. Prima lo stacco, poi la planata.
 
@@ -298,6 +326,10 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 
 - [ ] **Profondità sulla lavagna (fake 3D, L8):** durante lo swipe la griglia si muove meno del contenuto.
 - [ ] **Curva sulla camera (L8):** stessa famiglia con picco al 40% circa, contro `power2.inOut`, su uno zoom vero. Prima va misurata sul grafico.
+- [ ] **Curva a cupola contro curva D (v13):** stesso swipe, per capire quale regge meglio una camera.
+- [ ] **Un solo gesto con leggera rotazione (v13):** posizione e orientamento insieme, 3 keyframe invece di 4.
+- [ ] **Sfondo fermo senza griglia (v13):** contro la griglia di oggi e contro il fake 3D.
+- [ ] **Frase che si accumula e camera che arretra (v13):** la parola nuova entra colorata.
 - [ ] **Scala lenta unica su tutta la plate (L3):** continua dopo l'ultimo elemento, per la regola "mai ferma".
 - [ ] **Tremolio leggero sugli elementi (`wiggle`, L8):** deve uscire uguale a ogni render e restare appena percepibile.
 - [ ] **Un maestro per plate (L3, L9):** gli elementi seguono un gruppo che fa il movimento principale, con partenze sfalsate.
@@ -328,7 +360,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 ## Limiti
 
 - La mappa nasce dall'intero parlato di tutti i video e da un frame ogni 30 secondi: i frame sono stati studiati da vicino solo nei punti sui grafici.
-- Lezioni AE 1-11 registrate: la parte tecnica è chiusa. La Lezione 11 annuncia il modulo sugli short: retention e hook.
+- Lezioni AE 1-11 e la prima dell'aggiornamento registrate. Annunciati: transizioni avanzate e modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
 - Video a 720p e compressi. La curva è stata letta con precisione solo in v3 e nella scala di v5.
 - Sono esercizi su forme e testi: le lezioni viste non mostrano motion graphics montate su un video con il volto.
 - Il trascritto è automatico e alcuni nomi sono storpiati. Il creator citato in v3 è probabilmente Iman Gadzhi, da confermare.
