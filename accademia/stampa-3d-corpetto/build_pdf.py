@@ -156,14 +156,14 @@ s += [Paragraph("Parte 3 - Dati dell'intero capo", H1),
       Paragraph("Sul piatto dell'H2D ne entrano circa 20 per volta, lasciando un po' di spazio tra un pezzo e l'altro. "
                 "Quindi mi servono 3 piatti (20 + 20 + 17). Una bobina da 1 kg basta e avanza.", P),
       Paragraph("Stima complessiva dei tempi", H2),
-      Paragraph("Per stare tranquillo aggiungo un 20% di margine, per riprove, pulizia del piatto e piccoli errori: "
-                "11 h 45 min x 1,2 = circa 14 ore di stampa con una sola stampante. Poi c'è l'assemblaggio: i 57 moduli si uniscono "
-                "con il filo passato nei fori. Calcolo circa 3 minuti a modulo, quindi circa 3 ore in più.", P),
+      Paragraph("Con una sola stampante servono circa 11 h 45 min di stampa. Poi c'è l'assemblaggio: i 57 moduli si uniscono "
+                "con il filo passato nei fori. Calcolo circa 3 minuti a modulo, quindi circa 3 ore in più. "
+                "Il margine di errore è già dentro i 57 moduli, grazie al 10% di scorta.", P),
       Spacer(1, 4),
       tabella([["Stampanti disponibili", "Tempo di stampa", "In giorni di laboratorio (8 h)"],
-               ["1 stampante (H2D)", "circa 14 h", "circa 2 giorni"],
-               ["2 stampanti", "circa 7 h", "circa 1 giorno"],
-               ["3 stampanti", "circa 5 h", "mezza giornata"]],
+               ["1 stampante (H2D)", "circa 11 h 45 min", "circa 1 giorno e mezzo"],
+               ["2 stampanti", "circa 6 h", "circa 1 giorno"],
+               ["3 stampanti", "circa 4 h", "mezza giornata"]],
               [5 * cm, 4.5 * cm, 7 * cm]),
       Spacer(1, 4),
       img("screenshot-orca/03-slicing-3-moduli.webp", width=W, max_h=6.5 * cm),
