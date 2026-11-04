@@ -33,6 +33,8 @@ Sono parti del corso "Cash Flow Contents". Legenda: **Metodo** = serve per fare 
 | v19 `18-33-32` | AE 18 (probabile) | Cubi in 3D classico: pezzi che si compongono in un logo | Medio-alto: una quarta curva |
 | v20 `18-49-23` | AE 19 (probabile) | Testo su un tracciato che corre dentro un tubo colorato | Medio: utile per i collegamenti |
 | v21 `18-57-51` | AE 20, ultima | Profondità di campo: il fuoco si sposta tra gli elementi | **Alto: nuova per le plate** |
+| p1 `19-12-02` | Premiere 2 | Scorciatoie, tagli sui silenzi, taglio a J | Medio: una tecnica di taglio nuova |
+| p2 `19-24-40` | Premiere 3 | Sincronia audio, livello di regolazione, primi keyframe | Basso: da noi c'è già |
 | v6 `14-20-28` | AE 6 | Motion tracking | Medio |
 | v7 `14-51-15` | AE 7 | Lock-on tracking | Medio |
 | v8 `15-09-55` | AE 8 | Fake 3D, griglia, espressioni, primo pezzo dell'animazione finale | **Alto** |
@@ -404,6 +406,37 @@ Per le plate il pezzo buono non è l'effetto a tubo, che è molto suo. È la par
 
 Il rischio per noi: la sfocatura su più elementi può pesare sul render, va misurata.
 
+### La mappa del corso
+
+L'elenco si vede all'inizio della registrazione p1. I moduli sono 8: 1 Architetture, 2 Premiere Pro (10 lezioni), 3 After Effects (20 lezioni, finito), 4 Tenere Alta l'Attenzione, 5 Marketing Avanzato, 6 Scrittura Persuasiva, 7 Sound Design, 8 Bonus. Il modulo 4 parte con "Retention Rate".
+
+### p1: Premiere, Lezione 2, scorciatoie e come si taglia (12 min)
+
+Il numero viene dalla pagina: la lezione dopo è la 3. La Lezione 1 non è registrata. Questa parte va letta per il ragionamento sul taglio, non per i tasti: il nostro montaggio passa dalla skill.
+
+| Minuto | Cosa | Tipo | Collegamento |
+|---|---|---|---|
+| 00:25-05:10 | Tasti Q e W, mappa della tastiera, mano, zoom della preview, penna | Salta | Solo Premiere |
+| **05:10-06:03** | Si taglia sui silenzi, che si leggono come linea piatta nell'onda audio. Chi stacca la voce perde attenzione | **Metodo, già nostro** | La fase di taglio di `youtube-edit`, con la ricerca dei vuoti |
+| **06:11-07:11** | Via anche i riempitivi. Con due partenze della stessa frase si tiene quella che arriva in fondo | **Metodo, già nostro** | La scelta fra le ripetizioni nel taglio |
+| 07:11-08:23 | Avanti di un frame, punti di attacco e stacco per esportare un pezzo | Salta | |
+| **08:40-09:36** | Taglio a J e a L: la clip dopo parte in sottofondo mentre finisce la frase. Lui preferisce la J, utile dopo una reazione a fine frase | **Metodo, nuovo** | Da noi la J c'è solo per i suoni, non per la voce. Vedi la prova in lista |
+| 10:04-11:20 | Scollegare audio e video | Salta | Serve solo per fare la J a mano |
+
+### p2: Premiere, Lezione 3, sincronia e livello di regolazione (10 min)
+
+| Minuto | Cosa | Tipo | Collegamento |
+|---|---|---|---|
+| 00:02-01:51 | Audio del microfono sincronizzato da solo con la traccia della camera | Metodo | Serve quando girerai con un microfono esterno. Da noi si farebbe confrontando le onde audio |
+| 02:58-03:24 | File non in linea | Salta | |
+| **03:49-05:10** | Livello di regolazione: ciò che sta sotto riceve l'effetto, ciò che sta sopra no | **Metodo, già nostro** | Lo stesso di After Effects: testo nitido sopra uno sfondo sfocato |
+| 05:10-06:32 | Il livello non si scala, serve l'effetto Trasformazione | Salta | Solo Premiere. Da noi è la camera |
+| **06:32-07:27** | Un solo livello muove e sfoca video e testo insieme, per un tratto scelto | Metodo | La camera sulla lavagna e `#video-wrap` |
+| 07:27-08:19 | Colore su un livello unico sopra tutto il montaggio | Metodo, già nostro | Il look passa da un solo punto |
+| 08:19-09:43 | Keyframe: da A a B | Salta | Già visti nelle lezioni AE |
+
+La prossima è la Lezione 4, "Movimenti coi Keyframes e Testi", 20 minuti: è la parte di Premiere più vicina alle plate.
+
 ### Il filo che lega i video
 
 1. **Una gerarchia, non tanti oggetti:** scatole (v2), ragnatela (v4), precomposizione (v5), oggetto Null (v6) sono la stessa idea detta quattro volte. Un elemento porta il movimento, gli altri lo seguono.
@@ -535,6 +568,10 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 - [ ] **Transizione con una forma ripetuta (L20):** la stessa forma torna a ogni cambio, va capito se regge o stanca.
 - [ ] **Onda di turbolenza (L8, L9):** come transizione, prima misurando quanto pesa sul render.
 
+**Taglio**
+
+- [ ] **Taglio a J sulle reazioni (Premiere L2):** la voce della frase dopo parte sotto la fine della reazione. Da provare su un passaggio del Video #3 o sul prossimo video, serve il tuo orecchio.
+
 **Suono**
 
 - [ ] **Un suono per elemento con tono abbassato (L11):** solo con suoni scelti da te, da giudicare a orecchio.
@@ -544,7 +581,7 @@ Deciso il 04/11: si fanno tutte insieme quando il corso è finito, ognuna su una
 ## Limiti
 
 - La mappa nasce dall'intero parlato di tutti i video e da un frame ogni 30 secondi: i frame sono stati studiati da vicino solo nei punti sui grafici.
-- Modulo After Effects registrato tutto, dalla 1 alla 20: la pagina di v21 dice 20 di 20, quindi l'ordine dedotto regge. Per v13 e v14 il numero resta probabile. Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
+- Modulo After Effects registrato tutto, dalla 1 alla 20: la pagina di v21 dice 20 di 20, quindi l'ordine dedotto regge. Per v13 e v14 il numero resta probabile. Del modulo Premiere sono registrate solo le lezioni 2 e 3 su 10. Annunciato anche il modulo sugli short. Citate ma non viste: manipolazione visiva e regola del box.
 - Video a 720p e compressi. La curva è stata letta con precisione solo in v3 e nella scala di v5.
 - Sono esercizi su forme e testi: le lezioni viste non mostrano motion graphics montate su un video con il volto.
 - Il trascritto è automatico e alcuni nomi sono storpiati. Il creator citato in v3 è probabilmente Iman Gadzhi, da confermare.
