@@ -38,7 +38,11 @@ CSS = """
 def _focus(box):
     x, y, w, h = box
     s = max(1.12, min(1.5, 1250.0 / max(w, 1), 700.0 / max(h, 1)))
-    return (960 + (x + w / 2 - 960) * 0.75, 540 + (y + h / 2 - 540) * 0.75, s)
+    cy = 540 + (y + h / 2 - 540) * 0.75
+    top = cy - 540 / s
+    if 90 < top < 225:      # the frame's top edge would slice the page title: frame it clear of the title
+        cy += 225 - top
+    return (960 + (x + w / 2 - 960) * 0.75, cy, s)
 
 
 def _groups(scene):
