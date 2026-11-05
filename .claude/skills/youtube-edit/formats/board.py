@@ -26,6 +26,7 @@ GLIDE_EASE = "power2.inOut"
 HAND_JS = ("window.__hand = window.__hand || function (x) { if (x <= 0) return 0; if (x >= 1) return 1; var a = 0, b = 1, t = x, k, u, X;"
            " for (k = 0; k < 40; k++) { t = (a + b) / 2; u = 1 - t; X = 3 * u * u * t * .54 + 3 * u * t * t * 0 + t * t * t; if (X < x) a = t; else b = t; }"
            " u = 1 - t; return 3 * u * t * t + t * t * t; };")   # cubic-bezier(.54,0,0,1): y1 is 0 and y2 is 1, solved by bisection so every frame gives the same value
+GRID_DEPTH = 0.5             # the grid sits behind the pages and travels half as far as they do (course fake 3D, Jacopo's yes 05/11: "un dettaglio che conta"); 1 = glued to the pages
 DRIFT = 0.006                # between two moves the camera keeps pushing in, per second
 GROUP = 0.8                  # elements landing closer than this share one framing
 CSS = """
@@ -65,8 +66,8 @@ def _groups(scene):
 
 
 class Board:
-    def __init__(self, cid, track=10, track_audio=300, enter=True, leave=True):
-        self.cid, self.track, self.ta, self.enter, self.leave, self.pages, self.holes = cid, track, track_audio, enter, leave, [], []
+    def __init__(self, cid, track=10, track_audio=300, enter=True, leave=True, depth=GRID_DEPTH):
+        self.cid, self.track, self.ta, self.enter, self.leave, self.pages, self.holes, self.depth = cid, track, track_audio, enter, leave, [], [], depth
 
     def away(self, t0, t1):
         """The face comes back between t0 and t1 (a long stretch with nothing new on the board): the same swipe out and in."""
@@ -110,8 +111,10 @@ class Board:
         cid, P = self.cid, self.pages
         t_in, t_out = P[0]["a"], P[-1]["b"]
         h0, h1 = t_in - 0.5 * PUSH, t_out + 0.5 * PUSH
-        W, R = "#%s-w" % cid, "#%s-root" % cid
+        W, G, R = "#%s-w" % cid, "#%s-g" % cid, "#%s-root" % cid
         tf = lambda c: "x:%.1f,y:%.1f,scale:%.4f" % (960 - c[2] * c[0], 540 - c[2] * c[1], c[2])
+        c0 = (P[0]["ox"] + 960, P[0]["oy"] + 540)
+        tg = lambda c: tf((c0[0] + self.depth * (c[0] - c0[0]), c0[1] + self.depth * (c[1] - c0[1]), c[2]))   # the grid layer: same zoom, a share of the travel
         js, inner, snd = [HAND_JS], [], []
         xs, ys = [p["ox"] for p in P], [p["oy"] for p in P]
         grid = '<div class="bd-grid" style="left:%dpx;top:%dpx;width:%dpx;height:%dpx"></div>' % (min(xs) - 2400, min(ys) - 2400, max(xs) - min(xs) + 6720, max(ys) - min(ys) + 5840)
@@ -130,6 +133,7 @@ class Board:
         # the camera: every gap between two moves is a slow push-in, so it never stands still
         cur = (P[0]["ox"] + 960, P[0]["oy"] + 540, 1.0)
         js.append("tl.set('%s', { %s }, 0);" % (W, tf(cur)))
+        js.append("tl.set('%s', { %s }, 0);" % (G, tg(cur)))
         t = h0
         li, di = SOUNDS["plate-in"][3], SOUNDS["plate-in"][2]
         lo, do = SOUNDS["plate-out"][3], SOUNDS["plate-out"][2]
@@ -137,10 +141,13 @@ class Board:
             if t0 > t:
                 dr = (cur[0], cur[1], cur[2] * (1 + DRIFT * (t0 - t)))
                 js.append("tl.fromTo('%s', { %s }, { %s, duration:%.3f, ease:'none', immediateRender:false }, %.3f);" % (W, tf(cur), tf(dr), t0 - t, t))
+                js.append("tl.fromTo('%s', { %s }, { %s, duration:%.3f, ease:'none', immediateRender:false }, %.3f);" % (G, tg(cur), tg(dr), t0 - t, t))
                 cur = dr
             if to is None:
                 break
-            js.append("tl.fromTo('%s', { %s }, { %s, duration:%.3f, ease:%s, immediateRender:false }, %.3f);" % (W, tf(cur), tf(to), d, ease if ease == SWIPE_EASE else "'%s'" % ease, t0))
+            e = ease if ease == SWIPE_EASE else "'%s'" % ease
+            js.append("tl.fromTo('%s', { %s }, { %s, duration:%.3f, ease:%s, immediateRender:false }, %.3f);" % (W, tf(cur), tf(to), d, e, t0))
+            js.append("tl.fromTo('%s', { %s }, { %s, duration:%.3f, ease:%s, immediateRender:false }, %.3f);" % (G, tg(cur), tg(to), d, e, t0))
             cur, t = to, t0 + d
             if ease == SWIPE_EASE:
                 snd.append('<audio id="sfx-%s-s%d" src="sfx/plate-in.mp3" data-start="%.3f" data-duration="%.2f" data-track-index="%d" data-volume="1"></audio>' % (cid, len(snd), t0 + SWIPE_PEAK * d - li, di, self.ta + 1))
@@ -163,6 +170,6 @@ class Board:
             snd.append('<audio id="sfx-%s-hi%d" src="sfx/plate-in.mp3" data-start="%.3f" data-duration="%.2f" data-track-index="%d" data-volume="1"></audio>' % (cid, k, b - li, di, self.ta + 3))
         html = ('<style>%s</style>\n<div class="card-host clip" id="host-%s" data-card-id="%s" data-unanchored="1" data-start="%.3f" data-duration="%.3f" data-track-index="%d"'
                 ' style="left:0;top:0;width:1920px;height:1080px;visibility:hidden;opacity:1;">\n<div id="%s-root" style="position:absolute;inset:0;overflow:hidden"><div class="bd-bg"></div>'
-                '<div class="bd-w" id="%s-w">%s\n%s</div></div></div>\n%s'
-                % (SCENE_CSS + BASE_CSS + CSS, cid, cid, h0, h1 - h0, self.track, cid, cid, grid, "\n".join(inner), "\n".join(snd)))
+                '<div class="bd-w" id="%s-g">%s</div><div class="bd-w" id="%s-w">%s</div></div></div>\n%s'
+                % (SCENE_CSS + BASE_CSS + CSS, cid, cid, h0, h1 - h0, self.track, cid, cid, grid, cid, "\n".join(inner), "\n".join(snd)))
         return {"html": html, "js": "\n        ".join(js)}
