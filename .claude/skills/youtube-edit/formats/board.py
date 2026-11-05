@@ -22,10 +22,13 @@ SWIPE_EASE = "window.__hand" # cubic-bezier(.54,0,0,1), a JS function: fast earl
 SWIPE_PEAK = 0.3             # where the curve is fastest, as a share of the swipe: the sound sits there
 SWIPE_LEAD = 0.05 + SWIPE_PEAK * SWIPE   # the peak falls 0.05 s before the page's time, where the old swipe had it
 PUSH_EASE = "power3.inOut"   # face <-> board: slow start, fast middle, soft landing
-GLIDE_EASE = "power2.inOut"
+GLIDE_EASE = "window.__c40"  # camera glides inside a page: cubic-bezier(.5,0,.3,1), speed peak near 40% (course L8, Jacopo's yes 05/11; the 40% was read by eye, not measured)
 HAND_JS = ("window.__hand = window.__hand || function (x) { if (x <= 0) return 0; if (x >= 1) return 1; var a = 0, b = 1, t = x, k, u, X;"
            " for (k = 0; k < 40; k++) { t = (a + b) / 2; u = 1 - t; X = 3 * u * u * t * .54 + 3 * u * t * t * 0 + t * t * t; if (X < x) a = t; else b = t; }"
-           " u = 1 - t; return 3 * u * t * t + t * t * t; };")   # cubic-bezier(.54,0,0,1): y1 is 0 and y2 is 1, solved by bisection so every frame gives the same value
+           " u = 1 - t; return 3 * u * t * t + t * t * t; };"   # cubic-bezier(.54,0,0,1): y1 is 0 and y2 is 1, solved by bisection so every frame gives the same value
+           " window.__c40 = window.__c40 || function (x) { if (x <= 0) return 0; if (x >= 1) return 1; var a = 0, b = 1, t = x, k, u, X;"
+           " for (k = 0; k < 40; k++) { t = (a + b) / 2; u = 1 - t; X = 3 * u * u * t * .5 + 3 * u * t * t * .3 + t * t * t; if (X < x) a = t; else b = t; }"
+           " u = 1 - t; return 3 * u * t * t + t * t * t; };")
 GRID_DEPTH = 0.5             # the grid sits behind the pages and travels half as far as they do (course fake 3D, Jacopo's yes 05/11: "un dettaglio che conta"); 1 = glued to the pages
 DRIFT = 0.006                # between two moves the camera keeps pushing in, per second
 GROUP = 0.8                  # elements landing closer than this share one framing
@@ -145,7 +148,7 @@ class Board:
                 cur = dr
             if to is None:
                 break
-            e = ease if ease == SWIPE_EASE else "'%s'" % ease
+            e = ease if ease.startswith("window.") else "'%s'" % ease
             js.append("tl.fromTo('%s', { %s }, { %s, duration:%.3f, ease:%s, immediateRender:false }, %.3f);" % (W, tf(cur), tf(to), d, e, t0))
             js.append("tl.fromTo('%s', { %s }, { %s, duration:%.3f, ease:%s, immediateRender:false }, %.3f);" % (G, tg(cur), tg(to), d, e, t0))
             cur, t = to, t0 + d
