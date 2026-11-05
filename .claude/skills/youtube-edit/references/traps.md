@@ -52,7 +52,7 @@ fades are fine without backdrop-filter (lower lines). Glass that has not arrived
   found 1.8 GB of history copies; the revisions are only a rewind feature.
 
 **Encoding and files**
-- **`--gpu` ignores CRF** (`--quality high --gpu` gave 14 Mb/s at 4K): always `--video-bitrate 45M`.
+- **`--gpu` ignores CRF** (`--quality high --gpu` gave 14 Mb/s at 4K): always `--video-bitrate 60M` at 60 fps (45M at 30).
 - **The render drops two colour tags:** always the BT.709 remux, or faces look redder than the camera original.
 - **Skipping `assemble.py`:** the render keeps the camera level (~-25 LUFS). Level the voice to -14 first (a one-segment
   `assembly.json` does it), then add music; measure the file with `ebur128`.

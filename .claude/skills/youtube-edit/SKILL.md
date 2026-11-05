@@ -299,9 +299,10 @@ python3 "$SK/scripts/snap-beats.py" --project "$W"
 #     check-frames.py + qa-motion.py on the draft, Jacopo's notes, fixes, a new draft. Only an approved draft earns the 4K below.
 python3 "$SK/scripts/render-queue.py" -- npx hyperframes render "$W/public" --quality draft --resolution 1080p --gpu --workers 1 -o "$W/draft-1080p.mp4"
 # 5b. Render 4K (only after the draft is approved): the 1920x1080 composition renders at 2x. --gpu ignores CRF, so give the bitrate (45M = YouTube's 2160p
-#    figure). About a minute per 30 s on a recent Mac; without a hardware encoder, drop --gpu.
+#    figure at 30 fps; 60M at 60). 60 fps is the standard for the final (Jacopo, 05/11/2026): the footage stays 30, the graphics get 60. Drafts stay at 30 to save time.
+#    On this PC Video #3 took about 3 h 15 at 30 fps for 14:39: plan on nearly double. Without a hardware encoder, drop --gpu.
 PRODUCER_BROWSER_GPU_MODE=hardware NODE_OPTIONS=--max-old-space-size=8192 \
-  python3 "$SK/scripts/render-queue.py" -- npx hyperframes render "$W/public" --resolution 4k --video-bitrate 45M --gpu --workers 4 -o "$W/output-4k-raw.mp4"
+  python3 "$SK/scripts/render-queue.py" -- npx hyperframes render "$W/public" --fps 60 --resolution 4k --video-bitrate 60M --gpu --workers 4 -o "$W/output-4k-raw.mp4"
 # 6. Full BT.709 tags (the render leaves them "unknown" and QuickTime shows faces darker and redder). Lossless.
 ffmpeg -y -v error -i "$W/output-4k-raw.mp4" -c copy -color_primaries bt709 -color_trc bt709 -colorspace bt709 \
   -color_range tv -movflags +write_colr+faststart "$W/output-4k.mp4"

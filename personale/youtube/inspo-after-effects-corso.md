@@ -700,3 +700,5 @@ Tutte su materiale di prova o su copie: il taglio approvato del Video #3 e il su
 - **No:** colori invertiti, curva D sull'apertura della plate.
 - **Da decidere:** dove usare 60 fps e scia lunga. Finché non è deciso, 30 fps e niente sfocatura.
 - **Rimasto fuori:** il suono con tono abbassato, serve la scelta dei suoni.
+
+**Deciso il 05/11:** 60 fps è lo standard del finale YouTube, bozze a 30; la scia lunga si usa con parsimonia, solo sugli swipe più importanti.

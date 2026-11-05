@@ -45,6 +45,8 @@ Grading: `scripts/grade-1090.py` is the fixed 10-90 check after a grade.
 - **Inverted colours on a strong sentence:** "non adatto al nostro stile".
 - **Curve D on the plate opening (face to board):** "meglio uno swipe più veloce in questo caso". `PUSH` stays at 0.9 s with `power3.inOut`.
 
-## Open: yes to the look, not yet a default
+## 60 fps and motion blur (Jacopo, 05/11/2026)
 
-**60 fps** (render about +40% on the test) and **motion blur with the long trail** (render about ×10, method in `personale/youtube/inspo-after-effects-corso.md`). He said yes to both, but not where. Until he decides: 30 fps, no blur.
+- **60 fps is the standard** for YouTube finals: `--fps 60`, 60M. The footage stays at 30, the graphics get 60. Drafts stay at 30. A window of Video #3 rendered at 60 came out at 360 frames in 6 s, in 105 s. A full 4K costs nearly double the 30 fps time, not the +40% of the short test.
+- **Motion blur with the long trail: sparingly.** "Rende tutto molto più clean, usiamolo con parsimonia per non aumentare troppo i tempi." Only on the few swipes that matter most, chosen in the plate plan, and tell Jacopo which. It costs about ×10 on the shots it touches.
+- **Method:** copy slowed 4×, render at 240 fps (960 effective), then fuse. The long trail voted at 30 fps was `tmix=frames=32`. For a 60 fps output sample every 16 frames: `tmix=frames=32,select='not(mod(n\,16))',setpts=N/60/TB`. **Not yet tested at 60 fps, nor spliced into a full video:** try it on one window first.

@@ -2,13 +2,13 @@
 """assemble.py: put finished segments in order and deliver one 4K master. Replaces iMovie.
 
 Input : assembly.json (the manifest; a segment is a local MP4: a HyperFrames render, a Tella 4K export, a cutaway)
-Output: <out>.mp4 (3840x2160, 30 fps, H.264, BT.709 tags, AAC 48 kHz stereo), ASSEMBLY.md next to it
+Output: <out>.mp4 (3840x2160, 60 fps, H.264, BT.709 tags, AAC 48 kHz stereo), ASSEMBLY.md next to it
         (segment table with start times = YouTube chapter list, loudness per segment, md5), chapters.txt
 
 Manifest:
 {
   "project": "my-video",
-  "width": 3840, "height": 2160, "fps": 30,
+  "width": 3840, "height": 2160, "fps": 60,
   "loudness": -14,                       # LUFS target applied per segment (null = leave levels alone)
   "music": {"file": "bed.mp3", "db": -26, "fade": 2.0},   # optional, loops under the whole video
   "segments": [
@@ -40,7 +40,7 @@ args = ap.parse_args()
 
 mdir = os.path.dirname(os.path.abspath(args.manifest))
 M = json.load(open(args.manifest))
-W, H, FPS = int(M.get("width", 3840)), int(M.get("height", 2160)), int(M.get("fps", 30))
+W, H, FPS = int(M.get("width", 3840)), int(M.get("height", 2160)), int(M.get("fps", 60))
 LUFS = M.get("loudness", -14)
 work = args.work or os.path.join(mdir, "assembly-work")
 os.makedirs(work, exist_ok=True)
