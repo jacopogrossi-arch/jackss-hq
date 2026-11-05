@@ -119,4 +119,6 @@ From `personale/youtube/inspo-motion-plates-joseph.md` (his motion plates, and t
     is the default of `compose.py`; `--preset none` gives the old fixed cyan/blue look back, `--preset elegante-portfolio` the portfolio look.
 
 
+14c. **Course tests voted (Jacopo, 05/11/2026):** the yes, maybe and no list is `prove-corso.md`; read it before inventing a move, and never propose its "No" items again.
+
 14b. **Scene improvvisate, non formati da catalogo (01/11/2026).** Ogni spiegazione = una motion plate su misura nei canoni di Joseph (vedi `formats.md`, "Scene improvvisate"). Non fermarsi a "quale formato uso"; non rimettere le vecchie grafiche su sfondo verde (Jacopo: "così le migliori" non basta). Le linee tratteggiate compaiono solo quando collegano due elementi già in scena.

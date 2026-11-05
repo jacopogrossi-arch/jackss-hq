@@ -690,3 +690,13 @@ Tutte su materiale di prova o su copie: il taglio approvato del Video #3 e il su
 
 - Un suono per elemento con tono abbassato: servono suoni scelti da Jacopo.
 - La curva al 40% resta stimata a occhio: gli originali della lezione L8 non ci sono più.
+
+## Voti di Jacopo (05/11)
+
+45 prove votate dal telefono: 38 sì, 4 forse, 2 no, più la nota "curva D tutta la vita" sul confronto con la cupola. Elenco completo con le note in `.claude/skills/youtube-edit/references/prove-corso.md`, codice in `lab-corso.py`.
+
+- **Già di default in `board.py`:** curva D sugli swipe, griglia a metà velocità, camera col picco al 40%. Provate su un render corto, non ancora su un video vero.
+- **Forse:** flash bianco, gesto con rotazione, turbolenza, rampa sulla clip girata lenta.
+- **No:** colori invertiti, curva D sull'apertura della plate.
+- **Da decidere:** dove usare 60 fps e scia lunga. Finché non è deciso, 30 fps e niente sfocatura.
+- **Rimasto fuori:** il suono con tono abbassato, serve la scelta dei suoni.
