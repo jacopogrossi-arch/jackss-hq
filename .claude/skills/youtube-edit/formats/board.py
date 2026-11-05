@@ -30,6 +30,8 @@ HAND_JS = ("window.__hand = window.__hand || function (x) { if (x <= 0) return 0
            " for (k = 0; k < 40; k++) { t = (a + b) / 2; u = 1 - t; X = 3 * u * u * t * .5 + 3 * u * t * t * .3 + t * t * t; if (X < x) a = t; else b = t; }"
            " u = 1 - t; return 3 * u * t * t + t * t * t; };")
 GRID_DEPTH = 0.5             # the grid sits behind the pages and travels half as far as they do (course fake 3D, Jacopo's yes 05/11: "un dettaglio che conta"); 1 = glued to the pages
+FINISH = ('<div class="bd-fin" style="position:absolute;inset:0;z-index:50;pointer-events:none;background:radial-gradient(900px 500px at 50% 42%,rgba(255,240,200,.13),transparent 70%),'
+          'radial-gradient(closest-side at 50% 50%,transparent 62%,rgba(0,0,0,.4) 120%)"></div>')   # glow and vignette over the plate (course, Jacopo's yes 05/11); it stays still while the camera moves
 DRIFT = 0.006                # between two moves the camera keeps pushing in, per second
 GROUP = 0.8                  # elements landing closer than this share one framing
 CSS = """
@@ -69,8 +71,8 @@ def _groups(scene):
 
 
 class Board:
-    def __init__(self, cid, track=10, track_audio=300, enter=True, leave=True, depth=GRID_DEPTH):
-        self.cid, self.track, self.ta, self.enter, self.leave, self.pages, self.holes, self.depth = cid, track, track_audio, enter, leave, [], [], depth
+    def __init__(self, cid, track=10, track_audio=300, enter=True, leave=True, depth=GRID_DEPTH, finish=True):
+        self.cid, self.track, self.ta, self.enter, self.leave, self.pages, self.holes, self.depth, self.finish = cid, track, track_audio, enter, leave, [], [], depth, finish
 
     def away(self, t0, t1):
         """The face comes back between t0 and t1 (a long stretch with nothing new on the board): the same swipe out and in."""
@@ -173,6 +175,6 @@ class Board:
             snd.append('<audio id="sfx-%s-hi%d" src="sfx/plate-in.mp3" data-start="%.3f" data-duration="%.2f" data-track-index="%d" data-volume="1"></audio>' % (cid, k, b - li, di, self.ta + 3))
         html = ('<style>%s</style>\n<div class="card-host clip" id="host-%s" data-card-id="%s" data-unanchored="1" data-start="%.3f" data-duration="%.3f" data-track-index="%d"'
                 ' style="left:0;top:0;width:1920px;height:1080px;visibility:hidden;opacity:1;">\n<div id="%s-root" style="position:absolute;inset:0;overflow:hidden"><div class="bd-bg"></div>'
-                '<div class="bd-w" id="%s-g">%s</div><div class="bd-w" id="%s-w">%s</div></div></div>\n%s'
-                % (SCENE_CSS + BASE_CSS + CSS, cid, cid, h0, h1 - h0, self.track, cid, cid, grid, cid, "\n".join(inner), "\n".join(snd)))
+                '<div class="bd-w" id="%s-g">%s</div><div class="bd-w" id="%s-w">%s</div>%s</div></div>\n%s'
+                % (SCENE_CSS + BASE_CSS + CSS, cid, cid, h0, h1 - h0, self.track, cid, cid, grid, cid, "\n".join(inner), FINISH if self.finish else "", "\n".join(snd)))
         return {"html": html, "js": "\n        ".join(js)}
