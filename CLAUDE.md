@@ -63,7 +63,8 @@ File: `inverso/`
 - **Canale personale** (video lunghi, non Inverso) → `personale/youtube/` — README con video pubblicati e metodo copione→montaggio→miniatura→pubblicazione.
   - #1 "Si può usare l'AI nella moda?" — pubblicato 15/10/2026
   - #2 "Ho lasciato Claude ideare una collezione al posto mio" — pubblicato 21/10/2026, montato con la skill `youtube-edit`
-  - #3 — idea da decidere
+  - #3 "Come lancerei un brand di moda con l'AI (prima di lanciare il mio)" — pubblicato 06/11/2026
+  - #4 — idea da decidere
 - **Skill `youtube-edit`** → `.claude/skills/youtube-edit/` (`SKILL.md` = regole, `scripts/`, `formats/`, `presets/`, `references/`). Monta da clip grezza a MP4 4K. Ogni nota di gusto di Jacopo va salvata nella skill. Grading: look predefinito `pellicola-oro` (dal 27/10/2026; il WOW del 24/10 è superato).
 - **Sound design di tutto il video editing** (YouTube, reel travel, b-roll): fonte principale **Epidemic Sound** via connettore MCP (effetti e musica, dal 28/10/2026). I file scaricati restano solo in locale (`assets/sfx/licensed/`, `assets/music/licensed/`, fuori da git). Regole in `.claude/skills/youtube-edit/references/sound.md`.
 - **Agente `video-builder`** (`.claude/agents/`) — esegue le sezioni del piano scritto dal pianificatore, non decide il design.

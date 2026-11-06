@@ -1,6 +1,6 @@
 # YouTube #3 — Titolo, descrizione, tag
 
-> Da pubblicare. Video: iCloud `VIDEO 3 FINALE 60FPS/video3-finale-4k-60fps.mp4` (14:39, 4K 60 fps). Miniatura: `miniatura/03/miniatura-03-3-da-zero-gpt.jpg`.
+> ✅ **Pubblicato il 06/11/2026.** Video: iCloud `VIDEO 3 FINALE 60FPS/video3-finale-4k-60fps.mp4` (14:39, 4K 60 fps). Miniatura: `miniatura/03/miniatura-03-3-da-zero-gpt.jpg`.
 > Capitoli presi dai tempi veri della trascrizione finale. Niente nome del brand né link a @inversorome: nel video il nome non viene detto, scelta del 03/11.
 
 ## Titolo
