@@ -63,3 +63,6 @@ video-editor/shared/
 # Python bytecode cache
 __pycache__/
 *.pyc
+
+# Materiale di studio derivato da manuali (riassunti, render pagine): solo locale, mai su repo pubblico
+studio-privato/
