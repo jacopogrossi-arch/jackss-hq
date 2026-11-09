@@ -96,3 +96,4 @@ Domande di follow-up mandate: vedi chat del 09/11.
 
 ### utente 5 — 09/11
 - "Dipende dal materiale e dalla vestibilità. Per dei pantaloni in flanella che mi stanno perfettamente direi **200 euro**."
+- Follow-up mandato il 09/11 (cosa gli darebbe fiducia sulla vestibilità prima di comprare + dove vive ed età): risposta in attesa.
