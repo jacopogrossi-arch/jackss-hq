@@ -1,7 +1,7 @@
 # CLAUDE.md
 
 This file gives Claude Code the context to work well in this repository.
-*Ultimo aggiornamento: 25/10/2026.*
+*Ultimo aggiornamento: 09/11/2026.*
 
 ---
 
