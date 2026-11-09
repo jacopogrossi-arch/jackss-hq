@@ -9,21 +9,23 @@ Prima di chiedere aiuto all'AI bisogna prendere un pezzo di carta e scrivere ide
 
 ### 1 · Cosa vuoi vendere
 - Non solo "pantaloni" o "giacche": un brand punta a creare uno **stile**, non a vendere un singolo capo.
-- Però devi capire che tipo di prodotto vuoi vendere e come ti vuoi posizionare: ti vuoi specializzare in un prodotto particolare? *(da finire)*
-- Devi immaginare il tuo **punto di arrivo**.
+- Però devi **capire bene** che prodotto vuoi vendere. *(Aperto: Jacopo deve trovare qualcosa in più da dire qui.)*
+- Devi immaginare il tuo **punto di arrivo**: sia **a chi** vuoi arrivare, sia **dove** vuoi essere tra qualche anno. Il brand visto come una sorta di **culto**.
 
 ### 2 · A chi lo vuoi vendere
 - Il target è importante.
 - Indicativamente: che cosa fanno queste persone nella vita? Che interessi hanno? Che hobby?
 
-### 3 · Come lo vuoi vendere
-- Come ci vogliamo posizionare rispetto a queste persone.
+### 3 · Come ti posizioni rispetto al cliente
+- Come ci vogliamo porre verso queste persone.
 
-### 4 · Dove lo vuoi vendere
-- Che vie di comunicazione usiamo?
-- Spammare sui social, TikTok, tanti reel, influencer… **oppure** una cosa di nicchia, che si conosce di meno e ha un senso di esclusività?
+### 4 · Come ti posizioni rispetto agli altri brand
+- Anche nelle vie di comunicazione: spammare sui social, TikTok, tanti reel, influencer… **oppure** una cosa di nicchia, che si conosce di meno e ha un senso di esclusività?
 
-## Da chiarire con Jacopo
-- Come finisce il punto 1 (specializzazione in un prodotto).
-- "Punto di arrivo": dove vuoi arrivare tra qualche anno?
-- Confine tra punto 3 (posizionamento) e punto 4 (canali).
+## Chiarimenti di Jacopo (09/11 sera)
+- Punto di arrivo = a chi vuoi arrivare + dove tra qualche anno (brand come culto).
+- 3 = posizione rispetto al cliente · 4 = posizione rispetto agli altri brand (non "canali").
+- Niente etichetta «tocca a te»: parlare direttamente a una persona, all'imperativo («fai questo, fai quello»), mai «dovete».
+
+## Ancora aperto
+- Punto 1: cosa dire in più su "capire bene il prodotto".
