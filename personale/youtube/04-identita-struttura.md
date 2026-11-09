@@ -20,7 +20,7 @@
 - I tre significati: il rovescio del capo · il contrario della fretta · la via di mezzo.
 - La storia: "potevo avere la scarpa da 150 €, ne avevo una. Non sei."
 - **Valore:** l'AI non ti dà la storia, ti aiuta a sceglierla. Mostrare il testo grezzo del 21/07 e cosa Claude ha consigliato di tagliare (es. "verso il lusso e la ricchezza").
-- **Imparo:** quella frase la volevo tenere, e aveva ragione Claude a toglierla (da confermare con Jacopo).
+- **Imparo:** "verso il lusso e la ricchezza" l'avevo scritta io, e va tolta: Inverso parla di qualità, non di diventare ricchi (confermato da Jacopo il 09/11).
 
 ## 2 · Chi compra Inverso: intervista a Claude (2:30 → 6:00)
 - **Valore:** come far interpretare a Claude il tuo cliente ideale. Gli dai i tuoi testi, gli chiedi di restare nel personaggio, gli fai domande scomode. Prompt a schermo, rifacibile.
@@ -53,6 +53,6 @@
 
 ## Da decidere
 - [x] Il lavoro sul logo si fa **prima** delle riprese (deciso 09/11); nel video si mostra il risultato e i passaggi a schermo.
-- [ ] Parte 1: confermare quale taglio di Claude raccontare.
+- [x] Parte 1: si racconta il taglio di "verso il lusso e la ricchezza" (09/11).
 - [ ] Copione vero e proprio (dopo l'ok sulla struttura).
 - [ ] Data delle riprese.
