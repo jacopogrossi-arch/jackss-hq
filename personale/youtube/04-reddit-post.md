@@ -66,3 +66,12 @@ I might quote a few answers anonymously in a video about my journey, no username
 5. Raramente: si adatta al tipo di posto.
 
 Domande di follow-up mandate: vedi chat del 09/11.
+
+### utente 2 (UK, prezzi in sterline) — 09/11
+*Risposta libera, tradotta da Jacopo.*
+- Ha appena comprato un pantalone di flanella grigio medio da Oliver Brown a **£195** (circa 225 €). Sa che molti si spaventerebbero, si trova un paio "accettabile" a meno di un quarto.
+- Perché paga: il materiale e la vestibilità che vuole, e se c'è un problema viene sistemato (è successo: piccolo difetto, riportati e aggiustati volentieri). Calzano perfettamente.
+- Li voleva da portare con **tre blazer diversi** (navy SB Lanieri, nero DB Canali, tweed Donegal grigio-verde): funzionano con tutti.
+- Limite: forse pagherebbe di più, ma £195 è vicino al tetto.
+- **Compra molto su Vinted**: i tre blazer insieme sono costati quanto un pantalone. Paga tanto solo "quando è necessario".
+- Marchio piccolo e sconosciuto: sì, soprattutto in un **negozio fisico** dove capisce quanto ci tengono ai prodotti. **Da un sito web: meno probabile.**
