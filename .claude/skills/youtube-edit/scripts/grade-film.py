@@ -39,7 +39,8 @@ GAMMA = 2.4
 GREY = 0.18
 WHITE_STOPS = float(np.log2(1.0 / GREY))                 # display white, 2.47 stops above middle grey
 FILM = {"contrast": 1.12, "shoulder": 1.5, "white_target": 0.95, "stretch_from": 1.0, "stretch_max": 2.5, "stretch_min": 0.85,
-        "black": 0.004, "hl_desat": 0.2, "warm": None, "sat_hue": [], "density": 0.0, "hue": []}
+        "black": 0.004, "hl_desat": 0.2, "warm": None, "sat_hue": [], "density": 0.0, "hue": [],
+        "exposure": 0.0}   # stops the look itself adds on top of the clip's exposure (a low-key look sits darker: nic-lowkey)
 FINISH = {"halation": 0.0, "halation_threshold": 0.8, "halation_radius": 0.006, "halation_color": [1.0, 0.42, 0.16],
           "grain": 0.0, "grain_size": 2.0, "vignette": 0.0, "sky_grad": 0.0}
 LOOK_LIGHT_KEYS = ("gamma", "crush", "lift", "gain", "temp", "contrast", "shadows", "highlights")   # the film tone replaces these
@@ -102,6 +103,7 @@ def stretch_for(white_lin, f):
 def tone(rgb709, look, stops=0.0, wb=None, white_lin=None):
     """Steps 1-6: LUT output (Rec.709 code values) -> toned code values. Exposure in stops of linear light."""
     f = film_params(look)
+    stops = stops + f["exposure"]
     lin = to_lin(rgb709) * (2.0 ** stops)
     if wb:                                                   # the scan measures gains on code values; in linear light the same correction is gain ** 2.4
         lin = lin * np.array([wb[0] ** GAMMA, 1.0, wb[1] ** GAMMA], np.float32)

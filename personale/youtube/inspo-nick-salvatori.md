@@ -3,7 +3,8 @@
 *Analisi del 09/11/2026. Fonte: 9 file mandati da Jacopo su iCloud Drive (`inspo nic`). Sono 8 video unici: uno era un doppione del giorno 3.*
 *Metodo: trascrizione Whisper large-v3 parola per parola, tagli misurati con PySceneDetect, una classificazione automatica per ogni inquadratura (movimento camera, faccia, piano) controllata a occhio sui provini, colore misurato su ~600 frame, livelli audio.*
 *Trascrizioni complete, frame e provini restano solo in locale in `videos/inspo-nick/analisi/` (contenuti suoi, fuori dal repo pubblico).*
-*Limiti: i file sono 1080×720 (3:2), probabilmente scaricati da Instagram e quindi già ricompressi. Il colore è misurato sul file finale, non sul suo girato. La musica non l'ho ascoltata: ho solo misurato i livelli.*
+*Limiti: i file sono 1080×720 (3:2), scaricati da Instagram e quindi già ricompressi. Il colore è misurato sul file finale, non sul suo girato. La musica non l'ho ascoltata: ho solo misurato i livelli.*
+*Attenzione (correzione di Jacopo, 09/11): il logo IG con "@NICSALVATORI" che cambia posizione e i 4 s finali sul logo sono la **filigrana che Instagram aggiunge quando si scarica un video**, non scelte di Nic. Sono esclusi da tutta l'analisi: numeri, colore e suono.*
 
 ---
 
@@ -19,13 +20,15 @@ Nic è un videomaker con dieci anni nella musica (Sanremo, Eurovision con i Mån
 
 | Episodio | File | Durata | Inquadrature | Durata media | Parole/min | Formato e location |
 |---|---|---|---|---|---|---|
-| Giorno 1 | 473f… | 1:28 | 19 | 4,6 s | 172 | In giardino, ripreso **attraverso la finestra** + filmati d'archivio dei suoi lavori |
-| Giorno 2 | ba4d… | 2:34 | 31 | 5,0 s | 159 | **Riassunto lampo** (15 clip) + **lavagna bianca** |
-| Giorno 3 | 9ca7… (+ doppione adec…) | 2:55 | 30 | 5,8 s | 171 | Sgabello in giardino + **iPad a schermo diviso** |
-| Giorno 4 | f70a… | 2:55 | 27 | 6,5 s | 160 | Notte, **davanti al camino** + flashback alla lavagna in pigiama |
-| Giorno 5 | 8861… | 2:31 | 28 | 5,4 s | 154 | **Camminata parlata**, braccio teso, al tramonto |
-| Giorno 7 | 4dbc… | 2:34 | 19 | 8,1 s | 138 | **In auto**, camera fissa sul cruscotto, ritorno in città |
-| "Grazie" (probabilmente il giorno 6) | 0280… | 1:18 | 21 | 3,7 s | 120 | **Lettera fuori campo** + b-roll cinematografico del mattino |
+| Giorno 1 | 473f… | 1:24 | 18 | 4,7 s | 172 | In giardino, ripreso **attraverso la finestra** + filmati d'archivio dei suoi lavori |
+| Giorno 2 | ba4d… | 2:30 | 31 | 4,8 s | 159 | **Riassunto lampo** (15 clip) + **lavagna bianca** |
+| Giorno 3 | 9ca7… (+ doppione adec…) | 2:51 | 29 | 5,9 s | 171 | Sgabello in giardino + **iPad a schermo diviso** |
+| Giorno 4 | f70a… | 2:51 | 26 | 6,6 s | 160 | Notte, **davanti al camino** + flashback alla lavagna in pigiama |
+| Giorno 5 | 8861… | 2:26 | 27 | 5,4 s | 154 | **Camminata parlata**, braccio teso, al tramonto |
+| Giorno 7 | 4dbc… | 2:30 | 18 | 8,4 s | 138 | **In auto**, camera fissa sul cruscotto, ritorno in città |
+| "Grazie" (probabilmente il giorno 6) | 0280… | 1:13 | 20 | 3,7 s | 120 | **Lettera fuori campo** + b-roll cinematografico del mattino |
+
+*Durate e inquadrature sono senza i 4 s di uscita che aggiunge Instagram.*
 | Pezzo d'arte (prima della serie) | d493… | 0:23 | 6 | 3,8 s | — | Verticale 9:16, dall'alto, senza parole, telo-collage di foto |
 
 **Costanti:** 1:30-3:00 di durata. Una location nuova per ogni episodio. Un taglio ogni 4-8 s, più veloce quando racconta e più lento quando spiega. Parla tanto e fitto (150-170 parole al minuto), ma il ritmo non stanca perché l'immagine cambia.
@@ -108,12 +111,10 @@ Ogni episodio ha **una location principale e un "dispositivo" visivo** diverso:
 - Nella lettera fuori campo i sottotitoli diventano **grandi, al centro dello schermo**, con alcune parole chiave in **serif corsivo grassetto** ("*le peggio cose*", "*impossibile*").
 - **Titolo dell'aggancio:** la parola chiave **enorme in serif corsivo** ("*cliente*", "*world building?*") abbinata a un **bastoni grassetto piccolo** ("Il mio più grande", "mi ha mollato.", "cos'è il"). Nel giorno 5 la scritta passa **dietro la sua testa**: lui è scontornato davanti al testo.
 - **Transizione dopo l'aggancio: bruciatura di pellicola** rosso-arancio che sfuma in un giallo sovraesposto.
-- **Firma mobile:** logo IG + "@NICSALVATORI" in bastoni grassetto bianco **che cambia posto a ogni taglio** (alto a destra, poi a sinistra, poi al centro). Al posto di un watermark fisso, la firma diventa parte del ritmo.
-- **Uscita fissa:** 4 s di logo IG a colori + nome al centro, sopra l'ultima inquadratura scurita.
+- **Nessun logo né firma sua a schermo**: l'unico segno grafico ricorrente è il piccolo contatore "X/60" nel finale.
 
 ### Il suono (misurato, non ascoltato)
 - Le pause tra le parole restano solo 1-2 dB sotto il parlato: c'è **un letto sonoro continuo** sotto la voce (musica e/o ambiente), mai silenzio.
-- **I 4 s dell'uscita sul logo hanno lo stesso identico audio in tutti gli episodi**, e sono più forti del parlato (−13 dB contro −17): un **logo sonoro** ricorrente che chiude ogni puntata. *Da verificare ascoltando che tipo di suono è.*
 
 ---
 
@@ -164,11 +165,11 @@ Su un girato Rec.709 già corretto:
    - *Leve*: la ricerca sui tessuti, la sartoria italiana, Roma, l'accademia, l'AI usata come atelier e non come fabbrica.
    - *Dove stiamo andando*: il primo capo, venduto a uno sconosciuto.
 7. **Attenzione alla sua tesi "AI = Ikea".** Il tuo canale parla di AI nella moda, e lui dice che chi ha soldi vuole il mobile dell'artigiano. Non è un ostacolo: è la tua posizione. **"L'AI fa i mobili Ikea, io la uso per fare quelli su misura. Il gusto resta mio."** La sua conclusione ("l'unico motivo sono io, il mio gusto") è la stessa del tuo "il laboratorio prima del brand".
-8. **Sul piano grafico:** sottotitoli serif piccoli e sobri al posto dei box colorati; titolo d'aggancio serif corsivo + bastoni; firma che si muove; logo sonoro sempre uguale in chiusura.
+8. **Sul piano grafico:** sottotitoli serif piccoli e sobri al posto dei box colorati; titolo d'aggancio serif corsivo + bastoni; contatore "X/60" piccolo nel finale.
 
 ---
 
 ## 8. Prossimi passi possibili
 - Fare il preset di grading "nic-lowkey" nella skill `youtube-edit` e provarlo A/B contro `pellicola-oro` su una tua clip.
-- Ascoltare il logo sonoro finale e le musiche, e cercare suoni simili su Epidemic Sound.
+- Ascoltare le musiche di sottofondo e cercare brani simili su Epidemic Sound.
 - Scrivere il format della tua serie (aggancio, contatore, dispositivi per episodio, posta in gioco del Drop 1).
