@@ -18,17 +18,38 @@ Lavora in tre passi, uno alla volta.
    poi fermati e aspetta le mie risposte.
 
 3. Dopo le mie risposte crea un artefatto: una pagina sola con il mondo
-   del brand. Dentro metti:
-   - la visione in una frase
-   - il cliente: chi è, cosa fa, cosa compra oggi
-   - il tono di voce, con 5 parole da usare e 5 da evitare
-   - la palette di colori, con i codici
-   - due font, uno per i titoli e uno per i testi
-   - 6 immagini di riferimento: per ognuna descrivi soggetto, luce e colori,
-     e dammi le parole da cercare su Pinterest
+   del brand. La pagina deve già sembrare il brand: usa i suoi colori
+   e i suoi font, non una grafica qualunque. Si deve leggere bene
+   anche dal telefono. Dentro metti, in quest'ordine:
 
-Regole: usa solo quello che ti ho scritto. Se una cosa non la sai,
-chiedimela: non inventarla. Scrivi in italiano semplice.
+   - LA VISIONE in una frase, e sotto tre cose che questo brand non è.
+   - IL CLIENTE: una persona sola, con nome ed età. Cosa fa, cosa compra
+     oggi, perché oggi non è contento, cosa lo farebbe dire di no a me.
+   - IL TONO DI VOCE: 5 parole da usare e 5 da evitare. Poi tre frasi
+     scritte davvero in quel tono: una didascalia Instagram, il testo
+     di un'etichetta, la risposta a un cliente che chiede uno sconto.
+     Per ognuna aggiungi la versione sbagliata, quella da non scrivere mai.
+   - I COLORI: 5 colori, mostrati come campioni, con codice, nome
+     e a cosa serve ognuno (sfondo, testo, accento).
+   - I FONT: due font veri e gratuiti di Google Fonts, uno per i titoli
+     e uno per i testi. Mostra il nome del brand scritto con il primo.
+     Se non riesci a caricarli nella pagina, scrivi il loro nome esatto.
+   - 6 IMMAGINI DI RIFERIMENTO: per ognuna un riquadro con soggetto,
+     luce, colori e inquadratura, più le parole da cercare su Pinterest.
+   - I PROSSIMI TRE PASSI: cosa farei io questa settimana.
+
+Regole:
+- Accanto a ogni scelta scrivi il perché in una riga, legato a una frase
+  del mio foglio o delle mie risposte.
+- Vietate le frasi che andrebbero bene per qualsiasi brand ("qualità",
+  "eleganza senza tempo", "per chi ama distinguersi"). Prima di darmi
+  la pagina rileggila: se una frase potrebbe stare sul sito di un altro
+  brand, riscrivila.
+- Usa solo quello che ti ho scritto. Se una cosa non la sai, chiedimela:
+  non inventarla.
+- Italiano semplice, frasi corte.
+- Alla fine, fuori dalla pagina, dimmi i due punti che secondo te sono
+  ancora deboli.
 
 IL MIO FOGLIO
 1. Cosa voglio vendere:
