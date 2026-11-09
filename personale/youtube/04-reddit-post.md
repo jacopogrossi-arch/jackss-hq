@@ -104,3 +104,11 @@ Domande di follow-up mandate: vedi chat del 09/11.
 ### utente 6 — 09/11
 - **In teoria** spenderebbe 400 $ per un paio di pantaloni davvero belli. **In pratica** compra su eBay per molto, molto meno.
 - Anche se può permetterselo, 400 $ sono tanti per lui: avrebbe **paura di rovinarli** e non potrebbe sostituirli facilmente se un incidente li danneggia.
+
+---
+
+## Lettura del campione (09/11, con Jacopo)
+- **Non è il target:** risposte da r/malefashionadvice = uomini adulti, appassionati, mercato USA/UK. Gusti e canali d'acquisto diversi dal cliente di Inverso. In Italia eBay per i vestiti è di nicchia: il cliente ideale non comprerebbe lì; **Vinted sì**.
+- **Cosa resta valido** (non dipende dal mercato): la vestibilità decide il prezzo; la fiducia nasce dal provare o toccare il capo, non dal sito; "un artigiano ha bisogno di tempo"; paura di rovinare un capo caro; nessuno compra d'impulso.
+- **Cosa non vale per Inverso:** eBay, le cifre in $/£, il rapporto col sarto di fiducia.
+- **Prossimo passo:** risposte dal target vero (ragazzi italiani 20-30) → storie Instagram del profilo personale.
