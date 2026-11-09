@@ -76,3 +76,10 @@ Domande di follow-up mandate: vedi chat del 09/11.
 - **Compra molto su Vinted**: i tre blazer insieme sono costati quanto un pantalone. Paga tanto solo "quando è necessario".
 - Marchio piccolo e sconosciuto: sì, soprattutto in un **negozio fisico** dove capisce quanto ci tengono ai prodotti. **Da un sito web: meno probabile.**
 - Follow-up: ha **55 anni** (fuori target, si è scusato). Online secondo lui c'è poco da fare: la vestibilità giusta si trova solo di persona, almeno la prima volta. Da Oliver Brown si è fidato perché il commesso dava consigli sensati sulle modifiche e "sapeva chiaramente cosa faceva". Dubita che i ventenni vadano dal sarto: lui a quell'età non ci andava.
+
+### utente 3 — 09/11
+*Risposta libera, tradotta da Jacopo.*
+- Cerca marchi di "lusso silenzioso" visti nella cultura pop (TV, film): Orlebar Brown, Sunspel, N.Peal, Belstaff, Oliver Peoples. Vuole **alta qualità a poco prezzo**.
+- Ricerche salvate su **eBay**: capi nuovi o nuovi senza etichetta (regali non graditi, taglie sbagliate). Forti sconti se sei paziente e attento.
+- Ultimo acquisto: pantaloni Orlebar Brown a **65 $ invece di 400 $** di listino, cercati per più di un anno. "Non può andare troppo oltre il costo di produzione."
+- Frase chiave: **"Compro le cose quando costano poco, non quando le voglio."**
