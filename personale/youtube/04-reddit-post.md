@@ -75,3 +75,4 @@ Domande di follow-up mandate: vedi chat del 09/11.
 - Limite: forse pagherebbe di più, ma £195 è vicino al tetto.
 - **Compra molto su Vinted**: i tre blazer insieme sono costati quanto un pantalone. Paga tanto solo "quando è necessario".
 - Marchio piccolo e sconosciuto: sì, soprattutto in un **negozio fisico** dove capisce quanto ci tengono ai prodotti. **Da un sito web: meno probabile.**
+- Follow-up: ha **55 anni** (fuori target, si è scusato). Online secondo lui c'è poco da fare: la vestibilità giusta si trova solo di persona, almeno la prima volta. Da Oliver Brown si è fidato perché il commesso dava consigli sensati sulle modifiche e "sapeva chiaramente cosa faceva". Dubita che i ventenni vadano dal sarto: lui a quell'età non ci andava.
