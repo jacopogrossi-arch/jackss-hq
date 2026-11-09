@@ -115,7 +115,7 @@ Fuori repo: media del canale Jago in `Desktop\archivio-jago-assets\`; dispense d
 
 ## Strumenti
 
-- **Immagini/video AI:** solo Magnific (Nano Banana Pro, GPT-2, Seedance, Kling 3.0) — Higgsfield dismesso dal 03/07/2026. I prompt si scrivono con le skill `banana-pro-director` (immagini) e `cinema-worldbuilder-pro` (video).
+- **Immagini/video AI:** nessun generatore collegato al momento. Magnific non c'è più dal 09/11/2026 (Higgsfield dismesso dal 03/07/2026): non proporli. Jacopo collegherà un'API (ChatGPT o simile) per le immagini. I prompt si scrivono comunque con le skill `banana-pro-director` (immagini) e `cinema-worldbuilder-pro` (video).
 - **Notion — Jackss HQ:** workspace personale con hub su AI/video, salute/sport e studio. Per stato progetti non in repo, usare il MCP Notion.
 
 ---
