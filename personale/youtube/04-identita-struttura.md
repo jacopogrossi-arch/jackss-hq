@@ -26,7 +26,7 @@
 - **Valore:** come far interpretare a Claude il tuo cliente ideale. Gli dai i tuoi testi, gli chiedi di restare nel personaggio, gli fai domande scomode. Prompt a schermo, rifacibile.
 - Intervista dal vivo: le 5 domande di Reddit + domande extra (usato/Vinted, provare il capo, comprare online da un brand piccolo).
 - Si tiene il momento in cui risponde qualcosa di inaspettato.
-- ⚠️ Registrata il giorno delle riprese, nessuna prova prima.
+- 🖥️ **Registrazione schermo** (deciso 09/11): Jacopo incolla i suoi testi in Claude e ottiene la persona / il cliente ideale, poi l'intervista. Registrata il giorno delle riprese, nessuna prova prima.
 
 ## 3 · La prova con persone vere: Reddit (6:00 → 8:30)
 - "Volevo chiederlo ai ragazzi italiani. I subreddit italiani mi hanno bannato."
@@ -52,7 +52,7 @@
 ---
 
 ## Da decidere
-- [ ] Il lavoro sul logo (font, vettoriale, prove) si fa prima delle riprese e si mostra a schermo, o si gira mentre lo fai?
+- [x] Il lavoro sul logo si fa **prima** delle riprese (deciso 09/11); nel video si mostra il risultato e i passaggi a schermo.
 - [ ] Parte 1: confermare quale taglio di Claude raccontare.
 - [ ] Copione vero e proprio (dopo l'ok sulla struttura).
 - [ ] Data delle riprese.
