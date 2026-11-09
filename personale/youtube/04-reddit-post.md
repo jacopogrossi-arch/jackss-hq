@@ -92,3 +92,7 @@ Domande di follow-up mandate: vedi chat del 09/11.
 3. Mai quantità al posto della qualità ("perdita di tempo e denaro"). Solo lino, cotone o lana, da fonti affidabili e lavorati da un sarto rinomato.
 4. Si serve spesso di **piccoli sarti** invece che di case di moda.
 5. No: di solito sono gli altri a essere troppo informali.
+- Follow-up mandato il 09/11 (come trova un sarto di fiducia, se ordinerebbe da un artigiano giovane vedendo come è fatto il capo, età): risposta in attesa.
+
+### utente 5 — 09/11
+- "Dipende dal materiale e dalla vestibilità. Per dei pantaloni in flanella che mi stanno perfettamente direi **200 euro**."
