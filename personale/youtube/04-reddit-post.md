@@ -83,3 +83,12 @@ Domande di follow-up mandate: vedi chat del 09/11.
 - Ricerche salvate su **eBay**: capi nuovi o nuovi senza etichetta (regali non graditi, taglie sbagliate). Forti sconti se sei paziente e attento.
 - Ultimo acquisto: pantaloni Orlebar Brown a **65 $ invece di 400 $** di listino, cercati per più di un anno. "Non può andare troppo oltre il costo di produzione."
 - Frase chiave: **"Compro le cose quando costano poco, non quando le voglio."**
+- Follow-up mandato il 09/11 (cosa pagherebbe a prezzo pieno + età): risposta in attesa.
+
+### utente 4 — 09/11
+*Risposte alle 5 domande, tradotte da Jacopo.*
+1. Per un buon pantalone spende di solito **300-800 $**; il tetto dipende molto.
+2. Ordina su commissione con largo anticipo, quando non ne ha bisogno, a volte **uno o due anni prima**. Mai d'impulso.
+3. Mai quantità al posto della qualità ("perdita di tempo e denaro"). Solo lino, cotone o lana, da fonti affidabili e lavorati da un sarto rinomato.
+4. Si serve spesso di **piccoli sarti** invece che di case di moda.
+5. No: di solito sono gli altri a essere troppo informali.
