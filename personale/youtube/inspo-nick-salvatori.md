@@ -120,36 +120,49 @@ Ogni episodio ha **una location principale e un "dispositivo" visivo** diverso:
 
 ## 6. Il grading (la parte che ti fa impazzire)
 
-### Cosa ho misurato (mediana su tutti i frame di ogni video)
+Studio rifatto il 09/11 su **tutti e 7 i video**, 1 frame al secondo. Ho tolto dalle misure tutto quello che non è suo grading: la filigrana e l'uscita di Instagram (ultimi 4,3 s), i titoli d'apertura e i burn, le clip d'archivio, la chiamata FaceTime, il bianco e nero e i sottotitoli e scritte (mascherati). Scala 0-1 per la luce; tinte in Lab (a = verde↔magenta, b = blu↔giallo; 0 = neutro).
 
-| Video | Luminosità media | Nero (1°%) | Luci (99°%) | Saturazione | Tinta ombre | Tinta luci |
-|---|---|---|---|---|---|---|
-| G7 auto | **0,09** | 0,005 | **0,43** | 0,49 | magenta leggero, freddo | giallo-verde (prati) |
-| G1 finestra | 0,15 | 0,02 | 0,66 | 0,44 | magenta leggero, freddo | **calda gialla** |
-| G4 camino | 0,13 | 0,02 | 0,56 | 0,43 | magenta leggero, freddo | **calda gialla** |
-| G5 tramonto | 0,22 | 0,03 | 0,72 | **0,30** | magenta leggero, freddo | neutra/fredda |
-| Lettera | 0,22 | 0,01 | 0,71 | 0,37 | magenta leggero | **calda gialla** |
-| G3 giardino | 0,41 | 0,03 | 0,92 | **0,26** | fredda | neutra |
-| G2 lavagna | 0,44 | 0,05 | 0,55 | 0,26 | calda | calda |
+### Cosa ho misurato
+
+| Video | Luce media | Mediana | Nero (1°%) | Luci (99,9°%) | Ombre neutre (a / b) | Luci neutre (a / b) | Colore (medio / p90) | Pelle (tinta, croma, luce) | Verdi (tinta, croma) |
+|---|---|---|---|---|---|---|---|---|---|
+| G7 auto | **0,08** | 0,02 | 0,004 | **0,66** | +1,6 / −0,8 | −2,3 / +4,7 | **4,7** / 12 | 64°, 16, 0,37 | 133°, 18 |
+| G4 camino | 0,14 | 0,05 | 0,015 | 0,71 | +2,2 / +0,2 | +1,9 / **+9,7** | 6,5 / 14 | 61°, 19, 0,40 | 95°, 14 |
+| G1 finestra | 0,17 | 0,08 | 0,003 | 0,93 | +1,2 / −0,7 | +2,5 / +5,4 | 10,6 / 28 | 63°, 23, 0,46 | 130°, 22 |
+| Lettera | 0,21 | 0,17 | 0,004 | 0,78 | +2,8 / +0,1 | +0,9 / −2,6 | 10,0 / 25 | 42°, 22, 0,34 | 97°, 24 |
+| G5 tramonto | 0,24 | 0,14 | 0,015 | 0,90 | +1,2 / −0,1 | +6,1 / +1,4 | 7,9 / 16 | 42°, 17, 0,41 | 109°, 15 |
+| G3 giardino | 0,31 | 0,24 | 0,016 | 0,93 | +0,9 / −2,7 | +2,3 / +6,8 | 9,2 / 21 | 68°, 14, 0,66 | 135°, 20 |
+| G2 lavagna | 0,43 | 0,52 | 0,018 | 0,80 | +2,1 / −0,8 | +4,3 / +3,5 | 13,3 / 22 | 52°, 14, 0,52 | 111°, 27 |
 
 ### Come si traduce
-1. **Low-key, sottoesposto apposta.** In 5 video su 7 la luminosità media è sotto il 25%, e in auto arriva al 9%. **Il buio è il quadro**: la luce cade solo dove serve (faccia, finestra, fuoco).
-2. **Le luci non bruciano mai.** Il 99° percentile resta quasi sempre sotto il 75%: i bianchi sono morbidi, "da pellicola", con un roll-off dolce. In nessun video c'è un bianco puro (tranne la lavagna, che è il soggetto).
-3. **Neri profondi ma puliti.** Arrivano quasi a 0 senza la patina grigia "matte". Il contrasto c'è, ma tutto spostato in basso.
-4. **Saturazione contenuta** (0,26-0,44): i colori ci sono ma non urlano. Il verde dei prati tende all'oliva, la pelle resta naturale.
-5. **Split toning sottile e costante:** **ombre leggermente fredde e magenta** (si ripete in tutti gli episodi), **luci calde gialle**. È la firma, ma a bassissima intensità: si sente più che vedersi.
-6. **Gran parte del look è la luce, non il grading:** giornate grigie e piovose, ore blu e tramonti, luci pratiche (camino, monitor, finestra), softbox solo quando servono. **Riprende con la luce che c'è già e la tiene bassa.**
-7. **Contrasto dentro/fuori:** interni scuri e desaturati, esterni dalla finestra vivi (prati verdi, alberi d'autunno arancio). È il motivo visivo di tutta la serie: lui chiuso dentro, il mondo fuori.
+1. **Low-key, sottoesposto apposta.** In 5 video su 7 metà dell'immagine sta sotto il 17% di luce; in auto sotto il 2%. **Il buio è il quadro**: la luce cade solo dove serve (faccia, finestra, fuoco).
+2. **Le luci non arrivano mai al bianco.** Anche il punto più chiaro si ferma tra 0,66 e 0,93 (mediana ~0,80): spalla presto e morbida, "da pellicola".
+3. **Neri profondi ma puliti:** tra lo 0,3% e l'1,8%, senza patina grigia "matte".
+4. **Colore contenuto:** croma media 5-13 (molto bassa), i colori ci sono ma non urlano.
+5. **Split toning sottile e costante:** le **ombre neutre sono appena magenta** in tutti e 7 (a +0,9…+2,8), le **luci neutre crema-calde** (b fino a +10 nel camino). Si sente più che vedersi.
+6. **Pelle dorata:** tinta intorno ai 61° (verso il giallo, non verso il rosso-arancio), croma ~17, luce ~0,40 → **faccia al 40%, non al 65%** come in un video "normale".
+7. **Verdi oliva:** tinta ~110°, croma ~20: il verde dei prati è spento e tirato verso il giallo.
+8. **Vignetta leggera:** i bordi sono al 92% del centro (nelle tue clip al 98%).
+9. **Grana:** non misurabile, la compressione di Instagram la cancella.
+10. **Gran parte del look è la luce, non il grading:** giornate grigie, ore blu e tramonti, luci pratiche (camino, monitor, finestra). **Riprende con la luce che c'è e la tiene bassa.** Contrasto dentro/fuori: interni scuri e spenti, esterni dalla finestra vivi.
 
-### Ricetta di partenza per la skill (da provare, non ancora testata)
-Su un girato Rec.709 già corretto:
-- Esposizione **−0,5/−1 stop** rispetto al "giusto". Faccia intorno al 35-45% di luminosità, non al 60-70%.
-- Curva: neri a 0-2%, **bianchi limitati intorno all'88-92%** con una spalla morbida, mezzitoni leggermente giù.
-- Saturazione **−20/−25%**, verdi spostati verso l'oliva (hue verso il giallo, saturazione dei verdi ancora −10%).
-- Ombre: un tocco di **blu + magenta**. Luci: un tocco di **giallo caldo**. Intensità bassa.
-- Niente grana pesante, niente patina matte.
+### La LUT `nic-lowkey` (fatta il 09/11)
+Non è una copia del suo prima/dopo (non esiste: abbiamo solo il finito). Ho preso 60 frame da 20 tue clip (D-Log, D-Log2, D-Log M: video #3, test grading, Zanzibar) e ho fatto cercare al computer i numeri del motore pellicola della skill finché le tue clip avevano **gli stessi tratti misurati sopra** (nero, luci, pelle, verdi, tinte di ombre e luci, quantità di colore). Verificata: il file `.cube` dà lo stesso risultato della skill (scarto medio 0,2%).
 
-**Differenza con il tuo `pellicola-oro`:** il tuo è più luminoso e dorato in tutto il quadro. Il suo è più **scuro, freddo nelle ombre e caldo solo sulle luci**. Possiamo farne un preset nuovo (`nic-lowkey`?) e confrontarlo A/B su una tua clip.
+**Cosa fa:** esposizione −0,6 stop · nero all'1,2% · spalla presto, luci ferme intorno all'80% · luci crema-calde e un po' desaturate, ombre appena magenta · pelle spostata verso il dorato (saturazione pelle ×1,2) · verdi −25° verso l'oliva · colore generale −2% · vignetta 0,2.
+
+**Dove sono i file:** `.claude/skills/youtube-edit/assets/looks/nic-lowkey/`
+- `nic-lowkey-dlog2.cube` → girato D-Log2 del Pocket 4P (contiene già la LUT DJI: va **al posto** della LUT DJI)
+- `nic-lowkey-dlog.cube` → D-Log del Pocket 4P (idem)
+- `nic-lowkey-dlogm.cube` → D-Log M dell'Osmo Nano (idem)
+- `nic-lowkey-rec709.cube` → clip già in Rec.709
+- In CapCut la vignetta va aggiunta a mano (15-20%): una LUT non può contenerla.
+
+**Nella skill:** `--look nic-lowkey` su `grade-apply.py` (anteprima, poi `--render`). Se una clip esce troppo scura: `--stops 0.3`.
+
+**Cosa non fa:** il buio vero di Nic viene dalla luce delle scene. Su una clip girata in pieno sole la LUT la rende più cinematografica, ma non la trasforma in un interno al camino. Per il suo look bisogna anche **girare con poca luce e lasciare il buio nel quadro**.
+
+**Differenza con il tuo `pellicola-oro`:** il tuo è più luminoso e dorato in tutto il quadro; `nic-lowkey` è più scuro, con le ombre neutre e il caldo solo sulle luci e sulla pelle. Da provare A/B su una tua clip vera.
 
 ---
 
@@ -170,6 +183,6 @@ Su un girato Rec.709 già corretto:
 ---
 
 ## 8. Prossimi passi possibili
-- Fare il preset di grading "nic-lowkey" nella skill `youtube-edit` e provarlo A/B contro `pellicola-oro` su una tua clip.
+- ~~Fare il preset "nic-lowkey"~~ fatto il 09/11 (§6): ora provarlo A/B contro `pellicola-oro` su una tua clip vera.
 - Ascoltare le musiche di sottofondo e cercare brani simili su Epidemic Sound.
 - Scrivere il format della tua serie (aggancio, contatore, dispositivi per episodio, posta in gioco del Drop 1).

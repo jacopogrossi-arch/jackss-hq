@@ -403,16 +403,36 @@
             "black": 0.006,
             "hl_desat": 0.2,
             "warm": [
-              [0.04, 0.018, -0.045],
-              [-0.015, 0.006, 0.015]
+              [
+                0.04,
+                0.018,
+                -0.045
+              ],
+              [
+                -0.015,
+                0.006,
+                0.015
+              ]
             ],
             "sat_hue": [
-              [355, 25, 1.15],
-              [22, 22, 1.1]
+              [
+                355,
+                25,
+                1.15
+              ],
+              [
+                22,
+                22,
+                1.1
+              ]
             ],
             "density": 0.12,
             "hue": [
-              [219, 30, -5]
+              [
+                219,
+                30,
+                -5
+              ]
             ]
           },
           "finish": {
@@ -420,6 +440,60 @@
             "grain": 0.12,
             "grain_size": 2.0,
             "vignette": 0.25
+          }
+        }
+      },
+      "nic-lowkey": {
+        "title": "Nic low-key (pipeline film)",
+        "desc": "09/11/2026, dal colore di Nic Salvatori (@nicsalvatori), 7 episodi misurati senza filigrana IG, testi, archivio. Non copiato: numeri cercati finche' 60 frame di 20 clip di Jacopo (D-Log, D-Log2, D-Log M) hanno gli stessi tratti misurati di Nic: nero all'1,5 %, tetto delle luci all'80 % con spalla presto (niente bianco pieno), ombre neutre appena magenta, luci crema-calde, pelle dorata (tinta Lab 60 gradi, croma 17), verdi oliva, colore contenuto, vignetta leggera. Esposizione del look -0,6 stop. Il buio vero di Nic viene dalla luce delle scene (camino, auto, ora blu): il grading da solo non lo crea. Grana non messa: la compressione IG non permette di misurarla. Niente allungamento delle luci per clip (stretch fisso a 1): le luci di Nic non arrivano mai al bianco.",
+        "p": {
+          "sat": 0.9817,
+          "skin_sat": 1.2013,
+          "film": {
+            "exposure": -0.6018,
+            "contrast": 1.0706,
+            "black": 0.0118,
+            "shoulder": 0.7849,
+            "white_target": 0.9696,
+            "stretch_from": 1.0,
+            "hl_desat": 0.3714,
+            "density": 0.08,
+            "warm": [
+              [
+                0.0795,
+                0.0015,
+                -0.0796
+              ],
+              [
+                0.0227,
+                0.0034,
+                0.0217
+              ]
+            ],
+            "sat_hue": [
+              [
+                115,
+                70,
+                1.1171
+              ]
+            ],
+            "hue": [
+              [
+                115,
+                60,
+                -24.9996
+              ],
+              [
+                25,
+                30,
+                8.1601
+              ]
+            ],
+            "stretch_max": 1.0,
+            "stretch_min": 1.0
+          },
+          "finish": {
+            "vignette": 0.2
           }
         }
       }
