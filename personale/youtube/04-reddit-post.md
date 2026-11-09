@@ -53,3 +53,16 @@ I might quote a few answers anonymously in a video about my journey, no username
 - Prima di pubblicare: in ogni subreddit aprire **Informazioni → Regole** e controllare se sondaggi o "ricerche" sono vietati. Nel dubbio, scrivere ai moderatori.
 - Le stesse 5 domande vanno fatte a Claude nei panni del cliente ideale: è il confronto del video.
 - Rispondere ai commenti nelle prime ore fa salire il post.
+
+---
+
+## Risposte raccolte
+
+### r/malefashionadvice — utente 1 (Canada, prezzi in CAD) — 09/11
+1. Pagherebbe 150-200 CAD.
+2. Sì se silhouette e colore sono belli. Tessuto 98-100% naturale, al massimo 2% elastan; più sintetico = no.
+3. Pochi capi buoni, ma ha qualche pantalone brutto che non mette mai, frutto di "trial-and-error".
+4. Fiducia = provarlo di persona, leggere l'etichetta del materiale, toccarlo, capire se è fatto bene confrontandolo con i suoi pantaloni buoni di lana e cotone. "Non sono un esperto."
+5. Raramente: si adatta al tipo di posto.
+
+Domande di follow-up mandate: vedi chat del 09/11.
