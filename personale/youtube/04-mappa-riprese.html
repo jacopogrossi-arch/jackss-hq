@@ -1,0 +1,267 @@
+<title>Mappa riprese Inverso</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Instrument+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: una "linea" di fermate in alto (la mappa), poi un blocco per fermata con il percorso dei punti da toccare. */
+:root{
+  --bg:#f3efe7; --paper:#fbf9f4; --ink:#16130f; --muted:#6b645a; --rule:#d9d2c5;
+  --cam:#2f3f6b; --cam-soft:#e3e7f2;
+  --scr:#4f5a2c; --scr-soft:#e8ebdb;
+  --learn:#8a4a24; --learn-soft:#f3e4d8;
+  --display:"EB Garamond", Garamond, "Times New Roman", serif;
+  --body:"Instrument Sans", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f0e0c; --paper:#181613; --ink:#efe8db; --muted:#a59d90; --rule:#34302a;
+  --cam:#a9b8e6; --cam-soft:#1f2538; --scr:#c3cf8f; --scr-soft:#242816; --learn:#e3a57d; --learn-soft:#2d1f16; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f0e0c; --paper:#181613; --ink:#efe8db; --muted:#a59d90; --rule:#34302a;
+  --cam:#a9b8e6; --cam-soft:#1f2538; --scr:#c3cf8f; --scr-soft:#242816; --learn:#e3a57d; --learn-soft:#2d1f16; color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.5;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:28px 64px}
+.wrap{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+h1,h2{font-family:var(--display);font-weight:600;text-wrap:balance;margin:0;letter-spacing:.01em}
+h1{font-size:clamp(2rem,6vw,2.9rem);line-height:1.05}
+.kicker{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.lead{color:var(--muted);max-width:60ch;margin:6px 0 0}
+
+/* regole */
+.rules{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.rules li{background:var(--paper);border:1px solid var(--rule);border-radius:6px;padding:12px 14px;font-size:.95rem}
+.rules b{display:block;font-family:var(--display);font-size:1.15rem;font-weight:600}
+
+/* la linea */
+.line{display:flex;flex-wrap:wrap;gap:0;padding:0;margin:0;list-style:none;border-top:2px solid var(--ink)}
+.line li{flex:1 1 120px;min-width:0;padding:10px 10px 4px 0;position:relative}
+.line li::before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--ink)}
+.line li.done::before{background:var(--ink)}
+.line a{color:inherit;text-decoration:none;display:block}
+.line .n{font-family:var(--display);font-size:1.35rem;font-weight:600;line-height:1}
+.line .t{font-size:.85rem;font-weight:600}
+.line .d{font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums}
+
+/* legenda */
+.legend{display:flex;flex-wrap:wrap;gap:8px;font-size:.82rem}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:999px}
+.chip.cam{background:var(--cam-soft);color:var(--cam)}
+.chip.scr{background:var(--scr-soft);color:var(--scr)}
+.chip.time{background:transparent;color:var(--muted);border:1px solid var(--rule)}
+
+/* blocchi */
+.block{background:var(--paper);border:1px solid var(--rule);border-radius:8px;padding:22px 20px;display:flex;flex-direction:column;gap:16px;scroll-margin-top:16px}
+.block.done{opacity:.55}
+.head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 14px}
+.big{font-family:var(--display);font-size:3rem;line-height:.8;font-weight:500}
+.head h2{font-size:1.7rem;flex:1 1 220px;min-width:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.what{margin:0;font-size:1.02rem;max-width:62ch}
+
+.path{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.path li{display:grid;grid-template-columns:28px 1fr;gap:12px;position:relative;padding-bottom:14px}
+.path li:last-child{padding-bottom:0}
+.path li::before{content:"";position:absolute;left:13px;top:24px;bottom:0;width:2px;background:var(--rule)}
+.path li:last-child::before{display:none}
+.path .dot{width:28px;height:28px;border-radius:50%;border:2px solid var(--ink);display:grid;place-items:center;font-size:.8rem;font-weight:600;background:var(--paper);font-variant-numeric:tabular-nums}
+.path .txt{min-width:0;padding-top:2px}
+.path .txt b{font-weight:600}
+.path .txt em{color:var(--muted);font-style:normal;font-size:.92rem;display:block}
+
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px}
+.note{border-left:3px solid var(--rule);padding:4px 0 4px 12px;font-size:.93rem;min-width:0}
+.note .lab{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--muted);margin-bottom:2px}
+.note.start{border-color:var(--ink)}
+.note.start q{font-family:var(--display);font-size:1.12rem;font-style:italic;quotes:"«" "»"}
+.note.learn{border-color:var(--learn);background:var(--learn-soft);border-radius:0 6px 6px 0;padding:8px 12px}
+.note.learn .lab{color:var(--learn)}
+.note.value{border-color:var(--scr)}
+.note.warn{border-color:var(--cam);background:var(--cam-soft);border-radius:0 6px 6px 0;padding:8px 12px}
+.note.warn .lab{color:var(--cam)}
+
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid var(--rule);padding-top:12px;font-size:.9rem;color:var(--muted)}
+.foot .next b{color:var(--ink)}
+.check{display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-weight:600;color:var(--ink);font-size:.9rem}
+.check input{width:20px;height:20px;accent-color:var(--ink)}
+a:focus-visible,input:focus-visible{outline:2px solid var(--cam);outline-offset:2px}
+
+.ending{font-family:var(--display);font-size:1.25rem;font-style:italic;text-align:left;color:var(--muted);max-width:60ch}
+</style>
+
+<div class="wrap">
+
+  <header>
+    <div class="kicker">YouTube #4 · mappa delle riprese</div>
+    <h1>Ho costruito l'identità del mio brand con l'AI</h1>
+    <p class="lead">Non è un copione. Ogni blocco ti dice di cosa parlare e in che ordine. Leggi i punti, chiudi gli occhi un secondo, poi raccontali con parole tue.</p>
+  </header>
+
+  <ul class="rules">
+    <li><b>Un blocco alla volta</b>2–3 prese per blocco, poi passi al successivo. Se sbagli rifai solo quel blocco.</li>
+    <li><b>Segui i pallini</b>Sono i punti da toccare, in ordine. Le parole sono tue.</li>
+    <li><b>Se ti blocchi</b>Usa la frase d'attacco del blocco, poi vai a braccio.</li>
+  </ul>
+
+  <nav aria-label="Percorso del video">
+    <ul class="line" id="line">
+      <li data-b="b0"><a href="#b0"><div class="n">0</div><div class="t">L'aggancio</div><div class="d">30 s</div></a></li>
+      <li data-b="b1"><a href="#b1"><div class="n">1</div><div class="t">Il nome</div><div class="d">2 min</div></a></li>
+      <li data-b="b2"><a href="#b2"><div class="n">2</div><div class="t">Chi lo compra</div><div class="d">3–4 min</div></a></li>
+      <li data-b="b3"><a href="#b3"><div class="n">3</div><div class="t">Persone vere</div><div class="d">2–3 min</div></a></li>
+      <li data-b="b4"><a href="#b4"><div class="n">4</div><div class="t">Il logo</div><div class="d">3 min</div></a></li>
+      <li data-b="b5"><a href="#b5"><div class="n">5</div><div class="t">Chiusura</div><div class="d">1:30</div></a></li>
+    </ul>
+  </nav>
+
+  <div class="legend">
+    <span class="chip cam">● Camera</span> parli guardando in camera
+    <span class="chip scr">● Schermo</span> registri lo schermo e parli sopra
+  </div>
+
+  <!-- 0 -->
+  <section class="block" id="b0">
+    <div class="head"><span class="big">0</span><h2>L'aggancio</h2>
+      <div class="chips"><span class="chip cam">Camera</span><span class="chip time">30 s</span></div></div>
+    <p class="what">Dici il nome per la prima volta e prometti cosa succede nel video.</p>
+    <ol class="path">
+      <li><span class="dot">1</span><div class="txt"><b>Il nome.</b> Dillo e basta, poi una pausa.</div></li>
+      <li><span class="dot">2</span><div class="txt"><b>La promessa del #3.</b> Avevi detto che nel prossimo video avresti costruito l'identità del brand.</div></li>
+      <li><span class="dot">3</span><div class="txt"><b>Cosa vedranno.</b> Chi compra Inverso, come si presenta, tutto con l'AI.</div></li>
+      <li><span class="dot">4</span><div class="txt"><b>La parte onesta.</b> Vedrete dove sbaglia l'AI e dove sbaglio io.</div></li>
+    </ol>
+    <div class="notes">
+      <div class="note start"><span class="lab">Se ti blocchi, parti così</span><q>Il mio brand si chiama Inverso.</q></div>
+    </div>
+    <div class="foot"><span class="next">Poi passi a → <b>perché si chiama così</b></span>
+      <label class="check"><input type="checkbox" id="c-b0" data-b="b0"> Girato</label></div>
+  </section>
+
+  <!-- 1 -->
+  <section class="block" id="b1">
+    <div class="head"><span class="big">1</span><h2>Il nome e la storia</h2>
+      <div class="chips"><span class="chip cam">Camera</span><span class="chip time">2 min</span></div></div>
+    <p class="what">Spieghi perché si chiama Inverso, e racconti come Claude ti ha aiutato a scegliere cosa dire.</p>
+    <ol class="path">
+      <li><span class="dot">1</span><div class="txt"><b>Il rovescio del capo.</b> Un capo si giudica da dentro, dalle cuciture.<em>Se hai un capo a portata di mano, giralo e mostra il rovescio.</em></div></li>
+      <li><span class="dot">2</span><div class="txt"><b>Il contrario della fretta.</b> Un capo alla volta, mesi e non settimane.</div></li>
+      <li><span class="dot">3</span><div class="txt"><b>La via di mezzo.</b> La scarpa: potevi averne sei, ne avevi una.<em>Raccontala come una scelta, non come una lamentela (vedi sotto).</em></div></li>
+      <li><span class="dot">4</span><div class="txt"><b>Come l'hai scritto.</b> Di getto, a mano, una sera di luglio. Poi l'hai dato a Claude.</div></li>
+      <li><span class="dot">5</span><div class="txt"><b>La frase tagliata.</b> Claude ti ha detto di togliere "verso il lusso e la ricchezza": Inverso parla di qualità, non di diventare ricchi. Aveva ragione.</div></li>
+    </ol>
+    <div class="notes">
+      <div class="note warn"><span class="lab">La scarpa senza sembrare lamentela</span>Dillo tu prima degli altri: «non ero povero, anzi: potevo averne sei. Mi hanno insegnato a sceglierne una.» È una storia di scelta, non di mancanza.</div>
+      <div class="note value"><span class="lab">Cosa porta a casa chi guarda</span>La storia la scrivi tu. L'AI ti aiuta a capire cosa tenere e cosa togliere.</div>
+      <div class="note learn"><span class="lab">Momento "imparo"</span>Quella frase l'avevi scritta tu, e andava tolta.</div>
+    </div>
+    <div class="foot"><span class="next">Poi passi a → <b>a chi parla il brand</b></span>
+      <label class="check"><input type="checkbox" id="c-b1" data-b="b1"> Girato</label></div>
+  </section>
+
+  <!-- 2 -->
+  <section class="block" id="b2">
+    <div class="head"><span class="big">2</span><h2>Chi compra Inverso</h2>
+      <div class="chips"><span class="chip scr">Schermo</span><span class="chip time">3–4 min</span></div></div>
+    <p class="what">Dai a Claude i tuoi testi, lui diventa il tuo cliente ideale, e tu lo intervisti. Registri lo schermo e reagisci dal vivo.</p>
+    <ol class="path">
+      <li><span class="dot">1</span><div class="txt"><b>Spiega cosa stai facendo.</b> Gli do i miei testi e gli chiedo di diventare il mio cliente.</div></li>
+      <li><span class="dot">2</span><div class="txt"><b>Fai vedere il prompt.</b> Chi guarda deve poterlo rifare a casa.</div></li>
+      <li><span class="dot">3</span><div class="txt"><b>Le cinque domande.</b><em>Quanto spendi per un pantalone · cosa ti fa dire sì o no · tanti capi o pochi · ti fideresti di un brand appena nato · ti sei mai sentito fuori posto per come eri vestito.</em></div></li>
+      <li><span class="dot">4</span><div class="txt"><b>Le due domande in più.</b><em>Compri usato, su Vinted? · Compreresti online un pantalone senza provarlo?</em></div></li>
+      <li><span class="dot">5</span><div class="txt"><b>Fermati sulla sorpresa.</b> Quando risponde qualcosa che non ti aspettavi, dillo ad alta voce.</div></li>
+    </ol>
+    <div class="notes">
+      <div class="note value"><span class="lab">Cosa porta a casa chi guarda</span>Come farsi interpretare il cliente da Claude, per mettere alla prova un'idea prima di spendere un euro.</div>
+      <div class="note learn"><span class="lab">Momento "imparo"</span>La risposta che ti ha sorpreso. Non provarla prima: deve essere vera.</div>
+    </div>
+    <div class="foot"><span class="next">Poi passi a → <b>e le persone vere cosa dicono?</b></span>
+      <label class="check"><input type="checkbox" id="c-b2" data-b="b2"> Girato</label></div>
+  </section>
+
+  <!-- 3 -->
+  <section class="block" id="b3">
+    <div class="head"><span class="big">3</span><h2>La prova con persone vere</h2>
+      <div class="chips"><span class="chip cam">Camera</span><span class="chip time">2–3 min</span></div></div>
+    <p class="what">Racconti Reddit: com'è andata, chi ti ha risposto, cosa vale e cosa no. Chiudi facendo la domanda a chi guarda.</p>
+    <ol class="path">
+      <li><span class="dot">1</span><div class="txt"><b>Il ban.</b> Volevi chiederlo ai ragazzi italiani e i subreddit italiani ti hanno bannato.</div></li>
+      <li><span class="dot">2</span><div class="txt"><b>Chi ha risposto.</b> Americani e inglesi, uno di 55 anni con il sarto di fiducia. Gentilissimi, ma non sono il tuo cliente.<em>Non sono la Bibbia: dillo chiaro.</em></div></li>
+      <li><span class="dot">3</span><div class="txt"><b>Le quattro cose su cui erano d'accordo tutti.</b><em>Paghi tanto solo se ti sta perfetto · ti fidi se puoi toccarlo, non dal sito · un artigiano ha bisogno di tempo · un capo caro fa paura da mettere.</em></div></li>
+      <li><span class="dot">4</span><div class="txt"><b>Il confronto con Claude.</b> Dove ci aveva preso e dove no.</div></li>
+      <li><span class="dot">5</span><div class="txt"><b>La lezione.</b> Chi è esperto ha già il suo sarto. Il tuo cliente è chi non ce l'ha ancora.</div></li>
+      <li><span class="dot">6</span><div class="txt"><b>La domanda a chi guarda.</b> Il tuo pubblico non c'è ancora: lo stanno diventando loro. Quanto spenderebbero per un pantalone fatto bene, e cosa li fa dire di no? Nei commenti.</div></li>
+    </ol>
+    <div class="notes">
+      <div class="note start"><span class="lab">Frasi di Reddit da mettere a schermo</span><q>Un artigiano ha bisogno di tempo.</q><br><q>Compro le cose quando costano poco, non quando le voglio.</q></div>
+      <div class="note learn"><span class="lab">Momento "imparo"</span>Hai chiesto alle persone sbagliate, e l'hai capito solo leggendo le risposte.</div>
+    </div>
+    <div class="foot"><span class="next">Poi passi a → <b>come si presenta Inverso</b></span>
+      <label class="check"><input type="checkbox" id="c-b3" data-b="b3"> Girato</label></div>
+  </section>
+
+  <!-- 4 -->
+  <section class="block" id="b4">
+    <div class="head"><span class="big">4</span><h2>Il logo</h2>
+      <div class="chips"><span class="chip cam">Camera</span><span class="chip scr">Passaggi a schermo</span><span class="chip time">3 min</span></div></div>
+    <p class="what">Il lavoro sul logo è già fatto prima delle riprese. Qui racconti cosa non andava e mostri il risultato.</p>
+    <ol class="path">
+      <li><span class="dot">1</span><div class="txt"><b>Il logo che avevi.</b> Scritta INVERSO, fatta con l'AI. Mostralo.</div></li>
+      <li><span class="dot">2</span><div class="txt"><b>Il problema.</b> Non è un font vero: le lettere sono irregolari e non la puoi riscrivere uguale.</div></li>
+      <li><span class="dot">3</span><div class="txt"><b>Cosa hai fatto.</b> Trovato il font vero, fissato i colori, provato il logo sull'etichetta del pantalone e sul profilo.</div></li>
+      <li><span class="dot">4</span><div class="txt"><b>Il reveal.</b> Questo è il logo di Inverso.</div></li>
+    </ol>
+    <div class="notes">
+      <div class="note value"><span class="lab">Cosa porta a casa chi guarda</span>Se l'AI ti fa un logo, controlla che sia scritto con un font vero, o non potrai usarlo da nessuna parte.</div>
+      <div class="note learn"><span class="lab">Momento "imparo"</span>Pensavi di avere già un logo.</div>
+    </div>
+    <div class="foot"><span class="next">Poi passi a → <b>la chiusura</b></span>
+      <label class="check"><input type="checkbox" id="c-b4" data-b="b4"> Girato</label></div>
+  </section>
+
+  <!-- 5 -->
+  <section class="block" id="b5">
+    <div class="head"><span class="big">5</span><h2>Chiusura</h2>
+      <div class="chips"><span class="chip cam">Camera</span><span class="chip time">1:30</span></div></div>
+    <p class="what">Tiri le somme, dici una cosa che ancora non sai e lanci la discussione.</p>
+    <ol class="path">
+      <li><span class="dot">1</span><div class="txt"><b>Cosa ha adesso Inverso.</b> Un nome, una persona a cui parla, una faccia.</div></li>
+      <li><span class="dot">2</span><div class="txt"><b>Cosa non sai ancora.</b> Una cosa vera, detta senza giri.</div></li>
+      <li><span class="dot">3</span><div class="txt"><b>Di nuovo la domanda.</b> Quanto spendereste, cosa vi fa dire di no: nei commenti.</div></li>
+      <li><span class="dot">4</span><div class="txt"><b>Il prossimo video.</b> Tappa 2 della mappa: il pantalone.</div></li>
+      <li><span class="dot">5</span><div class="txt"><b>La frase del canale.</b> Tra un anno apro il mio brand, nel frattempo provo tutto. Iscriviti per vedere come va a finire.</div></li>
+    </ol>
+    <div class="notes">
+      <div class="note start"><span class="lab">Se ti blocchi, parti così</span><q>Un mese fa Inverso era solo un nome.</q></div>
+    </div>
+    <div class="foot"><span class="next">Fine. Bel lavoro.</span>
+      <label class="check"><input type="checkbox" id="c-b5" data-b="b5"> Girato</label></div>
+  </section>
+
+  <p class="ending">Spunta "Girato" quando un blocco è fatto: la mappa in alto si riempie.</p>
+</div>
+
+<script>
+(function(){
+  var KEY='mappa-riprese-04';
+  var state={};
+  try{state=JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){state={}}
+  function paint(){
+    document.querySelectorAll('.check input').forEach(function(cb){
+      var b=cb.dataset.b, on=!!state[b];
+      cb.checked=on;
+      document.getElementById(b).classList.toggle('done',on);
+      var stop=document.querySelector('.line li[data-b="'+b+'"]');
+      if(stop) stop.classList.toggle('done',on);
+    });
+  }
+  document.querySelectorAll('.check input').forEach(function(cb){
+    cb.addEventListener('change',function(){
+      state[cb.dataset.b]=cb.checked;
+      try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){}
+      paint();
+    });
+  });
+  paint();
+})();
+</script>
