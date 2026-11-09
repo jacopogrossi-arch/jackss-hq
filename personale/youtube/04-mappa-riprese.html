@@ -87,31 +87,34 @@ h1{font-size:clamp(2rem,6vw,2.9rem);line-height:1.05}
 .check input{width:20px;height:20px;accent-color:var(--ink)}
 a:focus-visible,input:focus-visible{outline:2px solid var(--cam);outline-offset:2px}
 
+.note.you{border-color:var(--learn);border-left-style:dashed}
+.note.you .lab{color:var(--learn)}
 .ending{font-family:var(--display);font-size:1.25rem;font-style:italic;text-align:left;color:var(--muted);max-width:60ch}
 </style>
 
 <div class="wrap">
 
   <header>
-    <div class="kicker">YouTube #4 · mappa delle riprese</div>
+    <div class="kicker">YouTube #4 · mappa delle riprese · v2</div>
     <h1>Ho costruito l'identità del mio brand con l'AI</h1>
-    <p class="lead">Non è un copione. Ogni blocco ti dice di cosa parlare e in che ordine. Leggi i punti, chiudi gli occhi un secondo, poi raccontali con parole tue.</p>
+    <p class="lead">Un metodo spiegato mentre lo fai. Chi guarda può rifarlo con te: ogni blocco ha un «tocca a te». Non è un copione: leggi i punti, poi raccontali con parole tue.</p>
   </header>
 
   <ul class="rules">
-    <li><b>Un blocco alla volta</b>2–3 prese per blocco, poi passi al successivo. Se sbagli rifai solo quel blocco.</li>
+    <li><b>Un blocco alla volta</b>2–3 prese per blocco. Se sbagli rifai solo quel blocco.</li>
     <li><b>Segui i pallini</b>Sono i punti da toccare, in ordine. Le parole sono tue.</li>
-    <li><b>Se ti blocchi</b>Usa la frase d'attacco del blocco, poi vai a braccio.</li>
+    <li><b>Tocca a te</b>Il momento in cui parli a chi guarda: «ora fallo tu».</li>
   </ul>
 
   <nav aria-label="Percorso del video">
     <ul class="line" id="line">
       <li data-b="b0"><a href="#b0"><div class="n">0</div><div class="t">L'aggancio</div><div class="d">30 s</div></a></li>
-      <li data-b="b1"><a href="#b1"><div class="n">1</div><div class="t">Il nome</div><div class="d">2 min</div></a></li>
-      <li data-b="b2"><a href="#b2"><div class="n">2</div><div class="t">Chi lo compra</div><div class="d">3–4 min</div></a></li>
-      <li data-b="b3"><a href="#b3"><div class="n">3</div><div class="t">Persone vere</div><div class="d">2–3 min</div></a></li>
-      <li data-b="b4"><a href="#b4"><div class="n">4</div><div class="t">Il logo</div><div class="d">3 min</div></a></li>
-      <li data-b="b5"><a href="#b5"><div class="n">5</div><div class="t">Chiusura</div><div class="d">1:30</div></a></li>
+      <li data-b="b1"><a href="#b1"><div class="n">1</div><div class="t">Il foglio</div><div class="d">3 min</div></a></li>
+      <li data-b="b2"><a href="#b2"><div class="n">2</div><div class="t">Il nome</div><div class="d">1:30</div></a></li>
+      <li data-b="b3"><a href="#b3"><div class="n">3</div><div class="t">Claude</div><div class="d">3 min</div></a></li>
+      <li data-b="b4"><a href="#b4"><div class="n">4</div><div class="t">Persone vere</div><div class="d">2 min</div></a></li>
+      <li data-b="b5"><a href="#b5"><div class="n">5</div><div class="t">Il logo</div><div class="d">2:30</div></a></li>
+      <li data-b="b6"><a href="#b6"><div class="n">6</div><div class="t">Chiusura</div><div class="d">1 min</div></a></li>
     </ul>
   </nav>
 
@@ -120,130 +123,142 @@ a:focus-visible,input:focus-visible{outline:2px solid var(--cam);outline-offset:
     <span class="chip scr">● Schermo</span> registri lo schermo e parli sopra
   </div>
 
-  <!-- 0 -->
   <section class="block" id="b0">
     <div class="head"><span class="big">0</span><h2>L'aggancio</h2>
       <div class="chips"><span class="chip cam">Camera</span><span class="chip time">30 s</span></div></div>
-    <p class="what">Dici il nome per la prima volta e prometti cosa succede nel video.</p>
+    <p class="what">Dici il nome per la prima volta e inviti chi guarda a farlo con te.</p>
     <ol class="path">
       <li><span class="dot">1</span><div class="txt"><b>Il nome.</b> Dillo e basta, poi una pausa.</div></li>
-      <li><span class="dot">2</span><div class="txt"><b>La promessa del #3.</b> Avevi detto che nel prossimo video avresti costruito l'identità del brand.</div></li>
-      <li><span class="dot">3</span><div class="txt"><b>Cosa vedranno.</b> Chi compra Inverso, come si presenta, tutto con l'AI.</div></li>
-      <li><span class="dot">4</span><div class="txt"><b>La parte onesta.</b> Vedrete dove sbaglia l'AI e dove sbaglio io.</div></li>
+      <li><span class="dot">2</span><div class="txt"><b>La promessa del #3.</b> Avevi detto che avresti costruito l'identità del brand: oggi la fai.</div></li>
+      <li><span class="dot">3</span><div class="txt"><b>Il metodo.</b> Ti faccio vedere come la costruisco io, passo per passo, con l'AI.</div></li>
+      <li><span class="dot">4</span><div class="txt"><b>L'invito.</b> Se anche tu hai un'idea di brand, prendi un foglio e fallo insieme a me.</div></li>
+      <li><span class="dot">5</span><div class="txt"><b>La parte onesta.</b> Vedrete dove sbaglia l'AI e dove sbaglio io.</div></li>
     </ol>
     <div class="notes">
       <div class="note start"><span class="lab">Se ti blocchi, parti così</span><q>Il mio brand si chiama Inverso.</q></div>
     </div>
-    <div class="foot"><span class="next">Poi passi a → <b>perché si chiama così</b></span>
+    <div class="foot"><span class="next">Poi passi a → <b>il foglio</b></span>
       <label class="check"><input type="checkbox" id="c-b0" data-b="b0"> Girato</label></div>
   </section>
 
-  <!-- 1 -->
   <section class="block" id="b1">
-    <div class="head"><span class="big">1</span><h2>Il nome e la storia</h2>
-      <div class="chips"><span class="chip cam">Camera</span><span class="chip time">2 min</span></div></div>
-    <p class="what">Spieghi perché si chiama Inverso, e racconti come Claude ti ha aiutato a scegliere cosa dire.</p>
+    <div class="head"><span class="big">1</span><h2>Il foglio: quattro domande</h2>
+      <div class="chips"><span class="chip cam">Camera</span><span class="chip time">3 min</span></div></div>
+    <p class="what">Prima dell'AI, carta e penna. Per ogni domanda: spieghi cosa vuol dire, rispondi per Inverso, poi passi la palla a chi guarda.</p>
     <ol class="path">
-      <li><span class="dot">1</span><div class="txt"><b>Il rovescio del capo.</b> Un capo si giudica da dentro, dalle cuciture.<em>Se hai un capo a portata di mano, giralo e mostra il rovescio.</em></div></li>
-      <li><span class="dot">2</span><div class="txt"><b>Il contrario della fretta.</b> Un capo alla volta, mesi e non settimane.</div></li>
-      <li><span class="dot">3</span><div class="txt"><b>La via di mezzo.</b> La scarpa: potevi averne sei, ne avevi una.<em>Raccontala come una scelta, non come una lamentela (vedi sotto).</em></div></li>
-      <li><span class="dot">4</span><div class="txt"><b>Come l'hai scritto.</b> Di getto, a mano, una sera di luglio. Poi l'hai dato a Claude.</div></li>
-      <li><span class="dot">5</span><div class="txt"><b>La frase tagliata.</b> Claude ti ha detto di togliere "verso il lusso e la ricchezza": Inverso parla di qualità, non di diventare ricchi. Aveva ragione.</div></li>
+      <li><span class="dot">1</span><div class="txt"><b>Perché il foglio.</b> L'AI ti aiuta solo se le dai idee chiare. Senza, ti restituisce cose generiche.</div></li>
+      <li><span class="dot">2</span><div class="txt"><b>1 · Cosa vuoi vendere.</b> Non un capo, uno stile. Ma da dove parti? E dove vuoi arrivare?<em>Inverso: si parte da un solo prodotto, il pantalone fatto bene. Un giorno, un guardaroba.</em></div></li>
+      <li><span class="dot">3</span><div class="txt"><b>2 · A chi.</b> Cosa fanno nella vita, che interessi hanno, che hobby.<em>Inverso: il ragazzo di mezzo, che vuole vestirsi bene e non ha ancora un sarto.</em></div></li>
+      <li><span class="dot">4</span><div class="txt"><b>3 · Come ti presenti.</b> Il tuo posto rispetto a queste persone: prezzo, tono, che promessa fai.<em>Inverso: pochi capi buoni, non lusso. Qui racconti la scarpa: una, non sei.</em></div></li>
+      <li><span class="dot">5</span><div class="txt"><b>4 · Dove.</b> Tanti reel, TikTok e influencer, oppure una cosa di nicchia che gira col passaparola?<em>Inverso: la tua risposta vera, anche se è «non lo so ancora».</em></div></li>
     </ol>
     <div class="notes">
-      <div class="note warn"><span class="lab">La scarpa senza sembrare lamentela</span>Dillo tu prima degli altri: «non ero povero, anzi: potevo averne sei. Mi hanno insegnato a sceglierne una.» È una storia di scelta, non di mancanza.</div>
-      <div class="note value"><span class="lab">Cosa porta a casa chi guarda</span>La storia la scrivi tu. L'AI ti aiuta a capire cosa tenere e cosa togliere.</div>
-      <div class="note learn"><span class="lab">Momento "imparo"</span>Quella frase l'avevi scritta tu, e andava tolta.</div>
+      <div class="note warn"><span class="lab">La scarpa senza sembrare lamentela</span>Dillo tu prima degli altri: «non ero povero, anzi: potevo averne sei. Mi hanno insegnato a sceglierne una.»</div>
+      <div class="note you"><span class="lab">Tocca a te</span>Dopo ogni domanda: «metti in pausa e scrivi la tua.»</div>
+      <div class="note value"><span class="lab">Cosa porta a casa chi guarda</span>Quattro domande da farsi prima di aprire qualsiasi AI.</div>
     </div>
-    <div class="foot"><span class="next">Poi passi a → <b>a chi parla il brand</b></span>
+    <div class="foot"><span class="next">Poi passi a → <b>dal foglio al nome</b></span>
       <label class="check"><input type="checkbox" id="c-b1" data-b="b1"> Girato</label></div>
   </section>
 
-  <!-- 2 -->
   <section class="block" id="b2">
-    <div class="head"><span class="big">2</span><h2>Chi compra Inverso</h2>
-      <div class="chips"><span class="chip scr">Schermo</span><span class="chip time">3–4 min</span></div></div>
-    <p class="what">Dai a Claude i tuoi testi, lui diventa il tuo cliente ideale, e tu lo intervisti. Registri lo schermo e reagisci dal vivo.</p>
+    <div class="head"><span class="big">2</span><h2>Dal foglio al nome</h2>
+      <div class="chips"><span class="chip cam">Camera</span><span class="chip time">1:30</span></div></div>
+    <p class="what">Dalle risposte è uscito il nome. Lo spieghi, e racconti il primo aiuto di Claude: cosa tagliare.</p>
     <ol class="path">
-      <li><span class="dot">1</span><div class="txt"><b>Spiega cosa stai facendo.</b> Gli do i miei testi e gli chiedo di diventare il mio cliente.</div></li>
-      <li><span class="dot">2</span><div class="txt"><b>Fai vedere il prompt.</b> Chi guarda deve poterlo rifare a casa.</div></li>
-      <li><span class="dot">3</span><div class="txt"><b>Le cinque domande.</b><em>Quanto spendi per un pantalone · cosa ti fa dire sì o no · tanti capi o pochi · ti fideresti di un brand appena nato · ti sei mai sentito fuori posto per come eri vestito.</em></div></li>
-      <li><span class="dot">4</span><div class="txt"><b>Le due domande in più.</b><em>Compri usato, su Vinted? · Compreresti online un pantalone senza provarlo?</em></div></li>
-      <li><span class="dot">5</span><div class="txt"><b>Fermati sulla sorpresa.</b> Quando risponde qualcosa che non ti aspettavi, dillo ad alta voce.</div></li>
+      <li><span class="dot">1</span><div class="txt"><b>I tre significati.</b> Il rovescio del capo · il contrario della fretta · la via di mezzo.<em>Se hai un capo a portata di mano, giralo e mostra il rovescio.</em></div></li>
+      <li><span class="dot">2</span><div class="txt"><b>Come l'hai scritto.</b> Di getto, a mano, una sera di luglio. Poi l'hai dato a Claude.</div></li>
+      <li><span class="dot">3</span><div class="txt"><b>La frase tagliata.</b> Claude ti ha detto di togliere «verso il lusso e la ricchezza». Inverso parla di qualità, non di diventare ricchi. Aveva ragione.<em>A schermo solo quella frase, il resto sfocato.</em></div></li>
     </ol>
     <div class="notes">
-      <div class="note value"><span class="lab">Cosa porta a casa chi guarda</span>Come farsi interpretare il cliente da Claude, per mettere alla prova un'idea prima di spendere un euro.</div>
-      <div class="note learn"><span class="lab">Momento "imparo"</span>La risposta che ti ha sorpreso. Non provarla prima: deve essere vera.</div>
+      <div class="note learn"><span class="lab">Momento «imparo»</span>Quella frase l'avevi scritta tu, e andava tolta.</div>
+      <div class="note value"><span class="lab">Cosa porta a casa chi guarda</span>La storia la scrivi tu. L'AI ti aiuta a capire cosa tenere e cosa togliere.</div>
     </div>
-    <div class="foot"><span class="next">Poi passi a → <b>e le persone vere cosa dicono?</b></span>
+    <div class="foot"><span class="next">Poi passi a → <b>do il foglio a Claude</b></span>
       <label class="check"><input type="checkbox" id="c-b2" data-b="b2"> Girato</label></div>
   </section>
 
-  <!-- 3 -->
   <section class="block" id="b3">
-    <div class="head"><span class="big">3</span><h2>La prova con persone vere</h2>
-      <div class="chips"><span class="chip cam">Camera</span><span class="chip time">2–3 min</span></div></div>
-    <p class="what">Racconti Reddit: com'è andata, chi ti ha risposto, cosa vale e cosa no. Chiudi facendo la domanda a chi guarda.</p>
+    <div class="head"><span class="big">3</span><h2>Do il foglio a Claude</h2>
+      <div class="chips"><span class="chip scr">Schermo</span><span class="chip time">3 min</span></div></div>
+    <p class="what">Incolli le tue quattro risposte, Claude diventa il tuo cliente ideale e tu lo intervisti. Registri lo schermo e reagisci dal vivo.</p>
     <ol class="path">
-      <li><span class="dot">1</span><div class="txt"><b>Il ban.</b> Volevi chiederlo ai ragazzi italiani e i subreddit italiani ti hanno bannato.</div></li>
-      <li><span class="dot">2</span><div class="txt"><b>Chi ha risposto.</b> Americani e inglesi, uno di 55 anni con il sarto di fiducia. Gentilissimi, ma non sono il tuo cliente.<em>Non sono la Bibbia: dillo chiaro.</em></div></li>
-      <li><span class="dot">3</span><div class="txt"><b>Le quattro cose su cui erano d'accordo tutti.</b><em>Paghi tanto solo se ti sta perfetto · ti fidi se puoi toccarlo, non dal sito · un artigiano ha bisogno di tempo · un capo caro fa paura da mettere.</em></div></li>
-      <li><span class="dot">4</span><div class="txt"><b>Il confronto con Claude.</b> Dove ci aveva preso e dove no.</div></li>
-      <li><span class="dot">5</span><div class="txt"><b>La lezione.</b> Chi è esperto ha già il suo sarto. Il tuo cliente è chi non ce l'ha ancora.</div></li>
-      <li><span class="dot">6</span><div class="txt"><b>La domanda a chi guarda.</b> Il tuo pubblico non c'è ancora: lo stanno diventando loro. Quanto spenderebbero per un pantalone fatto bene, e cosa li fa dire di no? Nei commenti.</div></li>
+      <li><span class="dot">1</span><div class="txt"><b>Incolla il foglio.</b> Le stesse quattro risposte di prima, niente di più.</div></li>
+      <li><span class="dot">2</span><div class="txt"><b>Fai vedere il prompt.</b> Chi guarda deve poterlo copiare e rifare con il suo foglio.</div></li>
+      <li><span class="dot">3</span><div class="txt"><b>Leggi il cliente che esce.</b> Dì ad alta voce cosa ti torna e cosa no.</div></li>
+      <li><span class="dot">4</span><div class="txt"><b>L'intervista.</b><em>Quanto spendi per un pantalone · cosa ti fa dire sì o no · tanti capi o pochi · ti fideresti di un brand appena nato · ti sei mai sentito fuori posto · compri su Vinted? · compreresti online senza provarlo?</em></div></li>
+      <li><span class="dot">5</span><div class="txt"><b>Fermati sulla sorpresa.</b> Quando risponde qualcosa che non ti aspettavi, dillo.</div></li>
     </ol>
     <div class="notes">
-      <div class="note start"><span class="lab">Frasi di Reddit da mettere a schermo</span><q>Un artigiano ha bisogno di tempo.</q><br><q>Compro le cose quando costano poco, non quando le voglio.</q></div>
-      <div class="note learn"><span class="lab">Momento "imparo"</span>Hai chiesto alle persone sbagliate, e l'hai capito solo leggendo le risposte.</div>
+      <div class="note you"><span class="lab">Tocca a te</span>«Prendi il tuo foglio, incollalo con questo prompt e intervista il tuo cliente.»</div>
+      <div class="note learn"><span class="lab">Momento «imparo»</span>La risposta che ti ha sorpreso. Non provarla prima: deve essere vera.</div>
     </div>
-    <div class="foot"><span class="next">Poi passi a → <b>come si presenta Inverso</b></span>
+    <div class="foot"><span class="next">Poi passi a → <b>e le persone vere?</b></span>
       <label class="check"><input type="checkbox" id="c-b3" data-b="b3"> Girato</label></div>
   </section>
 
-  <!-- 4 -->
   <section class="block" id="b4">
-    <div class="head"><span class="big">4</span><h2>Il logo</h2>
-      <div class="chips"><span class="chip cam">Camera</span><span class="chip scr">Passaggi a schermo</span><span class="chip time">3 min</span></div></div>
-    <p class="what">Il lavoro sul logo è già fatto prima delle riprese. Qui racconti cosa non andava e mostri il risultato.</p>
+    <div class="head"><span class="big">4</span><h2>La prova con persone vere</h2>
+      <div class="chips"><span class="chip cam">Camera</span><span class="chip time">2 min</span></div></div>
+    <p class="what">Il controllo del punto 2: hai chiesto su Reddit. Com'è andata, cosa vale e cosa no.</p>
     <ol class="path">
-      <li><span class="dot">1</span><div class="txt"><b>Il logo che avevi.</b> Scritta INVERSO, fatta con l'AI. Mostralo.</div></li>
-      <li><span class="dot">2</span><div class="txt"><b>Il problema.</b> Non è un font vero: le lettere sono irregolari e non la puoi riscrivere uguale.</div></li>
-      <li><span class="dot">3</span><div class="txt"><b>Cosa hai fatto.</b> Trovato il font vero, fissato i colori, provato il logo sull'etichetta del pantalone e sul profilo.</div></li>
-      <li><span class="dot">4</span><div class="txt"><b>Il reveal.</b> Questo è il logo di Inverso.</div></li>
+      <li><span class="dot">1</span><div class="txt"><b>Il ban.</b> Volevi chiederlo ai ragazzi italiani, i subreddit italiani ti hanno bannato.</div></li>
+      <li><span class="dot">2</span><div class="txt"><b>Chi ha risposto.</b> Americani e inglesi, uno di 55 anni con il sarto di fiducia. Non sono il tuo cliente.<em>Non sono la Bibbia: dillo chiaro.</em></div></li>
+      <li><span class="dot">3</span><div class="txt"><b>Su cosa erano d'accordo.</b><em>Paghi tanto solo se ti sta perfetto · ti fidi se puoi toccarlo · un artigiano ha bisogno di tempo · un capo caro fa paura da mettere.</em></div></li>
+      <li><span class="dot">4</span><div class="txt"><b>Il confronto con Claude.</b> Dove ci aveva preso e dove no.</div></li>
+      <li><span class="dot">5</span><div class="txt"><b>La lezione.</b> Chi è esperto ha già il suo sarto. Il tuo cliente è chi non ce l'ha ancora.</div></li>
+      <li><span class="dot">6</span><div class="txt"><b>La domanda a chi guarda.</b> Quanto spendereste per un pantalone fatto bene, e cosa vi fa dire di no? Nei commenti.</div></li>
     </ol>
     <div class="notes">
-      <div class="note value"><span class="lab">Cosa porta a casa chi guarda</span>Se l'AI ti fa un logo, controlla che sia scritto con un font vero, o non potrai usarlo da nessuna parte.</div>
-      <div class="note learn"><span class="lab">Momento "imparo"</span>Pensavi di avere già un logo.</div>
+      <div class="note you"><span class="lab">Tocca a te</span>L'AI non basta: chiedi a qualche persona vera, e scegli bene a chi.</div>
+      <div class="note learn"><span class="lab">Momento «imparo»</span>Hai chiesto alle persone sbagliate, e l'hai capito leggendo le risposte.</div>
     </div>
-    <div class="foot"><span class="next">Poi passi a → <b>la chiusura</b></span>
+    <div class="foot"><span class="next">Poi passi a → <b>come si presenta Inverso</b></span>
       <label class="check"><input type="checkbox" id="c-b4" data-b="b4"> Girato</label></div>
   </section>
 
-  <!-- 5 -->
   <section class="block" id="b5">
-    <div class="head"><span class="big">5</span><h2>Chiusura</h2>
-      <div class="chips"><span class="chip cam">Camera</span><span class="chip time">1:30</span></div></div>
+    <div class="head"><span class="big">5</span><h2>Il logo</h2>
+      <div class="chips"><span class="chip cam">Camera</span><span class="chip scr">Passaggi a schermo</span><span class="chip time">2:30</span></div></div>
+    <p class="what">La risposta concreta al punto 3: come ti presenti. Il lavoro è già fatto prima delle riprese.</p>
+    <ol class="path">
+      <li><span class="dot">1</span><div class="txt"><b>Il logo che avevi.</b> Scritta INVERSO, fatta con l'AI. Mostralo.</div></li>
+      <li><span class="dot">2</span><div class="txt"><b>Il problema.</b> Non è un font vero: lettere irregolari, non la puoi riscrivere uguale.</div></li>
+      <li><span class="dot">3</span><div class="txt"><b>Cosa hai fatto.</b> Trovato il font vero, fissato i colori, provato sull'etichetta del pantalone e sul profilo.</div></li>
+      <li><span class="dot">4</span><div class="txt"><b>Il reveal.</b> Questo è il logo di Inverso.</div></li>
+    </ol>
+    <div class="notes">
+      <div class="note you"><span class="lab">Tocca a te</span>Se l'AI ti fa un logo, controlla che sia un font vero, o non potrai usarlo da nessuna parte.</div>
+      <div class="note learn"><span class="lab">Momento «imparo»</span>Pensavi di avere già un logo.</div>
+    </div>
+    <div class="foot"><span class="next">Poi passi a → <b>la chiusura</b></span>
+      <label class="check"><input type="checkbox" id="c-b5" data-b="b5"> Girato</label></div>
+  </section>
+
+  <section class="block" id="b6">
+    <div class="head"><span class="big">6</span><h2>Chiusura</h2>
+      <div class="chips"><span class="chip cam">Camera</span><span class="chip time">1 min</span></div></div>
     <p class="what">Tiri le somme, dici una cosa che ancora non sai e lanci la discussione.</p>
     <ol class="path">
-      <li><span class="dot">1</span><div class="txt"><b>Cosa ha adesso Inverso.</b> Un nome, una persona a cui parla, una faccia.</div></li>
+      <li><span class="dot">1</span><div class="txt"><b>Il foglio, riempito.</b> Cosa, a chi, come, dove: ecco cosa ha adesso Inverso.</div></li>
       <li><span class="dot">2</span><div class="txt"><b>Cosa non sai ancora.</b> Una cosa vera, detta senza giri.</div></li>
-      <li><span class="dot">3</span><div class="txt"><b>Di nuovo la domanda.</b> Quanto spendereste, cosa vi fa dire di no: nei commenti.</div></li>
-      <li><span class="dot">4</span><div class="txt"><b>Il prossimo video.</b> Tappa 2 della mappa: il pantalone.</div></li>
-      <li><span class="dot">5</span><div class="txt"><b>La frase del canale.</b> Tra un anno apro il mio brand, nel frattempo provo tutto. Iscriviti per vedere come va a finire.</div></li>
+      <li><span class="dot">3</span><div class="txt"><b>Di nuovo la domanda.</b> Quanto spendereste, cosa vi fa dire di no. E se avete fatto il foglio, scrivete il vostro brand nei commenti.</div></li>
+      <li><span class="dot">4</span><div class="txt"><b>Il prossimo video.</b> Tappa 2: il pantalone.</div></li>
+      <li><span class="dot">5</span><div class="txt"><b>La frase del canale.</b> Tra un anno apro il mio brand, nel frattempo provo tutto.</div></li>
     </ol>
     <div class="notes">
       <div class="note start"><span class="lab">Se ti blocchi, parti così</span><q>Un mese fa Inverso era solo un nome.</q></div>
     </div>
     <div class="foot"><span class="next">Fine. Bel lavoro.</span>
-      <label class="check"><input type="checkbox" id="c-b5" data-b="b5"> Girato</label></div>
+      <label class="check"><input type="checkbox" id="c-b6" data-b="b6"> Girato</label></div>
   </section>
 
-  <p class="ending">Spunta "Girato" quando un blocco è fatto: la mappa in alto si riempie.</p>
+  <p class="ending">Spunta «Girato» quando un blocco è fatto: la mappa in alto si riempie.</p>
 </div>
 
 <script>
 (function(){
-  var KEY='mappa-riprese-04';
+  var KEY='mappa-riprese-04-v2';
   var state={};
   try{state=JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){state={}}
   function paint(){

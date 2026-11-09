@@ -5,6 +5,8 @@
 **Durata obiettivo:** 12-14 minuti
 **Novità:** qui si dice per la prima volta il nome **Inverso**.
 
+> **Aggiornamento 09/11 (sera):** la struttura è cambiata. Il video diventa un **metodo spiegato mentre lo faccio**, che chi guarda può rifare con me: il foglio con 4 domande (cosa, a chi, come, dove → appunti in `04-appunti-passeggiata.md`), poi il nome, poi il foglio dato a Claude, Reddit, logo, chiusura. Ogni blocco ha un momento "tocca a te". La versione aggiornata è nella mappa `04-mappa-riprese.html` (v2); sotto resta la bozza 1 per storico.
+
 **Due fili che corrono per tutto il video** (regola del canale, 09/11):
 - **Valore** → per chi non ha mai usato Claude: ogni parte insegna una cosa che si può rifare a casa.
 - **Imparo** → in ogni parte c'è un momento "qui ho sbagliato" o "qui non lo so".
