@@ -97,3 +97,7 @@ Domande di follow-up mandate: vedi chat del 09/11.
 ### utente 5 — 09/11
 - "Dipende dal materiale e dalla vestibilità. Per dei pantaloni in flanella che mi stanno perfettamente direi **200 euro**."
 - Follow-up mandato il 09/11 (cosa gli darebbe fiducia sulla vestibilità prima di comprare + dove vive ed età): risposta in attesa.
+
+### utente 6 — 09/11
+- **In teoria** spenderebbe 400 $ per un paio di pantaloni davvero belli. **In pratica** compra su eBay per molto, molto meno.
+- Anche se può permetterselo, 400 $ sono tanti per lui: avrebbe **paura di rovinarli** e non potrebbe sostituirli facilmente se un incidente li danneggia.
