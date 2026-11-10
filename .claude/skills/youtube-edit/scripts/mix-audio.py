@@ -49,6 +49,7 @@ for i, (path, start, d, vol) in enumerate(cues, start=1):
     labels.append("[s%d]" % i)
 fc.append("%samix=inputs=%d:duration=first:dropout_transition=0:normalize=0,atrim=0:%.3f[mix]" % ("".join(labels), len(labels), dur))
 tmp = tempfile.mkdtemp(prefix="mixaudio-", dir=os.environ.get("TEMP") or None)
+import atexit, shutil; atexit.register(shutil.rmtree, tmp, True)   # the work folder held ~0.5 GB of WAV per run and was never removed (2 GB found on C:, 10/11/2026)
 script = os.path.join(tmp, "fc.txt"); open(script, "w", encoding="utf-8").write(";\n".join(fc))
 raw = os.path.join(tmp, "mix.wav")
 subprocess.run(["ffmpeg", "-y", "-v", "error", *inputs, "-filter_complex_script", script, "-map", "[mix]", "-c:a", "pcm_s16le", raw], check=True)
