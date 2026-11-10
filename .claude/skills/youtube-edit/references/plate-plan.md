@@ -7,9 +7,9 @@ his system never builds a scene before the plan is approved, and the plan is one
 
 One row per sentence of the script that gets a plate. A sentence with no row stays on the face.
 
-| # | Time | Sentence (spoken) | Job of the plate | Idea (one line) | Format | Anchor word(s) | Face |
-|---|---|---|---|---|---|---|---|
-| 1 | 0:03 | "Premiere, After Effects, CapCut..." | name -> logo | five logos, one per name, then they fall on "opzionali" | chips / trail | each name | PiP |
+| # | Time | Sentence (spoken) | Job of the plate | Idea (one line) | Format | Anchor word(s) |
+|---|---|---|---|---|---|---|
+| 1 | 0:03 | "Premiere, After Effects, CapCut..." | name -> logo | five logos, one per name, then they fall on "opzionali" | chips / trail | each name |
 
 - **Job of the plate** is one of: *name* (a logo/object), *process* (steps), *metaphor* (an abstract idea), *number* (a count, a time, a price), *comparison* (A vs B),
   *avoid* (what not to do: struck through), *proof* (the real prompt/result on screen), *map* (where we are in the video), *emphasis* (the one sentence that must land).
@@ -18,7 +18,7 @@ One row per sentence of the script that gets a plate. A sentence with no row sta
 - **Anchor word(s)** are the words the elements enter on (they become `data-anchor`, and `beat-check.py` proves them).
 - Jacopo answers each row with **Approva / Cambia: <what he wants>**. A change is written the way he says it, not translated ("farli combattere, con effetti stile anime" is an idea, not a format).
   The first idea is rarely the best: when Jacopo describes a stronger one, that one wins and the difference goes in `NOTES_LOG.md`.
-- Then the **static storyboard** (stills of each plate with the PiP drawn, `format-still.py`) is approved a second time before any motion is rendered.
+- Then the **static storyboard** (stills of each plate, `format-still.py`) is approved a second time before any motion is rendered.
   Joseph approves the static drafts "almost always on the first look" because the plan was already right: the plan is where the thinking happens.
 
 ## 2. Where plates go (placement rules)
@@ -31,7 +31,7 @@ One row per sentence of the script that gets a plate. A sentence with no row sta
 6. Something done on a computer (a prompt, an approval, an answer) -> `uiplane`, redrawn, with the hand cursor.
 7. What the viewer should not do or no longer needs -> struck through and dimmed (`diagram` strike), not removed.
 8. The one sentence that must land -> `herotitle` (46); the face stays on screen through the hook.
-9. The face comes back every 20-40 s; when a plate lasts longer than ~12 s, split it or let the face breathe in the PiP.
+9. The face comes back every 20-40 s; when a plate lasts longer than ~12 s, split it and let the face come back full screen in between (no face PiP on plates: `taste.md` 9e).
 10. When the creator waits, is surprised or works: a cutaway of him (checklist for shooting), never stock.
 
 ## 3. Revisions with a timecode

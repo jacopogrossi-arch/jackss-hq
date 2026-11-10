@@ -2,8 +2,8 @@
 spiegare qualcosa, bam, una motion che spiega bene, dinamica, mai ferma. Possono essere 100.000 diversi, l'importante è che mantengano questi canoni").
 
 The canon (teardown of Joseph's video, personale/youtube/inspo-motion-plates-joseph.md): a full-frame scene on the green grid, the title top-left with ONE key word in the italic serif gold, every element lands
-ON the word that names it (card / pill / disc / photo, then the dashed line that connects it), things you do not need are struck through, the camera never stands still (plates_base.wrap: slow push-in + kick
-on every event), a smooth swish on everything that appears, and the face lives in the square PiP (pip.py) while the plate is up. Nothing enters the PiP corner (check_pip).
+ON the word that names it (card / pill / disc / photo, then the dashed line that connects it), things you do not need are struck through, the camera never stands still (plates_base.wrap: slow push-in; a run of plates glides on board.py, no kicks
+since 04/11/2026), a smooth swish on everything that appears, and the plate is full screen with no face PiP (since 04/11/2026, taste.md 9e).
 
     from scene import Scene
     s = Scene("p1", t_in=27.7, t_out=37.4, title="Carta *bianca*")

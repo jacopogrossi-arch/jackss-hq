@@ -8,8 +8,8 @@ that names it. They use our own tokens (--k-*, see studio.py) so the preset deci
 Contract (same as dotgrid.py / scaletta.py): each format returns {"html": ..., "js": ...} for compose.py's "raw_html"/"raw_js".
 All motion is seek-safe: every tween is a fromTo with explicit values and immediateRender:false, hidden start states come from tl.set.
 
-Face PiP (formats.md): the square PiP sits at PIP = (left 1552, top 712, 320 x 320). Nothing of a plate may enter it, plus a 40 px margin:
-`safe_right()` / `safe_bottom()` give the limits plates lay out against, and `check_pip()` asserts a box stays clear.
+Face PiP: plates carry none since 04/11/2026 (taste.md 9e). PIP = (left 1552, top 712, 320 x 320) is kept for a deliberate PiP (pip.py) and as the
+camera origin; `check_pip()` is a no-op, `safe_right()` / `safe_bottom()` are the old limits around that corner.
 """
 import html as _h
 

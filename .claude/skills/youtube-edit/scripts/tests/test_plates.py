@@ -1,5 +1,5 @@
 """formats/tracker.py, counter.py, versus.py, diagram.py, uiplane.py (formats 47-51, 01/11/2026): shape, spoken anchors, seek-safety,
-no sound, and the face PiP corner stays clear (plates_base.check_pip)."""
+no sound; the PiP guard and the camera kicks are switched off (04/11/2026)."""
 import os, re, sys, unittest
 from .helpers import SCRIPTS
 
@@ -33,22 +33,16 @@ class PlatesBase(unittest.TestCase):
     def test_keyword_markup(self):
         self.assertEqual(keyword("Quanto *tempo* serve"), 'Quanto <i class="pl-key">tempo</i> serve')
 
-    def test_pip_guard(self):
-        check_pip(110, 330, 1300, 270)           # a row that ends at x 1410: clear
-        with self.assertRaises(ValueError):
-            check_pip(110, 600, 1700, 200)       # a wide strip across the PiP corner
-        with self.assertRaises(ValueError):
-            check_pip(1500, 700, 200, 100)       # inside the PiP margin
+    def test_pip_guard_is_off(self):
+        # plates have no face PiP since 04/11/2026 (taste.md 9e): the corner is free, the guard accepts every box
+        for box in ((110, 330, 1300, 270), (110, 600, 1700, 200), (1500, 700, 200, 100)):
+            self.assertIsNone(check_pip(*box))
 
 
 class Camera(unittest.TestCase):
-    def test_kicks_fill_gaps_and_keep_spacing(self):
-        ks = plan_kicks([2.0, 2.3, 9.0], 0.0, 12.0)           # 2.0 and 2.3 are one event; 2.0 -> 9.0 is a 7 s gap
-        times = [t for t, _ in ks]
-        self.assertEqual(times, sorted(times))
-        self.assertTrue(all(b - a <= GAP + 0.01 for a, b in zip([0.3] + times, times + [11.3])), ks)   # nothing waits longer than GAP
-        self.assertEqual(sum(1 for t, a in ks if a == KICK_STRONG), 2)                                      # the strong kicks: 2.0 and 9.0
-        self.assertTrue(all(b - a >= 1.0 for (a, _), (b, _) in zip(ks, ks[1:])))
+    def test_kicks_are_off(self):
+        # no bounce since 04/11/2026 (taste.md 13): the motion of a plate is the fluid camera of board.py, never a kick
+        self.assertEqual(plan_kicks([2.0, 2.3, 9.0], 0.0, 12.0), [])
 
     def test_camera_never_pushes_anything_into_the_pip(self):
         """The camera scales about CAM_ORIGIN with at most CAM_DRIFT[0] * 1.016 and translates (x, y): a point outside the PiP zone must stay outside."""

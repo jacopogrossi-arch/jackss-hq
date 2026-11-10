@@ -113,16 +113,17 @@ when long) and `FACTS.md`, the numbers, dates, prices and tool claims the script
 ## Who plans, who builds (two models)
 
 Planning is where a mistake spreads through the whole video (a wrong beat, a wrong format, a cut that leaves a fact in); building from a
-finished plan is execution. So the strongest model plans and a mid-size one builds (the split behind the Claude Code Club's long edit:
-Opus planned and directed, Sonnet builders did the sections; Opus plans at high effort, Sonnet builds at medium effort).
+finished plan is execution. So the strongest model available plans, at high effort, and a mid-size one builds, at medium effort (the split
+behind the Claude Code Club's long edit). The names change with the releases: Opus planned Videos #2 and #3; Fable 5.2 is on trial as the
+planner from 10/11/2026, to be settled by a blind A/B of two plans of one section. The builder is Sonnet.
 
-- **The planner is the main session** (Jacopo picks Opus in the model selector, high effort, before starting). It decides: what the
+- **The planner is the main session** (Jacopo picks the planning model in the model selector, high effort, before starting). It decides: what the
   cut keeps (reading `PAPER-CUT.md`, `FACTS.md` and Jacopo's answers), the beatmap and the storyboard (beats, formats, anchors, camera,
   open loops), the hook gate, the preset, what the critic's report means, and every rule a note rewrites. It writes the plan down in
-  files (`storyboard.json` + a short `BRIEF.md` per section: what the section says, which formats and why, what must not happen), never
-  in its head, because the builder starts with no memory of the conversation.
+  files (`storyboard.json` + a short `BRIEF.md` per section: what the section says, which formats and why, what must not happen; for motion
+  plates the plan table of `references/plate-plan.md`, one row per sentence, as in `videos/03-brand-ai/BRIEF.md`), never in its head, because the builder starts with no memory of the conversation.
 - **The builder is the `video-builder` subagent** (`.claude/agents/video-builder.md`, model Sonnet, medium effort). One builder per
-  section or per task; give it the project folder, the section's `storyboard.json` part, its `BRIEF.md` and the files to read. It runs
+  section or per task (for motion plates: one block of the plan = one module `plates/bN.py` built with `formats/scene.py`); give it the project folder, the section's `storyboard.json` part, its `BRIEF.md` and the files to read. It runs
   `compose.py`, `beat-check.py`, `snap-beats.py`, `gap-scan.py`, `broll-conform.py`, hand-builds a format from its spec, fixes what
   those checks report, and makes lab windows (`window-patch.py`). It returns a short report: what it built, the files, every check's
   result, and anything it could not do. **It never changes the design.** If the plan is unclear or a check can only pass by changing
@@ -541,7 +542,7 @@ words, a specific reason to stay in the first three seconds that the video pays 
   5. **Only the winner enters:** a row in the library table (`references/formats.md`) plus a spec with its numbers, a test under
      `scripts/tests/`, and a line in `references/NOTES_LOG.md` with the result and Jacopo's reason. A loser is listed under
      "Rejected (do not rebuild)" with the reason, so nobody builds it again. The same A/B settles a model question (the scene
-     built by Opus versus by Sonnet from one plan: `--labels "sonnet,opus"`).
+     built, or a section planned, by two different models: `--labels "model-a,model-b"`).
 - **Model and tokens:** the strongest model plans, a mid-size one builds (see "Who plans, who builds"). Most tokens go to
   snapshots and tool output: one snapshot per moment, scripts over retyping.
 - **Where a saved rule goes:** in the file that holds that topic (`SKILL.md` for the pipeline and the cut, `references/` for

@@ -266,18 +266,13 @@ Every full-frame scene sits on an ambient three-radial brand wash plus a 96 px g
 **Words:** Jacopo calls these scenes **motion plates** (not "motion graphics"): a full-frame graphic that replaces the
 camera shot. When he says "motion plate" he means any format in this section, `world`, `deck`, `studio`, `chain3d`.
 
-**Face PiP on every motion plate** (Jacopo, 28/10/2026, A/B on `videos/_bench/ab/plate-pip/`, pick "la 1 però quadrata"):
-the talking shot keeps running in a small window. **Spec (the default):** a square crop of the face, 320x320 at 1080p,
-corners radius 28, bottom-right with a 48 px margin (left 1552, top 712), a 3 px cyan ring `rgba(10,240,240,.85)` with a
-cyan glow `0 0 28px rgba(10,240,240,.45)` plus a dark drop shadow. Not a second video: the base video's wrapper
-(`#video-wrap`) rises above the plate (`zIndex` 20; `#bg-video` alone stays under the card hosts) and is scaled with
-`transformOrigin 0 0` + a `clipPath: inset(... round r)` tween, so lips stay in sync and there is one audio. It arrives
-with the plate (scales from full frame into its corner in 0.55 s `power3.inOut`, the reverse on the way out); the ring
-fades in as it lands. Not on 46, 35 or stock cutaways of other people. Builder: `videos/_bench/ab/plate-pip/build.py`.
-- **Graphics never pass under the face** (Jacopo, 28/10/2026), not even for a frame during a camera move: lay the plate
-  out around the PiP corner (on the chain3d plate the whole scene is lifted 140 px) and let the plate's first element
-  enter only after the face has landed in its corner. Prove it on a no-face render of the same plate: crop the PiP corner
-  plus a 40 px margin and check with `signalstats` that YMAX stays at wash level for every frame of the plate (the dark wash of elegante-portfolio: under ~70; **plates-verde: its wash and grid read ~80, max 86 on the 01/11/2026 control**, while any ivory card reads above 200).
+**No face PiP on plates** (Jacopo, 04/11/2026; it replaces the square PiP of 28/10): a plate is full screen with nothing else, the
+voice runs under it, and the face comes back full screen when the plate ends (`taste.md` 9e). `formats/pip.py` (square 320x320
+at left 1552 / top 712, radius 28, ring in the preset's `ring` colour, the base video's own wrapper scaled with a `clipPath`
+so lips stay in sync) stays in the skill for a deliberate use only, on Jacopo's request; `plates_base.check_pip` no longer
+blocks that corner.
+- **Graphics never cover the face** (Jacopo, 28/10/2026): this now applies to the graphics BESIDE the full-screen face
+  (`taste.md` 9c: 3-4 per video, on the right, away from his head), not even for a frame during a camera move.
 
 - **6. Flow diagram.** A rail 1840 px wide at left 40: N nodes of 320 px, 56 px gaps, a 44 px arrow centred in each
   (five nodes: lefts 0/376/752/1128/1504, arrows 326/702/1078/1454; recompute for another N). A node: a cyan number
@@ -475,10 +470,9 @@ Source: `personale/youtube/inspo-motion-plates-joseph.md` (what each plate does 
 
 Common rules: full frame on the preset wash + grid (`k-wash`); the whole plate fades in 0.3 s and out 0.3 s; every element enters on the word that
 names it (`data-at` + `data-anchor`, so `beat-check.py` proves it); entrances are `y +40`, `blur(8px)` to 0, 0.5 s `power3.out`, 0.07 s apart in a row;
-**nothing enters the face PiP corner** (`plates_base.check_pip`: PiP 320x320 at left 1552 / top 712, plus 40 px: layouts stay left of x 1512 or above y 672
-and the builder raises otherwise); key word = `*word*` in the italic serif.
+the bottom-right corner is free since 04/11/2026 (no face PiP; `plates_base.check_pip` is kept as a no-op); key word = `*word*` in the italic serif.
 
-**Camera (Jacopo, 01/11/2026: "decisamente meglio, ma voglio più movimento di camera"; numbers from the teardown, `inspo-motion-plates-joseph.md` addendum).** The first green
+**Camera, first version (superseded 04/11/2026: the kicks are switched off, `plan_kicks` returns nothing, and a run of plates moves as one fluid camera on `formats/board.py`, see `taste.md` 13 and `prove-corso.md`; the slow push-in and the parallax grid stay. What follows is the record of the kick version.)** (Jacopo, 01/11/2026: "decisamente meglio, ma voglio più movimento di camera"; numbers from the teardown, `inspo-motion-plates-joseph.md` addendum).** The first green
 version was calm: 32 % of the time moving, a motion burst every 14 s. Joseph's plates are moving 63-66 % of the time, a motion burst every ~2 s, still runs at p90 0.27 s,
 and the camera is almost all slow zoom (median 0.4 %/s) with kicks up to 4.5 %/s, almost no pan or rotation. So `plates_base.wrap` gives every plate: (1) a **slow push-in**
 (`CAM_DRIFT`: 1.035 and -24/-10 px over the plate's life); (2) a **kick on every event** (`KICK_STRONG` +2.4 %, 0.3 s `power2.out`, relax 1.3 s `sine.inOut`; events closer than 1 s share
@@ -538,7 +532,7 @@ Jacopo: "sì" to porting the camera and the smooth sound to the older engine. Sw
   (world, deck, trail, dive, dashzoom, the 3D ones), beats with a `transition`, and any beat with `"cam": false`.
 - **Measured** on the 22-format zoo (real renders, optical flow at 15 fps, the stretch where each format is fully on screen): the nine camera formats were moving **51 %** of the time with a longest still run of 1.27 s; now **94 %** and 0.33 s.
   The over-the-face formats (lists, lines, pills, chat...) can not be measured this way (the face moves anyway) and have no camera: they get the sound.
-- **Not done:** the camera for the over-the-face formats, the real face PiP inside `compose.py` (it still lives in the bench builder `videos/_bench/ab/plate-pip/build.py`), and nobody has listened to any of this.
+- **Not done:** the camera for the over-the-face formats, the face PiP inside `compose.py` (dropped: no PiP on plates since 04/11/2026), and nobody has listened to any of this.
 
 
 ## Scene improvvisate in stile Joseph (metodo, 01/11/2026)
@@ -550,7 +544,7 @@ una motion plate su misura** (anche mai vista), nei canoni di Joseph. Se ne poss
 1. Leggere il testo parlato con i tempi delle parole (`transcript.json`) e dividerlo in unità di spiegazione: ogni idea che lo spettatore deve capire = una scena (cosa fa, in che relazione sta con cosa).
 2. Per ogni scena scegliere la *metafora visiva* più semplice (A + B -> C; strumenti che entrano in una persona; foto che entrano in Claude; una cosa barrata = non serve; 3+3+3+3 = 12; titoli scambiati e poi rimessi a posto con le spunte). Se serve un oggetto nuovo, lo si disegna con gli elementi di `Scene` (pill, disc, photo, text, big, link, strike, tick, glow, shift): non si aspetta che esista un formato.
 3. Titolo in alto a sinistra con UNA parola chiave in serif corsivo oro (`*parola*`); ogni elemento entra sulla parola che lo nomina (`t` = tempo della parola nel transcript); barrato ciò che non serve; la camera non sta mai ferma (la dà `plates_base.wrap`).
-4. Faccia nel quadratino PiP (`pip.py`) per tutta la durata della scena; più scene vicine (< 1,5 s) = una catena con un solo PiP (scene che si sovrappongono di 0,3 s) invece di far entrare e uscire la faccia di continuo.
+4. Nessun riquadro con la faccia (Jacopo, 04/11/2026): la plate è a tutto schermo, la voce continua sotto e la faccia torna a tutto schermo quando la plate finisce. Più scene vicine = pagine di una sola lavagna (`formats/board.py`: swipe da una pagina all'altra, mai qualche fotogramma di faccia in mezzo).
 5. Usare immagini e loghi VERI del video (tavole, Claude, Canva...); niente segnaposto inventati. Dove non c'è un'immagine vera, solo etichette.
 6. Verificare con `npx hyperframes check` + `snapshot --at` su un fotogramma per scena PRIMA del render; poi render della sola finestra (capitolo) e consegna in 480p + copia piena su iCloud.
 

@@ -6,6 +6,9 @@ Counts come from the delivered `storyboard.json` (transitions left out)._
 | Video | Date | Formats used (count) | New or adapted |
 |---|---|---|---|
 | #2 Claude ha ideato una collezione | 21/10/2026 | trail 7, line 7, gallery 2, list 2, build 1, annotate 1 (6 formats, 20 graphics) | gallery → trail, annotate with follow |
+| #3 Come lancerei un brand con l'AI | 06/11/2026 | about 50 motion plates improvised with `scene.py` on the digital board (`board.py`), preset `plates-verde`, plus 6 transitions and 2 graphics beside the face (receipt, side card). Not catalogue formats, so no count per format: the delivered storyboard is hand-built `raw_html`; the plan is `videos/03-brand-ai/BRIEF.md`, the code `plates5/b1..b8.py` | all new: the 5-step map that returns at every chapter (tracker idea), the 4-row step card, ID card with the live face, dealt question cards, crowd narrowing to one person, chart, clapperboard, price tag, receipt, the real screen recording as a sheet beside the face (experiment) |
+
+Variety for the next video: the shapes of #3 listed above are the ones NOT to repeat as they are (`taste.md` 9b); the map may return only as a recurring fixture.
 
 Not yet used in a real video (candidates for the next one): 41b hanging chips, 43 dot grid, 44 outline rail, 27b 3D card chain,
 45 living shape, 46 hero line. Plus the plate formats 47 tracker, 48 counter, 49 versus, 50 diagram, 51 UI plane

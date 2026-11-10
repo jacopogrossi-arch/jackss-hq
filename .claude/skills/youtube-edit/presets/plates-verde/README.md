@@ -18,14 +18,14 @@ prendiamo la *logica* (una plate per idea, ingresso sulla parola che la nomina),
 | Griglia | `rgba(120,235,180,.13)`, passo 80 px | linee da 1 px; si può far scorrere del 3-4% perché non ci siano fotogrammi morti |
 | Testo | `#f4efe6` avorio | |
 | Parola chiave | `#e3c47f` oro, Playfair Display Italic | una per frase al massimo |
-| Verde menta | `#5EE6A8` | spunte, connettori, barre di avanzamento, anello del PiP, bottoni "fatto" |
+| Verde menta | `#5EE6A8` | spunte, connettori, barre di avanzamento, bottoni "fatto" |
 | Card | avorio `rgba(244,239,230,.95)` su testo nero caldo | numero della card in menta scuro |
 | Plate interfaccia | nero caldo `#121110` | chat, piano, finestre: due fondi, come nel video di Joseph (blu + grigio carbone) |
 | Errore / da non fare | `#e0645c` | solo per il barrato |
 
 **Regola d'uso del colore (verde su verde):** sul fondo verde la parola-chiave è **oro o avorio**, mai verde; il menta si usa per strutture e stati.
 Su nero caldo (plate interfaccia) la parola-chiave può essere menta.
-**Anello del PiP:** menta `#5EE6A8` (token `ring`), non più ciano, quando la plate è di questo preset.
+**Niente riquadro con la faccia nelle plate** (Jacopo, 04/11/2026, `taste.md` 9e). Il token `ring` (menta `#5EE6A8`) resta per un PiP voluto apposta (`formats/pip.py`).
 
 ## Formati preferiti (nuovi, 01/11/2026)
 `tracker` (47: mappa dei passi con spunte che torna ai cambi di capitolo), `counter` (48: valori che salgono sulla parola + barra divisa),
@@ -36,7 +36,7 @@ Da evitare (come in elegante-portfolio): `halo`, `chip`, `image`. Moduli in `for
 ## Regole di gusto
 - Una plate per idea; ogni elemento entra **sulla parola che lo nomina** (`data-at` + `data-anchor`, lo verifica `beat-check.py`).
 - Parola-chiave nel corsivo serif; mai etichette piccole in maiuscolo spaziato, mai linee sotto i titoli (restano nel "vietato sempre").
-- Le grafiche non passano mai sotto il PiP (box 320x320 a left 1552/top 712 più 40 px di margine): i formati lo controllano con `check_pip()`.
+- La plate è a tutto schermo senza faccia; le grafiche accanto alla faccia a tutto schermo non coprono mai il volto (`taste.md` 9c).
 - Interfacce **ridisegnate**, mai screen recording grezze; manina 3D che arriva e preme.
 - Confronto = sempre affiancato; numeri = contatori vivi, non testo fermo.
 - Ciò che non serve più si **barra e si abbassa** (strike + opacità .4), non sparisce.
