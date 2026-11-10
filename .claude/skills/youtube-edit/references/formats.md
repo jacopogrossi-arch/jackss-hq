@@ -535,6 +535,30 @@ Jacopo: "sì" to porting the camera and the smooth sound to the older engine. Sw
 - **Not done:** the camera for the over-the-face formats, the face PiP inside `compose.py` (dropped: no PiP on plates since 04/11/2026), and nobody has listened to any of this.
 
 
+### 52. The 3D plate (`formats/world3d.py`, 10/11/2026)
+
+Jacopo on the first test (a trouser turning while its parts are named): "wow bellissimo, aggiungiamo assolutamente al workflow, anche in più situazioni". It entered on his
+word, without the blind A/B; the first real use still gets compared with the flat version of the same moment.
+
+- **What it is.** A full-frame plate drawn by three.js (`assets/vendor/three.module.min.js`, MIT) through the engine `assets/vendor/world3d.js`: real objects in a real space, lit
+  (warm key, mint rim), on the preset's green and grid, with ivory labels pinned to points of the objects that follow them as they turn, and a camera that flies.
+- **When (the situations):** (1) a garment or object whose parts are named one by one: it turns, the labels stay on their points; (2) the camera ENTERS or closes in on a
+  detail (pleats, a buckle), then pulls back to the whole; (3) a small world: cards, photos and objects standing in space, the camera travelling from one to the next as each is
+  named (a process told as a walk: idea -> pattern -> cloth -> garment); (4) a chapter opener on the object the chapter is about.
+- **When not:** a normal plate of title, pills and links (`scene.py`: sharper type, a fraction of the cost); a product's interface (never tilted into 3D); a hook (the face stays).
+- **Objects today:** `trouser` (the Drop 1 trouser built in code: natural waist, side adjusters, 0/1/2 pleats, straight leg, turn-ups; stylised, not a photograph),
+  `card` (an ivory sheet with a title and one *key* word, or a picture from `public/img`), `solid` (box, cylinder, sphere; `fabric=True` wears the drill weave: a roll of cloth).
+  A new object is a function in `world3d.js` plus a method here; a believable garment needs a real 3D model (GLB export from CLO 3D or similar), not yet supported.
+- **Rules.** Everything is a pure function of time (the engine has no clock, no random: `test_world3d`). Times are video times of the words, like in `scene.py`; labels carry
+  `data-at` + `data-anchor`. One camera move at a time, curve D by default, and the camera never stands still (a slow push for the plate's whole life). One hero object per
+  frame; fly into it rather than orbiting it for long. When the camera will carry objects through the top-left, give the title a `title_out`. Keep objects clear of the title.
+- **In a video:** a block of `plates-build.py` returns `World3D(...).build()` next to its `Scene`s; the script stages three.js and the engine into `public/vendor`. It is a plate
+  on its own (fades over the face in 0.3 s), not a page of the digital board. Lab without the pipeline: `World3D.page(folder, [worlds])`, then `npx hyperframes snapshot|render`.
+- **Cost (measured):** 1080p draft: 7.5 s in 76 s, 17.5 s in 100 s (about 6-10 s of render per second). 4K at 60 fps NOT measured: render one window before planning 3D in a final.
+  Two or three 3D plates per video, 6-10 s each.
+- **Checked:** stills and a 1080p draft of two worlds (`videos/_bench/three-test/`, no frozen stretch), and one 3D plate inside a page built by `plates-build.py` + `compose.py`
+  (snapshot). **Not checked:** a render with footage under it, 4K, sound (it has none of its own yet: add the plate swish by hand), the beat-check on its labels.
+
 ## Scene improvvisate in stile Joseph (metodo, 01/11/2026)
 
 Jacopo, dopo il capitolo 1 del Video #2 ("un ottimo risultato"): il metodo giusto NON è scegliere un formato dal catalogo e adattarlo, né riusare le vecchie grafiche su sfondo verde. **Ogni volta che c'è da spiegare qualcosa allo spettatore, si inventa

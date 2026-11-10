@@ -252,6 +252,9 @@ def main():
     if r.returncode:
         raise SystemExit("compose.py failed")
     write_plate_sounds(PUB, SK)
+    if "vendor/world3d.js" in rawhtml:                   # a 3D plate (formats/world3d.py): three.js and its engine next to the page
+        from world3d import World3D
+        World3D.stage(PUB)
     print("built:", PUB)
 
 
