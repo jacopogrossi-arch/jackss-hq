@@ -104,3 +104,11 @@ fullscreen` sections by the full-face rule, where the graphics live. A step tag 
 **Two-file tutorials:** `sync-tracks.py --a <face> --b <screen> --write-aligned "$W/aligned"`, the Cut stage on the face
 file, the screen as `clip` cutaways. `screen-activity.py` shows where a recording goes still (full-face candidates);
 `tella-timeline.py` lines sentences up with clicks and activity.
+
+**Face or screen, sentence by sentence (Jacopo, 10/11/2026, Video #4):** when the camera and the screen were recorded at once, the
+first job is to pair every camera clip with its screen recording (file times, then `sync-tracks.py`; a long recording needs
+`--window` wider than the offset, or match the same sentence in both transcripts) and decide the alternation: he talks to the camera
+while the screen stands still = full face, no screen; the screen is doing something he comments = screen with the face in a box;
+writing or waiting in silence = sped up or cut. Never judge a screen recording by its whole length ("11 minutes, too empty"): most of it
+is covered by the face. The camera clips are the spine and set the length: remove silences and bad takes only, never trim content to
+hit a target duration (a 30-minute video is fine).
