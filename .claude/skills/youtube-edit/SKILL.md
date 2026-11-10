@@ -89,6 +89,7 @@ is, subtitle mode, and its taste rules). The creator will add editing types over
 | A flat cut you made (no baked zooms, captions or transitions; 4K preferred) | the Pipeline |
 | One raw clip, 1 to 3 min (a hook, a segment intro) | Cut stage → `storyboard.json` → `compose.py` → `snap-beats.py` → render |
 | Several raw clips for one video | `ingest.py` (order and join into `source.mp4`) → the same on `source.mp4` |
+| A video explained with motion plates (every long YouTube video since #3) | Cut stage → the plate plan (`references/plate-plan.md`, in `BRIEF.md`, approved row by row) → one module per block in `$W/plates/` on `formats/scene.py` → `plates-build.py` → read `PLATES.md` → `beat-check.py`, stills, a draft window → render. See "The plates route" |
 | A long talking-head section (over 3 min) | Cut stage + `stutter-scan.py` + `CUT-REVIEW.html` at Checkpoint A → storyboard under the long-form doctrine (`references/long-form.md`) → `gap-scan.py` + `beat-check.py` → render per section |
 | A screen tutorial recorded in Tella (camera and screen as two tracks) | the Tella route (`references/tella.md`) |
 | A tutorial recorded as two files (face + screen) | `sync-tracks.py` → Cut stage on the face file → the screen as full-frame `clip` cutaways; or upload both into Tella |
@@ -167,6 +168,7 @@ planner from 10/11/2026, to be settled by a blind A/B of two plans of one sectio
 | `cutlist-to-edl.py` | the cut list as an EDL for the side-by-side review page (`node build-edl-review.mjs`) | `--cut-list --out` |
 | `phrase-times.py` | where a phrase is said (start of its first word, end of its last) | `--transcript "phrase" ... [--after T]` |
 | `compose.py` | `storyboard.json` → `public/index.html` | `--spec --out [--shared DIR] [--preset NAME]` |
+| `plates-build.py` | the standard build of a video made of motion plates: collects the `Scene`s of every block in `$W/plates/`, times each plate on its own elements, joins close plates into one digital board (`board.py`), keeps graphics beside the face as they are, moves everything onto a new cut (`recut`), then writes `storyboard.json`, runs `compose.py` and writes `PLATES.md` (runs, times, face breaks, warnings) | `W [--plates DIR] [--plan FILE] [--out DIR] [--video FILE] [--preset NAME] [--only b3,b4] [--no-compose]`; settings in `plates/plan.json` |
 | `beat-check.py` | each anchored element enters 0.10 s after to 0.60 s before its word; fails unanchored cards and a stale transcript | `--index --transcript [--suggest] [--allow-stale] [--video]` |
 | `snap-beats.py` | one snapshot per beat and per state inside a beat, tiled into `snaps/sheet.png` | `--project [--at T ...]` |
 | `gap-scan.py` | long-form coverage: stretches with no overlay and no camera move; density per 90 s | `--index [--early 15] [--body 20] [--max 30]` |
@@ -315,6 +317,28 @@ mkdir -p "$HOME/Movies/YouTube Renders/<project>" && cp "$W/output-4k.mp4" "$HOM
 **Snapshot every card moment before rendering** (a snapshot is seconds, a render is minutes) and read the PNGs; never
 assume. What the composer does not build goes into `raw_html` / `raw_js`, or a hand-built page on the skeleton below
 (copy `$SK/assets/fonts/*.woff2` into `public/fonts/` for a hand build).
+
+## The plates route (`plates-build.py`)
+
+The way Video #3 was built, as one script instead of a new hand-written `build_vN.py` per video (10/11/2026).
+
+1. **Plan first:** the sentence-by-sentence table of `references/plate-plan.md` in `$W/BRIEF.md`, approved row by row. A sentence with no row stays on the face.
+2. **One module per block of the plan** in `$W/plates/` (`b1.py`, `b2.py`, ...; a block is a chapter or about a minute). Each has a `build()` that makes
+   `Scene(...)` objects on the word times of `transcript.json` and returns the joined `{"html", "js"}`; worked example `references/example-plate-block.py`,
+   real ones in `videos/03-brand-ai/plates5/`. A full-frame plate is a normal `Scene`; a graphic beside the full-screen face is a `Scene(bg=False)`
+   (3-4 per video, `taste.md` 9c). Write the times you read in the transcript: do not tune a plate's start and end by hand.
+3. **Build:** `python "$SK/scripts/plates-build.py" "$W" --out "$W/build"` (add `--only b3` for one block in a lab). It times every plate on its
+   own elements (in 0.25 s before the first, out 1.8 s after the last), joins plates closer than 2.5 s into one board with a swipe between pages,
+   and brings the face back inside a page that waits 6.5 s or more. Everything that must be decided by hand goes in `$W/plates/plan.json`
+   (`override`, `cam`, `nohole`, `drop`, `transitions`, `img`; the keys are in the script's header), never in a copy of the script.
+4. **Read `build/PLATES.md` before anything renders:** every run, plate, time and face break, the share of the video on plates, and the warnings
+   (a plate with nothing landing on a word; a plate over 12 s with no face break and no camera of its own). Fix the blocks or the plan, build again.
+5. **The cut changed after the blocks were written?** Add the changes to `"recut"` in `plan.json` (`{"insert": t, "dur": d}`, `{"cut": [t0, t1]}`,
+   times on the OLD cut) and build again: every start, duration and timeline time moves onto the new cut, the transcript too. Never retype the times.
+6. Then the usual checks on `build/public`: `beat-check.py`, `format-still.py` / `snap-beats.py` stills, a rendered window for the motion
+   (motion is judged only in motion), the draft, `check-frames.py`, `qa-motion.py`, the critic, and Jacopo's ears on the sound.
+
+Put `--out` on the same drive as the footage: the script hard-links `input-video.mp4` into `build/public` and never copies it.
 
 ## Composition skeleton
 
