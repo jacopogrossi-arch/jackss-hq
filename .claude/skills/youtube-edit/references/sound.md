@@ -4,7 +4,7 @@ _Moved out of `SKILL.md` on 22/10/2026, text unchanged. Read this when: touching
 
 ## Sound
 
-**Sound rule (Jacopo, 20/10/2026, after video #2): a small sound on EVERY text that appears on screen, a pop on every logo, a click on every chapter tag, a swish that starts together with every 3D camera move.** `compose.py` queues these itself (`sub_cues`): a typing sound for text revealed progressively, a soft tap for list and callout items. Two cues closer than 0.28 s: the stronger stays. An explicit `sfx` on a beat still wins; `"sfx": null` silences it. A transition always carries its own sound (a flash is a shutter, a whip is a whoosh, a light leak is a long cinematic whoosh); a graphic that enters (trail, gallery, orbit, build, dive) gets a soft whoosh, an annotate arrow a tick. The overall level is set by the preset (`sound.level` low 0.6 / medium 1.0 / high 1.4 on top of each cue's own volume). Never a cue on plain speech. Whooshes belong to transitions and entering graphics, not to copy: a text line carries its small typing or tap sound, never a sweep. The "typing / click / pop on a real cause" table below holds for UI-like beats.
+**Sound rule of 20/10/2026 (after video #2), SUPERSEDED on 23/10 and 01/11/2026 by "Sound of the plates and the older engine" below (no pops; a smooth swish on whatever appears; the old "pop on every logo" no longer holds). What stays true from it: a click on every chapter tag, a swish that starts together with every 3D camera move.** `compose.py` queues these itself (`sub_cues`): a typing sound for text revealed progressively, a soft tap for list and callout items. Two cues closer than 0.28 s: the stronger stays. An explicit `sfx` on a beat still wins; `"sfx": null` silences it. A transition always carries its own sound (a flash is a shutter, a whip is a whoosh, a light leak is a long cinematic whoosh); a graphic that enters (trail, gallery, orbit, build, dive) gets a soft whoosh, an annotate arrow a tick. The overall level is set by the preset (`sound.level` low 0.6 / medium 1.0 / high 1.4 on top of each cue's own volume). Never a cue on plain speech. Whooshes belong to transitions and entering graphics, not to copy: a text line carries its small typing or tap sound, never a sweep. The "typing / click / pop on a real cause" table below holds for UI-like beats.
 
 **Cue system (use this, not hand-written `<audio>`):** `assets/sfx/cues.json` names every sound (whoosh, shutter, hit,
 glitch, riser, tick, ping, paper...) with file, max duration, volume and **lead** (seconds before the cut at which the
@@ -34,7 +34,7 @@ near-white leak at 0.9 burnt the frame to white, at 0.6 it went grey and olive. 
 | Sound | Allowed on | Volume | Never on |
 |---|---|---|---|
 | Typing | real typing, a prompt window or a search typing in, for exactly the typing time | 0.22 | anything that is not a keyboard |
-| Pop | a logo appearing (4a, 21) | 0.34 | a chip or a caption (those carry the text cue) |
+| Pop | superseded (01/11/2026): not used; a logo gets the smooth swish like everything that appears | - | - |
 | Click | every on-screen cursor click | 0.28 | anything without a cursor |
 | Ping / notification | a phone notification, literally | to taste | a number landing, a reveal, an accent |
 | Cha-ching | a money count landing | 0.07 | anything louder than a whisper |
@@ -56,7 +56,7 @@ they are not, say so and fall back to the local libraries (CC0 `assets/sfx`, `li
 typing, key-press, click, click-soft, pop, ping, notification, chime and more). Every Epidemic download is saved
 locally only: effects in `assets/sfx/licensed/` (`es-` name, a line in its `cues.json` and `CREDITS.md`), music in
 `assets/music/licensed/`; both are git-ignored, never committed, never in tests or public presets. Jacopo's taste
-still decides: no pops, a riser is metallic, nothing under elegant titles (see the table above and `NOTES_LOG.md`).
+still decides: a riser is metallic, nothing under elegant titles (see the table above, the plates section below and `NOTES_LOG.md`).
 
 **Music-only travel reels (Jacopo, reel Zanzibar #2, 29/10/2026):** the song tells the story, so the sound design is
 almost invisible. Measure the clips' own audio first; on a boat it is wind on the mic and engine (most energy under
@@ -115,16 +115,17 @@ music limiter's auto level pushed the master to 0 dBTP (now `alimiter=limit=0.84
 `library/LICENSES.md`. The level rule is under "Music" above.
 
 
-## Sound of the plates (01/11/2026, from the Joseph teardown; the taste is Jacopo's)
+## Sound of the plates and the older engine (01/11/2026, from the Joseph teardown; the taste is Jacopo's)
+
+**The rule in force: no pops, ever** (Jacopo, 23/10 and 28/10/2026), **and a smooth Epidemic swish on every element that appears on a plate** (Jacopo, 01/11/2026: "ogni volta che appare qualcosa va messo un sound effect, sempre smooth, swish").
 
 What the teardown showed with certainty (a timeline drawn in the video at 8:40-8:50): the sound design is attached to the **scene cuts**, **two layers per cut on two tracks**
 (Whoosh / Hit / Pop / Camera / Swipe / Glitch on one, Click / Riser / Whoosh / Hit on the other), about one cut every 2.2 s, chosen by studying the author's own earlier projects,
 without asking for reviews. What nobody measured: the level and the real sounds (the voice covers the file; see the addendum of `inspo-motion-plates-joseph.md`: no level or type here is measured).
-What we take: **the sound belongs to the cut, not to the text**, and the choice comes from the creator's taste. What we do NOT take: pops, clicks and hits on every element (Jacopo, 23/10
-and 28/10/2026). For our plates: one soft swish in and out of each plate (`plates_base.write_plate_sounds`), typing and click only where there is a real keyboard or cursor, a metallic
-riser only on a built suspense (the rule above), **a smooth Epidemic swish on every element that appears (Jacopo, 01/11/2026: "ogni volta che appare qualcosa va messo un sound effect, sempre smooth, swish")**, the cut swish quiet (peak -31 dBFS), and any extra layer (a low "body" under the whoosh, a second sound on a hard cut) is proposed to Jacopo as an A/B, not added on our own.
+What we take: **the sound belongs to the cut, and the choice comes from the creator's taste.** What we do NOT take: clicks and hits on every element. For our plates: one soft swish in and out of each plate
+(`plates_base.write_plate_sounds`), typing and click only where there is a real keyboard or cursor, a metallic riser only on a built suspense (the rule above), a smooth swish on every element that appears,
+the cut swish quiet (peak -31 dBFS), and any extra layer (a low "body" under the whoosh, a second sound on a hard cut) is proposed to Jacopo as an A/B, not added on our own.
 
-
-## Smooth sound on the older engine (01/11/2026)
-With the default preset `plates-verde` (`sound.smooth: true`) the engine's pops, taps and clicks are replaced by the three smooth Epidemic swishes of the plates, one for every thing that appears (`beat_events` in `compose.py`), and the swish
-pool (camera moves, whip, zoom-blur) by the quiet airy ones. Levels are the cue-table entries in `assets/sfx/licensed/cues.json` (peaks -25/-25/-26 and -31 dBFS); change them there. Details: `formats.md`, "Smooth sound and camera on the whole older engine".
+**On the older engine** (with the default preset `plates-verde`, `sound.smooth: true`) the engine's taps and clicks are replaced by the three smooth Epidemic swishes of the plates, one for every thing that appears
+(`beat_events` in `compose.py`), and the swish pool (camera moves, whip, zoom-blur) by the quiet airy ones. Levels are the cue-table entries in `assets/sfx/licensed/cues.json` (peaks -25/-25/-26 and -31 dBFS);
+change them there. Details: `formats.md`, "Smooth sound and camera on the whole older engine".

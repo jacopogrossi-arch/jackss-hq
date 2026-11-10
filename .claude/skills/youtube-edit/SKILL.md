@@ -142,7 +142,7 @@ planner from 10/11/2026, to be settled by a blind A/B of two plans of one sectio
 ## Recording so the cut works
 
 - 4K at 30 fps (29.97 is fine), standard colour, flat (no in-camera zooms, captions or transitions), the mic on every
-  file, one framing per session, a second of silence at each end. 1080p goes soft past ~112% zoom; 4K holds 200%.
+  file, one framing per session, a second of silence at each end. 1080p goes soft past ~112% zoom; 4K holds 150% freely and 200% only for a deliberate crash-in (`references/long-form.md`).
 - **Fluff a line? Pause about two seconds and restart the whole sentence from its first word.** The last take wins; redo
   the full sentence when a number, name or price came out wrong. "Cut that" or "scratch that" drops a stretch.
 - No spoken slates or notes to yourself (they are speech and get kept); clap or hold fingers up instead. Say lists as
@@ -258,6 +258,7 @@ after every apply scan the flat transcript for the same 3 to 4 word phrase twice
 fixed, every apply-cut goes to a 1080p proxy (`--out proxy/flat-1080p.mp4 --proxy`: it scales before the LUT, because the LUT on 4K
 frames is the slow step, not the decode or the encode; `--vf scale` after the LUT saved nothing on Video #3), and the drafts
 build on it; the 4K `public/input-video.mp4` is encoded once, from the approved cut list, right before the final 4K render.
+**Exception, travel reels only** (Zanzibar / vacation reels, Jacopo 29/10/2026: a soft draft next to his Mimo exports looked wrong): their drafts are rendered in full 4K resolution, no 1080p proxy. For every YouTube video the 1080p proxy drafts above are the rule.
 
 **apply-cut.py** does one frame-accurate re-encode (trim/atrim + concat, 20 ms audio fades at every join, CRF 16, a
 keyframe every 30 frames, 30 fps, BT.709) straight into `public/input-video.mp4`, every edge snapped to the source frame
@@ -275,6 +276,8 @@ signal (code x 2^(stops/2.4)), never on the log signal; lifting a subject that t
 The look (`--look NAME`, chosen with `grade-looks.py`) is the last step: it is baked into a 65-point 3D table and applied after the LUT, exposure and white balance; skin saturation is solved per look so skin stays natural (x1.15-1.25, measured: contrast and saturation alone took it to x1.5), and the skin hue window must stay wide and soft (a narrow one makes blotches and a halo on skin edges). LUTs per profile and every threshold are in `presets/vacanze-grading/preset.json` (`grade`; LUT files in `assets/luts/`, CREDITS.md): never cross D-Log, D-Log2 and D-Log M.
 
 **The professional grade (27/10/2026): film pipeline, shot matching, reference looks.** Built from five inspiration videos Jacopo liked (grain, film feel, "beautiful colours without exaggerating"). A look with a `film` key (default `pellicola-oro`) runs through `grade-film.py` instead of the gain-after-LUT path: exposure and white balance in linear light, contrast in stops around middle grey, a highlight stretch measured once per clip (its brightest highlights to ~95 %, starting one stop above grey so skin does not move), a shoulder that never clips, warm highlights / teal shadows with water and sky protected by the hue mask (warming the highlights without it turns turquoise water green), then a `finish` graph (halation, enlarged grain, vignette, optional graduated sky `sky_grad`). DJI LUT and grade are baked into ONE table (two 4K lookups in a row cost double). For a video with several clips: `grade-match.py` first (balances exposure and cast half-way towards the set, max 0.3 stop / 3 %: full matching dulled the lagoon and greyed a warm wall), then `grade-apply.py --match match.json`. To start a look from frames Jacopo likes: `grade-ref.py` (measures tints only on pixels the scene does not colour; never copy a creator's before/after as a LUT: their log is not ours). What the grade cannot do: golden-hour light, locked white balance, ND filter for motion blur: tell Jacopo, it is half of every look he admires. **Second look `nic-lowkey` (09/11/2026)**, from Nic Salvatori's 7 episodes (dossier `personale/youtube/inspo-nick-salvatori.md` §6): low-key, −0.6 stop via the look's own `film.exposure` key, deep clean blacks, shoulder early (highlights stop ~80 %), cream highlights, golden skin, olive greens, per-clip highlight stretch OFF (`stretch_min/max` 1.0). Fitted, not copied: numbers searched until 60 frames of Jacopo's clips matched the traits measured on Nic's finished picture. Ready `.cube` files for CapCut in `assets/looks/nic-lowkey/`. Its darkness is mostly scene light: say so when a bright clip does not look like Nic.
+
+**Which look (rule in one place, 27/10 to 10/11/2026):** `pellicola-oro` is the default look. The "look Jacopo" (Mimo recipe, `videos/look-jacopo/`) is an alternative for sunny travel reels only, chosen by context (A/B on the clip when unsure; slow, dreamy reels stay on `pellicola-oro`). The indoor LUT finalists in `references/prove-lut-creative.md` are not chosen yet: do not apply them without Jacopo's pick.
 
 **Log footage (DJI Osmo Pocket 4P, D-Log2):** the official LUTs are in `assets/luts/` (`DJI-Pocket4P-DLog2-to-Rec709-size65.cube` is the one to use; D-Log2 is not D-Log: never mix them). Apply it with `apply-cut.py --lut`, only on camera clips, never on stills or B-roll. Phone exports from DJI Mimo stay in D-Log2 too. Run ffmpeg from the project folder with a relative `lut.cube` or let apply-cut escape the path (a Windows `D:` path breaks `lut3d` otherwise).
 
@@ -549,7 +552,7 @@ words, a specific reason to stay in the first three seconds that the video pays 
   `python3 "$SK/scripts/studio-lab.py" <lab> --open` (light copy under `C:\\Users\\<name>\\HyperFrames`, the Windows trap in
   `references/hyperframes-app.md`), then `npx hyperframes catch-up <copy>` to read what he did there. YouTube work only: reels and travel
   videos keep going through drafts on the phone (Jacopo, 29/10/2026). If he says no for a lab, send the stills/MP4 as before.
-- **A new animation or graphic enters the skill only after it wins a blind A/B on the bench** (Jacopo, 22/10/2026).
+- **A new animation or graphic enters the skill only after it wins a blind A/B on the bench** (Jacopo, 22/10/2026), or on Jacopo's explicit say-so (e.g. format 52, the 3D plate, 10/11/2026).
   1. **State sheet first:** name every state before any code (what is on screen, where, size, colour) and every change
      between two states (what moves, the property, the ease, the time). A format without a state sheet drifts, and the review
      has nothing to point at.
