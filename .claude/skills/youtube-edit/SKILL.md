@@ -9,12 +9,12 @@ Turns raw footage or a flat cut into a finished video: the cut, animated overlay
 tagged 4K MP4. Everything runs on your own machine through HyperFrames (Chrome + FFmpeg): no per-render cost, and no
 footage leaves the computer.
 
-**The house style.** This is a real channel's editing skill, so it has opinions: light glass cards, DM Sans 700, cyan
-for key words, amber for money, magenta for punchlines, a camera anchored to the top of the frame, and silence unless
-something on screen makes a sound. Those are the defaults, written to you, the creator. `STYLE-GUIDE.md` (in the kit
-folder this skill came in) sums up the look: colours, font, cards, motion, camera, sound and cuts. When you change it,
-Claude updates the matching rules here and the colour tokens in the `:root` block of `scripts/compose.py`. For the
-look, the style guide wins.
+**The house style.** This is a real channel's editing skill, so it has opinions. The default look since 01/11/2026 is the preset
+`plates-verde` (deep green wash and grid, ivory cards, Inter + italic serif key word, a fluid camera on one digital board, smooth
+swishes on what appears, silence otherwise); the old cyan / DM Sans 700 "house look" is superseded (`--preset none` still gives it).
+See "Default preset" at the end of this file and `references/taste.md` 14. `STYLE-GUIDE.md` (in `video-editor/` at the repo root)
+describes the original cyan look only, kept as history: where it disagrees with `plates-verde`, the preset wins. When you change the
+look, Claude updates the matching rules here and the tokens in the preset.
 
 **This skill keeps learning.** Every rule below came from a real note on a real video. When you give a note worth
 keeping ("the text is too small", "no sound on this part"), say **"save this to the skill"**: Claude writes it into the
