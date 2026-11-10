@@ -45,7 +45,11 @@ fades are fine without backdrop-filter (lower lines). Glass that has not arrived
 **Disk (Windows, small system drive)**
 - **`snapshot`, `check` and `render` record a revision of the project in `~/.cache/hyperframes/history/<id>/blobs`**, and every revision copies the media: a full
   4K flat cut cost **2.2 GB per run** and filled a 223 GB `C:` to 0 bytes in one afternoon (tests then fail with "No space left on device"). Always export
-  `HYPERFRAMES_HISTORY_ROOT=D:\hf-history` (next to `TEMP=TMP=D:\hf-tmp` and `--frames-cache-dir`), take snapshots on a `window-patch.py` copy or a small
+  `HYPERFRAMES_HISTORY_ROOT=D:\hf-history` on a PC where it is not set. **On Jacopo's PC it is fixed since 10/11/2026, nothing to export:** three user
+  environment variables (set with `setx`, read by every program started afterwards) send it all to `D:`: `HYPERFRAMES_CACHE_DIR=D:\hyperframes-cache`
+  (Chrome, Parakeet, fonts, background removal: moved there from `C:\Users\<name>\.cache\hyperframes`), `HYPERFRAMES_HISTORY_ROOT=D:\hf-history` and
+  `HYPERFRAMES_EXTRACT_CACHE_DIR=D:\hf-cache` (the extracted frames, the same folder as `--frames-cache-dir`). Check them with `reg query HKCU\Environment`.
+  Windows' own `TEMP` stays on `C:` because other programs use it: for a long render still pass `TEMP=TMP=D:\hf-tmp`. Take snapshots on a `window-patch.py` copy or a small
   lab video instead of the full project. **Clean up with the CLI, not by hand** (HyperFrames 0.8.214, 29/10/2026): after each approved checkpoint
   and after every delivery, `npx hyperframes clean "$W" --dry-run` lists what it would remove (history media copies, extracted frames), then
   `npx hyperframes clean "$W"` removes it; add `--snapshots` only once the snapshots are approved. Never while a render runs. The first dry run
