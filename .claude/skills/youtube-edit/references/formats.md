@@ -63,7 +63,7 @@ against, and to hand-build the rest.
 | 39 | World camera | a system you walk through: push in, pull back to reveal, travel | `world` |
 | 40 | Numbered deck | the full-frame opener of each part of a numbered video | `deck` |
 | 41 | Pills around the head | two to six short labels while you stay on camera | `pills` |
-| 41b | Hanging chips | one to four tools or labels with real logos hung around the head, arrows to the face, a slow camera that carries them: **the default with the `elegante-portfolio` preset** | `formats/chips.py` |
+| 41b | Hanging chips | one to four tools or labels with real logos hung around the head, arrows to the face, a slow camera that carries them: **the default with the `plates-verde` preset** | `formats/chips.py` |
 | 42 | Chat (bubbles, window, phone) | a conversation | `chat` |
 | 43 | Dot grid | a count you say out loud, in groups ("three outfits, three mood boards..."): one row per group fills on its word | `formats/dotgrid.py` |
 | 44 | Outline rail | a list read out as an outline (what came out, the parts of a plan): rail, dots, names, ×N and bars | `formats/scaletta.py` |
@@ -87,7 +87,7 @@ counts). Still tied: the one used least in your last video.
 |---|---|---|
 | saying a count in groups ("three of each") | 43, 44, 3a | 43 when the numbers are the point; 44 when it is an outline or plan; 3a when the names alone are |
 | naming one tool | 4a, 34 | 4a; three or more tools in a row: 34 |
-| naming tools or labels while staying on camera | 41b, 41 | 41b with `elegante-portfolio` and real logos; 41 for five or six labels or icons only |
+| naming tools or labels while staying on camera | 41b, 41 | 41b with `plates-verde` and real logos; 41 for five or six labels or icons only |
 | showing a website | 4b, 4c | 4b for a glance under 3 s; 4c when you talk about it or it scrolls |
 | giving numbers | 1, 24, 25 | 1 for one stakes figure; 24 for two to four that belong together; 25 when it grew and the shape matters (25m when the trend is the point) |
 | explaining a process | 45, 27b, 6, 7, 8, 27, 30 | 45 when each step is a thing you can draw (a tool, a page, images) and steps are 1.2 s or more apart; 27b when the steps are abstract labels; 7 each step earns the next; 8 volume narrows to money; 30 one thing becomes several; 27 a quick sequence; 6 a long one |
@@ -266,11 +266,7 @@ Every full-frame scene sits on an ambient three-radial brand wash plus a 96 px g
 **Words:** Jacopo calls these scenes **motion plates** (not "motion graphics"): a full-frame graphic that replaces the
 camera shot. When he says "motion plate" he means any format in this section, `world`, `deck`, `studio`, `chain3d`.
 
-**No face PiP on plates** (Jacopo, 04/11/2026; it replaces the square PiP of 28/10): a plate is full screen with nothing else, the
-voice runs under it, and the face comes back full screen when the plate ends (`taste.md` 9e). `formats/pip.py` (square 320x320
-at left 1552 / top 712, radius 28, ring in the preset's `ring` colour, the base video's own wrapper scaled with a `clipPath`
-so lips stay in sync) stays in the skill for a deliberate use only, on Jacopo's request; `plates_base.check_pip` no longer
-blocks that corner.
+**No face PiP on plates** (Jacopo, 04/11/2026): full rule in `taste.md` 9e. `formats/pip.py` stays in the skill for a deliberate use only, on Jacopo's request.
 - **Graphics never cover the face** (Jacopo, 28/10/2026): this now applies to the graphics BESIDE the full-screen face
   (`taste.md` 9c: 3-4 per video, on the right, away from his head), not even for a frame during a camera move.
 
@@ -516,7 +512,7 @@ neon). With the default preset `plates-verde` (style key `look: "ivory"`), `comp
   (muddy gradient -> ivory), the agenda chips (dark capitals -> ivory pills), the dashboard-zoom card and the player (white text on ivory -> ink / deep green), the build labels (spaced capitals -> Inter, values in the italic serif).
   The animations run in the real render with the new look (satellites fly in and connect, the dive pulls back, the trail's arrow leads to the key word, world nodes land and the stat counts up, the dashboard card lifts and counts).
   `hyperframes check` on both zoos: the only errors also exist in the old look (a missing `sfx/pop.mp3` that the test storyboard never staged, and the doc format's blurred soft layer reported as occluded text); contrast 6/6 AA.
-- **Still not checked:** the `doc` format's text-occlusion errors (older than this work), `halo` (rejected anyway), `clip` (needs footage), `layers`, `image`, `hex`/`alerts` of world. Camera kicks and the smooth per-element sound are still only in the plate formats 47-51.
+- **Still not checked:** the `doc` format's text-occlusion errors (older than this work), `halo` (rejected anyway), `clip` (needs footage), `layers`, `image`, `hex`/`alerts` of world. Camera kicks (superseded 04/11/2026: no kicks, see `taste.md` 13) and the smooth per-element sound are still only in the plate formats 47-51.
 
 
 ### Smooth sound and camera on the whole older engine (01/11/2026)
@@ -527,7 +523,7 @@ Jacopo: "sì" to porting the camera and the smooth sound to the older engine. Sw
   (recomputed from each file's real peak with `volumedetect`: the first guesses were up to 4 dB off). A line that is not typed out gets a smooth swish, not a typing sound; the logo's explicit `pop.mp3` becomes a smooth cue.
   **Every thing that appears gets one**: `beat_events(b)` lists the appearance times of stats, growth, bars, pipeline, hub, equation, wall, pop-out, flow, lens, dock, deck, chat, search, world, fan3d, dash zoom, player, browser3d, doc, agenda, gallery
   (plus the beat's own entrance); two cues closer than 0.28 s keep one (the old rule). Without the licensed folder (another machine) the CC0 `whoosh-short` plays at 0.05.
-- **Camera.** The full-frame formats without a camera of their own (`CAM_TYPES`: stats, bars, pipeline, hub, flow, lens, search, dock, masktitle) get the plates' camera: a slow push-in on the host (scale 1.035, scale only, about the corner of the face PiP's
+- **Camera (kick version, superseded 04/11/2026: no kicks, fluid camera on `board.py`, `taste.md` 13; the record follows).** The full-frame formats without a camera of their own (`CAM_TYPES`: stats, bars, pipeline, hub, flow, lens, search, dock, masktitle) get the plates' camera: a slow push-in on the host (scale 1.035, scale only, about the corner of the face PiP's
   zone so the picture always covers the frame and nothing can move under the face) plus a kick on every event and a soft kick wherever more than 2.3 s would pass with nothing moving (`plates_base.plan_kicks`). Skipped: formats with their own camera
   (world, deck, trail, dive, dashzoom, the 3D ones), beats with a `transition`, and any beat with `"cam": false`.
 - **Measured** on the 22-format zoo (real renders, optical flow at 15 fps, the stretch where each format is fully on screen): the nine camera formats were moving **51 %** of the time with a longest still run of 1.27 s; now **94 %** and 0.33 s.

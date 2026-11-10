@@ -23,7 +23,7 @@ not law. A preset (`presets/<name>/README.md`) may override any of them. Jacopo'
 - **Change speed, never drift at a constant rate:** readable target, fast exit, slow arrival.
 - **Everything that moves has a cause.** A scan produces results, a prompt produces an artifact, a button produces a state.
 - **Density by hierarchy:** one primary move, supporting staggers on labels/cards, small tertiary details, all overlapping. Do not stop and start the whole frame on every beat.
-- **Overshoot only on the fun things** (~10% of moves in hooks/turns, almost none in proof and sign-off).
+- **Overshoot: none on plates and camera moves (13 below, 04/11/2026).** It is allowed only where `formats.md` defines it (the success stamp, "the house's one overshoot"); the old "~10% of moves in hooks/turns" no longer holds.
 - **No dead frame:** nothing may sit unchanged for more than ~0.6 s unless it is a payoff hold (a readable list/number, up to 1.0 s; hero up to 1.2 s) or a designed breath (0.6-1.5 s before a payoff, with one living thing on it: slow drift of 3-5%, a caret, a shimmer). `scripts/qa-motion.py` measures it.
 
 ## 2. Joins between beats
@@ -74,7 +74,7 @@ Slide test (30 s): cover all the text with your hand. If more than half the fram
 - Choose whooshes with little energy below ~150 Hz and a gentle 80-400 ms rise; high-pass ~150-220 Hz, low-pass ~9-11 kHz, click-free fades.
 - **Vary the files** for repeated items so a list does not sound like a percussion loop; soften sounds that cluster within ~0.15 s (x0.6).
 - Levels are set **per event against the music-only mix** (about +3-4 dB in the effect's own band; never let 2-8 kHz clicks poke out). Full-band loudness is useless for this.
-- Music bed 9-14 dB under the voice (ours: `add-music.py --db -14` plus ducking), a limiter on the delivery, true peak at or below -1.5 dBTP, **measure the final encoded stereo file** (a mono file reads 3 dB lower).
+- Music bed level, limiter and true peak: the numbers live only in `sound.md` (Music and the sound report); **measure the final encoded stereo file** (a mono file reads 3 dB lower).
 - When someone says "that whoosh", first listen to the music-only version at that moment: music snares and risers sound like whooshes.
 - Always keep a no-music twin. Change one thing per round and name it by timestamp.
 
@@ -108,7 +108,7 @@ From `personale/youtube/inspo-motion-plates-joseph.md` (his motion plates, and t
 8. **What you no longer need is struck through and dimmed**, not removed: leaving carries meaning as much as arriving.
 9. **The face is the anchor**: it comes back every 20-40 s to keep the relationship; big text enters at the sides, never over it.
 9b. **No twin plates (Jacopo, 03/11/2026: "vedo che usi sempre lo stesso formato")**: the same structure (disc + pills + dashed links) at most once in any ~6 neighbouring plates; the others are different shapes (an ID card, a receipt, a slider, a crowd...), invented in this style. When the line says "l'AI", show the real logo of the tool he means (Claude, ChatGPT), never the letters "AI".
-9c. **Graphics beside the full-screen face (Jacopo, 03/11/2026)**: allowed, but rare: 3-4 per video at most, only where they make sense and look good (a name, a number, an object he points at), on the side of the frame away from his head, never over the face. When in doubt, a motion plate with the PiP instead. Put them on the RIGHT of the frame, and hide the PiP square while they are up (the face is already full screen). Cards and boxes on a plate are ivory, not black (Jacopo 03/11: "perché sei ritornato a usare il nero").
+9c. **Graphics beside the full-screen face (Jacopo, 03/11/2026)**: allowed, but rare: 3-4 per video at most, only where they make sense and look good (a name, a number, an object he points at), on the side of the frame away from his head, never over the face. When in doubt, a motion plate instead. Put them on the RIGHT of the frame. Cards and boxes on a plate are ivory, not black (Jacopo 03/11: "perché sei ritornato a usare il nero").
 9e. **No face PiP on plates (Jacopo, 04/11/2026)**: "leverei il riquadro in basso a destra nelle plate": a plate is full screen with nothing else, the voice runs under it, and when it ends the face comes back full screen. Supersedes the PiP rule (28/10). The only face inside a plate is a deliberate one (the live face in Video #3's ID card).
 9d. **Screen recordings stay real (Jacopo, 03/11/2026)**: when he recorded the screen, never redraw it as a graphic. Frame the real recording in a window on the plate, zoomed on the paragraph he is reading (about 1.9x), panning down as he reads; highlights, strikes and ticks go on top at the word's measured pixel position (measure the word boxes on the frame, never guess). Keep the recording's own auto-zooms where they happen. Skip any stretch that shows private files or a forbidden name, and replace just that moment with a graphic.
 10. **The video demonstrates what it says**: use the method on screen (real prompt, real result) instead of describing it.
