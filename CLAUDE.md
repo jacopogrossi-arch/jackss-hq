@@ -48,6 +48,7 @@ File: `inverso/`
 - `concept-*.md`, `spiegazione-del-nome.md`, `bio-profili.md` — identità e racconto del brand
 - `analisi/` — analisi delle skill marketing (copywriting, psychology, social, product-marketing, idee, persona)
 - `ricerca/` — studio del pantalone Drop 1, numerato 01→15 (silhouette, scheda tecnica, cartamodello, tela di prova, materiali)
+- `logo/` — **logo definitivo di Inverso** (10/11/2026): `inverso-logo.svg` crema su nero, I romana con linee staccate, E normale
 - `assets-jago/` — asset dell'avatar Jago (logo, palette, moodboard, caroselli)
 
 **Stato:** la prima tela di prova del pantalone è stata cucita e provata il 05/08/2026 (rilievi in `ricerca/14-prima-prova-tela-rilievi.md`): fit da correggere. Da settembre il lavoro su Inverso è fermo mentre si sono chiusi accademia e i video YouTube. Ripartire da `piano-inverso.md` §9.
