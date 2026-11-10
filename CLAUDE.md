@@ -1,7 +1,7 @@
 # CLAUDE.md
 
 This file gives Claude Code the context to work well in this repository.
-*Ultimo aggiornamento: 09/11/2026.*
+*Ultimo aggiornamento: 10/11/2026.*
 
 ---
 
@@ -49,6 +49,7 @@ File: `inverso/`
 - `analisi/` — analisi delle skill marketing (copywriting, psychology, social, product-marketing, idee, persona)
 - `ricerca/` — studio del pantalone Drop 1, numerato 01→15 (silhouette, scheda tecnica, cartamodello, tela di prova, materiali)
 - `logo/` — **logo definitivo di Inverso** (10/11/2026): `inverso-logo.svg` crema su nero, I romana con linee staccate, E normale
+- `mondo-del-brand.html` — **identità del brand in una pagina** (10/11/2026, nata nel video YouTube #4): visione, cliente, voci da Reddit, tono, logo, palette (gesso `#EFE9DD`, inchiostro `#1E1B18`, bosco `#2F3A2E`, ruggine `#8A4B2D`, sabbia `#B9AE98`), font (Instrument Serif + IBM Plex Sans), prossimi passi
 - `assets-jago/` — asset dell'avatar Jago (logo, palette, moodboard, caroselli)
 
 **Stato:** la prima tela di prova del pantalone è stata cucita e provata il 05/08/2026 (rilievi in `ricerca/14-prima-prova-tela-rilievi.md`): fit da correggere. Da settembre il lavoro su Inverso è fermo mentre si sono chiusi accademia e i video YouTube. Ripartire da `piano-inverso.md` §9.
@@ -65,7 +66,8 @@ File: `inverso/`
   - #1 "Si può usare l'AI nella moda?" — pubblicato 15/10/2026
   - #2 "Ho lasciato Claude ideare una collezione al posto mio" — pubblicato 21/10/2026, montato con la skill `youtube-edit`
   - #3 "Come lancerei un brand di moda con l'AI (prima di lanciare il mio)" — pubblicato 06/11/2026
-  - #4 — idea da decidere
+  - #4 "L'identità del brand con l'AI" (titolo di lavoro; qui si rivela il nome Inverso) — **registrato 10/11/2026, da montare**. Mappa `04-mappa-riprese.html`, prompt `04-prompt-identita.md`, girato in `videos/04-identita/`
+  - #5 — idea da decidere (promesso in chiusura del #4: il pantalone)
 - **Skill `youtube-edit`** → `.claude/skills/youtube-edit/` (`SKILL.md` = regole, `scripts/`, `formats/`, `presets/`, `references/`). Monta da clip grezza a MP4 4K. Ogni nota di gusto di Jacopo va salvata nella skill. Grading: look predefinito `pellicola-oro` (dal 27/10/2026; il WOW del 24/10 è superato).
 - **Sound design di tutto il video editing** (YouTube, reel travel, b-roll): fonte principale **Epidemic Sound** via connettore MCP (effetti e musica, dal 28/10/2026). I file scaricati restano solo in locale (`assets/sfx/licensed/`, `assets/music/licensed/`, fuori da git). Regole in `.claude/skills/youtube-edit/references/sound.md`.
 - **Agente `video-builder`** (`.claude/agents/`) — esegue le sezioni del piano scritto dal pianificatore, non decide il design.

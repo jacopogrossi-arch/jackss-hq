@@ -57,7 +57,9 @@ Non è più il progetto: è uno strumento dentro Inverso.
 
 ## 7. Estetica visiva
 
-- Inverso/Jago: dark-luxury, dark academia — nero, ambra, legno, chiaroscuro, grana 35mm
+- **Identità Inverso (10/11/2026, da `inverso/mondo-del-brand.html`):** logo in `inverso/logo/`; palette gesso `#EFE9DD`, inchiostro `#1E1B18`, bosco `#2F3A2E`, ruggine `#8A4B2D` (accento, poco), sabbia `#B9AE98`; font Instrument Serif (titoli) + IBM Plex Sans (testi). Parole da evitare: drop, trend, must-have, imperdibile, collezione.
+- **Cosa dicono le persone vere (Reddit, 10/11/2026):** prezzo 150–250 € confermato · pochi capi buoni · tessuto naturale · la vestibilità si risolve solo di persona (online da un brand nuovo: poco probabile) · il concorrente vero è l'usato di qualità (eBay/Vinted) · chi ha già un sarto non lo cambia: il cliente è chi non ce l'ha ancora.
+- Jago e lookbook (storico, da riallineare alla nuova palette): dark-luxury, dark academia — nero, ambra, legno, chiaroscuro, grana 35mm
 - Processo su profilo personale: grezzo autentico va bene (è il "prima" del before/after)
 - Palette capi: nero, indaco profondo, oliva scuro, avorio
 
