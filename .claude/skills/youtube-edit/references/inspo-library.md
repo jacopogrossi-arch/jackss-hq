@@ -17,7 +17,12 @@ stored as a table `word -> graphic -> job`, plus the measured numbers, not as a 
 |---|---|---|---|
 | Joseph (Content AI Academy), "Ho automatizzato completamente il montaggio video con Claude" (11:49, 16:9) | 01/11/2026 | the 7-step system, the "plate has a job, lands on the word" logic, formats 47-51, taste section 9 | `personale/youtube/inspo-motion-plates-joseph.md` |
 | Ali Abdaal (motion plates + PiP face) | 28/10/2026 | the face PiP on every plate | `formats.md`, Explainers |
+| Nic Salvatori (@nicsalvatori), "giorno X di 60" build-in-public series | 08-09/11/2026 | low-key grade (half the frame under 17% light, black 0.3-1.8%, highlights at ~0.80, cream-warm highlights, golden skin ~61 deg, olive greens ~110 deg, low colour), small serif word-by-word subtitles, serif italic title + bars, a different visual device each episode; look `nic-lowkey` (A/B vs `pellicola-oro` still to do) | `personale/youtube/inspo-nick-salvatori.md` |
+| Travel-film and "the power of color grading" references (@nathanthmp, @tashidelekp, @irhas.mi, @corbandelavega, @3408.outside) | 27/10/2026 | golden highlights, whites that reach white, deep blacks, grain and film feel; measure the result, never copy a before/after as a LUT | `presets/vacanze-grading/README.md` |
 | Iman Gadzhi, Callaway, Pedro Andrade, Marshall Crew, @realskytan | 19-23/10/2026 | build / annotate / orbit / dive / agenda, dot grid, outline rail | `studio.py`, `formats.md` |
+
+## Videos downloaded from Instagram carry the platform's watermark (Jacopo, 09/11/2026)
+An IG logo plus "@username" that changes position, and about 4 s of exit on the logo (with its own audio), are **Instagram's watermark, never the creator's style**. In every teardown of a downloaded video: exclude the last ~4.3 s from cuts, durations, colour and sound (if the exit has no cut of its own it sticks to the last shot: subtract 4 s by hand); mask the white text (watermark and subtitles) before measuring colour; never cite the logo or the @name as a style element.
 
 ## Word -> graphic -> job (Joseph, 01/11/2026; the short version)
 | Time | Said | Graphic | Job |

@@ -115,9 +115,15 @@ Pellicola-oro resta per i video lenti e sognanti (Jacopo: "più fairy, più drea
 **Cosa il grading non puo' fare (lo fa Jacopo in ripresa):** luce dell'ora d'oro, bilanciamento del bianco fisso (non automatico), filtro ND
 per il mosso del cinema (tempo di scatto circa il doppio dei fps). E' meta' del look dei video che gli piacciono.
 
+## Il suo workflow in DJI Mimo (29/10/2026)
+"Recupero colore" (la conversione del log in Rec.709), poi esposizione -5/-10 punti, luminosita' -2/-3, contrasto +4, saturazione +10, vividezza +4; bianchi e neri non li tocca a mano.
+Misurato su 6 coppie originale/export: neri piu' profondi, bianchi pieni, toni medi piu' bassi, saturazione media x1,2, caldi e pelle piu' vivi, il mare spinto clip per clip a occhio (x1,3 / x2,0 / x2,5), bianchi neutri (niente crema, oro, grana, alone, vignetta).
+La ricetta a manopole (`videos/look-jacopo/look-jacopo-ricetta.cube`, da applicare DOPO la LUT DJI) non indovina quanto spingere il mare su una clip nuova: si ritocca clip per clip e le correzioni fini le da' lui.
+
 ## Limiti noti (da non scordare)
 - Una clip dove la pelle e' scura e il mare e' chiaro (es. D-Log, 23/10) non si schiarisce abbastanza: le luci non lasciano margine. Servirebbe una **maschera locale** o un
   **roll-off morbido delle luci**: non fatti.
+- **Pelle scura + mare chiaro (reel Zanzibar #1, 28/10):** quando c'e' pelle in scena, `grade-scan` e `grade-match` portano la pelle a un bersaglio tarato su pelle chiara: con la pelle scura (capitano, +0,9 stop) schiariscono tutta la scena. Da correggere (non ancorare l'esposizione su pelle scura, o usare la mediana); intanto si aggiusta a mano con `stops` in `shots.json`. Il cielo in controluce tra le foglie bruciato in camera (zebra 5 % dopo la LUT) non si recupera.
 - Il bianco corretto dagli oggetti neutri e' solo una proposta: un tramonto caldo o un'ombra blu non sono dominanti. I Kelvin scelti in camera (`WhiteBalanceKelvin`, `WhiteBalanceTintCc`
   nei metadati) per ora sono solo letti, non usati.
 - Nessun "look" (caldo mediterraneo, filmico...) e' ancora stato scelto: quando si fa, con il test A/B alla cieca della skill.

@@ -13,7 +13,13 @@ Video lunghi sul **canale personale** di Jacopo (non Inverso, non Jago).
 | 3 | Come lancerei un brand di moda con l'AI (prima di lanciare il mio) | pubblicato 06/11/2026 | struttura `03-come-lancerei-un-brand.md` · script `03-script.md` · esperimento `03-esperimento/` |
 | 4 | Ho costruito l'identità del mio brand con l'AI *(titolo di lavoro)* | **registrato 10/11/2026**, da montare | mappa `04-mappa-riprese.html` · prompt `04-prompt-identita.md` · Reddit `04-reddit-post.md` · pagina finale `inverso/mondo-del-brand.html` · logo `inverso/logo/` |
 
-## Metodo (dal video 1, da riusare)
+**Piano dei prossimi video (#5 → #12):** `piano-canale.md`.
+
+**Note sul #3 (per i prossimi render):** tempi reali del finale 4K a 60 fps: flat 4K 1 h 20, render 4 h 28, scia 39 min. Bozze e intermedi (83 GB) in `D:\DA-CANCELLARE-video3`: da cancellare quando Jacopo vuole. Link YouTube ancora da segnare in tabella.
+
+**Girato del #4:** `D:\Nuova cartella (2)\video 4\` (schermo PC, schermo iPad, camere); immagini, logo e miniature in `videos/04-identita/`.
+
+## Metodo (dal video 1 — storico: dal #2 si monta con la skill `youtube-edit`)
 
 **Copione.** Hook a camera *autentico*: chi sono → cosa ho fatto → cosa è successo (es. la frase di un collega) → la domanda. Non a memoria: si ricordano i 4 passaggi e si dice con parole proprie, 3 prese, si tiene la più naturale.
 

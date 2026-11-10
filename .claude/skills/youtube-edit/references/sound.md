@@ -129,3 +129,13 @@ the cut swish quiet (peak -31 dBFS), and any extra layer (a low "body" under the
 **On the older engine** (with the default preset `plates-verde`, `sound.smooth: true`) the engine's taps and clicks are replaced by the three smooth Epidemic swishes of the plates, one for every thing that appears
 (`beat_events` in `compose.py`), and the swish pool (camera moves, whip, zoom-blur) by the quiet airy ones. Levels are the cue-table entries in `assets/sfx/licensed/cues.json` (peaks -25/-25/-26 and -31 dBFS);
 change them there. Details: `formats.md`, "Smooth sound and camera on the whole older engine".
+
+
+## Voice, music taste and reel audio (notes from 29/10 to 04/11/2026)
+
+- **Voice cleaning with Adobe Podcast Enhance (Jacopo, 04/11/2026, "decisamente meglio" on the Pocket's internal mic):** settings voice 60%, background 10%, music 10%; noise drops about 13 dB, duration and sync unchanged. Export the whole voice as mono 48 kHz WAV to iCloud; Jacopo runs it on podcast.adobe.com/enhance and drops it back in iCloud Drive (it lands in the root folder). Then `mix-audio.py --voice <wav>`, no new render; check the offset and any lost words.
+- **Music taste:** "Green Cascade" (Jobii) loves it and it opens Video #3; "Last Minute Study" (Matt Large) rejected. For new beds start from the tracks similar to Green Cascade (`SearchSimilarToRecording`: calm lofi, 75-85 bpm, no vocals); the picks for Video #3 were Disque Magique and Captiva. Claude cannot hear music: his ear is the only judge. Changing music costs only `mix-audio`. Starting level for Video #3: `--music-db -10` (from -7; "the video flows, but lower the music"), also in the 4K mix.
+- **A title with elegant type gets nothing generic under it** (28/10, reel Zanzibar #1: whoosh + sparkle and reverse-cymbal + impact were "terribili"). Approved: a typewriter with real keys, one hit per letter.
+- **Phone playback:** effects under about 150 Hz are not heard on a phone; for reel transitions use airy swooshes (`es-swoosh-wide`, volume about 0.22).
+- **Audio taken from a reel or an edit has a tail:** the reference song ends (37.4 s in reel #1) and the platform's logo sound follows; always check the end of the audio. Pull the cuts from the reference by measuring the frames, not from a beat grid: on a live-played song without a kick both `mh-video-editor` and `beat-sync-edit` got the first attack wrong (reel #2: first cut at 2.43 s, confirmed by ear).
+

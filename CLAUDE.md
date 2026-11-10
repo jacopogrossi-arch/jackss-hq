@@ -66,8 +66,10 @@ File: `inverso/`
   - #1 "Si può usare l'AI nella moda?" — pubblicato 15/10/2026
   - #2 "Ho lasciato Claude ideare una collezione al posto mio" — pubblicato 21/10/2026, montato con la skill `youtube-edit`
   - #3 "Come lancerei un brand di moda con l'AI (prima di lanciare il mio)" — pubblicato 06/11/2026
-  - #4 "L'identità del brand con l'AI" (titolo di lavoro; qui si rivela il nome Inverso) — **registrato 10/11/2026, da montare**. Mappa `04-mappa-riprese.html`, prompt `04-prompt-identita.md`, girato in `videos/04-identita/`
-  - #5 — idea da decidere (promesso in chiusura del #4: il pantalone)
+  - #4 "L'identità del brand con l'AI" (titolo di lavoro; qui si rivela il nome Inverso) — **registrato 10/11/2026, da montare**. Mappa `04-mappa-riprese.html`, prompt `04-prompt-identita.md`, girato in `D:\Nuova cartella (2)\video 4\`, immagini e miniature in `videos/04-identita/`
+  - #5 → #12 — piano in `personale/youtube/piano-canale.md` (#5 = il pantalone, ~04/12; pausa esami 20/12 → 11/02)
+- **Regole di gusto video:** stanno tutte nella skill (`references/taste.md`, `sound.md`…), non in memoria (pulizia del 10/11/2026).
+- **Esami sessione 2027:** `studio-privato/` (solo locale, fuori da git): `STATO-MATERIALI.md` e `CALENDARIO-STUDIO.md`.
 - **Skill `youtube-edit`** → `.claude/skills/youtube-edit/` (`SKILL.md` = regole, `scripts/`, `formats/`, `presets/`, `references/`). Monta da clip grezza a MP4 4K. Ogni nota di gusto di Jacopo va salvata nella skill. Grading: look predefinito `pellicola-oro` (dal 27/10/2026; il WOW del 24/10 è superato).
   - **Motion plate (dal 10/11/2026):** si costruiscono con `scripts/plates-build.py` (un file per blocco in `videos/<video>/plates/`, scelte a mano in `plates/plan.json`), mai con script di build scritti a mano. Procedura in `SKILL.md`, "The plates route".
   - **Plate 3D (formato 52, dal 10/11/2026):** `formats/world3d.py` su three.js per capi e oggetti che ruotano con etichette agganciate, o un "mondo" di card e oggetti percorso dalla camera. Poche e brevi; il 4K a 60 fps è ancora da misurare.
