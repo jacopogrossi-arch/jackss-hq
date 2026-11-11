@@ -25,7 +25,7 @@ OUT = Path(__file__).parent
 
 # --- quote (mm) ---
 SPESSORE = 1.6        # piastra piatta, tutta dello stesso spessore
-LARG_TAGLIO = 5.0     # larghezza dei bracci della Y al centro (poi vanno a punta)
+LARG_TAGLIO = 10.7    # larghezza dei bracci della Y al centro (poi vanno a punta)
 BORDO_MIN = 4.0       # materiale che resta tra la punta del braccio e il lato dell'esagono
 ANGOLI = (90, 210, 330)
 
