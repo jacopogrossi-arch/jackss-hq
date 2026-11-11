@@ -53,3 +53,10 @@ Da riprendere in un'altra sessione partendo da `CONFRONTO-outdoor.mp4`.
 ## Note
 - Nei confronti `pellicola-oro` non aveva vignetta e grana: è stato confrontato solo il colore.
 - Le LUT dei pack sono a uso personale: restano in locale, mai su GitHub (le cartelle sono in `.gitignore`).
+
+## Indoor — scelta sul Video #4 (11/11/2026)
+- Jacopo ha scelto **VISIBLE CARBON al 35%** per il Video #4 (stanza, Pocket 4P D-Log2), dopo aver visto 50/70/80/100: «la 50 mi è piaciuta di più, però abbasserei ancora», poi «35». Al 100% è un teal and orange pieno (pelle arancione, muro verde-acqua). SINGULARITY scartata in questo giro.
+- **Catena usata:** clip 4K a 10 bit → `lut3d` DJI D-Log2→Rec.709 → curva di esposizione per clip (le clip del pomeriggio erano più scure: gamma calcolata sulla luminanza media, corretta ai 2/3) → VISIBLE CARBON miscelata al 35% → primo encode a 8 bit. Il look va messo PRIMA del primo encode a 8 bit.
+- **Trappola della miscela con ffmpeg:** in `blend=all_opacity=X` l'opacità vale per il PRIMO ingresso. `[lut][originale]blend=all_opacity=0.35` = 35% di LUT; con gli ingressi al contrario le prove «al 70%» erano in realtà al 30% (errore dell'11/11: Jacopo le trovava «molto leggere»). Controllo: la serie 0/50/70/80/100 deve salire in modo regolare.
+- **Mai giudicare la grana su una copia ricompressa:** su una copia 1080p a 8 bit passata da quattro encode la LUT mostra i blocchi della compressione sul muro; dal 4K a 10 bit spariscono. Le prove di look si fanno dalle clip originali.
+- **Niente riduzione del rumore temporale** (`hqdn3d`) sul parlato: lascia una scia dietro le mani. A dosi sotto il 50% non serve.
