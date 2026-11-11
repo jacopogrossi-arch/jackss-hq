@@ -16,7 +16,7 @@ import trimesh
 from matplotlib.patches import PathPatch
 from matplotlib.path import Path as MplPath
 from shapely import affinity
-from shapely.geometry import LineString
+from shapely.geometry import Polygon
 from shapely.ops import unary_union
 
 import modulo as M
@@ -25,18 +25,23 @@ OUT = Path(__file__).parent
 
 # --- quote (mm) ---
 SPESSORE = 1.6        # piastra piatta, tutta dello stesso spessore
-LARG_TAGLIO = 6.0     # larghezza dei bracci della Y forata
+LARG_TAGLIO = 5.0     # larghezza dei bracci della Y al centro (poi vanno a punta)
 BORDO_MIN = 4.0       # materiale che resta tra la punta del braccio e il lato dell'esagono
 ANGOLI = (90, 210, 330)
 
 APOTEMA = M.LATO_LATO / 2
-LUNG_ASSE = APOTEMA - BORDO_MIN - LARG_TAGLIO / 2   # dal centro al centro della punta tonda
+LUNG_ASSE = APOTEMA - BORDO_MIN   # dal centro alla punta del braccio
 
 
 def taglio_y():
-    bracci = [LineString([(0, 0), (LUNG_ASSE * math.cos(math.radians(a)), LUNG_ASSE * math.sin(math.radians(a)))])
-              for a in ANGOLI]
-    return unary_union([b.buffer(LARG_TAGLIO / 2, 32) for b in bracci])
+    """Stella a tre punte: ogni braccio e' un triangolo, largo al centro e a spigolo vivo in punta."""
+    bracci = []
+    for a in ANGOLI:
+        r = math.radians(a)
+        dx, dy = math.cos(r), math.sin(r)
+        nx, ny = -dy * LARG_TAGLIO / 2, dx * LARG_TAGLIO / 2
+        bracci.append(Polygon([(nx, ny), (LUNG_ASSE * dx, LUNG_ASSE * dy), (-nx, -ny)]))
+    return unary_union(bracci)
 
 
 def piastra_2d():
@@ -56,11 +61,9 @@ def esporta_step():
     rf = M.INSET_FORO * R
     centri = [(rf * math.cos(math.radians(a)), rf * math.sin(math.radians(a))) for a in range(0, 360, 60)]
     solido = solido.faces(">Z").workplane().pushPoints(centri).hole(M.DIAM_FORO)
-    for ang in ANGOLI:
-        c = (LUNG_ASSE / 2 * math.cos(math.radians(ang)), LUNG_ASSE / 2 * math.sin(math.radians(ang)))
-        braccio = cq.Workplane("XY").center(*c).slot2D(LUNG_ASSE + LARG_TAGLIO, LARG_TAGLIO, ang).extrude(SPESSORE)
-        solido = solido.cut(braccio)
-    solido = solido.clean()
+    contorno = list(taglio_y().exterior.coords)[:-1]
+    stella = cq.Workplane("XY").polyline(contorno).close().extrude(SPESSORE)
+    solido = solido.cut(stella).clean()
     cq.exporters.export(solido, str(OUT / "modulo-forato.step"))
     return solido.val().Volume(), solido.val().isValid()
 
@@ -84,7 +87,7 @@ def immagine_pianta(p2d):
     ax.text(0, -h - 7.2, "60 mm (vertice-vertice)", ha="center", va="top", fontsize=10)
     ax.annotate("", xy=(R + 5, -h), xytext=(R + 5, h), arrowprops=arr)
     ax.text(R + 6.5, 0, "52 mm\n(lato-lato)", ha="left", va="center", fontsize=10)
-    ax.annotate(f"taglio a Y passante\nlargo {LARG_TAGLIO:g} mm", xy=(0, 12), xytext=(-R - 6, h * 0.8), fontsize=9, ha="right",
+    ax.annotate(f"taglio a Y passante\n{LARG_TAGLIO:g} mm al centro, a punta", xy=(0, 8), xytext=(-R - 6, h * 0.8), fontsize=9, ha="right",
                 arrowprops=dict(arrowstyle="-", color="#222", lw=0.7))
     ax.annotate(f"bordo {BORDO_MIN:g} mm", xy=(0, h - BORDO_MIN / 2), xytext=(R * 0.2, h + 5), fontsize=9,
                 arrowprops=dict(arrowstyle="-", color="#222", lw=0.7))
