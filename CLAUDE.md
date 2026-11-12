@@ -66,7 +66,7 @@ File: `inverso/`
   - #1 "Si può usare l'AI nella moda?" — pubblicato 15/10/2026
   - #2 "Ho lasciato Claude ideare una collezione al posto mio" — pubblicato 21/10/2026, montato con la skill `youtube-edit`
   - #3 "Come lancerei un brand di moda con l'AI (prima di lanciare il mio)" — pubblicato 06/11/2026
-  - #4 "Ho creato l'identità del mio brand di moda con l'AI (fallo con me)" — pubblicato 12/11/2026 (https://youtu.be/aPDByKvlb5c), montato con la skill `youtube-edit`; è il video in cui si rivela il nome Inverso. Mappa `04-mappa-riprese.html`, prompt `04-prompt-identita.md`, lavoro in `videos/04-identita/`
+  - #4 "Ho creato l'identità del mio brand di moda con l'AI (fallo con me)" — pubblicato 12/11/2026 (https://youtu.be/aPDByKvlb5c), montato con la skill `youtube-edit`; è il video in cui si rivela il nome Inverso. Mappa `04-mappa-riprese.html`, prompt `04-prompt-identita.md`, in `videos/04-identita/` restano girato, video finale 4K e note (`progetto/`)
   - #5 → #12 — piano in `personale/youtube/piano-canale.md` (#5 = il pantalone, ~04/12; pausa esami 20/12 → 11/02)
 - **Regole di gusto video:** stanno tutte nella skill (`references/taste.md`, `sound.md`…), non in memoria (pulizia del 10/11/2026).
 - **Esami sessione 2027:** `studio-privato/` (solo locale, fuori da git): `STATO-MATERIALI.md` e `CALENDARIO-STUDIO.md`.

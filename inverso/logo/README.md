@@ -10,4 +10,4 @@
 
 **Cosa cambia rispetto a prima:** la I è un numero romano (due linee sottili staccate sopra e sotto), lo spazio tra le lettere è uguale ovunque e più stretto (20). Il resto del disegno è identico.
 
-Scartati: E specchiata, versioni con font nuovi (Cormorant, Bodoni, Cinzel, Playfair). Prove in `videos/04-identita/logo-prove/` (solo locale).
+Scartati: E specchiata, versioni con font nuovi (Cormorant, Bodoni, Cinzel, Playfair). Le prove sono state cancellate il 12/11/2026 con la pulizia del Video #4.

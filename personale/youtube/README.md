@@ -17,7 +17,7 @@ Video lunghi sul **canale personale** di Jacopo (non Inverso, non Jago).
 
 **Note sul #3 (per i prossimi render):** tempi reali del finale 4K a 60 fps: flat 4K 1 h 20, render 4 h 28, scia 39 min. Bozze e intermedi (83 GB) in `D:\DA-CANCELLARE-video3`: da cancellare quando Jacopo vuole. Link YouTube ancora da segnare in tabella.
 
-**Girato del #4:** `D:\Nuova cartella (2)\video 4\` (schermo PC, schermo iPad, camere); immagini, logo e miniature in `videos/04-identita/`.
+**Girato del #4:** `D:\Nuova cartella (2)\video 4\` (schermo PC, schermo iPad, camere); in `videos/04-identita/` (solo locale) dal 12/11/2026 restano solo il girato (`girato/`), il video finale 4K e le note di progetto (`progetto/`: piano, tagli, trascrizioni, plate, miniature).
 
 ## Metodo (dal video 1 — storico: dal #2 si monta con la skill `youtube-edit`)
 
