@@ -119,6 +119,8 @@ counts). Still tied: the one used least in your last video.
   their final place from frame one (only opacity and blur move): the one allowed move is the logo tile slipping in left of the
   first word and pushing it (0.5 s `power3.inOut`); `gold_at` turns line 1 to the gold gradient. Out: the mask closes (0.4 s).
   Two lines and six words at most, 2 to 7 s, once per section at most, no sound. Bench files `videos/_bench/ab/strumenti-titolo/`.
+  Jacopo, 12/11/2026, on a demo that opens and closes with it: "il gradiente vivo è bellissimo, bellissimo veramente". A good opener and closer.
+  The ids are fixed (`#tm`, `#r1`...): two hero lines in one page need a suffix on every id (see `hero()` in `D:ideoeditor\demo-luce\plates1.py`).
 - **5. Punchline chip.** `rgba(17,17,17,.45)` glass, blur 18 px, radius 16, 64 to 76 px/700, the emphasis word solid
   magenta, bottom-centre 80 px up.
 - **12. Key-word highlight (long form only).** A navy `#0005EE` block behind a word as you say it, white text, a glow;
