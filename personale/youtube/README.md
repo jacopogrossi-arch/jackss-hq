@@ -11,7 +11,7 @@ Video lunghi sul **canale personale** di Jacopo (non Inverso, non Jago).
 | 1 | Si può usare l'AI nella moda? | 15/10/2026 | copione `01-ai-accademia-moda.md` · titolo/descrizione/tag `01-pubblicazione.md` · miniatura `miniatura/miniatura-v3.jpg` |
 | 2 | Ho lasciato Claude ideare una collezione al posto mio | **21/10/2026** · [link](https://youtu.be/KySnU629RFk) | script `02-claude-idea-collezione.md` · montaggio `02-montaggio.md` · titolo/descrizione/tag `02-pubblicazione.md` · miniatura `miniatura/miniatura-02-v2.jpg` |
 | 3 | Come lancerei un brand di moda con l'AI (prima di lanciare il mio) | pubblicato 06/11/2026 | struttura `03-come-lancerei-un-brand.md` · script `03-script.md` · esperimento `03-esperimento/` |
-| 4 | Ho costruito l'identità del mio brand con l'AI *(titolo di lavoro)* | **registrato 10/11/2026**, da montare | mappa `04-mappa-riprese.html` · prompt `04-prompt-identita.md` · Reddit `04-reddit-post.md` · pagina finale `inverso/mondo-del-brand.html` · logo `inverso/logo/` |
+| 4 | Ho creato l'identità del mio brand di moda con l'AI (fallo con me) | **12/11/2026** · [link](https://youtu.be/aPDByKvlb5c) | mappa `04-mappa-riprese.html` · prompt `04-prompt-identita.md` · Reddit `04-reddit-post.md` · pagina finale `inverso/mondo-del-brand.html` · logo `inverso/logo/` |
 
 **Piano dei prossimi video (#5 → #12):** `piano-canale.md`.
 
