@@ -95,7 +95,7 @@ function labelTex(text) {
   const [c, x] = cv(512, 192); x.fillStyle = C.ink; x.fillRect(0, 0, 512, 192);
   for (let i = 0; i < 512; i += 4) { x.fillStyle = "rgba(255,255,255,.04)"; x.fillRect(i, 0, 1, 192); }
   x.strokeStyle = "rgba(185,174,152,.6)"; x.lineWidth = 4; x.strokeRect(12, 12, 488, 168);
-  if (text === "logo" || text === "logo-m") { if (text === "logo-m") { x.translate(512, 0); x.scale(-1, 1); } drawLogo(x, 256, 96, 330, C.gesso); } else { x.fillStyle = C.gesso; x.font = "400 96px " + SERIF; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText(text, 256, 100); }
+  if (text === "logo" || text === "logo-m") { if (text === "logo-m") { x.translate(512, 192); x.scale(-1, -1); } drawLogo(x, 256, 96, 330, C.gesso); } else { x.fillStyle = C.gesso; x.font = "400 96px " + SERIF; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText(text, 256, 100); }
   return tx(c);
 }
 function seampanel(o) {

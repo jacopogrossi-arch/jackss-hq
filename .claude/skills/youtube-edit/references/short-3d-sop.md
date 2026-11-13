@@ -34,6 +34,27 @@ Lo Short #1 "Il mio primo pantalone sembrava una gonna" (pubblicato il 13/11/202
 - **Camera:** `C(t, durata, pos, look, ease)`. Il semi-campo orizzontale è ~12° (fov 42, 9:16): un oggetto a più di ~12° dall'asse esce di quadro. Mai colpi di frusta sotto 1,1 s.
 - **Etichette:** `w.label(oggetto, punto, "Testo *corsivo*", t, out, anchor, dx, dy)`. Non sulla banda dei sottotitoli (y ≈ 1180) né sul bordo né sulla pillola del costo (top 118).
 
+- **Second world (Short #2, 13/11/2026):** `assets/vendor/atelier-studio.js` holds the night studio. It is loaded by `atelier-kit.js`, and the room is laid out in `videos/_bench/short2/room.py`, copied into `personale/youtube/short-02-identita/src/`. Objects:
+  - `wordblocks` (letter-cube totem)
+  - `seampanel` (right side / reverse side, also `dirty`)
+  - `fastrail`
+  - `wallclock` (`spin`)
+  - `shoeboxes`
+  - `sneaker`
+  - `axisline` (floor diagram with puck)
+  - `crossmark`
+  - `cityview`
+  - `crittall`
+  - `bookshelf`
+  - `pinboard` (`cards` that pop in)
+  - `swatchwall`
+  - `laptop`
+  - `deskset`
+  - `terrazzo`
+
+  The brand fonts (Instrument Serif, IBM Plex Sans) live in `assets/fonts/`. For the next Short, build a NEW world: copy the pattern, not the room.
+- **Long unattended work (overnight):** keep a `HANDOFF.md` in the work folder (task, rules, commands, to-do list, timed STATE) and schedule a one-off resume agent about 15 min after the token reset. The agent reads HANDOFF and resumes only if the main session has stopped.
+
 ## 4. Suono (`mix.py`, metodo Autogrill)
 - Musica Epidemic (licenza, `assets/music/licensed/`, riga in CREDITS.md); mai la stessa traccia ad aprire due video di fila. Short #1: "Ghost Band – Run".
 - Eventi fissi (whoosh + colpo d'apertura, riser col picco sulla parola-gancio, mappa, tuffi, forbici, contatore, cambi della pillola) + automatici (pop sulle etichette, swish sulle frasi grandi, whoosh sui movimenti), mai due suoni entro 0,35 s.

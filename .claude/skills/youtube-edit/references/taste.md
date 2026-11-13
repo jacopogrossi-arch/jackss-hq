@@ -190,3 +190,15 @@ Jacopo: "prima di mandare il 4K… ti fai tutti i frame, 10 per secondo… capis
 - **A live counter moves on with each PHASE, not with a word that comes later.** The cost pill read "niente" all through the pattern and "un foglio di carta" all through the toile, so at 52 s it contradicted the big statement. The rule: drawing = niente, pattern = paper (from "carta"), toile = cloth (from "tela").
 - **No double text.** When a 3D label and the caption say the same thing at the same moment ("Gamba dritta" / "gamba dritta"), the label comes in 0.8 s later, once the caption has moved on, or it is dropped.
 - **The hook must show the claim in the first frame.** "Sembrava una gonna" over a toile seen from the front doesn't read: open at 3/4, on the side where the volume is.
+
+## Short #2, built alone overnight (13/11/2026): what the reviews caught
+- **A new world for every Short, the same language.** Short #1 = the atelier by day; Short #2 = the Inverso studio at night (bosco walls, terrazzo, a black steel window on Rome, warm pendants). The map, the macros, the pinned labels and the phase pill stay the same; the objects change.
+- **The 9:16 frame is tall: build words vertically.** A horizontal row of letter cubes did not fit; a vertical totem does, and it can turn on its axis.
+- **Garments on a rail face the camera, or they read as planks.** Fan them about 45° (`fastrail` `fan`).
+- **A hero garment hangs from the rail, not from the ceiling.** No long cord (`hang` ≈ 0).
+- **Primitives that read as something else are worse than nothing.** An extruded sneaker looked like a stapler; a lofted one (footprint sole + superellipse sections + laces + collar) reads as a shoe.
+- **Text on 3D surfaces: check it by eye in a snapshot.** Each mirroring is a guess until the frame says otherwise: a label seen from the reverse needed a 180° turn, not a mirror. The same goes for a logo on a cylinder cap.
+- **Map badges and paths live only in the map.** Give every aerial map its own set (show at the arrival, out at the dive); never leave them on the floor during close shots.
+- **Light patches through the window burn out a top-down diagram.** Put the diagram outside them, on a dark rug, and end with a push-in on the result ("Inverso" in the middle).
+- **Rows of objects in 9:16: shoot them at 3/4**, so the row recedes and the boxes stay large.
+- **Nothing important under the phase pill or the caption band**, including the ends of a diagram.

@@ -67,7 +67,7 @@ File: `inverso/`
   - #2 "Ho lasciato Claude ideare una collezione al posto mio" — pubblicato 21/10/2026, montato con la skill `youtube-edit`
   - #3 "Come lancerei un brand di moda con l'AI (prima di lanciare il mio)" — pubblicato 06/11/2026
   - #4 "Ho creato l'identità del mio brand di moda con l'AI (fallo con me)" — pubblicato 12/11/2026 (https://youtu.be/aPDByKvlb5c), montato con la skill `youtube-edit`; è il video in cui si rivela il nome Inverso. Mappa `04-mappa-riprese.html`, prompt `04-prompt-identita.md`, in `videos/04-identita/` restano girato, video finale 4K e note (`progetto/`)
-  - **Shorts 3D (dal 13/11/2026):** Short #1 "Il mio primo pantalone sembrava una gonna" pubblicato il 13/11 (`personale/youtube/short-primo-pantalone/`, video correlato = #4). Procedura: `.claude/skills/youtube-edit/references/short-3d-sop.md`. **Prossimo: Short #2 per il #4** → `personale/youtube/short-02-identita/BRIEF.md`.
+  - **Shorts 3D (dal 13/11/2026):** Short #1 "Il mio primo pantalone sembrava una gonna" pubblicato il 13/11 (`personale/youtube/short-primo-pantalone/`, video correlato = #4). Procedura: `.claude/skills/youtube-edit/references/short-3d-sop.md`. **Short #2 "Il nome del mio brand ha tre significati"** (ritaglio del #4, scena nuova: lo studio di notte) costruito la notte del 13/11 → `personale/youtube/short-02-identita/README.md`, da rivedere con Jacopo prima di pubblicarlo.
   - #5 → #12 — piano in `personale/youtube/piano-canale.md` (#5 = il pantalone, ~04/12; pausa esami 20/12 → 11/02)
 - **Regole di gusto video:** stanno tutte nella skill (`references/taste.md`, `sound.md`…), non in memoria (pulizia del 10/11/2026).
 - **Esami sessione 2027:** `studio-privato/` (solo locale, fuori da git): `STATO-MATERIALI.md` e `CALENDARIO-STUDIO.md`.

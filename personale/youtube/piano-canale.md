@@ -41,7 +41,7 @@ Shorts in 3D (formato 52 / explainer 3D della skill `youtube-edit`), voce di Jac
 - **Sempre il "Video correlato"** al caricamento, puntato al lungo da cui nasce lo Short. È l'unico ponte vero tra Short e video lungo.
 - **Pausa esami (20/12 → 11/02):** gli Shorts si preparano a dicembre e si programmano per uscire durante la pausa, così il canale resta vivo senza riprese.
 - **Short #1 "Il mio primo pantalone sembrava una gonna"** (v5, **pubblicato 13/11/2026**, scheda in `short-primo-pantalone/README.md`): è il teaser del #5 (il pantalone, ~04/12). Video correlato: il #4 finché il #5 non esce, poi il #5.
-- **Short #2, per il #4 (prossimo):** brief e tre idee in `short-02-identita/BRIEF.md`.
+- **Short #2 "Il nome del mio brand ha tre significati"** (v1, costruito in autonomia la notte del 13/11/2026, **da rivedere con Jacopo prima di pubblicarlo**, scheda in `short-02-identita/README.md`): è il ritaglio del #4, ambientato in una scena nuova (lo studio di notte). Video correlato: il #4.
 - **Verifica dopo 6 Shorts:** in YouTube Studio guardare gli iscritti arrivati dagli Shorts e i clic sul video correlato. Se nessuno arriva al lungo, gli Shorts restano solo come copertura della pausa.
 
 ## Diario dei riscontri
