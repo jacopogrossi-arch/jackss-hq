@@ -124,7 +124,48 @@ function lsquare(o) {                                      // a metal L-square w
   add(g, new THREE.BoxGeometry(a, 0.003, 0.04), mat, a / 2, 0.0015, 0); add(g, new THREE.BoxGeometry(0.04, 0.003, b), mat, 0, 0.0015, -b / 2 + 0.02); return g;
 }
 
-export const CUTPROPS = new Set(["patterncut", "logoplate", "weight", "chalk", "lsquare"]);
+// ---------- the story path (14/11/2026, the Autogrill "serpentone" device): dots that draw themselves along a polyline over o.span = [t0, t1], newest dot pops in.
+//   o.pts = [[x, y, z], ...] relative to the prop origin; o.gap = spacing (m); o.r = dot radius; o.color; o.out = time it fades away (optional).
+function pathdots(o) {
+  const pts = o.pts || [[0, 0, 0], [1, 0, 0]], gap = o.gap || 0.12, r = o.r || 0.028, [t0, t1] = o.span || [0, 1], out = o.out == null ? 1e9 : o.out, g = new THREE.Group();
+  const D = [];
+  for (let i = 0; i < pts.length - 1; i++) {
+    const a = pts[i], b = pts[i + 1], L = Math.hypot(b[0] - a[0], b[1] - a[1], b[2] - a[2]), n = Math.max(1, Math.round(L / gap));
+    for (let k = 0; k < n; k++) { const f = k / n; D.push([lerp(a[0], b[0], f), lerp(a[1], b[1], f), lerp(a[2], b[2], f)]); }
+  }
+  D.push(pts[pts.length - 1]);
+  const geo = new THREE.SphereGeometry(r, 14, 10); geo.scale(1, o.flat ? 0.35 : 1, 1);
+  const mat = new THREE.MeshStandardMaterial({ color: o.color || "#c0392b", roughness: 0.45, emissive: o.color || "#c0392b", emissiveIntensity: o.glow == null ? 0.35 : o.glow });
+  const im = new THREE.InstancedMesh(geo, mat, D.length), m4 = new THREE.Matrix4(), q = new THREE.Quaternion(), sc = new THREE.Vector3(), ps = new THREE.Vector3();
+  im.castShadow = false; im.receiveShadow = false; g.add(im);
+  g.userData.update = (t) => {
+    const fo = t >= out ? clamp(1 - (t - out) / 0.35) : 1, shown = clamp((t - t0) / Math.max(0.01, t1 - t0)) * D.length;
+    for (let i = 0; i < D.length; i++) {
+      const k = clamp(shown - i), s = (k <= 0 ? 0 : (k < 1 ? 1.35 * Math.sin(k * Math.PI * 0.5) + (k > 0.6 ? (1 - k) * 0.6 : 0) : 1)) * fo;
+      ps.set(D[i][0], D[i][1], D[i][2]); sc.set(s || 1e-4, s || 1e-4, s || 1e-4); m4.compose(ps, q, sc); im.setMatrixAt(i, m4);
+    }
+    im.instanceMatrix.needsUpdate = true;
+  };
+  g.userData.update(-1); return g;
+}
+
+// ---------- a numbered station disc on the floor (seen from above): ink ring, cream face, a big number and a word. o.size = [diameter], o.n, o.word, o.show (appear) / o.out
+function floorbadge(o) {
+  const d = (o.size || [0.7])[0], c = document.createElement("canvas"); c.width = c.height = 512; const x = c.getContext("2d");
+  x.fillStyle = o.ring || "#8A4B2D"; x.beginPath(); x.arc(256, 256, 250, 0, Math.PI * 2); x.fill();
+  x.fillStyle = o.face || "#EFE9DD"; x.beginPath(); x.arc(256, 256, 222, 0, Math.PI * 2); x.fill();
+  x.fillStyle = o.ink || "#1E1B18"; x.textAlign = "center"; x.textBaseline = "middle";
+  x.font = "italic 230px 'Instrument Serif', 'Playfair Display', Georgia, serif"; x.fillText(String(o.n || 1), 256, o.word ? 220 : 262);
+  if (o.word) { x.font = "600 54px 'IBM Plex Sans', Inter, sans-serif"; x.fillText(o.word.toUpperCase(), 256, 380); }
+  const tx = new THREE.CanvasTexture(c); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 8;
+  const m = new THREE.Mesh(new THREE.CircleGeometry(d / 2, 64), new THREE.MeshStandardMaterial({ map: tx, roughness: 0.8, transparent: true, polygonOffset: true, polygonOffsetFactor: -4 }));
+  m.rotation.x = -Math.PI / 2; m.position.y = 0.004; const g = new THREE.Group(); g.add(m);
+  const t0 = o.show == null ? -1 : o.show, out = o.out == null ? 1e9 : o.out;
+  g.userData.update = (t) => { const k = t < t0 ? 0 : t >= out ? clamp(1 - (t - out) / 0.3) : clamp((t - t0) / 0.3); const s = k <= 0 ? 1e-4 : (k < 1 ? 1 + 0.15 * Math.sin(k * Math.PI) : 1) * k; m.scale.set(s, s, s); m.material.opacity = k; };
+  g.userData.update(-1); return g;
+}
+
+export const CUTPROPS = new Set(["patterncut", "logoplate", "weight", "chalk", "lsquare", "pathdots", "floorbadge"]);
 export function buildCut(o) {
   switch (o.type) {
     case "patterncut": return patterncut(o);
@@ -132,6 +173,8 @@ export function buildCut(o) {
     case "weight": return weight(o);
     case "chalk": return chalk(o);
     case "lsquare": return lsquare(o);
+    case "pathdots": return pathdots(o);
+    case "floorbadge": return floorbadge(o);
     default: return null;
   }
 }
