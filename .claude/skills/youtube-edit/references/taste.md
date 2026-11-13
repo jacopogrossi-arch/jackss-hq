@@ -166,4 +166,5 @@ For Shorts, use the detailed "primo pantalone" world (realism) together with the
 - **The voice needs emotion.** Generate the cloned voice ONE PARAGRAPH AT A TIME with expressive punctuation (… ! ?), then join the paragraphs with 0.35–0.55 s gaps. A single long take came out flat.
 - **Sound** follows the autogrill rules: an opening whoosh + hit, a riser peaking on the punch word, story events, automatic pops/swishes/whooshes at least 0.35 s apart, music 13 dB under the voice measured in LUFS, fixed gain to −16 LUFS.
 - **Render** with `finish.sh`: a 30 fps draft with QA that Jacopo listens to (a contact sheet does not show the sound), then the 60 fps final with BT.709 tags, a version number in the name and a light copy. Before the draft, check for flicker across 3 consecutive frames.
+- **Big statements stay modest in 9:16:** about 76–82 px (a number-punch like «117 cm» up to ~120). At 100–175 px Jacopo found them "veramente troppo grosso"; the look must stay close to the captions.
 - **Labels must not sit on the caption band** (y ≈ 1180 in 9:16) or cross the frame edge. Check them on the contact sheet.
