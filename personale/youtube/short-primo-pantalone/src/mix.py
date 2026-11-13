@@ -13,7 +13,9 @@ for i, t in enumerate(sorted(whips)): cues.append((S(WH[i % len(WH)]), t - 0.1, 
 for k, (t) in enumerate(sorted(l["at"] for l in B.w.labels)): cues.append((S("cc-tick" if k % 2 else "al-click"), t, -20))
 cues += [(S("al-logo-incoming"), 0.1, -17), (S("cc-impact"), at("gonna") - 0.05, -14),
          (S("al-snap"), at("cartamodello") + 0.5, -12), (S("al-snap"), at("verso") + 0.3, -14), (S("cloth-feed"), at("cuce"), -12), (S("cc-riser-corto"), at("centodiciassette") - 1.4, -16),
-         (S("cc-impact"), at("centodiciassette") + 0.2, -13), (S("es-pops6"), at("meglio"), -17), (S("cloth-feed"), at("tessuto"), -13), (S("es-zip-leather"), at("regolatori", 2) + 0.1, -14),
+         (S("cc-impact"), at("centodiciassette") + 0.2, -13), (S("es-pops6"), at("meglio"), -17), (S("cloth-feed"), at("tessuto", 2), -13), (S("es-zip-leather"), at("regolatori", 2) + 0.1, -14),
+         (S("es-whoosh-medium-transition"), at("Tutto") - 0.95, -12), (S("es-film-advance-wind"), at("Tutto") - 0.35, -15),
+         (S("es-scissors-cut-paper"), at("cartamodello") + 0.1, -11), (S("es-scissors-cut-paper"), at("cartamodello") + 2.4, -12),
          (S("cc-impact"), at("inverso"), -12), (S("al-logo-incoming"), at("inverso") - 0.1, -13)]
 inputs = ["-i", VO, "-i", MUS] + sum([["-i", f] for f, _, _ in cues], [])
 fc = ["[0:a]aformat=channel_layouts=stereo,highpass=f=70,acompressor=threshold=-20dB:ratio=2.2:attack=15:release=160,volume=3dB,apad=whole_dur=%s,atrim=0:%s,asplit=2[vo][vokey]" % (DUR, DUR),
