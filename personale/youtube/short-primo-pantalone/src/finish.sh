@@ -20,7 +20,9 @@ elif [ "$1" = "final" ]; then
   PYTHONIOENCODING=utf-8 python "$SK/scripts/qa-motion.py" --video "$NAME.mp4" --out renders/qa-final || echo "QA: see renders/qa-final/qa-motion.md"
   SZ=$(stat -c %s "$NAME.mp4")
   if [ "$SZ" -gt 28000000 ] && [ ! -s "$NAME-leggero.mp4" ]; then
-    ffmpeg -y -v error -i "$NAME.mp4" -c:v libx264 -preset slow -crf 22 -pix_fmt yuv420p -color_primaries bt709 -color_trc bt709 -colorspace bt709 -c:a copy -movflags +faststart "$NAME-leggero.mp4"
+    # 2-pass at a fixed bitrate: crf 22 gave 69 MB on a 60 fps Short; 2300k + 160k audio = ~27 MB for 86 s
+    ffmpeg -y -v error -i "$NAME.mp4" -c:v libx264 -preset slow -b:v 2300k -pass 1 -passlogfile renders/p2 -an -f mp4 NUL
+    ffmpeg -y -v error -i "$NAME.mp4" -c:v libx264 -preset slow -b:v 2300k -pass 2 -passlogfile renders/p2 -pix_fmt yuv420p -color_primaries bt709 -color_trc bt709 -colorspace bt709 -c:a aac -b:a 160k -movflags +faststart "$NAME-leggero.mp4"
   fi
   ls -la "$NAME"*.mp4
 fi
