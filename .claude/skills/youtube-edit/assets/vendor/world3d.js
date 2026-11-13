@@ -3,6 +3,7 @@
 // mount(spec) -> draws spec.id's world on <canvas id="<id>-gl">, moves the DOM labels <div id="<id>-l<n>"> onto their 3D points, and registers
 // window.__w3d[<id>](globalTime) so a GSAP proxy can drive it too. Spec: see formats/world3d.py.
 import * as THREE from "./three.module.min.js";
+import { build as kitBuild, KIT } from "./atelier-kit.js";
 
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const lerp = (a, b, k) => a + (b - a) * k;
@@ -56,7 +57,8 @@ function trouser(o) {
     g.add(new THREE.Mesh(loft([
       { y: 0.00, cx: s * 0.128, rx: hem, rz: hem + 0.006 }, { y: 0.30, cx: s * 0.124, rx: 0.104, rz: 0.112 }, { y: 0.52, cx: s * 0.120, rx: 0.108, rz: 0.118 },
       { y: 0.70, cx: s * LEG.cx, rx: LEG.rx, rz: LEG.rz }, { y: CROTCH, cx: s * LEG.cx, rx: LEG.rx, rz: LEG.rz }],
-      (a, y) => 0.005 * groove(a, 0, 0.07) * smooth((0.80 - y) / 0.25) + 0.004 * groove(a, Math.PI, 0.07) - 0.003 * Math.max(0, Math.sin(a * 5 + y * 40 + s)) * smooth((0.25 - y) / 0.25)), cloth));
+      (a, y) => 0.005 * groove(a, 0, 0.07) * smooth((0.80 - y) / 0.25) + 0.004 * groove(a, Math.PI, 0.07) - 0.003 * Math.max(0, Math.sin(a * 5 + y * 40 + s)) * smooth((0.25 - y) / 0.25)
+        + 0.0024 * Math.sin(a * 3 + y * 75 + s) * Math.exp(-Math.pow((y - 0.55) / 0.11, 2)) * groove(a, 0, 1.0) + 0.0045 * groove(a, 0, 0.7) * smooth((0.1 - y) / 0.1)), cloth));       // knee creases, a slight break over the shoe
     if (o.cuff !== false) g.add(new THREE.Mesh(loft([{ y: 0.0, cx: s * 0.128, rx: hem + 0.0045, rz: hem + 0.0105 }, { y: 0.048, cx: s * 0.1275, rx: hem + 0.004, rz: hem + 0.010 }], null, 128, 4), dark));
   }
   const outline = (a) => {                                // the outline of the two leg tops, seen from the centre
@@ -90,7 +92,31 @@ function trouser(o) {
     const b = new THREE.Mesh(new THREE.TorusGeometry(0.0095, 0.0018, 10, 28), gold); b.rotation.y = Math.PI / 2; b.scale.set(1, 1, 1.5); b.position.set(s * 0.1985, 1.060, 0.03); g.add(b);
   }
   const bt = new THREE.Mesh(new THREE.CylinderGeometry(0.0062, 0.0062, 0.003, 24), horn); bt.rotation.x = Math.PI / 2; bt.position.set(0.014, 1.062, 0.1205); g.add(bt);
-  const body = new THREE.Group(); g.scale.set(0.9, 1, 0.94); body.add(g); return body;
+  // ---- details (14/11/2026: the first trouser read as two tubes): slanted side pockets, back welt pockets, belt loops, the fly, knee creases, an optional hanger
+  const darkM = fabric(shade(color, 0.62)), bodyR = (y, a) => {         // radius of the hip body at height y and angle a (same recipe as the loop above, without the pleats)
+    let i0 = 0; while (i0 < keys.length - 2 && y > keys[i0 + 1].y) i0++;
+    const k0 = keys[i0], k1 = keys[i0 + 1], kk = smooth((y - k0.y) / (k1.y - k0.y)), rx = lerp(k0.rx, k1.rx, kk), rz = lerp(k0.rz, k1.rz, kk), sn = Math.sin(a), co = Math.cos(a), ell = 1 / Math.sqrt(sn * sn / (rx * rx) + co * co / (rz * rz));
+    return lerp(softmax(outline(a), ell * 0.84), ell, smooth((y - CROTCH) / 0.13));
+  };
+  const seam = (pts, r = 0.0022, mat = darkM) => g.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts.map((p) => new THREE.Vector3(...p))), 20, r, 5, false), mat));
+  const onBody = (y, a, off = 0.0026) => { const r = bodyR(y, a) + off; return [r * Math.sin(a), y, r * Math.cos(a)]; };
+  for (const s of [-1, 1]) {
+    const pk = []; for (let k = 0; k <= 8; k++) { const u = k / 8; pk.push(onBody(lerp(1.025, 0.865, u), s * lerp(1.12, 0.80, Math.pow(u, 1.2)))); } seam(pk, 0.0026);       // the slanted pocket opening
+    if (o.pockets !== false) { const bw = []; for (let k = 0; k <= 5; k++) bw.push(onBody(1.0, s * lerp(Math.PI - 0.62, Math.PI - 0.26, k / 5), 0.0016)); seam(bw, 0.0028); const bw2 = []; for (let k = 0; k <= 5; k++) bw2.push(onBody(0.975, s * lerp(Math.PI - 0.62, Math.PI - 0.26, k / 5), 0.0016)); seam(bw2, 0.0028); }
+  }
+  { const f = []; for (let k = 0; k <= 8; k++) { const u = k / 8; f.push([0.012 * smooth((u - 0.65) / 0.35), lerp(1.04, 0.845, u), bodyR(lerp(1.04, 0.845, u), 0.03 * smooth((u - 0.65) / 0.35)) + 0.0024]); } seam(f, 0.0016); }
+  for (const a of [-1.38, -0.92, -0.5, 0.5, 0.92, 1.38, Math.PI - 0.25, Math.PI + 0.25]) {                     // belt loops on the waistband
+    const r = 1 / Math.sqrt(Math.sin(a) ** 2 / (0.19 * 0.19) + Math.cos(a) ** 2 / (0.117 * 0.117)) + 0.002, lp = new THREE.Mesh(new THREE.BoxGeometry(0.015, 0.05, 0.006), dark); lp.position.set(r * Math.sin(a), 1.062, r * Math.cos(a)); lp.rotation.y = a; g.add(lp);
+  }
+  const body = new THREE.Group(); g.scale.set(0.9, 1, 0.94); body.add(g);
+  if (o.hang != null) {                                                  // hung from a wooden trouser hanger on a cord that runs up out of frame
+    const wood = new THREE.MeshStandardMaterial({ color: 0xb98a5a, roughness: 0.55 }), steel = new THREE.MeshStandardMaterial({ color: 0xc9ccd1, roughness: 0.3, metalness: 0.9 });
+    const bar = new THREE.Mesh(new THREE.BoxGeometry(0.42, 0.016, 0.03), wood); bar.position.set(0, 1.108, 0); body.add(bar);
+    for (const sx of [-0.15, 0.15]) { const c = new THREE.Mesh(new THREE.BoxGeometry(0.028, 0.05, 0.16), steel); c.position.set(sx, 1.085, 0); body.add(c); }
+    const hk = new THREE.Mesh(new THREE.TorusGeometry(0.02, 0.0028, 8, 18, Math.PI * 1.5), steel); hk.position.set(0, 1.145, 0); hk.rotation.z = Math.PI * 0.75; body.add(hk);
+    const cord = new THREE.Mesh(new THREE.CylinderGeometry(0.0025, 0.0025, o.hang, 6), new THREE.MeshStandardMaterial({ color: 0x1e1b18, roughness: 0.9 })); cord.position.set(0, 1.165 + o.hang / 2, 0); cord.userData.noshadow = true; body.add(cord);
+  }
+  return body;
 }
 
 // ---------- a card in space: ivory sheet with a title (one *key* word in the italic serif), a small line, or a picture
@@ -128,6 +154,7 @@ function card(o, img) {
   back.position.set(0.012, -0.018, -0.02); const g = new THREE.Group(); g.add(back); g.add(m); return g;
 }
 function solid(o) {
+  if (KIT.has(o.type)) return kitBuild(o, { fabric, shade });
   const mat = o.fabric ? fabric(o.color || "#7b7d5a") : new THREE.MeshStandardMaterial({ color: o.color || "#f4efe6", roughness: o.rough ?? 0.6, metalness: o.metal ?? 0 });
   const s = o.size || [0.3, 0.3, 0.3];
   const geo = o.type === "sphere" ? new THREE.SphereGeometry(s[0] / 2, 48, 32) : o.type === "cyl" ? new THREE.CylinderGeometry(s[0] / 2, s[0] / 2, s[1], 64) : new THREE.BoxGeometry(s[0], s[1], s[2]);
@@ -157,7 +184,7 @@ const inkFill = new THREE.MeshBasicMaterial({ color: PAPER, toneMapped: false, p
 const hash = (i) => { const s = Math.sin(i * 12.9898 + 78.233) * 43758.5453; return s - Math.floor(s); };
 
 export function mount(spec) {
-  const W = spec.w || 1920, H = spec.h || 1080, DUR = spec.dur, LOOK = spec.look || null;
+  const W = spec.w || 1920, H = spec.h || 1080, DUR = spec.dur, LOOK = spec.look || null, ROOM = spec.room || null;
   const host = document.getElementById("host-" + spec.id);
   const T0 = host && host.dataset.start != null ? parseFloat(host.dataset.start) : (spec.t_in || 0);     // the host's data-start wins: a recut moves it, the spec does not know
   const canvas = document.getElementById(spec.id + "-gl");
@@ -174,7 +201,7 @@ export function mount(spec) {
   if (mb) { mb.width = Math.round(W * PR); mb.height = Math.round(H * PR); }
   // the three looks and what each one does to the scene
   const dressed = [], inkOnly = [], onlyFinal = [], notInk = [], clayMats = new Map(); let slats = null, dust = null, mode = null;
-  const LIGHTS = LOOK ? { final: [4.6, 0, 1.2, 1.5], clay: [2.4, 0, 0.5, 0.8] } : { final: [2.7, 2.0, 0.7, 0.55], clay: [1.5, 0, 0.5, 1.0] };   // key, rim, side, hemisphere
+  const LIGHTS = ROOM ? { final: [ROOM.key_i ?? 3.2, ROOM.rim_i ?? 0.5, ROOM.side_i ?? 0, ROOM.hemi_i ?? 0.9], clay: [1.5, 0, 0.5, 1.0] } : LOOK ? { final: [4.6, 0, 1.2, 1.5], clay: [2.4, 0, 0.5, 0.8] } : { final: [2.7, 2.0, 0.7, 0.55], clay: [1.5, 0, 0.5, 1.0] };   // key, rim, side, hemisphere
   if (LOOK) {                                                  // an atelier: one warm key through blinds, a dark room, a floor that catches the stripes
     renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap; if (spec.exposure == null) renderer.toneMappingExposure = 1.45; side.position.set(2.2, 0.9, 1.8);
     const d = LOOK.dir || [-2.4, 1.5, 1.7]; key.color.set(LOOK.key || "#ffc98a"); key.position.set(d[0], d[1], d[2]); key.target.position.set(0, 0.65, 0); scene.add(key.target);
@@ -188,6 +215,16 @@ export function mount(spec) {
       const g = new THREE.BufferGeometry(); g.setAttribute("position", new THREE.Float32BufferAttribute(new Float32Array(360), 3));
       dust = new THREE.Points(g, new THREE.PointsMaterial({ color: 0xffe2b0, size: 0.011, transparent: true, opacity: 0.55, depthWrite: false, blending: THREE.AdditiveBlending })); dust.frustumCulled = false; scene.add(dust);
     }
+  }
+  if (ROOM) {                                                  // a lit room (14/11/2026): daylight through the window as the key, real shadows, a warm ambient, fog; props come from atelier-kit.js
+    renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap; renderer.toneMappingExposure = spec.exposure ?? 1.15;
+    const d = ROOM.dir || [-6, 5, 2.5], sb = ROOM.box || [6, 5, 30]; key.color.set(ROOM.key || "#fff0d8"); key.position.set(d[0], d[1], d[2]); key.target.position.set(...(ROOM.aim || [0, 0.8, 0])); scene.add(key.target);
+    key.castShadow = true; key.shadow.mapSize.set(ROOM.map || 4096, ROOM.map || 4096); key.shadow.bias = -0.0004; key.shadow.normalBias = 0.025; key.shadow.radius = ROOM.soft ?? 4;
+    Object.assign(key.shadow.camera, { left: -sb[0], right: sb[0], top: sb[1], bottom: -sb[1], near: 0.5, far: sb[2] }); key.shadow.camera.updateProjectionMatrix();
+    rim.color.set(ROOM.rim || "#a9bfe8"); rim.position.set(ROOM.rim_dir ? ROOM.rim_dir[0] : 3, ROOM.rim_dir ? ROOM.rim_dir[1] : 3, ROOM.rim_dir ? ROOM.rim_dir[2] : -4); side.color.set(ROOM.side || "#ffe9cf"); side.position.set(2.5, 1.5, 3.5);
+    hemi.color.set(ROOM.hemi ? ROOM.hemi[0] : "#fff0dd"); hemi.groundColor.set(ROOM.hemi ? ROOM.hemi[1] : "#6b4a30");
+    if (ROOM.fog) scene.fog = new THREE.Fog(ROOM.fog[0], ROOM.fog[1], ROOM.fog[2]);
+    camera.far = ROOM.far || 80; camera.updateProjectionMatrix();
   }
   function dressMesh(mesh, m) {                                 // one mesh in one look (an object can carry its own look: o.pass_mode)
     if (m === "final") mesh.material = mesh.userData.orig;
@@ -206,7 +243,7 @@ export function mount(spec) {
       key.color.set(f ? (LOOK.key || "#ffc98a") : "#ffffff"); side.color.set(f ? 0x7fa08a : 0xffffff); key.castShadow = f;
       hemi.color.set(f ? 0x5a4332 : 0xffffff); hemi.groundColor.set(f ? 0x120c08 : 0x9a9388);
     }
-    renderer.setClearColor(m === "ink" ? PAPER : c ? CLAY : (LOOK ? new THREE.Color(LOOK.bg || "#14100c") : 0x000000), f && !LOOK ? 0 : 1);
+    renderer.setClearColor(m === "ink" ? PAPER : c ? CLAY : (ROOM ? new THREE.Color(ROOM.bg || "#1b1511") : LOOK ? new THREE.Color(LOOK.bg || "#14100c") : 0x000000), f && !LOOK && !ROOM ? 0 : 1);
   }
   const passState = (t) => {                                    // the wipe bar: what is under it, what is coming in, where the edge is
     let cur = spec.base || "final";
@@ -222,11 +259,14 @@ export function mount(spec) {
       const meshes = []; g.traverse((x) => { if (x.isMesh) meshes.push(x); });                      // dress it for the passes: ink outlines (hull for round things, edge lines for boxes and sheets)
       for (const x of meshes) {
         if (x.material.type === "MeshBasicMaterial" && x.material.transparent) { notInk.push(x); onlyFinal.push(x); continue; }   // the card's soft back plate
-        x.userData.orig = x.material; x.userData.pass = o.pass_mode || null; dressed.push(x); if (LOOK) { x.castShadow = !x.userData.flat; x.receiveShadow = !x.userData.flat; }
+        x.userData.orig = x.material; x.userData.pass = o.pass_mode || null;
+        if (LOOK || ROOM) { const ns = x.userData.flat || x.userData.noshadow || x.material.isMeshBasicMaterial; x.castShadow = !ns && !x.userData.floor; x.receiveShadow = !x.userData.flat; }
+        if (KIT.has(o.type)) continue;                                 // props live in one look: no ink/clay dressing (saves a hull mesh per mesh)
+        dressed.push(x);
         if (o.type === "box" || o.type === "card") { const e = new THREE.LineSegments(new THREE.EdgesGeometry(x.geometry, 30), lineMat); e.userData.mesh = x; e.visible = false; x.add(e); inkOnly.push(e); }
         else { const h = new THREE.Mesh(x.geometry, hullMat); h.userData.mesh = x; h.visible = false; x.add(h); inkOnly.push(h); }
       }
-      if (o.shadow && !LOOK) {
+      if (o.shadow && !LOOK && !ROOM) {
         const c = document.createElement("canvas"); c.width = c.height = 256; const x = c.getContext("2d"), r = x.createRadialGradient(128, 128, 8, 128, 128, 128);
         r.addColorStop(0, "rgba(0,0,0,.62)"); r.addColorStop(1, "rgba(0,0,0,0)"); x.fillStyle = r; x.fillRect(0, 0, 256, 256);
         const s = new THREE.Mesh(new THREE.PlaneGeometry(o.shadow[0], o.shadow[1]), new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(c), transparent: true, depthWrite: false }));

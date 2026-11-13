@@ -52,7 +52,7 @@ class World3D:
         """title_out: video time at which the title leaves (give it when the camera will fly objects through the top-left of the frame)."""
         self.cid, self.t_in, self.t_out, self.title, self.sub, self.track, self.fade, self.fov, self.title_out = cid, t_in, t_out, title, sub, track, fade, fov, title_out
         self.objects, self.cams, self.labels, self.events = [], [], [], []
-        self.look_spec, self.base, self.passes, self.dofs, self.shutter_frames, self.exposure = None, "final", [], [], 0.8, None
+        self.room_spec, self.look_spec, self.base, self.passes, self.dofs, self.shutter_frames, self.exposure = None, "final", [], [], 0.8, None
 
     def _r(self, t):
         return round(t - self.t_in, 3)
@@ -68,9 +68,9 @@ class World3D:
         self.objects.append(o)
         return oid
 
-    def trouser(self, oid, pos=(0, 0, 0), rot_y=0.0, turn=None, move=None, t=None, color="#7b7d5a", pleats=2, cuff=True, scale=None, shadow=True, look=None):
+    def trouser(self, oid, pos=(0, 0, 0), rot_y=0.0, turn=None, move=None, t=None, color="#7b7d5a", pleats=2, cuff=True, scale=None, shadow=True, look=None, hang=None, pockets=True):
         """The Drop 1 trouser, built in code: natural waist with side adjusters, pleats (0, 1 or 2 per side), straight leg, turn-ups. Stylised, not a photo."""
-        return self._obj("trouser", oid, pos, rot_y, turn, move, t, color=color, pleats=pleats, cuff=cuff, scale=scale, shadow=[1.5, 0.95] if shadow else None, floor=pos[1], pass_mode=look)
+        return self._obj("trouser", oid, pos, rot_y, turn, move, t, color=color, pleats=pleats, cuff=cuff, scale=scale, shadow=[1.5, 0.95] if shadow else None, floor=pos[1], pass_mode=look, hang=hang, pockets=None if pockets else False)
 
     def card(self, oid, pos, w=0.8, h=0.5, text=None, sub=None, img=None, rot_y=0.0, turn=None, move=None, t=None, color=None, size=None, look=None, flat=False):
         """An ivory sheet standing in space: a title with one *key* word, or a picture (`img`, a path inside public/, e.g. "img/moodboard.jpg") with an optional caption."""
@@ -98,6 +98,19 @@ class World3D:
         self.labels.append(dict(obj=obj, p=list(point), text=text, sub=sub, t=self._r(t), at=t, anchor=anchor, dx=dx, dy=dy, out=None if out is None else self._r(out)))
         self.events.append(t)
         return self
+
+    def room(self, bg="#1b1511", key="#fff0d8", dir=(-6, 5, 2.5), key_i=3.2, hemi=("#fff0dd", "#6b4a30"), hemi_i=0.9, rim="#a9bfe8", rim_i=0.5, fog=None, box=(6, 5, 30), aim=(0, 0.8, 0), exposure=None, soft=4, far=80):
+        """A lit ROOM (14/11/2026, from the autogrill reference): daylight through a window as the key light (real shadow map), a warm ambient, optional fog. Fill it with props: prop(...).
+        A room is dense or it is empty: furnish every shot (floor, walls, window, shelves of cloth, a table with things on it, lamps). No venetian blinds (Jacopo: they read as a render error)."""
+        self.room_spec = dict(bg=bg, key=key, dir=list(dir), key_i=key_i, hemi=list(hemi), hemi_i=hemi_i, rim=rim, rim_i=rim_i, box=list(box), aim=list(aim), soft=soft, far=far)
+        if fog: self.room_spec["fog"] = list(fog)
+        self.exposure = exposure
+        return self
+
+    def prop(self, kind, oid, pos, size=None, rot_y=0.0, turn=None, move=None, t=None, **kw):
+        """A prop of the atelier kit (assets/vendor/atelier-kit.js). kind: woodfloor [x,z] · wall [len,h,thick] (hole=[cx,cy,w,h]) · window [w,h] · rollrack [len,h,depth] · bolts [w,d] (n=) · spoolwall [w,h] · table [len,h,depth]
+        · paper [w,d] (kind="pattern"|"sketch"|"swatch"|"lines") · frame [w,h] (kind=) · ruler [len,w] · shears · sewing · mannequin · pendant [cord] (light=) · desklamp · plant [h] · rail [len,h] · rug [w,d] · cloth [w,d] (color=)."""
+        return self._obj(kind, oid, pos, rot_y, turn, move, t, size=list(size) if size else None, **kw)
 
     def look(self, bg="#14100c", floor="#2b1d13", key="#ffc98a", dir=(-2.4, 1.5, 1.7), slats=9, gap=0.30, thick=0.09, dust=True, exposure=None, wall="#3b2b20", wall_z=-1.7):
         """An atelier look (13/11/2026, from the @holcdenis teardown): a dark room, ONE warm key light thrown through blinds (real shadow-map stripes that creep across the floor
@@ -134,6 +147,7 @@ class World3D:
         texts += [dict(id="%s-S" % self.cid, t=0.5, **out)] if self.sub else []
         extra = {}
         if self.look_spec: extra["look"] = self.look_spec
+        if self.room_spec: extra["room"] = self.room_spec
         if self.exposure is not None: extra["exposure"] = self.exposure
         if self.base != "final": extra["base"] = self.base
         if self.passes: extra["passes"] = self.passes
@@ -144,7 +158,7 @@ class World3D:
 
     def build(self, standalone=False):
         c, d = self.cid, self.t_out - self.t_in
-        wash = '' if self.look_spec else '<div class="w3-wash"></div><div class="w3-grid" id="%s-grid"></div>' % c
+        wash = '' if (self.look_spec or self.room_spec) else '<div class="w3-wash"></div><div class="w3-grid" id="%s-grid"></div>' % c
         inner = [wash + '<canvas class="w3-gl" id="%s-gl" width="1920" height="1080"></canvas><canvas class="w3-gl w3-mb" id="%s-mb" width="1920" height="1080" style="display:none"></canvas>'
                  '<svg class="w3-ln" id="%s-ln" width="1920" height="1080" viewBox="0 0 1920 1080"></svg>' % (c, c, c)]
         if self.passes:
@@ -160,7 +174,7 @@ class World3D:
         html = (CSS + '\n<div class="card-host clip w3-host" id="host-%s" data-card-id="%s" data-unanchored="1" data-start="%.3f" data-duration="%.3f" data-track-index="%d" '
                 'style="left:0;top:0;width:1920px;height:1080px;position:absolute;%s%s">%s</div>\n'
                 '<script type="module">import { mount } from "./vendor/world3d.js"; mount(%s);</script>'
-                % (c, c, self.t_in, d, self.track, vis, ("background:%s;" % self.look_spec["bg"]) if self.look_spec else "", "".join(inner), json.dumps(self.spec(), ensure_ascii=False)))
+                % (c, c, self.t_in, d, self.track, vis, ("background:%s;" % (self.room_spec or self.look_spec)["bg"]) if (self.look_spec or self.room_spec) else "", "".join(inner), json.dumps(self.spec(), ensure_ascii=False)))
         f = self.fade
         js = "\n".join([
             "tl.set('#host-%s', { visibility:'hidden', opacity:0 }, 0);" % c,
