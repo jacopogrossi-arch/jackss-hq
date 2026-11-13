@@ -51,7 +51,7 @@ class World3D:
     def __init__(self, cid, t_in, t_out, title=None, sub=None, track=30, fade=0.3, fov=32, title_out=None, w=1920, h=1080):
         """title_out: video time at which the title leaves (give it when the camera will fly objects through the top-left of the frame)."""
         self.cid, self.t_in, self.t_out, self.title, self.sub, self.track, self.fade, self.fov, self.title_out = cid, t_in, t_out, title, sub, track, fade, fov, title_out
-        self.W, self.H, self.caps, self.leaks = w, h, None, []                  # portrait for Shorts: World3D(..., w=1080, h=1920)
+        self.W, self.H, self.caps, self.leaks, self.bigs = w, h, None, [], []                  # portrait for Shorts: World3D(..., w=1080, h=1920)
         self.objects, self.cams, self.labels, self.events = [], [], [], []
         self.room_spec, self.look_spec, self.base, self.passes, self.dofs, self.shutter_frames, self.exposure = None, None, "final", [], [], 0.8, None
 
@@ -146,6 +146,14 @@ class World3D:
         self.caps = dict(chunks=[[round(a, 3), round(b, 3), t] for a, b, t in chunks], top=top, size=size, color=color, accent=accent)
         return self
 
+    def big(self, t0, t1, text, top=300, size=130, accent="#ffd98a"):
+        """A BIG statement on screen (autogrill method: title-question, numbers, the moral), VIDEO seconds. "*word*" = italic accent; "|" = line break.
+        On a Short it doubles as the caption: say the same words the voice says, and drop the word-captions that overlap it (spans())."""
+        self.bigs.append([round(t0, 3), round(t1, 3), text, top, size, accent]); return self
+
+    def spans(self):
+        return [(b[0], b[1]) for b in self.bigs]
+
     def leak(self, t, d=1.0, warm=True):
         """A film-burn / light-leak transition centred on t (VIDEO seconds), lasting d: warm orange-red flares that sweep across and wash the frame (screen blend),
         peaking at t. Hide a camera cut under the peak. Pair it with a whoosh (Jacopo, 14/11/2026: "al secondo 7 metterei un film burn o light leak e un suono")."""
@@ -202,6 +210,20 @@ class World3D:
             for a, b in (("CID", c), ("WPX", str(W)), ("TOP", str(cp["top"])), ("SIZE", str(cp["size"])), ("COLOR", cp["color"]), ("ACCENT", cp["accent"]), ("ITEMS", items)):
                 css = css.replace(a, b); js_cap = js_cap.replace(a, b)
             html += css + js_cap
+        if self.bigs:
+            bg = json.dumps(self.bigs, ensure_ascii=False)
+            css = ('<style>.CID-big { position:absolute; left:0; width:WPXpx; text-align:center; font-family:Inter,"Segoe UI",sans-serif; font-weight:900; line-height:1.0; letter-spacing:-.03em; color:#fbf7ee; opacity:0; padding:0 50px; box-sizing:border-box;'
+                   ' text-shadow:0 6px 40px rgba(0,0,0,.75), 0 2px 8px rgba(0,0,0,.7); z-index:55; }'
+                   ' .CID-big i { font-family:"Playfair Display",Georgia,serif; font-style:italic; font-weight:600; }</style><div id="CID-bigs"></div>')
+            js_bg = ('<script>(function(){ var B=BIGS, box=document.getElementById("CID-bigs"), els=[];'
+                     ' B.forEach(function(b){ var d=document.createElement("div"); d.className="CID-big"; d.style.top=b[3]+"px"; d.style.fontSize=b[4]+"px";'
+                     ' d.innerHTML=b[2].replace(/\\*(.+?)\\*/g, "<i style=\\"color:"+b[5]+"\\">$1</i>").split("|").join("<br>"); box.appendChild(d); els.push(d); });'
+                     ' window.addEventListener("hf-seek", function(e){ var t=e.detail.time; for (var i=0;i<B.length;i++) { var b=B[i], d=els[i];'
+                     ' if (t<b[0]||t>=b[1]) { d.style.opacity=0; continue; } var u=Math.min(1,(t-b[0])/0.18), v=Math.min(1,(b[1]-t)/0.14), k=1-Math.pow(1-u,3);'
+                     ' d.style.opacity=Math.min(u*1.6,v,1).toFixed(3); d.style.transform="translateY("+((1-k)*40).toFixed(1)+"px) scale("+(0.86+0.14*k).toFixed(3)+")"; } }); })();</script>')
+            for a, b in (("CID", c), ("WPX", str(W)), ("BIGS", bg)):
+                css = css.replace(a, b); js_bg = js_bg.replace(a, b)
+            html += css + js_bg
         if self.leaks:
             lk = json.dumps(self.leaks)
             css = ('<style>#CID-leak { position:absolute; inset:0; pointer-events:none; mix-blend-mode:screen; opacity:0; z-index:40; overflow:hidden; }'
