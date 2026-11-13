@@ -8,7 +8,7 @@ Le date sono indicative. I titoli sono di lavoro: si rifiniscono al momento dell
 | # | Uscita | Titolo di lavoro | Tipo | Cosa serve per girarlo |
 |---|---|---|---|---|
 | 4 | ~20/11 | Ho costruito l'identità del mio brand con l'AI | Esperimento | Già girato, da montare |
-| 5 | ~04/12 | Ho cucito il primo pantalone del mio brand (ed è venuto male) | Dietro le quinte | La tela del 05/08, i rilievi (`inverso/ricerca/14-...`), tu che la indossi e segni i difetti |
+| 5 | ~04/12 | Ho disegnato il primo capo del mio brand con l'AI | Esperimento + metodo | Workflow di design (scheda → flat ChatGPT → ricalco Procreate → colore → 3D con Claude). Mappa: `05-mappa-riprese.html` |
 | 6 | ~18/12 | Quanto costa davvero fare un pantalone | Metodo | Solo camera + plate. Numeri da `inverso/ricerca/`. Zero riprese esterne: adatto a prima degli esami |
 | — | 20/12 → 11/02 | **Pausa esami** | | Niente video. Al massimo un post nella scheda Community per tenere vivo il canale |
 | 7 | ~19/02 | Ho chiesto a Claude un cartamodello e l'ho cucito | Esperimento | Tool `cartamodelli/`, stampa, tela, macchina da cucire |
@@ -20,7 +20,7 @@ Le date sono indicative. I titoli sono di lavoro: si rifiniscono al momento dell
 
 ## Perché quest'ordine
 
-- **#5 mantiene la promessa** fatta in chiusura del #4 (il pantalone) e rimette in moto Inverso: per girarlo devi riprendere in mano la tela e i rilievi, che è proprio il lavoro fermo da settembre.
+- **#5 è il seguito del #4**: dopo l'identità, il primo capo. Solo design (disegno con l'AI e 3D con Claude), il cucito viene dopo. Deciso il 13/11/2026.
 - **#6 è il più leggero da produrre** e cade nella settimana prima della pausa.
 - **#8 e #10 nascono dai buchi trovati nel #4** (come far provare il capo online; il capo non ancora definito): ogni video risolve un problema vero del brand.
 - **#9 aspetta** finché non c'è un generatore di immagini collegato. Se a marzo non c'è, scambiarlo con il #11.

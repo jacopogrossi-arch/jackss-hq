@@ -1,4 +1,4 @@
-<title>Mappa video 5 · il pantalone</title>
+<title>Mappa video 5 · il primo capo</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
@@ -8,17 +8,17 @@
   --cam:#2F3A2E; --cam-soft:#DDE3D6;
   --scr:#8A4B2D; --scr-soft:#F0DFD3;
   --hand:#5E5546; --hand-soft:#E4DCCB;
-  --new:#8A4B2D;
+  --wow:#8A4B2D;
   --display:"Instrument Serif", Georgia, "Times New Roman", serif;
   --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
   --mono:"IBM Plex Mono", Consolas, monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#151311; --paper:#1E1B18; --ink:#EFE9DD; --muted:#B9AE98; --rule:#3A352E;
-  --cam:#B7C6AE; --cam-soft:#262E24; --scr:#E2A27F; --scr-soft:#33221A; --hand:#D3C8B2; --hand-soft:#2B2722; --new:#E2A27F; color-scheme:dark}}
+  --cam:#B7C6AE; --cam-soft:#262E24; --scr:#E2A27F; --scr-soft:#33221A; --hand:#D3C8B2; --hand-soft:#2B2722; --wow:#E2A27F; color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#151311; --paper:#1E1B18; --ink:#EFE9DD; --muted:#B9AE98; --rule:#3A352E;
-  --cam:#B7C6AE; --cam-soft:#262E24; --scr:#E2A27F; --scr-soft:#33221A; --hand:#D3C8B2; --hand-soft:#2B2722; --new:#E2A27F; color-scheme:dark}
+  --cam:#B7C6AE; --cam-soft:#262E24; --scr:#E2A27F; --scr-soft:#33221A; --hand:#D3C8B2; --hand-soft:#2B2722; --wow:#E2A27F; color-scheme:dark}
 
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;
@@ -38,7 +38,7 @@ section>h2{font-size:1.9rem;margin-bottom:12px}
 .line{display:flex;flex-wrap:wrap;padding:0;margin:0;list-style:none;border-top:2px solid var(--ink)}
 .line li{flex:1 1 100px;min-width:0;padding:12px 8px 4px 0;position:relative}
 .line li::before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--paper);border:2px solid var(--ink)}
-.line li.new::before{background:var(--new);border-color:var(--new)}
+.line li.wow::before{background:var(--wow);border-color:var(--wow)}
 .line a{color:inherit;text-decoration:none;display:block}
 .line a:focus-visible{outline:2px solid var(--scr);outline-offset:3px}
 .line .n{font-family:var(--mono);font-size:.78rem;color:var(--muted)}
@@ -51,7 +51,7 @@ section>h2{font-size:1.9rem;margin-bottom:12px}
 .chip.scr{background:var(--scr-soft);color:var(--scr)}
 .chip.hand{background:var(--hand-soft);color:var(--hand)}
 .chip.time{border:1px solid var(--rule);color:var(--muted)}
-.chip.new{border:1px solid var(--new);color:var(--new)}
+.chip.wow{border:1px solid var(--wow);color:var(--wow)}
 
 .blocks{display:flex;flex-direction:column;gap:16px}
 .block{background:var(--paper);border:1px solid var(--rule);border-radius:6px;padding:22px 20px;display:flex;flex-direction:column;gap:14px;scroll-margin-top:16px}
@@ -64,8 +64,6 @@ section>h2{font-size:1.9rem;margin-bottom:12px}
 .path{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
 .path li{display:grid;grid-template-columns:18px 1fr;gap:8px;font-size:.95rem}
 .path li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ink);margin-top:.6em}
-.note{font-size:.86rem;color:var(--muted);margin:0;border-top:1px dashed var(--rule);padding-top:10px}
-.note b{color:var(--ink)}
 
 .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
 .card{background:var(--paper);border:1px solid var(--rule);border-radius:6px;padding:18px;min-width:0}
@@ -79,16 +77,16 @@ section>h2{font-size:1.9rem;margin-bottom:12px}
 
 <div class="wrap">
   <header>
-    <div class="kicker">Video #5 · dietro le quinte · uscita ~04/12/2026 · girare entro ~24/11</div>
-    <h1>Ho cucito il primo pantalone del mio brand <em>(ed è venuto male)</em></h1>
-    <p class="lead">La mappa per girarlo. Il metodo "fai con me" di questo video è la <b>tela di prova</b>: come si collauda un capo prima di spendere sul tessuto buono. Il filo è un errore vero, con un numero vero, e una misura che prendi davanti alla camera e che decide il finale.</p>
+    <div class="kicker">Video #5 · esperimento + metodo · uscita ~04/12/2026 · girare entro ~24/11</div>
+    <h1>Ho disegnato il primo capo del mio brand <em>con l'AI</em></h1>
+    <p class="lead">Il seguito del #4: lì è nata l'identità, qui nasce il capo che la indossa. Il metodo "fai con me" è il tuo workflow di design, da un foglio bianco a un pantalone in 3D che ruota. Ogni blocco porta un risultato a schermo. Il cucito viene dopo, in un altro video.</p>
   </header>
 
   <ul class="facts">
-    <li><b>117 cm</b>giro fianchi del capo, misurato sul COS e non su di te</li>
-    <li><b>05/08</b>la tela cucita e provata, tenuta su con la mano</li>
-    <li><b>3 cose</b>mancavano: cinturino, side adjuster, chiusura</li>
-    <li><b>~12 min</b>durata da puntare, 10 blocchi</li>
+    <li><b>5 passi</b>scheda, flat, ricalco, colore, 3D</li>
+    <li><b>3 strumenti</b>ChatGPT, Procreate, Claude</li>
+    <li><b>1 capo</b>il pantalone del Drop 1</li>
+    <li><b>~11 min</b>durata da puntare, 10 blocchi</li>
   </ul>
 
   <section>
@@ -98,9 +96,9 @@ section>h2{font-size:1.9rem;margin-bottom:12px}
 
   <div class="legend">
     <span class="chip cam">camera</span> tu che parli
-    <span class="chip hand">mani</span> dettaglio sul tavolo
-    <span class="chip scr">plate</span> grafica o 3D
-    <span class="chip new">da girare nuovo</span> lavoro vero su Inverso, in video
+    <span class="chip scr">schermo</span> registrazione di ChatGPT o Claude
+    <span class="chip hand">iPad</span> ricalco in Procreate
+    <span class="chip wow">momento forte</span> da curare di più
   </div>
 
   <section class="blocks" id="blocks"></section>
@@ -109,84 +107,84 @@ section>h2{font-size:1.9rem;margin-bottom:12px}
     <h2>Prima di girare</h2>
     <div class="cols">
       <div class="card">
-        <h3>Sul tavolo</h3>
+        <h3>Da preparare</h3>
         <ul id="kit"></ul>
       </div>
       <div class="card">
         <h3>Gli Shorts che ne escono</h3>
         <ul>
-          <li><b>Teaser</b>: lo Short 3D "sembrava una gonna" (già fatto, esce prima del video)</li>
-          <li><b>Ritaglio</b>: "le misure le ho copiate da un COS" (blocco 3)</li>
-          <li><b>Ritaglio</b>: la misura dei fianchi davanti alla camera (blocco 7)</li>
-          <li><b>Riassunto</b>: le 4 regole della tela (blocco 9)</li>
+          <li><b>Teaser</b>: foglio bianco → pantalone 3D in 30 secondi</li>
+          <li><b>Ritaglio</b>: il trucco della Distorsione per le proporzioni (blocco 4)</li>
+          <li><b>Ritaglio</b>: perché i disegni fatti con l'AI sembrano finti, e come evitarlo (blocco 5)</li>
+          <li><b>Riassunto</b>: il voto sul colore (blocco 9)</li>
         </ul>
       </div>
     </div>
   </section>
 
   <section class="card">
-    <h3>Il finale dipende da un numero</h3>
-    <p style="margin:0 0 8px">Il blocco 7 decide come chiudi. Se il tuo giro fianchi è <b>vicino a 117</b>, il problema è la <b>curva</b> del fianco e lo correggi col gesso. Se è <b>intorno a 95</b>, il problema sono le <b>larghezze</b> e il cartamodello va rifatto: il finale diventa "ricomincio, e vi porto con me".</p>
-    <p class="ask" style="margin:0">Domanda per i commenti: «Chi cuce: correggo la curva o rifaccio le larghezze?»</p>
+    <h3>Come chiude</h3>
+    <p style="margin:0 0 8px">Il pantalone 3D in tre colori della palette (bosco, inchiostro, sabbia), uno accanto all'altro. Chi guarda vota nei commenti. Promessa del #6: dal 3D al cartamodello, si inizia a cucire.</p>
+    <p class="ask" style="margin:0">Domanda per i commenti: «Quale dei tre compreresti?»</p>
   </section>
 </div>
 
 <script>
 const B=[
- {t:"Gancio",d:"0:00",ch:["cam"],new:true,h:"Indossi la tela, la tieni su con la mano",
-  w:"Davanti allo specchio, inquadratura intera. Nessuna intro, si parte dal capo addosso.",
-  s:"Questo è il primo pantalone del mio brand. E sembra una gonna.",
-  p:["Giri di profilo: si vede la bombatura sul fianco","Lasci andare la mano: il pantalone scende","Stacco netto sul titolo"]},
- {t:"Promessa",d:"0:30",ch:["cam"],h:"Il patto con chi guarda",
-  w:"Seduto, inquadratura media. Richiamo al #4: avevi promesso il pantalone.",
-  s:"Nell'ultimo video vi avevo promesso il pantalone. Eccolo, errori compresi.",
-  p:["Frase-firma: sono uno studente, non ho niente da venderti, questo è un documento","Cosa impari: come si collauda un capo prima di spendere sul tessuto","Dove arriviamo: una misura che prendo qui, davanti a te"]},
- {t:"Il capo",d:"1:15",ch:["scr"],h:"Cosa dovrebbe diventare",
-  w:"Plate 3D: il pantalone del Drop 1 che ruota con le etichette (riusa la scena dello Short).",
-  s:"Prima ti faccio vedere cosa doveva venire fuori.",
-  p:["Cotone drill verde oliva, vita alta","Doppia piega all'italiana, gamba dritta","Side adjuster al posto della cintura, niente passanti"]},
- {t:"Primo errore",d:"2:15",ch:["hand","cam"],h:"Le misure prese da un COS",
-  w:"Sul tavolo: il pantalone COS e il metro. Misuri i fianchi del COS in diretta.",
-  s:"Le misure non le ho prese dal mio corpo. Le ho copiate da questo.",
-  p:["Fai con me: prendi un pantalone che ti sta bene e misuralo","Il limite: ti dice com'è fatto lui, non com'è fatto il tuo corpo","Qui nasce il numero 117"]},
- {t:"La tela",d:"3:30",ch:["hand"],h:"Perché si cuce prima in tela grezza",
-  w:"Cartamodello di carta sul tavolo, la tela, forbici, macchina da cucire. B-roll di mani.",
-  s:"La tela costa tre euro. Serve a sbagliare lì, non sul tessuto buono.",
-  p:["Fai con me: una tela di peso simile al tessuto finale (test: la lasci cadere, deve fare una piega netta)","Margini larghi, 3 cm sui laterali: ti lasciano correggere","Non deve essere bella: deve dirti la verità"]},
- {t:"La prova",d:"5:00",ch:["scr","cam"],h:"Cosa funziona e cosa no",
-  w:"Le tre foto del 05/08 (fronte, profilo, dietro) come plate, con cerchi sui punti.",
-  s:"Dal ginocchio in giù è giusto. Il problema è tutto sopra il cavallo.",
-  p:["La gamba cade dritta, il fondo è come previsto","La bombatura sul fianco, su tutte e due le gambe","La curva del fianco l'avevo disegnata a mano, senza sistema: era il punto più a rischio"]},
- {t:"Il dubbio",d:"6:15",ch:["cam","scr"],new:true,h:"Il capo non era giudicabile",
-  w:"Plate con le tre cose mancanti. Poi in camera: cuci (o spilli) un cinturino provvisorio di 4 cm, stretto a 72.",
-  s:"Prima di dare la colpa al cartamodello, devo essere onesto: il pantalone non stava dove doveva.",
-  p:["Mancavano cinturino, side adjuster e chiusura davanti","Tenuto con la mano stava 8-10 cm sotto la vita","Riprova col cinturino provvisorio e il davanti chiuso con gli spilli: rifai le tre foto"]},
- {t:"La misura",d:"8:00",ch:["cam","hand"],new:true,h:"Il numero che decide tutto",
-  w:"Ti misuri il giro fianchi a 20 cm dalla vita, in camera. Poi il numero grande a schermo accanto a 117.",
-  s:"Adesso mi misuro. Questo numero decide se il pantalone si salva.",
-  p:["Misura reale contro 117 del capo","Se la differenza supera i 20 cm, non è un pantalone ampio: è una gonna","È il momento dello Short più forte"]},
- {t:"Correzione",d:"9:15",ch:["hand","cam"],new:true,h:"Il gesso, la linea dritta",
-  w:"Primo piano: tiri la linea col gesso sulla seconda gamba. Poi le due gambe affiancate, prima e dopo.",
-  s:"Su una gamba l'ho già fatto. Guarda la differenza.",
-  p:["La gamba corretta contro quella originale","Cosa ti dice: togliere tessuto migliora, quindi il problema è la quantità","Cosa cambia nel cartamodello (curva o larghezze, in base al blocco 8)"]},
- {t:"Chiusura",d:"10:30",ch:["scr","cam"],h:"Le 4 regole della tela, e la domanda",
-  w:"Plate a lista che si spunta, poi tu in camera per la domanda e la promessa del #6.",
-  s:"Se cuci il tuo primo capo, fai queste quattro cose.",
-  p:["1 · Misura il tuo corpo, non un capo","2 · Tela di peso simile al tessuto vero","3 · Margini larghi","4 · Prima di giudicare, metti cinturino e chiusura","Domanda: «Correggo la curva o rifaccio le larghezze?» · Prossimo: quanto costa davvero fare questo pantalone"]}
+ {t:"Gancio",d:"0:00",ch:["scr"],wow:true,h:"Il risultato prima di tutto",
+  w:"Il pantalone 3D che ruota, poi stacco secco su un foglio bianco.",
+  s:"Da un foglio bianco a questo, con l'AI. Ti faccio vedere ogni passaggio.",
+  p:["Massimo 15 secondi","Il 3D in movimento, niente spiegazioni","Stacco sul titolo"]},
+ {t:"Patto",d:"0:15",ch:["cam"],h:"Dove eravamo, dove arriviamo",
+  w:"Seduto, inquadratura media.",
+  s:"Nell'ultimo video ho creato l'identità del mio brand. Oggi disegno il primo capo.",
+  p:["Frase-firma: sono uno studente, non ho niente da venderti, questo è un documento","Cosa porti a casa: il workflow in 5 passi, con i prompt in descrizione","Tu puoi rifarlo con qualsiasi capo"]},
+ {t:"Scheda",d:"0:50",ch:["cam","scr"],h:"Passo 1 · Decidi prima di disegnare",
+  w:"Plate: una scheda che si compila riga per riga mentre parli.",
+  s:"Prima di aprire l'AI scrivi la scheda. Se non sai cosa vuoi, l'AI decide per te.",
+  p:["Pantalone: vita alta, gamba dritta","Doppia piega all'italiana, regolatori laterali, niente passanti","Cotone drill, verde oliva, colori con il codice HEX della palette","Fai con me: capo, dettagli, tessuto, colori. Quattro righe."]},
+ {t:"Flat",d:"2:00",ch:["scr"],h:"Passo 2 · Il disegno tecnico con ChatGPT",
+  w:"Registrazione: incolli il prompt, esce il flat in bianco e nero.",
+  s:"Primo disegno: in bianco e nero, un capo solo, con le pieghe ben visibili.",
+  p:["Il prompt a schermo, evidenziate le tre frasi che contano","Cosa controlli: un capo per immagine, niente grigi, tutti i dettagli della scheda","Mostra un tentativo sbagliato e la correzione: è il momento vero"]},
+ {t:"Ricalco",d:"3:30",ch:["hand"],h:"Passo 3 · La mano: ricalco in Procreate",
+  w:"Timelapse dell'iPad: flat sopra il figurino a opacità bassa, poi il ricalco.",
+  s:"Qui l'AI si ferma e torna la mano. È la parte che rende il disegno mio.",
+  p:["Il figurino base sotto, il flat sopra","Il trucco: Trasforma → Distorsione finché spalle e vita combaciano","Non rigenerare il flat per sistemare le proporzioni: non funziona"]},
+ {t:"Colore",d:"5:00",ch:["scr"],h:"Passo 4 · Il colore senza effetto finto",
+  w:"Registrazione: il ricalco entra in ChatGPT, esce colorato. Prima e dopo affiancati.",
+  s:"Il problema dei disegni fatti con l'AI è che sembrano di plastica. Ecco come lo eviti.",
+  p:["Le linee del ricalco non si toccano","Colori piatti e opachi, un filo di aerografo solo vicino alle pieghe","La regola: niente lucido. Il lucido è il segnale che l'ha fatto un'AI","Il retro lo genera ChatGPT dal fronte: 20 secondi, solo il risultato"]},
+ {t:"Il salto",d:"6:15",ch:["cam"],h:"Perché non mi basta un disegno",
+  w:"In camera, breve. Tieni in mano il disegno stampato.",
+  s:"Un disegno lo guardi da un lato. Un capo lo devi poter girare.",
+  p:["Il disegno non ti fa vedere il volume, né il retro insieme al fronte","Prima di spendere sul tessuto voglio vederlo in tre dimensioni","Nessun software 3D da sarto: lo chiedo a Claude"]},
+ {t:"3D",d:"6:45",ch:["scr","cam"],wow:true,h:"Passo 5 · Claude costruisce il pantalone in 3D",
+  w:"Registrazione di Claude Code: gli dai la scheda e il disegno, lui scrive il codice e il pantalone appare.",
+  s:"Claude non disegna: scrive il codice che costruisce il capo.",
+  p:["La prima versione brutta, senza tagli: fa ridere ed è vera","Due o tre correzioni a parole («la piega più profonda», «la vita più alta»)","La versione finale nell'atelier 3D, che ruota con le etichette sui dettagli"]},
+ {t:"Confronto",d:"9:00",ch:["scr"],h:"Disegno contro 3D",
+  w:"Split screen: il figurino colorato a sinistra, il 3D che gira a destra.",
+  s:"Stesso capo, due modi di vederlo. Ecco cosa ti dà ognuno.",
+  p:["Il disegno: lo stile, il carattere, il portfolio","Il 3D: volume, retro, dettagli da vicino","Il colore si cambia in un secondo: lo provi con i colori del brand"]},
+ {t:"Chiusura",d:"10:15",ch:["scr","cam"],h:"Tre colori e un voto",
+  w:"Il pantalone 3D in bosco, inchiostro e sabbia, uno accanto all'altro. Poi tu in camera.",
+  s:"Io ho già un preferito. Tu quale compreresti?",
+  p:["Voto nei commenti: 1, 2 o 3","I prompt in descrizione","Prossimo video: dal 3D al cartamodello, si inizia a cucire"]}
 ];
-const K=["La tela del 05/08 (anche la gamba già corretta)","Il pantalone COS","Metro da sarta","Gesso","Spilli","Striscia di tela alta 4 cm per il cinturino provvisorio","Il cartamodello di carta","Le tre foto del 05/08 (fronte, profilo, dietro)","Specchio intero, cavalletto, luce di finestra"];
-const L={cam:"camera",scr:"plate",hand:"mani"};
+const K=["La scheda del pantalone scritta (capo, dettagli, tessuto, HEX)","I prompt pronti: flat, colore, retro","iPad con il figurino base in Procreate","Registrazione schermo attiva per ChatGPT e Claude Code","Le versioni del 3D salvate (prima brutta, intermedie, finale)","Il pantalone 3D nei tre colori della palette","Il disegno colorato stampato, da tenere in mano","Cavalletto e luce di finestra per i blocchi in camera"];
+const L={cam:"camera",scr:"schermo",hand:"iPad"};
 const esc=s=>s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
-document.getElementById("line").innerHTML=B.map((b,i)=>`<li class="${b.new?"new":""}"><a href="#b${i}"><div class="n">${String(i).padStart(2,"0")}</div><div class="t">${b.t}</div><div class="d">${b.d}</div></a></li>`).join("");
+document.getElementById("line").innerHTML=B.map((b,i)=>`<li class="${b.wow?"wow":""}"><a href="#b${i}"><div class="n">${String(i).padStart(2,"0")}</div><div class="t">${b.t}</div><div class="d">${b.d}</div></a></li>`).join("");
 document.getElementById("blocks").innerHTML=B.map((b,i)=>`<article class="block" id="b${i}">
  <div class="head"><span class="big">${i}</span><h3>${esc(b.h)}</h3>
- <div class="chips"><span class="chip time">${b.d}</span>${b.ch.map(c=>`<span class="chip ${c}">${L[c]}</span>`).join("")}${b.new?'<span class="chip new">da girare nuovo</span>':""}</div></div>
+ <div class="chips"><span class="chip time">${b.d}</span>${b.ch.map(c=>`<span class="chip ${c}">${L[c]}</span>`).join("")}${b.wow?'<span class="chip wow">momento forte</span>':""}</div></div>
  <p class="what">${esc(b.w)}</p>
  <p class="say">«${esc(b.s)}»</p>
  <ul class="path">${b.p.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>
 </article>`).join("");
 const store={get(k){try{return JSON.parse(localStorage.getItem(k)||"[]")}catch(e){return[]}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
-const done=store.get("kit5");
+const done=store.get("kit5b");
 document.getElementById("kit").innerHTML=K.map((k,i)=>`<li style="list-style:none;margin-left:-18px"><label><input type="checkbox" id="kit${i}" ${done.includes(i)?"checked":""}> ${esc(k)}</label></li>`).join("");
-document.getElementById("kit").addEventListener("change",()=>{store.set("kit5",K.map((_,i)=>i).filter(i=>document.getElementById("kit"+i).checked))});
+document.getElementById("kit").addEventListener("change",()=>{store.set("kit5b",K.map((_,i)=>i).filter(i=>document.getElementById("kit"+i).checked))});
 </script>
