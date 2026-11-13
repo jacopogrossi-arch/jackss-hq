@@ -1,4 +1,4 @@
-# Audio of the Short (v3, 14/11/2026), on the autogrill method (references/explainer-3d-sop.md §7):
+# Audio of the Short (v4, 13/11/2026), on the autogrill method (references/explainer-3d-sop.md §7):
 #  1. voice + sound effects (numpy): fixed story events, an opening whoosh + hit + a riser whose PEAK lands on "gonna";
 #     automatic pops on labels, swishes on big statements, whooshes on camera moves; never two sounds within 0.35 s, never on top of a fixed event.
 #  2. music: a bed BED dB under the voice MEASURED in LUFS, ducked under speech (sidechain), then one FIXED gain to TARGET LUFS + limiter (no single-pass loudnorm).
@@ -8,7 +8,7 @@ import numpy as np
 sys.argv = [sys.argv[0]]
 import build as B
 SK = "D:/ClaudeCodeTest/.claude/skills/youtube-edit/assets/"
-MUSIC = SK + "music/licensed/es-tidal-waves.mp3"
+MUSIC = SK + "music/licensed/es-ghost-band-run.mp3"
 BED, TARGET, SFX_GAIN = 13.0, -16.0, 5.0
 SR = 48000
 at, end, DUR = B.at, B.end, B.DUR
@@ -46,9 +46,17 @@ put(load("core/impact-bass-1.mp3", 1.2, -24, 0.5), 0.02, name="opening hit")
 put(load(L + "cc-riser-lungo.mp3", peak_db=-23, fade=0.02), gonna, "peak", "riser -> gonna")
 put(load(L + "cc-impact.mp3", peak_db=-17), gonna, name="impact: gonna")
 # ---- the story
-lk = at("Tutto") - 0.2
-put(load(L + "es-whoosh-medium-transition.mp3", peak_db=-20), lk, "peak", "film burn")
+lk = B.T_D1 - 0.2
+put(load(L + "es-whoosh-medium-transition.mp3", peak_db=-20), lk, "peak", "film burn (leak)")
 put(load(L + "es-film-advance-wind.mp3", peak_db=-24), lk + 0.15, name="film wind")
+# ---- v4: the map. Up = airy whoosh, the path draws with soft ticks, down into the station = clean whoosh
+for i, (tm, td) in enumerate([(B.T_MAP1, B.T_D1), (B.T_MAP2, B.T_D2), (B.T_MAP3, B.T_D3), (B.T_MAP4, B.T_D4)]):
+    put(load(L + "es-whoosh-classic-airy.mp3", peak_db=-21), tm, name="map up %d" % (i + 1))
+    if i: put(load(L + "cc-tick.mp3", peak_db=-27), tm + 0.55, name="path draws"); put(load(L + "cc-tick.mp3", peak_db=-28), tm + 1.0, name="path draws")
+    if i: put(load(L + "es-whoosh-soft-clean.mp3", 0.9, -22), td, name="dive %d" % (i + 1))
+put(load(L + "es-swoosh-wide.mp3", peak_db=-24), at("copiate"), name="COS arc")
+put(load(L + "es-number-counter.mp3", 1.0, -28), at("centodiciassette") + 0.05, name="counter 117")
+put(load(L + "es-pops6.mp3", peak_db=-26), at("pezzo", 2), name="cost pill")
 put(load(L + "es-scissors-cut-paper.mp3", peak_db=-19), at("cartamodello") + 0.1, name="scissors")
 put(load(L + "es-scissors-cut-paper.mp3", peak_db=-21), at("cartamodello") + 2.4, name="scissors 2")
 put(load(L + "cc-impact.mp3", peak_db=-22), at("errore", 2), name="impact: primo errore")

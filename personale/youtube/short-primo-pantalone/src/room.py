@@ -3,15 +3,16 @@ import math
 PI = math.pi
 
 
-def furnish(w):
+def furnish(w, hide=None):
+    H = {"hide": hide} if hide else {}
     # low golden sun through the two left windows (the wall really blocks it: shadows are real)
-    w.room(bg="#1a1410", key="#ffe2b8", dir=(-8, 2.7, 1.2), key_i=5.0, aim=(0.5, 0.8, 0.4), hemi=("#fff1e0", "#7a5a3a"), hemi_i=0.85, side_i=0.5, rim="#9db4e0", rim_i=0.45, box=(9, 6, 40), fog=("#1a1410", 14, 40), exposure=1.15)
+    w.room(bg="#1a1410", key="#ffe2b8", dir=(-8, 2.7, 1.2), key_i=5.0, aim=(0.5, 0.8, 0.4), hemi=("#fff1e0", "#7a5a3a"), hemi_i=0.85, side_i=0.5, rim="#9db4e0", rim_i=0.45, box=(9, 6, 40), fog=("#1a1410", 18, 46), exposure=1.28)
     P = w.prop
     P("woodfloor", "floor", (0.5, 0, 0.75), (9.4, 8.2))
-    P("wall", "wback", (0.5, 0, -3.1), (9.4, 3.4, 0.2), color="#d9c9a8")
-    P("wall", "wleft", (-4.1, 0, 0.75), (8.2, 3.4, 0.2), rot_y=PI / 2, color="#d9c9a8", hole=[0.55, 1.75, 1.8, 1.6])
+    P("wall", "wback", (0.5, 0, -3.1), (9.4, 3.4, 0.2), color="#ebe3d3")
+    P("wall", "wleft", (-4.1, 0, 0.75), (8.2, 3.4, 0.2), rot_y=PI / 2, color="#ebe3d3", hole=[0.55, 1.75, 1.8, 1.6])
     P("wall", "wleft2", (-4.1, 0, 0.75), (8.2, 3.4, 0.2), rot_y=PI / 2, color="#d9c9a8", hole=[-1.85, 1.75, 1.8, 1.6]) if False else None
-    P("wall", "wright", (5.1, 0, 0.75), (8.2, 3.4, 0.2), rot_y=PI / 2, color="#cdbd9a")
+    P("wall", "wright", (5.1, 0, 0.75), (8.2, 3.4, 0.2), rot_y=PI / 2, color="#e4dac6")
     P("window", "win1", (-4.0, 1.75, 0.2), (1.8, 1.6), rot_y=PI / 2)
     P("rug", "rug1", (-2.2, 0, 0.9), (3.4, 2.4), color="#b9ae98")
     # --- A: the drawing table under the window
@@ -25,8 +26,7 @@ def furnish(w):
     P("chalk", "chalk2", (-2.44, 0.928, 0.5), rot_y=-0.4, color="#2f5d8a")
     P("lsquare", "sq", (-3.32, 0.928, 1.02), (0.5, 0.32), rot_y=0.12)
     P("desklamp", "dlamp", (-3.55, 0.92, 0.3), rot_y=0.6)
-    P("pendant", "pend1", (-2.6, 2.25, 0.6), (1.5,), color="#8a4b2d", light=9)
-    P("pendant", "pend2", (-1.1, 2.4, 0.9), (1.4,), color="#2f3a2e", light=0)
+    P("pendant", "pend1", (-2.6, 2.25, 0.6), (1.5,), color="#8a4b2d", light=9, **H)
     P("buttonjar", "jar", (-1.7, 0.92, 0.3))
     P("pincushion", "pinc", (-1.95, 0.92, 0.95))
     P("spool", "spoolA", (-3.35, 0.92, 0.95), color="#2f3a2e", rot_y=0.5)
@@ -36,10 +36,10 @@ def furnish(w):
     P("sewing", "machine", (1.8, 0.78, 0.5), rot_y=-0.15)
     P("pincushion", "pincB", (2.55, 0.78, 0.7))
     P("spool", "spoolB", (1.4, 0.78, 0.35), color="#c9a24a", rot_y=0.8)
-    P("mannequin", "man1", (1.4, 0, -1.6))
+    P("mannequin", "man1", (1.75, 0, -1.6))   # moved right: the skirt outline at 51 s crossed it
     P("mannequin", "man2", (2.15, 0, -1.9), rot_y=-0.5, linen="#cfc2a3")
-    P("pendant", "pend3", (1.6, 2.45, 0.5), (1.3,), color="#c9a24a", light=6)
-    P("pendant", "pend4", (3.0, 2.5, -0.4), (1.2,), color="#8a4b2d", light=5)
+    P("pendant", "pend3", (1.6, 2.45, 0.5), (1.3,), color="#c9a24a", light=6, **H)
+    P("pendant", "pend4", (3.0, 2.5, -0.4), (1.2,), color="#8a4b2d", light=5, **H)
     # --- C: the stock wall and the rail
     P("rollrack", "rack", (3.55, 0, -2.82), (3.0, 2.3, 0.5), seed=4)
     P("spoolwall", "spools", (0.1, 1.0, -2.98), (2.1, 1.55))
