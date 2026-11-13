@@ -159,3 +159,11 @@ From `personale/youtube/analisi-inspo-3d-uiux.md` (20 principles, verdict for ou
 - **Captions** need a soft dark pill so they read on white paper. Labels in 9:16 need about 56 px.
 - **End card = the real logo** (`logoplate`, the paths of `inverso/logo/inverso-logo.svg`), not typed text.
 - **The background counts too.** Spools stand upright, plant leaves hang on stalks, folded cloth has weave and a rolled fold. Anything that reads as a primitive box gets fixed.
+
+## 3D Shorts: the detailed atelier method + the autogrill method (14/11/2026)
+For Shorts, use the detailed "primo pantalone" world (realism) together with the autogrill workflow (`explainer-3d-sop.md`). Both are the default from now on.
+- **Text on screen for the WHOLE video** ("sui reel fa tanto la differenza"). Word captions (`captions`) alternate with big statements (`big()`: title, numbers, the moral, the CTA). A big statement replaces the captions it overlaps. Each caption and big holds until the next text arrives, so there is no gap even in the pauses. Check with a script that the gap list is empty and no spoken word is uncovered.
+- **The voice needs emotion.** Generate the cloned voice ONE PARAGRAPH AT A TIME with expressive punctuation (… ! ?), then join the paragraphs with 0.35–0.55 s gaps. A single long take came out flat.
+- **Sound** follows the autogrill rules: an opening whoosh + hit, a riser peaking on the punch word, story events, automatic pops/swishes/whooshes at least 0.35 s apart, music 13 dB under the voice measured in LUFS, fixed gain to −16 LUFS.
+- **Render** with `finish.sh`: a 30 fps draft with QA that Jacopo listens to (a contact sheet does not show the sound), then the 60 fps final with BT.709 tags, a version number in the name and a light copy. Before the draft, check for flicker across 3 consecutive frames.
+- **Labels must not sit on the caption band** (y ≈ 1180 in 9:16) or cross the frame edge. Check them on the contact sheet.
