@@ -22,7 +22,7 @@ Cost, measured 10/11/2026: about 10 s of render per second of video at 1080p dra
 import json, os, re, shutil
 
 SK = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-VENDOR = ("three.module.min.js", "three-LICENSE.txt", "world3d.js", "atelier-kit.js")
+VENDOR = ("three.module.min.js", "three-LICENSE.txt", "world3d.js", "atelier-kit.js", "atelier-tex.js", "atelier-trouser.js", "atelier-props.js")
 
 CSS = """<style>
   .w3-host { background: var(--k-bg, #0A2B1E); overflow: hidden; font-family: var(--k-font, "Inter", "Segoe UI", system-ui, sans-serif); color: var(--k-text, #f4efe6); }
@@ -68,9 +68,9 @@ class World3D:
         self.objects.append(o)
         return oid
 
-    def trouser(self, oid, pos=(0, 0, 0), rot_y=0.0, turn=None, move=None, t=None, color="#7b7d5a", pleats=2, cuff=True, scale=None, shadow=True, look=None, hang=None, pockets=True):
+    def trouser(self, oid, pos=(0, 0, 0), rot_y=0.0, turn=None, move=None, t=None, color="#7b7d5a", pleats=2, cuff=True, scale=None, shadow=True, look=None, hang=None, pockets=True, hi=False, toile=False):
         """The Drop 1 trouser, built in code: natural waist with side adjusters, pleats (0, 1 or 2 per side), straight leg, turn-ups. Stylised, not a photo."""
-        return self._obj("trouser", oid, pos, rot_y, turn, move, t, color=color, pleats=pleats, cuff=cuff, scale=scale, shadow=[1.5, 0.95] if shadow else None, floor=pos[1], pass_mode=look, hang=hang, pockets=None if pockets else False)
+        return self._obj("trouser", oid, pos, rot_y, turn, move, t, color=color, pleats=pleats, cuff=cuff, scale=scale, shadow=[1.5, 0.95] if shadow else None, floor=pos[1], pass_mode=look, hang=hang, pockets=None if pockets else False, hi=hi or None, toile=toile or None)
 
     def card(self, oid, pos, w=0.8, h=0.5, text=None, sub=None, img=None, rot_y=0.0, turn=None, move=None, t=None, color=None, size=None, look=None, flat=False):
         """An ivory sheet standing in space: a title with one *key* word, or a picture (`img`, a path inside public/, e.g. "img/moodboard.jpg") with an optional caption."""

@@ -253,7 +253,7 @@ export function mount(spec) {
 
   function build(imgs) {
     (spec.objects || []).forEach((o, n) => {
-      const m = o.type === "trouser" ? trouser(o) : o.type === "card" ? card(o, imgs[n]) : solid(o);
+      const m = o.type === "trouser" ? (o.hi ? kitBuild(o, { fabric, shade }) : trouser(o)) : o.type === "card" ? card(o, imgs[n]) : solid(o);
       const g = new THREE.Group(); g.add(m); if (o.scale) m.scale.multiplyScalar(o.scale);
       scene.add(g); items[o.id] = { o, g };
       const meshes = []; g.traverse((x) => { if (x.isMesh) meshes.push(x); });                      // dress it for the passes: ink outlines (hull for round things, edge lines for boxes and sheets)
@@ -261,7 +261,7 @@ export function mount(spec) {
         if (x.material.type === "MeshBasicMaterial" && x.material.transparent) { notInk.push(x); onlyFinal.push(x); continue; }   // the card's soft back plate
         x.userData.orig = x.material; x.userData.pass = o.pass_mode || null;
         if (LOOK || ROOM) { const ns = x.userData.flat || x.userData.noshadow || x.material.isMeshBasicMaterial; x.castShadow = !ns && !x.userData.floor; x.receiveShadow = !x.userData.flat; }
-        if (KIT.has(o.type)) continue;                                 // props live in one look: no ink/clay dressing (saves a hull mesh per mesh)
+        if (KIT.has(o.type) || o.hi) continue;                                 // props live in one look: no ink/clay dressing (saves a hull mesh per mesh)
         dressed.push(x);
         if (o.type === "box" || o.type === "card") { const e = new THREE.LineSegments(new THREE.EdgesGeometry(x.geometry, 30), lineMat); e.userData.mesh = x; e.visible = false; x.add(e); inkOnly.push(e); }
         else { const h = new THREE.Mesh(x.geometry, hullMat); h.userData.mesh = x; h.visible = false; x.add(h); inkOnly.push(h); }

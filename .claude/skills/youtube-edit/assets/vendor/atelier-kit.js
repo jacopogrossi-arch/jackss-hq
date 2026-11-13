@@ -2,6 +2,9 @@
 // build(o, H) -> a THREE.Group for kit types, or null for any other type. H = { fabric, shade } from world3d.js. Everything is deterministic (hash, no random).
 // Units are metres, y up, every prop stands on y = 0 (a prop that hangs says so). Meshes that must not cast a shadow carry userData.noshadow.
 import * as THREE from "./three.module.min.js";
+import { trouserHi } from "./atelier-trouser.js";
+import { buildProp, PROPS } from "./atelier-props.js";
+import { fabricMaps } from "./atelier-tex.js";
 
 const hash = (a, b = 0, c = 0) => { const x = Math.sin(a * 127.1 + b * 311.7 + c * 74.7) * 43758.5453; return x - Math.floor(x); };
 export const PAL = ["#2f3a2e", "#8a4b2d", "#b9ae98", "#efe9dd", "#3b4f6b", "#6f7452", "#c9a24a", "#7a2f2f", "#4d6b5c", "#1e1b18", "#a58a6a", "#5d6b7a"];
@@ -71,10 +74,11 @@ function rollRack(o) {                                   // size [length, height
     if (h1 < 0.62) { const rad = Math.min(cw, rh) * (0.3 + 0.12 * hash(c, r, 7)); rolls.push([x, y + 0.015 + rad, 0.02, rad, pal[Math.floor(hash(c, r, 3) * pal.length)], D * 0.86]); }
     else if (h1 < 0.9) { const n = 3 + Math.floor(hash(c, r, 5) * 3); for (let k = 0; k < n; k++) stacks.push([x, y + 0.015 + 0.035 + k * 0.058, 0.02, cw - 0.07, 0.054, D * 0.8, pal[Math.floor(hash(c, r, 11 + k) * pal.length)]]); }
   }
-  const mkI = (geo, n) => new THREE.InstancedMesh(geo, std("#ffffff", 0.95), Math.max(1, n)), M = new THREE.Matrix4(), q = new THREE.Quaternion(), P = new THREE.Vector3(), S = new THREE.Vector3(), Cc = new THREE.Color();
-  const ri = mkI(CY(1, 1, 1, 18), rolls.length); q.setFromEuler(new THREE.Euler(Math.PI / 2, 0, 0));
+  const fm = fabricMaps("plain"), cm = () => new THREE.MeshStandardMaterial({ color: "#ffffff", roughness: 0.95, map: fm.map, normalMap: fm.normal }), sUV = (geo, u, v) => { const uv = geo.attributes.uv; for (let i = 0; i < uv.count; i++) uv.setXY(i, uv.getX(i) * u, uv.getY(i) * v); return geo; };
+  const mkI = (geo, n) => new THREE.InstancedMesh(geo, cm(), Math.max(1, n)), M = new THREE.Matrix4(), q = new THREE.Quaternion(), P = new THREE.Vector3(), S = new THREE.Vector3(), Cc = new THREE.Color();
+  const ri = mkI(sUV(CY(1, 1, 1, 24), 9, 5), rolls.length); q.setFromEuler(new THREE.Euler(Math.PI / 2, 0, 0));
   rolls.forEach((a, i) => { P.set(a[0], a[1], a[2]); S.set(a[3], a[5], a[3]); M.compose(P, q, S); ri.setMatrixAt(i, M); ri.setColorAt(i, Cc.set(a[4]).multiplyScalar(0.9 + 0.1 * hash(i, 1, 1))); }); ri.count = rolls.length;
-  const si = mkI(B(1, 1, 1), stacks.length); q.identity();
+  const si = mkI(sUV(B(1, 1, 1), 5, 1), stacks.length); q.identity();
   stacks.forEach((a, i) => { P.set(a[0], a[1], a[2]); S.set(a[3], a[4], a[5]); M.compose(P, q, S); si.setMatrixAt(i, M); si.setColorAt(i, Cc.set(a[6]).multiplyScalar(0.92)); }); si.count = stacks.length;
   g.add(ri); g.add(si); return g;
 }
@@ -104,8 +108,9 @@ function table(o) {                                      // size [length, height
   return g;
 }
 function drawBoard(kind, w, h) {
-  const [c, x] = cv(1024, Math.round(1024 * h / w));
-  const W = c.width, Hh = c.height;
+  const [c, x] = cv(2048, Math.round(2048 * h / w));
+  x.scale(2, 2);
+  const W = 1024, Hh = c.height / 2;
   if (kind === "pattern") {                              // kraft paper with the pieces of a trouser pattern: outlines, grain arrows, notches
     x.fillStyle = "#c8a878"; x.fillRect(0, 0, W, Hh);
     for (let i = 0; i < 900; i++) { x.fillStyle = "rgba(90,60,30," + (0.03 + 0.05 * hash(i, 1, 1)).toFixed(3) + ")"; x.fillRect(hash(i, 2, 2) * W, hash(i, 3, 3) * Hh, 2 + 6 * hash(i, 4, 4), 1); }
@@ -214,9 +219,11 @@ function clothSheet(o) {                                 // cloth laid on a tabl
   const m = new THREE.Mesh(geo, o.mat); m.rotation.x = -Math.PI / 2; m.position.y = 0.004; const g = new THREE.Group(); g.add(m); return g;
 }
 
-export const KIT = new Set(["woodfloor", "wall", "window", "rollrack", "bolts", "spoolwall", "table", "paper", "frame", "ruler", "shears", "sewing", "mannequin", "pendant", "desklamp", "plant", "rail", "rug", "cloth"]);
+export const KIT = new Set(["woodfloor", "wall", "window", "rollrack", "bolts", "spoolwall", "table", "paper", "frame", "ruler", "shears", "sewing", "mannequin", "pendant", "desklamp", "plant", "rail", "rug", "cloth", "cuttingmat", "buttonjar", "pincushion", "spool"]);
 export function build(o, H) {
+  if (PROPS.has(o.type)) return buildProp(o);
   switch (o.type) {
+    case "trouser": return trouserHi(o);
     case "woodfloor": return floorBoards(o);
     case "wall": return wallPanel(o);
     case "window": return windowFrame(o);
