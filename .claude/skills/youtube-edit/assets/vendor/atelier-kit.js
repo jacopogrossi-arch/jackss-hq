@@ -186,6 +186,14 @@ function pendant(o) {                                    // a hanging lamp: the 
   add(g, new THREE.SphereGeometry(0.05, 14, 10), new THREE.MeshBasicMaterial({ color: "#fff1c8", toneMapped: false }), 0, 0.02, 0).userData.noshadow = true;
   const h = halo(o.glowColor || "#ffd98a", o.glow ?? 0.9); h.scale.set(1.5, 1.5, 1); h.position.set(0, -0.05, 0); g.add(h);
   if (o.light) { const pl = new THREE.PointLight(o.glowColor || "#ffd7a0", o.light, 5, 1.6); pl.position.set(0, -0.12, 0); g.add(pl); }
+  if (o.hide) {                                          // o.hide=[[t0,t1],...]: the lamp fades out (0.35 s) for the span, e.g. while the camera flies up to the map, so it never crosses the lens
+    const mats = []; g.traverse((x) => { if (x.material) { x.material = x.material.clone(); x.material.transparent = true; x.userData.op = x.material.opacity; mats.push(x); } });
+    g.userData.update = (t) => {
+      let k = 1; for (const [a, b] of o.hide) { if (t > a - 0.01 && t < b + 0.36) k = Math.min(k, t < a + 0.35 ? 1 - (t - a) / 0.35 : t > b ? (t - b) / 0.35 : 0); }
+      k = Math.max(0, Math.min(1, k)); g.visible = k > 0.001; for (const x of mats) x.material.opacity = x.userData.op * k;
+    };
+    g.userData.update(-1);
+  }
   return g;
 }
 function deskLamp(o) {                                   // an articulated desk lamp, ~45 cm
