@@ -124,7 +124,7 @@ for n, (title, sub) in enumerate(SEGS):
         for side in "LR":
             good = side == "R"
             chips = "".join('<div class="word" style="left:%dpx">%s</div>' % (x, w) for x, w in zip(xs, words))
-            inner = chips + '<div class="head" id="p%s"></div><div class="card" id="g%s" style="left:230px;top:300px;opacity:0">3 vite</div><div class="lag mono" id="z%s" style="opacity:0;color:%s">ritardo %.2f s (%d fotogrammi)</div>' % (side, side, side, BOSCO if good else RUG, 0.10 if good else 0.90, 3 if good else 27)
+            inner = chips + '<div class="head" id="p%s"></div><div class="card" id="g%s" style="left:230px;top:300px;opacity:0">3 vite</div><div class="lag mono" id="z%s" style="opacity:0;color:%s">ritardo %s s (%d fotogrammi)</div>' % (side, side, side, BOSCO if good else RUG, "0,10" if good else "0,90", 3 if good else 27)
             html_inner.append(panel(side, n, inner, good))
             t_word = T(n, 3.0)                      # the word "vite" starts here
             js.append("tl.set('#g%s',{opacity:0,scale:.9,y:30},%.3f);" % (side, T(n, 0)))
