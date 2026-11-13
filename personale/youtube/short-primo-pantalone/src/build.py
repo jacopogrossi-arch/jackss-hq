@@ -70,10 +70,11 @@ def C(t, d, pos, look, ease="hand"):
 w.cam((0.95, 1.38, 3.5), look=(0.9, 1.2, 0.3))
 C(0.25, T_CUT - 0.3, (0.95, 1.3, 1.85), (0.9, 1.2, 0.3), "glide")                                        # hook: the toile, pushing in
 C(T_CUT, 0.6, (-1.95, 1.62, 1.1), (-2.0, 0.93, 0.5))                                                  # whip to the drawing table
-C(T_CUT + 0.62, t_draw1 - T_CUT - 0.3, (-2.0, 1.78, 0.72), (-2.0, 0.93, 0.5), "glide")                                   # the pencil draws, the camera sinks
+C(T_CUT + 0.62, at("carta") - 0.72 - (T_CUT + 0.62), (-2.0, 1.78, 0.72), (-2.0, 0.93, 0.5), "glide")                                   # the pencil draws, the camera sinks
 C(at("carta") - 0.7, 0.9, (-2.86, 1.78, 1.32), (-2.84, 0.93, 0.52))                                                      # whip to the cutting mat
-C(at("cartamodello"), at("errore", 2) - at("cartamodello") - 1.0, (-2.8, 1.78, 1.5), (-2.82, 0.93, 0.66), "glide")
+C(at("cartamodello"), at("errore", 2) - at("cartamodello") - 0.62, (-2.8, 1.78, 1.5), (-2.82, 0.93, 0.66), "glide")
 C(at("errore", 2) - 0.6, 0.9, (-0.2, 1.42, 2.35), (-0.55, 1.2, 1.0))                                                  # whip to the COS trouser
+C(at("errore", 2) + 0.32, at("cuce") - 0.78 - (at("errore", 2) + 0.32), (-0.22, 1.36, 2.05), (-0.55, 1.18, 1.0), "glide")   # slow push-in on the COS trouser (no frozen beat)
 C(at("cuce") - 0.75, 0.95, (1.0, 1.36, 2.35), (0.9, 1.2, 0.3))                                                        # whip to the toile
 C(at("cintura") - 0.3, 1.0, (0.92, 1.78, 1.15), (0.9, 1.55, 0.3))                                                     # the raw top edge: no waistband
 C(at("provata") - 0.1, 1.3, (1.0, 1.32, 2.2), (0.9, 1.2, 0.3), "glide")
@@ -101,19 +102,18 @@ for k, (t, d, pos, look, ease) in enumerate(CAMS):
 # ------------------------------------------------------------------ labels (pinned on the objects), each on its word
 L = w.label
 L("sketch", (0.10, 0.0, -0.29), "Vita *alta*", t=at("vita"), out=at("vita") + 1.2, anchor="vita", dx=-30, dy=-190)
-L("sketch", (0.115, 0.0, 0.07), "Gamba *dritta*", t=at("gamba"), out=at("gamba") + 1.2, anchor="gamba", dx=-190, dy=-130)
+L("sketch", (0.115, 0.0, 0.07), "Gamba *dritta*", t=at("gamba"), out=at("gamba") + 1.2, anchor="gamba", dx=-360, dy=-260)
 L("sketch", (0.045, 0.0, -0.21), "Doppia *piega*", t=at("piega"), out=at("piega") + 1.5, anchor="piega", dx=-250, dy=-80)
 L("patt", (0.0, 0.003, 0.0), "*Drittofilo*", t=at("verso"), out=at("verso") + 0.95, anchor="verso", dx=-300, dy=-140)
 L("patt", (0.098, 0.003, 0.017), "*Tacca* di montaggio", t=at("tacca"), out=at("tacca") + 1.7, anchor="tacca", dx=-420, dy=-160)
 L("cos", (0.0, 1.0, 0.13), "Pantalone *COS*", t=at("COS"), out=at("COS") + 1.8, anchor="cos", dx=-340, dy=-120)
 L("toileA", (0.1, 0.98, 0.14), "Tela *grezza*", t=at("grezza"), out=at("grezza") + 1.6, anchor="grezza", dx=-330, dy=-120)
-L("toileA", (0.19, 0.94, 0.04), "*117* cm ai fianchi", t=at("centodiciassette"), out=at("centodiciassette") + 3.0, anchor="117", dx=-420, dy=-160)
 L("toileB", (0.21, 0.75, 0.0), "Linea col *gesso*", t=at("gesso"), out=at("gesso") + 1.6, anchor="gesso", dx=-380, dy=-100)
 L("toileB", (0.21, 0.55, 0.05), "*Molto* meglio", t=at("meglio"), out=at("meglio") + 1.6, anchor="meglio", dx=-390, dy=-120)
-L("stoffa", (0.0, 0.2, 0.0), "un pezzo di *stoffa*", t=at("stoffa"), out=at("stoffa") + 1.6, anchor="stoffa", dx=-390, dy=-130)
+# (removed 14/11: it repeated the big statement and was cut at the left edge) L("stoffa", (0.0, 0.2, 0.0), "un pezzo di *stoffa*", t=at("stoffa"), out=at("stoffa") + 1.6, anchor="stoffa", dx=-390, dy=-130)
 L("hero", (0.0, 0.98, 0.13), "un capo *finito*", t=at("finito"), out=at("finito") + 1.5, anchor="finito", dx=-340, dy=-150)
 L("hero", (0.113, 0.5, 0.108), "Cotone *drill*", t=at("drill"), out=at("drill") + 1.8, anchor="drill", sub="verde oliva", dx=-360, dy=-120)
-L("hero", (0.01, 0.98, 0.135), "Doppia *piega*", t=at("doppia", 2), out=at("doppia", 2) + 2.0, anchor="piega2", dx=-110, dy=-170)
+L("hero", (0.01, 0.98, 0.135), "Doppia *piega*", t=at("doppia", 2), out=at("doppia", 2) + 2.0, anchor="piega2", dx=-60, dy=-470)
 L("hero", (0.19, 1.05, 0.03), "Regolatori *laterali*", t=at("regolatori", 2), out=at("regolatori", 2) + 2.0, anchor="regolatori", dx=-440, dy=-130)
 
 # ------------------------------------------------------------------ captions (big, word groups, upper-middle zone: Shorts' own buttons sit at the bottom)
@@ -131,6 +131,27 @@ for i, x in enumerate(WORDS):
         txt = txt.replace("*centodiciassette* centimetri", "*117* cm").replace("centodiciassette centimetri", "117 cm")   # numbers read as digits
         chunks.append((cur[0]["s"], min(nxt - 0.02, cur[-1]["e"] + 0.45), txt.rstrip(".,:").replace("...", "…")))
         cur = []
+# big statements (autogrill method): they say the same words as the voice and stand in for the captions while on screen, so text covers the whole video
+B = w.big
+def wend(stem, after):                                             # end of the first word containing `stem` after time `after`
+    return next(x["e"] for x in WORDS if x["s"] > after and stem in x["w"].lower())
+
+
+# big statements: ONE line, TWO at most (Jacopo, 14/11); a long sentence becomes two statements in a row
+B(0.0, end("gonna") + 0.3, "Il mio primo pantalone|sembrava una *gonna*", top=240, size=76)
+B(at("centodiciassette"), end("fianchi") + 0.15, "*117 cm* ai fianchi", top=260, size=96)
+B(at("più"), end("gonna", 2) + 0.35, "più che un pantalone|ampio, una *gonna*", top=260, size=78)
+B(at("errore", 3), wend("stoffa", at("errore", 3)) + 0.25, "l'errore costa|*un pezzo di stoffa*", top=250, size=78)
+B(at("Questo"), end("capo") + 0.2, "Questo è *Inverso*,|il mio primo capo", top=1160, size=80)
+B(at("vuoi"), wend("tela", at("vuoi")) + 0.25, "Vuoi vedere|la prossima tela?", top=1140, size=80)
+B(wend("tela", at("vuoi")) + 0.26, DUR, "*Seguimi*", top=1140, size=96)
+SP = w.spans()
+chunks = [c for c in chunks if not any(c[0] < b - 0.02 and c[1] > a + 0.02 for a, b in SP)]
+starts = sorted([c[0] for c in chunks] + [a for a, b in SP])   # text on screen ALL the time: each caption holds until the next text arrives
+chunks = [(a, max(b, min([s for s in starts if s > a + 0.01] + [b + 1.0]) - 0.01), t) for a, b, t in chunks]
+for bg in w.bigs:                                                 # ...and so does each big statement
+    nx = [s for s in starts if s > bg[0] + 0.01]
+    if nx and nx[0] - bg[1] < 1.0: bg[1] = round(max(bg[1], nx[0] - 0.01), 3)
 w.captions(chunks, top=1180, size=96)
 
 def _style(path):
