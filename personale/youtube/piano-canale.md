@@ -33,6 +33,15 @@ Le date sono indicative. I titoli sono di lavoro: si rifiniscono al momento dell
 - Ogni video chiude con una domanda vera per i commenti e con la promessa del successivo.
 - Dopo ogni uscita: una riga qui sotto con cosa hanno detto i commenti e cosa cambia nel piano.
 
+## Shorts (dal 13/11/2026)
+
+Shorts in 3D (formato 52 / explainer 3D della skill `youtube-edit`), voce di Jacopo col clone ElevenLabs e brand che compare in chiusura. Costano quasi zero: servono a portare traffico e iscritti verso i video lunghi, restando nei temi del canale.
+
+- **2-3 Shorts per ogni video lungo**, di tre tipi: **riassunto** (il metodo in 40 secondi), **ritaglio** (il momento migliore del lungo), **teaser** (esce prima e annuncia il lungo).
+- **Sempre il "Video correlato"** al caricamento, puntato al lungo da cui nasce lo Short. È l'unico ponte vero tra Short e video lungo.
+- **Pausa esami (20/12 → 11/02):** gli Shorts si preparano a dicembre e si programmano per uscire durante la pausa, così il canale resta vivo senza riprese.
+- **Verifica dopo 6 Shorts:** in YouTube Studio guardare gli iscritti arrivati dagli Shorts e i clic sul video correlato. Se nessuno arriva al lungo, gli Shorts restano solo come copertura della pausa.
+
 ## Diario dei riscontri
 
 *(vuoto: si riempie dal #4)*
