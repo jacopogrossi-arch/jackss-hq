@@ -30,3 +30,7 @@ Short #1 = l'atelier di giorno. Short #2 = **lo studio di Inverso di notte**: pa
 | s2a | parola orizzontale non entra nel 9:16, etichetta tessuta specchiata, asterischi nelle card, tavolo bruciato | totem verticale, etichetta specchiata giusta, luce/esposizione |
 | s2b | t-shirt di taglio (sembrano assi), filo del pantalone fino al soffitto, sneaker "spillatrice", logo del dischetto rovesciato, badge visibili fuori dalla mappa, card "tela" | t-shirt a ventaglio, gruccia senza filo, sneaker a loft (suola dalla sagoma, tomaia a sezioni), badge per ogni mappa, card "v1 cartamodello" |
 | s2c–e | diagramma sotto le macchie di luna, striscia coperta dal tappeto, chi ha / chi non ha sopra i dischi, scatole tagliate | diagramma spostato su un tappeto bosco, push-in finale sul logo, camera delle scatole arretrata |
+| bozza 1 (10 fps, 9 fogli) | etichetta tessuta capovolta, card del sughero piccole, orologio e scatole inquadrati male, diagramma lontano | etichetta ruotata di 180°, card più grandi, camera più bassa sul diagramma, asse più lungo |
+| bozza 2 + s2h | scatole ancora piccole con mezzo quadro vuoto | camera del terzo tuffo più vicina: le scatole riempiono il quadro |
+
+QA bozza: −16 LUFS, picco −1,4 dB, nessun fotogramma congelato.
