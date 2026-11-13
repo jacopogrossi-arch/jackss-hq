@@ -9,8 +9,9 @@ const CX = pchip(Y, [0.112, 0.113, 0.112, 0.105, 0.095, 0.080, 0.066, 0.048, 0.0
 const RX = pchip(Y, [0.094, 0.095, 0.101, 0.100, 0.097, 0.115, 0.128, 0.126, 0.124]);
 const RZ = pchip(Y, [0.097, 0.098, 0.106, 0.118, 0.130, 0.131, 0.130, 0.116, 0.112]);
 const pl = (a, at, w) => (a > at ? Math.exp(-Math.pow((a - at) / 0.03, 2)) : Math.exp(-Math.pow((a - at) / w, 2)));   // a fold: sharp on the crease side, soft on the other
-function relief(a, y) {
+function relief(a, y, bul = 0) {
   let r = 0;
+  r += bul * groove(a, Math.PI / 2, 0.95) * smooth((y - 0.55) / 0.2) * (1 - smooth((y - 0.98) / 0.06));                                    // a bulge on the side seam (the first toile: a wide hip)
   r += 0.0035 * (groove(a, 0, 0.06) + 0.7 * groove(a, Math.PI, 0.06)) * clamp((0.80 - y) / 0.1) * (y > 0.03 ? 1 : 0.5);              // pressed crease, front and back
   const fp = 0.0155 * smooth((y - 0.80) / 0.1) * (1 - smooth((y - 1.0) / 0.03)) + 0.003 * smooth((y - 0.55) / 0.25) * (1 - smooth((y - 1.0) / 0.03));
   r += fp * (pl(a, -0.30, 0.12) + pl(a, -0.66, 0.12));                                                                              // double pleat, towards the fly
@@ -21,12 +22,14 @@ function relief(a, y) {
   r += 0.008 * groove(a, Math.PI, 0.9) * smooth((y - 0.80) / 0.1) * (1 - smooth((y - 1.0) / 0.03));                                  // the seat
   return r;
 }
-const legPoint = (s, y, a, off = 0) => { const r = relief(a, y) + off; return [s * (CX(y) + (RX(y) + r) * Math.sin(a)), y, (RZ(y) + r) * Math.cos(a) - 0.004 * smooth((y - 0.8) / 0.2)]; };
+let FLARE = 0.05, BUL = [0, 0];
+const legPoint = (s, y, a, off = 0) => { const r = relief(a, y, BUL[s > 0 ? 1 : 0]) + off, fl = 1 + FLARE * smooth((0.35 - y) / 0.35); return [s * (CX(y) + (RX(y) * fl + r) * Math.sin(a)), y, (RZ(y) * fl + r) * Math.cos(a) - 0.004 * smooth((y - 0.8) / 0.2)]; };
 const legNormal = (s, y, a) => { const nx = Math.sin(a) / RX(y), nz = Math.cos(a) / RZ(y), l = Math.hypot(nx, nz); return [s * nx / l, nz / l]; };
 
 export function trouserHi(o) {
-  const color = o.color || "#6f7452", toile = !!o.toile, kind = toile ? "plain" : "twill";
-  const cloth = clothMat(color, kind), dark = clothMat(shade(color, 0.8), kind), body = new THREE.Group(), g = new THREE.Group(); body.add(g);
+  FLARE = o.flare ?? 0.05; BUL = o.bulge || [0, 0];
+  const color = o.color || "#6f7452", toile = !!o.toile, kind = toile ? "plain" : "twill", noband = !!o.noband, bpN = o.bp ?? 2, bpButton = o.bpbutton !== false, loopsOn = o.loops !== false && !noband, cuffOn = o.cuff !== false;
+  const cloth = clothMat(color, kind, { side: toile ? THREE.DoubleSide : THREE.FrontSide }), dark = clothMat(shade(color, 0.8), kind), body = new THREE.Group(), g = new THREE.Group(); body.add(g);
   const thread = toile ? "#d8cdb2" : new THREE.Color(color).lerp(new THREE.Color("#efe3c4"), 0.55).getStyle();
   const gold = new THREE.MeshStandardMaterial({ color: 0xe3c47f, roughness: 0.32, metalness: 0.95 }), horn = new THREE.MeshStandardMaterial({ color: 0x2b2118, roughness: 0.35, metalness: 0.1 });
   const seamM = clothMat(shade(color, 0.72), kind);
@@ -41,30 +44,35 @@ export function trouserHi(o) {
     for (let k = 0; k <= 72; k++) { const a = (k / 72) * Math.PI * 2; hem.push(legPoint(s, 0.040, a, 0.0014)); }
     g.add(stitches(hem, thread));                                                                                                      // hem stitching
     // turn-up (cuff): a slightly wider ring with a rolled fold and its own stitches
+    if (cuffOn) {
     const cuff = (y, a) => { const p = legPoint(s, 0.0, a, 0.004 + 0.0035 * Math.sin(Math.min(1, y / 0.045) * Math.PI)); return [p[0], y, p[2]]; }; cuff.rad = () => 0.1;
     g.add(new THREE.Mesh(loftGeo(cuff, 0.0, 0.046, 160, 10, s < 0), dark));
     const cs = []; for (let k = 0; k <= 72; k++) cs.push(legPoint(s, 0.0, (k / 72) * Math.PI * 2, 0.0075)), cs[cs.length - 1][1] = 0.032; g.add(stitches(cs.map((p) => [p[0], 0.032, p[2]]), thread, 0.007));
+    }
     // slanted side pocket: opening seam, lining lip, stitches
     const po = [], pi = [], ps = []; for (let k = 0; k <= 14; k++) { const u = k / 14, y = lerp(1.012, 0.86, Math.pow(u, 0.95)), a = lerp(1.30, 0.72, Math.pow(u, 1.15)); po.push(legPoint(s, y, a, 0.0018)); pi.push(legPoint(s, y, a - 0.035, 0.0012)); ps.push(legPoint(s, y, a - 0.07, 0.0013)); }
     g.add(tube(po, 0.0024, new THREE.MeshStandardMaterial({ color: toile ? "#e8e0cc" : shade(color, 0.62), roughness: 0.9 }), 40)); g.add(stitches(ps, thread, 0.0058)); g.add(tube(pi, 0.0012, seamM, 30));
     // back welt pocket: two welts, a button, stitches
     const bpA = Math.PI + s * 0.38;
+    if ((bpN >= 2 || s > 0) && bpN > 0) {
     for (const yy of [0.968, 0.944]) {
       const c = legPoint(s, yy, bpA, 0.002), n = legNormal(s, yy, bpA), w = new THREE.Mesh(new THREE.BoxGeometry(0.105, 0.0095, 0.0045), seamM);
       w.position.set(c[0], c[1], c[2]); w.rotation.y = Math.atan2(n[0], n[1]); g.add(w);
       const pts = []; for (let k = 0; k <= 10; k++) pts.push(legPoint(s, yy - 0.0075, bpA + (k / 10 - 0.5) * 0.85 * (s < 0 ? -1 : 1) * (0.105 / 0.20), 0.0032)); g.add(stitches(pts, thread, 0.0052));
     }
-    { const c = legPoint(s, 0.952, bpA, 0.0034), n = legNormal(s, 0.952, bpA), b = new THREE.Mesh(new THREE.CylinderGeometry(0.0066, 0.0066, 0.0028, 20), horn);
+    if (bpButton) { const c = legPoint(s, 0.952, bpA, 0.0034), n = legNormal(s, 0.952, bpA), b = new THREE.Mesh(new THREE.CylinderGeometry(0.0066, 0.0066, 0.0028, 20), horn);
       b.position.set(c[0], c[1], c[2]); b.rotation.set(Math.PI / 2, 0, 0); const holder = new THREE.Group(); holder.position.copy(b.position); b.position.set(0, 0, 0); holder.rotation.y = Math.atan2(n[0], n[1]); holder.add(b);
       for (const [hx, hy] of [[-0.002, -0.002], [0.002, 0.002], [-0.002, 0.002], [0.002, -0.002]]) { const hole = new THREE.Mesh(new THREE.SphereGeometry(0.0007, 6, 4), new THREE.MeshBasicMaterial({ color: 0x0a0806 })); hole.position.set(hx, hy, 0.0016); holder.add(hole); }
       g.add(holder); }
+    }
   }
   // --- the waistband and its details
+  if (!noband) {
   const wb = (y, a) => { const e = smooth((y - 1.015) / 0.01) * (1 - smooth((y - 1.075) / 0.008)); const r = 0.003 * e; return [(0.175 + r) * Math.sin(a), y, (0.112 + r) * Math.cos(a)]; }; wb.rad = () => 0.14;
   g.add(new THREE.Mesh(loftGeo(wb, 1.012, 1.08, 160, 16), dark));
   for (const yy of [1.0215, 1.0735]) { const p = []; for (let k = 0; k <= 160; k++) { const a = (k / 160) * Math.PI * 2; p.push([(0.1785) * Math.sin(a), yy, (0.1155) * Math.cos(a)]); } g.add(stitches(p, thread, 0.0058)); }
   const wl = (hx, hy, hz, ry = 0) => { const m = new THREE.Mesh(new THREE.BoxGeometry(hx, hy, hz), dark); m.rotation.y = ry; return m; };
-  for (const a of [-1.32, -0.88, -0.46, 0.46, 0.88, 1.32, Math.PI - 0.3, Math.PI + 0.3, Math.PI]) {                                       // belt loops
+  if (loopsOn) for (const a of [-1.32, -0.88, -0.46, 0.46, 0.88, 1.32, Math.PI - 0.3, Math.PI + 0.3, Math.PI]) {                                       // belt loops
     const r = 0.001 + 1 / Math.sqrt(Math.sin(a) ** 2 / (0.1805 ** 2) + Math.cos(a) ** 2 / (0.1175 ** 2)), lp = wl(0.014, 0.058, 0.0055, a); lp.position.set(r * Math.sin(a), 1.047, r * Math.cos(a)); g.add(lp);
     const st = []; for (const yy of [1.02, 1.074]) st.push([r * Math.sin(a), yy, r * Math.cos(a)]); const sp = new THREE.Mesh(new THREE.SphereGeometry(0.0009, 5, 4), new THREE.MeshStandardMaterial({ color: thread })); sp.position.set(st[0][0], st[0][1], st[0][2] + 0.0035 * Math.cos(a)); g.add(sp);
   }
@@ -72,11 +80,12 @@ export function trouserHi(o) {
     const bt = new THREE.Mesh(new THREE.CylinderGeometry(0.0095, 0.0095, 0.004, 28), horn); bt.rotation.x = Math.PI / 2; bt.position.set(-0.036, 1.047, 0.1262); g.add(bt);
     const rim = new THREE.Mesh(new THREE.TorusGeometry(0.0072, 0.0009, 6, 22), new THREE.MeshStandardMaterial({ color: 0x120d09, roughness: 0.4 })); rim.position.copy(bt.position); rim.position.z += 0.0022; g.add(rim);
     for (const [hx, hy] of [[-0.0025, -0.0025], [0.0025, 0.0025], [-0.0025, 0.0025], [0.0025, -0.0025]]) { const hole = new THREE.Mesh(new THREE.SphereGeometry(0.0009, 6, 4), new THREE.MeshBasicMaterial({ color: 0x050302 })); hole.position.set(-0.036 + hx, 1.047 + hy, 0.1285); g.add(hole); } }
+  }
   // fly: a J of stitches and a seam line at the centre front
   { const fl = [], fs = []; for (let k = 0; k <= 22; k++) { const u = k / 22, y = lerp(1.012, 0.815, u), x = 0.024 * (1 - smooth((u - 0.55) / 0.45)); const a = Math.asin(clamp((x - CX(y)) / RX(y), -1, 1)); const p = legPoint(1, y, a, 0.0022); fl.push([x, y, p[2]]); const a2 = Math.asin(clamp((x + 0.007 - CX(y)) / RX(y), -1, 1)), p2 = legPoint(1, y, a2, 0.0022); fs.push([x + 0.007, y, p2[2]]); }
     g.add(tube(fl, 0.0016, seamM, 40)); g.add(stitches(fs, thread, 0.0055)); }
   // the side adjusters: a tab with a double-prong buckle on each side seam
-  for (const s of [-1, 1]) {
+  if (!noband) for (const s of [-1, 1]) {
     const tb = new THREE.Mesh(new THREE.BoxGeometry(0.008, 0.032, 0.085), dark); tb.position.set(s * 0.1815, 1.046, -0.012); g.add(tb);
     const bk = new THREE.Mesh(new THREE.BoxGeometry(0.0035, 0.036, 0.030), gold); bk.position.set(s * 0.1865, 1.047, 0.030); g.add(bk);
     for (const dz of [-0.008, 0.008]) { const slot = new THREE.Mesh(new THREE.BoxGeometry(0.004, 0.026, 0.0035), horn); slot.position.set(s * 0.1868, 1.047, 0.030 + dz); g.add(slot); }

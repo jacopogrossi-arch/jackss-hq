@@ -48,9 +48,10 @@ def key(text):
 
 
 class World3D:
-    def __init__(self, cid, t_in, t_out, title=None, sub=None, track=30, fade=0.3, fov=32, title_out=None):
+    def __init__(self, cid, t_in, t_out, title=None, sub=None, track=30, fade=0.3, fov=32, title_out=None, w=1920, h=1080):
         """title_out: video time at which the title leaves (give it when the camera will fly objects through the top-left of the frame)."""
         self.cid, self.t_in, self.t_out, self.title, self.sub, self.track, self.fade, self.fov, self.title_out = cid, t_in, t_out, title, sub, track, fade, fov, title_out
+        self.W, self.H, self.caps = w, h, None                  # portrait for Shorts: World3D(..., w=1080, h=1920)
         self.objects, self.cams, self.labels, self.events = [], [], [], []
         self.room_spec, self.look_spec, self.base, self.passes, self.dofs, self.shutter_frames, self.exposure = None, None, "final", [], [], 0.8, None
 
@@ -68,9 +69,9 @@ class World3D:
         self.objects.append(o)
         return oid
 
-    def trouser(self, oid, pos=(0, 0, 0), rot_y=0.0, turn=None, move=None, t=None, color="#7b7d5a", pleats=2, cuff=True, scale=None, shadow=True, look=None, hang=None, pockets=True, hi=False, toile=False):
+    def trouser(self, oid, pos=(0, 0, 0), rot_y=0.0, turn=None, move=None, t=None, color="#7b7d5a", pleats=2, cuff=True, scale=None, shadow=True, look=None, hang=None, pockets=True, hi=False, toile=False, noband=False, bulge=None, loops=True, bp=2, bpbutton=True, flare=0.05, cuff_hi=None):
         """The Drop 1 trouser, built in code: natural waist with side adjusters, pleats (0, 1 or 2 per side), straight leg, turn-ups. Stylised, not a photo."""
-        return self._obj("trouser", oid, pos, rot_y, turn, move, t, color=color, pleats=pleats, cuff=cuff, scale=scale, shadow=[1.5, 0.95] if shadow else None, floor=pos[1], pass_mode=look, hang=hang, pockets=None if pockets else False, hi=hi or None, toile=toile or None)
+        return self._obj("trouser", oid, pos, rot_y, turn, move, t, color=color, pleats=pleats, cuff=cuff, scale=scale, shadow=[1.5, 0.95] if shadow else None, floor=pos[1], pass_mode=look, hang=hang, pockets=None if pockets else False, hi=hi or None, toile=toile or None, noband=noband or None, bulge=bulge, loops=None if loops else False, bp=bp, bpbutton=None if bpbutton else False, flare=flare)
 
     def card(self, oid, pos, w=0.8, h=0.5, text=None, sub=None, img=None, rot_y=0.0, turn=None, move=None, t=None, color=None, size=None, look=None, flat=False):
         """An ivory sheet standing in space: a title with one *key* word, or a picture (`img`, a path inside public/, e.g. "img/moodboard.jpg") with an optional caption."""
@@ -139,6 +140,12 @@ class World3D:
         self.shutter_frames = frames
         return self
 
+    def captions(self, chunks, top=1230, size=92, color="#fbf7ee", accent="#ffd98a"):
+        """Big word-group captions for Shorts (14/11/2026). chunks = [(t0, t1, "text with a *key* word"), ...] in VIDEO seconds; one chunk on screen at a time, popping in over 0.12 s.
+        Keep them above the bottom ~22% (Shorts' own buttons and title live there)."""
+        self.caps = dict(chunks=[[round(a, 3), round(b, 3), t] for a, b, t in chunks], top=top, size=size, color=color, accent=accent)
+        return self
+
     def spec(self):
         if not self.cams:
             raise ValueError("%s: give the camera a start with cam(pos, look)" % self.cid)
@@ -153,11 +160,13 @@ class World3D:
         if self.passes: extra["passes"] = self.passes
         if self.dofs: extra["dof"] = self.dofs
         if self.shutter_frames != 0.8: extra["shutter"] = self.shutter_frames
+        extra["w"], extra["h"] = self.W, self.H
         return dict(id=self.cid, t_in=self.t_in, dur=round(self.t_out - self.t_in, 3), fov=self.fov, objects=self.objects, cam=self.cams, texts=texts, **extra,
                     labels=[dict(obj=L["obj"], p=L["p"], t=L["t"], dx=L["dx"], dy=L["dy"], **({"out": L["out"]} if L["out"] is not None else {})) for L in self.labels])
 
     def build(self, standalone=False):
         c, d = self.cid, self.t_out - self.t_in
+        W, H = self.W, self.H
         wash = '' if (self.look_spec or self.room_spec) else '<div class="w3-wash"></div><div class="w3-grid" id="%s-grid"></div>' % c
         inner = [wash + '<canvas class="w3-gl" id="%s-gl" width="1920" height="1080"></canvas><canvas class="w3-gl w3-mb" id="%s-mb" width="1920" height="1080" style="display:none"></canvas>'
                  '<svg class="w3-ln" id="%s-ln" width="1920" height="1080" viewBox="0 0 1920 1080"></svg>' % (c, c, c)]
@@ -175,6 +184,19 @@ class World3D:
                 'style="left:0;top:0;width:1920px;height:1080px;position:absolute;%s%s">%s</div>\n'
                 '<script type="module">import { mount } from "./vendor/world3d.js"; mount(%s);</script>'
                 % (c, c, self.t_in, d, self.track, vis, ("background:%s;" % (self.room_spec or self.look_spec)["bg"]) if (self.look_spec or self.room_spec) else "", "".join(inner), json.dumps(self.spec(), ensure_ascii=False)))
+        html = html.replace('width="1920" height="1080"', 'width="%d" height="%d"' % (W, H)).replace('viewBox="0 0 1920 1080"', 'viewBox="0 0 %d %d"' % (W, H)).replace("width:1920px;height:1080px;position:absolute", "width:%dpx;height:%dpx;position:absolute" % (W, H))
+        if (W, H) != (1920, 1080):
+            html = html.replace("width: 1920px; height: 1080px; }", "width: %dpx; height: %dpx; }" % (W, H)).replace("width: 6px; height: 1080px;", "width: 6px; height: %dpx;" % H)
+        if self.caps:
+            cp = self.caps; items = json.dumps(cp["chunks"], ensure_ascii=False)
+            css = ('<style>#CID-cap { position:absolute; left:0; width:WPXpx; top:TOPpx; text-align:center; font-family:Inter,"Segoe UI",sans-serif; font-weight:800; font-size:SIZEpx; line-height:1.08; letter-spacing:-.02em; color:COLOR; opacity:0; padding:0 56px; box-sizing:border-box; text-shadow:0 4px 28px rgba(0,0,0,.7), 0 2px 6px rgba(0,0,0,.6); z-index:50; }'
+                   ' #CID-cap i { font-family:"Playfair Display",Georgia,serif; font-style:italic; font-weight:500; color:ACCENT; }</style><div id="CID-cap"></div>')
+            js_cap = ('<script>(function(){ var items=ITEMS, el=document.getElementById("CID-cap"), last=-1; window.addEventListener("hf-seek", function(e){ var t=e.detail.time, k=-1; for (var i=0;i<items.length;i++) if (t>=items[i][0] && t<items[i][1]) { k=i; break; }'
+                      ' if (k!==last) { el.innerHTML = k<0 ? "" : items[k][2].replace(/\\*(.+?)\\*/g, "<i>$1</i>"); last=k; }'
+                      ' if (k<0) { el.style.opacity=0; return; } var u=Math.min(1,(t-items[k][0])/0.12), v=Math.min(1,(items[k][1]-t)/0.08); el.style.opacity=Math.min(u,v).toFixed(3); el.style.transform="scale("+(0.92+0.08*u).toFixed(3)+")"; }); })();</script>')
+            for a, b in (("CID", c), ("WPX", str(W)), ("TOP", str(cp["top"])), ("SIZE", str(cp["size"])), ("COLOR", cp["color"]), ("ACCENT", cp["accent"]), ("ITEMS", items)):
+                css = css.replace(a, b); js_cap = js_cap.replace(a, b)
+            html += css + js_cap
         f = self.fade
         js = "\n".join([
             "tl.set('#host-%s', { visibility:'hidden', opacity:0 }, 0);" % c,
@@ -198,7 +220,7 @@ class World3D:
     def page(folder, worlds, duration=None):
         """A standalone lab page (no footage, no GSAP): folder/index.html + vendor + fonts, for `npx hyperframes snapshot|render folder`. Worlds must not overlap in time."""
         os.makedirs(os.path.join(folder, "fonts"), exist_ok=True)
-        World3D.stage(folder)
+        World3D.stage(folder); PW, PH = worlds[0].W, worlds[0].H
         for f in ("Inter.ttf", "PlayfairDisplay-Italic.ttf"):
             shutil.copy(os.path.join(SK, "assets", "fonts", f), os.path.join(folder, "fonts"))
         t0 = min(w.t_in for w in worlds); duration = duration or max(w.t_out for w in worlds) - t0
@@ -211,8 +233,8 @@ class World3D:
         page = ('<!doctype html>\n<html lang="it"><head><meta charset="utf-8"><title>world3d lab</title><style>\n'
                 '@font-face { font-family: "Inter"; src: url("fonts/Inter.ttf"); font-weight: 100 900; }\n'
                 '@font-face { font-family: "Playfair Display"; src: url("fonts/PlayfairDisplay-Italic.ttf"); font-weight: 400 900; font-style: italic; }\n'
-                'html, body { margin: 0; background: #0A2B1E; } #stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; }\n</style></head><body>\n'
-                '<div id="stage" data-composition-id="world3d-lab" data-no-timeline="1" data-start="0" data-duration="%.3f" data-fps="30" data-width="1920" data-height="1080">\n%s\n</div>\n%s\n</body></html>\n'
-                % (duration + t0, "\n".join(body), show))
+                'html, body { margin: 0; background: #0A2B1E; } #stage { position: relative; width: %dpx; height: %dpx; overflow: hidden; }\n</style></head><body>\n'
+                '<div id="stage" data-composition-id="world3d-lab" data-no-timeline="1" data-start="0" data-duration="%.3f" data-fps="30" data-width="%d" data-height="%d">\n%s\n</div>\n%s\n</body></html>\n'
+                % (PW, PH, duration + t0, PW, PH, "\n".join(body), show))
         open(os.path.join(folder, "index.html"), "w", encoding="utf-8").write(page)
         return os.path.join(folder, "index.html")
