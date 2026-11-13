@@ -14,14 +14,16 @@
 4. **Tre: la via di mezzo.** Tre. Alle medie potevo avere la scarpa da centocinquanta euro. Ne avevo una. Non sei! Da lì ho imparato una cosa: le cose si scelgono, poche e buone, e non servono a dimostrare niente. Né l'ostentazione di chi ha, né il flexing di chi non ha. L'inverso di tutti e due.
 5. **Chiusura.** Questo è Inverso. Sono uno studente, non ho niente da venderti: sto documentando tutto. Se vuoi vedere nascere il primo capo, seguimi.
 
-## Regia (i tempi li fissano le parole)
+## Regia (i tempi li fissano le parole; versione costruita la notte del 13/11)
 | # | Scena | Camera / scala | Dispositivo |
 |---|---|---|---|
-| 1 | Sette cubi-lettera sul pavimento, la parola è CAPOVOLTA nel primo fotogramma; un'onda li gira uno per uno: INVERSO | basso, frontale, poi sale | contatore "significati 0/3" |
-| map | lo studio dall'alto, 3 stazioni numerate, percorso rosso | aereo | — |
-| 2 | Pannello di drill oliva sul tavolo: il dritto pulito, poi si ribalta → rovescio con cuciture aperte e sorfilate, margini, etichetta; accanto il "rovescio sporco" con fili | MACRO | etichette dritto / rovescio, X ruggine sul sporco |
-| 2b | Parete moodboard: le tre carte "ore di studio", "errori", "costo del tessuto" | carrello | pop |
-| 3 | Stender: una fila di magliette identiche che scorre veloce (fast fashion) e si svuota; resta un solo pantalone. Orologio a muro che corre e poi rallenta | medio → stretto | big "mesi, *non settimane*" |
-| 4 | Scaffale: sei scatole da scarpe col cartellino 150 €; cinque spariscono, ne resta una con la sneaker sopra | stretto | big "*Una.* Non sei." |
-| 4b | DIAGRAMMA: dall'alto, una linea a terra da "ostentazione" a "flexing", il segnaposto scivola nel mezzo: "Inverso" | aereo | il momento-diagramma |
-| 5 | I cubi di nuovo, l'insegna col logo scende; pull-back | ampio | Seguimi |
+| 1 | Totem verticale di sette cubi-lettera in mezzo allo studio: nel primo fotogramma la parola è al rovescio, i cubi si girano uno per uno → INVERSO | basso, push-in, poi orbita | pillola "significato x/3" |
+| map | lo studio dall'alto, 3 tondi numerati a terra (il 3 è "?"), percorso rosso a puntini che si allunga a ogni mappa | aereo | etichette 1 · il rovescio, 2 · la fretta, 3 · ? |
+| 2 | Pannello di drill oliva sul tavolo: tasca a filo, si ribalta → rovescio sorfilato con l'etichetta Inverso; accanto il rovescio sporco con i fili e la X ruggine | MACRO | etichette agganciate |
+| 2b | Pannello di sughero: le card "ore di studio", "v1 cartamodello · da rifare" (barrata), il campione di drill, "€ / m" | carrello | pop |
+| 3 | Stender: fila di t-shirt che corre (fast fashion) e si svuota; entra un solo pantalone; l'orologio a muro corre | medio → macro → largo | big "in mesi, non in settimane" |
+| 4 | Plinto: sei scatole da scarpe 150 €, ne restano una e la sneaker sopra | stretto → macro | big "Una. Non sei." |
+| 4b | DIAGRAMMA a terra su un tappeto bosco: righello da "ostentazione" (chi ha) a "flexing" (chi non ha), il dischetto col logo va nel mezzo; push-in sul logo | aereo → stretto | il momento-diagramma |
+| 5 | Il totem si rigira e torna INVERSO; pull-back su tutto lo studio | ampio | Seguimi |
+
+Musica: «locomotivate» – Auxjack (Epidemic), 13 dB sotto la voce, sidechain.

@@ -5,6 +5,7 @@ import * as THREE from "./three.module.min.js";
 import { trouserHi } from "./atelier-trouser.js";
 import { buildProp, PROPS } from "./atelier-props.js";
 import { fabricMaps } from "./atelier-tex.js";
+import { buildStudio, STUDIO } from "./atelier-studio.js";
 
 const hash = (a, b = 0, c = 0) => { const x = Math.sin(a * 127.1 + b * 311.7 + c * 74.7) * 43758.5453; return x - Math.floor(x); };
 export const PAL = ["#2f3a2e", "#8a4b2d", "#b9ae98", "#efe9dd", "#3b4f6b", "#6f7452", "#c9a24a", "#7a2f2f", "#4d6b5c", "#1e1b18", "#a58a6a", "#5d6b7a"];
@@ -238,9 +239,10 @@ function clothSheet(o) {                                 // cloth laid on a tabl
   const m = new THREE.Mesh(geo, o.mat); m.rotation.x = -Math.PI / 2; m.position.y = 0.004; const g = new THREE.Group(); g.add(m); return g;
 }
 
-export const KIT = new Set(["woodfloor", "wall", "window", "rollrack", "bolts", "spoolwall", "table", "paper", "frame", "ruler", "shears", "sewing", "mannequin", "pendant", "desklamp", "plant", "rail", "rug", "cloth", "cuttingmat", "buttonjar", "pincushion", "spool", "hoop", "sketchdraw", "patterncut", "logoplate", "weight", "chalk", "lsquare", "pathdots", "floorbadge"]);
+export const KIT = new Set(["woodfloor", "wall", "window", "rollrack", "bolts", "spoolwall", "table", "paper", "frame", "ruler", "shears", "sewing", "mannequin", "pendant", "desklamp", "plant", "rail", "rug", "cloth", "cuttingmat", "buttonjar", "pincushion", "spool", "hoop", "sketchdraw", "patterncut", "logoplate", "weight", "chalk", "lsquare", "pathdots", "floorbadge", ...STUDIO]);
 export function build(o, H) {
   if (PROPS.has(o.type)) return buildProp(o);
+  if (STUDIO.has(o.type)) return buildStudio(o);
   switch (o.type) {
     case "trouser": return trouserHi(o);
     case "woodfloor": return floorBoards(o);

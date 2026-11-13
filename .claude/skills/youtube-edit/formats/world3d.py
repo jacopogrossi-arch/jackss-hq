@@ -22,7 +22,7 @@ Cost, measured 10/11/2026: about 10 s of render per second of video at 1080p dra
 import json, os, re, shutil
 
 SK = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-VENDOR = ("three.module.min.js", "three-LICENSE.txt", "world3d.js", "atelier-kit.js", "atelier-tex.js", "atelier-trouser.js", "atelier-props.js", "atelier-cut.js")
+VENDOR = ("three.module.min.js", "three-LICENSE.txt", "world3d.js", "atelier-kit.js", "atelier-tex.js", "atelier-trouser.js", "atelier-props.js", "atelier-cut.js", "atelier-studio.js")
 
 CSS = """<style>
   .w3-host { background: var(--k-bg, #0A2B1E); overflow: hidden; font-family: var(--k-font, "Inter", "Segoe UI", system-ui, sans-serif); color: var(--k-text, #f4efe6); }
@@ -266,8 +266,8 @@ class World3D:
         """A standalone lab page (no footage, no GSAP): folder/index.html + vendor + fonts, for `npx hyperframes snapshot|render folder`. Worlds must not overlap in time."""
         os.makedirs(os.path.join(folder, "fonts"), exist_ok=True)
         World3D.stage(folder); PW, PH = worlds[0].W, worlds[0].H
-        for f in ("Inter.ttf", "PlayfairDisplay-Italic.ttf"):
-            shutil.copy(os.path.join(SK, "assets", "fonts", f), os.path.join(folder, "fonts"))
+        for f in ("Inter.ttf", "PlayfairDisplay-Italic.ttf", "InstrumentSerif-Regular.ttf", "InstrumentSerif-Italic.ttf", "IBMPlexSans.ttf"):   # the last three: Inverso's brand fonts (13/11/2026)
+            if os.path.exists(os.path.join(SK, "assets", "fonts", f)): shutil.copy(os.path.join(SK, "assets", "fonts", f), os.path.join(folder, "fonts"))
         t0 = min(w.t_in for w in worlds); duration = duration or max(w.t_out for w in worlds) - t0
         body = []
         for w in worlds:
@@ -278,6 +278,9 @@ class World3D:
         page = ('<!doctype html>\n<html lang="it"><head><meta charset="utf-8"><title>world3d lab</title><style>\n'
                 '@font-face { font-family: "Inter"; src: url("fonts/Inter.ttf"); font-weight: 100 900; }\n'
                 '@font-face { font-family: "Playfair Display"; src: url("fonts/PlayfairDisplay-Italic.ttf"); font-weight: 400 900; font-style: italic; }\n'
+                '@font-face { font-family: "Instrument Serif"; src: url("fonts/InstrumentSerif-Regular.ttf"); font-weight: 400; font-style: normal; }\n'
+                '@font-face { font-family: "Instrument Serif"; src: url("fonts/InstrumentSerif-Italic.ttf"); font-weight: 400; font-style: italic; }\n'
+                '@font-face { font-family: "IBM Plex Sans"; src: url("fonts/IBMPlexSans.ttf"); font-weight: 100 700; }\n'
                 'html, body { margin: 0; background: #0A2B1E; } #stage { position: relative; width: %dpx; height: %dpx; overflow: hidden; }\n</style></head><body>\n'
                 '<div id="stage" data-composition-id="world3d-lab" data-no-timeline="1" data-start="0" data-duration="%.3f" data-fps="30" data-width="%d" data-height="%d">\n%s\n</div>\n%s\n</body></html>\n'
                 % (PW, PH, duration + t0, PW, PH, "\n".join(body), show))
