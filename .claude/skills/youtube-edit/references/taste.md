@@ -185,3 +185,8 @@ Jacopo: "prima di mandare il 4K… ti fai tutti i frame, 10 per secondo… capis
 - **Every element of the aerial map is on screen before the dive.** Labels go near their badge without covering each other, the caption band or the frame edge.
 - **Tools follow the path smoothly.** The shears turn at a corner by averaging the direction over ±8 points, never in a single 90° step.
 - **Stale renders.** If a render was stopped, kill the hyperframes processes and DELETE `draft-raw.mp4` before re-rendering, then check the timestamp: `finish.sh` skips the render when the file already exists.
+
+## Short v4 → v5: Jacopo's frame-by-frame notes (13/11/2026)
+- **A live counter moves on with each PHASE, not with a word that comes later.** The cost pill read "niente" all through the pattern and "un foglio di carta" all through the toile, so at 52 s it contradicted the big statement. The rule: drawing = niente, pattern = paper (from "carta"), toile = cloth (from "tela").
+- **No double text.** When a 3D label and the caption say the same thing at the same moment ("Gamba dritta" / "gamba dritta"), the label comes in 0.8 s later, once the caption has moved on, or it is dropped.
+- **The hook must show the claim in the first frame.** "Sembrava una gonna" over a toile seen from the front doesn't read: open at 3/4, on the side where the volume is.
