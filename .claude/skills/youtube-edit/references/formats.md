@@ -594,3 +594,9 @@ una motion plate su misura** (anche mai vista), nei canoni di Joseph. Se ne poss
 `Scene.link()` lo garantisce da sé (parte al più presto 0,3 s dopo il più tardivo dei due estremi) e usa un contenitore `div` con clip-path (il clip-path sull'`<svg>` direttamente NON nasconde il tratto: era il bug che mostrava linee a vuoto).
 
 Scene del capitolo 1 (Video #2, 0-127 s): carta bianca -> Claude -> "da solo" / "mano umana" barrata; Io + strumenti -> risultati / tempo / "sostituisce l'umano" barrato; mappa dei capitoli (tracker); tre trend -> Claude -> "analizza"; Claude -> outfit / mood board / concept con miniature vere; 3+3+3+3 = 12; titoli scambiati e rimessi a posto.
+
+### 52c. The atelier room: `room()` + `prop()` + the kit (14/11/2026)
+`w.room(...)` turns a world into a lit room: daylight as the key light through a window (real shadow map: the wall blocks it, the window cross shadows), warm ambient (`hemi_i`, `side_i`), optional fog. `w.prop(shape, id, pos, size, rot_y=, ...)` places a prop from `assets/vendor/atelier-kit.js`:
+woodfloor [x,z] · wall [len,h,thick] (hole=[cx,cy,w,h] for a window) · window [w,h] · rollrack [len,h,depth] · bolts [w,d] (n=) · spoolwall [w,h] · table [len,h,depth] · paper [w,d] (kind="pattern"|"sketch"|"swatch"|"lines") · frame [w,h] · ruler · shears · sewing · mannequin · pendant [cord] (light=) · desklamp · plant · rail [len,h] · rug · cloth.
+`w.trouser(..., hang=2.2)` hangs the trouser from a wooden hanger on a cord (pos y = height of the hem); it now has slanted side pockets, back welts, belt loops, fly and knee creases. The reference scene is `videos/_bench/atelier2/room.py` (`furnish(w)`). Mind the heights: a hung trouser spans y = hem..hem+1.08, so aim the camera at y ~ 1.2-1.6, not 1.0.
+Props live in one look (no ink/clay dressing). Rule of thumb from the autogrill video: if a shot looks empty, add props, not effects.

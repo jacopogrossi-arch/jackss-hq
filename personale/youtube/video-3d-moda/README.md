@@ -25,7 +25,7 @@ Dettagli in `references/formats.md` §52b. Tutto opzionale e retrocompatibile (r
 3. **Motion blur** a sotto-fotogrammi sopra 0,6 m/s (otturatore 0,8 fotogramma).
 4. **Profondità di campo** (12 render con la lente su un disco, il punto guardato resta nitido).
 5. Card **flat** (senza luci né ombre) per i titoli.
-6. **Principi UX nelle plate 2D** (proposte NON votate): `Board(arc=0.05)` (archi sulle swipe, opt-in, default spento), `plates_base.repeat_factor()` (frequenza d'uso), `scripts/qa-lag.py` (ritardo parola → effetto). Demo Prima \| Dopo in `videos/_bench/ux-prove/` (`UX-principi-prima-dopo.mp4`).
+6. **Principi UX nelle plate 2D** (proposte NON votate): `Board(arc=0.03)` (Jacopo 14/11: più lineare) (archi sulle swipe, opt-in, default spento), `plates_base.repeat_factor()` (frequenza d'uso), `scripts/qa-lag.py` (ritardo parola → effetto). Demo Prima \| Dopo in `videos/_bench/ux-prove/` (`UX-principi-prima-dopo.mp4`).
 
 ## Numeri misurati (GPU GTX 1060, WebGL hardware)
 - Render completo **1080p: 2 min 18 s**. Render completo **4K: circa 6 min** (la stima iniziale di 35 s per secondo era dominata dall'avvio, non dal rendering).
