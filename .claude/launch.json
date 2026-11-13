@@ -48,6 +48,18 @@
         "videos/_bench/atelier2/comp"
       ],
       "port": 8792
+    },
+    {
+      "name": "short1",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8793",
+        "--directory",
+        "videos/_bench/short1/comp"
+      ],
+      "port": 8793
     }
   ]
 }

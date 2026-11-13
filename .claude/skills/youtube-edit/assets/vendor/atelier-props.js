@@ -128,15 +128,65 @@ function spoolLying(o) {                                  // a wooden spool of t
   add(g, lat, M("#c9a46a", 0.6), 0, 0, 0); add(g, new THREE.CylinderGeometry(0.0125, 0.0125, 0.028, 20), clothMat(o.color || "#8a4b2d", "plain", { n: 0.5 }), 0, 0.018, 0); g.rotation.z = Math.PI / 2; g.position.y = 0.014; const w = new THREE.Group(); w.add(g); return w;
 }
 
+
+// ---------- a croquis that draws itself: strokes revealed over [t0, t1] (plate seconds), a 3D pencil riding the tip
+const SKETCH = (() => {
+  const L = [];
+  const poly = (...p) => L.push(p);
+  poly([0.30, 0.08], [0.70, 0.08], [0.71, 0.15], [0.73, 0.92], [0.535, 0.92], [0.50, 0.58], [0.465, 0.92], [0.27, 0.92], [0.29, 0.15], [0.30, 0.08]);
+  poly([0.29, 0.15], [0.71, 0.15]);
+  for (const s of [-1, 1]) { poly([0.5 + s * 0.09, 0.15], [0.5 + s * 0.085, 0.28]); poly([0.5 + s * 0.13, 0.15], [0.5 + s * 0.125, 0.27]); poly([0.5 + s * 0.20, 0.17], [0.5 + s * 0.18, 0.23], [0.5 + s * 0.16, 0.30]); }
+  poly([0.40, 0.32], [0.40, 0.91]); poly([0.60, 0.32], [0.60, 0.91]);
+  poly([0.27, 0.90], [0.535, 0.90]);
+  return L;
+})();
+function sketchReveal(o) {
+  const [w, d] = o.size, [t0, t1] = o.reveal, W = 1536, H = Math.round(W * d / w), g = new THREE.Group();
+  const base = document.createElement("canvas"); base.width = W; base.height = H; const bx = base.getContext("2d");
+  bx.fillStyle = "#f3ede0"; bx.fillRect(0, 0, W, H); bx.strokeStyle = "rgba(30,27,24,.10)"; bx.lineWidth = 1; for (let i = 0; i < W; i += 48) { bx.beginPath(); bx.moveTo(i, 0); bx.lineTo(i, H); bx.stroke(); } for (let j = 0; j < H; j += 48) { bx.beginPath(); bx.moveTo(0, j); bx.lineTo(W, j); bx.stroke(); }
+  const cvs = document.createElement("canvas"); cvs.width = W; cvs.height = H; const cx = cvs.getContext("2d"), tx = new THREE.CanvasTexture(cvs); tx.colorSpace = THREE.SRGBColorSpace; tx.anisotropy = 16;
+  const pts = SKETCH.map((pl) => pl.map((p) => [p[0] * W, p[1] * H])), lens = pts.map((pl) => { let s = 0; for (let i = 1; i < pl.length; i++) s += Math.hypot(pl[i][0] - pl[i - 1][0], pl[i][1] - pl[i - 1][1]); return s; }), total = lens.reduce((a, b) => a + b, 0);
+  const mesh = new THREE.Mesh(new THREE.PlaneGeometry(w, d), new THREE.MeshStandardMaterial({ map: tx, roughness: 0.9 })); mesh.rotation.x = -Math.PI / 2; mesh.position.y = 0.002; g.add(mesh);
+  const pen = new THREE.Group(), body = new THREE.Mesh(new THREE.CylinderGeometry(0.0042, 0.0042, 0.15, 6), M("#e0a82e", 0.5)); body.position.y = 0.083; pen.add(body);
+  const cone = new THREE.Mesh(new THREE.CylinderGeometry(0.0042, 0.0008, 0.016, 6), M("#d9b98a", 0.7)); cone.position.y = 0.0075; pen.add(cone);
+  const lead = new THREE.Mesh(new THREE.CylinderGeometry(0.0009, 0.0003, 0.004, 6), M("#1e1b18", 0.4)); lead.position.y = 0.0015; pen.add(lead);
+  const era = new THREE.Mesh(new THREE.CylinderGeometry(0.0044, 0.0044, 0.012, 6), M("#c9503a", 0.7)); era.position.y = 0.164; pen.add(era);
+  pen.rotation.set(-0.9, 0.25, 0.1); g.add(pen); let last = -1;
+  const draw = (p) => {
+    cx.drawImage(base, 0, 0); cx.strokeStyle = "#2a2623"; cx.lineWidth = 6; cx.lineCap = "round"; cx.lineJoin = "round"; let left = p * total, tip = pts[0][0];
+    for (let k = 0; k < pts.length && left > 0; k++) {
+      const pl = pts[k]; cx.beginPath(); cx.moveTo(pl[0][0], pl[0][1]); tip = pl[0];
+      for (let i = 1; i < pl.length && left > 0; i++) { const a = pl[i - 1], b = pl[i], sl = Math.hypot(b[0] - a[0], b[1] - a[1]), f = Math.min(1, left / sl); tip = [a[0] + (b[0] - a[0]) * f, a[1] + (b[1] - a[1]) * f]; cx.lineTo(tip[0], tip[1]); left -= sl; }
+      cx.stroke();
+    }
+    if (p >= 1) { cx.fillStyle = "#8a4b2d"; cx.font = "italic 500 92px 'Playfair Display', Georgia, serif"; cx.fillText("Drop 1", W * 0.06, H * 0.07); cx.fillStyle = "#1e1b18"; cx.font = "500 40px Inter, sans-serif"; cx.fillText("vita alta · doppia piega", W * 0.06, H * 0.115); }
+    tx.needsUpdate = true; return tip;
+  };
+  g.userData.update = (t) => {
+    const p = Math.max(0, Math.min(1, (t - t0) / (t1 - t0))), q = Math.round(p * 600);
+    if (q !== last) { last = q; const tip = draw(q / 600); pen.position.set((tip[0] / W - 0.5) * w, 0.002, (tip[1] / H - 0.5) * d); }
+    pen.visible = p > 0 && p < 1;
+  };
+  g.userData.update(-1); return g;
+}
+function hoop(o) {                                         // a flat measuring-tape ring round something: size [rx, rz]; stands in the XZ plane at its local y = 0
+  const [rx, rz] = o.size, g = new THREE.Group(), [c, x] = (() => { const cc = document.createElement("canvas"); cc.width = 1024; cc.height = 32; return [cc, cc.getContext("2d")]; })();
+  x.fillStyle = "#f0c93a"; x.fillRect(0, 0, 1024, 32); x.fillStyle = "#1e1b18"; for (let i = 0; i < 100; i++) x.fillRect(i * 10.24, 0, 2, i % 5 === 0 ? 18 : 9);
+  const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.wrapS = THREE.RepeatWrapping; t.repeat.set(2, 1);
+  const geo = new THREE.CylinderGeometry(1, 1, 0.016, 96, 1, true), m = new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ map: t, roughness: 0.55, side: THREE.DoubleSide })); m.scale.set(rx, 1, rz); g.add(m); return g;
+}
+
 export function buildProp(o) {
   switch (o.type) {
     case "sewing": return sewing(o);
+    case "sketchdraw": return sketchReveal(o);
     case "mannequin": return mannequin(o);
     case "cuttingmat": return cuttingMat(o);
     case "buttonjar": return buttonJar(o);
     case "pincushion": return pincushion(o);
     case "spool": return spoolLying(o);
+    case "hoop": return hoop(o);
     default: return null;
   }
 }
-export const PROPS = new Set(["sewing", "mannequin", "cuttingmat", "buttonjar", "pincushion", "spool"]);
+export const PROPS = new Set(["sewing", "mannequin", "cuttingmat", "buttonjar", "pincushion", "spool", "hoop", "sketchdraw"]);

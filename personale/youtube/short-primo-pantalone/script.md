@@ -31,7 +31,7 @@ Fatti usati (tutti da `inverso/ricerca/14-prima-prova-tela-rilievi.md` e dalla s
 
 Regole: nessuna veneziana, nessuna sfocatura di profondità (solo motion blur sugli stacchi), sottotitoli in zona alta/centrale, un cambio di inquadratura ogni 2-3 secondi, SFX su ogni stacco ed etichetta.
 
-## Da confermare con Jacopo
+## Confermato da Jacopo (14/11/2026: "va bene tutto")
 1. Il gancio "sembrava una gonna" (vero come numero, con il "sembrava" perché il rilievo lo dà come sospetto da verificare).
 2. Nominare COS o dire "un pantalone di una grande catena"?
 3. La chiamata finale: "seguimi" va bene o preferisci altro?

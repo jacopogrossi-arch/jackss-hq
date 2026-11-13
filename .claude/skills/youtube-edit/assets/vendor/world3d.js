@@ -195,7 +195,7 @@ export function mount(spec) {
   const rim = new THREE.DirectionalLight(0x8fe8c4, 2.0); rim.position.set(-2.0, 1.6, -2.2); scene.add(rim);
   const side = new THREE.DirectionalLight(0xfff4e0, 0.7); side.position.set(-2.2, 0.8, 1.4); scene.add(side);
   const hemi = new THREE.HemisphereLight(0xe9f5ee, 0x0a2b1e, 0.55); scene.add(hemi);
-  const items = {}, labels = [], grid = document.getElementById(spec.id + "-grid"), svg = document.getElementById(spec.id + "-ln");
+  const items = {}, updaters = [], labels = [], grid = document.getElementById(spec.id + "-grid"), svg = document.getElementById(spec.id + "-ln");
   const v = new THREE.Vector3(), look = new THREE.Vector3();
   const mb = document.getElementById(spec.id + "-mb"), mbx = mb ? mb.getContext("2d") : null, bar = document.getElementById(spec.id + "-bar"), bart = document.getElementById(spec.id + "-bart");
   if (mb) { mb.width = Math.round(W * PR); mb.height = Math.round(H * PR); }
@@ -254,7 +254,7 @@ export function mount(spec) {
   function build(imgs) {
     (spec.objects || []).forEach((o, n) => {
       const m = o.type === "trouser" ? (o.hi ? kitBuild(o, { fabric, shade }) : trouser(o)) : o.type === "card" ? card(o, imgs[n]) : solid(o);
-      const g = new THREE.Group(); g.add(m); if (o.scale) m.scale.multiplyScalar(o.scale);
+      const g = new THREE.Group(); g.add(m); if (o.scale) m.scale.multiplyScalar(o.scale); if (m.userData && m.userData.update) updaters.push(m.userData.update);
       scene.add(g); items[o.id] = { o, g };
       const meshes = []; g.traverse((x) => { if (x.isMesh) meshes.push(x); });                      // dress it for the passes: ink outlines (hull for round things, edge lines for boxes and sheets)
       for (const x of meshes) {
@@ -297,6 +297,7 @@ export function mount(spec) {
       g.position.set(p[0], p[1] - 0.12 * (1 - a), p[2]); g.rotation.set(r[0], r[1], r[2]); g.visible = a > 0.001;
       g.traverse((m) => { if (m.material && o.t != null && m.userData.orig === m.material) { m.material.transparent = true; m.material.opacity = (m.material.userData.o ?? (m.material.userData.o = m.material.opacity)) * a; } });
     }
+    for (const u of updaters) u(t);
     if (slats) for (const b of slats.children) b.position.y = b.userData.y0 + 0.012 * t;      // the sun creeps: the stripes drift across the room
   }
   function aimCamera(t) {                                                       // camera pose at time t (clamped), without any jitter

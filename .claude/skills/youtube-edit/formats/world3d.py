@@ -69,9 +69,9 @@ class World3D:
         self.objects.append(o)
         return oid
 
-    def trouser(self, oid, pos=(0, 0, 0), rot_y=0.0, turn=None, move=None, t=None, color="#7b7d5a", pleats=2, cuff=True, scale=None, shadow=True, look=None, hang=None, pockets=True, hi=False, toile=False, noband=False, bulge=None, loops=True, bp=2, bpbutton=True, flare=0.05, cuff_hi=None):
+    def trouser(self, oid, pos=(0, 0, 0), rot_y=0.0, turn=None, move=None, t=None, color="#7b7d5a", pleats=2, cuff=True, scale=None, shadow=True, look=None, hang=None, pockets=True, hi=False, toile=False, noband=False, bulge=None, loops=True, bp=2, bpbutton=True, flare=0.05, chalk=False):
         """The Drop 1 trouser, built in code: natural waist with side adjusters, pleats (0, 1 or 2 per side), straight leg, turn-ups. Stylised, not a photo."""
-        return self._obj("trouser", oid, pos, rot_y, turn, move, t, color=color, pleats=pleats, cuff=cuff, scale=scale, shadow=[1.5, 0.95] if shadow else None, floor=pos[1], pass_mode=look, hang=hang, pockets=None if pockets else False, hi=hi or None, toile=toile or None, noband=noband or None, bulge=bulge, loops=None if loops else False, bp=bp, bpbutton=None if bpbutton else False, flare=flare)
+        return self._obj("trouser", oid, pos, rot_y, turn, move, t, color=color, pleats=pleats, cuff=cuff, scale=scale, shadow=[1.5, 0.95] if shadow else None, floor=pos[1], pass_mode=look, hang=hang, pockets=None if pockets else False, hi=hi or None, toile=toile or None, noband=noband or None, bulge=bulge, loops=None if loops else False, bp=bp, bpbutton=None if bpbutton else False, flare=flare, chalk=chalk or None)
 
     def card(self, oid, pos, w=0.8, h=0.5, text=None, sub=None, img=None, rot_y=0.0, turn=None, move=None, t=None, color=None, size=None, look=None, flat=False):
         """An ivory sheet standing in space: a title with one *key* word, or a picture (`img`, a path inside public/, e.g. "img/moodboard.jpg") with an optional caption."""

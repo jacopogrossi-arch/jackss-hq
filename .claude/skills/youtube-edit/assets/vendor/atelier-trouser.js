@@ -92,6 +92,11 @@ export function trouserHi(o) {
     const bar = new THREE.Mesh(new THREE.CylinderGeometry(0.0022, 0.0022, 0.030, 8), gold); bar.rotation.x = Math.PI / 2; bar.position.set(s * 0.188, 1.032, 0.030); g.add(bar);
     for (let k = 0; k < 3; k++) { const e = new THREE.Mesh(new THREE.TorusGeometry(0.0035, 0.0009, 5, 12), horn); e.rotation.y = Math.PI / 2; e.position.set(s * 0.1865, 1.047, -0.008 - k * 0.016); g.add(e); }
   }
+  if (o.chalk) {                                                                                                                         // a straight chalk line on the corrected side
+    const bk = BUL; BUL = [0, 0]; const ch = new THREE.MeshStandardMaterial({ color: "#f6f1e4", roughness: 1 });
+    for (const s of [-1, 1]) if ((o.bulge || [0, 0])[s > 0 ? 1 : 0] < 0.01) { const pts = []; for (let k = 0; k <= 16; k++) { const y = lerp(0.98, 0.42, k / 16); pts.push(legPoint(s, y, Math.PI / 2, 0.0025)); } g.add(tube(pts, 0.0022, ch, 30)); }
+    BUL = bk;
+  }
   if (toile) {                                                                                                                          // a toile is marked: chalk lines, basting threads, pins
     const chalk = new THREE.MeshStandardMaterial({ color: "#b9402c", roughness: 1 }), pencil = new THREE.MeshStandardMaterial({ color: "#59534a", roughness: 1 });
     for (const s of [-1, 1]) {
