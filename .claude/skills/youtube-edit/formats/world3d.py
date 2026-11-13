@@ -22,7 +22,7 @@ Cost, measured 10/11/2026: about 10 s of render per second of video at 1080p dra
 import json, os, re, shutil
 
 SK = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-VENDOR = ("three.module.min.js", "three-LICENSE.txt", "world3d.js")
+VENDOR = ("three.module.min.js", "three-LICENSE.txt", "world3d.js", "atelier-kit.js")
 
 CSS = """<style>
   .w3-host { background: var(--k-bg, #0A2B1E); overflow: hidden; font-family: var(--k-font, "Inter", "Segoe UI", system-ui, sans-serif); color: var(--k-text, #f4efe6); }
@@ -52,13 +52,13 @@ class World3D:
         """title_out: video time at which the title leaves (give it when the camera will fly objects through the top-left of the frame)."""
         self.cid, self.t_in, self.t_out, self.title, self.sub, self.track, self.fade, self.fov, self.title_out = cid, t_in, t_out, title, sub, track, fade, fov, title_out
         self.objects, self.cams, self.labels, self.events = [], [], [], []
-        self.room_spec, self.look_spec, self.base, self.passes, self.dofs, self.shutter_frames, self.exposure = None, "final", [], [], 0.8, None
+        self.room_spec, self.look_spec, self.base, self.passes, self.dofs, self.shutter_frames, self.exposure = None, None, "final", [], [], 0.8, None
 
     def _r(self, t):
         return round(t - self.t_in, 3)
 
-    def _obj(self, kind, oid, pos, rot_y, turn, move, t, **kw):
-        o = dict(type=kind, id=oid, pos=list(pos), rot=[kw.pop("rot_x", 0), rot_y, kw.pop("rot_z", 0)], **{k: v for k, v in kw.items() if v is not None})
+    def _obj(self, _shape, oid, pos, rot_y, turn, move, t, **kw):
+        o = dict(type=_shape, id=oid, pos=list(pos), rot=[kw.pop("rot_x", 0), rot_y, kw.pop("rot_z", 0)], **{k: v for k, v in kw.items() if v is not None})
         if turn:                                        # (start, duration, to_rot_y, ease) in seconds from the plate's start
             o["turn"] = [dict(t=a, d=d, to=[o["rot"][0], to, o["rot"][2]], ease=e) for a, d, to, e in turn]
         if move:                                        # (start, duration, to_pos, ease)
@@ -107,10 +107,10 @@ class World3D:
         self.exposure = exposure
         return self
 
-    def prop(self, kind, oid, pos, size=None, rot_y=0.0, turn=None, move=None, t=None, **kw):
-        """A prop of the atelier kit (assets/vendor/atelier-kit.js). kind: woodfloor [x,z] · wall [len,h,thick] (hole=[cx,cy,w,h]) · window [w,h] · rollrack [len,h,depth] · bolts [w,d] (n=) · spoolwall [w,h] · table [len,h,depth]
+    def prop(self, shape, oid, pos, size=None, rot_y=0.0, turn=None, move=None, t=None, **kw):
+        """A prop of the atelier kit (assets/vendor/atelier-kit.js). shape: woodfloor [x,z] · wall [len,h,thick] (hole=[cx,cy,w,h]) · window [w,h] · rollrack [len,h,depth] · bolts [w,d] (n=) · spoolwall [w,h] · table [len,h,depth]
         · paper [w,d] (kind="pattern"|"sketch"|"swatch"|"lines") · frame [w,h] (kind=) · ruler [len,w] · shears · sewing · mannequin · pendant [cord] (light=) · desklamp · plant [h] · rail [len,h] · rug [w,d] · cloth [w,d] (color=)."""
-        return self._obj(kind, oid, pos, rot_y, turn, move, t, size=list(size) if size else None, **kw)
+        return self._obj(shape, oid, pos, rot_y, turn, move, t, size=list(size) if size else None, **kw)
 
     def look(self, bg="#14100c", floor="#2b1d13", key="#ffc98a", dir=(-2.4, 1.5, 1.7), slats=9, gap=0.30, thick=0.09, dust=True, exposure=None, wall="#3b2b20", wall_z=-1.7):
         """An atelier look (13/11/2026, from the @holcdenis teardown): a dark room, ONE warm key light thrown through blinds (real shadow-map stripes that creep across the floor

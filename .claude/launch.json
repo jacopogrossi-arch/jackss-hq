@@ -4,14 +4,38 @@
     {
       "name": "cartamodelli-tool",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8765", "--directory", "cartamodelli"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8765",
+        "--directory",
+        "cartamodelli"
+      ],
       "port": 8765
     },
     {
       "name": "atelier-lab",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8790", "--directory", "videos/_bench/atelier-lab/lab"],
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8790",
+        "--directory",
+        "videos/_bench/atelier-lab/lab"
+      ],
       "port": 8790
+    },
+    {
+      "name": "atelier2",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8791",
+        "--directory",
+        "videos/_bench/atelier2/lab"
+      ],
+      "port": 8791
     }
   ]
 }
