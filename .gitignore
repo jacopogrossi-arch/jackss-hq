@@ -66,3 +66,6 @@ __pycache__/
 
 # Materiale di studio derivato da manuali (riassunti, render pagine): solo locale, mai su repo pubblico
 studio-privato/
+
+# Cartamodelli: misure di persone reali e output stampabili (solo locale)
+cartamodelli/privato/
