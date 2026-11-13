@@ -36,6 +36,18 @@
         "videos/_bench/atelier2/lab"
       ],
       "port": 8791
+    },
+    {
+      "name": "atelier2v",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "8792",
+        "--directory",
+        "videos/_bench/atelier2/comp"
+      ],
+      "port": 8792
     }
   ]
 }

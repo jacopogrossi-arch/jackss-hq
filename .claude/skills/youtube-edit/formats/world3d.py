@@ -99,10 +99,10 @@ class World3D:
         self.events.append(t)
         return self
 
-    def room(self, bg="#1b1511", key="#fff0d8", dir=(-6, 5, 2.5), key_i=3.2, hemi=("#fff0dd", "#6b4a30"), hemi_i=0.9, rim="#a9bfe8", rim_i=0.5, fog=None, box=(6, 5, 30), aim=(0, 0.8, 0), exposure=None, soft=4, far=80):
+    def room(self, bg="#1b1511", key="#fff0d8", dir=(-6, 5, 2.5), key_i=3.2, hemi=("#fff0dd", "#6b4a30"), hemi_i=0.9, side_i=0.0, rim="#a9bfe8", rim_i=0.5, fog=None, box=(6, 5, 30), aim=(0, 0.8, 0), exposure=None, soft=4, far=80):
         """A lit ROOM (14/11/2026, from the autogrill reference): daylight through a window as the key light (real shadow map), a warm ambient, optional fog. Fill it with props: prop(...).
         A room is dense or it is empty: furnish every shot (floor, walls, window, shelves of cloth, a table with things on it, lamps). No venetian blinds (Jacopo: they read as a render error)."""
-        self.room_spec = dict(bg=bg, key=key, dir=list(dir), key_i=key_i, hemi=list(hemi), hemi_i=hemi_i, rim=rim, rim_i=rim_i, box=list(box), aim=list(aim), soft=soft, far=far)
+        self.room_spec = dict(bg=bg, key=key, dir=list(dir), key_i=key_i, hemi=list(hemi), hemi_i=hemi_i, side_i=side_i, rim=rim, rim_i=rim_i, box=list(box), aim=list(aim), soft=soft, far=far)
         if fog: self.room_spec["fog"] = list(fog)
         self.exposure = exposure
         return self
