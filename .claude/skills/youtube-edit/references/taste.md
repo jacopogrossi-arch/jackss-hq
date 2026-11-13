@@ -176,3 +176,12 @@ Jacopo, on v3: "ce lo facciamo andare bene, però il risultato non mi fa impazzi
 - **Palette and contrast.** The Autogrill is bright and saturated (red, green, white). The Short is all beige and warm, so on a phone it reads flat. Keep a strong contrast colour in every shot.
 - **Timing.** The Autogrill adds a pause after the words that close a paragraph (`BREAKS`, 0.4–1.1 s), and the view changes inside that pause. The Short joins the voice paragraphs with fixed gaps and does not cut on them.
 - **Music.** It gets chosen against the edit (energy and bpm that match the cuts), not just as "a new track".
+
+## Review frame by frame before the 4K (Short v4, 13/11/2026)
+Jacopo: "prima di mandare il 4K… ti fai tutti i frame, 10 per secondo… capisci se c'è qualcosa che non va". He also means any physical or logical mistake, not only flicker.
+- **Always do a 10 fps review of the draft before the final.** Extract the frames with `ffmpeg -vf "fps=10,scale=240:-2,drawtext=…pts…,tile=8x4"` into contact sheets of 3.2 s each and look at ALL of them. Then fix, snapshot the times you changed, and only after that render the 4K.
+- **The physics must hold.** A tape measure wraps AROUND the garment and turns with it, so it never goes into the fabric. A marker (chalk, dot, pin) must sit ON an object, never float in the air. A dotted outline hugs the garment it explains and does not cross other things (dress forms, the floor).
+- **The camera never goes through objects.** Before a fly to the aerial map, the pendant lamps fade out (`pendant(hide=[[t0,t1]])`); going through one gave the "flicker".
+- **Every element of the aerial map is on screen before the dive.** Labels go near their badge without covering each other, the caption band or the frame edge.
+- **Tools follow the path smoothly.** The shears turn at a corner by averaging the direction over ±8 points, never in a single 90° step.
+- **Stale renders.** If a render was stopped, kill the hyperframes processes and DELETE `draft-raw.mp4` before re-rendering, then check the timestamp: `finish.sh` skips the render when the file already exists.

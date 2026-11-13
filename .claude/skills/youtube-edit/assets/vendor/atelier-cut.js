@@ -68,7 +68,9 @@ function patterncut(o) {
   g.userData.update = (t) => {
     const q = smooth(clamp((t - t0) / (t1 - t0))), k = Math.round(q * 400);
     if (k !== last) { last = k; draw(k / 400); }
-    const f = q * CUT_END, i = Math.floor(f), a = P(i), bb = P(i + 3), dx = bb[0] - a[0], dz = bb[1] - a[1], L = Math.hypot(dx, dz) || 1, fr = f - i, c = P(i), c2 = P(i + 1);
+    const f = q * CUT_END, i = Math.floor(f), fr = f - i, c = P(i), c2 = P(i + 1);
+    let dx = 0, dz = 0; for (let j = -8; j <= 8; j++) { const u = P(i + j), v = P(i + j + 1), w8 = 1 - Math.abs(j) / 9; dx += (v[0] - u[0]) * w8; dz += (v[1] - u[1]) * w8; }   // direction averaged over ±8 points: the shears turn round a corner, they don't snap 90°
+    const L = Math.hypot(dx, dz) || 1;
     const px = lerp(c[0], c2[0], fr), pz = lerp(c[1], c2[1], fr);
     sh.position.x = px - (dx / L) * 0.05; sh.position.z = pz - (dz / L) * 0.05; sh.rotation.y = -Math.atan2(dz, dx);
     const cutting = t > t0 && t < t1, open = cutting ? 0.2 * (0.5 + 0.5 * Math.cos((t - t0) * Math.PI * 2 * 2.4)) : 0.05;
