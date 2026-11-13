@@ -22,7 +22,7 @@ Cost, measured 10/11/2026: about 10 s of render per second of video at 1080p dra
 import json, os, re, shutil
 
 SK = os.path.abspath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-VENDOR = ("three.module.min.js", "three-LICENSE.txt", "world3d.js", "atelier-kit.js", "atelier-tex.js", "atelier-trouser.js", "atelier-props.js")
+VENDOR = ("three.module.min.js", "three-LICENSE.txt", "world3d.js", "atelier-kit.js", "atelier-tex.js", "atelier-trouser.js", "atelier-props.js", "atelier-cut.js")
 
 CSS = """<style>
   .w3-host { background: var(--k-bg, #0A2B1E); overflow: hidden; font-family: var(--k-font, "Inter", "Segoe UI", system-ui, sans-serif); color: var(--k-text, #f4efe6); }
@@ -51,7 +51,7 @@ class World3D:
     def __init__(self, cid, t_in, t_out, title=None, sub=None, track=30, fade=0.3, fov=32, title_out=None, w=1920, h=1080):
         """title_out: video time at which the title leaves (give it when the camera will fly objects through the top-left of the frame)."""
         self.cid, self.t_in, self.t_out, self.title, self.sub, self.track, self.fade, self.fov, self.title_out = cid, t_in, t_out, title, sub, track, fade, fov, title_out
-        self.W, self.H, self.caps = w, h, None                  # portrait for Shorts: World3D(..., w=1080, h=1920)
+        self.W, self.H, self.caps, self.leaks = w, h, None, []                  # portrait for Shorts: World3D(..., w=1080, h=1920)
         self.objects, self.cams, self.labels, self.events = [], [], [], []
         self.room_spec, self.look_spec, self.base, self.passes, self.dofs, self.shutter_frames, self.exposure = None, None, "final", [], [], 0.8, None
 
@@ -146,6 +146,11 @@ class World3D:
         self.caps = dict(chunks=[[round(a, 3), round(b, 3), t] for a, b, t in chunks], top=top, size=size, color=color, accent=accent)
         return self
 
+    def leak(self, t, d=1.0, warm=True):
+        """A film-burn / light-leak transition centred on t (VIDEO seconds), lasting d: warm orange-red flares that sweep across and wash the frame (screen blend),
+        peaking at t. Hide a camera cut under the peak. Pair it with a whoosh (Jacopo, 14/11/2026: "al secondo 7 metterei un film burn o light leak e un suono")."""
+        self.leaks.append([round(t, 3), round(d, 3), 1 if warm else 0]); return self
+
     def spec(self):
         if not self.cams:
             raise ValueError("%s: give the camera a start with cam(pos, look)" % self.cid)
@@ -190,13 +195,31 @@ class World3D:
         if self.caps:
             cp = self.caps; items = json.dumps(cp["chunks"], ensure_ascii=False)
             css = ('<style>#CID-cap { position:absolute; left:0; width:WPXpx; top:TOPpx; text-align:center; font-family:Inter,"Segoe UI",sans-serif; font-weight:800; font-size:SIZEpx; line-height:1.08; letter-spacing:-.02em; color:COLOR; opacity:0; padding:0 56px; box-sizing:border-box; text-shadow:0 4px 28px rgba(0,0,0,.7), 0 2px 6px rgba(0,0,0,.6); z-index:50; }'
-                   ' #CID-cap i { font-family:"Playfair Display",Georgia,serif; font-style:italic; font-weight:500; color:ACCENT; }</style><div id="CID-cap"></div>')
+                   ' #CID-cap i { font-family:"Playfair Display",Georgia,serif; font-style:italic; font-weight:500; color:ACCENT; } #CID-cap span { background:rgba(22,18,14,.5); border-radius:22px; padding:2px 26px 10px; -webkit-box-decoration-break:clone; box-decoration-break:clone; }</style><div id="CID-cap"></div>')
             js_cap = ('<script>(function(){ var items=ITEMS, el=document.getElementById("CID-cap"), last=-1; window.addEventListener("hf-seek", function(e){ var t=e.detail.time, k=-1; for (var i=0;i<items.length;i++) if (t>=items[i][0] && t<items[i][1]) { k=i; break; }'
-                      ' if (k!==last) { el.innerHTML = k<0 ? "" : items[k][2].replace(/\\*(.+?)\\*/g, "<i>$1</i>"); last=k; }'
+                      ' if (k!==last) { el.innerHTML = k<0 ? "" : "<span>" + items[k][2].replace(/\\*(.+?)\\*/g, "<i>$1</i>") + "</span>"; last=k; }'
                       ' if (k<0) { el.style.opacity=0; return; } var u=Math.min(1,(t-items[k][0])/0.12), v=Math.min(1,(items[k][1]-t)/0.08); el.style.opacity=Math.min(u,v).toFixed(3); el.style.transform="scale("+(0.92+0.08*u).toFixed(3)+")"; }); })();</script>')
             for a, b in (("CID", c), ("WPX", str(W)), ("TOP", str(cp["top"])), ("SIZE", str(cp["size"])), ("COLOR", cp["color"]), ("ACCENT", cp["accent"]), ("ITEMS", items)):
                 css = css.replace(a, b); js_cap = js_cap.replace(a, b)
             html += css + js_cap
+        if self.leaks:
+            lk = json.dumps(self.leaks)
+            css = ('<style>#CID-leak { position:absolute; inset:0; pointer-events:none; mix-blend-mode:screen; opacity:0; z-index:40; overflow:hidden; }'
+                   ' #CID-leak div { position:absolute; left:0; top:0; border-radius:50%; filter:blur(60px); }</style>'
+                   '<div id="CID-leak"><div id="CID-lk1"></div><div id="CID-lk2"></div><div id="CID-lk3"></div></div>')
+            js_lk = ('<script>(function(){ var L=LEAKS, el=document.getElementById("CID-leak"), a=document.getElementById("CID-lk1"), b=document.getElementById("CID-lk2"), c=document.getElementById("CID-lk3"), W=WPX, H=HPX;'
+                     ' a.style.cssText="width:"+W*1.3+"px;height:"+H*0.75+"px;background:radial-gradient(closest-side, rgba(255,150,60,1), rgba(255,70,20,.75) 45%, rgba(160,20,10,0));";'
+                     ' b.style.cssText="width:"+W*0.9+"px;height:"+H*0.55+"px;background:radial-gradient(closest-side, rgba(255,235,180,1), rgba(255,170,80,.6) 50%, rgba(255,120,40,0));";'
+                     ' c.style.cssText="width:"+W*1.6+"px;height:"+H*0.4+"px;background:radial-gradient(closest-side, rgba(230,40,30,.9), rgba(120,10,30,0));";'
+                     ' window.addEventListener("hf-seek", function(e){ var t=e.detail.time, k=-1; for (var i=0;i<L.length;i++) if (Math.abs(t-L[i][0])<L[i][1]/2) { k=i; break; }'
+                     ' if (k<0) { el.style.opacity=0; return; } var u=(t-L[k][0])/(L[k][1]/2), e1=Math.pow(Math.cos(u*Math.PI/2),1.4);'
+                     ' el.style.opacity=e1.toFixed(3); var s=(u+1)/2;'
+                     ' a.style.transform="translate("+(-W*0.6+W*0.9*s)+"px,"+(H*0.05+H*0.3*s)+"px)";'
+                     ' b.style.transform="translate("+(W*0.5-W*0.6*s)+"px,"+(H*0.55-H*0.35*s)+"px) scale("+(0.8+0.5*e1)+")";'
+                     ' c.style.transform="translate("+(-W*0.3)+"px,"+(H*0.8-H*0.5*s)+"px)"; }); })();</script>')
+            for a, b in (("CID", c), ("WPX", str(W)), ("HPX", str(H)), ("LEAKS", lk)):
+                css = css.replace(a, b); js_lk = js_lk.replace(a, b)
+            html += css + js_lk
         f = self.fade
         js = "\n".join([
             "tl.set('#host-%s', { visibility:'hidden', opacity:0 }, 0);" % c,

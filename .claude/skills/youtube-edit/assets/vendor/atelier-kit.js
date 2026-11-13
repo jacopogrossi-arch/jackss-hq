@@ -82,20 +82,25 @@ function rollRack(o) {                                   // size [length, height
   stacks.forEach((a, i) => { P.set(a[0], a[1], a[2]); S.set(a[3], a[4], a[5]); M.compose(P, q, S); si.setMatrixAt(i, M); si.setColorAt(i, Cc.set(a[6]).multiplyScalar(0.92)); }); si.count = stacks.length;
   g.add(ri); g.add(si); return g;
 }
-function bolts(o) {                                      // a pile of folded cloth: size [w, d]; n layers
-  const [w, d] = o.size, g = new THREE.Group(), n = o.n || 5, pal = o.palette || PAL;
-  for (let k = 0; k < n; k++) add(g, B(w * (0.96 - 0.02 * (k % 3)), 0.07, d * (0.96 - 0.03 * (k % 2))), std(pal[Math.floor(hash(k, o.seed || 2, 8) * pal.length)], 0.95), 0.012 * Math.sin(k * 2.3), 0.035 + k * 0.072, 0.01 * Math.cos(k * 1.7), 0, 0.03 * Math.sin(k * 3.1) * 0, 0).rotation.y = 0.05 * Math.sin(k * 2.1);
+function bolts(o) {                                      // a pile of folded cloth: size [w, d]; n layers, each a woven slab with a rolled fold on the front edge
+  const [w, d] = o.size, g = new THREE.Group(), n = o.n || 5, pal = o.palette || PAL, fm = fabricMaps("plain"), th = 0.06;
+  for (let k = 0; k < n; k++) {
+    const col = pal[Math.floor(hash(k, o.seed || 2, 8) * pal.length)], mat = new THREE.MeshStandardMaterial({ color: col, roughness: 0.95, map: fm.map, normalMap: fm.normal }), ww = w * (0.96 - 0.02 * (k % 3)), dd = d * (0.96 - 0.03 * (k % 2));
+    const L = new THREE.Group(); L.position.set(0.012 * Math.sin(k * 2.3), 0.032 + k * (th + 0.004), 0.01 * Math.cos(k * 1.7)); L.rotation.y = 0.05 * Math.sin(k * 2.1); g.add(L);
+    const geo = B(ww, th * 0.9, dd - th), uv = geo.attributes.uv; for (let i = 0; i < uv.count; i++) uv.setXY(i, uv.getX(i) * ww / 0.08, uv.getY(i) * dd / 0.08); add(L, geo, mat, 0, 0, -th / 2);
+    const fold = CY(th / 2, th / 2, ww, 20), fu = fold.attributes.uv; for (let i = 0; i < fu.count; i++) fu.setXY(i, fu.getX(i) * 3, fu.getY(i) * ww / 0.08); add(L, fold, mat, 0, 0, dd / 2 - th, 0, 0, Math.PI / 2);
+  }
   return g;
 }
-function spoolWall(o) {                                  // size [w, h]: a pegboard covered in rows of thread spools; local origin = bottom centre, the board faces +z
+function spoolWall(o) {                                  // size [w, h]: a wall rack of shelves with thread spools standing upright (coloured thread between two wooden flanges)
   const [W, Hh] = o.size, g = new THREE.Group(), pal = o.palette || PAL; add(g, B(W, Hh, 0.03), std(o.color || "#c9ae82", 0.9), 0, Hh / 2, 0);
-  const rows = Math.floor(Hh / 0.13), cols = Math.floor(W / 0.075), n = rows * cols, im = new THREE.InstancedMesh(CY(1, 1, 1, 14), std("#ffffff", 0.6), n), tops = new THREE.InstancedMesh(CY(1, 1, 1, 14), std("#e8e0d0", 0.7), n);
-  const M = new THREE.Matrix4(), q = new THREE.Quaternion().setFromEuler(new THREE.Euler(Math.PI / 2, 0, 0)), P = new THREE.Vector3(), S = new THREE.Vector3(), Cc = new THREE.Color(); let k = 0;
-  for (let r = 0; r < rows; r++) { add(g, B(W - 0.04, 0.012, 0.05), std("#8a6a44", 0.8), 0, 0.1 + r * 0.13 - 0.03, 0.04);
-    for (let c = 0; c < cols; c++) { const x = -W / 2 + 0.05 + c * ((W - 0.1) / Math.max(1, cols - 1)), y = 0.1 + r * 0.13, run = Math.floor(c / (2 + Math.floor(hash(r, 1, 1) * 3)));
-      P.set(x, y, 0.055); S.set(0.03, 0.05, 0.03); M.compose(P, q, S); im.setMatrixAt(k, M); im.setColorAt(k, Cc.set(pal[Math.floor(hash(run, r, 4) * pal.length)]).multiplyScalar(0.8 + 0.25 * hash(c, r, 6)));
-      P.set(x, y, 0.055); S.set(0.0325, 0.054, 0.0325); M.compose(P, q, S); tops.setMatrixAt(k, M); tops.setColorAt(k, Cc.set("#ece3d1")); k++; } }
-  im.count = tops.count = k; g.add(tops); g.add(im); return g;
+  const rows = Math.floor(Hh / 0.13), cols = Math.floor(W / 0.062), n = rows * cols, thr = new THREE.InstancedMesh(CY(1, 1, 1, 18), std("#ffffff", 0.75), n), fl = new THREE.InstancedMesh(CY(1, 1, 1, 18), std("#d9b98a", 0.55), n * 2);
+  const M = new THREE.Matrix4(), q = new THREE.Quaternion(), P = new THREE.Vector3(), S = new THREE.Vector3(), Cc = new THREE.Color(); let k = 0, f = 0;
+  for (let r = 0; r < rows; r++) { const sy = 0.07 + r * 0.13; add(g, B(W - 0.04, 0.012, 0.07), std("#8a6a44", 0.8), 0, sy, 0.05);
+    for (let c = 0; c < cols; c++) { const x = -W / 2 + 0.04 + c * ((W - 0.08) / Math.max(1, cols - 1)), run = Math.floor(c / (2 + Math.floor(hash(r, 1, 1) * 3))), hgt = 0.05 + 0.012 * hash(c, r, 9), base = sy + 0.006, z = 0.05 + 0.006 * (hash(c, r, 2) - 0.5);
+      P.set(x, base + hgt / 2, z); S.set(0.019, hgt - 0.008, 0.019); M.compose(P, q, S); thr.setMatrixAt(k, M); thr.setColorAt(k, Cc.set(pal[Math.floor(hash(run, r, 4) * pal.length)]).multiplyScalar(0.8 + 0.25 * hash(c, r, 6))); k++;
+      for (const yy of [base + 0.002, base + hgt - 0.002]) { P.set(x, yy, z); S.set(0.024, 0.004, 0.024); M.compose(P, q, S); fl.setMatrixAt(f++, M); } } }
+  thr.count = k; fl.count = f; g.add(thr); g.add(fl); return g;
 }
 
 // ---------- the workshop furniture
@@ -189,10 +194,16 @@ function deskLamp(o) {                                   // an articulated desk 
   add(g, new THREE.ConeGeometry(0.06, 0.1, 18, 1, true), new THREE.MeshStandardMaterial({ color: m.color, roughness: 0.4, metalness: 0.3, side: THREE.DoubleSide }), 0.24, 0.5, 0, 0, 0, -2.2).userData.noshadow = true;
   const h = halo("#ffd98a", 0.7); h.scale.set(0.6, 0.6, 1); h.position.set(0.28, 0.43, 0); g.add(h); return g;
 }
-function plant(o) {                                      // a potted plant, `size` = [height]
+function plant(o) {                                      // a potted rubber plant: a trunk, branches, and each leaf on its own stalk (no floating leaves)
   const hgt = (o.size && o.size[0]) || 1.1, g = new THREE.Group(); add(g, CY(0.16, 0.12, 0.3, 20), std("#a95f3b", 0.8), 0, 0.15, 0); add(g, CY(0.145, 0.145, 0.02, 20), std("#3a2a1c", 1), 0, 0.29, 0);
-  add(g, CY(0.012, 0.018, hgt * 0.6, 8), std("#5a4030", 0.9), 0, 0.3 + hgt * 0.3, 0);
-  for (let i = 0; i < 12; i++) { const a = i * 2.4, r = 0.1 + 0.08 * hash(i, 1, 1), y = 0.35 + hgt * (0.25 + 0.65 * hash(i, 2, 2)); const l = add(g, new THREE.SphereGeometry(1, 10, 8), std(["#4f7a3f", "#5d8a45", "#44693a", "#6b9450"][i % 4], 0.8), r * Math.cos(a), y, r * Math.sin(a)); l.scale.set(0.09, 0.025, 0.2 + 0.08 * hash(i, 3, 3)); l.rotation.set(0.4 * Math.sin(a), -a, 0.5); }
+  const bark = std("#5a4030", 0.9), lc = ["#3f6a35", "#4d7a3f", "#3a5f31", "#5b8a48"]; add(g, CY(0.011, 0.017, hgt * 0.85, 8), bark, 0, 0.3 + hgt * 0.425, 0);
+  for (let i = 0; i < 14; i++) {
+    const a = i * 2.39996, y = 0.42 + hgt * 0.8 * (i / 14) + 0.03 * hash(i, 2, 2), r = 0.05 + 0.05 * hash(i, 1, 1), L = 0.17 + 0.06 * hash(i, 3, 3), up = 0.35 + 0.3 * hash(i, 4, 4);
+    const arm = new THREE.Group(); arm.position.set(0, y, 0); arm.rotation.y = -a; g.add(arm);
+    const tilt = new THREE.Group(); tilt.rotation.z = up; arm.add(tilt);
+    add(tilt, CY(0.0035, 0.0045, r, 6), bark, r / 2, 0, 0, 0, 0, Math.PI / 2);
+    const leaf = add(tilt, new THREE.SphereGeometry(1, 16, 10), std(lc[i % 4], 0.55), r + L / 2, 0, 0, 0, 0, -up - 0.25 * hash(i, 5, 5)); leaf.scale.set(L / 2, 0.006, 0.055 + 0.02 * hash(i, 6, 6));
+  }
   return g;
 }
 function rail(o) {                                       // a garment rail: size [length, height]; a row of coats and shirts on hangers (the bar is at `height`)
@@ -219,7 +230,7 @@ function clothSheet(o) {                                 // cloth laid on a tabl
   const m = new THREE.Mesh(geo, o.mat); m.rotation.x = -Math.PI / 2; m.position.y = 0.004; const g = new THREE.Group(); g.add(m); return g;
 }
 
-export const KIT = new Set(["woodfloor", "wall", "window", "rollrack", "bolts", "spoolwall", "table", "paper", "frame", "ruler", "shears", "sewing", "mannequin", "pendant", "desklamp", "plant", "rail", "rug", "cloth", "cuttingmat", "buttonjar", "pincushion", "spool", "hoop", "sketchdraw"]);
+export const KIT = new Set(["woodfloor", "wall", "window", "rollrack", "bolts", "spoolwall", "table", "paper", "frame", "ruler", "shears", "sewing", "mannequin", "pendant", "desklamp", "plant", "rail", "rug", "cloth", "cuttingmat", "buttonjar", "pincushion", "spool", "hoop", "sketchdraw", "patterncut", "logoplate", "weight", "chalk", "lsquare"]);
 export function build(o, H) {
   if (PROPS.has(o.type)) return buildProp(o);
   switch (o.type) {

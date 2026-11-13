@@ -2,6 +2,7 @@
 // (turned body, linen weave, seams, pins, turned wooden stand on casters), a cutting mat, a button jar, a pincushion, a spool.
 // Same conventions as atelier-kit.js: metres, y up, standing on y = 0, front = +z.
 import * as THREE from "./three.module.min.js";
+import { buildCut, CUTPROPS } from "./atelier-cut.js";
 import { hash2, clothMat, canvasTex, tube, stitches, lerp, smooth, clamp, fabricMaps } from "./atelier-tex.js";
 
 const M = (c, r = 0.5, m = 0) => new THREE.MeshStandardMaterial({ color: c, roughness: r, metalness: m });
@@ -186,7 +187,7 @@ export function buildProp(o) {
     case "pincushion": return pincushion(o);
     case "spool": return spoolLying(o);
     case "hoop": return hoop(o);
-    default: return null;
+    default: return buildCut(o);
   }
 }
-export const PROPS = new Set(["sewing", "mannequin", "cuttingmat", "buttonjar", "pincushion", "spool", "hoop", "sketchdraw"]);
+export const PROPS = new Set(["sewing", "mannequin", "cuttingmat", "buttonjar", "pincushion", "spool", "hoop", "sketchdraw", ...CUTPROPS]);

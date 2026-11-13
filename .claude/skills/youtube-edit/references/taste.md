@@ -149,3 +149,13 @@ From `personale/youtube/analisi-inspo-3d-uiux.md` (20 principles, verdict for ou
 - **Keep:** motion blur on the whips, depth of field on close shots, the camera moves. The UX proposals (arcs, follow-through, frequency of use, word-to-effect delay) are all OK; arcs nearly linear.
 - **Never:** venetian-blind light (reads as a render error; only a real window with a real cross is allowed), the ink/"disegno" pass as a published look (not good enough), an empty room, a trouser standing like two tubes.
 - **Do:** a dense, cartoon-but-real room in the autogrill way (many props in every shot, real daylight through a window, pendants with halos), a trouser with pockets, loops, fly and creases hung on a hanger, a camera tour between stations, cuts every 2-3 s, and a layer of sound effects (whip, label tick, chapter riser, material sounds) because silence kills retention.
+
+## 3D Short "primo pantalone": Jacopo's notes on proof 1 (14/11/2026)
+"Continuano così che quasi ci siamo." The direction is right; the bar is REALISM: the more correct details, the better the result.
+- **Garments look like real garments.** Tailored trousers have NO contrast top-stitching on the side seams, inseam or hem (blind hem). Thread is tone-on-tone. Pockets read OPEN (a dark mouth with the front edge standing proud and a bar-tack at each end), never as a stitched-shut line. A hung trouser is flat front-to-back: no puffy hips or waist. Toile marks are the real ones (grain line, hip line, knee line), not random strokes.
+- **Every action must be legible.** A tool never "moves at random": shears cut ALONG a drawn outline, with the cut appearing behind the blades. Pin a label on what the voice names (grain line, notch).
+- **No empty beats.** A shot of a blank sheet or an empty table is a retention hole. Start the action as the cut lands.
+- **Transitions.** A film burn / light leak with a whoosh on the hook-to-story cut (`World3D.leak(t, d)`, sounds `es-whoosh-medium-transition` + `es-film-advance-wind`).
+- **Captions** need a soft dark pill so they read on white paper. Labels in 9:16 need about 56 px.
+- **End card = the real logo** (`logoplate`, the paths of `inverso/logo/inverso-logo.svg`), not typed text.
+- **The background counts too.** Spools stand upright, plant leaves hang on stalks, folded cloth has weave and a rolled fold. Anything that reads as a primitive box gets fixed.
