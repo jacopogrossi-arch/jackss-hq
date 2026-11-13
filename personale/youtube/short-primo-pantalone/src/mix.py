@@ -56,7 +56,8 @@ for i, (tm, td) in enumerate([(B.T_MAP1, B.T_D1), (B.T_MAP2, B.T_D2), (B.T_MAP3,
     if i: put(load(L + "es-whoosh-soft-clean.mp3", 0.9, -22), td, name="dive %d" % (i + 1))
 put(load(L + "es-swoosh-wide.mp3", peak_db=-24), at("copiate"), name="COS arc")
 put(load(L + "es-number-counter.mp3", 1.0, -28), at("centodiciassette") + 0.05, name="counter 117")
-put(load(L + "es-pops6.mp3", peak_db=-26), at("pezzo", 2), name="cost pill")
+for _t in (B.at("carta"), B.at("tela")):                                          # the cost pill moves on at each phase
+    put(load(L + "es-pops6.mp3", peak_db=-26), _t, name="cost pill")
 put(load(L + "es-scissors-cut-paper.mp3", peak_db=-19), at("cartamodello") + 0.1, name="scissors")
 put(load(L + "es-scissors-cut-paper.mp3", peak_db=-21), at("cartamodello") + 2.4, name="scissors 2")
 put(load(L + "cc-impact.mp3", peak_db=-22), at("errore", 2), name="impact: primo errore")

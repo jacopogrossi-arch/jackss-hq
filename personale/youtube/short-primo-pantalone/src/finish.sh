@@ -5,7 +5,7 @@
 set -e
 cd "D:/ClaudeCodeTest/videos/_bench/short1"
 SK="D:/ClaudeCodeTest/.claude/skills/youtube-edit"
-V=v4; NAME="short-primo-pantalone-$V"
+V=v5; NAME="short-primo-pantalone-$V"
 mkdir -p renders
 [ -s renders/mix.wav ] || PYTHONIOENCODING=utf-8 python -W ignore mix.py
 mux() { [ -s "$2" ] || ffmpeg -y -v error -i "$1" -i renders/mix.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 256k -shortest -movflags +faststart "$2"; }

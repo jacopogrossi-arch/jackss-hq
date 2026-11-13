@@ -101,8 +101,8 @@ def C(t, d, pos, look, ease="hand"):
 
 
 MAP = ((3.45, 12.5, 1.45), (0.45, 0.0, 1.35))                         # the atelier from above: x runs down the screen (station 1 at the top, 4 at the bottom)
-w.cam((1.05, 1.36, 3.3), look=(0.9, 1.2, 0.3))
-C(0.0, at("gonna") - 0.2, (1.0, 1.3, 2.05), (0.9, 1.2, 0.3), "out")                              # already moving at frame 1, pushing in on the toile
+w.cam((2.55, 1.4, 2.75), look=(0.9, 1.15, 0.3))
+C(0.0, at("gonna") - 0.2, (2.2, 1.32, 1.85), (0.9, 1.15, 0.3), "out")                              # 3/4 from frame 1: the bulging hip reads as "a skirt" before the line ends
 C(at("gonna") - 0.15, 0.55, (2.15, 1.3, 1.05), (0.95, 1.18, 0.3))                                # "gonna": the bulging side
 C(T_MAP1, 1.6, MAP[0], MAP[1], "glide")                                                          # up through the roof: the map
 C(T_D1, 1.0, (-2.0, 1.78, 0.72), (-2.0, 0.93, 0.5), "glide")                                    # dive to station 1, the pencil draws
@@ -154,18 +154,18 @@ for n, (x, z, word) in ST.items():                                  # on the fir
 L("st2", (0, 0, 0), "2 · *cartamodello*", t=T_MAP2 + 1.2, out=T_D2 - 0.05, anchor="st2b", dx=-150, dy=-130)
 L("st3", (0, 0, 0), "3 · *tela*", t=T_MAP3 + 1.3, out=T_D3 - 0.05, anchor="st3b", dx=-150, dy=-130)
 L("st4", (0, 0, 0), "4 · *tessuto*", t=T_MAP4 + 1.2, out=T_D4 - 0.05, anchor="st4b", dx=-150, dy=-130)
-L("sketch", (0.10, 0.0, -0.29), "Vita *alta*", t=at("vita"), out=at("vita") + 1.2, anchor="vita", dx=-30, dy=130)
-L("sketch", (0.115, 0.0, 0.07), "Gamba *dritta*", t=at("gamba"), out=at("gamba") + 1.2, anchor="gamba", dx=-360, dy=-260)
-L("sketch", (0.045, 0.0, -0.21), "Doppia *piega*", t=at("piega"), out=at("piega") + 1.5, anchor="piega", dx=-250, dy=60)
+L("sketch", (0.10, 0.0, -0.29), "Vita *alta*", t=at("vita") + 0.8, out=at("vita") + 0.8 + 1.2, anchor="vita", dx=-30, dy=130)
+L("sketch", (0.115, 0.0, 0.07), "Gamba *dritta*", t=at("gamba") + 0.8, out=at("gamba") + 0.8 + 1.2, anchor="gamba", dx=-360, dy=-260)
+L("sketch", (0.045, 0.0, -0.21), "Doppia *piega*", t=at("piega") + 0.8, out=at("piega") + 0.8 + 1.5, anchor="piega", dx=-250, dy=60)
 L("patt", (0.0, 0.003, 0.0), "*Drittofilo*", t=at("verso"), out=at("verso") + 0.95, anchor="verso", dx=-300, dy=-140)
 L("patt", (0.098, 0.003, 0.017), "*Tacca* di montaggio", t=at("tacca"), out=at("tacca") + 1.7, anchor="tacca", dx=-420, dy=-160)
-L("cos", (0.0, 1.0, 0.13), "Pantalone *COS*", t=at("pantalone", 2), out=end("COS") + 0.3, anchor="cos", dx=-60, dy=-260)
-L("toileA", (0.1, 0.98, 0.14), "Tela *grezza*", t=at("grezza"), out=at("grezza") + 1.6, anchor="grezza", dx=-330, dy=-120)
-L("toileB", (0.21, 0.75, 0.0), "Linea col *gesso*", t=at("linea"), out=at("linea") + 1.4, anchor="gesso", dx=-380, dy=-100)
-L("toileB", (0.21, 0.55, 0.05), "*Molto* meglio", t=at("meglio"), out=at("meglio") + 1.4, anchor="meglio", dx=-390, dy=-120)
-L("hero", (0.113, 0.5, 0.108), "Cotone *drill*", t=at("drill"), out=at("drill") + 1.5, anchor="drill", sub="verde oliva", dx=-360, dy=-120)
-L("hero", (0.01, 0.98, 0.135), "Doppia *piega*", t=at("doppia", 2), out=at("doppia", 2) + 1.0, anchor="piega2", dx=-60, dy=-470)
-L("hero", (0.19, 1.05, 0.03), "Regolatori *laterali*", t=at("regolatori", 2), out=at("regolatori", 2) + 2.0, anchor="regolatori", dx=-440, dy=-130)
+L("cos", (0.0, 1.0, 0.13), "Pantalone *COS*", t=at("copiate"), out=end("COS") + 0.3, anchor="cos", dx=-60, dy=-260)
+L("toileA", (0.1, 0.98, 0.14), "Tela *grezza*", t=at("grezza") + 0.8, out=at("grezza") + 0.8 + 1.6, anchor="grezza", dx=-330, dy=-120)
+L("toileB", (0.21, 0.75, 0.0), "Linea col *gesso*", t=at("linea") + 0.8, out=at("linea") + 0.8 + 1.4, anchor="gesso", dx=-380, dy=-100)
+L("toileB", (0.21, 0.55, 0.05), "*Molto* meglio", t=at("meglio") + 0.8, out=at("meglio") + 0.8 + 1.4, anchor="meglio", dx=-390, dy=-120)
+L("hero", (0.113, 0.5, 0.108), "Cotone *drill*", t=at("drill") + 0.8, out=at("drill") + 0.8 + 1.5, anchor="drill", sub="verde oliva", dx=-360, dy=-120)
+L("hero", (0.01, 0.98, 0.135), "Doppia *piega*", t=at("doppia", 2) + 0.8, out=at("doppia", 2) + 0.8 + 1.0, anchor="piega2", dx=-60, dy=-470)
+L("hero", (0.19, 1.05, 0.03), "Regolatori *laterali*", t=at("regolatori", 2) + 0.8, out=at("regolatori", 2) + 0.8 + 2.0, anchor="regolatori", dx=-440, dy=-130)
 
 # ------------------------------------------------------------------ captions + big statements: text on screen for the WHOLE video, max two lines
 KEY = {"gonna", "disegno", "errore", "carta", "cartamodello", "corpo", "tela", "grezza", "bombatura", "centodiciassette", "gesso", "meglio", "stoffa", "finito", "drill", "oliva", "scelta", "inverso", "studente", "seguimi", "errori", "venderti", "primo", "arrivato"}
@@ -200,7 +200,7 @@ for bg in w.bigs:
 w.captions(chunks, top=1180, size=96)
 
 # ------------------------------------------------------------------ the live counters (DOM, pure functions of time: hf-seek)
-COST = [(at("sbagliare"), "niente"), (at("copiate"), "un foglio di carta"), (at("pezzo", 2), "un pezzo di stoffa")]
+COST = [(at("sbagliare"), "niente"), (at("carta"), "un foglio di carta"), (at("tela"), "un pezzo di stoffa")]   # moves on with each PHASE: paper while cutting the pattern, cloth for the whole toile
 COST_OUT = T_MAP4 + 0.2
 C117 = (at("centodiciassette"), at("centodiciassette") + 1.0)
 
