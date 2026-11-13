@@ -557,6 +557,26 @@ word, without the blind A/B; the first real use still gets compared with the fla
 - **Checked:** stills and a 1080p draft of two worlds (`videos/_bench/three-test/`, no frozen stretch), and one 3D plate inside a page built by `plates-build.py` + `compose.py`
   (snapshot). **Not checked:** a render with footage under it, 4K, sound (it has none of its own yet: add the plate swish by hand), the beat-check on its labels.
 
+### 52b. The atelier look, render passes, motion blur and depth of field in `world3d` (13/11/2026)
+
+From the teardown of a 3D reel (`personale/youtube/analisi-inspo-3d-uiux.md`). All of it is **optional and backward compatible** (a world without these calls renders exactly as before). Proofs in `videos/_bench/video-3d-moda/prove/` (local).
+Jacopo has **not voted** on these yet: they entered on his request of 13/11/2026 ("implementa questi nuovi elementi"); the first real use is the 90 s video `videos/_bench/video-3d-moda/`.
+
+```python
+w = World3D("v", 0, 90, fov=34)
+w.look(floor="#3a281b", wall="#4d3827")            # a dark atelier: ONE warm key through blinds (real shadow-map stripes that creep), cool green fill, dust, floor + back wall
+w.base_pass("ink")                                  # what the plate shows before its first wipe: "final" (default), "clay" or "ink"
+w.wipe("clay", 31.9, 0.9)                           # a red bar sweeps left to right at t (lasting d); behind it the look changes; a mono tag says FRAME .... . PASS: CLAY
+w.trouser("t", look="ink")                          # an object with ITS OWN look in every pass (ink = paper white + black outline, clay = grey): three lives side by side
+w.card("end", (0, 1.5, -0.25), w=2.1, h=0.74, text="*Inverso*", flat=True)   # flat = unlit, no shadows, always legible
+w.shutter(0.8)                                      # motion blur while the camera is faster than 0.6 m/s (N sub-frames, 0.8 frame shutter); 0 = off
+w.dof(t, d, 0.025)                                  # depth of field for d seconds (12 renders of the lens spread over a disc, the look-at point stays sharp)
+```
+- **Looks (passes).** `final` = lit; `clay` = flat grey, neutral light, no stripes, no cast shadows; `ink` = paper (#EFE9DD, the brand's gesso) with black outlines: inverted hull for round things (trouser, cylinders), edge lines for boxes and cards. The ink pass is the **technical drawing** (the flat), the clay pass is the **toile** (tela di prova).
+- **Costs (measured 13/11/2026, GTX 1060, hardware WebGL):** the 90 s video at 1080p renders in **2 min 18 s**; at 4K in about **30 min**, because every frame with depth of field (x12) or motion blur (x2-x10) averages several full-resolution renders on a 2D canvas. Keep DOF windows short (13 s in the whole video) and whips few.
+- **Determinism:** a frame is a pure function of t (the dust positions come from a hash, the blinds creep with t, the sub-frames sit at fixed offsets).
+- **Not done:** bloom, extruded 3D text, particles beyond dust, GPU accumulation (it is a 2D canvas average: 4K depth of field is the slow part).
+
 ## Scene improvvisate in stile Joseph (metodo, 01/11/2026)
 
 Jacopo, dopo il capitolo 1 del Video #2 ("un ottimo risultato"): il metodo giusto NON è scegliere un formato dal catalogo e adattarlo, né riusare le vecchie grafiche su sfondo verde. **Ogni volta che c'è da spiegare qualcosa allo spettatore, si inventa

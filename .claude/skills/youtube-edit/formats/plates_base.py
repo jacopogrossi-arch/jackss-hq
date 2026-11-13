@@ -177,3 +177,10 @@ BASE_CSS = """
   .pl-ck { position:absolute; width:36px; height:36px; border-radius:50%; background:var(--k-accent2); color:#06140d; opacity:0; }
   .pl-ck svg { position:absolute; inset:0; width:36px; height:36px; }
 """
+
+
+def repeat_factor(n):
+    """UX principle "frequency of use" (13/11/2026, proposal not yet voted by Jacopo): the n-th appearance (1, 2, 3...) of an element that keeps returning in a video
+    (chapter label, counter, lower third) animates for this share of the first appearance's duration: 1.0, 0.7, 0.5, 0.35 (never shorter than 0.35).
+    Not wired into any format: multiply an entrance duration by it by hand, and keep the very first one in full."""
+    return (1.0, 0.7, 0.5, 0.35)[min(max(int(n), 1), 4) - 1]

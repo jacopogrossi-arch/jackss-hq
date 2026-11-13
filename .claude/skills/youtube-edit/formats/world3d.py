@@ -30,6 +30,8 @@ CSS = """<style>
   .w3-grid { position: absolute; left: -240px; top: -240px; width: 2400px; height: 1560px; background-size: 80px 80px;
     background-image: linear-gradient(rgba(120,235,180,.13) 1px, transparent 1px), linear-gradient(90deg, rgba(120,235,180,.13) 1px, transparent 1px); }
   .w3-gl, .w3-ln { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; }
+  .w3-bar { position: absolute; left: 0; top: 0; width: 6px; height: 1080px; background: #e2472f; opacity: 0; box-shadow: 0 0 22px rgba(226,71,47,.55); }
+  .w3-bar b { position: absolute; left: 14px; top: 18px; font: 700 20px/1 "IBM Plex Mono", "Consolas", monospace; letter-spacing: .08em; color: #e2472f; white-space: nowrap; }
   .w3-title { position: absolute; left: 110px; top: 100px; font-size: 96px; font-weight: 800; line-height: 1.05; opacity: 0; }
   .w3-sub { position: absolute; left: 114px; top: 226px; font-size: 34px; font-weight: 500; color: rgba(244,239,230,.66); opacity: 0; }
   .w3-title i, .w3-lab i { font-family: var(--k-serif, "Playfair Display", Georgia, serif); font-style: italic; font-weight: 500; color: var(--k-accent, #e3c47f); }
@@ -50,6 +52,7 @@ class World3D:
         """title_out: video time at which the title leaves (give it when the camera will fly objects through the top-left of the frame)."""
         self.cid, self.t_in, self.t_out, self.title, self.sub, self.track, self.fade, self.fov, self.title_out = cid, t_in, t_out, title, sub, track, fade, fov, title_out
         self.objects, self.cams, self.labels, self.events = [], [], [], []
+        self.look_spec, self.base, self.passes, self.dofs, self.shutter_frames, self.exposure = None, "final", [], [], 0.8, None
 
     def _r(self, t):
         return round(t - self.t_in, 3)
@@ -65,17 +68,17 @@ class World3D:
         self.objects.append(o)
         return oid
 
-    def trouser(self, oid, pos=(0, 0, 0), rot_y=0.0, turn=None, move=None, t=None, color="#7b7d5a", pleats=2, cuff=True, scale=None, shadow=True):
+    def trouser(self, oid, pos=(0, 0, 0), rot_y=0.0, turn=None, move=None, t=None, color="#7b7d5a", pleats=2, cuff=True, scale=None, shadow=True, look=None):
         """The Drop 1 trouser, built in code: natural waist with side adjusters, pleats (0, 1 or 2 per side), straight leg, turn-ups. Stylised, not a photo."""
-        return self._obj("trouser", oid, pos, rot_y, turn, move, t, color=color, pleats=pleats, cuff=cuff, scale=scale, shadow=[1.5, 0.95] if shadow else None, floor=pos[1])
+        return self._obj("trouser", oid, pos, rot_y, turn, move, t, color=color, pleats=pleats, cuff=cuff, scale=scale, shadow=[1.5, 0.95] if shadow else None, floor=pos[1], pass_mode=look)
 
-    def card(self, oid, pos, w=0.8, h=0.5, text=None, sub=None, img=None, rot_y=0.0, turn=None, move=None, t=None, color=None, size=None):
+    def card(self, oid, pos, w=0.8, h=0.5, text=None, sub=None, img=None, rot_y=0.0, turn=None, move=None, t=None, color=None, size=None, look=None, flat=False):
         """An ivory sheet standing in space: a title with one *key* word, or a picture (`img`, a path inside public/, e.g. "img/moodboard.jpg") with an optional caption."""
-        return self._obj("card", oid, pos, rot_y, turn, move, t, w=w, h=h, text=text, sub=sub, img=img, color=color, size=size)
+        return self._obj("card", oid, pos, rot_y, turn, move, t, w=w, h=h, text=text, sub=sub, img=img, color=color, size=size, pass_mode=look, flat=flat or None)
 
-    def solid(self, oid, shape, pos, size, color=None, fabric=False, metal=None, rough=None, rot_y=0.0, turn=None, move=None, t=None, shadow=None):
+    def solid(self, oid, shape, pos, size, color=None, fabric=False, metal=None, rough=None, rot_y=0.0, turn=None, move=None, t=None, shadow=None, look=None):
         """A plain object: shape "box" (size x, y, z), "cyl" (diameter, height) or "sphere" (diameter). fabric=True wears the drill weave (a roll of cloth)."""
-        return self._obj(shape, oid, pos, rot_y, turn, move, t, size=list(size), color=color, fabric=fabric or None, metal=metal, rough=rough, shadow=shadow, floor=pos[1] - size[1] / 2 if len(size) > 1 else None)
+        return self._obj(shape, oid, pos, rot_y, turn, move, t, size=list(size), color=color, fabric=fabric or None, metal=metal, rough=rough, shadow=shadow, floor=pos[1] - size[1] / 2 if len(size) > 1 else None, pass_mode=look)
 
     def cam(self, pos, look, t=None, d=1.3, ease="hand"):
         """The first call is the start; every later call is ONE move to (pos, look) starting at video time t and lasting d (curve D by default, like the swipes)."""
@@ -96,19 +99,56 @@ class World3D:
         self.events.append(t)
         return self
 
+    def look(self, bg="#14100c", floor="#2b1d13", key="#ffc98a", dir=(-2.4, 1.5, 1.7), slats=9, gap=0.30, thick=0.09, dust=True, exposure=None, wall="#3b2b20", wall_z=-1.7):
+        """An atelier look (13/11/2026, from the @holcdenis teardown): a dark room, ONE warm key light thrown through blinds (real shadow-map stripes that creep across the floor
+        and the objects), dust in the light, a floor that catches it. Replaces the green wash and grid. `dir` = where the sun sits (x, y, z); `slats`/`gap`/`thick` = the blinds."""
+        self.look_spec = dict(bg=bg, floor=floor, key=key, dir=list(dir), slats=slats, gap=gap, thick=thick, dust=dust, wall=wall, wall_z=wall_z)
+        self.exposure = exposure
+        return self
+
+    def base_pass(self, mode):
+        """What the plate shows before its first wipe: "final" (default, lit), "clay" (flat grey, no stripes) or "ink" (paper + black outlines: the technical drawing)."""
+        self.base = mode
+        return self
+
+    def wipe(self, to, t, d=0.7):
+        """A vertical bar sweeps left to right at video time t (lasting d) and what is behind it becomes `to` ("final", "clay" or "ink"). It carries a small HUD tag (FRAME .... . PASS: ..)."""
+        self.passes.append(dict(t=self._r(t), d=d, to=to)); self.events.append(t)
+        return self
+
+    def dof(self, t, d, aperture=0.02):
+        """Depth of field from t for d seconds (eases in and out in 0.35 s): the lens is spread over a disc of radius `aperture` metres and 12 renders are averaged; the point the camera looks at stays sharp. x12 render cost."""
+        self.dofs.append(dict(t=self._r(t), d=d, ap=aperture)); self.events.append(t)
+        return self
+
+    def shutter(self, frames=0.8):
+        """Motion blur: the shutter stays open `frames` of a frame (0.8 = fast whips smear). Applies by itself while the camera is faster than ~0.6 m/s; 0 turns it off. x2-x10 render cost on those frames only."""
+        self.shutter_frames = frames
+        return self
+
     def spec(self):
         if not self.cams:
             raise ValueError("%s: give the camera a start with cam(pos, look)" % self.cid)
         out = {} if self.title_out is None else {"out": self._r(self.title_out)}
         texts = [dict(id="%s-T" % self.cid, t=0.25, **out)] if self.title else []
         texts += [dict(id="%s-S" % self.cid, t=0.5, **out)] if self.sub else []
-        return dict(id=self.cid, t_in=self.t_in, dur=round(self.t_out - self.t_in, 3), fov=self.fov, objects=self.objects, cam=self.cams, texts=texts,
+        extra = {}
+        if self.look_spec: extra["look"] = self.look_spec
+        if self.exposure is not None: extra["exposure"] = self.exposure
+        if self.base != "final": extra["base"] = self.base
+        if self.passes: extra["passes"] = self.passes
+        if self.dofs: extra["dof"] = self.dofs
+        if self.shutter_frames != 0.8: extra["shutter"] = self.shutter_frames
+        return dict(id=self.cid, t_in=self.t_in, dur=round(self.t_out - self.t_in, 3), fov=self.fov, objects=self.objects, cam=self.cams, texts=texts, **extra,
                     labels=[dict(obj=L["obj"], p=L["p"], t=L["t"], dx=L["dx"], dy=L["dy"], **({"out": L["out"]} if L["out"] is not None else {})) for L in self.labels])
 
     def build(self, standalone=False):
         c, d = self.cid, self.t_out - self.t_in
-        inner = ['<div class="w3-wash"></div><div class="w3-grid" id="%s-grid"></div><canvas class="w3-gl" id="%s-gl" width="1920" height="1080"></canvas>'
+        wash = '' if self.look_spec else '<div class="w3-wash"></div><div class="w3-grid" id="%s-grid"></div>' % c
+        inner = [wash + '<canvas class="w3-gl" id="%s-gl" width="1920" height="1080"></canvas><canvas class="w3-gl w3-mb" id="%s-mb" width="1920" height="1080" style="display:none"></canvas>'
                  '<svg class="w3-ln" id="%s-ln" width="1920" height="1080" viewBox="0 0 1920 1080"></svg>' % (c, c, c)]
+        if self.passes:
+            inner.append('<div class="w3-bar" id="%s-bar"><b id="%s-bart"></b></div>' % (c, c))
         if self.title:
             inner.append('<div class="w3-title" id="%s-T">%s</div>' % (c, key(self.title)))
         if self.sub:
@@ -118,9 +158,9 @@ class World3D:
             inner.append('<div class="w3-lab" id="%s-l%d" data-at="%.3f"%s>%s%s</div>' % (c, n, L["at"], an, key(L["text"]), "<small>%s</small>" % L["sub"] if L["sub"] else ""))
         vis = "visibility:visible;opacity:1;" if standalone else "visibility:hidden;opacity:0;"
         html = (CSS + '\n<div class="card-host clip w3-host" id="host-%s" data-card-id="%s" data-unanchored="1" data-start="%.3f" data-duration="%.3f" data-track-index="%d" '
-                'style="left:0;top:0;width:1920px;height:1080px;position:absolute;%s">%s</div>\n'
+                'style="left:0;top:0;width:1920px;height:1080px;position:absolute;%s%s">%s</div>\n'
                 '<script type="module">import { mount } from "./vendor/world3d.js"; mount(%s);</script>'
-                % (c, c, self.t_in, d, self.track, vis, "".join(inner), json.dumps(self.spec(), ensure_ascii=False)))
+                % (c, c, self.t_in, d, self.track, vis, ("background:%s;" % self.look_spec["bg"]) if self.look_spec else "", "".join(inner), json.dumps(self.spec(), ensure_ascii=False)))
         f = self.fade
         js = "\n".join([
             "tl.set('#host-%s', { visibility:'hidden', opacity:0 }, 0);" % c,
@@ -158,7 +198,7 @@ class World3D:
                 '@font-face { font-family: "Inter"; src: url("fonts/Inter.ttf"); font-weight: 100 900; }\n'
                 '@font-face { font-family: "Playfair Display"; src: url("fonts/PlayfairDisplay-Italic.ttf"); font-weight: 400 900; font-style: italic; }\n'
                 'html, body { margin: 0; background: #0A2B1E; } #stage { position: relative; width: 1920px; height: 1080px; overflow: hidden; }\n</style></head><body>\n'
-                '<div id="stage" data-composition-id="world3d-lab" data-start="0" data-duration="%.3f" data-fps="30" data-width="1920" data-height="1080">\n%s\n</div>\n%s\n</body></html>\n'
+                '<div id="stage" data-composition-id="world3d-lab" data-no-timeline="1" data-start="0" data-duration="%.3f" data-fps="30" data-width="1920" data-height="1080">\n%s\n</div>\n%s\n</body></html>\n'
                 % (duration + t0, "\n".join(body), show))
         open(os.path.join(folder, "index.html"), "w", encoding="utf-8").write(page)
         return os.path.join(folder, "index.html")

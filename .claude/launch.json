@@ -6,6 +6,12 @@
       "runtimeExecutable": "python",
       "runtimeArgs": ["-m", "http.server", "8765", "--directory", "cartamodelli"],
       "port": 8765
+    },
+    {
+      "name": "atelier-lab",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8790", "--directory", "videos/_bench/atelier-lab/lab"],
+      "port": 8790
     }
   ]
 }

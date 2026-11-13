@@ -122,7 +122,8 @@ function cardTexture(o, img) {
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t;
 }
 function card(o, img) {
-  const m = new THREE.Mesh(roundRect(o.w, o.h, o.radius ?? Math.min(o.w, o.h) * 0.07), new THREE.MeshStandardMaterial({ map: cardTexture(o, img), roughness: 0.82, metalness: 0, side: THREE.DoubleSide }));
+  const tex = cardTexture(o, img), m = new THREE.Mesh(roundRect(o.w, o.h, o.radius ?? Math.min(o.w, o.h) * 0.07), o.flat ? new THREE.MeshBasicMaterial({ map: tex, toneMapped: false, side: THREE.DoubleSide }) : new THREE.MeshStandardMaterial({ map: tex, roughness: 0.82, metalness: 0, side: THREE.DoubleSide }));
+  m.userData.flat = !!o.flat;
   const back = new THREE.Mesh(roundRect(o.w, o.h, o.radius ?? Math.min(o.w, o.h) * 0.07), new THREE.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: 0.28 }));
   back.position.set(0.012, -0.018, -0.02); const g = new THREE.Group(); g.add(back); g.add(m); return g;
 }
@@ -145,33 +146,101 @@ function track(start, keys, t) {
   return v;
 }
 
+// ---------- looks for the render passes (13/11/2026, from the @holcdenis teardown): "final" (lit), "clay" (flat grey, no stripes) and "ink" (paper + black outlines).
+const PAPER = 0xefe9dd, CLAY = 0xc4bdaf, INK = new THREE.Color(0x1e1b18);
+const hullMat = new THREE.ShaderMaterial({                // inverted hull: the back faces pushed out along the normal, in view space, scaled by distance (constant line width)
+  side: THREE.BackSide, uniforms: { w: { value: 0.0045 } }, toneMapped: false,
+  vertexShader: "uniform float w; void main(){ vec4 p = modelViewMatrix * vec4(position, 1.0); vec3 n = normalize(normalMatrix * normal); p.xyz += n * w * (-p.z); gl_Position = projectionMatrix * p; }",
+  fragmentShader: "void main(){ gl_FragColor = vec4(0.118, 0.106, 0.094, 1.0); }" });
+const lineMat = new THREE.LineBasicMaterial({ color: 0x1e1b18, toneMapped: false });
+const inkFill = new THREE.MeshBasicMaterial({ color: PAPER, toneMapped: false, polygonOffset: true, polygonOffsetFactor: 1, polygonOffsetUnits: 1, side: THREE.DoubleSide });
+const hash = (i) => { const s = Math.sin(i * 12.9898 + 78.233) * 43758.5453; return s - Math.floor(s); };
+
 export function mount(spec) {
-  const W = spec.w || 1920, H = spec.h || 1080, DUR = spec.dur;
+  const W = spec.w || 1920, H = spec.h || 1080, DUR = spec.dur, LOOK = spec.look || null;
   const host = document.getElementById("host-" + spec.id);
   const T0 = host && host.dataset.start != null ? parseFloat(host.dataset.start) : (spec.t_in || 0);     // the host's data-start wins: a recut moves it, the spec does not know
   const canvas = document.getElementById(spec.id + "-gl");
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, preserveDrawingBuffer: true });
-  renderer.setPixelRatio(1); renderer.setSize(W, H, false); renderer.outputColorSpace = THREE.SRGBColorSpace; renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = spec.exposure || 1.3;
+  const PR = Math.max(1, Math.min(2, window.devicePixelRatio || 1)); renderer.setPixelRatio(PR); renderer.setSize(W, H, false); renderer.outputColorSpace = THREE.SRGBColorSpace; renderer.toneMapping = THREE.ACESFilmicToneMapping; renderer.toneMappingExposure = spec.exposure || 1.3;
   const scene = new THREE.Scene(), camera = new THREE.PerspectiveCamera(spec.fov || 32, W / H, 0.05, 60);
   const key = new THREE.DirectionalLight(0xfff1de, 2.7); key.position.set(1.6, 2.4, 2.2); scene.add(key);          // warm key, cool rim in the preset's mint, a low fill
   const rim = new THREE.DirectionalLight(0x8fe8c4, 2.0); rim.position.set(-2.0, 1.6, -2.2); scene.add(rim);
   const side = new THREE.DirectionalLight(0xfff4e0, 0.7); side.position.set(-2.2, 0.8, 1.4); scene.add(side);
-  scene.add(new THREE.HemisphereLight(0xe9f5ee, 0x0a2b1e, 0.55));
+  const hemi = new THREE.HemisphereLight(0xe9f5ee, 0x0a2b1e, 0.55); scene.add(hemi);
   const items = {}, labels = [], grid = document.getElementById(spec.id + "-grid"), svg = document.getElementById(spec.id + "-ln");
   const v = new THREE.Vector3(), look = new THREE.Vector3();
+  const mb = document.getElementById(spec.id + "-mb"), mbx = mb ? mb.getContext("2d") : null, bar = document.getElementById(spec.id + "-bar"), bart = document.getElementById(spec.id + "-bart");
+  if (mb) { mb.width = Math.round(W * PR); mb.height = Math.round(H * PR); }
+  // the three looks and what each one does to the scene
+  const dressed = [], inkOnly = [], onlyFinal = [], notInk = [], clayMats = new Map(); let slats = null, dust = null, mode = null;
+  const LIGHTS = LOOK ? { final: [4.6, 0, 1.2, 1.5], clay: [2.4, 0, 0.5, 0.8] } : { final: [2.7, 2.0, 0.7, 0.55], clay: [1.5, 0, 0.5, 1.0] };   // key, rim, side, hemisphere
+  if (LOOK) {                                                  // an atelier: one warm key through blinds, a dark room, a floor that catches the stripes
+    renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap; if (spec.exposure == null) renderer.toneMappingExposure = 1.45; side.position.set(2.2, 0.9, 1.8);
+    const d = LOOK.dir || [-2.4, 1.5, 1.7]; key.color.set(LOOK.key || "#ffc98a"); key.position.set(d[0], d[1], d[2]); key.target.position.set(0, 0.65, 0); scene.add(key.target);
+    key.castShadow = true; key.shadow.mapSize.set(2048, 2048); key.shadow.bias = -0.0004; key.shadow.normalBias = 0.02; key.shadow.radius = 3;
+    Object.assign(key.shadow.camera, { left: -2.2, right: 2.2, top: 2.2, bottom: -2.2, near: 0.3, far: 9 }); key.shadow.camera.updateProjectionMatrix();
+    hemi.color.set(0x5a4332); hemi.groundColor.set(0x120c08); side.color.set(0x7fa08a);
+    slats = new THREE.Group(); const n = LOOK.slats ?? 9, gap = LOOK.gap ?? 0.30, th = LOOK.thick ?? 0.09, nm = new THREE.MeshBasicMaterial({ colorWrite: false, depthWrite: false });
+    for (let i = 0; i < n; i++) { const b = new THREE.Mesh(new THREE.BoxGeometry(3.6, th, 0.012), nm); b.position.y = (i - (n - 1) / 2) * gap; b.castShadow = true; b.userData.y0 = b.position.y; slats.add(b); }
+    slats.position.copy(key.target.position).addScaledVector(key.position.clone().sub(key.target.position).normalize(), 1.3); slats.lookAt(key.target.position); scene.add(slats);
+    if (LOOK.dust !== false) {                                 // dust in the light: a pure function of time (positions from a hash, no random)
+      const g = new THREE.BufferGeometry(); g.setAttribute("position", new THREE.Float32BufferAttribute(new Float32Array(360), 3));
+      dust = new THREE.Points(g, new THREE.PointsMaterial({ color: 0xffe2b0, size: 0.011, transparent: true, opacity: 0.55, depthWrite: false, blending: THREE.AdditiveBlending })); dust.frustumCulled = false; scene.add(dust);
+    }
+  }
+  function dressMesh(mesh, m) {                                 // one mesh in one look (an object can carry its own look: o.pass_mode)
+    if (m === "final") mesh.material = mesh.userData.orig;
+    else if (m === "ink") mesh.material = inkFill;
+    else { const o = mesh.userData.orig, k = o.color ? o.color.getHex() : CLAY; if (!clayMats.has(k)) clayMats.set(k, new THREE.MeshLambertMaterial({ color: new THREE.Color(k).lerp(new THREE.Color(CLAY), 0.7), side: THREE.DoubleSide })); mesh.material = clayMats.get(k); }
+  }
+  function setMode(m) {
+    if (m === mode) return; mode = m; const f = m === "final", c = m === "clay";
+    for (const mesh of dressed) dressMesh(mesh, mesh.userData.pass || m);
+    for (const h of inkOnly) h.visible = (h.userData.mesh.userData.pass || m) === "ink";
+    for (const h of onlyFinal) h.visible = f;
+    for (const h of notInk) h.visible = m !== "ink";
+    if (slats) slats.visible = f; if (dust) dust.visible = f;
+    const L = LIGHTS[f ? "final" : "clay"]; key.intensity = L[0]; rim.intensity = L[1]; side.intensity = L[2]; hemi.intensity = L[3];
+    if (LOOK) {                                                  // the clay pass is neutral and shadowless: no warm light, no stripes, no cast shadows
+      key.color.set(f ? (LOOK.key || "#ffc98a") : "#ffffff"); side.color.set(f ? 0x7fa08a : 0xffffff); key.castShadow = f;
+      hemi.color.set(f ? 0x5a4332 : 0xffffff); hemi.groundColor.set(f ? 0x120c08 : 0x9a9388);
+    }
+    renderer.setClearColor(m === "ink" ? PAPER : c ? CLAY : (LOOK ? new THREE.Color(LOOK.bg || "#14100c") : 0x000000), f && !LOOK ? 0 : 1);
+  }
+  const passState = (t) => {                                    // the wipe bar: what is under it, what is coming in, where the edge is
+    let cur = spec.base || "final";
+    for (const e of spec.passes || []) { const p = prog(t, e.t, e.d ?? 0.7, "hand"); if (p < 0.0005) break; if (p < 0.9995) return { a: cur, b: e.to, edge: p * W, p }; cur = e.to; }   // thresholds: the bezier never returns exactly 0 or 1
+    return { a: cur };
+  };
 
   function build(imgs) {
     (spec.objects || []).forEach((o, n) => {
       const m = o.type === "trouser" ? trouser(o) : o.type === "card" ? card(o, imgs[n]) : solid(o);
       const g = new THREE.Group(); g.add(m); if (o.scale) m.scale.multiplyScalar(o.scale);
       scene.add(g); items[o.id] = { o, g };
-      if (o.shadow) {
+      const meshes = []; g.traverse((x) => { if (x.isMesh) meshes.push(x); });                      // dress it for the passes: ink outlines (hull for round things, edge lines for boxes and sheets)
+      for (const x of meshes) {
+        if (x.material.type === "MeshBasicMaterial" && x.material.transparent) { notInk.push(x); onlyFinal.push(x); continue; }   // the card's soft back plate
+        x.userData.orig = x.material; x.userData.pass = o.pass_mode || null; dressed.push(x); if (LOOK) { x.castShadow = !x.userData.flat; x.receiveShadow = !x.userData.flat; }
+        if (o.type === "box" || o.type === "card") { const e = new THREE.LineSegments(new THREE.EdgesGeometry(x.geometry, 30), lineMat); e.userData.mesh = x; e.visible = false; x.add(e); inkOnly.push(e); }
+        else { const h = new THREE.Mesh(x.geometry, hullMat); h.userData.mesh = x; h.visible = false; x.add(h); inkOnly.push(h); }
+      }
+      if (o.shadow && !LOOK) {
         const c = document.createElement("canvas"); c.width = c.height = 256; const x = c.getContext("2d"), r = x.createRadialGradient(128, 128, 8, 128, 128, 128);
         r.addColorStop(0, "rgba(0,0,0,.62)"); r.addColorStop(1, "rgba(0,0,0,0)"); x.fillStyle = r; x.fillRect(0, 0, 256, 256);
         const s = new THREE.Mesh(new THREE.PlaneGeometry(o.shadow[0], o.shadow[1]), new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(c), transparent: true, depthWrite: false }));
         s.rotation.x = -Math.PI / 2; s.position.set(o.pos[0], (o.floor ?? o.pos[1]) + 0.002, o.pos[2]); scene.add(s);
       }
     });
+    if (LOOK) {                                                  // the floor that catches the stripes (hidden in the ink pass: the paper is the floor)
+      const fl = new THREE.Mesh(new THREE.PlaneGeometry(14, 14), new THREE.MeshStandardMaterial({ color: LOOK.floor || "#2b1d13", roughness: 0.92, metalness: 0 }));
+      fl.rotation.x = -Math.PI / 2; fl.position.y = LOOK.floor_y ?? 0; fl.receiveShadow = true; fl.userData.orig = fl.material; scene.add(fl); dressed.push(fl); notInk.push(fl);
+      if (LOOK.wall !== false) {                                 // a back wall: it catches the stripes too, and gives the room a depth
+        const wl = new THREE.Mesh(new THREE.PlaneGeometry(14, 6), new THREE.MeshStandardMaterial({ color: LOOK.wall || "#3b2b20", roughness: 0.95, metalness: 0 }));
+        wl.position.set(0, 3, LOOK.wall_z ?? -1.7); wl.receiveShadow = true; wl.userData.orig = wl.material; scene.add(wl); dressed.push(wl); notInk.push(wl);
+      }
+    }
     (spec.labels || []).forEach((L, n) => {
       const el = document.getElementById(spec.id + "-l" + n); if (!el || !svg) return;
       const line = document.createElementNS("http://www.w3.org/2000/svg", "line"); line.setAttribute("stroke", "#e3c47f"); line.setAttribute("stroke-width", "3"); line.setAttribute("stroke-dasharray", "2 10"); line.setAttribute("stroke-linecap", "round");
@@ -180,20 +249,43 @@ export function mount(spec) {
     });
   }
 
-  function renderAt(global) {
-    const t = clamp(global - T0, 0, DUR), life = t / DUR;
+  const c0 = spec.cam[0], camP = spec.cam.slice(1).map((k) => ({ t: k.t, d: k.d, to: k.pos, ease: k.ease || "hand" })), camL = spec.cam.slice(1).map((k) => ({ t: k.t, d: k.d, to: k.look, ease: k.ease || "hand" }));
+  function poseObjects(t) {
     for (const id in items) {
       const { o, g } = items[id], p = track(o.pos || [0, 0, 0], o.move, t), r = track(o.rot || [0, 0, 0], o.turn, t);
       const a = o.t == null ? 1 : prog(t, o.t, 0.6, "out");                      // an object that enters: rises 12 cm and fades in on its time
       g.position.set(p[0], p[1] - 0.12 * (1 - a), p[2]); g.rotation.set(r[0], r[1], r[2]); g.visible = a > 0.001;
-      g.traverse((m) => { if (m.material && o.t != null) { m.material.transparent = true; m.material.opacity = (m.material.userData.o ?? (m.material.userData.o = m.material.opacity)) * a; } });
+      g.traverse((m) => { if (m.material && o.t != null && m.userData.orig === m.material) { m.material.transparent = true; m.material.opacity = (m.material.userData.o ?? (m.material.userData.o = m.material.opacity)) * a; } });
     }
-    const c0 = spec.cam[0], pos = track(c0.pos, spec.cam.slice(1).map((k) => ({ t: k.t, d: k.d, to: k.pos, ease: k.ease || "hand" })), t);
-    const lk = track(c0.look, spec.cam.slice(1).map((k) => ({ t: k.t, d: k.d, to: k.look, ease: k.ease || "hand" })), t);
+    if (slats) for (const b of slats.children) b.position.y = b.userData.y0 + 0.012 * t;      // the sun creeps: the stripes drift across the room
+  }
+  function aimCamera(t) {                                                       // camera pose at time t (clamped), without any jitter
+    t = clamp(t, 0, DUR); const pos = track(c0.pos, camP, t), lk = track(c0.look, camL, t);
     look.set(lk[0], lk[1], lk[2]); camera.position.set(pos[0], pos[1], pos[2]);
-    camera.position.lerp(look, 0.05 * life);                                     // never still: a slow push towards what it looks at, the whole life of the plate
-    camera.lookAt(look); camera.updateMatrixWorld(); scene.updateMatrixWorld(true);
-    renderer.render(scene, camera);
+    camera.position.lerp(look, 0.05 * (t / DUR));                                // never still: a slow push towards what it looks at, the whole life of the plate
+    camera.lookAt(look); camera.updateMatrixWorld();
+  }
+  const camSpeed = (t) => { const h = 0.02; aimCamera(t - h); const a = camera.position.clone(), la = look.clone(); aimCamera(t + h); return (camera.position.distanceTo(a) + 0.5 * look.distanceTo(la)) / (2 * h); };   // m/s
+  const dofAt = (t) => { let ap = 0; for (const e of spec.dof || []) { const k = prog(t, e.t, 0.35, "smooth") * (1 - prog(t, e.t + e.d - 0.35, 0.35, "smooth")); ap = Math.max(ap, e.ap * k); } return ap; };
+  const rgt = new THREE.Vector3(), upv = new THREE.Vector3();
+
+  function renderAt(global) {
+    const t = clamp(global - T0, 0, DUR), life = t / DUR;
+    if (dust) { const a = dust.geometry.attributes.position; for (let i = 0; i < 120; i++) { const h1 = hash(i), h2 = hash(i + 500), h3 = hash(i + 900), y = ((h2 * 2.2 + t * (0.03 + 0.05 * h3)) % 2.2); a.setXYZ(i, -1.3 + h1 * 2.6 + 0.06 * Math.sin(t * 0.6 + i), y, -1.0 + h3 * 2.0 + 0.05 * Math.cos(t * 0.5 + i * 1.7)); } a.needsUpdate = true; }
+    // motion blur and depth of field: several renders of the same instant (shutter spread over time, lens spread over a disc) averaged on a 2D canvas. Pure function of t.
+    const shutter = (spec.shutter ?? 0.8) / 30, sp = shutter > 0 ? camSpeed(t) : 0, ap = dofAt(t);
+    let N = sp > 0.6 ? clamp(Math.round(sp * 3), 2, 10) : 1; if (ap > 0) N = Math.max(N, 12);
+    for (let i = 0; i < N; i++) {
+      const ts = N > 1 && sp > 0.6 ? t + ((i + 0.5) / N - 0.5) * shutter : t;
+      poseObjects(ts); aimCamera(ts); scene.updateMatrixWorld(true);
+      if (ap > 0) { const fx = look.clone(), r = ap * Math.sqrt((i + 0.5) / N), th = i * 2.39996; rgt.setFromMatrixColumn(camera.matrixWorld, 0); upv.setFromMatrixColumn(camera.matrixWorld, 1); camera.position.addScaledVector(rgt, r * Math.cos(th)).addScaledVector(upv, r * Math.sin(th)); camera.lookAt(fx); camera.updateMatrixWorld(); }
+      const ps = passState(ts); setMode(ps.a); renderer.setScissorTest(false); renderer.render(scene, camera);
+      if (ps.b) { setMode(ps.b); renderer.setScissorTest(true); renderer.setScissor(0, 0, ps.edge, H); renderer.render(scene, camera); renderer.setScissorTest(false); }
+      if (N > 1 && mbx) { if (i === 0) mbx.clearRect(0, 0, mb.width, mb.height); mbx.globalAlpha = 1 / (i + 1); mbx.drawImage(canvas, 0, 0); mbx.globalAlpha = 1; }
+    }
+    if (mb) { mb.style.display = N > 1 ? "block" : "none"; canvas.style.visibility = N > 1 ? "hidden" : "visible"; }
+    if (bar) { const ps = passState(t), on = ps.b != null; bar.style.opacity = on ? 1 : 0; if (on) { bar.style.transform = "translateX(" + (ps.edge - 3).toFixed(1) + "px)"; if (bart) bart.textContent = "FRAME " + String(Math.round(t * 30)).padStart(4, "0") + " · PASS: " + ps.b.toUpperCase(); } }
+    poseObjects(t); aimCamera(t); scene.updateMatrixWorld(true);                 // the labels project from the exact instant, not from a sub-sample
     if (grid) grid.style.transform = "translate(" + (-(camera.position.x * 60) - 28 * life).toFixed(2) + "px," + ((camera.position.y - c0.pos[1]) * 40 - 14 * life).toFixed(2) + "px)";   // the grid follows at a fraction of the camera: depth
     for (const { L, el, line, dot, p } of labels) {
       v.copy(p); if (L.obj && items[L.obj]) v.applyMatrix4(items[L.obj].g.matrixWorld); v.project(camera);

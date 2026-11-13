@@ -135,3 +135,12 @@ From `personale/youtube/inspo-motion-plates-joseph.md` (his motion plates, and t
 - **Colour, travel:** the goal is to make the place look beautiful, not real. Bright sea and sky are not darkened to reach a mean exposure: a vivid turquoise and full light beat the "correct" exposure (29/10: he kept the bright version on 15 clips of 17, the "correct" one only on the arch and the sailboat). Never change the colour of an already approved video without a side-by-side first.
 - **"Poco poco" means very little:** between two intensities he picks the lighter (27/10: red x1.15, skin x1.10, vibrance 0.40 on `pellicola-oro`). On village and green scenes the full WOW is a bit much.
 - **Colour is judged on full-resolution frames:** the 480p phone copy flattens (see also `SKILL.md`, travel-reel drafts).
+
+## UX / animation principles applied to plates (13/11/2026): PROPOSALS, NOT VOTED BY JACOPO
+From `personale/youtube/analisi-inspo-3d-uiux.md` (20 principles, verdict for our plates). Nothing here replaces a voted rule; adopt only after a blind A/B.
+- **Moving in arcs** (new): `Board(..., arc=0.05)` bows a diagonal swipe by 5% of its length, same speed profile (`board.arc_path`). Default `ARC = 0` (straight). Test: the same page-to-page swipe with and without.
+- **Frequency of use** (new): an element that returns (chapter label, counter, lower third) animates in full the first time, then shorter and quieter: `plates_base.repeat_factor(n)` = 1.0, 0.7, 0.5, 0.35 (floor 0.35) for the 1st..4th+ appearance. Not wired into any format yet: multiply an entrance duration by it by hand.
+- **Word -> effect delay <= 12 frames** (new): `scripts/qa-lag.py --words words.json --starts starts.json` lists every graphic whose first movement comes more than 0.40 s after the word that opens it.
+- **Follow-through, without overshoot**: secondary elements arrive 2-4 frames after the primary and settle with ease-out (labels after the card, the shadow after the object). Never a bounce.
+- **Squash and stretch: NO as a bounce** (conflicts with 13 above); only as motion blur on 3D whips (`w.shutter()`).
+- **Anticipation: to be tested in A/B only**: a 2-4 frame counter-move (1-2%) before a long swipe.

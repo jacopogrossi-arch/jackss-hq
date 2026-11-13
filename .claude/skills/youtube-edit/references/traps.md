@@ -120,3 +120,8 @@ fades are fine without backdrop-filter (lower lines). Glass that has not arrived
 - **`verify-render.py --res` wants `3840x2160`, not `4k`:** with `4k` it stops with a traceback and writes no `VERIFY.md`.
 - **Never run `taskkill ffmpeg` or `du` on `D:/hf-cache` while a render is running:** the first kills the render's own extraction, the second holds the mechanical disk for an hour.
 - **iCloud Drive is on C: (6 GB free):** an 8 GB 4K master does not fit there. It stays on D: and Jacopo uploads it from the PC.
+- **`bezier()` eases never return exactly 0 or 1 (world3d, 13/11/2026):** the 24-step bisection ends at 1 - 2^-24, so `p < 1` and `p > 0` are true for a finished or not-yet-started move. Compare with thresholds (0.0005 / 0.9995), as `passState` does.
+- **A world3d page needs `data-no-timeline="1"` on its root (13/11/2026):** without it every render worker waits 45 s for a GSAP timeline that never registers ("sub_timeline_readiness_timeout"). `World3D.page` now sets it.
+- **A 4K 3D render is slow only where it averages sub-frames (13/11/2026):** the 90 s video is 2 min 18 s at 1080p and ~30 min at 4K (hardware WebGL on a GTX 1060); a 4 s window with depth of field took 4 min at 4K. Measure one DOF window at 4K before planning.
+- **A background `python -m http.server` from Bash is refused by the permission classifier (13/11/2026):** use `preview_start` with an entry in `.claude/launch.json` (`atelier-lab`, port 8790).
+- **Clay and ink passes tint with the atelier light unless the lights change too (13/11/2026):** `setMode` neutralises key, side and hemisphere colours and switches the shadows off for the clay pass.

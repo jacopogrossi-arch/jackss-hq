@@ -12,6 +12,7 @@
     out = b.build()                                                    # {"html","js"}; the run lasts from the first page's a to the last page's b
 cam: [(t, x, y, scale, duration)] in page coordinates. Every tween is a fromTo with explicit values (seek-safe).
 """
+import math
 from plates_base import SOUNDS, POOL, plan_sfx, BASE_CSS
 from scene import CSS as SCENE_CSS
 
@@ -29,6 +30,8 @@ HAND_JS = ("window.__hand = window.__hand || function (x) { if (x <= 0) return 0
            " window.__c40 = window.__c40 || function (x) { if (x <= 0) return 0; if (x >= 1) return 1; var a = 0, b = 1, t = x, k, u, X;"
            " for (k = 0; k < 40; k++) { t = (a + b) / 2; u = 1 - t; X = 3 * u * u * t * .5 + 3 * u * t * t * .3 + t * t * t; if (X < x) a = t; else b = t; }"
            " u = 1 - t; return 3 * u * t * t + t * t * t; };")
+ARC = 0.0                    # 13/11/2026, UX principle "moving in arcs" (personale/youtube/analisi-inspo-3d-uiux.md): 0 = straight camera moves (the voted look); 0.05 = the path bows by 5% of its length. OPT-IN, not yet voted by Jacopo: A/B it first.
+ARC_STEPS = 14               # an arced move is cut into this many short linear pieces (same ease on the time axis, so the speed profile does not change)
 GRID_DEPTH = 0.5             # the grid sits behind the pages and travels half as far as they do (course fake 3D, Jacopo's yes 05/11: "un dettaglio che conta"); 1 = glued to the pages
 FINISH = ('<div class="bd-fin" style="position:absolute;inset:0;z-index:50;pointer-events:none;background:radial-gradient(900px 500px at 50% 42%,rgba(255,240,200,.13),transparent 70%),'
           'radial-gradient(closest-side at 50% 50%,transparent 62%,rgba(0,0,0,.4) 120%)"></div>')   # glow and vignette over the plate (course, Jacopo's yes 05/11); it stays still while the camera moves
@@ -70,8 +73,46 @@ def _groups(scene):
     return out
 
 
+def _bz(x1, y1, x2, y2):
+    """cubic-bezier(x1, y1, x2, y2) as a Python function of progress 0-1 (the same bisection as the JS eases, so the arced path has the same speed profile)."""
+    def f(x):
+        if x <= 0: return 0.0
+        if x >= 1: return 1.0
+        a, b, t = 0.0, 1.0, x
+        for _ in range(40):
+            t = (a + b) / 2; u = 1 - t
+            if 3 * u * u * t * x1 + 3 * u * t * t * x2 + t * t * t < x: a = t
+            else: b = t
+        u = 1 - t
+        return 3 * u * u * t * y1 + 3 * u * t * t * y2 + t * t * t
+    return f
+
+
+_EASES = {"window.__hand": _bz(.54, 0, 0, 1), "window.__c40": _bz(.5, 0, .3, 1)}
+
+
+def arc_path(cur, to, ease, arc, steps=ARC_STEPS):
+    """The camera (centre x, centre y, scale) going from `cur` to `to` along a bowed path instead of a straight line: a list of waypoints at equal TIME steps.
+    The position follows the ease along the chord and bows sideways by sin(pi*q) * arc * length (upwards when the move is sideways, so it never dips under the page);
+    the scale follows the same ease. Moves shorter than 300 px, or an unknown ease, stay straight (returns just [cur, to])."""
+    f = _EASES.get(ease)
+    dx, dy = to[0] - cur[0], to[1] - cur[1]; dist = math.hypot(dx, dy)
+    if f is None or arc <= 0 or dist < 300:
+        return [cur, to]
+    nx, ny = dy / dist, -dx / dist                 # a unit normal of the chord
+    if ny > 0.0001 or (abs(ny) <= 0.0001 and nx < 0):
+        nx, ny = -nx, -ny                          # bow upwards (or to the right for a vertical move)
+    pts = []
+    for k in range(steps + 1):
+        q = f(k / steps); bump = arc * dist * math.sin(math.pi * q)
+        pts.append((cur[0] + dx * q + nx * bump, cur[1] + dy * q + ny * bump, cur[2] + (to[2] - cur[2]) * q))
+    pts[0], pts[-1] = cur, to
+    return pts
+
+
 class Board:
-    def __init__(self, cid, track=10, track_audio=300, enter=True, leave=True, depth=GRID_DEPTH, finish=True):
+    def __init__(self, cid, track=10, track_audio=300, enter=True, leave=True, depth=GRID_DEPTH, finish=True, arc=ARC):
+        self.arc = arc
         self.cid, self.track, self.ta, self.enter, self.leave, self.pages, self.holes, self.depth, self.finish = cid, track, track_audio, enter, leave, [], [], depth, finish
 
     def away(self, t0, t1):
@@ -151,8 +192,15 @@ class Board:
             if to is None:
                 break
             e = ease if ease.startswith("window.") else "'%s'" % ease
-            js.append("tl.fromTo('%s', { %s }, { %s, duration:%.3f, ease:%s, immediateRender:false }, %.3f);" % (W, tf(cur), tf(to), d, e, t0))
-            js.append("tl.fromTo('%s', { %s }, { %s, duration:%.3f, ease:%s, immediateRender:false }, %.3f);" % (G, tg(cur), tg(to), d, e, t0))
+            wp = arc_path(cur, to, ease, self.arc)
+            if len(wp) > 2:                                          # an arced move: short linear pieces along the bowed path, equal time steps (the ease is already in the points)
+                dt = d / (len(wp) - 1)
+                for k in range(len(wp) - 1):
+                    js.append("tl.fromTo('%s', { %s }, { %s, duration:%.4f, ease:'none', immediateRender:false }, %.4f);" % (W, tf(wp[k]), tf(wp[k + 1]), dt, t0 + k * dt))
+                    js.append("tl.fromTo('%s', { %s }, { %s, duration:%.4f, ease:'none', immediateRender:false }, %.4f);" % (G, tg(wp[k]), tg(wp[k + 1]), dt, t0 + k * dt))
+            else:
+                js.append("tl.fromTo('%s', { %s }, { %s, duration:%.3f, ease:%s, immediateRender:false }, %.3f);" % (W, tf(cur), tf(to), d, e, t0))
+                js.append("tl.fromTo('%s', { %s }, { %s, duration:%.3f, ease:%s, immediateRender:false }, %.3f);" % (G, tg(cur), tg(to), d, e, t0))
             cur, t = to, t0 + d
             if ease == SWIPE_EASE:
                 snd.append('<audio id="sfx-%s-s%d" src="sfx/plate-in.mp3" data-start="%.3f" data-duration="%.2f" data-track-index="%d" data-volume="1"></audio>' % (cid, len(snd), t0 + SWIPE_PEAK * d - li, di, self.ta + 1))
