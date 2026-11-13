@@ -168,3 +168,11 @@ For Shorts, use the detailed "primo pantalone" world (realism) together with the
 - **Render** with `finish.sh`: a 30 fps draft with QA that Jacopo listens to (a contact sheet does not show the sound), then the 60 fps final with BT.709 tags, a version number in the name and a light copy. Before the draft, check for flicker across 3 consecutive frames.
 - **Big statements stay modest in 9:16:** about 76–82 px (a number-punch like «117 cm» up to ~96). ONE line, TWO at most: three lines "non mi piace". A longer sentence becomes two statements in a row, or the tail goes back to the captions. At 100–175 px Jacopo found them "veramente troppo grosso"; the look must stay close to the captions.
 - **Labels must not sit on the caption band** (y ≈ 1180 in 9:16) or cross the frame edge. Check them on the contact sheet.
+
+## Short "primo pantalone" v3 vs Autogrill v2.2: why the Autogrill is better (14/11/2026)
+Jacopo, on v3: "ce lo facciamo andare bene, però il risultato non mi fa impazzire… quello dell'autogrill rimane molto, molto meglio: i tempismi, la canzone di sottofondo, tutto". Measured differences, to fix on Short #2:
+- **Change of view.** The Autogrill has 17 real changes of view in 93 s (exterior, aerial plan, road, macro on the shelves). The Short has 2: the same warm atelier at a medium distance, joined by blurred whips. Next time vary the SCALE: wide/aerial ↔ macro, and use a different place or angle for each paragraph.
+- **A visual device that explains.** The Autogrill draws the dotted red path on the plan and runs a live counter («prodotti che ti passano davanti: 485»). The Short only shows objects. Each Short needs at least one diagram-like moment, for example the correct outline drawn over the wrong one, or 117 cm against the right measure.
+- **Palette and contrast.** The Autogrill is bright and saturated (red, green, white). The Short is all beige and warm, so on a phone it reads flat. Keep a strong contrast colour in every shot.
+- **Timing.** The Autogrill adds a pause after the words that close a paragraph (`BREAKS`, 0.4–1.1 s), and the view changes inside that pause. The Short joins the voice paragraphs with fixed gaps and does not cut on them.
+- **Music.** It gets chosen against the edit (energy and bpm that match the cuts), not just as "a new track".
