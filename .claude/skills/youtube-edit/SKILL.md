@@ -435,6 +435,7 @@ any prompt wraps (non-breaking spaces once made a prompt run out of the box). Ca
 | `references/plate-plan.md` | planning a video with motion plates: the sentence-by-sentence plan table Jacopo approves before the storyboard, and how timecoded notes become rules |
 | `references/prove-corso.md`, `references/lab-corso.py` | designing plates, cuts or reels: the 45 course tests Jacopo voted on 05/11, what is allowed, what not to propose again, and the working code |
 | `references/inspo-library.md` | choosing which plate to build for a sentence; adding a reference video's analysis (the *why* of each graphic) |
+| `references/explainer-3d-sop.md`, `formats/explainer3d/` | making a short animated 3D explainer (one cartoon world the camera flies through, voice-driven, e.g. the Autogrill "serpentone"): the full method, the product/scenery kit, the fixed-gain mix |
 | `references/hyperframes-app.md` | taking notes from Jacopo in Studio; looking for a motion plate idea in the Moments gallery; borrowing from the app's own skills |
 
 Each file is the same text that used to sit in this one, moved so that a routine pass does not have to read ~45,000 tokens of it. A rule

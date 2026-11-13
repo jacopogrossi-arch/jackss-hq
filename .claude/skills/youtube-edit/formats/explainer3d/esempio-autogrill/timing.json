@@ -1,0 +1,200 @@
+{
+ "duration": 92.72,
+ "cuts": [
+  [
+   9.04,
+   1.1
+  ],
+  [
+   16.32,
+   0.4
+  ],
+  [
+   23.52,
+   0.9
+  ],
+  [
+   34.4,
+   0.8
+  ],
+  [
+   42.0,
+   0.6
+  ],
+  [
+   58.75,
+   0.6
+  ],
+  [
+   65.63,
+   0.6
+  ],
+  [
+   71.71,
+   0.7
+  ],
+  [
+   77.71000000000001,
+   1.0
+  ]
+ ],
+ "labels": [
+  [
+   "un *caffè*",
+   1.87
+  ],
+  [
+   "un *salame*",
+   3.23
+  ],
+  [
+   "un *peluche*",
+   3.95
+  ],
+  [
+   "un Toblerone *gigante*",
+   4.75
+  ],
+  [
+   "*Pavesi*",
+   15.61
+  ],
+  [
+   "*Motta*",
+   16.25
+  ],
+  [
+   "*Alemagna*",
+   16.89
+  ],
+  [
+   "*ingresso*",
+   28.27
+  ],
+  [
+   "*uscita*",
+   29.79
+  ],
+  [
+   "il *serpentone*",
+   36.11
+  ],
+  [
+   "i *giocattoli*",
+   48.79
+  ],
+  [
+   "altezza *bambino*",
+   49.83
+  ],
+  [
+   "prodotti *tipici*",
+   53.27
+  ],
+  [
+   "*formaggi*",
+   54.55
+  ],
+  [
+   "*salumi*",
+   55.43
+  ],
+  [
+   "il *regalo* per casa",
+   56.39
+  ],
+  [
+   "i *dolci*",
+   59.11
+  ],
+  [
+   "*giganti*",
+   60.02
+  ],
+  [
+   "la *cassa*",
+   65.66
+  ],
+  [
+   "le *caramelle*, le *gomme*",
+   66.54
+  ]
+ ],
+ "overlays": [
+  [
+   "Perché in Autogrill <i>non si va mai dritti</i>?",
+   -0.6,
+   2.36
+  ],
+  [
+   "È colpa del <i>pavimento</i>.",
+   7.87,
+   10.32
+  ],
+  [
+   "<i>1977</i>",
+   11.93,
+   17.97
+  ],
+  [
+   "ha <i>fretta</i>",
+   20.33,
+   23.11
+  ],
+  [
+   "è <i>stanco</i>",
+   21.13,
+   23.11
+  ],
+  [
+   "domani non <i>tornerà</i>",
+   21.85,
+   23.11
+  ],
+  [
+   "pochi <i>minuti</i> per vendergli qualcosa",
+   23.37,
+   25.97
+  ],
+  [
+   "l'ultima <i>tentazione</i>",
+   68.22,
+   70.88
+  ],
+  [
+   "lo stesso trucco di <i>Ikea</i> e dei <i>duty free</i>",
+   71.82,
+   74.08
+  ],
+  [
+   "un percorso <i>obbligato</i>",
+   74.34,
+   77.56
+  ],
+  [
+   "travestito da <i>negozio</i>",
+   75.38,
+   77.56
+  ],
+  [
+   "in alcuni locali nuovi: <i>niente serpentone</i>",
+   79.84,
+   81.34
+  ],
+  [
+   "in quasi tutti gli altri: <i>sì</i>",
+   81.68,
+   82.54
+  ],
+  [
+   "il caffè: poco più di <i>un euro</i>",
+   85.0,
+   92.72
+  ],
+  [
+   "il percorso per uscire: un po' di <i>più</i>",
+   87.4,
+   92.72
+  ]
+ ]
+}
