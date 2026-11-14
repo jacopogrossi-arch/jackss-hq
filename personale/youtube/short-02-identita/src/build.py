@@ -56,21 +56,21 @@ T_DROP = at("avevo") + 0.05                     # "Ne avevo una": five boxes go
 T_DIA = at("servono") - 0.15                    # up to the diagram on the floor
 T_END = at("questo", 2) - 0.3
 FLY = [[T_MAP1, T_D1 + 1.1], [T_MAP2, T_D2 + 1.1], [T_MAP3, T_D3 + 1.1], [T_DIA - 0.1, T_END + 1.2]]
-w.board_cards = [dict(x=-0.4, y=-0.02, w=0.4, h=0.3, text="ore di studio", lines=True, rot=-0.05, t=at("ore") - 0.05),
-                 dict(x=0.02, y=-0.42, w=0.38, h=0.44, big="v1", text="cartamodello", sub="da rifare", strike=True, rot=0.06, t=at("errori") - 0.05),
-                 dict(x=0.42, y=0.04, w=0.32, h=0.24, swatch="#6f7452", rot=-0.03, t=at("costa") - 0.15),
-                 dict(x=0.44, y=-0.4, w=0.3, h=0.2, big="€ / m", text="drill", rot=0.04, t=at("costa") + 0.1)]
+w.board_cards = [dict(x=-0.21, y=0.06, w=0.38, h=0.28, text="ore di studio", lines=True, rot=-0.05, t=at("ore") - 0.05),
+                 dict(x=-0.03, y=-0.36, w=0.34, h=0.4, big="v1", text="cartamodello", sub="da rifare", strike=True, rot=0.06, t=at("errori") - 0.05),
+                 dict(x=0.3, y=0.1, w=0.26, h=0.2, swatch="#6f7452", rot=-0.03, t=at("costa") - 0.15),
+                 dict(x=0.34, y=-0.4, w=0.22, h=0.17, big="€ / m", text="drill", rot=0.04, t=at("costa") + 0.1)]
 w.clock_spin = [[T_MESI + 0.3, end("settimane") + 0.2, 6]]
 room.furnish(w, hide=FLY)
 w.leak(T_D1 - 0.05, 1.1)
 
 # ------------------------------------------------------------------ the objects
 TOT = (0.4, 0.0, 1.4)
-w.prop("wordblocks", "totem", TOT, (0.3,), rot_y=0.0, text="INVERSO", flips=[[T_FLIP, 0.09, 0.62, math.pi], [at("inverso", 3) - 0.25, 0.07, 0.8, 2 * math.pi]])
-PANEL, DIRTY = (-2.28, 0.9, 0.48), (-1.66, 0.9, 0.5)
-w.prop("seampanel", "panel", PANEL, (0.5, 0.62), rot_y=0.08, color="#6f7452", flip=[T_TURN, T_TURN + 0.95])
-w.prop("seampanel", "dirty", DIRTY, (0.5, 0.62), rot_y=-0.1, color="#6f7452", dirty=True, flipped=True)
-w.prop("crossmark", "xmark", (DIRTY[0] + 0.03, 0.912, DIRTY[2] + 0.05), (0.2,), rot_y=-0.1, show=T_X, out=T_BOARD + 0.6)
+w.prop("logosign", "totem", TOT, (1.0, 0.31), rot_y=0.0, height=1.3, flips=[[T_FLIP, 0.95, math.pi], [at("inverso", 3) - 0.25, 1.1, 2 * math.pi]])
+PANEL, DIRTY = (-2.33, 0.9, 0.36), (-1.67, 0.9, 0.36)
+w.prop("seampanel", "panel", PANEL, None, rot_y=0.08, color="#6f7452", flip=[T_TURN, T_TURN + 0.95])
+w.prop("seampanel", "dirty", DIRTY, None, rot_y=-0.1, color="#6f7452", dirty=True, flipped=True)
+w.prop("crossmark", "xmark", (DIRTY[0], 0.912, DIRTY[2] - 0.05), (0.42,), rot_y=-0.1, show=T_X, out=T_BOARD + 0.6)
 RAIL = (2.9, 0.0, -1.0)
 w.prop("fastrail", "rail", RAIL, (4.4, 1.75), span=[T_D2 + 0.15, T_CLEAR], clear=T_CLEAR, speed=3.4)
 HERO_Y = 0.6
@@ -106,19 +106,19 @@ def C(t, d, pos, look, ease="hand"):
 
 MAP = ((3.45, 12.5, 1.15), (0.45, 0.0, 1.05))
 DIA = ((AX[0] + 1.0, 6.0, AX[2]), (AX[0] - 0.2, 0.0, AX[2]))
-w.cam((1.45, 0.95, 4.55), look=(0.4, 1.28, 1.4))                                              # frame 1: the totem reads upside down
-C(0.05, T_FLIP + 0.9, (1.15, 1.15, 4.1), (0.4, 1.3, 1.4), "out")                                 # push while the cubes turn
+w.cam((1.15, 1.12, 3.9), look=(0.4, 1.3, 1.4))                                              # frame 1: the totem reads upside down
+C(0.05, T_FLIP + 0.9, (0.95, 1.22, 3.6), (0.4, 1.3, 1.4), "out")                                 # push while the cubes turn
 C(at("nome") - 0.1, at("nasconde") - at("nome") - 0.25, (-0.45, 1.55, 3.85), (0.4, 1.25, 1.4), "glide")   # orbit to the other side
 C(T_MAP1, 1.6, MAP[0], MAP[1], "glide")                                                         # up: the map, three stations
-C(T_D1, 1.05, (-2.27, 1.52, 1.32), (-2.28, 0.9, 0.46), "glide")                                 # dive 1: the right side of the panel
-C(at("dritto") - 0.25, 1.1, (-2.33, 1.2, 0.72), (-2.3, 0.9, 0.36))                               # macro: the welt pocket
-C(T_TURN - 0.05, 1.2, (-2.2, 1.62, 1.2), (-2.28, 0.9, 0.46), "glide")                           # back up while it turns over
-C(at("cuciture") - 0.25, 1.0, (-2.37, 1.16, 0.8), (-2.36, 0.9, 0.45))                           # macro: the pressed-open seams, overlocked
-C(at("nessuno") - 0.3, 1.0, (-2.24, 1.12, 0.52), (-2.27, 0.9, 0.2))                             # the woven label in the waistband
-C(T_300, 1.0, (-1.62, 1.5, 1.32), (-1.66, 0.9, 0.5), "glide")                                   # the dirty one
-C(T_X - 0.15, 0.8, (-1.64, 1.36, 1.1), (-1.66, 0.9, 0.48))
+C(T_D1, 1.05, (-2.31, 2.12, 1.02), (-2.33, 0.9, 0.34), "glide")                                 # dive 1: the right side of the panel
+C(at("dritto") - 0.25, 1.1, (-2.47, 1.2, 0.33), (-2.43, 0.9, -0.02))                               # macro: the welt pocket
+C(T_TURN - 0.05, 1.2, (-2.25, 2.1, 1.05), (-2.33, 0.9, 0.34), "glide")                           # back up while it turns over
+C(at("cuciture") - 0.25, 1.0, (-2.14, 1.18, 0.8), (-2.13, 0.9, 0.42))                           # macro: the pressed-open seams, overlocked
+C(at("nessuno") - 0.3, 1.0, (-2.3, 1.15, 0.22), (-2.33, 0.9, -0.1))                             # the woven label in the waistband
+C(T_300, 1.0, (-1.63, 2.05, 1.05), (-1.67, 0.9, 0.34), "glide")                                   # the dirty one
+C(T_X - 0.15, 0.8, (-1.65, 1.8, 0.98), (-1.67, 0.9, 0.34))
 C(T_BOARD, 1.25, (-1.33, 1.58, -0.95), (-1.35, 1.48, -3.0), "glide")                               # the cork board: hours, mistakes, cost
-C(at("errori") - 0.2, 1.8, (-1.29, 1.52, -1.4), (-1.33, 1.47, -3.0), "glide")
+C(at("errori") - 0.2, 1.8, (-1.3, 1.52, -1.15), (-1.32, 1.47, -3.0), "glide")
 C(T_MAP2, 1.25, MAP[0], MAP[1], "glide")                                                        # the map: 1 -> 2
 C(T_D2, 1.1, (2.62, 1.38, 1.05), (2.9, 1.28, -1.0), "glide")                                    # dive 2: the fast rail
 C(T_CLEAR + 0.3, 1.3, (2.82, 1.32, 0.75), (2.9, 1.2, -1.0), "glide")                            # one garment
@@ -134,7 +134,7 @@ C(T_DIA, 1.5, DIA[0], DIA[1], "glide")                                          
 C(at("inverso", 2) + 0.45, 1.0, (AX[0] + 0.85, 3.0, AX[2]), (AX[0] + 0.35, 0.0, AX[2]), "glide")        # push in on the puck: Inverso, in the middle
 C(T_END, 1.5, (1.5, 1.3, 4.55), (0.4, 1.28, 1.4), "glide")                                      # back to the totem
 C(at("studente") - 0.2, 2.6, (-0.55, 1.5, 4.1), (0.4, 1.25, 1.4), "glide")
-C(at("documentando") - 0.2, 3.2, (1.2, 2.6, 6.2), (0.6, 1.0, -0.4), "glide")                     # pull back: the whole studio
+C(at("documentando") - 0.2, 3.2, (0.95, 2.1, 5.7), (0.4, 1.12, 1.4), "glide")                     # pull back: the whole studio
 CAMS.sort()
 for k, (t, d, pos, look, ease) in enumerate(CAMS):
     nxt = CAMS[k + 1][0] if k + 1 < len(CAMS) else DUR
@@ -161,10 +161,10 @@ for n in ST:
 L("st3", (0, 0, 0), "3 · il più *personale*", t=at("personale") - 0.1, out=T_D1 - 0.1, anchor="st3p", dx=-120, dy=60)
 L("m2st2", (0, 0, 0), "2 · la *fretta*", t=T_MAP2 + 1.25, out=T_D2 - 0.05, anchor="st2b", dx=-170, dy=-140)
 L("m3st3", (0, 0, 0), "3 · la scarpa", t=T_MAP3 + 1.2, out=T_D3 - 0.05, anchor="st3b", dx=-150, dy=-140)
-L("panel", (-0.04, 0.012, -0.14), "Tasca *a filo*", t=at("dritto") + 0.75, out=T_TURN - 0.1, anchor="tasca", sub="bottone in corno", dx=-330, dy=-300)
-L("panel", (-0.09, 0.006, 0.05), "*Sorfilate*", t=at("cuciture") + 0.85, out=at("nessuno") - 0.35, anchor="sorf", sub="e stirate aperte", dx=-300, dy=-330)
-L("panel", (0.0, 0.006, -0.28), "L'etichetta *Inverso*", t=at("nessuno") + 0.55, out=T_300 + 0.1, anchor="etichetta", dx=-310, dy=-380)
-L("dirty", (0.09, 0.006, 0.0), "Fili *liberi*", t=at("rovescio", 3) + 0.25, out=T_X + 0.05, anchor="fili", sub="margini non rifiniti", dx=-380, dy=-330)
+L("panel", (-0.1, 0.012, -0.37), "Tasca *a filo*", t=at("dritto") + 0.75, out=T_TURN - 0.1, anchor="tasca", sub="bottone in corno", dx=-330, dy=-300)
+L("panel", (0.2, 0.006, 0.05), "*Sorfilate*", t=at("cuciture") + 0.85, out=at("nessuno") - 0.35, anchor="sorf", sub="e stirate aperte", dx=-300, dy=-330)
+L("panel", (0.0, 0.006, -0.463), "L'etichetta *Inverso*", t=at("nessuno") + 0.55, out=T_300 + 0.1, anchor="etichetta", dx=-310, dy=-380)
+L("dirty", (0.2, 0.006, 0.15), "Fili *liberi*", t=at("rovescio", 3) + 0.25, out=T_X + 0.05, anchor="fili", sub="margini non rifiniti", dx=-380, dy=-330)
 L("hero", (0.01, 0.98, 0.135), "Drop 1 · *il pantalone*", t=T_CLEAR + 1.3, out=T_MESI - 0.05, anchor="drop1", sub="cotone drill verde oliva", dx=-330, dy=-430)
 L("shoe", (0.0, 0.1, 0.0), "*Una* scarpa", t=at("imparato") + 0.1, out=at("scelgono") - 0.2, anchor="unascarpa", sub="portata fino in fondo", dx=-200, dy=-360) if False else None
 L("axis", (-1.6, 0.0, 0.0), "chi *ha*", t=at("ostentazione") + 0.6, out=T_END - 0.1, anchor="chiha", dx=150, dy=-30)

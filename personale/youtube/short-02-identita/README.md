@@ -1,9 +1,9 @@
 # Short #2: "Il nome del mio brand ha tre significati"
 
-**Costruito in autonomia la notte del 13/11/2026** (Jacopo: «hai carta bianca»). Da rivedere con Jacopo il 14/11 mattina prima della pubblicazione.
+**Costruito in autonomia la notte del 13/11/2026** (Jacopo: «hai carta bianca»). Rivisto con Jacopo il 14/11: v2 approvata per il 4K (non ancora pubblicato).
 9:16, ~72 s, tutto 3D (three.js + HyperFrames), voce clonata ElevenLabs "Jacopo Prova", musica «locomotivate» – Auxjack (Epidemic).
 **Video correlato:** il #4 (https://youtu.be/aPDByKvlb5c), di cui questo Short è un ritaglio: il nome Inverso spiegato in tre significati.
-**File finiti:** iCloud › Video 3D moda › `short-tre-significati-v1-4k.mp4` (2160×3840, 60 fps) e `-v1-leggero.mp4`. Progetto di lavoro: `videos/_bench/short2/` (solo locale).
+**File finiti:** iCloud › Video 3D moda › `short-tre-significati-v2-4k.mp4` (2160×3840, 60 fps) e `-v2-leggero.mp4` (la v1 della notte resta lì come storico). Progetto di lavoro: `videos/_bench/short2/` (solo locale).
 
 - **Copione e regia:** `script.md` · **Brief di partenza:** `BRIEF.md`
 - **Sorgenti:** `src/`: build.py (camera, oggetti, etichette, testi, pillola), room.py (lo studio), mix.py (suono), finish.sh (bozza/finale), transcribe.py (words.json)
@@ -34,3 +34,14 @@ Short #1 = l'atelier di giorno. Short #2 = **lo studio di Inverso di notte**: pa
 | bozza 2 + s2h | scatole ancora piccole con mezzo quadro vuoto | camera del terzo tuffo più vicina: le scatole riempiono il quadro |
 
 QA bozza: −16 LUFS, picco −1,4 dB, nessun fotogramma congelato.
+
+## Revisione di Jacopo (14/11/2026) → v2
+| Nota di Jacopo | Corretto |
+|---|---|
+| All'inizio il **logo** invece della scritta, per farlo ricordare | insegna nera laccata col logo (`logosign`) che si gira all'apertura e di nuovo sull'ultima frase |
+| Il **rovescio** non sembrava un pantalone ma un pezzo di stoffa | pantalone rimodellato da zero: dritto con cinturino, passanti, tasche a filo con bottone in corno, pences, piega; rovescio con cuciture aperte rifinite a macchina, sacchi tasca, fascia interna ruggine, etichetta tessuta e di lavaggio, orli; quello "sbagliato" con bordi sfilacciati e fili liberi |
+| Sul sughero «ore di studio» tagliata | testo dei cartellini che si rimpicciolisce finché entra; card spostate |
+| Troppi pop | un solo pop basso quando appare un cartellino (salta quelli a meno di 0,4 s) |
+| Riser a ~1:01 bruttissimo | riser lungo dell'Autogrill (`cc-riser-lungo`) |
+| (bozza 5) «v1» del sughero che sfarfalla | due cartellini sovrapposti sullo stesso piano (z-fighting): ogni card ora sta 2,5 mm sopra la precedente |
+| (revisione a 10 fps) tavolo buio poi luce di colpo all'arrivo del primo tuffo | la lampada che sparisce al volo della camera spegneva anche la sua luce: ora sparisce solo il paralume |

@@ -55,8 +55,9 @@ for i, (tm, td) in enumerate([(B.T_MAP1, B.T_D1), (B.T_MAP2, B.T_D2), (B.T_MAP3,
 # ---- 1: the reverse side
 put(load(L + "cloth-feed.mp3", peak_db=-22), B.T_TURN + 0.1, name="panel turns over")
 put(load(L + "cc-impact.mp3", peak_db=-18), B.T_X, name="impact: X on the dirty one")
-for _t in (at("ore") - 0.05, at("errori") - 0.05, at("costa") - 0.15):
-    put(load(L + "es-pops6.mp3", peak_db=-25), _t, name="card pinned")
+for _i, _c in enumerate(B.w.board_cards):          # ONE soft pop per card, when it lands (Jacopo 14/11: the 6-pop burst was too much)
+    if _i and _c["t"] - B.w.board_cards[_i - 1]["t"] < 0.4: continue
+    put(load("pack2/pop1.mp3", peak_db=-27), _c["t"] + 0.05, name="card pinned")
 # ---- 2: the rail races, empties, one trouser
 put(load(L + "al-swoosh-intense.mp3", peak_db=-24), B.T_D2 + 0.4, name="rail races")
 put(load(L + "al-whoosh-scrapy.mp3", peak_db=-24), B.T_CLEAR - 0.2, name="rail empties")
@@ -70,7 +71,7 @@ put(load(L + "es-swoosh-wide.mp3", peak_db=-24), B.T_DIA + 0.6, name="axis draws
 put(load(L + "cc-knock.mp3", peak_db=-22), at("ostentazione") + 0.25, name="puck lands")
 put(load(L + "cc-knock.mp3", peak_db=-22), at("flexing") + 0.05, name="puck slides")
 put(load(L + "al-logo-incoming.mp3", peak_db=-20), at("inverso", 2) + 0.1, name="puck to the middle")
-put(load(L + "al-charge-riser.mp3", peak_db=-25, fade=0.02), at("inverso", 3) - 0.25, "peak", "riser -> last turn")
+put(load(L + "cc-riser-lungo.mp3", peak_db=-24, fade=0.02), at("inverso", 3), "peak", "riser -> last turn")   # the Autogrill / Short #1 riser (14/11: al-charge-riser rejected)
 put(load(L + "cc-impact.mp3", peak_db=-17), at("inverso", 3), name="impact: Questo è Inverso")
 fixed = [t for t, _ in placed]
 # ---- automatic: pops on labels, swishes on big statements, whooshes on camera moves
