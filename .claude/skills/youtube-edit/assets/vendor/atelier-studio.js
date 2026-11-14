@@ -542,9 +542,10 @@ function pinboard(o) {
   x.fillStyle = "#b48a5c"; x.fillRect(0, 0, 1024, 640); for (let i = 0; i < 9000; i++) { x.fillStyle = "rgba(" + (H(i, 1, 1) > 0.5 ? "90,55,25" : "220,180,130") + "," + (0.25 * H(i, 2, 2)).toFixed(2) + ")"; x.fillRect(H(i, 3, 3) * 1024, H(i, 4, 4) * 640, 2, 2); }
   add(g, B(w, h, 0.02), [M("#3a2a1c"), M("#3a2a1c"), M("#3a2a1c"), M("#3a2a1c"), new THREE.MeshStandardMaterial({ map: tx(c), roughness: 0.95 }), M("#3a2a1c")], 0, 0, 0.01);
   const fr = M(o.frame || C.ink, 0.5); add(g, B(w + 0.06, 0.03, 0.04), fr, 0, h / 2 + 0.015, 0.02); add(g, B(w + 0.06, 0.03, 0.04), fr, 0, -h / 2 - 0.015, 0.02); add(g, B(0.03, h, 0.04), fr, -w / 2 - 0.015, 0, 0.02); add(g, B(0.03, h, 0.04), fr, w / 2 + 0.015, 0, 0.02);
-  const pin = new THREE.SphereGeometry(0.009, 12, 8), pinM = M(C.red, 0.35), anim = [];
+  const pin = new THREE.SphereGeometry(0.009, 12, 8), pinM = M(C.red, 0.35), anim = []; let layer = 0;   // layer: z step per card so overlapping cards never z-fight
+
   const put = (cd, i) => {
-    const cw = cd.w || 0.3, ch = cd.h || 0.21, q = new THREE.Group(); q.position.set(cd.x * w / 2, cd.y * h / 2, 0.024); q.rotation.z = cd.rot || 0; g.add(q);
+    const cw = cd.w || 0.3, ch = cd.h || 0.21, q = new THREE.Group(); q.position.set(cd.x * w / 2, cd.y * h / 2, 0.024 + 0.0025 * (layer++)); q.rotation.z = cd.rot || 0; g.add(q);
     const inner = new THREE.Group(); q.add(inner);
     if (cd.swatch) { add(inner, B(cw, ch, 0.003), clothMat(cd.swatch, cd.kind || "twill", { n: 0.6 })); }
     else add(inner, new THREE.PlaneGeometry(cw, ch), new THREE.MeshStandardMaterial({ map: cardTex(cd, cw, ch), roughness: 0.85 }), 0, 0, 0.002);
