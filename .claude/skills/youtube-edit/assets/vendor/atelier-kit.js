@@ -191,7 +191,7 @@ function pendant(o) {                                    // a hanging lamp: the 
     const mats = []; g.traverse((x) => { if (x.material) { x.material = x.material.clone(); x.material.transparent = true; x.userData.op = x.material.opacity; mats.push(x); } });
     g.userData.update = (t) => {
       let k = 1; for (const [a, b] of o.hide) { if (t > a - 0.01 && t < b + 0.36) k = Math.min(k, t < a + 0.35 ? 1 - (t - a) / 0.35 : t > b ? (t - b) / 0.35 : 0); }
-      k = Math.max(0, Math.min(1, k)); g.visible = k > 0.001; for (const x of mats) x.material.opacity = x.userData.op * k;
+      k = Math.max(0, Math.min(1, k)); for (const x of mats) { x.material.opacity = x.userData.op * k; x.visible = k > 0.001; }   // only the meshes fade: the PointLight stays on, so the table never goes dark then pops
     };
     g.userData.update(-1);
   }
