@@ -530,7 +530,7 @@ function bookshelf(o) {
 function cardTex(cd, w, h) {
   const W = 512, Hh = Math.round(W * h / w), [c, x] = cv(W, Hh); x.fillStyle = cd.bg || C.gesso; x.fillRect(0, 0, W, Hh); grain(x, W, Hh, 900, 0.05, 5);
   x.fillStyle = cd.ink || C.ink; x.textAlign = "center"; x.textBaseline = "middle";
-  if (cd.big) { x.font = "400 " + Math.round(Hh * 0.34) + "px " + SERIF; x.fillText(cd.big, W / 2, Hh * 0.42); }
+  if (cd.big) { x.font = "400 " + Math.round(Hh * 0.34) + "px " + SERIF; x.fillText(cd.big, W / 2, Hh * 0.42); x.lineJoin = "round"; x.lineWidth = Math.max(4, Hh * 0.012); x.strokeStyle = x.fillStyle; x.strokeText(cd.big, W / 2, Hh * 0.42); }   // a thicker stroke: thin serif strokes shimmered frame to frame when the card is small on screen
   { const t0 = (cd.text || "").replace(/\*/g, ""); let fs = Math.round(Hh * (cd.big ? 0.15 : 0.2)); x.font = "italic 400 " + fs + "px " + SERIF; while (fs > 12 && x.measureText(t0).width > W - 70) { fs -= 2; x.font = "italic 400 " + fs + "px " + SERIF; } } x.fillText((cd.text || "").replace(/\*/g, ""), W / 2, Hh * (cd.big ? 0.72 : 0.42));
   if (cd.sub) { x.font = "500 " + Math.round(Hh * 0.075) + "px " + SANS; x.fillStyle = "rgba(30,27,24,.6)"; x.fillText(cd.sub.toUpperCase(), W / 2, Hh * (cd.big ? 0.88 : 0.68)); }
   if (cd.lines) { x.strokeStyle = "rgba(30,27,24,.35)"; x.lineWidth = 3; for (let i = 0; i < 4; i++) { x.beginPath(); x.moveTo(60, Hh * 0.62 + i * 26); x.lineTo(W - 60 - 80 * H(i, 3, 3), Hh * 0.62 + i * 26); x.stroke(); } }
