@@ -73,6 +73,30 @@ function wordblocks(o) {                                    // a vertical totem:
   g.userData.update(-1); return g;
 }
 
+// ---------- the logo sign: a black lacquered panel with the Inverso logo in a steel swing frame; it flips about its horizontal axis
+function logoFace() {
+  const [c, x] = cv(2048, 640); x.fillStyle = C.ink; x.fillRect(0, 0, 2048, 640); grain(x, 2048, 640, 5000, 0.035, 11);
+  x.strokeStyle = "rgba(185,174,152,.45)"; x.lineWidth = 6; x.strokeRect(34, 34, 1980, 572);
+  x.save(); x.translate(1024, 320); x.rotate(Math.PI); drawLogo(x, 0, 0, 1460, C.gesso); x.restore();   // drawn upside down: it reads upright once the panel has flipped
+  return tx(c);
+}
+function logosign(o) {
+  const [w, h] = o.size || [1.0, 0.31], hy = o.height || 1.3, d = 0.03, g = new THREE.Group(), piv = new THREE.Group(); piv.position.y = hy; g.add(piv);
+  const face = new THREE.MeshStandardMaterial({ map: logoFace(), roughness: 0.35, metalness: 0.05 }), rim = M(C.ruggine, 0.5), steel = M("#2a2a2a", 0.3, 0.85), brass = M("#c9a24a", 0.3, 0.9);
+  const back = face.clone();   // the back carries the same upside-down drawing: the flip about x turns it upright
+  add(piv, B(w, h, d), [rim, rim, rim, rim, face, back]);
+  for (const s of [-1, 1]) {
+    add(g, CY(0.011, 0.011, hy + 0.02, 12), steel, s * (w / 2 + 0.035), (hy + 0.02) / 2, 0);
+    add(g, CY(0.018, 0.018, 0.03, 16), brass, s * (w / 2 + 0.035), hy, 0, 0, 0, Math.PI / 2);
+    add(g, CY(0.006, 0.006, 0.04, 8), steel, s * (w / 2 + 0.014), hy, 0, 0, 0, Math.PI / 2);
+    add(g, new THREE.SphereGeometry(0.016, 14, 10), brass, s * (w / 2 + 0.035), hy + 0.035, 0);
+  }
+  add(g, B(w + 0.2, 0.05, 0.32), M(C.ink, 0.5), 0, 0.025, 0); add(g, B(w + 0.22, 0.008, 0.34), brass, 0, 0.052, 0);
+  const flips = o.flips || [];
+  g.userData.update = (t) => { let a = 0; for (const [t0, dur, ang] of flips) a += ease((t - t0) / dur) * (ang ?? Math.PI); piv.rotation.x = a; };
+  g.userData.update(-1); return g;
+}
+
 // ---------- the trouser back panel: right side and wrong side ------------------------------------------------------
 function overlockTex(base, thread, dirty, seed) {
   const [c, x] = cv(256, 1024); x.fillStyle = base; x.fillRect(0, 0, 256, 1024); grain(x, 256, 1024, 1400, 0.06, seed);
@@ -98,52 +122,70 @@ function labelTex(text) {
   if (text === "logo" || text === "logo-m") { if (text === "logo-m") { x.translate(512, 192); x.scale(-1, -1); } drawLogo(x, 256, 96, 330, C.gesso); } else { x.fillStyle = C.gesso; x.font = "400 96px " + SERIF; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText(text, 256, 100); }
   return tx(c);
 }
-function seampanel(o) {
-  const [w, d] = o.size || [0.5, 0.62], col = o.color || "#6f7452", dirty = !!o.dirty, th = 0.004, g = new THREE.Group(), p = new THREE.Group(); g.add(p);
-  const fr = clothMat(col, "twill", { n: 0.8 }), bk = clothMat(new THREE.Color(col).multiplyScalar(1.18).getStyle(), "twill", { n: 0.35, rough: 0.97 });
-  fr.map = fr.map.clone(); fr.map.repeat.set(w / 0.08, d / 0.08); fr.map.needsUpdate = true; fr.normalMap = fr.normalMap.clone(); fr.normalMap.repeat.set(w / 0.08, d / 0.08); fr.normalMap.needsUpdate = true;
-  bk.map = fr.map; bk.normalMap = fr.normalMap;
-  const edge = M(new THREE.Color(col).multiplyScalar(0.8).getStyle(), 0.9);
-  const slab = add(p, B(w, th, d), [edge, edge, fr, bk, edge, edge]);
-  // right side (+y): the centre-back seam (a fine groove), a flush welt pocket with its button, the waistband
-  const dark = M("#1d1f14", 0.95);
-  add(p, B(0.003, 0.0012, d * 0.86), M(new THREE.Color(col).multiplyScalar(0.62).getStyle(), 0.95), w * 0.18, th / 2 + 0.0004, 0.045);
-  const wb = add(p, B(w, 0.007, 0.06), clothMat(col, "twill", { n: 0.8 }), 0, th / 2 + 0.0025, -d / 2 + 0.03);
-  add(p, B(w, 0.0012, 0.002), dark, 0, th / 2 + 0.0061, -d / 2 + 0.0605);
-  const pz = -d / 2 + 0.17, px = -w * 0.08;
-  add(p, B(0.15, 0.0014, 0.0045), dark, px, th / 2 + 0.0006, pz);                                          // the pocket mouth
-  for (const s of [-1, 1]) add(p, B(0.152, 0.0028, 0.0055), clothMat(col, "twill", { n: 0.8 }), px, th / 2 + 0.0014, pz + s * 0.005);   // the two welts
-  for (const s of [-1, 1]) add(p, B(0.003, 0.0034, 0.014), M(new THREE.Color(col).multiplyScalar(0.7).getStyle(), 0.9), px + s * 0.076, th / 2 + 0.0017, pz);
-  add(p, CY(0.0085, 0.0085, 0.003, 20), M("#3b2a1c", 0.35, 0.1), px, th / 2 + 0.0035, pz + 0.022);         // horn button under the welt
-  // wrong side (-y): built facing down, it faces up once the panel is turned over
-  const wr = new THREE.Group(); wr.rotation.x = Math.PI; wr.position.y = -th / 2; p.add(wr);              // inside wr, +y points away from the slab's back
-  const thread = o.thread || C.sabbia;
-  for (const s of [-1, 1]) {                                                                               // seam allowances pressed open, overlocked
-    const sw = dirty ? 0.026 + 0.01 * (s > 0 ? 1 : 0) : 0.028, mat = new THREE.MeshStandardMaterial({ map: overlockTex(new THREE.Color(col).multiplyScalar(1.12).getStyle(), thread, dirty, s > 0 ? 3 : 8), roughness: 0.95 });
-    if (s < 0) { mat.map.center.set(0.5, 0.5); mat.map.rotation = Math.PI; }
-    const a = add(wr, B(sw, 0.0022, d * 0.88), [edge, edge, mat, edge, edge, edge], w * 0.18 + s * (sw / 2 + 0.001), 0.0011, -0.045);
-    if (dirty) a.rotation.y = s * 0.025;
+function seampanel(o) {          // a whole pair of trousers laid flat, seen from the back; waist at -z, hem at +z; it turns over about z to show the wrong side
+  const col = o.color || "#6f7452", dirty = !!o.dirty, th = 0.004, g = new THREE.Group(), p = new THREE.Group(); g.add(p);
+  const zw = -0.49, zc = -0.19, zh = 0.49, W = 0.47;
+  const OUT = [[-0.21, zw], [0.21, zw], [0.228, -0.37], [0.235, -0.27], [0.222, 0.1], [0.215, zh], [0.03, zh], [0.017, 0.0], [0.011, -0.15], [0, zc], [-0.011, -0.15], [-0.017, 0.0], [-0.03, zh], [-0.215, zh], [-0.222, 0.1], [-0.235, -0.27], [-0.228, -0.37]];
+  const shp = new THREE.Shape(); OUT.forEach(([x, z], i) => (i ? shp.lineTo(x, -z) : shp.moveTo(x, -z))); shp.closePath();
+  const layer = (y0) => { const geo = new THREE.ExtrudeGeometry(shp, { depth: th / 2, bevelEnabled: false, curveSegments: 4 }); geo.rotateX(-Math.PI / 2); geo.translate(0, y0, 0); return geo; };
+  const rep = (m) => { for (const k of ["map", "normalMap"]) { m[k] = m[k].clone(); m[k].repeat.set(12.5, 12.5); m[k].needsUpdate = true; } return m; };
+  const fr = rep(clothMat(col, "twill", { n: 0.8 })), bk = rep(clothMat(new THREE.Color(col).multiplyScalar(1.18).getStyle(), "twill", { n: 0.35, rough: 0.97 }));
+  const edge = M(new THREE.Color(col).multiplyScalar(0.8).getStyle(), 0.9), dark = M("#1d1f14", 0.95), seamC = M(new THREE.Color(col).multiplyScalar(0.62).getStyle(), 0.95);
+  add(p, layer(0), [fr, edge]); add(p, layer(-th / 2), [bk, edge]);
+  // ---- right side (+y): waistband, belt loops, centre-back seam, two welt pockets with horn buttons, pressed creases, hems
+  const y0 = th / 2;
+  add(p, B(0.42, 0.006, 0.045), clothMat(col, "twill", { n: 0.8 }), 0, y0 + 0.003, zw + 0.0225);
+  add(p, B(0.42, 0.0012, 0.002), dark, 0, y0 + 0.0061, zw + 0.045);
+  for (const x of [-0.19, -0.1, 0, 0.1, 0.19]) add(p, B(0.013, 0.004, 0.054), M(new THREE.Color(col).multiplyScalar(0.92).getStyle(), 0.9), x, y0 + 0.0065, zw + 0.027);
+  add(p, B(0.0026, 0.0012, zc - (zw + 0.045)), seamC, 0, y0 + 0.0005, (zc + zw + 0.045) / 2);
+  p.add(stitches([[0.006, y0 + 0.0008, zw + 0.05], [0.006, y0 + 0.0008, zc - 0.01]], new THREE.Color(col).multiplyScalar(0.7).getStyle(), 0.006, 0.0034, 0.0006));
+  const pz = -0.37;
+  for (const px of [-0.1, 0.1]) {
+    add(p, B(0.12, 0.0014, 0.0045), dark, px, y0 + 0.0006, pz);
+    for (const s of [-1, 1]) add(p, B(0.122, 0.0028, 0.0055), clothMat(col, "twill", { n: 0.8 }), px, y0 + 0.0014, pz + s * 0.005);
+    for (const s of [-1, 1]) add(p, B(0.003, 0.0034, 0.014), M(new THREE.Color(col).multiplyScalar(0.7).getStyle(), 0.9), px + s * 0.061, y0 + 0.0017, pz);
+    add(p, CY(0.0085, 0.0085, 0.003, 20), M("#3b2a1c", 0.35, 0.1), px, y0 + 0.0035, pz + 0.022);
+    add(p, B(0.0022, 0.0009, 0.07), seamC, px, y0 + 0.0004, pz - 0.045);                         // the back darts above the pockets
   }
-  const bag = add(wr, B(0.19, 0.0016, 0.25), new THREE.MeshStandardMaterial({ map: pocketingTex(), roughness: 0.9 }), px, 0.0008, d / 2 - 0.2);   // the pocket bag, under the welt
-  if (dirty) { bag.rotation.y = 0.09; bag.position.x += 0.012; }
-  wr.add(stitches(dirty ? [[px - 0.09, 0.0018, d / 2 - 0.08], [px - 0.1, 0.0018, d / 2 - 0.2], [px - 0.085, 0.0018, d / 2 - 0.33]] : [[px - 0.09, 0.0018, d / 2 - 0.075], [px - 0.09, 0.0018, d / 2 - 0.325], [px + 0.09, 0.0018, d / 2 - 0.325], [px + 0.09, 0.0018, d / 2 - 0.075]], dirty ? "#c9b98a" : "#cfc4a6", 0.006, 0.0036, 0.0007));
-  const facing = add(wr, B(w, 0.0025, 0.055), M(dirty ? new THREE.Color(col).multiplyScalar(1.1).getStyle() : C.ruggine, 0.85), 0, 0.0013, d / 2 - 0.028);   // the waistband facing in rust
-  if (!dirty) {
-    add(wr, B(0.085, 0.0012, 0.03), new THREE.MeshStandardMaterial({ map: labelTex("logo-m"), roughness: 0.6 }), 0, 0.0032, d / 2 - 0.03, 0, 0, 0);   // the woven label
-    wr.add(stitches([[-w / 2 + 0.01, 0.0028, d / 2 - 0.054], [w / 2 - 0.01, 0.0028, d / 2 - 0.054]], "#e7dcc4", 0.006, 0.0036, 0.0007));
-  } else {
-    const loose = M("#d8cba6", 0.8);                                                                      // loose thread tails
-    for (let i = 0; i < 6; i++) {
-      const x0 = w * 0.18 + (H(i, 2, 2) - 0.5) * 0.06, z0 = -d * 0.38 + H(i, 3, 3) * d * 0.8, pts = [];
-      for (let k = 0; k < 7; k++) pts.push([x0 + Math.sin(k * 1.3 + i) * 0.02 + k * 0.006 * (i % 2 ? 1 : -1), 0.004 + 0.002 * Math.sin(k), z0 + k * 0.012 + Math.cos(k * 1.7 + i) * 0.01]);
-      const tb = tube(pts, 0.0006, loose, 40); tb.userData.noshadow = true; wr.add(tb);
+  for (const s of [-1, 1]) {
+    add(p, B(0.0035, 0.0007, 0.56), M(new THREE.Color(col).multiplyScalar(1.12).getStyle(), 0.8), s * 0.122, y0 + 0.0003, 0.2);   // pressed crease
+    add(p, B(0.186, 0.0016, 0.0025), seamC, s * 0.1225, y0 + 0.0007, zh - 0.035);                                      // hem line
+  }
+  // ---- wrong side (-y): built facing down, it faces up once the trousers turn over; inside wr z is mirrored (z_wr = -z)
+  const wr = new THREE.Group(); wr.rotation.x = Math.PI; wr.position.y = -th / 2; p.add(wr);
+  const thread = o.thread || C.sabbia; let sd = 3;
+  const seam = (x0, z0, x1, z1, sw = 0.02) => {                  // a seam pressed open: two overlocked allowances along (x0,z0)->(x1,z1)
+    const dx = x1 - x0, dz = z1 - z0, l = Math.hypot(dx, dz), ry = Math.atan2(dx, dz), cx = (x0 + x1) / 2, cz = (z0 + z1) / 2;
+    for (const s of [-1, 1]) {
+      const w2 = dirty ? sw * (0.75 + 0.6 * H(sd, 1, 1)) : sw, mat = new THREE.MeshStandardMaterial({ map: overlockTex(new THREE.Color(col).multiplyScalar(1.12).getStyle(), thread, dirty, sd++), roughness: 0.95 });
+      mat.map.repeat.set(1, l / 0.6); mat.map.wrapS = mat.map.wrapT = THREE.RepeatWrapping; if (s < 0) { mat.map.center.set(0.5, 0.5); mat.map.rotation = Math.PI; }
+      const o2 = s * (w2 / 2 + 0.001), m = add(wr, B(w2, 0.0022, l), [edge, edge, mat, edge, edge, edge], cx + Math.cos(ry) * o2, 0.0011, cz - Math.sin(ry) * o2, 0, ry + (dirty ? s * 0.02 : 0), 0);
     }
+  };
+  seam(0, -zw - 0.05, 0, -zc - 0.02);                                         // centre back
+  for (const s of [-1, 1]) { seam(s * 0.206, -zw - 0.12, s * 0.193, -zh + 0.06); seam(s * 0.042, -zc - 0.06, s * 0.056, -zh + 0.06, 0.017); }   // side seams, inseams
+  for (const px of [-0.1, 0.1]) {                                              // the pocket bags, under the welts
+    const bag = add(wr, B(0.15, 0.0016, 0.2), new THREE.MeshStandardMaterial({ map: pocketingTex(), roughness: 0.9 }), px, 0.0026, -pz - 0.11);
+    if (dirty) { bag.rotation.y = 0.08 * Math.sign(px); bag.position.x += 0.01 * Math.sign(px); }
+    else wr.add(stitches([[px - 0.07, 0.0036, -pz + 0.0], [px - 0.07, 0.0036, -pz - 0.205], [px + 0.07, 0.0036, -pz - 0.205], [px + 0.07, 0.0036, -pz + 0.0]], "#cfc4a6", 0.006, 0.0036, 0.0007));
   }
-  const t0 = o.flip ? o.flip[0] : 0, t1 = o.flip ? o.flip[1] : 0, axis = o.axis || "z";
+  add(wr, B(0.42, 0.0025, 0.05), M(dirty ? new THREE.Color(col).multiplyScalar(1.1).getStyle() : C.ruggine, 0.85), 0, 0.0013, -zw - 0.025);     // the waistband facing
+  for (const s of [-1, 1]) {                                                   // the hems turned up
+    add(wr, B(0.183, 0.0022, 0.045), M(new THREE.Color(col).multiplyScalar(1.05).getStyle(), 0.92), s * 0.1225, 0.0011, -zh + 0.0225);
+    if (!dirty) wr.add(stitches([[s * 0.035, 0.0024, -zh + 0.043], [s * 0.21, 0.0024, -zh + 0.043]], "#cfc4a6", 0.009, 0.0022, 0.0006));
+  }
+  if (!dirty) {
+    add(wr, B(0.085, 0.0012, 0.03), new THREE.MeshStandardMaterial({ map: labelTex("logo-m"), roughness: 0.6 }), 0, 0.0032, -zw - 0.027);   // the woven label
+    wr.add(stitches([[-0.2, 0.0028, -zw - 0.051], [0.2, 0.0028, -zw - 0.051]], "#e7dcc4", 0.006, 0.0036, 0.0007));
+  } else {
+    const loose = M("#d8cba6", 0.8);                                           // loose thread tails along the seams
+    const at = [[0, 0.36], [0, 0.26], [0.2, 0.05], [-0.2, -0.15], [0.05, -0.3], [-0.05, 0.0], [0.1, 0.32]];
+    at.forEach(([x0, z0], i) => { const pts = []; for (let k = 0; k < 7; k++) pts.push([x0 + Math.sin(k * 1.3 + i) * 0.02 + k * 0.006 * (i % 2 ? 1 : -1), 0.004 + 0.002 * Math.sin(k), z0 + k * 0.012 + Math.cos(k * 1.7 + i) * 0.01]); const tb = tube(pts, 0.0006, loose, 40); tb.userData.noshadow = true; wr.add(tb); });
+  }
+  const t0 = o.flip ? o.flip[0] : 0, t1 = o.flip ? o.flip[1] : 0;
   g.userData.update = (t) => {
     const k = o.flipped ? 1 : (o.flip ? ease((t - t0) / Math.max(0.01, t1 - t0)) : 0), a = k * Math.PI;
-    if (axis === "z") { p.rotation.z = a; p.position.set(-Math.sin(a) * 0 + (1 - Math.cos(a)) * 0, Math.sin(a) * w * 0.5 + th / 2, 0); }
-    else { p.rotation.x = -a; p.position.set(0, Math.sin(a) * d * 0.5 + th / 2, 0); }
+    p.rotation.z = a; p.position.set(0, Math.sin(a) * W * 0.5 + th / 2, 0);
   };
   g.userData.update(-1); return g;
 }
@@ -340,7 +382,7 @@ function cardTex(cd, w, h) {
   const W = 512, Hh = Math.round(W * h / w), [c, x] = cv(W, Hh); x.fillStyle = cd.bg || C.gesso; x.fillRect(0, 0, W, Hh); grain(x, W, Hh, 900, 0.05, 5);
   x.fillStyle = cd.ink || C.ink; x.textAlign = "center"; x.textBaseline = "middle";
   if (cd.big) { x.font = "400 " + Math.round(Hh * 0.34) + "px " + SERIF; x.fillText(cd.big, W / 2, Hh * 0.42); }
-  x.font = "italic 400 " + Math.round(Hh * (cd.big ? 0.15 : 0.2)) + "px " + SERIF; x.fillText((cd.text || "").replace(/\*/g, ""), W / 2, Hh * (cd.big ? 0.72 : 0.42));
+  { const t0 = (cd.text || "").replace(/\*/g, ""); let fs = Math.round(Hh * (cd.big ? 0.15 : 0.2)); x.font = "italic 400 " + fs + "px " + SERIF; while (fs > 12 && x.measureText(t0).width > W - 70) { fs -= 2; x.font = "italic 400 " + fs + "px " + SERIF; } } x.fillText((cd.text || "").replace(/\*/g, ""), W / 2, Hh * (cd.big ? 0.72 : 0.42));
   if (cd.sub) { x.font = "500 " + Math.round(Hh * 0.075) + "px " + SANS; x.fillStyle = "rgba(30,27,24,.6)"; x.fillText(cd.sub.toUpperCase(), W / 2, Hh * (cd.big ? 0.88 : 0.68)); }
   if (cd.lines) { x.strokeStyle = "rgba(30,27,24,.35)"; x.lineWidth = 3; for (let i = 0; i < 4; i++) { x.beginPath(); x.moveTo(60, Hh * 0.62 + i * 26); x.lineTo(W - 60 - 80 * H(i, 3, 3), Hh * 0.62 + i * 26); x.stroke(); } }
   if (cd.strike) { x.strokeStyle = C.red; x.lineWidth = 9; x.beginPath(); x.moveTo(70, Hh * 0.5); x.lineTo(W - 70, Hh * 0.36); x.stroke(); }
@@ -446,10 +488,11 @@ function terrazzo(o) {
   m.userData.floor = true; return m.parent;
 }
 
-export const STUDIO = new Set(["wordblocks", "seampanel", "fastrail", "wallclock", "shoeboxes", "sneaker", "cityview", "crittall", "bookshelf", "pinboard", "swatchwall", "axisline", "crossmark", "laptop", "deskset", "terrazzo"]);
+export const STUDIO = new Set(["wordblocks", "logosign", "seampanel", "fastrail", "wallclock", "shoeboxes", "sneaker", "cityview", "crittall", "bookshelf", "pinboard", "swatchwall", "axisline", "crossmark", "laptop", "deskset", "terrazzo"]);
 export function buildStudio(o) {
   switch (o.type) {
     case "wordblocks": return wordblocks(o);
+    case "logosign": return logosign(o);
     case "seampanel": return seampanel(o);
     case "fastrail": return fastrail(o);
     case "wallclock": return wallclock(o);
