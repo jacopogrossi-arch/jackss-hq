@@ -122,70 +122,219 @@ function labelTex(text) {
   if (text === "logo" || text === "logo-m") { if (text === "logo-m") { x.translate(512, 192); x.scale(-1, -1); } drawLogo(x, 256, 96, 330, C.gesso); } else { x.fillStyle = C.gesso; x.font = "400 96px " + SERIF; x.textAlign = "center"; x.textBaseline = "middle"; x.fillText(text, 256, 100); }
   return tx(c);
 }
+// The trousers are drawn at 2 px/mm on canvases in panel-local coordinates (x -0.25..0.25, z -0.5..0.5; canvas row 0 = the waist).
+const TW = 1024, TH = 2048, TX = (x) => (x + 0.25) * TW / 0.5, TZ = (z) => (z + 0.5) * TH, PXM = TW / 0.5;
+const TOUT = [[-0.21, -0.49], [0.21, -0.49], [0.228, -0.37], [0.235, -0.27], [0.222, 0.1], [0.215, 0.49], [0.03, 0.49], [0.017, 0.0], [0.011, -0.15], [0, -0.19], [-0.011, -0.15], [-0.017, 0.0], [-0.03, 0.49], [-0.215, 0.49], [-0.222, 0.1], [-0.235, -0.27], [-0.228, -0.37]];
+function tPath(x) { x.beginPath(); TOUT.forEach(([a, b], i) => (i ? x.lineTo(TX(a), TZ(b)) : x.moveTo(TX(a), TZ(b)))); x.closePath(); }
+function tLine(x, pts, close) { x.beginPath(); pts.forEach(([a, b], i) => (i ? x.lineTo(TX(a), TZ(b)) : x.moveTo(TX(a), TZ(b)))); if (close) x.closePath(); }
+function offsetPts(pts, d) {          // a polyline offset by d metres along its normal
+  return pts.map((q, i) => { const a = pts[Math.max(0, i - 1)], b = pts[Math.min(pts.length - 1, i + 1)], dx = b[0] - a[0], dz = b[1] - a[1], l = Math.hypot(dx, dz) || 1; return [q[0] - dz / l * d, q[1] + dx / l * d]; });
+}
+function resample(pts, step) {        // points every `step` metres along a polyline, with the unit tangent
+  const out = [];
+  for (let i = 0; i < pts.length - 1; i++) { const [x0, z0] = pts[i], [x1, z1] = pts[i + 1], l = Math.hypot(x1 - x0, z1 - z0) || 1e-6, n = Math.max(1, Math.round(l / step)); for (let k = 0; k < n; k++) out.push([x0 + (x1 - x0) * k / n, z0 + (z1 - z0) * k / n, (x1 - x0) / l, (z1 - z0) / l]); }
+  const last = pts[pts.length - 1], pv = out.length ? out[out.length - 1] : [0, 0, 0, 1]; out.push([last[0], last[1], pv[2], pv[3]]); return out;
+}
+function twill(x, base, dark, light, step = 5) {
+  x.fillStyle = base; x.fillRect(0, 0, TW, TH);
+  x.lineWidth = 1.7; x.strokeStyle = dark; x.beginPath(); for (let i = -TH; i < TW + TH; i += step) { x.moveTo(i, 0); x.lineTo(i - TH * 0.5, TH); } x.stroke();
+  x.lineWidth = 1; x.strokeStyle = light; x.beginPath(); for (let i = -TH + 2; i < TW + TH; i += step) { x.moveTo(i, 0); x.lineTo(i - TH * 0.5, TH); } x.stroke();
+}
+function dashes(x, pts, col, w, on, off, wob = 0, seed = 1) {   // a stitch line: dashes of `on` px every on+off px
+  const L = resample(pts, (on + off) / PXM); x.strokeStyle = col; x.lineWidth = w; x.lineCap = "round"; x.beginPath();
+  L.forEach(([a, b, ta, tb], i) => { const j = wob ? (H(i, seed, 9) - 0.5) * wob : 0, px = TX(a) - tb * j, pz = TZ(b) + ta * j, k = on / 2; x.moveTo(px - ta * k, pz - tb * k); x.lineTo(px + ta * k, pz + tb * k); });
+  x.stroke(); x.lineCap = "butt";
+}
+function zigzag(x, pts, d0, d1, col, w, pitch) {                 // an overlock: a zigzag between two offsets (metres) of a polyline
+  const L = resample(pts, pitch); x.strokeStyle = col; x.lineWidth = w; x.beginPath();
+  L.forEach(([a, b, ta, tb], i) => { const d = i % 2 ? d1 : d0, px = TX(a - tb * d), pz = TZ(b + ta * d); if (i) x.lineTo(px, pz); else x.moveTo(px, pz); }); x.stroke();
+}
+function normalFromHeight(hc, strength = 2.2) {
+  const W = hc.width, Hh = hc.height, src = hc.getContext("2d").getImageData(0, 0, W, Hh).data, [c, x] = cv(W, Hh), img = x.createImageData(W, Hh), d = img.data;
+  const h = (i, j) => src[((Math.min(Hh - 1, Math.max(0, j)) * W) + Math.min(W - 1, Math.max(0, i))) * 4] / 255;
+  for (let j = 0; j < Hh; j++) for (let i = 0; i < W; i++) {
+    const dx = (h(i + 1, j) - h(i - 1, j)) * strength, dy = (h(i, j + 1) - h(i, j - 1)) * strength, l = Math.hypot(dx, dy, 1), k = (j * W + i) * 4;
+    d[k] = (-dx / l * 0.5 + 0.5) * 255; d[k + 1] = (dy / l * 0.5 + 0.5) * 255; d[k + 2] = (1 / l * 0.5 + 0.5) * 255; d[k + 3] = 255;
+  }
+  x.putImageData(img, 0, 0); return c;
+}
+const T_SEAMS = {                     // the seams (panel-local metres)
+  cb: [[0, -0.444], [0, -0.3], [0.002, -0.2]],
+  side: (s) => [[s * 0.206, -0.47], [s * 0.212, -0.37], [s * 0.214, -0.27], [s * 0.2, 0.1], [s * 0.192, 0.47]],
+  inseam: (s) => [[s * 0.03, -0.16], [s * 0.038, 0.0], [s * 0.052, 0.47]],
+};
+function trouserRight(col, dirty) {   // [colour, height] canvases of the right side, seen from the back
+  const base = new THREE.Color(col), thr = base.clone().multiplyScalar(1.32).getStyle(), [c, x] = cv(TW, TH), [hc, hx] = cv(TW, TH);
+  twill(x, col, "rgba(0,0,0,.10)", "rgba(255,255,255,.05)"); twill(hx, "#808080", "rgba(0,0,0,.22)", "rgba(255,255,255,.18)");
+  grain(x, TW, TH, 26000, 0.045, 21);
+  for (let i = 0; i < 60; i++) { const g = x.createRadialGradient(0, 0, 0, 0, 0, 120); g.addColorStop(0, H(i, 4, 4) > 0.5 ? "rgba(255,250,235,.035)" : "rgba(0,0,0,.035)"); g.addColorStop(1, "rgba(0,0,0,0)"); x.save(); x.translate(H(i, 1, 4) * TW, H(i, 2, 4) * TH); x.fillStyle = g; x.fillRect(-120, -120, 240, 240); x.restore(); }
+  // waistband: a raised band, topstitched on both edges, with a seam groove and a shadow under it
+  x.fillStyle = "rgba(0,0,0,.05)"; x.fillRect(0, TZ(-0.49), TW, TZ(-0.445) - TZ(-0.49)); hx.fillStyle = "rgba(255,255,255,.18)"; hx.fillRect(0, TZ(-0.49), TW, TZ(-0.445) - TZ(-0.49));
+  for (const [q, a] of [[x, 0.35], [hx, 0.75]]) { q.strokeStyle = "rgba(0,0,0," + a + ")"; q.lineWidth = 3; tLine(q, [[-0.25, -0.445], [0.25, -0.445]]); q.stroke(); }
+  x.save(); x.filter = "blur(5px)"; x.strokeStyle = "rgba(0,0,0,.22)"; x.lineWidth = 10; tLine(x, [[-0.25, -0.44], [0.25, -0.44]]); x.stroke(); x.restore();
+  for (const z of [-0.4855, -0.4495]) { dashes(x, [[-0.205, z], [0.205, z]], thr, 2.2, 7, 4); dashes(hx, [[-0.205, z], [0.205, z]], "#fff", 2.6, 7, 4); }
+  // centre-back seam: a groove with a shadow, felled with two rows of topstitching
+  for (const [q, a] of [[x, 0.4], [hx, 0.8]]) { q.strokeStyle = "rgba(0,0,0," + a + ")"; q.lineWidth = 3; tLine(q, T_SEAMS.cb); q.stroke(); }
+  x.save(); x.filter = "blur(4px)"; x.strokeStyle = "rgba(0,0,0,.18)"; x.lineWidth = 9; tLine(x, offsetPts(T_SEAMS.cb, -0.003)); x.stroke(); x.restore();
+  for (const d of [0.0035, 0.0095]) { dashes(x, offsetPts(T_SEAMS.cb, -d), thr, 2, 6, 4, dirty ? 3 : 0, 3); dashes(hx, offsetPts(T_SEAMS.cb, -d), "#fff", 2.4, 6, 4, dirty ? 3 : 0, 3); }
+  // darts above the pockets, tapering
+  for (const px of [-0.1, 0.1]) for (const q of [x, hx]) { const g = q.createLinearGradient(0, TZ(-0.445), 0, TZ(-0.385)); g.addColorStop(0, "rgba(0,0,0,.4)"); g.addColorStop(1, "rgba(0,0,0,0)"); q.strokeStyle = g; q.lineWidth = 2.6; tLine(q, [[px, -0.445], [px, -0.385]]); q.stroke(); }
+  // welt pockets: the shadow around the welts, bar tacks at the ends
+  for (const px of [-0.1, 0.1]) {
+    x.save(); x.filter = "blur(6px)"; x.fillStyle = "rgba(0,0,0,.22)"; x.fillRect(TX(px - 0.063), TZ(-0.379), 0.126 * PXM, 0.018 * TH); x.restore();
+    for (const sx of [-1, 1]) for (const [q, cc] of [[x, thr], [hx, "#fff"]]) { q.fillStyle = cc; q.fillRect(TX(px + sx * 0.062) - 3, TZ(-0.377), 6, 0.014 * TH); }
+  }
+  // the pressed crease down each leg, the hem turned up and topstitched
+  for (const s of [-1, 1]) {
+    for (const [q, cc, w] of [[x, "rgba(255,250,235,.16)", 4], [hx, "rgba(255,255,255,.7)", 5]]) { q.strokeStyle = cc; q.lineWidth = w; tLine(q, [[s * 0.122, -0.12], [s * 0.1235, 0.49]]); q.stroke(); }
+    const hem = [[s * 0.033, 0.455], [s * 0.2155, 0.455]];
+    dashes(x, hem, thr, 2.2, 7, 4); dashes(hx, hem, "#fff", 2.6, 7, 4);
+    x.fillStyle = "rgba(0,0,0,.08)"; x.fillRect(Math.min(TX(s * 0.03), TX(s * 0.218)), TZ(0.462), Math.abs(TX(s * 0.218) - TX(s * 0.03)), TZ(0.49) - TZ(0.462));
+  }
+  for (const [q, a] of [[x, 0.28], [hx, 0.5]]) { q.save(); tPath(q); q.clip(); q.filter = "blur(7px)"; q.strokeStyle = "rgba(0,0,0," + a + ")"; q.lineWidth = 18; tPath(q); q.stroke(); q.restore(); }
+  return [c, hc];
+}
+function trouserWrong(col, dirty, thread) {   // [colour, height] canvases of the wrong side, in the same panel-local frame
+  const base = new THREE.Color(col).multiplyScalar(1.17), sh = (k) => base.clone().multiplyScalar(k).getStyle(), [c, x] = cv(TW, TH), [hc, hx] = cv(TW, TH);
+  twill(x, base.getStyle(), "rgba(0,0,0,.05)", "rgba(255,255,255,.05)", 6); twill(hx, "#808080", "rgba(0,0,0,.12)", "rgba(255,255,255,.1)", 6);
+  grain(x, TW, TH, 40000, 0.06, 33);
+  for (let i = 0; i < 9000; i++) { x.fillStyle = "rgba(255,252,240," + (0.05 + 0.06 * H(i, 7, 7)).toFixed(3) + ")"; x.fillRect(H(i, 8, 8) * TW, H(i, 9, 9) * TH, 1, 2 + 3 * H(i, 6, 6)); }   // the fuzzy back of the twill
+  const seams = [T_SEAMS.cb, T_SEAMS.side(-1), T_SEAMS.side(1), T_SEAMS.inseam(-1), T_SEAMS.inseam(1)];
+  seams.forEach((sp, si) => {
+    for (const s of [-1, 1]) {                                      // the two allowances, pressed open
+      const w = 0.017 * (dirty ? 0.7 + 0.6 * H(si, s + 2, 3) : 1), edgeP = offsetPts(sp, s * w).map((q, i) => (dirty ? [q[0] + (H(i, si, s + 2) - 0.5) * 0.004, q[1]] : q));
+      const band = sp.concat(edgeP.slice().reverse());
+      x.save(); x.filter = "blur(5px)"; tLine(x, offsetPts(sp, s * (w + 0.002))); x.lineWidth = 8; x.strokeStyle = "rgba(0,0,0,.25)"; x.stroke(); x.restore();   // shadow under the cut edge
+      x.fillStyle = sh(1.05); tLine(x, band, true); x.fill();
+      hx.fillStyle = "rgba(255,255,255,.35)"; tLine(hx, band, true); hx.fill();
+      if (!dirty) { zigzag(x, sp, s * (w - 0.0035), s * w, thread, 1.6, 0.0016); zigzag(hx, sp, s * (w - 0.0035), s * w, "#fff", 2, 0.0016); dashes(x, offsetPts(sp, s * (w - 0.005)), thread, 1.6, 5, 3); }
+      else { const L = resample(edgeP, 0.004); for (let i = 0; i < 160; i++) { const q = L[Math.floor(H(i, si, 11) * L.length)], len = 4 + 14 * H(i, si, 12), ang = (H(i, si, 13) - 0.5) * 1.6, nx = -q[3] * s, nz = q[2] * s; x.strokeStyle = "rgba(225,212,170," + (0.35 + 0.4 * H(i, si, 14)).toFixed(2) + ")"; x.lineWidth = 1.2; x.beginPath(); x.moveTo(TX(q[0]), TZ(q[1])); x.lineTo(TX(q[0]) + (nx * Math.cos(ang) - nz * Math.sin(ang)) * len, TZ(q[1]) + (nz * Math.cos(ang) + nx * Math.sin(ang)) * len); x.stroke(); } }
+    }
+    x.strokeStyle = "rgba(0,0,0,.45)"; x.lineWidth = 2.5; tLine(x, sp); x.stroke(); hx.strokeStyle = "rgba(0,0,0,.9)"; hx.lineWidth = 4; tLine(hx, sp); hx.stroke();   // the fold of the seam
+    dashes(x, sp, dirty ? "#cbbd93" : thread, 1.8, 5, 3, dirty ? 4 : 0, si + 5);
+  });
+  // the pocket bags (cotton pocketing) with a French-seamed edge; a little crooked on the dirty one
+  const bagW = 0.15, bagH = 0.215, bagZ = -0.2925;
+  for (const px of [-0.1, 0.1]) {
+    const ring = rrect(bagW, bagH, 0.02).getPoints(8).map((q) => [px + q.x, bagZ - q.y]);
+    const rot = (q) => { if (!dirty) return q; const a = 0.07 * Math.sign(px), dx = q[0] - px, dz = q[1] - bagZ; return [px + 0.008 * Math.sign(px) + dx * Math.cos(a) - dz * Math.sin(a), bagZ + dx * Math.sin(a) + dz * Math.cos(a)]; };
+    const R = ring.map(rot);
+    x.save(); x.filter = "blur(6px)"; x.fillStyle = "rgba(0,0,0,.35)"; tLine(x, R, true); x.fill(); x.restore();
+    x.save(); tLine(x, R, true); x.fillStyle = "#dcd3bf"; x.fill(); x.clip(); for (let i = 0; i < TW; i += 7) { x.fillStyle = "rgba(47,58,46,.12)"; x.fillRect(i, 0, 2.5, TH); } grain(x, TW, TH, 5000, 0.05, 44);
+    const sg = x.createLinearGradient(0, TZ(-0.4), 0, TZ(-0.18)); sg.addColorStop(0, "rgba(0,0,0,.10)"); sg.addColorStop(0.4, "rgba(255,255,255,.04)"); sg.addColorStop(1, "rgba(0,0,0,.12)"); x.fillStyle = sg; x.fillRect(0, 0, TW, TH);
+    for (let i = 0; i < 7; i++) { x.strokeStyle = "rgba(0,0,0,.06)"; x.lineWidth = 5; x.beginPath(); x.moveTo(TX(px - 0.06 + i * 0.02), TZ(-0.36)); x.quadraticCurveTo(TX(px - 0.05 + i * 0.02), TZ(-0.3), TX(px - 0.065 + i * 0.021), TZ(-0.2)); x.stroke(); }   // soft creases in the cotton
+    x.fillStyle = sh(0.86); x.fillRect(TX(px - 0.066), TZ(-0.392), 0.132 * PXM, 0.03 * TH); twill(x, "rgba(0,0,0,0)", "rgba(0,0,0,.08)", "rgba(255,255,255,.04)");   // the pocket facing in trouser cloth behind the welt
+    x.restore();
+    dashes(x, [[px - 0.066, -0.362], [px + 0.066, -0.362]], thread, 1.6, 5, 3);
+    x.strokeStyle = "rgba(0,0,0,.18)"; x.lineWidth = 3; tLine(x, R, true); x.stroke();
+    dashes(x, offsetPts(R.concat([R[0]]), -0.006), dirty ? "#bfb28c" : "#a99e86", 1.8, 5, 3, dirty ? 5 : 0, 7);
+    hx.fillStyle = "rgba(255,255,255,.28)"; tLine(hx, R, true); hx.fill(); hx.strokeStyle = "rgba(255,255,255,.6)"; hx.lineWidth = 6; hx.stroke();
+  }
+  // the waistband facing with its striped curtain
+  x.fillStyle = dirty ? sh(0.95) : C.ruggine; x.fillRect(0, TZ(-0.49), TW, TZ(-0.443) - TZ(-0.49));
+  if (!dirty) {
+    x.fillStyle = "#e8e0cf"; x.fillRect(0, TZ(-0.445), TW, 0.011 * TH); for (let i = 0; i < 4; i++) { x.fillStyle = i % 2 ? C.bosco : C.ruggine; x.fillRect(0, TZ(-0.443 + i * 0.0025), TW, 2); }
+    dashes(x, [[-0.21, -0.4865], [0.21, -0.4865]], "#e7dcc4", 2, 6, 4); dashes(x, [[-0.21, -0.4325], [0.21, -0.4325]], "#e7dcc4", 2, 6, 4);
+  }
+  hx.fillStyle = "rgba(255,255,255,.3)"; hx.fillRect(0, TZ(-0.49), TW, TZ(-0.432) - TZ(-0.49)); hx.fillStyle = "rgba(0,0,0,.6)"; hx.fillRect(0, TZ(-0.432), TW, 3);
+  // the hems turned up: overlocked raw edge and blind stitches (frayed on the dirty one)
+  for (const s of [-1, 1]) {
+    const x0 = TX(s < 0 ? -0.218 : 0.03), x1 = TX(s < 0 ? -0.03 : 0.218);
+    x.fillStyle = sh(1.04); x.fillRect(x0, TZ(0.452), x1 - x0, TZ(0.49) - TZ(0.452)); hx.fillStyle = "rgba(255,255,255,.3)"; hx.fillRect(x0, TZ(0.452), x1 - x0, TZ(0.49) - TZ(0.452));
+    x.save(); x.filter = "blur(4px)"; x.fillStyle = "rgba(0,0,0,.25)"; x.fillRect(x0, TZ(0.449), x1 - x0, 6); x.restore();
+    const edge = [[s < 0 ? -0.216 : 0.032, 0.452], [s < 0 ? -0.032 : 0.216, 0.452]];
+    if (!dirty) { zigzag(x, edge, 0, 0.0035, thread, 1.6, 0.0016); for (let i = 0; i < 26; i++) { const xx = x0 + (i + 0.5) * (x1 - x0) / 26; x.strokeStyle = thread; x.lineWidth = 1.4; x.beginPath(); x.moveTo(xx - 4, TZ(0.458)); x.lineTo(xx, TZ(0.462)); x.lineTo(xx + 4, TZ(0.458)); x.stroke(); } }
+    else for (let i = 0; i < 70; i++) { const xx = x0 + H(i, s + 2, 21) * (x1 - x0); x.strokeStyle = "rgba(225,212,170,.6)"; x.lineWidth = 1.2; x.beginPath(); x.moveTo(xx, TZ(0.452)); x.lineTo(xx + (H(i, s + 2, 22) - 0.5) * 8, TZ(0.452) - 3 - 9 * H(i, s + 2, 23)); x.stroke(); }
+  }
+  if (!dirty) {                                                      // the care label under the facing (mirrored: it is read from the other side)
+    x.save(); x.translate(TX(-0.045), TZ(-0.43)); x.scale(-1, 1); x.fillStyle = "#f4f1ea"; x.fillRect(-32, 0, 64, 92); x.fillStyle = "rgba(30,27,24,.75)"; x.font = "600 13px " + SANS; x.textAlign = "center"; x.fillText("100% CO", 0, 28); x.font = "500 9px " + SANS; x.fillText("MADE IN ROMA", 0, 46); x.fillText("30° · ⨯ · ≡", 0, 64); x.restore();
+    hx.fillStyle = "rgba(255,255,255,.4)"; hx.fillRect(TX(-0.045) - 32, TZ(-0.43), 64, 92);
+  }
+  for (const [q, a] of [[x, 0.22], [hx, 0.4]]) { q.save(); tPath(q); q.clip(); q.filter = "blur(7px)"; q.strokeStyle = "rgba(0,0,0," + a + ")"; q.lineWidth = 18; tPath(q); q.stroke(); q.restore(); }
+  return [c, hc];
+}
 function seampanel(o) {          // a whole pair of trousers laid flat, seen from the back; waist at -z, hem at +z; it turns over about z to show the wrong side
-  const col = o.color || "#6f7452", dirty = !!o.dirty, th = 0.004, g = new THREE.Group(), p = new THREE.Group(); g.add(p);
-  const zw = -0.49, zc = -0.19, zh = 0.49, W = 0.47;
-  const OUT = [[-0.21, zw], [0.21, zw], [0.228, -0.37], [0.235, -0.27], [0.222, 0.1], [0.215, zh], [0.03, zh], [0.017, 0.0], [0.011, -0.15], [0, zc], [-0.011, -0.15], [-0.017, 0.0], [-0.03, zh], [-0.215, zh], [-0.222, 0.1], [-0.235, -0.27], [-0.228, -0.37]];
-  const shp = new THREE.Shape(); OUT.forEach(([x, z], i) => (i ? shp.lineTo(x, -z) : shp.moveTo(x, -z))); shp.closePath();
-  const layer = (y0) => { const geo = new THREE.ExtrudeGeometry(shp, { depth: th / 2, bevelEnabled: false, curveSegments: 4 }); geo.rotateX(-Math.PI / 2); geo.translate(0, y0, 0); return geo; };
-  const rep = (m) => { for (const k of ["map", "normalMap"]) { m[k] = m[k].clone(); m[k].repeat.set(12.5, 12.5); m[k].needsUpdate = true; } return m; };
-  const fr = rep(clothMat(col, "twill", { n: 0.8 })), bk = rep(clothMat(new THREE.Color(col).multiplyScalar(1.18).getStyle(), "twill", { n: 0.35, rough: 0.97 }));
-  const edge = M(new THREE.Color(col).multiplyScalar(0.8).getStyle(), 0.9), dark = M("#1d1f14", 0.95), seamC = M(new THREE.Color(col).multiplyScalar(0.62).getStyle(), 0.95);
-  add(p, layer(0), [fr, edge]); add(p, layer(-th / 2), [bk, edge]);
-  // ---- right side (+y): waistband, belt loops, centre-back seam, two welt pockets with horn buttons, pressed creases, hems
-  const y0 = th / 2;
-  add(p, B(0.42, 0.006, 0.045), clothMat(col, "twill", { n: 0.8 }), 0, y0 + 0.003, zw + 0.0225);
-  add(p, B(0.42, 0.0012, 0.002), dark, 0, y0 + 0.0061, zw + 0.045);
-  for (const x of [-0.19, -0.1, 0, 0.1, 0.19]) add(p, B(0.013, 0.004, 0.054), M(new THREE.Color(col).multiplyScalar(0.92).getStyle(), 0.9), x, y0 + 0.0065, zw + 0.027);
-  add(p, B(0.0026, 0.0012, zc - (zw + 0.045)), seamC, 0, y0 + 0.0005, (zc + zw + 0.045) / 2);
-  p.add(stitches([[0.006, y0 + 0.0008, zw + 0.05], [0.006, y0 + 0.0008, zc - 0.01]], new THREE.Color(col).multiplyScalar(0.7).getStyle(), 0.006, 0.0034, 0.0006));
+  const col = o.color || "#6f7452", dirty = !!o.dirty, th = 0.0035, g = new THREE.Group(), p = new THREE.Group(); g.add(p);
+  const zw = -0.49, W = 0.47;
+  // the outline as an alpha mask, and a blurred copy that rolls the edges down onto the table
+  const [mc, mx] = cv(TW, TH); mx.fillStyle = "#000"; mx.fillRect(0, 0, TW, TH); mx.fillStyle = "#fff"; tPath(mx); mx.fill();
+  const BW = TW / 4, BH = TH / 4, [, bx] = cv(BW, BH); bx.filter = "blur(3px)"; bx.drawImage(mc, 0, 0, BW, BH); const bd = bx.getImageData(0, 0, BW, BH).data;
+  const edgeK = (xx, zz) => { const i = Math.min(BW - 1, Math.max(0, Math.round(TX(xx) / 4))), j = Math.min(BH - 1, Math.max(0, Math.round(TZ(zz) / 4))); return bd[(j * BW + i) * 4] / 255; };
+  const ridge = (xx, zz, a, b, sg) => { const dx = b[0] - a[0], dz = b[1] - a[1], t = clamp(((xx - a[0]) * dx + (zz - a[1]) * dz) / (dx * dx + dz * dz)), ex = xx - a[0] - dx * t, ez = zz - a[1] - dz * t; return Math.exp(-(ex * ex + ez * ez) / (2 * sg * sg)) * Math.sin(Math.PI * t); };
+  const sm = (e0, e1, v) => { const k = clamp((v - e0) / (e1 - e0)); return k * k * (3 - 2 * k); };
+  const amp = dirty ? 1.6 : 1, seed = dirty ? 2.1 : 0.4;
+  const hM = (xx, zz) => {
+    const legs = sm(-0.44, -0.33, zz); let f = 0;
+    f += 0.0012 * Math.sin(xx * 31 + zz * 6.3 + seed) * Math.sin(zz * 11.7 + 1.3) * legs * amp;
+    for (const s of [-1, 1]) {
+      f += 0.0034 * amp * (ridge(xx, zz, [s * 0.015, -0.165], [s * 0.13, -0.07], 0.008) + ridge(xx, zz, [s * 0.02, -0.12], [s * 0.165, -0.005], 0.009) + 0.8 * ridge(xx, zz, [s * 0.03, -0.06], [s * 0.12, 0.05], 0.008));
+      f += 0.0013 * amp * Math.sin(zz * 64 + s * 1.7 + seed) * Math.exp(-(((zz - 0.2) / 0.08) ** 2)) * Math.exp(-(((xx - s * 0.12) / 0.06) ** 2));
+      if (zz > -0.12 && Math.sign(xx) === s) f += 0.0013 * Math.exp(-(((Math.abs(xx) - 0.1225) / 0.0035) ** 2)) * sm(-0.12, -0.04, zz) * (dirty ? 0.3 : 1);   // the pressed crease
+      f += 0.0005 * sm(0.075, 0.06, Math.abs(xx - s * 0.1)) * sm(-0.4, -0.385, zz) * sm(-0.17, -0.185, zz);   // the pocket bags double the cloth
+    }
+    f += 0.0005 * sm(0.45, 0.455, zz);                                                                          // the hems
+    if (dirty && zz < -0.2) f += 0.0012 * Math.sin(zz * 170) * Math.exp(-((xx / 0.012) ** 2));                  // a puckered centre-back seam
+    f += (Math.min(1, edgeK(xx, zz) * 1.7) - 1) * 0.0045;
+    return f;
+  };
+  const NX = 128, NZ = 256, pos = [], uv = [], hh = [];
+  for (let j = 0; j <= NZ; j++) for (let i = 0; i <= NX; i++) { const xx = -0.25 + 0.5 * i / NX, zz = -0.5 + j / NZ, h = hM(xx, zz); hh.push(h); pos.push(xx, h, zz); uv.push(i / NX, 1 - j / NZ); }
+  const geo = (dy, flip, neg) => {
+    const P = pos.slice(); for (let k = 1; k < P.length; k += 3) P[k] = (neg ? -P[k] : P[k]) + dy; const idx = [];
+    for (let j = 0; j < NZ; j++) for (let i = 0; i < NX; i++) { const a = j * (NX + 1) + i, b = a + NX + 1, c2 = a + 1, d2 = b + 1; if (!flip) idx.push(a, b, c2, c2, b, d2); else idx.push(a, c2, b, c2, d2, b); }
+    const G = new THREE.BufferGeometry(); G.setAttribute("position", new THREE.Float32BufferAttribute(P, 3)); G.setAttribute("uv", new THREE.Float32BufferAttribute(uv, 2)); G.setIndex(idx); G.computeVertexNormals(); return G;
+  };
+  const alpha = tx(mc, null, false);
+  const mat = ([cc, hc], tint) => new THREE.MeshPhysicalMaterial({ map: tx(cc), normalMap: tx(normalFromHeight(hc), null, false), normalScale: new THREE.Vector2(1.1, 1.1), roughness: 0.93, sheen: 0.55, sheenRoughness: 0.75, sheenColor: new THREE.Color(tint).multiplyScalar(1.5), alphaMap: alpha, alphaTest: 0.5 });
+  const thread = o.thread || C.sabbia;
+  const mR = mat(trouserRight(col, dirty), col), mW = mat(trouserWrong(col, dirty, thread), col);
+  const up = [add(p, geo(th / 2, false), mR), add(p, geo(-th / 2, true), mW)];           // right side up: the edges roll down
+  const dn = [add(p, geo(th / 2, false, true), mR), add(p, geo(-th / 2, true, true), mW)];   // the mirrored shape, used once it has turned over
+  const hAt = (xx, zz) => hh[Math.round((zz + 0.5) * NZ) * (NX + 1) + Math.round((xx + 0.25) / 0.5 * NX)];
+  // ---- right side, in relief: waistband, belt loops with bar tacks, welts, horn buttons
+  const y0 = th / 2, bev = (w, l, t, r) => { const G = new THREE.ExtrudeGeometry(rrect(w, l, r), { depth: t, bevelEnabled: true, bevelThickness: t * 0.35, bevelSize: Math.min(r * 0.9, t * 0.5), bevelSegments: 2, curveSegments: 3 }); G.rotateX(-Math.PI / 2); G.translate(0, t * 0.35, 0); return G; };
+  const fine = (c0) => {                    // the same fine twill as the trousers (5 px at 2 px/mm), tiled on the relief parts
+    const [fc, fx] = cv(256, 256), [hc2, hx2] = cv(256, 256);
+    for (const [q, bs, d, l] of [[fx, c0, "rgba(0,0,0,.10)", "rgba(255,255,255,.05)"], [hx2, "#808080", "rgba(0,0,0,.22)", "rgba(255,255,255,.18)"]]) { q.fillStyle = bs; q.fillRect(0, 0, 256, 256); q.lineWidth = 1.7; q.strokeStyle = d; q.beginPath(); for (let i = -256; i < 512; i += 5.12) { q.moveTo(i, 0); q.lineTo(i - 128, 256); } q.stroke(); q.lineWidth = 1; q.strokeStyle = l; q.beginPath(); for (let i = -254; i < 512; i += 5.12) { q.moveTo(i, 0); q.lineTo(i - 128, 256); } q.stroke(); }
+    grain(fx, 256, 256, 1600, 0.045, 5);
+    const m = tx(fc, [8, 8]), n = tx(normalFromHeight(hc2), [8, 8], false);
+    return new THREE.MeshPhysicalMaterial({ map: m, normalMap: n, normalScale: new THREE.Vector2(1.1, 1.1), roughness: 0.93, sheen: 0.55, sheenRoughness: 0.75, sheenColor: new THREE.Color(c0).multiplyScalar(1.5) });
+  };
+  const twm = fine(col);
+  add(p, bev(0.418, 0.044, 0.0035, 0.004), twm, 0, y0 + hAt(0, zw + 0.022) - 0.0008, zw + 0.0225);
+  const thr = new THREE.Color(col).multiplyScalar(1.32).getStyle(), loopM = fine(new THREE.Color(col).multiplyScalar(0.95).getStyle());
+  for (const xl of [-0.19, -0.1, 0, 0.1, 0.19]) {
+    add(p, bev(0.0125, 0.056, 0.0028, 0.002), loopM, xl, y0 + 0.004, zw + 0.026);
+    for (const zt of [zw + 0.006, zw + 0.05]) p.add(stitches([[xl - 0.0045, y0 + 0.0084, zt], [xl + 0.0045, y0 + 0.0084, zt]], thr, 0.0016, 0.0016, 0.0005));
+  }
   const pz = -0.37;
   for (const px of [-0.1, 0.1]) {
-    add(p, B(0.12, 0.0014, 0.0045), dark, px, y0 + 0.0006, pz);
-    for (const s of [-1, 1]) add(p, B(0.122, 0.0028, 0.0055), clothMat(col, "twill", { n: 0.8 }), px, y0 + 0.0014, pz + s * 0.005);
-    for (const s of [-1, 1]) add(p, B(0.003, 0.0034, 0.014), M(new THREE.Color(col).multiplyScalar(0.7).getStyle(), 0.9), px + s * 0.061, y0 + 0.0017, pz);
-    add(p, CY(0.0085, 0.0085, 0.003, 20), M("#3b2a1c", 0.35, 0.1), px, y0 + 0.0035, pz + 0.022);
-    add(p, B(0.0022, 0.0009, 0.07), seamC, px, y0 + 0.0004, pz - 0.045);                         // the back darts above the pockets
+    const yb = y0 + hAt(px, pz);
+    add(p, B(0.122, 0.0012, 0.0035), M("#15160f", 0.95), px, yb + 0.0004, pz);
+    for (const s of [-1, 1]) { add(p, bev(0.124, 0.0055, 0.0022, 0.0015), twm, px, yb, pz + s * 0.0045); p.add(stitches([[px - 0.058, yb + 0.0035, pz + s * 0.0085], [px + 0.058, yb + 0.0035, pz + s * 0.0085]], thr, 0.0045, 0.0028, 0.0005)); }
+    const [bc2, bxx] = cv(128, 128); bxx.fillStyle = "#3b2a1c"; bxx.fillRect(0, 0, 128, 128);
+    for (let i = 0; i < 18; i++) { bxx.strokeStyle = "rgba(120,85,55," + (0.2 + 0.3 * H(i, 3, px > 0 ? 1 : 2)).toFixed(2) + ")"; bxx.lineWidth = 2; bxx.beginPath(); bxx.arc(64, 64, 10 + i * 3, H(i, 1, 1) * 6, H(i, 1, 1) * 6 + 2); bxx.stroke(); }   // horn grain
+    bxx.strokeStyle = "rgba(0,0,0,.4)"; bxx.lineWidth = 6; bxx.beginPath(); bxx.arc(64, 64, 50, 0, 7); bxx.stroke();
+    for (const [hx_, hz] of [[-14, -14], [14, -14], [-14, 14], [14, 14]]) { bxx.fillStyle = "#120c07"; bxx.beginPath(); bxx.arc(64 + hx_, 64 + hz, 6, 0, 7); bxx.fill(); }
+    bxx.strokeStyle = thr; bxx.lineWidth = 4; bxx.beginPath(); bxx.moveTo(50, 50); bxx.lineTo(78, 78); bxx.moveTo(78, 50); bxx.lineTo(50, 78); bxx.stroke();
+    const bm = new THREE.MeshStandardMaterial({ map: tx(bc2), roughness: 0.3, metalness: 0.05 }), bs = M("#2e2016", 0.35);
+    add(p, CY(0.0085, 0.008, 0.0028, 28), [bs, bm, bs], px, yb + 0.0032, pz + 0.022);
   }
-  for (const s of [-1, 1]) {
-    add(p, B(0.0035, 0.0007, 0.56), M(new THREE.Color(col).multiplyScalar(1.12).getStyle(), 0.8), s * 0.122, y0 + 0.0003, 0.2);   // pressed crease
-    add(p, B(0.186, 0.0016, 0.0025), seamC, s * 0.1225, y0 + 0.0007, zh - 0.035);                                      // hem line
-  }
-  // ---- wrong side (-y): built facing down, it faces up once the trousers turn over; inside wr z is mirrored (z_wr = -z)
+  // ---- wrong side, built facing down: the woven label (3D) and, on the dirty one, loose thread tails
   const wr = new THREE.Group(); wr.rotation.x = Math.PI; wr.position.y = -th / 2; p.add(wr);
-  const thread = o.thread || C.sabbia; let sd = 3;
-  const seam = (x0, z0, x1, z1, sw = 0.02) => {                  // a seam pressed open: two overlocked allowances along (x0,z0)->(x1,z1)
-    const dx = x1 - x0, dz = z1 - z0, l = Math.hypot(dx, dz), ry = Math.atan2(dx, dz), cx = (x0 + x1) / 2, cz = (z0 + z1) / 2;
-    for (const s of [-1, 1]) {
-      const w2 = dirty ? sw * (0.75 + 0.6 * H(sd, 1, 1)) : sw, mat = new THREE.MeshStandardMaterial({ map: overlockTex(new THREE.Color(col).multiplyScalar(1.12).getStyle(), thread, dirty, sd++), roughness: 0.95 });
-      mat.map.repeat.set(1, l / 0.6); mat.map.wrapS = mat.map.wrapT = THREE.RepeatWrapping; if (s < 0) { mat.map.center.set(0.5, 0.5); mat.map.rotation = Math.PI; }
-      const o2 = s * (w2 / 2 + 0.001), m = add(wr, B(w2, 0.0022, l), [edge, edge, mat, edge, edge, edge], cx + Math.cos(ry) * o2, 0.0011, cz - Math.sin(ry) * o2, 0, ry + (dirty ? s * 0.02 : 0), 0);
-    }
-  };
-  seam(0, -zw - 0.05, 0, -zc - 0.02);                                         // centre back
-  for (const s of [-1, 1]) { seam(s * 0.206, -zw - 0.12, s * 0.193, -zh + 0.06); seam(s * 0.042, -zc - 0.06, s * 0.056, -zh + 0.06, 0.017); }   // side seams, inseams
-  for (const px of [-0.1, 0.1]) {                                              // the pocket bags, under the welts
-    const bag = add(wr, B(0.15, 0.0016, 0.2), new THREE.MeshStandardMaterial({ map: pocketingTex(), roughness: 0.9 }), px, 0.0026, -pz - 0.11);
-    if (dirty) { bag.rotation.y = 0.08 * Math.sign(px); bag.position.x += 0.01 * Math.sign(px); }
-    else wr.add(stitches([[px - 0.07, 0.0036, -pz + 0.0], [px - 0.07, 0.0036, -pz - 0.205], [px + 0.07, 0.0036, -pz - 0.205], [px + 0.07, 0.0036, -pz + 0.0]], "#cfc4a6", 0.006, 0.0036, 0.0007));
-  }
-  add(wr, B(0.42, 0.0025, 0.05), M(dirty ? new THREE.Color(col).multiplyScalar(1.1).getStyle() : C.ruggine, 0.85), 0, 0.0013, -zw - 0.025);     // the waistband facing
-  for (const s of [-1, 1]) {                                                   // the hems turned up
-    add(wr, B(0.183, 0.0022, 0.045), M(new THREE.Color(col).multiplyScalar(1.05).getStyle(), 0.92), s * 0.1225, 0.0011, -zh + 0.0225);
-    if (!dirty) wr.add(stitches([[s * 0.035, 0.0024, -zh + 0.043], [s * 0.21, 0.0024, -zh + 0.043]], "#cfc4a6", 0.009, 0.0022, 0.0006));
-  }
-  if (!dirty) {
-    add(wr, B(0.085, 0.0012, 0.03), new THREE.MeshStandardMaterial({ map: labelTex("logo-m"), roughness: 0.6 }), 0, 0.0032, -zw - 0.027);   // the woven label
-    wr.add(stitches([[-0.2, 0.0028, -zw - 0.051], [0.2, 0.0028, -zw - 0.051]], "#e7dcc4", 0.006, 0.0036, 0.0007));
-  } else {
-    const loose = M("#d8cba6", 0.8);                                           // loose thread tails along the seams
-    const at = [[0, 0.36], [0, 0.26], [0.2, 0.05], [-0.2, -0.15], [0.05, -0.3], [-0.05, 0.0], [0.1, 0.32]];
-    at.forEach(([x0, z0], i) => { const pts = []; for (let k = 0; k < 7; k++) pts.push([x0 + Math.sin(k * 1.3 + i) * 0.02 + k * 0.006 * (i % 2 ? 1 : -1), 0.004 + 0.002 * Math.sin(k), z0 + k * 0.012 + Math.cos(k * 1.7 + i) * 0.01]); const tb = tube(pts, 0.0006, loose, 40); tb.userData.noshadow = true; wr.add(tb); });
+  if (!dirty) add(wr, B(0.085, 0.0012, 0.03), new THREE.MeshStandardMaterial({ map: labelTex("logo-m"), roughness: 0.6 }), 0, 0.0009 + hAt(0, zw + 0.027), -zw - 0.027);
+  else {
+    const loose = M("#d8cba6", 0.8);
+    [[0, 0.36], [0, 0.26], [0.2, 0.05], [-0.2, -0.15], [0.05, -0.3], [-0.05, 0.0], [0.1, 0.32], [-0.19, 0.3]].forEach(([x0, z0], i) => {
+      const pts = []; for (let k = 0; k < 7; k++) { const xx = x0 + Math.sin(k * 1.3 + i) * 0.02 + k * 0.006 * (i % 2 ? 1 : -1), zz = z0 + k * 0.012 + Math.cos(k * 1.7 + i) * 0.01; pts.push([xx, 0.0015 + hAt(clamp(xx, -0.249, 0.249), clamp(-zz, -0.499, 0.499)) + 0.0012 * Math.sin(k), zz]); }
+      const tb = tube(pts, 0.0005, loose, 40); tb.userData.noshadow = true; wr.add(tb);
+    });
   }
   const t0 = o.flip ? o.flip[0] : 0, t1 = o.flip ? o.flip[1] : 0;
   g.userData.update = (t) => {
     const k = o.flipped ? 1 : (o.flip ? ease((t - t0) / Math.max(0.01, t1 - t0)) : 0), a = k * Math.PI;
-    p.rotation.z = a; p.position.set(0, Math.sin(a) * W * 0.5 + th / 2, 0);
+    p.rotation.z = a; p.position.set(0, Math.sin(a) * W * 0.5 + th / 2 + 0.0045, 0);
+    for (const m of up) m.visible = k < 0.5; for (const m of dn) m.visible = k >= 0.5;
   };
   g.userData.update(-1); return g;
 }

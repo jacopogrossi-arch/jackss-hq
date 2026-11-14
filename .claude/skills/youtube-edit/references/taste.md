@@ -202,3 +202,10 @@ Jacopo: "prima di mandare il 4K… ti fai tutti i frame, 10 per secondo… capis
 - **Light patches through the window burn out a top-down diagram.** Put the diagram outside them, on a dark rug, and end with a push-in on the result ("Inverso" in the middle).
 - **Rows of objects in 9:16: shoot them at 3/4**, so the row recedes and the boxes stay large.
 - **Nothing important under the phase pill or the caption band**, including the ends of a diagram.
+
+## Jacopo's review of Short #2 (14/11/2026)
+- **The hero objects get the modelling hours.** The garment, and above all its inside, is what makes the reel. An object that reads as "a piece of fabric with a seam" fails, even in a good scene. It must read at first glance as the real thing: a whole pair of trousers, with waistband, belt loops, welt pockets, centre-back seam, two legs, the crease and the hems. It also needs real textile surface: soft folds, edges dropping onto the table, fabric sheen, and seam and stitch relief at about 2 px/mm. Spend the extra hours there, not on the room.
+- **Open on the logo, not on a word.** The brand mark must be the first thing seen, so people remember it. In Short #2 this is a black lacquered sign with the cream Inverso logo in a steel swing frame: it starts upside down and flips upright on «Inverso».
+- **Pops only when something appears on screen**: one soft pop per card as it lands, never a multi-pop burst.
+- **Risers:** use `cc-riser-lungo` (Autogrill, Short #1). `al-charge-riser` is rejected ("bruttissimo").
+- **Card text** shrinks to fit its card. Check that every card is fully inside the frame on the shot where it appears.
