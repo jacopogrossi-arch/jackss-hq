@@ -26,6 +26,7 @@ Per il contesto sulla vita personale (studi, sport, persone importanti), leggere
 | `accademia/` | Progetti e consegne dell'accademia di moda |
 | `personale/` | Canale YouTube personale, letture, Mandal-Art, regali e reel personali |
 | `.claude/skills/youtube-edit/` | La skill che monta i video (script, formati, preset, look colore) |
+| `.claude/skills/fashion-3d/` | **Skill per generare video 3D in codice** (dal 16/11/2026, separata da youtube-edit): Shorts 3D, explainer 3D, mascotte, piano di realismo |
 | `video-editor/` | Pacchetto originale della skill (README, SETUP, PROMPTS, STYLE-GUIDE) — documentazione, la skill vera è in `.claude/skills/` |
 | `videos/` | Cartelle di lavoro dei montaggi (footage, render) — **solo locale, fuori da git** |
 | `cartamodelli/` | Tool SVG per cartamodelli jeans via Claude API |
@@ -67,14 +68,14 @@ File: `inverso/`
   - #2 "Ho lasciato Claude ideare una collezione al posto mio" — pubblicato 21/10/2026, montato con la skill `youtube-edit`
   - #3 "Come lancerei un brand di moda con l'AI (prima di lanciare il mio)" — pubblicato 06/11/2026
   - #4 "Ho creato l'identità del mio brand di moda con l'AI (fallo con me)" — pubblicato 12/11/2026 (https://youtu.be/aPDByKvlb5c), montato con la skill `youtube-edit`; è il video in cui si rivela il nome Inverso. Mappa `04-mappa-riprese.html`, prompt `04-prompt-identita.md`, in `videos/04-identita/` restano girato, video finale 4K e note (`progetto/`)
-  - **Shorts 3D (dal 13/11/2026):** Short #1 "Il mio primo pantalone sembrava una gonna" pubblicato il 13/11 (`personale/youtube/short-primo-pantalone/`, video correlato = #4). Procedura: `.claude/skills/youtube-edit/references/short-3d-sop.md`. **Short #2 "Il nome del mio brand ha tre significati"** (ritaglio del #4, scena nuova: lo studio di notte) costruito la notte del 13/11 → `personale/youtube/short-02-identita/README.md`, da rivedere con Jacopo prima di pubblicarlo.
+  - **Shorts 3D (dal 13/11/2026):** Short #1 "Il mio primo pantalone sembrava una gonna" pubblicato il 13/11 (`personale/youtube/short-primo-pantalone/`, video correlato = #4). Procedura: `.claude/skills/fashion-3d/references/short-3d-sop.md`. **Short #2 "Il nome del mio brand ha tre significati"** (ritaglio del #4, scena nuova: lo studio di notte) costruito la notte del 13/11 → `personale/youtube/short-02-identita/README.md`, da rivedere con Jacopo prima di pubblicarlo.
   - #5 → #12 — piano in `personale/youtube/piano-canale.md` (#5 = il pantalone, ~04/12; pausa esami 20/12 → 11/02)
 - **Regole di gusto video:** stanno tutte nella skill (`references/taste.md`, `sound.md`…), non in memoria (pulizia del 10/11/2026).
 - **Esami sessione 2027:** `studio-privato/` (solo locale, fuori da git): `STATO-MATERIALI.md` e `CALENDARIO-STUDIO.md`.
 - **Skill `youtube-edit`** → `.claude/skills/youtube-edit/` (`SKILL.md` = regole, `scripts/`, `formats/`, `presets/`, `references/`). Monta da clip grezza a MP4 4K. Ogni nota di gusto di Jacopo va salvata nella skill. Grading: look predefinito `pellicola-oro` (dal 27/10/2026; il WOW del 24/10 è superato).
   - **Motion plate (dal 10/11/2026):** si costruiscono con `scripts/plates-build.py` (un file per blocco in `videos/<video>/plates/`, scelte a mano in `plates/plan.json`), mai con script di build scritti a mano. Procedura in `SKILL.md`, "The plates route".
   - **Plate 3D (formato 52, dal 10/11/2026):** `formats/world3d.py` su three.js per capi e oggetti che ruotano con etichette agganciate, o un "mondo" di card e oggetti percorso dalla camera. Poche e brevi; il 4K a 60 fps è ancora da misurare.
-  - **Explainer 3D animati (dal 13/11/2026):** SOP-tutorial in `.claude/skills/youtube-edit/references/explainer-3d-sop.md`, kit (prodotti, vegetazione, auto, mix) in `formats/explainer3d/`. Primo video: "serpentone Autogrill" v2.2 (progetto in `D:\videoeditor\autogrill`, master su iCloud › Video Claude). Idea: portare il format su video informativi di moda.
+  - **Explainer 3D animati (dal 13/11/2026):** SOP-tutorial in `.claude/skills/fashion-3d/references/explainer-3d-sop.md`, kit (prodotti, vegetazione, auto, mix) in `.claude/skills/fashion-3d/formats/explainer3d/`. Primo video: "serpentone Autogrill" v2.2 (progetto in `D:\videoeditor\autogrill`, master su iCloud › Video Claude). Idea: portare il format su video informativi di moda.
   - **HyperFrames lavora su D:** (cache, cronologia, fotogrammi) tramite tre variabili d'ambiente utente fisse, perché C: è piccolo. Dettagli in `references/traps.md`.
 - **Sound design di tutto il video editing** (YouTube, reel travel, b-roll): fonte principale **Epidemic Sound** via connettore MCP (effetti e musica, dal 28/10/2026). I file scaricati restano solo in locale (`assets/sfx/licensed/`, `assets/music/licensed/`, fuori da git). Regole in `.claude/skills/youtube-edit/references/sound.md`.
 - **Agente `video-builder`** (`.claude/agents/`) — esegue le sezioni del piano scritto dal pianificatore, non decide il design.

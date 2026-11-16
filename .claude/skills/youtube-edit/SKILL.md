@@ -435,8 +435,8 @@ any prompt wraps (non-breaking spaces once made a prompt run out of the box). Ca
 | `references/plate-plan.md` | planning a video with motion plates: the sentence-by-sentence plan table Jacopo approves before the storyboard, and how timecoded notes become rules |
 | `references/prove-corso.md`, `references/lab-corso.py` | designing plates, cuts or reels: the 45 course tests Jacopo voted on 05/11, what is allowed, what not to propose again, and the working code |
 | `references/inspo-library.md` | choosing which plate to build for a sentence; adding a reference video's analysis (the *why* of each graphic) |
-| `references/explainer-3d-sop.md`, `formats/explainer3d/` | making a short animated 3D explainer (one cartoon world the camera flies through, voice-driven, e.g. the Autogrill "serpentone"): the full method, the product/scenery kit, the fixed-gain mix |
-| `references/short-3d-sop.md` | making a vertical 3D Short in the atelier world (Short #1 "primo pantalone", 13/11/2026): voice per paragraph, phase counter, aerial map, labels, 10 fps review, 4K render, publishing |
+| **moved to the `fashion-3d` skill:** `fashion-3d/references/explainer-3d-sop.md`, `fashion-3d/formats/explainer3d/` | making a short animated 3D explainer (one cartoon world the camera flies through, voice-driven, e.g. the Autogrill "serpentone"): the full method, the product/scenery kit, the fixed-gain mix |
+| **moved to the `fashion-3d` skill:** `fashion-3d/references/short-3d-sop.md` | making a vertical 3D Short in the atelier world (Short #1 "primo pantalone", 13/11/2026): voice per paragraph, phase counter, aerial map, labels, 10 fps review, 4K render, publishing |
 | `references/hyperframes-app.md` | taking notes from Jacopo in Studio; looking for a motion plate idea in the Moments gallery; borrowing from the app's own skills |
 
 Each file is the same text that used to sit in this one, moved so that a routine pass does not have to read ~45,000 tokens of it. A rule
@@ -515,7 +515,7 @@ second), not in the number of cards; keep the read-in-under-2-seconds rule anywa
 
 ## Shorts (9:16)
 
-**3D Shorts (the channel's Shorts since 13/11/2026): follow `references/short-3d-sop.md` end to end.** The rules below are for a Short cut from a camera video.
+**3D Shorts (the channel's Shorts since 13/11/2026): use the `fashion-3d` skill (`.claude/skills/fashion-3d/`, `references/short-3d-sop.md`) end to end.** The rules below are for a Short cut from a camera video.
 
 Not the default routine. If you make one: a separate 1080x1920 composition (never a centre crop of the 16:9), hero type
 88 to 110 px, cards full width minus 48 px, the caption chip ~280 px from the bottom, word-exact captions on the kept
