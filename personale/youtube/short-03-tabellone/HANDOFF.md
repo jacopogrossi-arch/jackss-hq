@@ -16,3 +16,6 @@ Stato: copione APPROVATO da Jacopo. NON pubblicare (lo decide lui). Da fare in u
 ## Altro in sospeso (non e' del Short)
 - Pantalone v10: idee non fatte in `.claude/skills/fashion-3d/references/HANDOFF-trouser-v10.md` (spot dalla lampada, busto, gambe).
 - Chiave Gemini in `.env` (locale): consigliato cambiarla perche' incollata in chat.
+
+## File caricati in repo (16/11, perche' Jacopo non debba spostare nulla)
+In `assets/`: `trouser10b.glb` (pantalone v10, colore finale), `anteprima-1.jpg` e `anteprima-2.jpg` (fogli di revisione dell'anteprima), `confronto-pantalone-round11.jpg` (riferimento vs scena unita). Nello script dell'anteprima usare `assets/trouser10b.glb` al posto del glb locale. Resta fuori dal repo SOLO la chiave `.env` (segreta, non va mai caricata).
