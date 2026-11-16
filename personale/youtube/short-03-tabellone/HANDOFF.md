@@ -23,3 +23,8 @@ In `assets/`: `trouser10b.glb` (pantalone v10, colore finale), `anteprima-1.jpg`
 ## Aggiornamento 16/11 (sessione 2)
 - Fatto: glb v10 (`assets/trouser10b.glb`) nell'anteprima, pantalone ridotto (fit 0.7), card €500–1.500 spostata in quadro.
 - Resta: voce (serve /mcp → elevenlabs), finestra di notte quasi invisibile (parete troppo chiara), poi sottotitoli/mix/revisione 8 fps.
+
+## Aggiornamento 16/11 (sessione 2, dopo la riconnessione ElevenLabs)
+- Voce fatta: 7 paragrafi con "Jacopo Prova" (eleven_v3, 1 take ciascuno, ~760 crediti), posizionati all'inizio di ogni scena (0 / 5.0 / 14.9 / 26.2 / 38.2 / 50.2 / 58.6 s). File SOLO in locale: `videos/_bench/short3/vo/` (vo-placed.mp3 = 62,6 s). words.json (corretto a mano) e build nel repo.
+- Anteprima: sottotitoli parola per parola + 2 frasi grandi ("Quanto costa lanciare un pantalone?" 0-3,6 s; "10, poi 20 non cento" 45-49,6 s); niente sottotitoli sotto le frasi grandi e dopo 58,4 s (la CTA 3D porta il testo). Camera allargata sui cartellini prezzi.
+- Resta: musica Epidemic (non la stessa traccia dello Short precedente) + suoni, mix a -16 LUFS, bozza con finish.sh, revisione a 8 fps di TUTTO, finestra di notte (parete troppo chiara), poi 4K e consegna in iCloud. NON pubblicare.
