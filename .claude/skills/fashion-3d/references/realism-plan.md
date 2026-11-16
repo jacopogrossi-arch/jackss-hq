@@ -9,11 +9,11 @@ Not to import: venetian blinds; the laptop-frame composite as a default.
 ## Tools researched (web search 16/11/2026; nothing installed)
 | Tool | Finding | Verdict for Jacopo's PC (GTX 1060 6 GB, Windows, Blender 5.1 already installed) |
 |---|---|---|
-| Blender MCP (ahujasid, renamed `mcp-for-blender` on 01/09/2026) | MIT per most sources, install with `uvx`; Claude drives a live Blender | **Not needed first.** Blender can run headless from a script (`blender -b -P script.py`), no MCP and no extra attack surface. Install the MCP only if Jacopo wants interactive modelling. |
+| Blender MCP (ahujasid, renamed `mcp-for-blender` on 01/09/2026) | MIT per most sources, install with `uvx`; Claude drives a live Blender | **Installed 16/11 (Jacopo's call: no copy-pasting code).** Headless scripts (`blender -b -P script.py`) stay the fallback for batch renders. |
 | Blender skills (`kevinbadi/blender-skills`, `RobLe3/cc-blender-skill`) | Skill folders for Claude; kevinbadi's needs a Meshy API key (paid) | Unverified contents; read the repo before adopting anything. Write our own small Blender recipe for the garment instead. |
 | Hunyuan3D 2.1 | 10 GB VRAM shape, 21 GB texture, 29 GB both; Community License EXCLUDES the EU/UK/South Korea | **No.** The GPU is too small and the licence excludes Italy. |
 | UniRig (VAST-AI) | MIT, but the full checkpoints were still "coming soon" | Low priority; only for walking the mascot later. |
-| dream-loop (`achimala/dream-loop`) | MIT, critic subagent scores each screenshot on a gated 0-10 ladder and the build is redone until it passes | Idea adopted (we already have a "fresh reviewer"); we build our own on 8 fps contact sheets rather than install it. |
+| dream-loop (`achimala/dream-loop`) | MIT, critic subagent scores each screenshot on a gated 0-10 ladder and the build is redone until it passes | Idea adopted: our own version in `critic-loop.md` (not installed as is). |
 
 ## Installed on 16/11/2026 (Jacopo: "installala")
 - **Blender MCP** (`mcp-for-blender`, MIT): registered in Claude Code at USER scope (`claude mcp add blender -s user`, telemetry off, uv cache on `D:/uv-cache`); addon `blender_mcp` installed and enabled in Blender 5.1 (auto-starts the server on localhost:9876 when Blender opens). Tested: a socket command returned the scene. The MCP tools appear in a NEW Claude session. Security notes: it can run arbitrary Python inside Blender and the socket has no authentication, so keep it on localhost only and never expose the port; save the .blend before big scripts. Optional paid integrations in the addon (Meshy, Tripo, WorldLabs, "Premium") stay unused. Run only one MCP client at a time.
