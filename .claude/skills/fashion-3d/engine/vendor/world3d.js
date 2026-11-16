@@ -316,7 +316,7 @@ export function mount(spec) {
       const { o, g } = items[id], p = track(o.pos || [0, 0, 0], o.move, t), r = track(o.rot || [0, 0, 0], o.turn, t);
       const a = o.t == null ? 1 : prog(t, o.t, 0.6, "out");                      // an object that enters: rises 12 cm and fades in on its time
       g.position.set(p[0], p[1] - 0.12 * (1 - a), p[2]); g.rotation.set(r[0], r[1], r[2]); g.visible = a > 0.001;
-      g.traverse((m) => { if (m.material && o.t != null && m.userData.orig === m.material) { m.material.transparent = true; m.material.opacity = (m.material.userData.o ?? (m.material.userData.o = m.material.opacity)) * a; } });
+      g.traverse((m) => { if (m.material && o.t != null && m.userData.orig === m.material) for (const mt of [].concat(m.material)) { mt.transparent = true; mt.opacity = (mt.userData.o ?? (mt.userData.o = mt.opacity)) * a; } });   // [].concat: multi-material boxes (logoplate) too
     }
     for (const u of updaters) u(t);
     if (slats) for (const b of slats.children) b.position.y = b.userData.y0 + 0.012 * t;      // the sun creeps: the stripes drift across the room
