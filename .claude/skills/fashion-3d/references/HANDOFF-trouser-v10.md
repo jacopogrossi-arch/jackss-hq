@@ -1,0 +1,17 @@
+# HANDOFF — Blender trouser v10 (started 16/11/2026, long autonomous job)
+
+Jacopo approved the Short #3 script, but says the trouser "is not there yet". He gave up to 10 hours to make it much better, mainly with Blender. Goal: the critic judge scores >= 8/10 against the Gemini target `.critic/target.png` (prompt in `.critic/target_prompt.txt`).
+
+## Why v10 (not more v9 tuning)
+v9 = loft -> 5.5 mm voxel remesh -> cloth. The voxels round every sharp feature: the crease and pleats are barely visible, there is a bulge at the fly and the turn-ups are lumpy (critic 3/10).
+
+## v10 plan (script `videos/_bench/fashion3d/blender/build_trouser10.py`, copy in `scripts/blender_trouser10.py`)
+1. Build a quad mesh directly with the classic trouser topology (two leg tubes that merge at the crotch into one hip tube). It has columns placed exactly on the front/back creases, the pleat folds and the fly edge, so these can carry subdivision edge creases.
+2. A hidden mannequin collider (legs + hips) gives the trouser a body, like the target's stand. Cloth sim pinned at the waist.
+3. Sharp edges come from Subdivision (viewport 1 for the glb, render 2 for Cycles) with edge creases. Ridges are reinforced after the sim.
+4. Details reused from v9: waistband, loops, adjusters, J-fly, pockets, welts. Cuffs are rebuilt as smoothed rings.
+5. Judge with a Cycles still (`render_target.py`) AND the engine (`lab_target.py`), with a Sonnet judge on side-by-side images.
+
+## Status log (update at every step)
+- 16/11 v10 started: HANDOFF written.
+- 16/11 v10b: topologia a quad OK (niente scalino al cavallo: l'ellisse del bacino rientra solo al centro davanti/dietro), manichino con vuoto tra le gambe, sim ~80 s con bacino bloccato (pin z 0.70-0.84) e bending 25. Pinces con profilo a gradino, cintura liscia (band smooth=8), tasche e risvolti piu' sottili. Colore #4b5134 (il render era 2,5x troppo chiaro: in Cycles usare EXPOSURE -1.2). Runner: `videos/_bench/fashion3d/blender/run10.py` (build+render+foglio). Render Cycles "hero" 768x1344 in 6 s. Prossimo: voto del giudice (round3), poi lab_target.py col glb nuovo.
