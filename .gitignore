@@ -69,3 +69,6 @@ studio-privato/
 
 # Cartamodelli: misure di persone reali e output stampabili (solo locale)
 cartamodelli/privato/
+
+# critic loop: reference images (16/11/2026)
+.critic/

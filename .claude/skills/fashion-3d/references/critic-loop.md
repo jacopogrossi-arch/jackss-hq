@@ -1,7 +1,7 @@
 # Critic loop (adapted from dream-loop, MIT, github.com/achimala/dream-loop, 16/11/2026)
 
 Idea taken: build toward a TARGET image, and let a fresh, independent judge compare the live frame to the target and list what is wrong, round after round, until it scores high. Our version differs in three ways:
-- The target is a REAL reference chosen by Jacopo or by us from real photos (a real pair of trousers on a hanger, a real atelier), never a generated "dream" image (we have no image generator connected; the fal.ai script of dream-loop is NOT installed).
+- The target is a real photo chosen by Jacopo, OR (from 16/11/2026, Jacopo chose Gemini) a target generated with `scripts/gen_target.py` (Gemini image API, key in the gitignored `.env`, output in the gitignored `.critic/`; prompt written with the banana-pro-director skill and Jacopo's Drop 1 spec: wide straight leg, double Italian pleats, side adjusters, turn-ups, olive drill). The fal.ai script of dream-loop is NOT installed.
 - The frame is an 8 fps contact sheet or a still from the HyperFrames/Blender render, not a browser screenshot.
 - The judge is a fresh subagent with the Agent tool (model: sonnet is enough), with no memory of the builder's story.
 
