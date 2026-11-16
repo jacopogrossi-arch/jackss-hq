@@ -33,3 +33,6 @@ In `assets/`: `trouser10b.glb` (pantalone v10, colore finale), `anteprima-1.jpg`
 - Musica: Epidemic "Pixel Ghost" (HiP CoLouR, 98 bpm) in `assets/music/licensed/es-pixel-ghost.mp3` (locale, credito in CREDITS.md). `mix.py` (nel repo): voce + 23 suoni agganciati agli eventi del tabellone + musica 13 dB sotto la voce, -16 LUFS. Output `videos/_bench/short3/renders/mix.wav`.
 - Bozza: `videos/_bench/short3/renders/draft.mp4` (30 fps). Revisione a 8 fps su tutti i 22 fogli: nessun sfarfallio. Corretti: cartellino €3.000-8.000 tagliato e laptop in ritardo (camera piu' larga 29-35 s), frase "10, poi 20" riallineata alla voce (46.5 s).
 - Resta (decisioni/qualita'): finestra di notte (parete chiara), cartellino "tempo, non EUR" illeggibile nella vista dall'alto (20-26 s, il sottotitolo lo dice), finale un po' affollato (card + CTA + logo + Jacopino). Poi: ascolto reale della bozza da parte di Jacopo, render 4K (~20 min), consegna iCloud. NON pubblicare.
+
+## 16/11 sera: render finale
+- Finestra con foro (vista crepuscolo), cartellino tempo ingrandito, finale alleggerito. Render 1080p 60 fps: `videos/_bench/short3/short3-tabellone-v1.mp4` (65 s, 87 MB), copia in iCloud `Video 3D moda\short3-tabellone-v1.mp4`. Resta: ascolto/ok di Jacopo, eventuale 4K, titolo+descrizione (max 5 hashtag), pubblicazione SOLO se la decide lui.
