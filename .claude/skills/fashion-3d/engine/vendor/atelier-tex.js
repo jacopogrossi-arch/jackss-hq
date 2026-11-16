@@ -47,7 +47,8 @@ export function fabricMaps(kind = "twill") {
   return (_cache[kind] = { map: mk(cc, true), normal: mk(nc, false) });
 }
 export function clothMat(color, kind = "twill", o = {}) {
-  const m = fabricMaps(kind);
+  let m = fabricMaps(kind);
+  if (o.tile) { const c = (t) => { const k = t.clone(); k.repeat.set(o.tile, o.tile); k.needsUpdate = true; return k; }; m = { map: c(m.map), normal: c(m.normal) }; }   // o.tile: finer weave (2 = half size), only for whoever asks
   return new THREE.MeshStandardMaterial({ color, map: m.map, normalMap: m.normal, normalScale: new THREE.Vector2(o.n ?? 0.7, o.n ?? 0.7), roughness: o.rough ?? 0.92, metalness: 0, side: o.side ?? THREE.FrontSide });
 }
 

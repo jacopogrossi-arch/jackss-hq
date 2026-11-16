@@ -170,7 +170,7 @@ function glbObj(o, root) {
   if (o.fit) { const sz = new THREE.Box3().setFromObject(root).getSize(new THREE.Vector3()); root.scale.multiplyScalar(o.fit / Math.max(sz.y, 1e-6)); }
   root.updateMatrixWorld(true); const b = new THREE.Box3().setFromObject(root); root.position.x -= (b.min.x + b.max.x) / 2; root.position.z -= (b.min.z + b.max.z) / 2; root.position.y -= b.min.y;
   root.traverse((x) => { if (x.isMesh) { x.castShadow = true; x.receiveShadow = true;
-    if (o.fabric && x.material && /^drill/.test(x.material.name || "")) x.material = clothMat("#" + x.material.color.getHexString(THREE.SRGBColorSpace), "twill", { rough: 0.86 });   // Blender cloth (metric uvs / TILE) gets the engine twill: no plastic look
+    if (o.fabric && x.material && /^drill/.test(x.material.name || "")) x.material = clothMat("#" + x.material.color.getHexString(THREE.SRGBColorSpace), "twill", { rough: 0.86, n: 0.4, tile: o.tile ?? 2.5 });   // Blender cloth (metric uvs / TILE) gets the engine twill: no plastic look
     if (o.double && x.material) x.material.side = THREE.DoubleSide; } });
   g.add(root); return g;
 }

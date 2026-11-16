@@ -24,3 +24,17 @@ Instruct the judge to be nitpicky, to name the exact cause of any "fake" impress
 - Seek test: one frame rendered alone equals the same frame inside the video (PSNR > 40 dB).
 - Camera speed per frame: no spikes.
 - Three consecutive frames at the risky spots: nothing flickers (z-fighting).
+
+## First round (16/11/2026, Blender trouser v11, no target image, Sonnet judge)
+The judge gave 4/10: composition 1, light 1, materials 1, details 1.
+- **Applied:** fix 1 ("the twill reads as huge diagonal stripes / moire"). `w.glb(..., fabric=True)` now uses a finer, weaker twill (`clothMat` `tile` 2.5, normal 0.4). The before/after is in `videos/_bench/fashion3d/blender/twill_ab.jpg`. `clothMat` without `tile` is unchanged, so Short #2 is not touched.
+- **Rejected:**
+  - "legs too wide": the wide straight leg is the Drop 1 design;
+  - "cartoon set / no mannequin": that is a lab setting, not the target.
+- **Open, by impact:**
+  - pleats not readable from the front (they need sharper geometry);
+  - fly and crotch bulge;
+  - turn-ups too round;
+  - orange rim on the waistband top (rim light);
+  - bartack glitch at the pocket end.
+Lesson: without a real target the judge measures against a generic "product photo" and pushes toward slim trousers, so give it Jacopo's spec (`project_inverso_pantalone_drop1`) and a real reference.
