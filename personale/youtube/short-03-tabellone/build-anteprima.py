@@ -12,7 +12,7 @@ w = World3D("w1", 0.0, 65.0, fov=44, w=1080, h=1920)
 w.room(bg="#120f0c", key="#ffd9a8", dir=(-2.5, 4, 2.2), key_i=2.6, hemi=("#ffe6c8", "#3a2a1c"), hemi_i=0.55, rim="#8fa9d8", rim_i=0.6, aim=(0, 0.3, 0)).photo()
 if SOFT: w.soft(n=10, area=0.12, sky=0.35)
 w.prop("woodfloor", "fl", (0, 0, 0), (10, 10))
-w.prop("wall", "wl", (0, 0, -1.6), (8, 4, 0.1))
+w.prop("wall", "wl", (0, 0, -1.6), (8, 4, 0.1), hole=[0.4, 1.25, 1.3, 1.1])
 w.prop("window", "win", (0.4, 1.25, -1.54), (1.3, 1.1), view="night", dist=3)
 # the board: ivory slab with a forest border
 w.solid("brd0", "box", (0, Y / 2 - 0.004, 0.05), (3.4, Y - 0.008, 2.0), color="#2F3A2E", rough=0.7, radius=0.02)
@@ -35,7 +35,7 @@ w.card("t1b", (-0.2, Y + 0.2, 0.62), w=0.19, h=0.115, text="*< €30*", sub="car
 w.prop("sketchdraw", "sk", (-0.4, Y + 0.002, 0.95), (0.3, 0.42), rot_x=0, t=9.8, reveal=[10.0, 13.0])
 # square 2: the pattern
 w.prop("patterncut", "pc", (0.4, Y + 0.003, 0.15), (0.4, 0.58), rot_y=1.57, t=17.0, cut=[18.0, 24.0])
-w.card("t2", (0.62, Y + 0.17, 0.35), w=0.32, h=0.17, text="*tempo*, non €", t=20.5, color="#2F3A2E", move=[(29.0, 0.5, (0.62, -0.4, 0.35), "in")])
+w.card("t2", (0.55, Y + 0.12, 0.12), w=0.5, h=0.26, text="*tempo*, non €", t=20.5, color="#2F3A2E", move=[(29.0, 0.5, (0.62, -0.4, 0.35), "in")])
 # square 3: photos — the shooting tag falls
 w.card("t3a", (0.98, Y + 0.2, 0.62), w=0.21, h=0.12, text="*€3.000–8.000*", sub="shooting", t=30.0, color="#8A4B2D",
        move=[(34.6, 0.7, (1.0, Y + 0.02, 0.45), "in")], turn=[(34.6, 0.7, 0.0, "in")])
@@ -48,7 +48,7 @@ w.glb("tr", GLB, fit=0.7, pos=(0.05, Y, -0.6), rot_y=-0.25, double=True, fabric=
 # the counter on the board edge (cards swap)
 w.card("c0", (-1.45, Y + 0.12, -0.55), w=0.32, h=0.18, text="totale *€0*", rot_y=0.4, move=[(10.2, 0.4, (-1.45, -0.4, -0.55), "in")])
 w.card("c1", (-1.45, Y + 0.12, -0.55), w=0.32, h=0.18, text="totale *< €30*", rot_y=0.4, t=10.4, move=[(53.6, 0.4, (-1.45, -0.4, -0.55), "in")])
-w.card("c2", (0.1, Y + 0.3, -0.1), rot_y=0.15, w=0.36, h=0.18, text="*€500–1.500*", sub="tessuto, primo drop", t=54.0)
+w.card("c2", (0.1, Y + 0.3, -0.1), rot_y=0.15, w=0.36, h=0.18, text="*€500–1.500*", sub="tessuto, primo drop", t=54.0, move=[(58.0, 0.4, (0.1, -0.4, -0.1), "in")])
 # the ask, inside the world, then the logo
 w.prop("ctaplate", "cta", (0.3, Y, 0.2), (0.7, 0.24), text="Scrivi *PANTALONE*", t=58.2)
 w.prop("logoplate", "logo2", (0.3, 0.62, -0.25), (0.8, 0.4), t=61.6)
