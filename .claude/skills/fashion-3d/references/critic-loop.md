@@ -38,3 +38,17 @@ The judge gave 4/10: composition 1, light 1, materials 1, details 1.
   - orange rim on the waistband top (rim light);
   - bartack glitch at the pocket end.
 Lesson: without a real target the judge measures against a generic "product photo" and pushes toward slim trousers, so give it Jacopo's spec (`project_inverso_pantalone_drop1`) and a real reference.
+
+## Round with a real target (16/11/2026, Gemini target `.critic/target.png`, prompt in `.critic/target_prompt.txt`)
+- The target was generated with `gen_target.py` (gemini-2.5-flash-image, 9:16, one image for about 0.04 EUR). It is good: sharp creases, brass adjusters, 4 cm turn-ups, a night atelier.
+- Our matching shot is `videos/_bench/fashion3d/lab_target.py`. The judge gave **3/10**. Its main gaps: no pressed crease, pleats not readable, olive too saturated, flat bright light, a bulge at the fly, lumpy turn-ups.
+- **Applied:**
+  - drill colour `#66664a` (less saturated, browner);
+  - pressed crease and pleat ridges added AFTER the cloth sim (`P["crease"]`, `P["pleat"]`; the sim and the 7 mm voxels washed them out);
+  - voxels at 5.5 mm, so the bake now takes about 110 s;
+  - a darker key-light setup in the lab.
+- **Result:** colour and mood are closer. The crease is now there but only faintly visible, because the voxel size still rounds the ridge and DOF softens it.
+- **Next fix by impact:**
+  - a real crease, as a hard edge (edge split / a crease seam in the mesh) or a normal-map line, not a displacement;
+  - remove the fly bulge (the crotch relax step pushes material forward);
+  - crisper turn-ups.

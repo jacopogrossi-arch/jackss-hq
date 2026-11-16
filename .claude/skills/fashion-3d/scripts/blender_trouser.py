@@ -8,7 +8,7 @@ from mathutils import Vector, Matrix
 from mathutils.bvhtree import BVHTree
 
 OUT = r"D:\ClaudeCodeTest\videos\_bench\fashion3d\blender"
-P = dict(mix=globals().get("MIX", 0.85), frames=40, voxel=0.007, color="#6f7452", tile=0.08)
+P = dict(mix=globals().get("MIX", 0.85), frames=40, voxel=globals().get("VOXEL", 0.0055), color="#66664a", tile=0.08, crease=0.012, pleat=0.010)
 T0 = time.time(); LOG = {}
 Y  = [0, 0.10, 0.5, 0.72, 0.80, 0.86, 0.92, 1.02, 1.06]
 CX = [0.112, 0.113, 0.112, 0.105, 0.095, 0.080, 0.066, 0.048, 0.044]
@@ -95,6 +95,12 @@ kb = ob.data.shape_keys.key_blocks; base = [k.co.copy() for k in kb[0].data]; si
 for k in list(kb)[::-1]: ob.shape_key_remove(k)
 for v, b, q in zip(ob.data.vertices, base, simk):            # per-vertex mix: full drape on the legs, none at the turn-ups (crisp hems)
     w = P["mix"] + (1 - P["mix"]) * (1 - sm((b.z - 0.05) / 0.12)); v.co = b.lerp(q, w)   # the hem follows the sim fully (no bell)
+# 4b (16/11, critic round 1): pressed front crease + deeper pleats AFTER the sim (the sim and the voxel size washed them out)
+for v, b in zip(ob.data.vertices, base):
+    s, a = angle_of(b.x, b.y, b.z); d = 0.0
+    if b.z < 0.86: d += P["crease"] * math.exp(-abs(a - 0.0) / 0.045) * sm((0.86 - b.z) / 0.12) * sm((b.z - 0.06) / 0.04)
+    if b.z > 0.78: d += P["pleat"] * sm((b.z - 0.78) / 0.12) * (1 - sm((b.z - 1.0) / 0.02)) * sum(math.exp(-((a - at) / 0.025) ** 2) if a > at else math.exp(-((a - at) / 0.09) ** 2) for at in (-0.30, -0.66))
+    if d: v.co.x += s * math.sin(a) * d; v.co.y += -math.cos(a) * d
 ob.data.update()
 sc.frame_set(1)
 for g in list(ob.vertex_groups): ob.vertex_groups.remove(g)
