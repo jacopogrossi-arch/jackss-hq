@@ -69,3 +69,4 @@ Jacopo: "prima di mandare il 4K… ti fai tutti i frame, 10 per secondo… capis
 
 ## Blender trouser test (16/11/2026)
 - Jacopo, on the 3-way comparison (engine `trouserHi` / Blender glb in the engine / Blender Cycles): **the Blender glb in the engine "sembra molto più un pantalone"** because of the real drape and folds, despite the plastic look and defects. Bet on the Blender garment: simulated folds beat a cleaner procedural surface. Fix the plastic look (roughness, no specular shine, baked twill texture), keep the folds.
+- Front slanted pockets modelled as a dark tube + a cord on top: **"bruttissime, sembrano un filo spesso sopra"**. A pocket opening is a flat folded edge of the same cloth with a thin shadow gap behind it.

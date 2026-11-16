@@ -126,7 +126,7 @@ class World3D:
         self.room_spec.update(env=True, env_i=0.22, hemi_i=self.room_spec["hemi_i"] * 0.75, grade=dict(vignette=0.42, bloom=0.28, grain=0.03))
         return self
 
-    def soft(self, n=12, area=0.3, sky=0.4):
+    def soft(self, n=12, area=0.15, sky=0.45):
         """Soft shadows (16/11/2026, call AFTER room()): every frame becomes n sub-renders; the key light moves over a disc (`area` = its radius as a fraction of its distance: soft penumbrae)
         and a share `sky` of the ambient light comes from one shadowed sky direction per sub-render (contact shadows, darker corners, like ambient occlusion). Costs n renders per frame."""
         assert self.room_spec is not None, "call room() first"
@@ -141,7 +141,7 @@ class World3D:
         return self._obj("glb", oid, pos, rot_y, turn, move, t, src="models/" + base, fit=fit, double=double or None, fabric=fabric or None, **kw)
 
     def prop(self, shape, oid, pos, size=None, rot_y=0.0, turn=None, move=None, t=None, **kw):
-        """A prop of the atelier kit (assets/vendor/atelier-kit.js). shape: woodfloor [x,z] · wall [len,h,thick] (hole=[cx,cy,w,h]) · window [w,h] · rollrack [len,h,depth] · bolts [w,d] (n=) · spoolwall [w,h] · table [len,h,depth]
+        """A prop of the atelier kit (assets/vendor/atelier-kit.js). shape: woodfloor [x,z] · wall [len,h,thick] (hole=[cx,cy,w,h]) · window [w,h] (view="day"|"dusk"|"night": a Rome view outside, dist= metres behind the glass) · rollrack [len,h,depth] · bolts [w,d] (n=) · spoolwall [w,h] · table [len,h,depth]
         · paper [w,d] (kind="pattern"|"sketch"|"swatch"|"lines") · frame [w,h] (kind=) · ruler [len,w] · shears · sewing · mannequin · pendant [cord] (light=) · desklamp · plant [h] · rail [len,h] · rug [w,d] · cloth [w,d] (color=)."""
         return self._obj(shape, oid, pos, rot_y, turn, move, t, size=list(size) if size else None, **kw)
 

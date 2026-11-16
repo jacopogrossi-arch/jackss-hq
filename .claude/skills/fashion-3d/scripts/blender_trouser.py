@@ -190,14 +190,39 @@ for k in range(25):                                                             
     else: t_ = (u - 0.75) / 0.25; z = 0.84 - 0.025 * math.sin(t_ * math.pi / 2); a = -0.17 + 0.17 * t_
     p, n = surf(z, a, 0); fly.append(p + n * 0.0011)
 curve("fly", fly, 0.0007, thread)
-for s in (-1, 1):                                                                                     # slanted side pockets: dark open mouth + proud front lip + bar-tacks
-    mo, ed = [], []
-    for k in range(15):
-        u = k / 14; z = 1.012 - 0.152 * u ** 0.95; a = s * (1.30 - 0.58 * u ** 1.15)
-        p, n = surf(z, a, 0); mo.append(p + n * 0.0004)
-        p2, n2 = surf(z, a - s * 0.022, 0); ed.append(p2 + n2 * 0.0026)
-    curve("pocket_mouth", mo, 0.0021, mouth); curve("pocket_edge", ed, 0.0024, dark)
-    for q, i in ((mo[0], 0), (mo[-1], 14)): disc("bartack", q + Vector((0, -0.002, 0)), surf(1.0 if i == 0 else 0.86, s * (1.30 if i == 0 else 0.72), 0)[1], 0.0026, 0.0022, thread)
+def ribbon(name, path, prof, m_, s, n_along=40):
+    """a strip of cloth lying ON the surface along path [(z, a)]: prof = [(d metres across, +front side negative), offset out]; metric uvs"""
+    b_ = bmesh.new(); rows = []
+    for (z, a) in path:
+        row = []
+        for d, off in prof:
+            p, n = surf(z, a + s * d / 0.18, 0); row.append(b_.verts.new(p + n * off))
+        rows.append(row)
+    for i in range(len(rows) - 1):
+        for j in range(len(prof) - 1): b_.faces.new((rows[i][j], rows[i][j + 1], rows[i + 1][j + 1], rows[i + 1][j]))
+    b_.normal_update(); b_.faces.ensure_lookup_table(); fc = b_.faces[len(b_.faces) // 2]; c0 = fc.calc_center_median(); _, nn = surf(c0.z, math.atan2(c0.x, -c0.y), 0)
+    if fc.normal.dot(nn) < 0: bmesh.ops.reverse_faces(b_, faces=list(b_.faces))                   # face outwards, like the cloth
+    me_ = bpy.data.meshes.new(name); b_.to_mesh(me_); b_.free(); o = link(bpy.data.objects.new(name, me_), m_)
+    ul = o.data.uv_layers.new(name="UVMap")
+    for poly in o.data.polygons:
+        poly.use_smooth = True
+        for li in poly.loop_indices:
+            v = o.data.vertices[o.data.loops[li].vertex_index].co; ul.data[li].uv = ((math.atan2(v.x, -v.y) * 0.18) / P["tile"], v.z / P["tile"])
+    return o
+for s in (-1, 1):                                                                                     # slanted side pockets: the front panel ends in a soft folded edge standing ~2.5 mm proud, a thin shadow gap behind it, bar-tacks
+    path = []
+    for k in range(41):
+        u = k / 40; path.append((1.012 - 0.152 * u ** 0.95, s * (1.30 - 0.58 * u ** 1.15)))
+    fade = lambda i: sm(i / 4) * sm((40 - i) / 4)
+    lip = ribbon("pocket_lip", path, [(-0.011, 0.0006), (-0.007, 0.0013), (-0.0035, 0.0021), (-0.0013, 0.0026), (-0.0003, 0.0021), (0.0, 0.0012)], dark, s)
+    for i, row in enumerate([lip.data.vertices[j * 6:(j + 1) * 6] for j in range(41)]):            # flatten the lip into the cloth at both ends of the opening
+        f_ = fade(i)
+        for v in row:
+            p, n = bvh.find_nearest(v.co)[:2]; v.co = p + (v.co - p) * (0.35 + 0.65 * f_)
+    gap = ribbon("pocket_gap", path[2:-2], [(0.0, 0.0011), (0.0022, 0.0009)], mouth, s)
+    mo = [surf(z, a, 0)[0] for z, a in (path[0], path[-1])]
+    for z, a in (path[1], path[-2]):                                                                   # bar-tacks: a short flat bar of dense stitches across the end of the opening
+        q, n = surf(z, a, 0); box("bartack", q + n * 0.0012, n, (0.009, 0.0026, 0.0012), thread, bevel=0.0005)
 def onsurf(z, a0, a1, off, n=14):
     return [surf(z, a0 + (a1 - a0) * k / (n - 1), 0) for k in range(n)]
 for s in (-1, 1):                                                                                     # back welt pockets: welts FOLLOW the curve of the seat
@@ -205,13 +230,13 @@ for s in (-1, 1):                                                               
     for z in (0.9605, 0.9515):
         pts = [p + n * 0.0024 for p, n in onsurf(z, a - half, a + half, 0)]; curve("welt", pts, 0.0042, dark)
     curve("slit", [p + n * 0.0038 for p, n in onsurf(0.956, a - half * 0.98, a + half * 0.98, 0)], 0.0011, mouth)
-    for e in (a - half, a + half): q, n = surf(0.956, e, 0); disc("bartack", q + n * 0.004, n, 0.0024, 0.002, thread)
+    for e in (a - half, a + half): q, n = surf(0.956, e, 0); box("bartack", q + n * 0.003, n, (0.0026, 0.012, 0.0012), thread, bevel=0.0005)
     p, n = surf(0.944, a, 0); disc("bbutton", p + n * 0.0035, n, 0.0066, 0.003, horn)
 for s in (-1, 1): band("cuff", [0.004, 0.009, 0.042, 0.047], [0.0022, 0.0042, 0.0042, 0.0016], dark, s=s, N=120, zray=0.03)   # turn-ups
 so = ob.modifiers.new("sol", "SOLIDIFY"); so.thickness = 0.0018; so.offset = -1
 # metric UVs on the cloth details too (waistband, loops, tabs, turn-ups), so the engine twill covers them
 for o in coll.objects:
-    if o.type != 'MESH' or o.data.materials[0].name not in ("drill", "drill_dark"): continue
+    if o.type != 'MESH' or o.data.materials[0].name not in ("drill", "drill_dark") or len(o.data.uv_layers): continue
     ul = o.data.uv_layers.new(name="UVMap"); mw = o.matrix_world
     for poly in o.data.polygons:
         for li in poly.loop_indices:

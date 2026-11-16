@@ -36,7 +36,7 @@ description: Build 3D animated videos for Jacopo's channel and Inverso entirely 
 9. **Show before you spend:** stills, then a draft, then the final. `videos/` is local only (outside git); renders go to iCloud › Video 3D moda with the version in the file name.
 
 ## Engine features added 16/11/2026 (all opt-in, old Shorts identical)
-`w.room(env=0.22, grade=True)` or `w.room(...).photo()` (reflections + one grade) · `w.glb(id, file, fit=height_m)` (3D models, e.g. from Blender) · `w.solid(id, "rbox", ..., radius=)` (bevelled box) · `w.mascot(id, walk=[(t0,t1)], wave=[...], hop=[t...])` (Jacopino) · `w.prop("dotgrid", ...)` and `w.prop("ctaplate", ..., text="Scrivi *PANTALONE*")` (data as objects, call to action in the scene).
+`w.room(env=0.22, grade=True)` or `w.room(...).photo()` (reflections + one grade) · `w.glb(id, file, fit=height_m)` (3D models, e.g. from Blender) · `w.solid(id, "rbox", ..., radius=)` (bevelled box) · `w.mascot(id, walk=[(t0,t1)], wave=[...], hop=[t...])` (Jacopino) · `w.prop("dotgrid", ...)` and `w.prop("ctaplate", ..., text="Scrivi *PANTALONE*")` (data as objects, call to action in the scene). Afternoon 16/11: `w.soft()` (soft shadows + sky occlusion), `prop("window", ..., view="day"|"dusk"|"night")` (Rome outside), `w.glb(..., fabric=True)` (engine twill on Blender garments). **Hero trouser = Blender**: `scripts/blender_trouser.py` (run in Blender via the MCP, ~80 s incl. cloth sim) exports `trouser.glb`.
 
 ## Status
 - Phases 1, 2, 3, 5 (v1) and 6 (partly): done 16/11/2026. Next: phase 4, the Blender garment test, in a NEW session (`references/blender-test-plan.md`); then Jacopino v2, a first metaphor-world Short, the critic loop with an image API. Plan and results: `references/realism-plan.md`.

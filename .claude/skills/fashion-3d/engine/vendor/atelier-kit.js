@@ -53,14 +53,49 @@ function wallPanel(o) {                                  // size [length, height
   if (o.rail !== false) add(g, B(L, 0.05, T + 0.02), std(o.base || WOOD_D, 0.6), 0, 1.05, 0);                  // a dado rail: the wall is not a flat slab
   return g;
 }
+// the view through a window: a canvas painting (deterministic, hash only). kind: "day" | "dusk" | "night"; aspect = width / height
+function romeView(kind, aspect) {
+  const H = 1024, W = Math.round(H * aspect), [c, x] = cv(W, H), K = { day: ["#8fb4d8", "#e9e4d6", "#f2e6cc"], dusk: ["#4f5f8f", "#e8a070", "#f3c48c"], night: ["#0b1224", "#26294a", "#3a3350"] }[kind] || ["#8fb4d8", "#e9e4d6", "#f2e6cc"], night = kind === "night";
+  const sky = x.createLinearGradient(0, 0, 0, H * 0.62); sky.addColorStop(0, K[0]); sky.addColorStop(0.75, K[1]); sky.addColorStop(1, K[2]); x.fillStyle = sky; x.fillRect(0, 0, W, H);
+  if (!night) for (let i = 0; i < 5; i++) { x.fillStyle = "rgba(255,255,255," + (0.18 + 0.12 * hash(i, 3)) + ")"; const cx = W * hash(i, 1), cy = H * (0.08 + 0.22 * hash(i, 2)); for (let j = 0; j < 6; j++) { x.beginPath(); x.ellipse(cx + (j - 3) * 34 + 20 * hash(i, j), cy + 8 * hash(j, i), 60 + 30 * hash(j, i, 2), 16 + 8 * hash(j, i, 4), 0, 0, 7); x.fill(); } }
+  else for (let i = 0; i < 90; i++) { x.fillStyle = "rgba(255,248,230," + (0.3 + 0.6 * hash(i, 9)) + ")"; x.fillRect(W * hash(i, 5), H * 0.5 * hash(i, 6), 2, 2); }
+  const haze = (col, a) => { x.globalAlpha = a; x.fillStyle = col; };
+  // far: a dome with its lantern, and a line of roofs in the haze
+  haze(night ? "#1c1d33" : kind === "dusk" ? "#9b7f86" : "#b7b9bf", 1); const dx = W * 0.7, dy = H * 0.5;
+  x.beginPath(); x.ellipse(dx, dy, 120, 120, 0, Math.PI, 0); x.fill(); x.fillRect(dx - 132, dy, 264, 40); x.fillRect(dx - 14, dy - 168, 28, 52); x.beginPath(); x.ellipse(dx, dy - 116, 26, 18, 0, Math.PI, 0); x.fill(); x.fillRect(dx - 3, dy - 196, 6, 30);
+  for (let i = 0, px = 0; px < W; i++) { const bw = 60 + 120 * hash(i, 11), bh = 30 + 70 * hash(i, 12); x.fillRect(px, H * 0.56 - bh, bw + 1, bh + 200); px += bw; }
+  // middle: terracotta roofs, chimneys and one umbrella pine
+  x.globalAlpha = 1; const roof = night ? "#2a2230" : kind === "dusk" ? "#a5654a" : "#b8694a", wall2 = night ? "#3a3040" : kind === "dusk" ? "#d39b6e" : "#e2b98a";
+  for (let i = 0, px = -20; px < W; i++) { const bw = 140 + 160 * hash(i, 21), top = H * (0.6 + 0.05 * hash(i, 22)); x.fillStyle = wall2; x.fillRect(px, top, bw, H); x.fillStyle = roof; x.beginPath(); x.moveTo(px - 8, top + 4); x.lineTo(px + bw / 2, top - 26 - 14 * hash(i, 23)); x.lineTo(px + bw + 8, top + 4); x.fill();
+    if (hash(i, 24) > 0.5) x.fillRect(px + bw * 0.7, top - 34, 10, 26); px += bw; }
+  const tx = W * 0.22, ty = H * 0.62; x.fillStyle = night ? "#15161c" : "#5b4636"; x.fillRect(tx - 5, ty - 120, 10, 130);
+  x.fillStyle = night ? "#121a18" : kind === "dusk" ? "#3c4a3a" : "#4d6a45"; for (let j = 0; j < 9; j++) { x.beginPath(); x.ellipse(tx + (j - 4) * 26, ty - 140 - 12 * Math.sin(j), 46, 24, 0, 0, 7); x.fill(); }
+  // near: the palazzo across the street (ochre, cornice, windows with open green shutters; at night the windows are lit)
+  const fy = H * 0.74, fc = night ? "#4a3a33" : kind === "dusk" ? "#c98b5e" : "#d9a066"; x.fillStyle = fc; x.fillRect(0, fy, W, H - fy);
+  x.fillStyle = night ? "#3b2e29" : "#c48e57"; x.fillRect(0, fy, W, 14);
+  for (let r = 0; r < 2; r++) for (let i = 0; i < Math.ceil(W / 170); i++) {
+    const wx = 50 + i * 170, wy = fy + 50 + r * 130, lit = night && hash(i, r, 31) > 0.35;
+    x.fillStyle = lit ? "#ffcf8a" : night ? "#1d1820" : "#3d3a3a"; x.fillRect(wx, wy, 52, 84);
+    x.fillStyle = night ? "#22302a" : "#3f5a43"; x.fillRect(wx - 26, wy, 22, 84); x.fillRect(wx + 56, wy, 22, 84);
+    x.fillStyle = night ? "#3b2e29" : "#e8c48f"; x.fillRect(wx - 8, wy - 12, 68, 8);
+  }
+  return c;
+}
+
 function windowFrame(o) {                                // size [w, h]; its local origin is the middle of the opening; light comes through its glass
   const [w, h] = o.size, g = new THREE.Group(), fr = std("#f1ece0", 0.55), d = 0.1, f = 0.06;
   add(g, B(w + 2 * f, f, d), fr, 0, h / 2 + f / 2, 0); add(g, B(w + 2 * f, f, d), fr, 0, -h / 2 - f / 2, 0); add(g, B(f, h, d), fr, -w / 2 - f / 2, 0, 0); add(g, B(f, h, d), fr, w / 2 + f / 2, 0, 0);
   add(g, B(0.035, h, 0.05), fr, 0, 0, 0); add(g, B(w, 0.035, 0.05), fr, 0, h * 0.18, 0);                       // the cross: the only shadow the window makes
   add(g, B(w + 0.24, 0.05, 0.22), fr, 0, -h / 2 - f - 0.025, 0.08);                                           // sill
+  if (o.view) {                                          // 16/11/2026: a real view outside (Rome: sky, a palazzo across the street, roofs, a pine, a dome), painted once, set `dist` metres behind the glass so it moves with parallax
+    const dist = o.dist ?? 3.0, k = 1.4 + dist * 0.7, vw = w * k * 1.3, vh = h * k, pl = add(g, new THREE.PlaneGeometry(vw, vh), new THREE.MeshBasicMaterial({ map: tex(romeView(o.view, vw / vh)), toneMapped: false, fog: false }), 0, h * 0.13 * k, -dist);
+    pl.userData.noshadow = true;
+    const gl = add(g, new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ color: "#ffffff", transparent: true, opacity: 0.025, depthWrite: false }), 0, 0, -0.02); gl.userData.noshadow = true;
+  } else {
   const [c, x] = cv(4, 256), gr = x.createLinearGradient(0, 0, 0, 256); gr.addColorStop(0, "#dfe9f2"); gr.addColorStop(0.55, "#fff6e2"); gr.addColorStop(1, "#ffe2b0"); x.fillStyle = gr; x.fillRect(0, 0, 4, 256);
   const gl = add(g, new THREE.PlaneGeometry(w, h), new THREE.MeshBasicMaterial({ map: tex(c), toneMapped: false }), 0, 0, -0.02); gl.userData.noshadow = true;
-  const hl = halo("#fff0cf", o.glow ?? 0.55); hl.scale.set(w * 2.4, h * 2.2, 1); hl.position.set(0, 0, 0.25); g.add(hl);
+  }
+  const hl = halo("#fff0cf", o.glow ?? (o.view ? 0.18 : 0.55)); hl.scale.set(w * 2.4, h * 2.2, 1); hl.position.set(0, 0, 0.25); g.add(hl);
   return g;
 }
 
