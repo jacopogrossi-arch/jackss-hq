@@ -15,6 +15,7 @@ description: Build 3D animated videos for Jacopo's channel and Inverso entirely 
 | Make a 3D explainer (one cartoon world the camera flies through) + product/scenery kit | `references/explainer-3d-sop.md`, `formats/explainer3d/` |
 | Jacopo's verdicts and taste on 3D (read BEFORE building) | `references/taste-3d.md` |
 | What the 8 fps study of the reference reels taught us (continuous camera, never still, metaphor worlds) | `references/inspo-8fps-2026-11-16.md` |
+| Critic loop (fresh judge compares a frame with a real target, rubric 0-10) | `references/critic-loop.md` |
 | Realism upgrade plan and the tools researched (Blender, Hunyuan3D, UniRig, dream-loop) | `references/realism-plan.md` |
 | Engine code (world3d.py, atelier-*.js) | still in `youtube-edit/formats/world3d.py` and `youtube-edit/assets/vendor/` (moves here in phase 3, with the realism upgrade and a before/after test) |
 | Sound, voice, mix | same method as `youtube-edit/references/sound.md`; the Short/explainer SOPs say which parts apply |

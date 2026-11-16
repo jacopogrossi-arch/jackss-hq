@@ -15,6 +15,11 @@ Not to import: venetian blinds; the laptop-frame composite as a default.
 | UniRig (VAST-AI) | MIT, but the full checkpoints were still "coming soon" | Low priority; only for walking the mascot later. |
 | dream-loop (`achimala/dream-loop`) | MIT, critic subagent scores each screenshot on a gated 0-10 ladder and the build is redone until it passes | Idea adopted (we already have a "fresh reviewer"); we build our own on 8 fps contact sheets rather than install it. |
 
+## Installed on 16/11/2026 (Jacopo: "installala")
+- **Blender MCP** (`mcp-for-blender`, MIT): registered in Claude Code at USER scope (`claude mcp add blender -s user`, telemetry off, uv cache on `D:/uv-cache`); addon `blender_mcp` installed and enabled in Blender 5.1 (auto-starts the server on localhost:9876 when Blender opens). Tested: a socket command returned the scene. The MCP tools appear in a NEW Claude session. Security notes: it can run arbitrary Python inside Blender and the socket has no authentication, so keep it on localhost only and never expose the port; save the .blend before big scripts. Optional paid integrations in the addon (Meshy, Tripo, WorldLabs, "Premium") stay unused. Run only one MCP client at a time.
+- **dream-loop**: NOT installed as is (needs an image generator; its helper uses fal.ai). Its method is adapted in `critic-loop.md` (MIT credit kept).
+- **kevinbadi/blender-skills**: NOT installed (no licence stated; its 3D-generation skills send photos to Meshy, paid). We write our own camera recipes (turntable, push-in, crane) in the Blender notes.
+
 ## Hybrid decision
 Keep the three.js world, camera and sound (deterministic, cheap, fast to iterate). Use **Blender headless only for hero garments** (cloth simulation, seams, real folds), export `.glb`, load it in the world. Measure the render and export cost on the GTX 1060 before committing.
 
