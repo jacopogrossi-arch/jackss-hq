@@ -9,7 +9,7 @@ from mathutils import Vector, Matrix
 from mathutils.bvhtree import BVHTree
 
 OUT = r"D:\ClaudeCodeTest\videos\_bench\fashion3d\blender"
-P = dict(color="#4b5134", tile=0.08, frames=globals().get("FRAMES", 45), M=96, Q=8, ZC=0.745, dz=0.008,
+P = dict(color="#4d4a22", tile=0.08, frames=globals().get("FRAMES", 45), M=96, Q=8, ZC=0.745, dz=0.008,
          crease=0.0022, pleat=0.0065, sim=globals().get("SIM", True), subd=(1, 2))
 T0 = time.time(); LOG = {}
 Y  = [0, 0.10, 0.5, 0.72, 0.80, 0.86, 0.92, 1.02, 1.06]
@@ -225,11 +225,11 @@ def mat(name, col, rough=0.9, sheen=0.15, twill=True, metal=0.0):
     if twill:   # Blender-side weave (for Cycles stills); the engine uses its own clothMat
         tc = nt.nodes.new("ShaderNodeTexCoord"); w = nt.nodes.new("ShaderNodeTexWave"); w.wave_type = 'BANDS'; w.bands_direction = 'DIAGONAL'
         w.inputs["Scale"].default_value = 40; w.inputs["Distortion"].default_value = 0.6
-        bp = nt.nodes.new("ShaderNodeBump"); bp.inputs["Strength"].default_value = 0.18
+        bp = nt.nodes.new("ShaderNodeBump"); bp.inputs["Strength"].default_value = 0.3
         nt.links.new(tc.outputs["UV"], w.inputs["Vector"]); nt.links.new(w.outputs[1], bp.inputs["Height"]); nt.links.new(bp.outputs[0], b.inputs["Normal"])
     return m
 C = P["color"]
-cloth = mat("drill", lin(C)); dark = mat("drill_dark", lin(C, 0.86)); mouth = mat("mouth", lin(C, 0.22), twill=False, sheen=0)
+cloth = mat("drill", lin(C), rough=0.82, sheen=0.4); dark = mat("drill_dark", lin(C, 0.86)); mouth = mat("mouth", lin(C, 0.22), twill=False, sheen=0)
 thread = mat("drill_thread", lin(C, 0.72), twill=False); horn = mat("horn", lin("#2b2118"), rough=0.35, sheen=0, twill=False)
 brass = mat("brass", lin("#c9a15a"), rough=0.3, sheen=0, twill=False, metal=1.0)
 me.materials.clear(); me.materials.append(cloth)

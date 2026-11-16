@@ -21,8 +21,8 @@ def light(name, kind, loc, energy, color, size):
     d = bpy.data.lights.get(name) or bpy.data.lights.new(name, kind); d.energy = energy; d.color = color
     if kind == 'AREA': d.size = size
     o = obj(name, d); o.location = loc; o.rotation_euler = (Vector((0, 0, 0.6)) - Vector(loc)).to_track_quat('-Z', 'Y').to_euler(); o.hide_render = False; o.hide_viewport = False; return o
-light("key_t", 'AREA', (-1.4, -1.2, 1.5), 260, (1.0, 0.78, 0.55), 0.6)       # warm desk-lamp key, camera-left, above
-light("fill_t", 'AREA', (1.6, -1.6, 0.9), 22, (1.0, 0.85, 0.7), 1.5)        # faint warm fill
+light("key_t", 'AREA', (-1.7, -0.7, 1.2), 420, (1.0, 0.78, 0.55), 0.6)       # warm desk-lamp key, camera-left, above
+light("fill_t", 'AREA', (1.6, -1.6, 0.9), 6, (1.0, 0.85, 0.7), 1.5)        # faint warm fill
 light("rim_t", 'AREA', (0.8, 1.4, 1.4), 70, (1.0, 0.8, 0.6), 0.8)           # warm rim from behind
 w = sc.world or bpy.data.worlds.new("World"); sc.world = w; w.use_nodes = True
 bg = next(n for n in w.node_tree.nodes if n.type == 'BACKGROUND'); bg.inputs[0].default_value = (0.018, 0.012, 0.008, 1); bg.inputs[1].default_value = 1.0
