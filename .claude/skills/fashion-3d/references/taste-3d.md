@@ -66,3 +66,6 @@ Jacopo: "prima di mandare il 4K… ti fai tutti i frame, 10 per secondo… capis
 - **Pops only when something appears on screen**: one soft pop per card as it lands, never a multi-pop burst.
 - **Risers:** use `cc-riser-lungo` (Autogrill, Short #1). `al-charge-riser` is rejected ("bruttissimo").
 - **Card text** shrinks to fit its card. Check that every card is fully inside the frame on the shot where it appears.
+
+## Blender trouser test (16/11/2026)
+- Jacopo, on the 3-way comparison (engine `trouserHi` / Blender glb in the engine / Blender Cycles): **the Blender glb in the engine "sembra molto più un pantalone"** because of the real drape and folds, despite the plastic look and defects. Bet on the Blender garment: simulated folds beat a cleaner procedural surface. Fix the plastic look (roughness, no specular shine, baked twill texture), keep the folds.

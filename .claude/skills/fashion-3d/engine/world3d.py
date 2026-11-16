@@ -126,11 +126,19 @@ class World3D:
         self.room_spec.update(env=True, env_i=0.22, hemi_i=self.room_spec["hemi_i"] * 0.75, grade=dict(vignette=0.42, bloom=0.28, grain=0.03))
         return self
 
-    def glb(self, oid, src, fit=1.0, pos=(0, 0, 0), rot_y=0.0, turn=None, move=None, t=None, double=False, **kw):
+    def soft(self, n=12, area=0.3, sky=0.4):
+        """Soft shadows (16/11/2026, call AFTER room()): every frame becomes n sub-renders; the key light moves over a disc (`area` = its radius as a fraction of its distance: soft penumbrae)
+        and a share `sky` of the ambient light comes from one shadowed sky direction per sub-render (contact shadows, darker corners, like ambient occlusion). Costs n renders per frame."""
+        assert self.room_spec is not None, "call room() first"
+        self.room_spec["acc"] = dict(n=n, area=area, sky=sky)
+        return self
+
+    def glb(self, oid, src, fit=1.0, pos=(0, 0, 0), rot_y=0.0, turn=None, move=None, t=None, double=False, fabric=False, **kw):
         """A loaded 3D model (.glb, e.g. a garment simulated in Blender): scaled so its height is `fit` metres, standing on y = pos[1], centred on pos. The file is copied next to the page by stage().
-        Credit CC-BY models in the post caption. `double=True` renders both faces of the cloth."""
+        Credit CC-BY models in the post caption. `double=True` renders both faces of the cloth.
+        `fabric=True` (16/11/2026): materials named drill* get the engine twill (clothMat), so a Blender garment exported with metric uvs (uv = metres / 0.08) reads as cloth, not plastic."""
         base = os.path.basename(src); _MODELS[base] = os.path.abspath(src)
-        return self._obj("glb", oid, pos, rot_y, turn, move, t, src="models/" + base, fit=fit, double=double or None, **kw)
+        return self._obj("glb", oid, pos, rot_y, turn, move, t, src="models/" + base, fit=fit, double=double or None, fabric=fabric or None, **kw)
 
     def prop(self, shape, oid, pos, size=None, rot_y=0.0, turn=None, move=None, t=None, **kw):
         """A prop of the atelier kit (assets/vendor/atelier-kit.js). shape: woodfloor [x,z] · wall [len,h,thick] (hole=[cx,cy,w,h]) · window [w,h] · rollrack [len,h,depth] · bolts [w,d] (n=) · spoolwall [w,h] · table [len,h,depth]

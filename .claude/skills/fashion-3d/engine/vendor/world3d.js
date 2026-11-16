@@ -4,6 +4,7 @@
 // window.__w3d[<id>](globalTime) so a GSAP proxy can drive it too. Spec: see formats/world3d.py.
 import * as THREE from "./three.module.min.js";
 import { build as kitBuild, KIT } from "./atelier-kit.js";
+import { clothMat } from "./atelier-tex.js";                       // 16/11/2026: the engine weave on Blender garments (glb fabric=True)
 import { RoundedBoxGeometry } from "./RoundedBoxGeometry.js";     // three r170 add-ons (16/11/2026): bevelled boxes, a studio environment for reflections
 import { RoomEnvironment } from "./RoomEnvironment.js";
 
@@ -168,7 +169,9 @@ function glbObj(o, root) {
   const g = new THREE.Group(); if (!root) return g;
   if (o.fit) { const sz = new THREE.Box3().setFromObject(root).getSize(new THREE.Vector3()); root.scale.multiplyScalar(o.fit / Math.max(sz.y, 1e-6)); }
   root.updateMatrixWorld(true); const b = new THREE.Box3().setFromObject(root); root.position.x -= (b.min.x + b.max.x) / 2; root.position.z -= (b.min.z + b.max.z) / 2; root.position.y -= b.min.y;
-  root.traverse((x) => { if (x.isMesh) { x.castShadow = true; x.receiveShadow = true; if (o.double && x.material) x.material.side = THREE.DoubleSide; } });
+  root.traverse((x) => { if (x.isMesh) { x.castShadow = true; x.receiveShadow = true;
+    if (o.fabric && x.material && /^drill/.test(x.material.name || "")) x.material = clothMat("#" + x.material.color.getHexString(THREE.SRGBColorSpace), "twill", { rough: 0.86 });   // Blender cloth (metric uvs / TILE) gets the engine twill: no plastic look
+    if (o.double && x.material) x.material.side = THREE.DoubleSide; } });
   g.add(root); return g;
 }
 const loadImage = (src) => new Promise((ok) => { const i = new Image(); i.onload = () => ok(i); i.onerror = () => ok(null); i.src = src; });
@@ -211,7 +214,7 @@ export function mount(spec) {
   const mb = document.getElementById(spec.id + "-mb"), mbx = mb ? mb.getContext("2d") : null, bar = document.getElementById(spec.id + "-bar"), bart = document.getElementById(spec.id + "-bart");
   if (mb) { mb.width = Math.round(W * PR); mb.height = Math.round(H * PR); }
   // the three looks and what each one does to the scene
-  const dressed = [], inkOnly = [], onlyFinal = [], notInk = [], clayMats = new Map(); let slats = null, dust = null, mode = null, GR = null;
+  const dressed = [], inkOnly = [], onlyFinal = [], notInk = [], clayMats = new Map(); let slats = null, dust = null, mode = null, GR = null, ACC = null, SKY = null, KEY0 = null;
   const LIGHTS = ROOM ? { final: [ROOM.key_i ?? 3.2, ROOM.rim_i ?? 0.5, ROOM.side_i ?? 0, ROOM.hemi_i ?? 0.9], clay: [1.5, 0, 0.5, 1.0] } : LOOK ? { final: [4.6, 0, 1.2, 1.5], clay: [2.4, 0, 0.5, 0.8] } : { final: [2.7, 2.0, 0.7, 0.55], clay: [1.5, 0, 0.5, 1.0] };   // key, rim, side, hemisphere
   if (LOOK) {                                                  // an atelier: one warm key through blinds, a dark room, a floor that catches the stripes
     renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap; if (spec.exposure == null) renderer.toneMappingExposure = 1.45; side.position.set(2.2, 0.9, 1.8);
@@ -236,6 +239,11 @@ export function mount(spec) {
     hemi.color.set(ROOM.hemi ? ROOM.hemi[0] : "#fff0dd"); hemi.groundColor.set(ROOM.hemi ? ROOM.hemi[1] : "#6b4a30");
     if (ROOM.fog) scene.fog = new THREE.Fog(ROOM.fog[0], ROOM.fog[1], ROOM.fog[2]);
     if (ROOM.env) { const pm = new THREE.PMREMGenerator(renderer); scene.environment = pm.fromScene(new RoomEnvironment(), 0.04).texture; scene.environmentIntensity = ROOM.env_i ?? 0.5; pm.dispose(); }   // soft studio reflections on every PBR surface (fabric sheen, metal, wood)
+    if (ROOM.acc) {                                            // soft shadows by accumulation (16/11/2026, opt-in w.soft()): each sub-frame moves the key over a disc (an area light) and adds one sky light
+      ACC = Object.assign({ n: 12, area: 0.3, sky: 0.4 }, ROOM.acc); KEY0 = key.position.clone();                     // from a cosine-weighted direction, so contact shadows and corners darken like ambient occlusion
+      if (ACC.sky > 0) { SKY = new THREE.DirectionalLight(ROOM.hemi ? ROOM.hemi[0] : "#fff0dd", 0); SKY.castShadow = true; SKY.shadow.mapSize.set(2048, 2048); SKY.shadow.bias = -0.0005; SKY.shadow.normalBias = 0.03; SKY.shadow.radius = 2;
+        Object.assign(SKY.shadow.camera, { left: -sb[0], right: sb[0], top: sb[1], bottom: -sb[1], near: 0.5, far: sb[2] }); SKY.shadow.camera.updateProjectionMatrix(); SKY.target.position.copy(key.target.position); scene.add(SKY); scene.add(SKY.target); }
+    }
     if (ROOM.grade) GR = Object.assign({ bloom: 0.22, thresh: 0.85, vignette: 0.32, grain: 0.025, fringe: 0.0012 }, ROOM.grade === true ? {} : ROOM.grade);
     camera.far = ROOM.far || 80; camera.updateProjectionMatrix();
   }
@@ -348,12 +356,17 @@ export function mount(spec) {
     if (dust) { const a = dust.geometry.attributes.position; for (let i = 0; i < 120; i++) { const h1 = hash(i), h2 = hash(i + 500), h3 = hash(i + 900), y = ((h2 * 2.2 + t * (0.03 + 0.05 * h3)) % 2.2); a.setXYZ(i, -1.3 + h1 * 2.6 + 0.06 * Math.sin(t * 0.6 + i), y, -1.0 + h3 * 2.0 + 0.05 * Math.cos(t * 0.5 + i * 1.7)); } a.needsUpdate = true; }
     // motion blur and depth of field: several renders of the same instant (shutter spread over time, lens spread over a disc) averaged on a 2D canvas. Pure function of t.
     const shutter = (spec.shutter ?? 0.8) / 30, sp = shutter > 0 ? camSpeed(t) : 0, ap = dofAt(t);
-    let N = sp > 0.6 ? clamp(Math.round(sp * 3), 2, 10) : 1; if (ap > 0) N = Math.max(N, 12);
+    let N = sp > 0.6 ? clamp(Math.round(sp * 3), 2, 10) : 1; if (ap > 0) N = Math.max(N, 12); if (ACC) N = Math.max(N, ACC.n);
     for (let i = 0; i < N; i++) {
       const ts = N > 1 && sp > 0.6 ? t + ((i + 0.5) / N - 0.5) * shutter : t;
       poseObjects(ts); aimCamera(ts); scene.updateMatrixWorld(true);
       if (ap > 0) { const fx = look.clone(), r = ap * Math.sqrt((i + 0.5) / N), th = i * 2.39996; rgt.setFromMatrixColumn(camera.matrixWorld, 0); upv.setFromMatrixColumn(camera.matrixWorld, 1); camera.position.addScaledVector(rgt, r * Math.cos(th)).addScaledVector(upv, r * Math.sin(th)); camera.lookAt(fx); camera.updateMatrixWorld(); }
-      const ps = passState(ts); if (GR) renderer.setRenderTarget(rtH); setMode(ps.a); renderer.setScissorTest(false); renderer.render(scene, camera);
+      const ps = passState(ts); if (GR) renderer.setRenderTarget(rtH); setMode(ps.a);
+      if (ACC && mode === "final") {                             // sub-frame i: key on a disc around its place, sky light from the hemisphere (golden-angle points: deterministic)
+        const r = Math.sqrt((i + 0.5) / N), th = i * 2.39996, tg = key.target.position, dk = KEY0.clone().sub(tg), L = dk.length(), u = new THREE.Vector3().crossVectors(dk, new THREE.Vector3(0, 1, 0)).normalize(), w2 = new THREE.Vector3().crossVectors(u, dk).normalize();
+        key.position.copy(KEY0).addScaledVector(u, Math.cos(th) * r * ACC.area * L).addScaledVector(w2, Math.sin(th) * r * ACC.area * L);
+        if (SKY) { const hb = LIGHTS.final[3], th2 = th + 1.1; hemi.intensity = hb * (1 - ACC.sky); SKY.intensity = hb * ACC.sky * 1.5; SKY.position.set(tg.x + 8 * r * Math.cos(th2), tg.y + 8 * Math.sqrt(1 - r * r), tg.z + 8 * r * Math.sin(th2)); }
+      } renderer.setScissorTest(false); renderer.render(scene, camera);
       if (ps.b) { setMode(ps.b); if (GR) { rtH.scissorTest = true; rtH.scissor.set(0, 0, Math.round(ps.edge * rtH.width / W), rtH.height); } else { renderer.setScissorTest(true); renderer.setScissor(0, 0, ps.edge, H); } renderer.render(scene, camera); if (GR) rtH.scissorTest = false; else renderer.setScissorTest(false); }
       if (GR) grade(ts);
       if (N > 1 && mbx) { if (i === 0) mbx.clearRect(0, 0, mb.width, mb.height); mbx.globalAlpha = 1 / (i + 1); mbx.drawImage(canvas, 0, 0); mbx.globalAlpha = 1; }
