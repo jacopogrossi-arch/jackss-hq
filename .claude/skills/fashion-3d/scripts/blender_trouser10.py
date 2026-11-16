@@ -9,7 +9,7 @@ from mathutils import Vector, Matrix
 from mathutils.bvhtree import BVHTree
 
 OUT = r"D:\ClaudeCodeTest\videos\_bench\fashion3d\blender"
-P = dict(color="#4d4a22", tile=0.08, frames=globals().get("FRAMES", 45), M=96, Q=8, ZC=0.745, dz=0.008,
+P = dict(color="#4f5c30", tile=0.08, frames=globals().get("FRAMES", 45), M=96, Q=8, ZC=0.745, dz=0.008,
          crease=0.0022, pleat=0.0065, sim=globals().get("SIM", True), subd=(1, 2))
 T0 = time.time(); LOG = {}
 Y  = [0, 0.10, 0.5, 0.72, 0.80, 0.86, 0.92, 1.02, 1.06]
@@ -130,7 +130,7 @@ for i, v in enumerate(me.vertices):
         for ip, jp in enumerate(J_PLEAT):            # v10b: a pressed pleat = a step (the fold lies over the cloth towards the side seam) + a thin shadow groove on the fly side
             thp = math.pi * jp / NO; u = (th - thp) / step
             prof = max(0, 1 - max(u, 0) / 4.0) if u > -0.3 else (-0.45 * max(0, 1 - abs(u + 1) ) if u > -2 else 0)
-            d += P["pleat"] * (1.0, 0.6)[ip] * prof * sm((z - 0.86) / 0.13)
+            d += P["pleat"] * (1.0, 0.6)[ip] * prof * sm((z - 0.86) / 0.13) * (1 - sm((z - 0.975) / 0.03))   # v10c: fade out under the waistband (no ridges poking through)
         if 0.84 < z < 1.0 and s > 0 and th < 4.5 * step:                 # fly placket: the left front overlaps by 1.8 mm
             d += 0.0018 * sm((z - 0.84) / 0.02)
         # the inner pleat continues into the leg crease below the hip
