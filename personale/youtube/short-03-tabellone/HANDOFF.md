@@ -19,3 +19,7 @@ Stato: copione APPROVATO da Jacopo. NON pubblicare (lo decide lui). Da fare in u
 
 ## File caricati in repo (16/11, perche' Jacopo non debba spostare nulla)
 In `assets/`: `trouser10b.glb` (pantalone v10, colore finale), `anteprima-1.jpg` e `anteprima-2.jpg` (fogli di revisione dell'anteprima), `confronto-pantalone-round11.jpg` (riferimento vs scena unita). Nello script dell'anteprima usare `assets/trouser10b.glb` al posto del glb locale. Resta fuori dal repo SOLO la chiave `.env` (segreta, non va mai caricata).
+
+## Aggiornamento 16/11 (sessione 2)
+- Fatto: glb v10 (`assets/trouser10b.glb`) nell'anteprima, pantalone ridotto (fit 0.7), card €500–1.500 spostata in quadro.
+- Resta: voce (serve /mcp → elevenlabs), finestra di notte quasi invisibile (parete troppo chiara), poi sottotitoli/mix/revisione 8 fps.

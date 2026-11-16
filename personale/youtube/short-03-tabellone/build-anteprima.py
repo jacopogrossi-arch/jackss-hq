@@ -1,7 +1,7 @@
 import sys, math
 sys.path.insert(0, "D:/ClaudeCodeTest/.claude/skills/fashion-3d/engine")
 from world3d import World3D
-GLB = "D:/ClaudeCodeTest/videos/_bench/fashion3d/blender/trouser.glb"
+GLB = "D:/ClaudeCodeTest/personale/youtube/short-03-tabellone/assets/trouser10b.glb"
 PI = math.pi
 SOFT = "--soft" in sys.argv
 Y = 0.04                                   # board top
@@ -44,11 +44,11 @@ w.prop("laptop", "lap", (1.45, Y, 0.3), (0.34,), rot_y=-0.5, t=33.0)
 lit = [(43.0 + 0.12 * i, i) for i in range(10)] + [(46.5 + 0.08 * i, 10 + i) for i in range(10)]
 w.prop("dotgrid", "g", (1.25, Y + 0.48, -0.78), (0.8, 0.8), cols=10, rows=10, pop=[39.8, 0.008], lit=lit, accent="#ffc23a")
 # arrival: the Blender trouser
-w.glb("tr", GLB, fit=0.95, pos=(0.05, Y, -0.6), rot_y=-0.25, double=True, fabric=True, t=48.5)
+w.glb("tr", GLB, fit=0.7, pos=(0.05, Y, -0.6), rot_y=-0.25, double=True, fabric=True, t=48.5)
 # the counter on the board edge (cards swap)
 w.card("c0", (-1.45, Y + 0.12, -0.55), w=0.32, h=0.18, text="totale *€0*", rot_y=0.4, move=[(10.2, 0.4, (-1.45, -0.4, -0.55), "in")])
 w.card("c1", (-1.45, Y + 0.12, -0.55), w=0.32, h=0.18, text="totale *< €30*", rot_y=0.4, t=10.4, move=[(53.6, 0.4, (-1.45, -0.4, -0.55), "in")])
-w.card("c2", (-0.42, Y + 0.2, -0.62), rot_y=0.35, w=0.4, h=0.2, text="*€500–1.500*", sub="tessuto, primo drop", t=54.0)
+w.card("c2", (0.1, Y + 0.13, -0.1), rot_y=0.15, w=0.36, h=0.18, text="*€500–1.500*", sub="tessuto, primo drop", t=54.0)
 # the ask, inside the world, then the logo
 w.prop("ctaplate", "cta", (0.3, Y, 0.2), (0.7, 0.24), text="Scrivi *PANTALONE*", t=58.2)
 w.prop("logoplate", "logo2", (0.3, 0.62, -0.25), (0.8, 0.4), t=61.6)
