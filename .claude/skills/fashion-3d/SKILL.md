@@ -16,6 +16,9 @@ description: Build 3D animated videos for Jacopo's channel and Inverso entirely 
 | Jacopo's verdicts and taste on 3D (read BEFORE building) | `references/taste-3d.md` |
 | What the 8 fps study of the reference reels taught us (continuous camera, never still, metaphor worlds) | `references/inspo-8fps-2026-11-16.md` |
 | Critic loop (fresh judge compares a frame with a real target, rubric 0-10) | `references/critic-loop.md` |
+| Metaphor-world Short (new format) | `references/metaphor-world-sop.md` |
+| Blender test plan (next session) | `references/blender-test-plan.md` |
+| 8 fps review tools | `scripts/review8.py` (`sheets`, `still`, `seek`) |
 | Realism upgrade plan and the tools researched (Blender, Hunyuan3D, UniRig, dream-loop) | `references/realism-plan.md` |
 | Engine code | `engine/world3d.py` (Python side) and `engine/vendor/` (three.js r170 + `world3d.js` + `atelier-*.js` + add-ons GLTFLoader, RoundedBoxGeometry, RoomEnvironment). `youtube-edit/formats/world3d.py` is only a shim so old imports keep working. Moved 16/11/2026, verified pixel-identical on 6 frames of Short #2. |
 | Sound, voice, mix | same method as `youtube-edit/references/sound.md`; the Short/explainer SOPs say which parts apply |
@@ -32,7 +35,8 @@ description: Build 3D animated videos for Jacopo's channel and Inverso entirely 
 8. **Review at 8 fps** (contact sheets of 24 frames = 3 s) before any 4K render. Time estimate to Jacopo before long renders.
 9. **Show before you spend:** stills, then a draft, then the final. `videos/` is local only (outside git); renders go to iCloud › Video 3D moda with the version in the file name.
 
-## Status
+## Engine features added 16/11/2026 (all opt-in, old Shorts identical)
+`w.room(env=0.22, grade=True)` or `w.room(...).photo()` (reflections + one grade) · `w.glb(id, file, fit=height_m)` (3D models, e.g. from Blender) · `w.solid(id, "rbox", ..., radius=)` (bevelled box) · `w.mascot(id, walk=[(t0,t1)], wave=[...], hop=[t...])` (Jacopino) · `w.prop("dotgrid", ...)` and `w.prop("ctaplate", ..., text="Scrivi *PANTALONE*")` (data as objects, call to action in the scene).
 
-- Phase 1 (research of tools) and phase 2 (this split): done 16/11/2026.
-- Next: phase 3 realism upgrade (environment lighting, single grade, soft shadows, `.glb`, bevels, window view); phase 4 Blender garment test; phase 5 metaphor-world format + the mascot; phase 6 automatic checks. Plan and progress: `references/realism-plan.md`.
+## Status
+- Phases 1, 2, 3, 5 (v1) and 6 (partly): done 16/11/2026. Next: phase 4, the Blender garment test, in a NEW session (`references/blender-test-plan.md`); then Jacopino v2, a first metaphor-world Short, the critic loop with an image API. Plan and results: `references/realism-plan.md`.

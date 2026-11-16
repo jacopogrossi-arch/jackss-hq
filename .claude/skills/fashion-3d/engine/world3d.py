@@ -23,7 +23,8 @@ import json, os, re, shutil
 
 ENGINE = os.path.dirname(os.path.abspath(__file__))                              # fashion-3d/engine (since 16/11/2026; was youtube-edit/formats)
 SK = os.path.abspath(os.path.join(ENGINE, "..", "..", "youtube-edit"))            # youtube-edit: fonts and other shared assets
-VENDOR = ("three.module.min.js", "three-LICENSE.txt", "world3d.js", "atelier-kit.js", "atelier-tex.js", "atelier-trouser.js", "atelier-props.js", "atelier-cut.js", "atelier-studio.js")   # all in ENGINE/vendor
+VENDOR = ("three.module.min.js", "three-LICENSE.txt", "world3d.js", "atelier-kit.js", "atelier-tex.js", "atelier-trouser.js", "atelier-props.js", "atelier-cut.js", "atelier-studio.js", "atelier-mascot.js", "atelier-data.js")   # all in ENGINE/vendor
+_MODELS = {}      # .glb files registered by World3D.glb(), copied to <public>/models by stage()
 OPTIONAL = ("GLTFLoader.js", "BufferGeometryUtils.js", "RoundedBoxGeometry.js", "RoomEnvironment.js")   # three r170 add-ons, copied too
 
 CSS = """<style>
@@ -79,9 +80,9 @@ class World3D:
         """An ivory sheet standing in space: a title with one *key* word, or a picture (`img`, a path inside public/, e.g. "img/moodboard.jpg") with an optional caption."""
         return self._obj("card", oid, pos, rot_y, turn, move, t, w=w, h=h, text=text, sub=sub, img=img, color=color, size=size, pass_mode=look, flat=flat or None)
 
-    def solid(self, oid, shape, pos, size, color=None, fabric=False, metal=None, rough=None, rot_y=0.0, turn=None, move=None, t=None, shadow=None, look=None):
+    def solid(self, oid, shape, pos, size, color=None, fabric=False, metal=None, rough=None, rot_y=0.0, turn=None, move=None, t=None, shadow=None, look=None, radius=None):
         """A plain object: shape "box" (size x, y, z), "cyl" (diameter, height) or "sphere" (diameter). fabric=True wears the drill weave (a roll of cloth)."""
-        return self._obj(shape, oid, pos, rot_y, turn, move, t, size=list(size), color=color, fabric=fabric or None, metal=metal, rough=rough, shadow=shadow, floor=pos[1] - size[1] / 2 if len(size) > 1 else None, pass_mode=look)
+        return self._obj(shape, oid, pos, rot_y, turn, move, t, size=list(size), color=color, fabric=fabric or None, metal=metal, rough=rough, shadow=shadow, floor=pos[1] - size[1] / 2 if len(size) > 1 else None, pass_mode=look, radius=radius)
 
     def cam(self, pos, look, t=None, d=1.3, ease="hand"):
         """The first call is the start; every later call is ONE move to (pos, look) starting at video time t and lasting d (curve D by default, like the swipes)."""
@@ -102,13 +103,34 @@ class World3D:
         self.events.append(t)
         return self
 
-    def room(self, bg="#1b1511", key="#fff0d8", dir=(-6, 5, 2.5), key_i=3.2, hemi=("#fff0dd", "#6b4a30"), hemi_i=0.9, side_i=0.0, rim="#a9bfe8", rim_i=0.5, fog=None, box=(6, 5, 30), aim=(0, 0.8, 0), exposure=None, soft=4, far=80):
+    def room(self, bg="#1b1511", key="#fff0d8", dir=(-6, 5, 2.5), key_i=3.2, hemi=("#fff0dd", "#6b4a30"), hemi_i=0.9, side_i=0.0, rim="#a9bfe8", rim_i=0.5, fog=None, box=(6, 5, 30), aim=(0, 0.8, 0), exposure=None, soft=4, far=80, env=0.0, grade=None):
         """A lit ROOM (14/11/2026, from the autogrill reference): daylight through a window as the key light (real shadow map), a warm ambient, optional fog. Fill it with props: prop(...).
         A room is dense or it is empty: furnish every shot (floor, walls, window, shelves of cloth, a table with things on it, lamps). No venetian blinds (Jacopo: they read as a render error)."""
         self.room_spec = dict(bg=bg, key=key, dir=list(dir), key_i=key_i, hemi=list(hemi), hemi_i=hemi_i, side_i=side_i, rim=rim, rim_i=rim_i, box=list(box), aim=list(aim), soft=soft, far=far)
         if fog: self.room_spec["fog"] = list(fog)
+        if env: self.room_spec.update(env=True, env_i=env)      # env = intensity of the studio reflections (0.3-0.7): fabric sheen, metal, wood. Off by default (old Shorts stay identical)
+        if grade: self.room_spec["grade"] = grade if isinstance(grade, dict) else True     # True or dict(bloom=0.22, thresh=0.85, vignette=0.32, grain=0.025, fringe=0.0012): linear render, bloom, fringe, vignette, ACES, grain
         self.exposure = exposure
         return self
+
+    def mascot(self, oid, pos=(0, 0, 0), height=0.55, rot_y=0.0, turn=None, move=None, t=None, walk=None, wave=None, hop=None, glasses=False, vest=False):
+        """Jacopino, the channel's 3D mascot (a small stylised Jacopo: wavy brown hair, light stubble, black tee, dark-indigo boot-cut selvage jeans, black Texan boots). He faces +z and stands on y = pos[1].
+        walk / wave = lists of (start, end) VIDEO times; hop = list of VIDEO times. He blinks and breathes by himself. Use him to fill the empty moments: he reacts to what the voice says."""
+        r = lambda L: [[self._r(a), self._r(b)] for a, b in L] if L else None
+        return self._obj("jacopino", oid, pos, rot_y, turn, move, t, size=[height], walk=r(walk), wave=r(wave), hop=[self._r(h) for h in hop] if hop else None, glasses=glasses or None, vest=vest or None)
+
+    def photo(self):
+        """The 'photographic' finish tuned on Short #2 on 16/11/2026 (call AFTER room()): soft studio reflections at 0.22, the ambient light x0.75 (so blacks stay black), and one grade
+        (bloom 0.28, vignette 0.42, grain 0.03, a hint of lens fringe). Honest result of the A/B: a modest polish, NOT a jump in realism. The big lever is the hero model (see references/realism-plan.md)."""
+        assert self.room_spec is not None, "call room() first"
+        self.room_spec.update(env=True, env_i=0.22, hemi_i=self.room_spec["hemi_i"] * 0.75, grade=dict(vignette=0.42, bloom=0.28, grain=0.03))
+        return self
+
+    def glb(self, oid, src, fit=1.0, pos=(0, 0, 0), rot_y=0.0, turn=None, move=None, t=None, double=False, **kw):
+        """A loaded 3D model (.glb, e.g. a garment simulated in Blender): scaled so its height is `fit` metres, standing on y = pos[1], centred on pos. The file is copied next to the page by stage().
+        Credit CC-BY models in the post caption. `double=True` renders both faces of the cloth."""
+        base = os.path.basename(src); _MODELS[base] = os.path.abspath(src)
+        return self._obj("glb", oid, pos, rot_y, turn, move, t, src="models/" + base, fit=fit, double=double or None, **kw)
 
     def prop(self, shape, oid, pos, size=None, rot_y=0.0, turn=None, move=None, t=None, **kw):
         """A prop of the atelier kit (assets/vendor/atelier-kit.js). shape: woodfloor [x,z] · wall [len,h,thick] (hole=[cx,cy,w,h]) · window [w,h] · rollrack [len,h,depth] · bolts [w,d] (n=) · spoolwall [w,h] · table [len,h,depth]
@@ -262,6 +284,9 @@ class World3D:
         d = os.path.join(public, "vendor"); os.makedirs(d, exist_ok=True)
         for f in VENDOR + OPTIONAL:
             shutil.copy(os.path.join(ENGINE, "vendor", f), d)
+        if _MODELS:
+            md = os.path.join(public, "models"); os.makedirs(md, exist_ok=True)
+            for base, path in _MODELS.items(): shutil.copy(path, os.path.join(md, base))
 
     @staticmethod
     def page(folder, worlds, duration=None):

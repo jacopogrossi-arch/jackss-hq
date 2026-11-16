@@ -4,6 +4,8 @@
 // window.__w3d[<id>](globalTime) so a GSAP proxy can drive it too. Spec: see formats/world3d.py.
 import * as THREE from "./three.module.min.js";
 import { build as kitBuild, KIT } from "./atelier-kit.js";
+import { RoundedBoxGeometry } from "./RoundedBoxGeometry.js";     // three r170 add-ons (16/11/2026): bevelled boxes, a studio environment for reflections
+import { RoomEnvironment } from "./RoomEnvironment.js";
 
 const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
 const lerp = (a, b, k) => a + (b - a) * k;
@@ -157,8 +159,17 @@ function solid(o) {
   if (KIT.has(o.type)) return kitBuild(o, { fabric, shade });
   const mat = o.fabric ? fabric(o.color || "#7b7d5a") : new THREE.MeshStandardMaterial({ color: o.color || "#f4efe6", roughness: o.rough ?? 0.6, metalness: o.metal ?? 0 });
   const s = o.size || [0.3, 0.3, 0.3];
-  const geo = o.type === "sphere" ? new THREE.SphereGeometry(s[0] / 2, 48, 32) : o.type === "cyl" ? new THREE.CylinderGeometry(s[0] / 2, s[0] / 2, s[1], 64) : new THREE.BoxGeometry(s[0], s[1], s[2]);
+  const geo = o.type === "rbox" ? new RoundedBoxGeometry(s[0], s[1], s[2], 4, o.radius ?? 0.008) : o.type === "sphere" ? new THREE.SphereGeometry(s[0] / 2, 48, 32) : o.type === "cyl" ? new THREE.CylinderGeometry(s[0] / 2, s[0] / 2, s[1], 64) : new THREE.BoxGeometry(s[0], s[1], s[2]);
   return new THREE.Mesh(geo, mat);
+}
+// a loaded model (.glb): measured, scaled to a real height (o.fit, metres), stood on y = 0 and centred, shadows on. Credit CC-BY models in the post caption.
+const loadGlb = async (src) => { const { GLTFLoader } = await import("./GLTFLoader.js"); return new Promise((ok) => new GLTFLoader().load(src, (g) => ok(g.scene), undefined, () => ok(null))); };
+function glbObj(o, root) {
+  const g = new THREE.Group(); if (!root) return g;
+  if (o.fit) { const sz = new THREE.Box3().setFromObject(root).getSize(new THREE.Vector3()); root.scale.multiplyScalar(o.fit / Math.max(sz.y, 1e-6)); }
+  root.updateMatrixWorld(true); const b = new THREE.Box3().setFromObject(root); root.position.x -= (b.min.x + b.max.x) / 2; root.position.z -= (b.min.z + b.max.z) / 2; root.position.y -= b.min.y;
+  root.traverse((x) => { if (x.isMesh) { x.castShadow = true; x.receiveShadow = true; if (o.double && x.material) x.material.side = THREE.DoubleSide; } });
+  g.add(root); return g;
 }
 const loadImage = (src) => new Promise((ok) => { const i = new Image(); i.onload = () => ok(i); i.onerror = () => ok(null); i.src = src; });
 
@@ -200,7 +211,7 @@ export function mount(spec) {
   const mb = document.getElementById(spec.id + "-mb"), mbx = mb ? mb.getContext("2d") : null, bar = document.getElementById(spec.id + "-bar"), bart = document.getElementById(spec.id + "-bart");
   if (mb) { mb.width = Math.round(W * PR); mb.height = Math.round(H * PR); }
   // the three looks and what each one does to the scene
-  const dressed = [], inkOnly = [], onlyFinal = [], notInk = [], clayMats = new Map(); let slats = null, dust = null, mode = null;
+  const dressed = [], inkOnly = [], onlyFinal = [], notInk = [], clayMats = new Map(); let slats = null, dust = null, mode = null, GR = null;
   const LIGHTS = ROOM ? { final: [ROOM.key_i ?? 3.2, ROOM.rim_i ?? 0.5, ROOM.side_i ?? 0, ROOM.hemi_i ?? 0.9], clay: [1.5, 0, 0.5, 1.0] } : LOOK ? { final: [4.6, 0, 1.2, 1.5], clay: [2.4, 0, 0.5, 0.8] } : { final: [2.7, 2.0, 0.7, 0.55], clay: [1.5, 0, 0.5, 1.0] };   // key, rim, side, hemisphere
   if (LOOK) {                                                  // an atelier: one warm key through blinds, a dark room, a floor that catches the stripes
     renderer.shadowMap.enabled = true; renderer.shadowMap.type = THREE.PCFSoftShadowMap; if (spec.exposure == null) renderer.toneMappingExposure = 1.45; side.position.set(2.2, 0.9, 1.8);
@@ -224,6 +235,8 @@ export function mount(spec) {
     rim.color.set(ROOM.rim || "#a9bfe8"); rim.position.set(ROOM.rim_dir ? ROOM.rim_dir[0] : 3, ROOM.rim_dir ? ROOM.rim_dir[1] : 3, ROOM.rim_dir ? ROOM.rim_dir[2] : -4); side.color.set(ROOM.side || "#ffe9cf"); side.position.set(2.5, 1.5, 3.5);
     hemi.color.set(ROOM.hemi ? ROOM.hemi[0] : "#fff0dd"); hemi.groundColor.set(ROOM.hemi ? ROOM.hemi[1] : "#6b4a30");
     if (ROOM.fog) scene.fog = new THREE.Fog(ROOM.fog[0], ROOM.fog[1], ROOM.fog[2]);
+    if (ROOM.env) { const pm = new THREE.PMREMGenerator(renderer); scene.environment = pm.fromScene(new RoomEnvironment(), 0.04).texture; scene.environmentIntensity = ROOM.env_i ?? 0.5; pm.dispose(); }   // soft studio reflections on every PBR surface (fabric sheen, metal, wood)
+    if (ROOM.grade) GR = Object.assign({ bloom: 0.22, thresh: 0.85, vignette: 0.32, grain: 0.025, fringe: 0.0012 }, ROOM.grade === true ? {} : ROOM.grade);
     camera.far = ROOM.far || 80; camera.updateProjectionMatrix();
   }
   function dressMesh(mesh, m) {                                 // one mesh in one look (an object can carry its own look: o.pass_mode)
@@ -253,7 +266,7 @@ export function mount(spec) {
 
   function build(imgs) {
     (spec.objects || []).forEach((o, n) => {
-      const m = o.type === "trouser" ? (o.hi ? kitBuild(o, { fabric, shade }) : trouser(o)) : o.type === "card" ? card(o, imgs[n]) : solid(o);
+      const m = o.type === "trouser" ? (o.hi ? kitBuild(o, { fabric, shade }) : trouser(o)) : o.type === "card" ? card(o, imgs[n]) : o.type === "glb" ? glbObj(o, imgs[n]) : solid(o);
       const g = new THREE.Group(); g.add(m); if (o.scale) m.scale.multiplyScalar(o.scale); if (m.userData && m.userData.update) updaters.push(m.userData.update);
       scene.add(g); items[o.id] = { o, g };
       const meshes = []; g.traverse((x) => { if (x.isMesh) meshes.push(x); });                      // dress it for the passes: ink outlines (hull for round things, edge lines for boxes and sheets)
@@ -310,6 +323,26 @@ export function mount(spec) {
   const dofAt = (t) => { let ap = 0; for (const e of spec.dof || []) { const k = prog(t, e.t, 0.35, "smooth") * (1 - prog(t, e.t + e.d - 0.35, 0.35, "smooth")); ap = Math.max(ap, e.ap * k); } return ap; };
   const rgt = new THREE.Vector3(), upv = new THREE.Vector3();
 
+  // ---- one grade at the end (opt-in: room(grade=...)): the scene is drawn LINEAR into a half-float target, then bloom (only what is brighter than `thresh`), lens fringe, vignette, the same ACES curve and sRGB, grain
+  let rtH, q4, q8, qs, oc, fsq, mBright, mBlur, mComp;
+  if (GR) {
+    const sz = renderer.getDrawingBufferSize(new THREE.Vector2()), bw = sz.x, bh = sz.y, mk = (w, h) => new THREE.WebGLRenderTarget(Math.max(2, w), Math.max(2, h), { type: THREE.HalfFloatType });
+    rtH = new THREE.WebGLRenderTarget(bw, bh, { type: THREE.HalfFloatType, samples: 4 }); q4 = [mk(bw >> 2, bh >> 2), mk(bw >> 2, bh >> 2)]; q8 = [mk(bw >> 3, bh >> 3), mk(bw >> 3, bh >> 3)];
+    fsq = new THREE.Mesh(new THREE.PlaneGeometry(2, 2)); fsq.frustumCulled = false; oc = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1); qs = new THREE.Scene(); qs.add(fsq);
+    const vs = "varying vec2 vUv; void main(){ vUv = uv; gl_Position = vec4(position.xy, 0.0, 1.0); }", base = { vertexShader: vs, depthTest: false, depthWrite: false };
+    mBright = new THREE.ShaderMaterial({ ...base, toneMapped: false, uniforms: { t: { value: null }, th: { value: GR.thresh } }, fragmentShader: "uniform sampler2D t; uniform float th; varying vec2 vUv; void main(){ vec3 c = texture2D(t, vUv).rgb; float l = max(c.r, max(c.g, c.b)); gl_FragColor = vec4(c * smoothstep(th, th + 0.7, l), 1.0); }" });
+    mBlur = new THREE.ShaderMaterial({ ...base, toneMapped: false, uniforms: { t: { value: null }, d: { value: new THREE.Vector2() } }, fragmentShader: "uniform sampler2D t; uniform vec2 d; varying vec2 vUv; void main(){ vec3 c = texture2D(t, vUv).rgb * 0.227027; c += (texture2D(t, vUv + d * 1.3846).rgb + texture2D(t, vUv - d * 1.3846).rgb) * 0.3162162; c += (texture2D(t, vUv + d * 3.2308).rgb + texture2D(t, vUv - d * 3.2308).rgb) * 0.0702703; gl_FragColor = vec4(c, 1.0); }" });
+    mComp = new THREE.ShaderMaterial({ ...base, uniforms: { t: { value: null }, b4: { value: null }, b8: { value: null }, bloom: { value: GR.bloom }, vig: { value: GR.vignette }, grain: { value: GR.grain }, fr: { value: GR.fringe }, seed: { value: 0 } },
+      fragmentShader: "uniform sampler2D t, b4, b8; uniform float bloom, vig, grain, fr, seed; varying vec2 vUv; float h21(vec2 p){ p = fract(p * vec2(123.34, 456.21)); p += dot(p, p + 45.32); return fract(p.x * p.y); } void main(){ vec2 q = vUv - 0.5; float r2 = dot(q, q); vec2 o = q * fr * r2 * 8.0; vec3 c = vec3(texture2D(t, vUv + o).r, texture2D(t, vUv).g, texture2D(t, vUv - o).b); c += (texture2D(b4, vUv).rgb * 0.6 + texture2D(b8, vUv).rgb * 0.8) * bloom; c *= 1.0 - vig * smoothstep(0.12, 0.62, r2) * 1.6; gl_FragColor = vec4(c, 1.0);\n#include <tonemapping_fragment>\n#include <colorspace_fragment>\n gl_FragColor.rgb += (h21(vUv * 1920.0 + seed) - 0.5) * grain * (1.0 - dot(gl_FragColor.rgb, vec3(0.33))); }" });
+  }
+  function grade(t) {
+    const pass = (m, src, dst, dx, dy) => { fsq.material = m; if (m.uniforms.t) m.uniforms.t.value = src.texture || src; if (m.uniforms.d) m.uniforms.d.value.set(dx / dst.width, dy / dst.height); renderer.setRenderTarget(dst); renderer.render(qs, oc); };
+    pass(mBright, rtH, q4[0], 0, 0); pass(mBlur, q4[0], q4[1], 1, 0); pass(mBlur, q4[1], q4[0], 0, 1);
+    pass(mBlur, q4[0], q8[0], 1, 0); pass(mBlur, q8[0], q8[1], 0, 1); pass(mBlur, q8[1], q8[0], 1.6, 0); pass(mBlur, q8[0], q8[1], 0, 1.6);
+    fsq.material = mComp; mComp.uniforms.t.value = rtH.texture; mComp.uniforms.b4.value = q4[0].texture; mComp.uniforms.b8.value = q8[1].texture; mComp.uniforms.seed.value = (Math.round(t * 30) % 97) * 0.731;
+    renderer.setRenderTarget(null); renderer.render(qs, oc);
+  }
+
   function renderAt(global) {
     const t = clamp(global - T0, 0, DUR), life = t / DUR;
     if (dust) { const a = dust.geometry.attributes.position; for (let i = 0; i < 120; i++) { const h1 = hash(i), h2 = hash(i + 500), h3 = hash(i + 900), y = ((h2 * 2.2 + t * (0.03 + 0.05 * h3)) % 2.2); a.setXYZ(i, -1.3 + h1 * 2.6 + 0.06 * Math.sin(t * 0.6 + i), y, -1.0 + h3 * 2.0 + 0.05 * Math.cos(t * 0.5 + i * 1.7)); } a.needsUpdate = true; }
@@ -320,8 +353,9 @@ export function mount(spec) {
       const ts = N > 1 && sp > 0.6 ? t + ((i + 0.5) / N - 0.5) * shutter : t;
       poseObjects(ts); aimCamera(ts); scene.updateMatrixWorld(true);
       if (ap > 0) { const fx = look.clone(), r = ap * Math.sqrt((i + 0.5) / N), th = i * 2.39996; rgt.setFromMatrixColumn(camera.matrixWorld, 0); upv.setFromMatrixColumn(camera.matrixWorld, 1); camera.position.addScaledVector(rgt, r * Math.cos(th)).addScaledVector(upv, r * Math.sin(th)); camera.lookAt(fx); camera.updateMatrixWorld(); }
-      const ps = passState(ts); setMode(ps.a); renderer.setScissorTest(false); renderer.render(scene, camera);
-      if (ps.b) { setMode(ps.b); renderer.setScissorTest(true); renderer.setScissor(0, 0, ps.edge, H); renderer.render(scene, camera); renderer.setScissorTest(false); }
+      const ps = passState(ts); if (GR) renderer.setRenderTarget(rtH); setMode(ps.a); renderer.setScissorTest(false); renderer.render(scene, camera);
+      if (ps.b) { setMode(ps.b); if (GR) { rtH.scissorTest = true; rtH.scissor.set(0, 0, Math.round(ps.edge * rtH.width / W), rtH.height); } else { renderer.setScissorTest(true); renderer.setScissor(0, 0, ps.edge, H); } renderer.render(scene, camera); if (GR) rtH.scissorTest = false; else renderer.setScissorTest(false); }
+      if (GR) grade(ts);
       if (N > 1 && mbx) { if (i === 0) mbx.clearRect(0, 0, mb.width, mb.height); mbx.globalAlpha = 1 / (i + 1); mbx.drawImage(canvas, 0, 0); mbx.globalAlpha = 1; }
     }
     if (mb) { mb.style.display = N > 1 ? "block" : "none"; canvas.style.visibility = N > 1 ? "hidden" : "visible"; }
@@ -345,7 +379,7 @@ export function mount(spec) {
 
   let last = T0;
   const ready = Promise.all([document.fonts.load('800 40px "Inter"'), document.fonts.load('italic 500 40px "Playfair Display"'), document.fonts.ready,
-    ...(spec.objects || []).map((o) => (o.type === "card" && o.img ? loadImage(o.img) : Promise.resolve(null)))])
+    ...(spec.objects || []).map((o) => (o.type === "card" && o.img ? loadImage(o.img) : o.type === "glb" ? loadGlb(o.src) : Promise.resolve(null)))])
     .then((r) => { build(r.slice(3)); return renderer.compileAsync(scene, camera); }).then(() => { window.__w3d[spec.id] = (g, p) => { last = p == null ? g : T0 + p * DUR; renderAt(last); }; renderAt(last); });
   window.__w3d = window.__w3d || {}; window.__w3d[spec.id] = (g, p) => { last = p == null ? g : T0 + p * DUR; };      // (globalTime) or (null, progress 0-1 of the plate)
   window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady || {}; window.__hf.buildReady["w3d-" + spec.id] = ready;

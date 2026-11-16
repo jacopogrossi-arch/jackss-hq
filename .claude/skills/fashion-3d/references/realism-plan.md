@@ -25,8 +25,12 @@ Keep the three.js world, camera and sound (deterministic, cheap, fast to iterate
 
 ## Phases and status
 1. Research of tools: DONE 16/11.
-2. Skill split (docs, SOPs, kit, taste): DONE 16/11. Engine code moves in phase 3.
-3. Realism upgrade with before/after tests: TODO.
-4. Blender garment test: TODO.
-5. Metaphor-world format + Jacopo's 3D mascot: TODO.
-6. Automatic checks (8 fps never-still scan, seek test, camera speed, z-fighting 3 frames): TODO.
+2. Skill split (docs, SOPs, kit, taste, ENGINE): DONE 16/11. Engine moved to `fashion-3d/engine`; 6 frames of Short #2 pixel-identical before/after.
+3. Realism upgrade: DONE 16/11, all opt-in (old Shorts unchanged; Short #2 re-checked: 4 frames identical, 1 at 109 dB).
+   - `room(env=..., grade=...)` / `photo()`: studio reflections (IBL) + one linear grade (bloom, fringe, vignette, ACES, grain). **A/B on Short #2 (real frames): env 0.55 made the image washed-out (blacks lifted); tuned to env 0.22, ambient x0.75, vignette 0.42, bloom 0.28, grain 0.03 = a modest photographic polish, NOT a jump in realism.** Honest conclusion: realism comes from hero geometry and materials, not from post.
+   - `w.glb(...)`: loads `.glb` (GLTFLoader, three r170 add-ons vendored). Verified with a Blender-exported bevelled cube.
+   - `solid("rbox", radius=...)`: bevelled boxes.
+   - Not done: soft-shadow accumulation and sky-fill AO (the engine draws one render per frame; it would need the sub-frame loop for every frame), window view.
+4. Blender garment test: TODO, next session (`blender-test-plan.md`).
+5. Metaphor-world format (`metaphor-world-sop.md`) + Jacopo's 3D mascot: DONE as v1. `w.mascot` (Jacopino: walks, waves, hops, blinks; primitives, needs Jacopo's corrections), `dotgrid` and `ctaplate` props. Not done: a full metaphor-world Short.
+6. Automatic checks: `scripts/review8.py` (8 fps sheets, never-still scan with DEAD/DRIFT levels, seek test). Measured on our Shorts: Short #1 has 13 dead stretches over 0.8 s, Short #2 has 15 (some legit, e.g. the end card). Camera-speed print and z-fighting check: not done.
