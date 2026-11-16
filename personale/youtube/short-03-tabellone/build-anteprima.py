@@ -39,7 +39,7 @@ w.card("t2", (0.62, Y + 0.17, 0.35), w=0.32, h=0.17, text="*tempo*, non €", t=
 # square 3: photos — the shooting tag falls
 w.card("t3a", (0.98, Y + 0.2, 0.62), w=0.21, h=0.12, text="*€3.000–8.000*", sub="shooting", t=30.0, color="#8A4B2D",
        move=[(34.6, 0.7, (1.0, Y + 0.02, 0.45), "in")], turn=[(34.6, 0.7, 0.0, "in")])
-w.prop("laptop", "lap", (1.45, Y, 0.3), (0.34,), rot_y=-0.5, t=33.0)
+w.prop("laptop", "lap", (1.5, Y, 0.42), (0.34,), rot_y=-0.5, t=33.0)
 # square 4: the twist — 10 then 20 of 100 light up
 lit = [(43.0 + 0.12 * i, i) for i in range(10)] + [(46.5 + 0.08 * i, 10 + i) for i in range(10)]
 w.prop("dotgrid", "g", (1.25, Y + 0.48, -0.78), (0.8, 0.8), cols=10, rows=10, pop=[39.8, 0.008], lit=lit, accent="#ffc23a")
@@ -60,7 +60,7 @@ C = [((-1.55, 0.36, 1.45), (-1.2, 0.14, 0.6)),
      (13.8, 3.0, (0.4, 2.2, 1.45), (0.4, 0.0, 0.4)),
      (17.0, 8.6, (0.62, 1.7, 1.05), (0.4, 0.0, 0.45)),
      (25.8, 3.0, (0.95, 0.36, 1.45), (1.2, 0.14, 0.6)),
-     (29.0, 5.4, (1.42, 0.2, 0.95), (1.08, 0.17, 0.4)),
+     (29.0, 5.4, (1.3, 0.3, 1.5), (1.12, 0.16, 0.5)),
      (34.6, 3.6, (1.4, 0.32, 1.55), (1.15, 0.15, 0.5)),
      (38.4, 3.2, (2.15, 0.7, 0.55), (1.15, 0.42, -0.65)),
      (41.8, 7.2, (0.45, 0.72, 0.55), (1.2, 0.46, -0.78)),
@@ -91,8 +91,8 @@ for i, x in enumerate(WORDS):
         chunks.append((cur[0]["s"], min(nxt - 0.02, cur[-1]["e"] + 0.45), txt.rstrip(".,:")))
         cur = []
 w.big(-0.3, 3.6, "Quanto costa|lanciare un *pantalone*?", top=240, size=80)
-w.big(45.0, 49.6, "*10*, poi *20*|non cento", top=240, size=88)
-chunks = [c for c in chunks if not (c[0] < 3.6 or (c[0] < 49.6 and c[1] > 45.0) or c[0] >= 58.4)]
+w.big(46.5, 50.0, "*10*, poi *20*|non cento", top=240, size=88)
+chunks = [c for c in chunks if not (c[0] < 3.6 or (c[0] < 50.0 and c[1] > 46.5) or c[0] >= 58.4)]
 w.captions(chunks, top=1180, size=96)
 World3D.page("D:/ClaudeCodeTest/videos/_bench/short3/prev", [w], duration=65.0)
 print("built")
