@@ -36,3 +36,9 @@ In `assets/`: `trouser10b.glb` (pantalone v10, colore finale), `anteprima-1.jpg`
 
 ## 16/11 sera: render finale
 - Finestra con foro (vista crepuscolo), cartellino tempo ingrandito, finale alleggerito. Render 1080p 60 fps: `videos/_bench/short3/short3-tabellone-v1.mp4` (65 s, 87 MB), copia in iCloud `Video 3D moda\short3-tabellone-v1.mp4`. Resta: ascolto/ok di Jacopo, eventuale 4K, titolo+descrizione (max 5 hashtag), pubblicazione SOLO se la decide lui.
+
+## 16/11 notte: VERSIONE 2 (il tabellone e' bocciato)
+- Jacopo ha bocciato la versione "gioco da tavolo" (troppo lenta, Jacopino e grafiche brutti). Rifatto come **sala campioni di notte** (stile studio di notte, mondo nuovo): `v2/` (build.py, room.py, mix.py, final1080.sh). Progetto locale `videos/_bench/short3b/`. Voce e words.json invariati (non rigenerare).
+- Struttura: logo capovolto -> 5 postazioni (scrivania disegno, tavolo da taglio, set foto, parete 100 pezzi 10+20, pantalone appeso) con 5 salite sulla mappa; contatore "il mio costo"; un movimento camera ogni 2-3 s; fine con logo + CTA "Scrivi PANTALONE".
+- Musica Epidemic "Pixel Ghost". Render finale: `short3-sala-campioni-v2.mp4` (1080x1920, 60 fps) in iCloud `Video 3D moda\`.
+- Da migliorare se Jacopo lo chiede: set foto (macchina e softbox ancora blocchi semplici), colore dominante marrone, inquadrature scure a 17-19 s.
