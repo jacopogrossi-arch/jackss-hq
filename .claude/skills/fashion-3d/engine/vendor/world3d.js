@@ -183,7 +183,7 @@ function glbObj(o, root) {
     if (o.fabric && x.material && /^drill/.test(x.material.name || "")) x.material = clothMat("#" + x.material.color.getHexString(THREE.SRGBColorSpace), "twill", { rough: 0.86, n: o.grain ?? 0.4, tile: o.tile ?? 2.5 });   // Blender cloth (metric uvs / TILE) gets the engine twill: no plastic look
     if (o.double && x.material) x.material.side = THREE.DoubleSide; } });
   let piv = root;
-  if (o.beat || o.env || o.segs) {             // 17/11/2026: a rhythmic narrator on a still glb. While o.talk windows run: a soft bounce on every musical beat (o.beat = [period s, offset s]) and a small lean forward on each word onset (o.words); still otherwise. Pivot at the feet.
+  if (o.beat || o.env || o.segs || o.jaw) {             // 17/11/2026: a rhythmic narrator on a still glb. While o.talk windows run: a soft bounce on every musical beat (o.beat = [period s, offset s]) and a small lean forward on each word onset (o.words); still otherwise. Pivot at the feet.
     piv = new THREE.Group(); piv.add(root); const B = o.beat || [1, 0], amp = o.bob ?? 0.012;
     // 17/11/2026: rigged glb (Mixamo-style bones, e.g. from Tripo): the arms gesture on the voice. Rotations are given in the model frame (x side, y up, z forward) and converted to each bone's parent frame, so no bone-axis guessing.
     const bones = {}; root.traverse((x) => { if (x.isBone) { bones[x.name.replace(/^mixamorig:?/, "")] = x; x.userData.rest = x.quaternion.clone(); } });
@@ -193,6 +193,7 @@ function glbObj(o, root) {
     const hasRig = !!(bones.RightArm && bones.RightForeArm);
     // 17/11/2026: animation clips baked in the glb (e.g. Tripo "Anima"): idle / explaining / energetic. The clips are played as a pure function of t: idle when silent, "explaining" while he talks, "energetic" on loud passages, cross-faded by weights.
     let mixer = null; const CL = {}; const CA = [];
+    const JAWM = []; root.traverse((x) => { if (x.isMesh && x.morphTargetDictionary && x.morphTargetDictionary.jawOpen !== undefined) JAWM.push([x, x.morphTargetDictionary.jawOpen]); });      // 17/11/2026 (v8): the `jawOpen` shape key added by scripts/blender_add_jaw.py (every primitive of the head has it)
     if ((root.animations || []).length && o.clips !== false) {
       mixer = new THREE.AnimationMixer(root);
       for (const c of root.animations) { const a = mixer.clipAction(c); a.play(); a.setEffectiveTimeScale(0); a.setEffectiveWeight(0); const nm = (c.name || "").toLowerCase(); const key = nm.includes("relaxed") ? "idle" : (nm.includes("energy") || nm.includes("directly")) ? "energy" : "explain"; CL[key] = { a, d: c.duration }; CA.push({ a, d: c.duration }); }
@@ -204,6 +205,10 @@ function glbObj(o, root) {
       else { const ph = ((t - B[1]) / B[0]) % 1; pulse = Math.pow(Math.max(0, Math.cos(2 * Math.PI * (ph < 0 ? ph + 1 : ph))), 2); }
       let lean = 0; for (const wt of o.words || []) { if (wt > t) break; const d = t - wt; if (d < 0.5) lean = Math.max(lean, Math.exp(-d / 0.13)); }
       if (mixer) { piv.position.y = 0; piv.rotation.x = 0; } else { piv.position.y = k * amp * pulse; piv.rotation.x = k * (0.05 * lean + (o.env ? 0.025 * pulse : 0)); }      // with clips the body is moved only by the clips: the word-onset lean was a sudden jerk
+      if (o.jaw && JAWM.length) {         // o.jaw = [fps, [mouth opening 0..1]] (from the voice, see v8/jaw_curve.py); o.jawGain scales it
+        const J = o.jaw, f = Math.max(0, t) * J[0], i = Math.min(J[1].length - 2, Math.floor(f)), u = Math.min(1, f - i), v = (J[1][i] * (1 - u) + J[1][i + 1] * u) * (o.jawGain ?? 1);
+        for (const [m, kx] of JAWM) m.morphTargetInfluences[kx] = v;
+      }
       if (mixer && o.segs) {         // 17/11/2026 (v7): ONE clip per shot. o.segs = [[t0, t1, clipIndex, clipOffset, speed?], ...] (plate time): inside a segment a single clip plays at normal speed from clipOffset; only the short cross-fade at the boundary (o.segFade s) ever blends two clips, so no "glitch" of half of one clip and half of another.
         const F = o.segFade ?? 0.35, SP = o.clipSpeed ?? 1.0, sm = (u) => u * u * (3 - 2 * u), S = o.segs, n = S.length;
         const WT = CA.map(() => 0), TM = CA.map(() => 0), BEST = CA.map(() => -1);      // the same clip may appear in several segments (e.g. the still one): weights add up, the time comes from the segment with the biggest weight
