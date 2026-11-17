@@ -16,9 +16,9 @@ Costruire lo Short #11 (verticale 9:16, ~38 s). Copione APPROVATO: `script.md` (
 ## Passi (spunta quando fatti)
 1. [x] Cartella progetto locale `videos/_bench/short11/`, voce per paragrafi + words.json
 2. [x] `social/short-11-pantalone-3d/v1/`: build.py + room.py + mix (musica da Epidemic Sound, diversa da quelle già usate)
-3. [ ] Bozza 1080p a 10 fps + contact sheet, revisione di tutti i fogli, correzioni
-4. [ ] Bozza finale 1080p con audio → copia in `videos/_bench/short11/` e preparare titolo/descrizione (video correlato = #4)
-5. [ ] Commit/push, aggiorna HANDOFF, messaggio per Jacopo con cosa vedere e cosa decidere
+3. [x] Bozza 1080p a 10 fps + contact sheet, revisione di tutti i fogli, correzioni
+4. [x] Bozza finale 1080p con audio → copia in `videos/_bench/short11/` e preparare titolo/descrizione (video correlato = #4)
+5. [x] Commit/push, aggiorna HANDOFF, messaggio per Jacopo con cosa vedere e cosa decidere
 
 ## STATO
 - 17/11 23:50 — Copione approvato, 4 viste giocattolo generate e approvate. Nessun altro passo iniziato.
@@ -28,3 +28,4 @@ Costruire lo Short #11 (verticale 9:16, ~38 s). Copione APPROVATO: `script.md` (
 - 18/11 00:15 — BOZZA v1 FATTA (passi 1-4 completati). Revisione a 10 fps di tutti i 13 fogli, corrette: scrivania (la scheda ora si vede), 4 viste in griglia 2x2 che appaiono su «quattro viste», pantalone che finisce di fronte, narratore che entra solo nel primo piano, logo INVERSO che si raddrizza nell'ultima scheda. File locali: `videos/_bench/short11/short11-pantalone-3d-bozza-v1.mp4` (1080p 60 fps, 52 MB, -16 LUFS) e `bozza-leggera.mp4` (720p, 6 MB, mandata a Jacopo in chat). La copia in iCloud NON e' stata fatta (il permesso e' stato negato dal sistema): da fare solo se Jacopo la vuole. Per rifare tutto: `bash social/short-11-pantalone-3d/v1/run.sh nome`.
 - Resta: ascolto/ok di Jacopo, eventuali correzioni (max 1-2 giri), poi 4K (`render --resolution portrait-4k --gpu --video-bitrate 60M --fps 60`) e iCloud, titolo+descrizione (max 5 hashtag, video correlato #4), aggiornare Notion e memoria. Non pubblicare.
 - Note di qualita': la striscia scura in fondo all'ultima inquadratura (camera fuori dal pavimento) e la mancanza del narratore nel blocco delle 4 viste sono difetti minori noti.
+- 18/11 00:25 — Passi 1-5 FATTI. Titolo e descrizione in `pubblicazione.md`, memoria `project_shorts_3d.md` aggiornata, tutto su git (commit 54fe554). UNICA cosa automatizzabile rimasta: aggiornare Notion (Jackss HQ, `35c30837-a9e6-81ca-8fc5-ccfcb3f440ce`) con una riga sullo Short #11 (bozza pronta, in attesa dell'ok) e, se c'e', la pagina del registro Shorts. Se l'hai gia' fatto o i tool Notion non sono disponibili, scrivilo qui e fermati. NON rifare render o voce, NON pubblicare.
