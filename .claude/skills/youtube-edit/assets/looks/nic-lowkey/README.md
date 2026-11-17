@@ -1,6 +1,6 @@
 # nic-lowkey
 
-Look creato il 09/11/2026 dal colore di **Nic Salvatori** (@nicsalvatori), il creator modello di Jacopo. Studio completo: `personale/youtube/inspo-nick-salvatori.md` §6.
+Look creato il 09/11/2026 dal colore di **Nic Salvatori** (@nicsalvatori), il creator modello di Jacopo. Studio completo: `social/ispirazione/inspo-nick-salvatori.md` §6.
 
 **Non è una copia del suo prima/dopo.** È il look `nic-lowkey` di `presets/vacanze-grading/preset.json`, con i numeri cercati finché 60 frame di 20 clip di Jacopo (D-Log, D-Log2, D-Log M) avevano gli stessi tratti misurati sul finito di Nic (7 episodi, senza filigrana IG, testi e archivio).
 

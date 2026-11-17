@@ -10,16 +10,16 @@ stored as a table `word -> graphic -> job`, plus the measured numbers, not as a 
 3. Transcribe it (faster-whisper; with `av` 19 pass the audio as a numpy array, not the path).
 4. For every graphic write one line in the table below: **time, the words being said, the graphic, its job**.
 5. Write the rules that come out of it (what to copy: the *logic*; what not: palette and fonts that are the creator's signature) in `taste.md`, and the new formats in `formats.md`.
-6. Keep the long write-up in the repo (`personale/youtube/inspo-<name>.md`), not here: this file only keeps the index and the shortest useful table.
+6. Keep the long write-up in the repo (`social/ispirazione/inspo-<name>.md`), not here: this file only keeps the index and the shortest useful table.
 
 ## Index
 | Reference | Date | What it taught | Where |
 |---|---|---|---|
-| Joseph (Content AI Academy), "Ho automatizzato completamente il montaggio video con Claude" (11:49, 16:9) | 01/11/2026 | the 7-step system, the "plate has a job, lands on the word" logic, formats 47-51, taste section 9 | `personale/youtube/inspo-motion-plates-joseph.md` |
-| @holcdenis, "No Blender. Just Claude" (25 s, 9:16, 3D three.js) | 13/11/2026 | render passes clay / final / ink joined by a wipe bar, one key light through blinds, motion blur on whips, 3D text in the scene; gaps in `world3d.js` (no shadows, no post) | `personale/youtube/analisi-inspo-3d-uiux.md` |
-| @charles.unemployed, "20 Principles of UX & Animation" (27 s, 9:16) | 13/11/2026 | verdict of the 20 principles on our plates: arcs, frequency of use, word-to-effect delay are new; squash & stretch is NO (taste 13); proposals NOT yet voted by Jacopo | `personale/youtube/analisi-inspo-3d-uiux.md` |
+| Joseph (Content AI Academy), "Ho automatizzato completamente il montaggio video con Claude" (11:49, 16:9) | 01/11/2026 | the 7-step system, the "plate has a job, lands on the word" logic, formats 47-51, taste section 9 | `social/ispirazione/inspo-motion-plates-joseph.md` |
+| @holcdenis, "No Blender. Just Claude" (25 s, 9:16, 3D three.js) | 13/11/2026 | render passes clay / final / ink joined by a wipe bar, one key light through blinds, motion blur on whips, 3D text in the scene; gaps in `world3d.js` (no shadows, no post) | `social/ispirazione/analisi-inspo-3d-uiux.md` |
+| @charles.unemployed, "20 Principles of UX & Animation" (27 s, 9:16) | 13/11/2026 | verdict of the 20 principles on our plates: arcs, frequency of use, word-to-effect delay are new; squash & stretch is NO (taste 13); proposals NOT yet voted by Jacopo | `social/ispirazione/analisi-inspo-3d-uiux.md` |
 | Ali Abdaal (motion plates + PiP face) | 28/10/2026 | the face PiP on every plate | `formats.md`, Explainers |
-| Nic Salvatori (@nicsalvatori), "giorno X di 60" build-in-public series | 08-09/11/2026 | low-key grade (half the frame under 17% light, black 0.3-1.8%, highlights at ~0.80, cream-warm highlights, golden skin ~61 deg, olive greens ~110 deg, low colour), small serif word-by-word subtitles, serif italic title + bars, a different visual device each episode; look `nic-lowkey` (A/B vs `pellicola-oro` still to do) | `personale/youtube/inspo-nick-salvatori.md` |
+| Nic Salvatori (@nicsalvatori), "giorno X di 60" build-in-public series | 08-09/11/2026 | low-key grade (half the frame under 17% light, black 0.3-1.8%, highlights at ~0.80, cream-warm highlights, golden skin ~61 deg, olive greens ~110 deg, low colour), small serif word-by-word subtitles, serif italic title + bars, a different visual device each episode; look `nic-lowkey` (A/B vs `pellicola-oro` still to do) | `social/ispirazione/inspo-nick-salvatori.md` |
 | Travel-film and "the power of color grading" references (@nathanthmp, @tashidelekp, @irhas.mi, @corbandelavega, @3408.outside) | 27/10/2026 | golden highlights, whites that reach white, deep blacks, grain and film feel; measure the result, never copy a before/after as a LUT | `presets/vacanze-grading/README.md` |
 | Iman Gadzhi, Callaway, Pedro Andrade, Marshall Crew, @realskytan | 19-23/10/2026 | build / annotate / orbit / dive / agenda, dot grid, outline rail | `studio.py`, `formats.md` |
 

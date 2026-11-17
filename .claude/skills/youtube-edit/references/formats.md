@@ -461,7 +461,7 @@ Rules from the creator's notes on the first test (these are the taste of the `el
 
 ### Plate formats 47-51 (01/11/2026, from the teardown of Joseph's video)
 
-Source: `personale/youtube/inspo-motion-plates-joseph.md` (what each plate does and when he places it). Built for the **`plates-verde` preset** (deep green,
+Source: `social/ispirazione/inspo-motion-plates-joseph.md` (what each plate does and when he places it). Built for the **`plates-verde` preset** (deep green,
 80 px blueprint grid, gold key word, mint for structure) but they only use the `--k-*` tokens, so any preset restyles them. Shared helpers in
 `formats/plates_base.py`; stills without the pipeline with `scripts/format-still.py`; tests in `scripts/tests/test_plates.py`.
 **Not yet used in a real video**: first use needs a blind A/B on a real window (see `format-history.md`).
@@ -559,7 +559,7 @@ word, without the blind A/B; the first real use still gets compared with the fla
 
 ### 52b. The atelier look, render passes, motion blur and depth of field in `world3d` (13/11/2026)
 
-From the teardown of a 3D reel (`personale/youtube/analisi-inspo-3d-uiux.md`). All of it is **optional and backward compatible** (a world without these calls renders exactly as before). Proofs in `videos/_bench/video-3d-moda/prove/` (local).
+From the teardown of a 3D reel (`social/ispirazione/analisi-inspo-3d-uiux.md`). All of it is **optional and backward compatible** (a world without these calls renders exactly as before). Proofs in `videos/_bench/video-3d-moda/prove/` (local).
 Jacopo has **not voted** on these yet: they entered on his request of 13/11/2026 ("implementa questi nuovi elementi"); the first real use is the 90 s video `videos/_bench/video-3d-moda/`.
 
 ```python

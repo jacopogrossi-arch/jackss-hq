@@ -1,7 +1,7 @@
 import sys, math, json, os
 sys.path.insert(0, "D:/ClaudeCodeTest/.claude/skills/fashion-3d/engine")
 from world3d import World3D
-GLB = "D:/ClaudeCodeTest/personale/youtube/short-03-tabellone/assets/trouser10b.glb"
+GLB = "D:/ClaudeCodeTest/social/short-03-tabellone/assets/trouser10b.glb"
 PI = math.pi
 SOFT = "--soft" in sys.argv
 Y = 0.04                                   # board top

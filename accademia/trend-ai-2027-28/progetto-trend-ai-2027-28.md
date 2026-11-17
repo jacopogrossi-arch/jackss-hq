@@ -8,7 +8,7 @@
 **Materiale di partenza:** 20 foto delle pagine di un trend book A/I 2027-28 → Google Drive, cartella "PROGRETTO DIGITAL" (https://drive.google.com/drive/folders/1E2SQPL9tO8E33rtl_icfX6Nbfc8pFQeh)
 
 
-> 🎬 **Per il video YouTube #2** (*Ho lasciato Claude ideare una collezione al posto mio*, script in `personale/youtube/02-claude-idea-collezione.md`): il video si fa **dopo** aver finito il progetto. Mentre si lavora, conservare il materiale:
+> 🎬 **Per il video YouTube #2** (*Ho lasciato Claude ideare una collezione al posto mio*, script in `social/video-02/02-claude-idea-collezione.md`): il video si fa **dopo** aver finito il progetto. Mentre si lavora, conservare il materiale:
 > - screenshot o registrazioni dei passaggi chiave (Claude che lavora su Canva via MCP, Pinterest, flat su ChatGPT, ricalco in Procreate, colore);
 > - chi ha fatto cosa in ogni passaggio (Claude vs Jacopo), e soprattutto **gli errori dell'AI** corretti a mano (colori, testi, foto poco credibili): sono il materiale migliore del video;
 > - perché proprio "Fuori dal feed, dentro la città" tra le 10 idee di onlife;

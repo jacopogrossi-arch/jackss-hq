@@ -2,7 +2,7 @@
 
 *Scritto il 13/11/2026 alla fine dello Short #1, per partire subito in una sessione nuova.*
 
-**Per iniziare la sessione:** "Facciamo lo Short #2 per il video #4: leggi `personale/youtube/short-02-identita/BRIEF.md` e la SOP `.claude/skills/youtube-edit/references/short-3d-sop.md`."
+**Per iniziare la sessione:** "Facciamo lo Short #2 per il video #4: leggi `social/short-02-identita/BRIEF.md` e la SOP `.claude/skills/youtube-edit/references/short-3d-sop.md`."
 
 ## Il collegamento
 - Video lungo: **#4 "Ho creato l'identità del mio brand di moda con l'AI (fallo con me)"**, https://youtu.be/aPDByKvlb5c (pubblicato 12/11/2026). Video correlato = #4.

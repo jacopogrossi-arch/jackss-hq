@@ -40,7 +40,7 @@ Music bed around -22 dB under the voice, SFX peaks around -12 dB.
 GATE: Show the storyboard first and wait for approval.
 
 DELIVERY: ≈ 11 s, 1920×1080, 30 fps, H.264. Two files: with audio and without
-(so the sound can be remixed in DaVinci). Output: personale/youtube/motion/02-capitoli-v3.mp4
+(so the sound can be remixed in DaVinci). Output: social/motion/02-capitoli-v3.mp4
 ```
 
 ## Storyboard (in attesa di approvazione)
@@ -56,6 +56,6 @@ Voce di riferimento (dallo script): *"Prima di entrare nei dettagli ti dico come
 | 5 | 8,0 – 10,2 | Il figurino finito sospeso nello spazio, una lama di luce lo attraversa, glow leggero. Testo a sinistra: **04** *Presentazione*. La camera si allontana e mostra le quattro scene come pannelli in profondità. | colpo pieno all'arrivo · coda del drone |
 | 6 | 10,2 – 11,0 | I quattro numeri restano in fila in basso a sinistra, poi taglio netto al nero. | silenzio netto |
 
-**Asset:** frasi reali da `accademia/idee-concept-trend-ai-2027-28.md`. Per ora flat e figurino sono di **After Hours** (segnaposto); nel definitivo vanno quelli del tema onlife.
+**Asset:** frasi reali da `accademia/trend-ai-2027-28/idee-concept-trend-ai-2027-28.md`. Per ora flat e figurino sono di **After Hours** (segnaposto); nel definitivo vanno quelli del tema onlife.
 
 **Fattibilità:** 3D con prospettiva CSS, motion blur fondendo più sotto-fotogrammi, audio sintetizzato in Python e unito con ffmpeg. Render stimato: alcuni minuti.

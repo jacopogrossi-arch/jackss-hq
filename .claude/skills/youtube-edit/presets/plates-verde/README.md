@@ -4,7 +4,7 @@
 
 ## Cos'è
 Le **motion plate** (scene grafiche a tutto schermo, vedi `references/formats.md` → Explainers) su **verde profondo con griglia blueprint**, parola-chiave
-in **oro**, spunte/connettori/barre in **verde menta**. Nato il 01/11/2026 dal teardown del video di Joseph (`personale/youtube/inspo-motion-plates-joseph.md`):
+in **oro**, spunte/connettori/barre in **verde menta**. Nato il 01/11/2026 dal teardown del video di Joseph (`social/ispirazione/inspo-motion-plates-joseph.md`):
 prendiamo la *logica* (una plate per idea, ingresso sulla parola che la nomina), non il suo blu elettrico. Font identici al preset `elegante-portfolio`
 (Inter + Playfair Display Italic), quindi i due preset si possono alternare nello stesso canale.
 

@@ -2,7 +2,7 @@
 
 Lo Short #1 "Il mio primo pantalone sembrava una gonna" (pubblicato il 13/11/2026, v5) è il modello. Questa procedura dice come rifarne uno da zero in una sessione nuova, senza ripagare gli errori già fatti. Va letta insieme a `explainer-3d-sop.md` (metodo Autogrill: voce, suono, mix) e a `taste.md` (note di gusto, sezioni "Short").
 
-**Progetto di riferimento:** `videos/_bench/short1/` (locale, fuori da git). Copia dei sorgenti nel repo: `personale/youtube/short-primo-pantalone/src/` (build.py, room.py, mix.py, finish.sh, transcribe.py). Per uno Short nuovo: copia la cartella `src/` in `videos/_bench/shortN/` e parti da lì.
+**Progetto di riferimento:** `videos/_bench/short1/` (locale, fuori da git). Copia dei sorgenti nel repo: `social/short-primo-pantalone/src/` (build.py, room.py, mix.py, finish.sh, transcribe.py). Per uno Short nuovo: copia la cartella `src/` in `videos/_bench/shortN/` e parti da lì.
 
 ---
 
@@ -20,7 +20,7 @@ Lo Short #1 "Il mio primo pantalone sembrava una gonna" (pubblicato il 13/11/202
 ## 1. Idea e copione (30 min)
 - Un errore o una scoperta vera, con un numero vero. Struttura: gancio (3 s) → percorso a fasi → svolta → morale → brand → "seguimi".
 - 70–90 s, ~245 parole. Fatti presi dai file del repo (mai inventati). Firma del canale: "Sono uno studente, non ho niente da venderti: sto documentando tutto". Mai "non sono un esperto".
-- Copione in `personale/youtube/<short>/script.md`, confermato da Jacopo prima della voce.
+- Copione in `social/<short>/script.md`, confermato da Jacopo prima della voce.
 
 ## 2. Voce e parole (15 min)
 1. Genera un paragrafo per volta col connettore ElevenLabs (creative_generate_speech, voce "Jacopo Prova"). I link firmati del download NON vanno nel repo.
@@ -34,7 +34,7 @@ Lo Short #1 "Il mio primo pantalone sembrava una gonna" (pubblicato il 13/11/202
 - **Camera:** `C(t, durata, pos, look, ease)`. Il semi-campo orizzontale è ~12° (fov 42, 9:16): un oggetto a più di ~12° dall'asse esce di quadro. Mai colpi di frusta sotto 1,1 s.
 - **Etichette:** `w.label(oggetto, punto, "Testo *corsivo*", t, out, anchor, dx, dy)`. Non sulla banda dei sottotitoli (y ≈ 1180) né sul bordo né sulla pillola del costo (top 118).
 
-- **Second world (Short #2, 13/11/2026):** `assets/vendor/atelier-studio.js` holds the night studio. It is loaded by `atelier-kit.js`, and the room is laid out in `videos/_bench/short2/room.py`, copied into `personale/youtube/short-02-identita/src/`. Objects:
+- **Second world (Short #2, 13/11/2026):** `assets/vendor/atelier-studio.js` holds the night studio. It is loaded by `atelier-kit.js`, and the room is laid out in `videos/_bench/short2/room.py`, copied into `social/short-02-identita/src/`. Objects:
   - `wordblocks` (letter-cube totem)
   - `seampanel` (right side / reverse side, also `dirty`)
   - `fastrail`
@@ -87,8 +87,8 @@ npx hyperframes@0.9.35 render comp --quality high --resolution portrait-4k --gpu
 
 ## 8. Pubblicazione
 - Titolo con `#shorts`, descrizione: l'errore + il numero, la morale, il percorso, la firma, il link al video lungo, max 5 hashtag.
-- **Video correlato** sempre puntato al video lungo collegato (Short #1 → #4, poi #5). Registro in `personale/youtube/piano-canale.md` › Shorts.
-- Sorgenti nel repo (`personale/youtube/<short>/src/`), note di gusto in `taste.md`, stato su Notion.
+- **Video correlato** sempre puntato al video lungo collegato (Short #1 → #4, poi #5). Registro in `social/piano-canale.md` › Shorts.
+- Sorgenti nel repo (`social/<short>/src/`), note di gusto in `taste.md`, stato su Notion.
 
 ## Narratore 3D (lezioni dello Short #3, 17/11/2026)
 Personaggio di Jacopo (GLB Tripo con scheletro Mixamo e clip riposo/spiega/energia) che racconta lo Short. Cosa ha funzionato e cosa no:

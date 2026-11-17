@@ -222,9 +222,9 @@
 ## Lista riprese
 
 **Già pronte (file e foto):**
-- [ ] Portfolio Roue Libre stampato (`accademia/Roue_Libre_portfolio_FINALE.pdf`)
-- [ ] Sketch collo giacca 1 + versioni colorate v1→v4 + finale (`accademia/img-cinque-giacche/`)
-- [ ] Stampe e modulo all-over di After Hours (`accademia/img-after-hours/`)
+- [ ] Portfolio Roue Libre stampato (`accademia/fashion-design-cinque-giacche/Roue_Libre_portfolio_FINALE.pdf`)
+- [ ] Sketch collo giacca 1 + versioni colorate v1→v4 + finale (`accademia/fashion-design-cinque-giacche/img-cinque-giacche/`)
+- [ ] Stampe e modulo all-over di After Hours (`accademia/digital-fashion-design-after-hours/img-after-hours/`)
 - [ ] Foto della prima tela del pantalone (fronte, profilo, dietro)
 
 **Da girare:**

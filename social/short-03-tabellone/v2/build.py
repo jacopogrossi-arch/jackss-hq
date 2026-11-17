@@ -30,7 +30,7 @@ def end(word, n=1):
 
 DUR = 65.0
 RED, BOSCO, RUGGINE = "#b8432a", "#2F3A2E", "#8A4B2D"
-GLB = "D:/ClaudeCodeTest/personale/youtube/short-03-tabellone/assets/trouser10b.glb"
+GLB = "D:/ClaudeCodeTest/social/short-03-tabellone/assets/trouser10b.glb"
 w = World3D("s", 0.0, DUR, fov=42, w=1080, h=1920, fade=0.4)
 w.shutter(0.5)
 

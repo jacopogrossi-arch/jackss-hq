@@ -1,6 +1,6 @@
 # Archivio
 
-Progetti chiusi o dormienti e materiale fuori tema rispetto ai progetti attivi (Inverso, accademia, YouTube personale). Niente qui dentro è in sviluppo: si consulta solo per recuperare tecniche, prompt o riferimenti.
+Progetti chiusi o dormienti e materiale fuori tema rispetto ai progetti attivi (Inverso, accademia, social). Niente qui dentro è in sviluppo: si consulta solo per recuperare tecniche, prompt o riferimenti.
 
 | Cartella | Cos'è | Perché è qui |
 |---|---|---|

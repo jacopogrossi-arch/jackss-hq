@@ -40,7 +40,7 @@ def X(t):
     return t
 
 RED, BOSCO, RUGGINE = "#b8432a", "#2F3A2E", "#8A4B2D"
-GLB = "D:/ClaudeCodeTest/personale/youtube/short-03-tabellone/assets/trouser10b.glb"
+GLB = "D:/ClaudeCodeTest/social/short-03-tabellone/assets/trouser10b.glb"
 w = World3D("s", 0.0, DUR, fov=42, w=1080, h=1920, fade=0.4)
 w.shutter(0.5)
 
@@ -123,7 +123,7 @@ def talk_windows(t0, t1):
 
 
 ENV = json.load(open(HERE + "/env.json"))                                               # voice loudness at 60 fps: the narrator moves with the speech
-OMINO = "D:/ClaudeCodeTest/personale/youtube/short-03-tabellone/assets/action-figure-anim.glb"   # PS2 toy of Jacopo (Hunyuan3D shape + colours projected from the 3 approved views)
+OMINO = "D:/ClaudeCodeTest/social/short-03-tabellone/assets/action-figure-anim.glb"   # PS2 toy of Jacopo (Hunyuan3D shape + colours projected from the 3 approved views)
 DIVE = {1: ((-2.5, 2.3, 1.25), (-2.5, 0.9, 0.2)), 2: ((0.5, 2.6, 1.9), (0.5, 0.9, 0.95)), 3: ((3.5, 1.7, 2.8), (3.5, 1.1, 0.5)),
         4: ((0.9, 2.3, 0.6), (0.9, 1.7, -2.95)), 5: ((-0.9, 1.9, 4.2), (-0.9, 1.0, 2.55))}
 

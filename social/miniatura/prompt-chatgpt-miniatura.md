@@ -5,8 +5,8 @@
 ## Immagini da caricare (in quest'ordine)
 1. **Una tua foto vera** (spalle in su, luce buona, sguardo in camera)
 2. `bozza-miniatura-e-mio.jpg` — riferimento di layout
-3. `accademia/img-cinque-giacche/giacca2-sahariana-sketch.png` — sketch
-4. `accademia/img-cinque-giacche/giacca2-outfit-FINALE.png` — figurino colorato
+3. `accademia/fashion-design-cinque-giacche/img-cinque-giacche/giacca2-sahariana-sketch.png` — sketch
+4. `accademia/fashion-design-cinque-giacche/img-cinque-giacche/giacca2-outfit-FINALE.png` — figurino colorato
 
 ## Prompt
 

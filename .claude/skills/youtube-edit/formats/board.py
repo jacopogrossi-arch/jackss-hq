@@ -30,7 +30,7 @@ HAND_JS = ("window.__hand = window.__hand || function (x) { if (x <= 0) return 0
            " window.__c40 = window.__c40 || function (x) { if (x <= 0) return 0; if (x >= 1) return 1; var a = 0, b = 1, t = x, k, u, X;"
            " for (k = 0; k < 40; k++) { t = (a + b) / 2; u = 1 - t; X = 3 * u * u * t * .5 + 3 * u * t * t * .3 + t * t * t; if (X < x) a = t; else b = t; }"
            " u = 1 - t; return 3 * u * t * t + t * t * t; };")
-ARC = 0.0                    # 13/11/2026, UX principle "moving in arcs" (personale/youtube/analisi-inspo-3d-uiux.md): 0 = straight camera moves (the voted look); 0.05 = the path bows by 5% of its length. OPT-IN, not yet voted by Jacopo: A/B it first.
+ARC = 0.0                    # 13/11/2026, UX principle "moving in arcs" (social/ispirazione/analisi-inspo-3d-uiux.md): 0 = straight camera moves (the voted look); 0.05 = the path bows by 5% of its length. OPT-IN, not yet voted by Jacopo: A/B it first.
 ARC_STEPS = 14               # an arced move is cut into this many short linear pieces (same ease on the time axis, so the speed profile does not change)
 GRID_DEPTH = 0.5             # the grid sits behind the pages and travels half as far as they do (course fake 3D, Jacopo's yes 05/11: "un dettaglio che conta"); 1 = glued to the pages
 FINISH = ('<div class="bd-fin" style="position:absolute;inset:0;z-index:50;pointer-events:none;background:radial-gradient(900px 500px at 50% 42%,rgba(255,240,200,.13),transparent 70%),'

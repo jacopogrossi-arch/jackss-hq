@@ -1,0 +1,141 @@
+# CLAUDE.md
+
+This file gives Claude Code the context to work well in this repository.
+*Ultimo aggiornamento: 17/11/2026.*
+
+---
+
+## Chi è Jacopo
+
+Giovane italiano (Roma) con un progetto imprenditoriale in sviluppo nel settore AI + moda. Studia Economia all'università e moda in accademia.
+Non è uno sviluppatore: le spiegazioni devono essere pratiche (dove cliccare, cosa copiare, dove incollare).
+
+**Principio guida: semplice e funzionante batte elegante e complesso.**
+
+Per il contesto sulla vita personale (studi, sport, persone importanti), leggere la memoria `user_personal_life.md`.
+
+**Obiettivo di fondo:** portare Inverso al Drop 1 (primo capo, pre-order) — chiudere il ciclo idea→capo→campagna→vendita.
+
+---
+
+## Mappa della repo
+
+| Cartella | Cosa c'è |
+|---|---|
+| `inverso/` | Il brand: piano, strategia, analisi marketing, ricerca sul pantalone Drop 1 |
+| `accademia/` | Progetti e consegne dell'accademia di moda |
+| `personale/` | Canale YouTube personale, letture, Mandal-Art, regali e reel personali |
+| `.claude/skills/youtube-edit/` | La skill che monta i video (script, formati, preset, look colore) |
+| `.claude/skills/fashion-3d/` | **Skill per generare video 3D in codice** (dal 16/11/2026, separata da youtube-edit): Shorts 3D, explainer 3D, mascotte, piano di realismo |
+| `archivio/video-editor-pacchetto-originale/` | Pacchetto originale della skill (README, SETUP, PROMPTS, STYLE-GUIDE) — documentazione, la skill vera è in `.claude/skills/` |
+| `videos/` | Cartelle di lavoro dei montaggi (footage, render) — **solo locale, fuori da git** |
+| `cartamodelli/` | Tool SVG per cartamodelli jeans via Claude API |
+| `assets/notion-covers/` | Cover della dashboard Notion (linkate via GitHub raw: il repo deve restare pubblico) |
+| `.agents/` | `marketing-context.md` letto da tutte le skill marketing |
+| `archivio/` | Progetti chiusi o dormienti (vedi sotto) |
+
+**Il repo è pubblico.** Materiale riservato, file enormi e asset con licenza personale stanno in `.gitignore` (footage, suoni Artlist/Epidemic, LUT e pack di terzi, slide dei docenti). Se si crea una cartella nuova di questo tipo, aggiungerla al `.gitignore` **prima** di scriverci dentro.
+
+---
+
+## Progetto principale — INVERSO (dal 13/07/2026)
+
+**Inverso** — brand menswear italiano reale, costruito in build-in-public col volto di Jacopo.
+**Prima di tutto è un progetto personale di vita e ricerca**: sviluppo del gusto creativo, ricerca su tessuti e materiali, passione per la moda. I soldi finanziano la ricerca, non sono il fine.
+
+File: `inverso/`
+- `piano-inverso.md` — piano maestro (tabella di marcia con le caselle da spuntare)
+- `briefing-2026-07-12-inverso-strategia.md` — briefing strategico fondativo
+- `concept-*.md`, `spiegazione-del-nome.md`, `bio-profili.md` — identità e racconto del brand
+- `analisi/` — analisi delle skill marketing (copywriting, psychology, social, product-marketing, idee, persona)
+- `ricerca/` — studio del pantalone Drop 1, numerato 01→15 (silhouette, scheda tecnica, cartamodello, tela di prova, materiali)
+- `logo/` — **logo definitivo di Inverso** (10/11/2026): `inverso-logo.svg` crema su nero, I romana con linee staccate, E normale
+- `mondo-del-brand.html` — **identità del brand in una pagina** (10/11/2026, nata nel video YouTube #4): visione, cliente, voci da Reddit, tono, logo, palette (gesso `#EFE9DD`, inchiostro `#1E1B18`, bosco `#2F3A2E`, ruggine `#8A4B2D`, sabbia `#B9AE98`), font (Instrument Serif + IBM Plex Sans), prossimi passi
+- `assets-jago/` — asset dell'avatar Jago (logo, palette, moodboard, caroselli)
+
+**Stato:** la prima tela di prova del pantalone è stata cucita e provata il 05/08/2026 (rilievi in `ricerca/14-prima-prova-tela-rilievi.md`): fit da correggere. Da settembre il lavoro su Inverso è fermo mentre si sono chiusi accademia e i video YouTube. Ripartire da `piano-inverso.md` §9.
+
+**Struttura:** Jacopo = volto del processo (profilo IG personale) · @inversorome = risultato/drop · Jago = modello virtuale dei lookbook · @jagoworks = congelato, vetrina servizio.
+**Marketing:** skill `/inverso-marketing` (strategia) + copywriting/psychology/social/product-marketing/marketing-ideas e le altre marketing in `.claude/skills/`. Contesto letto da tutte: `.agents/marketing-context.md`.
+**Servizi (Lookbook AI, Idea→Campione):** solo dopo il Drop 1.
+
+---
+
+## YouTube personale + montaggio video
+
+- **Canale personale** (video lunghi, non Inverso) → `social/` — README con video pubblicati e metodo copione→montaggio→miniatura→pubblicazione.
+  - #1 "Si può usare l'AI nella moda?" — pubblicato 15/10/2026
+  - #2 "Ho lasciato Claude ideare una collezione al posto mio" — pubblicato 21/10/2026, montato con la skill `youtube-edit`
+  - #3 "Come lancerei un brand di moda con l'AI (prima di lanciare il mio)" — pubblicato 06/11/2026
+  - #4 "Ho creato l'identità del mio brand di moda con l'AI (fallo con me)" — pubblicato 12/11/2026 (https://youtu.be/aPDByKvlb5c), montato con la skill `youtube-edit`; è il video in cui si rivela il nome Inverso. Mappa `04-mappa-riprese.html`, prompt `04-prompt-identita.md`, in `videos/04-identita/` restano girato, video finale 4K e note (`progetto/`)
+  - **Shorts 3D (dal 13/11/2026):** Short #1 "Il mio primo pantalone sembrava una gonna" pubblicato il 13/11 (`social/short-primo-pantalone/`, video correlato = #4). Procedura: `.claude/skills/fashion-3d/references/short-3d-sop.md`. **Short #2 "Il nome del mio brand ha tre significati"** (ritaglio del #4, scena nuova: lo studio di notte) costruito la notte del 13/11 → `social/short-02-identita/README.md`, da rivedere con Jacopo prima di pubblicarlo. **Short #3 "Quanto costa lanciare un pantalone (se non hai un brand)" pubblicato il 17/11/2026** (v6: sala campioni di notte, narratore = personaggino 3D di Jacopo fatto con Tripo AI, dentro la scena, primi piani con riser, CTA "scrivi PANTALONE") → `social/short-03-tabellone/` (README, `HANDOFF.md` con tutta la storia, sorgenti in `v6/`); lezioni in `.claude/skills/fashion-3d/references/short-3d-sop.md` ("Narratore 3D").
+  - #5 → #12 — piano in `social/piano-canale.md` (#5 = il pantalone, ~04/12; pausa esami 20/12 → 11/02)
+- **Regole di gusto video:** stanno tutte nella skill (`references/taste.md`, `sound.md`…), non in memoria (pulizia del 10/11/2026).
+- **Esami sessione 2027:** `studio-privato/` (solo locale, fuori da git): `STATO-MATERIALI.md` e `CALENDARIO-STUDIO.md`.
+- **Skill `youtube-edit`** → `.claude/skills/youtube-edit/` (`SKILL.md` = regole, `scripts/`, `formats/`, `presets/`, `references/`). Monta da clip grezza a MP4 4K. Ogni nota di gusto di Jacopo va salvata nella skill. Grading: look predefinito `pellicola-oro` (dal 27/10/2026; il WOW del 24/10 è superato).
+  - **Motion plate (dal 10/11/2026):** si costruiscono con `scripts/plates-build.py` (un file per blocco in `videos/<video>/plates/`, scelte a mano in `plates/plan.json`), mai con script di build scritti a mano. Procedura in `SKILL.md`, "The plates route".
+  - **Plate 3D (formato 52, dal 10/11/2026):** `formats/world3d.py` su three.js per capi e oggetti che ruotano con etichette agganciate, o un "mondo" di card e oggetti percorso dalla camera. Poche e brevi; il 4K a 60 fps è ancora da misurare.
+  - **Explainer 3D animati (dal 13/11/2026):** SOP-tutorial in `.claude/skills/fashion-3d/references/explainer-3d-sop.md`, kit (prodotti, vegetazione, auto, mix) in `.claude/skills/fashion-3d/formats/explainer3d/`. Primo video: "serpentone Autogrill" v2.2 (progetto in `D:\videoeditor\autogrill`, master su iCloud › Video Claude). Idea: portare il format su video informativi di moda.
+  - **HyperFrames lavora su D:** (cache, cronologia, fotogrammi) tramite tre variabili d'ambiente utente fisse, perché C: è piccolo. Dettagli in `references/traps.md`.
+- **Sound design di tutto il video editing** (YouTube, reel travel, b-roll): fonte principale **Epidemic Sound** via connettore MCP (effetti e musica, dal 28/10/2026). I file scaricati restano solo in locale (`assets/sfx/licensed/`, `assets/music/licensed/`, fuori da git). Regole in `.claude/skills/youtube-edit/references/sound.md`.
+- **Agente `video-builder`** (`.claude/agents/`) — esegue le sezioni del piano scritto dal pianificatore, non decide il design.
+- I video in lavorazione vivono in `videos/<nn-nome>/` (locale, non su GitHub).
+
+---
+
+## Accademia di Moda
+
+`accademia/` — indice in `accademia-moda.md` (specchio del hub Notion "Fashion Design").
+
+- **Digital Fashion Design — "After Hours"** (Gucci × Tom Ford) — consegnato 09/10/2026
+- **Trend A/I 2027-28** (onlife, body toll, conviviality) — `progetto-trend-ai-2027-28.md`, progetto Canva unico
+- **Fashion Design — "Cinque giacche per cinque outfit"** (Roue Libre) — `progetto-fashion-design-cinque-giacche.md`, portfolio in `Roue_Libre_portfolio_FINALE.pdf`
+- File per progetto: `concept-*`, `cartella-*`, `moodboard-*`, `outfit-*`, immagini in `img-*/`
+
+Strumento collegato: **Cartamodelli** → `cartamodelli/` (avvio: `.claude/launch.json`, configurazione `cartamodelli-tool`).
+
+---
+
+## Vita personale
+
+Materiale personale non legato a un progetto sta in `personale/`:
+
+- **YouTube personale** → `social/` (vedi sopra)
+- **Letture** (lista con tracking, personali + Inverso) → `personale/vita/letture.md`
+- **Mandal-Art set→dic 2026** (griglia 9×9 stile Ohtani del 30/08/2026: centro "venduto a uno sconosciuto" + 8 aree — capo, metterci la faccia, università, tempo, corpo, persone, Chiara, crescita; nove caselle vuote apposta) → `personale/vita/mandal-art-set-dic-2026.md`, versione da stampare in `personale/stampa/`
+- **Pannello studio** (stato rapido YouTube/accademia/università) → `personale/vita/pannello-studio.json`
+- **Reel Corsica** (serie per amici e famiglia) → `personale/reel-corsica/`
+- **Reel Zanzibar** ("The beauty of Zanzibar", IG 4:3/16:9, finito 29/10/2026) → `personale/reel-zanzibar/` (piano, script, smistamento Pocket + Nano); clip e render in `videos/zanzibar/`, video finiti su iCloud in REEL ZANZIBAR
+- **Quadretto compleanno papà** → `personale/compleanno-papa/`
+
+---
+
+## Archivio
+
+Tutto ciò che è dormiente o chiuso sta in `archivio/` (dettaglio in `archivio/README.md`):
+
+- **Canale Jago** (7 video, outreach, strategia — chiuso il 13/07/2026, Jago vive come strumento di Inverso) → `archivio/canale-jago/`. La skill `/jago-creative-director` resta per eventuali video lookbook di Inverso.
+- **Dispensa Politica Economica** (esame 8/09/2026, metodo in memoria `metodo-dispense-esami`) → `archivio/dispensa-politica-economica/`
+- **AI Content Automation** (pipeline n8n, dormiente) → `archivio/n8n-automation/`
+- **AI Image & Video** (corso completato) → `archivio/ai-content-claude/`
+- **Log Jackss** (routine dismesse) → `archivio/logs-jackss/`
+
+Fuori repo: media del canale Jago in `Desktop\archivio-jago-assets\`; dispense di Diritto Pubblico e Ragioneria in `Desktop\archivio-studio\`.
+
+---
+
+## Strumenti
+
+- **Immagini/video AI:** nessun generatore collegato al momento. Magnific non c'è più dal 09/11/2026 (Higgsfield dismesso dal 03/07/2026): non proporli. Jacopo collegherà un'API (ChatGPT o simile) per le immagini. I prompt si scrivono comunque con le skill `banana-pro-director` (immagini) e `cinema-worldbuilder-pro` (video).
+- **3D (modelli, personaggi, oggetti): Tripo AI** (dal 17/11/2026): lo genera Jacopo e mi passa il GLB, io lo alleggerisco con gli script in `.claude/skills/fashion-3d/scripts/` (`blender_optimize_glb.py`, `blender_prepare_rig.py`). Hugging Face/Hunyuan3D è stato provato e abbandonato: non riproporlo.
+- **Notion — Jackss HQ:** workspace personale con hub su AI/video, salute/sport e studio. Per stato progetti non in repo, usare il MCP Notion.
+
+---
+
+## Git workflow
+
+- Remote: github.com/jacopogrossi-arch/jackss-hq — branch `master`
+- Commit e push dopo ogni unità di lavoro significativa.
+- **Doppio salvataggio:** oltre al push su GitHub, aggiornare anche Notion (Jackss HQ, via MCP) con lo stato di avanzamento a fine di ogni unità di lavoro.
+- Stage per filename, non `git add -A`.
+- Commit messages: imperativo, cosa è cambiato e perché.

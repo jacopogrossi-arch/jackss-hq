@@ -179,6 +179,6 @@ Regola: nel video vanno **solo cifre spese davvero** (scontrini, estratti conto,
 ## Ordine di lavoro
 
 1. ❓ Fornisci i **costi veri** (tabella sopra).
-2. **Fai l'esperimento** (si può fare anche insieme, in sessione): salviamo le due schede in `personale/youtube/03-esperimento-identikit.md`.
+2. **Fai l'esperimento** (si può fare anche insieme, in sessione): salviamo le due schede in `social/video-03/03-esperimento-identikit.md`.
 3. Script v1 sui risultati veri dell'esperimento.
 4. Riprese → montaggio con `youtube-edit` (preset plates-verde).

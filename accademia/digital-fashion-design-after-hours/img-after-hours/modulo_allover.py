@@ -2,8 +2,8 @@
 from PIL import Image, ImageOps, ImageDraw, ImageChops
 import numpy as np
 
-SRC = "D:/ClaudeCodeTest/accademia/img-after-hours/allover-elementi.webp"
-OUT = "D:/ClaudeCodeTest/accademia/img-after-hours/"
+SRC = "D:/ClaudeCodeTest/accademia/digital-fashion-design-after-hours/img-after-hours/allover-elementi.webp"
+OUT = "D:/ClaudeCodeTest/accademia/digital-fashion-design-after-hours/img-after-hours/"
 T = 3780  # 32 cm a 300 dpi
 
 CHOC = (59, 38, 32)

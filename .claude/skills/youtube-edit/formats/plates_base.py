@@ -1,7 +1,7 @@
 """plates_base.py: what the plate formats share (tracker, counter, versus, diagram, uiplane).
 
 A "motion plate" is a full-frame scene (see references/formats.md, Explainers). These five formats were designed on 01/11/2026 from the
-teardown of Joseph's video (`personale/youtube/inspo-motion-plates-joseph.md`): every plate has one job, and each element lands ON the word
+teardown of Joseph's video (`social/ispirazione/inspo-motion-plates-joseph.md`): every plate has one job, and each element lands ON the word
 that names it. They use our own tokens (--k-*, see studio.py) so the preset decides colour, fonts and grid; the defaults of studio.css
 (grid_a 0) leave older storyboards untouched.
 

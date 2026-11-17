@@ -4,7 +4,7 @@
 > **Angolo (v4):** NON un video sull'accademia. È un **test**: "Ho testato Claude, gli ho fatto fare una collezione". Jacopo è **contrario** a lasciare fare tutto all'AI, ma voleva vedere quanto potesse fare da solo, senza ispirazione umana. Il compito d'esame resta sullo sfondo e non si nomina (vedi avviso 3).
 > **Durata stimata:** 10–13 minuti.
 > **Esempio seguito fino in fondo:** ONLIFE. Gli altri due temi (Royal Humour, Body Talk) nella presentazione finale.
-> **Materiale:** `accademia/progetto-trend-ai-2027-28.md` · `idee-concept-trend-ai-2027-28.md` · `figurini-trend-ai-2027-28.md`
+> **Materiale:** `accademia/trend-ai-2027-28/progetto-trend-ai-2027-28.md` · `idee-concept-trend-ai-2027-28.md` · `figurini-trend-ai-2027-28.md`
 > **Motion graphics:** `motion/` (tabella brief, scena capitoli v3, metodo audio → timing).
 
 ---
