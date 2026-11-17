@@ -7,6 +7,7 @@
 - `direzione-canale.md`, `checklist-riprese.md`
 - `video-01/` … `video-05/` — materiali di ogni video lungo
 - `short-primo-pantalone/`, `short-02-identita/`, `short-03-tabellone/` — Shorts 3D (HANDOFF.md dentro lo Short #3)
+- `assets-3d/` — oggetti 3D in stile giocattolo (Gemini → Tripo): prompt pronti in `PROMPT-COMPLETI.md`, flusso in `PRONTO-GEMINI-TRIPO.md`
 - `ispirazione/` — teardown di video di riferimento · `miniatura/`, `motion/`, `video-3d-moda/`, `fashion-3d-prove/`
 
 **Convenzioni**
