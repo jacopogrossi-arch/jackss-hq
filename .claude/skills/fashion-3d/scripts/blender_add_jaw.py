@@ -30,13 +30,15 @@ def loc(v): return v - MOUTH
 def uh(p):                                                       # (u lateral, h altezza)
     d = p - MOUTH; return d.dot(L), p.z
 
+orig = mesh.copy(); orig.data = mesh.data.copy(); sc.collection.objects.link(orig); orig.modifiers.clear()      # copia originale (per le normali)
+bpy.context.view_layer.objects.active = mesh
 # ---- 1) suddividi la zona bocca
 me = mesh.data
 bm = bmesh.new(); bm.from_mesh(me); bm.faces.ensure_lookup_table()
 box = lambda p: abs((p - MOUTH).dot(L)) < 0.030 and abs(p.z - MOUTH.z) < 0.010 and (p - MOUTH).dot(F) > -0.03
 sel = [f for f in bm.faces if box(f.calc_center_median())]
 edges = list({e for f in sel for e in f.edges})
-bmesh.ops.subdivide_edges(bm, edges=edges, cuts=3, use_grid_fill=True)
+bmesh.ops.subdivide_edges(bm, edges=edges, cuts=5, use_grid_fill=True)
 bm.faces.ensure_lookup_table()
 print('facce nella zona bocca', len(sel), '-> facce totali', len(bm.faces))
 
@@ -49,6 +51,13 @@ dark = [f for f in bm.faces if lens(f.calc_center_median()) and f.normal.dot(F) 
 for f in dark: f.material_index = 1
 print('facce scure della bocca', len(dark))
 bm.to_mesh(me); bm.free(); me.update()
+# normali: il pupazzo e' liscio grazie a NORMALI PERSONALIZZATE (senza, la geometria a faccette si vede); l'operazione sulla bocca le perde: le ritrasferisco dalla copia originale (prima delle shape keys)
+mod = mesh.modifiers.new('nrm', 'DATA_TRANSFER'); mod.object = orig; mod.use_loop_data = True; mod.data_types_loops = {'CUSTOM_NORMAL'}; mod.loop_mapping = 'POLYINTERP_NEAREST'
+bpy.context.view_layer.objects.active = mesh
+try: bpy.ops.object.modifier_move_to_index(modifier='nrm', index=0)
+except Exception as e_: print('move modifier:', e_)
+bpy.ops.object.modifier_apply(modifier='nrm')
+bpy.data.objects.remove(orig, do_unlink=True)
 
 # ---- 3) pesi della mascella (0..1) per ogni vertice
 sm = lambda x: (lambda t: t * t * (3 - 2 * t))(max(0.0, min(1.0, x)))
