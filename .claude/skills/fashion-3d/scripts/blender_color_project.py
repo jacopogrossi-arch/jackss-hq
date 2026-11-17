@@ -61,6 +61,7 @@ wf *= k_f; wb *= k_b; wl *= k_l; wr *= k_r
 wf += 1e-3*k_f; wb += 1e-3*k_b; wl += 1e-3*k_l; wr += 1e-3*k_r
 W = wf+wb+wl+wr+1e-6
 col = (c_front*wf[:, None]+c_back*wb[:, None]+c_sideL*wl[:, None]+c_sideR*wr[:, None])/W[:, None]
+col = np.where(col <= 0.04045, col/12.92, ((col+0.055)/1.055)**2.4)     # le immagini sono sRGB, l'attributo colore e il glTF sono lineari: senza questo i colori escono sbiaditi
 rgba = np.concatenate([col, np.ones((n, 1), np.float32)], axis=1)
 if 'Col' in me.color_attributes: me.color_attributes.remove(me.color_attributes['Col'])
 ca = me.color_attributes.new('Col', 'FLOAT_COLOR', 'POINT')
