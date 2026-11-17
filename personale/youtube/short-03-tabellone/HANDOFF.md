@@ -73,3 +73,8 @@ Note di Jacopo sulla v2 e cosa e' stato fatto (progetto locale `videos/_bench/sh
 
 ## 17/11 notte: OMINO SCELTO (stile PS2 low-poly, variante B3 corretta)
 Scelto da Jacopo: stile PS2 low-poly, testa grossa, occhiali da sole neri tipo Wayfarer, Barbour verde oliva aperta su maglia nera, orologio argento al polso sinistro, NIENTE collanina, jeans leggermente svasati che coprono gli stivali, stivali NERI punta quadrata. Immagini (locali, in `videos/_bench/minime-input/`): `toy-jacopo-v4-front.png`, `-side.png`, `-back.png` (confronto-v4.png). Sono l'input per l'image-to-3D (multi-vista).
+
+## 17/11 notte: DEFINITIVO + regola di regia
+- Design omino DEFINITIVO (approvato da Jacopo): copie in `videos/_bench/minime-input/DEFINITIVO/jacopo-ps2-{front,side,back}.png` (locale).
+- Jacopo ha visto la v3 ("praticamente perfetta"). UNICA modifica richiesta per la versione con l'omino nuovo: quando l'omino parla/e' animato, ZOOM di camera su di lui; poi stacco/spostamento IMMEDIATO della scena sull'argomento che sta dicendo. Cosi' si capisce che e' il NARRATORE e non un oggetto staccato dalla scena. In build.py: per ogni apparizione `me()` aggiungere cam raw sull'omino all'inizio della frase, poi cam sull'argomento.
+- Prossima sessione: Jacopo apre Blender+MCP, chiave API image-to-3D.
