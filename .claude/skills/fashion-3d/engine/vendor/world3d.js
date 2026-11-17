@@ -183,7 +183,7 @@ function glbObj(o, root) {
     if (o.fabric && x.material && /^drill/.test(x.material.name || "")) x.material = clothMat("#" + x.material.color.getHexString(THREE.SRGBColorSpace), "twill", { rough: 0.86, n: o.grain ?? 0.4, tile: o.tile ?? 2.5 });   // Blender cloth (metric uvs / TILE) gets the engine twill: no plastic look
     if (o.double && x.material) x.material.side = THREE.DoubleSide; } });
   let piv = root;
-  if (o.beat || o.env) {             // 17/11/2026: a rhythmic narrator on a still glb. While o.talk windows run: a soft bounce on every musical beat (o.beat = [period s, offset s]) and a small lean forward on each word onset (o.words); still otherwise. Pivot at the feet.
+  if (o.beat || o.env || o.segs) {             // 17/11/2026: a rhythmic narrator on a still glb. While o.talk windows run: a soft bounce on every musical beat (o.beat = [period s, offset s]) and a small lean forward on each word onset (o.words); still otherwise. Pivot at the feet.
     piv = new THREE.Group(); piv.add(root); const B = o.beat || [1, 0], amp = o.bob ?? 0.012;
     // 17/11/2026: rigged glb (Mixamo-style bones, e.g. from Tripo): the arms gesture on the voice. Rotations are given in the model frame (x side, y up, z forward) and converted to each bone's parent frame, so no bone-axis guessing.
     const bones = {}; root.traverse((x) => { if (x.isBone) { bones[x.name.replace(/^mixamorig:?/, "")] = x; x.userData.rest = x.quaternion.clone(); } });
@@ -204,15 +204,16 @@ function glbObj(o, root) {
       else { const ph = ((t - B[1]) / B[0]) % 1; pulse = Math.pow(Math.max(0, Math.cos(2 * Math.PI * (ph < 0 ? ph + 1 : ph))), 2); }
       let lean = 0; for (const wt of o.words || []) { if (wt > t) break; const d = t - wt; if (d < 0.5) lean = Math.max(lean, Math.exp(-d / 0.13)); }
       if (mixer) { piv.position.y = 0; piv.rotation.x = 0; } else { piv.position.y = k * amp * pulse; piv.rotation.x = k * (0.05 * lean + (o.env ? 0.025 * pulse : 0)); }      // with clips the body is moved only by the clips: the word-onset lean was a sudden jerk
-      if (mixer && o.segs) {         // 17/11/2026 (v7): ONE clip per shot. o.segs = [[t0, t1, clipIndex, clipOffset], ...] (plate time): inside a segment a single clip plays at normal speed from clipOffset; only the short cross-fade at the boundary (o.segFade s) ever blends two clips, so no "glitch" of half of one clip and half of another.
+      if (mixer && o.segs) {         // 17/11/2026 (v7): ONE clip per shot. o.segs = [[t0, t1, clipIndex, clipOffset, speed?], ...] (plate time): inside a segment a single clip plays at normal speed from clipOffset; only the short cross-fade at the boundary (o.segFade s) ever blends two clips, so no "glitch" of half of one clip and half of another.
         const F = o.segFade ?? 0.35, SP = o.clipSpeed ?? 1.0, sm = (u) => u * u * (3 - 2 * u), S = o.segs, n = S.length;
-        for (const c of CA) c.a.setEffectiveWeight(0);
+        const WT = CA.map(() => 0), TM = CA.map(() => 0), BEST = CA.map(() => -1);      // the same clip may appear in several segments (e.g. the still one): weights add up, the time comes from the segment with the biggest weight
         S.forEach((sg, i) => {
-          const c = CA[sg[2]]; if (!c) return;
+          const ci = sg[2], c = CA[ci]; if (!c) return;
           let wgt = 1; if (i > 0) wgt *= sm(clamp((t - sg[0]) / F)); if (i < n - 1) wgt *= sm(clamp((sg[1] - t) / F));
           if (t < sg[0] && i > 0) wgt = 0; if (t > sg[1] && i < n - 1) wgt = 0;
-          c.a.time = Math.max(0, Math.min(c.d - 0.001, (sg[3] || 0) + (t - sg[0]) * SP)); c.a.setEffectiveWeight(wgt);
+          WT[ci] += wgt; if (wgt > BEST[ci]) { BEST[ci] = wgt; TM[ci] = Math.max(0, Math.min(c.d - 0.001, (sg[3] || 0) + (t - sg[0]) * (sg[4] ?? SP))); }
         });
+        CA.forEach((c, ci) => { c.a.time = TM[ci]; c.a.setEffectiveWeight(Math.min(1, WT[ci])); });
         mixer.update(0);
       } else if (mixer) {         // smooth clip playback (17/11/2026, after "movements are jerky"): continuous clip time (never restarted on a pause), slower playback, talk state held across short pauses with long ramps, and the explaining/energetic mix driven by a slowly moving average of the voice
         const sm = (u) => u * u * (3 - 2 * u), SP = o.clipSpeed ?? 0.72;

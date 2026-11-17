@@ -146,22 +146,30 @@ WORDS_T = [round(wd["s"], 3) for wd in WORDS]
 # ---- v7 (17/11/2026): the new Tripo file has 4 clips of 10 s each (played at normal speed, no slow motion, no cutting). RULE (Jacopo): in every shot the narrator plays ONE single clip from start to end of the shot,
 # never half of one and half of another (that was the "glitch"). Close-up on an important sentence = the clip with the most hand movement; side shots = the still "relaxed" clip.
 ACT = json.load(open(HERE + "/clip-activity.json"))            # arm activity per frame (24 fps) of each clip of the glb, measured on the exported file
-_tot = [sum(c["act"]) for c in ACT]
-IDLE = _tot.index(min(_tot)); _rest = sorted((i for i in range(len(ACT)) if i != IDLE), key=lambda i: -_tot[i])
-E_MAX, E_MID, EXPL = _rest[0], _rest[1], _rest[2]               # most hands / energetic / explaining
+# The 4 animations of the Tripo file (checked frame by frame, 17/11/2026; catalogue sheet: assets/clip-catalogo.png). Indexes = order inside action-figure-anim10.glb:
+IDLE = 0        # FERMA: rilassato, braccia lungo i fianchi, quasi immobile  -> inquadrature di lato / quando non e' protagonista
+E_MID = 1       # GESTI MEDI: parla guardando in camera, braccia che si aprono e si chiudono, ritmo calmo
+E_MAX = 2       # GESTI AMPI: parla con energia, braccia larghe, mani sui fianchi, la piu' mossa -> parole importanti
+EXPL = 3        # SPIEGA: parla spiegando, palmi aperti verso la camera, movimento medio
 CLIP_FPS, CLIP_DUR = 24.0, 9.9583
 HERO_CLIP = {1: E_MAX, 2: EXPL, 3: E_MID, 4: EXPL, 5: E_MAX}    # which clip each close-up uses (k = station); the final (CTA) uses FINAL_CLIP
 FINAL_CLIP = E_MID
 FADE = 0.35
+HERO_SPEED = 1.0                                                  # playback speed of the close-up clips (1.0 = as made by Tripo)
 
 
-def _off(ci, L, high=True):
-    """Start offset in the clip (s) for a segment of length L: the window with the most (or least) hand activity, away from the first/last 0.4 s (the ends of a clip are not loops)."""
-    a = ACT[ci]["act"]; n = int(L * CLIP_FPS); lo, hi = int(0.4 * CLIP_FPS), int((CLIP_DUR - 0.4) * CLIP_FPS) - n
-    if hi <= lo: return 0.0
+def _off(ci, L, high=True, sp=1.0):
+    """Start offset in the clip (s) for a segment of length L played at speed sp: the window with the most (or least) activity, away from the first/last 0.4 s (the ends of a clip are not loops)."""
+    a = ACT[ci]["act"]; n = int(L * sp * CLIP_FPS); lo, hi = int(0.4 * CLIP_FPS), int((CLIP_DUR - 0.4) * CLIP_FPS) - n
+    if hi <= lo: return 0.4
     best = max if high else min
     k = best(range(lo, hi + 1), key=lambda i: sum(a[i:i + n]))
     return round(k / CLIP_FPS, 3)
+
+
+def _speed(L):
+    """The 10 s clips are gentle at normal speed: close-ups play faster (up to HERO_SPEED) as long as the whole segment still fits inside ONE clip (no loop, no second clip)."""
+    return round(max(1.0, min(HERO_SPEED, (CLIP_DUR - 0.9) / L)), 3)
 
 
 def _segments(t0, t1, heroes):
@@ -170,12 +178,12 @@ def _segments(t0, t1, heroes):
 
     def calm(a, b):
         while a < b - 1e-6:
-            bb = min(b, a + 9.0); segs.append([a, bb, IDLE, _off(IDLE, bb - a, False)]); a = bb - FADE
+            bb = min(b, a + 9.0); segs.append([a, bb, IDLE, _off(IDLE, bb - a, False), 1.0]); a = bb - FADE
             if bb >= b: break
     cur = t0
     for hs, he, ci in heroes:
         calm(cur, hs + FADE)
-        segs.append([hs, he, ci, _off(ci, he - hs, True)]); cur = he - FADE
+        sp_ = _speed(he - hs); segs.append([hs, he, ci, _off(ci, he - hs, True, sp_), sp_]); cur = he - FADE
     if heroes[-1][1] < t1 - 0.05: calm(cur, t1)
     return segs
 
@@ -184,8 +192,8 @@ def me(oid, pos, t0, t1, rot=0.0, height=0.2, heroes=()):
     """The narrator INSIDE the scene: he stands on a surface of the station, in perspective and lit by the room, and the camera frames him as a character of the world. v7: one Tripo clip per shot (see above)."""
     x, y, z = pos
     sg = _segments(t0, t1, heroes)
-    for q in sg: print("  %s seg %.2f-%.2f clip %d off %.2f" % (oid, q[0], q[1], q[2], q[3]))
-    w.glb(oid, OMINO, fit=height, pos=(x, -8.0, z), rot_y=rot, segs=[[a_ - _O, b_ - _O, c_, o_] for a_, b_, c_, o_ in sg], segFade=FADE, clipSpeed=1.0, bob=0,
+    for q in sg: print("  %s seg %.2f-%.2f clip %d off %.2f x%.2f" % (oid, q[0], q[1], q[2], q[3], q[4]))
+    w.glb(oid, OMINO, fit=height, pos=(x, -8.0, z), rot_y=rot, segs=[[a_ - _O, b_ - _O, c_, o_, v_] for a_, b_, c_, o_, v_ in sg], segFade=FADE, clipSpeed=1.0, bob=0,
           move=[(t0 - _O, 0.35, pos, "out"), (t1 - _O, 0.01, (x, -8.0, z), "linear")])
 
 
@@ -340,13 +348,13 @@ for k_ in range(1, 6):
     mx_, mz_ = (sum(c[2][0] for c in cams_) / len(cams_), sum(c[2][2] for c in cams_) / len(cams_)) if cams_ else (P[0], P[2] + 3)
     rot_ = math.atan2(mx_ - P[0], mz_ - P[2]) * 0.9
     t0_ = WIN[k_][0] + 0.9; t1_ = (WIN[k_][1] + 0.1) if k_ < 5 else DUR + 1.0
-    s_, e_, _x = HEROES[k_ - 1]; d_ = 1.2 * hh
+    s_, e_, _x = HEROES[k_ - 1]; d_ = 1.55 * hh      # v7: wider close-up so the hands are in frame
     HL = [(s_ - 0.55, e_ + 0.05, HERO_CLIP[k_])] if k_ < 5 else [(s_ - 0.55, e_ + 0.05, HERO_CLIP[5]), (FINAL[0] - 0.55, t1_, FINAL_CLIP)]
     me("nar%d" % k_, P, t0_, t1_, rot=rot_, height=hh, heroes=HL)
-    pos0 = (P[0] + math.sin(rot_) * d_, P[1] + 0.62 * hh, P[2] + math.cos(rot_) * d_); look0 = (P[0], P[1] + 0.80 * hh, P[2])
+    pos0 = (P[0] + math.sin(rot_) * d_, P[1] + 0.60 * hh, P[2] + math.cos(rot_) * d_); look0 = (P[0], P[1] + 0.60 * hh, P[2])
     _calls.append([s_ - 0.5, 0.45, pos0, look0, "glide", "hero"])
     if e_ - s_ > 2.2:
-        d1 = d_ * 0.88; _calls.append([s_ + 0.9, e_ - s_ - 1.1, (P[0] + math.sin(rot_) * d1, P[1] + 0.62 * hh, P[2] + math.cos(rot_) * d1), look0, "glide", "hero"])
+        d1 = d_ * 0.9; _calls.append([s_ + 0.9, e_ - s_ - 1.1, (P[0] + math.sin(rot_) * d1, P[1] + 0.60 * hh, P[2] + math.cos(rot_) * d1), look0, "glide", "hero"])
     if k_ == 5:                                                                  # final: same spot, the camera pulls back to show him with the sign behind
         dF = 2.3 * hh; _calls.append([FINAL[0] - 0.5, 0.5, (P[0], P[1] + 0.5 * hh, P[2] + dF), (P[0], P[1] + 0.78 * hh, P[2]), "glide", "hero"])
         dF2 = 2.7 * hh; _calls.append([FINAL[0] + 1.5, 4.0, (P[0], P[1] + 0.5 * hh, P[2] + dF2), (P[0], P[1] + 0.85 * hh, P[2]), "glide", "hero"])
