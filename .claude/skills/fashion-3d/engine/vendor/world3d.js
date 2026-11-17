@@ -183,13 +183,14 @@ function glbObj(o, root) {
     if (o.fabric && x.material && /^drill/.test(x.material.name || "")) x.material = clothMat("#" + x.material.color.getHexString(THREE.SRGBColorSpace), "twill", { rough: 0.86, n: o.grain ?? 0.4, tile: o.tile ?? 2.5 });   // Blender cloth (metric uvs / TILE) gets the engine twill: no plastic look
     if (o.double && x.material) x.material.side = THREE.DoubleSide; } });
   let piv = root;
-  if (o.beat) {             // 17/11/2026: a rhythmic narrator on a still glb. While o.talk windows run: a soft bounce on every musical beat (o.beat = [period s, offset s]) and a small lean forward on each word onset (o.words); still otherwise. Pivot at the feet.
-    piv = new THREE.Group(); piv.add(root); const B = o.beat, amp = o.bob ?? 0.012;
+  if (o.beat || o.env) {             // 17/11/2026: a rhythmic narrator on a still glb. While o.talk windows run: a soft bounce on every musical beat (o.beat = [period s, offset s]) and a small lean forward on each word onset (o.words); still otherwise. Pivot at the feet.
+    piv = new THREE.Group(); piv.add(root); const B = o.beat || [1, 0], amp = o.bob ?? 0.012;
     g.userData.update = (t) => {
       let k = 0; for (const w of o.talk || []) if (t >= w[0] && t <= w[1]) { k = Math.min(1, (t - w[0]) / 0.15, (w[1] - t) / 0.15); break; }
-      const ph = ((t - B[1]) / B[0]) % 1, pulse = Math.pow(Math.max(0, Math.cos(2 * Math.PI * (ph < 0 ? ph + 1 : ph))), 2);
+      let pulse; if (o.env) { const E = o.env, f = Math.max(0, t) * E[0], i = Math.min(E[1].length - 2, Math.floor(f)), u = f - i; pulse = i < 0 ? 0 : E[1][i] * (1 - u) + E[1][i + 1] * u; }     // o.env = [fps, [voice loudness 0..1]]: he moves with the speech itself
+      else { const ph = ((t - B[1]) / B[0]) % 1; pulse = Math.pow(Math.max(0, Math.cos(2 * Math.PI * (ph < 0 ? ph + 1 : ph))), 2); }
       let lean = 0; for (const wt of o.words || []) { if (wt > t) break; const d = t - wt; if (d < 0.5) lean = Math.max(lean, Math.exp(-d / 0.13)); }
-      piv.position.y = k * amp * pulse; piv.rotation.x = k * 0.05 * lean;
+      piv.position.y = k * amp * pulse; piv.rotation.x = k * (0.05 * lean + (o.env ? 0.025 * pulse : 0));
     };
     g.userData.update(0);
   }
