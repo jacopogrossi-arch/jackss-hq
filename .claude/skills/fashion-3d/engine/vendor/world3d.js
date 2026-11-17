@@ -205,7 +205,7 @@ function glbObj(o, root) {
       let lean = 0; for (const wt of o.words || []) { if (wt > t) break; const d = t - wt; if (d < 0.5) lean = Math.max(lean, Math.exp(-d / 0.13)); }
       if (mixer) { piv.position.y = 0; piv.rotation.x = 0; } else { piv.position.y = k * amp * pulse; piv.rotation.x = k * (0.05 * lean + (o.env ? 0.025 * pulse : 0)); }      // with clips the body is moved only by the clips: the word-onset lean was a sudden jerk
       if (mixer) {         // smooth clip playback (17/11/2026, after "movements are jerky"): continuous clip time (never restarted on a pause), slower playback, talk state held across short pauses with long ramps, and the explaining/energetic mix driven by a slowly moving average of the voice
-        const sm = (u) => u * u * (3 - 2 * u), SP = o.clipSpeed ?? 0.8;
+        const sm = (u) => u * u * (3 - 2 * u), SP = o.clipSpeed ?? 0.72;
         let kk = 0; for (const w of o.talk || []) { const u = Math.min(clamp((t - w[0]) / 0.55), clamp((w[1] - t) / 0.7)); kk = Math.max(kk, sm(u)); }
         let acc = 0; for (let i = 0; i < 8; i++) acc += envAt(t - i * 0.1); const em = sm(clamp((acc / 8 - 0.42) / 0.3));
         const wi = 1 - kk, wx = kk * (1 - em), we = kk * em, ph = (c, tt) => ((tt % c.d) + c.d) % c.d;
