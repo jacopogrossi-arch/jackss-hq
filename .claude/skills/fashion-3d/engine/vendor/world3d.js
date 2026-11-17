@@ -185,12 +185,27 @@ function glbObj(o, root) {
   let piv = root;
   if (o.beat || o.env) {             // 17/11/2026: a rhythmic narrator on a still glb. While o.talk windows run: a soft bounce on every musical beat (o.beat = [period s, offset s]) and a small lean forward on each word onset (o.words); still otherwise. Pivot at the feet.
     piv = new THREE.Group(); piv.add(root); const B = o.beat || [1, 0], amp = o.bob ?? 0.012;
+    // 17/11/2026: rigged glb (Mixamo-style bones, e.g. from Tripo): the arms gesture on the voice. Rotations are given in the model frame (x side, y up, z forward) and converted to each bone's parent frame, so no bone-axis guessing.
+    const bones = {}; root.traverse((x) => { if (x.isBone) { bones[x.name.replace(/^mixamorig:?/, "")] = x; x.userData.rest = x.quaternion.clone(); } });
+    const _pq = new THREE.Quaternion(), _rq = new THREE.Quaternion(), _iq = new THREE.Quaternion(), _wq = new THREE.Quaternion(), AX = new THREE.Vector3(1, 0, 0), AZ = new THREE.Vector3(0, 0, 1);
+    const rotBone = (b, axis, ang) => { if (!b) return; b.parent.getWorldQuaternion(_pq); root.getWorldQuaternion(_rq); _iq.copy(_rq).invert().multiply(_pq); _wq.setFromAxisAngle(axis, ang); b.quaternion.copy(_iq).invert().multiply(_wq).multiply(_iq).multiply(b.userData.rest); b.updateMatrixWorld(true); };
+    const envAt = (tt) => { if (!o.env) return 0; const E = o.env, f = Math.max(0, tt) * E[0], i = Math.min(E[1].length - 2, Math.floor(f)); return E[1][i] * (1 - (f - i)) + E[1][i + 1] * (f - i); };
+    const hasRig = !!(bones.RightArm && bones.RightForeArm);
     g.userData.update = (t) => {
       let k = 0; for (const w of o.talk || []) if (t >= w[0] && t <= w[1]) { k = Math.min(1, (t - w[0]) / 0.15, (w[1] - t) / 0.15); break; }
       let pulse; if (o.env) { const E = o.env, f = Math.max(0, t) * E[0], i = Math.min(E[1].length - 2, Math.floor(f)), u = f - i; pulse = i < 0 ? 0 : E[1][i] * (1 - u) + E[1][i + 1] * u; }     // o.env = [fps, [voice loudness 0..1]]: he moves with the speech itself
       else { const ph = ((t - B[1]) / B[0]) % 1; pulse = Math.pow(Math.max(0, Math.cos(2 * Math.PI * (ph < 0 ? ph + 1 : ph))), 2); }
       let lean = 0; for (const wt of o.words || []) { if (wt > t) break; const d = t - wt; if (d < 0.5) lean = Math.max(lean, Math.exp(-d / 0.13)); }
       piv.position.y = k * amp * pulse; piv.rotation.x = k * (0.05 * lean + (o.env ? 0.025 * pulse : 0));
+      if (hasRig) {         // gestures: the right arm follows the voice now, the left a quarter of a second later and smaller; each word onset adds a small beat of the forearm
+        const eR = Math.min(1, pulse), eL = Math.min(1, envAt(t - 0.25)) * 0.7, G = o.gesture ?? 1;
+        const arm = (side, e) => { const s = side === "Right" ? -1 : 1;               // facing +z, the character's right arm is on -x
+          rotBone(bones[side + "Arm"], AX, -(0.18 + 0.30 * e) * k * G); const A = bones[side + "Arm"]; if (A) rotBone(A, AZ, s * -0.10 * k * G);
+          rotBone(bones[side + "ForeArm"], AX, -(0.75 + 0.55 * e + (side === "Right" ? 0.35 * lean : 0.15 * lean)) * k * G);
+          rotBone(bones[side + "Hand"], AX, -(0.10 + 0.25 * e) * k * G); };
+        arm("Right", eR); arm("Left", eL);
+        rotBone(bones.Head, AX, 0.04 * k * eR);
+      }
     };
     g.userData.update(0);
   }
