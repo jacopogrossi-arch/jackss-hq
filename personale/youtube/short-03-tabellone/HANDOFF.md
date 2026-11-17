@@ -52,3 +52,8 @@ Note di Jacopo sulla v2 e cosa e' stato fatto (progetto locale `videos/_bench/sh
 - Stampella mancante -> gancio + barretta + due pinze.
 - "Te in miniatura": il busto di cartone con la foto e' stato BOCCIATO ("cartonato no"). Ora e' un omino stile Lego con occhiali tondi, capelli sparati in su, maglia nera, jeans con cimosa rossa, stivali texani: `.claude/skills/fashion-3d/engine/vendor/atelier-mini.js`, `w.minime(...)`. Parla (bocca, testa, mano) sulle parole. Resta il tipo `w.standee` (cartonato) nel motore, non usato.
 - Render: `short3-sala-campioni-v3.mp4` (1080x1920, 60 fps) in iCloud `Video 3D moda\`.
+
+## 17/11 sera: omino da foto (in sospeso)
+- Provato Blender headless (`.claude/skills/fashion-3d/scripts/blender_minime.py`, 2 giri): volto scolpito da script NON convince (testa a uovo, capelli a squame). Le nuove skill Blender (blender-modeling ecc.) dicono che i personaggi organici sono fuori dal loro campo.
+- Jacopo (17/11): provare image-to-3D dalla sua foto e/o le skill Blender con l'MCP. Il Blender MCP NON e' collegato in questa sessione (server `blender` in timeout; serve Blender aperto con addon connesso + riavvio sessione). Gli unici image-to-3D visibili qui sono Higgsfield `generate_3d` e Magnific `models3d_generate`, due servizi che Jacopo ha dismesso: non usati senza il suo ok.
+- Input pronti in `videos/_bench/minime-input/` (locale). Nel video v3 resta l'omino stile Lego senza occhiali.
