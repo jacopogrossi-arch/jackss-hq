@@ -182,7 +182,18 @@ function glbObj(o, root) {
   root.traverse((x) => { if (x.isMesh) { x.castShadow = true; x.receiveShadow = true;
     if (o.fabric && x.material && /^drill/.test(x.material.name || "")) x.material = clothMat("#" + x.material.color.getHexString(THREE.SRGBColorSpace), "twill", { rough: 0.86, n: o.grain ?? 0.4, tile: o.tile ?? 2.5 });   // Blender cloth (metric uvs / TILE) gets the engine twill: no plastic look
     if (o.double && x.material) x.material.side = THREE.DoubleSide; } });
-  g.add(root);
+  let piv = root;
+  if (o.beat) {             // 17/11/2026: a rhythmic narrator on a still glb. While o.talk windows run: a soft bounce on every musical beat (o.beat = [period s, offset s]) and a small lean forward on each word onset (o.words); still otherwise. Pivot at the feet.
+    piv = new THREE.Group(); piv.add(root); const B = o.beat, amp = o.bob ?? 0.012;
+    g.userData.update = (t) => {
+      let k = 0; for (const w of o.talk || []) if (t >= w[0] && t <= w[1]) { k = Math.min(1, (t - w[0]) / 0.15, (w[1] - t) / 0.15); break; }
+      const ph = ((t - B[1]) / B[0]) % 1, pulse = Math.pow(Math.max(0, Math.cos(2 * Math.PI * (ph < 0 ? ph + 1 : ph))), 2);
+      let lean = 0; for (const wt of o.words || []) { if (wt > t) break; const d = t - wt; if (d < 0.5) lean = Math.max(lean, Math.exp(-d / 0.13)); }
+      piv.position.y = k * amp * pulse; piv.rotation.x = k * 0.05 * lean;
+    };
+    g.userData.update(0);
+  }
+  g.add(piv);
   if (o.mouth) {            // 17/11/2026: a dark mouth on a still glb head, opening and shutting on o.talk windows (plate seconds); mouth = [x, y, z, width, height] in the model's own units
     const M = o.mouth, mm = new THREE.Mesh(new THREE.SphereGeometry(1, 20, 12), new THREE.MeshBasicMaterial({ color: 0x180606, toneMapped: false }));
     mm.position.set(M[0], M[1], M[2]); mm.scale.set(M[3] / 2, 0.0001, M[3] / 5); root.add(mm);
