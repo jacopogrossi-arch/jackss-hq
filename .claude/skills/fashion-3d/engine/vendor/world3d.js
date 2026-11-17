@@ -203,13 +203,15 @@ function glbObj(o, root) {
       let pulse; if (o.env) { const E = o.env, f = Math.max(0, t) * E[0], i = Math.min(E[1].length - 2, Math.floor(f)), u = f - i; pulse = i < 0 ? 0 : E[1][i] * (1 - u) + E[1][i + 1] * u; }     // o.env = [fps, [voice loudness 0..1]]: he moves with the speech itself
       else { const ph = ((t - B[1]) / B[0]) % 1; pulse = Math.pow(Math.max(0, Math.cos(2 * Math.PI * (ph < 0 ? ph + 1 : ph))), 2); }
       let lean = 0; for (const wt of o.words || []) { if (wt > t) break; const d = t - wt; if (d < 0.5) lean = Math.max(lean, Math.exp(-d / 0.13)); }
-      piv.position.y = k * amp * pulse; piv.rotation.x = k * (0.05 * lean + (o.env ? 0.025 * pulse : 0));
-      if (mixer) {
-        let w0 = null; for (const w of o.talk || []) if (t >= w[0] && t <= w[1]) { w0 = w[0]; break; }
-        const em = Math.min(1, Math.max(0, (pulse - 0.45) / 0.45)), wi = 1 - k, wx = k * (1 - em), we = k * em, ph = (c, tt) => ((tt % c.d) + c.d) % c.d;
-        if (CL.idle) { CL.idle.a.time = ph(CL.idle, t); CL.idle.a.setEffectiveWeight(wi); }
-        if (CL.explain) { CL.explain.a.time = ph(CL.explain, (w0 ?? 0) !== null ? t - (w0 ?? 0) : t); CL.explain.a.setEffectiveWeight(CL.energy ? wx : wx + we); }
-        if (CL.energy) { CL.energy.a.time = ph(CL.energy, t - (w0 ?? 0)); CL.energy.a.setEffectiveWeight(we); }
+      if (mixer) { piv.position.y = 0; piv.rotation.x = 0; } else { piv.position.y = k * amp * pulse; piv.rotation.x = k * (0.05 * lean + (o.env ? 0.025 * pulse : 0)); }      // with clips the body is moved only by the clips: the word-onset lean was a sudden jerk
+      if (mixer) {         // smooth clip playback (17/11/2026, after "movements are jerky"): continuous clip time (never restarted on a pause), slower playback, talk state held across short pauses with long ramps, and the explaining/energetic mix driven by a slowly moving average of the voice
+        const sm = (u) => u * u * (3 - 2 * u), SP = o.clipSpeed ?? 0.8;
+        let kk = 0; for (const w of o.talk || []) { const u = Math.min(clamp((t - w[0]) / 0.55), clamp((w[1] - t) / 0.7)); kk = Math.max(kk, sm(u)); }
+        let acc = 0; for (let i = 0; i < 8; i++) acc += envAt(t - i * 0.1); const em = sm(clamp((acc / 8 - 0.42) / 0.3));
+        const wi = 1 - kk, wx = kk * (1 - em), we = kk * em, ph = (c, tt) => ((tt % c.d) + c.d) % c.d;
+        if (CL.idle) { CL.idle.a.time = ph(CL.idle, t * SP); CL.idle.a.setEffectiveWeight(wi); }
+        if (CL.explain) { CL.explain.a.time = ph(CL.explain, t * SP); CL.explain.a.setEffectiveWeight(CL.energy ? wx : wx + we); }
+        if (CL.energy) { CL.energy.a.time = ph(CL.energy, t * SP + 1.7); CL.energy.a.setEffectiveWeight(we); }
         mixer.update(0);
       } else if (hasRig) {         // gestures: the right arm follows the voice now, the left a quarter of a second later and smaller; each word onset adds a small beat of the forearm
         const eR = Math.min(1, pulse), eL = Math.min(1, envAt(t - 0.25)) * 0.7, G = o.gesture ?? 1;
