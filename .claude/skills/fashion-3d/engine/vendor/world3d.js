@@ -156,6 +156,16 @@ function card(o, img) {
   const back = new THREE.Mesh(roundRect(o.w, o.h, o.radius ?? Math.min(o.w, o.h) * 0.07), new THREE.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: 0.28 }));
   back.position.set(0.012, -0.018, -0.02); const g = new THREE.Group(); g.add(back); g.add(m); return g;
 }
+// a cardboard standee: a photo cut-out (PNG with alpha, `o.img`) standing on a small base. o.w = width (m); the height follows the picture. Origin = the floor under it.
+function standee(o, img) {
+  const g = new THREE.Group(), w = o.w || 0.3, h = img ? w * img.height / img.width : w * 0.75;
+  const tex = new THREE.Texture(img); tex.colorSpace = THREE.SRGBColorSpace; tex.anisotropy = 8; tex.needsUpdate = true;
+  const m = new THREE.Mesh(new THREE.PlaneGeometry(w, h), new THREE.MeshStandardMaterial({ map: tex, roughness: 0.8, metalness: 0, side: THREE.DoubleSide, alphaTest: 0.5 }));
+  m.position.y = 0.012 + h / 2; g.add(m);
+  const base = new THREE.Mesh(new THREE.BoxGeometry(w * 0.55, 0.012, 0.07), new THREE.MeshStandardMaterial({ color: "#d9c7a0", roughness: 0.9 })); base.position.y = 0.006; base.castShadow = true; g.add(base);
+  const sh = new THREE.Mesh(new THREE.CircleGeometry(w * 0.42, 32), new THREE.MeshBasicMaterial({ color: 0x000000, transparent: true, opacity: 0.22 })); sh.rotation.x = -Math.PI / 2; sh.scale.set(1, 0.35, 1); sh.position.set(0.02, 0.003, 0.02); g.add(sh);
+  return g;
+}
 function solid(o) {
   if (KIT.has(o.type)) return kitBuild(o, { fabric, shade });
   const mat = o.fabric ? fabric(o.color || "#7b7d5a") : new THREE.MeshStandardMaterial({ color: o.color || "#f4efe6", roughness: o.rough ?? 0.6, metalness: o.metal ?? 0 });
@@ -274,7 +284,7 @@ export function mount(spec) {
 
   function build(imgs) {
     (spec.objects || []).forEach((o, n) => {
-      const m = o.type === "trouser" ? (o.hi ? kitBuild(o, { fabric, shade }) : trouser(o)) : o.type === "card" ? card(o, imgs[n]) : o.type === "glb" ? glbObj(o, imgs[n]) : solid(o);
+      const m = o.type === "trouser" ? (o.hi ? kitBuild(o, { fabric, shade }) : trouser(o)) : o.type === "card" ? card(o, imgs[n]) : o.type === "standee" ? standee(o, imgs[n]) : o.type === "glb" ? glbObj(o, imgs[n]) : solid(o);
       const g = new THREE.Group(); g.add(m); if (o.scale) m.scale.multiplyScalar(o.scale); if (m.userData && m.userData.update) updaters.push(m.userData.update);
       scene.add(g); items[o.id] = { o, g };
       const meshes = []; g.traverse((x) => { if (x.isMesh) meshes.push(x); });                      // dress it for the passes: ink outlines (hull for round things, edge lines for boxes and sheets)
@@ -392,7 +402,7 @@ export function mount(spec) {
 
   let last = T0;
   const ready = Promise.all([document.fonts.load('800 40px "Inter"'), document.fonts.load('italic 500 40px "Playfair Display"'), document.fonts.ready,
-    ...(spec.objects || []).map((o) => (o.type === "card" && o.img ? loadImage(o.img) : o.type === "glb" ? loadGlb(o.src) : Promise.resolve(null)))])
+    ...(spec.objects || []).map((o) => ((o.type === "card" || o.type === "standee") && o.img ? loadImage(o.img) : o.type === "glb" ? loadGlb(o.src) : Promise.resolve(null)))])
     .then((r) => { build(r.slice(3)); return renderer.compileAsync(scene, camera); }).then(() => { window.__w3d[spec.id] = (g, p) => { last = p == null ? g : T0 + p * DUR; renderAt(last); }; renderAt(last); });
   window.__w3d = window.__w3d || {}; window.__w3d[spec.id] = (g, p) => { last = p == null ? g : T0 + p * DUR; };      // (globalTime) or (null, progress 0-1 of the plate)
   window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady || {}; window.__hf.buildReady["w3d-" + spec.id] = ready;

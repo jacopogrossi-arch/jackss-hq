@@ -80,6 +80,10 @@ class World3D:
         """An ivory sheet standing in space: a title with one *key* word, or a picture (`img`, a path inside public/, e.g. "img/moodboard.jpg") with an optional caption."""
         return self._obj("card", oid, pos, rot_y, turn, move, t, w=w, h=h, text=text, sub=sub, img=img, color=color, size=size, pass_mode=look, flat=flat or None)
 
+    def standee(self, oid, pos, img, w=0.3, rot_y=0.0, turn=None, move=None, t=None):
+        """A cardboard standee: a photo cut-out (PNG with alpha, path inside the page, e.g. "img/me.png") on a small base. w = width in metres (height follows the picture). pos = the floor under it."""
+        return self._obj("standee", oid, pos, rot_y, turn, move, t, w=w, img=img)
+
     def solid(self, oid, shape, pos, size, color=None, fabric=False, metal=None, rough=None, rot_y=0.0, turn=None, move=None, t=None, shadow=None, look=None, radius=None):
         """A plain object: shape "box" (size x, y, z), "cyl" (diameter, height) or "sphere" (diameter). fabric=True wears the drill weave (a roll of cloth)."""
         return self._obj(shape, oid, pos, rot_y, turn, move, t, size=list(size), color=color, fabric=fabric or None, metal=metal, rough=rough, shadow=shadow, floor=pos[1] - size[1] / 2 if len(size) > 1 else None, pass_mode=look, radius=radius)

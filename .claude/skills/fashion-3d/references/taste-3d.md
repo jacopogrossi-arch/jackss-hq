@@ -70,3 +70,12 @@ Jacopo: "prima di mandare il 4K… ti fai tutti i frame, 10 per secondo… capis
 ## Blender trouser test (16/11/2026)
 - Jacopo, on the 3-way comparison (engine `trouserHi` / Blender glb in the engine / Blender Cycles): **the Blender glb in the engine "sembra molto più un pantalone"** because of the real drape and folds, despite the plastic look and defects. Bet on the Blender garment: simulated folds beat a cleaner procedural surface. Fix the plastic look (roughness, no specular shine, baked twill texture), keep the folds.
 - Front slanted pockets modelled as a dark tube + a cord on top: **"bruttissime, sembrano un filo spesso sopra"**. A pocket opening is a flat folded edge of the same cloth with a thin shadow gap behind it.
+
+## Short #3 v2 (sala campioni), review di Jacopo 17/11/2026
+- **Voce: usare `eleven_v4`, MAI `eleven_v3`.** Con "Jacopo Prova" (0CeJTHP08UsLHht7KIni) v4 ha timbro e vivacita' dello Short #2 (misurato: F0 ~148 Hz, distanza MFCC 15); v3 e' piu' grave e lontana (100 Hz, distanza 46) e a Jacopo "non somiglia e non e' espressiva". Prima di rigenerare un paragrafo confronta un campione con la voce dello Short #2 (script: confronto F0 + MFCC con librosa).
+- **Niente "pop", mai** (regola gia' in sound.md): per carte/etichette che appaiono solo swish morbidi (`es-swish-classic-filter`, `es-whoosh-soft-resonant`, `es-whoosh-generic-air`). Jacopo ha sentito i pop (`es-pops6`) a 0:10, 0:23, 0:35, 0:53 e li ha bocciati.
+- **Non riusare l'apertura di un altro Short** (il logo che gira era gia' nello Short #2): aprire con un'altra immagine forte (qui il pantalone appeso con "€ ?"); il logo va alla fine.
+- **Una plate col prezzo entra quando il prezzo viene DETTO e resta visibile almeno 1,2 s** (non prima, non via subito): se serve, allungare la pausa della voce prima del cambio di scena.
+- **CTA chiara: dire COSA si riceve** ("scrivi PANTALONE e ti dico il prezzo finale"), non "il prossimo tiro".
+- **Un oggetto 'appeso' ha la stampella** (gancio, barretta, due pinze).
+- **Jacopo in miniatura: SI', ma non il cartoon.** Busto di cartone con la sua foto vera (tipo sticker con bordo bianco) che sta sui tavoli e saltella sulle parole che dice. Nuovo tipo di oggetto del motore: `w.standee(oid, pos, "img/me.png", w=...)` (PNG con alpha). Il ritaglio si fa con GrabCut da un fotogramma del girato (rect + maschera), foto solo in locale (repo pubblico).
