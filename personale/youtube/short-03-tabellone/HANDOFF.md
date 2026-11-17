@@ -78,3 +78,15 @@ Scelto da Jacopo: stile PS2 low-poly, testa grossa, occhiali da sole neri tipo W
 - Design omino DEFINITIVO (approvato da Jacopo): copie in `videos/_bench/minime-input/DEFINITIVO/jacopo-ps2-{front,side,back}.png` (locale).
 - Jacopo ha visto la v3 ("praticamente perfetta"). UNICA modifica richiesta per la versione con l'omino nuovo: quando l'omino parla/e' animato, ZOOM di camera su di lui; poi stacco/spostamento IMMEDIATO della scena sull'argomento che sta dicendo. Cosi' si capisce che e' il NARRATORE e non un oggetto staccato dalla scena. In build.py: per ogni apparizione `me()` aggiungere cam raw sull'omino all'inizio della frase, poi cam sull'argomento.
 - Prossima sessione: Jacopo apre Blender+MCP, chiave API image-to-3D.
+
+## 17/11 notte: STATO PER LA NUOVA SESSIONE (leggi questo per primo)
+**Obiettivo:** sostituire l'omino Lego di `short3c/build.py` (`me()`) con l'omino PS2 definitivo in 3D vero, poi render 1080p60. v3 approvata da Jacopo ("praticamente perfetta"): cambia SOLO l'omino + regola di regia (zoom su di lui quando parla, poi stacco subito sull'argomento).
+**Immagini definitive (locali):** `videos/_bench/minime-input/DEFINITIVO/jacopo-ps2-{front,side,back}.png`.
+**Image-to-3D, cronologia:**
+- Tripo/Meshy: export GLB solo con abbonamento (12 euro): Jacopo non vuole.
+- fal.ai: ricarica minima 10 euro: scartato. Chiave `FAL_KEY` messa in `.env` ma NON usata (puo' essere cancellata).
+- Scelta attuale: Hunyuan3D open source su Hugging Face (Space `tencent/Hunyuan3D-2mv` = multi-vista fronte/lato/retro, oppure `Hunyuan3D-2.1` per le texture a colori). Jacopo ha finito la quota ZeroGPU gratuita, poi ha caricato credito su Hugging Face.
+- Jacopo installa l'MCP Hugging Face: `claude mcp add hf-mcp-server -t http "https://huggingface.co/mcp?login"` + login con `/mcp` in sessione nuova. Con quello chiamare il Space Hunyuan3D (tool `dynamic_space`) e scaricare il GLB. Se non funziona, Jacopo usa la pagina web e mi da' il GLB in `videos/_bench/minime-input/`.
+**Impostazioni 3D consigliate:** formato GLB, texture a colori, ~30.000 triangoli (stile PS2), niente luci cotte nelle texture, posa A.
+**Dopo il GLB:** Blender (MCP se collegato, altrimenti headless `"C:\Program Files\Blender Foundation\Blender 5.1\blender.exe" -b -P script.py`): scala, orientamento, pulizia, controllo texture -> `w.glb(..., fit~0.3)`. Animazione parlata: dondolio/rotazione della testa e del busto sui `talk` windows (il GLB e' statico).
+**Da dire a Jacopo all'inizio:** aprire Blender con addon connesso (MCP), verificare `/mcp`.
