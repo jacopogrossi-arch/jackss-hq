@@ -1,9 +1,9 @@
 #!/bin/bash
 # Prepara un GLB arrivato da Tripo per il motore: (1) decomprime EXT_meshopt se serve, (2) alleggerisce (decimazione + texture), (3) fa 4 viste di controllo.
-# Uso: bash prepare_prop.sh input.glb cartella_output [triangoli=100000] [texture_px=2048]
+# Uso: bash prepare_prop.sh input.glb cartella_output [triangoli=250000] [texture_px=2048]
 # Richiede: Blender 5.1, Node/npx (gltf-transform si scarica da solo).
 set -e
-IN="$1"; OUT="$2"; TRIS="${3:-100000}"; TEX="${4:-2048}"
+IN="$1"; OUT="$2"; TRIS="${3:-250000}"; TEX="${4:-2048}"
 BL="C:/Program Files/Blender Foundation/Blender 5.1/blender.exe"; SK="D:/ClaudeCodeTest/.claude/skills/fashion-3d/scripts"
 mkdir -p "$OUT"; NAME=$(basename "$IN" .glb)
 cp "$IN" "$OUT/$NAME-orig.glb"

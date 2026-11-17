@@ -9,7 +9,7 @@ bpy.ops.import_scene.gltf(filepath=IN)
 ob = [o for o in bpy.context.scene.objects if o.type == 'MESH'][0]
 bpy.context.view_layer.objects.active = ob; ob.select_set(True); bpy.ops.object.transform_apply(location=True, rotation=True, scale=True)
 n0 = sum(len(p.vertices)-2 for p in ob.data.polygons)
-m = ob.modifiers.new('dec', 'DECIMATE'); m.decimate_type = 'COLLAPSE'; m.ratio = min(1.0, TRIS/max(n0, 1)); m.use_collapse_triangulate = True
+m = ob.modifiers.new('dec', 'DECIMATE'); m.decimate_type = 'COLLAPSE'; m.ratio = min(1.0, TRIS/max(n0, 1)); m.use_collapse_triangulate = True; m.delimit = {'UV'}   # 17/11: senza delimit UV la decimazione scompone le isole di texture e compaiono puntini bianchi/scuri
 bpy.ops.object.modifier_apply(modifier='dec')
 for p in ob.data.polygons: p.use_smooth = True
 print('triangoli', n0, '->', len(ob.data.polygons))
