@@ -179,7 +179,8 @@ function glbObj(o, root) {
   const g = new THREE.Group(); if (!root) return g;
   if (o.fit) { const sz = new THREE.Box3().setFromObject(root).getSize(new THREE.Vector3()); root.scale.multiplyScalar(o.fit / Math.max(sz.y, 1e-6)); }
   root.updateMatrixWorld(true); const b = new THREE.Box3().setFromObject(root); root.position.x -= (b.min.x + b.max.x) / 2; root.position.z -= (b.min.z + b.max.z) / 2; root.position.y -= b.min.y;
-  root.traverse((x) => { if (x.isMesh) { x.castShadow = true; x.receiveShadow = true;
+  root.traverse((x) => { if (x.isMesh) { x.castShadow = true; x.receiveShadow = o.recv !== false;      // o.recv=false: the shadow map covers the whole room (~3 mm/texel): on a 30 cm figure it shows as pixel blocks on the face
+   
     if (o.fabric && x.material && /^drill/.test(x.material.name || "")) x.material = clothMat("#" + x.material.color.getHexString(THREE.SRGBColorSpace), "twill", { rough: 0.86, n: o.grain ?? 0.4, tile: o.tile ?? 2.5 });   // Blender cloth (metric uvs / TILE) gets the engine twill: no plastic look
     if (o.double && x.material) x.material.side = THREE.DoubleSide; } });
   let piv = root;

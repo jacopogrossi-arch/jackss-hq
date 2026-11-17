@@ -51,7 +51,7 @@ def qexp(t):
 # ---------- 1) campiona le clip
 bones = [b.name for b in arm.pose.bones]
 ARM = [n for n in bones if any(s in n for s in ('Left', 'Right')) and any(s in n for s in ('Shoulder', 'Arm', 'Hand')) and not any(s in n for s in ('Leg', 'Foot', 'Toe'))]
-TORSO = [n for n in bones if n.split(':')[-1] in ('Spine', 'Spine1', 'Spine2', 'Neck', 'Head')]
+TORSO = [n for n in bones if n.split(':')[-1] in ('Hips', 'Spine', 'Spine1', 'Spine2', 'Neck', 'Head')]
 print('ossa braccia/mani', len(ARM), 'busto/testa', TORSO)
 clips = {}
 for act in bpy.data.actions:
@@ -94,6 +94,11 @@ Tm = T.mean(0); U, S, Vt = np.linalg.svd(T - Tm, full_matrices=False)
 NPC = 4; sig = S[:NPC] / np.sqrt(len(T)); PCs = Vt[:NPC]
 torso_idle = np.concatenate([clips[idle_name][b].mean(axis=0) for b in TORSO])
 print('componenti busto/testa: sigma', np.round(sig, 3))
+# il corpo segue le braccia: regressione (ridge) del busto/anche sulle prime componenti della posa delle braccia, imparata dalle clip (in un'animazione vera il busto si muove con i gesti)
+Xm = X.mean(0); _, SX, VX = np.linalg.svd(X - Xm, full_matrices=False); NZ = 8; PX = VX[:NZ]
+Z = (X - Xm) @ PX.T; lam = 0.5 * len(Z)
+BR = np.linalg.solve(Z.T @ Z + lam * np.eye(NZ), Z.T @ (T - Tm))                # (NZ, 3*ossa_busto)
+print('regressione braccia->corpo: residuo %.2f della varianza' % (((T - Tm - Z @ BR) ** 2).sum() / ((T - Tm) ** 2).sum()))
 
 
 # quale componente e' un "cenno" (testa verso avanti/basso)? lo misuro sul rig
@@ -163,7 +168,7 @@ for (a0, hold_to, k, gap_after), (a1, *_r) in zip(seq, seq[1:] + [(DUR, 0, 0, 0)
     if i1 > i0: target[i0:i1] = IDLE_I if (a1 - hold_to) > 0.9 else 0       # pausa lunga: riposo; corta: posa bassa di transizione
 
 # molla smorzata sui pesi (overshoot leggero)
-OM, ZE = 9.0, 0.78; dt = 1 / 60
+OM, ZE = 8.0, 0.60; dt = 1 / 60
 w_ = np.zeros(K1); w_[IDLE_I] = 1; vel = np.zeros(K1); WH = np.zeros((NS, K1))
 for i in range(NS):
     tgt = np.zeros(K1); tgt[target[i]] = 1
@@ -184,6 +189,13 @@ for t, cls, *_x in events:                                       # cenno sugli a
     i = int(t * 60); L = int(0.45 * 60)
     for q in range(L):
         if i + q < NS: nod_env[i + q] += (0.5 + 0.35 * cls) * math.sin(math.pi * q / L) ** 2
+BEAT_G, BODY_G = 0.22, 1.5
+bump = np.zeros(NS)                                              # colpetto all'attacco di ogni parola (decade in ~0.12 s)
+for w in W:
+    i0 = int(w['s'] * 60); amp = 0.4 + 0.6 * loud(w['s'], w['e'])
+    for q in range(int(0.5 * 60)):
+        if i0 + q < NS: bump[i0 + q] += amp * math.exp(-q / (0.12 * 60))
+bump = np.clip(bump, 0, 1.6)
 print('keyframes: 30 fps x', int(DUR * FPS_OUT), 'frame x', len(ARM) + len(TORSO), 'ossa')
 
 # ---------- 3) scrivi l'azione
@@ -194,10 +206,17 @@ nF = int(DUR * FPS_OUT) + 1
 for fi in range(nF):
     i = min(NS - 1, int(fi / FPS_OUT * 60))
     for bi, b in enumerate(ARM):
-        side_lag = 6 if 'Left' in b else 0                      # il sinistro e' in ritardo di 0.1 s
-        v = pose_at(i, side_lag)[3 * bi:3 * bi + 3] + noise_arm[bi][i] * arm_std[3 * bi:3 * bi + 3] * 0.18
+        nm = b.split(':')[-1]
+        dl = 0 if ('Shoulder' in nm or nm.endswith('Arm') and 'Fore' not in nm) else 4 if 'ForeArm' in nm else 8 if nm.endswith('Hand') else 11      # il gesto parte dalla spalla e "frusta" verso mano e dita
+        side_lag = dl + (6 if 'Left' in b else 0)                      # il sinistro e' in ritardo di 0.1 s
+        base_ = pose_at(i, side_lag)
+        v = base_[3 * bi:3 * bi + 3]
+        if dl >= 4: v = v + BEAT_G * bump[max(0, i - side_lag)] * (v - IDLE[3 * bi:3 * bi + 3])        # colpetto su ogni parola, solo avambraccio/mano/dita
+        v = v + noise_arm[bi][i] * arm_std[3 * bi:3 * bi + 3] * 0.32
         pb = arm.pose.bones[b]; pb.rotation_quaternion = qexp(v).tolist(); pb.keyframe_insert('rotation_quaternion', frame=fi + 1)
-    tv = torso_idle + (0.35 + 0.65 * E[i]) * sum(sig[k] * pcn[k][i] * PCs[k] * 0.9 for k in range(NPC)) + NOD_SIGN * 0.9 * sig[NOD_PC] * nod_env[i] * PCs[NOD_PC]
+    pv = pose_at(i, 3)
+    coup = (((pv - Xm) @ PX.T) @ BR) * BODY_G                            # il corpo segue le braccia (appreso dalle clip)
+    tv = torso_idle + Tm * 0 + coup + (0.5 + 0.9 * E[i]) * sum(sig[k] * pcn[k][i] * PCs[k] * 1.1 for k in range(NPC)) + NOD_SIGN * 0.9 * sig[NOD_PC] * nod_env[i] * PCs[NOD_PC]
     for bi, b in enumerate(TORSO):
         pb = arm.pose.bones[b]; pb.rotation_quaternion = qexp(tv[3 * bi:3 * bi + 3]).tolist(); pb.keyframe_insert('rotation_quaternion', frame=fi + 1)
 sc.frame_start, sc.frame_end = 1, nF

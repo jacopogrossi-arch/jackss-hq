@@ -194,7 +194,7 @@ def me(oid, pos, t0, t1, rot=0.0, height=0.2, heroes=()):
     x, y, z = pos
     sg = [[0.0, DUR + 1.0, 0, 0.0, 1.0]]      # v8: ONE long clip = the whole speech-driven performance (blender_perf.py), played in function of the global time
     for q in sg: print("  %s seg %.2f-%.2f clip %d off %.2f x%.2f" % (oid, q[0], q[1], q[2], q[3], q[4]))
-    w.glb(oid, OMINO, fit=height, pos=(x, -8.0, z), rot_y=rot, segs=[[a_ - _O, b_ - _O, c_, o_, v_] for a_, b_, c_, o_, v_ in sg], segFade=FADE, clipSpeed=1.0, bob=0, jaw=[60, JAW[int(_O * 60):]], jawGain=1.0,
+    w.glb(oid, OMINO, fit=height, pos=(x, -8.0, z), rot_y=rot, segs=[[a_ - _O, b_ - _O, c_, o_, v_] for a_, b_, c_, o_, v_ in sg], segFade=FADE, clipSpeed=1.0, bob=0, jaw=[60, JAW[int(_O * 60):]], jawGain=1.0, recv=False,
           move=[(t0 - _O, 0.35, pos, "out"), (t1 - _O, 0.01, (x, -8.0, z), "linear")])
 
 
