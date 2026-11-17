@@ -95,7 +95,7 @@ def noise_displace(o, strength, size):
 # ------------------------------------------------------------------------------------------------ the face texture (skin, stubble, blush, freckles)
 def skin_image():
     S = 1024; yy, xx = np.mgrid[0:S, 0:S].astype(np.float32) / S
-    base = np.array([0.88, 0.68, 0.53], np.float32); img = np.ones((S, S, 3), np.float32) * base
+    base = np.array([0.84, 0.60, 0.44], np.float32); img = np.ones((S, S, 3), np.float32) * base
     rng = np.random.default_rng(3)
     jaw = np.clip((0.40 - yy) / 0.22, 0, 1) * (np.abs(xx - 0.5) < 0.36)                     # v small = low on the head
     img *= (1 - 0.10 * jaw[..., None])
@@ -129,10 +129,10 @@ def build(open_mouth, preview_prefix=None):
     drop = 0.0065 if open_mouth else 0.0
     for v in bm.verts:
         x, y, z = v.co.x, v.co.y, v.co.z; fy = -y                                                     # fy > 0 = toward the face (-Y)
-        X, Y, Z = x * 0.050, y * 0.056, z * 0.060
+        X, Y, Z = x * 0.055, y * 0.058, z * 0.062
         lo = sm((-z - 0.05) / 0.9)                                                                      # 0 at the equator, 1 at the chin
-        X *= 1 - 0.34 * lo ** 1.4                                                                        # narrower jaw
-        Y *= 1 - 0.12 * lo; Z -= 0.0035 * lo * fy                                                       # a firm chin line
+        X *= 1 - 0.17 * lo ** 1.6                                                                        # narrower jaw
+        Y *= 1 - 0.06 * lo; Z += 0.004 * lo * fy                                                       # a firm chin line
         X *= 1 + 0.05 * sm(1 - abs(z + 0.05) / 0.35) * sm(fy)                                          # cheekbones
         Y -= 0.003 * sm(fy) * sm((z - 0.15) / 0.5)                                                      # forehead pushed forward
         Y -= 0.002 * sm(fy) * sm(1 - abs(z + 0.4) / 0.2)                                               # a little chin
@@ -155,15 +155,10 @@ def build(open_mouth, preview_prefix=None):
         parts.append(ellipsoid("iris%d" % sd, 0.0066, IRIS, (ex, cy - 0.0089, ez), (1, 0.32, 1), subd=1))
         parts.append(ellipsoid("pupil%d" % sd, 0.0031, PUPIL, (ex, cy - 0.0103, ez), (1, 0.3, 1), subd=1, seg=16))
         parts.append(ellipsoid("glint%d" % sd, 0.0012, GLINT, (ex + 0.0022, cy - 0.0112, ez + 0.0028), (1, 0.4, 1), subd=0, seg=12))
-        bm2 = bmesh.new(); bmesh.ops.create_uvsphere(bm2, u_segments=24, v_segments=14, radius=0.0116)
-        bmesh.ops.delete(bm2, geom=[f for f in bm2.faces if f.calc_center_median().z < 0.0012], context="FACES")
-        me2 = bpy.data.meshes.new("lid%d" % sd); bm2.to_mesh(me2); bm2.free(); lid = add("lid%d" % sd, me2, SKIN, (ex, cy, ez + 0.0006), subd=1); lid.rotation_euler = (math.radians(-12), 0, 0); parts.append(lid)
-        # eyebrow: thick, arched
-        pts = []
-        for k in range(5):
-            u = k / 4; bx = sd * lerp(0.0085, 0.0365, u); bz = 0.0295 + 0.0048 * math.sin(u * math.pi) - 0.0012 * u; s = surf(bx, bz)
-            pts.append((bx, s.y - 0.0007, bz))
-        parts.append(curve("brow%d" % sd, pts, BROW, depth=0.0024, radii=[0.7, 1.0, 1.0, 0.9, 0.55]))
+        # eyebrow: thick brush strokes along an arch
+        for k in range(4):
+            u = k / 3; bx = sd * lerp(0.0095, 0.0365, u); bz = 0.0305 + 0.0052 * math.sin(u * math.pi) - 0.0016 * u; sp2 = surf(bx, bz)
+            bro = ellipsoid("brow%d_%d" % (sd, k), 0.01, BROW, (bx, sp2.y + 0.0002, bz), (0.62 - 0.07 * u, 0.20, 0.26), (0, sd * 0.1, sd * (0.18 - 0.38 * u)), subd=1, seg=16); parts.append(bro)
         # ear
         ea = ellipsoid("ear%d" % sd, 0.01, SKIN, (sd * 0.0485, 0.004, -0.0035), (0.55, 0.9, 1.4), subd=1); parts.append(ea)
     # ---------------- nose and mouth
@@ -192,12 +187,12 @@ def build(open_mouth, preview_prefix=None):
         if c.z < hairline(ph, c.z) - 0.001: dele.append(f)
     bmesh.ops.delete(bmc, geom=dele, context="FACES")
     for v in bmc.verts:
-        n = v.normal; v.co += n * 0.0016
+        n = v.normal; v.co += n * 0.0035
     mc = bpy.data.meshes.new("scalp"); bmc.to_mesh(mc); bmc.free(); parts.append(add("scalp", mc, HAIR3, (0, 0, 0), smooth=True, subd=1))
-    cu = bpy.data.curves.new("hair", "CURVE"); cu.dimensions = "3D"; cu.bevel_depth = 0.0019; cu.bevel_resolution = 2; cu.resolution_u = 5; cu.use_fill_caps = False
+    cu = bpy.data.curves.new("hair", "CURVE"); cu.dimensions = "3D"; cu.bevel_depth = 0.0030; cu.bevel_resolution = 2; cu.resolution_u = 5; cu.use_fill_caps = False
     up = Vector((0, 0, 1)); back = Vector((0, 1, 0)); n_strands = 0
     rng = random.Random(5)
-    for _ in range(2600):
+    for _ in range(6000):
         # a random direction from the head centre -> a point on the scalp
         th = math.acos(1 - rng.random() * 1.45)                  # 0 = straight up
         ph = rng.uniform(-math.pi, math.pi)
@@ -206,10 +201,10 @@ def build(open_mouth, preview_prefix=None):
         if not hit[0]: continue
         p, n = hit[0], hit[1]
         if p.z < hairline(ph, p.z): continue
-        if rng.random() > 0.17: continue
+        if rng.random() > 0.40: continue
         front = sm((-p.y + 0.01) / 0.05) * sm((p.z - 0.02) / 0.03)
         top = sm((p.z - 0.03) / 0.03)
-        L = lerp(0.014, 0.034, top) * rng.uniform(0.8, 1.2) * lerp(1.0, 1.15, front)
+        L = lerp(0.016, 0.036, top) * rng.uniform(0.8, 1.2) * lerp(1.0, 1.2, front)
         comb = (up * 0.95 + back * (0.25 + 0.5 * (1 - front)) + Vector((rng.uniform(-0.2, 0.2), -0.25 * front, 0))).normalized()
         side = (1 - top)
         dir0 = (n * (0.6 + 0.4 * top) + comb * (0.5 * top)).normalized()
@@ -244,18 +239,16 @@ def build(open_mouth, preview_prefix=None):
         sx = sd * 0.0655
         sleeve = loft_z("sleeve%d" % sd, [(0.012, 0, 0, 0.0225, 0.0235), (0, 0, 0, 0.0255, 0.027), (-0.022, 0, 0, 0.0268, 0.0278), (-0.048, 0, 0, 0.0300, 0.0305)], 26, TEE, loc=(sx, 0, 0.335), rot=(0, sd * 0.22, 0), subd=2, caps=(True, True))
         noise_displace(sleeve, 0.0009, 0.04)
-        arm = loft_z("arm%d" % sd, [(-0.040, 0, 0, 0.0128, 0.0132), (-0.085, 0, 0, 0.0118, 0.0122), (-0.108, 0, 0, 0.0126, 0.0118), (-0.122, 0, 0, 0.0142, 0.0095), (-0.140, 0, 0, 0.0128, 0.0078), (-0.151, 0, 0, 0.0070, 0.0050), (-0.1545, 0, 0, 0.0025, 0.0022)], 22, SKIN, loc=(sx, 0, 0.335), rot=(0, sd * 0.22, 0), subd=2)
-        thumb = ellipsoid("thumb%d" % sd, 0.01, SKIN, (sx + sd * 0.0095, -0.0075, 0.335 - 0.127), (0.42, 0.42, 1.1), (0, sd * 0.1, 0), subd=1)
-        thumb.location = arm.matrix_world @ Vector((sd * (-0.0105), -0.0095, -0.128)) if False else thumb.location
+        arm = loft_z("arm%d" % sd, [(-0.040, 0, 0, 0.0145, 0.0148), (-0.085, 0, 0, 0.0132, 0.0138), (-0.108, 0, 0, 0.0142, 0.0132), (-0.122, 0, 0, 0.0178, 0.0128), (-0.142, 0, 0, 0.0170, 0.0112), (-0.158, 0, 0, 0.0105, 0.0078), (-0.1635, 0, 0, 0.0040, 0.0035)], 22, SKIN, loc=(sx, 0, 0.335), rot=(0, sd * 0.22, 0), subd=2)
     # ---------------- lighting + camera for the previews
     if preview_prefix and PREVIEW:
         scn = bpy.context.scene; scn.render.engine = "CYCLES"; scn.cycles.device = "CPU"; scn.cycles.samples = 40; scn.cycles.use_denoising = True
         scn.render.resolution_x = 640; scn.render.resolution_y = 860; scn.render.film_transparent = False
-        wd = bpy.data.worlds.new("w"); wd.use_nodes = True; wd.node_tree.nodes["Background"].inputs["Color"].default_value = hexc("#8a7660"); wd.node_tree.nodes["Background"].inputs["Strength"].default_value = 0.9; scn.world = wd
+        wd = bpy.data.worlds.new("w"); wd.use_nodes = True; wd.node_tree.nodes["Background"].inputs["Color"].default_value = hexc("#8a7660"); wd.node_tree.nodes["Background"].inputs["Strength"].default_value = 0.55; scn.world = wd
         def light(name, loc, energy, size):
             l = bpy.data.lights.new(name, "AREA"); l.energy = energy; l.size = size; o = bpy.data.objects.new(name, l); bpy.context.scene.collection.objects.link(o); o.location = loc
             d = Vector((0, 0, 0.26)) - Vector(loc); o.rotation_euler = d.to_track_quat("-Z", "Y").to_euler()
-        light("key", (0.5, -1.0, 0.8), 90, 0.8); light("fill", (-0.7, -0.8, 0.4), 30, 1.0); light("rim", (0.1, 0.9, 0.7), 60, 0.8)
+        light("key", (0.5, -1.0, 0.8), 55, 0.8); light("fill", (-0.7, -0.8, 0.4), 18, 1.0); light("rim", (0.1, 0.9, 0.7), 40, 0.8)
         fl = bpy.data.objects.new("floor", bpy.data.meshes.new("floor")); bm3 = bmesh.new(); bmesh.ops.create_grid(bm3, x_segments=1, y_segments=1, size=2.0); bm3.to_mesh(fl.data); bm3.free(); fl.data.materials.append(material("floor", "#a56a3f", 0.7)); bpy.context.scene.collection.objects.link(fl)
         cam = bpy.data.cameras.new("cam"); cam.lens = 55; co = bpy.data.objects.new("cam", cam); bpy.context.scene.collection.objects.link(co); scn.camera = co
         shots = {"front": ((0.0, -1.55, 0.27), (0, 0, 0.26)), "three": ((0.55, -1.25, 0.30), (0, 0, 0.27)), "head": ((0.0, -0.42, 0.44), (0, 0, 0.43)), "head3": ((0.25, -0.38, 0.45), (0, 0, 0.44)), "back": ((0.2, 1.4, 0.40), (0, 0, 0.36))}
