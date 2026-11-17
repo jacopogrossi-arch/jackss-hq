@@ -1,5 +1,12 @@
 # Oggetti 3D in stile giocattolo: Gemini → Tripo → Claude
 
+## STATO al 17/11/2026 sera: FATTO, pronto da usare negli Shorts
+- **7 oggetti pronti** (laptop, fotocamera su treppiede, macchina da cucire, pantalone, rotoli di tessuto, forbici, manichino): `D:/ClaudeCodeTest/videos/_bench/assets3d/finali/*.glb` (~250.000 triangoli e ~12 MB l'uno, locali, fuori da git). Anteprima con il narratore: `anteprima-oggetti-3d.jpg` (qui accanto).
+- **Scena di esempio** con luce notturna + narratore + i 7 oggetti: `scena-oggetti.py` (qui accanto). Si copia nel build.py di uno Short e si usa `w.glb(nome, file, fit=altezza, pos=..., double=True)`.
+- **Immagini Gemini** (le 7 + le varianti del pantalone): `social/assets-3d/gemini/`; il pantalone usato è la variante D.
+- **Trappole già pagate:** (1) decimare un GLB Tripo senza `delimit UV` lascia puntini bianchi/scuri "vintage": ora `blender_optimize_glb.py` lo fa giusto e `prepare_prop.sh` parte da 250.000 triangoli; (2) per il narratore `recv=False`, altrimenti pixel sul viso; (3) le forbici sono piatte: dall'alto o in diagonale, di fronte sono quasi invisibili; (4) la macchina da cucire ha ancora un po' di grana sul corpo crema.
+- **Scale e posizioni** nelle scene vere vanno decise per scena: quelle in `scena-oggetti.py` sono a occhio, solo per il confronto di stile.
+
 *Preparato il 17/11/2026 mentre Jacopo era in palestra. Tutto qui è pronto da copiare e incollare.*
 
 ## Il flusso (per ogni oggetto)
