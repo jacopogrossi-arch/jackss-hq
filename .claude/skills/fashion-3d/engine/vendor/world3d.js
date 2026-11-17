@@ -192,10 +192,10 @@ function glbObj(o, root) {
     const envAt = (tt) => { if (!o.env) return 0; const E = o.env, f = Math.max(0, tt) * E[0], i = Math.min(E[1].length - 2, Math.floor(f)); return E[1][i] * (1 - (f - i)) + E[1][i + 1] * (f - i); };
     const hasRig = !!(bones.RightArm && bones.RightForeArm);
     // 17/11/2026: animation clips baked in the glb (e.g. Tripo "Anima"): idle / explaining / energetic. The clips are played as a pure function of t: idle when silent, "explaining" while he talks, "energetic" on loud passages, cross-faded by weights.
-    let mixer = null; const CL = {};
+    let mixer = null; const CL = {}; const CA = [];
     if ((root.animations || []).length && o.clips !== false) {
       mixer = new THREE.AnimationMixer(root);
-      for (const c of root.animations) { const a = mixer.clipAction(c); a.play(); a.setEffectiveTimeScale(0); a.setEffectiveWeight(0); const nm = (c.name || "").toLowerCase(); const key = nm.includes("relaxed") ? "idle" : (nm.includes("energy") || nm.includes("directly")) ? "energy" : "explain"; CL[key] = { a, d: c.duration }; }
+      for (const c of root.animations) { const a = mixer.clipAction(c); a.play(); a.setEffectiveTimeScale(0); a.setEffectiveWeight(0); const nm = (c.name || "").toLowerCase(); const key = nm.includes("relaxed") ? "idle" : (nm.includes("energy") || nm.includes("directly")) ? "energy" : "explain"; CL[key] = { a, d: c.duration }; CA.push({ a, d: c.duration }); }
       root.traverse((x) => { if (x.isSkinnedMesh) x.frustumCulled = false; });
     }
     g.userData.update = (t) => {
@@ -204,7 +204,17 @@ function glbObj(o, root) {
       else { const ph = ((t - B[1]) / B[0]) % 1; pulse = Math.pow(Math.max(0, Math.cos(2 * Math.PI * (ph < 0 ? ph + 1 : ph))), 2); }
       let lean = 0; for (const wt of o.words || []) { if (wt > t) break; const d = t - wt; if (d < 0.5) lean = Math.max(lean, Math.exp(-d / 0.13)); }
       if (mixer) { piv.position.y = 0; piv.rotation.x = 0; } else { piv.position.y = k * amp * pulse; piv.rotation.x = k * (0.05 * lean + (o.env ? 0.025 * pulse : 0)); }      // with clips the body is moved only by the clips: the word-onset lean was a sudden jerk
-      if (mixer) {         // smooth clip playback (17/11/2026, after "movements are jerky"): continuous clip time (never restarted on a pause), slower playback, talk state held across short pauses with long ramps, and the explaining/energetic mix driven by a slowly moving average of the voice
+      if (mixer && o.segs) {         // 17/11/2026 (v7): ONE clip per shot. o.segs = [[t0, t1, clipIndex, clipOffset], ...] (plate time): inside a segment a single clip plays at normal speed from clipOffset; only the short cross-fade at the boundary (o.segFade s) ever blends two clips, so no "glitch" of half of one clip and half of another.
+        const F = o.segFade ?? 0.35, SP = o.clipSpeed ?? 1.0, sm = (u) => u * u * (3 - 2 * u), S = o.segs, n = S.length;
+        for (const c of CA) c.a.setEffectiveWeight(0);
+        S.forEach((sg, i) => {
+          const c = CA[sg[2]]; if (!c) return;
+          let wgt = 1; if (i > 0) wgt *= sm(clamp((t - sg[0]) / F)); if (i < n - 1) wgt *= sm(clamp((sg[1] - t) / F));
+          if (t < sg[0] && i > 0) wgt = 0; if (t > sg[1] && i < n - 1) wgt = 0;
+          c.a.time = Math.max(0, Math.min(c.d - 0.001, (sg[3] || 0) + (t - sg[0]) * SP)); c.a.setEffectiveWeight(wgt);
+        });
+        mixer.update(0);
+      } else if (mixer) {         // smooth clip playback (17/11/2026, after "movements are jerky"): continuous clip time (never restarted on a pause), slower playback, talk state held across short pauses with long ramps, and the explaining/energetic mix driven by a slowly moving average of the voice
         const sm = (u) => u * u * (3 - 2 * u), SP = o.clipSpeed ?? 0.72;
         let kk = 0; for (const w of o.talk || []) { const u = Math.min(clamp((t - w[0]) / 0.55), clamp((w[1] - t) / 0.7)); kk = Math.max(kk, sm(u)); }
         let acc = 0; for (let i = 0; i < 8; i++) acc += envAt(t - i * 0.1); const em = sm(clamp((acc / 8 - 0.42) / 0.3));
