@@ -70,3 +70,6 @@ Note di Jacopo sulla v2 e cosa e' stato fatto (progetto locale `videos/_bench/sh
 1. Jacopo: Blender aperto + MCP connesso; crea la chiave API del servizio image-to-3D (a consumo) e la mette in `.env`.
 2. Eventuale rifinitura dell'immagine (vista di fianco/retro per migliori risultati multi-view).
 3. image-to-3D -> GLB -> pulizia in Blender (scala, orientamento, peso) -> `w.glb(..., fit~0.3)` al posto dell'omino Lego in `short3c/build.py` `me()` -> render 1080p60.
+
+## 17/11 notte: OMINO SCELTO (stile PS2 low-poly, variante B3 corretta)
+Scelto da Jacopo: stile PS2 low-poly, testa grossa, occhiali da sole neri tipo Wayfarer, Barbour verde oliva aperta su maglia nera, orologio argento al polso sinistro, NIENTE collanina, jeans leggermente svasati che coprono gli stivali, stivali NERI punta quadrata. Immagini (locali, in `videos/_bench/minime-input/`): `toy-jacopo-v4-front.png`, `-side.png`, `-back.png` (confronto-v4.png). Sono l'input per l'image-to-3D (multi-vista).
