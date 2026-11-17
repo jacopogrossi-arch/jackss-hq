@@ -19,6 +19,7 @@ description: Build 3D animated videos for Jacopo's channel and Inverso entirely 
 | Metaphor-world Short (new format) | `references/metaphor-world-sop.md` |
 | Blender test plan (next session) | `references/blender-test-plan.md` |
 | 8 fps review tools | `scripts/review8.py` (`sheets`, `still`, `seek`) |
+| Third-party Blender skills installed (materials, lighting, cameras, rendering, export, modeling, fit loop) | `references/third-party-blender-skills.md` |
 | Realism upgrade plan and the tools researched (Blender, Hunyuan3D, UniRig, dream-loop) | `references/realism-plan.md` |
 | Engine code | `engine/world3d.py` (Python side) and `engine/vendor/` (three.js r170 + `world3d.js` + `atelier-*.js` + add-ons GLTFLoader, RoundedBoxGeometry, RoomEnvironment). `youtube-edit/formats/world3d.py` is only a shim so old imports keep working. Moved 16/11/2026, verified pixel-identical on 6 frames of Short #2. |
 | Sound, voice, mix | same method as `youtube-edit/references/sound.md`; the Short/explainer SOPs say which parts apply |
