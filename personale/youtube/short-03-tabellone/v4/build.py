@@ -124,7 +124,8 @@ def talk_windows(t0, t1):
     return [tuple(v) for v in ws]
 
 
-OMINO = "D:/ClaudeCodeTest/personale/youtube/short-03-tabellone/assets/jacopo-ps2-color.glb"   # PS2 toy of Jacopo (Hunyuan3D shape + colours projected from the 3 approved views)
+ENV = json.load(open(HERE + "/env.json"))                                               # voice loudness at 60 fps: the narrator moves with the speech
+OMINO = "D:/ClaudeCodeTest/personale/youtube/short-03-tabellone/assets/action-figure-3d.glb"   # PS2 toy of Jacopo (Hunyuan3D shape + colours projected from the 3 approved views)
 DIVE = {1: ((-2.5, 2.3, 1.25), (-2.5, 0.9, 0.2)), 2: ((0.5, 2.6, 1.9), (0.5, 0.9, 0.95)), 3: ((3.5, 1.7, 2.8), (3.5, 1.1, 0.5)),
         4: ((0.9, 2.3, 0.6), (0.9, 1.7, -2.95)), 5: ((-0.9, 1.9, 4.2), (-0.9, 1.0, 2.55))}
 
@@ -133,16 +134,11 @@ ZOOMS = []
 
 
 def me(oid, pos, t0, t1, rot=0.0, height=0.2, k=1):
-    """The narrator: appears, the camera zooms on him while he talks, then cuts at once to what he is saying about (the station's dive view)."""
+    """The narrator: appears, the camera zooms on him while he talks, then cuts at once to what he is saying about (the station's dive view). He moves with the speech: his body follows the voice loudness and leans on each word onset."""
     x, y, z = pos
-    sway, cur = [], rot
-    for a_, b_ in talk_windows(t0, t1):
-        n_ = max(1, int((b_ - a_) / 0.28))
-        for i_ in range(n_):
-            cur = rot + (0.16 if i_ % 2 == 0 else -0.16)
-            sway.append((round(a_ + i_ * (b_ - a_) / n_, 3), round((b_ - a_) / n_, 3), cur, "glide"))
-        sway.append((round(b_, 3), 0.2, rot, "glide"))
-    w.glb(oid, OMINO, fit=height, pos=(x, -8.0, z), rot_y=rot, turn=sway or None, talk=[list(v) for v in talk_windows(t0, t1)], mouth=[0.0, 0.455, 0.241, 0.075, 0.05],
+    tw = talk_windows(t0, t1)
+    words = [round(wd["s"], 3) for wd in WORDS if any(a_ <= wd["s"] <= b_ for a_, b_ in tw)]
+    w.glb(oid, OMINO, fit=height, pos=(x, -8.0, z), rot_y=rot, talk=[list(v) for v in tw], env=[60, ENV], words=words, bob=round(height * 0.03, 4),
           move=[(t0, 0.35, pos, "out"), (t1, 0.01, (x, -8.0, z), "linear")])
     d_ = height * 2.6
     ZOOMS.append(((x + math.sin(rot) * d_, y + height * 0.72, z + math.cos(rot) * d_), (x, y + height * 0.55, z), t0, DIVE[k], t0 + 0.95))
