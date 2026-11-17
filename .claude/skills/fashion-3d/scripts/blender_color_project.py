@@ -98,16 +98,48 @@ for _ in range(15):
 lab = np.empty(n, np.int32)
 for i0 in range(0, n, 50000): lab[i0:i0+50000] = ((col[i0:i0+50000, None, :]-cen[None])**2).sum(2).argmin(1)
 # regola geometrica: sulle gambe (sotto i fianchi, lontano dalle mani) il colore pelle non e' ammesso -> colore jeans; poi filtro a maggioranza
-skin_c = np.array([(c[0] > c[2]*1.25) and (c.mean() > 0.35) for c in cen])
+skin_c = np.array([(c[0] > c[1]*1.08) and (c[1] > c[2]*1.05) and (c.mean() > 0.50) for c in cen])
+print('CLUSTER', [(i, [round(float(v), 2) for v in c], int((lab == i).sum()), bool(skin_c[i])) for i, c in enumerate(cen)])
 leg = (z > 0.07) & (z < 0.32) & (x > 0.21) & (x < 0.79)
 mid = (z > 0.10) & (z < 0.30) & (x > 0.3) & (x < 0.7)
 jeans_c = np.bincount(lab[mid], minlength=K).argmax()
 lab[leg & skin_c[lab]] = jeans_c
-if len(a) > 10 and a[10] == 'indigo': cen[jeans_c] = np.array([0.12, 0.16, 0.28])   # jeans: indaco scuro come nel disegno
+def ref_color(u, v, r=22):
+    x0, x1, y0, y1 = bf
+    cx = int(x0 + u*(x1-x0)); cy = int(y0 + (1-v)*(y1-y0))
+    return np.median(fr[cy-r:cy+r, cx-r:cx+r].reshape(-1, 3), axis=0)
+JEANS_REF = ref_color(0.36, 0.20); JACKET_REF = ref_color(0.30, 0.52)
+print('REF jeans', JEANS_REF.round(2), 'giacca', JACKET_REF.round(2))
+cen[jeans_c] = JEANS_REF
 for _ in range(4):
     cnt = np.zeros((n, K), np.float32); np.add.at(cnt, (ia, lab[ib]), 1); cnt[np.arange(n), lab] += 1.5
     lab = cnt.argmax(1).astype(np.int32)
 col = col*(1-MIX) + cen[lab]*MIX
+# giacca: una tinta unica presa dal disegno (le pieghe dipinte non servono, ci pensano le luci)
+torso = (z > 0.33) & (z < 0.74)
+olive = np.array([(c[1] >= c[0]*0.85) and (c.mean() > 0.3) and (not s) for c, s in zip(cen, skin_c)])
+mj = olive[lab] & torso
+col[mj] = col[mj]*0.12 + JACKET_REF*0.88
+# testa: pelle = un solo colore (via la riga di giunzione fronte/lato); capelli e occhiali/sopracciglia = una tinta ciascuno, con un po' di variazione
+head = z > 0.74
+sk = skin_c[lab]
+if (sk & head).any():
+    col[sk] = col[sk & head].mean(0)
+# la pelle e' ammessa solo su testa e mani: altrove (gambe, stivali, orlo giacca) prende il colore della sua zona
+hands = (z > 0.24) & (z < 0.42) & ((x < 0.22) | (x > 0.78))
+bad = sk & ~head & ~hands
+BOOT = cen[int(np.argmin([c.mean() if (not s and c.mean() > 0.05) else 9 for c, s in zip(cen, skin_c)]))]
+col[bad & (z < 0.07)] = BOOT
+col[bad & (z >= 0.07) & (z < 0.33)] = JEANS_REF
+col[bad & (z >= 0.33)] = JACKET_REF
+face_low = head & (z < 0.855) & (np.abs(x-0.5) < 0.28)           # mento/guance: niente zone scure (barba sporca), solo pelle
+SKIN = col[sk & head].mean(0) if (sk & head).any() else col[sk].mean(0)
+col[face_low & ~sk & (col.mean(1) < 0.40)] = SKIN
+sk = sk | (face_low & ~sk & (col.mean(1) < 0.40))
+hr = head & ~sk & (col.mean(1) >= 0.18)
+dk = head & ~sk & (col.mean(1) < 0.18)
+for m_ in (hr, dk):
+    if m_.any(): col[m_] = col[m_]*0.25 + col[m_].mean(0)*0.75
 col = np.where(col <= 0.04045, col/12.92, ((col+0.055)/1.055)**2.4)     # le immagini sono sRGB, l'attributo colore e il glTF sono lineari: senza questo i colori escono sbiaditi
 rgba = np.concatenate([col, np.ones((n, 1), np.float32)], axis=1)
 if 'Col' in me.color_attributes: me.color_attributes.remove(me.color_attributes['Col'])
