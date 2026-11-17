@@ -174,7 +174,7 @@ function solid(o) {
   return new THREE.Mesh(geo, mat);
 }
 // a loaded model (.glb): measured, scaled to a real height (o.fit, metres), stood on y = 0 and centred, shadows on. Credit CC-BY models in the post caption.
-const loadGlb = async (src) => { const { GLTFLoader } = await import("./GLTFLoader.js"); return new Promise((ok) => new GLTFLoader().load(src, (g) => ok(g.scene), undefined, () => ok(null))); };
+const loadGlb = async (src) => { const { GLTFLoader } = await import("./GLTFLoader.js"); return new Promise((ok) => new GLTFLoader().load(src, (g) => { g.scene.animations = g.animations || []; ok(g.scene); }, undefined, () => ok(null))); };
 function glbObj(o, root) {
   const g = new THREE.Group(); if (!root) return g;
   if (o.fit) { const sz = new THREE.Box3().setFromObject(root).getSize(new THREE.Vector3()); root.scale.multiplyScalar(o.fit / Math.max(sz.y, 1e-6)); }
@@ -191,13 +191,27 @@ function glbObj(o, root) {
     const rotBone = (b, axis, ang) => { if (!b) return; b.parent.getWorldQuaternion(_pq); root.getWorldQuaternion(_rq); _iq.copy(_rq).invert().multiply(_pq); _wq.setFromAxisAngle(axis, ang); b.quaternion.copy(_iq).invert().multiply(_wq).multiply(_iq).multiply(b.userData.rest); b.updateMatrixWorld(true); };
     const envAt = (tt) => { if (!o.env) return 0; const E = o.env, f = Math.max(0, tt) * E[0], i = Math.min(E[1].length - 2, Math.floor(f)); return E[1][i] * (1 - (f - i)) + E[1][i + 1] * (f - i); };
     const hasRig = !!(bones.RightArm && bones.RightForeArm);
+    // 17/11/2026: animation clips baked in the glb (e.g. Tripo "Anima"): idle / explaining / energetic. The clips are played as a pure function of t: idle when silent, "explaining" while he talks, "energetic" on loud passages, cross-faded by weights.
+    let mixer = null; const CL = {};
+    if ((root.animations || []).length && o.clips !== false) {
+      mixer = new THREE.AnimationMixer(root);
+      for (const c of root.animations) { const a = mixer.clipAction(c); a.play(); a.setEffectiveTimeScale(0); a.setEffectiveWeight(0); const nm = (c.name || "").toLowerCase(); const key = nm.includes("relaxed") ? "idle" : (nm.includes("energy") || nm.includes("directly")) ? "energy" : "explain"; CL[key] = { a, d: c.duration }; }
+      root.traverse((x) => { if (x.isSkinnedMesh) x.frustumCulled = false; });
+    }
     g.userData.update = (t) => {
       let k = 0; for (const w of o.talk || []) if (t >= w[0] && t <= w[1]) { k = Math.min(1, (t - w[0]) / 0.15, (w[1] - t) / 0.15); break; }
       let pulse; if (o.env) { const E = o.env, f = Math.max(0, t) * E[0], i = Math.min(E[1].length - 2, Math.floor(f)), u = f - i; pulse = i < 0 ? 0 : E[1][i] * (1 - u) + E[1][i + 1] * u; }     // o.env = [fps, [voice loudness 0..1]]: he moves with the speech itself
       else { const ph = ((t - B[1]) / B[0]) % 1; pulse = Math.pow(Math.max(0, Math.cos(2 * Math.PI * (ph < 0 ? ph + 1 : ph))), 2); }
       let lean = 0; for (const wt of o.words || []) { if (wt > t) break; const d = t - wt; if (d < 0.5) lean = Math.max(lean, Math.exp(-d / 0.13)); }
       piv.position.y = k * amp * pulse; piv.rotation.x = k * (0.05 * lean + (o.env ? 0.025 * pulse : 0));
-      if (hasRig) {         // gestures: the right arm follows the voice now, the left a quarter of a second later and smaller; each word onset adds a small beat of the forearm
+      if (mixer) {
+        let w0 = null; for (const w of o.talk || []) if (t >= w[0] && t <= w[1]) { w0 = w[0]; break; }
+        const em = Math.min(1, Math.max(0, (pulse - 0.45) / 0.45)), wi = 1 - k, wx = k * (1 - em), we = k * em, ph = (c, tt) => ((tt % c.d) + c.d) % c.d;
+        if (CL.idle) { CL.idle.a.time = ph(CL.idle, t); CL.idle.a.setEffectiveWeight(wi); }
+        if (CL.explain) { CL.explain.a.time = ph(CL.explain, (w0 ?? 0) !== null ? t - (w0 ?? 0) : t); CL.explain.a.setEffectiveWeight(CL.energy ? wx : wx + we); }
+        if (CL.energy) { CL.energy.a.time = ph(CL.energy, t - (w0 ?? 0)); CL.energy.a.setEffectiveWeight(we); }
+        mixer.update(0);
+      } else if (hasRig) {         // gestures: the right arm follows the voice now, the left a quarter of a second later and smaller; each word onset adds a small beat of the forearm
         const eR = Math.min(1, pulse), eL = Math.min(1, envAt(t - 0.25)) * 0.7, G = o.gesture ?? 1;
         const arm = (side, e) => { const s = side === "Right" ? -1 : 1;               // facing +z, the character's right arm is on -x
           rotBone(bones[side + "Arm"], AX, -(0.18 + 0.30 * e) * k * G); const A = bones[side + "Arm"]; if (A) rotBone(A, AZ, s * -0.10 * k * G);
