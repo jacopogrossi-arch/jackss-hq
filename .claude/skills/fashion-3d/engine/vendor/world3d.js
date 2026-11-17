@@ -413,6 +413,24 @@ export function mount(spec) {
     renderer.setRenderTarget(null); renderer.render(qs, oc);
   }
 
+  // ---- narrator layer (17/11/2026): a second scene with its own camera, drawn over the main scene inside a screen rectangle that follows spec.narrator.layout
+  const nScene = new THREE.Scene(), nCam = new THREE.PerspectiveCamera(spec.narrator ? spec.narrator.fov : 28, 1, 0.1, 30); let NAR = null;
+  function narratorInit(root) {
+    const N = spec.narrator, g = glbObj({ fit: N.fit, talk: N.talk, env: N.env, words: N.words, bob: 0 }, root); nScene.add(g); NAR = { g, N };
+    const k1 = new THREE.DirectionalLight(0xfff1de, 2.6); k1.position.set(1.3, 2.2, 2.8); nScene.add(k1);
+    const k2 = new THREE.DirectionalLight(0x9fb4c8, 0.9); k2.position.set(-2.2, 1.0, 2.0); nScene.add(k2);
+    const k3 = new THREE.DirectionalLight(0xffc88c, 1.4); k3.position.set(-1.0, 2.0, -2.4); nScene.add(k3);
+    nScene.add(new THREE.HemisphereLight(0xe9f5ee, 0x3a2a1a, 0.9));
+  }
+  function narratorPass(ts) {
+    if (!NAR) return; const [x, y, w, h, ly, dist, rot] = track(NAR.N.start, NAR.N.layout, ts);
+    if (x > W - 1 || x + w < 1) return;
+    NAR.g.rotation.y = rot; if (NAR.g.userData.update) NAR.g.userData.update(ts);
+    nCam.aspect = w / h; nCam.position.set(0, ly, dist); nCam.lookAt(0, ly, 0); nCam.updateProjectionMatrix();
+    renderer.setRenderTarget(null); renderer.setScissorTest(false); renderer.autoClear = false; renderer.clearDepth();
+    renderer.setViewport(x, y, w, h); renderer.render(nScene, nCam); renderer.setViewport(0, 0, W, H); renderer.autoClear = true;
+  }
+
   function renderAt(global) {
     const t = clamp(global - T0, 0, DUR), life = t / DUR;
     if (dust) { const a = dust.geometry.attributes.position; for (let i = 0; i < 120; i++) { const h1 = hash(i), h2 = hash(i + 500), h3 = hash(i + 900), y = ((h2 * 2.2 + t * (0.03 + 0.05 * h3)) % 2.2); a.setXYZ(i, -1.3 + h1 * 2.6 + 0.06 * Math.sin(t * 0.6 + i), y, -1.0 + h3 * 2.0 + 0.05 * Math.cos(t * 0.5 + i * 1.7)); } a.needsUpdate = true; }
@@ -431,6 +449,7 @@ export function mount(spec) {
       } renderer.setScissorTest(false); renderer.render(scene, camera);
       if (ps.b) { setMode(ps.b); if (GR) { rtH.scissorTest = true; rtH.scissor.set(0, 0, Math.round(ps.edge * rtH.width / W), rtH.height); } else { renderer.setScissorTest(true); renderer.setScissor(0, 0, ps.edge, H); } renderer.render(scene, camera); if (GR) rtH.scissorTest = false; else renderer.setScissorTest(false); }
       if (GR) grade(ts);
+      narratorPass(ts);
       if (N > 1 && mbx) { if (i === 0) mbx.clearRect(0, 0, mb.width, mb.height); mbx.globalAlpha = 1 / (i + 1); mbx.drawImage(canvas, 0, 0); mbx.globalAlpha = 1; }
     }
     if (mb) { mb.style.display = N > 1 ? "block" : "none"; canvas.style.visibility = N > 1 ? "hidden" : "visible"; }
@@ -454,8 +473,8 @@ export function mount(spec) {
 
   let last = T0;
   const ready = Promise.all([document.fonts.load('800 40px "Inter"'), document.fonts.load('italic 500 40px "Playfair Display"'), document.fonts.ready,
-    ...(spec.objects || []).map((o) => ((o.type === "card" || o.type === "standee") && o.img ? loadImage(o.img) : o.type === "glb" ? loadGlb(o.src) : Promise.resolve(null)))])
-    .then((r) => { build(r.slice(3)); return renderer.compileAsync(scene, camera); }).then(() => { window.__w3d[spec.id] = (g, p) => { last = p == null ? g : T0 + p * DUR; renderAt(last); }; renderAt(last); });
+    ...(spec.objects || []).map((o) => ((o.type === "card" || o.type === "standee") && o.img ? loadImage(o.img) : o.type === "glb" ? loadGlb(o.src) : Promise.resolve(null))), spec.narrator ? loadGlb(spec.narrator.src) : Promise.resolve(null)])
+    .then((r) => { const nobj = (spec.objects || []).length; build(r.slice(3, 3 + nobj)); if (spec.narrator && r[3 + nobj]) narratorInit(r[3 + nobj]); return renderer.compileAsync(scene, camera); }).then(() => { window.__w3d[spec.id] = (g, p) => { last = p == null ? g : T0 + p * DUR; renderAt(last); }; renderAt(last); });
   window.__w3d = window.__w3d || {}; window.__w3d[spec.id] = (g, p) => { last = p == null ? g : T0 + p * DUR; };      // (globalTime) or (null, progress 0-1 of the plate)
   window.__hf = window.__hf || {}; window.__hf.buildReady = window.__hf.buildReady || {}; window.__hf.buildReady["w3d-" + spec.id] = ready;
   window.addEventListener("hf-seek", (e) => { window.__w3d[spec.id](e.detail.time); e.detail.waitUntil && e.detail.waitUntil(ready); });

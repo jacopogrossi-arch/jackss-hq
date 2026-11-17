@@ -56,6 +56,7 @@ class World3D:
         self.cid, self.t_in, self.t_out, self.title, self.sub, self.track, self.fade, self.fov, self.title_out = cid, t_in, t_out, title, sub, track, fade, fov, title_out
         self.W, self.H, self.caps, self.leaks, self.bigs = w, h, None, [], []                  # portrait for Shorts: World3D(..., w=1080, h=1920)
         self.objects, self.cams, self.labels, self.events = [], [], [], []
+        self.narr = None
         self.room_spec, self.look_spec, self.base, self.passes, self.dofs, self.shutter_frames, self.exposure = None, None, "final", [], [], 0.8, None
 
     def _r(self, t):
@@ -200,6 +201,14 @@ class World3D:
         peaking at t. Hide a camera cut under the peak. Pair it with a whoosh (Jacopo, 14/11/2026: "al secondo 7 metterei un film burn o light leak e un suono")."""
         self.leaks.append([round(t, 3), round(d, 3), 1 if warm else 0]); return self
 
+    def narrator(self, src, fit=1.0, talk=None, env=None, words=None, start=None, layout=None, fov=28, **kw):
+        """17/11/2026: a narrator layer drawn OVER the scene with its own camera and rectangle (screen px, origin bottom-left): he stays at the side while the scene camera works, and the rectangle grows to a close-up on the sentences that matter.
+        start / each layout key `to` = [x, y, w, h, lookY, dist, rot_y]; layout = [(t, d, to, ease), ...] in increasing time. env / words / talk drive the animation clips as in w.glb."""
+        base = os.path.basename(src); _MODELS[base] = os.path.abspath(src)
+        self.narr = dict(src="models/" + base, fit=fit, talk=[list(x) for x in (talk or [])], env=env, words=list(words or []), start=list(start), fov=fov,
+                         layout=[dict(t=round(a, 3), d=d, to=list(to), ease=e) for a, d, to, e in (layout or [])], **kw)
+        return self
+
     def spec(self):
         if not self.cams:
             raise ValueError("%s: give the camera a start with cam(pos, look)" % self.cid)
@@ -215,6 +224,7 @@ class World3D:
         if self.dofs: extra["dof"] = self.dofs
         if self.shutter_frames != 0.8: extra["shutter"] = self.shutter_frames
         extra["w"], extra["h"] = self.W, self.H
+        if self.narr: extra["narrator"] = self.narr
         return dict(id=self.cid, t_in=self.t_in, dur=round(self.t_out - self.t_in, 3), fov=self.fov, objects=self.objects, cam=self.cams, texts=texts, **extra,
                     labels=[dict(obj=L["obj"], p=L["p"], t=L["t"], dx=L["dx"], dy=L["dy"], **({"out": L["out"]} if L["out"] is not None else {})) for L in self.labels])
 
