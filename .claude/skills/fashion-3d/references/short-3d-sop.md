@@ -89,3 +89,13 @@ npx hyperframes@0.9.35 render comp --quality high --resolution portrait-4k --gpu
 - Titolo con `#shorts`, descrizione: l'errore + il numero, la morale, il percorso, la firma, il link al video lungo, max 5 hashtag.
 - **Video correlato** sempre puntato al video lungo collegato (Short #1 → #4, poi #5). Registro in `personale/youtube/piano-canale.md` › Shorts.
 - Sorgenti nel repo (`personale/youtube/<short>/src/`), note di gusto in `taste.md`, stato su Notion.
+
+## Narratore 3D (lezioni dello Short #3, 17/11/2026)
+Personaggio di Jacopo (GLB Tripo con scheletro Mixamo e clip riposo/spiega/energia) che racconta lo Short. Cosa ha funzionato e cosa no:
+- **DENTRO la scena, mai overlay:** un riquadro sovrapposto in un angolo "appeso al nulla" e' stato bocciato. Il narratore sta su una superficie del mondo (scrivania, tavolo, pavimento), in prospettiva e con le luci della stanza; la camera lo inquadra come un personaggio. Posizione per tappa scelta in automatico con `_score` (visibile di lato nelle inquadrature della tappa), non fissa a mano.
+- **Regia:** durante l'argomento la camera lavora sull'argomento e lui resta di lato (puo' uscire dal campo nei macro); sulle frasi importanti primo piano per TUTTA la frase (camera a 0.62h, guarda 0.80h, d=1.2h: faccia nella meta' alta, sottotitoli sopra la testa) con riser che culmina sulla prima parola, poi si torna all'argomento. Mai zoom da un secondo a meta' scena (non sembra il narratore). Il finale: primo piano con il cartello INVERSO dietro e la CTA come testo grande sopra.
+- **Il narratore non deve sembrare l'argomento:** non puntare la camera su di lui mentre si nomina l'oggetto (es. "il disegno").
+- **Movimento fluido (cause del "scattante"):** niente colpetto a inizio parola; clip in tempo continuo (mai riavviata a ogni pausa), rampe lunghe, mix spiega/energia con media mobile della voce, riproduzione ~72%, clip ammorbidite con `blender_prepare_rig.py ... anim smooth=4.5`. Le clip AI sono scattose di per se'.
+- **Niente bocca:** lo scheletro Mixamo non ha ossa del viso; la "finta bocca" (ellisse scura) e' stata bocciata da Jacopo. Non riproporla senza un rig facciale.
+- **Prova prima del render lungo:** `CLIP="9,17" python build.py` costruisce solo una finestra (tempi di oggetti/testi spostati), poi render + mux audio con ffmpeg (`-ss` sul mix) e mostra la clip a Jacopo.
+- **3D:** i personaggi/oggetti li genera Jacopo su Tripo AI (vedi memoria reference-tripo-ai-3d); io alleggerisco (`blender_optimize_glb.py`, `blender_prepare_rig.py`). Hugging Face/Hunyuan abbandonato.

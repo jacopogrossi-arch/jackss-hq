@@ -1,7 +1,7 @@
 # CLAUDE.md
 
 This file gives Claude Code the context to work well in this repository.
-*Ultimo aggiornamento: 13/11/2026.*
+*Ultimo aggiornamento: 17/11/2026.*
 
 ---
 
@@ -68,7 +68,7 @@ File: `inverso/`
   - #2 "Ho lasciato Claude ideare una collezione al posto mio" — pubblicato 21/10/2026, montato con la skill `youtube-edit`
   - #3 "Come lancerei un brand di moda con l'AI (prima di lanciare il mio)" — pubblicato 06/11/2026
   - #4 "Ho creato l'identità del mio brand di moda con l'AI (fallo con me)" — pubblicato 12/11/2026 (https://youtu.be/aPDByKvlb5c), montato con la skill `youtube-edit`; è il video in cui si rivela il nome Inverso. Mappa `04-mappa-riprese.html`, prompt `04-prompt-identita.md`, in `videos/04-identita/` restano girato, video finale 4K e note (`progetto/`)
-  - **Shorts 3D (dal 13/11/2026):** Short #1 "Il mio primo pantalone sembrava una gonna" pubblicato il 13/11 (`personale/youtube/short-primo-pantalone/`, video correlato = #4). Procedura: `.claude/skills/fashion-3d/references/short-3d-sop.md`. **Short #2 "Il nome del mio brand ha tre significati"** (ritaglio del #4, scena nuova: lo studio di notte) costruito la notte del 13/11 → `personale/youtube/short-02-identita/README.md`, da rivedere con Jacopo prima di pubblicarlo.
+  - **Shorts 3D (dal 13/11/2026):** Short #1 "Il mio primo pantalone sembrava una gonna" pubblicato il 13/11 (`personale/youtube/short-primo-pantalone/`, video correlato = #4). Procedura: `.claude/skills/fashion-3d/references/short-3d-sop.md`. **Short #2 "Il nome del mio brand ha tre significati"** (ritaglio del #4, scena nuova: lo studio di notte) costruito la notte del 13/11 → `personale/youtube/short-02-identita/README.md`, da rivedere con Jacopo prima di pubblicarlo. **Short #3 "Quanto costa lanciare un pantalone (se non hai un brand)" pubblicato il 17/11/2026** (v6: sala campioni di notte, narratore = personaggino 3D di Jacopo fatto con Tripo AI, dentro la scena, primi piani con riser, CTA "scrivi PANTALONE") → `personale/youtube/short-03-tabellone/` (README, `HANDOFF.md` con tutta la storia, sorgenti in `v6/`); lezioni in `.claude/skills/fashion-3d/references/short-3d-sop.md` ("Narratore 3D").
   - #5 → #12 — piano in `personale/youtube/piano-canale.md` (#5 = il pantalone, ~04/12; pausa esami 20/12 → 11/02)
 - **Regole di gusto video:** stanno tutte nella skill (`references/taste.md`, `sound.md`…), non in memoria (pulizia del 10/11/2026).
 - **Esami sessione 2027:** `studio-privato/` (solo locale, fuori da git): `STATO-MATERIALI.md` e `CALENDARIO-STUDIO.md`.
@@ -127,6 +127,7 @@ Fuori repo: media del canale Jago in `Desktop\archivio-jago-assets\`; dispense d
 ## Strumenti
 
 - **Immagini/video AI:** nessun generatore collegato al momento. Magnific non c'è più dal 09/11/2026 (Higgsfield dismesso dal 03/07/2026): non proporli. Jacopo collegherà un'API (ChatGPT o simile) per le immagini. I prompt si scrivono comunque con le skill `banana-pro-director` (immagini) e `cinema-worldbuilder-pro` (video).
+- **3D (modelli, personaggi, oggetti): Tripo AI** (dal 17/11/2026): lo genera Jacopo e mi passa il GLB, io lo alleggerisco con gli script in `.claude/skills/fashion-3d/scripts/` (`blender_optimize_glb.py`, `blender_prepare_rig.py`). Hugging Face/Hunyuan3D è stato provato e abbandonato: non riproporlo.
 - **Notion — Jackss HQ:** workspace personale con hub su AI/video, salute/sport e studio. Per stato progetti non in repo, usare il MCP Notion.
 
 ---
