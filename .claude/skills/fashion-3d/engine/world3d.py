@@ -23,7 +23,7 @@ import json, os, re, shutil
 
 ENGINE = os.path.dirname(os.path.abspath(__file__))                              # fashion-3d/engine (since 16/11/2026; was youtube-edit/formats)
 SK = os.path.abspath(os.path.join(ENGINE, "..", "..", "youtube-edit"))            # youtube-edit: fonts and other shared assets
-VENDOR = ("three.module.min.js", "three-LICENSE.txt", "world3d.js", "atelier-kit.js", "atelier-tex.js", "atelier-trouser.js", "atelier-props.js", "atelier-cut.js", "atelier-studio.js", "atelier-mascot.js", "atelier-data.js")   # all in ENGINE/vendor
+VENDOR = ("three.module.min.js", "three-LICENSE.txt", "world3d.js", "atelier-kit.js", "atelier-tex.js", "atelier-trouser.js", "atelier-props.js", "atelier-cut.js", "atelier-studio.js", "atelier-mascot.js", "atelier-mini.js", "atelier-data.js")   # all in ENGINE/vendor
 _MODELS = {}      # .glb files registered by World3D.glb(), copied to <public>/models by stage()
 OPTIONAL = ("GLTFLoader.js", "BufferGeometryUtils.js", "RoundedBoxGeometry.js", "RoomEnvironment.js")   # three r170 add-ons, copied too
 
@@ -122,6 +122,11 @@ class World3D:
         walk / wave = lists of (start, end) VIDEO times; hop = list of VIDEO times. He blinks and breathes by himself. Use him to fill the empty moments: he reacts to what the voice says."""
         r = lambda L: [[self._r(a), self._r(b)] for a, b in L] if L else None
         return self._obj("jacopino", oid, pos, rot_y, turn, move, t, size=[height], walk=r(walk), wave=r(wave), hop=[self._r(h) for h in hop] if hop else None, glasses=glasses or None, vest=vest or None)
+
+    def minime(self, oid, pos=(0, 0, 0), height=0.5, rot_y=0.0, turn=None, move=None, t=None, talk=None, glasses=True):
+        """Mini-me: a toy-figure Jacopo (round glasses, swept-up hair, black tee, indigo selvage jeans, Texan boots). Stands on y = pos[1], faces +z. talk = list of (start, end) VIDEO times: the mouth opens, the head nods and the right hand gestures."""
+        r = lambda L: [[self._r(a), self._r(b)] for a, b in L] if L else None
+        return self._obj("minime", oid, pos, rot_y, turn, move, t, size=[height], talk=r(talk), glasses=glasses)
 
     def photo(self):
         """The 'photographic' finish tuned on Short #2 on 16/11/2026 (call AFTER room()): soft studio reflections at 0.22, the ambient light x0.75 (so blacks stay black), and one grade

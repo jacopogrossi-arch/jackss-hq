@@ -7,6 +7,7 @@ import { buildProp, PROPS } from "./atelier-props.js";
 import { fabricMaps } from "./atelier-tex.js";
 import { buildStudio, STUDIO } from "./atelier-studio.js";
 import { buildMascot, MASCOT } from "./atelier-mascot.js";
+import { buildMini, MINI } from "./atelier-mini.js";
 import { buildData, DATA } from "./atelier-data.js";
 
 const hash = (a, b = 0, c = 0) => { const x = Math.sin(a * 127.1 + b * 311.7 + c * 74.7) * 43758.5453; return x - Math.floor(x); };
@@ -276,11 +277,12 @@ function clothSheet(o) {                                 // cloth laid on a tabl
   const m = new THREE.Mesh(geo, o.mat); m.rotation.x = -Math.PI / 2; m.position.y = 0.004; const g = new THREE.Group(); g.add(m); return g;
 }
 
-export const KIT = new Set(["woodfloor", "wall", "window", "rollrack", "bolts", "spoolwall", "table", "paper", "frame", "ruler", "shears", "sewing", "mannequin", "pendant", "desklamp", "plant", "rail", "rug", "cloth", "cuttingmat", "buttonjar", "pincushion", "spool", "hoop", "sketchdraw", "patterncut", "logoplate", "weight", "chalk", "lsquare", "pathdots", "floorbadge", ...STUDIO, ...MASCOT, ...DATA]);
+export const KIT = new Set(["woodfloor", "wall", "window", "rollrack", "bolts", "spoolwall", "table", "paper", "frame", "ruler", "shears", "sewing", "mannequin", "pendant", "desklamp", "plant", "rail", "rug", "cloth", "cuttingmat", "buttonjar", "pincushion", "spool", "hoop", "sketchdraw", "patterncut", "logoplate", "weight", "chalk", "lsquare", "pathdots", "floorbadge", ...STUDIO, ...MASCOT, ...MINI, ...DATA]);
 export function build(o, H) {
   if (PROPS.has(o.type)) return buildProp(o);
   if (STUDIO.has(o.type)) return buildStudio(o);
   if (MASCOT.has(o.type)) return buildMascot(o);
+  if (MINI.has(o.type)) return buildMini(o);
   if (DATA.has(o.type)) return buildData(o);
   switch (o.type) {
     case "trouser": return trouserHi(o);

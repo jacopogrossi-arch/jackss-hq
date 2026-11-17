@@ -42,3 +42,13 @@ In `assets/`: `trouser10b.glb` (pantalone v10, colore finale), `anteprima-1.jpg`
 - Struttura: logo capovolto -> 5 postazioni (scrivania disegno, tavolo da taglio, set foto, parete 100 pezzi 10+20, pantalone appeso) con 5 salite sulla mappa; contatore "il mio costo"; un movimento camera ogni 2-3 s; fine con logo + CTA "Scrivi PANTALONE".
 - Musica Epidemic "Pixel Ghost". Render finale: `short3-sala-campioni-v2.mp4` (1080x1920, 60 fps) in iCloud `Video 3D moda\`.
 - Da migliorare se Jacopo lo chiede: set foto (macchina e softbox ancora blocchi semplici), colore dominante marrone, inquadrature scure a 17-19 s.
+
+## 17/11: VERSIONE 3 (review di Jacopo sulla v2)
+Note di Jacopo sulla v2 e cosa e' stato fatto (progetto locale `videos/_bench/short3c/`, sorgenti in `v3/`):
+- Voce non sua / poco espressiva -> rigenerata con `eleven_v4` (la v2 usava `eleven_v3`, errore). Misurato: v4 ~ voce Short #2. Nuovo testo CTA: "A quanto lo vendo, alla fine? Scrivi PANTALONE nei commenti e ti dico il prezzo finale." (plate "Scrivi PANTALONE nei commenti" + card "e ti dico il prezzo finale").
+- Logo che gira a 0:00 gia' usato nello Short #2 -> apertura sul pantalone appeso con card "€ ?"; logo solo alla fine (cade e gira).
+- Pop sound (0:10, 0:23, 0:35, 0:53) -> sostituiti da swish morbidi (regola: niente pop).
+- Plate "< €30" entrava prima e usciva subito -> entra su "30", resta fino alla salita sulla mappa (pausa piu' lunga prima della seconda tappa).
+- Stampella mancante -> gancio + barretta + due pinze.
+- "Te in miniatura": il busto di cartone con la foto e' stato BOCCIATO ("cartonato no"). Ora e' un omino stile Lego con occhiali tondi, capelli sparati in su, maglia nera, jeans con cimosa rossa, stivali texani: `.claude/skills/fashion-3d/engine/vendor/atelier-mini.js`, `w.minime(...)`. Parla (bocca, testa, mano) sulle parole. Resta il tipo `w.standee` (cartonato) nel motore, non usato.
+- Render: `short3-sala-campioni-v3.mp4` (1080x1920, 60 fps) in iCloud `Video 3D moda\`.
