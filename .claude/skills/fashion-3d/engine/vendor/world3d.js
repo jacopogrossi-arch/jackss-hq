@@ -182,7 +182,18 @@ function glbObj(o, root) {
   root.traverse((x) => { if (x.isMesh) { x.castShadow = true; x.receiveShadow = true;
     if (o.fabric && x.material && /^drill/.test(x.material.name || "")) x.material = clothMat("#" + x.material.color.getHexString(THREE.SRGBColorSpace), "twill", { rough: 0.86, n: o.grain ?? 0.4, tile: o.tile ?? 2.5 });   // Blender cloth (metric uvs / TILE) gets the engine twill: no plastic look
     if (o.double && x.material) x.material.side = THREE.DoubleSide; } });
-  g.add(root); return g;
+  g.add(root);
+  if (o.mouth) {            // 17/11/2026: a dark mouth on a still glb head, opening and shutting on o.talk windows (plate seconds); mouth = [x, y, z, width, height] in the model's own units
+    const M = o.mouth, mm = new THREE.Mesh(new THREE.SphereGeometry(1, 20, 12), new THREE.MeshBasicMaterial({ color: 0x180606, toneMapped: false }));
+    mm.position.set(M[0], M[1], M[2]); mm.scale.set(M[3] / 2, 0.0001, M[3] / 5); root.add(mm);
+    g.userData.update = (t) => {
+      let k = 0; for (const w of o.talk || []) if (t >= w[0] && t <= w[1]) { k = Math.min(1, (t - w[0]) / 0.1, (w[1] - t) / 0.1); break; }
+      const open = k > 0 ? k * (0.25 + 0.75 * Math.abs(Math.sin(t * 17 + Math.sin(t * 5.3)))) : 0;
+      mm.scale.y = Math.max(0.0001, (M[4] / 2) * open); mm.visible = open > 0.03;
+    };
+    g.userData.update(0);
+  }
+  return g;
 }
 const loadImage = (src) => new Promise((ok) => { const i = new Image(); i.onload = () => ok(i); i.onerror = () => ok(null); i.src = src; });
 
