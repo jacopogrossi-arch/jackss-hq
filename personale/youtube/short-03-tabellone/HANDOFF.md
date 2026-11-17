@@ -57,3 +57,16 @@ Note di Jacopo sulla v2 e cosa e' stato fatto (progetto locale `videos/_bench/sh
 - Provato Blender headless (`.claude/skills/fashion-3d/scripts/blender_minime.py`, 2 giri): volto scolpito da script NON convince (testa a uovo, capelli a squame). Le nuove skill Blender (blender-modeling ecc.) dicono che i personaggi organici sono fuori dal loro campo.
 - Jacopo (17/11): provare image-to-3D dalla sua foto e/o le skill Blender con l'MCP. Il Blender MCP NON e' collegato in questa sessione (server `blender` in timeout; serve Blender aperto con addon connesso + riavvio sessione). Gli unici image-to-3D visibili qui sono Higgsfield `generate_3d` e Magnific `models3d_generate`, due servizi che Jacopo ha dismesso: non usati senza il suo ok.
 - Input pronti in `videos/_bench/minime-input/` (locale). Nel video v3 resta l'omino stile Lego senza occhiali.
+
+## 17/11 notte: PIANO CONCORDATO CON JACOPO PER L'OMINO (da riprendere in nuova sessione)
+**Tutti i pareri di Jacopo, in sintesi (da rispettare):**
+- Omino: NO cartone, NO "tre solidi uno sopra l'altro"; deve ASSOMIGLIARGLI ma NON realistico: stile giocattolo/cartoon coerente col video. Senza occhiali. Capelli alzati/dritti. "Se no semplicemente lasciamo stare."
+- Strumenti: ok a un servizio image-to-3D SOLO via API a consumo (niente abbonamenti); lui crea la chiave e mette i dati di pagamento. Prima mi serve il Blender MCP collegato (Blender aperto con addon, sessione riavviata) e le nuove skill Blender (9 MIT in `.claude/skills/`).
+- Voce: solo `eleven_v4` (mai v3). Niente suoni "pop": solo swish morbidi. Apertura mai uguale a un video precedente. Plate "< €30" deve entrare sulla parola e restare. CTA chiara ("scrivi PANTALONE nei commenti e ti dico il prezzo finale"). Stampella visibile.
+- Bozza v3 (`short3-sala-campioni-v3.mp4`) in revisione da parte di Jacopo: aspettare i suoi pareri; NON pubblicare.
+
+**Fatto stanotte:** immagine stilizzata (toy/vinyl, full body, A-pose, fronte, sfondo grigio, senza occhiali, maglia nera, jeans cimosa, stivali texani) generata con Gemini `gemini-3-pro-image-preview` dalla sua foto: `videos/_bench/minime-input/toy-jacopo-v1.png` (locale, fuori da git). E' l'input per l'image-to-3D.
+**Prossimi passi (nuova sessione):**
+1. Jacopo: Blender aperto + MCP connesso; crea la chiave API del servizio image-to-3D (a consumo) e la mette in `.env`.
+2. Eventuale rifinitura dell'immagine (vista di fianco/retro per migliori risultati multi-view).
+3. image-to-3D -> GLB -> pulizia in Blender (scala, orientamento, peso) -> `w.glb(..., fit~0.3)` al posto dell'omino Lego in `short3c/build.py` `me()` -> render 1080p60.
