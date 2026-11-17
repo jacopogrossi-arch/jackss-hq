@@ -121,7 +121,7 @@ olive = np.array([(c[1] >= c[0]*0.85) and (c.mean() > 0.3) and (not s) for c, s 
 mj = olive[lab] & torso
 col[mj] = col[mj]*0.12 + JACKET_REF*0.88
 # testa: pelle = un solo colore (via la riga di giunzione fronte/lato); capelli e occhiali/sopracciglia = una tinta ciascuno, con un po' di variazione
-head = z > 0.74
+head = z > 0.665
 sk = skin_c[lab]
 if (sk & head).any():
     col[sk] = col[sk & head].mean(0)
@@ -132,7 +132,9 @@ BOOT = cen[int(np.argmin([c.mean() if (not s and c.mean() > 0.05) else 9 for c, 
 col[bad & (z < 0.07)] = BOOT
 col[bad & (z >= 0.07) & (z < 0.33)] = JEANS_REF
 col[bad & (z >= 0.33)] = JACKET_REF
-face_low = head & (z < 0.855) & (np.abs(x-0.5) < 0.28)           # mento/guance: niente zone scure (barba sporca), solo pelle
+col[(z < 0.07) & (col.mean(1) > 0.12)] = BOOT                    # stivali: niente chiazze chiare
+col[(z >= 0.07) & (z < 0.32) & ~hands & (col.mean(1) > 0.22)] = JEANS_REF   # jeans: niente chiazze chiare
+face_low = head & (z < 0.795) & (np.abs(x-0.5) < 0.28)           # mento/guance: niente zone scure (barba sporca), solo pelle
 SKIN = col[sk & head].mean(0) if (sk & head).any() else col[sk].mean(0)
 col[face_low & ~sk & (col.mean(1) < 0.40)] = SKIN
 sk = sk | (face_low & ~sk & (col.mean(1) < 0.40))
