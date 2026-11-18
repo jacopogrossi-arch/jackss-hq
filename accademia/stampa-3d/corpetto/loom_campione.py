@@ -42,8 +42,9 @@ def V(i, j):
 def triangoli():
     """Triangoli (terne di indici di vertice) il cui centro cade nel rettangolo del campione."""
     out = []
-    for i in range(-12, 13):
-        for j in range(-12, 13):
+    n = int(max(LARG_CAMP, ALT_CAMP) / LATO) + 4
+    for i in range(-n, n + 1):
+        for j in range(-n, n + 1):
             for tri, su in (((i, j), (i + 1, j), (i, j + 1)), True), (((i + 1, j), (i + 1, j + 1), (i, j + 1)), False):
                 c = sum(V(*v) for v in tri) / 3
                 if abs(c[0]) <= LARG_CAMP / 2 and abs(c[1]) <= ALT_CAMP / 2:
@@ -136,6 +137,12 @@ def esporta_step(telo, spessore, nome):
 
 
 if __name__ == "__main__":
+    import sys
+    # uso: python loom_campione.py [larghezza altezza nome]   es. 160 160 grande
+    NOME = "campione"
+    if len(sys.argv) >= 3:
+        LARG_CAMP, ALT_CAMP = float(sys.argv[1]), float(sys.argv[2])
+        NOME = f"campione-{sys.argv[3]}" if len(sys.argv) > 3 else f"campione-{sys.argv[1]}"
     tris = triangoli()
     telo = telo_2d(tris)
     assert telo.geom_type == "Polygon", "il telo deve restare un pezzo unico"
@@ -144,11 +151,12 @@ if __name__ == "__main__":
     for sp in SPESSORI:
         tag = f"{round(sp * 10):02d}"
         mesh = trimesh.creation.extrude_polygon(telo, sp)
-        mesh.export(OUT / f"loom-campione-{tag}.stl")
-        mesh.export(OUT / f"loom-campione-{tag}.3mf")
+        mesh.export(OUT / f"loom-{NOME}-{tag}.stl")
+        mesh.export(OUT / f"loom-{NOME}-{tag}.3mf")
         print(f"spessore {sp} mm: watertight {mesh.is_watertight}, volume {round(mesh.volume)} mm3, circa {round(mesh.volume * 1.21 / 1000, 2)} g di TPU")
-    immagine(tris, telo)
+    if NOME == "campione":
+        immagine(tris, telo)
     try:
-        print("STEP valido:", esporta_step(telo, SPESSORI[0], "loom-campione-04.step"))
+        print("STEP valido:", esporta_step(telo, SPESSORI[0], f"loom-{NOME}-04.step"))
     except Exception as e:
         print("STEP saltato:", type(e).__name__, e)
