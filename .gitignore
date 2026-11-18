@@ -73,3 +73,5 @@ cartamodelli/privato/
 # critic loop: reference images (16/11/2026)
 .critic/
 social/short-11-pantalone-3d/v1/comp/
+social/short-sconosciuti/v1/comp/
+social/short-sconosciuti/v1/comp_test/
