@@ -56,11 +56,16 @@ R0 = 0.25
 w.glb("tr", TROUSER, fit=0.86, pos=(HP[0], 0.32, HP[2]), rot_y=R0, double=True,
       turn=[(0.0, 4.4, R0 + 1.3, "glide"), (T_3D, 1.4, R0, "glide"), (at("girare", 1, 20.0), 2.0, R0 + 2 * PI, "hand"), (at("dietro", 2) + 0.1, 1.0, R0 + 3 * PI, "hand"), (T_NON, 3.8, R0 + 4 * PI, "glide")])
 
-# ---- step 1: the sheet on the drawing desk (pencil writes it)
+# ---- step 1: the technical sheet standing on the drawing desk (drawing already done), the three lines pop on the words
 S1 = (-2.5, 0.9, 0.2)
-w.prop("sketchdraw", "sk", (S1[0], 0.905, S1[2]), (0.55, 0.78), rot_y=0.15, t=T_SCHEDA, reveal=[at("verde") - 0.2, end("parole") - 0.2])
-w.card("cscheda", (-1.85, 1.38, 0.8), w=0.78, h=0.46, text="*La scheda*", sub="verde oliva · vita alta · pieghe doppie", rot_y=-0.3, color=GESSO, t=at("scheda") - 0.1,
-       move=[(T_VISTE + 0.15, 0.01, (-1.85, -5.0, 0.8), "linear")])
+SH = (-2.55, 1.34, 0.35)                                       # centre of the sheet (0.62 x 0.84 m)
+OUT1 = [(T_VISTE + 0.15, 0.01, None, "linear")]
+w.card("sheet", SH, w=0.62, h=0.84, img="img/scheda.png", rot_y=0.0, flat=True, t=T_SCHEDA + 0.35, color="#F4EEDF",
+       move=[(T_VISTE + 0.15, 0.01, (SH[0], -5.0, SH[2]), "linear")])
+for i, (txt, t_) in enumerate([("Verde *oliva*", at("verde") - 0.1), ("Vita *alta*", at("vita") - 0.1), ("Pieghe *doppie*", at("pieghe") - 0.1)]):
+    yy = SH[1] + 0.84 * (0.5 - (760 + i * 95) / 1008.0)
+    w.card("line%d" % i, (SH[0], yy, SH[2] + 0.012), w=0.54, h=0.1, text=txt, rot_y=0.0, flat=True, color="#F4EEDF", size=80, t=t_,
+           move=[(T_VISTE + 0.15, 0.01, (SH[0], -5.0, SH[2] + 0.012), "linear")])
 
 # ---- step 2: four views, standing in a row in front of the photo set
 S3 = (3.5, 0.0, 0.5)
@@ -112,10 +117,10 @@ w.cam((1.0, 0.95, 4.5), (1.0, 0.75, 2.6))                                       
 C(0.05, 2.3, (2.1, 1.0, 4.0), (1.0, 0.75, 2.6), "glide")                                    # orbit while "ho dato un disegno a un'AI"
 C(at("pantalone"), 1.4, (1.2, 0.8, 3.7), (1.0, 0.78, 2.6), "hand")                          # push in on "pantalone"
 C(at("3d"), 0.5, (0.2, 1.25, 4.4), (1.0, 0.8, 2.6), "hand")
-C(T_SCHEDA, 1.1, (-2.1, 1.75, 2.7), (-2.3, 1.1, 0.4), "glide")                              # dive to the desk: paper + the sheet card
-C(at("verde") - 0.4, 1.4, (-2.35, 1.55, 1.0), (-2.5, 0.92, 0.25), "glide")                  # top view: the pencil writes
-C(at("alta") - 0.3, 1.3, (-3.0, 1.15, 0.9), (-2.5, 0.95, 0.2), "hand")                       # low and side
-C(at("scrivi") - 0.2, 1.1, (-2.1, 1.6, 2.8), (-2.3, 1.1, 0.4), "glide")                      # wide again: paper, card, narrator
+C(T_SCHEDA, 1.1, (-2.25, 1.5, 3.9), (-2.25, 1.15, 0.4), "glide")                              # dive to the desk: the sheet and the narrator beside it, frontal
+C(at("verde") - 0.3, 2.0, (-2.25, 1.42, 3.3), (-2.25, 1.2, 0.4), "hand")                      # slow push towards the sheet
+C(at("pieghe") - 0.3, 1.6, (-2.25, 1.38, 3.0), (-2.25, 1.25, 0.4), "hand")                  # closer on the lines
+C(at("scrivi") - 0.3, 1.3, (-2.25, 1.5, 3.7), (-2.25, 1.1, 0.4), "glide")                     # back to the wide frontal frame
 C(T_VISTE, 1.1, (4.2, 1.5, 4.2), (3.5, 1.35, 1.2), "glide")                                  # the photo set
 C(at("immagine") - 0.4, 1.0, (3.0, 1.4, 3.9), (3.5, 1.3, 1.25), "hand")
 C(at("quattro") - 0.3, 1.4, (3.5, 1.35, 4.1), (3.5, 1.3, 1.25), "hand")
@@ -127,7 +132,7 @@ C(at("sistemare") + 0.2, 0.8, (1.0, 1.1, 4.7), (1.0, 0.8, 2.6), "glide")
 C(at("girare", 1, 20.0) - 0.15, 1.9, (2.3, 1.1, 3.9), (1.0, 0.8, 2.6), "glide")                      # orbit during the 360
 C(at("dietro", 2) - 0.25, 1.4, (1.1, 0.9, 4.0), (1.0, 0.8, 2.6), "hand")                    # "da dietro": push on the back
 # narrator placement: automatic, the best spot visible from the side of the shots of each station
-V4 = {1: ((0.3, 0.0, 2.95), 0.50), 2: ((-3.12, 0.9, 0.42), 0.30), 3: ((2.7, 0.0, 2.2), 0.50), 4: ((0.3, 0.0, 2.95), 0.55)}
+V4 = {1: ((0.3, 0.0, 2.95), 0.50), 2: ((-3.12, 0.9, 0.42), 0.40), 3: ((2.7, 0.0, 2.2), 0.50), 4: ((0.3, 0.0, 2.95), 0.55)}
 WIN = {1: (0.0, T_SCHEDA), 2: (T_SCHEDA, T_VISTE), 3: (T_VISTE, T_3D), 4: (T_3D, DUR)}
 
 
@@ -164,6 +169,7 @@ for k_ in range(2, 5):
     P = PLACE[k_]; hh = V4[k_][1]; cams_ = [c for c in _calls if len(c) <= 5 and WIN[k_][0] <= c[0] <= WIN[k_][1]]
     mx_, mz_ = (sum(c[2][0] for c in cams_) / len(cams_), sum(c[2][2] for c in cams_) / len(cams_)) if cams_ else (P[0], P[2] + 3)
     rot_ = math.atan2(mx_ - P[0], mz_ - P[2]) * 0.9
+    if k_ == 2: P, rot_ = (-1.88, 0.9, 0.55), 0.05                  # on the desk, right of the sheet, facing the camera
     if k_ == 3: P = (3.15, 0.0, 2.65)                      # fixed: bottom-left of the four cards
     if k_ == 4: P, rot_ = (0.7, 0.0, 3.4), 0.2              # in front of the pedestal, a little to the left: the trouser stays behind him in the close-ups
     PLACE[k_] = (P, rot_)
@@ -227,4 +233,5 @@ if __name__ == "__main__":
     G = "D:/ClaudeCodeTest/social/assets-3d/gemini/"
     for f_, src_ in (("fronte", "01-pantalone-d-fronte.png"), ("retro", "01-pantalone-d-retro.png"), ("left", "01-pantalone-d-left.png"), ("right", "01-pantalone-d-right.png")):
         shutil.copy(G + src_, os.path.join(out, "img", "pantalone-%s.png" % f_))
+    shutil.copy(os.path.join(HERE, "img", "scheda.png"), os.path.join(out, "img", "scheda.png"))
     print("built")
