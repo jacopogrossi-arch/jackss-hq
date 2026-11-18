@@ -42,7 +42,7 @@ LP, RP = room.POLES                                           # (x, z) of the le
 # ---- the six comment cards: a pair per beat; the card pops on the first word of its sentence and stays on its post
 BEATS = [("conf", "prima", "conferma", "*~200 €*", "se gli sta perfetto"),
          ("schi", "primo", "schiaffo", "*65 $* vs 400", "compro solo quando costa poco"),
-         ("conf", "seconda", "conferma", "*toccarlo* di persona", "online: quasi nessuno si fida"),
+         ("conf", "seconda", "conferma", "*toccarlo*", "online: quasi nessuno si fida"),
          ("schi", "secondo", "schiaffo", "*serve tempo*", "da un giovane senza nome: no"),
          ("conf", "terza", "conferma", "*pochi* ma buoni", "meglio che tanti"),
          ("schi", "terzo", "schiaffo", "*400 $* in teoria", "paura di rovinarli")]
@@ -102,8 +102,8 @@ C(at("schiaffo") - 0.6, 1.0, (1.8, 1.5, 3.2), LOOK_R, "glide")
 for k, (ts, kind, tk) in enumerate(T):                       # per beat: dive to the post, then a slow push on the card
     look = LOOK_L if kind == "conf" else LOOK_R
     sx = -1 if kind == "conf" else 1
-    C(ts - 0.1, 1.0, (look[0] + sx * 0.5, 1.9, 3.6), look, "glide")
-    C(ts + 1.4, 2.4, (look[0] + sx * 0.2, 2.0, 2.8), (look[0], look[1] - 0.05, look[2]), "hand")
+    C(ts - 0.1, 1.0, (look[0] + sx * 0.5, 1.9, 3.2), look, "glide")
+    C(ts + 1.4, 2.4, (look[0] + sx * 0.2, 2.0, 2.4), (look[0], look[1] - 0.05, look[2]), "hand")
 # narrator + the close-up on the moral
 R4 = 0.0
 me("nar1", PN, T[0][0] - 0.2, DUR + 1.0, rot=R4, height=0.55)
