@@ -33,7 +33,7 @@ def end(word, n=1, after=0.0):
 DUR = 36.5
 F = "D:/ClaudeCodeTest/videos/_bench/assets3d/finali/"
 TROUSER = F + "pantalone.glb"
-OMINO = "D:/ClaudeCodeTest/videos/_bench/short11/assets/narratore-perf.glb"
+OMINO = "D:/ClaudeCodeTest/videos/_bench/short11/assets/narratore-perf-smooth.glb"
 w = World3D("s", 0.0, DUR, fov=42, w=1080, h=1920, fade=0.4)
 w.shutter(0.5)
 GESSO, SABBIA, RUGGINE, BOSCO = "#EFE9DD", "#B9AE98", "#8A4B2D", "#2F3A2E"
