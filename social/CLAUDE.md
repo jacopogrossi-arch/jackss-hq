@@ -18,4 +18,4 @@
 **Non fare**
 - Footage e render vivono in `videos/` (locale, fuori da git): mai qui dentro.
 - Mai nominare la tela di prova del 05/08 nei video.
-- TODO: da compilare (link dello Short #3 pubblicato).
+- TODO: da compilare (link degli Shorts #3 e #11 pubblicati).
