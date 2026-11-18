@@ -47,6 +47,7 @@ T_NON = at("non", 1, 20.0)                                    # 26.0  "Non ho ni
 T_COMP = at("video")                                          # 29.8  "Il video completo..."
 T_CHE = at("che", 1, 31.0)                                             # 31.9  "Che colore lo vuoi?"
 room.furnish(w)
+w.prop("terrazzo", "floor2", (0.5, 0, 8.4), (9.4, 7.0))                         # the floor goes on in front of the room: the wide end shots no longer show the void
 
 # ---- hero: the toy trouser on a turning pedestal on the green rug
 HP = (1.0, 0.0, 2.6)
@@ -113,10 +114,10 @@ def _flush():
         w.cam(pos, look, t=t, d=dd, ease=ease)
 
 
-w.cam((1.0, 0.95, 4.5), (1.0, 0.75, 2.6))                                                   # frame 1: the trouser, close, already turning
-C(0.05, 2.3, (2.1, 1.0, 4.0), (1.0, 0.75, 2.6), "glide")                                    # orbit while "ho dato un disegno a un'AI"
-C(at("pantalone"), 1.4, (1.2, 0.8, 3.7), (1.0, 0.78, 2.6), "hand")                          # push in on "pantalone"
-C(at("3d"), 0.5, (0.2, 1.25, 4.4), (1.0, 0.8, 2.6), "hand")
+w.cam((1.0, 1.0, 5.4), (1.0, 0.97, 2.6))                                                   # frame 1: the trouser, close, already turning
+C(0.05, 2.4, (2.3, 1.05, 5.0), (1.0, 0.97, 2.6), "glide")                                    # orbit while "ho dato un disegno a un'AI"
+C(at("pantalone"), 1.4, (1.5, 1.0, 4.9), (1.0, 0.97, 2.6), "hand")                          # push in on "pantalone"
+C(at("3d"), 0.5, (0.4, 1.05, 5.1), (1.0, 0.97, 2.6), "hand")
 C(T_SCHEDA, 1.1, (-2.25, 1.5, 3.9), (-2.25, 1.15, 0.4), "glide")                              # dive to the desk: the sheet and the narrator beside it, frontal
 C(at("verde") - 0.3, 2.0, (-2.25, 1.42, 3.3), (-2.25, 1.2, 0.4), "hand")                      # slow push towards the sheet
 C(at("pieghe") - 0.3, 1.6, (-2.25, 1.38, 3.0), (-2.25, 1.25, 0.4), "hand")                  # closer on the lines
