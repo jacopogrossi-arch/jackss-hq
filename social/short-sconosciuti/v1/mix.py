@@ -36,8 +36,12 @@ def put(a, t, align="start", name=""):
 
 L = "licensed/"
 at = B.at
-put(load(L + "cc-zoom-whoosh.mp3", peak_db=-20), 0.0, name="opening whoosh")
-put(load("core/impact-bass-1.mp3", 1.2, -24, 0.5), 0.02, name="opening hit")
+import build as _B0
+put(load(L + "cc-zoom-whoosh.mp3", peak_db=-19), 0.30, name="push-in whoosh")                                   # the fast zoom onto the window (0.35 -> 1.3 s)
+put(load(L + "al-swoosh-intense.mp3", peak_db=-16), 0.80, "peak", "push-in swoosh (strong)")
+put(load("core/impact-bass-1.mp3", 1.0, -25, 0.4), 1.22, name="push-in lands")
+put(load(L + "es-swoosh-wide.mp3", peak_db=-21), _B0.at("ragione") - 0.8 + 0.5, "peak", "pan to the green lamp")       # the two pans to the lamps
+put(load(L + "es-swoosh-wide.mp3", peak_db=-21), _B0.at("schiaffo") - 0.6 + 0.45, "peak", "pan to the red lamp")
 SW = [("es-swish-classic-filter.mp3", 0.67, -26), ("es-whoosh-soft-resonant.mp3", 0.57, -26), ("es-whoosh-generic-air.mp3", 0.55, -26)]
 _k = [0]
 
