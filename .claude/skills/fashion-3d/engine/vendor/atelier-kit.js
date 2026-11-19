@@ -225,6 +225,20 @@ function pendant(o) {                                    // a hanging lamp: the 
   add(g, new THREE.SphereGeometry(0.05, 14, 10), new THREE.MeshBasicMaterial({ color: "#fff1c8", toneMapped: false }), 0, 0.02, 0).userData.noshadow = true;
   const h = halo(o.glowColor || "#ffd98a", o.glow ?? 0.9); h.scale.set(1.5, 1.5, 1); h.position.set(0, -0.05, 0); g.add(h);
   if (o.light) { const pl = new THREE.PointLight(o.glowColor || "#ffd7a0", o.light, 5, 1.6); pl.position.set(0, -0.12, 0); g.add(pl); }
+  if (o.flash) {                                         // 19/11/2026 o.flash=[[t0,t1,"#colour"],...]: the lamp blinks in that colour (2.5 blinks a second) and throws it on the street, then goes back to warm
+    const bulb = g.children[2], base = o.light || 0, pl2 = g.children.find((x) => x.isPointLight), hc = {};
+    const hs = {}; for (const [, , col] of o.flash) if (!hs[col]) { const hh = halo(col, 0); hh.scale.set(3.4, 3.4, 1); hh.position.set(0, -0.05, 0); g.add(hh); hs[col] = hh; }
+    const prev = g.userData.update;
+    g.userData.update = (t) => {
+      if (prev) prev(t);
+      let act = null; for (const f of o.flash) if (t >= f[0] && t < f[1]) act = f;
+      for (const col in hs) hs[col].material.opacity = 0;
+      if (!act) { bulb.material.color.set("#fff1c8"); if (pl2) { pl2.color.set(o.glowColor || "#ffd7a0"); pl2.intensity = base; } return; }
+      const ph = ((t - act[0]) % 0.4) / 0.4, on = ph < 0.62 ? 1 : 0.18, fade = Math.min(1, (act[1] - t) / 0.15, (t - act[0]) / 0.05 + 0.4);
+      bulb.material.color.set(on > 0.5 ? act[2] : "#5a5a5a"); hs[act[2]].material.opacity = 0.95 * on * Math.max(0, fade);
+      if (pl2) { pl2.color.set(act[2]); pl2.intensity = base * (0.5 + 3.6 * on * Math.max(0, fade)); }
+    };
+  }
   if (o.hide) {                                          // o.hide=[[t0,t1],...]: the lamp fades out (0.35 s) for the span, e.g. while the camera flies up to the map, so it never crosses the lens
     const mats = []; g.traverse((x) => { if (x.material) { x.material = x.material.clone(); x.material.transparent = true; x.userData.op = x.material.opacity; mats.push(x); } });
     g.userData.update = (t) => {

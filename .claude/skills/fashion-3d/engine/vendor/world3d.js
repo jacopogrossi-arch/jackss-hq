@@ -134,6 +134,22 @@ function roundRect(w, h, r) {
 function cardTexture(o, img) {
   const W = 1024, H = Math.round(W * o.h / o.w), c = document.createElement("canvas"); c.width = W; c.height = H; const g = c.getContext("2d");
   g.fillStyle = o.color || "#f4efe6"; g.fillRect(0, 0, W, H);
+  if (o.badge) {                                         // 19/11/2026 bold verdict card: dark plate, thick coloured border, a round tick/cross icon on the left, big text fitted to the right
+    const bc = o.border || "#4be08a", ink = o.ink || "#fbf7ee";
+    g.strokeStyle = bc; g.lineWidth = 22; g.strokeRect(18, 18, W - 36, H - 36);
+    const cx = 150, cy = H / 2, R = 92; g.fillStyle = bc; g.beginPath(); g.arc(cx, cy, R, 0, Math.PI * 2); g.fill();
+    g.strokeStyle = o.color || "#101010"; g.lineWidth = 26; g.lineCap = "round"; g.lineJoin = "round"; g.beginPath();
+    if (o.badge === "ok") { g.moveTo(cx - 42, cy + 2); g.lineTo(cx - 10, cy + 36); g.lineTo(cx + 46, cy - 34); } else { g.moveTo(cx - 36, cy - 36); g.lineTo(cx + 36, cy + 36); g.moveTo(cx + 36, cy - 36); g.lineTo(cx - 36, cy + 36); }
+    g.stroke();
+    const x0 = 290, maxW = W - x0 - 50, parts = String(o.text || "").split("*"); let size = o.size || 130;
+    const font = (k, sz) => (k % 2 ? "italic 600 " + Math.round(sz * 1.1) + 'px "Playfair Display", Georgia, serif' : "800 " + sz + 'px "Inter", "Segoe UI", sans-serif');
+    const meas = (sz) => { let w = 0; parts.forEach((s, k) => { g.font = font(k, sz); w += g.measureText(s).width; }); return w; };
+    const w0 = meas(size); if (w0 > maxW) size = Math.floor(size * maxW / w0);
+    let x = x0; g.textBaseline = "middle"; g.textAlign = "left";
+    parts.forEach((s, k) => { g.font = font(k, size); g.fillStyle = k % 2 ? bc : ink; g.fillText(s, x, H * 0.40); x += g.measureText(s).width; });
+    if (o.sub) { let ss = 54; g.font = "600 " + ss + 'px "Inter", "Segoe UI", sans-serif'; const sw = g.measureText(o.sub).width; if (sw > maxW) { ss = Math.floor(ss * maxW / sw); g.font = "600 " + ss + 'px "Inter", "Segoe UI", sans-serif'; } g.fillStyle = "rgba(251,247,238,.82)"; g.fillText(o.sub, x0, H * 0.74); }
+    const t0 = new THREE.CanvasTexture(c); t0.colorSpace = THREE.SRGBColorSpace; t0.anisotropy = 8; return t0;
+  }
   let top = 0;
   if (img) {                                             // the picture fills the card, or its upper part when there is a title under it
     const ih = o.text ? H * 0.72 : H, k = Math.max(W / img.width, ih / img.height), dw = img.width * k, dh = img.height * k;

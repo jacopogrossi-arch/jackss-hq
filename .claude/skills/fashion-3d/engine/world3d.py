@@ -77,9 +77,9 @@ class World3D:
         """The Drop 1 trouser, built in code: natural waist with side adjusters, pleats (0, 1 or 2 per side), straight leg, turn-ups. Stylised, not a photo."""
         return self._obj("trouser", oid, pos, rot_y, turn, move, t, color=color, pleats=pleats, cuff=cuff, scale=scale, shadow=[1.5, 0.95] if shadow else None, floor=pos[1], pass_mode=look, hang=hang, pockets=None if pockets else False, hi=hi or None, toile=toile or None, noband=noband or None, bulge=bulge, loops=None if loops else False, bp=bp, bpbutton=None if bpbutton else False, flare=flare, chalk=chalk or None)
 
-    def card(self, oid, pos, w=0.8, h=0.5, text=None, sub=None, img=None, rot_y=0.0, turn=None, move=None, t=None, color=None, size=None, look=None, flat=False):
+    def card(self, oid, pos, w=0.8, h=0.5, text=None, sub=None, img=None, rot_y=0.0, turn=None, move=None, t=None, color=None, size=None, look=None, flat=False, ink=None, key=None, badge=None, border=None):
         """An ivory sheet standing in space: a title with one *key* word, or a picture (`img`, a path inside public/, e.g. "img/moodboard.jpg") with an optional caption."""
-        return self._obj("card", oid, pos, rot_y, turn, move, t, w=w, h=h, text=text, sub=sub, img=img, color=color, size=size, pass_mode=look, flat=flat or None)
+        return self._obj("card", oid, pos, rot_y, turn, move, t, w=w, h=h, text=text, sub=sub, img=img, color=color, size=size, pass_mode=look, flat=flat or None, ink=ink, key=key, badge=badge, border=border)
 
     def standee(self, oid, pos, img, w=0.3, rot_y=0.0, turn=None, move=None, t=None):
         """A cardboard standee: a photo cut-out (PNG with alpha, path inside the page, e.g. "img/me.png") on a small base. w = width in metres (height follows the picture). pos = the floor under it."""

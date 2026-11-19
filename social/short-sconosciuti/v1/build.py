@@ -36,7 +36,12 @@ OMINO = os.environ.get("OMINO", "D:/ClaudeCodeTest/videos/_bench/short-sconosciu
 w = World3D("s", 0.0, DUR, fov=42, w=1080, h=1920, fade=0.4)
 w.shutter(0.5)
 GESSO, SABBIA, RUGGINE, BOSCO = "#EFE9DD", "#B9AE98", "#8A4B2D", "#2F3A2E"
-room.furnish(w, trouser=TROUSER)
+GREEN, RED = "#3dff8a", "#ff3b2f"
+_B0 = [("conf", "prima"), ("schi", "primo"), ("conf", "seconda"), ("schi", "secondo"), ("conf", "terza"), ("schi", "terzo")]
+FL = [[(at("ragione") - 0.35, at("ragione") + 1.05, GREEN)], [(at("schiaffo") - 0.35, at("schiaffo") + 1.0, RED)]]   # the two lamps blink when the voice names them ("ragione" -> green, "schiaffo" -> red)
+for _k, _w0 in _B0:                                                                                                    # and each card makes its lamp blink as it lands
+    FL[0 if _k == "conf" else 1].append((at(_w0) + 0.1, at(_w0) + 1.1, GREEN if _k == "conf" else RED))
+room.furnish(w, trouser=TROUSER, flash_l=FL[0], flash_r=FL[1])
 LP, RP = room.POLES                                           # (x, z) of the left (conferme) and right (schiaffi) lamp post
 
 # ---- the six comment cards: a pair per beat; the card pops on the first word of its sentence and stays on its post
@@ -53,8 +58,8 @@ for kind, w0, w1, text, sub in BEATS:
     ts = at(w0) - 0.05; tk = at(w1, 1, ts) + 0.05
     px, pz = LP if kind == "conf" else RP
     i = cnt[kind]; cnt[kind] += 1
-    w.card("c_%s_%d" % (kind, i), (px, YS[kind][i], pz + 0.14), w=0.9, h=0.5, text=text, sub=sub, size=118, rot_y=0.12 if kind == "conf" else -0.12,
-           color="#B9D2AA" if kind == "conf" else "#E4AC92", t=ts)
+    w.card("c_%s_%d" % (kind, i), (px, YS[kind][i], pz + 0.14), w=1.0, h=0.53, text=text, sub=sub, size=130, rot_y=0.12 if kind == "conf" else -0.12, flat=True,
+           color="#0e2b1a" if kind == "conf" else "#33100e", border="#4be08a" if kind == "conf" else "#ff5a47", badge="ok" if kind == "conf" else "no", t=ts)
     T.append((ts, kind, tk))
 
 # ---- the logo sign for the end card (drops in with "Tu quanto pagheresti", flips = INVERSO)
@@ -95,8 +100,8 @@ T_HERO = at("erano") - 0.3                                    # "Non erano il mi
 E_HERO = end("tutto")
 LOOK_L, LOOK_R = (LP[0], 2.45, LP[1]), (RP[0], 2.45, RP[1])
 # hook: the lit shop window with the trouser, the camera drifts in, then it looks at the two posts ("ragione" -> left, "schiaffo" -> right)
-w.cam((0.5, 1.2, 3.6), (0.5, 2.15, -4.6))
-C(0.1, 2.6, (0.5, 1.15, 1.2), (0.5, 1.9, -4.6), "glide")
+w.cam((0.5, 1.5, 1.8), (0.5, 1.95, -4.6))                                                    # closer on the window (19/11): logo on the fascia + the trouser
+C(0.1, 2.6, (0.5, 1.4, 1.4), (0.5, 1.85, -4.6), "glide")
 C(at("ragione") - 0.8, 1.1, (-0.5, 1.5, 3.2), LOOK_L, "glide")
 C(at("schiaffo") - 0.6, 1.0, (1.8, 1.5, 3.2), LOOK_R, "glide")
 for k, (ts, kind, tk) in enumerate(T):                       # per beat: dive to the post, then a slow push on the card
@@ -139,7 +144,7 @@ for i, x in enumerate(WORDS):
         chunks.append((cur[0]["s"], min(nxt - 0.02, cur[-1]["e"] + 0.45), txt.rstrip(".,:")))
         cur = []
 T_HOOK_END = at("prima") - 0.1
-w.big(-0.3, T_HOOK_END, "6 *sconosciuti*|quanto *pagherebbero*|un pantalone?", top=240, size=82)
+w.big(-0.3, T_HOOK_END, "6 *sconosciuti*|quanto *pagherebbero*|un pantalone?", top=70, size=82)
 w.big(T_ENDW, DUR, "Tu quanto *pagheresti*?|scrivilo nei *commenti*", top=215, size=72)
 chunks = [c for c in chunks if not (c[0] < T_HOOK_END or c[0] >= T_ENDW - 0.05)]
 w.captions(chunks, top=340, size=96)
@@ -160,5 +165,5 @@ def _extra(path):
 
 if __name__ == "__main__":
     out = os.path.join(HERE, "comp")
-    print(World3D.page(out, [w], duration=DUR)); _extra(os.path.join(out, "index.html"))
+    print(World3D.page(out, [w], duration=DUR)); os.makedirs(os.path.join(out, "img"), exist_ok=True); shutil.copy(os.path.join(HERE, "img", "fascia.png"), os.path.join(out, "img", "fascia.png")); _extra(os.path.join(out, "index.html"))
     print("built, DUR", DUR)
