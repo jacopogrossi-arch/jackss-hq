@@ -18,3 +18,5 @@
 - 18/11 sera tardi: ElevenLabs tornato. Voce = take B del flusso (gen usphcKY0P8qLbUSstyCd, 53,7 s): `videos/_bench/short-sconosciuti/vo/vo.mp3` (takeA.mp3 di riserva). words.json (corretto a mano) e jaw.json veri; narratore `assets/narratore-perf-smooth.glb` rifatto sul nuovo parlato. BOZZA v1 fatta (`renders/draft.mp4`, 55,9 s, 19 fogli rivisti), `renders/bozza-leggera.mp4` mandata a Jacopo. Aspetto il suo OK/correzioni; poi 4K + iCloud + pubblicazione.md. NON pubblicare.
 
 - 19/11: BOZZA v2 (correzioni Jacopo): fascia INVERSO + targhetta DROP 1 sulla vetrina, camera piu vicina, lampioni che lampeggiano verde/rosso (opzione motore pendant flash=), cartelli nuovi (card badge/border). Mandata a Jacopo (renders/bozza-leggera-v2.mp4). Attendo OK per 4K.
+
+- 19/11: BOZZA v4: pantalone vetrina piu grande + luce bianca dal basso (prop uplight) e lampada vetrina bianca; lampioni FISSI verde/rosso (niente lampeggio); facciata piu romana (travertino, cornici, persiane a lamelle, balconcini, cornicione, targa Via dellAgo, Vespa). File: renders/bozza-leggera-v4.mp4. Attendo OK per 4K.

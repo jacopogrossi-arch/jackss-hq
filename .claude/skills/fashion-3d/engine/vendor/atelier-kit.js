@@ -225,6 +225,7 @@ function pendant(o) {                                    // a hanging lamp: the 
   add(g, new THREE.SphereGeometry(0.05, 14, 10), new THREE.MeshBasicMaterial({ color: "#fff1c8", toneMapped: false }), 0, 0.02, 0).userData.noshadow = true;
   const h = halo(o.glowColor || "#ffd98a", o.glow ?? 0.9); h.scale.set(1.5, 1.5, 1); h.position.set(0, -0.05, 0); g.add(h);
   if (o.light) { const pl = new THREE.PointLight(o.glowColor || "#ffd7a0", o.light, 5, 1.6); pl.position.set(0, -0.12, 0); g.add(pl); }
+  if (o.tint) g.children[2].material.color.set(o.tint);   // 19/11/2026: a steady coloured bulb (the halo and the light take o.glowColor)
   if (o.flash) {                                         // 19/11/2026 o.flash=[[t0,t1,"#colour"],...]: the lamp blinks in that colour (2.5 blinks a second) and throws it on the street, then goes back to warm
     const bulb = g.children[2], base = o.light || 0, pl2 = g.children.find((x) => x.isPointLight), hc = {};
     const hs = {}; for (const [, , col] of o.flash) if (!hs[col]) { const hh = halo(col, 0); hh.scale.set(3.4, 3.4, 1); hh.position.set(0, -0.05, 0); g.add(hh); hs[col] = hh; }
@@ -247,6 +248,14 @@ function pendant(o) {                                    // a hanging lamp: the 
     };
     g.userData.update(-1);
   }
+  return g;
+}
+function uplight(o) {                                    // 19/11/2026 a shop-window glow from below: a white point light + a soft halo + a lit disc on the floor. size=[radius]
+  const r = (o.size && o.size[0]) || 1.0, g = new THREE.Group(), col = o.glowColor || "#ffffff";
+  const h = halo(col, o.glow ?? 0.55); h.scale.set(r * 2.6, r * 2.0, 1); h.position.set(0, 0.45, 0); g.add(h);
+  const [c, x] = cv(256, 256), gr = x.createRadialGradient(128, 128, 0, 128, 128, 128); gr.addColorStop(0, "rgba(255,255,255,.9)"); gr.addColorStop(0.5, "rgba(255,255,255,.35)"); gr.addColorStop(1, "rgba(255,255,255,0)"); x.fillStyle = gr; x.fillRect(0, 0, 256, 256);
+  const disc = new THREE.Mesh(new THREE.PlaneGeometry(r * 2.4, r * 2.4), new THREE.MeshBasicMaterial({ map: tex(c), transparent: true, depthWrite: false, blending: THREE.AdditiveBlending, opacity: o.glow ?? 0.55, toneMapped: false })); disc.rotation.x = -Math.PI / 2; disc.position.y = 0.01; disc.userData.noshadow = true; g.add(disc);
+  if (o.light) { const pl = new THREE.PointLight(col, o.light, 6, 1.4); pl.position.set(0, 0.12, 0.25); g.add(pl); }
   return g;
 }
 function deskLamp(o) {                                   // an articulated desk lamp, ~45 cm
@@ -291,7 +300,7 @@ function clothSheet(o) {                                 // cloth laid on a tabl
   const m = new THREE.Mesh(geo, o.mat); m.rotation.x = -Math.PI / 2; m.position.y = 0.004; const g = new THREE.Group(); g.add(m); return g;
 }
 
-export const KIT = new Set(["woodfloor", "wall", "window", "rollrack", "bolts", "spoolwall", "table", "paper", "frame", "ruler", "shears", "sewing", "mannequin", "pendant", "desklamp", "plant", "rail", "rug", "cloth", "cuttingmat", "buttonjar", "pincushion", "spool", "hoop", "sketchdraw", "patterncut", "logoplate", "weight", "chalk", "lsquare", "pathdots", "floorbadge", ...STUDIO, ...MASCOT, ...MINI, ...DATA]);
+export const KIT = new Set(["woodfloor", "wall", "window", "rollrack", "bolts", "spoolwall", "table", "paper", "frame", "ruler", "shears", "sewing", "mannequin", "pendant", "uplight", "desklamp", "plant", "rail", "rug", "cloth", "cuttingmat", "buttonjar", "pincushion", "spool", "hoop", "sketchdraw", "patterncut", "logoplate", "weight", "chalk", "lsquare", "pathdots", "floorbadge", ...STUDIO, ...MASCOT, ...MINI, ...DATA]);
 export function build(o, H) {
   if (PROPS.has(o.type)) return buildProp(o);
   if (STUDIO.has(o.type)) return buildStudio(o);
@@ -314,6 +323,7 @@ export function build(o, H) {
     case "sewing": return sewingMachine(o);
     case "mannequin": return mannequin(o);
     case "pendant": return pendant(o);
+    case "uplight": return uplight(o);
     case "desklamp": return deskLamp(o);
     case "plant": return plant(o);
     case "rail": return rail(o);

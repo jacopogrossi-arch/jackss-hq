@@ -41,7 +41,7 @@ _B0 = [("conf", "prima"), ("schi", "primo"), ("conf", "seconda"), ("schi", "seco
 FL = [[(at("ragione") - 0.35, at("ragione") + 1.05, GREEN)], [(at("schiaffo") - 0.35, at("schiaffo") + 1.0, RED)]]   # the two lamps blink when the voice names them ("ragione" -> green, "schiaffo" -> red)
 for _k, _w0 in _B0:                                                                                                    # and each card makes its lamp blink as it lands
     FL[0 if _k == "conf" else 1].append((at(_w0) + 0.1, at(_w0) + 1.1, GREEN if _k == "conf" else RED))
-room.furnish(w, trouser=TROUSER, flash_l=FL[0], flash_r=FL[1])
+room.furnish(w, trouser=TROUSER)
 LP, RP = room.POLES                                           # (x, z) of the left (conferme) and right (schiaffi) lamp post
 
 # ---- the six comment cards: a pair per beat; the card pops on the first word of its sentence and stays on its post
