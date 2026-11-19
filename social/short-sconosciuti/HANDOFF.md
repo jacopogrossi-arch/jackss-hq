@@ -22,3 +22,5 @@
 - 19/11: BOZZA v4: pantalone vetrina piu grande + luce bianca dal basso (prop uplight) e lampada vetrina bianca; lampioni FISSI verde/rosso (niente lampeggio); facciata piu romana (travertino, cornici, persiane a lamelle, balconcini, cornicione, targa Via dellAgo, Vespa). File: renders/bozza-leggera-v4.mp4. Attendo OK per 4K.
 
 - 19/11: BOZZA v5: partenza da lontano + zoom velocissimo sulla vetrina; card1 «Vestibilita corretta / spenderebbe 200 € se andasse bene», card2 «Compro solo quando costa poco / 65 vs 200» (testi di Jacopo). renders/bozza-leggera-v5.mp4. Attendo OK 4K.
+
+- 19/11 mattina: 4K FATTO (2160x3840, 60 fps, 55,9 s, 405 MB) dopo il via di Jacopo; copiato in iCloud › Video 3D moda › short-sconosciuti-v1.mp4. pubblicazione.md scritta. Resta SOLO la pubblicazione (la fa Jacopo).

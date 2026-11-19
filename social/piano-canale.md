@@ -43,6 +43,7 @@ Shorts in 3D (formato 52 / explainer 3D della skill `youtube-edit`), voce di Jac
 - **Short #1 "Il mio primo pantalone sembrava una gonna"** (v5, **pubblicato 13/11/2026**, scheda in `short-primo-pantalone/README.md`): è il teaser del #5 (il pantalone, ~04/12). Video correlato: il #4 finché il #5 non esce, poi il #5.
 - **Short #2 "Il nome del mio brand ha tre significati"** (v1, costruito in autonomia la notte del 13/11/2026, **da rivedere con Jacopo prima di pubblicarlo**, scheda in `short-02-identita/README.md`): è il ritaglio del #4, ambientato in una scena nuova (lo studio di notte). Video correlato: il #4.
 - **Short #3 «Quanto costa lanciare un pantalone»** (**pubblicato 17/11/2026**) e **Short «Ho dato un disegno a un'AI e mi ha restituito un pantalone 3D»** (idea 11 della lista, **pubblicato 18/11/2026**, sorgenti in `short-11-pantalone-3d/`): teaser del #5. Video correlato: il #4 finché il #5 non esce.
+- **Short «Ho chiesto a 6 sconosciuti quanto pagherebbero un pantalone fatto bene»** (idea 1; **4K pronto 19/11/2026, da pubblicare**, scheda in `short-sconosciuti/pubblicazione.md`). Video correlato: #4.
 - **Verifica dopo 6 Shorts:** in YouTube Studio guardare gli iscritti arrivati dagli Shorts e i clic sul video correlato. Se nessuno arriva al lungo, gli Shorts restano solo come copertura della pausa.
 
 ## Diario dei riscontri
