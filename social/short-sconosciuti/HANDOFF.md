@@ -20,3 +20,5 @@
 - 19/11: BOZZA v2 (correzioni Jacopo): fascia INVERSO + targhetta DROP 1 sulla vetrina, camera piu vicina, lampioni che lampeggiano verde/rosso (opzione motore pendant flash=), cartelli nuovi (card badge/border). Mandata a Jacopo (renders/bozza-leggera-v2.mp4). Attendo OK per 4K.
 
 - 19/11: BOZZA v4: pantalone vetrina piu grande + luce bianca dal basso (prop uplight) e lampada vetrina bianca; lampioni FISSI verde/rosso (niente lampeggio); facciata piu romana (travertino, cornici, persiane a lamelle, balconcini, cornicione, targa Via dellAgo, Vespa). File: renders/bozza-leggera-v4.mp4. Attendo OK per 4K.
+
+- 19/11: BOZZA v5: partenza da lontano + zoom velocissimo sulla vetrina; card1 «Vestibilita corretta / spenderebbe 200 € se andasse bene», card2 «Compro solo quando costa poco / 65 vs 200» (testi di Jacopo). renders/bozza-leggera-v5.mp4. Attendo OK 4K.

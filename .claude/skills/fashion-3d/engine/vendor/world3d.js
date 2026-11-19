@@ -141,13 +141,17 @@ function cardTexture(o, img) {
     g.strokeStyle = o.color || "#101010"; g.lineWidth = 26; g.lineCap = "round"; g.lineJoin = "round"; g.beginPath();
     if (o.badge === "ok") { g.moveTo(cx - 42, cy + 2); g.lineTo(cx - 10, cy + 36); g.lineTo(cx + 46, cy - 34); } else { g.moveTo(cx - 36, cy - 36); g.lineTo(cx + 36, cy + 36); g.moveTo(cx + 36, cy - 36); g.lineTo(cx - 36, cy + 36); }
     g.stroke();
-    const x0 = 290, maxW = W - x0 - 50, parts = String(o.text || "").split("*"); let size = o.size || 130;
+    const x0 = 290, maxW = W - x0 - 50, ml = String(o.text || "").split("|"), sl = o.sub ? String(o.sub).split("|") : [];
     const font = (k, sz) => (k % 2 ? "italic 600 " + Math.round(sz * 1.1) + 'px "Playfair Display", Georgia, serif' : "800 " + sz + 'px "Inter", "Segoe UI", sans-serif');
-    const meas = (sz) => { let w = 0; parts.forEach((s, k) => { g.font = font(k, sz); w += g.measureText(s).width; }); return w; };
-    const w0 = meas(size); if (w0 > maxW) size = Math.floor(size * maxW / w0);
-    let x = x0; g.textBaseline = "middle"; g.textAlign = "left";
-    parts.forEach((s, k) => { g.font = font(k, size); g.fillStyle = k % 2 ? bc : ink; g.fillText(s, x, H * 0.40); x += g.measureText(s).width; });
-    if (o.sub) { let ss = 54; g.font = "600 " + ss + 'px "Inter", "Segoe UI", sans-serif'; const sw = g.measureText(o.sub).width; if (sw > maxW) { ss = Math.floor(ss * maxW / sw); g.font = "600 " + ss + 'px "Inter", "Segoe UI", sans-serif'; } g.fillStyle = "rgba(251,247,238,.82)"; g.fillText(o.sub, x0, H * 0.74); }
+    const meas = (str, sz) => { let w = 0; str.split("*").forEach((q, k) => { g.font = font(k, sz); w += g.measureText(q).width; }); return w; };
+    const sS0 = 50, subLH = sl.length ? sS0 * 1.28 : 0;                                                    // sub lines (fitted to the width)
+    let sS = sS0; for (const L of sl) { g.font = "600 " + sS + 'px "Inter", "Segoe UI", sans-serif'; const sw = g.measureText(L).width; if (sw > maxW) sS = Math.min(sS, Math.floor(sS * maxW / sw)); }
+    let size = Math.min(o.size || 130, Math.floor((H * 0.86 - sl.length * subLH - (sl.length ? 14 : 0)) / (ml.length * 1.08)));   // main size: fits the height and the width
+    for (const L of ml) { const w0 = meas(L, size); if (w0 > maxW) size = Math.floor(size * maxW / w0); }
+    const lhM = size * 1.08, block = ml.length * lhM + (sl.length ? 14 + sl.length * sS * 1.28 : 0); let yy = (H - block) / 2;
+    g.textBaseline = "middle"; g.textAlign = "left";
+    for (const L of ml) { let x = x0; L.split("*").forEach((q, k) => { g.font = font(k, size); g.fillStyle = k % 2 ? bc : ink; g.fillText(q, x, yy + lhM / 2); x += g.measureText(q).width; }); yy += lhM; }
+    yy += sl.length ? 14 : 0; for (const L of sl) { g.font = "600 " + sS + 'px "Inter", "Segoe UI", sans-serif'; g.fillStyle = "rgba(251,247,238,.82)"; g.fillText(L, x0, yy + sS * 0.64); yy += sS * 1.28; }
     const t0 = new THREE.CanvasTexture(c); t0.colorSpace = THREE.SRGBColorSpace; t0.anisotropy = 8; return t0;
   }
   let top = 0;

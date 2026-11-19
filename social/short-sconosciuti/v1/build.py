@@ -45,8 +45,8 @@ room.furnish(w, trouser=TROUSER)
 LP, RP = room.POLES                                           # (x, z) of the left (conferme) and right (schiaffi) lamp post
 
 # ---- the six comment cards: a pair per beat; the card pops on the first word of its sentence and stays on its post
-BEATS = [("conf", "prima", "conferma", "*~200 €*", "se gli sta perfetto"),
-         ("schi", "primo", "schiaffo", "*65 $* vs 400", "compro solo quando costa poco"),
+BEATS = [("conf", "prima", "conferma", "*Vestibilità*|corretta", "spenderebbe 200 €|se andasse bene"),
+         ("schi", "primo", "schiaffo", "Compro solo|quando *costa poco*", "65 vs 200"),
          ("conf", "seconda", "conferma", "*toccarlo*", "online: quasi nessuno si fida"),
          ("schi", "secondo", "schiaffo", "*serve tempo*", "da un giovane senza nome: no"),
          ("conf", "terza", "conferma", "*pochi* ma buoni", "meglio che tanti"),
@@ -100,8 +100,9 @@ T_HERO = at("erano") - 0.3                                    # "Non erano il mi
 E_HERO = end("tutto")
 LOOK_L, LOOK_R = (LP[0], 2.45, LP[1]), (RP[0], 2.45, RP[1])
 # hook: the lit shop window with the trouser, the camera drifts in, then it looks at the two posts ("ragione" -> left, "schiaffo" -> right)
-w.cam((0.5, 1.5, 1.8), (0.5, 1.95, -4.6))                                                    # closer on the window (19/11): logo on the fascia + the trouser
-C(0.1, 2.6, (0.5, 1.4, 1.4), (0.5, 1.85, -4.6), "glide")
+w.cam((0.5, 2.6, 15.0), (0.5, 2.4, -4.0))                                                    # starts FAR (the whole street front, 19/11) ...
+C(0.35, 0.95, (0.5, 1.5, 1.8), (0.5, 1.95, -4.6), "glide")                                   # ... then a very fast zoom-in onto the window: the visual punch on the look
+C(1.4, 2.6, (0.5, 1.4, 1.3), (0.5, 1.85, -4.6), "glide")
 C(at("ragione") - 0.8, 1.1, (-0.5, 1.5, 3.2), LOOK_L, "glide")
 C(at("schiaffo") - 0.6, 1.0, (1.8, 1.5, 3.2), LOOK_R, "glide")
 for k, (ts, kind, tk) in enumerate(T):                       # per beat: dive to the post, then a slow push on the card
