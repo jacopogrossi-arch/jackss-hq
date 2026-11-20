@@ -1,4 +1,8 @@
-# Short #16 «Non ho niente da venderti» (20/11/2026): market square at dawn. An empty stall; the narrator (toy figure of Jacopo) stands on the counter. Same engine/pipeline as Short «sconosciuti».
+# Short #16 «Non ho niente da venderti» (v2, 20/11/2026). Market stall at dawn seen FRONTALLY; the narrator (toy Jacopo) stands on the counter from frame 0.
+# Rules after v1 was rejected ("telecamera storta, mai centrata, card sbagliate, pantalone glitchato"):
+#  - every camera is on axis with its subject (pos.x == look.x) and level (pos.y == look.y, close-ups max 0.12 m up, SOP numbers); _flush asserts it, and no trims allowed
+#  - nothing comes out of the counter: objects appear with t= (fade + 12 cm rise) where nothing is under them, cards hang from the clothesline and leave upwards
+#  - every card is a fact said by the voice at that moment, with its source in script.md
 import json, math, os, re, shutil, sys
 SK = "D:/ClaudeCodeTest/.claude/skills/fashion-3d"
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -37,101 +41,138 @@ w.shutter(0.5)
 GESSO, SABBIA, RUGGINE, BOSCO = "#EFE9DD", "#B9AE98", "#8A4B2D", "#2F3A2E"
 room.furnish(w)
 SX, SZ = room.STALL
-TOP = room.TOP
-Y = TOP + 0.06                                              # surface of the counter top
+Y = room.Y
 
-# ---- the sign on the front of the counter: «IN VENDITA» is turned over -> «IN CORSO»
-T_FLIP = at("corso") - 0.15
+# ---- the sign on the front of the counter: «IN VENDITA», and on "c'è solo il DOCUMENTO" it becomes «IN CORSO»
+T_FLIP = at("documento", 2) - 0.1
 SIGNP = (SX, 0.42, SZ + 0.58)
 w.card("sign_a", SIGNP, w=1.5, h=0.5, text="*IN VENDITA*", size=120, color="#16120f", ink=GESSO, key="#ff8a5c", flat=True,
-       move=[(T_FLIP, 0.01, (SIGNP[0], -8.0, SIGNP[2]), "linear")])
-w.card("sign_b", (SIGNP[0], -8.0, SIGNP[2]), w=1.5, h=0.5, text="*IN CORSO*", size=120, color=GESSO, ink="#16120f", key=RUGGINE, flat=True,
-       move=[(T_FLIP, 0.35, SIGNP, "out")])
+       move=[(T_FLIP + 0.6, 0.01, (SIGNP[0], -8.0, SIGNP[2]), "linear")])
+w.card("sign_b", (SIGNP[0], SIGNP[1], SIGNP[2] + 0.012), w=1.5, h=0.5, text="*IN CORSO*", size=120, color=GESSO, ink="#16120f", key=RUGGINE, flat=True, t=T_FLIP)
 
-# ---- what appears on the counter, one thing at a time, on the word that names it
-T_COL, T_TR, T_ERR, T_CST = at("costruendo") - 0.1, at("pantalone") - 0.2, at("errori") - 0.2, at("costo") - 0.3
+# ---- the fact cards on the clothesline: (id, x, w, h, t_in, t_out, title, sub, kind)   kind: "no" red cross, "ok" green tick, None neutral
+# v2b: never more cards than the frame holds; "ogni strumento, ogni costo, ogni errore" = one card at a time in the centre (each pushes the previous one up)
+CZ = room.LINE_Z + 0.02
+T_OGNI = at("Ogni")
+PX = room.PED_L[0]
+CARDS = [
+    ("k_corsi", -0.41, 0.74, 0.4, at("corso") - 0.15, at("Economia") - 0.9, "*Corsi*", "zero", "no"),
+    ("k_brand", 0.41, 0.74, 0.4, at("aperto") - 0.15, at("Economia") - 0.9, "*Brand*", "non ancora aperto", "no"),
+    ("k_studio", 0.0, 0.78, 0.4, at("studente") + 0.2, at("primo") - 0.6, "*Economia* + *Moda*", "università + accademia", "ok"),
+    ("k_drop", PX, 0.62, 0.34, at("primo") - 0.1, at("disegnato") - 0.35, "*Drop 1*", "pieghe doppie · side adjuster", None),
+    ("k_3d", PX, 0.62, 0.34, at("disegnato"), at("sbagliato") - 0.35, "disegno → *3D*", "Short del 18/11", None),
+    ("k_gonna", PX, 0.62, 0.34, at("sbagliato"), T_OGNI - 0.9, "sembrava *una gonna*", "il primo pantalone · Short #1", "no"),
+    ("k_tools", 0.0, 0.78, 0.4, at("strumento") - 0.1, at("costo") - 0.35, "Tripo · *Blender*", "strumenti provati", None),
+    ("k_cost", 0.0, 0.78, 0.4, at("costo") - 0.1, at("errore") - 0.35, "*511 crediti*", "la voce di questo Short", None),
+    ("k_err", 0.0, 0.78, 0.4, at("errore") - 0.1, at("Il", 2) - 0.2, "*6 versioni*", "Short #3, prima di uscire", "no"),
+]
+STYLE = {"no": dict(color="#33100e", border="#ff5a47", badge="no"), "ok": dict(color="#0e2b1a", border="#4be08a", badge="ok"), None: dict(color="#16120f", border="#d9b36a")}
+for oid, x, cw, ch, t0, t1, title, sub, kind in CARDS:
+    cy = room.LINE_Y - ch / 2 - 0.01
+    mv = [(t1, 0.55, (x, cy + 3.5, CZ), "in")]
+    w.card(oid, (x, cy, CZ), w=cw, h=ch, text=title, sub=sub, size=118, ink=GESSO, key="#ffd98a", flat=True, t=t0, move=mv, **STYLE[kind])
+    for s in (-1, 1):                                                                                  # two pegs on the line, they come and go with the card
+        w.solid(oid + "_p%d" % s, "box", (x + s * cw * 0.32, room.LINE_Y - 0.01, CZ + 0.012), (0.022, 0.06, 0.02), color="#c9a46a", rough=0.7, t=t0,
+                move=[(t1, 0.55, (x + s * cw * 0.32, room.LINE_Y - 0.01 + 3.5, CZ + 0.012), "in")])
 
+# ---- the INVERSO band on the front valance of the awning (below the caption zone), on "...di menswear, INVERSO"
+T_INV = at("inverso") - 0.2
+T_INV_OUT = at("primo") - 0.5                                # it rolls away before the trouser (the brand is not open yet)...
+T_INV2 = at("apro") - 0.2                                   # ...and comes back on "tra un anno APRO il brand"
+BAND = (SX, 2.2, SZ + 0.69, 1.2, 0.17)
+w.card("fascia", BAND[:3], w=BAND[3], h=BAND[4], img="img/fascia.png", flat=True, color="#000000", t=T_INV, move=[(T_INV_OUT, 0.55, (BAND[0], BAND[1] + 3.5, BAND[2]), "in")])
+w.card("fascia2", BAND[:3], w=BAND[3], h=BAND[4], img="img/fascia.png", flat=True, color="#000000", t=T_INV2)
 
-def pop_card(oid, pos, t, **kw):
-    x, y, z = pos
-    w.card(oid, (x, -8.0, z), move=[(t, 0.35, pos, "out")], **kw)
+# ---- the trouser appears on the left pedestal (fade + 12 cm rise: it starts above the pedestal, nothing to cross)
+T_TR = at("pantalone") - 0.35
+w.glb("tr", TROUSER, fit=0.55, pos=(room.PED_L[0], Y + room.PED_H + 0.002, room.PED_L[1]), rot_y=0.0, double=True, t=T_TR)
 
+# ---- NARRATOR on the counter, centre, from frame 0
+PN = (SX, Y, SZ - 0.1)
+NH = 0.55
+w.glb("nar1", OMINO, fit=NH, pos=PN, rot_y=0.0, segs=[[0.0, DUR + 1.0, 0, 0.0, 1.0]], segFade=0.35, clipSpeed=1.0, bob=0, jaw=[60, JAW], jawGain=1.0, recv=False)
 
-for i, c in enumerate((BOSCO, GESSO, RUGGINE, SABBIA)):                                 # colour swatches (moodboard), left
-    p = (SX - 1.35 + i * 0.22, Y + 0.14, SZ + 0.28)
-    w.solid("sw%d" % i, "box", (p[0], -8.0, p[2]), (0.18, 0.28, 0.03), color=c, rough=0.8, move=[(T_COL + 0.08 * i, 0.35, p, "out")])
-pop_card("c_col", (SX - 1.1, Y + 0.95, SZ + 0.18), T_COL + 0.35, w=0.8, h=0.3, text="i *colori*", size=72, color="#16120f", ink=GESSO, key="#d9b36a", flat=True)
-w.glb("tr", TROUSER, fit=0.55, pos=(SX - 0.55, -8.0, SZ + 0.3), rot_y=0.15, double=True, move=[(T_TR, 0.4, (SX - 0.55, Y, SZ + 0.3), "out")])   # the toy trouser, Drop 1
-pop_card("c_tr", (SX - 0.55, Y + 1.05, SZ + 0.2), T_TR + 0.35, w=0.8, h=0.3, text="*Drop 1*", size=72, color="#16120f", ink=GESSO, key="#d9b36a", flat=True)
-nb = (SX + 0.55, Y + 0.02, SZ + 0.3)                                                    # the notebook (the errors)
-w.solid("nb", "box", (nb[0], -8.0, nb[2]), (0.42, 0.04, 0.3), color="#e8dfc9", rough=0.8, rot_y=-0.3, move=[(T_ERR, 0.35, nb, "out")])
-w.solid("nbc", "box", (nb[0] - 0.19, -8.0, nb[2]), (0.04, 0.045, 0.3), color=RUGGINE, rough=0.8, rot_y=-0.3, move=[(T_ERR, 0.35, (nb[0] - 0.19, nb[1], nb[2]), "out")])
-pop_card("c_err", (SX + 0.65, Y + 1.0, SZ + 0.2), T_ERR + 0.35, w=0.9, h=0.3, text="gli *errori*", size=72, color="#16120f", ink=GESSO, key="#ff8a5c", flat=True)
-pop_card("c_cst", (SX + 1.3, Y + 0.42, SZ + 0.3), T_CST, w=0.7, h=0.6, text="i *costi*", sub="tutti veri", size=80, color=GESSO, ink="#16120f", key=RUGGINE, flat=True)
-
-# ---- the end sign: INVERSO drops onto the awning at "Tra un anno apro il brand", flips on "documento"
-T_SIGN = at("Tra") - 0.2
-ENDS = (SX, 2.78, SZ + 0.4)
-w.prop("logosign", "totem", (ENDS[0], -6.0, ENDS[2]), (1.0, 0.31), rot_y=0.0, height=0.7, flips=[[at("documento", 2) + 0.1, 1.1, PI]],
-       move=[(T_SIGN, 0.01, (ENDS[0], 3.6, ENDS[2]), "linear"), (T_SIGN + 0.02, 0.55, ENDS, "in")])
-
-
-# ---- NARRATOR on the counter, centre-back
-def me(oid, pos, t0, t1, rot=0.0, height=0.55):
-    x, y, z = pos
-    w.glb(oid, OMINO, fit=height, pos=(x, -8.0, z), rot_y=rot, segs=[[0.0, DUR + 1.0, 0, 0.0, 1.0]], segFade=0.35, clipSpeed=1.0, bob=0, jaw=[60, JAW], jawGain=1.0, recv=False,
-          move=[(t0, 0.35, pos, "out"), (t1, 0.01, (x, -8.0, z), "linear")])
-
-
+# ---- CAMERA
 _calls = []
 
 
-def C(t, d, pos, look, ease="hand"):
+def C(t, d, pos, look, ease="glide"):
     _calls.append([t, d, pos, look, ease])
 
 
 def _flush():
     _calls.sort(key=lambda c: c[0])
-    for i, c in enumerate(_calls):
-        t, d, pos, look, ease = c
+    for i, (t, d, pos, look, ease) in enumerate(_calls):
+        assert abs(pos[0] - look[0]) < 1e-6, "camera off axis at %.2f" % t
+        assert 0 <= look[1] - pos[1] <= 0.12 + 1e-6, "camera not level at %.2f" % t
+        assert d >= 1.1 or ease == "hand", "move too fast at %.2f" % t
         nxt = _calls[i + 1][0] if i + 1 < len(_calls) else 1e9
-        dd = min(d, nxt - t - 0.02)
-        if dd < 0.25:
-            print("  cam skipped %.2f (no room)" % t); continue
-        if dd < d - 0.01: print("  cam trim %.2f: %.2f -> %.2f" % (t, d, dd))
-        w.cam(pos, look, t=t, d=dd, ease=ease)
+        assert t + d <= nxt - 0.02, "camera move at %.2f overlaps the next (%.2f)" % (t, nxt)
+        w.cam(pos, look, t=t, d=d, ease=ease)
+
+
+def wide(dist, yc):                                         # frontal, level, centred on the stall
+    return (SX, yc, SZ + dist), (SX, yc, SZ)
+
+
+def close(x=SX):                                            # narrator close-up, SOP numbers: camera 0.62h, look 0.80h, distance 1.2h... widened to 1.5h so the hands stay in frame
+    return (x, Y + 0.62 * NH, PN[2] + 1.5 * NH), (x, Y + 0.80 * NH, PN[2])
+
+
+def trouser(dist, yc=1.62):                                  # pedestal + trouser + its card all inside the frame, card below the captions (solved numerically)
+    px, pz = room.PED_L
+    return (px, yc, pz + dist), (px, yc, pz)
+
+
+w.cam(*wide(10.5, 1.45))                                                    # frame 0: the whole stall, the empty counter, the sign, him
+C(0.3, 1.3, *wide(4.6, 1.45))                                               # fast push to the stall
+C(at("Sono") - 0.35, 1.2, *close())                                         # "sono uno studente": close on him
+C(at("Economia") - 0.2, 1.2, *wide(3.2, 1.55))                              # back to medium: the card "Economia + Moda" above him
+C(at("menswear") - 0.4, 1.2, *wide(4.4, 1.7))                               # a step back: the INVERSO band lands on the awning
+C(at("primo") - 0.3, 1.3, *trouser(2.5))                                    # truck left onto the pedestal: the trouser appears
+C(at("disegnato") - 0.1, 3.0, *trouser(2.3), ease="hand")                 # slow push while he says how it was made
+C(T_OGNI - 0.5, 1.2, *wide(3.9, 1.55))                                      # back to centre: the three fact cards
+C(at("Lo", 1, T_OGNI) + 0.1, 1.2, *wide(3.0, 1.5))                          # "lo provo davanti a te": closer
+C(at("laboratorio") - 0.45, 1.1, *close())                                  # "il laboratorio, prima del brand": close-up
+C(at("Tra") - 0.25, 1.3, *wide(5.0, 1.6))                                   # "tra un anno apro il brand": the whole stall
+C(at("Fino") + 0.2, 1.8, *wide(3.4, 1.15), ease="hand")                     # push to the sign: «IN VENDITA» -> «IN CORSO» on "documento"
+C(at("Seguimi") - 0.15, 1.2, *wide(3.2, 1.7))                               # the CTA: him, the cards, the band
+C(end("provi") + 0.1, 1.9, *wide(4.4, 1.7), ease="hand")                    # slow pull back to the end
+_flush()
+
+
+def _layout_check():                                        # every card / the band, at the start and end of every hold: inside the frame and below the captions
+    tn = math.tan(math.radians(21)); bad = []
+    cams = sorted(_calls, key=lambda c: c[0])
+    things = [(c[0], c[1], c[2] - c[2] / 2 if False else room.LINE_Y - 0.01, room.LINE_Y - 0.01 - c[3], c[2], c[4], c[5]) for c in []]
+    items = [(oid, x, cw, room.LINE_Y - 0.01, room.LINE_Y - 0.01 - ch, t0 + 0.6, t1) for oid, x, cw, ch, t0, t1, *_ in CARDS]
+    for oid, ti, to in (("fascia", T_INV + 0.6, T_INV_OUT), ("fascia2", T_INV2 + 0.6, DUR)):
+        items.append((oid, BAND[0], BAND[3], BAND[1] + BAND[4] / 2, BAND[1] - BAND[4] / 2, ti, to))
+    for i, (t, d, pos, look, _) in enumerate(cams):
+        t_a, t_b = t + d, (cams[i + 1][0] if i + 1 < len(cams) else DUR)
+        for tt in (t_a, t_b):
+            for oid, x, cw, ytop, ybot, ti, to in items:
+                if not (ti <= tt < to): continue
+                z = BAND[2] if oid.startswith("fascia") else CZ
+                dd = pos[2] - z; hh = tn * dd; ww = hh * 1080 / 1920
+                top = 960 - (ytop - pos[1]) / hh * 960; bot = 960 - (ybot - pos[1]) / hh * 960
+                lx = 540 + (x - cw / 2 - pos[0]) / ww * 540; rx = 540 + (x + cw / 2 - pos[0]) / ww * 540
+                if bot < 0 or top > 1920 or rx < 0 or lx > 1080: continue      # out of frame entirely: fine (e.g. above a close-up)
+                if oid.startswith("fascia"):                                     # the band is scenery: it may be cropped, but never under the text on screen
+                    z0, z1 = (60, 270) if tt >= T_ENDW else (100, 430)
+                    if bot > z0 and top < z1 and rx > 100 and lx < 980: bad.append("%.2f %s top=%d bot=%d" % (tt, oid, top, bot))
+                elif top < 430 or lx < 30 or rx > 1050: bad.append("%.2f %s top=%d x=%d..%d" % (tt, oid, top, lx, rx))
+    assert not bad, "layout: " + "; ".join(bad)
 
 
 T_ENDW = at("Seguimi") - 0.05
-PN = (SX, Y, SZ - 0.15)                                       # narrator spot on the counter
-me("nar1", PN, 0.4, DUR + 1.0, rot=0.0, height=0.55)
-LK = (SX, Y + 0.3, SZ)
-w.cam((0.0, 2.4, 13.0), (0.0, 1.0, -2.0))                                                     # starts FAR on the whole square ...
-C(0.35, 0.95, (0.0, 1.35, 3.3), (0.0, 0.7, SZ), "glide")                                      # ... fast zoom onto the stall: the empty counter with the sign
-C(at("corso") - 1.1, 1.2, (0.0, 1.15, 2.1), (SX, 0.7, SZ + 0.3), "glide")                      # the sign, as it is turned over
-C(at("Sono") - 0.2, 1.2, (SX + 0.1, Y + 0.4, SZ + 1.1), LK, "glide")                           # close on the narrator: "sono uno studente"
-C(at("Economia") + 0.3, 3.0, (SX + 0.5, Y + 0.45, SZ + 1.35), LK, "hand")
-C(T_COL - 0.5, 1.0, (SX - 0.8, Y + 0.6, SZ + 1.8), (SX - 1.0, Y + 0.3, SZ + 0.2), "glide")   # the colours
-C(T_TR - 0.7, 1.0, (SX - 0.1, Y + 0.7, SZ + 1.5), (SX - 0.55, Y + 0.35, SZ + 0.3), "glide")     # the trouser, macro push
-C(T_TR + 0.9, 1.6, (SX - 0.4, Y + 0.6, SZ + 1.05), (SX - 0.55, Y + 0.32, SZ + 0.3), "hand")
-C(T_ERR - 0.7, 1.1, (SX + 1.0, Y + 0.65, SZ + 1.7), (SX + 0.35, Y + 0.3, SZ), "glide")      # the notebook
-C(at("Ogni") - 0.3, 1.4, (3.4, 1.7, SZ + 2.4), (SX, 0.9, SZ), "glide")                          # side orbit: all the documents at once
-C(at("Lo", 1, at("Ogni")), 3.2, (2.2, 1.5, SZ + 3.4), (SX, 0.95, SZ), "hand")
-C(at("Il", 2) - 0.4, 1.0, (SX - 0.1, Y + 0.4, SZ + 1.2), LK, "glide")
-C(at("Il", 2) + 1.1, 1.8, (SX - 0.05, Y + 0.38, SZ + 0.95), LK, "hand")                           # "il laboratorio, prima del brand": close on him
-C(T_SIGN - 0.3, 1.6, (0.0, 2.0, 9.5), (0.0, 2.1, SZ), "glide")                                   # the end card: the whole stall with the new sign
-C(T_SIGN + 1.9, 2.0, (0.0, 1.8, 6.6), (0.0, 2.1, SZ), "hand")
-C(T_ENDW - 0.1, 1.2, (SX + 0.1, Y + 0.5, SZ + 1.9), LK, "glide")                              # "seguimi, e dimmi nei commenti": close on him
-C(end("commenti") + 0.2, 2.2, (0.0, 1.9, 8.2), (0.0, 2.0, SZ), "glide")                         # pull back to the whole stall
-_flush()
-w.dof(0.0, DUR, aperture=0.003)
+_layout_check()
+w.dof(0.0, DUR, aperture=0.002)
 
-# ---- counter pill (follows the PHASE) + text on screen
-PILL = [(at("Sono") - 0.1, "in vendita <i>0</i> · documentato <i>0</i>")]
-for k, tt in enumerate((T_COL, T_TR, T_ERR, T_CST)):
-    PILL.append((tt, "in vendita <i>0</i> · documentato <i>%d</i>" % (k + 1)))
+# ---- pill (a fixed truth: nothing on sale; it changes only with the sign) + text on screen
+PILL = [(at("Sono") - 0.1, "in vendita: <i>0</i>"), (T_FLIP, "in vendita: <i>0</i> · in corso: <i>tutto</i>")]
 nm = lambda t: t.lower().strip(".,:?!«»")
-KEY = {"venderti", "corso", "brand", "studente", "inverso", "pantalone", "errori", "documento", "laboratorio", "anno", "commenti", "provi", "niente", "menswear", "ai"}
+KEY = {"venderti", "corso", "brand", "studente", "inverso", "pantalone", "errori", "documento", "laboratorio", "anno", "commenti", "provi", "niente", "menswear", "ai", "economia", "moda", "strumento", "costo", "errore"}
 chunks, cur = [], []
 for i, x in enumerate(WORDS):
     cur.append(x)
@@ -145,10 +186,11 @@ for i, x in enumerate(WORDS):
         chunks.append((cur[0]["s"], min(nxt - 0.02, cur[-1]["e"] + 0.45), txt.rstrip(".,:")))
         cur = []
 T_HOOK_END = at("Sono") - 0.1
+T_ENDW = at("Seguimi") - 0.05
 w.big(-0.3, T_HOOK_END, "Non ho niente|da *venderti*", top=70, size=100)
-w.big(T_ENDW, DUR, "Cosa vuoi che *provi*?|scrivilo nei *commenti*", top=60, size=70)
+w.big(T_ENDW, DUR, "Cosa vuoi che *provi*?|scrivilo nei *commenti*", top=70, size=70)
 chunks = [c for c in chunks if not (c[0] < T_HOOK_END or c[0] >= T_ENDW)]
-w.captions(chunks, top=340, size=96)
+w.captions(chunks, top=250, size=92)
 
 
 def _extra(path):
@@ -166,5 +208,6 @@ def _extra(path):
 
 if __name__ == "__main__":
     out = os.path.join(HERE, "comp")
-    print(World3D.page(out, [w], duration=DUR)); os.makedirs(os.path.join(out, "img"), exist_ok=True); _extra(os.path.join(out, "index.html"))
+    print(World3D.page(out, [w], duration=DUR)); os.makedirs(os.path.join(out, "img"), exist_ok=True)
+    shutil.copy(os.path.join(HERE, "img", "fascia.png"), os.path.join(out, "img", "fascia.png")); _extra(os.path.join(out, "index.html"))
     print("built, DUR", DUR)

@@ -48,14 +48,14 @@ def swish(t, name, extra=0.0):
     put(load(L + f, d, p + extra), t, name=name)
 
 
-put(load(L + "cc-impact.mp3", peak_db=-21), B.T_FLIP, name="sign turns over")
-for nme, t in (("colours", B.T_COL), ("trouser", B.T_TR), ("notebook", B.T_ERR), ("costs", B.T_CST)):   # every thing that lands on the counter: a swish + a tick on the counter pill
-    swish(t, "appear " + nme)
-    put(load(L + "cc-tick.mp3", peak_db=-24), t + 0.1, name="counter up " + nme)
-put(load(L + "es-swoosh-wide.mp3", peak_db=-21), B.at("Ogni") - 0.3 + 0.5, "peak", "side orbit")
+for oid, x, cw, ch, t0, t1, *_ in B.CARDS:                                           # every card: a swish when it is pegged on the line
+    swish(t0, "card " + oid)
+    put(load(L + "cc-tick.mp3", peak_db=-25), t0 + 0.35, name="peg " + oid)
+swish(B.T_TR, "trouser appears", -2)
+put(load(L + "al-logo-incoming.mp3", peak_db=-21), B.T_INV, name="INVERSO band")
+put(load(L + "al-logo-incoming.mp3", peak_db=-21), B.T_INV2, name="INVERSO band again")
 put(load(L + "cc-riser-corto-b.mp3", peak_db=-23, fade=0.02), B.at("Il", 2) - 0.1, "peak", "riser close-up")
-put(load(L + "cc-impact.mp3", peak_db=-18), B.T_SIGN + 0.55, name="sign lands")
-put(load(L + "al-logo-incoming.mp3", peak_db=-20), B.at("documento", 2) + 0.1, name="logo flip")
+put(load(L + "cc-impact.mp3", peak_db=-18), B.T_FLIP, name="sign turns: IN CORSO")
 put(load(L + "cc-riser-corto.mp3", peak_db=-22, fade=0.02), B.T_ENDW - 0.06, "peak", "riser end")
 vo_fx = np.clip(vtrack + fx * 10 ** (SFX_GAIN / 20), -1, 1)
 VF = os.path.join(OUT, "voice-fx.wav")

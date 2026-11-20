@@ -20,3 +20,20 @@
 1. **Scena.** Banco di mercato all'alba va bene, o preferisci un'altra?
 2. **«Tra un anno apro il brand».** È la tua linea di canale (01/11): la tengo come promessa, o la togliamo per non vincolarti?
 3. **Chiamata finale.** «Cosa vuoi che provi» nei commenti, oppure una domanda più tagliente?
+
+## v2 (20/11, dopo la bocciatura della v1): le card e la fonte di ogni frase
+Approvato: scena banco all'alba, «tra un anno apro il brand», chiamata «cosa vuoi che provi». Le card sono appese al filo sotto la tenda, ognuna è un fatto vero detto dalla voce in quel momento:
+
+| Quando (voce) | Card | Fonte |
+|---|---|---|
+| «né un corso» | ✗ **Corsi** · zero | nessun corso in vendita |
+| «né un brand aperto» | ✗ **Brand** · non ancora aperto | Inverso non è aperto (Drop 1 ancora in sviluppo) |
+| «Economia all'università, moda in accademia» | ✓ **Economia + Moda** · università + accademia | CLAUDE.md, chi sono |
+| «il primo è un pantalone» | **Drop 1** · pieghe doppie · side adjuster | scheda tecnica Drop 1 (01/08) |
+| «l'ho disegnato con l'AI» | **disegno → 3D** · Short del 18/11 | Short #11 pantalone 3D, pubblicato 18/11 |
+| «l'ho sbagliato più di una volta» | ✗ **sembrava una gonna** · il primo pantalone · Short #1 | Short #1 «Il mio primo pantalone sembrava una gonna» |
+| «ogni strumento» | **Tripo · Blender** · strumenti provati | GLB fatti con Tripo, ottimizzati in Blender |
+| «ogni costo» | **511 crediti** · la voce di questo Short | ElevenLabs: 67+112+106+111+115 crediti per i 5 pezzi di voce |
+| «ogni errore» | ✗ **6 versioni** · Short #3, prima di uscire | Short #3 pubblicato alla v6 |
+
+Altro in scena: cartello «IN VENDITA» che diventa «IN CORSO» sul secondo «documento»; fascia INVERSO sulla tenda su «Inverso» (sparisce prima del pantalone, il brand non è aperto) e torna su «apro il brand»; pillola fissa «in vendita: 0» → «in vendita: 0 · in corso: tutto».
