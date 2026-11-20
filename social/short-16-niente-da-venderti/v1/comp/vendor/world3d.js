@@ -166,8 +166,9 @@ function cardTexture(o, img) {
     let x = (W - wsum) / 2; const y = img ? top + (H - top) / 2 : (o.sub ? H * 0.46 : H / 2);
     g.textBaseline = "middle";
     parts.forEach((s, k) => { g.font = font(k); g.fillStyle = k % 2 ? (o.key || "#8a6a2a") : (o.ink || "#15100b"); g.fillText(s, x, y); x += g.measureText(s).width; });
-    if (o.sub && !img) { g.font = "500 " + Math.round(size * 0.46) + 'px "Inter", "Segoe UI", sans-serif'; g.fillStyle = "rgba(21,16,11,.66)"; g.textAlign = "center"; g.fillText(o.sub, W / 2, H * 0.72); }
+    if (o.sub && !img) { g.font = "500 " + Math.round(size * 0.46) + 'px "Inter", "Segoe UI", sans-serif'; g.fillStyle = o.ink ? o.ink : "rgba(21,16,11,.66)"; g.globalAlpha = o.ink ? 0.8 : 1; g.textAlign = "center"; g.fillText(o.sub, W / 2, H * 0.72); g.globalAlpha = 1; }   // 20/11: a light ink (dark card) gets a light sub, it was dark on dark
   }
+  if (o.border && !o.badge) { g.strokeStyle = o.border; g.lineWidth = 14; g.strokeRect(14, 14, W - 28, H - 28); }   // 20/11: neutral cards honour border= too
   const t = new THREE.CanvasTexture(c); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8; return t;
 }
 function card(o, img) {

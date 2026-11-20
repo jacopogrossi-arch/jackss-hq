@@ -54,6 +54,8 @@ for oid, x, cw, ch, t0, t1, *_ in B.CARDS:                                      
 swish(B.T_TR, "trouser appears", -2)
 put(load(L + "al-logo-incoming.mp3", peak_db=-21), B.T_INV, name="INVERSO band")
 put(load(L + "al-logo-incoming.mp3", peak_db=-21), B.T_INV2, name="INVERSO band again")
+swish(B.T_INV_OUT, "band leaves", -3)
+swish(B.T_INV2_OUT, "band leaves again", -3)
 put(load(L + "cc-riser-corto-b.mp3", peak_db=-23, fade=0.02), B.at("Il", 2) - 0.1, "peak", "riser close-up")
 put(load(L + "cc-impact.mp3", peak_db=-18), B.T_FLIP, name="sign turns: IN CORSO")
 put(load(L + "cc-riser-corto.mp3", peak_db=-22, fade=0.02), B.T_ENDW - 0.06, "peak", "riser end")

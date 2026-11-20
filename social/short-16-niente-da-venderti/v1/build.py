@@ -46,9 +46,9 @@ Y = room.Y
 # ---- the sign on the front of the counter: «IN VENDITA», and on "c'è solo il DOCUMENTO" it becomes «IN CORSO»
 T_FLIP = at("documento", 2) - 0.1
 SIGNP = (SX, 0.42, SZ + 0.58)
-w.card("sign_a", SIGNP, w=1.5, h=0.5, text="*IN VENDITA*", size=120, color="#16120f", ink=GESSO, key="#ff8a5c", flat=True,
+w.card("sign_a", SIGNP, w=1.3, h=0.44, text="*IN VENDITA*", size=120, color="#16120f", ink=GESSO, key="#ff8a5c", flat=True,
        move=[(T_FLIP + 0.6, 0.01, (SIGNP[0], -8.0, SIGNP[2]), "linear")])
-w.card("sign_b", (SIGNP[0], SIGNP[1], SIGNP[2] + 0.012), w=1.5, h=0.5, text="*IN CORSO*", size=120, color=GESSO, ink="#16120f", key=RUGGINE, flat=True, t=T_FLIP)
+w.card("sign_b", (SIGNP[0], SIGNP[1], SIGNP[2] + 0.012), w=1.3, h=0.44, text="*IN CORSO*", size=120, color=GESSO, ink="#16120f", key=RUGGINE, flat=True, t=T_FLIP)
 
 # ---- the fact cards on the clothesline: (id, x, w, h, t_in, t_out, title, sub, kind)   kind: "no" red cross, "ok" green tick, None neutral
 # v2b: never more cards than the frame holds; "ogni strumento, ogni costo, ogni errore" = one card at a time in the centre (each pushes the previous one up)
@@ -58,7 +58,7 @@ PX = room.PED_L[0]
 CARDS = [
     ("k_corsi", -0.41, 0.74, 0.4, at("corso") - 0.15, at("Economia") - 0.9, "*Corsi*", "zero", "no"),
     ("k_brand", 0.41, 0.74, 0.4, at("aperto") - 0.15, at("Economia") - 0.9, "*Brand*", "non ancora aperto", "no"),
-    ("k_studio", 0.0, 0.78, 0.4, at("studente") + 0.2, at("primo") - 0.6, "*Economia* + *Moda*", "università + accademia", "ok"),
+    ("k_studio", 0.0, 0.78, 0.4, at("Economia") + 0.35, at("primo") - 0.6, "*Economia* + *Moda*", "università + accademia", "ok"),
     ("k_drop", PX, 0.62, 0.34, at("primo") - 0.1, at("disegnato") - 0.35, "*Drop 1*", "pieghe doppie · side adjuster", None),
     ("k_3d", PX, 0.62, 0.34, at("disegnato"), at("sbagliato") - 0.35, "disegno → *3D*", "Short del 18/11", None),
     ("k_gonna", PX, 0.62, 0.34, at("sbagliato"), T_OGNI - 0.9, "sembrava *una gonna*", "il primo pantalone · Short #1", "no"),
@@ -81,7 +81,8 @@ T_INV_OUT = at("primo") - 0.5                                # it rolls away bef
 T_INV2 = at("apro") - 0.2                                   # ...and comes back on "tra un anno APRO il brand"
 BAND = (SX, 2.2, SZ + 0.69, 1.2, 0.17)
 w.card("fascia", BAND[:3], w=BAND[3], h=BAND[4], img="img/fascia.png", flat=True, color="#000000", t=T_INV, move=[(T_INV_OUT, 0.55, (BAND[0], BAND[1] + 3.5, BAND[2]), "in")])
-w.card("fascia2", BAND[:3], w=BAND[3], h=BAND[4], img="img/fascia.png", flat=True, color="#000000", t=T_INV2)
+T_INV2_OUT = at("Fino")                                     # "fino ad allora c'è solo il documento": the band goes, the sign stays
+w.card("fascia2", BAND[:3], w=BAND[3], h=BAND[4], img="img/fascia.png", flat=True, color="#000000", t=T_INV2, move=[(T_INV2_OUT, 0.55, (BAND[0], BAND[1] + 3.5, BAND[2]), "in")])
 
 # ---- the trouser appears on the left pedestal (fade + 12 cm rise: it starts above the pedestal, nothing to cross)
 T_TR = at("pantalone") - 0.35
@@ -127,7 +128,7 @@ def trouser(dist, yc=1.62):                                  # pedestal + trouse
 w.cam(*wide(10.5, 1.45))                                                    # frame 0: the whole stall, the empty counter, the sign, him
 C(0.3, 1.3, *wide(4.6, 1.45))                                               # fast push to the stall
 C(at("Sono") - 0.35, 1.2, *close())                                         # "sono uno studente": close on him
-C(at("Economia") - 0.2, 1.2, *wide(3.2, 1.55))                              # back to medium: the card "Economia + Moda" above him
+C(at("studente") + 0.3, 1.2, *wide(3.2, 1.55))                              # back to medium: the card "Economia + Moda" above him
 C(at("menswear") - 0.4, 1.2, *wide(4.4, 1.7))                               # a step back: the INVERSO band lands on the awning
 C(at("primo") - 0.3, 1.3, *trouser(2.5))                                    # truck left onto the pedestal: the trouser appears
 C(at("disegnato") - 0.1, 3.0, *trouser(2.3), ease="hand")                 # slow push while he says how it was made
@@ -135,9 +136,9 @@ C(T_OGNI - 0.5, 1.2, *wide(3.9, 1.55))                                      # ba
 C(at("Lo", 1, T_OGNI) + 0.1, 1.2, *wide(3.0, 1.5))                          # "lo provo davanti a te": closer
 C(at("laboratorio") - 0.45, 1.1, *close())                                  # "il laboratorio, prima del brand": close-up
 C(at("Tra") - 0.25, 1.3, *wide(5.0, 1.6))                                   # "tra un anno apro il brand": the whole stall
-C(at("Fino") + 0.2, 1.8, *wide(3.4, 1.15), ease="hand")                     # push to the sign: «IN VENDITA» -> «IN CORSO» on "documento"
-C(at("Seguimi") - 0.15, 1.2, *wide(3.2, 1.7))                               # the CTA: him, the cards, the band
-C(end("provi") + 0.1, 1.9, *wide(4.4, 1.7), ease="hand")                    # slow pull back to the end
+C(at("Fino") + 0.2, 1.8, *wide(4.0, 1.2), ease="hand")                     # push to the sign: «IN VENDITA» -> «IN CORSO» on "documento"
+C(at("Seguimi") - 0.15, 1.2, *close())                               # the CTA: him, the cards, the band
+C(end("provi") + 0.1, 1.9, *wide(5.6, 1.5), ease="hand")                    # slow pull back to the end
 _flush()
 
 
@@ -146,7 +147,7 @@ def _layout_check():                                        # every card / the b
     cams = sorted(_calls, key=lambda c: c[0])
     things = [(c[0], c[1], c[2] - c[2] / 2 if False else room.LINE_Y - 0.01, room.LINE_Y - 0.01 - c[3], c[2], c[4], c[5]) for c in []]
     items = [(oid, x, cw, room.LINE_Y - 0.01, room.LINE_Y - 0.01 - ch, t0 + 0.6, t1) for oid, x, cw, ch, t0, t1, *_ in CARDS]
-    for oid, ti, to in (("fascia", T_INV + 0.6, T_INV_OUT), ("fascia2", T_INV2 + 0.6, DUR)):
+    for oid, ti, to in (("fascia", T_INV + 0.6, T_INV_OUT), ("fascia2", T_INV2 + 0.6, T_INV2_OUT)):
         items.append((oid, BAND[0], BAND[3], BAND[1] + BAND[4] / 2, BAND[1] - BAND[4] / 2, ti, to))
     for i, (t, d, pos, look, _) in enumerate(cams):
         t_a, t_b = t + d, (cams[i + 1][0] if i + 1 < len(cams) else DUR)
