@@ -24,3 +24,5 @@
 - 19/11: BOZZA v5: partenza da lontano + zoom velocissimo sulla vetrina; card1 «Vestibilita corretta / spenderebbe 200 € se andasse bene», card2 «Compro solo quando costa poco / 65 vs 200» (testi di Jacopo). renders/bozza-leggera-v5.mp4. Attendo OK 4K.
 
 - 19/11 mattina: 4K FATTO (2160x3840, 60 fps, 55,9 s, 405 MB) dopo il via di Jacopo; copiato in iCloud › Video 3D moda › short-sconosciuti-v1.mp4. pubblicazione.md scritta. Resta SOLO la pubblicazione (la fa Jacopo).
+
+- 19/11 sera: PUBBLICATO da Jacopo. Primo commento: «200 euro per un jeans e troppo, lo pagherei 70». Short chiuso; prossimo = nuova sessione (idea 16 «Non ho niente da venderti», poi 14, 19; vedi memoria project_shorts_3d e social/piano-canale.md).
