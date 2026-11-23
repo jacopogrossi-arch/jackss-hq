@@ -16,6 +16,7 @@ description: Build 3D animated videos for Jacopo's channel and Inverso entirely 
 | Jacopo's verdicts and taste on 3D (read BEFORE building) | `references/taste-3d.md` |
 | What the 8 fps study of the reference reels taught us (continuous camera, never still, metaphor worlds) | `references/inspo-8fps-2026-11-16.md` |
 | Critic loop (fresh judge compares a frame with a real target, rubric 0-10) | `references/critic-loop.md` |
+| Hybrid shot: Blender layout + keyframes (Gemini) + image-to-video (Seedance on ElevenLabs) + lip-sync | `references/hybrid-blender-ai-sop.md` |
 | Metaphor-world Short (new format) | `references/metaphor-world-sop.md` |
 | Blender test plan (next session) | `references/blender-test-plan.md` |
 | 8 fps review tools | `scripts/review8.py` (`sheets`, `still`, `seek`) |

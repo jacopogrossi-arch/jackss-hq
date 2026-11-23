@@ -10,3 +10,9 @@ Pipeline:
 5. **Voce**: la battuta vera («Io parto da carta, matita e metro, meno di 30»), sincronia labiale come passaggio separato.
 
 Le immagini qui sono leggere (JPG) perché servono come link pubblici per ElevenLabs. I file pesanti restano in `videos/_bench/ibrido/`.
+
+## Esito prova 1 (23/11/2026)
+- Clip Seedance 2.5 720p (14.003 crediti) + lipsync Sync 3 con la voce vera (4.075 crediti). File in `videos/_bench/ibrido/video/`: `seedance-720-v1.mp4`, `lipsync-v1.mp4`, `confronto-v8-vs-ibrido.mp4`.
+- Funziona: identità stabile, occhiali sempre, set fermo come nel layout, bocca vera ed espressioni.
+- Da migliorare: troppi gesti per 5 s (ha saltato matita e metro), avvicinamento della camera quasi assente.
+- Lezioni complete nella skill: `.claude/skills/fashion-3d/references/hybrid-blender-ai-sop.md`.
