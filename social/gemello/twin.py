@@ -24,6 +24,7 @@ CAMMODE = opt("--cam", "main")
 GLB = "D:/ClaudeCodeTest/social/short-03-tabellone/v8/jaw-raw.glb"
 CUES = os.path.join(OUT, "cues.json")
 FPS = 24
+MSC = float(opt("--mscale", "1.35"))   # v5: bocca piu' larga (nel ghigno dell'AI occupa quasi tutto lo spazio tra le guance)
 H = 0.22                       # altezza del giocattolo (m)
 YAW = math.radians(15.6)       # il GLB ha il viso girato verso +X
 random.seed(4)
@@ -232,12 +233,43 @@ def jacket_cloth(m):
     if nin: L.new(nin, bp.inputs["Normal"])
     L.new(bp.outputs["Normal"], b.inputs["Normal"])
 
+def skin_shirt(m):
+    """v5: pelle calda e abbronzata con subsurface (maschera: tinta arancio + chiara, i capelli sono piu' scuri), maglietta grigia -> quasi nera (maschera: poco satura)."""
+    nt = m.node_tree; N, L = nt.nodes, nt.links; b = bsdf_of(m)
+    lk = next((l for l in L if l.to_socket == b.inputs["Base Color"]), None)
+    tex = next((n for n in N if n.type == "TEX_IMAGE"), None)
+    if not lk or not tex: return
+    src = lk.from_socket; col = tex.outputs["Color"]
+    hsv = N.new("ShaderNodeSeparateColor"); hsv.mode = "HSV"; L.new(col, hsv.inputs[0])
+    def rng(sock, a0, a1):
+        r = N.new("ShaderNodeMapRange"); r.inputs["From Min"].default_value = a0; r.inputs["From Max"].default_value = a1; L.new(sock, r.inputs["Value"]); return r.outputs["Result"]
+    def mul(a_, b_):
+        x = N.new("ShaderNodeMath"); x.operation = "MULTIPLY"; L.new(a_, x.inputs[0]); L.new(b_, x.inputs[1]); return x.outputs[0]
+    def inv(a_):
+        x = N.new("ShaderNodeMath"); x.operation = "SUBTRACT"; x.inputs[0].default_value = 1.0; L.new(a_, x.inputs[1]); return x.outputs[0]
+    hue_lo = rng(hsv.outputs[0], 0.0, 0.03); hue_hi = inv(rng(hsv.outputs[0], 0.10, 0.14))
+    skin = mul(mul(mul(hue_lo, hue_hi), rng(hsv.outputs[2], float(opt("--sv0", "0.30")), float(opt("--sv1", "0.42")))), rng(hsv.outputs[1], 0.12, 0.2))
+    shirt = mul(inv(rng(hsv.outputs[1], 0.10, 0.20)), rng(hsv.outputs[2], 0.03, 0.08))
+    tone = N.new("ShaderNodeMix"); tone.data_type = "RGBA"; tone.blend_type = "MULTIPLY"; tone.inputs["Factor"].default_value = 1.0
+    L.new(src, tone.inputs[6]); tone.inputs[7].default_value = (0.92, 0.70, 0.55, 1)                 # abbronzatura calda
+    m1 = N.new("ShaderNodeMix"); m1.data_type = "RGBA"; L.new(skin, m1.inputs["Factor"]); L.new(src, m1.inputs[6]); L.new(tone.outputs[2], m1.inputs[7])
+    dk = N.new("ShaderNodeMix"); dk.data_type = "RGBA"; dk.blend_type = "MULTIPLY"; dk.inputs["Factor"].default_value = 1.0
+    L.new(m1.outputs[2], dk.inputs[6]); dk.inputs[7].default_value = (0.35, 0.35, 0.35, 1)               # maglietta quasi nera
+    m2 = N.new("ShaderNodeMix"); m2.data_type = "RGBA"; L.new(shirt, m2.inputs["Factor"]); L.new(m1.outputs[2], m2.inputs[6]); L.new(dk.outputs[2], m2.inputs[7])
+    L.new(m2.outputs[2], b.inputs["Base Color"])
+    for nm, v_ in (("Subsurface Radius", (1.0, 0.35, 0.2)), ("Subsurface Scale", float(opt("--sss", "0.004")))):
+        if nm in b.inputs: b.inputs[nm].default_value = v_
+    if "Subsurface Weight" in b.inputs:
+        w_ = N.new("ShaderNodeMath"); w_.operation = "MULTIPLY"; w_.inputs[1].default_value = 0.35; L.new(skin, w_.inputs[0]); L.new(w_.outputs[0], b.inputs["Subsurface Weight"])
+    if "--skinmask" in argv: L.new(skin, b.inputs["Base Color"])    # prova: mostra la maschera della pelle
+
 # materiale del pupazzo: vinile con usura
 for m in body.data.materials:
     if m.name.startswith("tripo"):
         b = bsdf_of(m); b.inputs["Roughness"].default_value = 0.45; b.inputs["Specular IOR Level"].default_value = 0.45
         wear(m, 220, 0.12, 0.05)
         if "--nojacket" not in argv: jacket_cloth(m)
+        if "--noskin" not in argv: skin_shirt(m)
     if m.name == "mouth_dark" and MOUTH_MODE == "decal":
         pass
 
@@ -310,7 +342,7 @@ mouths = {}
 # v3: seconda serie "g" (ghigno) per la battuta finale: angoli molto piu' in su, un filo piu' larga, denti anche a bocca chiusa
 GRIN = {"X": (0.046, 0.0075, 2.4, 0.0040, 0.0, 0.0), "A": (0.042, 0.0080, 2.4, 0.0040, 0.0, 0.0)}
 if MOUTH_MODE == "decal":
-    MS = float(opt("--mscale", "1.15"))   # bocche un filo piu' grandi della piega scolpita: si leggono anche a figura intera
+    MS = MSC   # bocche un filo piu' grandi della piega scolpita: si leggono anche a figura intera
     GS = float(opt("--grin", "15.0"))
     sets = [(k, v, 6.0, 1.0) for k, v in SHAPES.items()]
     if "--nogrin" not in argv:
@@ -389,7 +421,7 @@ def layer_mesh(name, poly, off, m, rings=6):
 MC = {}            # strato -> oggetto
 MKEYS = list(SHAPES.keys())
 if MOUTH_MODE == "cont":
-    MS = float(opt("--mscale", "1.15"))
+    MS = MSC
     def layers_for(key, smile_c=6.0, tilt=0.0, wx=1.0, dims=None):
         w, h, n, tt, tb, tg = dims or SHAPES[key]
         w, h, tt, tb, tg = w * MS * wx, h * MS, tt * MS, tb * MS, tg * MS
@@ -477,10 +509,10 @@ if SMILE:
             r = math.hypot(u - 0.050 * s, z - 0.797)                   # guancia (misurata sul primo piano ortografico)
             wc = sm((0.028 - r) / 0.018)
             disp += (FWD * 0.0035 + UP * 0.0032 + LAT * s * 0.0010) * wc * GU
-            r2 = math.hypot(u - 0.034 * s, z - 0.781)                  # angolo della bocca / solco naso-labiale
-            wk = sm((0.014 - r2) / 0.010) * sm((abs(u) - 0.028) / 0.004)
+            r2 = math.hypot(u - (0.034 + 0.025 * (MSC - 1.15)) * s, z - 0.781)                  # angolo della bocca / solco naso-labiale
+            wk = sm((0.014 - r2) / 0.010) * sm((abs(u) - (0.028 + 0.025 * (MSC - 1.15))) / 0.004)
             disp += (UP * 0.0020 - FWD * 0.0006) * wk * GU
-        inside = ((u / 0.034) ** 2 + ((z - 0.777) / 0.014) ** 2) < 1.0  # ellisse della bocca: intoccabile
+        inside = ((u / (0.034 + 0.025 * (MSC - 1.15))) ** 2 + ((z - 0.777) / 0.014) ** 2) < 1.0  # ellisse della bocca: intoccabile
         if inside: disp *= 0.0
         wf = sm((fw + 0.035) / 0.012)
         smile_key.data[v.index].co = p + disp * wf
