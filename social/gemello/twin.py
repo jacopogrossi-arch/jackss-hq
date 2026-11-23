@@ -46,7 +46,7 @@ def mat(name, rgb, rough=0.6, emit=None, strength=1.0, spec=0.5):
     if emit:
         b.inputs["Emission Color"].default_value = (*emit, 1); b.inputs["Emission Strength"].default_value = strength
     return m
-NOWEAR = "--nowear" in argv; VOLD = float(opt("--vol", "0.05"))
+NOWEAR = "--nowear" in argv; VOLD = float(opt("--vol", "0.025")); KEY = float(opt("--key", "40"))
 def wear(m, scale=180.0, amt=0.25, bump=0.15, coord="Object"):
     """Usura alla Lego Movie: rugosita' a macchie + graffi sottili (rumore stirato) + micro-bump."""
     if NOWEAR: return m
@@ -110,11 +110,11 @@ mix = N.new("ShaderNodeMix"); mix.data_type = "RGBA"
 mix.inputs["A"].default_value = (0.03, 0.17, 0.10, 1); mix.inputs["B"].default_value = (0.42, 0.62, 0.50, 1)
 L_.new(mx3.outputs[0], mix.inputs["Factor"]); L_.new(mix.outputs["Result"], b.inputs["Base Color"])
 wear(mm, 90, 0.12, 0.05)
-mat_o = box("tappetino", (0.9, 0.7, 0.002), (0.02, 0.02, 0.001), mm)
+mat_o = box("tappetino", (0.9, 0.46, 0.002), (0.02, -0.06, 0.001), mm)   # finisce subito dietro i piedi: dietro si vede il tavolo caldo
 bpy.ops.object.transform_apply(scale=True)
 
 carta = wear(mat("carta", (0.80, 0.76, 0.68), 0.85, spec=0.3), 300, 0.05, 0.04)
-foglio = box("foglio", (0.21, 0.297, 0.0006), (0.075, -0.12, 0.0026), carta, rot=(0, 0, math.radians(-14)))
+foglio = box("foglio", (0.21, 0.297, 0.0006), (0.02, -0.165, 0.0026), carta, rot=(0, 0, math.radians(-64)))
 # matita gialla esagonale, punta di legno e grafite
 pmat = wear(mat("vernice", (0.85, 0.52, 0.02), 0.35), 400, 0.15, 0.1)
 bpy.ops.mesh.primitive_cylinder_add(vertices=6, radius=0.0042, depth=0.15, location=(0, 0, 0)); pen = bpy.context.object; pen.name = "matita"; pen.data.materials.append(pmat)
@@ -122,7 +122,7 @@ bpy.ops.mesh.primitive_cone_add(vertices=6, radius1=0.0042, radius2=0.0009, dept
 bpy.ops.mesh.primitive_cone_add(vertices=12, radius1=0.0011, depth=0.004, location=(0, 0, 0.0925)); gr = bpy.context.object; gr.data.materials.append(mat("grafite", (0.03, 0.03, 0.03), 0.3))
 bpy.ops.mesh.primitive_cylinder_add(vertices=16, radius=0.0044, depth=0.008, location=(0, 0, -0.079)); fe = bpy.context.object; fe.data.materials.append(mat("ottone", (0.6, 0.45, 0.2), 0.3)); bsdf_of(fe.data.materials[0]).inputs["Metallic"].default_value = 1
 for o in (tip, gr, fe): o.parent = pen
-pen.location = (0.085, -0.17, 0.0072); pen.rotation_euler = (0, math.radians(90), math.radians(10))
+pen.location = (0.035, -0.185, 0.0072); pen.rotation_euler = (0, math.radians(90), math.radians(12))
 # metro da sarta arrotolato + coda
 tmat = mat("metro", (0.80, 0.60, 0.12), 0.55)
 nt = tmat.node_tree; N, L_ = nt.nodes, nt.links; b = bsdf_of(tmat)
@@ -134,9 +134,9 @@ yy = N.new("ShaderNodeMath"); yy.operation = "GREATER_THAN"; yy.inputs[1].defaul
 an = N.new("ShaderNodeMath"); an.operation = "MULTIPLY"; L_.new(lt.outputs[0], an.inputs[0]); L_.new(yy.outputs[0], an.inputs[1])
 mixm = N.new("ShaderNodeMix"); mixm.data_type = "RGBA"; mixm.inputs["A"].default_value = (0.80, 0.60, 0.12, 1); mixm.inputs["B"].default_value = (0.05, 0.04, 0.03, 1)
 L_.new(an.outputs[0], mixm.inputs["Factor"]); L_.new(mixm.outputs["Result"], b.inputs["Base Color"])
-bpy.ops.mesh.primitive_cylinder_add(vertices=64, radius=0.03, depth=0.016, location=(-0.17, -0.06, 0.008)); roll = bpy.context.object; roll.name = "metro"; roll.data.materials.append(tmat)
-bpy.ops.mesh.primitive_cylinder_add(vertices=32, radius=0.011, depth=0.0165, location=(-0.17, -0.06, 0.008)); hub = bpy.context.object; hub.data.materials.append(mat("buco", (0.02, 0.015, 0.01), 0.9))
-coda = box("metro-coda", (0.16, 0.016, 0.0007), (-0.08, -0.115, 0.0016), tmat, rot=(0, 0, math.radians(-24)))
+bpy.ops.mesh.primitive_cylinder_add(vertices=64, radius=0.03, depth=0.016, location=(-0.105, -0.10, 0.008)); roll = bpy.context.object; roll.name = "metro"; roll.data.materials.append(tmat)
+bpy.ops.mesh.primitive_cylinder_add(vertices=32, radius=0.011, depth=0.0165, location=(-0.105, -0.10, 0.008)); hub = bpy.context.object; hub.data.materials.append(mat("buco", (0.02, 0.015, 0.01), 0.9))
+coda = box("metro-coda", (0.16, 0.016, 0.0007), (-0.045, -0.14, 0.0016), tmat, rot=(0, 0, math.radians(-30)))
 bpy.ops.object.transform_apply(scale=True)
 
 # ------------------------------------------------------------------ fondo: parete, scaffali con libri, lampadine (bokeh), finestra con la citta' di notte
@@ -153,7 +153,7 @@ for z in (0.10, 0.36, 0.62):
         if random.random() < 0.08: x += 0.06
 warm = (1.0, 0.62, 0.28)
 for (x, z) in ((-0.62, 0.23), (-0.15, 0.49), (-0.78, 0.75), (-0.33, 0.78), (0.12, 0.30)):
-    bpy.ops.mesh.primitive_uv_sphere_add(radius=0.012, location=(x, 0.86, z)); bpy.context.object.data.materials.append(mat("bulbo", (1, 0.7, 0.4), 0.5, emit=warm, strength=60))
+    bpy.ops.mesh.primitive_uv_sphere_add(radius=0.012, location=(x, 0.86, z)); bpy.context.object.data.materials.append(mat("bulbo", (1, 0.7, 0.4), 0.5, emit=warm, strength=25))
 # finestra: griglia di finestrelle della citta' (teal e ambra) dietro un telaio scuro
 city = mat("citta", (0, 0, 0), 1.0)
 nt = city.node_tree; N, L_ = nt.nodes, nt.links; b = bsdf_of(city)
@@ -447,13 +447,13 @@ def light(kind, loc, energy, color, size=0.3, target=(0, 0.13, 0.12), spot=70, b
     if kind == "AREA": l.data.size = size
     if kind == "SPOT": l.data.spot_size = math.radians(spot); l.data.spot_blend = blend; l.data.shadow_soft_size = size
     d = Vector(target) - Vector(loc); l.rotation_euler = d.to_track_quat("-Z", "Y").to_euler(); return l
-light("SPOT", (0.30, -0.42, 0.42), 26, (1.0, 0.72, 0.45), 0.08, target=(0.0, 0.10, 0.10), spot=55, blend=0.8)        # lampada da tavolo: key calda
-light("AREA", (-0.45, -0.35, 0.25), 4.0, (0.85, 0.80, 0.75), 0.5)                                                     # riempimento morbido
-light("AREA", (-0.25, 0.55, 0.32), 6.0, (0.35, 0.85, 0.80), 0.25, target=(0, 0.13, 0.15))                            # controluce teal (dalla finestra)
+light("SPOT", (0.30, -0.42, 0.42), KEY, (1.0, 0.66, 0.38), 0.08, target=(0.0, 0.10, 0.10), spot=55, blend=0.8)        # lampada da tavolo: key calda
+light("AREA", (-0.45, -0.35, 0.25), 1.5, (1.0, 0.82, 0.68), 0.5)                                                     # riempimento morbido
+light("AREA", (-0.25, 0.55, 0.32), 2.5, (0.35, 0.85, 0.80), 0.25, target=(0, 0.13, 0.15))                            # controluce teal (dalla finestra)
 light("AREA", (0.30, 0.45, 0.35), 4.0, (1.0, 0.65, 0.35), 0.25, target=(0, 0.13, 0.15))                             # controluce caldo
 light("SPOT", (-0.1, 0.95, 0.9), 30, (1.0, 0.6, 0.3), 0.05, target=(-0.4, 0.9, 0.3), spot=80, blend=1.0)           # luce sugli scaffali
 w = bpy.data.worlds.new("w"); sc.world = w; w.use_nodes = True
-bg = w.node_tree.nodes["Background"]; bg.inputs[0].default_value = (0.04, 0.035, 0.03, 1); bg.inputs[1].default_value = 0.5
+bg = w.node_tree.nodes["Background"]; bg.inputs[0].default_value = (0.04, 0.035, 0.03, 1); bg.inputs[1].default_value = 0.12
 vol = w.node_tree.nodes.new("ShaderNodeVolumePrincipled"); vol.inputs["Density"].default_value = VOLD; vol.inputs["Anisotropy"].default_value = 0.35
 vol.inputs["Color"].default_value = (1.0, 0.92, 0.85, 1)
 wo = next(n for n in w.node_tree.nodes if n.type == "OUTPUT_WORLD")
@@ -509,9 +509,9 @@ except Exception: pass
 vt = [i.identifier for i in bpy.types.ColorManagedViewSettings.bl_rna.properties["view_transform"].enum_items]
 sc.view_settings.view_transform = "AgX" if "AgX" in vt else "Filmic"
 looks = [i.identifier for i in bpy.types.ColorManagedViewSettings.bl_rna.properties["look"].enum_items]
-for lk in ("AgX - Medium High Contrast", "Medium High Contrast"):
+for lk in (opt("--look", "AgX - Punchy"), "AgX - Medium High Contrast", "Medium High Contrast"):
     if lk in looks: sc.view_settings.look = lk; break
-sc.view_settings.exposure = 0.3
+sc.view_settings.exposure = float(opt("--exp", "0.0"))
 sc.render.resolution_x, sc.render.resolution_y = 1080, 1920; sc.render.resolution_percentage = PCT
 sc.render.image_settings.file_format = "PNG"
 fdir = os.path.join(OUT, opt("--dir", "frames_%s_%s" % (MOUTH_MODE, CAMMODE))); os.makedirs(fdir, exist_ok=True)
