@@ -28,3 +28,12 @@ Ricerca: `.claude/skills/fashion-3d/references/research-reel-retention-2026-11-2
 - 40 campioni o meno: mosaico sulla texture/volume, non giudicare l'immagine; i still di controllo a 16-24 campioni servono solo per posa e inquadratura.
 - Macro sul metro: il rotolo è un cilindro liscio e la coda con le tacche sta sotto il foglio; un taglio vicino (<0.3 m) deforma la prospettiva. Il taglio s5 è oggi un taglio di scala frontale 85 mm su mano e petto.
 - Il tool voce dell'MCP non espone stability/seed; vedi dossier §6.
+
+## 24/11/2026 — Versione NARRATORE (sblocca il Reel)
+Decisione di Jacopo: Jacopino NON parla, la voce e' fuori campo (come fanno gli altri nei 5 video studiati: `social/ispirazione/3d-yt-shit/`). Il labiale a mano di P1/P2/P4 NON serve piu'.
+- `score_narratore.py`: copia di `score.py` con `LIPS = [(0.0, "X")]` (bocca a riposo + ghigno), inquadrature s3/s5/s6/s7 riscritte (viso e mani sempre nel quadro), `DISEGNO` sul foglio. `score.py` resta com'era (la prova di ieri e' riproducibile).
+- `reel.py` ha ora: `--check` (nessun render: ogni 0.25 s distanza camera-viso, mano con IK attivo e viso fuori quadro; `--minface`, `--checkpos`; shot con `macro=True` esclusi), `DISEGNO` nella partitura (curva che si traccia con `bevel_factor_end` + matita che la segue), `--debugdis`. Fix: la riga che cancellava TUTTE le azioni ora salva quelle di matita e disegno.
+- Il controllo sulla vecchia partitura trovava 6 problemi (mano destra fuori in s5/s6, entrambe in s7, camera a 0.29 m); sulla nuova: 0.
+- Anteprima dell'intero Reel (540x960, 48 campioni, 385 fotogrammi a ~1.6 s = ~10 min): `videos/_bench/reel-tessuto/narr/reel-narratore-anteprima.mp4`. Storyboard a bassa qualita': `narr/storyboard.png`.
+- DIFETTO APERTO: dopo 13 s la manica sinistra della giacca (destra nel quadro) si gonfia quando alza il braccio (OPEN_L); prima la nascondeva il taglio stretto.
+- DA FARE: sistemare la manica; plate «€0» su «zero» e «×2» su «due volte», swish sui tagli (Epidemic), render finale 1080x1920 (~45-50 min), audio finale, giudizio di Jacopo sull'anteprima.
