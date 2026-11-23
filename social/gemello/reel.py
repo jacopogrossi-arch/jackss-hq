@@ -184,6 +184,100 @@ bpy.ops.mesh.primitive_cylinder_add(vertices=32, radius=0.011, depth=0.0165, loc
 coda = box("metro-coda", (0.16, 0.016, 0.0007), (-0.045, -0.14, 0.0016), tmat, rot=(0, 0, math.radians(-30)))
 bpy.ops.object.transform_apply(scale=True)
 
+# ------------------------------------------------------------------ REEL «3 MISURE» (24/11/2026): tavolo da lavoro, pantaloni piatti, linee di misura, metro. Tutto dietro chiavi della partitura (TAVOLO, MISURE, HIDE_OLD).
+if SC.get("HIDE_OLD"):
+    for _o in (foglio, pen, tip, gr, fe, roll, hub, coda): _o.hide_render = True; _o.hide_viewport = True
+TAV = SC.get("TAVOLO")
+def trouser_poly(P):
+    """Sagoma di un pantalone steso, vista dall'alto: (u laterale, v dalla vita verso l'orlo). P: wh vita, hh anca, kh ginocchio, eh orlo esterno, hemw larghezza gamba all'orlo, rise, L."""
+    rise, L = P["rise"], P["L"]; ins = L - rise
+    R = [(P["wh"], 0.0), (P["hh"], rise * 0.7), (P["kh"], rise + 0.5 * ins), (P["eh"], L), (P["eh"] - P["hemw"], L), (0.0035, rise + 0.007)]
+    apex = [(0.0, rise)]
+    Lf = [(-u, v) for (u, v) in reversed(R)]
+    return R + apex + Lf
+def solid_mesh(name, poly2d, z0, th, m, bevel=0.0004):
+    me = bpy.data.meshes.new(name); n = len(poly2d)
+    verts = [(x, y, z0) for x, y in poly2d] + [(x, y, z0 + th) for x, y in poly2d]
+    faces = [list(range(n - 1, -1, -1)), list(range(n, 2 * n))] + [[i, (i + 1) % n, n + (i + 1) % n, n + i] for i in range(n)]
+    me.from_pydata(verts, [], faces); me.update()
+    ob = bpy.data.objects.new(name, me); sc.collection.objects.link(ob); ob.data.materials.append(m)
+    for pol in me.polygons: pol.use_smooth = False
+    if bevel:
+        bm_ = ob.modifiers.new("bev", "BEVEL"); bm_.width = bevel; bm_.segments = 2; bm_.limit_method = "ANGLE"
+    return ob
+TROUSER_OBJS = {}
+if TAV:
+    ZT = TAV["top"]
+    tavolo = box("tavolo", (TAV["x1"] - TAV["x0"], TAV["y1"] - TAV["y0"], 0.012), ((TAV["x0"] + TAV["x1"]) / 2, (TAV["y0"] + TAV["y1"]) / 2, ZT - 0.006), mm, bevel=0.001)
+    zleg = ZT - 0.012
+    for lx in (TAV["x0"] + 0.01, TAV["x1"] - 0.01):
+        for ly in (TAV["y0"] + 0.01, TAV["y1"] - 0.01):
+            box("gamba_tavolo", (0.008, 0.008, zleg), (lx, ly, zleg / 2), wear(mat("legno_t", (0.20, 0.09, 0.035), 0.5), 40, 0.15, 0.1))
+    for T in TAV["trousers"]:
+        P = T["P"]; col = T["col"]; parts = []
+        mt = wear(mat("tessuto_" + T["name"], col, 0.9, spec=0.15), 700, 0.10, 0.35)
+        poly = [(T["cx"] + u, T["yw"] - v) for (u, v) in trouser_poly(P)]
+        parts.append(solid_mesh("pant_" + T["name"], poly, ZT, 0.0035, mt))
+        dark = mat("cuciture_" + T["name"], tuple(c * 0.55 for c in col), 0.9, spec=0.1)
+        parts.append(box("fascia_" + T["name"], (2 * P["wh"], 0.0055, 0.0046), (T["cx"], T["yw"] - 0.00275, ZT + 0.0023), dark, bevel=0.0003))
+        parts.append(box("patta_" + T["name"], (0.0006, P["rise"] - 0.005, 0.0006), (T["cx"], T["yw"] - 0.0055 - (P["rise"] - 0.005) / 2, ZT + 0.0038), dark))
+        for k in (-0.6, -0.2, 0.2, 0.6): parts.append(box("passante_" + T["name"], (0.0024, 0.0085, 0.0058), (T["cx"] + k * P["wh"], T["yw"] - 0.0032, ZT + 0.0029), dark, bevel=0.0003))
+        for sg in (-1, 1):
+            parts.append(box("tasca_" + T["name"], (0.0007, 0.014, 0.0006), (T["cx"] + sg * (P["wh"] - 0.0055), T["yw"] - 0.0125, ZT + 0.0038), dark, rot=(0, 0, sg * math.radians(-28))))
+        bpy.ops.mesh.primitive_cylinder_add(vertices=14, radius=0.0017, depth=0.0008, location=(T["cx"] + 0.0035, T["yw"] - 0.0028, ZT + 0.0054)); bt = bpy.context.object; bt.name = "bottone_" + T["name"]
+        _bm = mat("bottone", (0.75, 0.62, 0.35), 0.35); bt.data.materials.append(_bm); bsdf_of(_bm).inputs["Metallic"].default_value = 0.8; parts.append(bt)
+        if T.get("tag"):   # cartellino con la taglia: testo 3D vero, leggibile da telefono
+            tg = box("cartellino_" + T["name"], (0.0185, 0.0135, 0.0008), (T["cx"] + T.get("tagx", 0.0), T["yw"] - 0.020, ZT + 0.0043), mat("cartoncino", (0.93, 0.90, 0.82), 0.7), rot=(0, 0, math.radians(T.get("tagrot", 0)))); parts.append(tg)
+            cu_t = bpy.data.curves.new("txt_" + T["name"], "FONT"); cu_t.body = T["tag"]; cu_t.size = 0.0098; cu_t.extrude = 0.0003; cu_t.align_x = "CENTER"; cu_t.align_y = "CENTER"
+            tx = bpy.data.objects.new("txt_" + T["name"], cu_t); sc.collection.objects.link(tx); tx.data.materials.append(mat("inchiostro", (0.05, 0.04, 0.03), 0.5))
+            tx.location = (T["cx"] + T.get("tagx", 0.0), T["yw"] - 0.020, ZT + 0.0051); tx.rotation_euler = (0, 0, math.radians(T.get("tagrot", 0))); parts.append(tx)
+        TROUSER_OBJS[T["name"]] = parts
+        if T.get("hide_from") is not None or T.get("show_from") is not None:     # i pantaloni del gancio spariscono col taglio, quello da misurare compare (il taglio nasconde lo scambio)
+            hf = T.get("hide_from", 1e9); sf = T.get("show_from", -1.0)
+            frs = sorted({1, (int(round(sf * FPS)) + 1) if sf > 0 else 1, (int(round(hf * FPS)) + 1) if hf < 1e8 else 1})
+            for o in parts:
+                for fr_ in frs:
+                    o.hide_render = not (sf <= (fr_ - 1) / FPS < hf); o.keyframe_insert("hide_render", frame=fr_)
+# linee di misura che si tracciano + metro (zero tenuto da una mano; il metro e' una striscia lunga fissa con le tacche: parte dal punto A verso B)
+MIS = SC.get("MISURE")
+if MIS and TAV:
+    _ZL = TAV["top"] + 0.0032
+    _lm = mat("tratto_misura", (0.80, 0.27, 0.08), 0.45); _bs = bsdf_of(_lm)
+    for k_ in ("Emission Color", "Emission"):
+        if k_ in _bs.inputs: _bs.inputs[k_].default_value = (0.80, 0.27, 0.08, 1)
+    if "Emission Strength" in _bs.inputs: _bs.inputs["Emission Strength"].default_value = 0.6
+    TAPE_L = 0.13
+    mesh_t = bpy.data.meshes.new("metro_m"); mesh_t.from_pydata([(0, -0.0035, 0), (TAPE_L, -0.0035, 0), (TAPE_L, 0.0035, 0), (0, 0.0035, 0), (0, -0.0035, 0.0007), (TAPE_L, -0.0035, 0.0007), (TAPE_L, 0.0035, 0.0007), (0, 0.0035, 0.0007)], [], [[0, 3, 2, 1], [4, 5, 6, 7], [0, 1, 5, 4], [1, 2, 6, 5], [2, 3, 7, 6], [3, 0, 4, 7]]); mesh_t.update()
+    tape = bpy.data.objects.new("metro_misura", mesh_t); sc.collection.objects.link(tape); tape.data.materials.append(tmat)
+    MIS_CUR = []
+    for M in MIS:
+        pts = [Vector((x, y)) for x, y in M["path"]]
+        seg = [(pts[i + 1] - pts[i]).length for i in range(len(pts) - 1)]; tot = sum(seg); N_ = 120; res = []
+        for k in range(N_ + 1):
+            d = tot * k / N_; i = 0
+            while i < len(seg) - 1 and d > seg[i]: d -= seg[i]; i += 1
+            u = 0.0 if seg[i] == 0 else min(1.0, d / seg[i]); res.append(pts[i].lerp(pts[i + 1], u))
+        cu = bpy.data.curves.new("linea_" + M["name"], "CURVE"); cu.dimensions = "3D"; cu.bevel_depth = M.get("w", 0.0007); cu.bevel_resolution = 2; cu.use_fill_caps = True
+        spl = cu.splines.new("POLY"); spl.points.add(len(res) - 1)
+        for q, v_ in zip(spl.points, res): q.co = (v_.x, v_.y, TAV["top"] + M.get("z", 0.0043), 1.0)
+        ob_ = bpy.data.objects.new("linea_" + M["name"], cu); sc.collection.objects.link(ob_); ob_.data.materials.append(_lm)
+        cu.bevel_factor_start = 0.0
+        MIS_CUR.append((M, cu, res))
+    for fr_ in range(1, NFR + 1):
+        t_ = (fr_ - 1) / FPS
+        vis = False
+        for M, cu, res in MIS_CUR:
+            e_ = 0.0 if t_ <= M["t0"] else (1.0 if t_ >= M["t1"] else (t_ - M["t0"]) / (M["t1"] - M["t0"])); e_ = e_ * e_ * (3 - 2 * e_)
+            if M.get("keep"): e_ = e_ if t_ < M["t1"] else 1.0      # le linee restano visibili per la conferma finale
+            cu.bevel_factor_end = e_; cu.keyframe_insert("bevel_factor_end", frame=fr_)
+            ta, tb = M["t0"] - 0.35, M.get("tape_off", M["t1"] + 0.9)
+            if ta <= t_ <= tb:
+                A = Vector(M["A"]); B = Vector(M["B"]); d_ = B - A
+                yaw = math.atan2(d_.y, d_.x); un = max(0.0, min(1.0, (t_ - ta) / 0.3)); un = un * un * (3 - 2 * un)
+                tape.location = (A.x, A.y, TAV["top"] + M.get("tz", 0.0037)); tape.rotation_euler = (0, 0, yaw); tape.scale = (0.2 + 0.8 * un, 1, 1); vis = True
+        tape.hide_render = not vis
+        tape.keyframe_insert("hide_render", frame=fr_); tape.keyframe_insert("location", frame=fr_); tape.keyframe_insert("rotation_euler", frame=fr_); tape.keyframe_insert("scale", frame=fr_)
+
 # ------------------------------------------------------------------ fondo: parete, scaffali con libri, lampadine (bokeh), finestra con la citta' di notte
 box("parete", (3.0, 0.05, 1.6), (0, 1.05, 0.6), wear(mat("parete", (0.10, 0.05, 0.03), 0.8), 20, 0.1, 0.1))
 scaff = wear(mat("scaffale", (0.20, 0.09, 0.035), 0.5), 40, 0.15, 0.1)
@@ -642,12 +736,16 @@ def qrot(pb, ex, ey, ez):
     pb.rotation_quaternion = Euler((math.radians(ex), math.radians(ey), math.radians(ez)), "XYZ").to_quaternion()
 PB = arm.pose.bones
 FINGERS = {s: [n for n in PB.keys() if ("%sHand" % s) in n and any(k in n for k in ("Index", "Middle", "Ring", "Pinky", "Thumb")) and n[-1] in "123"] for s in ("Right", "Left")}
+def ikp(p):
+    """Posizione della mano: raw di default; con IK_WORLD nella partitura i valori sono coordinate MONDO (m) e qui diventano (laterale, avanti, z) raw."""
+    if not SC.get("IK_WORLD"): return p
+    return (p[0] / S, (0.13 - p[1]) / S, p[2] / S + zmin)
 VIS = {}
 HEADYAW = float(opt("--headyaw", "-15.6"))   # gradi: riporta il viso verso la camera
 for f in range(NFR):
     t = f / FPS; fr = f + 1
-    tR.location = raw(*ikR_pos[f]); tR.keyframe_insert("location", frame=fr)
-    tL.location = raw(*ikL_pos[f]); tL.keyframe_insert("location", frame=fr)
+    tR.location = raw(*ikp(ikR_pos[f])); tR.keyframe_insert("location", frame=fr)
+    tL.location = raw(*ikp(ikL_pos[f])); tL.keyframe_insert("location", frame=fr)
     ikR.influence = max(0, min(1, ikR_inf[f])); ikR.keyframe_insert("influence", frame=fr)
     ikL.influence = max(0, min(1, ikL_inf[f])); ikL.keyframe_insert("influence", frame=fr)
     qrot(PB["mixamorig:RightHand"], *handR[f]); PB["mixamorig:RightHand"].keyframe_insert("rotation_quaternion", frame=fr)
