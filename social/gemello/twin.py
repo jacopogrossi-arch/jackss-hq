@@ -249,19 +249,29 @@ def skin_shirt(m):
         x = N.new("ShaderNodeMath"); x.operation = "SUBTRACT"; x.inputs[0].default_value = 1.0; L.new(a_, x.inputs[1]); return x.outputs[0]
     hue_lo = rng(hsv.outputs[0], 0.0, 0.03); hue_hi = inv(rng(hsv.outputs[0], 0.10, 0.14))
     skin = mul(mul(mul(hue_lo, hue_hi), rng(hsv.outputs[2], float(opt("--sv0", "0.30")), float(opt("--sv1", "0.42")))), rng(hsv.outputs[1], 0.12, 0.2))
-    shirt = mul(inv(rng(hsv.outputs[1], 0.10, 0.20)), rng(hsv.outputs[2], 0.03, 0.08))
+    shirt = mul(inv(rng(hsv.outputs[1], float(opt("--ss0", "0.18")), float(opt("--ss1", "0.30")))), inv(rng(hsv.outputs[2], 0.025, 0.05)))   # nero e poco saturo: maglietta (e scarpe)
+    tco = N.new("ShaderNodeTexCoord"); sxyz = N.new("ShaderNodeSeparateXYZ"); L.new(tco.outputs["Object"], sxyz.inputs[0])
+    shirt = mul(shirt, inv(rng(sxyz.outputs[2], 0.70, 0.72)))   # mai la testa: le lenti degli occhiali restano lucide
     tone = N.new("ShaderNodeMix"); tone.data_type = "RGBA"; tone.blend_type = "MULTIPLY"; tone.inputs["Factor"].default_value = 1.0
-    L.new(src, tone.inputs[6]); tone.inputs[7].default_value = (0.92, 0.70, 0.55, 1)                 # abbronzatura calda
+    L.new(src, tone.inputs[6]); tone.inputs[7].default_value = (0.90, 0.75, 0.64, 1)                 # abbronzatura calda
     m1 = N.new("ShaderNodeMix"); m1.data_type = "RGBA"; L.new(skin, m1.inputs["Factor"]); L.new(src, m1.inputs[6]); L.new(tone.outputs[2], m1.inputs[7])
     dk = N.new("ShaderNodeMix"); dk.data_type = "RGBA"; dk.blend_type = "MULTIPLY"; dk.inputs["Factor"].default_value = 1.0
     L.new(m1.outputs[2], dk.inputs[6]); dk.inputs[7].default_value = (0.35, 0.35, 0.35, 1)               # maglietta quasi nera
     m2 = N.new("ShaderNodeMix"); m2.data_type = "RGBA"; L.new(shirt, m2.inputs["Factor"]); L.new(m1.outputs[2], m2.inputs[6]); L.new(dk.outputs[2], m2.inputs[7])
     L.new(m2.outputs[2], b.inputs["Base Color"])
+    rin = next((l.from_socket for l in L if l.to_socket == b.inputs["Roughness"]), None)     # maglietta opaca: il grigio veniva dal riflesso, non dal colore
+    rm = N.new("ShaderNodeMix"); rm.data_type = "FLOAT"; L.new(shirt, rm.inputs["Factor"])
+    if rin: L.new(rin, rm.inputs[2])
+    else: rm.inputs[2].default_value = b.inputs["Roughness"].default_value
+    rm.inputs[3].default_value = 0.95; L.new(rm.outputs[0], b.inputs["Roughness"])
+    sp = N.new("ShaderNodeMath"); sp.operation = "MULTIPLY_ADD"; L.new(shirt, sp.inputs[0]); sp.inputs[1].default_value = -0.35; sp.inputs[2].default_value = 0.45
+    L.new(sp.outputs[0], b.inputs["Specular IOR Level"])
     for nm, v_ in (("Subsurface Radius", (1.0, 0.35, 0.2)), ("Subsurface Scale", float(opt("--sss", "0.004")))):
         if nm in b.inputs: b.inputs[nm].default_value = v_
     if "Subsurface Weight" in b.inputs:
         w_ = N.new("ShaderNodeMath"); w_.operation = "MULTIPLY"; w_.inputs[1].default_value = 0.35; L.new(skin, w_.inputs[0]); L.new(w_.outputs[0], b.inputs["Subsurface Weight"])
-    if "--skinmask" in argv: L.new(skin, b.inputs["Base Color"])    # prova: mostra la maschera della pelle
+    if "--skinmask" in argv: L.new(skin, b.inputs["Base Color"])
+    if "--shirtmask" in argv: L.new(shirt, b.inputs["Base Color"])    # prova: mostra la maschera della pelle
 
 # materiale del pupazzo: vinile con usura
 for m in body.data.materials:

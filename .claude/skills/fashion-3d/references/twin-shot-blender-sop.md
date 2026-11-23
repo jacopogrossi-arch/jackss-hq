@@ -75,4 +75,10 @@ Result v3 (`videos/_bench/gemello/v3.mp4`, `v3-vs-ai.mp4`, sheets `review/v3-8fp
 - **Face**: brows pop (+2.5 mm) on every stressed syllable, head nods +4°, smile and crooked smile ramp up on «meno di trenta».
 - **Review**: the 8 fps sheets cannot show a 1-2 frame sync error. Judge lip sync on a 24 fps face-cam clip with the audio, a `showwaves` strip under it and a half-speed copy (`videos/_bench/gemello/prova-bocca-v4.mp4`), and send it to the phone before the full render.
 
+## v5 (23/11/2026): skin, shirt, wider mouth (Jacopo after v4: "already better, perfect everything you can")
+Face-to-face still against the AI (`work/skin_cmp.jpg`): the AI skin is warm tan with modelled shadows, the shirt is matte black, and its grin fills almost the whole width between the cheeks.
+- **Skin** (`skin_shirt()` in twin.py, Tripo texture masked by colour): mask = orange hue (0.03-0.10) x value of the texture 0.30→0.42 (the hair is darker) x saturation 0.12→0.20. It catches face, neck and hands, not hair. On the mask: albedo x (0.90, 0.75, 0.64) and subsurface 0.35 (radius 1/0.35/0.2, scale 0.004). (0.92, 0.70, 0.55) was too orange. Check any mask with `--skinmask` / `--shirtmask`: they plug the mask into Base Color.
+- **Shirt**: the texture is ALREADY near-black; it looked grey because of the vinyl specular. So don't darken it: make it matte. Mask = value < 0.025-0.05 x saturation < 0.18-0.30 (shirt and shoes), minus everything above z 0.70 raw (otherwise the sunglass lenses go matte too). On the mask: roughness 0.95, specular 0.10.
+- **Mouth width** `--mscale 1.35` (was 1.15). The smile shape key's protected ellipse and its mouth-corner region move out with it (+0.025 per +1.0 of scale).
+
 Possible next step to test on a real Short: Blender 5.2.4 LTS is out as a portable zip (install on D:, keep 5.1 as fallback); the EL4CTEO skills need it.
