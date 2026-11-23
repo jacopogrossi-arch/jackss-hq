@@ -6,7 +6,8 @@ Ricerca: `.claude/skills/fashion-3d/references/research-reel-retention-2026-11-2
 - Voce FATTA: eleven_v4 "Jacopo Prova", 4 paragrafi, 200 crediti, 1 take ciascuno → `videos/_bench/reel-tessuto/vo/` (p1-p4, `vo.wav` montata 16.0 s con pause 0.50/0.55/0.60 s; locale). Tempi parole Whisper in `words.json`.
 - Labiale: P3 («Poi prendi il metro, e misuri due volte», 8.2-11.0 s) scritto A MANO sull'inviluppo in dB (`score.py` LIPS_P3). P1, P2, P4 = bozza automatica `lips_auto.json` (`social/gemello/lips_draft.py`): NON ancora a mano, ha nuclei sbagliati. Da rifare con lo stesso metodo (stampa dB a 10 ms, 5 dB per cifra, 0.5 s per riga, chiusure m/b/p una per una).
 - `social/gemello/reel.py` = twin.py + partitura esterna (`--score score.py`: DUR, VO, LIPS, STRESS, SHOTS, tracce gesti) e UNA camera per inquadratura (taglio netto, niente sbavatura del motion blur). Shakify per camera con offset diverso.
-- Clip di prova: finestra 8.0-11.0 s (fotogrammi 193-265), `videos/_bench/reel-tessuto/prova1*`.
+- Clip di prova FATTA e inviata a Jacopo: finestra 8.0-11.0 s (fotogrammi 193-265, 1080x1920, 48 campioni), `videos/_bench/reel-tessuto/prova1.mp4` (master), `prova1-telefono.mp4`, `prova1-labiale.mp4`, foglio `prova1-sheet.jpg`. Contiene 2 tagli (s4 medio -> s5 primo piano viso su «metro» -> s6 medio stretto). Iterazioni: s5 prima macro sul rotolo (illeggibile), poi taglio sul gesto (decentrato, perspettiva deformata), infine primo piano viso 65 mm. Gesti: la mano destra indica (indice dritto) ma nel medio stretto esce dal quadro a sinistra: da ricontrollare in s6.
+- Punti deboli visti nella prova: bocca piccola nei medi (valutare mw0 piu' alto), brows poco visibili, mano che indica tagliata fuori.
 
 ## Da fare (in ordine)
 1. Risposta di Jacopo alla clip di prova (labiale, taglio, gesti, voce).

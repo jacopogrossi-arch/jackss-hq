@@ -89,3 +89,12 @@ Face-to-face still against the AI (`work/skin_cmp.jpg`): the AI skin is warm tan
 - f/3.5 instead of f/2.2 (`--fstop`): paper, pencil and tape measure are the words of the line, so they must read in the foreground; at f/2.2 they were grey blobs.
 
 Possible next step to test on a real Short: Blender 5.2.4 LTS is out as a portable zip (install on D:, keep 5.1 as fallback); the EL4CTEO skills need it.
+
+## Reel a più inquadrature (23/11/2026): `reel.py` + partitura esterna
+Dal gemello 5 s al Reel intero: `social/gemello/reel.py` (copia di twin.py) legge `--score social/reel-tessuto/score.py` (DUR, VO, LIPS, STRESS, SHOTS, tracce gesti/testa/sopracciglia/sorriso). Finitura: `bash social/gemello/reel_finish.sh NOME T0 DUR` (post, versione telefono crf 22, clip labiale con viso + onda + metà velocità). Dettagli e stato in `social/reel-tessuto/HANDOFF.md`.
+- **Una camera per inquadratura** (rig + camera propri, keyframe solo nel proprio intervallo, `sc.camera = cam_for(fr)` prima di ogni render): il taglio e' netto e il motion blur non sbava tra due shot. Shakify per camera con `offset` diverso. Messa a fuoco = un empty per shot.
+- Scala della bocca (`mscale`) segue la distanza della camera dentro ogni shot.
+- Labiale: `social/gemello/lips_draft.py` fa solo una BOZZA (sillabe scritte a mano + picchi dell'inviluppo): nuclei sbagliati in vari punti. Il lavoro vero e' a mano su un grafico in dB (una cifra per 10 ms, 9 = picco, -5 dB per cifra; il lineare appiattisce le parti quiete): le chiusure m/b/p si vedono come buche, la voce quieta come cifre 4-6.
+- Inquadrature: medio stretto = 65 mm a ~0.25-0.30 m dal personaggio (viso leggibile); primo piano viso = 65 mm a 0.18 m con camera spostata sul viso (la testa e' girata: centrare a mano); un macro troppo vicino (<0.3 m) con 50 mm deforma la prospettiva; un macro su prop semplici (rotolo liscio) si legge come un disco.
+- Whisper (faster_whisper, CPU, modello small) da' i tempi delle parole con ±0.1 s; PyAV rotto: passare l'audio come array numpy 16 kHz.
+- Blender in background: comando in background del tool, NON `nohup ... &`.
