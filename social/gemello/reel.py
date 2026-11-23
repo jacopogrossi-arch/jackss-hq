@@ -794,6 +794,36 @@ try:
 except Exception as ex:
     print("Shakify NON disponibile:", ex)
 
+# ------------------------------------------------------------------ CONTROLLO PRIMA DEL RENDER (--check): nessun render, solo numeri per inquadratura (24/11/2026)
+# Per ogni 0.25 s: distanza camera-viso, mano con vincolo IK attivo fuori dal quadro, viso fuori dal quadro. Esce con codice 0 e stampa CHECK-FAIL.
+if "--check" in argv:
+    from bpy_extras.object_utils import world_to_camera_view
+    MIN_FACE = float(opt("--minface", "0.33"))     # sotto questa distanza la bocca-decal sparisce (HANDOFF 23/11); con bocca ferma non conta
+    hb_h = PB["mixamorig:Head"]; hands = (("destra", PB["mixamorig:RightHand"], ikR), ("sinistra", PB["mixamorig:LeftHand"], ikL))
+    rows = {}; fails = 0
+    for fr in range(1, NFR + 1, 6):                 # ogni 0.25 s
+        cam = cam_for(fr); sc.camera = cam; sc.frame_set(fr)
+        S = shot_at(fr - 1); mw = arm.matrix_world
+        face = mw @ ((hb_h.head + hb_h.tail) * 0.5)
+        dist = (cam.matrix_world.translation - face).length
+        v = world_to_camera_view(sc, cam, face)
+        R = rows.setdefault(S["name"], dict(dmin=9.0, face_out=0, hand_out=[], n=0)); R["n"] += 1; R["dmin"] = min(R["dmin"], dist)
+        if not (0.05 < v.x < 0.95 and 0.05 < v.y < 0.95 and v.z > 0): R["face_out"] += 1
+        for nm, hbn, ikc in hands:
+            if ikc.influence > 0.5:
+                h = world_to_camera_view(sc, cam, mw @ hbn.head)
+                if not (0.0 < h.x < 1.0 and 0.0 < h.y < 1.0 and h.z > 0): R["hand_out"].append((round((fr - 1) / FPS, 2), nm))
+    print("=== CHECK (ogni 0.25 s) ===")
+    for nm, R in rows.items():
+        probs = []
+        if R["dmin"] < MIN_FACE: probs.append("camera a %.2f m dal viso (< %.2f)" % (R["dmin"], MIN_FACE))
+        if R["face_out"]: probs.append("viso fuori quadro in %d campioni su %d" % (R["face_out"], R["n"]))
+        if R["hand_out"]: probs.append("mano fuori quadro mentre indica: %s" % ", ".join("%s a %.2fs" % (b, a) for a, b in R["hand_out"][:6]))
+        fails += len(probs)
+        print("CHECK-%s %-18s dist.min %.2f m | %s" % ("FAIL" if probs else "OK  ", nm, R["dmin"], "; ".join(probs) if probs else "ok"))
+    print("CHECK-TOTALE problemi:", fails)
+    raise SystemExit(0)
+
 # ------------------------------------------------------------------ render
 for eng in ("BLENDER_EEVEE", "BLENDER_EEVEE_NEXT"):
     try: sc.render.engine = eng; break
