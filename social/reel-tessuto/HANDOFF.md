@@ -9,6 +9,9 @@ Ricerca: `.claude/skills/fashion-3d/references/research-reel-retention-2026-11-2
 - Clip di prova FATTA e inviata a Jacopo: finestra 8.0-11.0 s (fotogrammi 193-265, 1080x1920, 48 campioni), `videos/_bench/reel-tessuto/prova1.mp4` (master), `prova1-telefono.mp4`, `prova1-labiale.mp4`, foglio `prova1-sheet.jpg`. Contiene 2 tagli (s4 medio -> s5 primo piano viso su «metro» -> s6 medio stretto). Iterazioni: s5 prima macro sul rotolo (illeggibile), poi taglio sul gesto (decentrato, perspettiva deformata), infine primo piano viso 65 mm. Gesti: la mano destra indica (indice dritto) ma nel medio stretto esce dal quadro a sinistra: da ricontrollare in s6.
 - Punti deboli visti nella prova: bocca piccola nei medi (valutare mw0 piu' alto), brows poco visibili, mano che indica tagliata fuori.
 
+## Verdetto di Jacopo sulla prova (23/11/2026)
+«La bocca della prova è brutta.» Lavoro SOSPESO: Jacopo migliora il metodo in un'altra sessione. Non riprendere il Reel finché il metodo bocca/labiale non è cambiato. Non renderizzare il Reel intero con la bocca attuale (decal + forme A-H).
+
 ## Da fare (in ordine)
 1. Risposta di Jacopo alla clip di prova (labiale, taglio, gesti, voce).
 2. Labiale a mano di P1, P2, P4.
