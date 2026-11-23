@@ -82,6 +82,8 @@ Sources: https://elevenlabs.io/docs/overview/models · https://elevenlabs.io/doc
 
 **Text to Dialogue** [OFFICIAL]: v4 recommended; many speakers, 2,000 chars per request, non-deterministic, tags in development — useful if a Reel has two voices (character and off-screen narrator), not needed for a monologue.
 
+**What the connected MCP actually exposes (checked 23/11/2026).** `creative_generate_speech` takes only `prompt`, `model_id` (eleven_v4 / v3 / multilingual_v2 / flash_v2_5 / turbo_v2_5), `voice_id`, `generations_count`, `estimate_only`: NO stability, style, speed, seed or previous_text. So the voice-settings A/B above cannot be run through it (it would need the REST API with a key, or the ElevenLabs web app). What we control from here: the model, the text (punctuation, caps, ellipses, one tag at most) and which take to keep. Cost is 1 credit per character (39 credits for «Il tessuto tagliato non torna indietro.»); `estimate_only` first. Download: `creative_get_generations` (flow_id + generation_ids) returns a signed `full_res_url` (mp3) to `curl`; a generation may still be "generating" for a few seconds, re-ask once. Reel «tessuto»: 4 paragraphs, 200 credits, 16 s. Voice files live in `videos/_bench/reel-tessuto/vo/` (local only). Speech-to-speech (`eleven_multilingual_sts_v2`) exists in the model list too but was not tried.
+
 **Do not forget (permissions / money):** ElevenLabs is reached through the `creative_*` MCP tools of the connected ElevenLabs server (`creative_generate_speech` with `voice_id`); ask before spending credits and state the number first (memory: reference-voce-elevenlabs).
 
 ## 7. Practical rules (the short list)
