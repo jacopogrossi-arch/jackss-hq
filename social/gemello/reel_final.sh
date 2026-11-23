@@ -12,7 +12,7 @@ S=$(python -c "print(int(round($T0*24))+1)")
 # --- audio: voce + swish; ogni swish parte (picco - t) prima del taglio cosi' il picco cade SUL taglio. Mai suoni sul parlato.
 # soft-clean picco 0.73 s, medium-transition picco 0.86 s (misurati 24/11)
 CUTS="2.80:soft 5.20:med 6.60:soft 8.95:soft 9.60:soft 11.40:med"
-IN="-i vo/vo.wav"; FC="[0:a]aresample=44100,apad=whole_dur=$DUR[v]"; MIX="[v]"; k=1
+IN="-i vo/vo.wav"; FC="[1:a]aresample=44100,apad=whole_dur=$DUR[vo]"; MIX="[vo]"; k=2   # ingresso 0 = fotogrammi, 1 = voce, 2.. = swish
 for c in $CUTS; do
   t=${c%%:*}; kind=${c##*:}
   if [ $kind = soft ]; then f=$SF/es-whoosh-soft-clean.mp3; pk=0.73; vol=0.20; else f=$SF/es-whoosh-medium-transition.mp3; pk=0.86; vol=0.26; fi
@@ -21,7 +21,7 @@ for c in $CUTS; do
   FC="$FC;[$k:a]atrim=0:1.6,afade=t=out:st=1.2:d=0.4,volume=$vol,aresample=44100,adelay=$ms|$ms[s$k]"
   MIX="$MIX[s$k]"; k=$((k+1))
 done
-FC="$FC;${MIX}amix=inputs=$k:normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=9[au]"
+FC="$FC;${MIX}amix=inputs=$((k-1)):normalize=0:duration=first,loudnorm=I=-14:TP=-1.5:LRA=9[au]"
 # --- video: post come finish.sh del gemello + plate (gesso su ruggine) con dissolvenza in/out
 POST="format=gbrp,split[a][b];[b]curves=all='0/0 0.75/0 1/1',gblur=sigma=28[g];[a][g]blend=all_mode=screen:all_opacity=${BLOOM:-0.12},vignette=angle=${VIG:-PI/7},curves=all='${CURVE:-0/0 0.25/0.21 0.75/0.79 1/1}',noise=alls=6:allf=t+u,format=yuv420p"
 plate() { # testo t0 t1 y
