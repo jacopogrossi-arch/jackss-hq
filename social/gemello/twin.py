@@ -15,7 +15,7 @@ argv = sys.argv[sys.argv.index("--") + 1:]
 OUT = argv[0]
 def opt(name, default):
     return argv[argv.index(name) + 1] if name in argv else default
-MOUTH_MODE = opt("--mouth", "decal")
+MOUTH_MODE = opt("--mouth", "cont")   # cont (v4: bocca continua a shape key) | decal (v3: a sostituzione) | keys (jawOpen)
 F0, F1 = [int(x) for x in opt("--frames", "1-121").split("-")]
 STEP = int(opt("--step", "1"))
 PCT = int(opt("--pct", "100"))
@@ -337,6 +337,89 @@ if MOUTH_MODE == "decal":
         parent_to_bone(grp, HEAD); grp["s0"] = list(grp.scale)
         mouths[key] = (grp, parts)
 
+# ---------------- v4: bocca CONTINUA. Una decal per strato (labbro, interno, denti sopra/sotto, lingua) a topologia fissa,
+# una shape key per ogni forma (A-H) + "grin" e "grinL" (angolo sinistro piu' su). Le forme si fondono con molle invece di scattare.
+def ytb(x, w, h, n, top, smile, tilt=0.0):
+    """Bordo superiore e inferiore della superellisse della bocca all'ascissa x."""
+    r = max(0.0, 1.0 - abs(2.0 * x / w) ** n) ** (1.0 / n)
+    c = smile * x * x + tilt * x
+    return h * top * r + c, -h * (1 - top) * r + c
+NT = 24
+def band_poly(w, h, n, smile, tilt, kind, amt, sx):
+    """Poligono a topologia fissa (2*NT punti, antiorario) per denti sopra/sotto e lingua; amt=0 -> altezza zero (spunta dal labbro)."""
+    xs = [(-1 + 2 * i / (NT - 1)) * w / 2 * sx for i in range(NT)]
+    lo, hi = [], []
+    for x in xs:
+        yt, yb = ytb(x, w, h, n, 0.42, smile, tilt)
+        if kind == "up":   a_, b_ = max(yb, yt - amt), yt
+        elif kind == "dn": a_, b_ = yb, min(yt, yb + amt)
+        else:
+            q = max(0.0, 1 - (2 * x / (w * sx)) ** 2) ** 0.5
+            a_, b_ = yb + 0.0002, min(yt, yb + 0.0002 + amt * q)
+        lo.append((x, a_)); hi.append((x, b_))
+    return lo + hi[::-1]
+BR = 4
+def is_band(poly): return len(poly) == 2 * NT
+def layer_coords(poly, off, rings=6):
+    if is_band(poly):     # striscia (denti, lingua): righe dal bordo basso a quello alto, mai un ventaglio (su forme curve il ventaglio riempie la bocca)
+        lo, hi = poly[:NT], poly[NT:][::-1]
+        return [surface_point(lo[i][0] + (hi[i][0] - lo[i][0]) * r / BR, lo[i][1] + (hi[i][1] - lo[i][1]) * r / BR, off) for r in range(BR + 1) for i in range(NT)]
+    cx = sum(p[0] for p in poly) / len(poly); cy = sum(p[1] for p in poly) / len(poly)
+    out = [surface_point(cx, cy, off)]
+    for k in range(1, rings + 1):
+        f = k / rings
+        out += [surface_point(cx + (x - cx) * f, cy + (y - cy) * f, off) for (x, y) in poly]
+    return out
+def layer_mesh(name, poly, off, m, rings=6):
+    me = bpy.data.meshes.new(name); n_ = len(poly)
+    vs = layer_coords(poly, off, rings)
+    if is_band(poly):
+        faces = [(r * NT + i, r * NT + i + 1, (r + 1) * NT + i + 1, (r + 1) * NT + i) for r in range(BR) for i in range(NT - 1)]
+        rings = 1
+    else:
+        faces = [(0, 1 + i, 1 + (i + 1) % n_) for i in range(n_)]
+    for k in range(rings - 1):
+        for i in range(n_):
+            a0 = 1 + k * n_; a1 = 1 + (k + 1) * n_
+            faces.append((a0 + i, a1 + i, a1 + (i + 1) % n_, a0 + (i + 1) % n_))
+    me.from_pydata([tuple(v) for v in vs], [], faces); me.update()
+    o = bpy.data.objects.new(name, me); sc.collection.objects.link(o); me.materials.append(m)
+    for p in me.polygons: p.use_smooth = True
+    return o
+MC = {}            # strato -> oggetto
+MKEYS = list(SHAPES.keys())
+if MOUTH_MODE == "cont":
+    MS = float(opt("--mscale", "1.15"))
+    def layers_for(key, smile_c=6.0, tilt=0.0, wx=1.0, dims=None):
+        w, h, n, tt, tb, tg = dims or SHAPES[key]
+        w, h, tt, tb, tg = w * MS * wx, h * MS, tt * MS, tb * MS, tg * MS
+        return {"lab": (mouth_outline(w + 0.004, h + 0.0034, n, smile=smile_c) if not tilt else [(x, y + tilt * x) for x, y in mouth_outline(w + 0.004, h + 0.0034, n, smile=smile_c)], 0.0006, m_lip),
+                "boc": ([(x, y + tilt * x) for x, y in mouth_outline(w, h, n, smile=smile_c)], 0.0010, m_in),
+                "lin": (band_poly(w, h, n, smile_c, tilt, "tg", tg, 0.62), 0.0013, m_tongue),
+                "dsu": (band_poly(w, h, n, smile_c, tilt, "up", tt, 0.92), 0.0015, m_teeth),
+                "dso": (band_poly(w, h, n, smile_c, tilt, "dn", tb, 0.90), 0.0015, m_teeth)}
+    base = layers_for("X")
+    bpy.ops.object.empty_add(location=MOUTH_C); grpc = bpy.context.object; grpc.name = "mouth_cont"; grpc.empty_display_size = 0.01
+    grpc.rotation_mode = "QUATERNION"
+    variants = {k: layers_for(k) for k in MKEYS if k != "X"}
+    for k in MKEYS:   # variante a ghigno di OGNI forma: il sorriso si fonde forma per forma (sommare un "delta ghigno" da X faceva uscire i denti dalle labbra)
+        variants[k + "g"] = layers_for(k, smile_c=float(opt("--grin", "15.0")), wx=1.06, dims=GRIN.get(k))
+    for ln, (poly, off, m) in base.items():
+        o = layer_mesh("mc_" + ln, poly, off, m); MC[ln] = o
+        o.shape_key_add(name="Basis")
+        for vk, lay in variants.items():
+            sk = o.shape_key_add(name=vk, from_mix=False); sk.slider_min = -0.3; sk.slider_max = 1.4
+            for i, co in enumerate(layer_coords(lay[ln][0], off)): sk.data[i].co = co
+        o.parent = grpc; o.matrix_parent_inverse = grpc.matrix_world.inverted()
+    if "--mdebug" in argv:
+        for ln, o in MC.items():
+            for kb_ in o.data.shape_keys.key_blocks:
+                us = [(c.co - MOUTH_C).dot(LAT) for c in kb_.data]; zs = [(c.co - MOUTH_C).z for c in kb_.data]; fs = [(c.co - MOUTH_C).dot(FWD) for c in kb_.data]
+                print("MDBG", ln, kb_.name, "u %.4f..%.4f z %.4f..%.4f f %.4f..%.4f" % (min(us), max(us), min(zs), max(zs), min(fs), max(fs)))
+    parent_to_bone(grpc, HEAD); grpc["s0"] = list(grpc.scale)
+    Q0 = grpc.rotation_quaternion.copy(); AX = (grpc.matrix_world.to_3x3().normalized().inverted() @ FWD).normalized()   # asse "avanti" nello spazio della bocca: per il sorriso storto
+    mouths["cont"] = (grpc, list(MC.values()))
+
 # ---------------- sopracciglia: ossa nuove che muovono le sopracciglia SCOLPITE (niente doppioni)
 BROWS = {"browR": (-0.036 + 0.0, 0.882), "browL": (0.044, 0.882)}   # (laterale rispetto alla bocca, z) misurati sul primo piano
 bpy.context.view_layer.objects.active = arm; arm.select_set(True)
@@ -360,6 +443,22 @@ for bn, (u0, z0) in BROWS.items():
         w_ = wu * wz * wgl
         if w_ > 0.01:
             vg.add([v.index], w_, "REPLACE")
+            if vg_head: vg_head.add([v.index], 1.0 - w_, "REPLACE")
+
+# ---------------- v4: mascella. Osso "jaw" (figlio di Head, perno dietro e sopra la bocca) che muove SOLO la pelle sotto la decal piu' aperta.
+JAWDEG = float(opt("--jawdeg", "3.0"))
+if MOUTH_MODE == "cont" and JAWDEG > 0:
+    bpy.context.view_layer.objects.active = arm; arm.select_set(True)
+    bpy.ops.object.mode_set(mode="EDIT")
+    eb = arm.data.edit_bones.new("jaw"); piv = MOUTH_C - FWD * 0.055 + UP * 0.02
+    eb.head = piv; eb.tail = piv + FWD * 0.04; eb.parent = arm.data.edit_bones[HEAD]
+    bpy.ops.object.mode_set(mode="OBJECT")
+    vgj = body.vertex_groups.new(name="jaw")
+    for v in body.data.vertices:
+        p = v.co; d = p - MOUTH_C; u = d.dot(LAT); fw = d.dot(FWD)
+        w_ = sm((0.749 - p.z) / 0.012) * sm((fw + 0.030) / 0.015) * sm((0.062 - abs(u)) / 0.02) * sm((p.z - 0.672) / 0.010)
+        if w_ > 0.01:
+            vgj.add([v.index], w_, "REPLACE")
             if vg_head: vg_head.add([v.index], 1.0 - w_, "REPLACE")
 
 # ---------------- sorriso (v3): shape key scolpita da script. Guance "a mela" su e in avanti, angoli della bocca su e indietro.
@@ -460,6 +559,10 @@ NOD = float(opt("--nod", "4.0"))
 nk = [(0, 0.0)]
 for ts in STRESS: nk += [(ts - 0.05, NOD), (ts + 0.07, 0.0)]
 nod = spring_track(nk, NFR, 20, 0.45)
+smirk_t = spring_track([(0, 0.0), (2.85, 0.5), (3.30, 0.9), (4.2, 0.7)], NFR, 9, 0.7)    # sorriso storto sulla battuta: meno simmetrico, piu' umano
+bk = [(0, 0.0)]
+for ts in STRESS: bk += [(ts - 0.06, 0.0025), (ts + 0.10, 0.0)]
+bpop = spring_track(bk, NFR, 18, 0.5)
 # respiro e micro-ondeggiamento (mai fermo)
 def breath(t): return 1.4 * math.sin(2 * math.pi * 0.28 * t)
 def sway(t): return 0.8 * math.sin(2 * math.pi * 0.17 * t + 1.0)
@@ -497,7 +600,7 @@ for f in range(NFR):
     qrot(PB["mixamorig:Hips"], 0, sway(t) * 0.6, sway(t) * 0.4); PB["mixamorig:Hips"].keyframe_insert("rotation_quaternion", frame=fr)
     for bn, tr in (("browR", browR[f]), ("browL", browL[f])):
         pb = PB[bn]; up_local = arm.data.bones[bn].matrix_local.to_3x3().inverted() @ UP
-        pb.location = up_local * tr[0] * 1.5; pb.keyframe_insert("location", frame=fr)
+        pb.location = up_local * (tr[0] + bpop[f]) * 1.5; pb.keyframe_insert("location", frame=fr)
         qrot(pb, 0, tr[1] * 1.5, 0); pb.keyframe_insert("rotation_quaternion", frame=fr)
 
 # ---------------- bocca: cues di Rhubarb -> forma visibile (anticipo di 1 fotogramma, minimo 2 fotogrammi: "sui due" come lo stop motion)
@@ -525,6 +628,73 @@ for fr in range(1, NFR + 1):
             grp.scale = Vector(grp["s0"]) * k_; grp.keyframe_insert("scale", frame=fr)
             for p in parts:
                 p.hide_render = (key != s_); p.keyframe_insert("hide_render", frame=fr)
+# ---------------- v4: partitura labiale ITALIANA allineata a mano sull'inviluppo della voce (passi da 10 ms; Rhubarb sbagliava di +-0,1 s e saltava le chiusure)
+# I-o par-to da car-ta, ma-ti-ta e me-tro, me-no di tren-ta. Vocali: a=D e=C i=B o=E u=F; m/b/p=A (chiusura piena); f/v=G; l=H; t d n s r k=B
+LIPS = [(0.00, "X"), (0.20, "B"), (0.29, "E"), (0.37, "A"), (0.41, "D"), (0.49, "B"), (0.62, "E"), (0.69, "B"), (0.72, "D"), (0.80, "B"), (0.89, "D"),
+        (1.00, "B"), (1.21, "D"), (1.33, "X"), (1.36, "A"), (1.43, "D"), (1.52, "B"), (1.60, "B"), (1.72, "B"), (1.79, "D"), (1.86, "C"), (1.91, "A"),
+        (1.99, "C"), (2.08, "B"), (2.16, "E"), (2.36, "X"), (2.86, "A"), (2.95, "C"), (3.05, "B"), (3.09, "E"), (3.15, "B"), (3.30, "C"), (3.38, "B"),
+        (3.43, "D"), (3.70, "X")]
+LEAD = float(opt("--lead", "0.06"))   # la bocca anticipa il suono di ~1,5 fotogrammi
+def read_env():
+    import wave, struct
+    wv = wave.open(os.path.join(OUT, "work", "battuta.wav")); sr = wv.getframerate(); nn = wv.getnframes(); ch = wv.getnchannels()
+    dd = struct.unpack("<%dh" % (nn * ch), wv.readframes(nn))[::ch]; hop = sr // 100
+    e = [math.sqrt(sum(x * x for x in dd[i:i + hop]) / hop) for i in range(0, len(dd) - hop, hop)]
+    mx = max(e); return [x / mx for x in e]
+if MOUTH_MODE == "cont":
+    ENV = read_env()
+    def env_at(t):
+        i = int(t * 100); return ENV[i] if 0 <= i < len(ENV) else 0.0
+    def lip_at(t):
+        cur = "X"
+        for t0, v in LIPS:
+            if t0 - LEAD <= t: cur = v
+        return cur
+    # 1) forma generica (vocali e consonanti) con una molla vettoriale; durante la chiusura A resta la forma della vocale vicina (coarticolazione)
+    sub = 8; dt = 1.0 / (FPS * sub); KS = [k for k in MKEYS if k not in ("X", "A")]
+    x = {k: 0.0 for k in KS}; vv = {k: 0.0 for k in KS}; cl = 0.0; vcl = 0.0; op = 0.0; vop = 0.0
+    OM, ZE = float(opt("--lomega", "34")), 0.82
+    lastv = "X"; W = []
+    for i in range(NFR * sub):
+        t = i * dt; v = lip_at(t)
+        if v not in ("A", "X"): lastv = v
+        tgt_shape = lastv if v == "A" else v
+        g = max(0.6, min(1.25, 0.62 + 0.75 * env_at(t + LEAD)))       # piu' voce = bocca piu' aperta (sillabe accentate)
+        for k in KS:
+            tg = (g if k == tgt_shape else 0.0)
+            a_ = OM * OM * (tg - x[k]) - 2 * ZE * OM * vv[k]; vv[k] += a_ * dt; x[k] += vv[k] * dt
+        # 2) chiusura labiale (m b p): molla molto rigida, labbra che si toccano davvero
+        tcl = 1.0 if v == "A" else 0.0; OC = 70.0
+        a_ = OC * OC * (tcl - cl) - 2 * 0.9 * OC * vcl; vcl += a_ * dt; cl += vcl * dt
+        if i % sub == 0:
+            c_ = max(0.0, min(1.0, cl))
+            W.append({k: max(-0.1, x[k]) * (1 - c_) for k in KS} | {"A": c_ * 0.9})
+    JAWW = {"X": 0.0, "A": 0.0, "B": 0.25, "C": 0.55, "D": 1.0, "E": 0.6, "F": 0.35, "G": 0.2, "H": 0.6}
+    MW0, MW1 = [float(x) for x in opt("--mwide", "1.22-1.0").split("-")]
+    def ease5(x): x = max(0.0, min(1.0, x)); return x * x * x * (x * (6 * x - 15) + 10)
+    for f in range(NFR):
+        fr = f + 1; t = f / FPS
+        k_ = MW0 + (MW1 - MW0) * ease5((f / (NFR - 1) - 0.08) / 0.84)
+        grpc.scale = Vector(grpc["s0"]) * k_; grpc.keyframe_insert("scale", frame=fr)
+        gr = max(0.0, min(1.0, (smile_t[f] - 0.55) / 0.4)) if smile_key else 0.0
+        MT = opt("--mtest", "")          # prova: una sola forma a 1 (es. --mtest D, --mtest grin)
+        for o in MC.values():
+            kb = o.data.shape_keys.key_blocks
+            if MT:
+                for kk in kb[1:]: kk.value = 1.0 if kk.name == MT else 0.0; kk.keyframe_insert("value", frame=fr)
+                continue
+            rest = max(0.0, 1.0 - sum(max(0.0, v_) for v_ in W[f].values()))     # quota della bocca a riposo (X)
+            for k in MKEYS:
+                val = W[f].get(k, 0.0) if k != "X" else 0.0
+                if k != "X": kb[k].value = val * (1 - gr); kb[k].keyframe_insert("value", frame=fr)
+                kb[k + "g"].value = (val if k != "X" else rest) * gr; kb[k + "g"].keyframe_insert("value", frame=fr)
+        from mathutils import Quaternion
+        grpc.rotation_quaternion = Q0 @ Quaternion(AX, math.radians(float(opt("--smirk", "5.0")) * smirk_t[f])); grpc.keyframe_insert("rotation_quaternion", frame=fr)
+        if JAWDEG > 0:
+            jo = sum(W[f].get(k, 0.0) * JAWW[k] for k in KS)
+            qrot(PB["jaw"], 0, 0, 0)
+            PB["jaw"].rotation_quaternion = Euler((math.radians(JAWDEG * jo), 0, 0), "XYZ").to_quaternion(); PB["jaw"].keyframe_insert("rotation_quaternion", frame=fr)
+
 if MOUTH_MODE == "keys" and jaw_key:   # confronto: la stessa partitura sulla shape key jawOpen, liscia (molla) invece che a sostituzione
     jt = spring_track([(0, 0.0)] + [((f - 1) / FPS, JAW[v]) for f, v in seq], NFR, 30, 0.8)
     for f in range(NFR):
