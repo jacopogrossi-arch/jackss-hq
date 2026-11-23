@@ -221,9 +221,9 @@ if TAV:
         dark = mat("cuciture_" + T["name"], tuple(c * 0.55 for c in col), 0.9, spec=0.1)
         parts.append(box("fascia_" + T["name"], (2 * P["wh"], 0.0055, 0.0046), (T["cx"], T["yw"] - 0.00275, ZT + 0.0023), dark, bevel=0.0003))
         parts.append(box("patta_" + T["name"], (0.0006, P["rise"] - 0.005, 0.0006), (T["cx"], T["yw"] - 0.0055 - (P["rise"] - 0.005) / 2, ZT + 0.0038), dark))
-        for k in (-0.6, -0.2, 0.2, 0.6): parts.append(box("passante_" + T["name"], (0.0024, 0.0085, 0.0058), (T["cx"] + k * P["wh"], T["yw"] - 0.0032, ZT + 0.0029), dark, bevel=0.0003))
+        for k in (-0.6, -0.2, 0.2, 0.6): parts.append(box("passante_" + T["name"], (0.0024, 0.0085, 0.0016), (T["cx"] + k * P["wh"], T["yw"] - 0.0032, ZT + 0.0054), dark, bevel=0.0003))
         for sg in (-1, 1):
-            parts.append(box("tasca_" + T["name"], (0.0007, 0.014, 0.0006), (T["cx"] + sg * (P["wh"] - 0.0055), T["yw"] - 0.0125, ZT + 0.0038), dark, rot=(0, 0, sg * math.radians(-28))))
+            parts.append(box("tasca_" + T["name"], (0.0005, 0.014, 0.0004), (T["cx"] + sg * (P["wh"] - 0.0055), T["yw"] - 0.0125, ZT + 0.0036), dark, rot=(0, 0, sg * math.radians(-28))))
         bpy.ops.mesh.primitive_cylinder_add(vertices=14, radius=0.0017, depth=0.0008, location=(T["cx"] + 0.0035, T["yw"] - 0.0028, ZT + 0.0054)); bt = bpy.context.object; bt.name = "bottone_" + T["name"]
         _bm = mat("bottone", (0.75, 0.62, 0.35), 0.35); bt.data.materials.append(_bm); bsdf_of(_bm).inputs["Metallic"].default_value = 0.8; parts.append(bt)
         if T.get("tag"):   # cartellino con la taglia: testo 3D vero, leggibile da telefono
@@ -234,9 +234,8 @@ if TAV:
         TROUSER_OBJS[T["name"]] = parts
         if T.get("hide_from") is not None or T.get("show_from") is not None:     # i pantaloni del gancio spariscono col taglio, quello da misurare compare (il taglio nasconde lo scambio)
             hf = T.get("hide_from", 1e9); sf = T.get("show_from", -1.0)
-            frs = sorted({1, (int(round(sf * FPS)) + 1) if sf > 0 else 1, (int(round(hf * FPS)) + 1) if hf < 1e8 else 1})
             for o in parts:
-                for fr_ in frs:
+                for fr_ in range(1, NFR + 1):          # una chiave per fotogramma: i booleani non vanno interpolati
                     o.hide_render = not (sf <= (fr_ - 1) / FPS < hf); o.keyframe_insert("hide_render", frame=fr_)
 # linee di misura che si tracciano + metro (zero tenuto da una mano; il metro e' una striscia lunga fissa con le tacche: parte dal punto A verso B)
 MIS = SC.get("MISURE")
@@ -278,6 +277,7 @@ if MIS and TAV:
         tape.hide_render = not vis
         tape.keyframe_insert("hide_render", frame=fr_); tape.keyframe_insert("location", frame=fr_); tape.keyframe_insert("rotation_euler", frame=fr_); tape.keyframe_insert("scale", frame=fr_)
 
+PRE_ACTIONS = set(bpy.data.actions)   # animazioni di props/linee/metro create finora: l'import del GLB piu' sotto cancella le sue azioni, non queste
 # ------------------------------------------------------------------ fondo: parete, scaffali con libri, lampadine (bokeh), finestra con la citta' di notte
 box("parete", (3.0, 0.05, 1.6), (0, 1.05, 0.6), wear(mat("parete", (0.10, 0.05, 0.03), 0.8), 20, 0.1, 0.1))
 scaff = wear(mat("scaffale", (0.20, 0.09, 0.035), 0.5), 40, 0.15, 0.1)
@@ -322,7 +322,7 @@ drop = [o for o in new if o.type == "MESH" and o is not body]
 new = [o for o in new if o not in drop]
 for o in drop: bpy.data.objects.remove(o, do_unlink=True)
 if arm.animation_data: arm.animation_data.action = None
-_keep = {a for a in (getattr(getattr(pen, "animation_data", None), "action", None), getattr(getattr(globals().get("cu"), "animation_data", None), "action", None)) if a}   # azioni di matita e disegno (DISEGNO): non toccarle
+_keep = set(PRE_ACTIONS) | {a for a in (getattr(getattr(pen, "animation_data", None), "action", None), getattr(getattr(globals().get("cu"), "animation_data", None), "action", None)) if a}   # azioni di matita e disegno (DISEGNO): non toccarle
 for act in list(bpy.data.actions):
     if act not in _keep: bpy.data.actions.remove(act)
 for pb in arm.pose.bones:
@@ -999,6 +999,7 @@ for fr in range(F0, F1 + 1, STEP):
         print("DBG", fr, "polso", tuple(round(x, 3) for x in arm.matrix_world @ hb.head), "bersaglio", tuple(round(x, 3) for x in tR.matrix_world.translation), "infl", round(ikR.influence, 2))
         if "--norender" in argv: continue
     if "--debugdis" in argv and DIS: print("DISDBG", fr, "bevel_end", round(cu.bevel_factor_end, 3), "pen", tuple(round(x, 3) for x in pen.location), "anim", bool(cu.animation_data and cu.animation_data.action))
+    if "--debughide" in argv and TAV: print("HIDEDBG", fr, {k: [o.hide_render for o in v][0] for k, v in TROUSER_OBJS.items()}, {k: tuple(round(x, 3) for x in v[0].location) for k, v in TROUSER_OBJS.items()})
     sc.render.filepath = os.path.join(fdir, "f%04d.png" % fr)
     bpy.ops.render.render(write_still=True)
     print("FRAME", fr, "%.1fs" % (time.time() - t0), flush=True)

@@ -9,3 +9,8 @@ Renderizzare 3 still a 48 campioni e mostrarli a Jacopo: gancio (t=1.5 s, frame 
 Poi: gate sagoma pantalone (waist/rise/inseam nei punti giusti), aggiungere al --check il controllo dello sguardo (angolo testa-camera > ~35 gradi), plate in post (×2 solo sulla vita), numeri veri di Jacopo (3 misure di un suo pantalone) al posto dei segnaposto.
 ## Tempi
 786 fotogrammi: anteprima mezza risoluzione ~20 min, render finale 1080x1920 ~90 min.
+
+## 24/11 sera — Gate 1 superato (3 still: videos/_bench/reel-3-misure/g1/g1c.png)
+Il codice di reel.py (tavolo, pantaloni piatti, cartellino «M» 3D, linee, metro, IK mondo) GIRA. Bug risolti: l'import del GLB cancellava le azioni di props/linee/metro (ora PRE_ACTIONS le salva); chiavi di visibilita' una per fotogramma; beccheggio testa NEGATIVO = guarda in basso; mani piatte (FING 0); fstop 6-8.
+Da sistemare dopo il giudizio di Jacopo: gancio (taglia in alto la testa e il bordo del pantalone sinistro), metro lungo 0.13 sporge molto (valutare 0.09), linea di misura coperta dal metro (alzare z o allargare), mano destra sembra un pugno nel cavallo, moiré da pochi campioni (a 48 e' normale).
+Poi: --check sguardo, plate, numeri veri, animazione completa (anteprima mezza risoluzione ~20 min).
