@@ -81,4 +81,11 @@ Face-to-face still against the AI (`work/skin_cmp.jpg`): the AI skin is warm tan
 - **Shirt**: the texture is ALREADY near-black; it looked grey because of the vinyl specular. So don't darken it: make it matte. Mask = value < 0.025-0.05 x saturation < 0.18-0.30 (shirt and shoes), minus everything above z 0.70 raw (otherwise the sunglass lenses go matte too). On the mask: roughness 0.95, specular 0.10.
 - **Mouth width** `--mscale 1.35` (was 1.15). The smile shape key's protected ellipse and its mouth-corner region move out with it (+0.025 per +1.0 of scale).
 
+## v6 (23/11/2026): contrast and background (`work/t6_cmp.jpg`: AI | v6 at 0 s and 3.5 s, post applied)
+- The remaining gap after v5 was the IMAGE, not the character: bright red books, mint-green mat, hazy greyish table, light spread everywhere.
+- Shelf light 30 W → 10 W (`--shelf`); fill 1.5 → 0.7 (`--fill`); key spot aimed at face/chest (target z 0.16 instead of 0.10, cone 40° instead of 55°: `--keyz`, `--keyspot`); haze 0.025 → 0.015.
+- Cutting mat darker (base 0.018/0.115/0.065, lines 0.26/0.42/0.33); table wood warmer and brighter (ramp 0.30/0.12/0.035 → 0.56/0.27/0.09): the warm band behind the feet is what separates the toy from the dark background.
+- Post: S-curve `0/0 0.25/0.21 0.75/0.79 1/1` after the vignette (`CURVE=` in finish.sh).
+- f/3.5 instead of f/2.2 (`--fstop`): paper, pencil and tape measure are the words of the line, so they must read in the foreground; at f/2.2 they were grey blobs.
+
 Possible next step to test on a real Short: Blender 5.2.4 LTS is out as a portable zip (install on D:, keep 5.1 as fallback); the EL4CTEO skills need it.

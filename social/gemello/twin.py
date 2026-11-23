@@ -47,7 +47,7 @@ def mat(name, rgb, rough=0.6, emit=None, strength=1.0, spec=0.5):
     if emit:
         b.inputs["Emission Color"].default_value = (*emit, 1); b.inputs["Emission Strength"].default_value = strength
     return m
-NOWEAR = "--nowear" in argv; VOLD = float(opt("--vol", "0.025")); KEY = float(opt("--key", "40"))
+NOWEAR = "--nowear" in argv; VOLD = float(opt("--vol", "0.015")); KEY = float(opt("--key", "40"))
 def wear(m, scale=180.0, amt=0.25, bump=0.15, coord="Object"):
     """Usura alla Lego Movie: rugosita' a macchie + graffi sottili (rumore stirato) + micro-bump."""
     if NOWEAR: return m
@@ -84,7 +84,7 @@ legno = mat("legno", (0.36, 0.17, 0.07), 0.45)
 nt = legno.node_tree; N, L_ = nt.nodes, nt.links; b = bsdf_of(legno)
 tc = N.new("ShaderNodeTexCoord"); wv = N.new("ShaderNodeTexWave"); wv.inputs["Scale"].default_value = 9; wv.inputs["Distortion"].default_value = 6; wv.inputs["Detail"].default_value = 4
 L_.new(tc.outputs["Object"], wv.inputs["Vector"])
-ramp = N.new("ShaderNodeValToRGB"); ramp.color_ramp.elements[0].color = (0.22, 0.09, 0.03, 1); ramp.color_ramp.elements[1].color = (0.42, 0.21, 0.09, 1)
+ramp = N.new("ShaderNodeValToRGB"); ramp.color_ramp.elements[0].color = (0.30, 0.12, 0.035, 1); ramp.color_ramp.elements[1].color = (0.56, 0.27, 0.09, 1)   # v6: legno piu' caldo e acceso (fascia calda dietro i piedi)
 L_.new(wv.outputs["Fac"], ramp.inputs["Fac"]); L_.new(ramp.outputs["Color"], b.inputs["Base Color"])
 wear(legno, 60, 0.15, 0.08)
 box("tavolo", (2.2, 2.0, 0.04), (0, 0.2, -0.02), legno)
@@ -108,7 +108,7 @@ L_.new(gridline("X", 0.02, 0.05).outputs[0], mx.inputs[0]); L_.new(gridline("Y",
 L_.new(gridline("X", 0.10, 0.018).outputs[0], mx2.inputs[0]); L_.new(gridline("Y", 0.10, 0.018).outputs[0], mx2.inputs[1])
 L_.new(mx.outputs[0], mx3.inputs[0]); L_.new(mx2.outputs[0], mx3.inputs[1])
 mix = N.new("ShaderNodeMix"); mix.data_type = "RGBA"
-mix.inputs["A"].default_value = (0.03, 0.17, 0.10, 1); mix.inputs["B"].default_value = (0.42, 0.62, 0.50, 1)
+mix.inputs["A"].default_value = (0.018, 0.115, 0.065, 1); mix.inputs["B"].default_value = (0.26, 0.42, 0.33, 1)   # v6: tappetino piu' scuro, righe meno brillanti
 L_.new(mx3.outputs[0], mix.inputs["Factor"]); L_.new(mix.outputs["Result"], b.inputs["Base Color"])
 wear(mm, 90, 0.12, 0.05)
 mat_o = box("tappetino", (0.9, 0.46, 0.002), (0.02, -0.06, 0.001), mm)   # finisce subito dietro i piedi: dietro si vede il tavolo caldo
@@ -749,11 +749,12 @@ def light(kind, loc, energy, color, size=0.3, target=(0, 0.13, 0.12), spot=70, b
     if kind == "AREA": l.data.size = size
     if kind == "SPOT": l.data.spot_size = math.radians(spot); l.data.spot_blend = blend; l.data.shadow_soft_size = size
     d = Vector(target) - Vector(loc); l.rotation_euler = d.to_track_quat("-Z", "Y").to_euler(); return l
-light("SPOT", (0.30, -0.42, 0.42), KEY, (1.0, 0.66, 0.38), 0.08, target=(0.0, 0.10, 0.10), spot=55, blend=0.8)        # lampada da tavolo: key calda
-light("AREA", (-0.45, -0.35, 0.25), 1.5, (1.0, 0.82, 0.68), 0.5)                                                     # riempimento morbido
+# v6: luce concentrata su viso e busto (come l'AI), riempimento piu' basso, scaffali piu' scuri: neri profondi dietro
+light("SPOT", (0.30, -0.42, 0.42), KEY, (1.0, 0.66, 0.38), 0.08, target=(0.0, 0.12, float(opt("--keyz", "0.16"))), spot=float(opt("--keyspot", "40")), blend=0.9)   # lampada da tavolo: key calda
+light("AREA", (-0.45, -0.35, 0.25), float(opt("--fill", "0.7")), (1.0, 0.82, 0.68), 0.5)                              # riempimento morbido
 light("AREA", (-0.25, 0.55, 0.32), 2.5, (0.35, 0.85, 0.80), 0.25, target=(0, 0.13, 0.15))                            # controluce teal (dalla finestra)
 light("AREA", (0.30, 0.45, 0.35), 4.0, (1.0, 0.65, 0.35), 0.25, target=(0, 0.13, 0.15))                             # controluce caldo
-light("SPOT", (-0.1, 0.95, 0.9), 30, (1.0, 0.6, 0.3), 0.05, target=(-0.4, 0.9, 0.3), spot=80, blend=1.0)           # luce sugli scaffali
+light("SPOT", (-0.1, 0.95, 0.9), float(opt("--shelf", "10")), (1.0, 0.6, 0.3), 0.05, target=(-0.4, 0.9, 0.3), spot=80, blend=1.0)           # luce sugli scaffali
 w = bpy.data.worlds.new("w"); sc.world = w; w.use_nodes = True
 bg = w.node_tree.nodes["Background"]; bg.inputs[0].default_value = (0.04, 0.035, 0.03, 1); bg.inputs[1].default_value = 0.12
 vol = w.node_tree.nodes.new("ShaderNodeVolumePrincipled"); vol.inputs["Density"].default_value = VOLD; vol.inputs["Anisotropy"].default_value = 0.35
@@ -766,7 +767,8 @@ rig = bpy.data.objects.new("cam_rig", None); sc.collection.objects.link(rig)
 bpy.ops.object.camera_add(); cam = bpy.context.object; sc.camera = cam; cam.parent = rig
 cam.location = (0, 0, 0); cam.rotation_euler = (0, 0, 0)
 cam.data.lens = 50; cam.data.sensor_width = 36; cam.data.sensor_fit = "AUTO"; cam.data.clip_start = 0.005
-cam.data.dof.use_dof = True; cam.data.dof.aperture_fstop = 2.2; cam.data.dof.aperture_blades = 7
+cam.data.dof.use_dof = True; cam.data.dof.aperture_fstop = float(opt("--fstop", "3.5"));   # v6: foglio, matita e metro in primo piano si leggono (sono le parole della battuta)
+cam.data.dof.aperture_blades = 7
 focus = bpy.data.objects.new("fuoco", None); sc.collection.objects.link(focus); cam.data.dof.focus_object = focus
 def ease(x): x = max(0.0, min(1.0, x)); return x * x * x * (x * (6 * x - 15) + 10)
 P0, L0 = Vector((0.0, -0.60, 0.165)), Vector((0.0, 0.13, 0.095))   # piede del tavolo: largo, testa-stivali + oggetti in primo piano
