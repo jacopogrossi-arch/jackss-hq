@@ -128,6 +128,46 @@ bpy.ops.mesh.primitive_cone_add(vertices=12, radius1=0.0011, depth=0.004, locati
 bpy.ops.mesh.primitive_cylinder_add(vertices=16, radius=0.0044, depth=0.008, location=(0, 0, -0.079)); fe = bpy.context.object; fe.data.materials.append(mat("ottone", (0.6, 0.45, 0.2), 0.3)); bsdf_of(fe.data.materials[0]).inputs["Metallic"].default_value = 1
 for o in (tip, gr, fe): o.parent = pen
 pen.location = (0.035, -0.185, 0.0072); pen.rotation_euler = (0, math.radians(90), math.radians(12))
+
+# ------------------------------------------------------------------ DISEGNO sul foglio (24/11/2026, opzione della partitura: DISEGNO = dict(t0, t1, path, c)): il macro sulla carta non e' piu' un foglio bianco.
+# La curva si traccia (bevel_factor_end animato) e la matita la segue con la punta. Senza DISEGNO nella partitura non cambia nulla.
+DIS = SC.get("DISEGNO")
+if DIS:
+    _pts = [(DIS["c"][0] + x, DIS["c"][1] + y) for x, y in DIS["path"]]
+    _seg = [math.dist(_pts[i], _pts[i + 1]) for i in range(len(_pts) - 1)]; _tot = sum(_seg)
+    _N = 160; _res = []
+    for k in range(_N + 1):                       # ricampionata a passo uguale: il fattore della curva = frazione di percorso
+        d = _tot * k / _N; i = 0
+        while i < len(_seg) - 1 and d > _seg[i]: d -= _seg[i]; i += 1
+        u = 0.0 if _seg[i] == 0 else min(1.0, d / _seg[i]); _res.append((_pts[i][0] + (_pts[i + 1][0] - _pts[i][0]) * u, _pts[i][1] + (_pts[i + 1][1] - _pts[i][1]) * u))
+    cu = bpy.data.curves.new("disegno", "CURVE"); cu.dimensions = "3D"; cu.bevel_depth = DIS.get("w", 0.00045); cu.bevel_resolution = 2; cu.use_fill_caps = True
+    sp = cu.splines.new("POLY"); sp.points.add(len(_res) - 1)
+    ZP = 0.0030                                   # appena sopra la carta (faccia superiore a z = 0.0029)
+    for q, (x, y) in zip(sp.points, _res): q.co = (x, y, ZP, 1.0)
+    dis = bpy.data.objects.new("disegno", cu); sc.collection.objects.link(dis)
+    gmat = mat("grafite_tratto", (0.035, 0.035, 0.04), 0.35); dis.data.materials.append(gmat)
+    cu.bevel_factor_start = 0.0
+    TD0, TD1 = DIS["t0"], DIS["t1"]
+    # matita inclinata (punta in basso, come quando si scrive): tip = location + 0.0925 * asse locale Z
+    _rz = math.radians(12); _ry = math.radians(110)
+    _ax = Vector((math.sin(_ry) * math.cos(_rz), math.sin(_ry) * math.sin(_rz), math.cos(_ry)))
+    rest_loc = Vector(pen.location); rest_rot = Euler(pen.rotation_euler)
+    def pen_at(pt): return Vector((pt[0], pt[1], ZP + 0.0006)) - _ax * 0.0925
+    pen.keyframe_insert("location", frame=1); pen.keyframe_insert("rotation_euler", frame=1)
+    for f in range(1, NFR + 1):
+        t = (f - 1) / FPS
+        e = 0.0 if t <= TD0 else (1.0 if t >= TD1 else (t - TD0) / (TD1 - TD0)); e = e * e * (3 - 2 * e) * 0.35 + e * 0.65   # quasi lineare, partenza e arrivo morbidi
+        cu.bevel_factor_end = e; cu.keyframe_insert("bevel_factor_end", frame=f)
+        a = (t - (TD0 - 0.25)) / 0.25          # 0.25 s prima: la matita si porta all'inizio del tratto
+        b = (t - TD1) / 0.30                   # dopo il tratto: resta li' (non serve piu' vederla)
+        if a <= 0:
+            pen.location = rest_loc; pen.rotation_euler = rest_rot
+        else:
+            a = min(1.0, a); a = a * a * (3 - 2 * a)
+            k = min(_N, int(round(e * _N))); tgt = pen_at(_res[k])
+            pen.location = rest_loc.lerp(tgt, a)
+            pen.rotation_euler = Euler((0, rest_rot.y + (_ry - rest_rot.y) * a, rest_rot.z))
+        pen.keyframe_insert("location", frame=f); pen.keyframe_insert("rotation_euler", frame=f)
 # metro da sarta arrotolato + coda
 tmat = mat("metro", (0.80, 0.60, 0.12), 0.55)
 nt = tmat.node_tree; N, L_ = nt.nodes, nt.links; b = bsdf_of(tmat)
@@ -188,7 +228,9 @@ drop = [o for o in new if o.type == "MESH" and o is not body]
 new = [o for o in new if o not in drop]
 for o in drop: bpy.data.objects.remove(o, do_unlink=True)
 if arm.animation_data: arm.animation_data.action = None
-for act in list(bpy.data.actions): bpy.data.actions.remove(act)
+_keep = {a for a in (getattr(getattr(pen, "animation_data", None), "action", None), getattr(getattr(globals().get("cu"), "animation_data", None), "action", None)) if a}   # azioni di matita e disegno (DISEGNO): non toccarle
+for act in list(bpy.data.actions):
+    if act not in _keep: bpy.data.actions.remove(act)
 for pb in arm.pose.bones:
     pb.rotation_mode = "QUATERNION"; pb.rotation_quaternion = (1, 0, 0, 0); pb.location = (0, 0, 0)
 bpy.context.view_layer.update()
@@ -858,6 +900,7 @@ for fr in range(F0, F1 + 1, STEP):
         hb = arm.pose.bones["mixamorig:RightHand"]
         print("DBG", fr, "polso", tuple(round(x, 3) for x in arm.matrix_world @ hb.head), "bersaglio", tuple(round(x, 3) for x in tR.matrix_world.translation), "infl", round(ikR.influence, 2))
         if "--norender" in argv: continue
+    if "--debugdis" in argv and DIS: print("DISDBG", fr, "bevel_end", round(cu.bevel_factor_end, 3), "pen", tuple(round(x, 3) for x in pen.location), "anim", bool(cu.animation_data and cu.animation_data.action))
     sc.render.filepath = os.path.join(fdir, "f%04d.png" % fr)
     bpy.ops.render.render(write_still=True)
     print("FRAME", fr, "%.1fs" % (time.time() - t0), flush=True)
