@@ -10,7 +10,7 @@ FONT=font.ttf   # copia locale: i percorsi Windows con "C:" rompono il filtro dr
 cd $G
 # 1) post: bloom morbido sulle luci (soglia + sfocatura in modalita' screen), vignettatura, grana in movimento; audio vero (battuta da 4,3 s, poi silenzio)
 ffmpeg -v error -y -framerate 24 -i $N/f%04d.png -i $AUD -filter_complex \
- "[0:v]format=gbrp,split[a][b];[b]curves=all='0/0 0.75/0 1/1',gblur=sigma=28[g];[a][g]blend=all_mode=screen:all_opacity=0.22,vignette=angle=PI/5,noise=alls=6:allf=t+u,format=yuv420p[v];[1:a]apad[au]" \
+ "[0:v]format=gbrp,split[a][b];[b]curves=all='0/0 0.75/0 1/1',gblur=sigma=28[g];[a][g]blend=all_mode=screen:all_opacity=${BLOOM:-0.12},vignette=angle=${VIG:-PI/7},noise=alls=6:allf=t+u,format=yuv420p[v];[1:a]apad[au]" \
  -map "[v]" -map "[au]" -t 5.042 -c:v libx264 -preset slow -crf 15 -c:a aac -b:a 192k $N.mp4
 # 2) affiancato: a sinistra la clip AI (Seedance + lipsync), a destra Blender; audio dello shot gemello
 ffmpeg -v error -y -i $AI -i $N.mp4 -filter_complex \

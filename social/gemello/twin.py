@@ -194,11 +194,50 @@ MOUTH_C = Vector((0.0215, -0.0218, 0.7764))
 HEAD = "mixamorig:Head"
 BODY_C = Vector((0.008, 0.06, 0.0))                  # asse del corpo (raw), dalle ossa Hips/Spine
 
+def jacket_cloth(m):
+    """v3: solo la giacca (verde oliva nella texture Tripo, maschera per tinta) diventa piu' scura, opaca e con trama di tela."""
+    nt = m.node_tree; N, L = nt.nodes, nt.links; b = bsdf_of(m)
+    lk = next((l for l in L if l.to_socket == b.inputs["Base Color"]), None)
+    if not lk: return
+    src = lk.from_socket
+    sep = N.new("ShaderNodeSeparateColor"); L.new(src, sep.inputs[0])
+    mx = N.new("ShaderNodeMath"); mx.operation = "MAXIMUM"; L.new(sep.outputs[0], mx.inputs[0]); L.new(sep.outputs[2], mx.inputs[1])
+    mx2 = N.new("ShaderNodeMath"); mx2.operation = "MAXIMUM"; L.new(mx.outputs[0], mx2.inputs[0]); mx2.inputs[1].default_value = 0.002
+    df = N.new("ShaderNodeMath"); df.operation = "DIVIDE"; L.new(sep.outputs[1], df.inputs[0]); L.new(mx2.outputs[0], df.inputs[1])   # verde / max(rosso, blu)
+    mk = N.new("ShaderNodeMapRange"); mk.inputs["From Min"].default_value = float(opt("--jm0", "0.96")); mk.inputs["From Max"].default_value = float(opt("--jm1", "1.00"))
+    L.new(df.outputs[0], mk.inputs["Value"])
+    hsv = N.new("ShaderNodeSeparateColor"); hsv.mode = "HSV"; L.new(src, hsv.inputs[0])          # solo colori saturi: la maglietta grigia resta fuori
+    ms_ = N.new("ShaderNodeMapRange"); ms_.inputs["From Min"].default_value = 0.22; ms_.inputs["From Max"].default_value = 0.38; L.new(hsv.outputs[1], ms_.inputs["Value"])
+    mk0 = mk; mk = N.new("ShaderNodeMath"); mk.operation = "MULTIPLY"; L.new(mk0.outputs["Result"], mk.inputs[0]); L.new(ms_.outputs["Result"], mk.inputs[1])
+    dark = N.new("ShaderNodeMix"); dark.data_type = "RGBA"; dark.blend_type = "MULTIPLY"
+    dark.inputs["Factor"].default_value = 1.0; L.new(src, dark.inputs[6]); dark.inputs[7].default_value = (*([float(opt("--jdark", "0.55"))] * 3), 1)
+    mix = N.new("ShaderNodeMix"); mix.data_type = "RGBA"; L.new(mk.outputs[0], mix.inputs["Factor"])
+    L.new(src, mix.inputs[6]); L.new(dark.outputs[2], mix.inputs[7]); L.new(mix.outputs[2], b.inputs["Base Color"])
+    # rugosita': giacca opaca (0.8), resto invariato
+    rin = next((l.from_socket for l in L if l.to_socket == b.inputs["Roughness"]), None)
+    rm = N.new("ShaderNodeMix"); rm.data_type = "FLOAT"; L.new(mk.outputs[0], rm.inputs["Factor"])
+    if rin: L.new(rin, rm.inputs[2])
+    else: rm.inputs[2].default_value = b.inputs["Roughness"].default_value
+    rm.inputs[3].default_value = 0.82; L.new(rm.outputs[0], b.inputs["Roughness"])
+    # trama di tela: due onde incrociate (ordito e trama) come bump, solo sulla giacca
+    tc = N.new("ShaderNodeTexCoord"); w1 = N.new("ShaderNodeTexWave"); w2 = N.new("ShaderNodeTexWave")
+    for w_, ax in ((w1, "X"), (w2, "Z")):
+        w_.wave_type = "BANDS"; w_.bands_direction = ax; w_.inputs["Scale"].default_value = 900.0; w_.inputs["Distortion"].default_value = 2.0
+        L.new(tc.outputs["Object"], w_.inputs["Vector"])
+    ad = N.new("ShaderNodeMath"); ad.operation = "MULTIPLY"; L.new(w1.outputs["Fac"], ad.inputs[0]); L.new(w2.outputs["Fac"], ad.inputs[1])
+    ms = N.new("ShaderNodeMath"); ms.operation = "MULTIPLY"; L.new(ad.outputs[0], ms.inputs[0]); L.new(mk.outputs[0], ms.inputs[1])
+    bp = N.new("ShaderNodeBump"); bp.inputs["Strength"].default_value = 0.35; bp.inputs["Distance"].default_value = 0.0003
+    L.new(ms.outputs[0], bp.inputs["Height"])
+    nin = next((l.from_socket for l in L if l.to_socket == b.inputs["Normal"]), None)
+    if nin: L.new(nin, bp.inputs["Normal"])
+    L.new(bp.outputs["Normal"], b.inputs["Normal"])
+
 # materiale del pupazzo: vinile con usura
 for m in body.data.materials:
     if m.name.startswith("tripo"):
         b = bsdf_of(m); b.inputs["Roughness"].default_value = 0.45; b.inputs["Specular IOR Level"].default_value = 0.45
         wear(m, 220, 0.12, 0.05)
+        if "--nojacket" not in argv: jacket_cloth(m)
     if m.name == "mouth_dark" and MOUTH_MODE == "decal":
         pass
 
@@ -268,13 +307,19 @@ m_lip = mat("labbro", (0.30, 0.13, 0.09), 0.5, spec=0.5)
 m_teeth = mat("denti", (0.80, 0.76, 0.68), 0.35)
 m_tongue = mat("lingua", (0.45, 0.10, 0.09), 0.5)
 mouths = {}
+# v3: seconda serie "g" (ghigno) per la battuta finale: angoli molto piu' in su, un filo piu' larga, denti anche a bocca chiusa
+GRIN = {"X": (0.046, 0.0075, 2.4, 0.0040, 0.0, 0.0), "A": (0.042, 0.0080, 2.4, 0.0040, 0.0, 0.0)}
 if MOUTH_MODE == "decal":
     MS = float(opt("--mscale", "1.15"))   # bocche un filo piu' grandi della piega scolpita: si leggono anche a figura intera
-    for key, (w, h, n, tt, tb, tg) in SHAPES.items():
-        w, h, tt, tb, tg = w * MS, h * MS, tt * MS, tb * MS, tg * MS
+    GS = float(opt("--grin", "15.0"))
+    sets = [(k, v, 6.0, 1.0) for k, v in SHAPES.items()]
+    if "--nogrin" not in argv:
+        sets += [(k + "g", GRIN.get(k, v), GS, 1.06) for k, v in SHAPES.items()]
+    for key, (w, h, n, tt, tb, tg), smile_c, wx in sets:
+        w, h, tt, tb, tg = w * MS * wx, h * MS, tt * MS, tb * MS, tg * MS
         parts = []
-        inner = mouth_outline(w, h, n)
-        lip = mouth_outline(w + 0.004, h + 0.0034, n)
+        inner = mouth_outline(w, h, n, smile=smile_c)
+        lip = mouth_outline(w + 0.004, h + 0.0034, n, smile=smile_c)
         parts.append(poly_mesh("lab_" + key, lip, 0.0006, m_lip))
         parts.append(poly_mesh("boc_" + key, inner, 0.0010, m_in))
         topv = max(p[1] for p in inner); botv = min(p[1] for p in inner)
@@ -289,7 +334,7 @@ if MOUTH_MODE == "decal":
             if len(tp) > 2: parts.append(poly_mesh("dso_" + key, [(x * 0.9, y) for x, y in tp], 0.0015, m_teeth))
         bpy.ops.object.empty_add(location=MOUTH_C); grp = bpy.context.object; grp.name = "mouth_" + key; grp.empty_display_size = 0.01
         for p in parts: p.parent = grp; p.matrix_parent_inverse = grp.matrix_world.inverted()
-        parent_to_bone(grp, HEAD)
+        parent_to_bone(grp, HEAD); grp["s0"] = list(grp.scale)
         mouths[key] = (grp, parts)
 
 # ---------------- sopracciglia: ossa nuove che muovono le sopracciglia SCOLPITE (niente doppioni)
@@ -316,6 +361,31 @@ for bn, (u0, z0) in BROWS.items():
         if w_ > 0.01:
             vg.add([v.index], w_, "REPLACE")
             if vg_head: vg_head.add([v.index], 1.0 - w_, "REPLACE")
+
+# ---------------- sorriso (v3): shape key scolpita da script. Guance "a mela" su e in avanti, angoli della bocca su e indietro.
+# Gli occhi sono dietro gli occhiali scuri: niente strizzata (non si vedrebbe). Mai dentro l'area della bocca (li' ci sono le bocche a sostituzione).
+SMILE = "--nosmile" not in argv
+smile_key = None
+if SMILE:
+    if not body.data.shape_keys: body.shape_key_add(name="Basis")
+    smile_key = body.shape_key_add(name="smile", from_mix=False)
+    GU = float(opt("--cheek", "1.6"))
+    for v in body.data.vertices:
+        p = v.co; d = p - MOUTH_C; u = d.dot(LAT); fw = d.dot(FWD); z = p.z
+        if fw < -0.035 or z > 0.86 or z < 0.735: continue
+        disp = Vector((0, 0, 0))
+        for s in (-1, 1):
+            r = math.hypot(u - 0.050 * s, z - 0.797)                   # guancia (misurata sul primo piano ortografico)
+            wc = sm((0.028 - r) / 0.018)
+            disp += (FWD * 0.0035 + UP * 0.0032 + LAT * s * 0.0010) * wc * GU
+            r2 = math.hypot(u - 0.034 * s, z - 0.781)                  # angolo della bocca / solco naso-labiale
+            wk = sm((0.014 - r2) / 0.010) * sm((abs(u) - 0.028) / 0.004)
+            disp += (UP * 0.0020 - FWD * 0.0006) * wk * GU
+        inside = ((u / 0.034) ** 2 + ((z - 0.777) / 0.014) ** 2) < 1.0  # ellisse della bocca: intoccabile
+        if inside: disp *= 0.0
+        wf = sm((fw + 0.035) / 0.012)
+        smile_key.data[v.index].co = p + disp * wf
+    smile_key.value = 0.0
 
 # shape key bocca (modalita' "keys"): jawOpen guidato dai cues
 jaw_key = body.data.shape_keys.key_blocks.get("jawOpen") if body.data.shape_keys else None
@@ -374,12 +444,22 @@ handL = spring_track([(0, (0, 0, 0)), (0.42, (FL, 0, 0)), (2.45, (0, 0, 0))], NF
 handR = spring_track([(0, (0, 0, 0)), (2.60, (10, TW, 0))], NFR, 12, 0.6, 3)
 fingR_idx = spring_track([(0, 0.3), (2.5, 0.1)], NFR, 14, 0.7)
 fingR_oth = spring_track([(0, 0.3), (2.5, 0.12)], NFR, 14, 0.7)
-fingL = spring_track([(0, 0.3), (0.42, 0.05), (2.45, 0.3)], NFR, 12, 0.7)
+POINT = "--nopoint" not in argv   # v3: l'indice sinistro indica il foglio (i pesi delle dita sono separati: l'indice resta dritto se pieghi le altre)
+fingL = spring_track([(0, 0.3), (0.42, 0.05), (2.45, 0.3)], NFR, 12, 0.7)            # indice
+fingL_oth = spring_track([(0, 0.3), (0.40, 1.0 if POINT else 0.05), (2.45, 0.3)], NFR, 12, 0.7)   # medio, anulare, mignolo (+ pollice a meta')
+CURL = float(opt("--curl", "70"))
 # testa (pitch +giu', yaw + verso destra schermo, roll) gradi; busto; sopracciglia (alza m raw, inclinazione gradi)
 head = spring_track([(0, (0, 0, 0)), (0.20, (-4, 0, 2)), (0.62, (13, 7, 0)), (1.0, (16, 9, 2)), (1.45, (14, 5, -1)), (2.0, (16, 3, 1)), (2.42, (-2, 0, 0)), (2.85, (-5, -4, -6)), (3.30, (2, -6, -8)), (3.75, (-2, -3, -5)), (4.4, (-1, -2, -4))], NFR, 9, 0.62, 3)
 spine = spring_track([(0, (0, 0, 0)), (0.30, (-2, 0, 0)), (0.55, (5, 5, 0)), (2.45, (0, 0, 0)), (2.80, (-3, -4, 0)), (3.30, (-1, -6, -2)), (4.0, (-2, -3, -1))], NFR, 7, 0.7, 3)
 browR = spring_track([(0, (0, 0)), (0.18, (0.006, 0)), (0.70, (0.0, -6)), (1.95, (0.004, 0)), (2.30, (0.001, 0)), (2.85, (0.007, 6)), (3.35, (0.009, 10)), (3.95, (0.005, 4))], NFR, 12, 0.6, 2)
 browL = spring_track([(0, (0, 0)), (0.20, (0.006, 0)), (0.70, (0.0, 6)), (1.95, (0.004, 0)), (2.30, (0.001, 0)), (2.85, (0.004, -2)), (3.35, (0.002, -4)), (3.95, (0.002, -2))], NFR, 12, 0.6, 2)
+# v3: sorriso (shape key) e cenni della testa sulle sillabe accentate (PAR-to, CAR-ta, ma-TI-ta, ME-tro, ME-no, TREN-ta)
+smile_t = spring_track([(0, 0.35), (0.18, 0.65), (0.70, 0.40), (1.95, 0.60), (2.40, 0.35), (2.85, 0.55), (3.28, 1.0), (4.3, 0.85)], NFR, 10, 0.6)
+STRESS = [0.40, 1.00, 1.55, 2.00, 2.82, 3.30]
+NOD = float(opt("--nod", "4.0"))
+nk = [(0, 0.0)]
+for ts in STRESS: nk += [(ts - 0.05, NOD), (ts + 0.07, 0.0)]
+nod = spring_track(nk, NFR, 20, 0.45)
 # respiro e micro-ondeggiamento (mai fermo)
 def breath(t): return 1.4 * math.sin(2 * math.pi * 0.28 * t)
 def sway(t): return 0.8 * math.sin(2 * math.pi * 0.17 * t + 1.0)
@@ -401,10 +481,14 @@ for f in range(NFR):
     for side, lst in FINGERS.items():
         for n in lst:
             if side == "Right": c = fingR_idx[f] if "Index" in n else fingR_oth[f]
-            else: c = fingL[f]
-            ang = (35 if "Thumb" not in n else 15) * c + 8
+            else: c = fingL[f] if "Index" in n else fingL_oth[f]
+            if side == "Left" and POINT and "Index" not in n and c > 0.3:
+                ang = (CURL if "Thumb" not in n else 25) * c + 8
+            else:
+                ang = (35 if "Thumb" not in n else 15) * c + 8
             qrot(PB[n], ang, 0, 0); PB[n].keyframe_insert("rotation_quaternion", frame=fr)
-    hp, hy, hr = head[f]
+    hp, hy, hr = head[f]; hp += nod[f]
+    if smile_key: smile_key.value = max(0.0, min(1.2, smile_t[f])); smile_key.keyframe_insert("value", frame=fr)
     qrot(PB["mixamorig:Head"], hp * 0.6, hy * 0.6 + HEADYAW * 0.6, hr * 0.6); PB["mixamorig:Head"].keyframe_insert("rotation_quaternion", frame=fr)
     qrot(PB["mixamorig:Neck"], hp * 0.4, hy * 0.4 + HEADYAW * 0.4, hr * 0.4); PB["mixamorig:Neck"].keyframe_insert("rotation_quaternion", frame=fr)
     sp_, sy, sr = spine[f]
@@ -429,10 +513,16 @@ def shape_at(fr):
         if f <= fr: cur = v
     return cur
 JAW = {"X": 0.0, "A": 0.0, "B": 0.25, "C": 0.55, "D": 1.0, "E": 0.6, "F": 0.35, "G": 0.2, "H": 0.6}
+GRIN_T = float(opt("--grint", "3.25"))     # da qui in poi la serie a ghigno
+MW0, MW1 = [float(x) for x in opt("--mwide", "1.22-1.0").split("-")]   # bocca piu' grande quando la camera e' larga (segue l'avvicinamento)
+def ease5(x): x = max(0.0, min(1.0, x)); return x * x * x * (x * (6 * x - 15) + 10)
 for fr in range(1, NFR + 1):
     s_ = shape_at(fr)
     if MOUTH_MODE == "decal":
+        if (fr - 1) / FPS >= GRIN_T and (s_ + "g") in mouths: s_ = s_ + "g"
+        k_ = MW0 + (MW1 - MW0) * ease5(((fr - 1) / (NFR - 1) - 0.08) / 0.84)
         for key, (grp, parts) in mouths.items():
+            grp.scale = Vector(grp["s0"]) * k_; grp.keyframe_insert("scale", frame=fr)
             for p in parts:
                 p.hide_render = (key != s_); p.keyframe_insert("hide_render", frame=fr)
 if MOUTH_MODE == "keys" and jaw_key:   # confronto: la stessa partitura sulla shape key jawOpen, liscia (molla) invece che a sostituzione
