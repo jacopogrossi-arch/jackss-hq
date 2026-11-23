@@ -18,6 +18,8 @@ Ricerca: `.claude/skills/fashion-3d/references/research-reel-retention-2026-11-2
 6. Audio finale: voce + swish, niente musica o letto sotto -26 LUFS; master loudnorm -14.
 
 ## Trappole
+- **Primo piano: la bocca sparisce sotto ~0.30 m dal viso** (65 mm a 0.30 m e 85 mm a 0.18 m: solo una linea, anche con la forma E forzata `--mtest E`; a 0.33-0.38 m si apre). Pesi giusti (stampati con `--wdebug FRAME`), e' un problema di rendering a distanza ravvicinata (decal a ~0.2 mm dalla pelle). Tenere la camera a >= 0.33 m e usare lenti lunghe per stringere. Controllare SEMPRE la bocca fotogramma per fotogramma sui primi piani prima di inviare.
+- Il ritaglio del clip labiale e' ora a tutta larghezza (1080:1080:0:100) per includere primi piani e medi.
 - Blender in background: lanciare `blender -b -P ...` come comando in background del tool, NON con `nohup ... &` (il processo muore con la shell: restano pochi fotogrammi).
 - Percorsi di uscita sempre assoluti `D:/...`.
 - 40 campioni o meno: mosaico sulla texture/volume, non giudicare l'immagine; i still di controllo a 16-24 campioni servono solo per posa e inquadratura.

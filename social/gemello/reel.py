@@ -703,6 +703,9 @@ if MOUTH_MODE == "cont":
         if i % sub == 0:
             c_ = max(0.0, min(1.0, cl))
             W.append({k: max(-0.1, x[k]) * (1 - c_) for k in KS} | {"A": c_ * 0.9})
+    if "--wdebug" in argv:
+        for ff in range(int(opt("--wdebug", "215")), int(opt("--wdebug", "215")) + 14):
+            print("WDBG", ff + 1, round(ff / FPS, 2), {k: round(v, 2) for k, v in W[ff].items() if abs(v) > 0.05}, "env", round(env_at(ff / FPS), 2))
     JAWW = {"X": 0.0, "A": 0.0, "B": 0.25, "C": 0.55, "D": 1.0, "E": 0.6, "F": 0.35, "G": 0.2, "H": 0.6}
     MW0, MW1 = [float(x) for x in opt("--mwide", "1.22-1.0").split("-")]
     def ease5(x): x = max(0.0, min(1.0, x)); return x * x * x * (x * (6 * x - 15) + 10)

@@ -2,10 +2,10 @@
 # Finitura del Reel (23/11/2026): post + versione telefono + clip di controllo del labiale.
 # Uso: bash reel_finish.sh NOME T0 DUR [FACE_CROP]
 #   NOME = cartella dei PNG in videos/_bench/reel-tessuto/NOME (f%04d.png, primo numero = T0*24+1), T0/DUR in secondi nella voce montata
-#   FACE_CROP = w:h:x:y del viso nel fotogramma 1080x1920 (default 760:760:160:150)
+#   FACE_CROP = w:h:x:y del viso nel fotogramma 1080x1920 (default 1080:1080:0:100)
 # Scrive: NOME.mp4 (master crf 15), NOME-telefono.mp4 (crf 22, < 30 MB per Remote Control), NOME-labiale.mp4 (viso + onda + metà velocità)
 set -e
-N=$1; T0=$2; DUR=$3; CROP=${4:-760:760:160:150}
+N=$1; T0=$2; DUR=$3; CROP=${4:-1080:1080:0:100}
 G=/d/ClaudeCodeTest/videos/_bench/reel-tessuto
 VO=$G/vo/vo.wav
 FONT=$G/font.ttf   # copia locale: il percorso con "C:" rompe drawtext
