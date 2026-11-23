@@ -59,4 +59,6 @@ Jacopo asked whether to remodel on Tripo: NO for these gaps. A new mesh resets a
 - **Post**: bloom screen 0.12 (was 0.22), vignette PI/7 (was PI/5): `BLOOM=… VIG=… bash finish.sh v3`.
 - Blender trap: launch with an ABSOLUTE `D:/...` output path. A relative `videos/_bench/...` was resolved against C:\ and wrote the frames to `C:\videos\...`.
 
+Result v3 (`videos/_bench/gemello/v3.mp4`, `v3-vs-ai.mp4`, sheets `review/v3-8fps-0{1,2}.jpg`, still `work/v2v3.jpg`): the grin and the darker matte jacket read at full body, the index points at the paper, the bloom veil is gone. Render ~15 min, 0 credits. Still behind the AI: the AI face is darker and more contrasted (ours is pale, flatter skin), its mouth opens wider with the jaw, and its hand-on-chest gesture reads more human than our arm-out gestures. Send the phone a re-encoded copy (crf 22, ~1.4 MB): the crf 15 master is ~37 MB, over the 30 MB Remote Control limit.
+
 Possible next step to test on a real Short: Blender 5.2.4 LTS is out as a portable zip (install on D:, keep 5.1 as fallback); the EL4CTEO skills need it.
