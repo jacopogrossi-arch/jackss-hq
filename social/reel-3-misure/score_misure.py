@@ -93,3 +93,39 @@ BROW_R = [(0, (0, 0)), (5.0, (0.004, 2)), (9.0, (0.003, -2)), (20.0, (0.004, 2))
 BROW_L = [(0, (0, 0)), (5.0, (0.004, 2)), (9.0, (0.003, -2)), (20.0, (0.004, 2))]
 SMILE = [(0, 0.10), (24.0, 0.10), (28.8, 0.35), (32.0, 0.35)]
 SMIRK = [(0, 0.0)]
+
+
+# ===== V2 STABILE (24/11/2026): Jacopino NON muove le mani sugli oggetti (mani ferme sul bordo del tavolo: solo respiro e sguardo); il metro si srotola da solo, le linee si tracciano da sole.
+# La retention la fanno la camera (livellata, senza shake, un cambio ogni ~2 s), le prospettive diverse e gli eventi in scena.
+NO_SHAKE = True
+IKR_POS = [(0, EDGE_R)]; IKR_INF = [(0, 1.0)]
+IKL_POS = [(0, EDGE_L)]; IKL_INF = [(0, 1.0)]
+HANDL = [(0, (0, 0, 0))]; HANDR = [(0, (0, 0, 0))]
+def shot(name, t0, t1, lens, P0, P1, L0, L1, fstop=8.0):
+    return dict(name=name, t0=t0, t1=t1, lens=lens, P0=P0, P1=P1, L0=L0, L1=L1, fstop=fstop, FOC0=L0, FOC1=L1)
+Z0 = ZT + 0.002
+SHOTS = [
+    # gancio: push frontale, poi radente sui cartellini «M»
+    shot("h1_largo", 0.00, 1.60, 35, (0.02, -0.32, 0.31), (0.0, -0.26, 0.29), (0.0, 0.05, 0.105), (0.0, 0.05, 0.105), 6.0),
+    shot("h2_cartellini", 1.60, 3.24, 50, (-0.07, -0.10, 0.10), (0.07, -0.10, 0.10), (-0.05, YW - 0.020, Z0), (0.05, YW - 0.020, Z0), 6.0),
+    # stesura: giro alto attorno al pantalone, poi radente lungo le gambe verso la vita
+    shot("s2a_alto", 3.24, 5.00, 40, (-0.12, -0.14, 0.25), (0.10, -0.14, 0.25), (0.0, 0.04, ZT), (0.0, 0.04, ZT), 8.0),
+    shot("s2b_radente", 5.00, 6.75, 40, (0.0, -0.22, 0.10), (0.0, -0.08, 0.10), (0.0, 0.06, 0.085), (0.0, 0.08, 0.085), 8.0),
+    # vita: tre quarti, poi dall'alto che segue la linea, poi macro sull'angolo destro (×2)
+    shot("s3a_tre_quarti", 6.75, 8.40, 40, (-0.15, -0.20, 0.29), (-0.12, -0.16, 0.27), (0.0, 0.085, 0.125), (0.0, 0.087, 0.12), 8.0),
+    shot("s3b_alto_linea", 8.40, 10.20, 50, (-0.035, 0.015, 0.20), (0.035, 0.015, 0.20), (-0.024, YW - 0.003, ZT), (0.026, YW - 0.003, ZT), 8.0),
+    shot("s3c_macro_angolo", 10.20, 12.38, 70, (0.10, -0.01, 0.105), (0.07, 0.03, 0.095), (0.024, YW - 0.003, ZT + 0.004), (0.022, YW - 0.003, ZT + 0.004), 7.0),
+    # cavallo: tre quarti da destra, dall'alto sulla linea che sale, frontale basso all'incrocio
+    shot("s4a_destra", 12.38, 14.60, 40, (0.14, -0.17, 0.24), (0.10, -0.14, 0.22), (0.0, 0.08, 0.10), (0.0, 0.08, 0.10), 8.0),
+    shot("s4b_alto_linea", 14.60, 16.60, 50, (0.0, -0.02, 0.18), (0.0, 0.025, 0.17), (0.0, RISE_Y, ZT), (0.0, YW, ZT), 8.0),
+    shot("s4c_basso_incrocio", 16.60, 18.12, 50, (0.0, -0.13, 0.10), (0.0, -0.07, 0.095), (0.0, 0.07, 0.085), (0.0, 0.075, 0.085), 7.0),
+    # interno gamba: tre quarti da sinistra, dall'alto che scende lungo la gamba, allargo
+    shot("s5a_sinistra", 18.12, 20.30, 40, (-0.13, -0.14, 0.21), (-0.10, -0.12, 0.20), (0.0, 0.06, 0.09), (0.0, 0.05, 0.09), 8.0),
+    shot("s5b_alto_gamba", 20.30, 22.30, 50, (0.0, 0.0, 0.17), (0.0, -0.07, 0.17), (-0.002, RISE_Y, ZT), (-0.002, HEM_Y, ZT), 8.0),
+    shot("s5c_allargo", 22.30, 23.15, 35, (0.0, -0.20, 0.20), (0.0, -0.24, 0.22), (0.0, 0.04, 0.09), (0.0, 0.05, 0.09), 8.0),
+    # tre numeri: giro lento attorno ai pantaloni con le tre linee visibili
+    shot("s6a_giro", 23.15, 26.25, 40, (-0.12, -0.25, 0.22), (0.0, -0.28, 0.26), (0.0, 0.05, 0.09), (0.0, 0.05, 0.09), 8.0),
+    shot("s6b_giro", 26.25, 29.33, 40, (0.0, -0.28, 0.26), (0.12, -0.25, 0.22), (0.0, 0.05, 0.09), (0.0, 0.05, 0.09), 8.0),
+    # domanda: spinta da tavolo a Jacopino
+    shot("s7_domanda", 29.33, 32.76, 50, (-0.06, -0.18, 0.12), (0.0, -0.12, 0.16), (0.0, 0.09, 0.11), (0.0, 0.11, 0.16), 6.0),
+]

@@ -963,6 +963,7 @@ def cam_for(fr):
     return CAMS[-1][2]
 sc.camera = CAMS[0][2]
 try:
+    if SC.get("NO_SHAKE"): raise RuntimeError("shake disattivato dalla partitura")
     bpy.ops.preferences.addon_enable(module="bl_ext.user_default.camera_shakify")
     for si, (f0, f1, cam, S) in enumerate(CAMS):
         bpy.ops.object.select_all(action="DESELECT")
