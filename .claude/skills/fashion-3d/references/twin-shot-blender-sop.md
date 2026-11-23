@@ -27,9 +27,11 @@ Files: `social/gemello/twin.py` (whole shot, one headless script), `social/gemel
 - Palm up on this rig: right hand local rotation (10, +80, 0) degrees.
 - Head looks at the paper during gesture 1, then back to camera with a tilt on the punchline; brows up on «Io», small raise on «metro», big raise + tilt on «meno di trenta».
 
-## Look
-- EEVEE (`BLENDER_EEVEE` in 5.x), 64 samples, raytracing, AgX Medium High Contrast, exposure +0.3, f/2.2 on the toy (strong DOF = small-scale cue), motion blur 0.45.
-- **Haze**: world Principled Volume, density 0.05 at toy scale. 0.35 makes the whole frame milky. With fewer than ~48 samples the volume (and the bokeh) turns into a mosaic: never judge looks on a 16-sample test.
+## Look (v1 → v2: the biggest gap was NOT the character, it was a milky, low-contrast image)
+- EEVEE (`BLENDER_EEVEE` in 5.x), 64 samples, raytracing, **AgX - Punchy, exposure 0**, f/2.2 on the toy (strong DOF = small-scale cue), motion blur 0.45.
+- What made v1 grey-green and washed out next to the AI clip: exposure +0.3, world background 0.5, haze 0.05, bloom 0.40, teal rim 6 W and a cool fill. v2: world 0.12, haze 0.025, bloom 0.22 above 75% luminance, teal rim 2.5 W, warm fill 1.5 W, warm key spot 40 W (1.0/0.66/0.38). Deep blacks first, then add light.
+- Set dressing as in the AI clip: the cutting mat ENDS just behind the feet so the warm wooden table shows behind (a warm band = depth); paper, pencil and tape measure big in the blurred foreground; bookshelf bulbs at emission 25, not 60.
+- **Haze**: world Principled Volume, density 0.025 at toy scale. 0.35 makes the whole frame milky. With fewer than ~48 samples the volume (and the bokeh) turns into a mosaic: never judge looks on a 16-sample test.
 - City window behind: big brick-texture tiles (scale 5), emission ~0.9; small tiles become a honeycomb of bokeh discs.
 - Wear (Lego Movie): noise roughness + stretched-noise scratches + micro bump on every material, subtle (bump 0.05-0.15).
 - Post in ffmpeg, not in the Blender compositor (5.x compositor API changed): soft bloom (threshold curve + gblur, screen 0.4), vignette, moving grain.

@@ -19,6 +19,7 @@ description: Build 3D animated videos for Jacopo's channel and Inverso entirely 
 | Hybrid shot: Blender layout + keyframes (Gemini) + image-to-video (Seedance on ElevenLabs) + lip-sync | `references/hybrid-blender-ai-sop.md` |
 | Metaphor-world Short (new format) | `references/metaphor-world-sop.md` |
 | Research 23/11: tools and skills for a top-level Blender (lip sync, mocap, camera, toy look, agent skills) | `references/research-blender-pro-2026-11-23.md` |
+| Twin shot 23/11: the hybrid AI clip rebuilt in Blender only (Rhubarb replacement mouths, brow bones, IK gestures, Shakify, EEVEE look) | `references/twin-shot-blender-sop.md` |
 | Blender test plan (next session) | `references/blender-test-plan.md` |
 | 8 fps review tools | `scripts/review8.py` (`sheets`, `still`, `seek`) |
 | Third-party Blender skills installed (materials, lighting, cameras, rendering, export, modeling, fit loop) | `references/third-party-blender-skills.md` |
