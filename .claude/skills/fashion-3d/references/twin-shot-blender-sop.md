@@ -39,3 +39,13 @@ Files: `social/gemello/twin.py` (whole shot, one headless script), `social/gemel
 
 ## Numbers (GTX 1060 6 GB, 1080x1920)
 - ~7 s per frame at 64 samples with volume → 121 frames ≈ 15 min. A 30 s Short at 24 fps ≈ 85 min.
+
+## Result (23/11/2026): v2 vs the AI clip, 8 fps sheets `videos/_bench/gemello/review/v2-8fps-0{1,2}.jpg`
+Files: `videos/_bench/gemello/v2.mp4` (5 s, 1080x1920, 24 fps, real audio), `v2-vs-ai.mp4` (side by side), `v1*` kept for the before/after.
+Close to the AI clip: framing, set, warm night palette, deep blacks, DOF/bokeh, push-in (ours is MORE visible than the AI's), two readable gestures on the right words, a mouth that changes on every syllable, brows above the glasses. Cost: 0 credits, ~15 min of render.
+Gaps left, by weight:
+1. **Facial acting**: the AI grins, squints, moves cheeks and jaw; our replacement mouths read in closeup but are small at full body and the face around them is rigid. Next: smile/cheek shape keys (sculpted, not the ragged jawOpen), bigger mouths when the camera is wide, a head bob on stressed syllables; try iPhone face capture (ARKit) later.
+2. **Hands**: Tripo fingers are fused (no index pointing, no relaxed finger spread); the AI's hand-on-chest + pointing reads more human. Next: re-rig the hands (separate finger weights with `el4-character-rigging` `bind_mesh.py --method proxy`) or a cleaner hand from Tripo.
+3. **Material**: our jacket is lighter, smoother olive plastic; the AI's is darker with cloth texture and wear. Next: darken the albedo and add a fabric normal on the jacket only.
+4. **Post**: the ffmpeg bloom still lifts a faint veil and the vignette darkens the foreground paper: try bloom 0.12 and a gentler vignette.
+Possible next step to test on a real Short: Blender 5.2.4 LTS is out as a portable zip (install on D:, keep 5.1 as fallback); the EL4CTEO skills need it.
