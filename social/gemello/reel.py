@@ -808,10 +808,13 @@ if "--check" in argv:
         dist = (cam.matrix_world.translation - face).length
         v = world_to_camera_view(sc, cam, face)
         R = rows.setdefault(S["name"], dict(dmin=9.0, face_out=0, hand_out=[], n=0)); R["n"] += 1; R["dmin"] = min(R["dmin"], dist)
+        if S.get("macro"): continue                  # inquadratura macro: niente viso ne' mani da controllare
         if not (0.05 < v.x < 0.95 and 0.05 < v.y < 0.95 and v.z > 0): R["face_out"] += 1
         for nm, hbn, ikc in hands:
             if ikc.influence > 0.5:
-                h = world_to_camera_view(sc, cam, mw @ hbn.head)
+                wp = mw @ hbn.head
+                if "--checkpos" in argv: print("HANDPOS %s t=%.2f %s mano=(%.3f,%.3f,%.3f) viso=(%.3f,%.3f,%.3f)" % (S["name"], (fr - 1) / FPS, nm, wp.x, wp.y, wp.z, face.x, face.y, face.z))
+                h = world_to_camera_view(sc, cam, wp)
                 if not (0.0 < h.x < 1.0 and 0.0 < h.y < 1.0 and h.z > 0): R["hand_out"].append((round((fr - 1) / FPS, 2), nm))
     print("=== CHECK (ogni 0.25 s) ===")
     for nm, R in rows.items():
