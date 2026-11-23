@@ -245,7 +245,7 @@ if MIS and TAV:
     for k_ in ("Emission Color", "Emission"):
         if k_ in _bs.inputs: _bs.inputs[k_].default_value = (0.80, 0.27, 0.08, 1)
     if "Emission Strength" in _bs.inputs: _bs.inputs["Emission Strength"].default_value = 0.6
-    TAPE_L = 0.13
+    TAPE_L = SC.get("TAPE_L", 0.13)
     mesh_t = bpy.data.meshes.new("metro_m"); mesh_t.from_pydata([(0, -0.0035, 0), (TAPE_L, -0.0035, 0), (TAPE_L, 0.0035, 0), (0, 0.0035, 0), (0, -0.0035, 0.0007), (TAPE_L, -0.0035, 0.0007), (TAPE_L, 0.0035, 0.0007), (0, 0.0035, 0.0007)], [], [[0, 3, 2, 1], [4, 5, 6, 7], [0, 1, 5, 4], [1, 2, 6, 5], [2, 3, 7, 6], [3, 0, 4, 7]]); mesh_t.update()
     tape = bpy.data.objects.new("metro_misura", mesh_t); sc.collection.objects.link(tape); tape.data.materials.append(tmat)
     MIS_CUR = []
@@ -276,6 +276,47 @@ if MIS and TAV:
                 tape.location = (A.x, A.y, TAV["top"] + M.get("tz", 0.0037)); tape.rotation_euler = (0, 0, yaw); tape.scale = (0.2 + 0.8 * un, 1, 1); vis = True
         tape.hide_render = not vis
         tape.keyframe_insert("hide_render", frame=fr_); tape.keyframe_insert("location", frame=fr_); tape.keyframe_insert("rotation_euler", frame=fr_); tape.keyframe_insert("scale", frame=fr_)
+
+# ------------------------------------------------------------------ ATELIER (24/11/2026): pochi dettagli di sartoria, coerenti con la scena (chiave ATELIER della partitura)
+ATL = SC.get("ATELIER")
+if ATL and TAV:
+    ZT_ = TAV["top"]
+    acciaio = mat("acciaio_forbici", (0.55, 0.56, 0.58), 0.28); bsdf_of(acciaio).inputs["Metallic"].default_value = 1.0
+    nero_m = mat("manico_nero", (0.02, 0.02, 0.025), 0.4)
+    # forbici da sarto: due lame incrociate + due anelli
+    fx, fy = ATL["forbici"]; fz = ZT_ + 0.0012; fa = math.radians(ATL.get("forbici_rot", 25))
+    for sg in (-1, 1):
+        bl = box("lama", (0.050, 0.0055, 0.0009), (fx, fy, fz + (0.0009 if sg > 0 else 0.0)), acciaio, rot=(0, 0, fa + sg * math.radians(7)))
+        bl.location = (fx + math.cos(fa + sg * math.radians(7)) * 0.025, fy + math.sin(fa + sg * math.radians(7)) * 0.025, fz + (0.0009 if sg > 0 else 0.0))
+        bpy.ops.mesh.primitive_torus_add(major_radius=0.0065, minor_radius=0.0016, major_segments=24, minor_segments=8,
+            location=(fx - math.cos(fa + sg * math.radians(7)) * 0.0075 + math.sin(fa) * sg * 0.003, fy - math.sin(fa + sg * math.radians(7)) * 0.0075 - math.cos(fa) * sg * 0.003, fz + 0.0004))
+        to_ = bpy.context.object; to_.data.materials.append(nero_m); to_.scale = (1.0, 0.8, 1.0); to_.rotation_euler = (0, 0, fa + sg * math.radians(7))
+    # gesso da sarto (triangolo piatto)
+    gx, gy = ATL["gesso"]
+    box("gesso", (0.014, 0.011, 0.0022), (gx, gy, ZT_ + 0.0011), mat("gesso_sarto", (0.88, 0.86, 0.80), 0.9), rot=(0, 0, math.radians(18)), bevel=0.0006)
+    # rocchetto di filo
+    rx, ry = ATL["rocchetto"]
+    filo = mat("filo", (0.50, 0.12, 0.06), 0.85); legno_r = mat("legno_rocchetto", (0.55, 0.38, 0.20), 0.5)
+    bpy.ops.mesh.primitive_cylinder_add(vertices=24, radius=0.0042, depth=0.011, location=(rx, ry, ZT_ + 0.0055)); r1 = bpy.context.object; r1.data.materials.append(filo)
+    for dz in (0.0005, 0.0105):
+        bpy.ops.mesh.primitive_cylinder_add(vertices=24, radius=0.0058, depth=0.0010, location=(rx, ry, ZT_ + dz)); r2 = bpy.context.object; r2.data.materials.append(legno_r)
+    # puntaspilli con qualche spillo
+    px, py = ATL["puntaspilli"]
+    bpy.ops.mesh.primitive_uv_sphere_add(segments=24, ring_count=12, radius=0.0085, location=(px, py, ZT_ + 0.0045)); pc = bpy.context.object; pc.scale = (1, 1, 0.55); pc.data.materials.append(mat("puntaspilli", (0.45, 0.10, 0.08), 0.95))
+    for k, (dx, dy, ax) in enumerate(((0.002, 0.001, 20), (-0.003, 0.002, -25), (0.001, -0.004, 5), (-0.004, -0.002, -40))):
+        bpy.ops.mesh.primitive_cylinder_add(vertices=6, radius=0.00018, depth=0.016, location=(px + dx, py + dy, ZT_ + 0.011)); sp_ = bpy.context.object; sp_.rotation_euler = (math.radians(ax), math.radians(ax * 0.6), 0); sp_.data.materials.append(acciaio)
+        bpy.ops.mesh.primitive_uv_sphere_add(segments=8, ring_count=6, radius=0.0007, location=(px + dx + math.sin(math.radians(ax * 0.6)) * 0.008, py + dy - math.sin(math.radians(ax)) * 0.008, ZT_ + 0.011 + math.cos(math.radians(ax)) * 0.008)); hd_ = bpy.context.object; hd_.data.materials.append(mat("spillo_testa", (0.9, 0.7, 0.1), 0.4))
+    # manichino sartoriale in secondo piano (a sinistra del pupazzo)
+    dx_, dy_ = ATL["manichino"]
+    lino = wear(mat("lino_manichino", (0.36, 0.30, 0.22), 0.95), 300, 0.12, 0.2)
+    bpy.ops.mesh.primitive_uv_sphere_add(segments=40, ring_count=20, radius=1.0, location=(dx_, dy_, 0.135)); tr = bpy.context.object; tr.scale = (0.036, 0.022, 0.058); tr.data.materials.append(lino)
+    bpy.ops.mesh.primitive_cylinder_add(vertices=24, radius=0.0075, depth=0.012, location=(dx_, dy_, 0.198)); nk_ = bpy.context.object; nk_.data.materials.append(lino)
+    bpy.ops.mesh.primitive_uv_sphere_add(segments=16, ring_count=8, radius=0.0085, location=(dx_, dy_, 0.208)); cp_ = bpy.context.object; cp_.scale = (1, 1, 0.5); cp_.data.materials.append(mat("legno_manichino", (0.30, 0.14, 0.06), 0.5))
+    bpy.ops.mesh.primitive_cylinder_add(vertices=16, radius=0.0032, depth=0.082, location=(dx_, dy_, 0.045)); pl_ = bpy.context.object; pl_.data.materials.append(mat("ottone_manichino", (0.6, 0.45, 0.2), 0.3))
+    bpy.ops.mesh.primitive_cylinder_add(vertices=24, radius=0.034, depth=0.005, location=(dx_, dy_, 0.0025)); bs_ = bpy.context.object; bs_.data.materials.append(mat("legno_manichino", (0.30, 0.14, 0.06), 0.5))
+    # un metro da sarta appeso al collo del manichino (due strisce gialle)
+    box("metro_collo", (0.003, 0.0012, 0.05), (dx_ - 0.012, dy_ - 0.016, 0.168), tmat, rot=(0, math.radians(10), 0))
+    box("metro_collo2", (0.003, 0.0012, 0.05), (dx_ + 0.012, dy_ - 0.016, 0.168), tmat, rot=(0, math.radians(-10), 0))
 
 PRE_ACTIONS = set(bpy.data.actions)   # animazioni di props/linee/metro create finora: l'import del GLB piu' sotto cancella le sue azioni, non queste
 # ------------------------------------------------------------------ fondo: parete, scaffali con libri, lampadine (bokeh), finestra con la citta' di notte

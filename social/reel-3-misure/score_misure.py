@@ -10,6 +10,8 @@ VO = "D:/ClaudeCodeTest/videos/_bench/reel-3-misure/vo/vo.wav"
 LIPS = [(0.0, "X")]
 STRESS = []
 HIDE_OLD = True
+TAPE_L = 0.09
+ATELIER = dict(forbici=(0.100, 0.005), forbici_rot=28, gesso=(-0.100, 0.020), rocchetto=(0.112, 0.062), puntaspilli=(-0.112, 0.070), manichino=(-0.24, 0.34))
 IK_WORLD = True
 
 ZT = 0.075                                   # piano del tavolo
@@ -27,14 +29,14 @@ TAVOLO = dict(top=ZT, x0=-0.17, x1=0.17, y0=-0.06, y1=0.106, trousers=[
 RISE_Y = YW - PA["rise"]                     # y dell'incrocio (cavallo)
 HEM_Y = YW - PA["L"]
 MISURE = [
-    dict(name="vita", A=(-PA["wh"], YW - 0.0030), B=(PA["wh"], YW - 0.0030), path=[(-PA["wh"], YW - 0.0030), (PA["wh"], YW - 0.0030)], t0=8.40, t1=10.20, z=0.0053, tz=0.0049, keep=True, tape_off=12.0),
-    dict(name="cavallo", A=(0.0, RISE_Y), B=(0.0, YW - 0.0006), path=[(0.0, RISE_Y), (0.0, YW - 0.0006)], t0=14.60, t1=16.60, tape_off=17.8, keep=True),
-    dict(name="interno", A=(-0.0015, RISE_Y - 0.003), B=(-0.0020, HEM_Y), path=[(-0.0015, RISE_Y - 0.003), (-0.0020, HEM_Y)], t0=20.30, t1=22.30, tape_off=22.9, keep=True),
+    dict(name="vita", A=(-PA["wh"], YW - 0.0030), B=(PA["wh"], YW - 0.0030), path=[(-PA["wh"], YW - 0.0030), (PA["wh"], YW - 0.0030)], t0=8.40, t1=10.20, z=0.0062, tz=0.0049, w=0.0010, keep=True, tape_off=12.0),
+    dict(name="cavallo", A=(0.0, RISE_Y), B=(0.0, YW - 0.0006), path=[(0.0, RISE_Y), (0.0, YW - 0.0006)], t0=14.60, t1=16.60, z=0.0050, tz=0.0035, w=0.0010, tape_off=17.8, keep=True),
+    dict(name="interno", A=(-0.0015, RISE_Y - 0.003), B=(-0.0020, HEM_Y), path=[(-0.0015, RISE_Y - 0.003), (-0.0020, HEM_Y)], t0=20.30, t1=22.30, z=0.0050, tz=0.0035, w=0.0010, tape_off=22.9, keep=True),
 ]
 
 # ------------------------------------------------------------------ camera (una per inquadratura, taglio netto)
 SHOTS = [
-    dict(name="s1_gancio", t0=0.00, t1=3.24, lens=35, P0=(0.0, -0.20, 0.27), P1=(0.0, -0.16, 0.25), L0=(0.0, 0.040, 0.078), L1=(0.0, 0.045, 0.078), fstop=7.0, FOC0=(0, 0.045, ZT), FOC1=(0, 0.045, ZT)),
+    dict(name="s1_gancio", t0=0.00, t1=3.24, lens=35, P0=(0.0, -0.27, 0.30), P1=(0.0, -0.23, 0.28), L0=(0.0, 0.05, 0.105), L1=(0.0, 0.05, 0.105), fstop=7.0, FOC0=(0, 0.045, ZT), FOC1=(0, 0.045, ZT)),
     dict(name="s2_setup", t0=3.24, t1=6.75, lens=50, P0=(-0.13, -0.17, 0.21), P1=(-0.11, -0.14, 0.20), L0=(0.0, 0.085, 0.10), L1=(0.0, 0.085, 0.10), fstop=8.0, FOC0=(0, 0.085, ZT), FOC1=(0, 0.085, ZT)),
     dict(name="s3_vita", t0=6.75, t1=12.38, lens=40, P0=(-0.15, -0.19, 0.28), P1=(-0.13, -0.16, 0.27), L0=(0.0, 0.085, 0.125), L1=(0.0, 0.087, 0.125), fstop=8.0, FOC0=(0, 0.095, ZT), FOC1=(0, 0.095, ZT)),
     dict(name="s4_cavallo", t0=12.38, t1=18.12, lens=40, P0=(0.15, -0.19, 0.28), P1=(0.13, -0.16, 0.27), L0=(0.0, 0.080, 0.125), L1=(0.0, 0.082, 0.125), fstop=8.0, FOC0=(0, 0.080, ZT), FOC1=(0, 0.080, ZT)),
