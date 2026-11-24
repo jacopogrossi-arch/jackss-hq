@@ -14,3 +14,13 @@ Poi: gate sagoma pantalone (waist/rise/inseam nei punti giusti), aggiungere al -
 Il codice di reel.py (tavolo, pantaloni piatti, cartellino «M» 3D, linee, metro, IK mondo) GIRA. Bug risolti: l'import del GLB cancellava le azioni di props/linee/metro (ora PRE_ACTIONS le salva); chiavi di visibilita' una per fotogramma; beccheggio testa NEGATIVO = guarda in basso; mani piatte (FING 0); fstop 6-8.
 Da sistemare dopo il giudizio di Jacopo: gancio (taglia in alto la testa e il bordo del pantalone sinistro), metro lungo 0.13 sporge molto (valutare 0.09), linea di misura coperta dal metro (alzare z o allargare), mano destra sembra un pugno nel cavallo, moiré da pochi campioni (a 48 e' normale).
 Poi: --check sguardo, plate, numeri veri, animazione completa (anteprima mezza risoluzione ~20 min).
+
+## 24/11 sera — v4 (video: videos/_bench/reel-3-misure/reel-3-misure-v4b.mp4)
+Feedback di Jacopo sulla v3 (scritte mal posizionate/stile diverso, taglio a 0:03 scattoso, camera macchinosa, metro nei pantaloni/fibbia, striscia rosa e "effetto patinato", tutto sparisce di colpo, disordinato e poco luxury) -> risolti:
+- CAUSA DEL "GLITCH" su giacca/capelli: NEBBIA VOLUMETRICA (VOLD) a pochi campioni = reticolo a quadretti. Ora VOLD=0 nella partitura (reel.py: `--vol` / chiave VOLD).
+- Pantaloni antracite + gesso bianco OPACO (no emissione) accanto al metro; niente passanti/bottone; un metro per misura (lunghezza = misura + 1 cm) che si srotola e si ritira in 0.4 s; etichette 3D VITA/CAVALLO/INTERNO con pop; segnalini (NON scalarli: bug del blocco bianco gigante a 8 s).
+- CAM_SOFT (movimento quasi lineare), camera che SEGUE il metro; Jacopino a PUPPET_Y=0.18 (7 cm dietro il tavolo), MAT_COLORS scuri, props ridotti, JACKET_WEAVE 170.
+- Sottotitoli = captions.py (Inter ExtraBold + Playfair corsivo #ffb48f, una parola alla volta, pop, CY=250) coi tempi della voce (Whisper corretto a mano); assemble.sh aggiunge flash caldo sui tagli (forte a 3.24) e la voce.
+- reel.py: ATTENZIONE alla riga che cancella le azioni dopo l'import del GLB (ora salva PRE_ACTIONS).
+## Da fare
+Tre misure vere di Jacopo (le etichette non hanno numeri: i numeri d'esempio sono stati tolti dai sottotitoli), suono (swish Epidemic), render finale 1080p (VOLD=0: piu' veloce di prima, da misurare), controllo guardando il video intero.
