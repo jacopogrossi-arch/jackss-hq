@@ -286,7 +286,8 @@ if MIS and TAV:
         for M, _ex in MIS_EXTRA:
             pop = _sm((t_ - M.get("lt0", M["t0"] - 0.1)) / 0.28)
             for _o in _ex:
-                _o.scale = (max(pop, 0.001),) * 3; _o.hide_render = pop <= 0.0; _o.keyframe_insert("scale", frame=fr_); _o.keyframe_insert("hide_render", frame=fr_)
+                if _o.type == "FONT": _o.scale = (max(pop, 0.001),) * 3; _o.keyframe_insert("scale", frame=fr_)      # solo le scritte fanno il «pop»; i segnalini compaiono e basta
+                _o.hide_render = pop <= 0.0; _o.keyframe_insert("hide_render", frame=fr_)
         for M, tp, A_, yaw in MIS_TAPES:
             ta = M["t0"] - 0.55; tb = M.get("tape_off", M["t1"] + 0.9)
             un = _sm((t_ - ta) / 0.40) if t_ < tb else 1.0 - _sm((t_ - tb) / 0.40)       # si srotola in 0.4 s, si ritira in 0.4 s verso lo zero
