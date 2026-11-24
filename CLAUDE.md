@@ -27,6 +27,6 @@ Jacopo, italiano (Roma). Studio Economia all'università e moda in accademia. No
 - Doppio salvataggio: a fine lavoro aggiorna anche Notion (Jackss HQ) via MCP.
 
 ## Strumenti
-- Immagini/video AI: nessun generatore collegato. Magnific e Higgsfield non ci sono più: non proporli.
+- Immagini/video AI: Magnific non c'è più, non proporlo. Higgsfield (dal 25/11/2026) si può usare quando serve davvero: anche una sola clip in tutto il video, per una scena che non si gira e non si fa in 3D. Prima verifica che sia collegato e dimmi i crediti.
 - 3D: Tripo AI (genero io il GLB, tu lo alleggerisci con gli script in `.claude/skills/fashion-3d/scripts/`).
 - Suoni e musica: Epidemic Sound via MCP, file solo in locale.
