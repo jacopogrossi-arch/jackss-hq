@@ -1,0 +1,427 @@
+[
+{
+"text": "la",
+"start": 0.0,
+"end": 0.18
+},
+{
+"text": "tua",
+"start": 0.18,
+"end": 0.32
+},
+{
+"text": "M",
+"start": 0.32,
+"end": 0.74
+},
+{
+"text": "non",
+"start": 0.74,
+"end": 1.16
+},
+{
+"text": "è",
+"start": 1.16,
+"end": 1.36
+},
+{
+"text": "la",
+"start": 1.36,
+"end": 1.5
+},
+{
+"text": "M",
+"start": 1.5,
+"end": 1.78
+},
+{
+"text": "di",
+"start": 1.78,
+"end": 1.94
+},
+{
+"text": "un",
+"start": 1.94,
+"end": 2.04
+},
+{
+"text": "altro",
+"start": 2.04,
+"end": 2.24
+},
+{
+"text": "brand.",
+"start": 2.24,
+"end": 2.64
+},
+{
+"text": "Prendi",
+"start": 3.14,
+"end": 3.52
+},
+{
+"text": "un",
+"start": 3.52,
+"end": 3.62
+},
+{
+"text": "pantalone",
+"start": 3.62,
+"end": 4.08
+},
+{
+"text": "che",
+"start": 4.08,
+"end": 4.22
+},
+{
+"text": "ti",
+"start": 4.22,
+"end": 4.38
+},
+{
+"text": "sta",
+"start": 4.38,
+"end": 4.54
+},
+{
+"text": "bene",
+"start": 4.54,
+"end": 4.92
+},
+{
+"text": "e",
+"start": 4.92,
+"end": 5.28
+},
+{
+"text": "stendi",
+"start": 5.28,
+"end": 5.56
+},
+{
+"text": "lo",
+"start": 5.56,
+"end": 5.74
+},
+{
+"text": "sul",
+"start": 5.74,
+"end": 5.9
+},
+{
+"text": "tavolo.",
+"start": 5.9,
+"end": 6.34
+},
+{
+"text": "Prima",
+"start": 6.7,
+"end": 6.98
+},
+{
+"text": "misura,",
+"start": 6.98,
+"end": 7.42
+},
+{
+"text": "la",
+"start": 7.92,
+"end": 8.02
+},
+{
+"text": "vita.",
+"start": 8.02,
+"end": 8.28
+},
+{
+"text": "Da",
+"start": 9.0,
+"end": 9.12
+},
+{
+"text": "un",
+"start": 9.12,
+"end": 9.24
+},
+{
+"text": "lato",
+"start": 9.24,
+"end": 9.5
+},
+{
+"text": "all",
+"start": 9.5,
+"end": 9.7
+},
+{
+"text": "'altro",
+"start": 9.7,
+"end": 9.92
+},
+{
+"text": "del",
+"start": 9.92,
+"end": 10.12
+},
+{
+"text": "bordo",
+"start": 10.12,
+"end": 10.52
+},
+{
+"text": "e",
+"start": 10.52,
+"end": 10.98
+},
+{
+"text": "multiplichi",
+"start": 10.98,
+"end": 11.5
+},
+{
+"text": "per",
+"start": 11.5,
+"end": 11.7
+},
+{
+"text": "due.",
+"start": 11.7,
+"end": 11.94
+},
+{
+"text": "Seconda,",
+"start": 12.38,
+"end": 13.0
+},
+{
+"text": "l",
+"start": 13.42,
+"end": 13.48
+},
+{
+"text": "'altezza",
+"start": 13.48,
+"end": 13.9
+},
+{
+"text": "del",
+"start": 13.9,
+"end": 14.1
+},
+{
+"text": "cavallo,",
+"start": 14.1,
+"end": 14.56
+},
+{
+"text": "dall",
+"start": 15.12,
+"end": 15.3
+},
+{
+"text": "'incrocio",
+"start": 15.3,
+"end": 15.7
+},
+{
+"text": "delle",
+"start": 15.7,
+"end": 15.9
+},
+{
+"text": "gambe",
+"start": 15.9,
+"end": 16.34
+},
+{
+"text": "fino",
+"start": 16.34,
+"end": 16.7
+},
+{
+"text": "al",
+"start": 16.7,
+"end": 16.88
+},
+{
+"text": "bordo",
+"start": 16.88,
+"end": 17.14
+},
+{
+"text": "davanti.",
+"start": 17.14,
+"end": 17.68
+},
+{
+"text": "Terza,",
+"start": 18.12,
+"end": 18.54
+},
+{
+"text": "l",
+"start": 19.0,
+"end": 19.08
+},
+{
+"text": "'interno",
+"start": 19.08,
+"end": 19.48
+},
+{
+"text": "gamba,",
+"start": 19.48,
+"end": 19.86
+},
+{
+"text": "dall",
+"start": 20.32,
+"end": 20.54
+},
+{
+"text": "'incrocio",
+"start": 20.54,
+"end": 21.14
+},
+{
+"text": "giù",
+"start": 21.14,
+"end": 21.66
+},
+{
+"text": "fino",
+"start": 21.66,
+"end": 21.9
+},
+{
+"text": "all",
+"start": 21.9,
+"end": 22.14
+},
+{
+"text": "'orlo.",
+"start": 22.14,
+"end": 22.52
+},
+{
+"text": "Tre",
+"start": 23.04,
+"end": 23.32
+},
+{
+"text": "numeri.",
+"start": 23.32,
+"end": 23.86
+},
+{
+"text": "Prima",
+"start": 24.22,
+"end": 24.42
+},
+{
+"text": "di",
+"start": 24.42,
+"end": 24.56
+},
+{
+"text": "comprare,",
+"start": 24.56,
+"end": 25.04
+},
+{
+"text": "confronta",
+"start": 25.4,
+"end": 25.86
+},
+{
+"text": "li",
+"start": 25.86,
+"end": 25.98
+},
+{
+"text": "con",
+"start": 25.98,
+"end": 26.08
+},
+{
+"text": "la",
+"start": 26.08,
+"end": 26.18
+},
+{
+"text": "tabella.",
+"start": 26.18,
+"end": 26.64
+},
+{
+"text": "Se",
+"start": 26.96,
+"end": 27.14
+},
+{
+"text": "non",
+"start": 27.14,
+"end": 27.28
+},
+{
+"text": "tornano,",
+"start": 27.28,
+"end": 27.86
+},
+{
+"text": "lascia",
+"start": 28.1,
+"end": 28.44
+},
+{
+"text": "stare.",
+"start": 28.44,
+"end": 28.78
+},
+{
+"text": "E",
+"start": 29.34,
+"end": 29.44
+},
+{
+"text": "tu,",
+"start": 29.44,
+"end": 29.62
+},
+{
+"text": "scrivimi",
+"start": 29.98,
+"end": 30.46
+},
+{
+"text": "nei",
+"start": 30.46,
+"end": 30.58
+},
+{
+"text": "commenti",
+"start": 30.58,
+"end": 31.24
+},
+{
+"text": "il",
+"start": 31.24,
+"end": 31.44
+},
+{
+"text": "tuo",
+"start": 31.44,
+"end": 31.68
+},
+{
+"text": "interno",
+"start": 31.68,
+"end": 32.22
+},
+{
+"text": "gamba.",
+"start": 32.22,
+"end": 32.58
+}
+]

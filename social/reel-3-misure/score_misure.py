@@ -137,3 +137,38 @@ ARANCIO = (0.92, 0.10, 0.04); AZZURRO = (0.10, 0.55, 1.0); MAGENTA = (0.85, 0.10
 MISURE[0].update(col=ARANCIO, caps=True, capl=0.010, label="VITA", lpos=(-0.0105, YW - 0.0145), lsize=0.011, w=0.0013, tz=0.0049)
 MISURE[1].update(col=AZZURRO, caps=True, capl=0.009, label="CAVALLO", lpos=(0.0135, 0.0745), lrot=90, lsize=0.0066, w=0.0013)
 MISURE[2].update(col=MAGENTA, caps=True, capl=0.009, label="INTERNO", lpos=(-0.0175, (RISE_Y + HEM_Y) / 2), lrot=90, lsize=0.0085, w=0.0013)
+
+# ===== V4 (24/11): look sobrio e leggibile. Pantaloni scuri + gesso bianco opaco (niente emissione, niente rosa), metro che non attraversa nulla (niente passanti/bottone,
+# lunghezza = misura + 1 cm, si ritira), camera morbida che SEGUE il metro, spazio sopra la testa per le scritte, meno oggetti.
+CAM_SOFT = True
+MAT_COLORS = ((0.016, 0.028, 0.024), (0.05, 0.072, 0.064))
+ANTRACITE = (0.030, 0.038, 0.075)
+TAVOLO["trousers"] = [
+    dict(name="H1", P=PA, col=ANTRACITE, cx=-0.052, yw=YW, tag="M", tagrot=-4, hide_from=2.95, loops=False, button=False),
+    dict(name="H2", P=PB, col=SAND, cx=0.052, yw=YW, tag="M", tagrot=5, hide_from=2.95, loops=False, button=False),
+    dict(name="A", P=PA, col=ANTRACITE, cx=0.0, yw=YW, show_from=2.95, loops=False, button=False),
+]
+ATELIER.update(rocchetto=(2.0, 2.0), puntaspilli=(2.0, 2.0), forbici=(0.115, 0.002), gesso=(-0.115, 0.018))
+MISURE = [
+    dict(name="vita", A=(-PA["wh"], YW - 0.0030), B=(PA["wh"], YW - 0.0030), path=[(-PA["wh"], YW - 0.0030), (PA["wh"], YW - 0.0030)], side=-1, t0=9.10, t1=10.90, lt0=7.95, tape_off=12.00,
+         label="VITA", lpos=(-0.0105, YW - 0.0170), lsize=0.0115, capl=0.0085),
+    dict(name="cavallo", A=(0.0, RISE_Y), B=(0.0, YW - 0.0006), path=[(0.0, RISE_Y), (0.0, YW - 0.0006)], side=-1, t0=15.20, t1=17.20, lt0=14.05, tape_off=17.90,
+         label="CAVALLO", lpos=(0.0150, 0.0790), lrot=90, lsize=0.0078, capl=0.0085),
+    dict(name="interno", A=(-0.0015, RISE_Y - 0.003), B=(-0.0020, HEM_Y), path=[(-0.0015, RISE_Y - 0.003), (-0.0020, HEM_Y)], side=-1, t0=20.40, t1=22.50, lt0=19.05, tape_off=22.90,
+         label="INTERNO", lpos=(-0.0160, 0.0270), lrot=90, lsize=0.0085, capl=0.0085),
+]
+SHOTS = [
+    shot("h1_largo", 0.00, 3.24, 35, (0.02, -0.34, 0.30), (0.0, -0.23, 0.24), (0.0, 0.06, 0.150), (0.0, 0.06, 0.140), 7.0),
+    shot("s2_arco", 3.24, 6.75, 40, (0.0, -0.30, 0.27), (-0.09, -0.19, 0.20), (0.0, 0.05, 0.105), (0.0, 0.06, 0.092), 8.0),
+    shot("s3a_tre_quarti", 6.75, 9.00, 40, (-0.15, -0.20, 0.27), (-0.12, -0.17, 0.24), (0.0, 0.085, 0.115), (0.0, 0.087, 0.105), 8.0),
+    shot("s3b_segue_metro", 9.00, 12.38, 50, (-0.07, -0.13, 0.19), (0.07, -0.13, 0.19), (-0.02, 0.09, 0.085), (0.03, 0.09, 0.085), 8.0),
+    shot("s4a_destra", 12.38, 15.10, 40, (0.13, -0.17, 0.25), (0.10, -0.14, 0.22), (0.0, 0.08, 0.10), (0.0, 0.08, 0.10), 8.0),
+    shot("s4b_segue_metro", 15.10, 18.12, 50, (0.0, -0.03, 0.18), (0.0, 0.02, 0.16), (0.0, RISE_Y, ZT), (0.0, YW, ZT), 8.0),
+    shot("s5a_sinistra", 18.12, 20.30, 40, (-0.13, -0.14, 0.21), (-0.10, -0.12, 0.20), (0.0, 0.06, 0.09), (0.0, 0.05, 0.09), 8.0),
+    shot("s5b_segue_metro", 20.30, 23.15, 50, (0.0, 0.0, 0.17), (0.0, -0.07, 0.17), (-0.002, RISE_Y, ZT), (-0.002, HEM_Y, ZT), 8.0),
+    shot("s6_giro", 23.15, 29.33, 40, (-0.10, -0.27, 0.24), (0.10, -0.27, 0.24), (0.0, 0.05, 0.125), (0.0, 0.05, 0.125), 8.0),
+    shot("s7_domanda", 29.33, 32.76, 40, (0.0, -0.24, 0.20), (0.0, -0.15, 0.17), (0.0, 0.09, 0.125), (0.0, 0.10, 0.125), 7.0),
+]
+JACKET_WEAVE = 170.0   # trama piu' larga: a 900 la giacca faceva moire (reticolo a quadretti) al render
+
+VOLD = 0.0   # niente nebbia volumetrica: a pochi campioni dava il reticolo a quadretti su giacca/capelli (il "glitch")

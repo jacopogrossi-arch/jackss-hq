@@ -1,22 +1,19 @@
 #!/usr/bin/env bash
-# Montaggio del Reel «Le 3 misure»: fotogrammi + finitura (bloom, vignetta, grana) + plate PNG con dissolvenza + voce.
-# Uso: bash assemble.sh FRAMES_DIR OUT.mp4 [LARGHEZZA]   (LARGHEZZA = larghezza dei fotogrammi: 540 anteprima, 1080 finale)
+# Montaggio del Reel «Le 3 misure»: fotogrammi + finitura (bloom, vignetta, grana) + sottotitoli parola per parola (captions.py) + flash sui tagli + voce.
+# Uso: bash assemble.sh FRAMES_DIR OUT.mp4 [LARGHEZZA]   (540 anteprima, 1080 finale)
 set -e
 FR=$1; OUT=$2; WID=${3:-540}; HGT=$((WID * 16 / 9))
-G=/d/ClaudeCodeTest/videos/_bench/reel-3-misure; P=$G/plates; VO=$G/vo/vo.wav
-POST="format=gbrp,split[a][b];[b]curves=all='0/0 0.75/0 1/1',gblur=sigma=$((WID / 38))[g];[a][g]blend=all_mode=screen:all_opacity=0.10,vignette=angle=PI/7,curves=all='0/0 0.25/0.21 0.75/0.79 1/1',noise=alls=4:allf=t+u,format=yuv420p"
-# nome:inizio:fine:fade-in:fade-out
-PLATES=("p1_gancio:0.2:2.95:1:1" "p2_vita:6.9:8.4:1:1" "p3_x2:10.4:12.0:1:1" "p4_cavallo:12.6:14.5:1:1" "p5_interno:18.2:20.1:1:1" "p6_numeri1:23.4:25.3:1:0" "p6_numeri2:25.3:27.1:0:0" "p6_numeri3:27.1:28.9:0:1" "p7_domanda:29.5:32.7:1:1")
-INP=(-framerate 24 -start_number 1 -i "$FR/f%04d.png" -i "$VO"); FC="[0:v]${POST}[v0];"; N=2; LAST=v0; K=0
-for pl in "${PLATES[@]}"; do
-  IFS=: read -r name a b fi fo <<< "$pl"
-  INP+=(-loop 1 -framerate 24 -t 33 -i "$P/$name.png")
-  CH="[$N:v]format=rgba,scale=$WID:$HGT"
-  [ "$fi" = 1 ] && CH+=",fade=t=in:st=$a:d=0.14:alpha=1"
-  [ "$fo" = 1 ] && CH+=",fade=t=out:st=$(python -c "print(round($b-0.14,2))"):d=0.14:alpha=1"
-  FC+="${CH}[pl$K];[$LAST][pl$K]overlay=0:0:format=auto:enable='between(t,$a,$b)'[v$((K+1))];"
-  LAST=v$((K+1)); N=$((N+1)); K=$((K+1))
+G=/d/ClaudeCodeTest/videos/_bench/reel-3-misure; VO=$G/vo/vo.wav
+POST="format=gbrp,split[a][b];[b]curves=all='0/0 0.75/0 1/1',gblur=sigma=$((WID / 38))[g];[a][g]blend=all_mode=screen:all_opacity=0.08,vignette=angle=PI/7,curves=all='0/0 0.25/0.21 0.75/0.79 1/1',noise=alls=4:allf=t+u,format=yuv420p"
+# flash caldo sui tagli: tempo:intensita' (decade in 3 passi ~0.2 s). Il taglio a 3.24 e' quello forte.
+FL=""; for c in "3.24:0.95" "6.75:0.40" "12.38:0.40" "18.12:0.40" "23.15:0.40" "29.33:0.40"; do
+  t=${c%%:*}; a=${c##*:}
+  for step in "0.00:0.05:1.0" "0.05:0.11:0.55" "0.11:0.20:0.25"; do
+    IFS=: read -r s0 s1 k <<< "$step"
+    FL+=",drawbox=x=0:y=0:w=iw:h=ih:color=0xFFE9C8@$(python -c "print(round($a*$k,3))"):t=fill:enable='between(t,$(python -c "print(round($t+$s0,3))"),$(python -c "print(round($t+$s1,3))"))'"
+  done
 done
-FC+="[1:a]loudnorm=I=-14:TP=-1.5:LRA=9[au]"
-ffmpeg -v error -y "${INP[@]}" -filter_complex "$FC" -map "[$LAST]" -map "[au]" -t 32.75 -c:v libx264 -preset slow -crf 19 -c:a aac -b:a 160k "$OUT"
+ffmpeg -v error -y -framerate 24 -start_number 1 -i "$FR/f%04d.png" -framerate 24 -start_number 1 -i "$G/caps/c%04d.png" -i "$VO" \
+  -filter_complex "[0:v]${POST}[v0];[1:v]scale=$WID:$HGT,format=rgba[cp];[v0][cp]overlay=0:0:format=auto${FL}[v];[2:a]loudnorm=I=-14:TP=-1.5:LRA=9[au]" \
+  -map "[v]" -map "[au]" -t 32.75 -c:v libx264 -preset slow -crf 19 -c:a aac -b:a 160k "$OUT"
 ls -la "$OUT"

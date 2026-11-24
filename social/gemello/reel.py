@@ -51,7 +51,7 @@ def mat(name, rgb, rough=0.6, emit=None, strength=1.0, spec=0.5):
     if emit:
         b.inputs["Emission Color"].default_value = (*emit, 1); b.inputs["Emission Strength"].default_value = strength
     return m
-NOWEAR = "--nowear" in argv; VOLD = float(opt("--vol", "0.015")); KEY = float(opt("--key", "40"))
+NOWEAR = "--nowear" in argv; VOLD = float(opt("--vol", str(SC.get("VOLD", 0.015)))); KEY = float(opt("--key", "40"))
 def wear(m, scale=180.0, amt=0.25, bump=0.15, coord="Object"):
     """Usura alla Lego Movie: rugosita' a macchie + graffi sottili (rumore stirato) + micro-bump."""
     if NOWEAR: return m
@@ -113,6 +113,8 @@ L_.new(gridline("X", 0.10, 0.018).outputs[0], mx2.inputs[0]); L_.new(gridline("Y
 L_.new(mx.outputs[0], mx3.inputs[0]); L_.new(mx2.outputs[0], mx3.inputs[1])
 mix = N.new("ShaderNodeMix"); mix.data_type = "RGBA"
 mix.inputs["A"].default_value = (0.018, 0.115, 0.065, 1); mix.inputs["B"].default_value = (0.26, 0.42, 0.33, 1)   # v6: tappetino piu' scuro, righe meno brillanti
+_mc = SC.get("MAT_COLORS")
+if _mc: mix.inputs["A"].default_value = tuple(_mc[0]) + (1,); mix.inputs["B"].default_value = tuple(_mc[1]) + (1,)
 L_.new(mx3.outputs[0], mix.inputs["Factor"]); L_.new(mix.outputs["Result"], b.inputs["Base Color"])
 wear(mm, 90, 0.12, 0.05)
 mat_o = box("tappetino", (0.9, SC.get("MAT_DEPTH", 0.46), 0.002), (0.02, -0.06 + (SC.get("MAT_DEPTH", 0.46) - 0.46) / 2, 0.001), mm)   # finisce subito dietro i piedi: dietro si vede il tavolo caldo
@@ -221,11 +223,12 @@ if TAV:
         dark = mat("cuciture_" + T["name"], tuple(c * 0.55 for c in col), 0.9, spec=0.1)
         parts.append(box("fascia_" + T["name"], (2 * P["wh"], 0.0055, 0.0046), (T["cx"], T["yw"] - 0.00275, ZT + 0.0023), dark, bevel=0.0003))
         parts.append(box("patta_" + T["name"], (0.0006, P["rise"] - 0.005, 0.0006), (T["cx"], T["yw"] - 0.0055 - (P["rise"] - 0.005) / 2, ZT + 0.0038), dark))
-        for k in (-0.6, -0.2, 0.2, 0.6): parts.append(box("passante_" + T["name"], (0.0024, 0.0085, 0.0016), (T["cx"] + k * P["wh"], T["yw"] - 0.0032, ZT + 0.0054), dark, bevel=0.0003))
+        for k in ((-0.6, -0.2, 0.2, 0.6) if T.get("loops", True) else ()): parts.append(box("passante_" + T["name"], (0.0024, 0.0085, 0.0016), (T["cx"] + k * P["wh"], T["yw"] - 0.0032, ZT + 0.0054), dark, bevel=0.0003))
         for sg in (-1, 1):
             parts.append(box("tasca_" + T["name"], (0.0005, 0.014, 0.0004), (T["cx"] + sg * (P["wh"] - 0.0055), T["yw"] - 0.0125, ZT + 0.0036), dark, rot=(0, 0, sg * math.radians(-28))))
-        bpy.ops.mesh.primitive_cylinder_add(vertices=14, radius=0.0017, depth=0.0008, location=(T["cx"] + 0.0035, T["yw"] - 0.0028, ZT + 0.0054)); bt = bpy.context.object; bt.name = "bottone_" + T["name"]
-        _bm = mat("bottone", (0.75, 0.62, 0.35), 0.35); bt.data.materials.append(_bm); bsdf_of(_bm).inputs["Metallic"].default_value = 0.8; parts.append(bt)
+        if T.get("button", True):
+            bpy.ops.mesh.primitive_cylinder_add(vertices=14, radius=0.0017, depth=0.0008, location=(T["cx"] + 0.0035, T["yw"] - 0.0028, ZT + 0.0054)); bt = bpy.context.object; bt.name = "bottone_" + T["name"]
+            _bm = mat("bottone", (0.75, 0.62, 0.35), 0.35); bt.data.materials.append(_bm); bsdf_of(_bm).inputs["Metallic"].default_value = 0.8; parts.append(bt)
         if T.get("tag"):   # cartellino con la taglia: testo 3D vero, leggibile da telefono
             tg = box("cartellino_" + T["name"], (0.0185, 0.0135, 0.0008), (T["cx"] + T.get("tagx", 0.0), T["yw"] - 0.020, ZT + 0.0043), mat("cartoncino", (0.93, 0.90, 0.82), 0.7), rot=(0, 0, math.radians(T.get("tagrot", 0)))); parts.append(tg)
             cu_t = bpy.data.curves.new("txt_" + T["name"], "FONT"); cu_t.body = T["tag"]; cu_t.size = 0.0098; cu_t.extrude = 0.0003; cu_t.align_x = "CENTER"; cu_t.align_y = "CENTER"
@@ -237,66 +240,59 @@ if TAV:
             for o in parts:
                 for fr_ in range(1, NFR + 1):          # una chiave per fotogramma: i booleani non vanno interpolati
                     o.hide_render = not (sf <= (fr_ - 1) / FPS < hf); o.keyframe_insert("hide_render", frame=fr_)
-# linee di misura che si tracciano + metro (zero tenuto da una mano; il metro e' una striscia lunga fissa con le tacche: parte dal punto A verso B)
+# linee di misura: tratto di GESSO opaco (nessuna emissione) accanto al metro + segnalini + nome sul tessuto; un metro per misura (lunghezza = misura + 1 cm), si srotola e si RITIRA morbido
 MIS = SC.get("MISURE")
 if MIS and TAV:
-    _ZL = TAV["top"] + 0.0032
-    _lm = mat("tratto_misura", (0.80, 0.27, 0.08), 0.45); _bs = bsdf_of(_lm)
-    for k_ in ("Emission Color", "Emission"):
-        if k_ in _bs.inputs: _bs.inputs[k_].default_value = (0.80, 0.27, 0.08, 1)
-    if "Emission Strength" in _bs.inputs: _bs.inputs["Emission Strength"].default_value = 0.6
-    TAPE_L = SC.get("TAPE_L", 0.13)
-    mesh_t = bpy.data.meshes.new("metro_m"); mesh_t.from_pydata([(0, -0.0035, 0), (TAPE_L, -0.0035, 0), (TAPE_L, 0.0035, 0), (0, 0.0035, 0), (0, -0.0035, 0.0007), (TAPE_L, -0.0035, 0.0007), (TAPE_L, 0.0035, 0.0007), (0, 0.0035, 0.0007)], [], [[0, 3, 2, 1], [4, 5, 6, 7], [0, 1, 5, 4], [1, 2, 6, 5], [2, 3, 7, 6], [3, 0, 4, 7]]); mesh_t.update()
-    tape = bpy.data.objects.new("metro_misura", mesh_t); sc.collection.objects.link(tape); tape.data.materials.append(tmat)
-    MIS_CUR = []; MIS_EXTRA = []
+    ZTOP = TAV["top"]
+    _chalk = mat("gesso_tratto", tuple(SC.get("CHALK", (0.93, 0.91, 0.85))), 0.9, spec=0.1)
+    MIS_CUR = []; MIS_EXTRA = []; MIS_TAPES = []
     for M in MIS:
-        pts = [Vector((x, y)) for x, y in M["path"]]
+        A_ = Vector(M["A"]); B_ = Vector(M["B"]); dvec = B_ - A_; dl = dvec.length; dn = dvec.normalized(); nrm = Vector((-dn.y, dn.x)) * M.get("side", -1)
+        off = M.get("off", 0.0058)
+        pts = [Vector(q_) + nrm * off for q_ in M["path"]]
         seg = [(pts[i + 1] - pts[i]).length for i in range(len(pts) - 1)]; tot = sum(seg); N_ = 120; res = []
         for k in range(N_ + 1):
             d = tot * k / N_; i = 0
             while i < len(seg) - 1 and d > seg[i]: d -= seg[i]; i += 1
             u = 0.0 if seg[i] == 0 else min(1.0, d / seg[i]); res.append(pts[i].lerp(pts[i + 1], u))
-        cu = bpy.data.curves.new("linea_" + M["name"], "CURVE"); cu.dimensions = "3D"; cu.bevel_depth = M.get("w", 0.0007); cu.bevel_resolution = 2; cu.use_fill_caps = True
+        zl = ZTOP + M.get("z", 0.0042)
+        cu = bpy.data.curves.new("linea_" + M["name"], "CURVE"); cu.dimensions = "3D"; cu.bevel_depth = M.get("w", 0.0006); cu.bevel_resolution = 2; cu.use_fill_caps = True
         spl = cu.splines.new("POLY"); spl.points.add(len(res) - 1)
-        for q, v_ in zip(spl.points, res): q.co = (v_.x, v_.y, TAV["top"] + M.get("z", 0.0043), 1.0)
-        _mcol = M.get("col")
-        if _mcol:
-            _lmk = mat("tratto_" + M["name"], _mcol, 0.4); _bk = bsdf_of(_lmk)
-            for k_ in ("Emission Color", "Emission"):
-                if k_ in _bk.inputs: _bk.inputs[k_].default_value = tuple(_mcol) + (1,)
-            if "Emission Strength" in _bk.inputs: _bk.inputs["Emission Strength"].default_value = 0.45
-        else: _lmk = _lm
-        ob_ = bpy.data.objects.new("linea_" + M["name"], cu); sc.collection.objects.link(ob_); ob_.data.materials.append(_lmk)
+        for q, v_ in zip(spl.points, res): q.co = (v_.x, v_.y, zl, 1.0)
+        ob_ = bpy.data.objects.new("linea_" + M["name"], cu); sc.collection.objects.link(ob_); ob_.data.materials.append(_chalk)
         cu.bevel_factor_start = 0.0
-        MIS_CUR.append((M, cu, res))
+        MIS_CUR.append((M, cu))
         _ex = []
-        if M.get("caps"):      # segnalini perpendicolari alle due estremita' (come in un disegno tecnico)
-            _d = (pts[-1] - pts[0]).normalized(); _nx = Vector((-_d.y, _d.x)); _ang = math.atan2(_d.y, _d.x) + math.pi / 2
-            for _pt in (pts[0], pts[-1]):
-                _ex.append(box("segnalino_" + M["name"], (0.0016, M.get("capl", 0.011), 0.0016), (_pt.x, _pt.y, TAV["top"] + M.get("z", 0.0043)), _lmk, rot=(0, 0, _ang)))
-        if M.get("label"):     # nome della misura scritto sul tessuto
-            _cu_t = bpy.data.curves.new("etich_" + M["name"], "FONT"); _cu_t.body = M["label"]; _cu_t.size = M.get("lsize", 0.011); _cu_t.extrude = 0.0004; _cu_t.align_x = "CENTER"; _cu_t.align_y = "CENTER"
+        _ang = math.atan2(dn.y, dn.x) + math.pi / 2
+        for _pt in (pts[0], pts[-1]):    # segnalini perpendicolari alle estremita'
+            _ex.append(box("segnalino_" + M["name"], (0.0010, M.get("capl", 0.010), 0.0010), (_pt.x, _pt.y, zl), _chalk, rot=(0, 0, _ang)))
+        if M.get("label"):
+            _cu_t = bpy.data.curves.new("etich_" + M["name"], "FONT"); _cu_t.body = M["label"]; _cu_t.size = M.get("lsize", 0.011); _cu_t.extrude = 0.0003; _cu_t.align_x = "CENTER"; _cu_t.align_y = "CENTER"
             _tx = bpy.data.objects.new("etich_" + M["name"], _cu_t); sc.collection.objects.link(_tx)
-            _tx.data.materials.append(mat("etich_inchiostro_" + M["name"], M.get("lcol", (0.03, 0.04, 0.03)), 0.5))
-            _tx.location = (M["lpos"][0], M["lpos"][1], TAV["top"] + 0.0042); _tx.rotation_euler = (0, 0, math.radians(M.get("lrot", 0))); _ex.append(_tx)
-        if _ex: MIS_EXTRA.append((M, _ex))
+            _tx.data.materials.append(_chalk)
+            _tx.location = (M["lpos"][0], M["lpos"][1], ZTOP + 0.0040); _tx.rotation_euler = (0, 0, math.radians(M.get("lrot", 0))); _ex.append(_tx)
+        MIS_EXTRA.append((M, _ex))
+        # metro di questa misura: origine nello zero (A), allineato verso B, lunghezza misura + sbordo
+        Lt = dl + M.get("over", 0.010)
+        mt = bpy.data.meshes.new("metro_" + M["name"]); hw = 0.0036
+        mt.from_pydata([(0, -hw, 0), (Lt, -hw, 0), (Lt, hw, 0), (0, hw, 0), (0, -hw, 0.0007), (Lt, -hw, 0.0007), (Lt, hw, 0.0007), (0, hw, 0.0007)], [], [[0, 3, 2, 1], [4, 5, 6, 7], [0, 1, 5, 4], [1, 2, 6, 5], [2, 3, 7, 6], [3, 0, 4, 7]]); mt.update()
+        tp = bpy.data.objects.new("metro_" + M["name"], mt); sc.collection.objects.link(tp); tp.data.materials.append(tmat)
+        MIS_TAPES.append((M, tp, A_, math.atan2(dn.y, dn.x)))
+    def _sm(x): x = max(0.0, min(1.0, x)); return x * x * (3 - 2 * x)
     for fr_ in range(1, NFR + 1):
         t_ = (fr_ - 1) / FPS
-        vis = False
-        for M, cu, res in MIS_CUR:
-            e_ = 0.0 if t_ <= M["t0"] else (1.0 if t_ >= M["t1"] else (t_ - M["t0"]) / (M["t1"] - M["t0"])); e_ = e_ * e_ * (3 - 2 * e_)
-            if M.get("keep"): e_ = e_ if t_ < M["t1"] else 1.0      # le linee restano visibili per la conferma finale
-            cu.bevel_factor_end = e_; cu.keyframe_insert("bevel_factor_end", frame=fr_)
-            ta, tb = M["t0"] - 0.35, M.get("tape_off", M["t1"] + 0.9)
-            if ta <= t_ <= tb:
-                A = Vector(M["A"]); B = Vector(M["B"]); d_ = B - A
-                yaw = math.atan2(d_.y, d_.x); un = max(0.0, min(1.0, (t_ - ta) / 0.3)); un = un * un * (3 - 2 * un)
-                tape.location = (A.x, A.y, TAV["top"] + M.get("tz", 0.0037)); tape.rotation_euler = (0, 0, yaw); tape.scale = (0.2 + 0.8 * un, 1, 1); vis = True
+        for M, cu in MIS_CUR:
+            cu.bevel_factor_end = _sm((t_ - M["t0"]) / (M["t1"] - M["t0"])); cu.keyframe_insert("bevel_factor_end", frame=fr_)
         for M, _ex in MIS_EXTRA:
+            pop = _sm((t_ - M.get("lt0", M["t0"] - 0.1)) / 0.28)
             for _o in _ex:
-                _o.hide_render = t_ < M["t0"] - 0.1; _o.keyframe_insert("hide_render", frame=fr_)
-        tape.hide_render = not vis
-        tape.keyframe_insert("hide_render", frame=fr_); tape.keyframe_insert("location", frame=fr_); tape.keyframe_insert("rotation_euler", frame=fr_); tape.keyframe_insert("scale", frame=fr_)
+                _o.scale = (max(pop, 0.001),) * 3; _o.hide_render = pop <= 0.0; _o.keyframe_insert("scale", frame=fr_); _o.keyframe_insert("hide_render", frame=fr_)
+        for M, tp, A_, yaw in MIS_TAPES:
+            ta = M["t0"] - 0.55; tb = M.get("tape_off", M["t1"] + 0.9)
+            un = _sm((t_ - ta) / 0.40) if t_ < tb else 1.0 - _sm((t_ - tb) / 0.40)       # si srotola in 0.4 s, si ritira in 0.4 s verso lo zero
+            tp.hide_render = un <= 0.003
+            tp.location = (A_.x, A_.y, ZTOP + M.get("tz", 0.0049)); tp.rotation_euler = (0, 0, yaw); tp.scale = (max(un, 0.001), 1, 1)
+            tp.keyframe_insert("hide_render", frame=fr_); tp.keyframe_insert("location", frame=fr_); tp.keyframe_insert("rotation_euler", frame=fr_); tp.keyframe_insert("scale", frame=fr_)
 
 # ------------------------------------------------------------------ ATELIER (24/11/2026): pochi dettagli di sartoria, coerenti con la scena (chiave ATELIER della partitura)
 ATL = SC.get("ATELIER")
@@ -425,7 +421,7 @@ def jacket_cloth(m):
     # trama di tela: due onde incrociate (ordito e trama) come bump, solo sulla giacca
     tc = N.new("ShaderNodeTexCoord"); w1 = N.new("ShaderNodeTexWave"); w2 = N.new("ShaderNodeTexWave")
     for w_, ax in ((w1, "X"), (w2, "Z")):
-        w_.wave_type = "BANDS"; w_.bands_direction = ax; w_.inputs["Scale"].default_value = 900.0; w_.inputs["Distortion"].default_value = 2.0
+        w_.wave_type = "BANDS"; w_.bands_direction = ax; w_.inputs["Scale"].default_value = float(SC.get("JACKET_WEAVE", 900.0)); w_.inputs["Distortion"].default_value = 2.0
         L.new(tc.outputs["Object"], w_.inputs["Vector"])
     ad = N.new("ShaderNodeMath"); ad.operation = "MULTIPLY"; L.new(w1.outputs["Fac"], ad.inputs[0]); L.new(w2.outputs["Fac"], ad.inputs[1])
     ms = N.new("ShaderNodeMath"); ms.operation = "MULTIPLY"; L.new(ad.outputs[0], ms.inputs[0]); L.new(mk.outputs[0], ms.inputs[1])
@@ -971,6 +967,8 @@ for S in SC["SHOTS"]:
     f0, f1 = round(S["t0"] * FPS), round(S["t1"] * FPS)
     for f in range(f0, min(f1, NFR)):
         e = ease((f - f0) / max(1, f1 - f0 - 1))
+        if SC.get("CAM_SOFT"):
+            _u = max(0.0, min(1.0, (f - f0) / max(1, f1 - f0 - 1))); e = 0.6 * _u + 0.4 * (0.5 - 0.5 * math.cos(math.pi * _u))
         p = Vector(S["P0"]).lerp(Vector(S["P1"]), e); p.x += S.get("arc", 0.008) * math.sin(math.pi * e)
         look = Vector(S["L0"]).lerp(Vector(S["L1"]), e)
         rig.location = p; rig.rotation_euler = (look - p).to_track_quat("-Z", "Y").to_euler()
@@ -1036,10 +1034,13 @@ for eng in ("BLENDER_EEVEE", "BLENDER_EEVEE_NEXT"):
     except TypeError: pass
 ee = sc.eevee
 ee.taa_render_samples = SAMPLES
-for k, v in (("use_raytracing", True), ("use_shadows", True), ("volumetric_tile_size", "4"), ("volumetric_samples", 64), ("volumetric_start", 0.02), ("volumetric_end", 3.0),
+for k, v in (("use_raytracing", True), ("use_shadows", True), ("volumetric_tile_size", SC.get("VOL_TILE", "4")), ("volumetric_samples", SC.get("VOL_SAMPLES", 64)), ("volumetric_start", 0.02), ("volumetric_end", 3.0),
              ("use_volumetric_shadows", True), ("shadow_ray_count", 2), ("shadow_step_count", 8), ("use_fast_gi", True)):
     try: setattr(ee, k, v)
     except Exception as ex: print("eevee", k, ex)
+for _k, _v in SC.get("EEVEE_EXTRA", {}).items():
+    try: setattr(ee, _k, _v)
+    except Exception as ex: print("eevee extra", _k, ex)
 sc.render.use_motion_blur = True
 try: sc.render.motion_blur_shutter = 0.45
 except Exception: pass
