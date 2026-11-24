@@ -9,7 +9,7 @@ W, H = 1080, 1920; FPS = 24; NFR = 787
 FD = "D:/ClaudeCodeTest/.claude/skills/youtube-edit/assets/fonts/"
 OUT = "D:/ClaudeCodeTest/videos/_bench/reel-3-misure/caps/"
 os.makedirs(OUT, exist_ok=True)
-CY = 250                         # centro verticale del sottotitolo (sopra la testa: le inquadrature lasciano aria in alto)
+CY = 1180                         # centro verticale: un po' sotto il centro dello schermo (richiesta di Jacopo)
 MAXW = 930
 BIANCO = (255, 255, 255); ACCENTO = (255, 180, 143)
 K = True
@@ -63,5 +63,5 @@ if __name__ == "__main__":
             sw, sh_ = int(W * pop), int(H * pop); img = img.resize((sw, sh_), Image.LANCZOS)
             canv = Image.new("RGBA", (W, H), (0, 0, 0, 0)); canv.paste(img, ((W - sw) // 2, int(CY - CY * pop)), img); img = canv
             if alpha < 1.0: img.putalpha(img.getchannel("A").point(lambda v: int(v * alpha)))
-        out = Image.alpha_composite(VEIL, img); out.save(path)
+        out = img; out.save(path)
     print("fatto", NFR)
