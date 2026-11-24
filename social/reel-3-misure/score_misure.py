@@ -129,3 +129,12 @@ SHOTS = [
     # domanda: spinta da tavolo a Jacopino
     shot("s7_domanda", 29.33, 32.76, 50, (-0.06, -0.18, 0.12), (0.0, -0.12, 0.16), (0.0, 0.09, 0.11), (0.0, 0.11, 0.16), 6.0),
 ]
+
+
+# ===== V3 (24/11): Jacopino 7 cm dietro il tavolo (sagoma separata, niente giacca-tavolo), misure dirette (colore, segnalini, nome sul tessuto), inquadrature piu' larghe
+PUPPET_Y = 0.18
+MAT_DEPTH = 0.62
+ARANCIO = (0.92, 0.10, 0.04); AZZURRO = (0.10, 0.55, 1.0); MAGENTA = (0.85, 0.10, 0.50)
+MISURE[0].update(col=ARANCIO, caps=True, capl=0.010, label="VITA", lpos=(-0.0105, YW - 0.0145), lsize=0.011, w=0.0013, tz=0.0049)
+MISURE[1].update(col=AZZURRO, caps=True, capl=0.009, label="CAVALLO", lpos=(0.0135, 0.0745), lrot=90, lsize=0.0066, w=0.0013)
+MISURE[2].update(col=MAGENTA, caps=True, capl=0.009, label="INTERNO", lpos=(-0.0175, (RISE_Y + HEM_Y) / 2), lrot=90, lsize=0.0085, w=0.0013)

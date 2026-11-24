@@ -115,7 +115,7 @@ mix = N.new("ShaderNodeMix"); mix.data_type = "RGBA"
 mix.inputs["A"].default_value = (0.018, 0.115, 0.065, 1); mix.inputs["B"].default_value = (0.26, 0.42, 0.33, 1)   # v6: tappetino piu' scuro, righe meno brillanti
 L_.new(mx3.outputs[0], mix.inputs["Factor"]); L_.new(mix.outputs["Result"], b.inputs["Base Color"])
 wear(mm, 90, 0.12, 0.05)
-mat_o = box("tappetino", (0.9, 0.46, 0.002), (0.02, -0.06, 0.001), mm)   # finisce subito dietro i piedi: dietro si vede il tavolo caldo
+mat_o = box("tappetino", (0.9, SC.get("MAT_DEPTH", 0.46), 0.002), (0.02, -0.06 + (SC.get("MAT_DEPTH", 0.46) - 0.46) / 2, 0.001), mm)   # finisce subito dietro i piedi: dietro si vede il tavolo caldo
 bpy.ops.object.transform_apply(scale=True)
 
 carta = wear(mat("carta", (0.80, 0.76, 0.68), 0.85, spec=0.3), 300, 0.05, 0.04)
@@ -248,7 +248,7 @@ if MIS and TAV:
     TAPE_L = SC.get("TAPE_L", 0.13)
     mesh_t = bpy.data.meshes.new("metro_m"); mesh_t.from_pydata([(0, -0.0035, 0), (TAPE_L, -0.0035, 0), (TAPE_L, 0.0035, 0), (0, 0.0035, 0), (0, -0.0035, 0.0007), (TAPE_L, -0.0035, 0.0007), (TAPE_L, 0.0035, 0.0007), (0, 0.0035, 0.0007)], [], [[0, 3, 2, 1], [4, 5, 6, 7], [0, 1, 5, 4], [1, 2, 6, 5], [2, 3, 7, 6], [3, 0, 4, 7]]); mesh_t.update()
     tape = bpy.data.objects.new("metro_misura", mesh_t); sc.collection.objects.link(tape); tape.data.materials.append(tmat)
-    MIS_CUR = []
+    MIS_CUR = []; MIS_EXTRA = []
     for M in MIS:
         pts = [Vector((x, y)) for x, y in M["path"]]
         seg = [(pts[i + 1] - pts[i]).length for i in range(len(pts) - 1)]; tot = sum(seg); N_ = 120; res = []
@@ -259,9 +259,27 @@ if MIS and TAV:
         cu = bpy.data.curves.new("linea_" + M["name"], "CURVE"); cu.dimensions = "3D"; cu.bevel_depth = M.get("w", 0.0007); cu.bevel_resolution = 2; cu.use_fill_caps = True
         spl = cu.splines.new("POLY"); spl.points.add(len(res) - 1)
         for q, v_ in zip(spl.points, res): q.co = (v_.x, v_.y, TAV["top"] + M.get("z", 0.0043), 1.0)
-        ob_ = bpy.data.objects.new("linea_" + M["name"], cu); sc.collection.objects.link(ob_); ob_.data.materials.append(_lm)
+        _mcol = M.get("col")
+        if _mcol:
+            _lmk = mat("tratto_" + M["name"], _mcol, 0.4); _bk = bsdf_of(_lmk)
+            for k_ in ("Emission Color", "Emission"):
+                if k_ in _bk.inputs: _bk.inputs[k_].default_value = tuple(_mcol) + (1,)
+            if "Emission Strength" in _bk.inputs: _bk.inputs["Emission Strength"].default_value = 0.45
+        else: _lmk = _lm
+        ob_ = bpy.data.objects.new("linea_" + M["name"], cu); sc.collection.objects.link(ob_); ob_.data.materials.append(_lmk)
         cu.bevel_factor_start = 0.0
         MIS_CUR.append((M, cu, res))
+        _ex = []
+        if M.get("caps"):      # segnalini perpendicolari alle due estremita' (come in un disegno tecnico)
+            _d = (pts[-1] - pts[0]).normalized(); _nx = Vector((-_d.y, _d.x)); _ang = math.atan2(_d.y, _d.x) + math.pi / 2
+            for _pt in (pts[0], pts[-1]):
+                _ex.append(box("segnalino_" + M["name"], (0.0016, M.get("capl", 0.011), 0.0016), (_pt.x, _pt.y, TAV["top"] + M.get("z", 0.0043)), _lmk, rot=(0, 0, _ang)))
+        if M.get("label"):     # nome della misura scritto sul tessuto
+            _cu_t = bpy.data.curves.new("etich_" + M["name"], "FONT"); _cu_t.body = M["label"]; _cu_t.size = M.get("lsize", 0.011); _cu_t.extrude = 0.0004; _cu_t.align_x = "CENTER"; _cu_t.align_y = "CENTER"
+            _tx = bpy.data.objects.new("etich_" + M["name"], _cu_t); sc.collection.objects.link(_tx)
+            _tx.data.materials.append(mat("etich_inchiostro_" + M["name"], M.get("lcol", (0.03, 0.04, 0.03)), 0.5))
+            _tx.location = (M["lpos"][0], M["lpos"][1], TAV["top"] + 0.0042); _tx.rotation_euler = (0, 0, math.radians(M.get("lrot", 0))); _ex.append(_tx)
+        if _ex: MIS_EXTRA.append((M, _ex))
     for fr_ in range(1, NFR + 1):
         t_ = (fr_ - 1) / FPS
         vis = False
@@ -274,6 +292,9 @@ if MIS and TAV:
                 A = Vector(M["A"]); B = Vector(M["B"]); d_ = B - A
                 yaw = math.atan2(d_.y, d_.x); un = max(0.0, min(1.0, (t_ - ta) / 0.3)); un = un * un * (3 - 2 * un)
                 tape.location = (A.x, A.y, TAV["top"] + M.get("tz", 0.0037)); tape.rotation_euler = (0, 0, yaw); tape.scale = (0.2 + 0.8 * un, 1, 1); vis = True
+        for M, _ex in MIS_EXTRA:
+            for _o in _ex:
+                _o.hide_render = t_ < M["t0"] - 0.1; _o.keyframe_insert("hide_render", frame=fr_)
         tape.hide_render = not vis
         tape.keyframe_insert("hide_render", frame=fr_); tape.keyframe_insert("location", frame=fr_); tape.keyframe_insert("rotation_euler", frame=fr_); tape.keyframe_insert("scale", frame=fr_)
 
@@ -719,7 +740,7 @@ for o in new:
 S = H / 0.983
 root.scale = (S, S, S)   # il corpo guarda gia' la camera: solo la testa e' girata (corretta sull'osso Head)
 zmin = min((body.matrix_world @ Vector(c)).z for c in body.bound_box)
-root.location = Vector((0, 0.13, 0)) - BODY_C * S - Vector((0, 0, zmin * S))
+root.location = Vector((0, SC.get("PUPPET_Y", 0.13), 0)) - BODY_C * S - Vector((0, 0, zmin * S))
 bpy.context.view_layer.update()
 
 # ------------------------------------------------------------------ IK delle braccia (bersagli in coordinate raw, figli della radice)
@@ -780,7 +801,7 @@ FINGERS = {s: [n for n in PB.keys() if ("%sHand" % s) in n and any(k in n for k 
 def ikp(p):
     """Posizione della mano: raw di default; con IK_WORLD nella partitura i valori sono coordinate MONDO (m) e qui diventano (laterale, avanti, z) raw."""
     if not SC.get("IK_WORLD"): return p
-    return (p[0] / S, (0.13 - p[1]) / S, p[2] / S + zmin)
+    return (p[0] / S, (SC.get("PUPPET_Y", 0.13) - p[1]) / S, p[2] / S + zmin)
 VIS = {}
 HEADYAW = float(opt("--headyaw", "-15.6"))   # gradi: riporta il viso verso la camera
 for f in range(NFR):
