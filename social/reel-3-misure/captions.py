@@ -9,7 +9,7 @@ W, H = 1080, 1920; FPS = 24; NFR = 787
 FD = "D:/ClaudeCodeTest/.claude/skills/youtube-edit/assets/fonts/"
 OUT = "D:/ClaudeCodeTest/videos/_bench/reel-3-misure/caps/"
 os.makedirs(OUT, exist_ok=True)
-CY = 330                         # centro verticale del sottotitolo (sopra la testa: le inquadrature lasciano aria in alto)
+CY = 250                         # centro verticale del sottotitolo (sopra la testa: le inquadrature lasciano aria in alto)
 MAXW = 930
 BIANCO = (255, 255, 255); ACCENTO = (255, 180, 143)
 K = True
