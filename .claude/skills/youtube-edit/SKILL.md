@@ -5,7 +5,7 @@ description: Edit a YouTube video end to end in Claude Code. Takes a raw camera 
 
 # YouTube editor
 
-> **Dal 25/11/2026 i reel e gli Short 3D si fanno con la skill `director` (comando `/director`), non con i formati 3D di questa skill.** Decisione di Jacopo dopo il test completo (prova T1MLINE). Per i video YouTube lunghi questa skill resta quella di riferimento finché non si prova director anche lì.
+> **Dal 25/11/2026 i reel e gli Short 3D si fanno con la skill `director` (comando `/director`), non con i formati 3D di questa skill.** Decisione di Jacopo dopo il test completo (prova T1MLINE). Per i video YouTube lunghi resta questa skill: director è stato provato sul girato del #4 il 25/11 e bocciato (tagli fatti solo sull'audio, grafiche che non piacciono).
 
 Turns raw footage or a flat cut into a finished video: the cut, animated overlays, cutaways, camera moves, sound and a
 tagged 4K MP4. Everything runs on your own machine through HyperFrames (Chrome + FFmpeg): no per-render cost, and no
