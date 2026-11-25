@@ -1,9 +1,11 @@
 ---
 name: fashion-3d
-description: Build 3D animated videos for Jacopo's channel and Inverso entirely in code (three.js, rendered by HyperFrames): vertical 3D Shorts in the atelier world, animated 3D explainers (the "Autogrill" format), metaphor worlds, a 3D garment that turns, and Jacopo's own 3D mascot. Use for any request about a 3D Short, a 3D scene, a 3D garment, "mondo 3D", mascotte, or realism of a 3D render. NOT for cutting camera footage, grading, plates on a talking head (that is youtube-edit).
+description: SUPERSEDED for 3D reels and Shorts since 25/11/2026 (use the director skill). Build 3D animated videos for Jacopo's channel and Inverso entirely in code (three.js, rendered by HyperFrames): vertical 3D Shorts in the atelier world, animated 3D explainers (the "Autogrill" format), metaphor worlds, a 3D garment that turns, and Jacopo's own 3D mascot. Use for any request about a 3D Short, a 3D scene, a 3D garment, "mondo 3D", mascotte, or realism of a 3D render. NOT for cutting camera footage, grading, plates on a talking head (that is youtube-edit).
 ---
 
 # fashion-3d: 3D films in code
+
+> **Dal 25/11/2026 i reel e gli Short 3D si fanno con la skill `director` (comando `/director`), non con questa.** Decisione di Jacopo dopo il test completo (prova T1MLINE): «sul 3D non c'è proprio metro di paragone». Niente fusione tra le due skill. Questa resta come archivio dei metodi e per lavori 3D che non sono reel (oggetti, GLB da Tripo da alleggerire, scene singole).
 
 *Born 16/11/2026 as a split from `youtube-edit` (which keeps editing, motion plates, grading, sound). This skill owns everything about generating 3D.*
 
