@@ -17,7 +17,7 @@ Jacopo, italiano (Roma). Studio Economia all'università e moda in accademia. No
 - `archivio/` — progetti chiusi o dormienti (consultabili, non in sviluppo)
 - `.claude/` skill e agenti · `.agents/` contesto marketing · `cartamodelli/` tool SVG · `assets/` cover Notion
 - Solo locale, fuori da git: `videos/` (footage e render), `studio-privato/`
-- Fuori da questo repo: `D:\claude-3d-shop`, side hustle con un amico (dal 25/11/2026): una pagina sui video 3D fatti con Claude e una skill nostra in vendita a 5–10 €. È un repo separato apposta: non leggerlo e non portarne il contesto qui, né viceversa.
+- Fuori da questo repo: `D:\skill-3d-claude`, side hustle con un amico (dal 25/11/2026): una pagina sui video 3D fatti con Claude e una skill nostra in vendita a 5–10 €. È un repo separato apposta: non leggerlo e non portarne il contesto qui, né viceversa.
 
 ## Regola d'oro
 **Lavora solo nella cartella dell'area richiesta** e leggi il suo `CLAUDE.md`. Non toccare le altre aree se non te lo chiedo.
