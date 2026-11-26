@@ -46,6 +46,7 @@ not law. A preset (`presets/<name>/README.md`) may override any of them. Jacopo'
 6. **A pinned object** at the same coordinates through three or more shots.
 7. **A web-footer ending** (logo + tagline + button + URL) held for seconds: a resolved end hold is 0.6-1.4 s and has something alive in it.
 8. **An effect to show effort:** a new technique every beat. Use an effect because the idea needs it.
+9. **Copy only Jacopo understands** (26/11/2026, Short «Il prompt magico non esiste», comment «non si capisce un cazzo»; Jacopo: the problem was voice and writing, not graphics). Never: inside metaphors and puns («un capo si giudica dal rovescio» right after «direttore» reads as capo = boss; plays on the name Inverso), a key word repeated but never explained in concrete terms, an abstract hook question, six messages in one Short with no example shown, a final twist that contradicts the thesis («serve un direttore» → «l'ha diretto Claude»), numbers dropped in unexplained (75/25). A Short is one idea + one example the viewer SEES. Test: read the script as a stranger who knows neither Jacopo nor Inverso; every line must make sense on its own.
 
 Slide test (30 s): cover all the text with your hand. If more than half the frames are "a flat colour with a card on it", it is a deck: fix the picture, not the type.
 
